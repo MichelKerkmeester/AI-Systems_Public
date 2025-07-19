@@ -42,9 +42,9 @@ Because better input means less time fixing output.
 ### DEV - Claude Code - Instructions + Commands
 > Work in progress!
 > > To be added: 
-> - Dynamic long-term memory ([Graphiti](https://github.com/getzep/graphiti))
-> - Automated mode/command selection, context clearing, planning & more.
-> - Currently really bloated, but will make it as 'Lean' but powerfull as possible.
+> - Dynamic long-term memory ([Graphiti](https://github.com/getzep/graphiti) & [Crawl4AI RAG](https://github.com/coleam00/mcp-crawl4ai-rag))
+> - Parallel agents that work with Gemini & Kimi
+> - Automated spec writing and task completion summaries
 
 Transform your Claude conversations into persistent, automated development workflows with custom commands and maintained context.
 - **Problem I faced**: Repetitive Claude conversations, lost context between sessions, manual workflow steps
