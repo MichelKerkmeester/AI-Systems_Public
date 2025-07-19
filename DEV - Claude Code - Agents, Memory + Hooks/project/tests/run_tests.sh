@@ -9,7 +9,7 @@ echo "==================================="
 echo ""
 
 # Set up Python path
-export PYTHONPATH="/Users/michel_kerkmeester/AI & Dev/Websites/• anobel.nl/.claude:$PYTHONPATH"
+export PYTHONPATH="/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl/.claude:$PYTHONPATH"
 
 # Run the integration tests
 python3 test_hooks_integration.py

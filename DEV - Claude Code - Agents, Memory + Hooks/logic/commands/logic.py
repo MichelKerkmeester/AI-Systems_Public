@@ -42,7 +42,10 @@ class LogicCommand:
         
         # State tracking
         self.state_path = self.claude_path / "project" / "state"
-        self.state = StateManager(self.state_path / "logic-state.json")
+        self.state = StateManager(
+            self.state_path / "logic-state.json",
+            default_state={"commands_executed": 0, "last_command": None}
+        )
         
         # Multi-agent support
         self.agent_registry = AgentRegistry()
@@ -83,6 +86,7 @@ class LogicCommand:
             "hooks": self.manage_hooks,
             "system": self.show_system,
             "tasks": self.show_tasks,
+            "agents": self.manage_agents,
             "debug": self.debug_mode
         }
         
@@ -106,7 +110,7 @@ class LogicCommand:
             ("hooks", "Manage automated hooks"),
             ("system (sys)", "System metrics and performance"),
             ("tasks (t)", "Task management overview"),
-            ("tasks parallel", "Parallel agent execution"),
+            ("agents", "Multi-agent orchestration"),
             ("debug (d)", "Debug mode and diagnostics")
         ]
         
@@ -578,6 +582,13 @@ class LogicCommand:
             "status": "success",
             "output": output
         }
+    
+    def manage_agents(self, args: List[str]) -> Dict[str, Any]:
+        """Manage multi-agent system"""
+        # Import and delegate to AgentsCommand
+        from .agents import AgentsCommand
+        agents_cmd = AgentsCommand()
+        return agents_cmd.execute(args)
     
     def manage_parallel_tasks(self, args: List[str]) -> Dict[str, Any]:
         """Manage parallel task execution"""

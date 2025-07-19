@@ -7,23 +7,31 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/• anobel.nl/.claude/hooks/quality/quality-hook.py'"
+            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl/.claude/scripts/greeting-hook.py'"
           },
           {
             "type": "command",
-            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/• anobel.nl/.claude/hooks/memory/memory-context-hook.py'"
+            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl/.claude/scripts/test-hook.py'"
           },
           {
             "type": "command",
-            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/• anobel.nl/.claude/hooks/core/mode-suggestion-hook.py'"
+            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl/.claude/logic/hooks/quality/quality-hook.py'"
           },
           {
             "type": "command",
-            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/• anobel.nl/.claude/hooks/core/workflow-automation-hook.py'"
+            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl/.claude/logic/hooks/memory/memory-context-hook.py'"
           },
           {
             "type": "command",
-            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/• anobel.nl/.claude/hooks/core/query-planning-hook.py'"
+            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl/.claude/logic/hooks/core/mode-suggestion-hook.py'"
+          },
+          {
+            "type": "command",
+            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl/.claude/logic/hooks/core/workflow-automation-hook.py'"
+          },
+          {
+            "type": "command",
+            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl/.claude/logic/hooks/core/query-planning-hook.py'"
           }
         ]
       }
@@ -34,7 +42,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/• anobel.nl/.claude/hooks/session/session-hook.py'"
+            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl/.claude/logic/hooks/session/session-hook.py'"
           }
         ]
       }
@@ -45,15 +53,32 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/• anobel.nl/.claude/hooks/session/session-hook.py'"
+            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl/.claude/logic/hooks/session/session-hook.py'"
           },
           {
             "type": "command",
-            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/• anobel.nl/.claude/hooks/core/context-management-hook.py'"
+            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl/.claude/logic/hooks/core/context-management-hook.py'"
           },
           {
             "type": "command",
-            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/• anobel.nl/.claude/hooks/core/pattern-extraction-hook.py'"
+            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl/.claude/logic/hooks/core/pattern-extraction-hook.py'"
+          }
+        ]
+      },
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl/.claude/logic/hooks/core/claude-md-update-hook.py'"
+          },
+          {
+            "type": "command",
+            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl/.claude/logic/hooks/core/system-status-update-hook.py'"
+          },
+          {
+            "type": "command",
+            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl/.claude/logic/hooks/core/folder-structure-hook.py'"
           }
         ]
       },
@@ -62,19 +87,23 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/• anobel.nl/.claude/hooks/quality/quality-hook.py'"
+            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl/.claude/logic/hooks/quality/quality-hook.py'"
           },
           {
             "type": "command",
-            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/• anobel.nl/.claude/hooks/core/security-scan-hook.py'"
+            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl/.claude/logic/hooks/core/security-scan-hook.py'"
           },
           {
             "type": "command",
-            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/• anobel.nl/.claude/hooks/core/doc-update-hook.py'"
+            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl/.claude/logic/hooks/core/doc-update-hook.py'"
           },
           {
             "type": "command",
-            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/• anobel.nl/.claude/hooks/core/task-management-hook.py'"
+            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl/.claude/logic/hooks/core/task-management-hook.py'"
+          },
+          {
+            "type": "command",
+            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl/.claude/logic/hooks/tools/post-tool-use-memory.py'"
           }
         ]
       },
@@ -83,7 +112,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/• anobel.nl/.claude/hooks/core/security-scan-hook.py'"
+            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl/.claude/logic/hooks/core/security-scan-hook.py'"
           }
         ]
       },
@@ -92,11 +121,11 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/• anobel.nl/.claude/hooks/core/parallel-agent-hook.py'"
+            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl/.claude/logic/hooks/core/parallel-agent-hook.py'"
           },
           {
             "type": "command",
-            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/• anobel.nl/.claude/hooks/core/task-management-hook.py'"
+            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl/.claude/logic/hooks/core/task-management-hook.py'"
           }
         ]
       }

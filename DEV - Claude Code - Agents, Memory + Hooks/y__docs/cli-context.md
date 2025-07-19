@@ -24,7 +24,7 @@
 - **Primary Interface**: Claude Code CLI
 - **Terminal**: Warp
 - **Shell**: zsh (macOS)
-- **Working Directory**: `/Users/michel_kerkmeester/AI & Dev/Websites/• anobel.nl`
+- **Working Directory**: `/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl`
 
 ## Key Points
 
@@ -55,7 +55,7 @@
 ### Typical CLI Session
 ```bash
 # Start working in Warp terminal
-cd "/Users/michel_kerkmeester/AI & Dev/Websites/• anobel.nl"
+cd "/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl"
 
 # Claude Code CLI is ready - no setup needed
 # Just start coding - hooks handle automation

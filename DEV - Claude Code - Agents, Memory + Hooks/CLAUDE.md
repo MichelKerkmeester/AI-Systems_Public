@@ -1,4 +1,4 @@
-# 🚀 Claude Code Assistant
+# 🚀 Claude Code Assistant - anobel.nl
 
 ## 🖥️ Environment: Claude Code CLI
 **Important:** This project uses Claude Code CLI in the terminal (Warp), NOT the Claude Desktop app.  
@@ -9,11 +9,12 @@ All commands and automation are designed for CLI usage. Desktop-specific feature
 ### System Status Display
 ```
 === 🚀 Claude Code System Status ===
-[🧠 Memory] Graphiti: ✅ Active | [X] memories stored
-[📚 Knowledge] facts.json ✅ | patterns.json ✅ | constraints.json ✅  
-[🤖 MCPs] Sequential Thinking ✅ | Graphiti ✅ | Gemini ✅ | GitHub ✅ | n8n ✅
-[🎯 Mode] Auto Mode 🚀 | Project: anobel.nl | Git: main
-[📝 Todos] [X] active tasks | [📂 Session] [name] | Age: [X]h
+[🧠 Memory] Graphiti: ✅ Active | Neo4j Connected
+[📚 Knowledge] facts ✅ | patterns ✅ | constraints ✅ | security ✅  
+[🤖 MCPs] Sequential ✅ | Graphiti ✅ | Gemini ✅ | GitHub ✅ | Context7 ✅ | Notion ✅ | Shadcn ✅ | Webflow ✅
+[⚡ Hooks] 13 active hooks | Quality ✅ | Security ✅ | Memory ✅ | Session ✅
+[🎯 Commands] /memory | /save | /logic
+[📂 System] Project: anobel.nl | Git: main | Mode: Auto 🚀
 =====================================
 ```
 
@@ -98,6 +99,43 @@ Tasks automatically flow through stages:
 ```
 
 **Patterns captured:** DECISION, SECURITY, BREAKING, RESOLVED, PATTERN, client preferences, API limits
+
+---
+
+## 🚨 HOOK AUTOMATION WARNINGS
+
+### What Hooks Automate (But You Might Still Break)
+
+Even with hooks enabled, these mistakes can still happen:
+
+#### 1. Quality Hook Pitfalls
+- ❌ **Claiming work is complete without testing** - Hook reminds but can't force
+- ❌ **Writing fake tests** - Tests that don't actually verify functionality  
+- ❌ **Bypass attempts** - Using `window.console.log` or eval to avoid detection
+- ❌ **Ignoring file size warnings** - Creating 500+ line files despite reminders
+
+#### 2. Security Hook Blind Spots
+- ❌ **Base64 encoded secrets** - Hook might miss encoded credentials
+- ❌ **Secrets in comments** - `// API_KEY: abc123` still exposes secrets
+- ❌ **Git commit messages** - Secrets in commit descriptions bypass file scanning
+- ❌ **Minified/obfuscated code** - Hidden secrets in compressed code
+
+#### 3. Memory Hook Gaps
+- ❌ **Not capturing decisions** - Important choices lost between sessions
+- ❌ **Skipping memory search** - Re-solving already solved problems
+- ❌ **Outdated memories** - Not updating when patterns change
+
+#### 4. Pattern Extraction Misses
+- ❌ **Context-specific patterns** - Regex can't catch nuanced patterns
+- ❌ **Conflicting patterns** - Auto-extraction might create duplicates
+- ❌ **Client requirements** - Manual patterns often needed for preferences
+
+#### 5. Task Management Workarounds
+- ❌ **Direct file creation** - Making tasks without commands
+- ❌ **Multiple active tasks** - Editing files to bypass one-task limit
+- ❌ **Skipping task flow** - Moving files between folders manually
+
+**Remember:** Hooks are safety nets, not guarantees. They catch obvious mistakes but can't enforce good judgment or thorough testing.
 
 ---
 

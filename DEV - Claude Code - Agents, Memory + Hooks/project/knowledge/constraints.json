@@ -36,6 +36,13 @@
     "standard": "WCAG 2.1 AA",
     "motion": "Respect prefers-reduced-motion"
   },
+  "naming_conventions": {
+    "markdown_files": "kebab-case required (except README.md and CLAUDE.md)",
+    "examples": {
+      "correct": ["task-summary.md", "memory-automation-guide.md", "hook-consolidation-summary.md"],
+      "incorrect": ["TaskSummary.md", "memory_automation_guide.md", "Hook Consolidation Summary.md"]
+    }
+  },
   "security": {
     "api_keys": "NEVER store in .claude folders",
     "storage": "Use .env files only",

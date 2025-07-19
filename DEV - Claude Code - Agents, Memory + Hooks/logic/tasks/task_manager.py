@@ -12,6 +12,7 @@ from pathlib import Path
 from datetime import datetime
 from typing import Dict, List, Optional, Tuple, Any
 from dataclasses import dataclass, asdict
+from .task_summarizer import TaskSummarizer
 
 
 @dataclass
@@ -58,6 +59,9 @@ class TaskManager:
         
         # Task registry
         self.registry_path = self.tasks_dir / ".task-registry.json"
+        
+        # Initialize task summarizer
+        self.summarizer = TaskSummarizer()
         
         # Ensure directories exist
         for dir_path in [self.to_do_dir, self.active_dir, self.completed_dir, 

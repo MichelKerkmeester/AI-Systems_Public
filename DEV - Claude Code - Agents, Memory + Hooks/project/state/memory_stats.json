@@ -1,0 +1,39 @@
+{
+  "daily_captures": {
+    "2025-07-19": 3
+  },
+  "pattern_types": {
+    "DECISION": 1,
+    "SECURITY": 1,
+    "PATTERN": 1
+  },
+  "sources": {
+    "memory_context_hook": 1,
+    "post_tool_use_hook": 1,
+    "pattern_extraction_hook": 1
+  },
+  "automation_levels": {
+    "full": 2,
+    "semi": 1
+  },
+  "total_captures": 3,
+  "first_capture": "2025-07-19T17:55:50.185128",
+  "last_capture": "2025-07-19T17:55:50.185451",
+  "sessions": {
+    "test_session": 3
+  },
+  "hook_performance": {
+    "memory_context_hook": {
+      "triggered": 2,
+      "captured": 1
+    },
+    "post_tool_use_hook": {
+      "triggered": 1,
+      "captured": 1
+    },
+    "pattern_extraction_hook": {
+      "triggered": 0,
+      "captured": 0
+    }
+  }
+}

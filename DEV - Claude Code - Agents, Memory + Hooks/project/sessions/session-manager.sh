@@ -4,7 +4,7 @@
 # Automatically moves current sessions to old when creating new ones
 # Features: Auto-backup, confirmation prompts, timestamp-based naming
 
-SESSIONS_DIR="/Users/michel_kerkmeester/AI & Dev/Websites/• anobel.nl/.claude/project/sessions"
+SESSIONS_DIR="/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl/.claude/project/sessions"
 CURRENT_DIR="$SESSIONS_DIR/current"
 OLD_DIR="$SESSIONS_DIR/old"
 BACKUP_DIR="$SESSIONS_DIR/backups"

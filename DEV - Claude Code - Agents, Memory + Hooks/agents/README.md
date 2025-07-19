@@ -1,383 +1,206 @@
-# Multi-Agent Development Guide
-
-This guide explains how to use Claude's multi-agent system for parallel development of work packages.
+# Multi-Agent System with Intelligent Model Routing
 
 ## Overview
 
-The multi-agent system allows multiple Claude instances to work concurrently on different parts of your project. Each agent:
-- Works in an isolated git worktree
-- Has its own resource limits
-- Communicates through a message queue
-- Coordinates through distributed locking
+This multi-agent orchestration system combines parallel agent execution with intelligent model routing to achieve significant token reduction (40-50% cost savings) without sacrificing quality.
 
 ## Quick Start
 
-### 1. Start Parallel Agents
-
 ```bash
-# Start agents for specific work packages
-/logic tasks parallel start wp1,wp2,wp3
+# Start agents with auto mode selection
+/logic agents start
 
-# Start agents for all high-priority tasks
-/logic tasks parallel start all
-```
+# Start specific mode
+/logic agents start parallel  # 2-4 agents (default)
+/logic agents start simple    # Single agent
+/logic agents start swarm     # 5+ agents
 
-### 2. Monitor Progress
+# Monitor agents
+/logic agents status
 
-```bash
-# Check status of all agents
-/logic tasks parallel status
-
-# View logs for specific agent
-/logic tasks parallel logs claude-wp1-abc123
-```
-
-### 3. Merge Completed Work
-
-```bash
-# Merge specific agent's work
-/logic tasks parallel merge claude-wp1-abc123
-
-# Clean up all agents
-/logic tasks parallel cleanup
+# View model usage and costs
+/logic agents models
 ```
 
 ## Architecture
 
-### Component Overview
+### Components
 
-```
-.claude/agents/
-├── registry/              # Agent registration & tracking
-│   ├── active-agents.json # Currently active agents
-│   └── agent-history.json # Historical records
-├── locks/                 # Distributed locking
-│   ├── git.lock          # Git operation mutex
-│   ├── memory.lock       # Memory system mutex
-│   └── hooks/            # Per-hook locks
-├── messages/             # Inter-agent communication
-│   ├── broadcast/        # Broadcast messages
-│   └── {agent-id}/       # Agent-specific messages
-├── worktrees/            # Git worktrees for agents
-│   └── {work-package}/   # Isolated development branch
-└── monitoring/           # Resource usage tracking
-```
+1. **Task Complexity Analyzer** (`routing/task_complexity_analyzer.py`)
+   - Analyzes task complexity (0-20 score)
+   - Detects task type (architecture, debug, search, etc.)
+   - Estimates resource requirements
 
-### Agent Lifecycle
+2. **Model Selector** (`routing/model_selector.py`)
+   - Routes tasks to optimal models
+   - Tracks usage and costs
+   - Provides fallback strategies
 
-1. **Spawn**: Create worktree, register agent, start process
-2. **Initialize**: Set up workspace, subscribe to messages
-3. **Execute**: Process assigned tasks with resource monitoring
-4. **Complete**: Finish tasks, prepare for merge
-5. **Merge**: Integrate changes back to main branch
-6. **Cleanup**: Remove worktree, deregister, release resources
+3. **Agent Types** (Phase 2 - Coming Soon)
+   - **AnalystAgent**: Problem decomposition, research
+   - **DeveloperAgent**: Implementation, coding
+   - **ReviewerAgent**: Code review, quality checks
+   - **SynthesisAgent**: Merge results, resolve conflicts
 
-## Key Components
+## Model Routing Strategy
 
-### 1. Distributed Locking
+### Complexity-Based Routing
 
-Prevents conflicts when agents access shared resources:
+| Complexity | Score | Model | Use Cases |
+|-----------|-------|-------|-----------|
+| TRIVIAL | < 3 | Kimi Pro | Simple searches, file reads |
+| SIMPLE | 3-5 | Kimi Pro | Single file edits |
+| MEDIUM | 6-8 | Gemini/Claude | Multi-file changes |
+| COMPLEX | 9-12 | Claude | Architecture, debugging |
+| CRITICAL | > 12 | Claude | Security, synthesis |
 
-```python
-from logic.shared import DistributedLockManager
+### Task Type Routing
 
-lock_manager = DistributedLockManager(agent_id)
+- **Always Claude**: Architecture, Design, Synthesis, Security
+- **Prefer Kimi**: Search, Read, Simple Edit
+- **Prefer Gemini**: Analysis, Review, Testing
 
-# Exclusive file access
-with lock_manager.atomic_file_operation("config.json"):
-    # Safe to modify file
-    update_config()
+## Commands
 
-# Named resource lock
-lock = lock_manager.acquire_lock("database", timeout=10)
-if lock:
-    try:
-        perform_database_operation()
-    finally:
-        lock_manager.release_lock("database")
-```
+### Agent Management
 
-### 2. Message Queue
+```bash
+# Start agents
+/logic agents start [mode]
 
-Agents communicate asynchronously:
+# Check status
+/logic agents status
 
-```python
-from logic.shared import MessageQueue, Message
+# Model usage stats
+/logic agents models
 
-queue = MessageQueue(agent_id)
+# Configure routing
+/logic agents route on|off|claude|kimi|gemini
 
-# Send status update
-queue.send_status_update("Working on feature X", {
-    "progress": 50,
-    "estimated_completion": "10 minutes"
-})
+# Analyze task complexity
+/logic agents analyze "implement new feature"
 
-# Subscribe to messages
-def on_task_complete(message):
-    print(f"Task {message.payload['task_id']} completed!")
+# Synthesize results
+/logic agents synthesize
 
-queue.subscribe("task_complete", on_task_complete)
-queue.start()
+# Cleanup resources
+/logic agents cleanup
 ```
 
-### 3. Resource Monitoring
+### Configuration
 
-Each agent has resource limits:
+```bash
+# View configuration
+/logic agents config
 
-```python
-from logic.shared import ResourceMonitor
-
-monitor = ResourceMonitor(agent_id)
-monitor.start_monitoring()
-
-# Check if within limits
-if not monitor.check_limits():
-    # Throttle or pause work
-    await asyncio.sleep(5)
-
-# Get usage statistics
-stats = monitor.get_usage_stats()
-print(f"Memory: {stats['avg_memory_mb']}MB")
-print(f"CPU: {stats['avg_cpu_percent']}%")
+# Update router config
+# Edit: .claude/agents/configs/router-config.json
 ```
 
-### 4. Conflict Resolution
+## Cost Optimization
 
-Automatic handling of concurrent access:
+### Token Reduction Strategies
 
-```python
-from logic.shared import ConflictResolver, Conflict, ConflictType
+1. **Gemini MCP for Analysis** (65-85% reduction)
+   - 1M token context window
+   - Excellent for codebase analysis
 
-resolver = ConflictResolver()
+2. **Kimi Pro for Simple Tasks** (60% reduction)
+   - 128K context window
+   - Great for searches and edits
 
-# Report conflict
-conflict = Conflict(
-    conflict_type=ConflictType.FILE_EDIT,
-    resource="src/main.py",
-    agent1_id=agent1,
-    agent2_id=agent2,
-    details={"lines": [10, 20]}
-)
+3. **Claude for Complex Tasks**
+   - Critical reasoning
+   - Creative problem solving
 
-resolution = resolver.resolve_conflict(conflict)
-# Returns: MERGE, QUEUE, FIRST_WINS, etc.
+### Expected Savings
+
+- Simple tasks: 60% cost reduction
+- Analysis tasks: 65-85% reduction
+- Overall: 40-50% cost savings
+
+## Integration with Claude Code Router
+
+### Installation (Phase 1 - TODO)
+
+```bash
+# Install claude-code-router MCP
+git clone https://github.com/musistudio/claude-code-router.git
+cd claude-code-router
+npm install
+npm link
+
+# Configure in ~/.claude.json
 ```
 
-## Resource Limits
+### Environment Variables
 
-Default per-agent limits:
-- Memory: 512MB
-- CPU: 25%
-- Open files: 100
-- Disk writes: 100MB/min
+```bash
+# Kimi Pro API
+export KIMI_API_KEY="your-api-key"
 
-Global limits:
-- Total memory: 2GB
-- Total CPU: 80%
+# Optional: Ollama for local models
+# Install: https://ollama.ai
+# Pull model: ollama pull qwen2.5-coder:latest
+```
+
+## Git Worktree Management (Phase 3)
+
+Each developer agent gets an isolated worktree:
+
+```
+.claude/agents/worktrees/
+├── developer-1234567-0/  # Agent worktree
+├── developer-1234567-1/  # Another agent
+└── synthesis/           # Merge workspace
+```
+
+## Monitoring and Debugging
+
+### Resource Limits
+
 - Max agents: 10
+- Memory per agent: 512MB
+- CPU per agent: 25%
+- Global memory: 2GB
 
-## Best Practices
-
-### 1. Work Package Design
-
-- **Independent**: Minimize dependencies between packages
-- **Focused**: Single responsibility per package
-- **Sized**: 2-8 hours of work per package
-- **Testable**: Clear acceptance criteria
-
-### 2. Conflict Avoidance
-
-- **File Isolation**: Work on different files when possible
-- **Lock Granularity**: Use fine-grained locks
-- **Quick Operations**: Hold locks briefly
-- **Async Work**: Use message queue for coordination
-
-### 3. Performance
-
-- **Batch Operations**: Group file operations
-- **Lazy Loading**: Load resources on-demand
-- **Shared Cache**: Use agent-local caches
-- **Resource Awareness**: Monitor usage regularly
-
-## Troubleshooting
-
-### Agent Not Starting
+### Debug Commands
 
 ```bash
-# Check resource availability
-/logic tasks parallel status
+# Enable debug mode
+/logic debug on
 
-# View system resources
+# View execution trace
+/logic debug trace
+
+# Check integrations
 /logic system
-
-# Check for stale locks
-/logic agents emergency clean
 ```
 
-### Merge Conflicts
+## Implementation Progress
 
-```bash
-# Check for conflicts before merge
-git merge --no-commit --no-ff {branch}
+- [x] Phase 1: Foundation & Router Setup
+  - [x] Directory structure
+  - [x] TaskComplexityAnalyzer
+  - [x] ModelSelector
+  - [x] Command integration
+  - [ ] MCP installation
 
-# If conflicts exist, create integration agent
-/logic tasks parallel start {wp}-integration
-```
+- [ ] Phase 2: Core Agents
+- [ ] Phase 3: Orchestration Layer
+- [ ] Phase 4: Intelligence Integration
+- [ ] Phase 5: Testing & Documentation
 
-### Performance Issues
+## Next Steps
 
-```bash
-# Monitor resource usage
-/logic agents monitor
+1. Install claude-code-router MCP
+2. Configure Kimi Pro API credentials
+3. Test routing with sample tasks
+4. Implement specialized agent types
+5. Add git worktree support
 
-# Check agent logs
-/logic tasks parallel logs {agent-id}
+## References
 
-# Reduce parallel agents
-/logic tasks parallel pause {agent-id}
-```
-
-### Emergency Recovery
-
-```bash
-# Stop all agents
-/logic agents emergency stop
-
-# Clean up resources
-/logic agents emergency clean
-
-# Reset system
-/logic agents emergency reset
-```
-
-## Advanced Usage
-
-### Custom Agent Types
-
-Create specialized agents in `.claude/logic/shared/agent_base.py`:
-
-```python
-class ReviewAgent(AgentBase):
-    def __init__(self, work_package, **kwargs):
-        super().__init__(
-            agent_type="review",
-            work_package=work_package,
-            **kwargs
-        )
-    
-    async def initialize(self):
-        # Set up review tools
-        pass
-    
-    async def run(self):
-        # Review implementation
-        pass
-```
-
-### Work Distribution
-
-Configure in `.claude/logic/shared/work_distribution.py`:
-
-```python
-# Define agent capabilities
-engine.agent_capabilities["specialist"] = AgentCapabilities(
-    agent_type="specialist",
-    supported_tasks=[TaskType.OPTIMIZE, TaskType.PROFILE],
-    performance_multiplier=1.5
-)
-
-# Create distribution plan
-plan = engine.create_distribution_plan()
-optimized = engine.optimize_distribution(plan, max_agents=5)
-```
-
-### Hook Integration
-
-Hooks automatically support multi-agent execution:
-
-```python
-class MyHook(HookBase):
-    def __init__(self):
-        super().__init__()
-        self.metadata = {
-            "concurrent_safe": True,
-            "exclusive_resources": ["database"],
-            "max_parallel": 3
-        }
-```
-
-## Examples
-
-### Example 1: Parallel Feature Development
-
-```bash
-# Define work packages in todos
-/todo
-- wp1-auth: Implement authentication system
-- wp2-api: Create REST API endpoints  
-- wp3-ui: Build user interface
-
-# Start parallel development
-/logic tasks parallel start wp1-auth,wp2-api,wp3-ui
-
-# Monitor progress
-/logic tasks parallel status
-
-# Merge as completed
-/logic tasks parallel merge claude-wp1-auth-abc123
-/logic tasks parallel merge claude-wp2-api-def456
-/logic tasks parallel merge claude-wp3-ui-ghi789
-```
-
-### Example 2: Large Refactoring
-
-```bash
-# Start all refactoring tasks
-/logic tasks parallel start all
-
-# Monitor resource usage
-/logic agents monitor
-
-# Pause heavy agent if needed
-/logic tasks parallel pause claude-wp-database-xyz
-
-# Resume when resources available
-/logic tasks parallel resume claude-wp-database-xyz
-```
-
-### Example 3: Integration Testing
-
-```bash
-# Run tests in parallel
-/logic tasks parallel start test-unit,test-integration,test-e2e
-
-# View test results
-/logic tasks parallel logs claude-test-unit-123
-/logic tasks parallel logs claude-test-integration-456
-
-# Merge test improvements
-/logic tasks parallel merge all
-```
-
-## Security Considerations
-
-1. **File Access**: Agents only access project directory
-2. **Git Operations**: Sequential through locking
-3. **Resource Limits**: Prevent system exhaustion
-4. **Message Privacy**: Agent-specific message directories
-5. **Lock Timeouts**: Prevent indefinite blocking
-
-## Future Enhancements
-
-- Cloud-based agent execution
-- GPU-accelerated agents
-- Cross-project agent sharing
-- Agent skill marketplace
-- Visual monitoring dashboard
-
----
-
-For more information, see:
-- `/logic help agents` - Command reference
-- `.claude/logic/shared/` - Implementation details
-- `.claude/project/tests/test_multi_agent.py` - Test examples
+- [claude-code-router](https://github.com/musistudio/claude-code-router)
+- [Kimi Pro API](https://www.moonshot.ai/)
+- Task document: `.claude/project/tasks/to-do/multi-agent-system-with-routing.md`

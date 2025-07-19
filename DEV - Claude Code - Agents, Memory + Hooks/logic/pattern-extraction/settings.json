@@ -1,0 +1,44 @@
+{
+  "enabled": true,
+  "auto_extract": true,
+  "min_content_length": 50,
+  "triggers": {
+    "on_session_save": true,
+    "on_significant_changes": true,
+    "on_memory_capture": true,
+    "files_threshold": 2,
+    "lines_threshold": 50,
+    "time_threshold_minutes": 30,
+    "pattern_count_threshold": 3
+  },
+  "enhanced_patterns": {
+    "client_preferences": true,
+    "technical_decisions": true,
+    "error_solutions": true,
+    "performance_optimizations": true,
+    "security_patterns": true,
+    "api_patterns": true,
+    "ui_patterns": true
+  },
+  "memory_integration": {
+    "sync_with_graphiti": true,
+    "extract_from_memories": true,
+    "memory_batch_size": 10
+  },
+  "gemini_integration": {
+    "enabled": true,
+    "model": "gemini-2.0-flash-thinking-exp",
+    "fallback_model": "gemini-2.0-flash",
+    "prompt_template": "Extract actionable patterns, technical facts, and constraints from this development session. Focus on: 1) Decisions made, 2) Problems solved, 3) Patterns established, 4) Client preferences discovered. Content: {content}"
+  },
+  "exclude_patterns": [
+    "console.log",
+    "TODO:",
+    "FIXME:",
+    "test",
+    "temp",
+    "debug"
+  ],
+  "last_updated": "2025-07-19T18:00:00Z",
+  "description": "Enhanced pattern extraction settings for aggressive memory capture"
+}

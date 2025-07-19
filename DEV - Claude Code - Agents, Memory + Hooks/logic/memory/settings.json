@@ -1,11 +1,15 @@
 {
-  "automation_level": "semi",
-  "last_updated": "2025-01-17T00:00:00Z",
+  "automation_level": "full",
+  "last_updated": "2025-01-19T00:00:00Z",
   "description": "Memory automation settings - controls automatic capture behavior",
   "valid_levels": {
     "off": "No automatic capture",
     "manual": "Only capture on explicit /memory commands", 
     "semi": "Auto-capture critical patterns, prompt for others (default)",
     "full": "Auto-capture all detected patterns"
-  }
+  },
+  "capture_threshold": 3,
+  "buffer_size": 5,
+  "patterns_enhanced": true,
+  "post_tool_capture": true
 }
