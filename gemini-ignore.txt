@@ -1,0 +1,95 @@
+# Gemini Ignore Patterns
+# This file tells Gemini which files/directories to exclude from analysis
+# Similar to .gitignore syntax
+
+# Dependencies
+node_modules/
+bower_components/
+vendor/
+packages/
+
+# Build outputs
+dist/
+build/
+out/
+.next/
+.nuxt/
+.cache/
+coverage/
+*.min.js
+*.min.css
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+*secret*
+*password*
+*credential*
+secrets/
+keys/
+
+# IDE and system files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Logs and databases
+*.log
+logs/
+*.sqlite
+*.db
+
+# Test files (optional - uncomment if needed)
+# __tests__/
+# *.test.js
+# *.spec.js
+# cypress/
+
+# Large binary files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+*.dmg
+*.iso
+*.jar
+*.war
+
+# Media files (usually not needed for code analysis)
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.mp4
+*.mov
+*.avi
+*.mp3
+*.wav
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+
+# Framework specific
+.svelte-kit/
+.sveltekit/
+.vercel/
+.netlify/
+
+# Documentation (optional - uncomment if needed)
+# docs/
+# *.md
+# !README.md
+# !CLAUDE.md

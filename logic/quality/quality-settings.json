@@ -1,0 +1,48 @@
+{
+  "enforcement_level": "balanced",
+  "auto_test_reminder": true,
+  "show_suggestions": true,
+  "track_test_runs": true,
+  "reminder_threshold": {
+    "lines_changed": 20,
+    "files_changed": 3,
+    "critical_files": ["auth", "api", "payment", "security", "config", "env", ".env"]
+  },
+  "pattern_overrides": {
+    "console_log": {
+      "enabled": true,
+      "severity": "warning"
+    },
+    "px_units": {
+      "enabled": true,
+      "severity": "warning"
+    },
+    "api_keys": {
+      "enabled": true,
+      "severity": "critical"
+    },
+    "global_pollution": {
+      "enabled": true,
+      "severity": "warning"
+    },
+    "missing_null_check": {
+      "enabled": true,
+      "severity": "warning"
+    }
+  },
+  "test_commands": {
+    "quick": "/test quick",
+    "full": "/test full",
+    "security": "/test security",
+    "performance": "/test performance"
+  },
+  "actually_works_protocol": {
+    "enabled": true,
+    "messages": [
+      "Testing is not optional - it's professional",
+      "Actually verify the code works before declaring success",
+      "Run the code, check for errors, validate the output"
+    ],
+    "show_after_edits": 3
+  }
+}

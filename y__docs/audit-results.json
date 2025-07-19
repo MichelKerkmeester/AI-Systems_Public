@@ -1,0 +1,35 @@
+{
+  "timestamp": "2025-07-19T14:55:00.888548",
+  "metrics": {
+    "counts": {
+      "total_files": 26,
+      "readme_files": 10,
+      "guide_files": 1,
+      "reference_files": 1,
+      "example_files": 1
+    },
+    "stale_docs": [],
+    "coverage": {
+      "logic": 42.10526315789473,
+      "hooks": 0.0,
+      "scripts": 0.0
+    }
+  },
+  "issues": {
+    "missing_docs": [
+      "docs/CONTRIBUTING.md - Contribution guidelines",
+      "docs/CHANGELOG.md - Change history",
+      "docs/API.md - API reference",
+      "docs/SECURITY.md - Security guidelines"
+    ],
+    "toc_issues": []
+  },
+  "recommendations": [
+    "Consider adding more example documentation",
+    "Improve logic documentation coverage (currently 42%)",
+    "Improve hooks documentation coverage (currently 0%)",
+    "Improve scripts documentation coverage (currently 0%)",
+    "Create missing documentation files"
+  ],
+  "health_score": 45.614035087719294
+}

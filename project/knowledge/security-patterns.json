@@ -1,0 +1,115 @@
+{
+  "api_key_patterns": {
+    "high_risk": {
+      "openai": {
+        "pattern": "sk-[a-zA-Z0-9]*-[A-Za-z0-9]{40,}",
+        "description": "OpenAI API Key",
+        "example": "sk-proj-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+      },
+      "google": {
+        "pattern": "AIza[A-Za-z0-9-_]{35}",
+        "description": "Google API Key",
+        "example": "AIzaxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+      },
+      "aws": {
+        "pattern": "AKIA[0-9A-Z]{16}",
+        "description": "AWS Access Key",
+        "example": "AKIAXXXXXXXXXXXXXXXX"
+      },
+      "github": {
+        "pattern": "ghp_[A-Za-z0-9]{36}",
+        "description": "GitHub Personal Access Token",
+        "example": "ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+      },
+      "stripe": {
+        "pattern": "(sk|pk)_(test|live)_[A-Za-z0-9]{24,}",
+        "description": "Stripe API Key",
+        "example": "sk_test_xxxxxxxxxxxxxxxxxxxxxxxx"
+      },
+      "slack": {
+        "pattern": "xox[baprs]-[0-9]{10,13}-[0-9]{10,13}-[a-zA-Z0-9]{24,32}",
+        "description": "Slack Token",
+        "example": "xoxb-xxxxxxxxxxxx-xxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxx"
+      }
+    },
+    "medium_risk": {
+      "generic_long": {
+        "pattern": "[A-Za-z0-9_\\-]{32,}",
+        "description": "Generic long alphanumeric string",
+        "min_length": 32
+      },
+      "bearer": {
+        "pattern": "Bearer\\s+[A-Za-z0-9\\-._~+/]+=*",
+        "description": "Bearer token",
+        "example": "Bearer xxxxxxxxxxxxxxxxxxxxxxxxx"
+      },
+      "base64": {
+        "pattern": "[A-Za-z0-9+/]{40,}={0,2}",
+        "description": "Base64 encoded string",
+        "min_length": 40
+      },
+      "uuid": {
+        "pattern": "[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}",
+        "description": "UUID format",
+        "example": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+      },
+      "jwt": {
+        "pattern": "eyJ[A-Za-z0-9_-]+\\.[A-Za-z0-9_-]+\\.[A-Za-z0-9_-]+",
+        "description": "JSON Web Token",
+        "example": "eyJxxxxx.xxxxx.xxxxx"
+      }
+    },
+    "keywords": {
+      "must_check": [
+        "api_key",
+        "apikey",
+        "api-key",
+        "secret_key",
+        "secretkey",
+        "secret-key",
+        "access_token",
+        "accesstoken",
+        "access-token",
+        "private_key",
+        "privatekey",
+        "private-key",
+        "auth_token",
+        "authtoken",
+        "auth-token",
+        "client_secret",
+        "client_id",
+        "password",
+        "passwd",
+        "token",
+        "credential"
+      ]
+    }
+  },
+  "redaction_rules": {
+    "replacement": "[REDACTED]",
+    "partial_show": 4,
+    "format": "[REDACTED_${TYPE}_****${LAST4}]"
+  },
+  "exclusions": {
+    "paths": [
+      ".env",
+      ".env.local",
+      ".env.example",
+      "settings.local.json"
+    ],
+    "ignore_patterns": [
+      "example",
+      "sample",
+      "test",
+      "mock",
+      "fake",
+      "dummy"
+    ]
+  },
+  "severity_levels": {
+    "critical": "Immediate block and alert",
+    "high": "Block write and prompt for action",
+    "medium": "Warning with suggestion",
+    "low": "Log for review"
+  }
+}
