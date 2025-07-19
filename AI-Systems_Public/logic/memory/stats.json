@@ -1,0 +1,24 @@
+{
+  "total_memories": 14,
+  "auto_captured": 0,
+  "manual_captured": 14,
+  "by_category": {
+    "architecture_decision": 2,
+    "security_update": 2,
+    "code_pattern": 3,
+    "bug_fix": 3,
+    "performance": 2,
+    "manual_preference": 2
+  },
+  "last_capture": "2025-07-18T12:26:55.152038+00:00",
+  "sessions": {
+    "total": 1,
+    "current_session_captures": 6
+  },
+  "automation_stats": {
+    "patterns_detected": 0,
+    "prompts_shown": 0,
+    "prompts_accepted": 0,
+    "prompts_declined": 0
+  }
+}

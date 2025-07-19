@@ -1,0 +1,26 @@
+{
+  "enabled": true,
+  "auto_extract": true,
+  "min_content_length": 100,
+  "triggers": {
+    "on_session_save": true,
+    "on_significant_changes": true,
+    "on_memory_capture": true,
+    "files_threshold": 5,
+    "lines_threshold": 100
+  },
+  "gemini_integration": {
+    "enabled": true,
+    "model": "gemini-2.0-flash-thinking-exp",
+    "prompt_template": "Extract code patterns, technical facts, and constraints from the following content. Focus on:\n1. Client preferences and requirements\n2. Technical constraints and limits\n3. Code patterns and conventions\n4. API endpoints and integrations\n5. Security rules and best practices\n\nContent:\n{content}\n\nReturn as JSON with keys: facts, patterns, constraints"
+  },
+  "exclude_patterns": [
+    "console.log",
+    "TODO:",
+    "FIXME:",
+    "test",
+    "temp",
+    "debug",
+    "localhost"
+  ]
+}
