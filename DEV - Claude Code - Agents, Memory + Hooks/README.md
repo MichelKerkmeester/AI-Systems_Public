@@ -2,6 +2,7 @@
 > > To be added: 
 > - Dynamic long-term memory ([Graphiti](https://github.com/getzep/graphiti) & [Crawl4AI RAG](https://github.com/coleam00/mcp-crawl4ai-rag))
 > - Parallel agents that work with Gemini & Kimi
+> - Testing with Puppeteer, Playwright / Chrome Debug, accessible by Agents like Gemini
 > - Automated spec writing and task completion summaries
 
 # Claude Code - AI-Enhanced Development System
