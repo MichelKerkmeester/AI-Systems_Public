@@ -81,9 +81,13 @@ class FolderStructureHook(HookBase):
             "tasks": ".claude/project/tasks/",
             "todos": ".claude/project/tasks/",
             
-            # Sessions
-            "sessions": ".claude/project/sessions/",
-            "session": ".claude/project/sessions/"
+            # Task completion sub-folders
+            "memory-summary": ".claude/project/tasks/x__completed/memory/",
+            "documentation-summary": ".claude/project/tasks/x__completed/documentation/",
+            "refactoring-summary": ".claude/project/tasks/x__completed/refactoring/",
+            "multi-agent-summary": ".claude/project/tasks/x__completed/multi-agent/",
+            "integration-summary": ".claude/project/tasks/x__completed/integration/",
+            "optimization-summary": ".claude/project/tasks/x__completed/optimization/"
         }
         
         # Incorrect path patterns to detect

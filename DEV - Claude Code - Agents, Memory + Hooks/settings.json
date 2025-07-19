@@ -36,25 +36,11 @@
         ]
       }
     ],
-    "PreToolUse": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl/.claude/logic/hooks/session/session-hook.py'"
-          }
-        ]
-      }
-    ],
+    "PreToolUse": [],
     "PostToolUse": [
       {
         "matcher": "",
         "hooks": [
-          {
-            "type": "command",
-            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl/.claude/logic/hooks/session/session-hook.py'"
-          },
           {
             "type": "command",
             "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl/.claude/logic/hooks/core/context-management-hook.py'"

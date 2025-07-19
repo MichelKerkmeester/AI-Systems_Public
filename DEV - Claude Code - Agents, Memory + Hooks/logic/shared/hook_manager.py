@@ -1,6 +1,5 @@
 """
 Process-Aware Hook Manager for Claude Code
-Integrates with DesktopCommanderMCP for real-time monitoring
 """
 
 import asyncio
@@ -19,7 +18,7 @@ from .hook_priority import HookPriorityManager, HookExecution, HookMetadata
 
 class ProcessAwareHookManager:
     """
-    Manages hook execution with process monitoring via DesktopCommanderMCP
+    Manages hook execution with process monitoring
     """
     
     def __init__(self, agent_id: Optional[str] = None):
@@ -33,18 +32,6 @@ class ProcessAwareHookManager:
         self.claude_path = Path.home() / "AI & Dev" / "Websites" / "anobel.nl" / ".claude"
         self.hooks_dir = self.claude_path / "logic" / "hooks"
         
-        # Desktop Commander interface (will be initialized when available)
-        self.desktop_commander = None
-        self._init_desktop_commander()
-    
-    def _init_desktop_commander(self):
-        """Initialize Desktop Commander interface when available"""
-        try:
-            # This will be available after Claude Desktop restart
-            # For now, we'll use subprocess as fallback
-            self.desktop_commander = None
-        except:
-            pass
     
     async def trigger_hooks(self, event_type: str, context: Dict[str, Any]) -> List[Dict[str, Any]]:
         """
@@ -129,16 +116,9 @@ class ProcessAwareHookManager:
         
         try:
             # Execute hook
-            if self.desktop_commander:
-                # Use Desktop Commander for process monitoring
-                result = await self._execute_with_desktop_commander(
-                    hook_path, execution.context
-                )
-            else:
-                # Fallback to subprocess
-                result = await self._execute_with_subprocess(
-                    hook_path, execution.context
-                )
+            result = await self._execute_with_subprocess(
+                hook_path, execution.context
+            )
             
             # Cache result if successful
             if result.get("exit_code") == 0:
@@ -167,13 +147,6 @@ class ProcessAwareHookManager:
                 "execution_time_ms": execution_time,
                 "error": str(e)
             }
-    
-    async def _execute_with_desktop_commander(self, hook_path: Path, 
-                                            context: Dict[str, Any]) -> Dict[str, Any]:
-        """Execute hook using Desktop Commander for monitoring"""
-        # This will be implemented when Desktop Commander is available
-        # For now, fall back to subprocess
-        return await self._execute_with_subprocess(hook_path, context)
     
     async def _execute_with_subprocess(self, hook_path: Path, 
                                       context: Dict[str, Any]) -> Dict[str, Any]:

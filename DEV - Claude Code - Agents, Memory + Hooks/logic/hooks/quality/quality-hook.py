@@ -225,7 +225,7 @@ class QualityHook(HookBase):
             [
                 "Commands: /workflow, /test, /memory, /mode, /pr, /security",
                 "Status indicators: ⏳ Progress | ✅ Complete | ❌ Failed | ⚠️ Warning",
-                "Session files: .claude/project/sessions/current/",
+                "Task files: .claude/project/tasks/",
                 "Knowledge: facts.json, patterns.json, constraints.json"
             ],
             "info"
@@ -386,7 +386,7 @@ class QualityHook(HookBase):
             items = [
                 "🚀 **Auto-Running Tests** (threshold exceeded)",
                 f"Executing: `{test_cmd}`",
-                "Monitoring with Desktop Commander for real-time results..."
+                "Monitoring with subprocess for real-time results..."
             ]
             output_parts.append(MessageFormatter.section("Automated Testing", items, "test"))
             

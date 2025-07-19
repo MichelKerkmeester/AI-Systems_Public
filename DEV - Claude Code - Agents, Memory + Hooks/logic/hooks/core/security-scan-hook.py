@@ -350,7 +350,7 @@ class SecurityScanHook(ToolHook):
         }
         
         # This would be called by the /security command replacement
-        # Implementation would use Desktop Commander's search_code for fast scanning
+        # Implementation would use ripgrep for fast scanning
         
         return results
 

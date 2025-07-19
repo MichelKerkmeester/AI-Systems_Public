@@ -24,12 +24,15 @@ class KimiClient:
         if not self.api_key:
             raise ValueError("KIMI_API_KEY not found in environment variables")
         
-        self.base_url = "https://api.moonshot.cn/v1"
-        self.model = "moonshot-v1-32k"
+        # OpenRouter API endpoint  
+        self.base_url = "https://openrouter.ai/api/v1"
+        self.model = "moonshotai/kimi-k2"  # Available Kimi model on OpenRouter
         self.headers = {
             "Authorization": f"Bearer {self.api_key}",
             "Content-Type": "application/json",
-            "Accept": "application/json"
+            "Accept": "application/json",
+            "HTTP-Referer": "https://github.com/yourusername/yourproject",  # Required by OpenRouter
+            "X-Title": "Multi-Agent System"  # Optional but recommended
         }
         
         # Token costs (per 1k tokens)

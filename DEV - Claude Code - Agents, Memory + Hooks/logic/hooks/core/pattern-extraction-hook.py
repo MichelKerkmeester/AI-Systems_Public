@@ -18,7 +18,7 @@ sys.path.insert(0, str(claude_path))
 
 from logic.shared import (
     HookBase, ToolHook,
-    SettingsManager, SessionStateManager,
+    SettingsManager,
     MessageFormatter
 )
 
@@ -42,9 +42,8 @@ class PatternExtractionHook(HookBase):
         self.settings_path = self.claude_path / "logic" / "notebook" / "hooks" / "notebook-settings.json"
         self.settings = SettingsManager(self.settings_path, self._get_default_settings())
         
-        # Session tracking
+        # State directory for tracking
         self.state_dir = self.claude_path / "project" / "state"
-        self.session_state = SessionStateManager(self.state_dir)
         
         # Pattern definitions
         self.pattern_matchers = self._init_pattern_matchers()
@@ -133,22 +132,27 @@ class PatternExtractionHook(HookBase):
         if not self.settings.get("enabled"):
             return 0, None
         
-        # Check if this is a trigger event
-        tool_name = hook_input.get("toolName", "")
-        
-        # Session save trigger
-        if tool_name == "Bash" and self._is_session_save(hook_input):
-            return self._handle_session_save(hook_input)
-        
-        # File change trigger
-        elif tool_name in ["Edit", "Write", "MultiEdit"]:
-            return self._handle_file_changes(hook_input)
-        
-        # Memory capture trigger
-        elif tool_name == "mcp__graphiti-gemini__add_episode":
-            return self._handle_memory_capture(hook_input)
-        
+        # DISABLED: This hook depends on session functionality which has been removed
+        # Pattern extraction is now handled through task management and memory hooks
         return 0, None
+        
+        # Original functionality commented out for reference:
+        # Check if this is a trigger event
+        # tool_name = hook_input.get("toolName", "")
+        # 
+        # Session save trigger
+        # if tool_name == "Bash" and self._is_session_save(hook_input):
+        #     return self._handle_session_save(hook_input)
+        # 
+        # File change trigger
+        # elif tool_name in ["Edit", "Write", "MultiEdit"]:
+        #     return self._handle_file_changes(hook_input)
+        # 
+        # Memory capture trigger
+        # elif tool_name == "mcp__graphiti-gemini__add_episode":
+        #     return self._handle_memory_capture(hook_input)
+        # 
+        # return 0, None
     
     def _is_session_save(self, hook_input: Dict[str, Any]) -> bool:
         """Check if this is a session save command"""
@@ -362,7 +366,7 @@ import json
 # In production, this would call the actual Gemini MCP tool
 response = {
     "status": "simulated",
-    "message": "Gemini MCP integration pending Desktop Commander activation"
+    "message": "Gemini MCP integration pending"
 }
 print(json.dumps(response))
 """

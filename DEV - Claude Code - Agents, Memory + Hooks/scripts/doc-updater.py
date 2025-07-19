@@ -189,7 +189,7 @@ class DocUpdater:
             # Categorize files
             if "README" in md_file.name:
                 categories["Getting Started"].append(rel_path)
-            elif "technical/mcp" in str(rel_path):
+            elif "mcp" in str(rel_path) and "mcp/" in str(rel_path):
                 categories["MCP Servers"].append(rel_path)
             elif any(x in str(rel_path) for x in ["guide", "tutorial", "examples"]):
                 categories["Guides"].append(rel_path)

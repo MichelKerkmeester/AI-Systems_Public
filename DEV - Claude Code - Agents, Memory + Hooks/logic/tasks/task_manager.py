@@ -50,9 +50,9 @@ class TaskManager:
         self.tasks_dir = self.claude_path / "project" / "tasks"
         self.to_do_dir = self.tasks_dir / "to-do"
         self.active_dir = self.tasks_dir / "active"
-        self.completed_dir = self.tasks_dir / "completed"
+        self.completed_dir = self.tasks_dir / "x__completed"
         self.archive_dir = self.tasks_dir / "z__archive"
-        self.templates_dir = self.tasks_dir / "templates"
+        self.templates_dir = self.tasks_dir / "y__templates"
         
         # Legacy support - merge suggestions into to-do
         self.suggestions_dir = self.tasks_dir / "suggestions"

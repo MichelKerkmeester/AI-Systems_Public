@@ -176,7 +176,7 @@ class QueryPlanningHook(UserPromptHook):
             "The task lifecycle will automatically manage:",
             "• `/to-do` → Planning and approval",
             "• `/active` → Implementation tracking",
-            "• `/completed` → Documentation of results",
+            "• `/x__completed` → Documentation of results",
             "• `/z__archive` → Long-term reference"
         ]
         output += MessageFormatter.section("Task Management", recommendation_items, "task")

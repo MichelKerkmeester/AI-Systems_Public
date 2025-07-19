@@ -39,11 +39,7 @@ class PostToolUseMemoryHook(HookBase):
             "mcp__github-mcp-server__create_issue": "issue_created",
             
             # System operations
-            "Bash": "command_execution",
-            "mcp__desktop-commander__execute_command": "command_execution",
-            
-            # Configuration changes
-            "mcp__desktop-commander__set_config_value": "config_change"
+            "Bash": "command_execution"
         }
         
         # Patterns to detect in tool results
@@ -83,8 +79,7 @@ class PostToolUseMemoryHook(HookBase):
         # For manual mode, only capture critical operations
         if level == "manual":
             critical_tools = ["mcp__github-mcp-server__create_pull_request", 
-                            "mcp__github-mcp-server__merge_pull_request",
-                            "mcp__desktop-commander__set_config_value"]
+                            "mcp__github-mcp-server__merge_pull_request"]
             return tool_name in critical_tools
             
         # For semi/full mode, check additional criteria

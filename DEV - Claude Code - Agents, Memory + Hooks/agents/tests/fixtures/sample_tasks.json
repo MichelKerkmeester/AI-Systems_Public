@@ -1,0 +1,136 @@
+{
+  "trivial_tasks": [
+    {
+      "description": "Fix typo in README",
+      "expected_complexity": "TRIVIAL",
+      "expected_score": 1,
+      "expected_model": "kimi-pro"
+    },
+    {
+      "description": "Update version number",
+      "expected_complexity": "TRIVIAL", 
+      "expected_score": 1,
+      "expected_model": "kimi-pro"
+    },
+    {
+      "description": "Add comment to function",
+      "expected_complexity": "TRIVIAL",
+      "expected_score": 2,
+      "expected_model": "kimi-pro"
+    }
+  ],
+  "simple_tasks": [
+    {
+      "description": "Search for all occurrences of 'logger'",
+      "expected_complexity": "SIMPLE",
+      "expected_score": 4,
+      "expected_model": "kimi-pro"
+    },
+    {
+      "description": "Add error handling to existing function",
+      "expected_complexity": "SIMPLE",
+      "expected_score": 5,
+      "expected_model": "kimi-pro"
+    },
+    {
+      "description": "Update import statements",
+      "expected_complexity": "SIMPLE",
+      "expected_score": 3,
+      "expected_model": "kimi-pro"
+    }
+  ],
+  "medium_tasks": [
+    {
+      "description": "Implement user authentication feature",
+      "expected_complexity": "MEDIUM",
+      "expected_score": 10,
+      "expected_model": "claude-opus-4"
+    },
+    {
+      "description": "Refactor database connection logic",
+      "expected_complexity": "MEDIUM",
+      "expected_score": 11,
+      "expected_model": "claude-opus-4"
+    },
+    {
+      "description": "Add comprehensive test coverage",
+      "expected_complexity": "MEDIUM",
+      "expected_score": 9,
+      "expected_model": "claude-opus-4"
+    }
+  ],
+  "complex_tasks": [
+    {
+      "description": "Refactor entire authentication system with OAuth2 integration",
+      "expected_complexity": "COMPLEX",
+      "expected_score": 15,
+      "expected_model": "claude-opus-4"
+    },
+    {
+      "description": "Migrate from monolith to microservices architecture",
+      "expected_complexity": "COMPLEX",
+      "expected_score": 17,
+      "expected_model": "claude-opus-4"
+    }
+  ],
+  "critical_tasks": [
+    {
+      "description": "Complete system redesign with new framework migration and data migration",
+      "expected_complexity": "CRITICAL",
+      "expected_score": 19,
+      "expected_model": "claude-opus-4"
+    }
+  ],
+  "analysis_tasks": [
+    {
+      "description": "Analyze the codebase architecture and suggest improvements",
+      "expected_complexity": "COMPLEX",
+      "expected_score": 14,
+      "expected_model": "gemini-mcp",
+      "agent_type": "analyst"
+    },
+    {
+      "description": "Research best practices for microservices communication",
+      "expected_complexity": "MEDIUM",
+      "expected_score": 11,
+      "expected_model": "gemini-mcp",
+      "agent_type": "analyst"
+    }
+  ],
+  "review_tasks": [
+    {
+      "description": "Review security vulnerabilities in API endpoints",
+      "expected_complexity": "COMPLEX",
+      "expected_score": 14,
+      "expected_model": "claude-opus-4",
+      "agent_type": "reviewer"
+    },
+    {
+      "description": "Check code patterns for consistency",
+      "expected_complexity": "SIMPLE",
+      "expected_score": 6,
+      "expected_model": "kimi-pro",
+      "agent_type": "reviewer"
+    }
+  ],
+  "edge_cases": [
+    {
+      "description": "",
+      "expected_complexity": "TRIVIAL",
+      "expected_score": 0,
+      "expected_model": "kimi-pro"
+    },
+    {
+      "description": "!@#$%^&*()",
+      "expected_complexity": "TRIVIAL",
+      "expected_score": 0,
+      "expected_model": "kimi-pro"
+    },
+    {
+      "description": "This is a very long task description that contains multiple complex requirements including refactoring, testing, documentation, security analysis, performance optimization, and deployment automation all in one single task which should be broken down into smaller tasks",
+      "expected_complexity": "CRITICAL",
+      "expected_score": 18,
+      "expected_model": "claude-opus-4"
+    }
+  ]
+}

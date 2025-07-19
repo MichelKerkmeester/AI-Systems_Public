@@ -25,6 +25,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "logic" / "shared")
 
 from types import AnalystAgent, DeveloperAgent, ReviewerAgent, SynthesisAgent
 from routing import TaskComplexityAnalyzer, ModelSelector, ComplexityLevel
+from intelligence import get_memory_integration, get_conflict_resolution
+from intelligence.conflict_resolution import ConflictType
 
 
 class OrchestratorState(Enum):
@@ -92,6 +94,10 @@ class ParallelOrchestrator:
         # Model routing components
         self.complexity_analyzer = TaskComplexityAnalyzer()
         self.model_selector = ModelSelector()
+        
+        # Intelligence components
+        self.memory = get_memory_integration()
+        self.conflict_resolver = get_conflict_resolution()
         
         # Worktree management
         self.worktree_base = Path.home() / ".claude" / "agents" / "worktrees"

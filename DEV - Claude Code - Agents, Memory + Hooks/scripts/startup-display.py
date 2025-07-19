@@ -123,7 +123,7 @@ def get_mcp_status():
     expected_mcps = [
         "Sequential Thinking", "Graphiti", "Gemini", "GitHub", 
         "Context7", "n8n", "Puppeteer", "Playwright", 
-        "Desktop Commander", "Figma"
+        "Figma"
     ]
     
     # In a real implementation, we would check actual MCP connections

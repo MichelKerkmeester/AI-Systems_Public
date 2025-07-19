@@ -688,7 +688,7 @@ class LogicCommand:
         
         output += "\n⚠️ Note: This is a simulation. In production:\n"
         output += "  • Git worktrees would be created\n"
-        output += "  • Agents would be spawned via DesktopCommanderMCP\n"
+        output += "  • Agents would be spawned via subprocess\n"
         output += "  • Real-time monitoring would be active\n"
         
         output += "\nUse `/logic tasks parallel status` to monitor progress.\n"
@@ -914,7 +914,6 @@ class LogicCommand:
     def _check_integrations(self) -> Dict[str, bool]:
         """Check integration status"""
         return {
-            "DesktopCommanderMCP": True,
             "Sequential Thinking": True,
             "Graphiti Memory": True,
             "Gemini AI": True,

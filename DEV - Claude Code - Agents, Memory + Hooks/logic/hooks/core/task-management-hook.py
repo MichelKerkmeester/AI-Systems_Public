@@ -203,7 +203,7 @@ class TaskManagementHook(ToolHook):
             return {"status": 0, "output": output}
         
         # Check if task is being moved between folders
-        elif any(folder in file_path for folder in ["/active/", "/completed/"]):
+        elif any(folder in file_path for folder in ["/active/", "/x__completed/"]):
             output = self._generate_task_movement_notice(file_path)
             return {"status": 0, "output": output}
         
@@ -226,7 +226,7 @@ class TaskManagementHook(ToolHook):
             "5. **Complete** when finished: `/logic tasks complete`",
             "",
             "The task will automatically flow through:",
-            "`/to-do` → `/active` → `/completed` → `/z__archive`"
+            "`/to-do` → `/active` → `/x__completed` → `/z__archive`"
         ]
         
         output += self.formatter.section("Task Workflow", items, "success")
@@ -250,7 +250,7 @@ class TaskManagementHook(ToolHook):
         if "/active/" in file_path:
             status = "activated"
             emoji = "🚀"
-        elif "/completed/" in file_path:
+        elif "/x__completed/" in file_path:
             status = "completed"
             emoji = "✅"
         else:

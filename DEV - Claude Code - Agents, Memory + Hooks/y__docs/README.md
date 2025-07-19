@@ -17,35 +17,17 @@
 ## Directory Structure
 
 ```
-docs/
-├── graphiti/
-│   ├── README.md # Overview and navigation
-│   ├── memory-verifcation-guide.md # Testing and verification
-│   └── practical-examples.md # Real-world usage examples
-├── logic/
-│   ├── README.md # Overview and navigation
-│   ├── advanced.md
-│   ├── automation.md # Automation patterns
-│   ├── commands.md # Command reference
-│   ├── hooks.md # Hook system docs
-│   ├── migration.md # Migration guide
-│   └── troubleshooting.md # Common issues and solutions
-├── mcp/
-│   ├── desktop-commander/
-│   │   └── README.md # Overview and navigation
-│   ├── gemini/
-│   │   └── README.md # Overview and navigation
-│   ├── github/
-│   │   └── README.md # Overview and navigation
-│   ├── n8n/
-│   │   └── README.md # Overview and navigation
-│   ├── sequential-thinking/
-│   │   └── README.md # Overview and navigation
-│   └── README.md # Overview and navigation
-├── technical/
-│   └── hooks-in-cc.md
-├── CLI-CONTEXT.md
-└── README.md # Overview and navigation
+y__docs/
+├── agents/          # Multi-agent system documentation
+├── graphiti/        # Memory system documentation
+├── hooks/           # Hook system documentation
+├── logic/           # Logic commands and automation
+├── mcp/             # MCP server integrations
+├── memory/          # Memory management guides
+├── scripts/         # Script documentation
+├── technical/       # Technical references
+├── cli-context.md   # CLI environment guide
+└── README.md        # This file
 ```
 
 ## Overview
@@ -54,48 +36,41 @@ Welcome to the Claude Code documentation for the anobel.nl project. This documen
 
 ## Documentation Structure
 
-```
-docs/
-├── README.md                # This file
-├── CLI-CONTEXT.md          # CLI environment and workflow guide
-├── graphiti/               # Graphiti memory system documentation
-│   ├── README.md
-│   └── memory-verifcation-guide.md
-├── logic/                  # Logic system and hooks documentation
-│   ├── advanced.md         # Advanced features and customization
-│   ├── automation.md       # Automation patterns and workflows
-│   ├── commands.md         # Command reference guide
-│   ├── hooks.md           # Hook system documentation
-│   ├── migration.md       # Migration from old commands
-│   └── troubleshooting.md # Common issues and solutions
-├── technical/             # Technical implementation details
-│   └── hooks-in-cc.md    # Hook implementation in Claude Code
-└── mcp/                   # MCP server documentation (coming soon)
-    ├── sequential-thinking/
-    ├── gemini/
-    ├── github/
-    ├── n8n/
-    └── desktop-commander/
-```
+### Core Documentation
+- **agents/** - Multi-agent system architecture and implementation
+- **graphiti/** - Memory management with Neo4j integration
+- **hooks/** - Individual hook documentation and guides
+- **logic/** - Logic system, commands, and automation
+- **mcp/** - MCP server documentation for all integrations
+- **memory/** - Memory patterns and best practices
+- **scripts/** - Utility scripts and tools
+- **technical/** - Technical references and specifications
+
+### Key Files
+- **cli-context.md** - CLI environment specifics and workflow
+- **README.md** - Main documentation index (this file)
 
 ## Navigation Guide
 
 ### Quick Start
-- New to Claude Code? Start with [CLI-CONTEXT.md](./CLI-CONTEXT.md)
-- Migrating from old commands? See [logic/migration.md](./logic/migration.md)
+- New to Claude Code? Start with [cli-context.md](./cli-context.md)
+- Understanding hooks? See [hooks/README.md](./hooks/README.md)
 - Need help? Check [logic/troubleshooting.md](./logic/troubleshooting.md)
 
 ### By Topic
 - **Commands & Usage**: [logic/commands.md](./logic/commands.md)
 - **Automation**: [logic/automation.md](./logic/automation.md)
-- **Hooks System**: [logic/hooks.md](./logic/hooks.md)
+- **Hook System**: [hooks/README.md](./hooks/README.md)
 - **Memory Management**: [graphiti/README.md](./graphiti/README.md)
-- **Advanced Features**: [logic/advanced.md](./logic/advanced.md)
+- **MCP Servers**: [mcp/README.md](./mcp/README.md)
+- **Scripts & Tools**: [scripts/README.md](./scripts/README.md)
+- **Multi-Agent System**: [agents/README.md](./agents/README.md)
 
 ### By Use Case
 - **Setting up automation**: Start with [logic/automation.md](./logic/automation.md)
-- **Understanding hooks**: Read [logic/hooks.md](./logic/hooks.md)
-- **Managing memory**: See [graphiti/README.md](./graphiti/README.md)
+- **Creating custom hooks**: Read [hooks/hook-development-guide.md](./hooks/hook-development-guide.md)
+- **Managing memory**: See [graphiti/README.md](./graphiti/README.md) and [memory/](./memory/)
+- **Using MCP servers**: Browse [mcp/](./mcp/) for specific integrations
 - **Debugging issues**: Check [logic/troubleshooting.md](./logic/troubleshooting.md)
 
 ## Documentation Standards

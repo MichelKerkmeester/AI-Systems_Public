@@ -228,5 +228,5 @@ User Input → Pattern Detection → Format Instructions → Claude Executes →
 
 - [Memory System Overview](./README.md)
 - [Graphiti Integration](../graphiti/README.md)
-- [Hook System](../technical/claude-code-hooks-reference.md)
+- [Hook System](../hooks/claude-code-hooks-reference.md)
 - [Pattern Extraction](../logic/pattern-extraction.md)
