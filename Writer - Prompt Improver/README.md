@@ -2,7 +2,7 @@
 
 ## 🚀 What is This?
 
-The Prompt Improver System is a specialized Claude configuration that transforms vague questions into optimized AI prompts. Instead of answering questions directly, it takes ANY input and returns an improved version that will get better results from AI models.
+The Prompt Improver System is a specialized Claude configuration that transforms simple questions into optimized AI prompts. Instead of answering questions directly, it takes ANY input and returns an improved version that will get better results from AI models.
 
 **Key Benefits:**
 - Turn unclear requests into professional prompts
