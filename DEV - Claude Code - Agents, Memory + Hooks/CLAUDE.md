@@ -55,15 +55,16 @@ All commands and automation are designed for CLI usage. Desktop-specific feature
 ## 3. 📋 TASK MANAGEMENT
 
 ### Task Lifecycle
-Tasks automatically flow through stages:
+Tasks flow through stages:
 ```
-/to-do → /active → /completed → /z__archive (after 30 days)
+/specs → /active → /completed → /z__archive (user-managed only)
 ```
+**Note:** z__archive folders are user-managed. AI agents should organize completed tasks in topic-specific sub-folders.
 
 ### Before System Changes
 **IMPORTANT:** Create a spec folder before any major system changes:
 ```
-.claude/project/tasks/specs/
+.claude/tasks/specs/
 └── [feature-name]/
     ├── requirements.md     # What needs to be done
     ├── design.md          # How it will be implemented
@@ -143,7 +144,7 @@ Even with hooks enabled, these mistakes can still happen:
 
 ```
 .claude/
-├── docs/                   # All documentation
+├── docs/                   # All documentation (renamed from y__docs)
 │   ├── logic/             # Logic system docs
 │   ├── graphiti/          # Memory system docs
 │   ├── technical/         # Implementation details
@@ -153,15 +154,16 @@ Even with hooks enabled, these mistakes can still happen:
 │   ├── memory/            # Memory context
 │   ├── tasks/             # Task lifecycle
 │   └── quality/           # Code quality
-├── project/
-│   ├── knowledge/         # facts.json, patterns.json, constraints.json
-│   ├── sessions/          # Work history
-│   ├── tasks/             # Task organization
-│   │   ├── to-do/        # Pending tasks
-│   │   ├── active/       # Current task (max 1)
-│   │   ├── completed/    # Finished tasks
-│   │   └── z__archive/   # Old tasks (excluded)
-│   └── state/             # System state
+├── knowledge/              # facts.json, patterns.json, constraints.json (moved from project/)
+├── state/                  # System state (moved from project/)
+├── tasks/                  # Task organization (moved from project/)
+│   ├── specs/            # Task specifications (pending)
+│   ├── active/           # Current task (max 1)
+│   ├── completed/        # Finished tasks
+│   └── z__archive/       # User-managed archive (excluded from AI operations)
+├── tests/                  # Tests (moved from project/)
+├── agents/                 # Agent system
+├── scripts/                # Utility scripts
 └── settings.json          # Configuration
 ```
 

@@ -47,14 +47,14 @@ class TaskManager:
             self.claude_path = claude_path
         
         # Task directories
-        self.tasks_dir = self.claude_path / "project" / "tasks"
-        self.to_do_dir = self.tasks_dir / "to-do"
+        self.tasks_dir = self.claude_path / "tasks"
+        self.to_do_dir = self.tasks_dir / "specs"
         self.active_dir = self.tasks_dir / "active"
-        self.completed_dir = self.tasks_dir / "x__completed"
+        self.completed_dir = self.tasks_dir / "completed"
         self.archive_dir = self.tasks_dir / "z__archive"
         self.templates_dir = self.tasks_dir / "y__templates"
         
-        # Legacy support - merge suggestions into to-do
+        # Legacy support - merge suggestions into specs
         self.suggestions_dir = self.tasks_dir / "suggestions"
         
         # Task registry
@@ -88,7 +88,7 @@ class TaskManager:
             json.dump(registry, f, indent=2)
     
     def _migrate_suggestions_to_todo(self):
-        """Migrate any remaining files from suggestions to to-do"""
+        """Migrate any remaining files from suggestions to specs"""
         if self.suggestions_dir.exists():
             for file_path in self.suggestions_dir.glob("*.md"):
                 dest_path = self.to_do_dir / file_path.name
@@ -109,8 +109,34 @@ class TaskManager:
         safe_name = ''.join(c for c in safe_name if c.isalnum() or c in '-_')
         return f"{safe_name}.md"
     
+    def _determine_task_subfolder(self, name: str, task_type: str = "specs") -> str:
+        """Determine appropriate sub-folder based on task name"""
+        name_lower = name.lower()
+        
+        # Category mappings
+        if any(word in name_lower for word in ["feature", "add", "implement", "create", "new"]):
+            return "features"
+        elif any(word in name_lower for word in ["bug", "fix", "issue", "error", "problem"]):
+            return "bugs"
+        elif any(word in name_lower for word in ["enhance", "improve", "upgrade", "update"]):
+            return "enhancements"
+        elif any(word in name_lower for word in ["refactor", "clean", "reorganize", "restructure", "optimize"]):
+            return "refactoring"
+        elif any(word in name_lower for word in ["doc", "readme", "guide", "manual", "help"]):
+            return "documentation"
+        elif any(word in name_lower for word in ["test", "spec", "verify", "validate"]):
+            return "testing"
+        elif any(word in name_lower for word in ["security", "auth", "permission", "vulnerability"]):
+            return "security"
+        elif any(word in name_lower for word in ["performance", "speed", "optimize", "cache"]):
+            return "performance"
+        elif any(word in name_lower for word in ["integrate", "connect", "api", "webhook"]):
+            return "integrations"
+        else:
+            return "general"
+    
     def create_task(self, name: str, description: str = "", template: Optional[str] = None) -> Task:
-        """Create a new task in to-do"""
+        """Create a new task in specs with automatic sub-folder organization"""
         # Create task object
         task = Task(
             name=name,
@@ -119,9 +145,16 @@ class TaskManager:
             status="to-do"
         )
         
+        # Determine sub-folder
+        subfolder = self._determine_task_subfolder(name)
+        task_dir = self.to_do_dir / subfolder
+        
+        # Ensure sub-folder exists
+        task_dir.mkdir(parents=True, exist_ok=True)
+        
         # Generate filename
         filename = self._generate_task_filename(name)
-        filepath = self.to_do_dir / filename
+        filepath = task_dir / filename
         
         # Use template if provided
         if template and (self.templates_dir / f"{template}.md").exists():
@@ -176,18 +209,33 @@ class TaskManager:
         if registry["active_task"]:
             raise ValueError(f"Task '{registry['active_task']}' is already active. Complete it first.")
         
-        # Move file
+        # Find the file (could be in a sub-folder)
         filename = self._generate_task_filename(name)
-        source = self.to_do_dir / filename
+        source = None
         
-        if not source.exists():
-            # Try legacy suggestions directory
-            source = self.suggestions_dir / filename
-            if not source.exists():
-                # Try to find in completed
-                source = self.completed_dir / filename
-                if not source.exists():
-                    return False
+        # First try direct path
+        if (self.to_do_dir / filename).exists():
+            source = self.to_do_dir / filename
+        else:
+            # Search in sub-folders
+            for subdir in self.to_do_dir.iterdir():
+                if subdir.is_dir() and (subdir / filename).exists():
+                    source = subdir / filename
+                    break
+        
+        # Try legacy locations if not found
+        if not source:
+            if (self.suggestions_dir / filename).exists():
+                source = self.suggestions_dir / filename
+            else:
+                # Search in completed sub-folders
+                for subdir in self.completed_dir.iterdir():
+                    if subdir.is_dir() and (subdir / filename).exists():
+                        source = subdir / filename
+                        break
+        
+        if not source:
+            return False
         
         dest = self.active_dir / filename
         shutil.move(str(source), str(dest))
@@ -221,10 +269,17 @@ class TaskManager:
         if not source.exists():
             return False
         
+        # Determine sub-folder for completed task
+        subfolder = self._determine_task_subfolder(name)
+        completed_subdir = self.completed_dir / subfolder
+        
+        # Ensure sub-folder exists
+        completed_subdir.mkdir(parents=True, exist_ok=True)
+        
         # Add timestamp to completed filename
         timestamp = datetime.now().strftime('%Y-%m-%d-%H%M%S')
         dest_filename = f"{timestamp}-{filename}"
-        dest = self.completed_dir / dest_filename
+        dest = completed_subdir / dest_filename
         
         shutil.move(str(source), str(dest))
         
@@ -270,11 +325,11 @@ class TaskManager:
         results = []
         query_lower = query.lower()
         
-        # Search in all directories except archive
+        # Search in all directories except archive (including sub-folders)
         for dir_path in [self.to_do_dir, self.active_dir, self.completed_dir]:
             if not dir_path.exists():
                 continue
-            for filepath in dir_path.glob("*.md"):
+            for filepath in dir_path.rglob("*.md"):
                 content = filepath.read_text()
                 
                 if query_lower in content.lower():
@@ -377,38 +432,60 @@ class TaskManager:
         
         return total_hours / count if count > 0 else None
     
-    def archive_old_tasks(self, days: int = 30) -> int:
-        """Archive completed tasks older than specified days"""
+    def suggest_tasks_for_archival(self, days: int = 30) -> List[Tuple[Path, datetime]]:
+        """
+        Suggest completed tasks that could be archived (user-managed only).
+        
+        IMPORTANT: z__archive folders are user-managed only. This method only
+        suggests files for archival - it does NOT move files automatically.
+        Only the user should move files to z__archive folders.
+        
+        Returns:
+            List of tuples (filepath, completion_date) for tasks older than specified days
+        """
         from datetime import timedelta
         
-        archived_count = 0
+        suggestions = []
         cutoff_date = datetime.now() - timedelta(days=days)
         
-        # Check completed directory
-        for filepath in self.completed_dir.glob("*.md"):
-            # Try to get completion date from filename or content
+        # Check completed directory and subdirectories
+        for filepath in self.completed_dir.rglob("*.md"):
+            # Skip files already in z__archive
+            if "z__archive" in str(filepath):
+                continue
+                
             try:
-                # Extract timestamp from filename if present
+                # Try to get completion date from filename
                 filename_parts = filepath.stem.split('-')
                 if len(filename_parts) >= 3:
                     date_str = '-'.join(filename_parts[:3])
                     file_date = datetime.strptime(date_str, '%Y-%m-%d')
                     
                     if file_date < cutoff_date:
-                        # Archive the file
-                        archive_path = self.archive_dir / filepath.name
-                        shutil.move(str(filepath), str(archive_path))
-                        archived_count += 1
+                        suggestions.append((filepath, file_date))
             except:
                 # If we can't parse the date, check file modification time
                 stat = filepath.stat()
                 mod_time = datetime.fromtimestamp(stat.st_mtime)
                 if mod_time < cutoff_date:
-                    archive_path = self.archive_dir / filepath.name
-                    shutil.move(str(filepath), str(archive_path))
-                    archived_count += 1
+                    suggestions.append((filepath, mod_time))
         
-        return archived_count
+        # Sort by date (oldest first)
+        suggestions.sort(key=lambda x: x[1])
+        return suggestions
+    
+    def archive_old_tasks(self, days: int = 30) -> int:
+        """
+        DEPRECATED: This method is disabled to ensure z__archive is user-managed only.
+        Use suggest_tasks_for_archival() instead to get a list of candidates.
+        
+        Raises:
+            NotImplementedError: Always raised as automatic archival is disabled
+        """
+        raise NotImplementedError(
+            "Automatic archival is disabled. z__archive folders are user-managed only. "
+            "Use suggest_tasks_for_archival() to get a list of archival candidates."
+        )
     
     def should_exclude_path(self, path: Path) -> bool:
         """Check if a path should be excluded from Claude operations"""

@@ -3,7 +3,7 @@
   "planning_threshold": 6,
   "auto_create_task": true,
   "require_approval": true,
-  "task_folder": "to-do",
+  "task_folder": "specs",
   "include_timeline": true,
   "include_metrics": true,
   "description": "Automatically creates task documents for complex queries requiring planning"

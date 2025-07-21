@@ -79,7 +79,7 @@ class TestTracker:
     
     def __init__(self, state_path: Path):
         """Initialize test tracker"""
-        self.state_path = state_path / "test-state.json"
+        self.state_path = state_path / "mode-state.json"
         self._state = None
     
     @property

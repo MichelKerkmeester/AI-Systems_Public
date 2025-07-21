@@ -23,7 +23,7 @@ class DocUpdateHook(ToolHook):
     def __init__(self):
         super().__init__()
         self.formatter = MessageFormatter()
-        self.state_file = Path(__file__).parent.parent.parent / "project" / "state" / "doc-update-state.json"
+        self.state_file = Path(__file__).parent.parent.parent / "state" / "doc-update-state.json"
         self.doc_updater = Path(__file__).parent.parent.parent / "scripts" / "doc-updater.py"
         
     def can_handle(self, request_data: dict) -> bool:
@@ -31,7 +31,7 @@ class DocUpdateHook(ToolHook):
         # Trigger on documentation file changes
         if request_data.get("name") in ["Write", "Edit", "MultiEdit"]:
             file_path = request_data.get("arguments", {}).get("file_path", "")
-            return ".claude/y__docs" in file_path and file_path.endswith(".md")
+            return ".claude/docs" in file_path and file_path.endswith(".md")
         
         # Also trigger on /save commands for periodic updates
         if request_data.get("name") == "save-command":
@@ -160,7 +160,7 @@ class DocUpdateHook(ToolHook):
             f"⚠️ Found {count} broken link{'s' if count > 1 else ''} in documentation",
             "",
             "To view details and fix:",
-            "`cat .claude/y__docs/UPDATE_REPORT.md`",
+            "`cat .claude/docs/UPDATE_REPORT.md`",
             "",
             "To manually run documentation update:",
             "`python3 .claude/scripts/doc-updater.py`"

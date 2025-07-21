@@ -38,7 +38,7 @@ class TaskManagementHook(ToolHook):
         # Handle task file operations
         if tool_name in ["Write", "Edit", "MultiEdit"]:
             file_path = request_data.get("arguments", {}).get("file_path", "")
-            if ".claude/project/tasks/" in file_path:
+            if ".claude/tasks/" in file_path:
                 return True
         
         return False
@@ -197,13 +197,13 @@ class TaskManagementHook(ToolHook):
         """Handle task file creation/editing"""
         file_path = request_data.get("arguments", {}).get("file_path", "")
         
-        # Check if this is a new task creation in to-do
-        if "/to-do/" in file_path and file_path.endswith(".md"):
+        # Check if this is a new task creation in specs
+        if "/specs/" in file_path and file_path.endswith(".md"):
             output = self._generate_task_creation_guidance(file_path)
             return {"status": 0, "output": output}
         
         # Check if task is being moved between folders
-        elif any(folder in file_path for folder in ["/active/", "/x__completed/"]):
+        elif any(folder in file_path for folder in ["/active/", "/completed/"]):
             output = self._generate_task_movement_notice(file_path)
             return {"status": 0, "output": output}
         
@@ -212,11 +212,19 @@ class TaskManagementHook(ToolHook):
     def _generate_task_creation_guidance(self, file_path: str) -> str:
         """Generate guidance for new task creation"""
         task_name = Path(file_path).stem
+        file_path_obj = Path(file_path)
+        
+        # Determine if it's in a sub-folder
+        parent_dir = file_path_obj.parent.name
+        if parent_dir != "specs":
+            location = f"/specs/{parent_dir}/"
+        else:
+            location = "/specs/"
         
         output = self.formatter.header("Task Created Successfully", "task")
         
         items = [
-            f"✅ Task '{task_name}' created in /to-do",
+            f"✅ Task '{task_name}' created in {location}",
             "",
             "**Task Workflow Reminder:**",
             "1. **Review** the task document for completeness",
@@ -225,8 +233,19 @@ class TaskManagementHook(ToolHook):
             "4. **Track** progress with TodoWrite",
             "5. **Complete** when finished: `/logic tasks complete`",
             "",
-            "The task will automatically flow through:",
-            "`/to-do` → `/active` → `/x__completed` → `/z__archive`"
+            "The task will flow through:",
+            "`/specs/[category]/` → `/active/` → `/completed/[category]/` → `/z__archive (user-managed)`",
+            "",
+            "**📁 Organization:** Tasks are automatically organized in sub-folders:",
+            "• **Specs**: `/specs/features/`, `/specs/bugs/`, `/specs/enhancements/`, etc.",
+            "• **Completed**: `/completed/features/`, `/completed/bugs/`, `/completed/refactoring/`, etc.",
+            "",
+            "Common categories:",
+            "• `features/` - New functionality",
+            "• `bugs/` - Bug fixes and issues",
+            "• `enhancements/` - Improvements and upgrades",
+            "• `refactoring/` - Code restructuring",
+            "• `documentation/` - Docs and guides"
         ]
         
         output += self.formatter.section("Task Workflow", items, "success")
@@ -236,7 +255,8 @@ class TaskManagementHook(ToolHook):
             "💡 **Tips for Task Management:**",
             "• Only one task can be active at a time",
             "• TodoWrite automatically tracks progress",
-            "• Tasks archive after 30 days in completed",
+            "• Organize completed tasks in topic-specific sub-folders",
+            "• z__archive folders are user-managed only",
             "• Use `/logic tasks status` to check progress"
         ]
         
@@ -250,7 +270,7 @@ class TaskManagementHook(ToolHook):
         if "/active/" in file_path:
             status = "activated"
             emoji = "🚀"
-        elif "/x__completed/" in file_path:
+        elif "/completed/" in file_path:
             status = "completed"
             emoji = "✅"
         else:
@@ -275,8 +295,42 @@ class TaskManagementHook(ToolHook):
                 "• Hook will monitor completion status",
                 "• Complete with: `/logic tasks complete`"
             ])
+        elif status == "completed":
+            # Try to determine sub-folder suggestion
+            folder_suggestion = self._suggest_task_folder(task_name)
+            items.extend([
+                "",
+                "**📁 Organization Reminder:**",
+                f"Consider organizing in: `{folder_suggestion}`",
+                "",
+                "Common sub-folders:",
+                "• `/completed/features/` - New functionality",
+                "• `/completed/bugs/` - Bug fixes",
+                "• `/completed/refactoring/` - Code improvements",
+                "• `/completed/documentation/` - Docs & guides"
+            ])
         
         output += self.formatter.section("Status Update", items, "success")
         output += self.formatter.footer()
         
         return output
+    
+    def _suggest_task_folder(self, task_name: str) -> str:
+        """Suggest appropriate sub-folder based on task name"""
+        task_lower = task_name.lower()
+        
+        # Simple keyword matching for folder suggestions
+        if any(word in task_lower for word in ["feature", "add", "implement", "create"]):
+            return "/completed/features/"
+        elif any(word in task_lower for word in ["bug", "fix", "issue", "error"]):
+            return "/completed/bugs/"
+        elif any(word in task_lower for word in ["refactor", "clean", "reorganize", "optimize"]):
+            return "/completed/refactoring/"
+        elif any(word in task_lower for word in ["doc", "guide", "readme"]):
+            return "/completed/documentation/"
+        elif any(word in task_lower for word in ["test", "spec"]):
+            return "/completed/testing/"
+        elif any(word in task_lower for word in ["enhance", "improve", "upgrade"]):
+            return "/completed/enhancements/"
+        else:
+            return "/completed/general/"

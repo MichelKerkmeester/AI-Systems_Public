@@ -52,7 +52,7 @@ class SystemStatusUpdateHook(HookBase):
         super().__init__("SystemStatusUpdate")
         self.claude_md_path = self.project_root / "CLAUDE.md"
         self.settings_path = self.project_root / ".claude" / "settings.json"
-        self.knowledge_dir = self.project_root / ".claude" / "project" / "knowledge"
+        self.knowledge_dir = self.project_root / ".claude" / "knowledge"
         
         # MCP config locations (try multiple paths)
         self.mcp_config_paths = [
@@ -76,7 +76,7 @@ class SystemStatusUpdateHook(HookBase):
         triggers = [
             "claude_desktop_config.json",
             "settings.json",
-            ".claude/project/knowledge/",
+            ".claude/knowledge/",
             ".claude/logic/commands/",
             ".claude/logic/hooks/"
         ]
@@ -142,7 +142,6 @@ class SystemStatusUpdateHook(HookBase):
             mcps = {
                 "Sequential": True,
                 "Graphiti": True,
-                "Gemini": True,
                 "GitHub": True,
                 "Context7": True
             }

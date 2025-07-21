@@ -15,13 +15,11 @@ from typing import Dict, List, Any, Optional
 # Add parent directories to path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from shared import (
+from logic.shared import (
     MessageFormatter,
     SettingsManager,
     StateManager,
-    HookRegistry,
-    AgentRegistry,
-    GlobalResourceManager
+    HookRegistry
 )
 
 
@@ -47,9 +45,7 @@ class LogicCommand:
             default_state={"commands_executed": 0, "last_command": None}
         )
         
-        # Multi-agent support
-        self.agent_registry = AgentRegistry()
-        self.resource_manager = GlobalResourceManager()
+        # (Agent support removed)
     
     def _get_default_settings(self) -> Dict[str, Any]:
         """Get default settings"""
@@ -86,7 +82,6 @@ class LogicCommand:
             "hooks": self.manage_hooks,
             "system": self.show_system,
             "tasks": self.show_tasks,
-            "agents": self.manage_agents,
             "debug": self.debug_mode
         }
         
@@ -110,7 +105,6 @@ class LogicCommand:
             ("hooks", "Manage automated hooks"),
             ("system (sys)", "System metrics and performance"),
             ("tasks (t)", "Task management overview"),
-            ("agents", "Multi-agent orchestration"),
             ("debug (d)", "Debug mode and diagnostics")
         ]
         
@@ -338,10 +332,7 @@ class LogicCommand:
         
         # Multi-agent status
         output += f"\n🤖 **Multi-Agent System:**\n"
-        agents = self.agent_registry.list_active_agents()
-        output += f"  • Active agents: {len(agents)}\n"
-        if agents:
-            output += f"  • Types: {', '.join(set(a.agent_type for a in agents))}\n"
+        # Agent system removed
         resource_usage = self.resource_manager.get_total_usage()
         output += f"  • Resource usage: {resource_usage['cpu_percent']:.1f}% CPU, {resource_usage['memory_mb']:.1f}MB RAM\n"
         
@@ -583,12 +574,6 @@ class LogicCommand:
             "output": output
         }
     
-    def manage_agents(self, args: List[str]) -> Dict[str, Any]:
-        """Manage multi-agent system"""
-        # Import and delegate to AgentsCommand
-        from .agents import AgentsCommand
-        agents_cmd = AgentsCommand()
-        return agents_cmd.execute(args)
     
     def manage_parallel_tasks(self, args: List[str]) -> Dict[str, Any]:
         """Manage parallel task execution"""
@@ -598,27 +583,13 @@ class LogicCommand:
         action = args[0].lower()
         
         if action == "start":
-            return self._start_parallel_agents(args[1:] if len(args) > 1 else [])
+            return {"status": "error", "message": "Parallel agents have been removed. Use Task tool instead."}
         elif action == "status":
             return self._show_parallel_status()
-        elif action == "logs":
-            if len(args) < 2:
-                return {"status": "error", "message": "Specify agent ID for logs"}
-            return self._show_agent_logs(args[1])
-        elif action == "pause":
-            if len(args) < 2:
-                return {"status": "error", "message": "Specify agent ID to pause"}
-            return self._pause_agent(args[1])
-        elif action == "resume":
-            if len(args) < 2:
-                return {"status": "error", "message": "Specify agent ID to resume"}
-            return self._resume_agent(args[1])
-        elif action == "merge":
-            if len(args) < 2:
-                return {"status": "error", "message": "Specify agent ID to merge"}
-            return self._merge_agent_work(args[1])
+        elif action in ["logs", "pause", "resume", "merge"]:
+            return {"status": "error", "message": "Agent operations removed. Use Task tool instead."}
         elif action == "cleanup":
-            return self._cleanup_parallel_agents()
+            return {"status": "error", "message": "Agent cleanup no longer needed."}
         else:
             return {
                 "status": "error",
@@ -632,8 +603,7 @@ class LogicCommand:
         
         output += "\n🚀 **Parallel Commands:**\n"
         commands = [
-            ("start [wp1,wp2,...]", "Launch agents for work packages"),
-            ("start all", "Launch agents for all pending tasks"),
+            ("start", "[Removed - use Task tool instead]"),
             ("status", "Show status of all agents"),
             ("logs [agent]", "View logs for specific agent"),
             ("pause [agent]", "Pause agent execution"),
@@ -646,16 +616,8 @@ class LogicCommand:
             output += f"  • `/logic tasks parallel {cmd}` - {desc}\n"
         
         output += "\n📊 **Current Resources:**\n"
-        # Check resource availability
-        if self.resource_manager.can_start_agent():
-            output += "  ✅ Resources available for new agents\n"
-        else:
-            output += "  ❌ Resource limits reached\n"
-        
-        total_usage = self.resource_manager.get_total_usage()
-        output += f"  • Active agents: {total_usage['agent_count']}\n"
-        output += f"  • Memory usage: {total_usage['memory_mb']:.1f} MB\n"
-        output += f"  • CPU usage: {total_usage['cpu_percent']:.1f}%\n"
+        output += "\n⚠️ **Note:** The parallel agent system has been removed.\n"
+        output += "Use the Task tool in Claude Code for parallel execution.\n"
         
         output += "\n" + MessageFormatter.footer()
         
@@ -664,69 +626,13 @@ class LogicCommand:
             "output": output
         }
     
-    def _start_parallel_agents(self, args: List[str]) -> Dict[str, Any]:
-        """Start parallel agents for work packages"""
-        if not args:
-            return {
-                "status": "error",
-                "message": "Specify work packages to execute (e.g., 'wp1,wp2' or 'all')"
-            }
-        
-        work_packages = []
-        if args[0].lower() == "all":
-            # Get all pending high-priority tasks
-            # In production, this would query TodoWrite or task system
-            work_packages = ["wp4-cleanup", "wp5-tasks", "wp6-parallel"]
-        else:
-            # Parse comma-separated list
-            work_packages = [wp.strip() for wp in args[0].split(",")]
-        
-        output = f"🚀 Starting parallel execution for {len(work_packages)} work packages:\n\n"
-        
-        for wp in work_packages:
-            output += f"  • {wp} - Initializing agent...\n"
-        
-        output += "\n⚠️ Note: This is a simulation. In production:\n"
-        output += "  • Git worktrees would be created\n"
-        output += "  • Agents would be spawned via subprocess\n"
-        output += "  • Real-time monitoring would be active\n"
-        
-        output += "\nUse `/logic tasks parallel status` to monitor progress.\n"
-        
-        return {
-            "status": "success",
-            "output": output
-        }
     
     def _show_parallel_status(self) -> Dict[str, Any]:
         """Show status of parallel agents"""
         output = MessageFormatter.header("Parallel Agent Status", "status")
         
-        # Get active agents
-        agents = self.agent_registry.list_active_agents()
-        
-        if not agents:
-            output += "\n📭 No active agents running.\n"
-        else:
-            output += f"\n🤖 **Active Agents ({len(agents)}):**\n\n"
-            
-            for agent in agents:
-                uptime = int(time.time() - agent.started)
-                output += f"📦 **{agent.work_package or 'General'}**\n"
-                output += f"  • Agent ID: {agent.agent_id}\n"
-                output += f"  • Type: {agent.agent_type}\n"
-                output += f"  • Status: {agent.status}\n"
-                output += f"  • Uptime: {uptime}s\n"
-                
-                # Progress from metadata
-                if "progress" in agent.metadata:
-                    output += f"  • Progress: {agent.metadata['progress']:.1f}%\n"
-                
-                output += "\n"
-        
-        # Resource usage
-        output += "💻 **Resource Usage:**\n"
-        total_usage = self.resource_manager.get_total_usage()
+        output += "\n📭 No active agents - system removed.\n"
+        output += "\nUse the Task tool for parallel execution.\n"
         output += f"  • Total memory: {total_usage['memory_mb']:.1f} MB\n"
         output += f"  • Total CPU: {total_usage['cpu_percent']:.1f}%\n"
         
@@ -744,61 +650,10 @@ class LogicCommand:
             "output": output
         }
     
-    def _show_agent_logs(self, agent_id: str) -> Dict[str, Any]:
-        """Show logs for specific agent"""
-        # In production, would read actual log files
-        output = f"📜 Logs for agent: {agent_id}\n\n"
-        output += "[Simulated log output]\n"
-        output += "2024-01-19 10:15:23 [INFO] Agent started\n"
-        output += "2024-01-19 10:15:24 [INFO] Workspace initialized\n"
-        output += "2024-01-19 10:15:25 [INFO] Task received: implement-feature\n"
-        output += "2024-01-19 10:15:26 [INFO] Executing task...\n"
-        
-        return {
-            "status": "success",
-            "output": output
-        }
     
-    def _pause_agent(self, agent_id: str) -> Dict[str, Any]:
-        """Pause agent execution"""
-        return {
-            "status": "success",
-            "output": f"⏸️ Agent {agent_id} paused (simulation)"
-        }
     
-    def _resume_agent(self, agent_id: str) -> Dict[str, Any]:
-        """Resume agent execution"""
-        return {
-            "status": "success",
-            "output": f"▶️ Agent {agent_id} resumed (simulation)"
-        }
     
-    def _merge_agent_work(self, agent_id: str) -> Dict[str, Any]:
-        """Merge agent's completed work"""
-        output = f"🔀 Merging work from agent: {agent_id}\n\n"
-        output += "• Checking for conflicts...\n"
-        output += "• No conflicts found\n"
-        output += "• Merging branch to main...\n"
-        output += "✅ Merge completed successfully (simulation)\n"
-        
-        return {
-            "status": "success",
-            "output": output
-        }
     
-    def _cleanup_parallel_agents(self) -> Dict[str, Any]:
-        """Clean up parallel agent resources"""
-        output = "🧹 Cleaning up parallel agents...\n\n"
-        output += "• Stopping all agents\n"
-        output += "• Removing git worktrees\n"
-        output += "• Clearing agent workspaces\n"
-        output += "• Releasing resources\n"
-        output += "\n✅ Cleanup completed (simulation)\n"
-        
-        return {
-            "status": "success",
-            "output": output
-        }
     
     def debug_mode(self, args: List[str]) -> Dict[str, Any]:
         """Enable debug mode and diagnostics"""
@@ -916,7 +771,6 @@ class LogicCommand:
         return {
             "Sequential Thinking": True,
             "Graphiti Memory": True,
-            "Gemini AI": True,
             "GitHub": True
         }
 

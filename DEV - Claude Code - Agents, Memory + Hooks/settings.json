@@ -11,7 +11,7 @@
           },
           {
             "type": "command",
-            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl/.claude/scripts/test-hook.py'"
+            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl/.claude/logic/hooks/core/prompt-enhancement-hook.py'"
           },
           {
             "type": "command",
@@ -122,5 +122,49 @@
     "context_on_startup": true,
     "max_relevant_memories": 5,
     "show_suggestions": true
+  },
+  "prompt_enhancement": {
+    "enabled": true,
+    "enhancement_level": "balanced",
+    "rule_injection": {
+      "enabled": true,
+      "inject_project_rules": true,
+      "inject_code_standards": true,
+      "inject_security_rules": true
+    },
+    "context_depth": {
+      "include_file_context": true,
+      "include_project_state": true,
+      "include_recent_changes": true,
+      "max_context_tokens": 2000
+    },
+    "pattern_learning": {
+      "enabled": true,
+      "track_success": true,
+      "adapt_patterns": true,
+      "learning_file": ".claude/pattern_learning.json"
+    },
+    "enhancement_modes": {
+      "minimal": {
+        "description": "Light touch - only critical clarifications",
+        "clarify_vague": false,
+        "suggest_breakdown": false,
+        "inject_rules": false
+      },
+      "balanced": {
+        "description": "Default - helpful enhancements without being intrusive",
+        "clarify_vague": true,
+        "suggest_breakdown": true,
+        "inject_rules": true
+      },
+      "comprehensive": {
+        "description": "Full enhancement - maximum assistance and structure",
+        "clarify_vague": true,
+        "suggest_breakdown": true,
+        "inject_rules": true,
+        "add_checklists": true,
+        "suggest_alternatives": true
+      }
+    }
   }
 }

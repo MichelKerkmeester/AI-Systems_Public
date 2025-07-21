@@ -100,9 +100,8 @@ def initialize_schema():
         print("\n✅ Neo4j schema initialization complete!")
         print("\n🎉 Graphiti is now ready to use!")
         print("\nNext steps:")
-        print("1. Test with: python3 .claude/logic/memory/test-graphiti.py")
-        print("2. In Claude Code: /memory manual 'Your first memory'")
-        print("3. Or trigger auto-capture: 'DECISION: Important architectural choice'")
+        print("1. In Claude Code: /memory manual 'Your first memory'")
+        print("2. Or trigger auto-capture: 'DECISION: Important architectural choice'")
         
         return True
         

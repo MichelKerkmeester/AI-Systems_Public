@@ -15,7 +15,7 @@ class DocAuditor:
     
     def __init__(self):
         self.base_path = Path(__file__).parent.parent
-        self.docs_path = self.base_path / "y__docs"
+        self.docs_path = self.base_path / "docs"
         self.audit_results = {
             "timestamp": datetime.now().isoformat(),
             "metrics": {},
@@ -72,10 +72,10 @@ class DocAuditor:
         
         # Check for expected documentation
         expected_docs = {
-            "y__docs/CONTRIBUTING.md": "Contribution guidelines",
-            "y__docs/CHANGELOG.md": "Change history",
-            "y__docs/API.md": "API reference",
-            "y__docs/SECURITY.md": "Security guidelines"
+            "docs/CONTRIBUTING.md": "Contribution guidelines",
+            "docs/CHANGELOG.md": "Change history",
+            "docs/API.md": "API reference",
+            "docs/SECURITY.md": "Security guidelines"
         }
         
         for path, description in expected_docs.items():

@@ -1,15 +1,9 @@
 {
   "settings": {
     "context_compaction": true,
-    "command_whitelist": ["context", "pr", "test", "workflow", "notebook", "mode", "gemini", "memory"],
+    "command_whitelist": ["context", "pr", "test", "workflow", "notebook", "mode", "memory"],
     "response_length": "adaptive",
     "autocomplete": true,
-    "gemini_optional": true,
-    "gemini_prompts": {
-      "enabled": true,
-      "default_response": "n",
-      "show_benefits": true
-    },
     "sequential_thinking": {
       "enabled": true,
       "mandatory": true,
@@ -23,7 +17,6 @@
         "security_implementation": true
       },
       "exceptions": {
-        "gemini_active": true,
         "simple_tasks": ["read", "write", "edit", "ls", "grep", "cat"],
         "known_context": true,
         "direct_commands": true,
@@ -46,7 +39,6 @@
       "/n": "/notebook",
       "/m": "/mode",
       "/p": "/pr",
-      "/g": "/gemini"
     },
     "quick_access": {
       "/test-quick": "/test quick",
@@ -64,10 +56,6 @@
       "/mode-strict": "/mode strict",
       "/mode-auto": "/mode auto",
       "/mode-hybrid": "/mode hybrid",
-      "/gemini-review": "/gemini review",
-      "/gemini-optimize": "/gemini optimize",
-      "/gemini-security": "/gemini security",
-      "/gemini-patterns": "/gemini patterns",
       "/notebook-extract": "/notebook extract",
       "/notebook-summary": "/notebook summary"
     }
@@ -265,25 +253,6 @@
     "context_export": {
       "method": "template_based",
       "include": ["current_branch", "recent_files", "active_tasks", "context_score"]
-    }
-  },
-  
-  "gemini_enhancement_triggers": {
-    "workflow": {
-      "conditions": ["files_count > 20", "complexity > medium", "user_request"],
-      "prompt": "Gemini AI can reduce token usage by ~70% for this codebase analysis."
-    },
-    "test": {
-      "conditions": ["test_type === 'full'", "files_count > 10"],
-      "prompt": "Gemini can provide pattern detection and optimization insights."
-    },
-    "context": {
-      "conditions": ["operation === 'export'", "context_score > 80"],
-      "prompt": "Gemini can create a condensed context summary (80% smaller)."
-    },
-    "notebook": {
-      "conditions": ["operation === 'extract'", "patterns_found > 5"],
-      "prompt": "Enhance extraction with Gemini pattern recognition?"
     }
   },
   

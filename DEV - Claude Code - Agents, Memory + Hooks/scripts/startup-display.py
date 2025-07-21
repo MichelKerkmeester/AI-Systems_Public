@@ -121,7 +121,7 @@ def get_mcp_status():
     """Get MCP server status"""
     # List of expected MCPs based on CLAUDE.md documentation
     expected_mcps = [
-        "Sequential Thinking", "Graphiti", "Gemini", "GitHub", 
+        "Sequential Thinking", "Graphiti", "GitHub", 
         "Context7", "n8n", "Puppeteer", "Playwright", 
         "Figma"
     ]

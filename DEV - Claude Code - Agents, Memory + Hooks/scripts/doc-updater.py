@@ -20,7 +20,7 @@ class DocUpdater:
         else:
             self.base_path = base_path
         
-        self.docs_path = self.base_path / "y__docs"
+        self.docs_path = self.base_path / "docs"
         self.broken_links = []
         self.updated_files = []
         
@@ -306,7 +306,7 @@ class DocUpdater:
         
         # Generate report
         report = self.generate_report()
-        report_path = self.base_path / "y__docs" / "UPDATE_REPORT.md"
+        report_path = self.base_path / "docs" / "UPDATE_REPORT.md"
         report_path.write_text(report)
         
         print(f"\nUpdate complete!")

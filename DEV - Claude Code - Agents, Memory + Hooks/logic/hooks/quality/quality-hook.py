@@ -28,7 +28,7 @@ class QualityHook(HookBase):
         
         # Settings and state paths
         self.settings_path = self.claude_path / "logic" / "quality" / "quality-settings.json"
-        self.state_path = self.claude_path / "project" / "state"
+        self.state_path = self.claude_path / "state"
         
         # Initialize managers
         self.settings = SettingsManager(self.settings_path, self._get_default_settings())
@@ -225,7 +225,7 @@ class QualityHook(HookBase):
             [
                 "Commands: /workflow, /test, /memory, /mode, /pr, /security",
                 "Status indicators: ⏳ Progress | ✅ Complete | ❌ Failed | ⚠️ Warning",
-                "Task files: .claude/project/tasks/",
+                "Task files: .claude/tasks/",
                 "Knowledge: facts.json, patterns.json, constraints.json"
             ],
             "info"

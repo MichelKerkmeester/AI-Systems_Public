@@ -36,8 +36,8 @@ try:
 except ImportError:
     # Fallback for standalone execution
     class HookBase:
-        def __init__(self, name):
-            self.name = name
+        def __init__(self):
+            self.name = "FolderStructure"
             self.project_root = Path(__file__).parent.parent.parent.parent
     
     class MessageFormatter:
@@ -47,18 +47,24 @@ except ImportError:
         def format_info(msg): return f"ℹ️ {msg}"
         @staticmethod
         def format_suggestion(msg): return f"💡 {msg}"
+        @staticmethod
+        def format_error(msg): return f"❌ {msg}"
 
 
 class FolderStructureHook(HookBase):
     def __init__(self):
-        super().__init__("FolderStructure")
+        try:
+            super().__init__("FolderStructure")
+        except TypeError:
+            # Fallback for standalone testing
+            super().__init__()
         
         # Define correct folder structure
         self.correct_structure = {
-            # Documentation should go to y__docs
-            "docs": ".claude/y__docs/",
-            "documentation": ".claude/y__docs/",
-            "doc": ".claude/y__docs/",
+            # Documentation should go to docs
+            "docs": ".claude/docs/",
+            "documentation": ".claude/docs/",
+            "doc": ".claude/docs/",
             
             # Archive locations
             "archive": ".claude/z__archive/",
@@ -68,34 +74,37 @@ class FolderStructureHook(HookBase):
             "agents": ".claude/agents/",
             "hooks": ".claude/logic/hooks/",
             "logic": ".claude/logic/",
-            "project": ".claude/project/",
             "scripts": ".claude/scripts/",
             
             # Knowledge files
-            "knowledge": ".claude/project/knowledge/",
-            "patterns": ".claude/project/knowledge/",
-            "facts": ".claude/project/knowledge/",
-            "constraints": ".claude/project/knowledge/",
+            "knowledge": ".claude/knowledge/",
+            "patterns": ".claude/knowledge/",
+            "facts": ".claude/knowledge/",
+            "constraints": ".claude/knowledge/",
             
             # Tasks
-            "tasks": ".claude/project/tasks/",
-            "todos": ".claude/project/tasks/",
+            "tasks": ".claude/tasks/",
+            "todos": ".claude/tasks/",
             
             # Task completion sub-folders
-            "memory-summary": ".claude/project/tasks/x__completed/memory/",
-            "documentation-summary": ".claude/project/tasks/x__completed/documentation/",
-            "refactoring-summary": ".claude/project/tasks/x__completed/refactoring/",
-            "multi-agent-summary": ".claude/project/tasks/x__completed/multi-agent/",
-            "integration-summary": ".claude/project/tasks/x__completed/integration/",
-            "optimization-summary": ".claude/project/tasks/x__completed/optimization/"
+            "memory-summary": ".claude/tasks/completed/memory/",
+            "documentation-summary": ".claude/tasks/completed/documentation/",
+            "refactoring-summary": ".claude/tasks/completed/refactoring/",
+            "multi-agent-summary": ".claude/tasks/completed/multi-agent/",
+            "integration-summary": ".claude/tasks/completed/integration/",
+            "optimization-summary": ".claude/tasks/completed/optimization/"
         }
         
         # Incorrect path patterns to detect
         self.incorrect_patterns = {
-            r"\.claude/docs/": ".claude/y__docs/",
-            r"\.claude/project/docs/": ".claude/y__docs/",
-            r"\.claude/documentation/": ".claude/y__docs/",
-            r"\.claude/project/documentation/": ".claude/y__docs/",
+            r"\.claude/y__docs/": ".claude/docs/",
+            r"\.claude/project/docs/": ".claude/docs/",
+            r"\.claude/documentation/": ".claude/docs/",
+            r"\.claude/project/documentation/": ".claude/docs/",
+            r"\.claude/project/knowledge/": ".claude/knowledge/",
+            r"\.claude/project/tasks/": ".claude/tasks/",
+            r"\.claude/project/sessions/": ".claude/sessions/",
+            r"\.claude/project/state/": ".claude/state/",
             r"\.claude/archive/": ".claude/z__archive/",
             r"\.claude/project/archive/": ".claude/z__archive/"
         }
@@ -109,11 +118,46 @@ class FolderStructureHook(HookBase):
         if not file_path:
             return None
             
+        # CRITICAL: Block ALL writes to z__archive folders (user-managed only)
+        if "z__archive" in file_path:
+            # Use error_box or fallback to simple print
+            try:
+                print(MessageFormatter.error_box(
+                    "BLOCKED: Cannot write to z__archive folders - these are user-managed only!"
+                ))
+            except:
+                print("❌ BLOCKED: Cannot write to z__archive folders - these are user-managed only!")
+            # Simple print for info
+            print("ℹ️  z__archive folders are exclusively for user-managed archival. "
+                  "AI agents should organize files in topic-specific sub-folders instead.")
+            
+            # Suggest alternative location
+            if "/tasks/" in file_path:
+                if "/completed/" in file_path:
+                    print("💡 Place completed tasks in sub-folders like:\n"
+                          "  • /completed/features/\n"
+                          "  • /completed/refactoring/\n"
+                          "  • /completed/documentation/")
+                elif "/specs/" in file_path:
+                    print("💡 Place specs in sub-folders like:\n"
+                          "  • /specs/features/\n"
+                          "  • /specs/bugs/\n"
+                          "  • /specs/enhancements/")
+            
+            return {
+                "error": "z__archive folders are user-managed only. Use topic-specific sub-folders instead.",
+                "blocked": True
+            }
+            
         # Check for incorrect paths
         suggestion = self.check_path(file_path)
         if suggestion:
-            # Block creation in .claude/docs/ directory
-            if ".claude/docs/" in file_path and ".claude/docs/README.md" not in file_path:
+            # Block creation in deprecated locations
+            if (".claude/y__docs/" in file_path or 
+                ".claude/project/knowledge/" in file_path or 
+                ".claude/project/tasks/" in file_path or
+                ".claude/project/sessions/" in file_path or
+                ".claude/project/state/" in file_path):
                 print(MessageFormatter.format_error(
                     f"❌ BLOCKED: Cannot create files in deprecated location: {file_path}"
                 ))
@@ -163,6 +207,18 @@ class FolderStructureHook(HookBase):
             
         return None
     
+    def process(self, request_data: dict, project_context: dict) -> dict:
+        """Main processing method required by HookBase"""
+        tool_name = request_data.get("name", "")
+        args = request_data.get("arguments", {})
+        
+        # Run pre-tool check
+        result = self.pre_tool_use(tool_name, args)
+        if result:
+            return {"status": 1, "output": result.get("error", "Operation blocked")}
+            
+        return {"status": 0}
+    
     def post_tool_use(self, tool_name: str, args: Dict, result: Any):
         """Check for incorrect references after file operations"""
         if tool_name not in ["Write", "Edit", "MultiEdit"]:
@@ -187,9 +243,9 @@ class FolderStructureHook(HookBase):
                     relative_part = match.group(1)
                     
                     # Special handling for nested structures
-                    if "y__docs" in relative_part:
-                        # Remove redundant y__docs if present
-                        relative_part = relative_part.replace("y__docs/", "")
+                    if "docs" in relative_part:
+                        # Remove redundant docs if present
+                        relative_part = relative_part.replace("docs/", "")
                     
                     suggested = os.path.join(correct_base, relative_part)
                     return suggested
@@ -199,8 +255,8 @@ class FolderStructureHook(HookBase):
         
         # Knowledge files
         if filename in ["facts.json", "patterns.json", "constraints.json", "security-patterns.json"]:
-            if ".claude/project/knowledge/" not in path_str:
-                return f".claude/project/knowledge/{filename}"
+            if ".claude/knowledge/" not in path_str:
+                return f".claude/knowledge/{filename}"
         
         # Hook files
         if filename.endswith("-hook.py") and ".claude/logic/hooks/" not in path_str:
@@ -306,11 +362,40 @@ class FolderStructureHook(HookBase):
         claude_dir = self.project_root / ".claude"
         
         # Check for incorrect docs directory
-        if (claude_dir / "docs").exists():
+        if (claude_dir / "y__docs").exists():
             issues.append({
                 "type": "incorrect_directory",
-                "path": ".claude/docs/",
-                "suggestion": "Move contents to .claude/y__docs/"
+                "path": ".claude/y__docs/",
+                "suggestion": "Move contents to .claude/docs/"
+            })
+        
+        # Check for old project directories
+        if (claude_dir / "project" / "knowledge").exists():
+            issues.append({
+                "type": "incorrect_directory",
+                "path": ".claude/project/knowledge/",
+                "suggestion": "Move contents to .claude/knowledge/"
+            })
+        
+        if (claude_dir / "project" / "tasks").exists():
+            issues.append({
+                "type": "incorrect_directory", 
+                "path": ".claude/project/tasks/",
+                "suggestion": "Move contents to .claude/tasks/"
+            })
+            
+        if (claude_dir / "project" / "sessions").exists():
+            issues.append({
+                "type": "incorrect_directory",
+                "path": ".claude/project/sessions/",
+                "suggestion": "Move contents to .claude/sessions/"
+            })
+            
+        if (claude_dir / "project" / "state").exists():
+            issues.append({
+                "type": "incorrect_directory",
+                "path": ".claude/project/state/",
+                "suggestion": "Move contents to .claude/state/"
             })
         
         # Check for files in wrong locations
@@ -334,6 +419,50 @@ class FolderStructureHook(HookBase):
             "valid": len(issues) == 0,
             "issues": issues
         }
+    
+    def suggest_folder_for_task(self, task_name: str, task_type: str = None) -> str:
+        """
+        Suggest appropriate sub-folder for a task based on its name and type.
+        
+        Args:
+            task_name: Name of the task/file
+            task_type: Optional type hint (e.g., 'spec', 'completed', 'active')
+            
+        Returns:
+            Suggested sub-folder path
+        """
+        task_lower = task_name.lower()
+        
+        # Define category mappings
+        categories = {
+            "features": ["feature", "add", "implement", "create", "new"],
+            "bugs": ["bug", "fix", "issue", "error", "problem"],
+            "refactoring": ["refactor", "clean", "reorganize", "restructure", "optimize"],
+            "documentation": ["doc", "readme", "guide", "manual", "help"],
+            "enhancements": ["enhance", "improve", "upgrade", "update"],
+            "testing": ["test", "spec", "verify", "validate"],
+            "security": ["security", "auth", "permission", "vulnerability"],
+            "performance": ["performance", "speed", "optimize", "cache"],
+            "integration": ["integrate", "connect", "api", "webhook"],
+            "migration": ["migrate", "move", "transfer", "convert"]
+        }
+        
+        # Check task name against categories
+        for category, keywords in categories.items():
+            if any(keyword in task_lower for keyword in keywords):
+                if task_type == "completed":
+                    return f".claude/tasks/completed/{category}/"
+                elif task_type == "specs":
+                    return f".claude/tasks/specs/{category}/"
+                elif task_type == "active":
+                    return f".claude/tasks/active/{category}/"
+                else:
+                    return f"{category}/"
+        
+        # Default to general category
+        if task_type:
+            return f".claude/tasks/{task_type}/general/"
+        return "general/"
 
 
 def main():
@@ -342,11 +471,14 @@ def main():
     
     # Test path checking
     test_paths = [
-        ".claude/docs/technical/test.md",
+        ".claude/y__docs/technical/test.md",
         ".claude/documentation/api.md",
         ".claude/project/docs/readme.md",
-        ".claude/logic/hooks/test-hook.py",
-        ".claude/project/patterns.json"
+        ".claude/project/knowledge/patterns.json",
+        ".claude/project/tasks/specs/test-task.md",
+        ".claude/project/sessions/test-session.md",
+        ".claude/project/state/test.json",
+        ".claude/logic/hooks/test-hook.py"
     ]
     
     print("Testing path validation:\n")

@@ -87,7 +87,7 @@ class QueryPlanningHook(UserPromptHook):
             "planning_threshold": 6,  # Score needed to trigger planning
             "auto_create_task": True,
             "require_approval": True,
-            "task_folder": "to-do",
+            "task_folder": "specs",
             "include_timeline": True,
             "include_metrics": True
         }
@@ -173,11 +173,11 @@ class QueryPlanningHook(UserPromptHook):
             "• Ensure nothing is missed",
             "• Document decisions and rationale",
             "",
-            "The task lifecycle will automatically manage:",
-            "• `/to-do` → Planning and approval",
-            "• `/active` → Implementation tracking",
-            "• `/x__completed` → Documentation of results",
-            "• `/z__archive` → Long-term reference"
+            "The task lifecycle will manage:",
+            "• `/specs` → Planning and approval (organized in sub-folders)",
+            "• `/active` → Implementation tracking",  
+            "• `/completed` → Documentation (organized in sub-folders)",
+            "• `/z__archive` → User-managed long-term archive"
         ]
         output += MessageFormatter.section("Task Management", recommendation_items, "task")
         
@@ -192,6 +192,9 @@ class QueryPlanningHook(UserPromptHook):
             "• Timeline and deliverables",
             "",
             f"Suggested task name: `{task_name}`",
+            "",
+            "The task will be automatically organized in the appropriate sub-folder",
+            "based on its type (features, bugs, enhancements, etc.).",
             "",
             "Once you approve the task, implementation can begin systematically."
         ]
