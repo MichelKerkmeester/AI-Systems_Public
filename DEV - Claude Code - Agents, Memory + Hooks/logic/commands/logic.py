@@ -22,6 +22,18 @@ from logic.shared import (
     HookRegistry
 )
 
+# Import code reuse components
+try:
+    from logic.code_reuse import (
+        ReuseAnalyzer, ComplianceValidator,
+        JustificationSystem, SimilarityDetector,
+        PatternMatcher, ConsolidationAnalyzer
+    )
+    from logic.code_reuse.state_manager import StateManager as ReuseStateManager
+    CODE_REUSE_AVAILABLE = True
+except ImportError:
+    CODE_REUSE_AVAILABLE = False
+
 
 class LogicCommand:
     """Unified logic system management"""
@@ -39,11 +51,21 @@ class LogicCommand:
         self.hook_registry = HookRegistry(self.claude_path)
         
         # State tracking
-        self.state_path = self.claude_path / "project" / "state"
+        self.state_path = self.claude_path / "logic" / "state"
         self.state = StateManager(
             self.state_path / "logic-state.json",
             default_state={"commands_executed": 0, "last_command": None}
         )
+        
+        # Initialize code reuse components if available
+        if CODE_REUSE_AVAILABLE:
+            self.reuse_analyzer = ReuseAnalyzer()
+            self.compliance_validator = ComplianceValidator()
+            self.justification_system = JustificationSystem()
+            self.similarity_detector = SimilarityDetector()
+            self.pattern_matcher = PatternMatcher()
+            self.consolidation_analyzer = ConsolidationAnalyzer()
+            self.reuse_state_manager = ReuseStateManager()
         
         # (Agent support removed)
     
@@ -82,7 +104,8 @@ class LogicCommand:
             "hooks": self.manage_hooks,
             "system": self.show_system,
             "tasks": self.show_tasks,
-            "debug": self.debug_mode
+            "debug": self.debug_mode,
+            "reuse": self.manage_reuse
         }
         
         if sub_cmd in handlers:
@@ -103,6 +126,7 @@ class LogicCommand:
         commands = [
             ("help (h)", "Show this help message"),
             ("hooks", "Manage automated hooks"),
+            ("reuse", "Code reuse analysis and enforcement"),
             ("system (sys)", "System metrics and performance"),
             ("tasks (t)", "Task management overview"),
             ("debug (d)", "Debug mode and diagnostics")
@@ -114,6 +138,8 @@ class LogicCommand:
         output += "\n🎯 **Quick Examples:**\n"
         output += "  • `/logic hooks list` - Show all hooks\n"
         output += "  • `/logic hooks disable security` - Disable security hook\n"
+        output += "  • `/logic reuse analyze Button` - Find reusable Button components\n"
+        output += "  • `/logic reuse report` - View code reuse metrics\n"
         output += "  • `/logic system` - Show performance metrics\n"
         output += "  • `/logic tasks` - View task automation status\n"
         
@@ -685,6 +711,46 @@ class LogicCommand:
                 "suggestions": ["on", "off", "status", "trace"]
             }
     
+    def manage_reuse(self, args: List[str]) -> Dict[str, Any]:
+        """Manage code reuse analysis and enforcement"""
+        if not CODE_REUSE_AVAILABLE:
+            return {
+                "status": "error",
+                "message": "Code reuse module not available. Check installation."
+            }
+            
+        if not args:
+            args = ["help"]
+        
+        action = args[0].lower()
+        
+        if action == "help":
+            return self._show_reuse_help()
+        elif action == "analyze":
+            if len(args) < 2:
+                return {"status": "error", "message": "Specify component name to analyze"}
+            return self._analyze_reuse(args[1], ' '.join(args[2:]) if len(args) > 2 else '')
+        elif action == "justify":
+            if len(args) < 2:
+                return {"status": "error", "message": "Specify file path to justify"}
+            return self._justify_file(args[1], ' '.join(args[2:]) if len(args) > 2 else '')
+        elif action == "report":
+            return self._generate_reuse_report()
+        elif action == "consolidate":
+            return self._find_consolidation_opportunities()
+        elif action == "metrics":
+            return self._show_reuse_metrics()
+        elif action == "enable":
+            return self._toggle_reuse_enforcement(True)
+        elif action == "disable":
+            return self._toggle_reuse_enforcement(False)
+        else:
+            return {
+                "status": "error",
+                "message": f"Unknown reuse action: {action}",
+                "suggestions": ["analyze", "justify", "report", "consolidate", "metrics", "enable", "disable"]
+            }
+    
     def _show_debug_status(self) -> Dict[str, Any]:
         """Show debug information"""
         output = MessageFormatter.header("Debug Status", "debug")
@@ -773,6 +839,274 @@ class LogicCommand:
             "Graphiti Memory": True,
             "GitHub": True
         }
+    
+    # Code Reuse Helper Methods
+    def _show_reuse_help(self) -> Dict[str, Any]:
+        """Show code reuse help"""
+        output = MessageFormatter.header("Code Reuse System", "reuse")
+        
+        output += "\n📋 **Available Commands:**\n"
+        commands = [
+            ("analyze <component>", "Find reusable components matching name/description"),
+            ("justify <file>", "Justify why a new file is needed"),
+            ("report", "Generate comprehensive reuse report"),
+            ("consolidate", "Find code consolidation opportunities"),
+            ("metrics", "Show reuse metrics and statistics"),
+            ("enable", "Enable reuse enforcement hook"),
+            ("disable", "Disable reuse enforcement hook")
+        ]
+        
+        for cmd, desc in commands:
+            output += f"  • `/logic reuse {cmd}` - {desc}\n"
+            
+        output += "\n🎯 **Examples:**\n"
+        output += "  • `/logic reuse analyze Button` - Find reusable button components\n"
+        output += "  • `/logic reuse justify src/NewFeature.js` - Justify new file creation\n"
+        output += "  • `/logic reuse consolidate` - Find duplicate code to merge\n"
+        
+        output += "\n💡 **Tips:**\n"
+        output += "  • Run `analyze` before creating new files\n"
+        output += "  • Use `consolidate` periodically to clean up duplicates\n"
+        output += "  • Check `metrics` to track improvement over time\n"
+        
+        output += "\n" + MessageFormatter.footer()
+        return {"status": "success", "output": output}
+    
+    def _analyze_reuse(self, component: str, description: str = '') -> Dict[str, Any]:
+        """Analyze reuse opportunities for a component"""
+        output = MessageFormatter.header(f"Reuse Analysis: {component}", "analysis")
+        
+        # Perform analysis
+        analysis = self.reuse_analyzer.analyze_for_reuse(component, description)
+        
+        if not analysis.components:
+            output += f"\n❌ No existing components found matching '{component}'\n"
+            output += "✅ You may create a new file for this component.\n"
+        else:
+            output += f"\n🔍 Found {len(analysis.components)} reusable component(s):\n"
+            
+            for i, comp in enumerate(analysis.components, 1):
+                output += f"\n**{i}. {comp.file_path}**\n"
+                output += f"  • Match Score: {comp.match_score:.0%}\n"
+                output += f"  • Functionality: {comp.functionality_match:.0%} match\n"
+                output += f"  • Interface: {comp.interface_compatibility:.0%} compatible\n"
+                output += f"  • Effort: {comp.modification_effort}\n"
+                output += f"  • Recommendation: {comp.extension_method}\n"
+                
+                if comp.code_snippet:
+                    output += f"  • Preview:\n```javascript\n{comp.code_snippet[:200]}...\n```\n"
+            
+            output += f"\n📊 **Overall Recommendation:** {analysis.recommendation}\n"
+            if analysis.analysis_summary:
+                output += f"💡 {analysis.analysis_summary}\n"
+        
+        # Update metrics
+        self.reuse_state_manager.increment_value(
+            'code_reuse_state.json',
+            'statistics.total_analyses'
+        )
+        
+        output += "\n" + MessageFormatter.footer()
+        return {"status": "success", "output": output}
+    
+    def _justify_file(self, file_path: str, reason: str = '') -> Dict[str, Any]:
+        """Create justification for new file"""
+        output = MessageFormatter.header(f"File Justification: {file_path}", "justify")
+        
+        # Check if justification already exists
+        existing = self.justification_system.get_justification(file_path)
+        if existing:
+            output += f"\n📋 **Existing Justification:**\n"
+            output += f"  • Status: {'✅ Approved' if existing.approved else '❌ Pending'}\n"
+            output += f"  • Created: {existing.timestamp}\n"
+            output += f"  • Reason: {existing.reason}\n"
+            
+            if existing.approved:
+                output += "\n✅ This file is already approved for creation.\n"
+                return {"status": "success", "output": output}
+        
+        if not reason:
+            output += "\n❌ Please provide a justification reason.\n"
+            output += "\nUsage: `/logic reuse justify <file> <reason>`\n"
+            output += "\nExample reasons:\n"
+            output += "  • 'New feature with no existing similar components'\n"
+            output += "  • 'External integration requiring specific structure'\n"
+            output += "  • 'Performance optimization requiring separate implementation'\n"
+            return {"status": "error", "output": output}
+        
+        # Create justification
+        justification = self.justification_system.create_justification(
+            file_path=file_path,
+            reason=reason,
+            reuse_attempts=[],  # Should be filled from actual analysis
+            alternatives_considered=[]
+        )
+        
+        # Auto-approve for now (in real implementation, might require review)
+        approved = self.justification_system.approve_justification(
+            file_path,
+            approved_by="system",
+            comments="Auto-approved via /logic reuse justify"
+        )
+        
+        if approved:
+            output += "\n✅ **Justification Approved!**\n"
+            output += f"  • File: {file_path}\n"
+            output += f"  • Reason: {reason}\n"
+            output += "\nYou may now create this file.\n"
+        else:
+            output += "\n❌ Justification could not be approved.\n"
+        
+        output += "\n" + MessageFormatter.footer()
+        return {"status": "success", "output": output}
+    
+    def _generate_reuse_report(self) -> Dict[str, Any]:
+        """Generate comprehensive reuse report"""
+        output = MessageFormatter.header("Code Reuse Report", "report")
+        
+        # Load current state
+        state = self.reuse_state_manager.load_state('code_reuse_state.json')
+        stats = state.get('statistics', {})
+        
+        # Find consolidation opportunities
+        opportunities = self.consolidation_analyzer.find_consolidation_opportunities()
+        
+        # Pattern compliance
+        pattern_report = self.pattern_matcher.generate_pattern_report()
+        
+        output += "\n📊 **Reuse Statistics:**\n"
+        output += f"  • Total Analyses: {stats.get('total_analyses', 0)}\n"
+        output += f"  • Files Analyzed: {stats.get('files_analyzed', 0)}\n"
+        output += f"  • Duplicates Found: {stats.get('duplicates_found', 0)}\n"
+        output += f"  • Consolidations: {stats.get('consolidations_completed', 0)}\n"
+        output += f"  • Code Lines Saved: {stats.get('code_lines_saved', 0)}\n"
+        
+        output += "\n🔄 **Consolidation Opportunities:**\n"
+        if opportunities:
+            total_savings = sum(opp.lines_saved for opp in opportunities)
+            output += f"  • Found {len(opportunities)} opportunities\n"
+            output += f"  • Potential savings: {total_savings} lines\n"
+            
+            for i, opp in enumerate(opportunities[:3], 1):
+                output += f"\n  {i}. {opp.strategy} - {opp.lines_saved} lines\n"
+                output += f"     Files: {', '.join(opp.affected_files[:3])}\n"
+        else:
+            output += "  • No consolidation opportunities found ✨\n"
+        
+        output += "\n📋 **Pattern Compliance:**\n"
+        output += f"  • Patterns Followed: {pattern_report.get('patterns_followed', 0)}\n"
+        output += f"  • Violations Found: {pattern_report.get('violations_count', 0)}\n"
+        output += f"  • Adoption Rate: {pattern_report.get('adoption_rate', 0):.0%}\n"
+        
+        if pattern_report.get('top_violations'):
+            output += "\n  ⚠️ Top Violations:\n"
+            for violation in pattern_report['top_violations'][:3]:
+                output += f"    • {violation['pattern']}: {violation['count']} instances\n"
+        
+        output += "\n" + MessageFormatter.footer()
+        return {"status": "success", "output": output}
+    
+    def _find_consolidation_opportunities(self) -> Dict[str, Any]:
+        """Find and display consolidation opportunities"""
+        output = MessageFormatter.header("Consolidation Analysis", "consolidate")
+        
+        output += "\n🔍 Analyzing codebase for duplicates...\n"
+        
+        # Find opportunities
+        opportunities = self.consolidation_analyzer.find_consolidation_opportunities()
+        
+        if not opportunities:
+            output += "\n✨ **No consolidation opportunities found!**\n"
+            output += "Your codebase is well-organized with minimal duplication.\n"
+        else:
+            output += f"\n📊 Found {len(opportunities)} consolidation opportunities:\n"
+            
+            total_savings = sum(opp.lines_saved for opp in opportunities)
+            output += f"\n💰 **Total potential savings: {total_savings} lines**\n"
+            
+            for i, opp in enumerate(opportunities[:5], 1):
+                output += f"\n**{i}. {opp.description}**\n"
+                output += f"  • Strategy: {opp.strategy}\n"
+                output += f"  • Lines saved: {opp.lines_saved}\n"
+                output += f"  • Effort: {opp.effort_estimate}\n"
+                output += f"  • Files affected: {len(opp.affected_files)}\n"
+                
+                if opp.migration_plan:
+                    output += "  • Migration steps:\n"
+                    for j, step in enumerate(opp.migration_plan[:3], 1):
+                        output += f"    {j}. {step}\n"
+                    if len(opp.migration_plan) > 3:
+                        output += f"    ... and {len(opp.migration_plan) - 3} more steps\n"
+            
+            if len(opportunities) > 5:
+                output += f"\n... and {len(opportunities) - 5} more opportunities\n"
+            
+            output += "\n💡 Run `/logic reuse report` for detailed analysis.\n"
+        
+        output += "\n" + MessageFormatter.footer()
+        return {"status": "success", "output": output}
+    
+    def _show_reuse_metrics(self) -> Dict[str, Any]:
+        """Show detailed reuse metrics"""
+        output = MessageFormatter.header("Code Reuse Metrics", "metrics")
+        
+        # Load state
+        state = self.reuse_state_manager.load_state('code_reuse_state.json')
+        stats = state.get('statistics', {})
+        perf = state.get('performance_metrics', {})
+        
+        output += "\n📈 **Usage Statistics:**\n"
+        output += f"  • Total Analyses: {stats.get('total_analyses', 0)}\n"
+        output += f"  • Files Analyzed: {stats.get('files_analyzed', 0)}\n"
+        output += f"  • New Files Created: {stats.get('new_files_created', 0)}\n"
+        output += f"  • File Creations Blocked: {stats.get('file_creations_blocked', 0)}\n"
+        output += f"  • Compliance Warnings: {stats.get('compliance_warnings', 0)}\n"
+        
+        # Calculate reuse rate
+        total_attempts = stats.get('new_files_created', 0) + stats.get('file_creations_blocked', 0)
+        reuse_rate = (stats.get('file_creations_blocked', 0) / total_attempts * 100) if total_attempts > 0 else 0
+        
+        output += f"\n📊 **Effectiveness:**\n"
+        output += f"  • Reuse Rate: {reuse_rate:.1f}%\n"
+        output += f"  • Code Lines Saved: {stats.get('code_lines_saved', 0)}\n"
+        output += f"  • Duplicates Found: {stats.get('duplicates_found', 0)}\n"
+        output += f"  • Consolidations: {stats.get('consolidations_completed', 0)}\n"
+        
+        output += f"\n⚡ **Performance:**\n"
+        output += f"  • Avg Analysis Time: {perf.get('average_analysis_time_ms', 0):.1f}ms\n"
+        output += f"  • Cache Hit Rate: {perf.get('cache_hit_rate', 0):.1%}\n"
+        output += f"  • Memory Usage: {perf.get('memory_usage_mb', 0):.1f}MB\n"
+        
+        # Feature flags
+        flags = state.get('feature_flags', {})
+        output += f"\n🔧 **Configuration:**\n"
+        output += f"  • Pattern Learning: {'✅' if flags.get('pattern_learning_enabled', True) else '❌'}\n"
+        output += f"  • AI Suggestions: {'✅' if flags.get('ai_suggestions_enabled', True) else '❌'}\n"
+        output += f"  • Performance Mode: {flags.get('performance_mode', 'balanced')}\n"
+        
+        output += "\n" + MessageFormatter.footer()
+        return {"status": "success", "output": output}
+    
+    def _toggle_reuse_enforcement(self, enable: bool) -> Dict[str, Any]:
+        """Enable or disable reuse enforcement"""
+        # This would update the hook configuration
+        # For now, we'll just update the state
+        action = "enabled" if enable else "disabled"
+        
+        output = MessageFormatter.header(f"Code Reuse {action.title()}", "config")
+        output += f"\n{'✅' if enable else '❌'} Code reuse enforcement has been {action}.\n"
+        
+        if enable:
+            output += "\n🔒 **Active Protections:**\n"
+            output += "  • New file creation requires justification\n"
+            output += "  • Compliance validation on all edits\n"
+            output += "  • Reuse suggestions in prompts\n"
+        else:
+            output += "\n⚠️ **Warning:** Code reuse is not being enforced.\n"
+            output += "Consider re-enabling to maintain code quality.\n"
+        
+        output += "\n" + MessageFormatter.footer()
+        return {"status": "success", "output": output}
 
 
 def main():

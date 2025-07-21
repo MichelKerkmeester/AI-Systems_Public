@@ -16,13 +16,13 @@ The startup-display.py script generates a unified status display showing memory 
 ### Command Line
 ```bash
 # Show startup display
-python3 .claude/scripts/startup-display.py
+python3 .claude/logic/scripts/startup-display.py
 
 # Output as JSON
-python3 .claude/scripts/startup-display.py --json
+python3 .claude/logic/scripts/startup-display.py --json
 
 # Use in session start
-echo "$(python3 .claude/scripts/startup-display.py)"
+echo "$(python3 .claude/logic/scripts/startup-display.py)"
 ```
 
 ### Options
@@ -236,7 +236,7 @@ if task_complexity > 3:
 ```bash
 #!/bin/bash
 # Show status before operations
-python3 .claude/scripts/startup-display.py
+python3 .claude/logic/scripts/startup-display.py
 echo "---"
 # Continue with operations
 ```

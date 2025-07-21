@@ -98,7 +98,7 @@ Welcome to the Claude Code documentation for the anobel.nl project. This documen
 
 When adding new documentation:
 1. Place it in the appropriate directory
-2. Run the TOC generator: `python3 .claude/scripts/add-toc.py`
+2. Run the TOC generator: `python3 .claude/logic/scripts/add-toc.py`
 3. Update relevant README files
 4. Add cross-references from related docs
 5. Test all links and code examples

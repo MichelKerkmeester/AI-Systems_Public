@@ -1,0 +1,92 @@
+{
+  "daily_captures": {
+    "2025-07-21": {
+      "PATTERN": 2,
+      "SECURITY": 3,
+      "RESOLVED": 1,
+      "DECISION": 2
+    }
+  },
+  "pattern_types": {
+    "PATTERN": 2,
+    "SECURITY": 3,
+    "RESOLVED": 1,
+    "DECISION": 2
+  },
+  "sources": {
+    "manual": 3,
+    "memory_context_hook": 1,
+    "pattern_extraction_hook": 1,
+    "test_hook": 2,
+    "conversation_buffer": 1
+  },
+  "automation_levels": {
+    "full": 6,
+    "manual": 1,
+    "semi": 1
+  },
+  "total_captures": 8,
+  "first_capture": "2025-07-21T13:14:39.912608+00:00",
+  "last_capture": "2025-07-21T13:20:49.897391+00:00",
+  "sessions": {
+    "test_session_001": 5
+  },
+  "performance_metrics": {
+    "capture_latency": [
+      23.778200149536133,
+      37.249088287353516,
+      23.692846298217773,
+      42.54293441772461,
+      23.95486831665039,
+      12.520790100097656,
+      12.514114379882812,
+      12.515068054199219
+    ],
+    "queue_processing_time": [
+      49.242258071899414,
+      51.43380165100098,
+      75.80399513244629
+    ],
+    "average_latency": 0,
+    "average_queue_time": 0
+  },
+  "pattern_hit_rates": {
+    "client_preference": {
+      "hits": 4,
+      "misses": 6
+    },
+    "api_pattern": {
+      "hits": 8,
+      "misses": 2
+    },
+    "security_rule": {
+      "hits": 5,
+      "misses": 5
+    }
+  },
+  "daily_automation_rate": {
+    "2025-07-21": {
+      "auto": 5,
+      "manual": 3
+    }
+  },
+  "hook_performance": {
+    "memory_context_hook": {
+      "triggered": 5,
+      "captured": 2
+    },
+    "post_tool_use_hook": {
+      "triggered": 5,
+      "captured": 0
+    },
+    "pattern_extraction_hook": {
+      "triggered": 0,
+      "captured": 0
+    },
+    "todo_memory_hook": {
+      "triggered": 0,
+      "captured": 0
+    }
+  },
+  "last_reset": "2025-07-21T13:14:39.886437+00:00"
+}

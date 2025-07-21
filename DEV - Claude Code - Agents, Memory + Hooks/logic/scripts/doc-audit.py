@@ -14,7 +14,7 @@ class DocAuditor:
     """Documentation health auditor"""
     
     def __init__(self):
-        self.base_path = Path(__file__).parent.parent
+        self.base_path = Path(__file__).parent.parent.parent
         self.docs_path = self.base_path / "docs"
         self.audit_results = {
             "timestamp": datetime.now().isoformat(),

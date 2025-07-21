@@ -80,7 +80,7 @@
 **Solutions:**
 1. Check current session:
    ```bash
-   cat .claude/state/.current-session
+   cat .claude/logic/state/.current-session
    ```
 
 2. Manually create new session:
@@ -218,7 +218,7 @@
 
 2. Clear stale locks:
    ```bash
-   rm .claude/state/locks/*.lock
+   rm .claude/logic/state/locks/*.lock
    ```
 
 3. Set unique agent ID:
@@ -246,13 +246,13 @@
 ### Reset Commands
 ```bash
 # Reset mode state
-rm .claude/state/mode-state.json
+rm .claude/logic/state/mode-state.json
 
 # Clear session state
-rm .claude/state/.current-session
+rm .claude/logic/state/.current-session
 
 # Reset all tracking
-rm -rf .claude/state/*
+rm -rf .claude/logic/state/*
 ```
 
 ### Emergency Recovery

@@ -7,30 +7,23 @@ This directory contains intelligent modules that enhance Claude Code's capabilit
 ```
 agents/
 ├── intelligence/          # Enhancement and integration modules
-│   ├── prompt_enhancer.py      # Claude-Organizer prompt enhancement
-│   ├── pattern_library.py      # Pattern matching for prompts
 │   ├── graphiti_memory_integration.py  # Memory system integration
 │   ├── sequential_thinking_integration.py  # Thinking tool integration
 │   └── conflict_resolution.py  # Conflict handling utilities
 └── clients/              # (Empty - previously contained API clients)
+
+# Note: prompt_enhancer.py and pattern_library.py have been moved to:
+# .claude/logic/prompt_improver/
 ```
 
 ## 🧠 Intelligence Modules
 
-### prompt_enhancer.py
-The Claude-Organizer integration that enhances every prompt with:
-- Two-pass enhancement (best practices + project rules)
-- CLAUDE.md rule injection
-- Context-aware improvements
-- Pattern matching capabilities
+### Moved Modules
+The following modules have been relocated to better organize the codebase:
+- **prompt_enhancer.py** → `.claude/logic/prompt_improver/prompt_enhancer.py`
+- **pattern_library.py** → `.claude/logic/prompt_improver/pattern_library.py`
 
-### pattern_library.py
-Pattern matching and learning system for common request types:
-- Bug fix patterns
-- Feature request patterns
-- Documentation patterns
-- Performance optimization patterns
-- Success tracking and adaptation
+These modules continue to provide prompt enhancement and pattern matching capabilities through the hook system.
 
 ### graphiti_memory_integration.py
 Integration with the Graphiti memory system for:
@@ -56,7 +49,7 @@ Utilities for handling conflicts in:
 ## 🚀 Usage
 
 These modules work automatically through the hook system. They are invoked by:
-- The prompt enhancement hook (`/logic/hooks/core/prompt-enhancement-hook.py`)
+- The prompt enhancement hook (`/logic/hooks/core/prompt-enhancement-hook.py`) - which uses modules from `/logic/prompt_improver/`
 - Memory context hooks
 - Other system hooks as needed
 

@@ -16,16 +16,16 @@ The mode-manager.py script handles the mode system for Claude Code, managing tra
 ### Command Line
 ```bash
 # Get current mode
-python3 .claude/scripts/mode-manager.py --current
+python3 .claude/logic/scripts/mode-manager.py --current
 
 # Change mode
-python3 .claude/scripts/mode-manager.py --set deep-work
+python3 .claude/logic/scripts/mode-manager.py --set deep-work
 
 # View mode history
-python3 .claude/scripts/mode-manager.py --history
+python3 .claude/logic/scripts/mode-manager.py --history
 
 # Get mode suggestions
-python3 .claude/scripts/mode-manager.py --suggest "implement authentication"
+python3 .claude/logic/scripts/mode-manager.py --suggest "implement authentication"
 ```
 
 ### As a Module

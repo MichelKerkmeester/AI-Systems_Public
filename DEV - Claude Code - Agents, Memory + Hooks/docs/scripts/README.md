@@ -28,7 +28,7 @@ Scripts in Claude Code provide utility functions that support the main system op
 All scripts can be run directly:
 
 ```bash
-python3 .claude/scripts/script-name.py [arguments]
+python3 .claude/logic/scripts/script-name.py [arguments]
 ```
 
 Or through the system:

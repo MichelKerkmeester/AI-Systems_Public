@@ -48,7 +48,7 @@ Settings file: `.claude/logic/context/context-settings.json`
 
 The hook runs automatically and requires no manual intervention. Context is saved to:
 - `.claude/sessions/context.json` - Current context
-- `.claude/state/context-state.json` - Hook state
+- `.claude/logic/state/context-state.json` - Hook state
 
 ### Context Structure
 ```json

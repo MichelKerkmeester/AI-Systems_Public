@@ -202,7 +202,7 @@ User Input → Pattern Detection → Format Instructions → Claude Executes →
 
 1. Check automation level: `cat .claude/logic/memory/settings.json`
 2. Verify Graphiti is running: Test with MCP call
-3. Check hook errors: `.claude/state/hook_errors.log`
+3. Check hook errors: `.claude/logic/state/hook_errors.log`
 
 ### Too Many Captures
 
@@ -212,7 +212,7 @@ User Input → Pattern Detection → Format Instructions → Claude Executes →
 
 ### Statistics Not Updating
 
-1. Check stats file: `.claude/state/memory_stats.json`
+1. Check stats file: `.claude/logic/state/memory_stats.json`
 2. Verify hook permissions
 3. Reset stats if corrupted
 

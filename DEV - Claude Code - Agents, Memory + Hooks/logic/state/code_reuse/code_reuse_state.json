@@ -1,0 +1,62 @@
+{
+  "version": "1.0.0",
+  "last_updated": null,
+  "statistics": {
+    "total_analyses": 0,
+    "files_analyzed": 0,
+    "duplicates_found": 0,
+    "consolidations_completed": 0,
+    "patterns_discovered": 0,
+    "violations_detected": 0,
+    "auto_fixes_applied": 0,
+    "manual_fixes_required": 0,
+    "code_lines_saved": 0,
+    "file_size_reduction_kb": 0
+  },
+  "performance_metrics": {
+    "average_analysis_time_ms": 0,
+    "cache_hit_rate": 0,
+    "pattern_match_accuracy": 0,
+    "false_positive_rate": 0,
+    "memory_usage_mb": 0,
+    "last_analysis_duration_ms": 0,
+    "analyses_since_last_cache_clear": 0
+  },
+  "historical_data": {
+    "daily_metrics": [],
+    "weekly_summaries": [],
+    "monthly_trends": {
+      "duplication_rate_trend": [],
+      "compliance_score_trend": [],
+      "automation_effectiveness_trend": []
+    }
+  },
+  "feature_flags": {
+    "auto_consolidation_enabled": false,
+    "pattern_learning_enabled": true,
+    "aggressive_deduplication": false,
+    "real_time_analysis": false,
+    "cross_project_analysis": false,
+    "ai_suggestions_enabled": true,
+    "webhook_notifications": false,
+    "performance_mode": "balanced"
+  },
+  "cache": {
+    "file_hashes": {},
+    "pattern_cache": {},
+    "analysis_results": {},
+    "last_cleared": null,
+    "size_mb": 0,
+    "max_size_mb": 100
+  },
+  "active_sessions": {
+    "current_analysis": null,
+    "pending_consolidations": [],
+    "queued_files": []
+  },
+  "error_log": {
+    "recent_errors": [],
+    "error_count_by_type": {},
+    "last_error": null
+  }
+}

@@ -76,7 +76,7 @@ class ClaudeMdUpdateHook(HookBase):
         # Check if modifying relevant files
         relevant_paths = [
             ".claude/logic/hooks/",
-            ".claude/scripts/",
+            ".claude/logic/scripts/",
             ".claude/logic/commands/",
             "settings.json"
         ]

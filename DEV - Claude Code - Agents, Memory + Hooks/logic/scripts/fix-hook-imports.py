@@ -41,7 +41,7 @@ def fix_imports_in_file(file_path):
 
 def main():
     """Fix imports in all hook files"""
-    hooks_dir = Path(__file__).resolve().parent.parent / "hooks"
+    hooks_dir = Path(__file__).resolve().parent.parent.parent / "logic" / "hooks"
     
     # Find all Python files
     python_files = list(hooks_dir.rglob("*.py"))

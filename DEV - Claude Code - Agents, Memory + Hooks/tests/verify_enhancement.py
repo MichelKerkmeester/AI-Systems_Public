@@ -8,7 +8,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 sys.path.insert(0, str(Path(__file__).parent.parent / "logic"))
 
-from agents.intelligence.prompt_enhancer import enhance_prompt
+from logic.prompt_improver.prompt_enhancer import enhance_prompt
 
 print("🚀 Claude-Organizer Enhancement Verification")
 print("=" * 50)

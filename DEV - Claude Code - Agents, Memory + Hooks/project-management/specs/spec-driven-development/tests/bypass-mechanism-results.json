@@ -1,0 +1,60 @@
+{
+  "test_name": "Prompt Improver Bypass Mechanism Tests",
+  "test_date": "2025-07-21",
+  "test_description": "Verify that prompts with bypass prefixes are not enhanced by the Prompt Improver system",
+  "tests": [
+    {
+      "test_id": 1,
+      "input": "raw: console.log('test')",
+      "expected_behavior": "No enhancement, original prompt passes through",
+      "actual_result": "PASS - Bypass prefix 'raw:' correctly prevents enhancement",
+      "enhancement_occurred": false,
+      "enhancement_notice_appeared": false,
+      "output_matches_input": true,
+      "notes": "The 'raw:' prefix successfully bypassed the enhancement system"
+    },
+    {
+      "test_id": 2,
+      "input": "exact: SELECT * FROM users",
+      "expected_behavior": "No enhancement, original SQL query passes through",
+      "actual_result": "PASS - Bypass prefix 'exact:' correctly prevents enhancement",
+      "enhancement_occurred": false,
+      "enhancement_notice_appeared": false,
+      "output_matches_input": true,
+      "notes": "The 'exact:' prefix successfully bypassed the enhancement system for SQL queries"
+    },
+    {
+      "test_id": 3,
+      "input": "/memory search patterns",
+      "expected_behavior": "No enhancement for command inputs",
+      "actual_result": "PASS - Commands starting with '/' are not enhanced",
+      "enhancement_occurred": false,
+      "enhancement_notice_appeared": false,
+      "output_matches_input": true,
+      "notes": "System commands are correctly excluded from enhancement"
+    },
+    {
+      "test_id": 4,
+      "input": "no-enhance: just do this exactly",
+      "expected_behavior": "No enhancement, original prompt passes through",
+      "actual_result": "PASS - Bypass prefix 'no-enhance:' correctly prevents enhancement",
+      "enhancement_occurred": false,
+      "enhancement_notice_appeared": false,
+      "output_matches_input": true,
+      "notes": "The 'no-enhance:' prefix successfully bypassed the enhancement system"
+    }
+  ],
+  "summary": {
+    "total_tests": 4,
+    "passed": 4,
+    "failed": 0,
+    "bypass_prefixes_tested": ["raw:", "exact:", "no-enhance:", "/command"],
+    "conclusion": "All bypass mechanisms are working correctly. The Prompt Improver system properly recognizes and respects all tested bypass prefixes, allowing original prompts to pass through without enhancement."
+  },
+  "implementation_notes": {
+    "bypass_detection": "The system correctly identifies bypass prefixes at the beginning of prompts",
+    "command_exclusion": "Commands starting with '/' are automatically excluded from enhancement",
+    "prefix_handling": "After detecting a bypass prefix, the system removes it and passes the remaining content unchanged",
+    "no_side_effects": "No enhancement notices or processing indicators appear when bypass is active"
+  }
+}

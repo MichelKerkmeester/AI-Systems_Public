@@ -54,7 +54,7 @@ Rules:
 
 ### Task Creation Detection
 ```
-File created: /tasks/specs/new-feature.md
+File created: /project-management/specs/new-feature.md
 
 ✅ Task 'new-feature' created in /specs
 

@@ -38,7 +38,7 @@ class TaskManagementHook(ToolHook):
         # Handle task file operations
         if tool_name in ["Write", "Edit", "MultiEdit"]:
             file_path = request_data.get("arguments", {}).get("file_path", "")
-            if ".claude/tasks/" in file_path:
+            if ".claude/project-management/" in file_path:
                 return True
         
         return False

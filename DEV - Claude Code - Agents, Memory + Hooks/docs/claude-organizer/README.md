@@ -79,7 +79,7 @@ Enhanced Prompt → Existing Hooks
     "pattern_learning": {
       "enabled": true,
       "track_success": true,
-      "persistence_file": ".claude/state/pattern-learning.json"
+      "persistence_file": ".claude/logic/state/pattern-learning.json"
     }
   }
 }
@@ -116,7 +116,7 @@ Add email functionality following CLAUDE.md principles:
 **Enhanced:**
 ```
 Task: Refactor authentication system
-Prerequisites: Create spec folder at .claude/tasks/specs/auth-refactor/
+Prerequisites: Create spec folder at .claude/project-management/specs/auth-refactor/
 
 Required Deliverables:
 1. requirements.md - Define scope and goals
@@ -217,7 +217,7 @@ Enhancement Statistics:
 1. Check if enabled: `/logic hooks status`
 2. Verify no bypass prefix used
 3. Check enhancement level setting
-4. Review hook logs: `.claude/state/prompt-enhancement-stats.json`
+4. Review hook logs: `.claude/logic/state/prompt-enhancement-stats.json`
 
 ### Too Much Enhancement?
 - Use `minimal` level for lighter touch

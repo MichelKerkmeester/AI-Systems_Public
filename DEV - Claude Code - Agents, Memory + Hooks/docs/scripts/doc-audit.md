@@ -16,16 +16,16 @@ The doc-audit.py script analyzes the documentation system to calculate health sc
 ### Command Line
 ```bash
 # Run full audit
-python3 .claude/scripts/doc-audit.py
+python3 .claude/logic/scripts/doc-audit.py
 
 # Generate detailed report
-python3 .claude/scripts/doc-audit.py --detailed
+python3 .claude/logic/scripts/doc-audit.py --detailed
 
 # Output to file
-python3 .claude/scripts/doc-audit.py --output audit-report.json
+python3 .claude/logic/scripts/doc-audit.py --output audit-report.json
 
 # Check specific directory
-python3 .claude/scripts/doc-audit.py --path .claude/docs/logic/
+python3 .claude/logic/scripts/doc-audit.py --path .claude/docs/logic/
 ```
 
 ### Options
@@ -148,7 +148,7 @@ if significant_changes_detected():
 ```yaml
 - name: Documentation Health Check
   run: |
-    python3 .claude/scripts/doc-audit.py --threshold 70
+    python3 .claude/logic/scripts/doc-audit.py --threshold 70
     if [ $? -ne 0 ]; then
       echo "Documentation health below threshold"
       exit 1

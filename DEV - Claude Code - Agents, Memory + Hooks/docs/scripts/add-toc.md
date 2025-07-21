@@ -16,13 +16,13 @@ The add-toc.py script scans markdown files and generates table of contents based
 ### Command Line
 ```bash
 # Process single file
-python3 .claude/scripts/add-toc.py path/to/file.md
+python3 .claude/logic/scripts/add-toc.py path/to/file.md
 
 # Process directory
-python3 .claude/scripts/add-toc.py .claude/docs/
+python3 .claude/logic/scripts/add-toc.py .claude/docs/
 
 # Process with options
-python3 .claude/scripts/add-toc.py --update --recursive .claude/docs/
+python3 .claude/logic/scripts/add-toc.py --update --recursive .claude/docs/
 ```
 
 ### Options
@@ -66,7 +66,7 @@ The doc-update-hook.py automatically calls this script when documentation change
 Can be integrated into build pipelines:
 ```yaml
 - name: Generate TOCs
-  run: python3 .claude/scripts/add-toc.py --update --recursive docs/
+  run: python3 .claude/logic/scripts/add-toc.py --update --recursive docs/
 ```
 
 ## Code Structure

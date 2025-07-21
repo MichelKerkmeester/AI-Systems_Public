@@ -47,7 +47,7 @@ class TaskManager:
             self.claude_path = claude_path
         
         # Task directories
-        self.tasks_dir = self.claude_path / "tasks"
+        self.tasks_dir = self.claude_path / "project-management"
         self.to_do_dir = self.tasks_dir / "specs"
         self.active_dir = self.tasks_dir / "active"
         self.completed_dir = self.tasks_dir / "completed"
@@ -87,6 +87,10 @@ class TaskManager:
         with open(self.registry_path, 'w') as f:
             json.dump(registry, f, indent=2)
     
+    def get_task_registry(self) -> Dict[str, Any]:
+        """Get the current task registry (public method)"""
+        return self._load_registry()
+    
     def _migrate_suggestions_to_todo(self):
         """Migrate any remaining files from suggestions to specs"""
         if self.suggestions_dir.exists():
@@ -113,25 +117,44 @@ class TaskManager:
         """Determine appropriate sub-folder based on task name"""
         name_lower = name.lower()
         
-        # Category mappings
-        if any(word in name_lower for word in ["feature", "add", "implement", "create", "new"]):
-            return "features"
-        elif any(word in name_lower for word in ["bug", "fix", "issue", "error", "problem"]):
-            return "bugs"
-        elif any(word in name_lower for word in ["enhance", "improve", "upgrade", "update"]):
-            return "enhancements"
-        elif any(word in name_lower for word in ["refactor", "clean", "reorganize", "restructure", "optimize"]):
-            return "refactoring"
-        elif any(word in name_lower for word in ["doc", "readme", "guide", "manual", "help"]):
-            return "documentation"
-        elif any(word in name_lower for word in ["test", "spec", "verify", "validate"]):
-            return "testing"
-        elif any(word in name_lower for word in ["security", "auth", "permission", "vulnerability"]):
+        # Category mappings - Order matters! More specific patterns first
+        
+        # Security patterns (check before bugs)
+        if any(word in name_lower for word in ["security", "auth", "permission", "vulnerability", "secure", "encryption", "access"]):
             return "security"
-        elif any(word in name_lower for word in ["performance", "speed", "optimize", "cache"]):
+        
+        # Documentation patterns (check before update)
+        elif any(word in name_lower for word in ["doc", "documentation", "readme", "guide", "manual", "help", "tutorial", "instructions"]):
+            return "documentation"
+        
+        # Testing patterns (check before create/spec)
+        elif any(word in name_lower for word in ["test", "testing", "unittest", "integration test", "e2e", "verify", "validate", "qa"]):
+            return "testing"
+        
+        # Bug patterns
+        elif any(word in name_lower for word in ["bug", "fix", "issue", "error", "problem", "broken", "crash"]):
+            return "bugs"
+        
+        # Performance patterns (check before optimize in refactoring)
+        elif any(word in name_lower for word in ["performance", "speed", "slow", "optimize performance", "cache", "latency"]):
             return "performance"
-        elif any(word in name_lower for word in ["integrate", "connect", "api", "webhook"]):
+        
+        # Feature patterns
+        elif any(word in name_lower for word in ["feature", "add", "implement", "create", "new", "build"]):
+            return "features"
+        
+        # Enhancement patterns
+        elif any(word in name_lower for word in ["enhance", "improve", "upgrade", "update", "better"]):
+            return "enhancements"
+        
+        # Refactoring patterns
+        elif any(word in name_lower for word in ["refactor", "clean", "reorganize", "restructure", "optimize code"]):
+            return "refactoring"
+        
+        # Integration patterns
+        elif any(word in name_lower for word in ["integrate", "connect", "api", "webhook", "integration", "third-party"]):
             return "integrations"
+        
         else:
             return "general"
     
@@ -152,9 +175,39 @@ class TaskManager:
         # Ensure sub-folder exists
         task_dir.mkdir(parents=True, exist_ok=True)
         
-        # Generate filename
-        filename = self._generate_task_filename(name)
-        filepath = task_dir / filename
+        # Create project folder with task name (sanitized)
+        safe_project_name = ''.join(c for c in name.lower() if c.isalnum() or c in ' -_')
+        safe_project_name = safe_project_name.replace(' ', '-')
+        project_dir = task_dir / safe_project_name
+        project_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Create test folder automatically
+        test_dir = project_dir / "tests"
+        test_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Create test plan template
+        test_plan_content = f"""# Test Plan: {name}
+**Date:** {datetime.now().strftime("%Y-%m-%d")}
+**Time:** {datetime.now().strftime("%H:%M:%S")}
+
+## Test Objectives
+<!-- Define what needs to be tested -->
+
+## Test Cases
+<!-- List specific test cases -->
+
+## Test Results
+<!-- Document test results here -->
+"""
+        test_plan_path = test_dir / f"test-plan-{datetime.now().strftime('%Y-%m-%d-%H%M%S')}.md"
+        with open(test_plan_path, 'w') as f:
+            f.write(test_plan_content)
+        
+        # Generate filename with timestamp
+        timestamp = datetime.now().strftime("%Y-%m-%d-%H%M%S")
+        base_filename = self._generate_task_filename(name).replace('.md', '')
+        filename = f"{base_filename}-{timestamp}.md"
+        filepath = project_dir / filename
         
         # Use template if provided
         if template and (self.templates_dir / f"{template}.md").exists():
@@ -165,8 +218,10 @@ class TaskManager:
                 created_at=task.created_at
             )
         else:
-            # Default content
+            # Default content with date and time
             content = f"""# Task: {name}
+**Date:** {datetime.now().strftime("%Y-%m-%d")}  
+**Time:** {datetime.now().strftime("%H:%M:%S")}  
 
 ## Description
 {description or "No description provided."}
@@ -178,6 +233,16 @@ class TaskManager:
 - [ ] Not started
 - [ ] In progress  
 - [ ] Completed
+
+## Requirements
+<!-- Define specific requirements here -->
+
+## Implementation Plan
+<!-- Outline the implementation approach -->
+
+## Test Strategy
+<!-- Link to test plan in /tests folder -->
+See: [Test Plan](./tests/test-plan-{datetime.now().strftime('%Y-%m-%d-%H%M%S')}.md)
 
 ## Notes
 <!-- Add implementation notes here -->
@@ -487,11 +552,10 @@ class TaskManager:
             "Use suggest_tasks_for_archival() to get a list of archival candidates."
         )
     
-    def should_exclude_path(self, path: Path) -> bool:
+    def should_exclude_path(self, path: str) -> bool:
         """Check if a path should be excluded from Claude operations"""
         # Convert to string for comparison
         path_str = str(path)
-        archive_str = str(self.archive_dir)
         
-        # Check if path is in or under archive directory
-        return archive_str in path_str or path.is_relative_to(self.archive_dir)
+        # Check if path contains z__archive
+        return "z__archive" in path_str

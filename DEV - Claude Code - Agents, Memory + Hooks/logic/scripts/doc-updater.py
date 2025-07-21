@@ -16,7 +16,7 @@ class DocUpdater:
     
     def __init__(self, base_path: Path = None):
         if base_path is None:
-            self.base_path = Path(__file__).parent.parent
+            self.base_path = Path(__file__).parent.parent.parent
         else:
             self.base_path = base_path
         

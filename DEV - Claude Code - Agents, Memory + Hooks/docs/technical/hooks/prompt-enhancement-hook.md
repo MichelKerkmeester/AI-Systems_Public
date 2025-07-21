@@ -75,7 +75,7 @@ The hook automatically detects prompt types:
 
 ## Integration with PromptEnhancer
 
-The hook uses the `PromptEnhancer` class from `.claude/logic/agents/intelligence/prompt_enhancer.py` which:
+The hook uses the `PromptEnhancer` class from `.claude/logic/prompt_improver/prompt_enhancer.py` which:
 - Loads rules from CLAUDE.md
 - Integrates with pattern libraries
 - Applies context-aware enhancements
@@ -131,7 +131,7 @@ When `log_enhancements` is enabled, the hook tracks:
 - Enhancement confidence
 - Recent enhancement history
 
-State is stored in `.claude/state/prompt-enhancement-state.json`.
+State is stored in `.claude/logic/state/prompt-enhancement-state.json`.
 
 ## Best Practices
 

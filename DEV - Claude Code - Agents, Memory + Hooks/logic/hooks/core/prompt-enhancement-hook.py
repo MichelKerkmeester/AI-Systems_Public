@@ -20,7 +20,7 @@ from logic.shared import (
     SettingsManager, StateManager,
     MessageFormatter
 )
-from logic.agents.intelligence.prompt_enhancer import PromptEnhancer, EnhancementResult
+from logic.prompt_improver import PromptEnhancer, EnhancementResult
 
 
 class PromptEnhancementHook(UserPromptHook):
@@ -43,7 +43,7 @@ class PromptEnhancementHook(UserPromptHook):
         
         # Enhancement tracking
         self.state_path = self.claude_path / "state" / "prompt-enhancement-state.json"
-        self.state = StateManager(self.state_path)
+        self.state = StateManager(self.state_path, self._get_default_state())
     
     def _get_default_settings(self) -> Dict[str, Any]:
         """Get default settings for prompt enhancement"""
@@ -74,6 +74,18 @@ class PromptEnhancementHook(UserPromptHook):
                     "inject_rules": "comprehensive"
                 }
             }
+        }
+    
+    def _get_default_state(self) -> Dict[str, Any]:
+        """Get default state for tracking"""
+        return {
+            "enhancement_count": 0,
+            "bypass_count": 0,
+            "rules_applied": {},
+            "prompt_types": {},
+            "recent_enhancements": [],
+            "last_enhancement": None,
+            "errors": []
         }
     
     def _init_bypass_patterns(self):

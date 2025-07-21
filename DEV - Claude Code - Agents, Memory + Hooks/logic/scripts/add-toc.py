@@ -108,7 +108,7 @@ def add_toc_to_file(file_path: Path) -> bool:
 
 def main():
     """Process all markdown files in .claude/docs"""
-    base_path = Path(__file__).parent.parent
+    base_path = Path(__file__).parent.parent.parent
     docs_path = base_path / "docs"
     
     if not docs_path.exists():

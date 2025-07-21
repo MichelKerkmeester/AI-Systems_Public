@@ -4,7 +4,7 @@
 from pathlib import Path
 
 # Check various path calculations
-prompt_enhancer_file = Path("/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl/.claude/agents/intelligence/prompt_enhancer.py")
+prompt_enhancer_file = Path("/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl/.claude/logic/prompt_improver/prompt_enhancer.py")
 project_root_calc = prompt_enhancer_file.parent.parent.parent.parent
 claude_md_path = project_root_calc / "CLAUDE.md"
 

@@ -16,7 +16,7 @@ The startup-with-memory.py script is a specialized variant of the startup displa
 ### Command Line
 ```bash
 # Get memory status
-python3 .claude/scripts/startup-with-memory.py
+python3 .claude/logic/scripts/startup-with-memory.py
 
 # Output format (JSON)
 {

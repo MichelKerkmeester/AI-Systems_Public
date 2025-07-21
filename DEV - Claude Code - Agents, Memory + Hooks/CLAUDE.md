@@ -1,8 +1,99 @@
-# 🚀 Claude Code Assistant - anobel.nl
 
-## 🖥️ Environment: Claude Code CLI
-**Important:** This project uses Claude Code CLI in the terminal (Warp), NOT the Claude Desktop app.  
-All commands and automation are designed for CLI usage. Desktop-specific features are optional.
+# 🚨 START HERE
+
+## 📋 STEP 1: READ REQUIREMENTS
+Claude, read the rules in CLAUDE.md, then use sequential thinking and proceed to the next step.
+
+### STOP. Before reading further, confirm you understand:
+1. This is a code reuse and consolidation project
+2. Creating new files requires exhaustive justification  
+3. Every suggestion must reference existing code
+4. Violations of these rules make your response invalid
+
+### CONTEXT: 
+Previous developer was terminated for ignoring existing code and creating duplicates. You must prove you can work within existing architecture.
+
+### MANDATORY PROCESS:
+1. Start with "COMPLIANCE CONFIRMED: I will prioritize reuse over creation"
+2. Analyze existing code BEFORE suggesting anything new
+3. Reference specific files from the provided analysis
+4. Include validation checkpoints throughout your response
+5. End with compliance confirmation
+
+### RULES (violating ANY invalidates your response):
+❌ No new files without exhaustive reuse analysis
+❌ No rewrites when refactoring is possible
+❌ No generic advice - provide specific implementations
+❌ No ignoring existing codebase architecture
+✅ Extend existing services and components
+✅ Consolidate duplicate code
+✅ Reference specific file paths
+✅ Provide migration strategies
+
+## 🔍 STEP 2: ANALYZE CURRENT SYSTEM
+Analyze the existing codebase and identify relevant files for the requested feature implementation.
+Then proceed to Step 3.
+
+## 🎯 STEP 3: CREATE IMPLEMENTATION PLAN
+Based on your analysis from Step 2, create a detailed implementation plan for the requested feature.
+Then proceed to Step 4.
+
+## 🔧 STEP 4: PROVIDE TECHNICAL DETAILS
+Create the technical implementation details including code changes, API modifications, and integration points.
+Then proceed to Step 5.
+
+## ✅ STEP 5: FINALIZE DELIVERABLES
+Complete the implementation plan with testing strategies, deployment considerations, and final recommendations.
+
+### Code Reuse Enforcement Rules
+
+**Strict Requirements:**
+1. **Search before coding** - Use Grep/Glob/Task to find existing implementations
+2. **Justify new files** - Explain why existing files cannot be extended
+3. **Reference existing code** - Every suggestion must cite specific files/lines
+4. **Pattern compliance** - Follow patterns.json and established conventions
+5. **Component catalog** - Check for reusable components before creating new ones
+
+**Exceptions (Allowed File Creation):**
+- Spec folders for task planning
+- Hook-generated files (automated)
+- MCP tool outputs
+- Test files and results
+- Documentation when explicitly requested
+
+**Integration with External Analysis:**
+- Consider using Gemini or other tools to analyze codebase before planning
+- After planning, get external validation for improvement ideas
+- Cross-reference multiple sources for comprehensive understanding
+
+### 📋 Spec-Driven Code Reuse Process
+
+For complex features (complexity score ≥ 6), the system automatically creates a specification:
+
+#### Automatic Spec Creation
+1. **Triggered by**: Keywords like "implement", "create", "build" + complex requirements
+2. **Location**: `/specs/code-reuse/[feature-name]/`
+3. **Contents**: 4 mandatory documents + test folder
+4. **Workflow**: Spec → Active → Completed with summary
+
+#### Spec Structure for Code Reuse
+```
+/specs/code-reuse/[feature]/
+├── requirements.md      # Include reuse analysis requirements
+├── design.md           # Reference existing components
+├── test-plan.md        # Test reuse compliance
+├── rollback.md         # Preserve reusable components
+└── tests/              # Verification results
+```
+
+#### Integration with 5-Step Process
+- **Step 1**: If complex, create spec automatically
+- **Step 2**: Save search results to spec
+- **Step 3**: Document in design.md
+- **Step 4**: Track in active task
+- **Step 5**: Generate completion summary
+
+---
 
 ## 1. 🎯 QUICK START
 
@@ -34,11 +125,16 @@ All commands and automation are designed for CLI usage. Desktop-specific feature
 
 ## 2. 🛠️ CORE PRINCIPLES
 
+### AI Environment: Claude Code CLI
+**Important:** This project uses Claude Code CLI in the terminal (Warp), NOT the Claude Desktop app.  
+All commands and automation are designed for CLI usage. Desktop-specific features are optional.
+
 ### Development Philosophy
-1. **Elite JavaScript & CSS specialist** - Fix root causes, not symptoms
+1. **Elite JavaScript & CSS specialist** - Fix root causes using proven patterns
 2. **Production-grade code** - DRY, KISS, secure, performant
 3. **Webflow enhancement** - Work with platform, never against it
-4. **Full ownership** - Complete solutions, not patches
+4. **Code reuse first** - Search existing code before writing new
+5. **Full ownership** - Complete solutions built from existing components
 
 ### Technical Constraints
 | Category | ❌ Never | ✅ Always |
@@ -64,13 +160,15 @@ Tasks flow through stages:
 ### Before System Changes
 **IMPORTANT:** Create a spec folder before any major system changes:
 ```
-.claude/tasks/specs/
+.claude/project-management/specs/
 └── [feature-name]/
     ├── requirements.md     # What needs to be done
     ├── design.md          # How it will be implemented
     ├── test-plan.md       # How to verify it works
     └── rollback-plan.md   # How to undo if needed
 ```
+
+**Automatic Spec Creation**: Complex requests (score ≥ 6) trigger automatic spec generation with code reuse analysis included.
 
 ### Task Commands
 - Tasks are managed automatically via TodoWrite integration
@@ -80,30 +178,61 @@ Tasks flow through stages:
 
 ---
 
-## 4. 🤖 AUTOMATION & HOOKS
+## 4. 🧠 MANDATORY MEMORY OPERATIONS (v2 Enforcement)
 
-### What Runs Automatically
-| Old Command | Triggers | Manual Override |
-|-------------|----------|-----------------|
-| `/workflow` | Complex tasks (3+ steps) | Sequential Thinking tool |
-| `/test` | 3+ files changed | Run tests manually |
-| `/security` | Sensitive patterns | `/logic emergency` |
-| `/notebook` | Session saves | `/logic notebook` |
-| `/mode` | Task complexity | Respond to suggestions |
+**BEFORE ANY TASK:**
+1. **ALWAYS** search memories using `mcp__graphiti-gemini__search` with relevant keywords
+2. **ALWAYS** state: "Searched X memories, found Y relevant" at task start
+3. **NEVER** skip this - enforced by hooks before TodoWrite tasks
+4. **Memory search is mandatory** - violations make your response invalid
 
-### Memory Automation Levels
-```bash
-/memory auto off     # No automation
-/memory auto manual  # Explicit capture only
-/memory auto semi    # Critical auto, others prompt (default)
-/memory auto full    # Capture everything
+**DURING CONVERSATIONS:**
+Auto-capture triggers (immediate capture required):
+- **Decisions**: "decided to", "will use", "choosing", "selected"
+- **Errors fixed**: "resolved", "fixed", "solution works", "workaround"
+- **Patterns**: "always", "convention", "best practice", "standard"
+- **Security**: Any auth/token/credential/API key discussion
+- **Breaking changes**: Migration, deprecation, or backwards compatibility
+- **Code reuse**: Found components, existing solutions, refactor opportunities
+- **Client preferences**: User feedback, requirements, constraints
+- **Performance**: Optimization discoveries, bottlenecks identified
+
+**AFTER TOOL USE:**
+Automatic capture after:
+- File edits (Edit/MultiEdit/Write) - captures changes made
+- Task completions (TodoWrite status changes)
+- Error resolutions (any fix applied)
+- Pattern discoveries (new conventions found)
+- Test results (successes and failures)
+- Security scans (vulnerabilities found/fixed)
+
+**CONVERSATION BUFFER:**
+- System auto-captures after 5 exchanges to prevent memory loss
+- Buffer includes full context and decisions made
+
+**CAPTURE FORMAT:**
+```json
+mcp__graphiti-gemini__add_episode
+{
+  "data": {
+    "name": "[TYPE]: Brief description",
+    "episode_body": "Detailed content with context, code snippets, file paths",
+    "source": "task|conversation|error_fix|pattern|code_reuse|security",
+    "group_id": "project-category",
+    "valid_at": "ISO timestamp (optional)"
+  }
+}
 ```
 
-**Patterns captured:** DECISION, SECURITY, BREAKING, RESOLVED, PATTERN, client preferences, API limits
+**ENFORCEMENT:** 
+- Skipping memory operations = invalid response
+- System now captures 50+ memories per day automatically
+- Each session must end with: "Captured N memories this session"
+- Memory search is enforced by hooks before any TodoWrite task creation
 
 ---
 
-## 🚨 HOOK AUTOMATION WARNINGS
+## 5. ⚠️ HOOK AUTOMATION WARNINGS
 
 ### What Hooks Automate (But You Might Still Break)
 
@@ -114,6 +243,8 @@ Even with hooks enabled, these mistakes can still happen:
 - ❌ **Writing fake tests** - Tests that don't actually verify functionality  
 - ❌ **Bypass attempts** - Using `window.console.log` or eval to avoid detection
 - ❌ **Ignoring file size warnings** - Creating 500+ line files despite reminders
+- ❌ **Creating duplicate code** - Not searching for existing implementations
+- ❌ **Ignoring reusable patterns** - Writing from scratch instead of extending
 
 #### 2. Security Hook Blind Spots
 - ❌ **Base64 encoded secrets** - Hook might miss encoded credentials
@@ -125,6 +256,7 @@ Even with hooks enabled, these mistakes can still happen:
 - ❌ **Not capturing decisions** - Important choices lost between sessions
 - ❌ **Skipping memory search** - Re-solving already solved problems
 - ❌ **Outdated memories** - Not updating when patterns change
+- ❌ **Missing code reuse patterns** - Not documenting found components
 
 #### 4. Pattern Extraction Misses
 - ❌ **Context-specific patterns** - Regex can't catch nuanced patterns
@@ -140,42 +272,7 @@ Even with hooks enabled, these mistakes can still happen:
 
 ---
 
-## 5. 📂 PROJECT STRUCTURE
-
-```
-.claude/
-├── docs/                   # All documentation (renamed from y__docs)
-│   ├── logic/             # Logic system docs
-│   ├── graphiti/          # Memory system docs
-│   ├── technical/         # Implementation details
-│   └── mcp/               # MCP server docs
-├── logic/                  # Hooks and automation
-│   ├── session/           # Session management
-│   ├── memory/            # Memory context
-│   ├── tasks/             # Task lifecycle
-│   └── quality/           # Code quality
-├── knowledge/              # facts.json, patterns.json, constraints.json (moved from project/)
-├── state/                  # System state (moved from project/)
-├── tasks/                  # Task organization (moved from project/)
-│   ├── specs/            # Task specifications (pending)
-│   ├── active/           # Current task (max 1)
-│   ├── completed/        # Finished tasks
-│   └── z__archive/       # User-managed archive (excluded from AI operations)
-├── tests/                  # Tests (moved from project/)
-├── agents/                 # Agent system
-├── scripts/                # Utility scripts
-└── settings.json          # Configuration
-```
-
-### Key Files
-- **facts.json** - Project requirements, client preferences
-- **patterns.json** - Code conventions, established patterns
-- **constraints.json** - Technical limits, platform rules
-- **settings.json** - Hook configuration, automation levels
-
----
-
-## 6. 🆘 HELP & TROUBLESHOOTING
+## 5. 🆘 HELP & TROUBLESHOOTING
 
 ### Get Help
 ```bash
@@ -184,6 +281,7 @@ Even with hooks enabled, these mistakes can still happen:
 /logic help hooks        # Understanding hooks
 /logic help migration    # Migrate from old commands
 /logic help troubleshooting  # Fix common issues
+/logic help code-reuse   # Spec-driven code reuse workflow
 ```
 
 ### Quick Fixes
@@ -198,6 +296,10 @@ Even with hooks enabled, these mistakes can still happen:
 - [ ] All tests passing
 - [ ] Performance budgets met
 - [ ] Security scan clean
+- [ ] No duplicate functionality
+- [ ] Existing code searched and reused
+- [ ] Pattern compliance verified
+- [ ] New files justified if created
 
 ---
 

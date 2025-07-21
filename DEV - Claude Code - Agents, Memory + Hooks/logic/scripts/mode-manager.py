@@ -12,8 +12,8 @@ from typing import Dict, Optional, Tuple, List
 
 class ModeManager:
     def __init__(self):
-        self.base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        self.state_file = os.path.join(self.base_dir, "state", "mode-state.json")
+        self.base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+        self.state_file = os.path.join(self.base_dir, "logic", "state", "mode-state.json")
         self.config_file = os.path.join(self.base_dir, "..", "claude.config.json")
         self.state = self._load_state()
         self.config = self._load_config()

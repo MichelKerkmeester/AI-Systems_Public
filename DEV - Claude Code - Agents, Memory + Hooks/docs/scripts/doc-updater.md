@@ -16,16 +16,16 @@ The doc-updater.py script automatically maintains the documentation system by up
 ### Command Line
 ```bash
 # Update entire documentation
-python3 .claude/scripts/doc-updater.py
+python3 .claude/logic/scripts/doc-updater.py
 
 # Update specific directory
-python3 .claude/scripts/doc-updater.py --path .claude/docs/logic/
+python3 .claude/logic/scripts/doc-updater.py --path .claude/docs/logic/
 
 # Dry run (preview changes)
-python3 .claude/scripts/doc-updater.py --dry-run
+python3 .claude/logic/scripts/doc-updater.py --dry-run
 
 # Force regeneration
-python3 .claude/scripts/doc-updater.py --force
+python3 .claude/logic/scripts/doc-updater.py --force
 ```
 
 ### Options
@@ -293,12 +293,12 @@ DOC_INDEX_FORMAT=compact python3 doc-updater.py
 ### Automation
 ```bash
 # Cron job for daily updates
-0 2 * * * cd /project && python3 .claude/scripts/doc-updater.py
+0 2 * * * cd /project && python3 .claude/logic/scripts/doc-updater.py
 
 # Git hook for automatic updates
 #!/bin/bash
 # .git/hooks/pre-commit
-python3 .claude/scripts/doc-updater.py --path .claude/docs/
+python3 .claude/logic/scripts/doc-updater.py --path .claude/docs/
 ```
 
 ## Related Documentation

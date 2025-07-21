@@ -74,7 +74,7 @@ class FolderStructureHook(HookBase):
             "agents": ".claude/agents/",
             "hooks": ".claude/logic/hooks/",
             "logic": ".claude/logic/",
-            "scripts": ".claude/scripts/",
+            "scripts": ".claude/logic/scripts/",
             
             # Knowledge files
             "knowledge": ".claude/knowledge/",
@@ -83,16 +83,19 @@ class FolderStructureHook(HookBase):
             "constraints": ".claude/knowledge/",
             
             # Tasks
-            "tasks": ".claude/tasks/",
-            "todos": ".claude/tasks/",
+            "tasks": ".claude/project-management/",
+            "todos": ".claude/project-management/",
+            
+            # State
+            "state": ".claude/logic/state/",
             
             # Task completion sub-folders
-            "memory-summary": ".claude/tasks/completed/memory/",
-            "documentation-summary": ".claude/tasks/completed/documentation/",
-            "refactoring-summary": ".claude/tasks/completed/refactoring/",
-            "multi-agent-summary": ".claude/tasks/completed/multi-agent/",
-            "integration-summary": ".claude/tasks/completed/integration/",
-            "optimization-summary": ".claude/tasks/completed/optimization/"
+            "memory-summary": ".claude/project-management/completed/memory/",
+            "documentation-summary": ".claude/project-management/completed/documentation/",
+            "refactoring-summary": ".claude/project-management/completed/refactoring/",
+            "multi-agent-summary": ".claude/project-management/completed/multi-agent/",
+            "integration-summary": ".claude/project-management/completed/integration/",
+            "optimization-summary": ".claude/project-management/completed/optimization/"
         }
         
         # Incorrect path patterns to detect
@@ -102,9 +105,9 @@ class FolderStructureHook(HookBase):
             r"\.claude/documentation/": ".claude/docs/",
             r"\.claude/project/documentation/": ".claude/docs/",
             r"\.claude/project/knowledge/": ".claude/knowledge/",
-            r"\.claude/project/tasks/": ".claude/tasks/",
+            r"\.claude/project/tasks/": ".claude/project-management/",
             r"\.claude/project/sessions/": ".claude/sessions/",
-            r"\.claude/project/state/": ".claude/state/",
+            r"\.claude/project/state/": ".claude/logic/state/",
             r"\.claude/archive/": ".claude/z__archive/",
             r"\.claude/project/archive/": ".claude/z__archive/"
         }
@@ -381,7 +384,7 @@ class FolderStructureHook(HookBase):
             issues.append({
                 "type": "incorrect_directory", 
                 "path": ".claude/project/tasks/",
-                "suggestion": "Move contents to .claude/tasks/"
+                "suggestion": "Move contents to .claude/project-management/"
             })
             
         if (claude_dir / "project" / "sessions").exists():
@@ -451,17 +454,17 @@ class FolderStructureHook(HookBase):
         for category, keywords in categories.items():
             if any(keyword in task_lower for keyword in keywords):
                 if task_type == "completed":
-                    return f".claude/tasks/completed/{category}/"
+                    return f".claude/project-management/completed/{category}/"
                 elif task_type == "specs":
-                    return f".claude/tasks/specs/{category}/"
+                    return f".claude/project-management/specs/{category}/"
                 elif task_type == "active":
-                    return f".claude/tasks/active/{category}/"
+                    return f".claude/project-management/active/{category}/"
                 else:
                     return f"{category}/"
         
         # Default to general category
         if task_type:
-            return f".claude/tasks/{task_type}/general/"
+            return f".claude/project-management/{task_type}/general/"
         return "general/"
 
 
