@@ -66,33 +66,6 @@ Complete the implementation plan with testing strategies, deployment considerati
 - After planning, get external validation for improvement ideas
 - Cross-reference multiple sources for comprehensive understanding
 
-### 📋 Spec-Driven Code Reuse Process
-
-For complex features (complexity score ≥ 6), the system automatically creates a specification:
-
-#### Automatic Spec Creation
-1. **Triggered by**: Keywords like "implement", "create", "build" + complex requirements
-2. **Location**: `/specs/code-reuse/[feature-name]/`
-3. **Contents**: 4 mandatory documents + test folder
-4. **Workflow**: Spec → Active → Completed with summary
-
-#### Spec Structure for Code Reuse
-```
-/specs/code-reuse/[feature]/
-├── requirements.md      # Include reuse analysis requirements
-├── design.md           # Reference existing components
-├── test-plan.md        # Test reuse compliance
-├── rollback.md         # Preserve reusable components
-└── tests/              # Verification results
-```
-
-#### Integration with 5-Step Process
-- **Step 1**: If complex, create spec automatically
-- **Step 2**: Save search results to spec
-- **Step 3**: Document in design.md
-- **Step 4**: Track in active task
-- **Step 5**: Generate completion summary
-
 ---
 
 ## 1. 🎯 QUICK START
@@ -175,6 +148,33 @@ Tasks flow through stages:
 - Active task limit: 1 (enforced by system)
 - Progress tracked in real-time
 - Completion suggestions when all todos done
+
+### Spec-Driven Code Reuse Process
+
+For complex features (complexity score ≥ 6), the system automatically creates a specification:
+
+#### Automatic Spec Creation
+1. **Triggered by**: Keywords like "implement", "create", "build" + complex requirements
+2. **Location**: `/specs/code-reuse/[feature-name]/`
+3. **Contents**: 4 mandatory documents + test folder
+4. **Workflow**: Spec → Active → Completed with summary
+
+#### Spec Structure for Code Reuse
+```
+/specs/code-reuse/[feature]/
+├── requirements.md      # Include reuse analysis requirements
+├── design.md           # Reference existing components
+├── test-plan.md        # Test reuse compliance
+├── rollback.md         # Preserve reusable components
+└── tests/              # Verification results
+```
+
+#### Integration with 5-Step Process
+- **Step 1**: If complex, create spec automatically
+- **Step 2**: Save search results to spec
+- **Step 3**: Document in design.md
+- **Step 4**: Track in active task
+- **Step 5**: Generate completion summary
 
 ---
 

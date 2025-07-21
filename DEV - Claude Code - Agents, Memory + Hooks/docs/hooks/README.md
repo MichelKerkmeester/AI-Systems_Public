@@ -1,52 +1,184 @@
-# Hook Documentation
-
-This directory contains comprehensive documentation for all hooks in the Claude Code system.
+# Understanding Automation Hooks
 
 ## Table of Contents
 
-### Core Hooks
-- [Context Management Hook](./context-management-hook.md) - Auto-saves context state
-- [Doc Update Hook](./doc-update-hook.md) - Updates documentation on changes
-- [Mode Suggestion Hook](./mode-suggestion-hook.md) - Suggests mode changes
-- [Parallel Agent Hook](./parallel-agent-hook.md) - Manages parallel agents
-- [Pattern Extraction Hook](./pattern-extraction-hook.md) - Extracts patterns with Gemini
-- [Query Planning Hook](./query-planning-hook.md) - Creates tasks for complex queries
-- [Security Scan Hook](./security-scan-hook.md) - Blocks sensitive operations
-- [Task Management Hook](./task-management-hook.md) - Manages task lifecycle
-- [Workflow Automation Hook](./workflow-automation-hook.md) - Triggers on complexity
+- [Hook Events](#hook-events)
+  - [🎯 UserPromptSubmit](#-userpromptsubmit)
+  - [🔧 PreToolUse](#-pretooluse)
+  - [📊 PostToolUse](#-posttooluse)
+- [Hook Configuration](#hook-configuration)
+  - [Enable/Disable Hooks](#enabledisable-hooks)
+  - [Hook Settings Locations](#hook-settings-locations)
+- [Common Hook Patterns](#common-hook-patterns)
+  - [1. Auto-Session Management](#1-auto-session-management)
+  - [2. Memory Context Loading](#2-memory-context-loading)
+  - [3. Pattern Extraction](#3-pattern-extraction)
+  - [4. Quality Enforcement](#4-quality-enforcement)
+  - [5. Security Scanning](#5-security-scanning)
+- [Troubleshooting Hooks](#troubleshooting-hooks)
+  - [Hook Not Running?](#hook-not-running)
+  - [Hook Blocking Operations?](#hook-blocking-operations)
+  - [Performance Issues?](#performance-issues)
+- [Creating Custom Hooks](#creating-custom-hooks)
+  - [Basic Hook Structure](#basic-hook-structure)
+  - [Hook Best Practices](#hook-best-practices)
+- [Advanced Hook Features](#advanced-hook-features)
+  - [Conditional Execution](#conditional-execution)
+  - [Hook Chaining](#hook-chaining)
+  - [Recovery Mechanisms](#recovery-mechanisms)
+## Hook Events
 
-### Specialized Hooks
-- [Memory Context Hook](./memory-context-hook.md) - Memory system integration
-- [Quality Hook](./quality-hook.md) - Code quality checks
-- [Session Hook](./session-hook.md) - Session management
+### 🎯 UserPromptSubmit
+Triggered when you submit a prompt to Claude.
 
-## Hook System Overview
+**Active hooks:**
+- **quality-hook** - Enforces code quality and CLAUDE.md compliance
+- **memory-context-hook** - Loads relevant memories from Graphiti
+- **mode-suggestion-hook** - Suggests optimal mode for your task
+- **workflow-automation-hook** - Triggers Sequential Thinking for complex tasks
 
-Hooks in Claude Code are automated scripts that run in response to specific events. They enable the system to react intelligently to user actions without manual intervention.
+### 🔧 PreToolUse
+Triggered before any tool executes.
 
-### Hook Types
+**Active hooks:**
+- **session-hook** - Creates new sessions after 4-hour timeout
 
-1. **UserPromptSubmit Hooks** - Run when the user submits a prompt
-2. **PreToolUse Hooks** - Run before a tool is executed
-3. **PostToolUse Hooks** - Run after a tool completes
-4. **Tool-Specific Hooks** - Run for specific tools (e.g., TodoWrite)
+### 📊 PostToolUse
+Triggered after tool execution completes.
 
-### Hook Priority System
+**Active hooks:**
+- **session-hook** - Updates session with tool usage
+- **context-management-hook** - Maintains context state
+- **pattern-extraction-hook** - Extracts patterns from code/conversation
+- **quality-hook** - Checks code quality after edits
+- **security-scan-hook** - Scans for security issues
 
-Hooks execute in priority order (1 = highest):
-- Priority 1: Security and critical checks
-- Priority 2: Quality and validation
-- Priority 3: Workflow and automation
-- Priority 4: Context and patterns
-- Priority 5: Suggestions and UI
+## Hook Configuration
 
-### Performance Guidelines
+### Enable/Disable Hooks
 
-- Each hook should execute in < 100ms
-- Total hook execution time should be < 300ms
-- Use caching where possible
-- Avoid blocking operations
+```bash
+# Via command
+/logic hooks disable pattern-extraction-hook
+/logic hooks enable memory-context-hook
 
-### Creating New Hooks
+# Via settings.json
+{
+  "hooks": {
+    "enabled": false  # Disable all hooks
+  }
+}
 
-See the [Hook Development Guide](./hook-development-guide.md) for instructions on creating new hooks.
+# Via environment variable
+CLAUDE_HOOKS_DISABLED=1 claude code
+```
+
+### Hook Settings Locations
+
+```
+.claude/
+├── settings.json              # Global hook configuration
+├── logic/
+│   ├── session/hooks/
+│   │   └── session-settings.json    # Session-specific settings
+│   ├── memory/
+│   │   └── settings.json            # Memory automation settings
+│   └── quality/hooks/
+│       └── quality-settings.json    # Quality check thresholds
+```
+
+## Common Hook Patterns
+
+### 1. Auto-Session Management
+- Creates new session after 4-hour timeout
+- Archives old sessions when limit reached
+- Generates session summaries automatically
+
+### 2. Memory Context Loading
+- Analyzes your prompts for keywords
+- Searches Graphiti for relevant memories
+- Shows context before Claude responds
+
+### 3. Pattern Extraction
+- Scans for client preferences, constraints, patterns
+- Updates knowledge files automatically
+- Deduplicates against existing entries
+
+### 4. Quality Enforcement
+- Reminds about testing after multiple file changes
+- Enforces DRY principles
+- Suggests refactoring for large files
+
+### 5. Security Scanning
+- Detects API keys and secrets
+- Blocks unsafe file writes
+- Alerts on security patterns
+
+## Troubleshooting Hooks
+
+### Hook Not Running?
+1. Check if hooks are enabled: `/logic hooks status`
+2. Verify hook file exists and is executable
+3. Check for path issues (spaces in path need quotes)
+4. Run with debug: `claude --debug`
+
+### Hook Blocking Operations?
+1. Check hook output for error messages
+2. Disable problematic hook: `/logic hooks disable [name]`
+3. Use emergency disable: `/logic emergency disable`
+
+### Performance Issues?
+1. Check metrics: `/logic metrics`
+2. Disable non-critical hooks
+3. Adjust hook settings for less frequent runs
+
+## Creating Custom Hooks
+
+### Basic Hook Structure
+```python
+#!/usr/bin/env python3
+import sys
+import json
+
+# Read input
+hook_input = json.loads(sys.stdin.read())
+
+# Process based on event
+if hook_input.get("toolName") == "Edit":
+    # Custom logic here
+    pass
+
+# Exit codes:
+# 0 = success, continue
+# 2 = block operation
+# Any output = show to user
+sys.exit(0)
+```
+
+### Hook Best Practices
+1. **Fast execution** - Keep under 100ms
+2. **Fail gracefully** - Don't break on errors
+3. **Minimal output** - Only show important info
+4. **State management** - Use proper state files
+5. **Security** - Never log sensitive data
+
+## Advanced Hook Features
+
+### Conditional Execution
+Hooks can check conditions before running:
+- Branch name
+- File patterns  
+- Time of day
+- User preferences
+
+### Hook Chaining
+Multiple hooks can work together:
+1. Memory hook finds context
+2. Pattern extractor updates knowledge
+3. Session hook records activity
+
+### Recovery Mechanisms
+Hooks include crash recovery:
+- Recovery points before critical operations
+- State restoration after crashes
+- Automatic cleanup of incomplete operations

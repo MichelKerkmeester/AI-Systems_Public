@@ -1,209 +1,168 @@
-# Memory Context Hook
+# Memory Context Hook v2 Documentation
 
 ## Overview
 
-**Hook Name**: Memory Context Hook  
-**Purpose**: Provides contextual memory hints and suggestions during development  
-**Location**: `/hooks/memory/memory-context-hook.py`  
-**Triggers**: UserPromptSubmit events  
-**Priority**: 4 (Context enhancement)  
-**Performance**: ~8ms typical execution time
+The Enhanced Memory Context Hook v2 is a significant upgrade to the memory management system, introducing background processing, priority-based capture, and enhanced pattern detection for code reuse scenarios.
 
-## Description
+## Key Features
 
-The Memory Context Hook integrates with the Graphiti memory system to provide relevant context and suggestions based on stored memories. It detects keywords in user prompts and surfaces related patterns, decisions, and constraints from the knowledge base.
+### 1. **Background Processing with MemoryCaptureQueue**
+- Non-blocking memory capture using Python's threading and queue modules
+- Priority queue ensures critical memories (security, breaking changes) are processed first
+- Daemon thread handles processing without blocking user interaction
+
+### 2. **MCPBridge Abstraction**
+- Clean interface for MCP tool communication
+- Simulated mode for testing without actual MCP connection
+- Easy integration with Graphiti memory system
+
+### 3. **Enhanced Pattern Detection**
+New patterns specifically for code reuse:
+- `REUSABLE_COMPONENT`: Detects mentions of reusable code elements
+- `EXISTING_SOLUTION`: Identifies references to existing implementations
+- `REFACTOR_OPPORTUNITY`: Catches suggestions for code consolidation
+
+### 4. **Priority System**
+Four priority levels ensure important memories are captured first:
+1. **CRITICAL**: Security issues, breaking changes
+2. **HIGH**: Decisions, patterns, reusable components
+3. **MEDIUM**: Bug fixes, optimizations, refactor opportunities
+4. **LOW**: General learnings, configuration changes
+
+### 5. **Enhanced Context Extraction**
+- Captures 150 characters of context around detected patterns
+- Extracts file paths and line numbers when mentioned
+- Preserves surrounding context for better memory retrieval
 
 ## Configuration
 
-Settings are managed through the Memory section in CLAUDE.md:
+The hook uses settings from `.claude/settings.json`:
 
-```python
-Memory Configuration:
-- auto_context: true         # Enable automatic context
-- context_on_startup: true   # Load context at startup
-- max_relevant_memories: 5   # Limit displayed memories
-- show_suggestions: true     # Show memory-based suggestions
-```
-
-## How It Works
-
-1. **Keyword Detection**:
-   - Scans prompts for technical terms
-   - Identifies project-specific patterns
-   - Matches against memory tags
-
-2. **Memory Retrieval**:
-   - Queries Graphiti for relevant memories
-   - Ranks by relevance score
-   - Limits to configured maximum
-
-3. **Context Presentation**:
-   - Shows related patterns
-   - Displays past decisions
-   - Highlights constraints
-
-4. **Smart Suggestions**:
-   - Based on similar past scenarios
-   - Leverages learned patterns
-   - Prevents repeated mistakes
-
-## Example Usage
-
-### Pattern Recognition
-```
-User: "I need to implement a hero section"
-
-🧠 Memory Context
-
-Found 3 relevant memories:
-
-1. Hero Implementation Pattern (2 weeks ago)
-   - Used intersection observer for animations
-   - REM units for responsive scaling
-   - Webflow class: .hero-wrapper
-
-2. Performance Constraint (1 month ago)
-   - Hero images must be <500KB
-   - Use WebP format with fallback
-   - Lazy load below-fold content
-
-3. Design Decision (3 weeks ago)
-   - Maintain 16:9 aspect ratio
-   - Mobile-first breakpoints
-   - Accessibility: min contrast 4.5:1
-```
-
-### Constraint Warnings
-```
-User: "Let me add a video background"
-
-⚠️ Platform Constraint Detected
-
-Previous memory: "Webflow video limitations"
-- Autoplay requires muted attribute
-- Mobile fallback image required
-- Max file size: 30MB
-- Supported formats: MP4, WebM
-
-Consider: Static image with subtle animation
-```
-
-## Memory Categories
-
-### Facts
-- Technical discoveries
-- Platform capabilities
-- API specifications
-- Performance benchmarks
-
-### Patterns
-- Implementation approaches
-- Code structures
-- Solution templates
-- Best practices
-
-### Constraints
-- Platform limitations
-- Security requirements
-- Performance boundaries
-- Business rules
-
-## Integration Points
-
-- **Graphiti MCP**: Memory storage and retrieval
-- **Pattern Extraction Hook**: Feeds new memories
-- **Context Management Hook**: Shares context data
-- **Task Management**: Memory linked to tasks
-
-## Performance Optimization
-
-- Keyword indexing for fast lookup
-- Caches recent queries
-- Async memory fetching
-- Relevance threshold filtering
-
-## Advanced Features
-
-### Memory Weighting
-```python
-relevance_factors = {
-    "recency": 0.3,      # Recent memories weighted higher
-    "frequency": 0.2,    # Often-accessed memories
-    "similarity": 0.4,   # Keyword match strength
-    "importance": 0.1    # Manual importance flag
-}
-```
-
-### Context Filtering
-```python
-filters = {
-    "min_relevance": 0.7,
-    "max_age_days": 90,
-    "categories": ["patterns", "constraints"],
-    "exclude_tags": ["deprecated", "experimental"]
-}
-```
-
-## Troubleshooting
-
-### No Context Shown
-- Check memory system connection
-- Verify keywords match stored memories
-- Lower relevance threshold
-- Ensure memories exist for topic
-
-### Too Much Context
-- Increase relevance threshold
-- Reduce max_relevant_memories
-- Add exclusion filters
-- Focus keyword matching
-
-### Outdated Suggestions
-- Update memory timestamps
-- Archive old memories
-- Refresh memory index
-- Clear cache
-
-## Manual Memory Control
-
-- Search memories: `/memory search [query]`
-- Add memory: `/memory add [content]`
-- View all: `/memory list`
-- Clear context: `/memory context clear`
-
-## Memory Quality
-
-### Good Memory Entry
 ```json
 {
-  "content": "Use data-wf-* attributes for Webflow interactions",
-  "type": "pattern",
-  "tags": ["webflow", "interactions", "attributes"],
-  "context": {
-    "file": "components/animations.js",
-    "decision_reason": "Maintains platform compatibility"
+  "memory": {
+    "auto_context": true,
+    "context_on_startup": true,
+    "max_relevant_memories": 5,
+    "show_suggestions": true,
+    "v2_features": {
+      "background_processing": true,
+      "enhanced_patterns": true,
+      "context_extraction": true,
+      "priority_queue": true,
+      "file_context_tracking": true
+    }
   }
 }
 ```
 
-### Poor Memory Entry
-```json
-{
-  "content": "Fixed bug",
-  "type": "fact"
-  // Missing context, tags, and specifics
-}
+## Pattern Categories
+
+### Critical Patterns (Priority 1)
+- **SECURITY**: API keys, tokens, credentials, authentication
+- **BREAKING**: Breaking changes, migrations, deprecations
+
+### High Priority Patterns (Priority 2)
+- **DECISION**: Architecture decisions, technology choices
+- **PATTERN**: Coding patterns, conventions, standards
+- **REUSABLE_COMPONENT**: Existing components that can be reused
+- **EXISTING_SOLUTION**: Already implemented solutions
+
+### Medium Priority Patterns (Priority 3)
+- **RESOLVED**: Bug fixes, issue resolutions
+- **ERROR_FIX**: Specific error corrections
+- **OPTIMIZATION**: Performance improvements
+- **REFACTOR_OPPORTUNITY**: Code that could be consolidated
+
+### Low Priority Patterns (Priority 4)
+- **USER_FEEDBACK**: Client requirements, user requests
+- **CONFIG_CHANGE**: Configuration updates
+- **LEARNING**: Discoveries, insights
+- **ARCHITECTURE**: System design decisions
+- **API_CHANGE**: Interface modifications
+- **DEPENDENCY**: Package updates, library changes
+
+## Implementation Details
+
+### Memory Item Structure
+```python
+@dataclass
+class MemoryItem:
+    content: str
+    memory_type: str
+    context: str
+    priority: MemoryPriority
+    timestamp: datetime
+    file_path: Optional[str] = None
+    line_number: Optional[int] = None
 ```
 
-## Privacy & Security
+### Queue Statistics
+The hook tracks:
+- Queued items waiting for processing
+- Successfully processed memories
+- Failed capture attempts
+- Session memory count by type
 
-- No sensitive data in memories
-- API keys never stored
-- Personal info excluded
-- Memories are project-scoped
+### Thread Safety
+- Uses thread-safe `queue.PriorityQueue`
+- Daemon thread ensures clean shutdown
+- No shared mutable state between threads
 
-## Related Documentation
+## Usage Examples
 
-- [Graphiti Memory System](../../graphiti/README.md)
-- [Memory Verification Guide](../../graphiti/memory-verification-guide.md)
-- [Pattern Extraction Hook](./pattern-extraction-hook.md)
+### Example 1: Detecting Reusable Components
+```
+User: "Found existing authentication component we can reuse instead of creating new"
+Hook: Captures with EXISTING_SOLUTION and REUSABLE_COMPONENT patterns
+```
+
+### Example 2: File Context Extraction
+```
+User: "Fixed bug in /src/utils/helper.js:42 by adding validation"
+Hook: Captures with file_path="/src/utils/helper.js", line_number=42
+```
+
+### Example 3: Priority Processing
+```
+User: "The API key was exposed, need to rotate it and update security"
+Hook: CRITICAL priority ensures immediate processing
+```
+
+## Testing
+
+Run the test suite:
+```bash
+python3 .claude/tests/test-memory-hook-v2.py
+```
+
+Tests verify:
+- Pattern detection accuracy
+- Command skipping (e.g., `/memory` commands)
+- Context extraction
+- Priority assignment
+- Background processing
+
+## Migration from v1
+
+To upgrade from the original memory-context-hook:
+
+1. Update `settings.json` to point to the new hook
+2. No data migration needed - uses same Graphiti backend
+3. Enhanced features are automatically enabled
+
+## Performance Considerations
+
+- Non-blocking design ensures no UI lag
+- Background thread uses minimal resources
+- Queue has no hard size limit but processes continuously
+- Simulated mode available for testing without MCP overhead
+
+## Future Enhancements
+
+Potential improvements:
+- Batch processing for multiple memories
+- Persistent queue for crash recovery
+- Memory deduplication
+- Smart context merging for related patterns
+- Integration with other hooks for richer context
