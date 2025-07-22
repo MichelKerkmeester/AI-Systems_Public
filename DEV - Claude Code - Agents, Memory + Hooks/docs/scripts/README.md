@@ -14,6 +14,19 @@ This directory contains comprehensive documentation for all utility scripts in t
 - [startup-display.py](./startup-display.md) - Shows system status on startup
 - [startup-with-memory.py](./startup-with-memory.md) - Enhanced startup with memory integration
 
+## Directory Structure
+
+```
+scripts/
+├── README.md # Overview and navigation
+├── add-toc.md
+├── doc-audit.md
+├── doc-updater.md
+├── mode-manager.md
+├── startup-display.md
+└── startup-with-memory.md
+```
+
 ## Script System Overview
 
 Scripts in Claude Code provide utility functions that support the main system operations. They are designed to be:

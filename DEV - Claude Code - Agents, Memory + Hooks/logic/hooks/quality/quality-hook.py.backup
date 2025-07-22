@@ -166,30 +166,6 @@ class QualityHook(HookBase):
                 "suggestion": "Add existence check: const el = document.querySelector(...); if (el) { ... }",
                 "severity": "warning",
                 "section": "Technical Constraints"
-            },
-            # Comment pattern violations
-            "js_missing_header": {
-                "pattern": r'^(?!// ─{65})',
-                "message": "JavaScript file missing proper header comment",
-                "suggestion": "Add header: // ─────────────────────────────────────────────────────────────────",
-                "severity": "info",
-                "section": "Comment Patterns",
-                "file_start_only": True
-            },
-            "css_missing_header": {
-                "pattern": r'^(?!/\* ─{63} \*/)',
-                "message": "CSS file missing proper header comment",
-                "suggestion": "Add header: /* ───────────────────────────────────────────────────────────── */",
-                "severity": "info",
-                "section": "Comment Patterns",
-                "file_start_only": True
-            },
-            "improper_inline_comment": {
-                "pattern": r'^\s*//\s+[a-z](?!ode:|ote:|odo:|ixme:|ack:|arning:|rror:|mportant:)',
-                "message": "Inline comment should start with prefix or proper sentence",
-                "suggestion": "Use prefixes: TODO:, NOTE:, FIXME:, or start with capital letter",
-                "severity": "info",
-                "section": "Comment Patterns"
             }
         }
     
@@ -334,35 +310,16 @@ class QualityHook(HookBase):
                 continue
             if name in ["console_log", "global_pollution", "missing_null_check"] and not is_js:
                 continue
-            if name == "js_missing_header" and not is_js:
-                continue
-            if name == "css_missing_header" and not is_css:
-                continue
-            if name == "improper_inline_comment" and not is_js:
-                continue
             
-            # Handle file-start-only patterns
-            if pattern_info.get("file_start_only", False):
-                # Only check first non-empty line
-                lines = content.split('\n')
-                first_line = next((l for l in lines if l.strip()), '')
-                if first_line and re.search(pattern_info["pattern"], first_line):
+            # Search for violations
+            for i, line in enumerate(content.split('\n'), 1):
+                if re.search(pattern_info["pattern"], line, re.IGNORECASE):
                     violations.append({
                         "type": name,
-                        "line": 1,
+                        "line": i,
                         "file": file_path,
                         **pattern_info
                     })
-            else:
-                # Search for violations in all lines
-                for i, line in enumerate(content.split('\n'), 1):
-                    if re.search(pattern_info["pattern"], line, re.IGNORECASE):
-                        violations.append({
-                            "type": name,
-                            "line": i,
-                            "file": file_path,
-                            **pattern_info
-                        })
         
         # Check file size
         line_count = len(content.split('\n'))

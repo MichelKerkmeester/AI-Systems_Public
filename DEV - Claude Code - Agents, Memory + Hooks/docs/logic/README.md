@@ -25,14 +25,10 @@
 ```
 logic/
 ├── README.md # Overview and navigation
-├── advanced.md
 ├── automation.md # Automation patterns
 ├── commands.md # Command reference
-├── hooks.md # Hook system docs
-├── migration.md # Migration guide
 └── troubleshooting.md # Common issues and solutions
 ```
-
 ## Overview
 
 The Logic system is the heart of Claude Code's automation and command infrastructure. It manages hooks, commands, and intelligent automation to streamline your development workflow.

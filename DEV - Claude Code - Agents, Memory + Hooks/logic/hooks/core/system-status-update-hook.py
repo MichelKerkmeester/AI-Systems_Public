@@ -142,8 +142,7 @@ class SystemStatusUpdateHook(HookBase):
             mcps = {
                 "Sequential": True,
                 "Graphiti": True,
-                "GitHub": True,
-                "Context7": True
+                "GitHub": True
             }
         
         return mcps

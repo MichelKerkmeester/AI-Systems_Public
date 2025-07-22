@@ -87,7 +87,7 @@ class FolderStructureHook(HookBase):
             "todos": ".claude/project-management/",
             
             # State
-            "state": ".claude/logic/state/",
+            "state": ".claude/state/",
             
             # Task completion sub-folders
             "memory-summary": ".claude/project-management/completed/memory/",
@@ -107,7 +107,7 @@ class FolderStructureHook(HookBase):
             r"\.claude/project/knowledge/": ".claude/knowledge/",
             r"\.claude/project/tasks/": ".claude/project-management/",
             r"\.claude/project/sessions/": ".claude/sessions/",
-            r"\.claude/project/state/": ".claude/logic/state/",
+            r"\.claude/project/state/": ".claude/state/",
             r"\.claude/archive/": ".claude/z__archive/",
             r"\.claude/project/archive/": ".claude/z__archive/"
         }

@@ -15,7 +15,7 @@ from typing import Dict, List, Any, Optional
 # Add parent directories to path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from logic.shared import (
+from shared import (
     MessageFormatter,
     SettingsManager,
     StateManager,
@@ -24,12 +24,12 @@ from logic.shared import (
 
 # Import code reuse components
 try:
-    from logic.code_reuse import (
+    from code_reuse import (
         ReuseAnalyzer, ComplianceValidator,
         JustificationSystem, SimilarityDetector,
         PatternMatcher, ConsolidationAnalyzer
     )
-    from logic.code_reuse.state_manager import StateManager as ReuseStateManager
+    from state.code_reuse.state_manager import StateManager as ReuseStateManager
     CODE_REUSE_AVAILABLE = True
 except ImportError:
     CODE_REUSE_AVAILABLE = False
@@ -105,7 +105,8 @@ class LogicCommand:
             "system": self.show_system,
             "tasks": self.show_tasks,
             "debug": self.debug_mode,
-            "reuse": self.manage_reuse
+            "reuse": self.manage_reuse,
+            "claude-md-update": self.check_claude_md_update
         }
         
         if sub_cmd in handlers:
@@ -129,7 +130,8 @@ class LogicCommand:
             ("reuse", "Code reuse analysis and enforcement"),
             ("system (sys)", "System metrics and performance"),
             ("tasks (t)", "Task management overview"),
-            ("debug (d)", "Debug mode and diagnostics")
+            ("debug (d)", "Debug mode and diagnostics"),
+            ("claude-md-update", "Check if CLAUDE.md needs updates")
         ]
         
         for cmd, desc in commands:
@@ -1104,6 +1106,118 @@ class LogicCommand:
         else:
             output += "\n⚠️ **Warning:** Code reuse is not being enforced.\n"
             output += "Consider re-enabling to maintain code quality.\n"
+        
+        output += "\n" + MessageFormatter.footer()
+        return {"status": "success", "output": output}
+    
+    def check_claude_md_update(self, args: List[str]) -> Dict[str, Any]:
+        """Check if CLAUDE.md needs updates based on system changes"""
+        output = MessageFormatter.header("CLAUDE.md Update Check", "update")
+        
+        # Load tracked changes
+        changes_file = self.logic_path / "system" / "claude_md_changes.json"
+        if changes_file.exists():
+            try:
+                with open(changes_file, 'r') as f:
+                    changes_data = json.load(f)
+                    changes = changes_data.get("changes", [])
+                    last_update = changes_data.get("last_update")
+            except:
+                changes = []
+                last_update = None
+        else:
+            changes = []
+            last_update = None
+        
+        if not changes:
+            output += "\n✅ **CLAUDE.md is up to date**\n"
+            output += "\nNo significant system changes detected since last update.\n"
+            
+            if last_update:
+                output += f"\nLast update: {last_update}\n"
+        else:
+            output += f"\n📝 **{len(changes)} system changes detected:**\n\n"
+            
+            # Group changes by category
+            categories = {
+                "hooks": [],
+                "commands": [],
+                "code_reuse": [],
+                "memory": [],
+                "specs": []
+            }
+            
+            for change in changes:
+                file_path = change.get("file", "")
+                if "hooks/" in file_path:
+                    categories["hooks"].append(change)
+                elif "commands/" in file_path:
+                    categories["commands"].append(change)
+                elif "code_reuse/" in file_path:
+                    categories["code_reuse"].append(change)
+                elif "memory/" in file_path:
+                    categories["memory"].append(change)
+                elif "specs/" in file_path and "/completed/" in file_path:
+                    categories["specs"].append(change)
+            
+            # Display changes by category
+            if categories["hooks"]:
+                output += "**🪝 Hook Changes:**\n"
+                for change in categories["hooks"]:
+                    output += f"  • {change.get('description', 'Unknown change')}\n"
+                output += "\n"
+            
+            if categories["commands"]:
+                output += "**📟 Command Changes:**\n"
+                for change in categories["commands"]:
+                    output += f"  • {change.get('description', 'Unknown change')}\n"
+                output += "\n"
+            
+            if categories["code_reuse"]:
+                output += "**♻️ Code Reuse System Changes:**\n"
+                for change in categories["code_reuse"]:
+                    output += f"  • {change.get('description', 'Unknown change')}\n"
+                output += "\n"
+            
+            if categories["memory"]:
+                output += "**🧠 Memory System Changes:**\n"
+                for change in categories["memory"]:
+                    output += f"  • {change.get('description', 'Unknown change')}\n"
+                output += "\n"
+            
+            if categories["specs"]:
+                output += "**✅ Completed Features:**\n"
+                for change in categories["specs"]:
+                    output += f"  • {change.get('description', 'Unknown change')}\n"
+                output += "\n"
+            
+            output += "\n🔄 **Recommended Updates for CLAUDE.md:**\n"
+            output += "1. Review the changes above\n"
+            output += "2. Update relevant sections in CLAUDE.md:\n"
+            
+            if categories["hooks"]:
+                output += "   - Section 5: Hook Automation Warnings\n"
+            if categories["commands"]:
+                output += "   - Section 1: Quick Start (commands list)\n"
+                output += "   - Section 6: Help & Troubleshooting\n"
+            if categories["code_reuse"] or categories["memory"]:
+                output += "   - START HERE steps (if process changed)\n"
+                output += "   - Section 4: Memory Operations\n"
+            if categories["specs"]:
+                output += "   - Section 3: Task Management\n"
+            
+            output += "\n3. Run this command again after updates to clear the change log\n"
+        
+        # Check hook status
+        output += "\n📊 **Self-Update Hook Status:**\n"
+        hook_info = self.hook_registry.get_hook_info("claude-md-self-update-hook")
+        if hook_info and hook_info.get("enabled"):
+            output += "  ✅ Auto-monitoring is active\n"
+            output += "  • Threshold: 5 significant changes\n"
+            output += "  • Check frequency: Once per day\n"
+        else:
+            output += "  ❌ Auto-monitoring is disabled\n"
+            output += "  • Enable with: `/logic hooks enable claude-md-self-update-hook`\n"
         
         output += "\n" + MessageFormatter.footer()
         return {"status": "success", "output": output}

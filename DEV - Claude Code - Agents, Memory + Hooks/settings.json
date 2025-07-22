@@ -7,10 +7,6 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl/.claude/logic/scripts/greeting-hook.py'"
-          },
-          {
-            "type": "command",
             "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl/.claude/logic/hooks/core/prompt-enhancement-hook.py'"
           },
           {
@@ -19,7 +15,7 @@
           },
           {
             "type": "command",
-            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl/.claude/logic/hooks/memory-context-hook-v2.py'"
+            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl/.claude/logic/hooks/memory-context-hook.py'"
           },
           {
             "type": "command",
@@ -101,7 +97,7 @@
           },
           {
             "type": "command",
-            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl/.claude/logic/hooks/tools/post-tool-use-memory.py'"
+            "command": "python3 '/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl/.claude/logic/hooks/memory/post-tool-use-memory.py'"
           }
         ]
       },

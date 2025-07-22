@@ -73,21 +73,6 @@ def get_hook_status():
     return "Loading..."
 
 
-def get_session_age():
-    """Get current session age"""
-    try:
-        sessions_dir = Path.home() / ".claude" / "project" / "sessions" / "current"
-        if sessions_dir.exists():
-            session_files = list(sessions_dir.glob("*.md"))
-            if session_files:
-                # Get the most recent session file
-                latest = max(session_files, key=lambda p: p.stat().st_mtime)
-                age_seconds = datetime.now().timestamp() - latest.stat().st_mtime
-                hours = int(age_seconds / 3600)
-                return f"{hours}h"
-    except:
-        pass
-    return "0h"
 
 
 def get_git_status():
@@ -122,7 +107,7 @@ def get_mcp_status():
     # List of expected MCPs based on CLAUDE.md documentation
     expected_mcps = [
         "Sequential Thinking", "Graphiti", "GitHub", 
-        "Context7", "n8n", "Puppeteer", "Playwright", 
+        "Puppeteer", "Playwright", 
         "Figma"
     ]
     
@@ -143,9 +128,9 @@ def get_todo_count():
         # TodoWrite tool doesn't persist state between messages
         # So we can't reliably get the count here
         # Return a descriptive message instead
-        return "Session todos"
+        return "Current todos"
     except:
-        return "Session todos"
+        return "Current todos"
 
 
 def generate_startup_display():
@@ -155,7 +140,6 @@ def generate_startup_display():
     memory_status = get_memory_status()
     task_status = get_task_status()
     hook_status = get_hook_status()
-    session_age = get_session_age()
     git_branch = get_git_status()
     mcp_status = get_mcp_status()
     todo_info = get_todo_count()
@@ -168,53 +152,52 @@ def generate_startup_display():
 [📚 Knowledge] facts.json ✅ | patterns.json ✅ | constraints.json ✅  
 [🤖 MCPs] {mcp_status}
 [🎯 Mode] {mode} | Project: anobel.nl | Git: {git_branch}
-[📂 Session] Age: {session_age} | [📝 Todos] {todo_info}
-[🪝 Hooks] {hook_status} | [📋 Tasks] {task_status}
+[📝 Todos] {todo_info} | [🪝 Hooks] {hook_status} | [📋 Tasks] {task_status}
 ====================================="""
     
     return display
 
 
-def get_session_id():
-    """Get or create a unique session ID based on process start time"""
-    # Use Claude Code's process ID and start time as session identifier
-    session_marker_dir = Path.home() / ".claude" / "state"
-    session_marker_dir.mkdir(parents=True, exist_ok=True)
+def get_startup_id():
+    """Get or create a unique startup ID based on process start time"""
+    # Use Claude Code's process ID and start time as startup identifier
+    startup_marker_dir = Path.home() / ".claude" / "state"
+    startup_marker_dir.mkdir(parents=True, exist_ok=True)
     
-    # Try to get Claude session ID from environment or use process-based fallback
-    claude_session_id = os.environ.get('CLAUDE_SESSION_ID', '')
+    # Try to get Claude startup ID from environment or use process-based fallback
+    claude_startup_id = os.environ.get('CLAUDE_STARTUP_ID', '')
     
-    if claude_session_id:
-        session_id = claude_session_id
+    if claude_startup_id:
+        startup_id = claude_startup_id
     else:
-        # Create a session ID based on current process info
+        # Create a startup ID based on current process info
         pid = os.getpid()
         ppid = os.getppid()
         
-        # Simple session ID based on parent process and time window (5 minute buckets)
+        # Simple startup ID based on parent process and time window (5 minute buckets)
         time_bucket = int(datetime.now().timestamp() / 300)  # 5-minute buckets
-        session_id = f"{ppid}_{time_bucket}"
+        startup_id = f"{ppid}_{time_bucket}"
     
-    return session_id, session_marker_dir / f"startup_shown_{session_id}"
+    return startup_id, startup_marker_dir / f"startup_shown_{startup_id}"
 
 
 def should_show_startup():
-    """Check if we should show the startup display for this session"""
+    """Check if we should show the startup display for this startup"""
     debug = "--debug" in sys.argv
     
     # Always show if forced
     if "--force" in sys.argv:
         return True
     
-    # Check session marker
-    session_id, marker_path = get_session_id()
+    # Check startup marker
+    startup_id, marker_path = get_startup_id()
     
     if debug:
-        print(f"[DEBUG] Session ID: {session_id}")
+        print(f"[DEBUG] Startup ID: {startup_id}")
         print(f"[DEBUG] Marker path: {marker_path}")
         print(f"[DEBUG] Marker exists: {marker_path.exists()}")
     
-    # If marker exists, we've already shown for this session
+    # If marker exists, we've already shown for this startup
     if marker_path.exists():
         # Check if marker is stale (older than 6 hours)
         try:
@@ -227,14 +210,14 @@ def should_show_startup():
         except:
             pass
         if debug:
-            print("[DEBUG] Already shown for this session, skipping")
+            print("[DEBUG] Already shown for this startup, skipping")
         return False
     
     # Create marker to indicate we're showing
     try:
         marker_path.touch()
         if debug:
-            print("[DEBUG] Created session marker")
+            print("[DEBUG] Created startup marker")
     except Exception as e:
         if debug:
             print(f"[DEBUG] Failed to create marker: {e}")
@@ -243,7 +226,7 @@ def should_show_startup():
 
 
 def cleanup_old_markers():
-    """Clean up old session markers (older than 24 hours)"""
+    """Clean up old startup markers (older than 24 hours)"""
     try:
         session_marker_dir = Path.home() / ".claude" / "state"
         if session_marker_dir.exists():

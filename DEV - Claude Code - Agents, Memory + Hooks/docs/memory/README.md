@@ -29,6 +29,15 @@ graphiti/
 └── practical-examples.md # Real-world usage examples
 ```
 
+## Directory Structure
+
+```
+memory/
+├── README.md # Overview and navigation
+├── memory-verifcation-guide.md # Testing and verification
+└── practical-examples.md # Real-world usage examples
+```
+
 ## 🚀 Quick Start
 
 ### Essential Commands

@@ -26,6 +26,28 @@
   - [Conditional Execution](#conditional-execution)
   - [Hook Chaining](#hook-chaining)
   - [Recovery Mechanisms](#recovery-mechanisms)
+## Directory Structure
+
+```
+hooks/
+├── README.md # Overview and navigation
+├── claude-code-hooks-reference.md
+├── context-management-hook.md
+├── doc-update-hook.md
+├── hook-development-guide.md
+├── memory-context-hook.md
+├── mode-suggestion-hook.md
+├── parallel-agent-hook.md
+├── pattern-extraction-hook.md
+├── prompt-enhancement-hook.md
+├── quality-hook.md
+├── query-planning-hook.md
+├── security-scan-hook.md
+├── session-hook.md
+├── task-management-hook.md
+└── workflow-automation-hook.md
+```
+
 ## Hook Events
 
 ### 🎯 UserPromptSubmit

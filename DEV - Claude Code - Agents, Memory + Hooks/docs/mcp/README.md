@@ -25,28 +25,25 @@
 ```
 mcp/
 ├── chrome-debug/
-│   └── README.md # Chrome DevTools Protocol access
+│   └── README.md # Overview and navigation
 ├── context7/
-│   └── README.md # Library documentation retrieval
+│   └── README.md # Overview and navigation
 ├── figma/
-│   └── README.md # Design system integration
-├── gemini/
-│   └── README.md # AI-powered code analysis
+│   └── README.md # Overview and navigation
 ├── github/
-│   └── README.md # GitHub API integration
+│   └── README.md # Overview and navigation
 ├── graphiti/
-│   └── README.md # Memory management with Neo4j
+│   └── README.md # Overview and navigation
 ├── n8n/
-│   └── README.md # Workflow automation
+│   └── README.md # Overview and navigation
 ├── playwright/
-│   └── README.md # Browser automation
+│   └── README.md # Overview and navigation
 ├── puppeteer/
-│   └── README.md # Chrome automation
+│   └── README.md # Overview and navigation
 ├── sequential-thinking/
-│   └── README.md # Structured reasoning
-└── README.md # This file
+│   └── README.md # Overview and navigation
+└── README.md # Overview and navigation
 ```
-
 ## Overview
 
 This directory contains documentation for all MCP servers integrated with Claude Code, providing extended capabilities for development, automation, and integration with external services.

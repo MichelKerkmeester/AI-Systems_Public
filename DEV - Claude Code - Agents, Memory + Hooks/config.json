@@ -1,7 +1,11 @@
 {
   "settings": {
     "context_compaction": true,
-    "command_whitelist": ["context", "pr", "test", "workflow", "notebook", "mode", "memory"],
+    "command_whitelist": [
+      "memory",
+      "logic",
+      "status"
+    ],
     "response_length": "adaptive",
     "autocomplete": true,
     "sequential_thinking": {
@@ -17,85 +21,58 @@
         "security_implementation": true
       },
       "exceptions": {
-        "simple_tasks": ["read", "write", "edit", "ls", "grep", "cat"],
+        "simple_tasks": [
+          "read",
+          "write",
+          "edit",
+          "ls",
+          "grep",
+          "cat"
+        ],
         "known_context": true,
         "direct_commands": true,
         "quick_retrieval": true
       },
       "visual_indicators": {
-        "active": "[🧠 Sequential Thinking: Active]",
-        "stage": "[🧠 Stage: {stage}]",
-        "complete": "[🧠 Thinking Complete]"
+        "active": "[\ud83e\udde0 Sequential Thinking: Active]",
+        "stage": "[\ud83e\udde0 Stage: {stage}]",
+        "complete": "[\ud83e\udde0 Thinking Complete]"
       },
-      "stages": ["Problem Definition", "Research", "Analysis", "Synthesis", "Conclusion"]
+      "stages": [
+        "Problem Definition",
+        "Research",
+        "Analysis",
+        "Synthesis",
+        "Conclusion"
+      ]
     }
   },
-  
   "aliases": {
     "commands": {
-      "/w": "/workflow",
-      "/t": "/test",
-      "/c": "/context",
-      "/n": "/notebook",
-      "/m": "/mode",
-      "/p": "/pr",
+      "/l": "/logic",
+      "/m": "/memory",
+      "/s": "/status"
     },
     "quick_access": {
-      "/test-quick": "/test quick",
-      "/test-full": "/test full",
-      "/test-security": "/test security",
-      "/test-performance": "/test performance",
-      "/workflow-auto": "/workflow auto",
-      "/workflow-plan": "/workflow plan",
-      "/workflow-implement": "/workflow implement",
-      "/workflow-refactor": "/workflow refactor",
-      "/context-refresh": "/context refresh",
-      "/context-status": "/context status",
-      "/context-checkpoint": "/context checkpoint",
-      "/context-export": "/context export",
-      "/mode-strict": "/mode strict",
-      "/mode-auto": "/mode auto",
-      "/mode-hybrid": "/mode hybrid",
-      "/notebook-extract": "/notebook extract",
-      "/notebook-summary": "/notebook summary"
+      "/memory-search": "/memory search",
+      "/memory-auto": "/memory auto",
+      "/logic-help": "/logic help",
+      "/logic-hooks": "/logic hooks",
+      "/logic-hooks-status": "/logic hooks status",
+      "/logic-claude-md-update": "/logic claude-md-update"
     }
   },
-  
-  "modes": {
-    "strict": {
-      "icon": "🔒",
-      "safe_guards": "maximum",
-      "checkpoint_frequency": "every_action",
-      "max_staleness": 50
-    },
-    "auto": {
-      "icon": "🚀",
-      "safe_guards": "standard",
-      "checkpoint_frequency": "smart_triggers",
-      "max_staleness": 120
-    },
-    "hybrid": {
-      "icon": "⚖️",
-      "safe_guards": "balanced",
-      "checkpoint_frequency": "milestones",
-      "max_staleness": 80
+  "deprecated_commands": {
+    "_comment": "These commands have been replaced by automation via hooks",
+    "replaced": {
+      "/context": "Automated via memory-context-hook-graphiti.py",
+      "/pr": "Use GitHub MCP tools directly",
+      "/test": "Automated via quality-hook.py",
+      "/workflow": "Automated via task-management-hook.py",
+      "/notebook": "Automated via pattern-extraction-hook.py",
+      "/mode": "No longer needed - system runs in auto mode"
     }
   },
-  
-  "mode_detection": {
-    "strict": {
-      "patterns": ["production", "deploy", "release", "critical", "security"],
-      "branches": ["main", "master", "production"]
-    },
-    "hybrid": {
-      "patterns": ["refactor", "optimize", "complex"],
-      "file_count": 10
-    },
-    "auto": {
-      "default": true
-    }
-  },
-  
   "drift_prevention": {
     "enabled": true,
     "thresholds": {
@@ -107,38 +84,61 @@
       "severe_drift": "force_refresh_prompt"
     }
   },
-  
   "validation": {
     "slater_constraints": {
       "no_domcontentloaded": {
-        "patterns": ["DOMContentLoaded", "document\\.addEventListener\\(['\"]DOMContentLoaded"],
+        "patterns": [
+          "DOMContentLoaded",
+          "document\\.addEventListener\\(['\"]DOMContentLoaded"
+        ],
         "severity": "error",
         "message": "Slater autoloads - no DOMContentLoaded needed. Use direct initialization or Webflow.push() for dependencies.",
         "auto_fix": true
       },
       "no_vite_references": {
-        "patterns": ["vite", "Vite", "import\\.meta\\.hot"],
+        "patterns": [
+          "vite",
+          "Vite",
+          "import\\.meta\\.hot"
+        ],
         "severity": "warning",
         "message": "Vite is for future use only. Current development uses Slater."
       }
     },
     "webflow_constraints": {
       "no_dom_manipulation": {
-        "patterns": ["createElement", "appendChild", "innerHTML ="],
+        "patterns": [
+          "createElement",
+          "appendChild",
+          "innerHTML ="
+        ],
         "severity": "error"
       },
       "rem_units_only": {
-        "patterns": ["\\d+px(?![\\w-])"],
-        "exceptions": ["border", "outline", "box-shadow"],
+        "patterns": [
+          "\\d+px(?![\\w-])"
+        ],
+        "exceptions": [
+          "border",
+          "outline",
+          "box-shadow"
+        ],
         "severity": "error",
         "auto_fix": true
       },
       "data_attributes_required": {
-        "forbidden_selectors": ["^\\.w-", "^#w-"],
+        "forbidden_selectors": [
+          "^\\.w-",
+          "^#w-"
+        ],
         "severity": "warning"
       },
       "no_console_production": {
-        "patterns": ["console\\.log", "console\\.error", "console\\.warn"],
+        "patterns": [
+          "console\\.log",
+          "console\\.error",
+          "console\\.warn"
+        ],
         "severity": "error",
         "auto_fix": true
       }
@@ -172,7 +172,6 @@
       }
     }
   },
-  
   "notebook_extraction": {
     "patterns": {
       "client_preferences": {
@@ -235,26 +234,55 @@
       "auto_save": true
     }
   },
-  
   "fallback_behaviors": {
     "code_analysis": {
       "method": "grep_and_read",
-      "patterns": ["function", "class", "export", "import"],
+      "patterns": [
+        "function",
+        "class",
+        "export",
+        "import"
+      ],
       "context_lines": 5
     },
     "optimization": {
       "method": "rule_based",
-      "checks": ["bundle_size", "unused_imports", "console_logs", "pixel_units"]
+      "checks": [
+        "bundle_size",
+        "unused_imports",
+        "console_logs",
+        "pixel_units"
+      ]
     },
     "security": {
       "method": "pattern_matching",
-      "patterns": ["api_key", "secret", "password", "token", "eval", "innerHTML"]
+      "patterns": [
+        "api_key",
+        "secret",
+        "password",
+        "token",
+        "eval",
+        "innerHTML"
+      ]
     },
     "context_export": {
       "method": "template_based",
-      "include": ["current_branch", "recent_files", "active_tasks", "context_score"]
+      "include": [
+        "current_branch",
+        "recent_files",
+        "active_tasks",
+        "context_score"
+      ]
     }
   },
-  
-  "current_mode": "auto"
+  "current_commands": {
+    "/memory": "Knowledge management (search|manual|auto)",
+    "/logic": "System control & help (help|hooks|emergency) - Subcommands: help, hooks, system, tasks, debug, reuse",
+    "/status": "Check system health"
+  },
+  "command_sync": {
+    "_comment": "Auto-updated by quality/config-sync-hook.py when commands change",
+    "last_sync": "2025-07-22 07:32:55",
+    "sync_enabled": true
+  }
 }
