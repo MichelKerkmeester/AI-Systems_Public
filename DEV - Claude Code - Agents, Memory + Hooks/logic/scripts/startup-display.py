@@ -21,14 +21,38 @@ from logic.tasks import TaskManager
 def get_memory_status():
     """Get memory system status"""
     try:
-        # Try to get memory count
-        cmd = 'echo "MATCH (e:Episodic) RETURN count(e);" | docker exec -i graphiti-neo4j cypher-shell -u neo4j -p password -d neo4j --format plain 2>/dev/null'
-        result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
-        if result.returncode == 0:
-            lines = result.stdout.strip().split('\n')
-            if len(lines) > 1:
-                count = int(lines[1])
+        # Try to get memory count using Neo4j Desktop instance
+        from neo4j import GraphDatabase
+        
+        # Connection details for Neo4j Desktop
+        uri = "neo4j://127.0.0.1:7687"
+        database = "graphiti"
+        username = "neo4j"
+        password = "AQCIbagraydayAQCIba"
+        
+        driver = GraphDatabase.driver(uri, auth=(username, password))
+        
+        with driver.session(database=database) as session:
+            result = session.run("MATCH (e:Episodic) RETURN count(e) as count")
+            record = result.single()
+            if record:
+                count = record["count"]
+                driver.close()
                 return f"✅ Active | {count} memories stored"
+        
+        driver.close()
+    except ImportError:
+        # Fallback to cypher-shell if neo4j package not available
+        try:
+            cmd = f'echo "MATCH (e:Episodic) RETURN count(e);" | cypher-shell -a neo4j://127.0.0.1:7687 -u neo4j -p AQCIbagraydayAQCIba -d graphiti --format plain 2>/dev/null'
+            result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+            if result.returncode == 0:
+                lines = result.stdout.strip().split('\n')
+                if len(lines) > 1:
+                    count = int(lines[1])
+                    return f"✅ Active | {count} memories stored"
+        except:
+            pass
     except:
         pass
     return "❌ Offline"
@@ -281,7 +305,6 @@ def main():
             "memory": get_memory_status(),
             "tasks": get_task_status(),
             "hooks": get_hook_status(),
-            "session_age": get_session_age(),
             "git": get_git_status(),
             "mcps": get_mcp_status()
         }

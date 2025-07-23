@@ -24,7 +24,7 @@ class DocUpdateHook(ToolHook):
         super().__init__()
         self.formatter = MessageFormatter()
         self.state_file = Path(__file__).parent.parent.parent / "state" / "doc-update-state.json"
-        self.doc_updater = Path(__file__).parent.parent.parent / "scripts" / "doc-updater.py"
+        self.doc_updater = Path(__file__).parent.parent.parent / "documentation" / "scripts" / "doc-updater.py"
         
     def can_handle(self, request_data: dict) -> bool:
         """Check if this affects documentation"""
@@ -98,7 +98,7 @@ class DocUpdateHook(ToolHook):
             # Documentation update took too long
             return {
                 "status": 0,
-                "output": "Documentation update timed out. Run manually: `python3 .claude/logic/scripts/doc-updater.py`"
+                "output": "Documentation update timed out. Run manually: `python3 .claude/logic/documentation/scripts/doc-updater.py`"
             }
         except Exception as e:
             # Log error but don't fail the operation
@@ -163,7 +163,7 @@ class DocUpdateHook(ToolHook):
             "`cat .claude/docs/UPDATE_REPORT.md`",
             "",
             "To manually run documentation update:",
-            "`python3 .claude/logic/scripts/doc-updater.py`"
+            "`python3 .claude/logic/documentation/scripts/doc-updater.py`"
         ]
         
         output += self.formatter.section("Action Required", items, "warning")

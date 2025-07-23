@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-07-23T17:25:10.436257",
+  "filter_version": "optimized",
+  "neo4j_threshold": 0.8,
+  "neo4j_connected": null,
+  "supabase_configured": null,
+  "processes_running": true,
+  "recent_activity": false,
+  "deployment_ready": true
+}

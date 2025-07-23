@@ -14,7 +14,7 @@ from pathlib import Path
 def main():
     """Execute the status command"""
     # Path to startup display script
-    script_path = Path(__file__).resolve().parents[2] / "scripts" / "startup-display.py"
+    script_path = Path(__file__).resolve().parents[2] / "logic" / "scripts" / "startup-display.py"
     
     # Build command with force flag to always show
     cmd = [sys.executable, str(script_path), "--force"]

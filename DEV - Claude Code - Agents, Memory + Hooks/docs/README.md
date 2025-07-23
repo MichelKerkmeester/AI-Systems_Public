@@ -93,7 +93,7 @@ The hook system provides intelligent automation through 16+ specialized hooks:
 | **Quality Hooks** | quality, security-scan, pattern-extraction | Code quality & security |
 | **Memory Hooks** | memory-context, context-management | Knowledge management |
 | **Workflow Hooks** | task-management, workflow-automation | Process automation |
-| **Enhancement Hooks** | prompt-enhancement, mode-suggestion, query-planning | AI assistance |
+| **Enhancement Hooks** | prompt-enhancement, query-planning | AI assistance |
 | **Tool Hooks** | parallel-agent | Performance optimization |
 
 [→ Complete Hook Documentation](./hooks/README.md)
@@ -128,7 +128,6 @@ The logic system provides:
 Utility scripts that power automation:
 - **doc-updater.py**: Maintains documentation structure
 - **add-toc.py**: Generates table of contents
-- **mode-manager.py**: Controls automation modes
 - **startup-display.py**: Shows system status
 - **doc-audit.py**: Validates documentation
 
@@ -145,7 +144,6 @@ docs/
 │   ├── doc-update-hook.md
 │   ├── hook-development-guide.md
 │   ├── memory-context-hook.md
-│   ├── mode-suggestion-hook.md
 │   ├── parallel-agent-hook.md
 │   ├── pattern-extraction-hook.md
 │   ├── prompt-enhancement-hook.md
@@ -191,7 +189,6 @@ docs/
 │   ├── add-toc.md
 │   ├── doc-audit.md
 │   ├── doc-updater.md
-│   ├── mode-manager.md
 │   ├── startup-display.md
 │   └── startup-with-memory.md
 └── README.md # Overview and navigation
@@ -231,7 +228,6 @@ docs/
 - **Script Overview**: [scripts/README.md](./scripts/README.md)
 - **Doc Updater**: [scripts/doc-updater.md](./scripts/doc-updater.md)
 - **TOC Generator**: [scripts/add-toc.md](./scripts/add-toc.md)
-- **Mode Manager**: [scripts/mode-manager.md](./scripts/mode-manager.md)
 
 ### By Use Case
 - **Setting up automation**: Start with [logic/automation.md](./logic/automation.md)
@@ -273,7 +269,7 @@ docs/
 ### Manual Triggers Available
 - 🔧 `/memory search` - Search knowledge base
 - 🔧 `/logic help [topic]` - Get specific help
-- 🔧 Run any script manually from `.claude/logic/scripts/`
+- 🔧 Run any script manually from `.claude/logic/scripts/` and subdirectories
 
 ## Documentation Standards
 
@@ -300,7 +296,7 @@ docs/
 
 When adding new documentation:
 1. Place it in the appropriate directory
-2. Run the TOC generator: `python3 .claude/logic/scripts/add-toc.py`
+2. Run the TOC generator: `python3 .claude/logic/documentation/scripts/add-toc.py`
 3. Update relevant README files
 4. Add cross-references from related docs
 5. Test all links and code examples

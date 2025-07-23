@@ -28,7 +28,7 @@
   "infrastructure": {
     "graphiti_memory": {
       "status": "configured",
-      "server_location": "/Users/michel_kerkmeester/AI & Dev/Claude Code/graphiti-gemini-setup/graphiti-gemini-mcp/graphiti_gemini_mcp_server.py",
+      "server_location": "/Users/michel_kerkmeester/AI & Dev/Websites/anobel.nl/mcp-servers/graphiti/graphiti-gemini-mcp/graphiti_gemini_mcp_server.py",
       "database": "Neo4j via Docker (port 7687)",
       "processing_time": "~10 seconds per episode",
       "models": {
