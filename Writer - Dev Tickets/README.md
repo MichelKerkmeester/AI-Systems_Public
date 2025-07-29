@@ -1,4 +1,4 @@
-# Dev Ticket Writer - User Guide
+# Dev Ticket Writer - User Guide v2.0
 
 ## 🚀 What is This?
 
@@ -11,6 +11,7 @@ The Dev Ticket Writer system transforms any request into clear, actionable devel
 - Focus on WHAT and WHY, not HOW
 - Save time with structured templates
 - Professional presentation with icons in all modes
+- **NEW: Intelligent MCP tool selection for optimal analysis**
 
 **Key Principle:** If a ticket takes more than 2 minutes to read, it's too long.
 
@@ -22,12 +23,12 @@ The Dev Ticket Writer system transforms any request into clear, actionable devel
 1. Go to [claude.ai](https://claude.ai)
 2. Click "Projects" in the sidebar
 3. Click "Create project"
-4. Name it "Dev Ticket Writer"
+4. Name it "Dev Ticket Writer v2"
 
 ### Step 2: Add the System Instructions
 1. In your project, click "Edit project details"
 2. Find the "Custom instructions" section
-3. Copy and paste the main system file: `Writer - Dev Tickets - v1.6.md`
+3. Copy and paste the main system file: `Writer - Dev Tickets - v2.0.0.md`
 4. Save the project
 
 ### Step 3: Upload Reference Document
@@ -39,50 +40,57 @@ Begin any conversation in the project, and Claude will transform your requests i
 
 .
 
-## 🧠 Optional Enhancement: Sequential Thinking MCP
+## 🧠 Enhanced Intelligence: Dual MCP Support
 
-### What is Sequential Thinking MCP?
-The Sequential Thinking MCP (Model Context Protocol) is a tool that enhances Claude's analytical capabilities by forcing systematic, step-by-step thinking before generating responses. When enabled, the system analyzes your feature request through multiple "thoughts" before writing tickets, resulting in more complete and well-structured tickets.
+### What's New in v2.0?
+The Dev Ticket Writer now intelligently chooses between two thinking tools based on your request complexity:
 
-### Why Use It for Dev Tickets?
-- **Better requirement analysis**: System thoroughly analyzes user needs before writing
-- **Fewer clarifications needed**: Systematic thinking catches missing details early
-- **More complete tickets**: Considers edge cases and dependencies automatically
-- **Consistent structure**: Ensures all ticket components are properly addressed
-- **Smarter mode selection**: Better analysis of complexity to choose the right ticket mode
+1. **Sequential Thinking MCP** - For straightforward, linear analysis
+2. **Cascade Thinking MCP** - For complex scenarios requiring exploration of alternatives
 
-### How to Install Sequential Thinking MCP
+The system automatically selects the best tool and adapts the number of analysis thoughts (minimum 1, scaling up based on complexity).
 
-**Prerequisites:**
-- For Method 1 (uvx): Python 3.10+ and UV package manager
-- For Method 2 (npx): Node.js installed
-- Basic familiarity with editing configuration files
+### Intelligent Selection Logic
 
-**Installation Method 1: Using uvx (Recommended - Full Features)**
+**Sequential Thinking is chosen for:**
+- Simple feature requests with clear scope
+- Quick (`$q`) and Standard (`$s`) mode tickets
+- Bug fixes and performance improvements
+- Single-feature implementations
+- Straightforward requirement updates
 
-1. **Locate your Claude Desktop configuration:**
+**Cascade Thinking is chosen for:**
+- Requests mentioning "alternatives" or "options"
+- Complex (`$c`) and Epic (`$e`) mode tickets
+- Multi-phase implementations
+- Unclear scope requiring exploration
+- Comparing different solutions
+- Features with interconnected dependencies
+
+### Adaptive Thought Process
+
+The system now uses a flexible approach:
+- **Minimum:** 1 thought (for very simple requests)
+- **Simple requests:** 1-2 thoughts
+- **Standard features:** 2-3 thoughts
+- **Complex analysis:** 3-5 thoughts with potential branching
+- **Epic breakdown:** 5+ thoughts with multiple exploration branches
+
+.
+
+## 🔧 Installing MCP Tools (Optional but Recommended)
+
+Both tools work independently, so you can install one or both based on your needs.
+
+### Sequential Thinking MCP Installation
+
+**For simpler, linear ticket analysis:**
+
+1. **Edit your Claude Desktop configuration:**
    - **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
    - **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
 
-2. **Edit the configuration file** to add Sequential Thinking MCP:
-```json
-{
-  "mcpServers": {
-    "sequential-thinking": {
-      "command": "uvx",
-      "args": [
-        "--from",
-        "git+https://github.com/arben-adm/mcp-sequential-thinking",
-        "--with",
-        "portalocker",
-        "mcp-sequential-thinking"
-      ]
-    }
-  }
-}
-```
-
-**Installation Method 2: Using npx (Simpler Alternative)**
+2. **Add Sequential Thinking:**
 ```json
 {
   "mcpServers": {
@@ -94,43 +102,45 @@ The Sequential Thinking MCP (Model Context Protocol) is a tool that enhances Cla
 }
 ```
 
-3. **If you already have other MCP servers**, add Sequential Thinking to the existing list:
+### Cascade Thinking MCP Installation
+
+**For complex ticket analysis with branching:**
+
+1. **Add to the same configuration file:**
 ```json
 {
   "mcpServers": {
-    "filesystem": {
+    "cascade-thinking": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/path/to/allowed/files"]
-    },
-    "sequential-thinking": {
-      "command": "uvx",
-      "args": [
-        "--from",
-        "git+https://github.com/arben-adm/mcp-sequential-thinking",
-        "--with",
-        "portalocker",
-        "mcp-sequential-thinking"
-      ]
+      "args": ["-y", "cascade-thinking-mcp"]
     }
   }
 }
 ```
 
-4. **Save the file and restart Claude Desktop**
+### Installing Both Tools
 
-5. **Verify installation** by starting a new chat and looking for the 🔌 icon, which should show "sequential-thinking" as an available tool
+**For maximum flexibility:**
+```json
+{
+  "mcpServers": {
+    "sequential-thinking": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+    },
+    "cascade-thinking": {
+      "command": "npx",
+      "args": ["-y", "cascade-thinking-mcp"]
+    }
+  }
+}
+```
 
-### How It Works with Dev Tickets
-When Sequential Thinking MCP is available, the Dev Ticket Writer automatically:
-- Uses it for all ticket creation requests
-- Analyzes through 3+ thoughts:
-  - Understanding the feature request and user context
-  - Identifying missing information or clarifications
-  - Planning ticket structure and selecting appropriate mode
-- Only bypasses it for simple ticket edits
-- Creates more thorough and well-structured tickets
+3. **Save and restart Claude Desktop**
 
-**Note**: The system works perfectly without Sequential Thinking MCP. If it's not installed, you'll see "Sequential Thinking MCP not available, proceeding with standard analysis" and tickets will still be created using the system's built-in intelligence.
+4. **Verify installation** by looking for the 🔌 icon showing available tools
+
+**Note**: The system works without these tools but provides enhanced analysis when available.
 
 .
 
@@ -142,15 +152,21 @@ Simply describe what you need:
 We need search filters for our product catalog
 ```
 
+The system will:
+1. Assess complexity
+2. Choose appropriate MCP tool (if available)
+3. Analyze with adaptive thought count
+4. Generate the perfect ticket
+
 ### Mode Selection
 The system has four modes for different complexity levels:
 
-| Mode | Command | Use For |
-|------|---------|---------|
-| **Quick** | `$q` | Simple, single features |
-| **Standard** | `$s` (DEFAULT) | Most features and improvements |
-| **Complex** | `$c` | Multi-phase implementations |
-| **Epic** | `$e` | Major initiatives with child tickets |
+| Mode | Command | Use For | Typical MCP | Thoughts |
+|------|---------|---------|-------------|----------|
+| **Quick** | `$q` | Simple, single features | Sequential | 1-2 |
+| **Standard** | `$s` (DEFAULT) | Most features and improvements | Sequential | 2-3 |
+| **Complex** | `$c` | Multi-phase implementations | Cascade | 3-5 |
+| **Epic** | `$e` | Major initiatives with child tickets | Cascade | 5+ |
 
 ### Mode Examples:
 ```
@@ -169,16 +185,21 @@ $e create customer self-service portal
 
 ### Every Ticket Includes:
 1. **Always in an artifact** (for easy copying)
-2. **User Value statement** (why it matters)
-3. **Business Goal** (measurable impact)
-4. **Requirements** (outcome-focused, not technical)
-5. **Success Criteria** (measurable checkboxes)
-6. **Design links** (when applicable)
-7. **Dependencies** (related tickets)
-8. **Icons throughout** (for visual hierarchy in all modes)
+2. **MCP tool notation** (which tool was used for analysis)
+3. **User Value statement** (why it matters)
+4. **Business Goal** (measurable impact)
+5. **Requirements** (outcome-focused, not technical)
+6. **Success Criteria** (measurable checkboxes)
+7. **Design links** (when applicable)
+8. **Dependencies** (related tickets)
+9. **Icons throughout** (for visual hierarchy in all modes)
 
 ### Example Output Structure:
 ```markdown
+MODE: $s
+TICKET TYPE: Feature
+MCP USED: Sequential Thinking
+
 ### ❖ Search Filters
 
 **User Value:** Find relevant products faster
@@ -204,33 +225,30 @@ $e create customer self-service portal
 - Requires: Search API v2 (#1234)
 ```
 
-### Icon Reference:
-- **❖** Feature titles
-- **◇** Requirements sections
-- **→** Design sections
-- **✓** Success criteria
-- **⊗** Dependencies
-- **⚠️** Risks/warnings
-- **⌘** About/context sections
-
 .
 
 ## 🆘 Troubleshooting
 
-### "It's providing technical solutions"
-- Make sure you're in the Dev Ticket Writer project
-- The system should focus on WHAT not HOW
-- Check that custom instructions are saved properly
+### "It's not using any MCP tool"
+- Check if MCPs are installed (look for 🔌 icon)
+- The system works fine without them
+- You'll see "MCP tools not available" notation
+
+### "It's using the wrong MCP tool"
+- The system chooses based on complexity indicators
+- You can hint at complexity: "explore alternatives" → Cascade
+- Simple, clear requests → Sequential
+
+### "Too many/few thoughts being used"
+- v2.0 adapts thought count to complexity
+- Simple edits might use just 1 thought
+- Complex epics might use 10+
+- This is normal and optimized behavior
 
 ### "The ticket is too long/detailed"
 - Use `$q` mode for simpler tickets
 - Default `$s` mode balances completeness and brevity
 - Remember: 2-minute read rule
-
-### "I need multiple related tickets"
-- Use `$e` epic mode for major initiatives
-- Ask to split complex features into phases
-- Each ticket should be one deployable unit
 
 ### "Missing design links"
 - The system will note "Needs: Design mockups"
@@ -238,12 +256,19 @@ $e create customer self-service portal
 - Add actual links when available
 
 ### "Icons aren't showing in tickets"
-- Icons should appear in ALL modes (Quick, Standard, Complex, Epic)
+- Icons should appear in ALL modes
 - Every major section should have an icon
-- Check that you're using the latest version (v1.6)
+- Check that you're using v2.0 or later
 
-### "Sequential Thinking MCP not working"
-- Check if it shows in the 🔌 tools menu
-- Verify your config file syntax is correct
-- Restart Claude Desktop after configuration changes
-- System works fine without it (just notes it's unavailable)
+.
+
+## 🎉 What's New in v2.0
+
+1. **Intelligent MCP Selection** - Automatically chooses the best thinking tool
+2. **Flexible Thought Requirements** - Minimum 1 thought, scales with complexity
+3. **Dual MCP Support** - Works with Sequential or Cascade Thinking MCPs
+4. **Adaptive Analysis** - Thought count matches request complexity
+5. **Enhanced Documentation** - Clear indication of which tool was used
+6. **Backward Compatible** - Works without MCPs installed
+
+The Dev Ticket Writer v2.0 brings intelligence to ticket creation, choosing the right analytical approach for each request while maintaining the core principle: focus on WHAT and WHY, not HOW.

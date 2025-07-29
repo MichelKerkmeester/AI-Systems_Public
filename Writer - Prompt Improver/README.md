@@ -1,4 +1,4 @@
-# Prompt Improver System - User Guide
+# Prompt Improver System - User Guide v3.0
 
 ## 🚀 What is This?
 
@@ -9,6 +9,9 @@ The Prompt Improver System is a specialized Claude configuration that transforms
 - Get consistent, high-quality AI responses
 - Learn prompt engineering best practices
 - Save time with reusable prompt templates
+- **NEW: Intelligent MCP tool selection for optimal improvements**
+
+**Key Principle:** The best prompt is one that gets the desired result reliably.
 
 .
 
@@ -18,12 +21,12 @@ The Prompt Improver System is a specialized Claude configuration that transforms
 1. Go to [claude.ai](https://claude.ai)
 2. Click "Projects" in the sidebar
 3. Click "Create project"
-4. Name it "Prompt Improver" (or similar)
+4. Name it "Prompt Improver v3" (or similar)
 
 ### Step 2: Add the System Instructions
 1. In your project, click "Edit project details"
 2. Find the "Custom instructions" section
-3. Copy and paste the main system file: `Writer - Prompt Improver - v2.8.md`
+3. Copy and paste the main system file: `Writer - Prompt Improver - v3.0.0.md`
 4. Save the project
 
 ### Step 3: Upload Reference Documents
@@ -37,50 +40,56 @@ Begin any conversation in the project, and Claude will automatically improve you
 
 .
 
-## 🧠 Optional Enhancement: Sequential Thinking MCP
+## 🧠 Enhanced Intelligence: Dual MCP Support
 
-### What is Sequential Thinking MCP?
-The Sequential Thinking MCP (Model Context Protocol) is a tool that enhances Claude's analytical capabilities by forcing systematic, step-by-step thinking before generating responses. When enabled, the system analyzes prompts through multiple "thoughts" before improving them, resulting in more nuanced and effective enhancements.
+### What's New in v3.0?
+The Prompt Improver now intelligently chooses between two thinking tools based on your prompt's complexity:
 
-### Why Use It for Prompt Improvement?
-- **Deeper pattern analysis**: System identifies prompt weaknesses more systematically
-- **Better enhancement selection**: Chooses the most appropriate improvement techniques
-- **Smarter complexity matching**: Better adapts improvements to prompt complexity
-- **More creative approaches**: Sequential analysis often reveals unique enhancement angles
-- **Consistent quality**: Ensures no aspect of prompt improvement is overlooked
+1. **Sequential Thinking MCP** - For straightforward, linear improvements
+2. **Cascade Thinking MCP** - For complex scenarios requiring exploration of alternatives
 
-### How to Install Sequential Thinking MCP
+The system automatically selects the best tool and adapts the number of analysis thoughts (minimum 1, scaling up based on complexity).
 
-**Prerequisites:**
-- For Method 1 (uvx): Python 3.10+ and UV package manager
-- For Method 2 (npx): Node.js installed
-- Basic familiarity with editing configuration files
+### Intelligent Selection Logic
 
-**Installation Method 1: Using uvx (Recommended - Full Features)**
+**Sequential Thinking is chosen for:**
+- Short (`$s`) and Improve (`$i`) mode prompts
+- Simple, clear prompt improvements
+- Minor edits and refinements
+- Single-purpose enhancements
+- Quick clarity boosts
 
-1. **Locate your Claude Desktop configuration:**
+**Cascade Thinking is chosen for:**
+- Refine (`$r`) mode with 3-phase optimization
+- Prompts mentioning "alternatives" or "options"
+- Complex multi-part prompts
+- Unclear intent requiring exploration
+- Comparing different enhancement strategies
+
+### Adaptive Thought Process
+
+The system now uses a flexible approach:
+- **Minimum:** 1 thought (for very simple improvements)
+- **Simple prompts:** 1-2 thoughts
+- **Standard enhancements:** 2-3 thoughts
+- **Complex refinements:** 3-5 thoughts with potential branching
+- **Full optimization:** 5+ thoughts with multiple exploration branches
+
+.
+
+## 🔧 Installing MCP Tools (Optional but Recommended)
+
+Both tools work independently, so you can install one or both based on your needs.
+
+### Sequential Thinking MCP Installation
+
+**For straightforward prompt improvements:**
+
+1. **Edit your Claude Desktop configuration:**
    - **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
    - **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
 
-2. **Edit the configuration file** to add Sequential Thinking MCP:
-```json
-{
-  "mcpServers": {
-    "sequential-thinking": {
-      "command": "uvx",
-      "args": [
-        "--from",
-        "git+https://github.com/arben-adm/mcp-sequential-thinking",
-        "--with",
-        "portalocker",
-        "mcp-sequential-thinking"
-      ]
-    }
-  }
-}
-```
-
-**Installation Method 2: Using npx (Simpler Alternative)**
+2. **Add Sequential Thinking:**
 ```json
 {
   "mcpServers": {
@@ -92,43 +101,45 @@ The Sequential Thinking MCP (Model Context Protocol) is a tool that enhances Cla
 }
 ```
 
-3. **If you already have other MCP servers**, add Sequential Thinking to the existing list:
+### Cascade Thinking MCP Installation
+
+**For complex prompt analysis with branching:**
+
+1. **Add to the same configuration file:**
 ```json
 {
   "mcpServers": {
-    "filesystem": {
+    "cascade-thinking": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/path/to/allowed/files"]
-    },
-    "sequential-thinking": {
-      "command": "uvx",
-      "args": [
-        "--from",
-        "git+https://github.com/arben-adm/mcp-sequential-thinking",
-        "--with",
-        "portalocker",
-        "mcp-sequential-thinking"
-      ]
+      "args": ["-y", "cascade-thinking-mcp"]
     }
   }
 }
 ```
 
-4. **Save the file and restart Claude Desktop**
+### Installing Both Tools
 
-5. **Verify installation** by starting a new chat and looking for the 🔌 icon, which should show "sequential-thinking" as an available tool
+**For maximum flexibility:**
+```json
+{
+  "mcpServers": {
+    "sequential-thinking": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+    },
+    "cascade-thinking": {
+      "command": "npx",
+      "args": ["-y", "cascade-thinking-mcp"]
+    }
+  }
+}
+```
 
-### How It Works with Prompt Improver
-When Sequential Thinking MCP is available, the Prompt Improver automatically:
-- Uses it for all prompt improvement requests
-- Analyzes through 3+ thoughts:
-  - Understanding user intent and prompt type
-  - Identifying weaknesses and enhancement opportunities
-  - Planning improvement approach and pattern selection
-- Only bypasses it for simple prompt edits
-- Creates more sophisticated and effective improvements
+3. **Save and restart Claude Desktop**
 
-**Note**: The system works perfectly without Sequential Thinking MCP. If it's not installed, you'll see "Sequential Thinking MCP not available, proceeding with standard analysis" and prompts will still be improved using the system's built-in intelligence.
+4. **Verify installation** by looking for the 🔌 icon showing available tools
+
+**Note**: The system works without these tools but provides enhanced analysis when available.
 
 .
 
@@ -140,15 +151,21 @@ Simply type what you want, and the system will improve it:
 analyze customer data
 ```
 
+The system will:
+1. Assess complexity
+2. Choose appropriate MCP tool (if available)
+3. Analyze with adaptive thought count
+4. Generate the optimized prompt
+
 ### Mode Selection
 The system has four modes:
 
-| Mode | Command | Use For |
-|------|---------|---------|
-| **Short** | `$short` or `$s` | Quick, minimal improvements |
-| **Improve** | `$improve` or `$i` (DEFAULT) | Smart enhancement for most cases |
-| **Refine** | `$refine` or `$r` | Maximum quality with 3-phase optimization |
-| **JSON** | `$json` or `$j` | API-ready structured format |
+| Mode | Command | Use For | Typical MCP | Thoughts |
+|------|---------|---------|-------------|----------|
+| **Short** | `$short` or `$s` | Quick, minimal improvements | Sequential | 1-2 |
+| **Improve** | `$improve` or `$i` (DEFAULT) | Smart enhancement for most cases | Sequential | 2-3 |
+| **Refine** | `$refine` or `$r` | Maximum quality with 3-phase optimization | Cascade | 3-5+ |
+| **JSON** | `$json` or `$j` | API-ready structured format | Sequential | 2-3 |
 
 .
 
@@ -198,7 +215,7 @@ Try: `analyze Q4 sales data to find growth opportunities`
 ### 1. When to Use Each Mode
 - **$short**: Quick questions, simple improvements, time-sensitive needs
 - **$improve**: Daily use, standard prompts, good balance of quality/speed
-- **$refine**: Critical prompts, templates you'll reuse, when quality matters most
+- **$refine**: Critical prompts, templates you'll reuse, when quality matters most (uses Cascade Thinking for exploration)
 - **$json**: API integrations, programmatic use, structured data needs
 
 ### 2. The System NEVER Answers
@@ -211,11 +228,15 @@ Remember: This system only improves prompts. It won't:
 Everything gets transformed into an improved prompt.
 
 ### 3. Artifacts = Easy Reuse
-All improved prompts are delivered in "artifacts" - special formatted blocks that you can:
-- Copy with one click
-- Save for later use
-- Share with others
-- Use in any AI system
+All improved prompts are delivered in "artifacts" with MCP tool notation:
+```
+MODE USED: $improve
+MCP USED: Sequential Thinking
+ENHANCEMENT PATTERN: Analysis Task
+COMPLEXITY LEVEL: Medium
+
+[Your improved prompt here]
+```
 
 ### 4. Learn from the Improvements
 Pay attention to what the system adds:
@@ -225,30 +246,12 @@ Pay attention to what the system adds:
 - Success criteria
 - Context and constraints
 
-These patterns will help you write better prompts naturally over time.
-
-### 5. JSON Mode for Developers
-The `$json` mode is perfect for:
-- Building AI-powered applications
-- Creating reusable prompt templates
-- Integrating with APIs
-- Storing prompts in databases
-- Version control systems
-
-Example JSON structure:
-```json
-{
-  "task": "You are a customer support specialist...",
-  "taskRules": [
-    "Always maintain professional tone",
-    "Respond within 3 sentences"
-  ],
-  "parameters": {
-    "temperature": 0.7,
-    "max_tokens": 150
-  }
-}
-```
+### 5. Complex Prompts Benefit from Cascade Thinking
+When using `$refine` mode or dealing with unclear/complex prompts, the system may use Cascade Thinking to:
+- Explore different enhancement strategies
+- Compare multiple improvement approaches
+- Branch into specialized optimizations
+- Ensure the best possible outcome
 
 .
 
@@ -259,21 +262,42 @@ Example JSON structure:
 - Check that custom instructions are properly saved
 - Try using explicit mode tags: `$improve [your prompt]`
 
+### "It's not using any MCP tool"
+- Check if MCPs are installed (look for 🔌 icon)
+- The system works fine without them
+- You'll see "MCP tools not available" notation
+
+### "It's using the wrong MCP tool"
+- The system chooses based on complexity indicators
+- `$refine` mode typically uses Cascade Thinking
+- Simple improvements use Sequential Thinking
+- This is optimized behavior
+
+### "Too many/few thoughts being used"
+- v3.0 adapts thought count to complexity
+- Simple improvements might use just 1 thought
+- Complex refinements might use 5+
+- This is normal and optimized behavior
+
 ### "The improvements seem too complex"
 - Use `$short` mode for simpler enhancements
 - The default mode adapts to complexity - simple inputs get simple improvements
-
-### "I want it to actually answer my question"
-- This system is specifically designed NOT to answer questions
-- For regular Claude interactions, use a different project or conversation
 
 ### "JSON output isn't valid"
 - The JSON mode creates valid, structured JSON
 - Check for any manual edits that might have broken the format
 - The JSON directly mirrors the improved prompt structure
 
-### "Sequential Thinking MCP not working"
-- Check if it shows in the 🔌 tools menu
-- Verify your config file syntax is correct
-- Restart Claude Desktop after configuration changes
-- System works fine without it (just notes it's unavailable)
+.
+
+## 🎉 What's New in v3.0
+
+1. **Intelligent MCP Selection** - Automatically chooses the best thinking tool
+2. **Flexible Thought Requirements** - Minimum 1 thought, scales with complexity
+3. **Dual MCP Support** - Works with Sequential or Cascade Thinking MCPs
+4. **Adaptive Analysis** - Thought count matches prompt complexity
+5. **Enhanced Documentation** - Clear indication of which tool was used
+6. **Mode-Specific Optimization** - Each mode optimized for its use case
+7. **Backward Compatible** - Works without MCPs installed
+
+The Prompt Improver v3.0 brings intelligence to prompt enhancement, choosing the right analytical approach for each request while maintaining the core principle: transform every input into an optimized prompt that gets results.
