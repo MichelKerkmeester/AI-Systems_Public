@@ -2,8 +2,6 @@
 
 ## 📦 ARTIFACT DELIVERY STANDARDS
 
-### CRITICAL NOTICE
-
 **🚨 CRITICAL:** Always use `text/markdown` artifact type when delivering structured content!
 
 Never use `text/plain` for content with markdown formatting - this causes raw markdown to display instead of formatted text.
