@@ -1,29 +1,35 @@
-# 🤖 Claude App Builder v1.4.0
+# 🎯 Prompt Engineering Assistant v3.0.0
 
-A streamlined system that transforms Claude into an elite app architect, building functional web applications and AI demos directly in Claude artifacts. Now with intelligent thinking tool selection for optimal problem-solving.
+A comprehensive system that transforms vague requests into clear, effective AI prompts using proven frameworks, systematic evaluation, and intelligent refinement. Features 5 operating modes, visual progress tracking, and conversational guidance.
 
-## 🆕 What's New in v1.4.0
+## 🆕 What's New in v3.0.0
 
-- **Intelligent Thinking Tool Selection**: Automatically chooses between Sequential and Cascade Thinking based on task complexity
-- **Dynamic Thought Expansion**: Starts with just 1 thought, expands only when complexity demands
-- **Complexity Scoring**: Smart algorithm to assess task requirements
-- **Graceful Fallbacks**: Works seamlessly even without thinking MCPs
-- **MCP Usage Documentation**: Clear indication of which tool was used in outputs
+- **5 Operating Modes**: From quick fixes ($short) to full optimization ($refine)
+- **Interactive Guided Mode**: Conversational prompt building with intelligent questions
+- **Visual Dashboard**: Real-time progress bars and enhancement metrics
+- **3-Phase Refinement**: Improve → Evaluate → Refine workflow
+- **35-Criteria Evaluation**: Comprehensive quality assessment system
+- **MCP Integration**: Supports Sequential and Cascade Thinking tools
+- **Pattern Library**: Reusable templates for common use cases
+
+.
 
 ## Overview
 
-The Claude App Builder enables rapid development of web applications within Claude's artifact environment. With three focused modes ($app, $ai, $data) and intelligent thinking optimization, it delivers production-ready applications that work immediately.
+The Prompt Engineering Assistant helps users craft powerful, precise prompts for any AI system. With three core frameworks (CRAFT, SPARK, PRISM) and intelligent enhancement algorithms, it delivers professional-grade prompts that maximize AI performance.
 
 ## ✨ Key Features
 
-- **3 Specialized Modes**: $app (general apps), $ai (AI-powered interfaces), $data (dashboards & visualization)
-- **Intelligent Thinking Tools**: Automatic selection between Sequential (linear) and Cascade (exploratory) thinking
-- **MCP Integration**: Optional enhancements via $search, $docs, $ui, and $magic shortcuts
-- **Fluid Responsive Design**: Smooth scaling using CSS clamp() formulas
-- **Minimal Thought Overhead**: Starts with 1 thought, expands dynamically
-- **Visual Pattern Libraries**: Reference UI patterns for professional designs
-- **Zero External Dependencies**: Everything works within artifact constraints
-- **Comprehensive Documentation**: Each app includes detailed README
+- **5 Specialized Modes**: $short, $improve (default), $refine, $interactive, $json
+- **3 Core Frameworks**: CRAFT (structure), SPARK (enhancement), PRISM (evaluation)
+- **Intelligent MCP Selection**: Automatic choice between Sequential and Cascade thinking
+- **Visual Progress Tracking**: Unicode-based dashboards showing improvements
+- **Platform Optimization**: Tailored for ChatGPT, Claude, and other AI platforms
+- **Comprehensive Examples**: 50+ before/after transformations
+- **First-Time User Detection**: Automatic onboarding for new users
+- **Artifact-Based Delivery**: All prompts delivered in reusable artifacts
+
+.
 
 ## 🚀 Quick Setup
 
@@ -31,31 +37,28 @@ The Claude App Builder enables rapid development of web applications within Clau
 1. Go to claude.ai
 2. Click "Projects" in sidebar
 3. Click "Create project"
-4. Name it "Claude App Builder v1.4"
+4. Name it "Prompt Engineering Assistant v3.0"
 
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `DEV - Claude App Builder - v1.4.0.md`
+3. Copy and paste: `Writer - Prompt Improver - v3.0.0.md`
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
 Add these to your project's knowledge base:
-- `Claude App Builder - Artifact Standards - v1.0.1.md`
-- `Claude App Builder - Fluid Responsive Guide - v1.0.1.md`
-- `Claude App Builder - Visual Pattern Libraries - v1.0.0.md`
+- `Prompt - Artifact Standards & Templates - v1.0.0.md`
+- `Prompt - Evaluation & Refinement - v1.0.0.md`
+- `Prompt - Examples & Case Studies - v1.0.0.md`
+- `Prompt - Interactive Mode - v1.0.0.md`
+- `Prompt - Patterns & Enhancements - v1.0.0.md`
 
-### Step 4: Enable MCP Features
-Available MCP shortcuts for enhanced features:
-- `$search` - Web search integration (requires Tavily or Brave Search MCP)
-- `$docs` - Documentation access (requires Context7 MCP)
-- `$ui` - Shadcn UI components (built-in, no MCP needed)
-- `$magic` - Animation effects (built-in, only when explicitly requested)
+.
 
-### Step 5: Install Thinking Tools (Recommended)
+### Step 4: Install Thinking Tools (Optional but Recommended)
 The system intelligently selects between these based on task complexity:
 
-#### Sequential Thinking (for linear tasks)
+#### Sequential Thinking (for linear analysis)
 ```json
 {
   "sequential-thinking": {
@@ -65,7 +68,7 @@ The system intelligently selects between these based on task complexity:
 }
 ```
 
-#### Cascade Thinking (for exploratory tasks)
+#### Cascade Thinking (for exploratory analysis)
 ```json
 {
   "cascade-thinking": {
@@ -75,169 +78,170 @@ The system intelligently selects between these based on task complexity:
 }
 ```
 
-### Step 6: Start Building
-Simply describe what you want with the appropriate mode:
+.
+
+### Step 5: Start Improving Prompts
+Simply paste your prompt or describe what you need:
 ```
-Build a $app todo list manager
-Create an $ai chatbot assistant
-Make a $data sales dashboard
-```
-
-## 🧠 Intelligent Thinking Tool Selection
-
-The system automatically chooses the best thinking approach:
-
-### Complexity Scoring
-- **Mode**: $ai (3pts) > $data (2pts) > $app (1pt)
-- **MCP Integration**: +2pts per MCP feature
-- **Keywords**: +3pts for exploratory terms, -2pts for simple/basic
-- **Threshold**: Score ≥5 uses Cascade, <5 uses Sequential
-
-### Examples
-- "Simple $app calculator" → Sequential (1 thought)
-- "$ai multi-agent system with $search" → Cascade (starts with 1, may expand to 3-5)
-- "$data dashboard" → Sequential (1-2 thoughts)
-
-**Note**: The system works without these tools but provides enhanced analysis and planning capabilities when available. When tools are used, you'll see "MCP USED: [tool name]" in the documentation.
-
-## 📋 System Modes
-
-| Mode | Purpose | Use Cases | Typical Thinking |
-|------|---------|-----------|------------------|
-| **$app** | General web applications | Tools, utilities, CRUD apps | Sequential (1-3 thoughts) |
-| **$ai** | AI-powered interfaces | Chatbots, assistants, multi-agent systems | Cascade (1-5 thoughts) |
-| **$data** | Data visualization | Dashboards, analytics, CSV analysis | Sequential/Cascade (1-4 thoughts) |
-
-## 🛠️ Technical Stack
-
-### Pre-loaded Libraries
-- React 18, Tailwind CSS (utilities only)
-- Recharts, Lodash, Papaparse, XLSX
-- Three.js r128, D3.js, Chart.js
-- TensorFlow.js, Tone.js
-
-### Claude-Specific APIs
-- `window.claude.complete()` - AI completions
-- `window.fs.readFile()` - File reading
-- No localStorage - React state only
-- Client-side only - No server capabilities
-
-## 🔧 Constraints
-
-- **No localStorage**: Use React state
-- **No external APIs**: Except window.claude.complete
-- **Client-side only**: No server functionality
-- **Static Tailwind**: Pre-compiled utilities only
-
-## 📚 Documentation
-
-Each app includes:
-- Comprehensive README with version history
-- Usage instructions and examples
-- Technical architecture details
-- Known limitations and troubleshooting
-
-## 📦 Complete MCP Installation Guide
-
-### Thinking Tools (Highly Recommended)
-
-**Sequential Thinking (for methodical, linear tasks):**
-```json
-{
-  "sequential-thinking": {
-    "command": "npx",
-    "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
-  }
-}
+write about dogs
+$improve analyze customer data
+$interactive
+$refine create a marketing strategy
 ```
 
-**Cascade Thinking (for exploratory, multi-path tasks):**
-```json
-{
-  "cascade-thinking": {
-    "command": "npx",
-    "args": ["-y", "cascade-thinking-mcp"]
-  }
-}
+## 🎛️ Operating Modes
+
+| Mode | Activation | Purpose | Best For | MCP Usage |
+|------|------------|---------|----------|-----------|
+| **$short** | `$short` or `$s` | Quick minimal refinement | Simple clarity boost | Sequential (1-2 thoughts) |
+| **$improve** | `$improve` or `$i` (DEFAULT) | Smart enhancement | Most improvements | Sequential (2-3 thoughts) |
+| **$refine** | `$full` or `$refine` or `$r` | Full 3-phase optimization | Maximum quality | Cascade (3-5+ thoughts) |
+| **$interactive** | `$interactive` | Guided help with Q&A | Learning/exploring | Sequential (1-3 thoughts) |
+| **$json** | `$json` or `$j` | API-ready JSON format | Programmatic use | Sequential (2-3 thoughts) |
+
+.
+
+## 🏗️ Core Frameworks
+
+### CRAFT Framework (Structure)
+- **C** - Context & Background
+- **R** - Role & Expertise
+- **A** - Action & Deliverables
+- **F** - Format & Structure
+- **T** - Target & Success Criteria
+
+### SPARK Method (Enhancement)
+- **S** - Specificity (add concrete details)
+- **P** - Purpose (clarify intent)
+- **A** - Audience (define target users)
+- **R** - Results (specify outcomes)
+- **K** - Knowledge (include context)
+
+### PRISM Evaluation (Quality)
+- **P** - Precision (25%)
+- **R** - Relevance (20%)
+- **I** - Impact (25%)
+- **S** - Structure (15%)
+- **M** - Measurability (15%)
+
+.
+
+
+## 📊 Visual Dashboard Example
+
+```
+📊 Optimization Report
+Overall Enhancement Score: 85% ↑
+
+CRAFT Framework Coverage:
+C - Context      ████████░░ 80%
+R - Role         ██████████ 100%
+A - Action       ████████░░ 80%
+F - Format       ██████░░░░ 60%
+T - Target       ██████████ 100%
+
+Key Improvements:
+🎯 Specificity: +45% (added metrics, timeframes)
+👤 Role Definition: +30% (expert persona added)
+📋 Structure: +25% (clear sections defined)
+
+Before: 3 words | Clarity: 2/10
+After: 87 words | Clarity: 9/10
 ```
 
-### Web Search MCPs (for $search)
+.
 
-**Tavily Search:**
-```json
-{
-  "tavily": {
-    "command": "npx",
-    "args": ["-y", "@modelcontextprotocol/server-tavily"],
-    "env": {
-      "TAVILY_API_KEY": "your-api-key-here"
-    }
-  }
-}
+## 🤖 Interactive Mode
+
+Perfect for beginners or when you need guidance:
+- Asks 2-3 targeted questions
+- Builds prompt from your answers
+- Provides explanations
+- Shows improvement metrics
+
+Example:
+```
+User: $interactive "create presentation"
+AI: "Let me help! What's the main purpose? Who's your audience?"
 ```
 
-**Brave Search:**
-```json
-{
-  "brave-search": {
-    "command": "npx",
-    "args": ["-y", "@modelcontextprotocol/server-brave-search"],
-    "env": {
-      "BRAVE_API_KEY": "your-api-key-here"
-    }
-  }
-}
-```
+.
 
-### UI Component MCPs (for $ui and $magic)
+## 📈 Evaluation System
 
-**Shadcn UI (for $ui):**
-```json
-{
-  "shadcn": {
-    "command": "npx",
-    "args": ["-y", "@modelcontextprotocol/server-shadcn"]
-  }
-}
-```
+### Quick Evaluation (10 Criteria)
+- Clarity & Specificity
+- Context Provided
+- Task Definition
+- Output Format
+- And 6 more...
 
-**Magic UI (for $magic):**
-```json
-{
-  "magic-ui": {
-    "command": "npx",
-    "args": ["-y", "@modelcontextprotocol/server-magic-ui"]
-  }
-}
-```
+### Full Evaluation (35 Criteria)
+- 7 groups of 5 criteria each
+- Comprehensive scoring
+- Targeted improvement suggestions
+- Before/after comparison
 
-### Documentation Access (for $docs)
-**Context7:**
-```json
-{
-  "context7": {
-    "command": "npx",
-    "args": ["-y", "@context7/mcp-server"]
-  }
-}
-```
+.
 
-### Notes:
-- Replace `your-api-key-here` with actual API keys from the respective services
-- Restart Claude Desktop after adding MCPs
-- The thinking tools are optional but highly recommended for optimal performance
-- The system works without any MCPs but is enhanced with them
-- You'll see "MCP tools not available" notation if thinking tools aren't installed
+## 🔧 Technical Details
 
-## 🎯 Version History
+### MCP Selection Logic
+- **Simple/Clear tasks** → Sequential (1-2 thoughts)
+- **Standard improvements** → Sequential (2-3 thoughts)
+- **Complex/Unclear** → Cascade (3-5 thoughts)
+- **Full refinement** → Cascade (5+ thoughts)
 
-- **v1.4.0**: Intelligent thinking tool selection, dynamic thought expansion
-- **v1.3.1**: Enhanced visual patterns, mandatory sequential thinking
-- **v1.3.0**: Fluid responsive design, comprehensive documentation
-- **v1.2.0**: MCP integration, $ui and $magic components
-- **v1.1.0**: Three specialized modes ($app, $ai, $data)
-- **v1.0.0**: Initial release
+### Platform Detection
+Automatically optimizes for:
+- ChatGPT
+- Claude
+- Gemini
+- Other AI platforms
+
+### Artifact Standards
+- Always uses `text/markdown` type
+- Includes mode and MCP notation
+- Visual dashboard for appropriate modes
+- Complete enhancement details
+
+## 📚 Example Transformations
+
+### Simple Enhancement
+**Before:** "write blog"
+**After:** "Write a 1200-word blog post on 'Remote Work Productivity' for tech professionals. Include 5 strategies with examples. Tone: conversational yet authoritative."
+
+### Complex Analysis
+**Before:** "analyze data"
+**After:** "As a data analyst, identify top 3 customer segments from Q4 sales data. Format: Executive summary with actionable insights prioritized by revenue impact."
+
+### Technical Request
+**Before:** "fix bug"
+**After:** "Debug React component re-rendering issue causing UI freeze. Provide: root cause analysis, fix implementation, prevention strategies."
+
+.
+
+## ⚠️ Important Notes
+
+- **Never answers prompts** - Only improves them
+- **Always uses artifacts** - Ensures reusability
+- **No em dashes** - Uses commas, colons, or periods
+- **Works without MCPs** - But enhanced with them
+
+## 📦 Version History
+
+- **v3.0.0**: Complete rewrite with 5 modes, visual dashboards, interactive guidance
+- **v2.0.0**: Added evaluation system and refinement workflow
+- **v1.0.0**: Initial CRAFT framework implementation
+
+## 🎯 Key Principles
+
+1. **Make prompt engineering accessible** without dumbing it down
+2. **Every feature serves both beginners and experts**
+3. **Visual feedback makes improvements tangible**
+4. **Preserve user intent while maximizing effectiveness**
+5. **Scale complexity to match task requirements**
 
 ---
 
-*Build complete, functional web applications that work immediately. Focus on user experience and visual quality with intelligent optimization.*
+*Transform vague requests into powerful prompts. Make AI work better for everyone.*

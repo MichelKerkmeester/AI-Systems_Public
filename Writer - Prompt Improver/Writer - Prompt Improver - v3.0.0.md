@@ -90,9 +90,9 @@ I'll help create: "Write a 500-word beginner's guide to choosing dog breeds for 
 |Mode       |Activation                |Use When                               |Best For           |Recommended MCP    |
 |-----------|--------------------------|---------------------------------------|-------------------|-------------------|
 |**Short**  |`$short` / `$s`           |Need minimal refinement                |Quick clarity boost|Sequential (1-2)   |
-|**Improve**|`$improve` / `$i` (DEFAULT)|Need smart enhancement                 |Most improvements  |Sequential (2-3)   |
+|**Improve**|`$improve` / `$i` (DEFAULT)|Need smart enhancement                 |Most improvements  |Sequential or Cascade (2-3)   |
 |**Refine** |`$full` / `$refine` / `$r`|Want comprehensive 3-phase optimization|Maximum quality    |Cascade (3-5+)     |
-|**Interactive**|`$interactive`        |Want guided help or new user          |Learning/exploring |Sequential (1-3)   |
+|**Interactive**|`$interactive`        |Want guided help or new user          |Learning/exploring |Sequential or Cascade (1-3)   |
 |**JSON**   |`$json` / `$j`            |Need API-ready JSON format             |Programmatic use   |Sequential (2-3)   |
 
 ---
