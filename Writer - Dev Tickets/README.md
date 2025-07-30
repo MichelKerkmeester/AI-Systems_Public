@@ -1,4 +1,4 @@
-# Dev Ticket Writer - User Guide v2.0
+# Dev Ticket Writer - User Guide v2.1
 
 ## 🚀 What is This?
 
@@ -10,8 +10,10 @@ The Dev Ticket Writer system transforms any request into clear, actionable devel
 - Get consistent ticket format across your team
 - Focus on WHAT and WHY, not HOW
 - Save time with structured templates
-- Professional presentation with icons in all modes
-- **NEW: Intelligent MCP tool selection for optimal analysis**
+- Professional presentation with abstract symbols throughout
+- **NEW: Interactive mode for guided ticket creation (DEFAULT)**
+- **NEW: Intelligent partial input enhancement**
+- **NEW: Enhanced MCP tool selection for optimal analysis**
 
 **Key Principle:** If a ticket takes more than 2 minutes to read, it's too long.
 
@@ -23,26 +25,31 @@ The Dev Ticket Writer system transforms any request into clear, actionable devel
 1. Go to [claude.ai](https://claude.ai)
 2. Click "Projects" in the sidebar
 3. Click "Create project"
-4. Name it "Dev Ticket Writer v2"
+4. Name it "Dev Ticket Writer v2.1"
 
 ### Step 2: Add the System Instructions
 1. In your project, click "Edit project details"
 2. Find the "Custom instructions" section
-3. Copy and paste the main system file: `Writer - Dev Tickets - v2.0.0.md`
+3. Copy and paste the main system file: `Writer - Dev Tickets - v2.1.0.md`
 4. Save the project
 
-### Step 3: Upload Reference Document
-Upload the examples document to your project:
-- `Dev Tickets - Examples & Patterns.md` (contains all ticket examples and patterns)
+### Step 3: Upload Reference Documents
+Upload all reference documents to your project:
+- `Ticket - Interactive Mode - v1.1.0.md` (conversational ticket creation)
+- `Ticket - Examples - Quick & Standard - v1.1.0.md` (mode examples)
+- `Ticket - Examples - Complex & Epic - v1.1.0.md` (advanced examples)
+- `Ticket - Examples - Bugs & Improvements - v1.1.0.md` (specialized types)
+- `Ticket - Examples - Partial Input Handling - v1.1.0.md` (enhancement patterns)
+- `Ticket - Patterns & Methodology - v1.1.0.md` (quality patterns)
 
 ### Step 4: Start Writing Tickets!
-Begin any conversation in the project, and Claude will transform your requests into proper dev tickets.
+Begin any conversation in the project, and Claude will default to Interactive Mode, guiding you through creating professional tickets.
 
 .
 
 ## 🧠 Enhanced Intelligence: Dual MCP Support
 
-### What's New in v2.0?
+### What's New in v2.1?
 The Dev Ticket Writer now intelligently chooses between two thinking tools based on your request complexity:
 
 1. **Sequential Thinking MCP** - For straightforward, linear analysis
@@ -60,8 +67,9 @@ The system automatically selects the best tool and adapts the number of analysis
 - Straightforward requirement updates
 
 **Cascade Thinking is chosen for:**
-- Requests mentioning "alternatives" or "options"
+- Interactive mode conversations (`$interactive`)
 - Complex (`$c`) and Epic (`$e`) mode tickets
+- Requests mentioning "alternatives" or "options"
 - Multi-phase implementations
 - Unclear scope requiring exploration
 - Comparing different solutions
@@ -73,6 +81,7 @@ The system now uses a flexible approach:
 - **Minimum:** 1 thought (for very simple requests)
 - **Simple requests:** 1-2 thoughts
 - **Standard features:** 2-3 thoughts
+- **Interactive conversations:** 3-5 thoughts
 - **Complex analysis:** 3-5 thoughts with potential branching
 - **Epic breakdown:** 5+ thoughts with multiple exploration branches
 
@@ -146,38 +155,57 @@ Both tools work independently, so you can install one or both based on your need
 
 ## 🎯 How to Use
 
-### Basic Usage
+### Basic Usage (Interactive Mode - DEFAULT)
 Simply describe what you need:
 ```
 We need search filters for our product catalog
 ```
 
 The system will:
-1. Assess complexity
-2. Choose appropriate MCP tool (if available)
-3. Analyze with adaptive thought count
-4. Generate the perfect ticket
+1. Start Interactive Mode by default
+2. Guide you through key questions
+3. Choose appropriate MCP tool (if available)
+4. Analyze with adaptive thought count
+5. Generate the perfect ticket
 
 ### Mode Selection
-The system has four modes for different complexity levels:
+The system has five modes for different complexity levels:
 
 | Mode | Command | Use For | Typical MCP | Thoughts |
 |------|---------|---------|-------------|----------|
-| **Quick** | `$q` | Simple, single features | Sequential | 1-2 |
-| **Standard** | `$s` (DEFAULT) | Most features and improvements | Sequential | 2-3 |
-| **Complex** | `$c` | Multi-phase implementations | Cascade | 3-5 |
-| **Epic** | `$e` | Major initiatives with child tickets | Cascade | 5+ |
+| **Interactive** | `$interactive` or `$int` | DEFAULT - Guided creation | Cascade | 3-5 |
+| **Quick** | `$q` | Simple, single features (explicit only) | Sequential | 1-2 |
+| **Standard** | `$s` | Most features and improvements (explicit only) | Sequential | 2-3 |
+| **Complex** | `$c` | Multi-phase implementations (explicit only) | Cascade | 3-5 |
+| **Epic** | `$e` | Major initiatives with child tickets (explicit only) | Cascade | 5+ |
 
 ### Mode Examples:
 ```
+need user profiles
+(Automatically starts Interactive Mode)
+
+$interactive need user profiles
+(Explicitly starts guided conversation)
+
 $q add logout button to header
+(Quick mode - must be explicitly requested)
 
 $s implement user profile editing with avatar upload
+(Standard mode - must be explicitly requested)
 
 $c rebuild search system with filters, personalization, and analytics
+(Complex mode with phases)
 
 $e create customer self-service portal
+(Epic with child tickets)
 ```
+
+### Interactive Mode Features:
+- **Conversational approach** - Asks targeted questions
+- **Educational** - Teaches product thinking through practice
+- **Adaptive** - Detects complexity and selects appropriate final mode
+- **Smart questions** - Priority-weighted based on what's missing
+- **Visual dashboard** - Shows ticket quality metrics
 
 .
 
@@ -186,23 +214,24 @@ $e create customer self-service portal
 ### Every Ticket Includes:
 1. **Always in an artifact** (for easy copying)
 2. **MCP tool notation** (which tool was used for analysis)
-3. **User Value statement** (why it matters)
-4. **Business Goal** (measurable impact)
-5. **Requirements** (outcome-focused, not technical)
-6. **Success Criteria** (measurable checkboxes)
-7. **Design links** (when applicable)
-8. **Dependencies** (related tickets)
-9. **Icons throughout** (for visual hierarchy in all modes)
+3. **Mode notation** (which mode was used)
+4. **User Value statement** (why it matters)
+5. **Business Goal** (measurable impact)
+6. **Requirements** (outcome-focused, not technical)
+7. **Success Criteria** (measurable checkboxes)
+8. **Design links** (when applicable)
+9. **Dependencies** (related tickets)
+10. **Abstract symbols throughout** (❖, ◇, →, ✓, ⊗)
 
 ### Example Output Structure:
 ```markdown
-MODE: $s
+MODE: $interactive → $s
 TICKET TYPE: Feature
-MCP USED: Sequential Thinking
+MCP USED: Cascade Thinking
 
 ### ❖ Search Filters
 
-**User Value:** Find relevant products faster
+**User Value:** Find relevant products faster with smart filtering
 
 **Business Goal:** Reduce search abandonment by 30%
 
@@ -210,19 +239,49 @@ MCP USED: Sequential Thinking
 
 ## ◇ Requirements
 - Filter by category, price, availability
-- Results update instantly
-- Mobile-responsive design
+- Results update instantly without refresh
+- Mobile-responsive filter panel
+- Clear all filters option
 
-## → Design
+---
+
+## → Designs & References
 - [Figma - Search Filters](link)
+- **Notice:** Mobile uses collapsible panel
+
+---
 
 ## ✓ Success Criteria
 - [ ] Filters work on all devices
 - [ ] Results update in <300ms
 - [ ] 30% reduction in abandonment
+- [ ] Filter state persists during session
+
+---
 
 ## ⊗ Dependencies
 - Requires: Search API v2 (#1234)
+- Blocks: Saved searches (#1235)
+```
+
+### Interactive Mode Dashboard:
+```
+📊 Interactive Mode Report
+Overall Quality Score: 4.5/5 ⭐
+
+✅ Ticket Structure Checklist:
+✓ User value clearly stated
+✓ Business goal measurable
+✓ Requirements outcome-focused
+✓ Success criteria verifiable
+✓ Dependencies identified
+✓ All symbols properly used
+✓ 2-minute read test: PASS (1:45)
+
+Product Management Insights:
+• We chose $standard mode for clear scope
+• Success criteria focus on user outcomes
+• Requirements use WHAT not HOW language
 ```
 
 .
@@ -236,39 +295,46 @@ MCP USED: Sequential Thinking
 
 ### "It's using the wrong MCP tool"
 - The system chooses based on complexity indicators
-- You can hint at complexity: "explore alternatives" → Cascade
+- Interactive mode typically uses Cascade
 - Simple, clear requests → Sequential
 
+### "I don't want Interactive Mode"
+- Explicitly specify your preferred mode: `$q`, `$s`, `$c`, or `$e`
+- Interactive is only the default when no mode is specified
+
 ### "Too many/few thoughts being used"
-- v2.0 adapts thought count to complexity
+- v2.1 adapts thought count to complexity
 - Simple edits might use just 1 thought
 - Complex epics might use 10+
 - This is normal and optimized behavior
 
 ### "The ticket is too long/detailed"
 - Use `$q` mode for simpler tickets
-- Default `$s` mode balances completeness and brevity
+- Interactive mode helps find the right balance
 - Remember: 2-minute read rule
 
-### "Missing design links"
-- The system will note "Needs: Design mockups"
-- Tickets can proceed with placeholder for designs
-- Add actual links when available
+### "How do I handle partial inputs?"
+- System automatically enhances incomplete requests
+- Extracts from screenshots and lists
+- Marks assumptions with "Inferred:"
+- Flags gaps with "Needs:"
 
-### "Icons aren't showing in tickets"
-- Icons should appear in ALL modes
-- Every major section should have an icon
-- Check that you're using v2.0 or later
+### "Abstract symbols aren't showing"
+- Symbols (❖, ◇, →, ✓, ⊗) should appear throughout
+- Every major section needs appropriate symbol
+- Check that you're using v2.1 or later
 
 .
 
-## 🎉 What's New in v2.0
+## 🎉 What's New in v2.1
 
-1. **Intelligent MCP Selection** - Automatically chooses the best thinking tool
-2. **Flexible Thought Requirements** - Minimum 1 thought, scales with complexity
-3. **Dual MCP Support** - Works with Sequential or Cascade Thinking MCPs
-4. **Adaptive Analysis** - Thought count matches request complexity
-5. **Enhanced Documentation** - Clear indication of which tool was used
-6. **Backward Compatible** - Works without MCPs installed
+1. **Interactive Mode (DEFAULT)** - Conversational ticket creation for everyone
+2. **Partial Input Enhancement** - Intelligently handles incomplete requests
+3. **Enhanced Symbol System** - Professional abstract symbols throughout
+4. **Educational Layer** - Teaches product thinking through practice
+5. **Smart Question Priority** - Asks only what's critical
+6. **Visual Quality Dashboard** - Shows ticket quality metrics
+7. **Improved MCP Selection** - Better matching of tool to complexity
+8. **No Em Dash Rule** - Clearer punctuation throughout
 
-The Dev Ticket Writer v2.0 brings intelligence to ticket creation, choosing the right analytical approach for each request while maintaining the core principle: focus on WHAT and WHY, not HOW.
+The Dev Ticket Writer v2.1 democratizes product management by making professional ticket creation accessible to everyone through Interactive Mode, while maintaining the core principle: focus on WHAT and WHY, not HOW.
