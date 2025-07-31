@@ -1,4 +1,4 @@
-# Dev Ticket Writer - User Guide v2.1
+# Dev Ticket Writer - User Guide v2.2
 
 ## 🚀 What is This?
 
@@ -11,9 +11,10 @@ The Dev Ticket Writer system transforms any request into clear, actionable devel
 - Focus on WHAT and WHY, not HOW
 - Save time with structured templates
 - Professional presentation with abstract symbols throughout
-- **NEW: Interactive mode for guided ticket creation (DEFAULT)**
-- **NEW: Intelligent partial input enhancement**
-- **NEW: Enhanced MCP tool selection for optimal analysis**
+- **Interactive mode for guided ticket creation (DEFAULT)**
+- **Intelligent partial input enhancement**
+- **Enhanced MCP tool selection for optimal analysis**
+- **NEW: Figma integration for better design understanding**
 
 **Key Principle:** If a ticket takes more than 2 minutes to read, it's too long.
 
@@ -25,21 +26,22 @@ The Dev Ticket Writer system transforms any request into clear, actionable devel
 1. Go to [claude.ai](https://claude.ai)
 2. Click "Projects" in the sidebar
 3. Click "Create project"
-4. Name it "Dev Ticket Writer v2.1"
+4. Name it "Dev Ticket Writer v2.2"
 
 ### Step 2: Add the System Instructions
 1. In your project, click "Edit project details"
 2. Find the "Custom instructions" section
-3. Copy and paste the main system file: `Writer - Dev Tickets - v2.1.0.md`
+3. Copy and paste the main system file: `Writer - Dev Tickets - v2.2.0.md`
 4. Save the project
 
 ### Step 3: Upload Reference Documents
 Upload all reference documents to your project:
-- `Ticket - Interactive Mode - v1.1.0.md` (conversational ticket creation)
+- `Ticket - Interactive Mode - v1.2.0.md` (conversational ticket creation with Figma)
 - `Ticket - Examples - Quick & Standard - v1.1.0.md` (mode examples)
 - `Ticket - Examples - Complex & Epic - v1.1.0.md` (advanced examples)
 - `Ticket - Examples - Bugs & Improvements - v1.1.0.md` (specialized types)
 - `Ticket - Examples - Partial Input Handling - v1.1.0.md` (enhancement patterns)
+- `Ticket - Examples - Figma Context.md` (proper Figma usage examples)
 - `Ticket - Patterns & Methodology - v1.1.0.md` (quality patterns)
 
 ### Step 4: Start Writing Tickets!
@@ -47,15 +49,16 @@ Begin any conversation in the project, and Claude will default to Interactive Mo
 
 .
 
-## 🧠 Enhanced Intelligence: Dual MCP Support
+## 🧠 Enhanced Intelligence: Triple MCP Support
 
-### What's New in v2.1?
-The Dev Ticket Writer now intelligently chooses between two thinking tools based on your request complexity:
+### What's New in v2.2?
+The Dev Ticket Writer now intelligently chooses between three tools based on your needs:
 
 1. **Sequential Thinking MCP** - For straightforward, linear analysis
-2. **Cascade Thinking MCP** - For complex scenarios requiring exploration of alternatives
+2. **Cascade Thinking MCP** - For complex scenarios requiring exploration
+3. **Figma MCP** - For understanding designs to write better requirements (NEW)
 
-The system automatically selects the best tool and adapts the number of analysis thoughts (minimum 1, scaling up based on complexity).
+The system automatically selects the best tool(s) and adapts the analysis approach.
 
 ### Intelligent Selection Logic
 
@@ -64,72 +67,165 @@ The system automatically selects the best tool and adapts the number of analysis
 - Quick (`$q`) and Standard (`$s`) mode tickets
 - Bug fixes and performance improvements
 - Single-feature implementations
-- Straightforward requirement updates
 
 **Cascade Thinking is chosen for:**
 - Interactive mode conversations (`$interactive`)
 - Complex (`$c`) and Epic (`$e`) mode tickets
-- Requests mentioning "alternatives" or "options"
 - Multi-phase implementations
-- Unclear scope requiring exploration
-- Comparing different solutions
 - Features with interconnected dependencies
+
+**Figma MCP is used when:**
+- User has Figma designs available
+- Creating tickets for any UI features
+- Need to understand user flows and interactions
+- Want to identify all states (error, success, loading)
+- Assessing feature complexity from designs
+- User explicitly asks for design details
 
 ### Adaptive Thought Process
 
-The system now uses a flexible approach:
-- **Minimum:** 1 thought (for very simple requests)
+The system uses a flexible approach:
 - **Simple requests:** 1-2 thoughts
 - **Standard features:** 2-3 thoughts
 - **Interactive conversations:** 3-5 thoughts
-- **Complex analysis:** 3-5 thoughts with potential branching
-- **Epic breakdown:** 5+ thoughts with multiple exploration branches
+- **Complex analysis:** 3-5 thoughts with branching
+- **Epic breakdown:** 5+ thoughts with exploration
 
 .
 
-## 🔧 Installing MCP Tools (Optional but Recommended)
+## 🔧 Installing MCP Tools (Recommended)
 
-Both tools work independently, so you can install one or both based on your needs.
+All three MCP tools can be installed using Docker for easy management. This is the recommended approach for stability and ease of use.
 
-### Sequential Thinking MCP Installation
+### Prerequisites
+- Docker Desktop installed and running ([Download Docker Desktop](https://www.docker.com/products/docker-desktop/))
+- Claude Desktop app installed ([Download Claude](https://claude.ai/download))
+- At least 2GB of free disk space
 
-**For simpler, linear ticket analysis:**
+### Quick Docker Setup
 
-1. **Edit your Claude Desktop configuration:**
-   - **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
-   - **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
+1. **Create MCP Servers Directory**
+```bash
+mkdir -p "$HOME/MCP Servers"
+cd "$HOME/MCP Servers"
+```
 
-2. **Add Sequential Thinking:**
+2. **Clone the MCP Repositories**
+```bash
+# Clone Sequential Thinking MCP
+git clone https://github.com/arben-adm/mcp-sequential-thinking.git
+
+# Clone Cascade Thinking MCP
+git clone https://github.com/drewdotpro/cascade-thinking-mcp.git
+
+# Clone Figma MCP (if available via Docker)
+# Note: Check if Figma MCP has Docker support
+```
+
+3. **Create Docker Compose File**
+Create `docker-compose.yml` in the MCP Servers directory:
+
+```yaml
+services:
+  # Sequential Thinking MCP Server
+  sequential-thinking:
+    build:
+      context: ./mcp-sequential-thinking
+      dockerfile: Dockerfile
+    image: mcp-sequential-thinking:latest
+    container_name: mcp-sequential-thinking
+    restart: always
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - sequential-data:/app/data
+    networks:
+      - mcp-network
+
+  # Cascade Thinking MCP Server
+  cascade-thinking:
+    build:
+      context: ./cascade-thinking-mcp
+      dockerfile: Dockerfile
+    image: mcp-cascade-thinking:latest
+    container_name: mcp-cascade-thinking
+    restart: always
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - cascade-data:/app/data
+    networks:
+      - mcp-network
+
+  # Figma MCP Server (if Docker supported)
+  figma:
+    build:
+      context: ./figma-mcp
+      dockerfile: Dockerfile
+    image: mcp-figma:latest
+    container_name: mcp-figma
+    restart: always
+    environment:
+      - FIGMA_API_KEY=${FIGMA_API_KEY}
+    volumes:
+      - figma-data:/app/data
+    networks:
+      - mcp-network
+
+volumes:
+  sequential-data:
+  cascade-data:
+  figma-data:
+
+networks:
+  mcp-network:
+    driver: bridge
+```
+
+4. **Configure Claude Desktop**
+Update your Claude Desktop configuration:
+
+**macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
+**Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
+**Linux**: `~/.config/Claude/claude_desktop_config.json`
+
 ```json
 {
   "mcpServers": {
     "sequential-thinking": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
-    }
-  }
-}
-```
-
-### Cascade Thinking MCP Installation
-
-**For complex ticket analysis with branching:**
-
-1. **Add to the same configuration file:**
-```json
-{
-  "mcpServers": {
+      "command": "docker",
+      "args": ["exec", "-i", "mcp-sequential-thinking", "uv", "run", "--with", "portalocker", "-m", "mcp_sequential_thinking.server"]
+    },
     "cascade-thinking": {
-      "command": "npx",
-      "args": ["-y", "cascade-thinking-mcp"]
+      "command": "docker",
+      "args": ["exec", "-i", "mcp-cascade-thinking", "node", "dist/index.js"]
+    },
+    "figma": {
+      "command": "docker",
+      "args": ["exec", "-i", "mcp-figma", "node", "index.js"]
     }
   }
 }
 ```
 
-### Installing Both Tools
+5. **Start the MCP Servers**
+```bash
+cd "$HOME/MCP Servers"
 
-**For maximum flexibility:**
+# Build and start all containers
+docker-compose up -d
+
+# Or start specific services
+docker-compose up -d sequential-thinking cascade-thinking
+```
+
+6. **Restart Claude Desktop**
+Quit and restart Claude Desktop to load the new MCP server configuration.
+
+### Alternative: NPX Installation (Simpler but less stable)
+
+If you prefer not to use Docker, you can use the original NPX method:
+
 ```json
 {
   "mcpServers": {
@@ -140,16 +236,66 @@ Both tools work independently, so you can install one or both based on your need
     "cascade-thinking": {
       "command": "npx",
       "args": ["-y", "cascade-thinking-mcp"]
+    },
+    "figma": {
+      "command": "npx",
+      "args": ["-y", "@figma/mcp-server"]
     }
   }
 }
 ```
 
-3. **Save and restart Claude Desktop**
+### Verification
+1. **Check Docker Desktop**: You should see running containers
+2. **In Claude Desktop**: Look for the 🔌 icon showing available tools
+3. **Test the servers**: Try using the thinking tools in a conversation
 
-4. **Verify installation** by looking for the 🔌 icon showing available tools
+### Troubleshooting
+- **Containers won't start**: Check Docker Desktop is running
+- **Claude can't connect**: Restart Claude Desktop after starting containers
+- **View logs**: `docker-compose logs -f [service-name]`
+- **Reset everything**: `docker-compose down -v && docker-compose up -d`
 
-**Note**: The system works without these tools but provides enhanced analysis when available.
+.
+
+## 🎨 Figma Integration (NEW in v2.2)
+
+### How Figma Helps
+Figma MCP helps the ticket writer **understand designs** to write better requirements. It does NOT extract technical specifications.
+
+### When Figma Adds Value:
+- **Any UI features** - Even simple ones, if designs exist
+- **Complex UI flows** - Multiple screens with interactions
+- **New features** - Understanding the complete user journey
+- **Major redesigns** - Seeing all the changes in context
+- **Component updates** - Knowing what specifically changed
+- **Multi-state interfaces** - Forms with validation, wizards, etc.
+
+### When to Skip Figma:
+- Backend-only features
+- Performance improvements
+- Database changes
+- API development
+- When user says not to use it
+
+### Special Cases:
+- **If user requests specs**: System will extract technical details
+- **Simple UI features**: Can still use Figma if it helps understand context
+- **Component updates**: References changes without extracting specs (unless requested)
+
+### First-Time Setup:
+1. When offered Figma integration, you'll need an API key
+2. Go to Figma → Account Settings → Personal Access Tokens
+3. Create a new token and share it with the system
+4. This is a one-time setup per environment
+
+### What Figma Provides:
+- Understanding of complete user flows
+- Identification of all necessary states
+- Complexity assessment
+- Better requirement completeness
+- Technical specifications when explicitly requested
+- Component change references
 
 .
 
@@ -158,54 +304,34 @@ Both tools work independently, so you can install one or both based on your need
 ### Basic Usage (Interactive Mode - DEFAULT)
 Simply describe what you need:
 ```
-We need search filters for our product catalog
+We need a team dashboard for our collaboration tool
 ```
 
 The system will:
 1. Start Interactive Mode by default
 2. Guide you through key questions
-3. Choose appropriate MCP tool (if available)
-4. Analyze with adaptive thought count
+3. Offer Figma review for UI features (if available)
+4. Choose appropriate MCP tools
 5. Generate the perfect ticket
 
+### With Figma Designs:
+```
+User: Create a ticket for our new onboarding flow
+System: [Asks key questions about the feature]
+System: I notice this involves multiple screens. Do you have Figma designs I can review?
+User: Yes, here's the link: figma.com/file/ABC123
+System: [Reviews designs to understand flow, states, and complexity]
+System: [Creates comprehensive ticket based on full understanding]
+```
+
 ### Mode Selection
-The system has five modes for different complexity levels:
-
-| Mode | Command | Use For | Typical MCP | Thoughts |
-|------|---------|---------|-------------|----------|
-| **Interactive** | `$interactive` or `$int` | DEFAULT - Guided creation | Cascade | 3-5 |
-| **Quick** | `$q` | Simple, single features (explicit only) | Sequential | 1-2 |
-| **Standard** | `$s` | Most features and improvements (explicit only) | Sequential | 2-3 |
-| **Complex** | `$c` | Multi-phase implementations (explicit only) | Cascade | 3-5 |
-| **Epic** | `$e` | Major initiatives with child tickets (explicit only) | Cascade | 5+ |
-
-### Mode Examples:
-```
-need user profiles
-(Automatically starts Interactive Mode)
-
-$interactive need user profiles
-(Explicitly starts guided conversation)
-
-$q add logout button to header
-(Quick mode - must be explicitly requested)
-
-$s implement user profile editing with avatar upload
-(Standard mode - must be explicitly requested)
-
-$c rebuild search system with filters, personalization, and analytics
-(Complex mode with phases)
-
-$e create customer self-service portal
-(Epic with child tickets)
-```
-
-### Interactive Mode Features:
-- **Conversational approach** - Asks targeted questions
-- **Educational** - Teaches product thinking through practice
-- **Adaptive** - Detects complexity and selects appropriate final mode
-- **Smart questions** - Priority-weighted based on what's missing
-- **Visual dashboard** - Shows ticket quality metrics
+| Mode | Command | Use For | Typical MCPs Used |
+|------|---------|---------|-------------------|
+| **Interactive** | `$interactive` or `$int` | DEFAULT - Guided creation | Cascade + Figma |
+| **Quick** | `$q` | Simple features (explicit only) | Sequential |
+| **Standard** | `$s` | Most features (explicit only) | Sequential |
+| **Complex** | `$c` | Multi-phase work (explicit only) | Cascade + Figma |
+| **Epic** | `$e` | Major initiatives (explicit only) | Cascade + Figma |
 
 .
 
@@ -213,128 +339,245 @@ $e create customer self-service portal
 
 ### Every Ticket Includes:
 1. **Always in an artifact** (for easy copying)
-2. **MCP tool notation** (which tool was used for analysis)
+2. **MCP tools notation** (which tools were used)
 3. **Mode notation** (which mode was used)
-4. **User Value statement** (why it matters)
-5. **Business Goal** (measurable impact)
-6. **Requirements** (outcome-focused, not technical)
-7. **Success Criteria** (measurable checkboxes)
-8. **Design links** (when applicable)
-9. **Dependencies** (related tickets)
-10. **Abstract symbols throughout** (❖, ◇, →, ✓, ⊗)
+4. **Figma integration status** (if applicable)
+5. **User Value statement** (why it matters)
+6. **Business Goal** (measurable impact)
+7. **Requirements** (outcome-focused)
+8. **Success Criteria** (measurable)
+9. **Design References** (Figma links when available)
+10. **Dependencies** (related tickets)
 
-### Example Output Structure:
+### Example with Figma Context:
 ```markdown
-MODE: $interactive → $s
+MODE: $interactive → $standard
 TICKET TYPE: Feature
-MCP USED: Cascade Thinking
+MCP USED: Cascade Thinking + Figma
+FIGMA INTEGRATED: Yes (for context)
 
-### ❖ Search Filters
+### ❖ Team Dashboard
 
-**User Value:** Find relevant products faster with smart filtering
+**User Value:** See your team's progress and collaborate effectively in one place
 
-**Business Goal:** Reduce search abandonment by 30%
-
----
-
-## ◇ Requirements
-- Filter by category, price, availability
-- Results update instantly without refresh
-- Mobile-responsive filter panel
-- Clear all filters option
+**Business Goal:** Increase team collaboration by 40%
 
 ---
 
 ## → Designs & References
-- [Figma - Search Filters](link)
-- **Notice:** Mobile uses collapsible panel
+- [Figma - Team Dashboard](figma://file/ABC123)
+- **Notice:** Design shows 3 main sections with real-time updates
+
+---
+
+## ◇ Requirements
+- Display team activity feed with recent updates
+- Show performance metrics in scannable cards
+- List active projects with progress
+- Support filtering by member and time
+- Handle empty states gracefully
+- Auto-refresh without losing context
 
 ---
 
 ## ✓ Success Criteria
-- [ ] Filters work on all devices
-- [ ] Results update in <300ms
-- [ ] 30% reduction in abandonment
-- [ ] Filter state persists during session
-
----
-
-## ⊗ Dependencies
-- Requires: Search API v2 (#1234)
-- Blocks: Saved searches (#1235)
+- [ ] Dashboard loads in <2 seconds
+- [ ] 50% reduction in status meetings
+- [ ] All data updates within 30 seconds
+- [ ] Works on tablet and desktop
 ```
 
-### Interactive Mode Dashboard:
-```
-📊 Interactive Mode Report
-Overall Quality Score: 4.5/5 ⭐
+.
 
-✅ Ticket Structure Checklist:
-✓ User value clearly stated
-✓ Business goal measurable
-✓ Requirements outcome-focused
-✓ Success criteria verifiable
-✓ Dependencies identified
-✓ All symbols properly used
-✓ 2-minute read test: PASS (1:45)
+## 🔧 Installing MCP Tools (Recommended)
 
-Product Management Insights:
-• We chose $standard mode for clear scope
-• Success criteria focus on user outcomes
-• Requirements use WHAT not HOW language
+All three MCP tools can be installed using Docker for easy management. This is the recommended approach for stability and ease of use.
+
+### Prerequisites
+- Docker Desktop installed and running ([Download Docker Desktop](https://www.docker.com/products/docker-desktop/))
+- Claude Desktop app installed ([Download Claude](https://claude.ai/download))
+- At least 2GB of free disk space
+
+### Quick Docker Setup
+
+1. **Create MCP Servers Directory**
+```bash
+mkdir -p "$HOME/MCP Servers"
+cd "$HOME/MCP Servers"
 ```
+
+2. **Clone the MCP Repositories**
+```bash
+# Clone Sequential Thinking MCP
+git clone https://github.com/arben-adm/mcp-sequential-thinking.git
+
+# Clone Cascade Thinking MCP
+git clone https://github.com/drewdotpro/cascade-thinking-mcp.git
+
+# Clone Figma MCP (if available via Docker)
+# Note: Check if Figma MCP has Docker support
+```
+
+3. **Create Docker Compose File**
+Create `docker-compose.yml` in the MCP Servers directory:
+
+```yaml
+services:
+  # Sequential Thinking MCP Server
+  sequential-thinking:
+    build:
+      context: ./mcp-sequential-thinking
+      dockerfile: Dockerfile
+    image: mcp-sequential-thinking:latest
+    container_name: mcp-sequential-thinking
+    restart: always
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - sequential-data:/app/data
+    networks:
+      - mcp-network
+
+  # Cascade Thinking MCP Server
+  cascade-thinking:
+    build:
+      context: ./cascade-thinking-mcp
+      dockerfile: Dockerfile
+    image: mcp-cascade-thinking:latest
+    container_name: mcp-cascade-thinking
+    restart: always
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - cascade-data:/app/data
+    networks:
+      - mcp-network
+
+  # Figma MCP Server (if Docker supported)
+  figma:
+    build:
+      context: ./figma-mcp
+      dockerfile: Dockerfile
+    image: mcp-figma:latest
+    container_name: mcp-figma
+    restart: always
+    environment:
+      - FIGMA_API_KEY=${FIGMA_API_KEY}
+    volumes:
+      - figma-data:/app/data
+    networks:
+      - mcp-network
+
+volumes:
+  sequential-data:
+  cascade-data:
+  figma-data:
+
+networks:
+  mcp-network:
+    driver: bridge
+```
+
+4. **Configure Claude Desktop**
+Update your Claude Desktop configuration:
+
+**macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
+**Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
+**Linux**: `~/.config/Claude/claude_desktop_config.json`
+
+```json
+{
+  "mcpServers": {
+    "sequential-thinking": {
+      "command": "docker",
+      "args": ["exec", "-i", "mcp-sequential-thinking", "uv", "run", "--with", "portalocker", "-m", "mcp_sequential_thinking.server"]
+    },
+    "cascade-thinking": {
+      "command": "docker",
+      "args": ["exec", "-i", "mcp-cascade-thinking", "node", "dist/index.js"]
+    },
+    "figma": {
+      "command": "docker",
+      "args": ["exec", "-i", "mcp-figma", "node", "index.js"]
+    }
+  }
+}
+```
+
+5. **Start the MCP Servers**
+```bash
+cd "$HOME/MCP Servers"
+
+# Build and start all containers
+docker-compose up -d
+
+# Or start specific services
+docker-compose up -d sequential-thinking cascade-thinking
+```
+
+6. **Restart Claude Desktop**
+Quit and restart Claude Desktop to load the new MCP server configuration.
+
+### Alternative: NPX Installation (Simpler but less stable)
+
+If you prefer not to use Docker, you can use the original NPX method:
+
+```json
+{
+  "mcpServers": {
+    "sequential-thinking": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+    },
+    "cascade-thinking": {
+      "command": "npx",
+      "args": ["-y", "cascade-thinking-mcp"]
+    },
+    "figma": {
+      "command": "npx",
+      "args": ["-y", "@figma/mcp-server"]
+    }
+  }
+}
+```
+
+### Verification
+1. **Check Docker Desktop**: You should see running containers
+2. **In Claude Desktop**: Look for the 🔌 icon showing available tools
+3. **Test the servers**: Try using the thinking tools in a conversation
+
+### Troubleshooting MCP Installation
+- **Containers won't start**: Check Docker Desktop is running
+- **Claude can't connect**: Restart Claude Desktop after starting containers
+- **View logs**: `docker-compose logs -f [service-name]`
+- **Reset everything**: `docker-compose down -v && docker-compose up -d`
 
 .
 
 ## 🆘 Troubleshooting
 
-### "It's not using any MCP tool"
-- Check if MCPs are installed (look for 🔌 icon)
-- The system works fine without them
-- You'll see "MCP tools not available" notation
+### "Should I use Figma for this ticket?"
+- Use for complex UI features with multiple screens
+- Skip for backend, bugs, or simple changes
+- It's always optional - never required
 
-### "It's using the wrong MCP tool"
-- The system chooses based on complexity indicators
-- Interactive mode typically uses Cascade
-- Simple, clear requests → Sequential
+### "Figma asks for an API key"
+- One-time setup: Figma → Settings → Personal Access Tokens
+- Create token and share with system
+- Stored securely in local configuration
 
-### "I don't want Interactive Mode"
-- Explicitly specify your preferred mode: `$q`, `$s`, `$c`, or `$e`
-- Interactive is only the default when no mode is specified
+### "Can't access Figma file"
+- Check file permissions
+- Ensure URL is complete
+- Can always proceed without Figma
 
-### "Too many/few thoughts being used"
-- v2.1 adapts thought count to complexity
-- Simple edits might use just 1 thought
-- Complex epics might use 10+
-- This is normal and optimized behavior
+### "Ticket includes technical specs"
+- This shouldn't happen in v2.2
+- Figma is for understanding, not spec extraction
+- Requirements should focus on WHAT, not HOW
 
-### "The ticket is too long/detailed"
-- Use `$q` mode for simpler tickets
-- Interactive mode helps find the right balance
-- Remember: 2-minute read rule
-
-### "How do I handle partial inputs?"
-- System automatically enhances incomplete requests
-- Extracts from screenshots and lists
-- Marks assumptions with "Inferred:"
-- Flags gaps with "Needs:"
-
-### "Abstract symbols aren't showing"
-- Symbols (❖, ◇, →, ✓, ⊗) should appear throughout
-- Every major section needs appropriate symbol
-- Check that you're using v2.1 or later
-
-.
-
-## 🎉 What's New in v2.1
-
-1. **Interactive Mode (DEFAULT)** - Conversational ticket creation for everyone
-2. **Partial Input Enhancement** - Intelligently handles incomplete requests
-3. **Enhanced Symbol System** - Professional abstract symbols throughout
-4. **Educational Layer** - Teaches product thinking through practice
-5. **Smart Question Priority** - Asks only what's critical
-6. **Visual Quality Dashboard** - Shows ticket quality metrics
-7. **Improved MCP Selection** - Better matching of tool to complexity
-8. **No Em Dash Rule** - Clearer punctuation throughout
-
-The Dev Ticket Writer v2.1 democratizes product management by making professional ticket creation accessible to everyone through Interactive Mode, while maintaining the core principle: focus on WHAT and WHY, not HOW.
+### Other Issues:
+- **No MCP tools**: System works without them
+- **Wrong MCP selection**: Based on complexity
+- **Interactive not wanted**: Use explicit mode (`$q`, `$s`, etc.)
+- **Ticket too long**: Use simpler mode or break down
