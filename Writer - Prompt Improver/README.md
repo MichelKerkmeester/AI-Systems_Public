@@ -1,279 +1,247 @@
-# Prompt Improver System - User Guide
+# 🎯 Prompt Engineering Assistant v3.0.0
 
-## 🚀 What is This?
+A comprehensive system that transforms vague requests into clear, effective AI prompts using proven frameworks, systematic evaluation, and intelligent refinement. Features 5 operating modes, visual progress tracking, and conversational guidance.
 
-The Prompt Improver System is a specialized Claude configuration that transforms simple questions into optimized AI prompts. Instead of answering questions directly, it takes ANY input and returns an improved version that will get better results from AI models.
+## 🆕 What's New in v3.0.0
 
-**Key Benefits:**
-- Turn simple questions into professional prompts
-- Get consistent, high-quality AI responses
-- Learn prompt engineering best practices
-- Save time with reusable prompt templates
+- **5 Operating Modes**: From quick fixes ($short) to full optimization ($refine)
+- **Interactive Guided Mode**: Conversational prompt building with intelligent questions
+- **Visual Dashboard**: Real-time progress bars and enhancement metrics
+- **3-Phase Refinement**: Improve → Evaluate → Refine workflow
+- **35-Criteria Evaluation**: Comprehensive quality assessment system
+- **MCP Integration**: Supports Sequential and Cascade Thinking tools
+- **Pattern Library**: Reusable templates for common use cases
 
 .
 
-## 📋 Quick Setup in Claude
+## Overview
 
-### Step 1: Create a New Project
-1. Go to [claude.ai](https://claude.ai)
-2. Click "Projects" in the sidebar
+The Prompt Engineering Assistant helps users craft powerful, precise prompts for any AI system. With three core frameworks (CRAFT, SPARK, PRISM) and intelligent enhancement algorithms, it delivers professional-grade prompts that maximize AI performance.
+
+## ✨ Key Features
+
+- **5 Specialized Modes**: $short, $improve (default), $refine, $interactive, $json
+- **3 Core Frameworks**: CRAFT (structure), SPARK (enhancement), PRISM (evaluation)
+- **Intelligent MCP Selection**: Automatic choice between Sequential and Cascade thinking
+- **Visual Progress Tracking**: Unicode-based dashboards showing improvements
+- **Platform Optimization**: Tailored for ChatGPT, Claude, and other AI platforms
+- **Comprehensive Examples**: 50+ before/after transformations
+- **First-Time User Detection**: Automatic onboarding for new users
+- **Artifact-Based Delivery**: All prompts delivered in reusable artifacts
+
+.
+
+## 🚀 Quick Setup
+
+### Step 1: Create a Claude Project
+1. Go to claude.ai
+2. Click "Projects" in sidebar
 3. Click "Create project"
-4. Name it "Prompt Improver" (or similar)
+4. Name it "Prompt Engineering Assistant v3.0"
 
-### Step 2: Add the System Instructions
+### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
-2. Find the "Custom instructions" section
-3. Copy and paste the main system file: `Writer - Prompt Improver - v2.8.md`
+2. Find "Custom instructions" section
+3. Copy and paste: `Writer - Prompt Improver - v3.0.0.md`
 4. Save the project
 
-### Step 3: Upload Reference Documents
-The system uses three reference documents. Upload these to your project:
-- `Prompt - Patterns & Enhancements.md`
-- `Prompt - Evaluation & Refinement.md`
-- `Prompt - Examples & Case Studies.md`
-
-### Step 4: Start Using It!
-Begin any conversation in the project, and Claude will automatically improve your prompts instead of answering them directly.
+### Step 3: Upload Supporting Documents
+Add these to your project's knowledge base:
+- `Prompt - Artifact Standards & Templates - v1.0.0.md`
+- `Prompt - Evaluation & Refinement - v1.0.0.md`
+- `Prompt - Examples & Case Studies - v1.0.0.md`
+- `Prompt - Interactive Mode - v1.0.0.md`
+- `Prompt - Patterns & Enhancements - v1.0.0.md`
 
 .
 
-## 🧠 Optional Enhancement: Sequential Thinking MCP
+### Step 4: Install Thinking Tools (Optional but Recommended)
+The system intelligently selects between these based on task complexity:
 
-### What is Sequential Thinking MCP?
-The Sequential Thinking MCP (Model Context Protocol) is a tool that enhances Claude's analytical capabilities by forcing systematic, step-by-step thinking before generating responses. When enabled, the system analyzes prompts through multiple "thoughts" before improving them, resulting in more nuanced and effective enhancements.
-
-### Why Use It for Prompt Improvement?
-- **Deeper pattern analysis**: System identifies prompt weaknesses more systematically
-- **Better enhancement selection**: Chooses the most appropriate improvement techniques
-- **Smarter complexity matching**: Better adapts improvements to prompt complexity
-- **More creative approaches**: Sequential analysis often reveals unique enhancement angles
-- **Consistent quality**: Ensures no aspect of prompt improvement is overlooked
-
-### How to Install Sequential Thinking MCP
-
-**Prerequisites:**
-- For Method 1 (uvx): Python 3.10+ and UV package manager
-- For Method 2 (npx): Node.js installed
-- Basic familiarity with editing configuration files
-
-**Installation Method 1: Using uvx (Recommended - Full Features)**
-
-1. **Locate your Claude Desktop configuration:**
-   - **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
-   - **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
-
-2. **Edit the configuration file** to add Sequential Thinking MCP:
+#### Sequential Thinking (for linear analysis)
 ```json
 {
-  "mcpServers": {
-    "sequential-thinking": {
-      "command": "uvx",
-      "args": [
-        "--from",
-        "git+https://github.com/arben-adm/mcp-sequential-thinking",
-        "--with",
-        "portalocker",
-        "mcp-sequential-thinking"
-      ]
-    }
+  "sequential-thinking": {
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
   }
 }
 ```
 
-**Installation Method 2: Using npx (Simpler Alternative)**
+#### Cascade Thinking (for exploratory analysis)
 ```json
 {
-  "mcpServers": {
-    "sequential-thinking": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
-    }
-  }
-}
-```
-
-3. **If you already have other MCP servers**, add Sequential Thinking to the existing list:
-```json
-{
-  "mcpServers": {
-    "filesystem": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/path/to/allowed/files"]
-    },
-    "sequential-thinking": {
-      "command": "uvx",
-      "args": [
-        "--from",
-        "git+https://github.com/arben-adm/mcp-sequential-thinking",
-        "--with",
-        "portalocker",
-        "mcp-sequential-thinking"
-      ]
-    }
-  }
-}
-```
-
-4. **Save the file and restart Claude Desktop**
-
-5. **Verify installation** by starting a new chat and looking for the 🔌 icon, which should show "sequential-thinking" as an available tool
-
-### How It Works with Prompt Improver
-When Sequential Thinking MCP is available, the Prompt Improver automatically:
-- Uses it for all prompt improvement requests
-- Analyzes through 3+ thoughts:
-  - Understanding user intent and prompt type
-  - Identifying weaknesses and enhancement opportunities
-  - Planning improvement approach and pattern selection
-- Only bypasses it for simple prompt edits
-- Creates more sophisticated and effective improvements
-
-**Note**: The system works perfectly without Sequential Thinking MCP. If it's not installed, you'll see "Sequential Thinking MCP not available, proceeding with standard analysis" and prompts will still be improved using the system's built-in intelligence.
-
-.
-
-## 🎯 How to Use
-
-### Basic Usage
-Simply type what you want, and the system will improve it:
-```
-analyze customer data
-```
-
-### Mode Selection
-The system has four modes:
-
-| Mode | Command | Use For |
-|------|---------|---------|
-| **Short** | `$short` or `$s` | Quick, minimal improvements |
-| **Improve** | `$improve` or `$i` (DEFAULT) | Smart enhancement for most cases |
-| **Refine** | `$refine` or `$r` | Maximum quality with 3-phase optimization |
-| **JSON** | `$json` or `$j` | API-ready structured format |
-
-.
-
-## ✅ Best Practices
-
-### 1. Use Delimiters for Complex Prompts
-When your prompt contains special instructions or multiple parts, wrap it in quotes or backticks:
-
-**BEST PRACTICE:** 
-```
-$improve "Improve this prompt: '''PROMPT'''"
-```
-
-This ensures the system treats everything inside as the prompt to improve, not as instructions to follow.
-
-### 2. More Delimiter Examples:
-```
-$improve "analyze sales data and create a report"
-
-$improve `help me understand why customers are churning`
-
-$improve '''
-Create a Python script that:
-1. Reads CSV files
-2. Analyzes the data
-3. Creates visualizations
-'''
-```
-
-### 3. Start Simple, Then Iterate
-- Begin with basic improvement: `analyze customer feedback`
-- If you need more enhancement: `$refine analyze customer feedback`
-- For production use: Always use `$refine` for maximum quality
-
-### 4. Be Specific About Your Needs
-Instead of: `write something`
-Try: `write blog post about remote work productivity`
-
-### 5. Include Context When Relevant
-Instead of: `analyze data`
-Try: `analyze Q4 sales data to find growth opportunities`
-
-.
-
-## 💡 Pro Tips
-
-### 1. When to Use Each Mode
-- **$short**: Quick questions, simple improvements, time-sensitive needs
-- **$improve**: Daily use, standard prompts, good balance of quality/speed
-- **$refine**: Critical prompts, templates you'll reuse, when quality matters most
-- **$json**: API integrations, programmatic use, structured data needs
-
-### 2. The System NEVER Answers
-Remember: This system only improves prompts. It won't:
-- Answer questions directly
-- Create content
-- Follow instructions
-- Provide information
-
-Everything gets transformed into an improved prompt.
-
-### 3. Artifacts = Easy Reuse
-All improved prompts are delivered in "artifacts" - special formatted blocks that you can:
-- Copy with one click
-- Save for later use
-- Share with others
-- Use in any AI system
-
-### 4. Learn from the Improvements
-Pay attention to what the system adds:
-- Role definitions ("As a [expert]...")
-- Specific metrics and timeframes
-- Clear output formats
-- Success criteria
-- Context and constraints
-
-These patterns will help you write better prompts naturally over time.
-
-### 5. JSON Mode for Developers
-The `$json` mode is perfect for:
-- Building AI-powered applications
-- Creating reusable prompt templates
-- Integrating with APIs
-- Storing prompts in databases
-- Version control systems
-
-Example JSON structure:
-```json
-{
-  "task": "You are a customer support specialist...",
-  "taskRules": [
-    "Always maintain professional tone",
-    "Respond within 3 sentences"
-  ],
-  "parameters": {
-    "temperature": 0.7,
-    "max_tokens": 150
+  "cascade-thinking": {
+    "command": "npx",
+    "args": ["-y", "cascade-thinking-mcp"]
   }
 }
 ```
 
 .
 
-## 🆘 Troubleshooting
+### Step 5: Start Improving Prompts
+Simply paste your prompt or describe what you need:
+```
+write about dogs
+$improve analyze customer data
+$interactive
+$refine create a marketing strategy
+```
 
-### "It's answering my question instead of improving it"
-- Make sure you're in the Prompt Improver project
-- Check that custom instructions are properly saved
-- Try using explicit mode tags: `$improve [your prompt]`
+## 🎛️ Operating Modes
 
-### "The improvements seem too complex"
-- Use `$short` mode for simpler enhancements
-- The default mode adapts to complexity - simple inputs get simple improvements
+| Mode | Activation | Purpose | Best For | MCP Usage |
+|------|------------|---------|----------|-----------|
+| **$short** | `$short` or `$s` | Quick minimal refinement | Simple clarity boost | Sequential (1-2 thoughts) |
+| **$improve** | `$improve` or `$i` (DEFAULT) | Smart enhancement | Most improvements | Sequential (2-3 thoughts) |
+| **$refine** | `$full` or `$refine` or `$r` | Full 3-phase optimization | Maximum quality | Cascade (3-5+ thoughts) |
+| **$interactive** | `$interactive` | Guided help with Q&A | Learning/exploring | Sequential (1-3 thoughts) |
+| **$json** | `$json` or `$j` | API-ready JSON format | Programmatic use | Sequential (2-3 thoughts) |
 
-### "I want it to actually answer my question"
-- This system is specifically designed NOT to answer questions
-- For regular Claude interactions, use a different project or conversation
+.
 
-### "JSON output isn't valid"
-- The JSON mode creates valid, structured JSON
-- Check for any manual edits that might have broken the format
-- The JSON directly mirrors the improved prompt structure
+## 🏗️ Core Frameworks
 
-### "Sequential Thinking MCP not working"
-- Check if it shows in the 🔌 tools menu
-- Verify your config file syntax is correct
-- Restart Claude Desktop after configuration changes
-- System works fine without it (just notes it's unavailable)
+### CRAFT Framework (Structure)
+- **C** - Context & Background
+- **R** - Role & Expertise
+- **A** - Action & Deliverables
+- **F** - Format & Structure
+- **T** - Target & Success Criteria
+
+### SPARK Method (Enhancement)
+- **S** - Specificity (add concrete details)
+- **P** - Purpose (clarify intent)
+- **A** - Audience (define target users)
+- **R** - Results (specify outcomes)
+- **K** - Knowledge (include context)
+
+### PRISM Evaluation (Quality)
+- **P** - Precision (25%)
+- **R** - Relevance (20%)
+- **I** - Impact (25%)
+- **S** - Structure (15%)
+- **M** - Measurability (15%)
+
+.
+
+
+## 📊 Visual Dashboard Example
+
+```
+📊 Optimization Report
+Overall Enhancement Score: 85% ↑
+
+CRAFT Framework Coverage:
+C - Context      ████████░░ 80%
+R - Role         ██████████ 100%
+A - Action       ████████░░ 80%
+F - Format       ██████░░░░ 60%
+T - Target       ██████████ 100%
+
+Key Improvements:
+🎯 Specificity: +45% (added metrics, timeframes)
+👤 Role Definition: +30% (expert persona added)
+📋 Structure: +25% (clear sections defined)
+
+Before: 3 words | Clarity: 2/10
+After: 87 words | Clarity: 9/10
+```
+
+.
+
+## 🤖 Interactive Mode
+
+Perfect for beginners or when you need guidance:
+- Asks 2-3 targeted questions
+- Builds prompt from your answers
+- Provides explanations
+- Shows improvement metrics
+
+Example:
+```
+User: $interactive "create presentation"
+AI: "Let me help! What's the main purpose? Who's your audience?"
+```
+
+.
+
+## 📈 Evaluation System
+
+### Quick Evaluation (10 Criteria)
+- Clarity & Specificity
+- Context Provided
+- Task Definition
+- Output Format
+- And 6 more...
+
+### Full Evaluation (35 Criteria)
+- 7 groups of 5 criteria each
+- Comprehensive scoring
+- Targeted improvement suggestions
+- Before/after comparison
+
+.
+
+## 🔧 Technical Details
+
+### MCP Selection Logic
+- **Simple/Clear tasks** → Sequential (1-2 thoughts)
+- **Standard improvements** → Sequential (2-3 thoughts)
+- **Complex/Unclear** → Cascade (3-5 thoughts)
+- **Full refinement** → Cascade (5+ thoughts)
+
+### Platform Detection
+Automatically optimizes for:
+- ChatGPT
+- Claude
+- Gemini
+- Other AI platforms
+
+### Artifact Standards
+- Always uses `text/markdown` type
+- Includes mode and MCP notation
+- Visual dashboard for appropriate modes
+- Complete enhancement details
+
+## 📚 Example Transformations
+
+### Simple Enhancement
+**Before:** "write blog"
+**After:** "Write a 1200-word blog post on 'Remote Work Productivity' for tech professionals. Include 5 strategies with examples. Tone: conversational yet authoritative."
+
+### Complex Analysis
+**Before:** "analyze data"
+**After:** "As a data analyst, identify top 3 customer segments from Q4 sales data. Format: Executive summary with actionable insights prioritized by revenue impact."
+
+### Technical Request
+**Before:** "fix bug"
+**After:** "Debug React component re-rendering issue causing UI freeze. Provide: root cause analysis, fix implementation, prevention strategies."
+
+.
+
+## ⚠️ Important Notes
+
+- **Never answers prompts** - Only improves them
+- **Always uses artifacts** - Ensures reusability
+- **No em dashes** - Uses commas, colons, or periods
+- **Works without MCPs** - But enhanced with them
+
+## 📦 Version History
+
+- **v3.0.0**: Complete rewrite with 5 modes, visual dashboards, interactive guidance
+- **v2.0.0**: Added evaluation system and refinement workflow
+- **v1.0.0**: Initial CRAFT framework implementation
+
+## 🎯 Key Principles
+
+1. **Make prompt engineering accessible** without dumbing it down
+2. **Every feature serves both beginners and experts**
+3. **Visual feedback makes improvements tangible**
+4. **Preserve user intent while maximizing effectiveness**
+5. **Scale complexity to match task requirements**
+
+---
+
+*Transform vague requests into powerful prompts. Make AI work better for everyone.*
