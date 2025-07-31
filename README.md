@@ -4,6 +4,25 @@
 
 ## 📝 Writing Systems
 
+### Writer - Prompt Improver  
+Transforms 'do the thing' into prompts that get exactly what you need. 
+Because better input means less time fixing output.
+ 
+- **Problem I faced**: Vague prompts getting vague results  
+- **What I built**: Systematic enhancement with quality scoring   
+- **You'll use this for**: Any AI interaction that needs clarity
+
+.
+
+### Writer - AI Systems
+Analyze any AI system (like mine), and generate professional specifications for the creation of similar AI Systems.
+
+- **Problem I faced**: Recreating systems from scratch, losing proven patterns
+- **What I built**: Meta-system that extracts patterns and generates actionable specs
+- **You'll use this for**: System architecture, enhancement planning, pattern reuse
+
+.
+
 ### Writer - Branded Content
 Basic copywriting system based on my own Client systems, it transforms generic marketing speak into a authentic branded voice. 
 
@@ -19,27 +38,6 @@ Create tickets from any request with clear specs, acceptance criteria, and conte
 - **Problem I faced**: "Build the thing that does the stuff"  
 - **What I built**: System that transforms any request into clear tickets  
 - **You'll use this for**: Feature requests, bug reports, any dev communication
-
-.
-
-### Writer - AI Systems
-Analyze any AI system (like mine), and generate professional specifications for the creation of similar AI Systems.
-
-- **Problem I faced**: Recreating systems from scratch, losing proven patterns
-- **What I built**: Meta-system that extracts patterns and generates actionable specs
-- **You'll use this for**: System architecture, enhancement planning, pattern reuse
-
-.
-
-## 🚀 Enhancement Systems
-
-### Writer - Prompt Improver  
-Transforms 'do the thing' into prompts that get exactly what you need. 
-Because better input means less time fixing output.
- 
-- **Problem I faced**: Vague prompts getting vague results  
-- **What I built**: Systematic enhancement with quality scoring   
-- **You'll use this for**: Any AI interaction that needs clarity  
 
 .
 
