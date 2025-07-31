@@ -43,19 +43,13 @@ Create tickets from any request with clear specs, acceptance criteria, and conte
 
 ## 💻 Development Systems
 
-### DEV - Claude Code - Instructions + Commands
+### DEV - Claude Code - Agents, Long-term Memory, Hooks, Commands, etc.
 > Work in progress!
 > > To be added: 
 > - Dynamic long-term memory ([Graphiti](https://github.com/getzep/graphiti) & [Crawl4AI RAG](https://github.com/coleam00/mcp-crawl4ai-rag))
 > - Parallel agents that work with Gemini & Kimi (Groq proxy)
 > - Testing with Puppeteer, Playwright / Chrome Debug, accessible by Agents like Gemini
 > - Automated spec writing and task completion summaries
-
-Transform your Claude conversations into persistent, automated development workflows with custom commands and maintained context.
-- **Problem I faced**: Repetitive Claude conversations, lost context between sessions, manual workflow steps
-- **What I built**: CLI that maintains context, automates workflows, and enables custom commands
-- **How it works**: Project-specific instructions + custom slash commands + persistent context files
-- **You'll use this for**: Consistent dev workflows, automated code reviews, complex multi-step tasks
 
 .
 
