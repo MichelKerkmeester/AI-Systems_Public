@@ -9,7 +9,6 @@ Basic copywriting system based on my own Client systems, it transforms generic m
 
 - **Problem I faced**: Marketing copy that made readers roll their eyes  
 - **What I built**: Sarah's strategic voice system with data-driven creativity  
-- **How it works**: Write, Share, Connect, and Improve modes  
 - **You'll use this for**: Campaigns, social content, brand stories that resonate  
 
 .
@@ -19,8 +18,16 @@ Create tickets from any request with clear specs, acceptance criteria, and conte
 
 - **Problem I faced**: "Build the thing that does the stuff"  
 - **What I built**: System that transforms any request into clear tickets  
-- **How it works**: Quick, Standard, Complex, or Epic modes  
-- **You'll use this for**: Feature requests, bug reports, any dev communication  
+- **You'll use this for**: Feature requests, bug reports, any dev communication
+
+.
+
+### Writer - AI Systems
+Analyze any AI systems (like mine), and generate professional specifications for the creation or updates of similar AI Systems.
+
+- **Problem I faced**: Recreating systems from scratch, losing proven patterns
+- **What I built**: Meta-system that extracts patterns and generates actionable specs
+- **You'll use this for**: System architecture, enhancement planning, pattern reuse
 
 .
 
@@ -31,8 +38,7 @@ Transforms 'do the thing' into prompts that get exactly what you need.
 Because better input means less time fixing output.
  
 - **Problem I faced**: Vague prompts getting vague results  
-- **What I built**: Systematic enhancement with quality scoring  
-- **How it works**: Short, Improve, Refine, or JSON output modes  
+- **What I built**: Systematic enhancement with quality scoring   
 - **You'll use this for**: Any AI interaction that needs clarity  
 
 .
@@ -70,5 +76,4 @@ Zero to working App prototype in one conversation.
 
 - **Problem I faced**: "I need a demo for tomorrow's meeting"  
 - **What I built**: Instant web apps in Claude artifacts  
-- **How it works**: $app, $ai, or $data modes with component shortcuts  
-- **You'll use this for**: Prototypes, tools, data visualizations  
+- **You'll use this for**: Quick prototypes, tools, data visualizations  
