@@ -23,7 +23,7 @@ Create tickets from any request with clear specs, acceptance criteria, and conte
 .
 
 ### Writer - AI Systems
-Analyze any AI system (like mine), and generate professional specifications for the creation or updates of similar AI Systems.
+Analyze any AI system (like mine), and generate professional specifications for the creation of similar AI Systems.
 
 - **Problem I faced**: Recreating systems from scratch, losing proven patterns
 - **What I built**: Meta-system that extracts patterns and generates actionable specs
