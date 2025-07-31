@@ -6,3 +6,10 @@ Writer - Prompt Improver/.DS_Store
 .DS_Store
 .DS_Store
 .DS_Store
+
+# Folders to ignore
+y -- A. Nobel & Zn/
+y -- Barter/
+y -- Dataprovider/
+y -- Michel Kerkmeester/
+.DS_Store
