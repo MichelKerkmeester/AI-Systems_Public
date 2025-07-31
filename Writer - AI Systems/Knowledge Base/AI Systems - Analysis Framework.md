@@ -1,4 +1,4 @@
-# Spec Writer - Analysis Framework
+# AI Systems - Analysis Framework - v1.0.0
 
 This document provides the methodology for analyzing AI systems to extract patterns, understand architectures, and identify enhancement opportunities.
 

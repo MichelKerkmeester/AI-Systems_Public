@@ -1,4 +1,4 @@
-# Spec Writer - Pattern Library
+# AI Systems - Pattern Library - v1.0.0
 
 This document contains reusable architectural patterns extracted from successful AI systems, ready for implementation in new specifications.
 

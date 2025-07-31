@@ -1,4 +1,4 @@
-# Spec Writer - Artifact Standards
+# AI Systems - Artifact Standards - v1.0.0
 
 This document defines mandatory standards for delivering specifications and analysis reports via artifacts.
 
@@ -911,7 +911,7 @@ config:
 
 ### Cross-References
 Format: **See [Document Name] → Section [X]**
-Example: **See Pattern Library → Architectural Patterns**
+Example: **See AI Systems - Pattern Library.md → Architectural Patterns**
 
 ---
 
