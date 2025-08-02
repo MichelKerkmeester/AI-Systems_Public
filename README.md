@@ -37,7 +37,7 @@ They were designed to work with the Claude App, but you can tweak them to fit wi
 **Professional specifications and documentation**
 - **6 Operating Modes**: Interactive, Analyze, Create, Update, Integrate, README
 - **Pattern Library**: Proven architectures from successful systems
-- **Easy Creation**: Spec it, Build it, Document it
+- **Easy System Creation**: Spec it, Build it, Document it
 - **Educational Focus**: Learn architecture through creation
 - **Visual Mapping**: ASCII diagrams for system understanding
 - **Version Aware**: Migration and compatibility planning
