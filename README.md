@@ -6,7 +6,6 @@ Some of my more basic AI systems that I made available to the public. They were 
 > - Beat the odds?
 > - Don't reward me with unwanted coffee: https://buymeacoffee.com/michelkerkmeester
 
-.
 
 ## 🎯 Quick Navigation
 
