@@ -1,3 +1,3 @@
-# AI Systems Public ✨
+### AI Systems Public ✨
 
-### You probably won't try these, but you're definitely missing out.
+You probably won't try these, but you're definitely missing out.
