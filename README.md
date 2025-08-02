@@ -1,4 +1,4 @@
-# AI MAGIC ✨
+# AI Magic ✨
 
 Some of my more basic AI systems that I made available to the public. 
 
