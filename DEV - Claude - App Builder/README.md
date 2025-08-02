@@ -1,4 +1,4 @@
-# Claude App Builder - User Guide v2.0
+# Claude App Builder - User Guide v1.3.3
 
 ## 🚀 What is This?
 
