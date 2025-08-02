@@ -1,6 +1,7 @@
 # AI MAGIC ✨
 
 Some of my more basic AI systems that I made available to the public. 
+
 They were designed to work with the Claude Desktop App, but you can tweak them to fit with other AI setups too.
 
 > - 99.9% of people won't try these systems
