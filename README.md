@@ -2,4 +2,4 @@
 
 - 99.9% of people won't try these systems.
 - Beat the odds?
-- Please don't reward me with unwanted coffee: https://buymeacoffee.com/michelkerkmeester
+- Don't reward me with unwanted coffee: https://buymeacoffee.com/michelkerkmeester
