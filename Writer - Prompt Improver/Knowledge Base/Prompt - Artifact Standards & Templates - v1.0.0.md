@@ -1,4 +1,4 @@
-# Prompt - Artifact Standards & Templates
+# Prompt - Artifact Standards & Templates - v1.0.0
 
 This document defines mandatory standards for delivering enhanced prompts via artifacts.
 

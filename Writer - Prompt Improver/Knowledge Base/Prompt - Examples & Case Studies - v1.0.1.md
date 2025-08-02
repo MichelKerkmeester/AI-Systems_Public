@@ -1,4 +1,4 @@
-# Prompt Examples & Case Studies
+# Prompt Examples & Case Studies - v1.0.1
 
 **Optimized before/after transformations** demonstrating real-world prompt improvements across different domains.
 

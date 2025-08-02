@@ -1,4 +1,4 @@
-# Prompt Patterns & Enhancement Techniques
+# Prompt Patterns & Enhancement Techniques - v1.0.1
 
 **Reusable templates with integrated enhancement options** for crafting effective prompts across common use cases.
 

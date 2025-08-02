@@ -1,4 +1,4 @@
-# Prompt - Interactive Mode
+# Prompt - Interactive Mode - v1.0.0
 
 **Full specification of `$interactive` mode** - the conversational prompt enhancement system that guides users through creating effective prompts step-by-step.
 

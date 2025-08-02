@@ -53,34 +53,7 @@ Add these to your project's knowledge base:
 - `Prompt - Interactive Mode - v1.0.0.md`
 - `Prompt - Patterns & Enhancements - v1.0.0.md`
 
-.
-
-### Step 4: Install Thinking Tools (Optional but Recommended)
-The system intelligently selects between these based on task complexity:
-
-#### Sequential Thinking (for linear analysis)
-```json
-{
-  "sequential-thinking": {
-    "command": "npx",
-    "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
-  }
-}
-```
-
-#### Cascade Thinking (for exploratory analysis)
-```json
-{
-  "cascade-thinking": {
-    "command": "npx",
-    "args": ["-y", "cascade-thinking-mcp"]
-  }
-}
-```
-
-.
-
-### Step 5: Start Improving Prompts
+### Step 4: Start Improving Prompts
 Simply paste your prompt or describe what you need:
 ```
 write about dogs
@@ -88,6 +61,8 @@ $improve analyze customer data
 $interactive
 $refine create a marketing strategy
 ```
+
+.
 
 ## 🎛️ Operating Modes
 
@@ -125,7 +100,6 @@ $refine create a marketing strategy
 - **M** - Measurability (15%)
 
 .
-
 
 ## 📊 Visual Dashboard Example
 
@@ -205,6 +179,8 @@ Automatically optimizes for:
 - Visual dashboard for appropriate modes
 - Complete enhancement details
 
+.
+
 ## 📚 Example Transformations
 
 ### Simple Enhancement
@@ -218,6 +194,83 @@ Automatically optimizes for:
 ### Technical Request
 **Before:** "fix bug"
 **After:** "Debug React component re-rendering issue causing UI freeze. Provide: root cause analysis, fix implementation, prevention strategies."
+
+.
+
+## 🔧 Installing MCP Tools (Recommended)
+
+The system intelligently selects between these based on task complexity. Choose either Docker (stable) or NPX (quick) installation:
+
+### Option A: AI-Powered Docker Setup (Recommended)
+
+**Prerequisites:**
+- Docker Desktop installed ([Download Docker Desktop](https://www.docker.com/products/docker-desktop/))
+- Claude Desktop app ([Download Claude](https://claude.ai/download))
+
+**AI-Assisted Installation:**
+
+Copy this prompt to Claude, ChatGPT, or any AI assistant:
+
+```
+Help me set up Docker containers for the Prompt Engineering Assistant MCP tools.
+
+I need to:
+1. Create a directory at "$HOME/MCP Servers"
+2. Clone these repos:
+   - https://github.com/arben-adm/mcp-sequential-thinking.git
+   - https://github.com/drewdotpro/cascade-thinking-mcp.git
+3. Create a docker-compose.yml file with services for both
+4. Configure Claude Desktop's claude_desktop_config.json
+5. Start the containers with docker-compose
+
+I'm on [Windows/Mac/Linux]. Please give me the exact commands to run.
+```
+
+The AI will provide step-by-step commands for your operating system.
+
+**Verification:**
+1. Check Docker Desktop for 2 running containers
+2. Look for the 🔌 icon in Claude Desktop showing available tools
+3. Test with: "improve this prompt: write about dogs"
+
+### Option B: NPX Installation (Quick but Less Stable)
+
+Add to Claude Desktop config file:
+```json
+{
+  "mcpServers": {
+    "sequential-thinking": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+    },
+    "cascade-thinking": {
+      "command": "npx",
+      "args": ["-y", "cascade-thinking-mcp"]
+    }
+  }
+}
+```
+
+.
+
+## 🆘 Troubleshooting
+
+### MCP Connection Issues
+- **Docker not running**: Start Docker Desktop
+- **Can't connect**: Restart Claude Desktop
+- **Wrong directory**: Check you're in "$HOME/MCP Servers"
+- **Permission errors**: Run terminal as administrator (Windows) or use sudo (Mac/Linux)
+
+### Common Setup Problems
+- **"Command not found"**: Ensure Node.js is installed for NPX method
+- **Containers won't start**: Check Docker Desktop is running
+- **Tools not showing**: Restart Claude Desktop after config changes
+- **Rate limits**: Both tools handle this gracefully with retries
+
+### Getting Help
+- For Docker issues: Check container logs in Docker Desktop
+- For NPX issues: Check Claude Desktop logs
+- For general issues: The AI assistant can help diagnose problems
 
 .
 
@@ -241,6 +294,15 @@ Automatically optimizes for:
 3. **Visual feedback makes improvements tangible**
 4. **Preserve user intent while maximizing effectiveness**
 5. **Scale complexity to match task requirements**
+
+.
+
+## 📚 Other Resources
+
+- [MCP Protocol Guide](https://modelcontextprotocol.io/)
+- [Docker Desktop Help](https://docs.docker.com/desktop/)
+- [Sequential Thinking MCP](https://github.com/arben-adm/mcp-sequential-thinking)
+- [Cascade Thinking MCP](https://github.com/drewdotpro/cascade-thinking-mcp)
 
 ---
 

@@ -46,11 +46,58 @@ Add these essential documents to your project:
 - `AI Systems - Pattern Library.md` - Reusable architectural patterns
 - `AI Systems - README Template.md` - Professional documentation patterns
 
-### Step 4: Enable MCP Tools (Recommended)
-For enhanced analysis and thinking capabilities:
-- Sequential Thinking MCP - For linear analysis tasks
-- Cascade Thinking MCP - For complex system exploration
-(See installation guide below)
+### Step 4: Install MCP Tools (Recommended)
+The system intelligently selects between these based on task complexity. Choose either Docker (stable) or NPX (quick) installation:
+
+#### Option A: AI-Powered Docker Setup (Recommended)
+
+**Prerequisites:**
+- Docker Desktop installed ([Download Docker Desktop](https://www.docker.com/products/docker-desktop/))
+- Claude Desktop app ([Download Claude](https://claude.ai/download))
+
+**AI-Assisted Installation:**
+
+Copy this prompt to Claude, ChatGPT, or any AI assistant:
+
+```
+Help me set up Docker containers for the AI Systems Spec Writer MCP tools.
+
+I need to:
+1. Create a directory at "$HOME/MCP Servers"
+2. Clone these repos:
+   - https://github.com/arben-adm/mcp-sequential-thinking.git
+   - https://github.com/drewdotpro/cascade-thinking-mcp.git
+3. Create a docker-compose.yml file with services for both
+4. Configure Claude Desktop's claude_desktop_config.json
+5. Start the containers with docker-compose
+
+I'm on [Windows/Mac/Linux]. Please give me the exact commands to run.
+```
+
+The AI will provide step-by-step commands for your operating system.
+
+**Verification:**
+1. Check Docker Desktop for 2 running containers
+2. Look for the 🔌 icon in Claude Desktop showing available tools
+3. Test with: "$analyze this chat system"
+
+#### Option B: NPX Installation (Quick but Less Stable)
+
+Add to Claude Desktop config file:
+```json
+{
+  "mcpServers": {
+    "sequential-thinking": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+    },
+    "cascade-thinking": {
+      "command": "npx",
+      "args": ["-y", "cascade-thinking-mcp"]
+    }
+  }
+}
+```
 
 ### Step 5: Start Creating Specifications
 ```
@@ -202,215 +249,24 @@ The system includes proven patterns extracted from successful AI systems:
 
 .
 
-## 🛠️ MCP Installation Guide (Docker Desktop)
+## 🆘 Troubleshooting
 
-MCPs (Model Context Protocol) enhance the system's analytical capabilities. This guide uses Docker Desktop for easy management and reliable operation.
+### MCP Connection Issues
+- **Docker not running**: Start Docker Desktop
+- **Can't connect**: Restart Claude Desktop
+- **Wrong directory**: Check you're in "$HOME/MCP Servers"
+- **Permission errors**: Run terminal as administrator (Windows) or use sudo (Mac/Linux)
 
-### Prerequisites
-- **Docker Desktop** installed and running ([Download Docker Desktop](https://www.docker.com/products/docker-desktop/))
-- **Claude Desktop** app installed ([Download Claude](https://claude.ai/download))
-- **Git** installed (for cloning repositories)
-- At least 2GB of free disk space
+### Common Setup Problems
+- **"Command not found"**: Ensure Node.js is installed for NPX method
+- **Containers won't start**: Check Docker Desktop is running
+- **Tools not showing**: Restart Claude Desktop after config changes
+- **Rate limits**: Both tools handle this gracefully with retries
 
-### Quick Installation Steps
-
-#### 1. Create MCP Servers Directory
-```bash
-mkdir -p "$HOME/MCP Servers"
-cd "$HOME/MCP Servers"
-```
-
-#### 2. Clone the MCP Repositories
-```bash
-# Clone Sequential Thinking MCP
-git clone https://github.com/arben-adm/mcp-sequential-thinking.git
-
-# Clone Cascade Thinking MCP  
-git clone https://github.com/drewdotpro/cascade-thinking-mcp.git
-```
-
-#### 3. Download Docker Configuration Files
-Create these files in your MCP Servers directory:
-
-**docker-compose.yml**:
-```yaml
-services:
-  # Sequential Thinking MCP Server
-  sequential-thinking:
-    build:
-      context: ./mcp-sequential-thinking
-      dockerfile: Dockerfile
-    image: mcp-sequential-thinking:latest
-    container_name: mcp-sequential-thinking
-    restart: always
-    environment:
-      - PYTHONUNBUFFERED=1
-    volumes:
-      - sequential-data:/app/data
-      - ./mcp-sequential-thinking/logs:/app/logs
-    networks:
-      - mcp-network
-    healthcheck:
-      test: ["CMD", "echo", "healthy"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-
-  # Cascade Thinking MCP Server
-  cascade-thinking:
-    build:
-      context: ./cascade-thinking-mcp
-      dockerfile: Dockerfile
-    image: mcp-cascade-thinking:latest
-    container_name: mcp-cascade-thinking
-    restart: always
-    environment:
-      - NODE_ENV=production
-    volumes:
-      - cascade-data:/app/data
-      - ./cascade-thinking-mcp/logs:/app/logs
-    networks:
-      - mcp-network
-    healthcheck:
-      test: ["CMD", "echo", "healthy"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-
-volumes:
-  sequential-data:
-    name: mcp-sequential-data
-  cascade-data:
-    name: mcp-cascade-data
-
-networks:
-  mcp-network:
-    name: mcp-network
-    driver: bridge
-```
-
-#### 4. Create Management Scripts
-
-**start-mcp-servers.sh**:
-```bash
-#!/bin/bash
-echo "🚀 Starting MCP servers in Docker..."
-cd "$(dirname "$0")"
-
-echo "📦 Building Docker images..."
-docker-compose build
-
-echo "🏃 Starting containers..."
-docker-compose up -d
-
-sleep 3
-echo "✅ Container status:"
-docker-compose ps
-
-echo ""
-echo "✨ MCP servers are now running in Docker!"
-echo "🐳 You can see them in Docker Desktop app"
-```
-
-**stop-mcp-servers.sh**:
-```bash
-#!/bin/bash
-echo "🛑 Stopping MCP servers..."
-cd "$(dirname "$0")"
-docker-compose down
-echo "✅ MCP servers stopped!"
-```
-
-Make scripts executable:
-```bash
-chmod +x start-mcp-servers.sh
-chmod +x stop-mcp-servers.sh
-```
-
-#### 5. Configure Claude Desktop
-
-Find your Claude configuration file:
-- **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
-- **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
-- **Linux**: `~/.config/Claude/claude_desktop_config.json`
-
-Add this configuration:
-```json
-{
-  "mcpServers": {
-    "cascade-thinking": {
-      "command": "docker",
-      "args": ["exec", "-i", "mcp-cascade-thinking", "node", "dist/index.js"],
-      "env": {
-        "NODE_ENV": "production"
-      }
-    },
-    "sequential-thinking": {
-      "command": "docker",
-      "args": ["exec", "-i", "mcp-sequential-thinking", "uv", "run", "--with", "portalocker", "-m", "mcp_sequential_thinking.server"],
-      "env": {
-        "PYTHONUNBUFFERED": "1"
-      }
-    }
-  }
-}
-```
-
-#### 6. Start the MCP Servers
-```bash
-cd "$HOME/MCP Servers"
-./start-mcp-servers.sh
-```
-
-#### 7. Restart Claude Desktop
-Quit and restart Claude Desktop to load the new MCP server configuration.
-
-### 🐳 Docker Desktop Management
-
-#### View Container Status
-Open Docker Desktop to see:
-- Running containers: `mcp-sequential-thinking` and `mcp-cascade-thinking`
-- Resource usage (CPU/Memory)
-- Container logs (click on container → "Logs" tab)
-
-#### Quick Commands
-```bash
-# Check status
-docker ps
-
-# View logs
-docker-compose logs -f
-
-# Restart a specific server
-docker-compose restart sequential-thinking
-
-# Update servers
-git -C mcp-sequential-thinking pull
-git -C cascade-thinking-mcp pull
-docker-compose build
-docker-compose up -d
-```
-
-### 🔧 Troubleshooting
-
-**Containers won't start:**
-- Ensure Docker Desktop is running
-- Check logs: `docker-compose logs`
-- Rebuild: `docker-compose build --no-cache`
-
-**Claude can't connect:**
-- Verify containers are running in Docker Desktop
-- Restart Claude Desktop
-- Check configuration file syntax
-
-**Permission errors:**
-- Make scripts executable: `chmod +x *.sh`
-- On Linux/macOS, may need: `sudo docker-compose up -d`
-
-### 📊 Verification
-1. **Docker Desktop**: Two green containers running
-2. **Claude Desktop**: Look for 🔌 icon showing MCP connections
-3. **Test**: Try using sequential or cascade thinking in Claude
+### Getting Help
+- For Docker issues: Check container logs in Docker Desktop
+- For NPX issues: Check Claude Desktop logs
+- For general issues: The AI assistant can help diagnose problems
 
 .
 
@@ -448,17 +304,6 @@ Every specification includes:
 
 .
 
-## 🔗 Resources
-
-- [Pattern Library Reference](AI Systems - Pattern Library.md)
-- [Analysis Framework Guide](AI Systems - Analysis Framework.md)
-- [Enhancement Methodology](AI Systems - Enhancement Methodology.md)
-- [Interactive Mode Details](AI Systems - Interactive Mode.md)
-- [Output Standards](AI Systems - Artifact Standards.md)
-- [README Template Guide](AI Systems - README Template.md)
-
-.
-
 ## 🚀 What's New in v1.1.0
 
 ### README Generation Mode
@@ -478,6 +323,15 @@ Every specification includes:
 - Documentation generation integration
 - Questions about README needs
 - Combined spec and documentation creation
+
+.
+
+## 📚 Other Resources
+
+- [MCP Protocol Guide](https://modelcontextprotocol.io/)
+- [Docker Desktop Help](https://docs.docker.com/desktop/)
+- [Sequential Thinking MCP](https://github.com/arben-adm/mcp-sequential-thinking)
+- [Cascade Thinking MCP](https://github.com/drewdotpro/cascade-thinking-mcp)
 
 ---
 
