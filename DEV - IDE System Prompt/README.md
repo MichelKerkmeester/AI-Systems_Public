@@ -1,152 +1,226 @@
-# IDE System Prompt / Rules - User Guide
+# IDE System Prompt - User Guide v3.9.0
 
-## 🎯 What is This?
+Transform any AI coding assistant into an elite software engineer who fixes root causes, not symptoms.
 
-A comprehensive set of IDE rules that transforms AI assistants into elite software engineers who:
-- Fix root causes, not symptoms
-- Deliver production-grade code with zero technical debt
-- Optimize performance relentlessly
-- Follow modern web development best practices
-- **NEW:** Leverage MCP (Model Context Protocol) tools for enhanced reasoning and documentation
+## 🚀 What is This?
 
-> [!NOTE]  
-> While this system is optimized for a **Webflow + Slater** workflow, its principles can be easily adapted for any other development environment or use case.
+IDE System Prompt is a comprehensive set of rules that elevates AI coding assistants in your IDE from helpful tools to elite engineering partners. It enforces production-grade standards, eliminates technical debt, and integrates advanced reasoning through MCP tools.
+
+**Key Benefits:**
+- Transform IDE AI assistants into elite software engineers
+- Get production-ready code with zero technical debt on first try
+- Fix root causes instead of patching symptoms
+- Enforce CSS-first performance optimization automatically
+- Scale from simple fixes to complex architecture decisions
+- Works in Cursor, Windsurf, Claude Code, VS Code, and more
+
+**Key Principle:** Fix the root cause, not the symptom. Every line of code should be production-grade.
 
 .
 
-## 💡 How It Works
+## 🆕 What's New in v2.0.0
 
-The system enforces 10 core principles + MCP workflows:
+- **MCP Integration**: Sequential Thinking for systematic analysis in IDEs
+- **Enhanced Workflow**: Think first, validate with tools, then code
+- **Performance Rules**: CSS-first approach with REM units only
+- **Modular Rules**: Toggle specific behaviors per task
+- **IDE-Optimized**: Works across all major AI-enabled IDEs
 
-1. **🎯 Objective** - Elite engineering, not just helpful
-2. **🧠 Principles** - DRY, KISS, CSS-first approach + MCP integration
-3. **🔍 Reasoning** - Explicit assumptions, evidence-based solutions
-4. **🧔 MCP Tool Usage** - Code-reasoning validation, Context7 docs, web search
-5. **🚦 Pre-Code Check** - Define scope before coding
-6. **🛡️ Risk Management** - Document what could break
-7. **🌀 Dev Planning/Execution** - Phased approach, creative solutions
-8. **💬 Strategic/Tactical Comms** - Clear rationale, scannable format
-9. **📚 Libraries** - Preferred tools (Motion.dev, Swiper.js, etc.)
-10. **🛠️ Tech Execution** - Webflow/Slater specific rules
-11. **🏎️ MCP Workflow** - Tool sequence and decision tree
+.
+
+## Overview
+
+Most AI coding assistants generate "good enough" code that accumulates technical debt over time. They fix symptoms instead of root causes, leading to fragile applications that break with each change.
+
+The IDE System Prompt transforms this approach entirely. By enforcing 11 core engineering principles directly in your IDE, it ensures your AI assistant thinks like a senior engineer: analyzing root causes, optimizing performance relentlessly, and delivering production-grade code from the start. Whether you're building with Webflow + Slater or any modern stack, these rules create an AI partner that maintains the standards of elite engineering teams.
+
+The integration with MCP (Model Context Protocol) tools takes this further, adding systematic reasoning validation right in your development environment. It's not just about writing code; it's about engineering solutions that scale.
+
+## ✨ Key Features
+
+- **Elite Engineering Standards**: DRY, KISS principles with production-grade output
+- **MCP Tool Integration**: Sequential thinking and validation in your IDE
+- **Performance Optimization**: CSS-first approach, zero unnecessary JavaScript
+- **Risk Management**: Document what could break before it does
+- **Phased Development**: Strategic planning before tactical execution
+- **Framework Flexibility**: Optimized for Webflow + Slater, adaptable to any stack
+- **Modular Rule System**: Enable/disable specific behaviors per task
 
 .
 
 ## 🚀 Quick Setup
 
-### For Cursor / Windsurf IDE (Recommended Setup)
-1. Open your project in Cursor or Windsurf
-2. Go to **Settings → Project Rules** (Cursor) or **AI Rules** (Windsurf)
-3. Add each section as a separate rule for better organization:
-   - Rule 1: "Objective" (Section 1)
-   - Rule 2: "Principles" (Section 2)
-   - Rule 3: "Reasoning" (Section 3)
-   - Rule 4: "MCP Tool Usage" (Section 3A)
-   - Rule 5: "Pre-Code Check" (Section 4)
-   - Rule 6: "Risk Management" (Section 5)
-   - Rule 7: "Dev Planning & Execution" (Sections 6A & 6B)
-   - Rule 8: "Communication" (Sections 7A & 7B)
-   - Rule 9: "Libraries" (Section 8)
-   - Rule 10: "Tech Execution" (Sections 9A, 9B, 9C)
-   - Rule 11: "MCP Workflow" (Sections 10a, 10b, 10c)
-4. Enable/disable rules based on your current task
+### Step 1: Choose Your IDE
 
-**Benefits of separate rules:**
-- Toggle specific behaviors (e.g., disable "Risk Management" for quick prototypes)
-- Keep context window efficient by only using needed rules
-- Easier to maintain and update individual sections
+**Supported IDEs:**
+- **Cursor** (Recommended): Settings → Project Rules
+- **Windsurf**: Settings → AI Rules
+- **Claude Code**: Create `claude.md` in project root
+- **VS Code with AI**: Create `.vscode/ai-rules.md`
+- **JetBrains IDEs**: Create `.idea/ai-assistant.md`
+- **Generic**: Create `AI_RULES.md` in project root
 
-**Alternative:** Create `.cursorrules` file (Cursor) or `.windsurfrules` file (Windsurf) with all rules combined
+### Step 2: Add Rules (Modular Approach)
 
-.
+For Cursor/Windsurf, add each section as a separate rule:
+1. **Rule 1**: "Objective" - Elite engineering standards
+2. **Rule 2**: "Principles" - DRY, KISS, CSS-first
+3. **Rule 3**: "Reasoning" - Evidence-based solutions
+4. **Rule 4**: "MCP Tool Usage" - Validation workflow
+5. **Rule 5**: "Pre-Code Check" - Scope definition
+6. **Rule 6**: "Risk Management" - Breakage prevention
+7. **Rule 7**: "Dev Planning" - Phased approach
+8. **Rule 8**: "Communication" - Clear rationale
+9. **Rule 9**: "Libraries" - Preferred tools
+10. **Rule 10**: "Tech Execution" - Framework specifics
+11. **Rule 11**: "MCP Workflow" - Tool decision tree
 
-### For Claude Code (claude.md)
-1. Create `claude.md` in your project root
-2. Paste the system prompt
-3. Claude Code will reference these rules automatically
-4. **Important:** Ensure MCP tools are configured in your environment
+### Step 3: Configure MCP Tools (Optional but Recommended)
 
-.
+See [Installing MCP Tools](#installing-mcp-tools-recommended) section below.
 
-### For Gemini CLI (gemini.md)
-1. Create `gemini.md` in your project root
-2. Paste the system prompt
-3. Gemini will use these as context
-4. **Note:** MCP integration may vary based on Gemini's tool support
+### Step 4: Verify Setup
 
-.
-
-### For Other IDEs
-- **VS Code with AI extensions:** Add to `.vscode/ai-rules.md`
-- **JetBrains IDEs:** Add to `.idea/ai-assistant.md`
-- **Generic:** Create `AI_RULES.md` in project root
-
-.
-
-## 🧔 MCP Tools Overview
-
-### Code-Reasoning (Validation Tool)
-- Use AFTER internal reasoning to validate approach
-- Verify complex logic and edge cases
-- Explore alternative implementations
-
-### Context7 (Library Documentation)
-- Real-time library documentation
-- API reference and best practices
-- Compatibility verification
-
-### Tavily/Brave Search (Current Information)
-- Latest web development trends
-- Browser compatibility checks
-- Performance optimization techniques
-
-.
-
-## 🧠 Sequential Thinking MCP Installation
-
-### What is Sequential Thinking MCP?
-The Sequential Thinking MCP enhances AI's analytical capabilities by forcing systematic, step-by-step thinking before generating responses. It provides structured thinking through defined cognitive stages and is essential for the IDE System Prompt's MCP workflow.
-
-### Why Use It?
-- **Better code analysis**: System thoroughly analyzes requirements before coding
-- **Fewer bugs**: Systematic thinking catches edge cases early
-- **Smarter architecture decisions**: Considers multiple approaches before implementing
-- **Consistent quality**: Ensures all aspects of the problem are addressed
-
-### How to Install Sequential Thinking MCP
-
-**Prerequisites:**
-- For Method 1 (uvx): Python 3.10+ and UV package manager
-- For Method 2 (npx): Node.js installed
-
-**Installation Method 1: Using uvx (Recommended - Full Features)**
-
-1. **Locate your Claude Desktop configuration:**
-   - **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
-   - **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
-
-2. **Edit the configuration file** to add Sequential Thinking MCP:
-```json
-{
-  "mcpServers": {
-    "sequential-thinking": {
-      "command": "uvx",
-      "args": [
-        "--from",
-        "git+https://github.com/arben-adm/mcp-sequential-thinking",
-        "--with",
-        "portalocker",
-        "mcp-sequential-thinking"
-      ]
-    }
-  }
-}
+Test with a simple request in your IDE:
+```
+"Analyze this code for performance issues and suggest improvements"
 ```
 
-**Installation Method 2: Using npx (Simpler Alternative)**
+The AI should follow the systematic approach, using MCP tools if available.
+
+.
+
+## 🎯 How to Use
+
+### Basic Usage
+
+Simply write your development request in your IDE. The AI will:
+1. Analyze the problem systematically
+2. Use MCP tools to validate approach (if available)
+3. Define scope before coding
+4. Deliver production-grade solution
+5. Document risks and considerations
+
+### Rule Toggling (Cursor/Windsurf)
+
+Enable/disable rules based on your needs:
+- **Quick prototype**: Disable "Risk Management" and "MCP Workflow"
+- **Performance critical**: Enable all optimization rules
+- **Learning mode**: Enable "Communication" for detailed explanations
+- **Production deploy**: Enable all rules for maximum quality
+
+### Example Workflows
+
+**Example 1: Performance Optimization**
+```
+"This animation is janky on mobile. Fix it."
+```
+Result: AI analyzes root cause, converts to CSS-only solution, documents performance gains
+
+**Example 2: Complex Feature**
+```
+"Add infinite scroll with lazy loading"
+```
+Result: Phased implementation plan, MCP validation, production-ready code with edge cases handled
+
+**Example 3: Bug Fix**
+```
+"Form validation breaks on Safari"
+```
+Result: Root cause analysis, cross-browser solution, regression prevention
+
+.
+
+## 🏗️ Core Principles
+
+### 1. Elite Engineering Standards
+The AI operates as a senior engineer, not just a helpful assistant. Every response maintains production-grade quality with zero tolerance for technical debt.
+
+### 2. DRY, KISS, CSS-First
+- **DRY**: Never repeat code patterns
+- **KISS**: Simplest solution that fully works
+- **CSS-First**: Exhausts CSS before touching JavaScript
+
+### 3. Evidence-Based Solutions
+No assumptions. Every decision backed by explicit reasoning, validated through MCP tools when available.
+
+### 4. Performance Obsession
+- REM units only (never pixels)
+- Minimize DOM manipulation
+- CSS animations over JavaScript
+- Lazy load everything possible
+
+### 5. Risk Documentation
+Proactively identifies and documents what could break, why, and how to prevent it.
+
+.
+
+## 📊 MCP Tool Workflow
+
+```
+User Request in IDE
+     ↓
+Internal Analysis (Sequential Thinking if available)
+     ↓
+Tool Selection Decision:
+├─ Simple/Known → Direct Implementation
+├─ Complex Logic → Code-Reasoning Validation
+├─ Library Usage → Context7 Documentation
+└─ Current Info → Web Search
+     ↓
+Validated Implementation
+     ↓
+Risk Documentation
+```
+
+.
+
+## 🔧 Installing MCP Tools (Recommended)
+
+MCP tools enhance your IDE's AI capabilities. While the IDE System Prompt works without them, having Sequential Thinking MCP provides systematic analysis for better code quality.
+
+### Option A: AI-Powered Docker Setup (Recommended)
+
+**Prerequisites:**
+- Docker Desktop installed ([Download Docker Desktop](https://www.docker.com/products/docker-desktop/))
+- Your AI-enabled IDE (Cursor, Windsurf, Claude Code, etc.)
+
+**AI-Assisted Installation:**
+
+Copy this prompt to Claude, ChatGPT, or any AI assistant:
+
+```
+Help me set up Docker containers for IDE System Prompt MCP tools.
+
+I need to:
+1. Create a directory at "$HOME/MCP Servers"
+2. Clone the Sequential Thinking MCP repo:
+   - https://github.com/arben-adm/mcp-sequential-thinking.git
+3. Create a docker-compose.yml file for the service
+4. Configure my IDE to use the MCP tool:
+   - For Cursor/Windsurf: Update settings
+   - For Claude Code: Update claude.md
+   - For VS Code: Update .vscode settings
+5. Start the container with docker-compose
+
+I'm using [Your IDE] on [Windows/Mac/Linux]. Please give me the exact commands to run.
+```
+
+The AI will provide step-by-step commands for your specific IDE and operating system.
+
+**Verification:**
+1. Check Docker Desktop for 1 running container
+2. In your IDE, test with a complex request
+3. The AI should mention using Sequential Thinking MCP
+
+### Option B: NPX Installation (Quick Alternative)
+
+For IDEs that support NPX-based MCP servers, add to your IDE configuration:
+
+**For Cursor/Windsurf** (in project settings):
 ```json
 {
-  "mcpServers": {
+  "mcp": {
     "sequential-thinking": {
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
@@ -155,57 +229,96 @@ The Sequential Thinking MCP enhances AI's analytical capabilities by forcing sys
 }
 ```
 
-3. **If you already have other MCP servers**, add Sequential Thinking to the existing list:
-```json
-{
-  "mcpServers": {
-    "filesystem": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/path/to/allowed/files"]
-    },
-    "sequential-thinking": {
-      "command": "uvx",
-      "args": [
-        "--from",
-        "git+https://github.com/arben-adm/mcp-sequential-thinking",
-        "--with",
-        "portalocker",
-        "mcp-sequential-thinking"
-      ]
-    }
-  }
-}
+**For Claude Code** (in claude.md):
+```markdown
+<!-- MCP Configuration -->
+sequential-thinking: npx -y @modelcontextprotocol/server-sequential-thinking
 ```
 
-4. **Save the file and restart Claude Desktop**
+### What Sequential Thinking MCP Does
 
-5. **Verify installation** by starting a new chat and looking for the 🔌 icon, which should show "sequential-thinking" as an available tool
-
-### How It Works with IDE System Prompt
-When Sequential Thinking MCP is available, the system:
-- Uses it for complex multi-step tasks and architecture decisions
-- Analyzes problems through structured cognitive stages
-- Validates approaches before implementation
-- Only bypasses it for simple file operations or known answers
-- Works in conjunction with other MCP tools for comprehensive development support
-
-**Note**: The system works without Sequential Thinking MCP, but having it installed significantly enhances code quality and problem-solving capabilities.
+When available in your IDE, it:
+- Forces systematic step-by-step analysis before generating code
+- Catches edge cases through structured thinking stages
+- Validates architectural decisions before implementation
+- Enhances code quality and reduces bugs
 
 .
 
-## 📋 Usage Tips
+## 🆘 Troubleshooting
 
-1. **Start Simple**: Begin with core rules (1-5), add others as needed
-2. **MCP Workflow**: Always think first, then validate with tools
-3. **Performance First**: CSS > JS, REM units only
-4. **Document Everything**: Especially non-obvious patterns
-5. **Match Complexity**: Scale response detail to task size
+### AI Not Following Rules in IDE
+- **Symptom**: AI gives generic responses without systematic analysis
+- **Cause**: Rules not properly loaded or conflicting instructions
+- **Solution**: 
+  - Ensure rules are in correct IDE location
+  - Check for syntax errors in configuration
+  - Restart IDE after adding rules
+
+### MCP Tools Not Working
+- **Symptom**: AI doesn't mention using Sequential Thinking
+- **Solution**: 
+  1. Verify Docker container is running
+  2. Check IDE MCP configuration
+  3. Ensure IDE supports MCP tools
+  4. Try NPX method if Docker fails
+
+### Performance Issues with AI
+- **Symptom**: Slow responses or timeouts in IDE
+- **Solution**: 
+  - Disable some rules for simpler tasks
+  - Use modular rules approach
+  - Disable MCP workflow for basic edits
+
+### IDE-Specific Issues
+- **Cursor**: Check .cursorrules file syntax
+- **Windsurf**: Verify .windsurfrules placement
+- **Claude Code**: Ensure claude.md is in project root
+- **VS Code**: Check AI extension settings
+
+### Getting Help
+- Check your IDE's AI documentation
+- Review Docker logs if using container method
+- Simplify rules to identify issues
+- Start with core rules (1-5) only
 
 .
 
-## 🔗 Resources
+## ⚠️ Important Notes
 
+- **IDE-Focused** - This system is for IDEs, NOT Claude Desktop
+- **MCP Tools Optional** - System works without them but is more powerful with them
+- **Framework Agnostic** - While optimized for Webflow + Slater, principles apply everywhere
+- **Performance First** - CSS solutions always preferred over JavaScript
+- **Production Standards** - Every response assumes production deployment
+- **Modular Design** - Enable only the rules you need for each task
+
+## 📦 Version History
+
+- **v2.0.0**: MCP integration, modular rules, enhanced workflow
+- **v1.5.0**: Added performance optimization rules
+- **v1.0.0**: Initial release with core engineering principles
+
+## 🎯 Key Principles
+
+1. **Root Cause Analysis** - Never patch symptoms, fix the underlying issue
+2. **Performance Obsession** - Every millisecond matters, CSS > JS always
+3. **Production Grade** - Code that scales from day one
+4. **Evidence-Based** - Validate assumptions with tools and data
+5. **Risk Awareness** - Document what could break before it does
+
+.
+
+## 📚 Other Resources
+
+- [MCP Protocol Documentation](https://modelcontextprotocol.io/)
+- [Sequential Thinking MCP](https://github.com/arben-adm/mcp-sequential-thinking)
+- [Docker Desktop Help](https://docs.docker.com/desktop/)
 - [Motion.dev Documentation](https://motion.dev)
 - [Swiper.js](https://swiperjs.com)
 - [Webflow Forums](https://forum.webflow.com)
 - [Finsweet Resources](https://finsweet.com)
+
+---
+
+*Stop writing code that just works. Start engineering solutions that excel. With IDE System Prompt, your AI assistant becomes the senior engineer every project deserves.*
