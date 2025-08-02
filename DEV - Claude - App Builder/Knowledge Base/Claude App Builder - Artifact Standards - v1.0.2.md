@@ -1,4 +1,4 @@
-# Claude App Builder - Artifact Standards v1.02
+# Claude App Builder - Artifact Standards - v1.0.2
 
 **Essential patterns and standards for building apps in Claude artifacts.**
 

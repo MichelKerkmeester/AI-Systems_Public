@@ -1,167 +1,243 @@
-# Branded Content Writer - User Guide v3.0
+# Branded Content Writer - User Guide v3.0.0
 
-## 🚀 What is This?
+A comprehensive system that transforms marketing challenges into authentic content through guided conversation, proven frameworks, and intelligent content planning. Features 5 operating modes, visual progress tracking, and Sarah Chen's collaborative marketing voice.
 
-This system solves the biggest content problem: **sounding like yourself at scale**.
+## 🆕 What's New in v3.0.0
 
-Instead of staring at blank pages or publishing generic content, you describe what you need and get back 3 versions that actually sound like you. The secret? A mix of writing modes for different purposes, tones for different contexts, frameworks that structure your ideas, and **intelligent content planning** that adapts to complexity.
-
-**Key Benefits:**
-- Write marketing content with a consistent, professional voice
-- Get 3 variations of every piece (concise/authentic/valuable)
-- Access proven marketing frameworks (SVC, CASE, QPT, etc.)
-- Create content that drives engagement and action
-- Learn from a voice that balances data with humanity
-- **NEW: Intelligent MCP tool selection for optimal content strategy**
-
-→ Your personality + proven structures + smart planning = content that's on-brand.
+- **Interactive Mode as Default**: Conversational content creation that uncovers campaign stories
+- **5 Operating Modes**: From general writing ($write) to full optimization ($improve)
+- **Visual VEST Dashboard**: Real-time quality scoring and improvement metrics
+- **Marketing Story Discovery**: Finds failures, team wins, and genuine learnings
+- **MCP Integration**: Supports Sequential and Cascade Thinking tools
+- **Framework Library**: 9 proven marketing frameworks organized by complexity
 
 .
 
-## ⚡ Ready to level up?
+## Overview
 
-This starter system creates on-brand content fast.
+The Branded Content Writer helps marketers create compelling content that drives results. With Sarah Chen's authentic voice, strategic frameworks (SVC, CASE, PATH), and intelligent MCP selection, it delivers professional-grade marketing content with genuine human connection.
 
-**Build it into an enterprise-ready content engine by adding:**
+## ✨ Key Features
 
-- Expanded library of frameworks, examples and case studies 
-- Focus modes that adapt output to strategic themes such as sustainability, innovation or customer value
-- Platform-specific guidelines, including frameworks, tone, and focus combination presets
-- Improved request analysis, routing and response scaling guidelines
-- Curated market, industry, and competitor research optimized for LLM integration
-- Repositories of product or service information, either as knowledge base item or through custom MCP integration
-
-.
-
-## 🎨 PRO TIP: Make This YOUR Brand Voice!
-
-**Transform this system into your personal or company brand voice using my [Prompt Improver](https://github.com/MichelKerkmeester/AI-Systems-Public/tree/main/Writer%20-%20Prompt%20Improver)!**
-
-This system comes configured as "Sarah Chen" - a marketing leader with specific traits and experiences. But you can instantly customize it to match YOUR unique voice, industry, and expertise.
-
-**Example customization prompt:**
-```
-$full Improve this prompt '''
-Transform the Branded Content Writer system into a [YOUR ROLE] writer for [YOUR BRAND].
-
-Current system: Sarah Chen, marketing leader, 10+ years, data-driven storytelling
-Target system: [YOUR NAME/BRAND], [YOUR ROLE], [YOUR EXPERIENCE], [YOUR VOICE TRAITS]
-
-Keep the framework structure and 3-variation output system.
-'''
-```
-
-See the full "Customization" section below for detailed instructions.
+- **5 Specialized Modes**: $interactive (default), $write, $share, $connect, $improve
+- **9 Marketing Frameworks**: Simple (SVC, QPT, DER), Medium (CASE, PATH, REAL), Complex (STORY, GUIDE, HELP)
+- **Intelligent MCP Selection**: Automatic choice between Sequential and Cascade thinking
+- **Visual Progress Tracking**: VEST scoring with improvement metrics
+- **Campaign Story Mining**: Uncovers failures and team contributions
+- **Triple-Variation Output**: Concise, Authentic, and Valuable versions
+- **Natural Imperfections**: Preserves conversational rough edges
+- **Artifact-Based Delivery**: All content in reusable markdown artifacts
 
 .
 
-## 🧠 Enhanced Intelligence: Dual MCP Support
+## 🚀 Quick Setup
 
-### What's New in v3.0?
-The Branded Content Writer now intelligently chooses between two thinking tools based on your content's complexity:
-
-1. **Sequential Thinking MCP** - For straightforward, linear content creation
-2. **Cascade Thinking MCP** - For complex content requiring exploration of multiple approaches
-
-The system automatically selects the best tool and adapts the number of analysis thoughts (minimum 1, scaling up based on complexity).
-
-### Intelligent Selection Logic
-
-**Sequential Thinking is chosen for:**
-- Clear content requests with specified platform/format
-- Write (`$w`) and Share (`$s`) modes with simple requirements
-- Single framework applications
-- Direct edits or rewrites
-- Straightforward marketing insights
-- Quick social media posts
-
-**Cascade Thinking is chosen for:**
-- Improve (`$i`) mode with VEST evaluation and refinement
-- Unclear platform/audience requiring exploration
-- Content mentioning "different approaches" or "variations"
-- Complex campaign narratives
-- Multiple framework options that could work
-- Strategic content requiring angle exploration
-- Creating 3 variations that need different strategic approaches
-
-### Adaptive Thought Process
-
-The system now uses a flexible approach:
-- **Minimum:** 1 thought (for very simple edits)
-- **Simple posts:** 1-2 thoughts
-- **Standard content:** 2-3 thoughts
-- **Complex narratives:** 3-5 thoughts with potential branching
-- **Full improvement cycles:** 5+ thoughts with multiple exploration branches
-
-.
-
-## 📋 Quick Setup in Claude
-
-### Step 1: Create a New Project
-1. Go to [claude.ai](https://claude.ai)
-2. Click "Projects" in the sidebar
+### Step 1: Create a Claude Project
+1. Go to claude.ai
+2. Click "Projects" in sidebar
 3. Click "Create project"
-4. Name it "Branded Content Writer v3" (or your customized version)
+4. Name it "Branded Content Writer v3.0"
 
-### Step 2: Add the System Instructions
+### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
-2. Find the "Custom instructions" section
-3. Copy and paste the main system file: `Writer - Branded Content - v3.0.0.md`
+2. Find "Custom instructions" section
+3. Copy and paste: `Writer - Branded Content - v2.1.0.md`
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
-Upload these documents to your project knowledge base:
-- `Artifact Standards & Templates.md` (mandatory artifact structures - update with MCP notation)
-- `Copywriter Frameworks.md` (all writing frameworks)
+Add these to your project's knowledge base:
+- `Artifact Standards & Templates.md`
+- `Copywriter Frameworks.md`
+- `Interactive Mode.md`
 
-### Step 4: Start Creating!
-Begin any conversation in the project, and Claude will write in the configured brand voice (default: Sarah Chen), delivering marketing content in artifacts with 3 variations.
+### Step 4: Start Creating Content
+Simply describe what you need or let interactive mode guide you:
+```
+Need help with email campaign copy
+$write a LinkedIn post about A/B testing
+$share insights from our failed product launch
+$improve make this sound less corporate
+```
 
 .
 
-## 🔧 Installing MCP Tools (Optional but Recommended)
+## 🎛️ Operating Modes
 
-Both tools work independently, so you can install one or both based on your needs.
+| Mode | Activation | Purpose | Best For | MCP Usage |
+|------|------------|---------|----------|-----------|
+| **$interactive** | `$interactive` or `$int` (DEFAULT) | Guided creation with questions | First-timers, story discovery | Cascade (3-5+ thoughts) |
+| **$write** | `$write` or `$w` | General content creation | Quick marketing copy | Sequential (2-3 thoughts) |
+| **$share** | `$share` or `$s` | Knowledge & insights | Sharing learnings | Sequential (2-3 thoughts) |
+| **$connect** | `$connect` or `$c` | Community building | Engagement posts | Sequential/Cascade (2-4 thoughts) |
+| **$improve** | `$improve` or `$i` | Optimize existing copy | Guaranteed 18+ VEST score | Cascade (3-5+ thoughts) |
 
-### Sequential Thinking MCP Installation
+.
 
-**For straightforward content creation:**
+## 🏗️ Core Frameworks
 
-1. **Edit your Claude Desktop configuration:**
-   - **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
-   - **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
+### Simple Frameworks (3-Part)
+- **SVC**: Situation • Value • Connection
+- **QPT**: Question • Perspective • Takeaway
+- **DER**: Do • Example • Result
 
-2. **Add Sequential Thinking:**
-```json
-{
-  "mcpServers": {
-    "sequential-thinking": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
-    }
-  }
-}
+### Medium Frameworks (4-Part)
+- **CASE**: Context • Action • Stakes • Evolution
+- **PATH**: Problem • Approach • Twist • Harvest
+- **REAL**: Recognize • Explore • Apply • Learn
+
+### Complex Frameworks (5+ Parts)
+- **STORY**: Setup • Tension • Opportunity • Resolution • Yes-And
+- **GUIDE**: Goal • Understand • Install • Demo • Extend
+- **HELP**: Hook • Explain • List • Practice
+
+.
+
+## 📊 Visual Dashboard Example
+
+```
+📊 Marketing Copy Effectiveness Report
+Overall Score: 19/20 (VEST Framework)
+
+Value Breakdown:
+V - Value Delivery ████████░░ 90% (Clear reader benefit)
+E - Economy       ████████░░ 80% (Could trim 10%)
+S - Sound         ██████████ 100% (Perfect Sarah voice)
+T - Truth         ██████████ 100% (Data + humility)
+
+Marketing Excellence:
+✅ Story Arc - Problem → discovery → insight flows naturally
+✅ Authenticity - Failure included, team credited
+✅ Data Integration - Numbers support narrative
+✅ Voice Consistency - Sounds like coffee chat
+✅ Natural Imperfection - "Still figuring out" included
+
+Framework Learning:
+📚 Why PATH: Your story had a clear journey with unexpected discovery
+💡 Key principle: The twist makes it memorable
+🎯 Use this when: You learned something surprising
 ```
 
-### Cascade Thinking MCP Installation
+.
 
-**For complex content strategy with branching:**
+## 🤖 Interactive Mode
 
-1. **Add to the same configuration file:**
-```json
-{
-  "mcpServers": {
-    "cascade-thinking": {
-      "command": "npx",
-      "args": ["-y", "cascade-thinking-mcp"]
-    }
-  }
-}
+Perfect for discovering your marketing story:
+- Asks about campaign challenges and wins
+- Uncovers failures worth sharing
+- Identifies team members to credit
+- Builds content through conversation
+- Teaches framework selection
+
+Example:
+```
+User: $interactive
+AI: "Hey! Let's create marketing content that actually works. What marketing challenge are you facing?"
 ```
 
-### Installing Both Tools
+.
 
-**For maximum flexibility:**
+## 📈 Quality System (VEST)
+
+### VEST Framework (20 Points)
+- **V**alue: Helps readers improve their marketing
+- **E**conomy: Every sentence necessary
+- **S**ound: Natural conversation tone
+- **T**ruth: Specific examples and data
+
+### Scoring Bands
+- **18-20**: Ship immediately
+- **15-17**: Quick polish needed
+- **12-14**: Systematic revision
+- **Below 12**: Complete rewrite
+
+.
+
+## 🔧 Technical Details
+
+### MCP Selection Logic
+- **Interactive mode** → Always Cascade (3-5+ thoughts)
+- **Standard content** → Sequential (2-3 thoughts)
+- **Complex narratives** → Cascade (3-5 thoughts)
+- **Full improvement** → Cascade (5+ thoughts with branches)
+
+### Voice Characteristics
+Sarah Chen's authentic markers:
+- Team credit ("Our designer spotted...")
+- Process transparency ("Took 6 tests to figure out...")
+- Genuine uncertainty ("Still not sure why...")
+- Natural fragments. For emphasis.
+- Data with stories ("CTR jumped 47%")
+
+### Artifact Standards
+- Always uses `text/markdown` type
+- Includes framework and MCP notation
+- 3 variations mandatory
+- Complete structure every time
+
+.
+
+## 📚 Example Transformations
+
+### Campaign Story Discovery
+**User:** "We ran an email campaign"
+**Interactive Mode:** "Congrats! What was broken before this campaign? What almost went wrong?"
+**Result:** Story about accidental test email that revealed winning formula
+
+### Quick Social Post
+**User:** "$write LinkedIn post about stock photos"
+**Result:** 
+- Most concise: "Stock photos killed our CTR. Real employees: +47%. You?"
+- Most authentic: "Client fought us on employee photos. We tested anyway..."
+- Most valuable: "Marketing truth: Replace stock with real faces. CTR +47%..."
+
+### Knowledge Sharing
+**User:** "$share what we learned about pop-ups"
+**Result:** PATH framework story about discovering exit intent vs immediate pop-ups
+
+.
+
+## 🔧 Installing MCP Tools (Recommended)
+
+The system intelligently selects between these based on content complexity. Choose either Docker (stable) or NPX (quick) installation:
+
+### Option A: AI-Powered Docker Setup (Recommended)
+
+**Prerequisites:**
+- Docker Desktop installed ([Download Docker Desktop](https://www.docker.com/products/docker-desktop/))
+- Claude Desktop app ([Download Claude](https://claude.ai/download))
+
+**AI-Assisted Installation:**
+
+Copy this prompt to Claude, ChatGPT, or any AI assistant:
+
+```
+Help me set up Docker containers for the Branded Content Writer MCP tools.
+
+I need to:
+1. Create a directory at "$HOME/MCP Servers"
+2. Clone these repos:
+   - https://github.com/arben-adm/mcp-sequential-thinking.git
+   - https://github.com/drewdotpro/cascade-thinking-mcp.git
+3. Create a docker-compose.yml file with services for both
+4. Configure Claude Desktop's claude_desktop_config.json
+5. Start the containers with docker-compose
+
+I'm on [Windows/Mac/Linux]. Please give me the exact commands to run.
+```
+
+The AI will provide step-by-step commands for your operating system.
+
+**Verification:**
+1. Check Docker Desktop for 2 running containers
+2. Look for the 🔌 icon in Claude Desktop showing available tools
+3. Test with: "$write a post about marketing automation"
+
+### Option B: NPX Installation (Quick but Less Stable)
+
+Add to Claude Desktop config file:
+- **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
+- **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
+
 ```json
 {
   "mcpServers": {
@@ -177,249 +253,138 @@ Both tools work independently, so you can install one or both based on your need
 }
 ```
 
-3. **Save and restart Claude Desktop**
-
-4. **Verify installation** by looking for the 🔌 icon showing available tools
-
-**Note**: The system works without these tools but provides enhanced content planning when available.
+Save and restart Claude Desktop.
 
 .
 
-## 🎯 How to Use
-
-### Basic Usage
-Simply describe what you need:
-```
-Write a LinkedIn post about the importance of A/B testing
-```
-
-The system will:
-1. Assess complexity
-2. Choose appropriate MCP tool (if available)
-3. Analyze with adaptive thought count
-4. Generate content with 3 variations
-
-### Mode Selection
-The system has four specialized modes:
-
-| Mode | Command | Use For | Example Output Style | Typical MCP | Thoughts |
-|------|---------|---------|---------------------|-------------|----------|
-| **Write** | `$write` or `$w` (DEFAULT) | General content needs | Balanced marketing insights | Sequential | 2-3 |
-| **Share** | `$share` or `$s` | Knowledge & insights | "Here's what worked..." | Sequential | 2-3 |
-| **Connect** | `$connect` or `$c` | Building relationships | "Ever notice how we all..." | Sequential/Cascade | 2-4 |
-| **Improve** | `$improve` or `$i` | Optimize content | Full VEST evaluation + refined versions | Cascade | 3-5+ |
-
-### Mode Examples:
-```
-$write a post about marketing automation best practices
-
-$share insights from our email campaign
-
-$connect with other marketers about budget constraints
-
-$improve [creates content then automatically refines it]
-```
-
-.
-
-## 🎨 Tone Modifiers
-
-### Add Tones for Different Contexts
-Combine modes with tones for precise voice control:
-
-| Tone | Code | Best For |
-|------|------|----------|
-| **Natural** | `$natural` (DEFAULT) | Authentic voice with genuine uncertainty |
-| **Casual** | `$casual` | Social media, team updates |
-| **Technical** | `$technical` | Data reports, analytics |
-| **Educational** | `$educational` | Tutorials, guides |
-| **Minimal** | `$minimal` | Ad copy, headlines |
-
-### Tone Combination Examples:
-```
-$write + $casual a social media post about our new feature
-
-$share + $casual insights about influencer marketing
-
-$write + $technical on setting up GA4 conversion tracking
-
-$connect + $educational about marketing measurement challenges
-```
-
-.
-
-## ✅ Output Format
-
-### Every Response Includes:
-1. **Always in an artifact** (text/markdown format)
-2. **Mandatory structure with metadata:**
-   - Framework used (if applicable)
-   - Mode (write/share/connect/improve)
-   - Tone (natural by default)
-   - Platform (if specified)
-   - Context (from your query)
-   - **MCP USED** (which tool was used for planning)
-3. **3 variations minimum:**
-   - **Most concise:** Fewest words, maximum impact
-   - **Most authentic:** Natural Sarah voice with stories
-   - **Most valuable:** Maximum actionable takeaway
-
-### Example Output Structure:
-```
-FRAMEWORK: SVC (Situation•Value•Connection)
-MODE: $write
-TONE: $natural
-PLATFORM: LinkedIn
-CONTEXT: A/B testing importance for marketers
-MCP USED: Sequential Thinking
-
-Stock photos killed our CTR. Real employees increased it by 47%.
-
----
-
-## Variations
-
-### Most concise:
-Stock photos killed our CTR. Real employees: +47%. You?
-
-### Most authentic:
-Client fought us on using employee photos vs stock. We A/B tested anyway. 
-Real faces won by 47%. Sometimes "unprofessional" is exactly what people 
-want. When's your last visual audit?
-
-### Most valuable:
-Marketing truth: We replaced stock photos with real employee shots. CTR 
-jumped 47%, cost per lead dropped 31%. Test: Swap one hero image for 
-authentic photo. Track for 2 weeks. Share results?
-```
-
-.
-
-## 🎯 Full Customization Guide
+## 🎨 Customization Guide
 
 ### Transform Into ANY Brand Voice
-The Branded Content Writer system is fully customizable. While it comes configured as "Sarah Chen" (a marketing leader), you can adapt it to any role, industry, or brand voice.
 
-**Quick customization with [Prompt Improver](https://github.com/MichelKerkmeester/AI-Systems-Public/tree/main/Writer%20-%20Prompt%20Improver):**
+The system comes configured as "Sarah Chen" but is fully customizable using the [Prompt Improver](https://github.com/MichelKerkmeester/AI-Systems-Public/tree/main/Writer%20-%20Prompt%20Improver):
 
 ```
 $full Improve this prompt '''
-Transform the Branded Content Writer system (currently configured as Sarah Chen, marketing leader) into a [YOUR ROLE] writer system for [YOUR COMPANY/BRAND].
+Transform the Branded Content Writer system into a [YOUR ROLE] writer for [YOUR BRAND].
 
-Key changes needed:
-- Replace Sarah Chen with [YOUR NAME/BRAND]
-- Change from marketing focus to [YOUR INDUSTRY/FOCUS]
-- Adjust experience from "10+ years in marketing" to [YOUR BACKGROUND]
-- Modify voice characteristics from "data-driven storytelling" to [YOUR VOICE TRAITS]
-- Keep the framework structure but adapt examples to [YOUR FIELD]
-- Maintain the 3-variation output system
+Current: Sarah Chen, marketing leader, 10+ years, collaborative voice
+Target: [YOUR NAME/BRAND], [YOUR ROLE], [YOUR EXPERIENCE], [YOUR VOICE TRAITS]
+
+Keep the framework structure and 3-variation output system.
+Adapt examples to [YOUR INDUSTRY].
 '''
 ```
 
-**Example for a Technical Writer:**
+**Example for Tech Startup Founder:**
 ```
-$full Improve this prompt '''
-Transform the Branded Content Writer system into a technical documentation writer system for a developer-focused SaaS company.
-
-Key changes:
-- Replace marketing storytelling with technical clarity
-- Change campaign examples to API documentation examples
-- Adjust tone from "human stories" to "developer-friendly precision"
-- Keep the quality frameworks but optimize for technical accuracy
-'''
+Transform into a startup founder voice:
+- Replace marketing focus with product/growth focus
+- Change from team credit to startup hustle stories
+- Adjust from "still figuring out" to "rapidly iterating"
+- Keep frameworks but use startup examples
 ```
 
 .
 
 ## 💡 Pro Tips
 
-### 1. Specify Platform for Optimized Content
+### 1. Let Interactive Mode Guide You
+Default mode asks the right questions to uncover great stories:
+- What went wrong? (Finds authentic moments)
+- Who helped? (Natural team credit)
+- What surprised you? (Genuine insights)
+
+### 2. Specify Platform for Optimization
 ```
-Write a Twitter thread about content marketing ROI
-
-Create an Instagram caption for our new campaign launch
-
-Draft a LinkedIn article about marketing automation
-```
-
-### 2. Use Frameworks Directly
-Request specific frameworks when you know what you need:
-```
-Use the CASE framework to tell our product launch story
-
-Apply QPT to challenge assumptions about email marketing
-
-Create a PATH framework story about fixing our attribution
+Write a Twitter thread about conversion optimization
+Create LinkedIn post celebrating team win
+Draft email nurture sequence intro
 ```
 
-### 3. The Magic of $improve Mode
-This mode automatically:
+### 3. Use Frameworks Directly
+When you know what you need:
+```
+Use CASE framework for our product launch story
+Apply PATH to explain our pivot
+Create QPT post challenging marketing assumptions
+```
+
+### 4. The Magic of $improve Mode
 - Creates initial content
-- Evaluates it with the 20-point VEST framework
-- Identifies weaknesses
-- Delivers refined versions
-- Shows you exactly what was improved
-- **Uses Cascade Thinking to explore multiple improvement strategies**
+- Evaluates with 20-point VEST framework
+- Automatically refines weak areas
+- Guarantees 18+ score
+- Shows exactly what improved
 
-Perfect for high-stakes content!
-
-### 4. Complex Content Benefits from Cascade Thinking
-When dealing with unclear requirements or needing multiple strategic approaches, the system may use Cascade Thinking to:
-- Explore different framework options
-- Test various tone combinations
-- Branch into specialized content strategies
-- Ensure the best possible variations
-
-### 5. Natural Voice is Default
-The system defaults to `$natural` tone - authentic voice with:
-- Genuine uncertainty ("Still figuring out why...")
-- Conversational fragments
-- Real campaign stories
-- Team credit naturally included
+### 5. Embrace Natural Imperfections
+Best performing content includes:
+- "Still testing why this works..."
+- "Our intern spotted the pattern"
+- "Took us 6 months to figure out"
+- Fragments. For emphasis.
 
 .
 
 ## 🆘 Troubleshooting
 
-### "It's not using any MCP tool"
-- Check if MCPs are installed (look for 🔌 icon)
-- The system works fine without them
-- You'll see "MCP tools not available" notation
+### MCP Connection Issues
+- **Docker not running**: Start Docker Desktop
+- **Can't connect**: Restart Claude Desktop
+- **Wrong directory**: Check you're in "$HOME/MCP Servers"
+- **Permission errors**: Run terminal as administrator (Windows) or use sudo (Mac/Linux)
 
-### "It's using the wrong MCP tool"
-- The system chooses based on complexity indicators
-- `$improve` mode typically uses Cascade Thinking
-- Simple content uses Sequential Thinking
-- This is optimized behavior
+### Common Setup Problems
+- **"Command not found"**: Ensure Node.js is installed for NPX method
+- **Containers won't start**: Check Docker Desktop is running
+- **Tools not showing**: Restart Claude Desktop after config changes
+- **Rate limits**: Both tools handle this gracefully with retries
 
-### "Too many/few thoughts being used"
-- v3.0 adapts thought count to complexity
-- Simple edits might use just 1 thought
-- Complex content might use 5+
-- This is normal and optimized behavior
+### Content Issues
+- **Too polished**: Let natural imperfections through
+- **Missing story**: Use interactive mode to dig deeper
+- **No team credit**: Ask "Who contributed to this?"
+- **Lacks data**: Include specific metrics
+- **Wrong voice**: Check Sarah's DO's and DON'T's
 
-### "The content feels generic"
-- Add more context about your campaign/audience
-- Specify platform for optimized voice
-- Use specific frameworks for structure
-- Include real metrics/examples in your request
-
-### "Wrong tone for my brand"
-- See customization guide above
-- Adjust Sarah Chen's voice to match yours
-- Keep the system structure, change the personality
+### Getting Help
+- For Docker issues: Check container logs in Docker Desktop
+- For NPX issues: Check Claude Desktop logs
+- For content issues: Use $improve mode for automatic enhancement
 
 .
 
-## 🎉 What's New in v3.0
+## ⚠️ Important Notes
 
-1. **Intelligent MCP Selection** - Automatically chooses the best thinking tool
-2. **Flexible Thought Requirements** - Minimum 1 thought, scales with complexity
-3. **Dual MCP Support** - Works with Sequential or Cascade Thinking MCPs
-4. **Adaptive Analysis** - Thought count matches content complexity
-5. **Enhanced Documentation** - Clear indication of which tool was used
-6. **Mode-Specific Optimization** - Each mode optimized for its use case
-7. **Strategic Branching** - Complex content explores multiple approaches
-8. **Backward Compatible** - Works without MCPs installed
+- **Always includes failures** - Authenticity builds trust
+- **Credits team naturally** - "Our designer noticed..."
+- **No em dashes** - Uses commas, colons, or periods
+- **Works without MCPs** - But enhanced with them
+- **Preserves rough edges** - Perfect polish feels fake
 
-The Branded Content Writer v3.0 brings intelligence to content creation, choosing the right analytical approach for each request while maintaining Sarah Chen's authentic marketing voice and the proven 3-variation system.
+## 📦 Version History
+
+- **v3.0.0**: Interactive mode default, VEST scoring, enhanced MCP integration
+- **v2.0.0**: Added framework library and improve mode
+- **v1.0.0**: Initial Sarah Chen voice implementation
+
+## 🎯 Key Principles
+
+1. **Great marketing admits what didn't work** - Failure stories teach
+2. **Team credit makes everyone look good** - Collaboration beats ego
+3. **Natural voice outperforms polish** - Authenticity drives engagement
+4. **Process transparency builds trust** - Show the messy middle
+5. **Data needs human context** - Numbers alone don't connect
+
+.
+
+## 📚 Other Resources
+
+- [MCP Protocol Guide](https://modelcontextprotocol.io/)
+- [Docker Desktop Help](https://docs.docker.com/desktop/)
+- [Sequential Thinking MCP](https://github.com/arben-adm/mcp-sequential-thinking)
+- [Cascade Thinking MCP](https://github.com/drewdotpro/cascade-thinking-mcp)
+- [Prompt Improver](https://github.com/MichelKerkmeester/AI-Systems-Public/tree/main/Writer%20-%20Prompt%20Improver)
+
+---
+
+*Transform marketing challenges into human stories. Create content that actually works.*

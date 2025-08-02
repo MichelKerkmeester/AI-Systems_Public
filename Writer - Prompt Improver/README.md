@@ -1,4 +1,4 @@
-# 🎯 Prompt Engineering Assistant v3.0.0
+# Prompt Engineering Assistant - User Guide v3.0.0
 
 A comprehensive system that transforms vague requests into clear, effective AI prompts using proven frameworks, systematic evaluation, and intelligent refinement. Features 5 operating modes, visual progress tracking, and conversational guidance.
 

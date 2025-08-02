@@ -1,4 +1,4 @@
-# Notion Agent - User Guide v1.0
+# Notion Agent - User Guide v2.0
 
 ## 🚀 What is This?
 
@@ -23,7 +23,7 @@ The Notion Agent transforms natural language into Notion operations, making work
 1. Go to [claude.ai](https://claude.ai)
 2. Click "Projects" in the sidebar
 3. Click "Create project"
-4. Name it "Notion Agent v1.0"
+4. Name it "Notion Agent v2.0"
 
 ### Step 2: Add the System Instructions
 1. In your project, click "Edit project details"
@@ -39,19 +39,27 @@ Upload all reference documents to your project:
 - `Notion - Pattern Library - v1.0.0.md` (pre-built structures)
 - `Notion - Quick Operations - v1.0.0.md` (common operations)
 
-### Step 4: Start Using Natural Language!
+### Step 4: Get Your Notion API Key
+1. Go to [https://www.notion.so/my-integrations](https://www.notion.so/my-integrations)
+2. Click "New integration"
+3. Give it a name (e.g., "Claude Assistant")
+4. Copy the API key for MCP setup
+
+### Step 5: Start Using Natural Language!
 Begin any conversation in the project, and Claude will guide you through creating Notion workspaces conversationally.
 
 .
 
-## 🧠 Intelligent MCP Integration
+## 🧠 Enhanced Intelligence: Triple MCP Support
 
-### Enhanced with Triple MCP Support
-The Notion Agent intelligently chooses between three tools:
+### What's New in v2.0?
+The Notion Agent intelligently chooses between three tools based on your needs:
 
-1. **Notion MCP** - The core tool for all Notion operations
-2. **Sequential Thinking MCP** - For simple, straightforward operations
+1. **Notion MCP** - Core tool for all Notion operations
+2. **Sequential Thinking MCP** - For straightforward, linear operations
 3. **Cascade Thinking MCP** - For complex workspace design and exploration
+
+The system automatically selects the best tool(s) and adapts the analysis approach.
 
 ### Intelligent Selection Logic
 
@@ -68,7 +76,15 @@ The Notion Agent intelligently chooses between three tools:
 - Exploring design options
 - Pattern selection decisions
 
-### Adaptive Intelligence
+**Notion MCP is always used for:**
+- All actual Notion operations
+- Workspace navigation
+- Content creation and updates
+- Database and page management
+
+### Adaptive Thought Process
+
+The system uses a flexible approach:
 - **Simple requests:** 2-3 thoughts
 - **Standard operations:** 3-4 thoughts
 - **Interactive guidance:** 3-5 thoughts
@@ -87,9 +103,10 @@ I need to organize my projects
 The system will:
 1. Start Interactive Mode automatically
 2. Ask 2-3 clarifying questions
-3. Design the perfect structure
-4. Create everything in Notion
-5. Teach you why it works
+3. Choose appropriate MCP tools
+4. Design the perfect structure
+5. Create everything in Notion
+6. Teach you why it works
 
 ### Example Conversations
 
@@ -115,10 +132,10 @@ Quick questions to customize this perfectly:
 ### Mode Selection
 | Mode | Command | Use For | Typical MCPs Used |
 |------|---------|---------|-------------------|
-| **Interactive** | DEFAULT | Guided workspace creation | Cascade + Notion |
-| **Workspace** | `$workspace` or `$w` | Complete systems | Cascade + Notion |
-| **Content** | `$content` or `$c` | Writing and pages | Sequential + Notion |
-| **Organize** | `$organize` or `$o` | Restructuring | Sequential + Notion |
+| **Interactive** | `$interactive` or `$int` | DEFAULT - Guided creation | Cascade + Notion |
+| **Workspace** | `$workspace` or `$w` | Complete systems (explicit only) | Cascade + Notion |
+| **Content** | `$content` or `$c` | Writing and pages (explicit only) | Sequential + Notion |
+| **Organize** | `$organize` or `$o` | Restructuring (explicit only) | Sequential + Notion |
 
 .
 
@@ -126,6 +143,10 @@ Quick questions to customize this perfectly:
 
 ### Visual Feedback for Every Operation
 ```
+MODE: $interactive → $workspace
+OPERATION TYPE: Database Creation
+MCP USED: Cascade Thinking + Notion
+
 📊 Creating: Project Tracker Database
 📍 Location: /Workspace/Projects/
 ⏳ Setting up structure...
@@ -157,22 +178,19 @@ better as you add more items."
 
 .
 
-## 🔧 Installing MCP Tools (AI-Assisted Setup)
+## 🔧 Installing MCP Tools (Recommended)
 
-### Prerequisites
+The system intelligently selects between these based on task complexity. Choose either Docker (stable) or NPX (quick) installation:
+
+### Option A: AI-Powered Docker Setup (Recommended)
+
+**Prerequisites:**
 - Docker Desktop installed ([Download Docker Desktop](https://www.docker.com/products/docker-desktop/))
 - Claude Desktop app ([Download Claude](https://claude.ai/download))
 - Notion API key from [notion.so/my-integrations](https://www.notion.so/my-integrations)
 
-### AI-Powered Docker Setup
+**AI-Assisted Installation:**
 
-**Step 1: Get Your Notion API Key**
-1. Go to [https://www.notion.so/my-integrations](https://www.notion.so/my-integrations)
-2. Click "New integration"
-3. Give it a name (e.g., "Claude Assistant")
-4. Copy the API key
-
-**Step 2: Ask Any AI Assistant**
 Copy this prompt to Claude, ChatGPT, or any AI assistant:
 
 ```
@@ -192,15 +210,16 @@ I need to:
 I'm on [Windows/Mac/Linux]. Please give me the exact commands to run.
 ```
 
-**Step 3: Follow AI Instructions**
 The AI will provide step-by-step commands for your operating system.
 
-**Step 4: Share Pages with Integration**
-In Notion, share any pages you want to manage with your integration.
+**Verification:**
+1. Check Docker Desktop for 3 running containers
+2. Look for the 🔌 icon in Claude Desktop showing available tools
+3. Test with: "Create a simple task list in Notion"
 
-### Alternative: NPX Installation (Quick but Less Stable)
+### Option B: NPX Installation (Quick but Less Stable)
 
-For Claude Desktop config file:
+Add to Claude Desktop config file:
 ```json
 {
   "mcpServers": {
@@ -223,11 +242,7 @@ For Claude Desktop config file:
 }
 ```
 
-### Verification
-1. **Docker method**: Check Docker Desktop for 3 running containers
-2. **NPX method**: Look for npm processes running
-3. **Claude Desktop**: See 🔌 icon with available tools
-4. **Test**: Try "Create a simple task list in Notion"
+**Important:** Don't forget to share pages with your Notion integration!
 
 .
 
@@ -238,46 +253,82 @@ For Claude Desktop config file:
 - Interactive mode will guide you step by step
 - Try: "Help me get organized" or "I need to track [anything]"
 
-### "Can't find my workspace"
-- System will help navigate your workspace
-- Can create in personal space if needed
-- Shows existing similar items to avoid duplicates
-
-### "Permission denied"
+### "Can't find my workspace / Permission denied"
 - Check workspace access settings
 - Share pages with Notion integration
 - System suggests alternatives automatically
+- Can create in personal space if needed
 
-### "Too complex for me"
-- Interactive mode adapts to your expertise
-- Starts simple, adds features gradually
-- Every step explained in plain English
+### "Notion API key issues"
+- One-time setup: [notion.so/my-integrations](https://www.notion.so/my-integrations)
+- Create new integration and copy API key
+- Add to Docker .env file or NPX config
+
+### "Operation failed or rate limited"
+- System queues and retries automatically
+- Handles sync problems gracefully
+- Suggests optimization for large databases
+- Breaks complex formulas into simpler parts
 
 ### MCP Connection Issues
 - **Docker not running**: Start Docker Desktop
-- **Can't connect**: Restart Claude Desktop
+- **Can't connect**: Restart Claude Desktop  
 - **Wrong directory**: Check you're in "$HOME/MCP Servers"
-- **Permission errors**: Run terminal as administrator (Windows)
+- **Permission errors**: Run terminal as administrator (Windows) or use sudo (Mac/Linux)
 
-### Common Notion Issues
-- **Rate limits**: System queues and retries automatically
-- **Sync problems**: Handles gracefully with clear status
-- **Complex formulas**: Breaks down into simpler parts
-- **Large databases**: Suggests optimization strategies
+### Common Setup Problems
+- **"Command not found"**: Ensure Node.js is installed for NPX method
+- **Containers won't start**: Check Docker Desktop is running
+- **Tools not showing**: Restart Claude Desktop after config changes
+- **Rate limits**: All tools handle this gracefully with retries
+
+### Other Issues
+- **No MCP tools**: System works without them (reduced functionality)
+- **Wrong MCP selection**: Based on complexity automatically
+- **Interactive not wanted**: Use explicit mode (`$w`, `$c`, etc.)
+- **Too complex**: System adapts to your expertise level
+
+### Getting Help
+- For Docker issues: Check container logs in Docker Desktop
+- For NPX issues: Check Claude Desktop logs
+- For Notion issues: Check API integration settings
+- For general issues: The AI assistant can help diagnose problems
+
+.
+
+## ⚠️ Important Notes
+
+- **Interactive mode is DEFAULT** - Unless explicitly specified otherwise
+- **Never overwrites data** - Always creates new or asks permission
+- **Works without MCPs** - But significantly enhanced with them
+- **Respects permissions** - Only accesses shared pages
+- **Educational approach** - Teaches Notion concepts as you work
+
+## 📦 Version History
+
+- **v2.0.0**: Enhanced MCP selection, updated setup guides
+- **v1.0.0**: Initial Notion agent with interactive mode
+
+## 🎯 Key Principles
+
+1. **Natural language first** - Describe what you want, not how
+2. **Learn while doing** - Every operation teaches Notion concepts
+3. **Best practices built-in** - Professional patterns automatically applied
+4. **Graceful error handling** - Never leaves you stuck
+5. **Progressive complexity** - Starts simple, grows with your needs
 
 .
 
 ## 📚 Other Resources
 
-- [Notion API Documentation](https://developers.notion.com/)
 - [MCP Protocol Guide](https://modelcontextprotocol.io/)
 - [Docker Desktop Help](https://docs.docker.com/desktop/)
 - [Sequential Thinking MCP](https://github.com/arben-adm/mcp-sequential-thinking)
 - [Cascade Thinking MCP](https://github.com/drewdotpro/cascade-thinking-mcp)
 - [Notion MCP Server](https://github.com/notionhq/mcp-server-notion)
-
-Remember: **You don't need to know Notion to use Notion anymore!**
+- [Notion API Documentation](https://developers.notion.com/)
+- [Notion Integration Setup](https://www.notion.so/my-integrations)
 
 ---
 
-*The Notion Agent makes workspace management conversational. Just describe what you want to organize, and watch your Notion workspace build itself while you learn.*
+*Transform natural language into organized Notion workspaces. Just describe what you want to organize, and watch your workspace build itself while you learn.*

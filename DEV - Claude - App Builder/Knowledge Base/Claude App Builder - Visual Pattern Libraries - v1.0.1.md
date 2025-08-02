@@ -1,4 +1,4 @@
-# Claude App Builder - Visual Pattern Libraries
+# Claude App Builder - Visual Pattern Libraries - v1.0.1
 
 **Reference guide for visual design patterns and inspiration sources.**
 

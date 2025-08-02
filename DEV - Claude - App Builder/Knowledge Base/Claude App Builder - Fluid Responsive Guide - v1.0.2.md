@@ -1,4 +1,4 @@
-# Claude App Builder - Fluid Responsive Design Guide v1.02
+# Claude App Builder - Fluid Responsive Design Guide - v1.0.2
 
 **Essential guide for implementing smooth, accessible fluid responsive design in Claude artifacts.**
 

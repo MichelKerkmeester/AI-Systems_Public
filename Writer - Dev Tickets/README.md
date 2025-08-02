@@ -1,4 +1,4 @@
-# Dev Ticket Writer - User Guide v2.2
+# Dev Ticket Writer - User Guide v3.0.0
 
 ## 🚀 What is This?
 
@@ -36,13 +36,10 @@ The Dev Ticket Writer system transforms any request into clear, actionable devel
 
 ### Step 3: Upload Reference Documents
 Upload all reference documents to your project:
-- `Ticket - Interactive Mode - v1.2.0.md` (conversational ticket creation with Figma)
-- `Ticket - Examples - Quick & Standard - v1.1.0.md` (mode examples)
-- `Ticket - Examples - Complex & Epic - v1.1.0.md` (advanced examples)
-- `Ticket - Examples - Bugs & Improvements - v1.1.0.md` (specialized types)
-- `Ticket - Examples - Partial Input Handling - v1.1.0.md` (enhancement patterns)
-- `Ticket - Examples - Figma Context.md` (proper Figma usage examples)
-- `Ticket - Patterns & Methodology - v1.1.0.md` (quality patterns)
+- `Ticket - Interactive Mode - v1.3.0.md` (conversational ticket creation with Figma)
+- `Ticket - Examples Library - v1.0.0.md` (comprehensive examples for all modes)
+- `Ticket - Templates & Standards - v1.0.0.md` (core templates and formatting)
+- `Ticket - Quick Reference Card - v1.0.0.md` (daily reference guide)
 
 ### Step 4: Start Writing Tickets!
 Begin any conversation in the project, and Claude will default to Interactive Mode, guiding you through creating professional tickets.
@@ -90,212 +87,6 @@ The system uses a flexible approach:
 - **Interactive conversations:** 3-5 thoughts
 - **Complex analysis:** 3-5 thoughts with branching
 - **Epic breakdown:** 5+ thoughts with exploration
-
-.
-
-## 🔧 Installing MCP Tools (Recommended)
-
-All three MCP tools can be installed using Docker for easy management. This is the recommended approach for stability and ease of use.
-
-### Prerequisites
-- Docker Desktop installed and running ([Download Docker Desktop](https://www.docker.com/products/docker-desktop/))
-- Claude Desktop app installed ([Download Claude](https://claude.ai/download))
-- At least 2GB of free disk space
-
-### Quick Docker Setup
-
-1. **Create MCP Servers Directory**
-```bash
-mkdir -p "$HOME/MCP Servers"
-cd "$HOME/MCP Servers"
-```
-
-2. **Clone the MCP Repositories**
-```bash
-# Clone Sequential Thinking MCP
-git clone https://github.com/arben-adm/mcp-sequential-thinking.git
-
-# Clone Cascade Thinking MCP
-git clone https://github.com/drewdotpro/cascade-thinking-mcp.git
-
-# Clone Figma MCP (if available via Docker)
-# Note: Check if Figma MCP has Docker support
-```
-
-3. **Create Docker Compose File**
-Create `docker-compose.yml` in the MCP Servers directory:
-
-```yaml
-services:
-  # Sequential Thinking MCP Server
-  sequential-thinking:
-    build:
-      context: ./mcp-sequential-thinking
-      dockerfile: Dockerfile
-    image: mcp-sequential-thinking:latest
-    container_name: mcp-sequential-thinking
-    restart: always
-    environment:
-      - PYTHONUNBUFFERED=1
-    volumes:
-      - sequential-data:/app/data
-    networks:
-      - mcp-network
-
-  # Cascade Thinking MCP Server
-  cascade-thinking:
-    build:
-      context: ./cascade-thinking-mcp
-      dockerfile: Dockerfile
-    image: mcp-cascade-thinking:latest
-    container_name: mcp-cascade-thinking
-    restart: always
-    environment:
-      - NODE_ENV=production
-    volumes:
-      - cascade-data:/app/data
-    networks:
-      - mcp-network
-
-  # Figma MCP Server (if Docker supported)
-  figma:
-    build:
-      context: ./figma-mcp
-      dockerfile: Dockerfile
-    image: mcp-figma:latest
-    container_name: mcp-figma
-    restart: always
-    environment:
-      - FIGMA_API_KEY=${FIGMA_API_KEY}
-    volumes:
-      - figma-data:/app/data
-    networks:
-      - mcp-network
-
-volumes:
-  sequential-data:
-  cascade-data:
-  figma-data:
-
-networks:
-  mcp-network:
-    driver: bridge
-```
-
-4. **Configure Claude Desktop**
-Update your Claude Desktop configuration:
-
-**macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
-**Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
-**Linux**: `~/.config/Claude/claude_desktop_config.json`
-
-```json
-{
-  "mcpServers": {
-    "sequential-thinking": {
-      "command": "docker",
-      "args": ["exec", "-i", "mcp-sequential-thinking", "uv", "run", "--with", "portalocker", "-m", "mcp_sequential_thinking.server"]
-    },
-    "cascade-thinking": {
-      "command": "docker",
-      "args": ["exec", "-i", "mcp-cascade-thinking", "node", "dist/index.js"]
-    },
-    "figma": {
-      "command": "docker",
-      "args": ["exec", "-i", "mcp-figma", "node", "index.js"]
-    }
-  }
-}
-```
-
-5. **Start the MCP Servers**
-```bash
-cd "$HOME/MCP Servers"
-
-# Build and start all containers
-docker-compose up -d
-
-# Or start specific services
-docker-compose up -d sequential-thinking cascade-thinking
-```
-
-6. **Restart Claude Desktop**
-Quit and restart Claude Desktop to load the new MCP server configuration.
-
-### Alternative: NPX Installation (Simpler but less stable)
-
-If you prefer not to use Docker, you can use the original NPX method:
-
-```json
-{
-  "mcpServers": {
-    "sequential-thinking": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
-    },
-    "cascade-thinking": {
-      "command": "npx",
-      "args": ["-y", "cascade-thinking-mcp"]
-    },
-    "figma": {
-      "command": "npx",
-      "args": ["-y", "@figma/mcp-server"]
-    }
-  }
-}
-```
-
-### Verification
-1. **Check Docker Desktop**: You should see running containers
-2. **In Claude Desktop**: Look for the 🔌 icon showing available tools
-3. **Test the servers**: Try using the thinking tools in a conversation
-
-### Troubleshooting
-- **Containers won't start**: Check Docker Desktop is running
-- **Claude can't connect**: Restart Claude Desktop after starting containers
-- **View logs**: `docker-compose logs -f [service-name]`
-- **Reset everything**: `docker-compose down -v && docker-compose up -d`
-
-.
-
-## 🎨 Figma Integration (NEW in v2.2)
-
-### How Figma Helps
-Figma MCP helps the ticket writer **understand designs** to write better requirements. It does NOT extract technical specifications.
-
-### When Figma Adds Value:
-- **Any UI features** - Even simple ones, if designs exist
-- **Complex UI flows** - Multiple screens with interactions
-- **New features** - Understanding the complete user journey
-- **Major redesigns** - Seeing all the changes in context
-- **Component updates** - Knowing what specifically changed
-- **Multi-state interfaces** - Forms with validation, wizards, etc.
-
-### When to Skip Figma:
-- Backend-only features
-- Performance improvements
-- Database changes
-- API development
-- When user says not to use it
-
-### Special Cases:
-- **If user requests specs**: System will extract technical details
-- **Simple UI features**: Can still use Figma if it helps understand context
-- **Component updates**: References changes without extracting specs (unless requested)
-
-### First-Time Setup:
-1. When offered Figma integration, you'll need an API key
-2. Go to Figma → Account Settings → Personal Access Tokens
-3. Create a new token and share it with the system
-4. This is a one-time setup per environment
-
-### What Figma Provides:
-- Understanding of complete user flows
-- Identification of all necessary states
-- Complexity assessment
-- Better requirement completeness
-- Technical specifications when explicitly requested
-- Component change references
 
 .
 
@@ -389,139 +180,87 @@ FIGMA INTEGRATED: Yes (for context)
 
 .
 
+## 🎨 Figma Integration (NEW in v2.2)
+
+### How Figma Helps
+Figma MCP helps the ticket writer **understand designs** to write better requirements. It does NOT extract technical specifications.
+
+### When Figma Adds Value:
+- **Any UI features** - Even simple ones, if designs exist
+- **Complex UI flows** - Multiple screens with interactions
+- **New features** - Understanding the complete user journey
+- **Major redesigns** - Seeing all the changes in context
+- **Component updates** - Knowing what specifically changed
+- **Multi-state interfaces** - Forms with validation, wizards, etc.
+
+### When to Skip Figma:
+- Backend-only features
+- Performance improvements
+- Database changes
+- API development
+- When user says not to use it
+
+### Special Cases:
+- **If user requests specs**: System will extract technical details
+- **Simple UI features**: Can still use Figma if it helps understand context
+- **Component updates**: References changes without extracting specs (unless requested)
+
+### First-Time Setup:
+1. When offered Figma integration, you'll need an API key
+2. Go to Figma → Account Settings → Personal Access Tokens
+3. Create a new token and share it with the system
+4. This is a one-time setup per environment
+
+### What Figma Provides:
+- Understanding of complete user flows
+- Identification of all necessary states
+- Complexity assessment
+- Better requirement completeness
+- Technical specifications when explicitly requested
+- Component change references
+
+.
+
 ## 🔧 Installing MCP Tools (Recommended)
 
-All three MCP tools can be installed using Docker for easy management. This is the recommended approach for stability and ease of use.
+The system intelligently selects between these based on task complexity. Choose either Docker (stable) or NPX (quick) installation:
 
-### Prerequisites
-- Docker Desktop installed and running ([Download Docker Desktop](https://www.docker.com/products/docker-desktop/))
-- Claude Desktop app installed ([Download Claude](https://claude.ai/download))
-- At least 2GB of free disk space
+### Option A: AI-Powered Docker Setup (Recommended)
 
-### Quick Docker Setup
+**Prerequisites:**
+- Docker Desktop installed ([Download Docker Desktop](https://www.docker.com/products/docker-desktop/))
+- Claude Desktop app ([Download Claude](https://claude.ai/download))
 
-1. **Create MCP Servers Directory**
-```bash
-mkdir -p "$HOME/MCP Servers"
-cd "$HOME/MCP Servers"
+**AI-Assisted Installation:**
+
+Copy this prompt to Claude, ChatGPT, or any AI assistant:
+
+```
+Help me set up Docker containers for the Dev Ticket Writer MCP tools.
+
+I need to:
+1. Create a directory at "$HOME/MCP Servers"
+2. Clone these repos:
+   - https://github.com/arben-adm/mcp-sequential-thinking.git
+   - https://github.com/drewdotpro/cascade-thinking-mcp.git
+   - https://github.com/modelcontextprotocol/servers/tree/main/src/figma
+3. Create a docker-compose.yml file with services for all three
+4. Configure Claude Desktop's claude_desktop_config.json
+5. Start the containers with docker-compose
+
+I'm on [Windows/Mac/Linux]. Please give me the exact commands to run.
 ```
 
-2. **Clone the MCP Repositories**
-```bash
-# Clone Sequential Thinking MCP
-git clone https://github.com/arben-adm/mcp-sequential-thinking.git
+The AI will provide step-by-step commands for your operating system.
 
-# Clone Cascade Thinking MCP
-git clone https://github.com/drewdotpro/cascade-thinking-mcp.git
+**Verification:**
+1. Check Docker Desktop for 3 running containers
+2. Look for the 🔌 icon in Claude Desktop showing available tools
+3. Test with: "Create a ticket for user login"
 
-# Clone Figma MCP (if available via Docker)
-# Note: Check if Figma MCP has Docker support
-```
+### Option B: NPX Installation (Quick but Less Stable)
 
-3. **Create Docker Compose File**
-Create `docker-compose.yml` in the MCP Servers directory:
-
-```yaml
-services:
-  # Sequential Thinking MCP Server
-  sequential-thinking:
-    build:
-      context: ./mcp-sequential-thinking
-      dockerfile: Dockerfile
-    image: mcp-sequential-thinking:latest
-    container_name: mcp-sequential-thinking
-    restart: always
-    environment:
-      - PYTHONUNBUFFERED=1
-    volumes:
-      - sequential-data:/app/data
-    networks:
-      - mcp-network
-
-  # Cascade Thinking MCP Server
-  cascade-thinking:
-    build:
-      context: ./cascade-thinking-mcp
-      dockerfile: Dockerfile
-    image: mcp-cascade-thinking:latest
-    container_name: mcp-cascade-thinking
-    restart: always
-    environment:
-      - NODE_ENV=production
-    volumes:
-      - cascade-data:/app/data
-    networks:
-      - mcp-network
-
-  # Figma MCP Server (if Docker supported)
-  figma:
-    build:
-      context: ./figma-mcp
-      dockerfile: Dockerfile
-    image: mcp-figma:latest
-    container_name: mcp-figma
-    restart: always
-    environment:
-      - FIGMA_API_KEY=${FIGMA_API_KEY}
-    volumes:
-      - figma-data:/app/data
-    networks:
-      - mcp-network
-
-volumes:
-  sequential-data:
-  cascade-data:
-  figma-data:
-
-networks:
-  mcp-network:
-    driver: bridge
-```
-
-4. **Configure Claude Desktop**
-Update your Claude Desktop configuration:
-
-**macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
-**Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
-**Linux**: `~/.config/Claude/claude_desktop_config.json`
-
-```json
-{
-  "mcpServers": {
-    "sequential-thinking": {
-      "command": "docker",
-      "args": ["exec", "-i", "mcp-sequential-thinking", "uv", "run", "--with", "portalocker", "-m", "mcp_sequential_thinking.server"]
-    },
-    "cascade-thinking": {
-      "command": "docker",
-      "args": ["exec", "-i", "mcp-cascade-thinking", "node", "dist/index.js"]
-    },
-    "figma": {
-      "command": "docker",
-      "args": ["exec", "-i", "mcp-figma", "node", "index.js"]
-    }
-  }
-}
-```
-
-5. **Start the MCP Servers**
-```bash
-cd "$HOME/MCP Servers"
-
-# Build and start all containers
-docker-compose up -d
-
-# Or start specific services
-docker-compose up -d sequential-thinking cascade-thinking
-```
-
-6. **Restart Claude Desktop**
-Quit and restart Claude Desktop to load the new MCP server configuration.
-
-### Alternative: NPX Installation (Simpler but less stable)
-
-If you prefer not to use Docker, you can use the original NPX method:
-
+Add to Claude Desktop config file:
 ```json
 {
   "mcpServers": {
@@ -540,17 +279,6 @@ If you prefer not to use Docker, you can use the original NPX method:
   }
 }
 ```
-
-### Verification
-1. **Check Docker Desktop**: You should see running containers
-2. **In Claude Desktop**: Look for the 🔌 icon showing available tools
-3. **Test the servers**: Try using the thinking tools in a conversation
-
-### Troubleshooting MCP Installation
-- **Containers won't start**: Check Docker Desktop is running
-- **Claude can't connect**: Restart Claude Desktop after starting containers
-- **View logs**: `docker-compose logs -f [service-name]`
-- **Reset everything**: `docker-compose down -v && docker-compose up -d`
 
 .
 
@@ -576,8 +304,64 @@ If you prefer not to use Docker, you can use the original NPX method:
 - Figma is for understanding, not spec extraction
 - Requirements should focus on WHAT, not HOW
 
+### MCP Connection Issues
+- **Docker not running**: Start Docker Desktop
+- **Can't connect**: Restart Claude Desktop
+- **Wrong directory**: Check you're in "$HOME/MCP Servers"
+- **Permission errors**: Run terminal as administrator (Windows) or use sudo (Mac/Linux)
+
+### Common Setup Problems
+- **"Command not found"**: Ensure Node.js is installed for NPX method
+- **Containers won't start**: Check Docker Desktop is running
+- **Tools not showing**: Restart Claude Desktop after config changes
+- **Rate limits**: All tools handle this gracefully with retries
+
 ### Other Issues:
 - **No MCP tools**: System works without them
 - **Wrong MCP selection**: Based on complexity
 - **Interactive not wanted**: Use explicit mode (`$q`, `$s`, etc.)
 - **Ticket too long**: Use simpler mode or break down
+
+### Getting Help
+- For Docker issues: Check container logs in Docker Desktop
+- For NPX issues: Check Claude Desktop logs
+- For general issues: The AI assistant can help diagnose problems
+
+.
+
+## ⚠️ Important Notes
+
+- **Interactive mode is DEFAULT** - Unless explicitly specified otherwise
+- **Never include HOW** - Focus on WHAT and WHY
+- **Always under 2 minutes** - Break down if longer
+- **No em dashes** - Uses commas, colons, or periods
+- **Works without MCPs** - But enhanced with them
+
+## 📦 Version History
+
+- **v2.2.0**: Figma integration, enhanced MCP selection
+- **v2.1.0**: Interactive mode as default, partial input handling
+- **v2.0.0**: Added MCP integration and visual dashboards
+- **v1.0.0**: Initial ticket writing system
+
+## 🎯 Key Principles
+
+1. **Democratize product thinking** - Anyone can write great tickets
+2. **Focus on user value** - Every ticket starts with user benefit
+3. **Measurable outcomes** - Success criteria must be specific
+4. **Developer freedom** - Define WHAT, let them decide HOW
+5. **2-minute readability** - Respect everyone's time
+
+.
+
+## 📚 Other Resources
+
+- [MCP Protocol Guide](https://modelcontextprotocol.io/)
+- [Docker Desktop Help](https://docs.docker.com/desktop/)
+- [Sequential Thinking MCP](https://github.com/arben-adm/mcp-sequential-thinking)
+- [Cascade Thinking MCP](https://github.com/drewdotpro/cascade-thinking-mcp)
+- [Figma MCP Server](https://github.com/modelcontextprotocol/servers/tree/main/src/figma)
+
+---
+
+*Transform vague requests into clear, actionable tickets. Make product thinking accessible to everyone.*

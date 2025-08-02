@@ -1,4 +1,4 @@
-# 🏗️ AI Systems Spec Writer v1.1.0
+# AI Systems Spec Writer - User Guide v1.1.0
 
 A sophisticated system that transforms AI system analysis into actionable specifications and professional documentation, enabling anyone to architect professional AI systems through guided conversations and proven patterns.
 
@@ -46,60 +46,7 @@ Add these essential documents to your project:
 - `AI Systems - Pattern Library.md` - Reusable architectural patterns
 - `AI Systems - README Template.md` - Professional documentation patterns
 
-### Step 4: Install MCP Tools (Recommended)
-The system intelligently selects between these based on task complexity. Choose either Docker (stable) or NPX (quick) installation:
-
-#### Option A: AI-Powered Docker Setup (Recommended)
-
-**Prerequisites:**
-- Docker Desktop installed ([Download Docker Desktop](https://www.docker.com/products/docker-desktop/))
-- Claude Desktop app ([Download Claude](https://claude.ai/download))
-
-**AI-Assisted Installation:**
-
-Copy this prompt to Claude, ChatGPT, or any AI assistant:
-
-```
-Help me set up Docker containers for the AI Systems Spec Writer MCP tools.
-
-I need to:
-1. Create a directory at "$HOME/MCP Servers"
-2. Clone these repos:
-   - https://github.com/arben-adm/mcp-sequential-thinking.git
-   - https://github.com/drewdotpro/cascade-thinking-mcp.git
-3. Create a docker-compose.yml file with services for both
-4. Configure Claude Desktop's claude_desktop_config.json
-5. Start the containers with docker-compose
-
-I'm on [Windows/Mac/Linux]. Please give me the exact commands to run.
-```
-
-The AI will provide step-by-step commands for your operating system.
-
-**Verification:**
-1. Check Docker Desktop for 2 running containers
-2. Look for the 🔌 icon in Claude Desktop showing available tools
-3. Test with: "$analyze this chat system"
-
-#### Option B: NPX Installation (Quick but Less Stable)
-
-Add to Claude Desktop config file:
-```json
-{
-  "mcpServers": {
-    "sequential-thinking": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
-    },
-    "cascade-thinking": {
-      "command": "npx",
-      "args": ["-y", "cascade-thinking-mcp"]
-    }
-  }
-}
-```
-
-### Step 5: Start Creating Specifications
+### Step 4: Start Creating Specifications
 ```
 Analyze my chatbot system → $analyze
 Create a writing assistant spec → $create
@@ -249,6 +196,62 @@ The system includes proven patterns extracted from successful AI systems:
 
 .
 
+## 🔧 Installing MCP Tools (Recommended)
+
+The system intelligently selects between these based on task complexity. Choose either Docker (stable) or NPX (quick) installation:
+
+### Option A: AI-Powered Docker Setup (Recommended)
+
+**Prerequisites:**
+- Docker Desktop installed ([Download Docker Desktop](https://www.docker.com/products/docker-desktop/))
+- Claude Desktop app ([Download Claude](https://claude.ai/download))
+
+**AI-Assisted Installation:**
+
+Copy this prompt to Claude, ChatGPT, or any AI assistant:
+
+```
+Help me set up Docker containers for the AI Systems Spec Writer MCP tools.
+
+I need to:
+1. Create a directory at "$HOME/MCP Servers"
+2. Clone these repos:
+   - https://github.com/arben-adm/mcp-sequential-thinking.git
+   - https://github.com/drewdotpro/cascade-thinking-mcp.git
+3. Create a docker-compose.yml file with services for both
+4. Configure Claude Desktop's claude_desktop_config.json
+5. Start the containers with docker-compose
+
+I'm on [Windows/Mac/Linux]. Please give me the exact commands to run.
+```
+
+The AI will provide step-by-step commands for your operating system.
+
+**Verification:**
+1. Check Docker Desktop for 2 running containers
+2. Look for the 🔌 icon in Claude Desktop showing available tools
+3. Test with: "$analyze this chat system"
+
+### Option B: NPX Installation (Quick but Less Stable)
+
+Add to Claude Desktop config file:
+```json
+{
+  "mcpServers": {
+    "sequential-thinking": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+    },
+    "cascade-thinking": {
+      "command": "npx",
+      "args": ["-y", "cascade-thinking-mcp"]
+    }
+  }
+}
+```
+
+.
+
 ## 🆘 Troubleshooting
 
 ### MCP Connection Issues
@@ -268,61 +271,30 @@ The system includes proven patterns extracted from successful AI systems:
 - For NPX issues: Check Claude Desktop logs
 - For general issues: The AI assistant can help diagnose problems
 
-.
-
-## 📖 Usage Tips
-
-1. **Start with Interactive Mode**: Let the system guide you through your first specifications
-2. **Analyze Before Creating**: Study existing systems to extract proven patterns
-3. **Use Visual Dashboards**: Check completeness scores and pattern usage
-4. **Follow the Patterns**: Leverage the pattern library for consistent quality
-5. **Document Everything**: Use $readme mode for professional documentation
-6. **Explain Decisions**: The system teaches architectural choices
 
 .
 
-## 🎓 Educational Features
+## ⚠️ Important Notes
 
-- **Guided Conversations**: Learn system design through practice
-- **Pattern Explanations**: Understand why certain architectures work
-- **Progress Tracking**: See your specification develop step-by-step
-- **Best Practice Integration**: Industry standards built into the process
-- **Confidence Building**: Graduate from guided to independent design
-- **Documentation Skills**: Learn to create compelling READMEs
+- **Interactive mode is DEFAULT** - Unless explicitly specified otherwise
+- **Pattern-first approach** - Apply proven designs consistently
+- **Always use artifacts** - Ensures reusability and sharing
+- **No em dashes** - Uses commas, colons, or periods
+- **Works without MCPs** - But enhanced with them
 
-.
+## 📦 Version History
 
-## 📊 Quality Assurance
+- **v1.1.0**: Added README generation mode and documentation patterns
+- **v1.0.0**: Initial release with 5 modes and pattern library
+- **v0.9.0**: Beta with core analysis capabilities
 
-Every specification includes:
-- ✅ Completeness checking (objectives, architecture, implementation)
-- ✅ Pattern validation (proper application of proven designs)
-- ✅ Risk assessment (technical, user experience, business)
-- ✅ Implementation guidance (phase-by-phase approach)
-- ✅ Version planning (future enhancement paths)
-- ✅ Documentation quality (professional README standards)
+## 🎯 Key Principles
 
-.
-
-## 🚀 What's New in v1.1.0
-
-### README Generation Mode
-- Professional documentation creation
-- Adaptive content based on system complexity
-- Visual formatting with clean separation
-- Example-driven usage guides
-- Comprehensive troubleshooting sections
-
-### Enhanced Pattern Library
-- Documentation patterns added
-- Professional README pattern
-- Progressive documentation pattern
-- Example-driven documentation pattern
-
-### Improved Interactive Mode
-- Documentation generation integration
-- Questions about README needs
-- Combined spec and documentation creation
+1. **Democratize system architecture** - Anyone can design AI systems
+2. **Learn by doing** - Educational at every step
+3. **Patterns over perfection** - Proven designs beat novel approaches
+4. **Visual understanding** - Architecture diagrams clarify complexity
+5. **Documentation matters** - Systems without docs don't get adopted
 
 .
 
@@ -332,7 +304,3 @@ Every specification includes:
 - [Docker Desktop Help](https://docs.docker.com/desktop/)
 - [Sequential Thinking MCP](https://github.com/arben-adm/mcp-sequential-thinking)
 - [Cascade Thinking MCP](https://github.com/drewdotpro/cascade-thinking-mcp)
-
----
-
-*Transform AI system analysis into actionable specifications and compelling documentation. Build with confidence using proven patterns and intelligent guidance. Now with professional README generation to ensure your systems get adopted and loved.*
