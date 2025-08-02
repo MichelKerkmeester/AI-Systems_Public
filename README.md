@@ -66,7 +66,7 @@ They were designed to work with the Claude App, but you can tweak them to fit wi
 
 #### 5. 🛠️ IDE System Prompt
 **Transform AI coding assistants into elite software engineers**
-- **Production Standards**: Zero technical debt, root cause fixes
+- **Production Standards**: Zero technical debt, fixes root causes, not symptoms
 - **Performance First**: CSS-only solutions, REM units, lazy loading
 - **IDE Support**: Cursor, Windsurf, Claude Code, VS Code, JetBrains
 - **MCP Integration**: Sequential Thinking for systematic analysis
@@ -75,7 +75,7 @@ They were designed to work with the Claude App, but you can tweak them to fit wi
 
 #### 6. 🏗️ Claude App Builder
 **Build functional web apps directly in Claude**
-- **Instant Apps**: Working applications in minutes
+- **Instant Apps**: Working prototypes in minutes
 - **3 Specialized Modes**: $app (tools), $ai (interfaces), $data (dashboards)
 - **Fluid Responsive**: Scales perfectly 320px-1920px
 - **Pre-loaded Libraries**: React, Tailwind, Three.js, Chart.js
