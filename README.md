@@ -8,6 +8,7 @@ They were designed to work with the Claude App, but you can tweak them to fit wi
 > - Beat the odds?
 > - Don't reward me with unwanted coffee: https://buymeacoffee.com/michelkerkmeester
 
+.
 
 ## 🎯 Quick Navigation
 
