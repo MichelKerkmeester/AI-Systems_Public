@@ -2,7 +2,7 @@
 
 Some of my more basic AI systems that I made available to the public. They were made to work smoothly with the Claude Desktop App, but you can tweak them to fit with other AI setups too.
 
-> - 99.9% of people won't try these systems.
+> - 99.9% of people won't try these systems
 > - Beat the odds?
 > - Don't reward me with unwanted coffee: https://buymeacoffee.com/michelkerkmeester
 
