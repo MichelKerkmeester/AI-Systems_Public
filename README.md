@@ -33,11 +33,11 @@ They were designed to work with the Claude App, but you can tweak them to fit wi
 - **Platform Optimized**: ChatGPT, Claude, Gemini auto-detection
 - **50+ Examples**: Before/after transformation library
 
-#### 2. 📐 AI Systems Spec Writer
+#### 2. 📐 AI Systems Creator
 **Professional specifications and documentation**
 - **6 Operating Modes**: Interactive, Analyze, Create, Update, Integrate, README
 - **Pattern Library**: Proven architectures from successful systems
-- **Everything you need**: Spec it, Build it, Document it
+- **Easy Creation**: Spec it, Build it, Document it
 - **Educational Focus**: Learn architecture through creation
 - **Visual Mapping**: ASCII diagrams for system understanding
 - **Version Aware**: Migration and compatibility planning
