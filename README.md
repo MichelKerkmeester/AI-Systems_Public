@@ -12,7 +12,7 @@ Some of my more basic AI systems that I made available to the public. They were 
 | Category | Systems | Purpose |
 |----------|---------|---------|
 | **✍️ Writers** | [Prompt Engineering](#1--prompt-engineering-assistant), [AI Systems](#2--ai-systems-spec-writer), [Branded Content](#3--branded-content-writer), [Dev Ticket](#4--dev-ticket-writer) | Content, Documentation, Systems |
-| **💻 Dev** | [IDE System](#5--ide-system-prompt), [Claude App Builder](#6--claude-app-builder) | Coding, 1-Shot Apps |
+| **💻 Dev** | [IDE System](#5--ide-system-prompt), [Claude App Builder](#6--claude-app-builder) | Coding, Instant Apps |
 | **🤖 Agents** | [Notion Agent](#7--notion-agent) | Automate workspace tasks |
 
 .
