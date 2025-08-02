@@ -1,4 +1,4 @@
-# Notion Agent - User Guide v2.0
+# Notion Agent - User Guide v1.0.0
 
 ## 🚀 What is This?
 
