@@ -34,7 +34,6 @@ The AI Systems Spec Writer analyzes AI systems to generate comprehensive specifi
 - **Improved Interactive Mode**: Enhanced conversational flow with better examples
 - **Clearer Complexity Boundaries**: Non-overlapping categories for better system assessment
 - **Default Mode Logic**: Explicit triggers for automatic interactive mode activation
-- **Time-Pressure Free**: Removed all time estimates to encourage quality over speed
 
 .
 
