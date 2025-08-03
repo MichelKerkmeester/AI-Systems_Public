@@ -12,8 +12,8 @@ The AI Systems Spec Writer analyzes AI systems to generate comprehensive specifi
 - Learn architectural principles through guided conversations
 - Apply proven patterns from successful AI systems
 - Create visual system maps for better understanding
-- Always get implementation guidance through Rule 16
-- Invisible request clarity enhancement through Rule 17
+- Always get implementation guidance 
+- Invisible request clarity enhancement
 
 **Key Principle:** Great specifications bridge the gap between vision and implementation. Every output teaches, every pattern empowers, every user succeeds.
 
