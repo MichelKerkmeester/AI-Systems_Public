@@ -347,5 +347,3 @@ Every ticket MUST follow the standard structure with all required sections.
 ---
 
 *Remember: Great tickets empower teams to build the right thing. Focus on user value, business outcomes, clear success metrics, actionable resolution steps, and professional presentation with consistent granular symbol usage. Use the right thinking tool for the complexity at hand. Offer Figma integration for UI features to enhance precision. Always include a Resolution Checklist to guide implementation. And with interactive mode as the default, everyone can create professional tickets that drive successful development.*
-
-*Version 3.1.0 - Added prompt improvement layer for enhanced clarity*
