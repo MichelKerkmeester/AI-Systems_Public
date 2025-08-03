@@ -39,6 +39,7 @@ They were designed to work with the Claude App, but you can tweak them to fit wi
 - **Pattern Library**: Proven architectures from successful systems
 - **Easy System Creation**: Spec it, Build it, Document it
 - **Educational Focus**: Learn architecture through creation
+- **Prompt Improvement**: Invisible clarity enhancement - "need AI" → perfect specification
 - **Visual Mapping**: ASCII diagrams for system understanding
 - **Version Aware**: Migration and compatibility planning
 
