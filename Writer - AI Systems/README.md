@@ -1,4 +1,4 @@
-# 🏗️ AI Systems Spec Writer - User Guide v2.0.0
+# 🏗️ AI Systems Spec Writer - User Guide v2.1.0
 
 Transform AI system concepts into professional specifications and compelling documentation that drives adoption through proven patterns and intelligent analysis.
 
@@ -13,13 +13,20 @@ The AI Systems Spec Writer analyzes AI systems to generate comprehensive specifi
 - Apply proven patterns from successful AI systems
 - Create visual system maps for better understanding
 - Always get implementation guidance through Rule 16
+- Invisible request clarity enhancement through Rule 17
 
 **Key Principle:** Great specifications bridge the gap between vision and implementation. Every output teaches, every pattern empowers, every user succeeds.
 
 .
 
-## 🆕 What's New in v2.0.0
+## 🆕 What's New in v2.1.0
 
+- **Prompt Improvement Layer**: Invisible request clarity enhancement (Rule 17) - NEW!
+- **Enhanced Pattern Library**: Added Prompt Improvement Pattern to v1.3.0
+- **Updated Quick Reference**: Now includes clarity enhancement guidance
+- **Smarter Interactive Mode**: Works with pre-enhanced requests seamlessly
+
+### Also in v2.0.0:
 - **Quick Reference Card**: Instant access to modes, patterns, and solutions at your fingertips
 - **Full Mode**: Complete end-to-end workflow from analysis to implementation with checkpoints
 - **Evaluate & Refine Mode**: Visual quality assessment and automated improvement suggestions
@@ -28,27 +35,26 @@ The AI Systems Spec Writer analyzes AI systems to generate comprehensive specifi
 - **Clearer Complexity Boundaries**: Non-overlapping categories for better system assessment
 - **Default Mode Logic**: Explicit triggers for automatic interactive mode activation
 - **Time-Pressure Free**: Removed all time estimates to encourage quality over speed
-- **Pattern Library v2.0**: Aligned versioning and added Implementation Checkpoint Pattern
-- **Bug Fixes**: Resolved formatting issues, section numbering, and consistency problems
 
 .
 
 ## Overview
 
-The AI Systems Spec Writer is a meta-system that transforms system analysis into actionable specifications. With eight operational modes, intelligent MCP integration, and a comprehensive pattern library, it empowers both beginners and experts to architect professional AI systems through guided conversations.
+The AI Systems Spec Writer is a meta-system that transforms system analysis into actionable specifications. With eight operational modes, intelligent MCP integration, a comprehensive pattern library, and invisible request enhancement, it empowers both beginners and experts to architect professional AI systems through guided conversations.
 
 This system doesn't just analyze and specify - it teaches and implements. Every interaction is an opportunity to learn architectural principles, understand patterns, and master the art of system design. Whether you're creating a simple chatbot or architecting a complex multi-system integration, the Spec Writer guides you from concept to implementation.
 
-The v2.0.0 release emphasizes the complete journey: from initial idea through specification to actual implementation, ensuring no user is left wondering "what's next?"
+The v2.1.0 release adds invisible prompt improvement, ensuring even the vaguest requests become perfect specifications, while v2.0.0 established the complete journey from initial idea through specification to actual implementation.
 
 ## ✨ Key Features
 
+- **Prompt Improvement Layer**: Automatically clarifies vague requests without you noticing
 - **8 Operational Modes**: Including new Full and Evaluate modes for comprehensive workflows
 - **Quick Reference Card**: Everything you need at a glance - modes, patterns, fixes, and checklists
 - **Full Mode Workflow**: Complete journey from analysis → spec → implementation → documentation
 - **Evaluate & Refine**: Visual quality scoring (SPACE framework) with improvement suggestions
 - **Intelligent MCP Selection**: Automatic tool choice based on task complexity
-- **Pattern Library v2.0**: Complete pattern collection with Implementation Checkpoint
+- **Pattern Library v1.3.0**: Complete pattern collection with Prompt Improvement
 - **Professional READMEs**: Documentation that drives adoption
 - **Visual Architecture**: ASCII diagrams for system understanding
 - **Educational Integration**: Learn architectural principles while creating
@@ -63,30 +69,32 @@ The v2.0.0 release emphasizes the complete journey: from initial idea through sp
 1. Go to [claude.ai](https://claude.ai)
 2. Click "Projects" in sidebar
 3. Click "Create project"
-4. Name it "AI Systems Spec Writer v2.0"
+4. Name it "AI Systems Spec Writer v2.1"
 
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Writer - AI Systems - v2.0.0.md`
+3. Copy and paste: `Writer - AI Systems - v2.1.0.md`
 4. Save the project
 
 ### Step 3: Upload Knowledge Base
 Add these essential documents to your project:
-- `AI Systems - Analysis Framework - v2.0.0.md`
+- `AI Systems - Analysis Framework - v1.1.0.md`
 - `AI Systems - Artifact Standards - v1.0.0.md`
 - `AI Systems - Enhancement Methodology - v1.0.0.md`
 - `AI Systems - Evaluate & Refine Mode - v1.0.0.md`
 - `AI Systems - Full Mode - v1.0.0.md`
 - `AI Systems - Interactive Mode - v2.0.0.md`
-- `AI Systems - Pattern Library - v2.0.0.md`
-- `AI Systems - Quick Reference Card - v2.0.0.md`
+- `AI Systems - Pattern Library - v1.3.0.md`
+- `AI Systems - Prompt Improvement - v1.0.0.md`
+- `AI Systems - Quick Reference Card - v1.0.0.md`
 - `AI Systems - README Template - v2.0.0.md`
 
 ### Step 4: Start Creating!
-Simply describe what you need - interactive mode is the default:
+Simply describe what you need - interactive mode is the default, and vague requests are automatically enhanced:
 ```
-I need to organize my customer data
+need AI system
+I want to organize my customer data
 Help me build a content review system
 Create something to manage team tasks
 ```
@@ -96,17 +104,20 @@ Create something to manage team tasks
 ## 🎯 How to Use
 
 ### Basic Usage (Interactive Mode - DEFAULT)
-Simply describe what you need:
+Simply describe what you need (even vaguely!):
 ```
 I want to build a content moderation system
+need ML pipeline
+analyze auth API
 ```
 
 The system will:
-1. Welcome you with friendly guidance
-2. Ask 3-5 strategic questions
-3. Build your specification progressively
-4. Generate complete documentation
-5. **Offer implementation help** (always!)
+1. Invisibly enhance your request for clarity
+2. Welcome you with friendly guidance
+3. Ask 3-5 strategic questions
+4. Build your specification progressively
+5. Generate complete documentation
+6. **Offer implementation help** (always!)
 
 ### Mode Selection
 | Mode | Command | Purpose | Best For | MCP Usage |
@@ -121,6 +132,13 @@ The system will:
 | **Evaluate** | `$evaluate` | Quality check | Specification improvement | Cascade (5-7) |
 
 ### Example Transformations
+
+**Prompt Improvement in Action:**
+```
+User: need AI
+System: [Invisibly enhances to: "create specification for artificial intelligence"]
+Result: Clear understanding, perfect specification
+```
 
 **Quick Reference in Action:**
 ```
@@ -156,6 +174,13 @@ Next: "Need help implementing any of the setup steps?"
 .
 
 ## 🏗️ Core Capabilities
+
+### Request Enhancement (NEW)
+- Invisible abbreviation expansion (AI → artificial intelligence)
+- Structure improvement for vague requests
+- Zero assumptions added
+- Sub-second processing
+- Interactive mode preservation
 
 ### System Analysis
 - Deep architectural understanding
@@ -200,6 +225,7 @@ The system leverages proven patterns from successful AI systems:
 - **Mode System**: Operational flexibility
 - **Artifact Delivery**: Consistent outputs
 - **Implementation Checkpoint**: Always offer next steps
+- **Prompt Improvement**: Invisible clarity enhancement
 
 ### Documentation Patterns (v2.0)
 - **Professional README**: Compelling structure
@@ -277,9 +303,10 @@ Add to Claude Desktop config file:
 ### System Usage Issues
 
 **"I don't know where to start"**
-- Just describe your goal in plain language
+- Just describe your goal in plain language (even vaguely!)
 - Interactive mode activates automatically
-- Example: "I need to manage customer feedback"
+- Prompt improvement clarifies your request invisibly
+- Example: "need customer thing" works perfectly!
 
 **"The specification seems incomplete"**
 - Use `$evaluate` mode for quality assessment
@@ -307,6 +334,7 @@ Add to Claude Desktop config file:
 
 ## ⚠️ Important Notes
 
+- **Prompt improvement is invisible** - Vague requests automatically enhanced (Rule 17)
 - **Interactive mode is DEFAULT** - Activates automatically for unclear requests
 - **Rule 16 always applies** - Every specification includes implementation offer
 - **Pattern-first approach** - Proven designs ensure quality
@@ -317,6 +345,7 @@ Add to Claude Desktop config file:
 
 ## 📦 Version History
 
+- **v2.1.0**: Prompt Improvement Layer (Rule 17) for invisible request enhancement
 - **v2.0.0**: Implementation Checkpoint, Full/Evaluate modes, comprehensive fixes
 - **v1.2.0**: Enhanced README templates with compelling documentation patterns
 - **v1.1.0**: Added $readme mode and documentation generation
@@ -325,10 +354,11 @@ Add to Claude Desktop config file:
 ## 🎯 Key Principles
 
 1. **Never leave users wondering "what's next?"** - Implementation guidance always offered
-2. **Democratize system architecture** - Expert design accessible to everyone
-3. **Documentation drives adoption** - Great systems deserve compelling READMEs
-4. **Patterns ensure quality** - Proven approaches beat random experimentation
-5. **Learning through creation** - Every specification teaches architectural thinking
+2. **Clarity from chaos** - Even vague requests become perfect specifications
+3. **Democratize system architecture** - Expert design accessible to everyone
+4. **Documentation drives adoption** - Great systems deserve compelling READMEs
+5. **Patterns ensure quality** - Proven approaches beat random experimentation
+6. **Learning through creation** - Every specification teaches architectural thinking
 
 .
 
