@@ -19,8 +19,8 @@ This document provides the enhanced template for generating professional README 
 The `$readme` mode generates professional documentation that makes AI systems irresistible to users. READMEs serve as both practical guides and compelling narratives that drive adoption through clarity, visual appeal, and user-focused language.
 
 **Key Principles:**
-- Hook readers in the first 3 seconds
-- Enable success in under 5 minutes
+- Hook readers immediately
+- Enable quick success
 - Show value through examples
 - Guide through troubleshooting
 - Inspire with possibilities
@@ -36,8 +36,8 @@ The `$readme` mode generates professional documentation that makes AI systems ir
 3. **Support**: Keep them successful
 
 ### Quality Indicators
-- **3-Second Test**: Value clear immediately
-- **5-Minute Setup**: Running quickly
+- **Immediate Value**: Clear benefits in opening
+- **Quick Setup**: Simple, clear steps
 - **Example-Driven**: Show, don't just tell
 - **Problem-Solving**: Anticipate issues
 - **Professional**: Polished appearance
@@ -311,7 +311,7 @@ Add to Claude Desktop config file:
 - **Tone**: Inspiring but credible
 
 ### Quick Setup
-- **Time Target**: 5 minutes maximum
+- **Goal**: Get users running quickly
 - **Steps**: 3-4 numbered actions
 - **Details**: Exact commands and locations
 - **Verification**: Always include confirmation
@@ -466,7 +466,7 @@ Challenge → Our Approach → Evidence/Example → Your Success
 
 1. **Feature Focus Instead of Benefits**
    - Wrong: "Has 5 modes"
-   - Right: "Create any type of content in seconds"
+   - Right: "Create any type of content effortlessly"
 
 2. **Missing Visual Breaks**
    - Wrong: Dense paragraphs
@@ -510,7 +510,7 @@ Overall Score: 86/100 ⭐⭐⭐⭐
 - [ ] "What is This?" section with benefits
 - [ ] Key Principle statement
 - [ ] Version number in title
-- [ ] Quick setup under 5 minutes
+- [ ] Quick setup guide
 - [ ] Real examples with inputs/outputs
 - [ ] MCP installation (both methods)
 - [ ] Troubleshooting section
@@ -535,7 +535,7 @@ Overall Score: 86/100 ⭐⭐⭐⭐
 |-----------|--------|-----------------|
 | First Impression | 20% | Title, tagline, opening |
 | Value Communication | 25% | Benefits, outcomes, examples |
-| Setup Success | 20% | Clarity, completeness, timing |
+| Setup Success | 20% | Clarity, completeness |
 | Visual Design | 15% | Formatting, hierarchy, breaks |
 | Support Quality | 20% | Troubleshooting, help, resources |
 
