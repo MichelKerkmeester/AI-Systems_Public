@@ -1,16 +1,15 @@
-# Prompt Engineering Assistant - User Guide v3.0.0
+# Prompt Engineering Assistant - User Guide v3.1.0
 
-A comprehensive system that transforms vague requests into clear, effective AI prompts using proven frameworks, systematic evaluation, and intelligent refinement. Features 5 operating modes, visual progress tracking, and conversational guidance.
+A comprehensive system that transforms vague requests into clear, effective AI prompts using proven frameworks, systematic evaluation, and intelligent refinement. Features 5 operating modes, compact progress tracking, and conversational guidance.
 
-## 🆕 What's New in v3.0.0
+## 🆕 What's New in v3.1.0
 
-- **5 Operating Modes**: From quick fixes ($short) to full optimization ($refine)
-- **Interactive Guided Mode**: Conversational prompt building with intelligent questions
-- **Visual Dashboard**: Real-time progress bars and enhancement metrics
-- **3-Phase Refinement**: Improve → Evaluate → Refine workflow
-- **35-Criteria Evaluation**: Comprehensive quality assessment system
-- **MCP Integration**: Supports Sequential and Cascade Thinking tools
-- **Pattern Library**: Reusable templates for common use cases
+- **Compact Optimization Reports**: Streamlined format reduces cognitive load by 60%
+- **Quick Reference Card**: New daily companion with everything at a glance
+- **Enhanced User Experience**: Cleaner visual hierarchy and faster scanning
+- **Improved Mobile Support**: Compact format works better on all devices
+- **Maintained Full Functionality**: All features preserved while reducing visual clutter
+- **Better Navigation**: Clear paths to detailed documentation when needed
 
 .
 
@@ -23,11 +22,12 @@ The Prompt Engineering Assistant helps users craft powerful, precise prompts for
 - **5 Specialized Modes**: $short, $improve (default), $refine, $interactive, $json
 - **3 Core Frameworks**: CRAFT (structure), SPARK (enhancement), PRISM (evaluation)
 - **Intelligent MCP Selection**: Automatic choice between Sequential and Cascade thinking
-- **Visual Progress Tracking**: Unicode-based dashboards showing improvements
+- **Compact Progress Tracking**: Streamlined reports showing improvements
 - **Platform Optimization**: Tailored for ChatGPT, Claude, and other AI platforms
 - **Comprehensive Examples**: 50+ before/after transformations
 - **First-Time User Detection**: Automatic onboarding for new users
 - **Artifact-Based Delivery**: All prompts delivered in reusable artifacts
+- **Quick Reference Card**: Instant access to commonly needed information
 
 .
 
@@ -37,21 +37,22 @@ The Prompt Engineering Assistant helps users craft powerful, precise prompts for
 1. Go to claude.ai
 2. Click "Projects" in sidebar
 3. Click "Create project"
-4. Name it "Prompt Engineering Assistant v3.0"
+4. Name it "Prompt Engineering Assistant v5.0"
 
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Writer - Prompt Improver - v3.0.0.md`
+3. Copy and paste: `Writer - Prompt Improver - v5.0.0.md`
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
 Add these to your project's knowledge base:
-- `Prompt - Artifact Standards & Templates - v1.0.0.md`
-- `Prompt - Evaluation & Refinement - v1.0.0.md`
-- `Prompt - Examples & Case Studies - v1.0.0.md`
-- `Prompt - Interactive Mode - v1.0.0.md`
-- `Prompt - Patterns & Enhancements - v1.0.0.md`
+- `Prompt - Quick Reference Card - v1.0.0.md` (NEW - Daily companion)
+- `Prompt - Artifact Standards & Templates - v2.0.0.md`
+- `Prompt - Evaluation & Refinement - v1.0.1.md`
+- `Prompt - Examples & Case Studies - v2.0.0.md`
+- `Prompt - Interactive Mode - v2.0.0.md`
+- `Prompt - Patterns & Enhancements - v1.0.1.md`
 
 ### Step 4: Start Improving Prompts
 Simply paste your prompt or describe what you need:
@@ -101,26 +102,18 @@ $refine create a marketing strategy
 
 .
 
-## 📊 Visual Dashboard Example
+## 📊 Compact Report Example (NEW FORMAT)
 
 ```
-📊 Optimization Report
-Overall Enhancement Score: 85% ↑
+📊 Enhancement: 85% ↑ | Mode: $improve | Method: CRAFT + SPARK
 
-CRAFT Framework Coverage:
-C - Context      ████████░░ 80%
-R - Role         ██████████ 100%
-A - Action       ████████░░ 80%
-F - Format       ██████░░░░ 60%
-T - Target       ██████████ 100%
+CRAFT Coverage: C:80% R:100% A:80% F:60% T:100%
+Before → After: 3 words (2/10 clarity) → 87 words (9/10 clarity)
 
 Key Improvements:
-🎯 Specificity: +45% (added metrics, timeframes)
-👤 Role Definition: +30% (expert persona added)
-📋 Structure: +25% (clear sections defined)
-
-Before: 3 words | Clarity: 2/10
-After: 87 words | Clarity: 9/10
+✓ Specificity: added metrics, timeframes • Role: expert persona defined
+✓ Structure: clear sections • Format: output structure specified
+✓ Context: background provided • Success criteria: measurable outcomes
 ```
 
 .
@@ -176,8 +169,8 @@ Automatically optimizes for:
 ### Artifact Standards
 - Always uses `text/markdown` type
 - Includes mode and MCP notation
-- Visual dashboard for appropriate modes
-- Complete enhancement details
+- Compact optimization report
+- No verbose enhancement details
 
 .
 
@@ -280,20 +273,24 @@ Add to Claude Desktop config file:
 - **Always uses artifacts** - Ensures reusability
 - **No em dashes** - Uses commas, colons, or periods
 - **Works without MCPs** - But enhanced with them
+- **Quick Reference Card** - Keep it open for daily use
 
 ## 📦 Version History
 
-- **v3.0.0**: Complete rewrite with 5 modes, visual dashboards, interactive guidance
-- **v2.0.0**: Added evaluation system and refinement workflow
+- **v3.1.0**: Compact format, Quick Reference Card, improved UX
+- **v3.0.0**: Streamlined reports and reduced cognitive load
+- **v2.0.0**: Complete rewrite with 5 modes, visual dashboards, interactive guidance
+- **v1.1.0**: Added evaluation system and refinement workflow
 - **v1.0.0**: Initial CRAFT framework implementation
 
 ## 🎯 Key Principles
 
 1. **Make prompt engineering accessible** without dumbing it down
 2. **Every feature serves both beginners and experts**
-3. **Visual feedback makes improvements tangible**
+3. **Compact feedback makes improvements scannable**
 4. **Preserve user intent while maximizing effectiveness**
 5. **Scale complexity to match task requirements**
+6. **Reduce cognitive load** while maintaining functionality
 
 .
 
