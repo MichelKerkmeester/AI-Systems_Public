@@ -1,15 +1,19 @@
-# Dev Ticket Writer - User Guide v3.1.0
+# Dev Ticket Writer - User Guide v3.2.0
 
-A comprehensive system that transforms development requests into clear, actionable tickets focusing on user value and business outcomes. Features 5 operating modes, intelligent prompt clarification, and educational Interactive mode that teaches product thinking.
+A comprehensive system that transforms development requests into clear, actionable tickets focusing on user value and business outcomes. Features 5 operating modes, intelligent prompt clarification, educational Interactive mode, and enhanced visual hierarchy with callout formatting.
 
-## 🆕 What's New in v3.1.0
+## 🆕 What's New in v3.2.0
 
-- **Prompt Improvement Layer**: Automatically clarifies vague requests like "fix auth" → "create bug fix ticket for authentication"
+- **Callout-Based Formatting**: All ticket sections now wrapped in GitHub-style callouts for enhanced visual hierarchy
+- **Improved Scannability**: NOTE, IMPORTANT, INFO, TIP, WARNING, and CAUTION callouts guide attention
+- **Symbol + Callout System**: Combines abstract symbols with callout blocks for maximum clarity
+- **Updated Templates**: All modes now use the new callout format
+- **Backwards Compatible**: Core functionality unchanged, only presentation enhanced
+
+### Previous v3.1.0 Features
+- **Prompt Improvement Layer**: Automatically clarifies vague requests
 - **Developer Abbreviation Support**: Understands API, DB, UI, auth, and other common dev terms
-- **Invisible Enhancement**: <0.5 second processing preserves Interactive mode's educational flow
 - **Smart Pattern Recognition**: Transforms "need login" → "create feature ticket for login"
-- **30-40% Fewer Clarifications**: Better first-attempt ticket creation
-- **Maintained Philosophy**: Still focuses on WHAT and WHY, never HOW
 
 ## Overview
 
@@ -18,9 +22,10 @@ The Dev Ticket Writer helps teams create professional development tickets that c
 ## ✨ Key Features
 
 - **5 Specialized Modes**: $interactive (default), $quick, $standard, $complex, $epic
+- **Callout Formatting**: Visual hierarchy through GitHub-style callout blocks
 - **Prompt Improvement**: Clarifies vague requests without adding assumptions
 - **Educational Focus**: Interactive mode teaches product management through practice
-- **Professional Symbols**: Mandatory abstract symbols (❖, ◇, →, ✓, ⊗) for visual hierarchy
+- **Professional Symbols**: Mandatory abstract symbols (❖, ◇, →, ✓, ⊗) within callouts
 - **Resolution Checklists**: Required actionable steps scaled by complexity
 - **Figma Integration**: Optional design extraction for UI features
 - **2-Minute Rule**: All tickets readable in under 2 minutes
@@ -32,19 +37,19 @@ The Dev Ticket Writer helps teams create professional development tickets that c
 1. Go to claude.ai
 2. Click "Projects" in sidebar
 3. Click "Create project"
-4. Name it "Dev Ticket Writer v3.1"
+4. Name it "Dev Ticket Writer v3.2"
 
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Writer - Dev Tickets - v3.1.0.md`
+3. Copy and paste: `Writer - Dev Tickets - v3.2.0.md`
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
 Add these to your project's knowledge base:
-- `Ticket - Quick Reference Card - v1.1.0.md` (Daily companion)
-- `Ticket - Templates & Standards - v1.0.0.md` (All templates and symbols)
-- `Ticket - Examples Library - v1.0.0.md` (Real-world examples)
+- `Ticket - Templates & Standards - v2.0.0.md` (All templates with callouts)
+- `Ticket - Examples Library - v2.0.0.md` (Real-world examples with callouts)
+- `Ticket - Quick Reference Card - v1.0.0.md` (Daily companion)
 - `Ticket - Interactive Mode - v1.3.0.md` (Conversational spec)
 - `Ticket - Prompt Improvement - v1.0.0.md` (Request clarification)
 
@@ -68,6 +73,55 @@ add API endpoint
 | **Epic** | `$e` | Major initiatives | 10-20 items | Cascade (5+ thoughts) |
 
 **Note:** Interactive mode is the default unless explicitly specified otherwise.
+
+## 📋 Ticket Structure with Callouts
+
+Every ticket section is now wrapped in appropriate callout blocks:
+
+```markdown
+> [!NOTE]
+> ### ❖ Feature Name
+> 
+> **User Value:** What the user gains
+> **Business Goal:** How this helps business
+
+> [!IMPORTANT]
+> ## ◇ Requirements
+> - Outcome-focused bullet points
+> - Clear deliverables
+
+> [!INFO]
+> ## → Designs & References
+> - [Figma designs](link)
+> - [API docs](link)
+
+> [!TIP]
+> ## ✓ Success Criteria
+> - [ ] Measurable outcomes
+> - [ ] Verification points
+
+> [!TIP]
+> ## ✓ Resolution Checklist
+> - [ ] Implementation steps
+> - [ ] Testing tasks
+> - [ ] Documentation
+
+> [!WARNING]
+> ## ⊗ Dependencies
+> - Requires: Backend API (#123)
+> - Blocks: Future feature (#456)
+```
+
+### Callout Mapping
+
+| Symbol | Section Type | Callout | Visual Purpose |
+|--------|-------------|---------|----------------|
+| ❖ | Title/Feature | `[!NOTE]` | Primary identification |
+| ◇ | Requirements | `[!IMPORTANT]` | Core requirements emphasis |
+| → | Designs/References | `[!INFO]` | Supporting information |
+| ✓ | Success/Checklist | `[!TIP]` | Actionable items |
+| ⊗ | Dependencies | `[!WARNING]` | Blocking awareness |
+| ⚠ | Risks | `[!CAUTION]` | Risk mitigation |
 
 ## 📝 How Prompt Improvement Works
 
@@ -100,21 +154,24 @@ The system invisibly enhances vague requests before processing:
 - **WHY**: User value and business outcomes
 - **NOT HOW**: Leave implementation to developers
 
-### Symbol System (Required)
-- **❖** - Titles and major features
-- **◇** - Requirements and processes
-- **→** - Designs & References
-- **✓** - Success criteria AND Resolution Checklist
-- **⊗** - Dependencies
+### Symbol System (Required within Callouts)
+- **❖** - Titles and major features (in NOTE callouts)
+- **◇** - Requirements and processes (in IMPORTANT callouts)
+- **→** - Designs & References (in INFO callouts)
+- **✓** - Success criteria AND Resolution Checklist (in TIP callouts)
+- **⊗** - Dependencies (in WARNING callouts)
+- **⚠** - Risks (in CAUTION callouts)
 
 ### Ticket Structure
-1. Title with ❖ symbol
-2. User Value statement
-3. Business Goal (measurable)
-4. Requirements (outcome-focused)
-5. Success Criteria (checkboxes)
-6. Resolution Checklist (REQUIRED)
-7. Dependencies (if any)
+1. Title with ❖ symbol in NOTE callout
+2. User Value statement in same callout
+3. Business Goal (measurable) in same callout
+4. Requirements in IMPORTANT callout
+5. Designs/References in INFO callout (if any)
+6. Success Criteria in TIP callout
+7. Resolution Checklist in TIP callout (REQUIRED)
+8. Dependencies in WARNING callout (if any)
+9. Risks in CAUTION callout (if any)
 
 ## 📊 Interactive Mode Example
 
@@ -132,8 +189,18 @@ User: Users can't save preferences. Email/password. 80% registration rate.
 
 System: Perfect! Do you have any Figma designs for the login flow?
 
-[Creates complete ticket with all sections, symbols, and resolution checklist]
+[Creates complete ticket with callout formatting, symbols, and resolution checklist]
 ```
+
+## 🎨 Visual Enhancement Benefits
+
+The new callout system provides:
+
+1. **Instant Section Recognition**: Different callout types signal content purpose
+2. **Improved Scannability**: Visual blocks separate concerns clearly  
+3. **Consistent Rendering**: Callouts display uniformly across platforms
+4. **Maintained Hierarchy**: Symbols still provide detailed categorization
+5. **Enhanced Accessibility**: Better visual grouping for all readers
 
 ## 🤖 Educational Focus
 
@@ -143,11 +210,12 @@ Interactive mode teaches product thinking by:
 - Showing quality metrics and scores
 - Providing learning points
 - Building skills through practice
+- Demonstrating proper callout usage
 
 ## 📈 Quality Assurance
 
 ### 2-Minute Readability
-All tickets must be scannable and understood in under 2 minutes.
+All tickets must be scannable and understood in under 2 minutes. Callouts enhance this by providing visual anchors.
 
 ### Resolution Checklist Scaling
 - **Quick**: 3-5 simple tasks
@@ -160,6 +228,7 @@ All tickets must be scannable and understood in under 2 minutes.
 - 95% meet quality standards
 - <5 minute average conversation
 - 100% maintain readability standards
+- 100% proper callout usage
 
 ## 🔧 MCP Tools Integration
 
@@ -181,26 +250,44 @@ The system intelligently selects thinking tools based on complexity:
 - Design extraction and understanding
 - Never required, always beneficial
 
-## 📚 Example Transformations
-
-### Bug Fix
-**Input:** "fix checkout bug"
-**Enhanced:** "create bug fix ticket for checkout issue"
-**Result:** Complete bug ticket with reproduction steps, expected behavior, and fix checklist
+## 📚 Example with Callouts
 
 ### Feature Request
-**Input:** "need API"
-**Enhanced:** "create feature ticket for application programming interface"
-**Interactive:** Asks about API purpose, consumers, and success metrics
-**Result:** Structured feature ticket with clear requirements and business value
+**Input:** "need user profiles"
 
-### Performance Issue
-**Input:** "DB queries slow"
-**Enhanced:** "create performance ticket for database queries"
-**Result:** Performance ticket with current metrics, target metrics, and optimization checklist
+**Result:**
+```markdown
+> [!NOTE]
+> ### ❖ User Profile Management
+> 
+> **User Value:** Personalize your experience and track your activity
+> **Business Goal:** Increase user engagement by 40%
+
+> [!IMPORTANT]
+> ## ◇ Requirements
+> - Display user information (name, avatar, bio)
+> - Edit profile capability
+> - Activity history view
+> - Privacy settings
+
+> [!TIP]
+> ## ✓ Success Criteria
+> - [ ] 80% of users complete profiles
+> - [ ] Profile page loads <2 seconds
+> - [ ] All fields editable and save properly
+
+> [!TIP]
+> ## ✓ Resolution Checklist
+> - [ ] Create profile component
+> - [ ] Implement edit functionality
+> - [ ] Add validation rules
+> - [ ] Test on mobile devices
+> - [ ] Update user API
+```
 
 ## ⚠️ Important Notes
 
+- **Callouts are mandatory** - Every major section needs appropriate callout
 - **Never provides implementation advice** - Only creates tickets
 - **Always uses artifacts** - Every ticket in markdown artifact
 - **No em dashes** - Uses alternatives for readability
@@ -210,6 +297,7 @@ The system intelligently selects thinking tools based on complexity:
 
 ## 📦 Version History
 
+- **v3.2.0**: Added callout formatting for enhanced visual hierarchy
 - **v3.1.0**: Added prompt improvement layer and developer abbreviations
 - **v3.0.0**: Introduced mandatory Resolution Checklists
 - **v2.0.0**: Interactive mode as default, enhanced educational focus
@@ -223,8 +311,14 @@ The system intelligently selects thinking tools based on complexity:
 4. **Maintain 2-minute readability** for all tickets
 5. **Scale complexity appropriately** with different modes
 6. **Preserve user intent** while clarifying requests
+7. **Enhance visual hierarchy** with callout formatting
 
 ## 🆘 Troubleshooting
+
+### Callout Formatting
+- **Callout not rendering**: Check markdown processor supports GitHub-style callouts
+- **Wrong callout type**: Refer to callout mapping table
+- **Missing callouts**: All sections require callout wrapping
 
 ### Prompt Improvement Issues
 - **Abbreviation not expanding**: Not in dictionary, will be preserved
@@ -237,13 +331,14 @@ The system intelligently selects thinking tools based on complexity:
 - **Figma not connecting**: It's optional, continue without
 
 ### Common Problems
-- **Missing symbols**: Required in all sections
+- **Missing symbols**: Required in all sections within callouts
 - **No Resolution Checklist**: Required for every ticket
 - **Too long to read**: Violates 2-minute rule
 - **Implementation details**: Remove HOW, keep WHAT/WHY
 
 ## 📚 Additional Resources
 
+- [GitHub Callout Documentation](https://github.com/orgs/community/discussions/16925)
 - [Product Management Basics](https://www.productplan.com/learn/product-management-basics/)
 - [User Story Writing](https://www.atlassian.com/agile/project-management/user-stories)
 - [SMART Goals](https://www.atlassian.com/blog/productivity/how-to-write-smart-goals)
@@ -251,4 +346,4 @@ The system intelligently selects thinking tools based on complexity:
 
 ---
 
-*Transform vague requests into clear tickets. Teach product thinking through practice. Focus on WHAT and WHY, never HOW.*
+*Transform vague requests into clear tickets. Teach product thinking through practice. Focus on WHAT and WHY, never HOW. Enhance clarity with callout formatting.*
