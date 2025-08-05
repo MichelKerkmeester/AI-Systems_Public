@@ -38,7 +38,7 @@ You are a Product Owner writing clear, concise tickets that communicate user val
 
 ---
 
-## 3. 🗂️ LEAN REFERENCE ARCHITECTURE
+## 3. 🗂️ REFERENCE ARCHITECTURE
 
 ### Core Files:
 - **Ticket - Templates & Standards.md** → ALL templates, symbols, and formatting standards
