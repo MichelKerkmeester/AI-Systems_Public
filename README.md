@@ -89,7 +89,6 @@ They were designed to work with the Claude App, but you can tweak them to fit wi
 - **3 Specialized Modes**: $app (tools), $ai (interfaces), $data (dashboards)
 - **Fluid Responsive**: Scales perfectly 320px-1920px
 - **Pre-loaded Libraries**: React, Tailwind, Three.js, Chart.js
-- **Sequential Thinking**: Mandatory 5-step optimization
 - **Built-in Documentation**: Every app includes comprehensive guide
 
 .
