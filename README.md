@@ -73,7 +73,7 @@ They were designed to work with the Claude App, but you can tweak them to fit wi
 - **Self-Improving System**: Self-updating knowledge base, automated prompt enhancement and Claude.md updates
 - **Multi-Model Orchestra**: KIMI & Gemini collaborate for optimal task routing
 - **Web Understanding**: Crawl4AI for dynamic content analysis and RAG integration
-- **Debug Automation**: Gemini-powered browser testing via Playwright, Puppeteer, Chrome DevTools
+- **Debug Automation**: Gemini-powered browser testing via Playwright, Puppeteer and Chrome DevTools
 
 #### 6. 🛠️ IDE System Prompt
 **Perfect for Webflow developers who also use Slater, GSAP and Motion**
