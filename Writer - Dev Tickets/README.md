@@ -1,8 +1,8 @@
-# Dev Ticket Writer - User Guide v3.3.0
+# Dev Ticket Writer - User Guide v3.4.0
 
 A comprehensive system that transforms development requests into clear, actionable tickets with developer-first clarity. Features scope prefixes, rich descriptions, technical details, automatic label mapping, and 5 operating modes including educational Interactive mode.
 
-## 🆕 What's New in v3.3.0
+## 🆕 What's New in v3.4.0
 
 - **Scope Prefixes**: Every ticket now starts with [BE], [FE], [Mobile], [FS], [DevOps], or [QA] for immediate clarity
 - **Rich Descriptions**: 1-2 comprehensive paragraphs with bullet points explaining context and impact
