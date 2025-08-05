@@ -69,12 +69,11 @@ They were designed to work with the Claude App, but you can tweak them to fit wi
 **Next-generation AI development ecosystem with autonomous agents**
 - **Intelligent Code Reuse**: Serena-powered semantic analysis prevents redundancy
 - **Long-Term Memory**: Graphiti knowledge graph retains project context forever
+- **Project Intelligence**: Fully automated project management and spec writing
+- **Self-Improving System**: Self-updating knowledge base, automated prompt enhancement and Claude.md updates
 - **Multi-Model Orchestra**: KIMI & Gemini collaborate for optimal task routing
-- **Self-Improving System**: Automated prompt enhancement and spec generation
-- **Project Intelligence**: Full lifecycle management with automated documentation
-- **Web Understanding**: Crawl4AI for dynamic content analysis and integration
+- **Web Understanding**: Crawl4AI for dynamic content analysis and RAG integration
 - **Debug Automation**: Gemini-powered browser testing via Playwright, Puppeteer, Chrome DevTools
-- **Living Documentation**: Self-updating knowledge base that evolves with your codebase
 
 #### 6. 🛠️ IDE System Prompt
 **Perfect for Webflow developers who also use Slater, GSAP and Motion**
