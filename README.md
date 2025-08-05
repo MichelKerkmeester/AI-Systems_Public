@@ -40,7 +40,6 @@ They were designed to work with the Claude App, but you can tweak them to fit wi
 - **Easy System Creation**: Spec it, Build it, Document it
 - **Educational Focus**: Learn architecture through creation
 - **Prompt Improvement**: Invisible clarity enhancement - "need AI" → perfect specification
-- **Visual Mapping**: ASCII diagrams for system understanding
 - **Version Aware**: Migration and compatibility planning
 
 #### 3. ✍️ Branded Content Writer
@@ -98,7 +97,6 @@ They were designed to work with the Claude App, but you can tweak them to fit wi
 **Natural language control of Notion workspaces**
 - **Natural Language**: "Organize my projects" → Complete workspace
 - **Best Practices**: Professional patterns automatically applied
-- **Zero Learning**: No Notion interface knowledge required
 - **Smart Structure**: Databases, views, and relations optimized
 - **Error Recovery**: Graceful handling with alternatives
 - **Educational Mode**: Learn Notion while building
