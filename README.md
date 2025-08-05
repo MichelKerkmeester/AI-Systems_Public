@@ -15,7 +15,7 @@ They were designed to work with the Claude App, but you can tweak them to fit wi
 | Category | Systems | Purpose |
 |----------|---------|---------|
 | **✍️ Writers** | [Prompt Engineering](#1--prompt-engineering-assistant), [AI Systems](#2--ai-systems-spec-writer), [Branded Content](#3--branded-content-writer), [Dev Ticket](#4--dev-ticket-writer) | Content, Documentation, Systems |
-| **💻 Dev** | [IDE System](#5--ide-system-prompt), [Claude App Builder](#6--claude-app-builder), [Claude Code CLI](#7--claude-code-cli---multi-model-agent-system-coming-soon) | Coding, Prototyping, AI Development |
+| **💻 Dev** | [Claude Code CLI](#5--claude-code-cli---multi-model-agent-system-coming-soon), [IDE System](#6--ide-system-prompt), [Claude App Builder](#7--claude-app-builder) | Coding, Prototyping, AI Development |
 | **🤖 Agents** | [Notion Agent](#8--notion-agent) | Automate workspace tasks |
 
 .
@@ -65,25 +65,7 @@ They were designed to work with the Claude App, but you can tweak them to fit wi
 
 ### 💻 Development Systems
 
-#### 5. 🛠️ IDE System Prompt
-**Transform AI coding assistants into elite software engineers**
-- **Production Standards**: Zero technical debt, fixes root causes, not symptoms
-- **Performance First**: CSS-only solutions, REM units, lazy loading
-- **IDE Support**: Cursor, Windsurf, Claude Code, VS Code, JetBrains
-- **MCP Integration**: Sequential Thinking for systematic analysis
-- **Risk Management**: Proactive breakage documentation
-- **Modular Rules**: Toggle features based on task complexity
-
-#### 6. 🏗️ Claude App Builder
-**Build functional web apps directly in Claude**
-- **Instant Apps**: Working prototypes in minutes
-- **3 Specialized Modes**: $app (tools), $ai (interfaces), $data (dashboards)
-- **Fluid Responsive**: Scales perfectly 320px-1920px
-- **Pre-loaded Libraries**: React, Tailwind, Three.js, Chart.js
-- **Sequential Thinking**: Mandatory 5-step optimization
-- **Built-in Documentation**: Every app includes comprehensive guide
-
-#### 7. 🌟 Claude Code CLI - Multi-Model Agent System (Coming Soon)
+#### 5. 🌟 Claude Code CLI - Multi-Model Agent System (Coming Soon)
 **Next-generation AI development ecosystem with autonomous agents**
 - **Intelligent Code Reuse**: Serena-powered semantic analysis prevents redundancy
 - **Long-Term Memory**: Graphiti knowledge graph retains project context forever
@@ -93,6 +75,22 @@ They were designed to work with the Claude App, but you can tweak them to fit wi
 - **Web Understanding**: Crawl4AI for dynamic content analysis and integration
 - **Debug Automation**: Gemini-powered browser testing via Playwright, Puppeteer, Chrome DevTools
 - **Living Documentation**: Self-updating knowledge base that evolves with your codebase
+
+#### 6. 🛠️ IDE System Prompt
+**Perfect for Webflow developers who also use Slater, GSAP and Motion**
+- **Production Standards**: Zero technical debt, fixes root causes, not symptoms
+- **Performance First**: CSS-only solutions, REM units, lazy loading
+- **IDE Support**: Cursor, Windsurf, Claude Code, VS Code, JetBrains
+- **Risk Management**: Proactive breakage documentation
+- **Modular Rules**: Toggle features based on task complexity
+
+#### 7. 🏗️ Claude App Builder
+**Build functional app prototypes directly in Claude**
+- **3 Specialized Modes**: $app (tools), $ai (interfaces), $data (dashboards)
+- **Fluid Responsive**: Scales perfectly 320px-1920px
+- **Pre-loaded Libraries**: React, Tailwind, Three.js, Chart.js
+- **Sequential Thinking**: Mandatory 5-step optimization
+- **Built-in Documentation**: Every app includes comprehensive guide
 
 .
 
