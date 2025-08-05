@@ -57,7 +57,6 @@ They were designed to work with the Claude App, but you can tweak them to fit wi
 - **Interactive Default**: Conversational guidance for perfect tickets
 - **5 Ticket Modes**: Quick, Standard, Complex, Epic, Interactive
 - **2-Minute Rule**: Readable tickets guaranteed
-- **User Value Focus**: WHAT and WHY, never HOW
 - **Prompt Improvement**: Auto-clarifies "fix auth" → "create bug fix ticket for authentication"
 - **Figma Integration**: Design understanding for better requirements
 - **Triple MCP Support**: Sequential, Cascade, and Figma tools
