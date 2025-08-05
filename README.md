@@ -15,8 +15,8 @@ They were designed to work with the Claude App, but you can tweak them to fit wi
 | Category | Systems | Purpose |
 |----------|---------|---------|
 | **✍️ Writers** | [Prompt Engineering](#1--prompt-engineering-assistant), [AI Systems](#2--ai-systems-spec-writer), [Branded Content](#3--branded-content-writer), [Dev Ticket](#4--dev-ticket-writer) | Content, Documentation, Systems |
-| **💻 Dev** | [IDE System](#5--ide-system-prompt), [Claude App Builder](#6--claude-app-builder) | Coding, Prototyping |
-| **🤖 Agents** | [Notion Agent](#7--notion-agent) | Automate workspace tasks |
+| **💻 Dev** | [IDE System](#5--ide-system-prompt), [Claude App Builder](#6--claude-app-builder), [Claude Code CLI](#7--claude-code-cli---multi-model-agent-system-coming-soon) | Coding, Prototyping, AI Development |
+| **🤖 Agents** | [Notion Agent](#8--notion-agent) | Automate workspace tasks |
 
 .
 
@@ -84,11 +84,22 @@ They were designed to work with the Claude App, but you can tweak them to fit wi
 - **Sequential Thinking**: Mandatory 5-step optimization
 - **Built-in Documentation**: Every app includes comprehensive guide
 
+#### 7. 🌟 Claude Code CLI - Multi-Model Agent System (Coming Soon)
+**Next-generation AI development ecosystem with autonomous agents**
+- **Intelligent Code Reuse**: Serena-powered semantic analysis prevents redundancy
+- **Long-Term Memory**: Graphiti knowledge graph retains project context forever
+- **Multi-Model Orchestra**: KIMI & Gemini collaborate for optimal task routing
+- **Self-Improving System**: Automated prompt enhancement and spec generation
+- **Project Intelligence**: Full lifecycle management with automated documentation
+- **Web Understanding**: Crawl4AI for dynamic content analysis and integration
+- **Debug Automation**: Gemini-powered browser testing via Playwright, Puppeteer, Chrome DevTools
+- **Living Documentation**: Self-updating knowledge base that evolves with your codebase
+
 .
 
 ### 🤖 Agent Systems
 
-#### 7. 📝 Notion Agent
+#### 8. 📝 Notion Agent
 **Natural language control of Notion workspaces**
 - **Natural Language**: "Organize my projects" → Complete workspace
 - **Best Practices**: Professional patterns automatically applied
@@ -96,6 +107,7 @@ They were designed to work with the Claude App, but you can tweak them to fit wi
 - **Smart Structure**: Databases, views, and relations optimized
 - **Error Recovery**: Graceful handling with alternatives
 - **Educational Mode**: Learn Notion while building
+
 
 .
 
