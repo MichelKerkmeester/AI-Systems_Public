@@ -1,4 +1,4 @@
-ja# AI Magic ✨
+# AI Magic ✨
 
 Some of my more basic AI systems that I made available to the public. 
 
@@ -67,7 +67,7 @@ They were designed to work with the Claude App, but you can tweak them to fit wi
 
 #### 5. 🌟 Claude Code CLI - Multi-Model Agent System (Coming Soon)
 **Next-generation AI development ecosystem with autonomous agents**
-- **Multi-Model Orchestra**: Claude, KIMI & Gemini collaborate for optimal task routing (Save tokens, only use Opus when needed)
+- **Multi-Model Orchestra**: Claude, KIMI & Gemini collaborate for optimal task routing (Save tokens, only uses Opus when needed)
 - **Intelligent Code Reuse**: Serena-powered semantic analysis prevents redundancy
 - **Long-Term Memory**: Graphiti knowledge graph retains project context forever
 - **Web Understanding**: Crawl4AI for dynamic content analysis and RAG integration
