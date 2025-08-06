@@ -61,7 +61,6 @@ Some of my more basic AI systems that I made available to the public. They were 
 - **Multi-Model Orchestra**: Claude, KIMI & Gemini collaborate for optimal task routing (Save tokens, only uses Opus when needed)
 - **Intelligent Code Reuse**: Serena-powered semantic analysis prevents redundancy
 - **Long-Term Memory**: Graphiti knowledge graph retains project context forever
-- **Web Understanding**: Crawl4AI for dynamic content analysis and RAG integration
 - **Self-Improving System**: Self-updating knowledge base, automated prompt enhancement and Claude.md updates
 - **Project Intelligence**: Fully automated project management and spec writing
 - **Debug Automation**: Gemini-powered browser testing via Playwright, Puppeteer and Chrome DevTools
