@@ -1,6 +1,6 @@
 # Dev Ticket Writer - User Guide v4.0.0
 
-A comprehensive system that transforms development requests into clear, actionable tickets with developer-first clarity. Features user-specified scope and labels, structured problem/solution descriptions, concise frontend implementation specs, and 5 operating modes including educational Interactive mode.
+The Dev Ticket Writer helps teams create professional development tickets that are "clear at first glance" for developers while teaching product thinking principles. By focusing on WHAT needs to be done and WHY it matters (not HOW to implement), it bridges the communication gap between product and development. When implementation details are needed, the concise Spec mode provides focused, copy-paste ready solutions.
 
 ## 🆕 What's New in v4.0.0
 
@@ -9,10 +9,6 @@ A comprehensive system that transforms development requests into clear, actionab
 - **Concise Spec Mode**: 1-3 questions max, 20-60 lines output, copy-paste ready code
 - **Smart Pattern Detection**: Instant generation for common patterns like "hide scrollbar"
 - **Enhanced Complex Mode**: Choose between phased approach or child ticket breakdown
-
-## Overview
-
-The Dev Ticket Writer helps teams create professional development tickets that are "clear at first glance" for developers while teaching product thinking principles. By focusing on WHAT needs to be done and WHY it matters (not HOW to implement), it bridges the communication gap between product and development. When implementation details are needed, the concise Spec mode provides focused, copy-paste ready solutions.
 
 ## ✨ Key Features
 
@@ -25,7 +21,8 @@ The Dev Ticket Writer helps teams create professional development tickets that a
 - **Educational Focus**: Interactive mode teaches product management through practice
 - **Resolution Checklists**: Required actionable steps scaled by complexity
 - **2-Minute Rule**: All tickets readable in under 2 minutes
-- **Artifact Delivery**: Every ticket in reusable markdown artifacts
+
+.
 
 ## 🚀 Quick Setup
 
@@ -60,6 +57,8 @@ $c payment integration           # Complex (offers Interactive)
 $spec hide scrollbar             # Spec mode (instant generation)
 ```
 
+.
+
 ## 🎯 Interactive Offers (NEW)
 
 When users specify `$standard` or `$complex`, the system ALWAYS offers Interactive assistance first:
@@ -78,6 +77,8 @@ Which would you prefer? (1 or 2)
 
 This ensures users get the best possible ticket quality while respecting their autonomy.
 
+.
+
 ## 🎛️ Operating Modes
 
 | Mode | Command | When to Use | Resolution Checklist | Interactive Offer | Focus |
@@ -89,6 +90,8 @@ This ensures users get the best possible ticket quality while respecting their a
 | **Spec** | `$spec` | Frontend implementation | 20-60 lines | No | Concise code solutions |
 
 **Note:** Interactive mode is the default unless explicitly specified.
+
+.
 
 ## 🔧 Complex Mode (Enhanced)
 
@@ -107,6 +110,8 @@ For multi-team coordination:
 - Quality & polish tickets
 
 The system helps you choose the right approach during ticket creation.
+
+.
 
 ## 💻 Spec Mode (Transformed)
 
@@ -137,6 +142,8 @@ User: 50k, React
 - **Copy-paste ready code**
 - **No placeholders or comments**
 
+.
+
 ## 🎯 Scope Prefixes
 
 Every ticket title includes a user-specified scope prefix:
@@ -151,6 +158,8 @@ Every ticket title includes a user-specified scope prefix:
 | **[QA]** | Testing features | `# ❖ [QA] Test Automation` |
 
 **Note:** System asks users to specify scope - never assumes.
+
+.
 
 ## 📝 Structured Descriptions
 
@@ -173,6 +182,8 @@ By implementing comprehensive filtering capabilities, we'll dramatically improve
 **Business Goal:** Dramatically reduce search abandonment rate
 ```
 
+.
+
 ## 🏷️ Label System
 
 The system asks users to specify appropriate labels:
@@ -187,6 +198,8 @@ Example:
 System: What labels should I add to this ticket?
 User: feature, search, filters, high-priority
 ```
+
+.
 
 ## 💬 Interactive Mode Flow
 
@@ -247,95 +260,83 @@ User: React
 System: [Generates 25-line working implementation]
 ```
 
-## 🔧 MCP Tools Integration
+.
 
-The system intelligently selects thinking tools:
+## 🔧 Installing MCP Tools (Recommended)
 
-### Sequential Thinking MCP
-- Quick ($q), Standard ($s), and Spec ($spec) modes
-- 1-3 thoughts for analysis
+The system intelligently selects between Sequential and Cascade Thinking based on task complexity. Choose either Docker (stable) or NPX (quick) installation:
 
-### Cascade Thinking MCP
-- Interactive mode (always)
-- Complex ($c) mode
-- 3-5+ thoughts with branching
+### Option A: AI-Powered Docker Setup (Recommended)
+
+**Prerequisites:**
+- Docker Desktop installed ([Download Docker Desktop](https://www.docker.com/products/docker-desktop/))
+- Claude Desktop app ([Download Claude](https://claude.ai/download))
+
+**AI-Assisted Installation:**
+
+Copy this prompt to Claude, ChatGPT, or any AI assistant:
+
+```
+Help me set up Docker containers for the Dev Ticket Writer MCP tools.
+
+I need to:
+1. Create a directory at "$HOME/MCP Servers"
+2. Clone these repos:
+   - https://github.com/sequentialthinking/sequential-thinking-mcp
+   - https://github.com/cascadethinking/cascade-thinking-mcp
+3. Create a docker-compose.yml file with services for both
+4. Configure Claude Desktop's claude_desktop_config.json
+5. Start the containers with docker-compose
+
+I'm on [Windows/Mac/Linux]. Please give me the exact commands to run.
+```
+
+The AI will provide step-by-step commands for your operating system.
+
+**Verification:**
+1. Check Docker Desktop for 2 running containers
+2. Look for the 🔌 icon in Claude Desktop showing available tools
+3. Test with: "$q fix login bug"
+
+### Option B: NPX Installation (Quick but Less Stable)
+
+Add to Claude Desktop config file:
+```json
+{
+  "mcpServers": {
+    "sequential-thinking": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+    },
+    "cascade-thinking": {
+      "command": "npx",
+      "args": ["-y", "cascade-thinking-mcp"]
+    }
+  }
+}
+```
+
+### MCP Tool Selection
+
+The system intelligently selects thinking tools based on mode:
+
+| Mode | Tool Selection | Thoughts Used |
+|------|---------------|---------------|
+| **Interactive** | Cascade Thinking | 3-5+ thoughts with branching |
+| **Quick ($q)** | Sequential Thinking | 1-3 thoughts for analysis |
+| **Standard ($s)** | Sequential Thinking | 1-3 thoughts for analysis |
+| **Complex ($c)** | Cascade Thinking | 3-5+ thoughts with branching |
+| **Spec ($spec)** | Sequential Thinking | 1-3 thoughts for analysis |
 
 ### Figma MCP (Optional)
-- UI feature tickets
-- Design extraction
-- Never required, always beneficial
+For UI feature tickets, the system can integrate with Figma to:
+- Extract design specifications
+- Reference component libraries
+- Link to design files
 
-## 📚 Example Outputs
+While never required, Figma integration enhances UI-related tickets with direct design references.
 
-### Standard Ticket (After Interactive Offer)
-```markdown
-# ❖ [FS] User Authentication System
-
-[Comprehensive description with ⚠︎ problems and ⁉ reasons]
-[User value and business goal]
-[Detailed requirements with **◊** sub-headings]
-[Success criteria]
-[Resolution checklist 8-15 items]
-[User-specified labels]
-```
-
-### Complex Ticket (Phased Approach)
-```markdown
-# ❖ [FS] Real-time Collaboration Platform
-
-[Strategic overview]
-[Phase 1: Foundation]
-[Phase 2: Core Features]
-[Phase 3: Enhancement]
-[Resolution checklist 15-30 items organized by phase]
-```
-
-### Spec Implementation
-```markdown
-# Virtual Scroll Table
-
-## Objective
-Efficiently render 50k rows without performance issues.
-
-## Implementation
-```typescript
-[40 lines of working React code]
-```
-
-## Key Points
-- Only renders visible rows
-- Smooth scrolling
-- Add memo() for optimization
-```
-
-## ⚠️ Important Notes
-
-- **Interactive offers required** - System always offers for $s and $c
-- **Scope/labels required** - System asks users to specify
-- **No assumptions** - System never guesses
-- **Complex mode flexible** - Handles phases OR child tickets
-- **Spec mode concise** - 1-3 questions, working code only
-- **No percentages** - Use descriptive language
-- **Always uses artifacts** - Every ticket/spec in markdown
-
-## 📦 Version History
-
-- **v4.0.0**: 5 modes (merged Complex/Epic), Interactive offers, concise Spec mode
-- **v3.5.0**: User-specified scope and labels, enhanced Interactive mode
-- **v3.4.0**: Structured descriptions (⚠︎/⁉), Spec mode, implementation references
-- **v3.0.0**: Introduced mandatory Resolution Checklists
-- **v2.0.0**: Interactive mode as default, educational focus
-- **v1.0.0**: Initial WHAT/WHY philosophy implementation
-
-## 🎯 Key Principles
-
-1. **User empowerment** through Interactive offers for better tickets
-2. **No assumptions** - always ask for scope and labels
-3. **Flexibility** - Complex mode adapts to feature needs
-4. **Conciseness** - Spec mode delivers focused solutions
-5. **Education** - Learn product thinking through practice
-6. **Developer clarity** - Structured, scannable tickets
-7. **2-minute readability** for all tickets
+.
 
 ## 🆘 Troubleshooting
 
@@ -359,12 +360,59 @@ Efficiently render 50k rows without performance issues.
 - **Wrong scope chosen?** - Be specific about work location
 - **Too many labels?** - Keep to 3-5 most relevant
 
+### MCP Connection Issues
+- **Docker not running**: Start Docker Desktop
+- **Can't connect**: Restart Claude Desktop
+- **Wrong directory**: Check you're in "$HOME/MCP Servers"
+- **Permission errors**: Run terminal as administrator (Windows) or use sudo (Mac/Linux)
+
+### Common Setup Problems
+- **"Command not found"**: Ensure Node.js is installed for NPX method
+- **Containers won't start**: Check Docker Desktop is running
+- **Tools not showing**: Restart Claude Desktop after config changes
+- **Rate limits**: Both tools handle this gracefully with retries
+
+### Getting Help
+- For Docker issues: Check container logs in Docker Desktop
+- For NPX issues: Check Claude Desktop logs
+- For general issues: The AI assistant can help diagnose problems
+
+.
+
+## ⚠️ Important Notes
+
+- **Interactive offers required** - System always offers for $s and $c
+- **Scope/labels required** - System asks users to specify
+- **No assumptions** - System never guesses
+- **Complex mode flexible** - Handles phases OR child tickets
+- **Spec mode concise** - 1-3 questions, working code only
+- **No percentages** - Use descriptive language
+- **Always uses artifacts** - Every ticket/spec in markdown
+- **Works without MCPs** - But enhanced with them
+
+.
+
+## 📦 Version History
+
+- **v4.0.0**: 5 modes (merged Complex/Epic), Interactive offers, concise Spec mode
+- **v3.5.0**: User-specified scope and labels, enhanced Interactive mode
+- **v3.4.0**: Structured descriptions (⚠︎/⁉), Spec mode, implementation references
+- **v3.0.0**: Introduced mandatory Resolution Checklists
+- **v2.0.0**: Interactive mode as default, educational focus
+- **v1.0.0**: Initial WHAT/WHY philosophy implementation
+
+.
+
 ## 📚 Additional Resources
 
 - [Product Management Basics](https://www.productplan.com/learn/product-management-basics/)
 - [User Story Writing](https://www.atlassian.com/agile/project-management/user-stories)
 - [Writing Clear Requirements](https://www.atlassian.com/agile/requirements)
 - [MDN Web Docs](https://developer.mozilla.org/) (for spec mode)
+- [MCP Protocol Guide](https://modelcontextprotocol.io/)
+- [Docker Desktop Help](https://docs.docker.com/desktop/)
+- [Sequential Thinking MCP](https://github.com/sequentialthinking/sequential-thinking-mcp)
+- [Cascade Thinking MCP](https://github.com/cascadethinking/cascade-thinking-mcp)
 
 ---
 
