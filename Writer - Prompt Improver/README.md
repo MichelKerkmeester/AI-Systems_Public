@@ -192,7 +192,7 @@ Automatically optimizes for:
 
 ## 🔧 Installing MCP Tools (Recommended)
 
-The system intelligently selects between these based on task complexity. Choose either Docker (stable) or NPX (quick) installation:
+The system intelligently selects between Sequential and Cascade Thinking based on task complexity. Choose either Docker (stable) or NPX (quick) installation:
 
 ### Option A: AI-Powered Docker Setup (Recommended)
 
@@ -210,8 +210,8 @@ Help me set up Docker containers for the Prompt Engineering Assistant MCP tools.
 I need to:
 1. Create a directory at "$HOME/MCP Servers"
 2. Clone these repos:
-   - https://github.com/arben-adm/mcp-sequential-thinking.git
-   - https://github.com/drewdotpro/cascade-thinking-mcp.git
+   - https://github.com/sequentialthinking/sequential-thinking-mcp
+   - https://github.com/cascadethinking/cascade-thinking-mcp
 3. Create a docker-compose.yml file with services for both
 4. Configure Claude Desktop's claude_desktop_config.json
 5. Start the containers with docker-compose
@@ -243,6 +243,18 @@ Add to Claude Desktop config file:
   }
 }
 ```
+
+### MCP Tool Selection
+
+The system intelligently selects thinking tools based on mode:
+
+| Mode | Tool Selection | Thoughts Used |
+|------|---------------|---------------|
+| **$short** | Sequential Thinking | 1-2 thoughts |
+| **$improve** | Sequential Thinking | 2-3 thoughts |
+| **$refine** | Cascade Thinking | 3-5+ thoughts |
+| **$interactive** | Sequential Thinking | 1-3 thoughts |
+| **$json** | Sequential Thinking | 2-3 thoughts |
 
 .
 
@@ -294,12 +306,13 @@ Add to Claude Desktop config file:
 
 .
 
-## 📚 Other Resources
+## 📚 Additional Resources
 
 - [MCP Protocol Guide](https://modelcontextprotocol.io/)
 - [Docker Desktop Help](https://docs.docker.com/desktop/)
-- [Sequential Thinking MCP](https://github.com/arben-adm/mcp-sequential-thinking)
-- [Cascade Thinking MCP](https://github.com/drewdotpro/cascade-thinking-mcp)
+- [Sequential Thinking MCP](https://github.com/sequentialthinking/sequential-thinking-mcp)
+- [Cascade Thinking MCP](https://github.com/cascadethinking/cascade-thinking-mcp)
+- [Claude Projects Guide](https://support.anthropic.com/claude-projects)
 
 ---
 
