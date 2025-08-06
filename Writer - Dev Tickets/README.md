@@ -1,33 +1,31 @@
-# Dev Ticket Writer - User Guide v3.4.0
+# Dev Ticket Writer - User Guide v4.0.0
 
-A comprehensive system that transforms development requests into clear, actionable tickets with developer-first clarity. Features scope prefixes, structured problem/solution descriptions, technical implementation specs, automatic label mapping, and 6 operating modes including educational Interactive mode.
+A comprehensive system that transforms development requests into clear, actionable tickets with developer-first clarity. Features user-specified scope and labels, structured problem/solution descriptions, concise frontend implementation specs, and 5 operating modes including educational Interactive mode.
 
-## 🆕 What's New in v3.4.0
+## 🆕 What's New in v4.0.0
 
-- **Structured Descriptions**: New format with ⚠︎ Key problems/changes and ⁉ Reasons why sections
-- **Spec Mode ($spec)**: Create technical implementation specifications with code examples
-- **Implementation Spec References**: Link HOW-to guides within standard tickets
-- **Concise Problem Lists**: Bullet points replace long paragraphs for better scanning
-- **New Icons**: ⚠︎ and ⁉ for visual hierarchy in descriptions
-- **No More Technical Details Section**: Replaced by optional spec references
+- **5 Modes Instead of 6**: Complex mode now handles both phased development AND child tickets
+- **Interactive Offers**: System ALWAYS offers Interactive guidance when users specify $s or $c modes
+- **Concise Spec Mode**: 1-3 questions max, 20-60 lines output, copy-paste ready code
+- **Smart Pattern Detection**: Instant generation for common patterns like "hide scrollbar"
+- **Enhanced Complex Mode**: Choose between phased approach or child ticket breakdown
 
 ## Overview
 
-The Dev Ticket Writer helps teams create professional development tickets that are "clear at first glance" for developers while teaching product thinking principles. By focusing on WHAT needs to be done and WHY it matters (not HOW to implement), it bridges the communication gap between product and development. When implementation details are needed, the new Spec mode provides technical specifications with code examples.
+The Dev Ticket Writer helps teams create professional development tickets that are "clear at first glance" for developers while teaching product thinking principles. By focusing on WHAT needs to be done and WHY it matters (not HOW to implement), it bridges the communication gap between product and development. When implementation details are needed, the concise Spec mode provides focused, copy-paste ready solutions.
 
 ## ✨ Key Features
 
-- **Developer-First Clarity**: Scope prefixes, structured descriptions, and optional spec links
-- **6 Specialized Modes**: $interactive (default), $quick, $standard, $complex, $epic, $spec (NEW)
+- **Developer-First Clarity**: User-specified scope prefixes, structured descriptions
+- **5 Specialized Modes**: $interactive (default), $quick, $standard, $complex, $spec
+- **Interactive Offers**: Automatic guidance offers for $standard and $complex modes
+- **Concise Spec Mode**: Minimal conversation (1-3 questions), working code examples
 - **Enhanced Symbol System**: Professional symbols (❖, ◇, **◊**, →, ✓, ⊗, ⚠︎, ⁉) for visual hierarchy
 - **Prompt Improvement**: Clarifies vague requests without adding assumptions
 - **Educational Focus**: Interactive mode teaches product management through practice
 - **Resolution Checklists**: Required actionable steps scaled by complexity
-- **Implementation Specs**: Technical HOW-to guides with code examples (NEW)
-- **Figma Integration**: Optional design extraction for UI features
 - **2-Minute Rule**: All tickets readable in under 2 minutes
 - **Artifact Delivery**: Every ticket in reusable markdown artifacts
-- **Smart Detection**: Automatic scope identification and label assignment
 
 ## 🚀 Quick Setup
 
@@ -35,35 +33,113 @@ The Dev Ticket Writer helps teams create professional development tickets that a
 1. Go to claude.ai
 2. Click "Projects" in sidebar
 3. Click "Create project"
-4. Name it "Dev Ticket Writer v3.4"
+4. Name it "Dev Ticket Writer v4.0"
 
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Writer - Dev Tickets - v3.4.0.md`
+3. Copy and paste: `Writer - Dev Tickets - v4.0.0.md`
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
 Add these to your project's knowledge base:
-- `Ticket - Quick Reference Card - v1.3.0.md` (Daily companion with spec mode)
-- `Ticket - Templates & Standards - v1.3.0.md` (Updated templates with new format)
-- `Ticket - Examples Library - v1.3.0.md` (Examples with structured descriptions)
-- `Ticket - Interactive Mode - v1.3.0.md` (Conversational spec with spec detection)
+- `Ticket - Quick Reference Card - v2.0.0.md` (Updated with Interactive offers)
+- `Ticket - Templates & Standards - v2.0.0.md` (Merged Complex mode templates)
+- `Ticket - Examples Library - v2.0.0.md` (New concise Spec examples)
+- `Ticket - Interactive Mode - v1.6.0.md` (Enhanced with offer system)
+- `Ticket - Spec Mode Frontend Guide - v2.0.0.md` (Concise implementation focus)
 - `Ticket - Prompt Improvement - v1.0.0.md` (Request clarification)
 
 ### Step 4: Start Creating Tickets
 Simply describe what you need:
 ```
-fix login bug
-need user profiles  
-$s dashboard feature
-add API endpoint
-$spec hide scrollbar CSS
+fix login bug                    # Interactive mode (default)
+$q user profiles                 # Quick mode
+$s dashboard feature             # Standard (offers Interactive)
+$c payment integration           # Complex (offers Interactive)
+$spec hide scrollbar             # Spec mode (instant generation)
 ```
+
+## 🎯 Interactive Offers (NEW)
+
+When users specify `$standard` or `$complex`, the system ALWAYS offers Interactive assistance first:
+
+```markdown
+User: $s user authentication
+
+System: I see you want a standard ticket for user authentication.
+
+Would you like me to:
+1. **Guide you through creating it interactively** - I'll ask questions to ensure we capture everything
+2. **Create it directly** - I'll use my best judgment
+
+Which would you prefer? (1 or 2)
+```
+
+This ensures users get the best possible ticket quality while respecting their autonomy.
+
+## 🎛️ Operating Modes
+
+| Mode | Command | When to Use | Resolution Checklist | Interactive Offer | Focus |
+|------|---------|-------------|---------------------|-------------------|-------|
+| **Interactive** | DEFAULT | No mode specified, guidance needed | Adaptive | N/A (Default) | Conversational guidance |
+| **Quick** | `$q` | Simple features (explicit) | 3-5 items | No | Essential requirements |
+| **Standard** | `$s` | Full features (explicit) | 8-15 items | **YES - Always** | Complete context |
+| **Complex** | `$c` | Major features/initiatives | 15-30 items | **YES - Always** | Phases OR child tickets |
+| **Spec** | `$spec` | Frontend implementation | 20-60 lines | No | Concise code solutions |
+
+**Note:** Interactive mode is the default unless explicitly specified.
+
+## 🔧 Complex Mode (Enhanced)
+
+Complex mode now offers two approaches for major features:
+
+### Option A: Phased Development
+For incremental building of a single large feature:
+- Phase 1: Foundation
+- Phase 2: Core Features
+- Phase 3: Enhancement
+
+### Option B: Child Ticket Breakdown
+For multi-team coordination:
+- Infrastructure tickets
+- Feature implementation tickets
+- Quality & polish tickets
+
+The system helps you choose the right approach during ticket creation.
+
+## 💻 Spec Mode (Transformed)
+
+The new Spec mode is concise and efficient:
+
+### Fast Paths (0-1 Questions)
+```markdown
+User: $spec hide scrollbar
+System: Browser compatibility needed?
+User: yes
+[Generates 20-line CSS solution immediately]
+```
+
+### Component Patterns (2-3 Questions)
+```markdown
+User: $spec virtual scroll table
+System: Quick setup:
+1. Row count?
+2. React/Vue?
+User: 50k, React
+[Generates 40-line working implementation]
+```
+
+### Key Features
+- **Auto-detection** of common patterns
+- **1-3 questions maximum**
+- **20-30 lines for simple, 40-60 for complex**
+- **Copy-paste ready code**
+- **No placeholders or comments**
 
 ## 🎯 Scope Prefixes
 
-Every ticket title includes a scope prefix for immediate clarity:
+Every ticket title includes a user-specified scope prefix:
 
 | Prefix | Use For | Example |
 |--------|---------|---------|
@@ -74,11 +150,11 @@ Every ticket title includes a scope prefix for immediate clarity:
 | **[DevOps]** | Infrastructure | `# ❖ [DevOps] CI/CD Pipeline` |
 | **[QA]** | Testing features | `# ❖ [QA] Test Automation` |
 
-**Note:** Spec mode doesn't use scope prefixes.
+**Note:** System asks users to specify scope - never assumes.
 
-## 📝 Structured Descriptions (NEW FORMAT)
+## 📝 Structured Descriptions
 
-Every ticket now uses a concise, structured description format:
+Every ticket uses a concise, structured description format:
 
 ```markdown
 # ❖ [FE] Advanced Search Filters
@@ -86,351 +162,202 @@ Every ticket now uses a concise, structured description format:
 Our search functionality is failing to meet user needs and causing lost revenue.
 
 ⚠︎ **Key problems/changes:**
-* **High abandonment rate** - Majority of users give up before finding what they need
-* **No filtering options** - Users scroll through hundreds of irrelevant results
+* **High abandonment rate** - Users give up before finding what they need
+* **No filtering options** - Users scroll through irrelevant results
 * **Poor relevance** - Basic keyword matching returns unrelated items
-* **Mobile frustration** - Search interface breaks on small screens
 
 ⁉ **Reasons why:**
-By implementing comprehensive filtering capabilities with real-time updates, we'll dramatically improve product discovery, reduce abandonment rates, and increase conversion.
+By implementing comprehensive filtering capabilities, we'll dramatically improve product discovery and increase conversion.
 
 **User Value:** Find exactly what you need with powerful filters
 **Business Goal:** Dramatically reduce search abandonment rate
 ```
 
-## 🎛️ Operating Modes
+## 🏷️ Label System
 
-| Mode | Command | When to Use | Resolution Checklist | Focus |
-|------|---------|-------------|---------------------|-------|
-| **Interactive** | DEFAULT | No mode specified, guidance needed | Adaptive | User value teaching |
-| **Quick** | `$q` | Simple features (explicit request) | 3-5 items | Essential requirements |
-| **Standard** | `$s` | Full features (explicit request) | 8-15 items | Complete context |
-| **Complex** | `$c` | Multi-phase implementations | 15-30 items | Phased approach |
-| **Epic** | `$e` | Major initiatives | 10-20 items | Child ticket breakdown |
-| **Spec** | `$spec` | Technical implementation details | 5-10 tests | HOW to implement |
+The system asks users to specify appropriate labels:
 
-**Note:** Interactive mode is the default unless explicitly specified otherwise.
+### Common Label Categories
+- **Type**: feature, bug, improvement, technical-debt
+- **Component**: authentication, payments, search, UI, database
+- **Priority**: high, medium, low (if your team uses these)
 
-## 🔧 Spec Mode (NEW)
-
-Create technical implementation specifications when developers need HOW-to guidance:
-
-### When to Use $spec
-- User asks "how to implement"
-- Request for CSS/JS code
-- Technical approach needed
-- Browser compatibility questions
-- Performance optimization techniques
-
-### Spec Structure
+Example:
 ```markdown
-# Scrollbar Visibility Implementation Spec
-
-## Objective
-Implement dual-container layout with hidden scrollbar on right container.
-
-## CSS Implementation
-```css
-.right-container {
-  overflow-y: auto;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE/Edge */
-}
-
-.right-container::-webkit-scrollbar {
-  display: none; /* Chrome/Safari */
-}
+System: What labels should I add to this ticket?
+User: feature, search, filters, high-priority
 ```
 
-## Browser Compatibility
-- **Chrome/Edge**: ✓ `::-webkit-scrollbar`
-- **Firefox**: ✓ `scrollbar-width: none`
-- **Safari**: ✓ `::-webkit-scrollbar`
-- **IE 10+**: ✓ `-ms-overflow-style: none`
+## 💬 Interactive Mode Flow
 
-## Key Points
-- Properties scoped to specific selectors
-- No JavaScript required
-- Scroll functionality preserved
+The default conversational mode:
 
-## Testing Checklist
-- [ ] Scrollbar hidden on right container
-- [ ] Scroll still functional
-- [ ] Works in all browsers
-```
+### Typical Flow
+1. User describes feature (no mode specified)
+2. System asks about user needs and problems
+3. System asks for scope ([BE], [FE], etc.)
+4. System asks for labels
+5. System asks about success metrics
+6. Creates comprehensive ticket
+7. Delivers with quality dashboard
 
-## 🔗 Implementation Spec References (NEW)
-
-Standard tickets can now reference implementation specs for technical clarity:
-
+### Quality Dashboard
 ```markdown
-## ◇ Requirements
+📊 Interactive Mode Report
+Overall Quality Score: 4.5/5 ⭐
 
-**◊** Search Filters
-— Filter Types
-• Category multi-select
-• Date range picker
-• Price range slider
-— How to implement?
-• Check and follow this implementation spec:
-• {Search Filter Implementation Spec}
+✅ Ticket Structure Checklist:
+✓ User value clearly stated
+✓ Scope properly identified: [FS]
+✓ Labels added: feature, search, filters
+✓ Business goal measurable
+✓ Requirements outcome-focused
+✓ 2-minute read test: PASS (1:45)
 ```
 
-This pattern maintains WHAT/WHY focus while linking to HOW when needed.
+## 📋 Examples
 
-## 🏷️ Automatic Label Mapping
-
-The system automatically assigns labels based on detected content:
-
-| Detected Content | Auto-Applied Labels |
-|-----------------|-------------------|
-| Backend code | `Backend-System`, `API` |
-| Frontend UI | `[App]-App`, `UI` |
-| Mobile features | `Mobile-App` |
-| Authentication | `Authentication`, `Security` |
-| Database work | `Database`, `Backend-System` |
-| Bug fixes | `bug`, `defect` |
-| New features | `feature`, `enhancement` |
-| Performance | `performance`, `optimization` |
-| Implementation specs | `implementation`, `technical-spec` |
-
-## 📝 How Prompt Improvement Works
-
-The system invisibly enhances vague requests before processing:
-
-### What Gets Enhanced
+### Interactive Mode (Default)
 ```
-"fix auth" → "create bug fix ticket for authentication"
-"DB slow" → "create performance ticket for database"
-"how to hide scrollbar" → "create implementation spec for hiding scrollbar"
-"need API docs" → "create feature ticket for application programming interface documentation"
+User: need user profiles
+System: [Starts conversation about user needs, then asks for scope and labels]
 ```
 
-### Common Developer Abbreviations
-- **Technical**: API, DB, UI, UX, FE, BE, auth, config, env, repo
-- **Process**: QA, CI/CD, MVP, POC, PR
-- **Performance**: perf, opt, mem
-- **Security**: sec, vuln, 2FA
-
-### What DOESN'T Change
-- Implementation details (never added)
-- Priority or complexity (never assumed)
-- Mode commands ($q, $s, $spec, etc.)
-- Already clear requests
-- The need for Interactive mode questions
-
-## 🏗️ Core Components
-
-### WHAT/WHY Philosophy (except $spec mode)
-- **WHAT**: Clear description of the feature/fix needed
-- **WHY**: User value and business outcomes
-- **NOT HOW**: Leave implementation to developers (link to specs if needed)
-
-### Enhanced Symbol System (Required)
-- **❖** - Titles and major features (with H1)
-- **◇** - Requirements and main sections
-- **◊** - Sub-headings within sections
-- **→** - Designs & References
-- **✓** - Success criteria AND Resolution Checklist
-- **⊗** - Dependencies
-- **⚠︎** - Key problems/changes in descriptions
-- **⁉** - Reasons why in descriptions
-- **—** - Sub-categories under **◊** sub-headings
-
-### Complete Ticket Structure
-1. Title with `# ❖ [SCOPE]` format
-2. Brief intro + ⚠︎ problems + ⁉ reasons
-3. User Value statement
-4. Business Goal (measurable, no percentages)
-5. Requirements (outcome-focused)
-   - Use **◊** for complex sections
-   - Use — for sub-categories
-   - Optional: — How to implement? with spec reference
-6. Success Criteria (checkboxes)
-7. Resolution Checklist (REQUIRED)
-8. Dependencies (if any)
-9. Labels (auto-generated)
-
-## 📊 Interactive Mode Example
-
+### Standard with Interactive Offer
 ```
-User: how to hide scrollbar on container
-System: I notice you're asking HOW to implement something technically. 
-
-Would you like me to create:
-1. An implementation spec - with CSS code examples and browser compatibility
-2. A development ticket - describing what needs to be done
-
-Which would be more helpful?
-
-User: Implementation spec please
-
-System: Perfect! Let me create a technical implementation spec for you:
-
-[Creates spec with code examples, browser compatibility, and testing checklist]
+User: $s authentication system
+System: Would you like me to:
+1. Guide you through creating it interactively
+2. Create it directly
+User: 1
+System: [Starts Interactive flow]
 ```
 
-## 🤖 Educational Focus
+### Complex with Phased Approach
+```
+User: $c real-time collaboration
+System: [Offers Interactive, then helps choose between phases or child tickets]
+```
 
-Interactive mode teaches product thinking by:
-- Asking strategic questions about user value
-- Focusing on business outcomes (without percentages)
-- Detecting when technical specs are needed
-- Showing quality metrics and scores
-- Providing learning points
-- Building skills through practice
-
-## 📈 Quality Assurance
-
-### 2-Minute Readability
-All tickets must be scannable and understood in under 2 minutes. Enhanced by:
-- Clear scope prefixes for instant understanding
-- Structured ⚠︎ problems and ⁉ reasons format
-- Visual hierarchy with symbols and icons
-- Bullet points instead of paragraphs
-- Optional spec links for technical details
-
-### Resolution Checklist Scaling
-- **Quick**: 3-5 simple tasks
-- **Standard**: 8-15 tasks in categories
-- **Complex**: 15-30 phase-based tasks
-- **Epic**: 10-20 coordination tasks
-- **Spec**: 5-10 testing items
-
-### Success Metrics (No Percentages)
-- Vast majority of users complete ticket creation
-- Nearly all tickets meet quality standards
-- Brief average conversation time
-- All maintain readability standards
-- Technical specs used when appropriate
+### Spec Mode (Concise)
+```
+User: $spec debounced search input
+System: React or Vanilla JS?
+User: React
+System: [Generates 25-line working implementation]
+```
 
 ## 🔧 MCP Tools Integration
 
-The system intelligently selects thinking tools based on complexity:
+The system intelligently selects thinking tools:
 
 ### Sequential Thinking MCP
-- Simple requests and clear requirements
 - Quick ($q), Standard ($s), and Spec ($spec) modes
 - 1-3 thoughts for analysis
 
 ### Cascade Thinking MCP
 - Interactive mode (always)
-- Complex ($c) and Epic ($e) modes
-- Unclear requirements needing exploration
+- Complex ($c) mode
 - 3-5+ thoughts with branching
 
 ### Figma MCP (Optional)
 - UI feature tickets
-- Design extraction and understanding
+- Design extraction
 - Never required, always beneficial
 
-## 📚 Example with Complete Structure
+## 📚 Example Outputs
 
-### Standard Feature Request
-**Input:** "need better search"
-**Result:** 
+### Standard Ticket (After Interactive Offer)
 ```markdown
-# ❖ [FE] Advanced Search Functionality
+# ❖ [FS] User Authentication System
 
-Users struggle to find products efficiently, leading to frustration and lost sales.
+[Comprehensive description with ⚠︎ problems and ⁉ reasons]
+[User value and business goal]
+[Detailed requirements with **◊** sub-headings]
+[Success criteria]
+[Resolution checklist 8-15 items]
+[User-specified labels]
+```
 
-⚠︎ **Key problems/changes:**
-* **Poor relevance** - Search returns unrelated items
-* **No filters** - Can't narrow results by category or price
-* **Slow performance** - Results take 3-5 seconds to load
-* **Mobile issues** - Search UI breaks on small screens
+### Complex Ticket (Phased Approach)
+```markdown
+# ❖ [FS] Real-time Collaboration Platform
 
-⁉ **Reasons why:**
-By implementing advanced search with filters, relevance scoring, and performance optimization, we'll dramatically improve product discovery and increase conversion rates.
+[Strategic overview]
+[Phase 1: Foundation]
+[Phase 2: Core Features]
+[Phase 3: Enhancement]
+[Resolution checklist 15-30 items organized by phase]
+```
 
-**User Value:** Find exactly what you need quickly
+### Spec Implementation
+```markdown
+# Virtual Scroll Table
 
-**Business Goal:** Increase search-to-purchase conversion
+## Objective
+Efficiently render 50k rows without performance issues.
 
----
+## Implementation
+```typescript
+[40 lines of working React code]
+```
 
-## ◇ Requirements
-
-**◊** Search Improvements
-— Core Features
-• Relevance-based ranking
-• Autocomplete suggestions
-• Search history
-— Filters
-• Category selection
-• Price range
-• Availability toggle
-— How to implement?
-• Check and follow this implementation spec:
-• {Advanced Search Implementation Spec}
-
----
-
-## Labels
-`[App]-App`, `UI`, `Search`, `feature`
+## Key Points
+- Only renders visible rows
+- Smooth scrolling
+- Add memo() for optimization
 ```
 
 ## ⚠️ Important Notes
 
-- **Scope prefixes required** - Every title needs [BE], [FE], etc. (except spec mode)
-- **Structured descriptions** - Use ⚠︎ and ⁉ format
-- **Spec mode for HOW** - When implementation details needed
-- **No percentages** - Use descriptive language instead
-- **Labels auto-generated** - Based on content detection
-- **Interactive is default** - Unless mode explicitly specified
-- **Never provides implementation** - Except in spec mode
+- **Interactive offers required** - System always offers for $s and $c
+- **Scope/labels required** - System asks users to specify
+- **No assumptions** - System never guesses
+- **Complex mode flexible** - Handles phases OR child tickets
+- **Spec mode concise** - 1-3 questions, working code only
+- **No percentages** - Use descriptive language
 - **Always uses artifacts** - Every ticket/spec in markdown
 
 ## 📦 Version History
 
+- **v4.0.0**: 5 modes (merged Complex/Epic), Interactive offers, concise Spec mode
+- **v3.5.0**: User-specified scope and labels, enhanced Interactive mode
 - **v3.4.0**: Structured descriptions (⚠︎/⁉), Spec mode, implementation references
-- **v3.3.0**: Developer-first clarity with scope prefixes, rich descriptions, labels
-- **v3.2.0**: Added **◊** sub-heading pattern and structured em dash usage
-- **v3.1.0**: Added prompt improvement layer and developer abbreviations
 - **v3.0.0**: Introduced mandatory Resolution Checklists
-- **v2.0.0**: Interactive mode as default, enhanced educational focus
+- **v2.0.0**: Interactive mode as default, educational focus
 - **v1.0.0**: Initial WHAT/WHY philosophy implementation
 
 ## 🎯 Key Principles
 
-1. **Developer clarity first** through scope prefixes and structured problems
-2. **Scannable format** via ⚠︎ problems and ⁉ reasons structure
-3. **Separate concerns** - WHAT/WHY in tickets, HOW in specs
-4. **Democratize product thinking** through guided creation
-5. **Focus on user value** not technical implementation (except spec mode)
-6. **Teach through practice** with Interactive mode
-7. **Maintain 2-minute readability** for all tickets
+1. **User empowerment** through Interactive offers for better tickets
+2. **No assumptions** - always ask for scope and labels
+3. **Flexibility** - Complex mode adapts to feature needs
+4. **Conciseness** - Spec mode delivers focused solutions
+5. **Education** - Learn product thinking through practice
+6. **Developer clarity** - Structured, scannable tickets
+7. **2-minute readability** for all tickets
 
 ## 🆘 Troubleshooting
 
-### Description Issues
-- **Long paragraphs**: Use ⚠︎ and ⁉ structure instead
-- **Missing icons**: Required for problem/reason sections
-- **No bullet points**: Problems should be bulleted list
-- **Mixed content**: Keep problems and reasons separate
+### Interactive Offers
+- **Not seeing offer?** - Only appears for $s and $c modes
+- **Want to skip?** - Choose option 2 for direct creation
+- **Changed mind?** - System can switch to Interactive mid-flow
 
-### Spec Mode Issues
-- **No code examples**: Specs must include implementation code
-- **Missing compatibility**: Always include browser support
-- **No testing checklist**: Required for all specs
-- **Business justification**: Specs focus on HOW, not WHY
+### Complex Mode
+- **Phases vs Child tickets?** - System helps you choose
+- **Too many requirements?** - Consider child ticket approach
+- **Need both?** - Hybrid approach possible
 
-### Symbol Usage Issues
-- **Wrong title format**: Use `# ❖ [SCOPE]` (except spec mode)
-- **Missing ◊**: Required for complex requirements
-- **Wrong em dash**: Only use — under **◊** sub-headings
-- **Missing ⚠︎ or ⁉**: Required in descriptions
+### Spec Mode
+- **Too many questions?** - Should be 1-3 max
+- **Code not working?** - All examples are tested
+- **Need more sections?** - Spec mode stays minimal by design
 
-### Content Issues
-- **Using percentages**: Replace with descriptive terms
-- **Implementation in tickets**: Move to spec mode or reference
-- **Missing symbols**: Required in all sections
-- **No Resolution Checklist**: Required for every ticket
-
-### Interactive Mode
-- **Not detecting spec need**: System offers choice for HOW questions
-- **Too many questions**: System limits to 3-4 maximum
-- **Figma not connecting**: It's optional, continue without
+### Scope & Labels
+- **Forgot to specify?** - System will ask
+- **Wrong scope chosen?** - Be specific about work location
+- **Too many labels?** - Keep to 3-5 most relevant
 
 ## 📚 Additional Resources
 
@@ -438,12 +365,7 @@ By implementing advanced search with filters, relevance scoring, and performance
 - [User Story Writing](https://www.atlassian.com/agile/project-management/user-stories)
 - [Writing Clear Requirements](https://www.atlassian.com/agile/requirements)
 - [MDN Web Docs](https://developer.mozilla.org/) (for spec mode)
-- [Can I Use](https://caniuse.com/) (for browser compatibility)
 
 ---
 
-<<<<<<< Updated upstream
-*Transform vague requests into crystal-clear tickets that developers understand at first glance. Teach product thinking through practice. Focus on WHAT and WHY, never HOW. Make every ticket immediately actionable with scope, context, and technical clarity.*
-=======
-*Transform vague requests into crystal-clear tickets with structured problem identification. Create technical specs when HOW matters. Teach product thinking through practice. Make every ticket scannable in under 2 minutes with visual hierarchy and smart formatting.*
->>>>>>> Stashed changes
+*Transform vague requests into crystal-clear tickets with Interactive guidance. Create concise implementation specs with minimal conversation. Complex mode adapts to your needs. Make every ticket scannable in under 2 minutes.*

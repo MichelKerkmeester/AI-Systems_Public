@@ -44,13 +44,13 @@ Some of my more basic AI systems that I made available to the public. They were 
 - **3 Variations**: Concise, Authentic, Valuable versions
 - **Natural Imperfection**: Preserved rough edges for authenticity
 
-#### 4. 📋 Dev Ticket Writer
+#### 4. 📋 Dev Ticket Writer v4.0
 **Convert any request into actionable development tickets**
-- **Interactive Default**: Conversational guidance for perfect tickets
-- **5 Ticket Modes**: Quick, Standard, Complex, Epic, Interactive
-- **2-Minute Rule**: Readable tickets guaranteed
-- **Prompt Improvement**: Auto-clarifies "fix auth" → "create bug fix ticket for authentication"
-- **Triple MCP Support**: Sequential, Cascade, and Figma tools
+- **3 Ticket Modes**: Quick ($q), Standard ($s), Complex ($c) for any feature size
+- **Implementation Specs**: $spec mode for frontend code solutions (1-3 questions, copy-paste ready)
+- **Interactive Guidance**: Default conversational mode helps create better tickets
+- **Automatic Prompt Improvement**: "fix auth" → "create bug fix ticket for authentication"
+- **Smart MCP Integration**: Sequential, Cascade, and Figma tools adapt to complexity
 
 .
 
@@ -143,7 +143,7 @@ docker-compose up -d
 ## 🎯 Choosing the Right System
 
 **For Writers & Documentation:**
-- Requirements → Dev Ticket Writer
+- Requirements → Dev Ticket Writer (now with Interactive offers!)
 - AI prompts → Prompt Engineering Assistant
 - System design → AI Systems Spec Writer
 - Marketing copy → Branded Content Writer
@@ -151,6 +151,7 @@ docker-compose up -d
 **For Developers:**
 - Code quality → IDE System Prompt
 - App prototypes → Claude App Builder
+- Implementation specs → Dev Ticket Writer ($spec mode)
 
 **For Productivity:**
 - Workspace automation → Notion Agent
