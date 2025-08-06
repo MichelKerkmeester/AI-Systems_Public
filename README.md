@@ -34,12 +34,11 @@ They were designed to work with the Claude App, but you can tweak them to fit wi
 
 #### 2. 📐 AI Systems Creator
 **Professional specifications and documentation**
-- **6 Operating Modes**: Interactive, Analyze, Create, Update, Integrate, README
-- **Pattern Library**: Proven architectures from successful systems
 - **Easy System Creation**: Spec it, Build it, Document it
+- **6 Operating Modes**: Interactive, Analyze, Create, Update, Integrate, README
 - **Educational Focus**: Learn architecture through creation
-- **Prompt Improvement**: Invisible clarity enhancement - "need AI" → perfect specification
 - **Version Aware**: Migration and compatibility planning
+- **Prompt Improvement**: Invisible clarity enhancement - "need AI" → perfect specification
 
 #### 3. ✍️ Branded Content Writer
 **Marketing content with authentic voice**
