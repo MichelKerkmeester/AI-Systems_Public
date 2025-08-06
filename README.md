@@ -31,7 +31,6 @@ They were designed to work with the Claude App, but you can tweak them to fit wi
 - **Visual Dashboards**: Real-time progress bars and scoring
 - **35-Point Evaluation**: Comprehensive quality assessment
 - **Platform Optimized**: ChatGPT, Claude, Gemini auto-detection
-- **50+ Examples**: Before/after transformation library
 
 #### 2. 📐 AI Systems Creator
 **Professional specifications and documentation**
