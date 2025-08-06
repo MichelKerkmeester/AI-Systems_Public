@@ -44,7 +44,7 @@ Some of my more basic AI systems that I made available to the public. They were 
 - **3 Variations**: Concise, Authentic, Valuable versions
 - **Natural Imperfection**: Preserved rough edges for authenticity
 
-#### 4. 📋 Dev Ticket Writer v4.0
+#### 4. 📋 Dev Ticket Writer
 **Convert any request into actionable development tickets**
 - **3 Ticket Modes**: Quick ($q), Standard ($s), Complex ($c) for any feature size
 - **Implementation Specs**: $spec mode for frontend code solutions (1-3 questions, copy-paste ready)
