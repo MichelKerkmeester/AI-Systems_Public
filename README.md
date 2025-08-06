@@ -25,7 +25,6 @@ Some of my more basic AI systems that I made available to the public. They were 
 **Turn vague requests into powerful AI prompts**
 - **5 Operating Modes**: $short, $improve, $refine, $interactive, $json
 - **3 Core Frameworks**: CRAFT (structure), SPARK (enhance), PRISM (evaluate)
-- **Visual Dashboards**: Real-time progress bars and scoring
 - **35-Point Evaluation**: Comprehensive quality assessment
 - **Platform Optimized**: ChatGPT, Claude, Gemini auto-detection
 
@@ -34,8 +33,7 @@ Some of my more basic AI systems that I made available to the public. They were 
 - **Easy System Creation**: Spec it, Build it, Document it
 - **6 Operating Modes**: Interactive, Analyze, Create, Update, Integrate, README
 - **Educational Focus**: Learn architecture through creation
-- **Version Aware**: Migration and compatibility planning
-- **Prompt Improvement**: Invisible clarity enhancement - "need AI" → perfect specification
+- **Prompt Improvement**: Invisible clarity enhancement 
 
 #### 3. ✍️ Branded Content Writer
 **Marketing content with authentic voice**
@@ -52,7 +50,6 @@ Some of my more basic AI systems that I made available to the public. They were 
 - **5 Ticket Modes**: Quick, Standard, Complex, Epic, Interactive
 - **2-Minute Rule**: Readable tickets guaranteed
 - **Prompt Improvement**: Auto-clarifies "fix auth" → "create bug fix ticket for authentication"
-- **Figma Integration**: Design understanding for better requirements
 - **Triple MCP Support**: Sequential, Cascade, and Figma tools
 
 .
@@ -74,7 +71,6 @@ Some of my more basic AI systems that I made available to the public. They were 
 - **Production Standards**: Zero technical debt, fixes root causes, not symptoms
 - **Performance First**: CSS-only solutions, REM units, lazy loading
 - **IDE Support**: Cursor, Windsurf, Claude Code, VS Code, JetBrains
-- **Risk Management**: Proactive breakage documentation
 - **Modular Rules**: Toggle features based on task complexity
 
 #### 7. 🏗️ Claude App Builder
