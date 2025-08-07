@@ -1,28 +1,26 @@
-# Dev Ticket Writer - User Guide v4.0.0
+# Dev Ticket Writer - User Guide v4.1.0
 
 The Dev Ticket Writer helps teams create professional development tickets that are "clear at first glance" for developers while teaching product thinking principles. By focusing on WHAT needs to be done and WHY it matters (not HOW to implement), it bridges the communication gap between product and development. When implementation details are needed, the concise Spec mode provides focused, copy-paste ready solutions.
 
-## 🆕 What's New in v4.0.0
+## 🆕 What's New in v4.1.0
 
-- **5 Modes Instead of 6**: Complex mode now handles both phased development AND child tickets
-- **Interactive Offers**: System ALWAYS offers Interactive guidance when users specify $s or $c modes
-- **Concise Spec Mode**: 1-3 questions max, 20-60 lines output, copy-paste ready code
-- **Smart Pattern Detection**: Instant generation for common patterns like "hide scrollbar"
-- **Enhanced Complex Mode**: Choose between phased approach or child ticket breakdown
+- **Global Resolution Checklists**: Maximum 3 items per section, outcome-focused approach
+- **Clearer Work Streams**: Think in deliverables, not tasks
+- **Improved Readability**: Checklists scannable in seconds
+- **Better Developer Experience**: High-level guidance without micromanagement
+- **Maintained Features**: All v4.0.0 features preserved with enhanced clarity
 
 ## ✨ Key Features
 
 - **Developer-First Clarity**: User-specified scope prefixes, structured descriptions
 - **5 Specialized Modes**: $interactive (default), $quick, $standard, $complex, $spec
 - **Interactive Offers**: Automatic guidance offers for $standard and $complex modes
+- **Global Resolution Approach**: Max 3 items per section, outcome-focused checklists
 - **Concise Spec Mode**: Minimal conversation (1-3 questions), working code examples
 - **Enhanced Symbol System**: Professional symbols (❖, ◇, **◊**, →, ✓, ⊗, ⚠︎, ⁉) for visual hierarchy
 - **Prompt Improvement**: Clarifies vague requests without adding assumptions
 - **Educational Focus**: Interactive mode teaches product management through practice
-- **Resolution Checklists**: Required actionable steps scaled by complexity
 - **2-Minute Rule**: All tickets readable in under 2 minutes
-
-.
 
 ## 🚀 Quick Setup
 
@@ -30,22 +28,22 @@ The Dev Ticket Writer helps teams create professional development tickets that a
 1. Go to claude.ai
 2. Click "Projects" in sidebar
 3. Click "Create project"
-4. Name it "Dev Ticket Writer v4.0"
+4. Name it "Dev Ticket Writer v4.1"
 
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Writer - Dev Tickets - v4.0.0.md`
+3. Copy and paste: `Writer - Dev Tickets - v4.1.0.md`
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
 Add these to your project's knowledge base:
-- `Ticket - Quick Reference Card - v2.0.0.md` (Updated with Interactive offers)
-- `Ticket - Templates & Standards - v2.0.0.md` (Merged Complex mode templates)
-- `Ticket - Examples Library - v2.0.0.md` (New concise Spec examples)
-- `Ticket - Interactive Mode - v1.6.0.md` (Enhanced with offer system)
-- `Ticket - Spec Mode Frontend Guide - v2.0.0.md` (Concise implementation focus)
-- `Ticket - Prompt Improvement - v1.0.0.md` (Request clarification)
+- `Ticket - Quick Reference Card - v3.0.0.md` (Updated with global checklist sizing)
+- `Ticket - Templates & Standards - v3.0.0.md` (Major update to Resolution Checklists)
+- `Ticket - Examples Library - v3.0.0.md` (All examples updated with global approach)
+- `Ticket - Interactive Mode - v1.7.0.md` (Updated for global checklists)
+- `Ticket - Spec Mode Frontend Guide - v1.0.0.md` (Concise implementation focus)
+- `Ticket - Prompt Improvement - v1.1.0.md` (Request clarification)
 
 ### Step 4: Start Creating Tickets
 Simply describe what you need:
@@ -57,9 +55,48 @@ $c payment integration           # Complex (offers Interactive)
 $spec hide scrollbar             # Spec mode (instant generation)
 ```
 
-.
+## 🎯 Resolution Checklist Philosophy (NEW)
 
-## 🎯 Interactive Offers (NEW)
+The v4.1.0 update revolutionizes how Resolution Checklists work:
+
+### Core Changes
+- **Think in work streams**, not tasks
+- **Maximum 3 items per section**
+- **Each checkbox = meaningful deliverable**
+- **Focus on WHAT gets delivered**, not HOW
+- **Each item represents 2-8 hours minimum work**
+
+### Sizing by Mode
+
+| Mode | Total Sections | Items per Section | Total Items |
+|------|---------------|-------------------|-------------|
+| **Quick** | 2-3 | 2-3 | 4-6 |
+| **Standard** | 4-5 | 2-3 | 8-12 |
+| **Complex** | 6-8 | 2-3 | 12-20 |
+
+### Example Transformation
+
+**Old Style (Too Detailed):**
+```markdown
+### Frontend Implementation
+- [ ] Create Button.tsx component
+- [ ] Add hover state styles
+- [ ] Add active state styles
+- [ ] Add disabled state styles
+- [ ] Import design tokens
+- [ ] Set up onClick handlers
+- [ ] Add loading spinner
+```
+
+**New Style (Global Outcome):**
+```markdown
+### Component Development
+- [ ] Build Button component with all states
+- [ ] Add complete test coverage
+- [ ] Integrate with component library
+```
+
+## 🎯 Interactive Offers
 
 When users specify `$standard` or `$complex`, the system ALWAYS offers Interactive assistance first:
 
@@ -77,21 +114,17 @@ Which would you prefer? (1 or 2)
 
 This ensures users get the best possible ticket quality while respecting their autonomy.
 
-.
-
 ## 🎛️ Operating Modes
 
-| Mode | Command | When to Use | Resolution Checklist | Interactive Offer | Focus |
-|------|---------|-------------|---------------------|-------------------|-------|
+| Mode | Command | When to Use | Resolution Sections | Interactive Offer | Focus |
+|------|---------|-------------|-------------------|-------------------|-------|
 | **Interactive** | DEFAULT | No mode specified, guidance needed | Adaptive | N/A (Default) | Conversational guidance |
-| **Quick** | `$q` | Simple features (explicit) | 3-5 items | No | Essential requirements |
-| **Standard** | `$s` | Full features (explicit) | 8-15 items | **YES - Always** | Complete context |
-| **Complex** | `$c` | Major features/initiatives | 15-30 items | **YES - Always** | Phases OR child tickets |
-| **Spec** | `$spec` | Frontend implementation | 20-60 lines | No | Concise code solutions |
+| **Quick** | `$q` | Simple features (explicit) | 2-3 sections | No | Essential requirements |
+| **Standard** | `$s` | Full features (explicit) | 4-5 sections | **YES - Always** | Complete context |
+| **Complex** | `$c` | Major features/initiatives | 6-8 sections | **YES - Always** | Phases OR child tickets |
+| **Spec** | `$spec` | Frontend implementation | N/A | No | Concise code solutions |
 
 **Note:** Interactive mode is the default unless explicitly specified.
-
-.
 
 ## 🔧 Complex Mode (Enhanced)
 
@@ -110,8 +143,6 @@ For multi-team coordination:
 - Quality & polish tickets
 
 The system helps you choose the right approach during ticket creation.
-
-.
 
 ## 💻 Spec Mode (Transformed)
 
@@ -142,8 +173,6 @@ User: 50k, React
 - **Copy-paste ready code**
 - **No placeholders or comments**
 
-.
-
 ## 🎯 Scope Prefixes
 
 Every ticket title includes a user-specified scope prefix:
@@ -158,8 +187,6 @@ Every ticket title includes a user-specified scope prefix:
 | **[QA]** | Testing features | `# ❖ [QA] Test Automation` |
 
 **Note:** System asks users to specify scope - never assumes.
-
-.
 
 ## 📝 Structured Descriptions
 
@@ -182,15 +209,13 @@ By implementing comprehensive filtering capabilities, we'll dramatically improve
 **Business Goal:** Dramatically reduce search abandonment rate
 ```
 
-.
-
 ## 🏷️ Label System
 
 The system asks users to specify appropriate labels:
 
 ### Common Label Categories
 - **Type**: feature, bug, improvement, technical-debt
-- **Component**: authentication, payments, search, UI, database
+- **Component**: authentication, payments, search, UI
 - **Priority**: high, medium, low (if your team uses these)
 
 Example:
@@ -198,8 +223,6 @@ Example:
 System: What labels should I add to this ticket?
 User: feature, search, filters, high-priority
 ```
-
-.
 
 ## 💬 Interactive Mode Flow
 
@@ -211,7 +234,7 @@ The default conversational mode:
 3. System asks for scope ([BE], [FE], etc.)
 4. System asks for labels
 5. System asks about success metrics
-6. Creates comprehensive ticket
+6. Creates comprehensive ticket with global checklist
 7. Delivers with quality dashboard
 
 ### Quality Dashboard
@@ -225,7 +248,14 @@ Overall Quality Score: 4.5/5 ⭐
 ✓ Labels added: feature, search, filters
 ✓ Business goal measurable
 ✓ Requirements outcome-focused
+✓ Resolution checklist global (max 3 items/section)
 ✓ 2-minute read test: PASS (1:45)
+
+📋 Resolution Checklist Quality:
+Global Approach   ██████████ 100%
+Outcome Focus     █████████░ 95%
+Section Count     4 sections ✓
+Items per Section 2-3 items ✓
 ```
 
 ## 📋 Examples
@@ -260,7 +290,27 @@ User: React
 System: [Generates 25-line working implementation]
 ```
 
-.
+### Global Resolution Checklist Example
+```markdown
+## ✓ Resolution Checklist
+
+### Foundation Work
+- [ ] Set up architecture and dependencies
+- [ ] Configure necessary integrations
+
+### Core Development
+- [ ] Implement primary functionality
+- [ ] Add secondary features
+- [ ] Apply UI/UX requirements
+
+### Testing & Validation
+- [ ] Complete functional testing
+- [ ] Verify cross-browser compatibility
+
+### Documentation
+- [ ] Update technical documentation
+- [ ] Create user guides if needed
+```
 
 ## 🔧 Installing MCP Tools (Recommended)
 
@@ -336,9 +386,12 @@ For UI feature tickets, the system can integrate with Figma to:
 
 While never required, Figma integration enhances UI-related tickets with direct design references.
 
-.
-
 ## 🆘 Troubleshooting
+
+### Resolution Checklists
+- **Too many items?** - Think in work streams, not tasks
+- **Too detailed?** - Each item should be a deliverable
+- **Not sure how to group?** - Use system layers or feature areas
 
 ### Interactive Offers
 - **Not seeing offer?** - Only appears for $s and $c modes
@@ -377,10 +430,9 @@ While never required, Figma integration enhances UI-related tickets with direct 
 - For NPX issues: Check Claude Desktop logs
 - For general issues: The AI assistant can help diagnose problems
 
-.
-
 ## ⚠️ Important Notes
 
+- **Global checklists required** - Max 3 items per section, outcome-focused
 - **Interactive offers required** - System always offers for $s and $c
 - **Scope/labels required** - System asks users to specify
 - **No assumptions** - System never guesses
@@ -390,18 +442,15 @@ While never required, Figma integration enhances UI-related tickets with direct 
 - **Always uses artifacts** - Every ticket/spec in markdown
 - **Works without MCPs** - But enhanced with them
 
-.
-
 ## 📦 Version History
 
+- **v4.1.0**: Global Resolution Checklists (max 3 items/section, outcome-focused)
 - **v4.0.0**: 5 modes (merged Complex/Epic), Interactive offers, concise Spec mode
 - **v3.5.0**: User-specified scope and labels, enhanced Interactive mode
 - **v3.4.0**: Structured descriptions (⚠︎/⁉), Spec mode, implementation references
 - **v3.0.0**: Introduced mandatory Resolution Checklists
 - **v2.0.0**: Interactive mode as default, educational focus
 - **v1.0.0**: Initial WHAT/WHY philosophy implementation
-
-.
 
 ## 📚 Additional Resources
 
@@ -416,4 +465,4 @@ While never required, Figma integration enhances UI-related tickets with direct 
 
 ---
 
-*Transform vague requests into crystal-clear tickets with Interactive guidance. Create concise implementation specs with minimal conversation. Complex mode adapts to your needs. Make every ticket scannable in under 2 minutes.*
+*Transform vague requests into crystal-clear tickets with Interactive guidance. Create concise implementation specs with minimal conversation. Complex mode adapts to your needs. Resolution Checklists now use global, outcome-focused approach for maximum clarity. Make every ticket scannable in under 2 minutes.*
