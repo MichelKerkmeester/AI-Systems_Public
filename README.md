@@ -58,7 +58,7 @@ Some of my more basic AI systems that I made available to the public. They were 
 
 #### 5. 🌟 Claude Code CLI - Multi-Model Agent System (Coming Soon)
 **Next-generation AI development ecosystem with autonomous agents**
-- **Multi-Model Orchestra**: Opus, Sonnet & Gemini collaborate for optimal task routing (Save tokens, only uses Opus when needed)
+- **Multi-Model Orchestra**: Opus, Sonnet & Gemini collaborate for optimal task routing (Save tokens, only uses Opus 4.1 when needed)
 - **Intelligent Code Reuse**: Serena-powered semantic analysis prevents redundancy
 - **Long-Term Memory**: Graphiti knowledge graph retains project context forever
 - **Self-Improving System**: Self-updating knowledge base, automated prompt enhancement and Claude.md updates
