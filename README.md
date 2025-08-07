@@ -13,7 +13,7 @@ Some of my more basic AI systems that I made available to the public. They were 
 |----------|---------|---------|
 | **✍️ Writers** | [Prompt Engineering](#1--prompt-engineering-assistant), [AI Systems](#2--ai-systems-spec-writer), [Branded Content](#3--branded-content-writer), [Dev Ticket](#4--dev-ticket-writer) | Content, Documentation, Systems |
 | **💻 Dev** | [Claude Code CLI](#5--claude-code-cli---multi-model-agent-system-coming-soon), [IDE System](#6--ide-system-prompt), [Claude App Builder](#7--claude-app-builder) | Coding, Prototyping, AI Development |
-| **🤖 Agents** | [Notion Agent](#8--notion-agent) | Automate workspace tasks |
+| **🤖 Agents** | [Notion Agent](#8--notion-agent), [Imagician Agent](#9--imagician-agent) | Automate workspace tasks, Image file editing |
 
 .
 
@@ -91,6 +91,14 @@ Some of my more basic AI systems that I made available to the public. They were 
 - **Error Recovery**: Graceful handling with alternatives
 - **Educational Mode**: Learn Notion while building
 
+#### 9. 🖼️ Imagician Agent
+**Image file editing and conversion through conversation**
+- **8 Core Operations**: Resize, compress, convert, crop, rotate, flip, batch process, metadata
+- **5 Smart Modes**: Interactive (default), Quick ($q), Batch ($b), Platform ($p), Web ($w)
+- **Platform Optimized**: Instagram, Facebook, Twitter, LinkedIn, YouTube specifications built-in
+- **Smart Understanding**: "Make it smaller" → Intelligently chooses resize vs compress
+- **Web Excellence**: Automatic WebP conversion, responsive sets, progressive encoding
+- **Visual Feedback**: Before/after comparisons with size and quality metrics
 
 .
 
@@ -100,7 +108,7 @@ Some of my more basic AI systems that I made available to the public. They were 
 All systems support Model Context Protocol tools:
 - **Sequential Thinking**: Linear analysis and validation
 - **Cascade Thinking**: Complex exploration and branching
-- **Domain-Specific**: Figma, Notion, search tools as needed
+- **Domain-Specific**: Figma, Notion, Imagician, search tools as needed
 
 ### Intelligent Modes
 - **Interactive Default**: Conversational guidance for beginners
@@ -131,6 +139,7 @@ cd "$HOME/MCP Servers"
 # Clone needed tools
 git clone https://github.com/arben-adm/mcp-sequential-thinking.git
 git clone https://github.com/drewdotpro/cascade-thinking-mcp.git
+git clone https://github.com/flowy11/imagician.git  # For Imagician Agent
 
 # Use AI to generate docker-compose.yml
 # Start containers
@@ -154,6 +163,7 @@ docker-compose up -d
 
 **For Productivity:**
 - Workspace automation → Notion Agent
+- Image file editing → Imagician Agent
 
 .
 
