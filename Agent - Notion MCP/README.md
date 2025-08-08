@@ -33,12 +33,12 @@ The Notion Agent transforms natural language into organized Notion workspaces, m
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Agent - Notion MCP - v1.0.0.md`
+3. Copy and paste: `Agent - Notion MCP - v1.1.0.md`
 4. Save the project
 
 ### Step 3: Upload Reference Documents
 Add these 3 streamlined documents to your project:
-- `Notion - Interactive Mode - v1.0.0.md` (Conversational guidance specification)
+- `Notion - Interactive Mode - v1.1.0.md` (Conversational guidance specification)
 - `Notion - Patterns & Operations - v1.0.0.md` (All patterns and operation mappings)
 - `Notion - Workspace Intelligence - v1.0.0.md` (Best practices and error recovery)
 
@@ -236,50 +236,50 @@ This needs several connected components:
 • Dashboard with business metrics
 ```
 
-## 🔧 Installing Notion MCP (Required)
+## 🔧 Installing MCPs (Required & Optional)
 
-The Notion MCP provides core functionality. Choose your installation method:
+### Required: Notion MCP
 
-### Option A: Docker Setup (Recommended - Stable)
+The Notion MCP provides core functionality for all Notion operations.
+
+#### Option A: AI-Powered Docker Setup (Recommended)
 
 **Prerequisites:**
-- Docker Desktop ([Download](https://www.docker.com/products/docker-desktop/))
-- Claude Desktop ([Download](https://claude.ai/download))
+- Docker Desktop installed ([Download Docker Desktop](https://www.docker.com/products/docker-desktop/))
+- Claude Desktop app ([Download Claude](https://claude.ai/download))
 - Notion API key from [notion.so/my-integrations](https://www.notion.so/my-integrations)
 
-**Quick Docker Setup:**
+**AI-Assisted Installation:**
 
-1. Create directory and clone:
-```bash
-mkdir -p "$HOME/MCP Servers" && cd "$HOME/MCP Servers"
-git clone https://github.com/notionhq/mcp-server-notion.git
-cd mcp-server-notion
+Copy this prompt to Claude, ChatGPT, or any AI assistant:
+
+```
+Help me set up Docker containers for the Notion Agent MCP tools.
+
+I need to:
+1. Create a directory at "$HOME/MCP Servers"
+2. Clone these repos:
+   - https://github.com/notionhq/mcp-server-notion.git (main tool)
+   - https://github.com/modelcontextprotocol/server-sequential-thinking.git (optional)
+   - https://github.com/cascadethinking/cascade-thinking-mcp.git (optional)
+3. Set up environment variables for Notion API key
+4. Create Dockerfiles if needed
+5. Create a docker-compose.yml file with all services
+6. Configure Claude Desktop's claude_desktop_config.json
+7. Build and start the containers with docker-compose
+
+My Notion API key is: [YOUR_API_KEY_HERE]
+I'm on [Windows/Mac/Linux]. Please give me the exact commands to run.
 ```
 
-2. Add your API key:
-```bash
-echo "NOTION_API_KEY=your-key-here" > .env
-```
+The AI will provide step-by-step commands for your operating system.
 
-3. Create docker-compose.yml:
-```yaml
-version: '3.8'
-services:
-  notion-mcp:
-    build: .
-    environment:
-      - NOTION_API_KEY=${NOTION_API_KEY}
-    restart: unless-stopped
-```
+**Verification:**
+1. Check Docker Desktop for running containers (notion-mcp, and optionally sequential-thinking-mcp, cascade-thinking-mcp)
+2. Look for the 🔌 icon in Claude Desktop showing connected tools
+3. Test with: "organize my tasks"
 
-4. Start container:
-```bash
-docker-compose up -d
-```
-
-5. Configure Claude Desktop (see config location below)
-
-### Option B: NPX Installation (Quick Setup)
+#### Option B: NPX Setup (Quick but Less Stable)
 
 Add to Claude Desktop config:
 
@@ -323,10 +323,12 @@ For even better workspace design, add thinking tools:
 }
 ```
 
-**Verification:**
-1. Restart Claude Desktop
-2. Look for 🔌 icon showing connected tools
-3. Test with: "organize my tasks"
+**Benefits of Thinking MCPs:**
+- **Sequential Thinking**: 2x faster simple operations
+- **Cascade Thinking**: Smarter workspace design
+- **Automatic selection**: Agent chooses the right tool
+- **Better patterns**: Explores all options
+- **Intelligent decisions**: Evaluates trade-offs
 
 ## 🆘 Troubleshooting
 
@@ -363,11 +365,23 @@ docker-compose restart
 - **Want direct creation?** Use explicit mode ($w, $c, $o)
 - **Need to change approach?** System adapts mid-conversation
 
+### MCP Connection Issues
+- **Docker not running**: Start Docker Desktop
+- **Can't connect**: Restart Claude Desktop
+- **Wrong directory**: Check you're in "$HOME/MCP Servers"
+- **Permission errors**: Run terminal as administrator (Windows) or use sudo (Mac/Linux)
+
+### Common Setup Problems
+- **"Command not found"**: Ensure Node.js is installed for NPX method
+- **Containers won't start**: Check Docker Desktop is running
+- **Tools not showing**: Restart Claude Desktop after config changes
+- **API key issues**: Verify key is correct and has permissions
+
 ### Getting Help
-- Docker logs: `docker logs notion-mcp`
-- Config issues: Check JSON syntax
-- Notion issues: Verify integration settings
-- General help: System provides clear error messages
+- For Docker issues: Check container logs in Docker Desktop
+- For NPX issues: Check Claude Desktop logs
+- For Notion issues: Verify integration settings
+- For general issues: The AI assistant can help diagnose problems
 
 ## ⚠️ Important Notes
 
