@@ -37,12 +37,11 @@ Some of my more basic AI systems that I made available to the public. They were 
 
 #### 3. ✍️ Branded Content Writer
 **Marketing content with authentic voice**
-- **Sarah Chen Voice**: Collaborative, authentic, data-driven
-- **9 Frameworks**: Simple (SVC), Medium (PATH), Complex (STORY)
-- **Story Discovery**: Uncovers failures and team wins
-- **VEST Scoring**: 20-point quality guarantee
-- **3 Variations**: Concise, Authentic, Valuable versions
 - **Natural Imperfection**: Preserved rough edges for authenticity
+- **9 Frameworks**: Simple (SVC), Medium (PATH), Complex (STORY)
+- **3 Variations**: Concise, Authentic, Valuable versions
+- **VEST Scoring**: 20-point quality guarantee
+
 
 #### 4. 📋 Dev Ticket Writer
 **Convert any request into actionable development tickets**
@@ -95,10 +94,9 @@ Some of my more basic AI systems that I made available to the public. They were 
 **Image file editing and conversion through conversation**
 - **8 Core Operations**: Resize, compress, convert, crop, rotate, flip, batch process, metadata
 - **5 Smart Modes**: Interactive (default), Quick ($q), Batch ($b), Platform ($p), Web ($w)
-- **Platform Optimized**: Instagram, Facebook, Twitter, LinkedIn, YouTube specifications built-in
 - **Smart Understanding**: "Make it smaller" → Intelligently chooses resize vs compress
-- **Web Excellence**: Automatic WebP conversion, responsive sets, progressive encoding
 - **Visual Feedback**: Before/after comparisons with size and quality metrics
+- **Platform Optimized**: Instagram, Facebook, Twitter, LinkedIn, YouTube specifications built-in
 
 .
 
