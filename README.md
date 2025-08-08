@@ -11,8 +11,8 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 | Category | Systems | Purpose |
 |----------|---------|---------|
-| **🤖 Agent CLI** | [Claude Code Prime](#1--claude-code-prime---multi-model-agent-system--coming-soon) | CLI-based development systems |
-| **💬 Agent MCP** | [Notion Agent](#2--notion-agent), [Imagician Agent](#3--imagician-agent) | MCP tools, made easy with conversational systems |
+| **🤖 CLI Agents** | [Claude Code Prime](#1--claude-code-prime---multi-model-agent-system--coming-soon) | CLI-based development systems |
+| **💬 MCP Agents** | [Notion Agent](#2--notion-agent), [Imagician Agent](#3--imagician-agent) | MCP tools, made easy with conversational systems |
 | **✍️ Writers** | [Prompt Engineering](#4--prompt-engineering-assistant), [AI Systems](#5--ai-systems-creator), [Branded Content](#6--branded-content-writer), [Dev Ticket](#7--dev-ticket-writer) | Automated content, documentation & prompt writing |
 | **💻 Dev Systems** | [IDE System](#8--ide-system-prompt), [Claude App Builder](#9--claude-app-builder) | IDE enhancements & prototype tools |
 
