@@ -19,6 +19,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 .
 
 ## 🤖 Agent Systems
+---
 **CLI-based development systems**
 ---
 
@@ -34,6 +35,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 .
 
 ## 💬 Agent Systems
+---
 **MCP tools, made easy with conversational systems**
 ---
 
@@ -56,6 +58,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 .
 
 ## ✍️ Writer Systems
+---
 **Automated content, documentation & prompt writing**
 ---
 
@@ -92,6 +95,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 .
 
 ## 💻 Development Systems
+---
 **IDE enhancements & prototype tools**
 ---
 
