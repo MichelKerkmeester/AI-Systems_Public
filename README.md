@@ -28,8 +28,8 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **6-Agent System**: Specialized agents (Orchestrator, Analysis, Implementation, QA, Documentation, Debug) with context-aware personas within each subagent
 - **Long-Term Memory**: Graphiti knowledge graph maintains project context across sessions forever
 - **Intelligent Code Reuse**: Serena semantic analysis ensures existing code is found and reused before creating new
-- **Self-Improving System**: Automatically updates claude.md, the knowledge base, and documentation, leveraging smarthooks for quality assurance and continuous learning
-- **Temporal Intelligence**: Self-scheduling tasks, Git auto-commit checkpoints, and Project Management
+- **Self-Improving System**: Automatically updates claude.md, knowledge base, and documentation, leveraging smarthooks for quality assurance and continuous learning
+- **Temporal Intelligence**: Self-scheduling tasks, Git auto-commit checkpoints, and project management
 
 .
 
