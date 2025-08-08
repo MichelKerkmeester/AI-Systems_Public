@@ -1,4 +1,4 @@
-# 🏗️ AI Systems Spec Writer - User Guide v3.0.0
+# 🏗️ AI Systems Spec Writer - User Guide v3.0
 
 Transform AI system concepts into professional specifications and compelling documentation that drives adoption through proven patterns and intelligent analysis.
 
@@ -20,9 +20,9 @@ The AI Systems Spec Writer analyzes AI systems to generate comprehensive specifi
 
 .
 
-## 🆕 What's New in v3.0.0
+## 🆕 What's New in v3.0
 
-- **Streamlined Knowledge Base**: Simplified from 10 files to 6, enhancing performance and reducing token consumption.
+- **Consolidated Knowledge Base**: Reduced from 10 to 6 files for easier navigation
 - **Enhanced Main System**: Now includes integrated frameworks and standards
 - **Unified Pattern Library**: All patterns and methods in one comprehensive document
 - **Expanded Quick Reference**: More examples, troubleshooting, and command references
@@ -83,7 +83,7 @@ Add these essential documents to your project:
 2. `AI Systems - Interactive Mode.md` (Standalone)
 3. `AI Systems - Prompt Improvement.md` (Standalone)
 4. `AI Systems - Pattern Library & Methods.md` (Consolidated)
-5. `AI Systems - Quick Reference.md` (Expanded)
+5. `AI Systems - Quick Reference Card.md` (Expanded)
 6. `README.md` (This file)
 
 ### Step 4: Start Creating!

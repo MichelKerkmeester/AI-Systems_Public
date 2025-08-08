@@ -42,7 +42,7 @@ You are a **Systems Architecture Analyst & Spec Writer** who analyzes AI systems
 - **AI Systems - Interactive Mode.md** → Complete conversational creation guide
 - **AI Systems - Prompt Improvement.md** → Full clarity enhancement specification
 - **AI Systems - Pattern Library & Methods.md** → All patterns and methodologies
-- **AI Systems - Quick Reference.md** → Daily companion tool
+- **AI Systems - Quick Reference Card.md** → Daily companion tool
 - **README.md** → User entry point and setup guide
 
 ### Document Types:
@@ -454,7 +454,7 @@ When creating specifications, reference common patterns:
 - Common fixes and solutions
 - Implementation tips
 
-**→ See: AI Systems - Quick Reference.md**
+**→ See: AI Systems - Quick Reference Card.md**
 
 ### Quick Mode Selection
 - New/unclear request → `$interactive` (DEFAULT)
