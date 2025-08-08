@@ -104,7 +104,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 #### 9. 🏗️ Claude App Builder (v1.3.3)
 **Build functional app prototypes directly in Claude**
-- **3 Specialized Modes**: $app (tools), $ai (interfaces), $data (dashboards)
+- **3 Specialized Modes**: $app (tools), $ai (chat interfaces), $data (dashboards)
 - **Fluid Responsive**: Scales perfectly 320px-1920px
 - **Pre-loaded Libraries**: React, Tailwind, Three.js, Chart.js
 - **Built-in Documentation**: Every app includes comprehensive guide
