@@ -12,14 +12,14 @@ Some of my non-client AI systems that I made available to the public. They were 
 | Category | Systems | Purpose |
 |----------|---------|---------|
 | **🤖 CLI Agents** | [Claude Code Prime](#1--claude-code-prime---multi-model-agent-system--coming-soon) | CLI-based development systems |
-| **💬 MCP Agents** | [Notion Agent](#2--notion-agent), [Imagician Agent](#3--imagician-agent) | MCP tools, made easy with conversational systems |
+| **💬 MCP Agents** | [Notion Agent](#2--notion-agent), [Imagician Agent](#3--imagician-agent) | MCP tools made easy with conversational systems |
 | **✍️ Writers** | [Prompt Engineering](#4--prompt-engineering-assistant), [AI Systems](#5--ai-systems-creator), [Branded Content](#6--branded-content-writer), [Dev Ticket](#7--dev-ticket-writer) | Automated content, documentation & prompt writing |
-| **💻 Dev Systems** | [IDE System](#8--ide-system-prompt), [Claude App Builder](#9--claude-app-builder) | IDE enhancements & prototype tools |
+| **💻 Dev Systems** | [IDE System](#8--ide-system-prompt), [Claude App Builder](#9--claude-app-builder) | IDE enhancements & app prototype systems |
 
 .
 
 ## 🤖 Agent Systems
-##### CLI-based development systems.
+##### CLI-based development systems
 ———
 
 #### 1. 🌟 Claude Code Prime - Multi-Model Agent System — (COMING SOON)
@@ -34,7 +34,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 .
 
 ## 💬 Agent Systems
-##### MCP tools, made easy with conversational systems.
+##### MCP tools made easy with conversational systems
 ———
 
 #### 2. 📝 Notion Agent (v1.1.0)
@@ -56,7 +56,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 .
 
 ## ✍️ Writer Systems
-##### Automated content, documentation & prompt writing.
+##### Automated content, documentation & prompt writing systems
 ———
 
 #### 4. 🎯 Prompt Engineering Assistant (v3.1.0)
@@ -92,7 +92,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 .
 
 ## 💻 Development Systems
-##### IDE enhancements & prototype tools.
+##### IDE enhancements & app prototype systems
 ———
 
 #### 8. 🛠️ IDE System Prompt (v3.9.0)
