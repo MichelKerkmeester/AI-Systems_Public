@@ -22,7 +22,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 ##### CLI-based development systems.
 ———
 
-#### 1. 🌟 Claude Code Prime - Multi-Model Agent System ❖ COMING SOON
+#### 1. 🌟 Claude Code Prime - Multi-Model Agent System — (COMING SOON)
 **Next-generation AI development ecosystem with intelligent orchestration**
 - **Multi-Model Orchestra**: OPUS 4.1, Sonnet & Gemini collaborate - each model used for its strengths
 - **6-Agent System**: Specialized agents (Orchestrator, Analysis, Implementation, QA, Documentation, Debug) with context-aware personas within each subagent
@@ -37,7 +37,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 ##### MCP tools, made easy with conversational systems.
 ———
 
-#### 2. 📝 Notion Agent
+#### 2. 📝 Notion Agent (v1.1.0)
 **Natural language control of Notion workspaces**
 - **Natural Language**: "Organize my projects" → Complete workspace
 - **Best Practices**: Professional patterns automatically applied
@@ -45,7 +45,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **Error Recovery**: Graceful handling with alternatives
 - **Educational Mode**: Learn Notion while building
 
-#### 3. 🖼️ Imagician Agent
+#### 3. 🖼️ Imagician Agent (v1.2.0)
 **Image file editing and conversion through conversation**
 - **8 Core Operations**: Resize, compress, convert, crop, rotate, flip, batch process, metadata
 - **5 Smart Modes**: Interactive (default), Quick ($q), Batch ($b), Platform ($p), Web ($w)
@@ -59,21 +59,21 @@ Some of my non-client AI systems that I made available to the public. They were 
 ##### Automated content, documentation & prompt writing.
 ———
 
-#### 4. 🎯 Prompt Engineering Assistant
+#### 4. 🎯 Prompt Engineering Assistant (v3.1.0)
 **Turn vague requests into powerful AI prompts**
 - **5 Operating Modes**: $short, $improve, $refine, $interactive, $json
 - **3 Core Frameworks**: CRAFT (structure), SPARK (enhance), PRISM (evaluate)
 - **35-Point Evaluation**: Comprehensive quality assessment
 - **Platform Optimized**: ChatGPT, Claude, Gemini auto-detection
 
-#### 5. 📐 AI Systems Creator
+#### 5. 📐 AI Systems Creator (v3.0.0)
 **Professional specifications and documentation**
 - **Easy System Creation**: Spec it, Build it, Document it
 - **6 Operating Modes**: Interactive, Analyze, Create, Update, Integrate, README
 - **Educational Focus**: Learn architecture through creation
 - **Prompt Improvement**: Invisible clarity enhancement 
 
-#### 6. ✍️ Branded Content Writer
+#### 6. ✍️ Branded Content Writer (v3.0.0)
 **Marketing content with authentic voice**
 - **Natural Imperfection**: Preserved rough edges for authenticity
 - **9 Frameworks**: Simple (SVC), Medium (PATH), Complex (STORY)
@@ -81,7 +81,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **VEST Scoring**: 20-point quality guarantee
 
 
-#### 7. 📋 Dev Ticket Writer
+#### 7. 📋 Dev Ticket Writer (v4.1.0)
 **Convert any request into actionable development tickets**
 - **3 Ticket Modes**: Quick ($q), Standard ($s), Complex ($c) for any feature size
 - **Implementation Specs**: $spec mode for frontend code solutions (1-3 questions, copy-paste ready)
@@ -95,14 +95,14 @@ Some of my non-client AI systems that I made available to the public. They were 
 ##### IDE enhancements & prototype tools.
 ———
 
-#### 8. 🛠️ IDE System Prompt
+#### 8. 🛠️ IDE System Prompt (v3.9.0)
 **Perfect for Webflow developers who also use Slater, GSAP and Motion**
 - **Production Standards**: Zero technical debt, fixes root causes, not symptoms
 - **Performance First**: CSS-only solutions, REM units, lazy loading
 - **IDE Support**: Cursor, Windsurf, Claude Code, VS Code, JetBrains
 - **Modular Rules**: Toggle features based on task complexity
 
-#### 9. 🏗️ Claude App Builder
+#### 9. 🏗️ Claude App Builder (v1.3.3)
 **Build functional app prototypes directly in Claude**
 - **3 Specialized Modes**: $app (tools), $ai (interfaces), $data (dashboards)
 - **Fluid Responsive**: Scales perfectly 320px-1920px
