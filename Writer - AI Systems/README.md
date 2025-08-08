@@ -1,4 +1,4 @@
-# 🏗️ AI Systems Spec Writer - User Guide v2.1.0
+# 🏗️ AI Systems Spec Writer - User Guide v3.0.0
 
 Transform AI system concepts into professional specifications and compelling documentation that drives adoption through proven patterns and intelligent analysis.
 
@@ -14,46 +14,47 @@ The AI Systems Spec Writer analyzes AI systems to generate comprehensive specifi
 - Create visual system maps for better understanding
 - Always get implementation guidance 
 - Invisible request clarity enhancement
+- Streamlined 6-file knowledge base (reduced from 10)
 
 **Key Principle:** Great specifications bridge the gap between vision and implementation. Every output teaches, every pattern empowers, every user succeeds.
 
 .
 
-## 🆕 What's New in v2.1.0
+## 🆕 What's New in v3.0.0
 
-- **Prompt Improvement Layer**: Invisible request clarity enhancement (Rule 17) - NEW!
-- **Enhanced Pattern Library**: Added Prompt Improvement Pattern to v1.3.0
-- **Updated Quick Reference**: Now includes clarity enhancement guidance
-- **Smarter Interactive Mode**: Works with pre-enhanced requests seamlessly
+- **Streamlined Knowledge Base**: Simplified from 10 files to 6, enhancing performance and reducing token consumption.
+- **Enhanced Main System**: Now includes integrated frameworks and standards
+- **Unified Pattern Library**: All patterns and methods in one comprehensive document
+- **Expanded Quick Reference**: More examples, troubleshooting, and command references
+- **Maintained Core Features**: All 8 modes, 17 rules, and patterns preserved
 
-### Also in v2.0.0:
-- **Quick Reference Card**: Instant access to modes, patterns, and solutions at your fingertips
-- **Full Mode**: Complete end-to-end workflow from analysis to implementation with checkpoints
-- **Evaluate & Refine Mode**: Visual quality assessment and automated improvement suggestions
-- **Implementation Checkpoint Pattern**: Every specification now offers step-by-step implementation help (Rule 16)
-- **Improved Interactive Mode**: Enhanced conversational flow with better examples
-- **Clearer Complexity Boundaries**: Non-overlapping categories for better system assessment
-- **Default Mode Logic**: Explicit triggers for automatic interactive mode activation
+### Also Includes (from v2.x):
+- **Prompt Improvement Layer**: Invisible request clarity enhancement (Rule 17)
+- **Implementation Checkpoint**: Every specification offers step-by-step help (Rule 16)
+- **Full Mode**: Complete end-to-end workflow with checkpoints
+- **Evaluate & Refine Mode**: Visual quality assessment and improvements
+- **Interactive Mode Default**: Conversational creation for everyone
 
 .
 
 ## Overview
 
-The AI Systems Spec Writer is a meta-system that transforms system analysis into actionable specifications. With eight operational modes, intelligent MCP integration, a comprehensive pattern library, and invisible request enhancement, it empowers both beginners and experts to architect professional AI systems through guided conversations.
+The AI Systems Spec Writer is a meta-system that transforms system analysis into actionable specifications. With eight operational modes, intelligent MCP integration, a comprehensive pattern library, and a streamlined 6-file architecture, it empowers both beginners and experts to architect professional AI systems through guided conversations.
 
 This system doesn't just analyze and specify - it teaches and implements. Every interaction is an opportunity to learn architectural principles, understand patterns, and master the art of system design. Whether you're creating a simple chatbot or architecting a complex multi-system integration, the Spec Writer guides you from concept to implementation.
 
-The v2.1.0 release adds invisible prompt improvement, ensuring even the vaguest requests become perfect specifications, while v2.0.0 established the complete journey from initial idea through specification to actual implementation.
+The v3.0 release consolidates the knowledge base for better navigation while maintaining all functionality. The invisible prompt improvement ensures even the vaguest requests become perfect specifications, and implementation checkpoints guarantee you're never left wondering "what's next?"
 
 ## ✨ Key Features
 
+- **Streamlined Architecture**: 6-file knowledge base (40% reduction) with better organization
 - **Prompt Improvement Layer**: Automatically clarifies vague requests without you noticing
-- **8 Operational Modes**: Including new Full and Evaluate modes for comprehensive workflows
-- **Quick Reference Card**: Everything you need at a glance - modes, patterns, fixes, and checklists
+- **8 Operational Modes**: Including Full and Evaluate modes for comprehensive workflows
+- **Quick Reference Card**: Everything you need at a glance with expanded examples
 - **Full Mode Workflow**: Complete journey from analysis → spec → implementation → documentation
 - **Evaluate & Refine**: Visual quality scoring (SPACE framework) with improvement suggestions
 - **Intelligent MCP Selection**: Automatic tool choice based on task complexity
-- **Pattern Library v1.3.0**: Complete pattern collection with Prompt Improvement
+- **Pattern Library v3.0**: Consolidated patterns and methods in one document
 - **Professional READMEs**: Documentation that drives adoption
 - **Visual Architecture**: ASCII diagrams for system understanding
 - **Educational Integration**: Learn architectural principles while creating
@@ -68,26 +69,22 @@ The v2.1.0 release adds invisible prompt improvement, ensuring even the vaguest 
 1. Go to [claude.ai](https://claude.ai)
 2. Click "Projects" in sidebar
 3. Click "Create project"
-4. Name it "AI Systems Spec Writer v2.1"
+4. Name it "AI Systems Spec Writer v3.0"
 
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Writer - AI Systems - v2.1.0.md`
+3. Copy and paste: `Writer - AI Systems.md`
 4. Save the project
 
-### Step 3: Upload Knowledge Base
+### Step 3: Upload Knowledge Base (6 Files)
 Add these essential documents to your project:
-- `AI Systems - Analysis Framework - v1.1.0.md`
-- `AI Systems - Artifact Standards - v1.0.0.md`
-- `AI Systems - Enhancement Methodology - v1.0.0.md`
-- `AI Systems - Evaluate & Refine Mode - v1.0.0.md`
-- `AI Systems - Full Mode - v1.0.0.md`
-- `AI Systems - Interactive Mode - v2.0.0.md`
-- `AI Systems - Pattern Library - v1.3.0.md`
-- `AI Systems - Prompt Improvement - v1.0.0.md`
-- `AI Systems - Quick Reference Card - v1.0.0.md`
-- `AI Systems - README Template - v2.0.0.md`
+1. `Writer - AI Systems.md` (Main system - enhanced)
+2. `AI Systems - Interactive Mode.md` (Standalone)
+3. `AI Systems - Prompt Improvement.md` (Standalone)
+4. `AI Systems - Pattern Library & Methods.md` (Consolidated)
+5. `AI Systems - Quick Reference.md` (Expanded)
+6. `README.md` (This file)
 
 ### Step 4: Start Creating!
 Simply describe what you need - interactive mode is the default, and vague requests are automatically enhanced:
@@ -139,13 +136,6 @@ System: [Invisibly enhances to: "create specification for artificial intelligenc
 Result: Clear understanding, perfect specification
 ```
 
-**Quick Reference in Action:**
-```
-User: How do I fix vague requirements?
-Quick Reference: Switch to $interactive for guided discovery
-Result: Clear, actionable solution instantly
-```
-
 **Full Mode Journey:**
 ```
 User: $full create a code review system
@@ -163,19 +153,12 @@ Result: Targeted improvements with before/after comparison
 Next: "Would you like me to apply these refinements?"
 ```
 
-**Documentation Excellence:**
-```
-User: $readme for my AI writing assistant
-Result: Compelling README with hooks, examples, and AI-powered setup
-Next: "Need help implementing any of the setup steps?"
-```
-
 .
 
 ## 🏗️ Core Capabilities
 
-### Request Enhancement (NEW)
-- Invisible abbreviation expansion (AI → artificial intelligence)
+### Request Enhancement (Invisible)
+- Abbreviation expansion (AI → artificial intelligence)
 - Structure improvement for vague requests
 - Zero assumptions added
 - Sub-second processing
@@ -186,7 +169,7 @@ Next: "Need help implementing any of the setup steps?"
 - Pattern extraction and documentation
 - Strength and weakness identification
 - Enhancement opportunity discovery
-- Clear complexity assessment (non-overlapping categories)
+- Clear complexity assessment
 - Implementation readiness evaluation
 
 ### Specification Generation
@@ -199,7 +182,7 @@ Next: "Need help implementing any of the setup steps?"
 
 ### Documentation Creation
 - Compelling READMEs with transformation hooks
-- Quick setup guides (no time pressure)
+- Quick setup guides
 - Feature showcases focused on outcomes
 - Comprehensive troubleshooting
 - Visual formatting with clean separation
@@ -216,7 +199,7 @@ Next: "Need help implementing any of the setup steps?"
 
 ## 📊 Pattern Library Highlights
 
-The system leverages proven patterns from successful AI systems:
+The consolidated Pattern Library & Methods (v3.0) includes:
 
 ### Architectural Patterns
 - **MCP Integration**: Intelligent tool selection
@@ -226,18 +209,17 @@ The system leverages proven patterns from successful AI systems:
 - **Implementation Checkpoint**: Always offer next steps
 - **Prompt Improvement**: Invisible clarity enhancement
 
-### Documentation Patterns (v2.0)
+### Documentation Patterns
 - **Professional README**: Compelling structure
 - **Transformation Hook**: Value-first messaging
 - **AI-Powered Setup**: Accessible installation
 - **Visual Separation**: Clean readability
 - **Key Principles**: Memorable philosophy
 
-### Quality Patterns
-- **Multi-Dimensional Scoring**: SPACE framework
-- **Automated Improvement**: Self-enhancing outputs
-- **Visual Feedback**: Progress tracking
-- **Error Recovery**: Graceful failure handling
+### Methods
+- **Enhancement Methods**: Safe system evolution
+- **Evaluation Methods**: SPACE framework application
+- **Full Workflow Methods**: Phase-by-phase execution
 
 .
 
@@ -312,10 +294,11 @@ Add to Claude Desktop config file:
 - System will identify gaps and suggest improvements
 - Always ends with implementation guidance
 
-**"I need to see the full process"**
-- Use `$full` mode for comprehensive workflow
-- Includes checkpoints at each phase
-- Complete journey from analysis to documentation
+**"Too many files to navigate"**
+- v3.0 consolidates to just 6 files
+- Main system file now includes frameworks
+- Pattern Library has all patterns and methods
+- Quick Reference expanded with more examples
 
 ### MCP Connection Issues
 - **Docker not running**: Start Docker Desktop
@@ -327,12 +310,13 @@ Add to Claude Desktop config file:
 - For Docker issues: Check container logs in Docker Desktop
 - For NPX issues: Check Claude Desktop logs
 - For specification help: System always offers implementation guidance
-- For pattern questions: Reference the Pattern Library
+- For pattern questions: Reference the Pattern Library & Methods
 
 .
 
 ## ⚠️ Important Notes
 
+- **Consolidated knowledge base** - Now just 6 files instead of 10
 - **Prompt improvement is invisible** - Vague requests automatically enhanced (Rule 17)
 - **Interactive mode is DEFAULT** - Activates automatically for unclear requests
 - **Rule 16 always applies** - Every specification includes implementation offer
@@ -344,6 +328,7 @@ Add to Claude Desktop config file:
 
 ## 📦 Version History
 
+- **v3.0.0**: Consolidated knowledge base from 10 to 6 files, enhanced main system
 - **v2.1.0**: Prompt Improvement Layer (Rule 17) for invisible request enhancement
 - **v2.0.0**: Implementation Checkpoint, Full/Evaluate modes, comprehensive fixes
 - **v1.2.0**: Enhanced README templates with compelling documentation patterns
