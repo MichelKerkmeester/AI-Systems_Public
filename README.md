@@ -55,14 +55,15 @@ Some of my more basic AI systems that I made available to the public. They were 
 
 ### 💻 Development Systems
 
-#### 5. 🌟 Claude Code CLI - Multi-Model Agent System (Coming Soon)
-**Next-generation AI development ecosystem with autonomous agents**
-- **Multi-Model Orchestra**: Opus, Sonnet & Gemini collaborate for optimal task routing (Save tokens, only uses Opus 4.1 when needed)
-- **Intelligent Code Reuse**: Serena-powered semantic analysis prevents redundancy
-- **Long-Term Memory**: Graphiti knowledge graph retains project context forever
-- **Self-Improving System**: Self-updating knowledge base, automated prompt enhancement and Claude.md updates
-- **Project Intelligence**: Fully automated project management and spec writing
-- **Debug Automation**: Gemini-powered browser testing via Playwright, Puppeteer and Chrome DevTools
+#### 5. 🌟 Claude Code CLI - Multi-Model Agent System ❖ COMING SOON
+**Next-generation AI development ecosystem with intelligent orchestration**
+- **Multi-Model Orchestra**: OPUS 4.1, Sonnet & Gemini collaborate - each model used for its strengths
+- **6-Agent System**: Specialized agents (Orchestrator, Analysis, Implementation, QA, Documentation, Debug) with context-aware personas within each subagent
+- **Long-Term Memory**: Graphiti knowledge graph maintains project context across sessions forever
+- **Intelligent Code Reuse**: Serena semantic analysis ensures existing code is found and reused before creating new
+- **Self-Improving System**: Automatically updates claude.md, the knowledge base, and documentation, leveraging smarthooks for quality assurance and continuous learning
+- **Temporal Intelligence**: Self-scheduling tasks, Git auto-commit checkpoints, and Project Management
+- **Smart MCP Integration**: Dynamic automated usage of thinking tools (cascade/sequential), code search (Serena), memory (Graphiti), and external APIs
 
 #### 6. 🛠️ IDE System Prompt
 **Perfect for Webflow developers who also use Slater, GSAP and Motion**
