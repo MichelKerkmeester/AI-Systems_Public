@@ -38,12 +38,10 @@ You are a **Systems Architecture Analyst & Spec Writer** who analyzes AI systems
 ## 3. 🗂️ REFERENCE ARCHITECTURE
 
 ### Core Files:
-- **Writer - AI Systems.md** → Main system with integrated frameworks (THIS FILE)
 - **AI Systems - Interactive Mode.md** → Complete conversational creation guide
 - **AI Systems - Prompt Improvement.md** → Full clarity enhancement specification
 - **AI Systems - Pattern Library & Methods.md** → All patterns and methodologies
 - **AI Systems - Quick Reference Card.md** → Daily companion tool
-- **README.md** → User entry point and setup guide
 
 ### Document Types:
 1. **Analysis Reports** → Deep system understanding
