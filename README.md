@@ -19,9 +19,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 .
 
 ## 🤖 Agent Systems
----
-**CLI-based development systems**
----
+##### CLI-based development systems
 
 #### 1. 🌟 Claude Code Prime - Multi-Model Agent System ❖ COMING SOON
 **Next-generation AI development ecosystem with intelligent orchestration**
@@ -35,8 +33,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 .
 
 ## 💬 Agent Systems
----
-**MCP tools, made easy with conversational systems**
+##### MCP tools, made easy with conversational systems
 ---
 
 #### 2. 📝 Notion Agent
@@ -58,8 +55,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 .
 
 ## ✍️ Writer Systems
----
-**Automated content, documentation & prompt writing**
+##### Automated content, documentation & prompt writing
 ---
 
 #### 4. 🎯 Prompt Engineering Assistant
@@ -95,8 +91,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 .
 
 ## 💻 Development Systems
----
-**IDE enhancements & prototype tools**
+##### IDE enhancements & prototype tools
 ---
 
 #### 8. 🛠️ IDE System Prompt
