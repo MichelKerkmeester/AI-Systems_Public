@@ -24,7 +24,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 #### 1. 🌟 Claude Code Prime - Multi-Model Agent System — (COMING SOON)
 **Next-generation AI development ecosystem with intelligent orchestration**
-- **Multi-Model Orchestra**: OPUS 4.1, Sonnet & Gemini collaborate, usage based on task complexity and model strengths
+- **Multi-Model Orchestra**: OPUS 4.1, GPT-5 & Gemini collaborate, usage based on task complexity and model strengths
 - **6-Agent System**: Specialized agents (Orchestrator, Analysis, Implementation, QA, Documentation, Debug) with parallel sub-agents that have context-aware personas
 - **Long-Term Memory**: Graphiti knowledge graph maintains project context across sessions forever
 - **Intelligent Code Reuse**: Serena semantic analysis ensures existing code is found and reused before creating new
