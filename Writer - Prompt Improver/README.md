@@ -1,33 +1,34 @@
-# Prompt Engineering Assistant - User Guide v3.1.0
+# Prompt Engineering Assistant - User Guide v4.0.0
 
-A comprehensive system that transforms vague requests into clear, effective AI prompts using proven frameworks, systematic evaluation, and intelligent refinement. Features 5 operating modes, compact progress tracking, and conversational guidance.
+A comprehensive system that transforms vague requests into clear, effective AI prompts using proven frameworks, systematic evaluation, and intelligent refinement. Features 8 operating modes including 3 specialized Lovable sub-modes, compact progress tracking, and conversational guidance.
 
-## 🆕 What's New in v3.1.0
+## 🆕 What's New in v4.0.0
 
-- **Compact Optimization Reports**: Streamlined format reduces cognitive load by 60%
-- **Quick Reference Card**: New daily companion with everything at a glance
-- **Enhanced User Experience**: Cleaner visual hierarchy and faster scanning
-- **Improved Mobile Support**: Compact format works better on all devices
-- **Maintained Full Functionality**: All features preserved while reducing visual clutter
-- **Better Navigation**: Clear paths to detailed documentation when needed
+- **Lovable Platform Integration**: Three specialized sub-modes for prototype, website, and app development
+- **Enhanced Framework Architecture**: New VISION, CONVERT, and SCALE frameworks for Lovable modes
+- **Intelligent Auto-Detection**: Weighted keyword analysis for automatic mode selection
+- **Chat vs Default Mode Strategy**: Clear guidance for Lovable platform development
+- **Expanded MCP Usage**: Cascade Thinking for complex apps (up to 8 thoughts)
+- **Comprehensive Troubleshooting**: Platform-specific issue resolution
+- **Quick Reference Card**: Enhanced with Lovable mode guide
 
 .
 
 ## Overview
 
-The Prompt Engineering Assistant helps users craft powerful, precise prompts for any AI system. With three core frameworks (CRAFT, SPARK, PRISM) and intelligent enhancement algorithms, it delivers professional-grade prompts that maximize AI performance.
+The Prompt Engineering Assistant helps users craft powerful, precise prompts for any AI system, with specialized support for the Lovable development platform. With six core frameworks (CRAFT, SPARK, PRISM, VISION, CONVERT, SCALE) and intelligent enhancement algorithms, it delivers professional-grade prompts that maximize AI performance.
 
 ## ✨ Key Features
 
-- **5 Specialized Modes**: $short, $improve (default), $refine, $interactive, $json
-- **3 Core Frameworks**: CRAFT (structure), SPARK (enhancement), PRISM (evaluation)
+- **8 Specialized Modes**: Including 3 Lovable sub-modes for different development scenarios
+- **6 Core Frameworks**: Universal (CRAFT, SPARK, PRISM) + Lovable-specific (VISION, CONVERT, SCALE)
 - **Intelligent MCP Selection**: Automatic choice between Sequential and Cascade thinking
-- **Compact Progress Tracking**: Streamlined reports showing improvements
-- **Platform Optimization**: Tailored for ChatGPT, Claude, and other AI platforms
-- **Comprehensive Examples**: 50+ before/after transformations
-- **First-Time User Detection**: Automatic onboarding for new users
-- **Artifact-Based Delivery**: All prompts delivered in reusable artifacts
-- **Quick Reference Card**: Instant access to commonly needed information
+- **Platform-Specific Optimization**: Deep integration with React, Supabase, Tailwind tech stack
+- **Compact Progress Tracking**: Streamlined reports with framework-specific metrics
+- **Comprehensive Examples**: 100+ before/after transformations including Lovable patterns
+- **Interactive Mode**: Conversational guidance with platform-aware questions
+- **Artifact-Based Delivery**: All prompts delivered in reusable markdown artifacts
+- **Quick Reference Card**: Instant access to modes, frameworks, and patterns
 
 .
 
@@ -37,22 +38,24 @@ The Prompt Engineering Assistant helps users craft powerful, precise prompts for
 1. Go to claude.ai
 2. Click "Projects" in sidebar
 3. Click "Create project"
-4. Name it "Prompt Engineering Assistant v5.0"
+4. Name it "Prompt Engineering Assistant v4.0"
 
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Writer - Prompt Improver - v5.0.0.md`
+3. Copy and paste: `Writer - Prompt Improver - v4.0.0.md`
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
 Add these to your project's knowledge base:
-- `Prompt - Quick Reference Card - v1.0.0.md` (NEW - Daily companion)
+- `Prompt - Quick Reference Card - v2.0.0.md` (Enhanced with Lovable guide)
 - `Prompt - Artifact Standards & Templates - v2.0.0.md`
-- `Prompt - Evaluation & Refinement - v1.0.1.md`
+- `Prompt - Evaluation & Refinement - v2.0.0.md`
 - `Prompt - Examples & Case Studies - v2.0.0.md`
 - `Prompt - Interactive Mode - v2.0.0.md`
-- `Prompt - Patterns & Enhancements - v1.0.1.md`
+- `Prompt - Patterns & Enhancements - v2.0.0.md`
+- `Prompt - Lovable Mode - v1.0.0.md` (NEW)
+- `Prompt - Lovable Examples & Patterns - v1.1.0.md` (NEW)
 
 ### Step 4: Start Improving Prompts
 Simply paste your prompt or describe what you need:
@@ -60,61 +63,35 @@ Simply paste your prompt or describe what you need:
 write about dogs
 $improve analyze customer data
 $interactive
-$refine create a marketing strategy
+$lovable-app build todo list
+$lp create dashboard mockup
+$lw marketing landing page
 ```
 
 .
+
 
 ## 🎛️ Operating Modes
 
+### Core Modes
+
 | Mode | Activation | Purpose | Best For | MCP Usage |
 |------|------------|---------|----------|-----------|
-| **$short** | `$short` or `$s` | Quick minimal refinement | Simple clarity boost | Sequential (1-2 thoughts) |
-| **$improve** | `$improve` or `$i` (DEFAULT) | Smart enhancement | Most improvements | Sequential (2-3 thoughts) |
-| **$refine** | `$full` or `$refine` or `$r` | Full 3-phase optimization | Maximum quality | Cascade (3-5+ thoughts) |
-| **$interactive** | `$interactive` | Guided help with Q&A | Learning/exploring | Sequential (1-3 thoughts) |
-| **$json** | `$json` or `$j` | API-ready JSON format | Programmatic use | Sequential (2-3 thoughts) |
+| **$short** | `$short` or `$s` | Quick minimal refinement | Simple clarity boost | Sequential (1-2) |
+| **$improve** | `$improve` or `$i` (DEFAULT) | Smart enhancement | Most improvements | Sequential/Cascade (2-3) |
+| **$refine** | `$full`, `$refine`, or `$r` | Full 3-phase optimization | Maximum quality | Cascade (3-5+) |
+| **$interactive** | `$interactive` | Guided help with Q&A | Learning/exploring | Sequential/Cascade (1-3) |
+| **$json** | `$json` or `$j` | API-ready JSON format | Programmatic use | Sequential (2-3) |
 
-.
+### Lovable Sub-Modes
 
-## 🏗️ Core Frameworks
+| Sub-Mode | Activation | Purpose | Best For | MCP Usage |
+|----------|------------|---------|----------|-----------|
+| **Prototype** | `$lovable-prototype` or `$lp` | Visual mockups and concepts | Design validation | Sequential (1-3) |
+| **Website** | `$lovable-website` or `$lw` | Marketing sites and landing pages | Conversion focus | Sequential (2-4) |
+| **App** | `$lovable-app` or `$la` | Full-stack applications | Complete functionality | Cascade (3-6) |
 
-### CRAFT Framework (Structure)
-- **C** - Context & Background
-- **R** - Role & Expertise
-- **A** - Action & Deliverables
-- **F** - Format & Structure
-- **T** - Target & Success Criteria
-
-### SPARK Method (Enhancement)
-- **S** - Specificity (add concrete details)
-- **P** - Purpose (clarify intent)
-- **A** - Audience (define target users)
-- **R** - Results (specify outcomes)
-- **K** - Knowledge (include context)
-
-### PRISM Evaluation (Quality)
-- **P** - Precision (25%)
-- **R** - Relevance (20%)
-- **I** - Impact (25%)
-- **S** - Structure (15%)
-- **M** - Measurability (15%)
-
-.
-
-## 📊 Compact Report Example (NEW FORMAT)
-
-```
-📊 Enhancement: 85% ↑ | Mode: $improve | Method: CRAFT + SPARK
-
-CRAFT Coverage: C:80% R:100% A:80% F:60% T:100%
-Before → After: 3 words (2/10 clarity) → 87 words (9/10 clarity)
-
-Key Improvements:
-✓ Specificity: added metrics, timeframes • Role: expert persona defined
-✓ Structure: clear sections • Format: output structure specified
-✓ Context: background provided • Success criteria: measurable outcomes
-```
+**Auto-detection**: Using just `$lovable` analyzes keywords to select the appropriate sub-mode automatically.
 
 .
 
@@ -134,6 +111,59 @@ AI: "Let me help! What's the main purpose? Who's your audience?"
 
 .
 
+## 🏗️ Frameworks Overview
+
+### Universal Frameworks
+
+#### CRAFT Framework (Structure)
+- **C** - Context & Background
+- **R** - Role & Expertise
+- **A** - Action & Deliverables
+- **F** - Format & Structure
+- **T** - Target & Success Criteria
+
+#### SPARK Method (Enhancement)
+- **S** - Specificity (add concrete details)
+- **P** - Purpose (clarify intent)
+- **A** - Audience (define target users)
+- **R** - Results (specify outcomes)
+- **K** - Knowledge (include context)
+
+#### PRISM Evaluation (Quality)
+- **P** - Precision (25%)
+- **R** - Relevance (20%)
+- **I** - Impact (25%)
+- **S** - Structure (15%)
+- **M** - Measurability (15%)
+
+### Lovable-Specific Frameworks
+
+#### VISION Framework (Prototype Mode)
+- **V** - Visual Design (layout, colors, typography)
+- **I** - Interactions (animations, transitions)
+- **S** - Screens (page flow, navigation)
+- **I** - Iteration (quick refinements)
+- **O** - Observable (user journey)
+- **N** - Notable (memorable elements)
+
+#### CONVERT Framework (Website Mode)
+- **C** - Content Strategy (SEO, copy, metadata)
+- **O** - Optimization (performance, Core Web Vitals)
+- **N** - Navigation (user pathways)
+- **V** - Visual Impact (hero sections, CTAs)
+- **E** - Engagement (forms, chat, social)
+- **R** - Responsive (mobile-first design)
+- **T** - Testing (A/B testing, analytics)
+
+#### SCALE Framework (App Mode)
+- **S** - Structure (database schema, architecture)
+- **C** - Components (reusable UI elements)
+- **A** - Authentication (user management, roles)
+- **L** - Logic (business rules, validation)
+- **E** - Endpoints (APIs, webhooks, real-time)
+
+.
+
 ## 📈 Evaluation System
 
 ### Quick Evaluation (10 Criteria)
@@ -150,6 +180,40 @@ AI: "Let me help! What's the main purpose? Who's your audience?"
 - Before/after comparison
 
 .
+
+
+## 📊 Compact Report Examples
+
+### Standard Enhancement
+```
+📊 Enhancement: 85% ↑ | Mode: $improve | Method: CRAFT + SPARK
+
+CRAFT Coverage: C:80% R:100% A:80% F:60% T:100%
+Before → After: 3 words (2/10 clarity) → 87 words (9/10 clarity)
+
+Key Improvements:
+✓ Specificity: added metrics, timeframes • Role: expert persona defined
+✓ Structure: clear sections • Format: output structure specified
+```
+
+### Lovable App Enhancement
+```
+📊 Enhancement: 92% ↑ | Mode: $lovable-app | Method: SCALE Framework
+
+SCALE Coverage: S:100% C:80% A:100% L:80% E:90%
+Before → After: 5 words (3/10 clarity) → 450 words (10/10 clarity)
+Backend: Supabase ✓ | Auth: Configured ✓
+Implementation Phases: 4
+Platform: Lovable-optimized ✓
+
+Key Improvements:
+✓ Tech stack: React + Supabase defined • Database: Complete schema
+✓ Features: CRUD + real-time • Auth: Email/OAuth strategy
+✓ Components: UI architecture • Phases: Clear implementation order
+```
+
+.
+
 
 ## 🔧 Technical Details
 
@@ -277,42 +341,51 @@ The system intelligently selects thinking tools based on mode:
 - For NPX issues: Check Claude Desktop logs
 - For general issues: The AI assistant can help diagnose problems
 
+### Lovable-Specific Issues
+- **Supabase Connection**: Check environment variables, verify project URL
+- **Component Rendering**: Clear cache, check Tailwind classes
+- **Build Failures**: Start with blank project, build incrementally
+- **Real-time Not Working**: Enable realtime on tables, check RLS policies
+
 .
 
 ## ⚠️ Important Notes
 
 - **Never answers prompts** - Only improves them
-- **Always uses artifacts** - Ensures reusability
+- **Always uses artifacts** - Ensures reusability  
 - **No em dashes** - Uses commas, colons, or periods
-- **Works without MCPs** - But enhanced with them
-- **Quick Reference Card** - Keep it open for daily use
+- **Platform-aware** - Optimizes for Lovable when detected
+- **Chat vs Default** - Clear guidance for Lovable development
+- **Quick Reference Card** - Enhanced with Lovable guide
 
 ## 📦 Version History
 
+- **v4.0.0**: Lovable platform integration, 3 sub-modes, 6 frameworks, enhanced MCP usage
 - **v3.1.0**: Compact format, Quick Reference Card, improved UX
 - **v3.0.0**: Streamlined reports and reduced cognitive load
-- **v2.0.0**: Complete rewrite with 5 modes, visual dashboards, interactive guidance
-- **v1.1.0**: Added evaluation system and refinement workflow
+- **v2.0.0**: Complete rewrite with 5 modes, visual dashboards
 - **v1.0.0**: Initial CRAFT framework implementation
 
 ## 🎯 Key Principles
 
 1. **Make prompt engineering accessible** without dumbing it down
-2. **Every feature serves both beginners and experts**
-3. **Compact feedback makes improvements scannable**
-4. **Preserve user intent while maximizing effectiveness**
-5. **Scale complexity to match task requirements**
-6. **Reduce cognitive load** while maintaining functionality
+2. **Platform-specific optimization** when appropriate
+3. **Scale complexity** to match task requirements
+4. **Preserve user intent** while maximizing effectiveness
+5. **Reduce cognitive load** through compact reporting
+6. **Support full-stack development** with Lovable integration
 
 .
 
 ## 📚 Additional Resources
 
+- [Lovable Platform Documentation](https://lovable.dev/docs)
+- [Supabase Documentation](https://supabase.com/docs)
+- [React Documentation](https://react.dev)
+- [Tailwind CSS](https://tailwindcss.com)
 - [MCP Protocol Guide](https://modelcontextprotocol.io/)
-- [Docker Desktop Help](https://docs.docker.com/desktop/)
 - [Sequential Thinking MCP](https://github.com/sequentialthinking/sequential-thinking-mcp)
 - [Cascade Thinking MCP](https://github.com/cascadethinking/cascade-thinking-mcp)
-- [Claude Projects Guide](https://support.anthropic.com/claude-projects)
 
 ---
 

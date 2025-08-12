@@ -55,8 +55,8 @@ INTERACTIVE OFFERED: Yes - Declined
 - **◇** - Process/workflow sections and requirements
 - **◊** - Sub-headings within sections (for organizing complex requirements)
 - **→** - Designs & References sections
-- **✦** - Success criteria sections
-- **✓** - Resolution Checklist sections
+- **✦** - Success criteria sections (bullets only, no checkboxes)
+- **✓** - Resolution Checklist sections (checkboxes only, no bullets)
 - **⊗** - Dependencies or out of scope
 - **⚠** - Risks and important notices
 - **⚠︎** - Key problems/changes in descriptions
@@ -71,9 +71,9 @@ INTERACTIVE OFFERED: Yes - Declined
 - **•** - Bullet points under items
 
 ### Symbol Usage Rules
-- **✦** is EXCLUSIVELY for Success Criteria checkboxes
-- **✓** is EXCLUSIVELY for Resolution Checklist sections and items
-- Never mix these symbols - maintain clear distinction
+- **✦** is EXCLUSIVELY for Success Criteria (bullets only, no checkboxes)
+- **✓** is EXCLUSIVELY for Resolution Checklist sections (checkboxes only, no bullets)
+- Never mix these formats - maintain clear distinction
 
 ### Spec Mode Approach (Minimal Symbols)
 For $spec mode, use conversational format with minimal symbols:
@@ -94,13 +94,13 @@ For $spec mode, use conversational format with minimal symbols:
 • More requirements
 
 ## ✦ Success Criteria
-- [ ] Success metric 1
-- [ ] Success metric 2
+- Success metric 1
+- Success metric 2
 
 ## ✓ Resolution Checklist
 ### Work Stream
-- [ ] Deliverable 1
-- [ ] Deliverable 2
+[ ] Deliverable 1
+[ ] Deliverable 2
 ```
 
 ---
@@ -144,21 +144,21 @@ INTERACTIVE OFFERED: N/A
 ---
 
 ## ✦ Success Criteria
-- [ ] [Criterion 1]
-- [ ] [Criterion 2]
-- [ ] [Criterion 3]
+- [Criterion 1]
+- [Criterion 2]
+- [Criterion 3]
 
 ---
 
 ## ✓ Resolution Checklist
 
 ### Implementation
-- [ ] Build core functionality
-- [ ] Apply styling and responsive behavior
+[ ] Build core functionality
+[ ] Apply styling and responsive behavior
 
 ### Verification
-- [ ] Test across browsers and devices
-- [ ] Validate against requirements
+[ ] Test across browsers and devices
+[ ] Validate against requirements
 
 ---
 
@@ -221,32 +221,32 @@ By implementing [solution approach], we'll achieve [specific benefits] and impro
 ---
 
 ## ✦ Success Criteria
-- [ ] [Detailed criterion 1]
-- [ ] [Performance metric]
-- [ ] [User experience metric]
-- [ ] [Business metric]
+- [Detailed criterion 1]
+- [Performance metric]
+- [User experience metric]
+- [Business metric]
 
 ---
 
 ## ✓ Resolution Checklist
 
 ### Foundation Work
-- [ ] Set up architecture and dependencies
-- [ ] Configure necessary integrations
+[ ] Set up architecture and dependencies
+[ ] Configure necessary integrations
 
 ### Core Development
-- [ ] Implement primary functionality
-- [ ] Add secondary features
-- [ ] Apply UI/UX requirements
+[ ] Implement primary functionality
+[ ] Add secondary features
+[ ] Apply UI/UX requirements
 
 ### Testing & Validation
-- [ ] Complete functional testing
-- [ ] Verify cross-browser compatibility
-- [ ] Validate performance metrics
+[ ] Complete functional testing
+[ ] Verify cross-browser compatibility
+[ ] Validate performance metrics
 
 ### Documentation
-- [ ] Update technical documentation
-- [ ] Create user guides if needed
+[ ] Update technical documentation
+[ ] Create user guides if needed
 
 ---
 
@@ -385,45 +385,45 @@ This comprehensive implementation will transform [system/feature] by [approach],
 ---
 
 ## ✦ Success Criteria
-- [ ] [High-level metric 1]
-- [ ] [Performance benchmark]
-- [ ] [User adoption metric]
-- [ ] [Business impact metric]
-- [ ] [Quality metric]
+- [High-level metric 1]
+- [Performance benchmark]
+- [User adoption metric]
+- [Business impact metric]
+- [Quality metric]
 
 ---
 
 ## ✓ Resolution Checklist
 
 ### Foundation & Architecture
-- [ ] Establish technical foundation
-- [ ] Set up infrastructure and dependencies
-- [ ] Configure integrations
+[ ] Establish technical foundation
+[ ] Set up infrastructure and dependencies
+[ ] Configure integrations
 
 ### Core Feature Development
-- [ ] Implement primary functionality
-- [ ] Build secondary features
-- [ ] Complete third-tier features
+[ ] Implement primary functionality
+[ ] Build secondary features
+[ ] Complete third-tier features
 
 ### Integration & Testing
-- [ ] Connect all components
-- [ ] Complete comprehensive testing
-- [ ] Validate against requirements
+[ ] Connect all components
+[ ] Complete comprehensive testing
+[ ] Validate against requirements
 
 ### Performance & Polish
-- [ ] Optimize performance
-- [ ] Apply UI/UX polish
-- [ ] Fix edge cases
+[ ] Optimize performance
+[ ] Apply UI/UX polish
+[ ] Fix edge cases
 
 ### Documentation & Training
-- [ ] Complete technical documentation
-- [ ] Create user guides
-- [ ] Conduct team training
+[ ] Complete technical documentation
+[ ] Create user guides
+[ ] Conduct team training
 
 ### Launch Preparation
-- [ ] Complete security audit
-- [ ] Finalize deployment plan
-- [ ] Prepare rollback strategy
+[ ] Complete security audit
+[ ] Finalize deployment plan
+[ ] Prepare rollback strategy
 
 ---
 
@@ -544,25 +544,25 @@ Fixing this bug will [restore functionality], eliminate [user frustration], and 
 ---
 
 ## ✦ Success Criteria
-- [ ] Bug no longer reproducible
-- [ ] No regression in related features
-- [ ] Works across all supported browsers
+- Bug no longer reproducible
+- No regression in related features
+- Works across all supported browsers
 
 ---
 
 ## ✓ Resolution Checklist
 
 ### Investigation
-- [ ] Identify root cause and affected areas
-- [ ] Document findings
+[ ] Identify root cause and affected areas
+[ ] Document findings
 
 ### Fix Implementation
-- [ ] Apply fix to all instances
-- [ ] Add regression prevention
+[ ] Apply fix to all instances
+[ ] Add regression prevention
 
 ### Verification
-- [ ] Test fix across all scenarios
-- [ ] Validate no regressions
+[ ] Test fix across all scenarios
+[ ] Validate no regressions
 
 ---
 
@@ -637,27 +637,27 @@ By optimizing [area], we'll achieve [specific improvements] resulting in [measur
 ---
 
 ## ✦ Success Criteria
-- [ ] [Performance target met]
-- [ ] [User metric improved]
-- [ ] [No negative side effects]
+- [Performance target met]
+- [User metric improved]
+- [No negative side effects]
 
 ---
 
 ## ✓ Resolution Checklist
 
 ### Analysis & Planning
-- [ ] Baseline measurements and target definition
-- [ ] Impact assessment complete
+[ ] Baseline measurements and target definition
+[ ] Impact assessment complete
 
 ### Implementation
-- [ ] Apply optimizations
-- [ ] Update related systems
-- [ ] Add monitoring
+[ ] Apply optimizations
+[ ] Update related systems
+[ ] Add monitoring
 
 ### Validation
-- [ ] Measure improvements against targets
-- [ ] Verify no regressions
-- [ ] Document results
+[ ] Measure improvements against targets
+[ ] Verify no regressions
+[ ] Document results
 
 ---
 
@@ -669,11 +669,13 @@ By optimizing [area], we'll achieve [specific improvements] resulting in [measur
 
 ## 4. ✓ RESOLUTION CHECKLIST TEMPLATES
 
-### 🚨 DISTINCT SYMBOL APPROACH
+### 🚨 DISTINCT FORMAT APPROACH
 
 **Core Philosophy:**
 - Use **✓** symbol for Resolution Checklist sections
 - Use **✦** symbol for Success Criteria
+- Resolution Checklist: **Checkboxes only, no bullets**
+- Success Criteria: **Bullets only, no checkboxes**
 - Think in **work streams**, not tasks
 - Each checkbox = **meaningful deliverable**
 - Sections = **logical groupings** of related work
@@ -697,12 +699,12 @@ By optimizing [area], we'll achieve [specific improvements] resulting in [measur
 ## ✓ Resolution Checklist
 
 ### Implementation
-- [ ] Build core functionality
-- [ ] Apply styling and responsive behavior
+[ ] Build core functionality
+[ ] Apply styling and responsive behavior
 
 ### Verification
-- [ ] Test across browsers and devices
-- [ ] Validate against requirements
+[ ] Test across browsers and devices
+[ ] Validate against requirements
 ```
 
 ### Standard Mode Checklist
@@ -710,21 +712,21 @@ By optimizing [area], we'll achieve [specific improvements] resulting in [measur
 ## ✓ Resolution Checklist
 
 ### Foundation Work
-- [ ] Set up architecture and dependencies
-- [ ] Configure necessary integrations
+[ ] Set up architecture and dependencies
+[ ] Configure necessary integrations
 
 ### Core Development
-- [ ] Implement primary functionality
-- [ ] Add secondary features
-- [ ] Apply UI/UX requirements
+[ ] Implement primary functionality
+[ ] Add secondary features
+[ ] Apply UI/UX requirements
 
 ### Testing & Validation
-- [ ] Complete functional testing
-- [ ] Verify cross-browser compatibility
+[ ] Complete functional testing
+[ ] Verify cross-browser compatibility
 
 ### Documentation
-- [ ] Update technical documentation
-- [ ] Create user guides if needed
+[ ] Update technical documentation
+[ ] Create user guides if needed
 ```
 
 ### Complex Mode Checklist (Phased)
@@ -732,34 +734,34 @@ By optimizing [area], we'll achieve [specific improvements] resulting in [measur
 ## ✓ Resolution Checklist
 
 ### Foundation & Architecture
-- [ ] Establish technical foundation
-- [ ] Set up infrastructure
-- [ ] Configure integrations
+[ ] Establish technical foundation
+[ ] Set up infrastructure
+[ ] Configure integrations
 
 ### Core Feature Development
-- [ ] Implement primary functionality
-- [ ] Build secondary features
-- [ ] Complete third-tier features
+[ ] Implement primary functionality
+[ ] Build secondary features
+[ ] Complete third-tier features
 
 ### Integration & Testing
-- [ ] Connect all components
-- [ ] Complete comprehensive testing
-- [ ] Validate against requirements
+[ ] Connect all components
+[ ] Complete comprehensive testing
+[ ] Validate against requirements
 
 ### Performance & Polish
-- [ ] Optimize performance
-- [ ] Apply UI/UX polish
-- [ ] Fix edge cases
+[ ] Optimize performance
+[ ] Apply UI/UX polish
+[ ] Fix edge cases
 
 ### Documentation & Training
-- [ ] Complete technical documentation
-- [ ] Create user guides
-- [ ] Conduct team training
+[ ] Complete technical documentation
+[ ] Create user guides
+[ ] Conduct team training
 
 ### Launch Preparation
-- [ ] Complete security audit
-- [ ] Finalize deployment plan
-- [ ] Prepare rollback strategy
+[ ] Complete security audit
+[ ] Finalize deployment plan
+[ ] Prepare rollback strategy
 ```
 
 ### Complex Mode Checklist (Child Tickets)
@@ -767,29 +769,29 @@ By optimizing [area], we'll achieve [specific improvements] resulting in [measur
 ## ✓ Resolution Checklist
 
 ### Ticket Creation & Planning
-- [ ] Create all child tickets
-- [ ] Assign team owners
-- [ ] Map dependencies
+[ ] Create all child tickets
+[ ] Assign team owners
+[ ] Map dependencies
 
 ### Cross-Team Coordination
-- [ ] Establish sync meetings
-- [ ] Define integration points
-- [ ] Align testing strategy
+[ ] Establish sync meetings
+[ ] Define integration points
+[ ] Align testing strategy
 
 ### Development Tracking
-- [ ] Monitor child ticket progress
-- [ ] Resolve blockers
-- [ ] Maintain timeline
+[ ] Monitor child ticket progress
+[ ] Resolve blockers
+[ ] Maintain timeline
 
 ### Integration & Testing
-- [ ] Complete integration testing
-- [ ] Validate end-to-end flows
-- [ ] Performance verification
+[ ] Complete integration testing
+[ ] Validate end-to-end flows
+[ ] Performance verification
 
 ### Launch Coordination
-- [ ] All child tickets complete
-- [ ] Final integration verified
-- [ ] Go-live checklist complete
+[ ] All child tickets complete
+[ ] Final integration verified
+[ ] Go-live checklist complete
 ```
 
 ### Bug Fix Checklist
@@ -797,16 +799,16 @@ By optimizing [area], we'll achieve [specific improvements] resulting in [measur
 ## ✓ Resolution Checklist
 
 ### Investigation
-- [ ] Identify root cause and affected areas
-- [ ] Document findings
+[ ] Identify root cause and affected areas
+[ ] Document findings
 
 ### Fix Implementation
-- [ ] Apply fix to all instances
-- [ ] Add regression prevention
+[ ] Apply fix to all instances
+[ ] Add regression prevention
 
 ### Verification
-- [ ] Test fix across all scenarios
-- [ ] Validate no regressions
+[ ] Test fix across all scenarios
+[ ] Validate no regressions
 ```
 
 ### Improvement Checklist
@@ -814,21 +816,21 @@ By optimizing [area], we'll achieve [specific improvements] resulting in [measur
 ## ✓ Resolution Checklist
 
 ### Analysis & Planning
-- [ ] Baseline measurements and target definition
-- [ ] Impact assessment complete
+[ ] Baseline measurements and target definition
+[ ] Impact assessment complete
 
 ### Implementation
-- [ ] Apply optimizations
-- [ ] Update related systems
-- [ ] Add monitoring
+[ ] Apply optimizations
+[ ] Update related systems
+[ ] Add monitoring
 
 ### Validation
-- [ ] Measure improvements against targets
-- [ ] Verify no regressions
+[ ] Measure improvements against targets
+[ ] Verify no regressions
 
 ### Documentation
-- [ ] Document changes and results
-- [ ] Update team guides
+[ ] Document changes and results
+[ ] Update team guides
 ```
 
 ### SMART Criteria for Checklist Items
@@ -889,9 +891,9 @@ const example = "code here";
 ```
 
 ### Lists
-- Use `-` for unordered lists
+- Use `-` for unordered lists (Success Criteria)
 - Use `1.` for ordered lists
-- Use `- [ ]` for checkboxes
+- Use `[ ]` for checkboxes (Resolution Checklist only)
 - Indent with 2 spaces for nested items
 - Use `•` for bullet points under sub-categories
 
@@ -938,11 +940,11 @@ By implementing advanced search with filters, relevance scoring, and performance
 **Success Criteria (✦):**
 ```markdown
 ## ✦ Success Criteria
-- [ ] Feature works as designed on all devices
-- [ ] Page loads within target time
-- [ ] Majority of users complete task successfully
-- [ ] Zero critical bugs in production
-- [ ] Analytics tracking implemented
+- Feature works as designed on all devices
+- Page loads within target time
+- Majority of users complete task successfully
+- Zero critical bugs in production
+- Analytics tracking implemented
 ```
 
 **Resolution Checklist (✓):**
@@ -950,9 +952,9 @@ By implementing advanced search with filters, relevance scoring, and performance
 ## ✓ Resolution Checklist
 
 ### Work Stream Name
-- [ ] Deliverable 1
-- [ ] Deliverable 2
-- [ ] Deliverable 3
+[ ] Deliverable 1
+[ ] Deliverable 2
+[ ] Deliverable 3
 ```
 
 ### Complex Mode Implementation Approaches
@@ -1065,7 +1067,7 @@ INSIGHTS GAINED:
 
 ## Version History
 
-- **v2.2.0**: Updated symbol assignments for clarity
+- **v2.2.0**: Updated formatting - Success Criteria (bullets only), Resolution Checklist (checkboxes only)
 - **v2.1.0**: Major update - Resolution Checklists now use global approach (max 3 items per section, outcome-focused)
 - **v2.0.0**: Merged Complex/Epic templates, added concise Spec mode
 - **v1.0.0**: Initial template standards

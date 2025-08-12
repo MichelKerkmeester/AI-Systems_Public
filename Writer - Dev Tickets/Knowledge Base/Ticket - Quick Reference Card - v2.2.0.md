@@ -8,8 +8,8 @@ This quick reference card provides instant access to the most commonly needed in
 - **Quick lookups** during ticket creation
 - **Mode selection** guidance
 - **Interactive offer** reminders
-- **Symbol reference** with updated distinction
-- **Resolution checklist** sizing with ✦ symbol
+- **Format reference** with updated distinction
+- **Resolution checklist** sizing with ✓ symbol
 - **Spec mode** fast paths
 - **Quality verification** checklist
 
@@ -25,11 +25,11 @@ Keep this open while writing tickets for maximum efficiency.
 6. [🎯 QUICK PATTERNS](#6--quick-patterns)
 7. [🚨 MCP SELECTION](#7--mcp-selection)
 8. [💬 MODE RESPONSES](#8--mode-responses)
-9. [✦ RESOLUTION CHECKLIST SIZES](#9--resolution-checklist-sizes)
+9. [✓ RESOLUTION CHECKLIST SIZES](#9--resolution-checklist-sizes)
 10. [💻 SPEC MODE FAST PATHS](#10--spec-mode-fast-paths)
 11. [🔗 QUICK LINKS](#11--quick-links)
 12. [⚡ COMMON COMMANDS](#12--common-commands)
-13. [📐 SYMBOL HIERARCHY](#13--symbol-hierarchy)
+13. [📐 FORMAT HIERARCHY](#13--format-hierarchy)
 14. [✅ QUALITY CHECKLIST](#14--quality-checklist)
 15. [🚀 QUICK START](#15--quick-start)
 
@@ -50,8 +50,8 @@ Keep this open while writing tickets for maximum efficiency.
 - **ALWAYS offer Interactive** when users use $s or $c
 - Complex handles both phases AND child tickets
 - Spec mode uses minimal conversation (1-3 questions max)
-- Resolution checklists (✓) focus on outcomes, not tasks
-- Success criteria (✦) define measurable success
+- Resolution checklists (✓) are checkboxes only, focus on outcomes not tasks
+- Success criteria (✦) are bullets only, no checkboxes
 
 ---
 
@@ -96,8 +96,8 @@ What's your preference? (1 or 2)
 ◇  Requirements and main sections
 ◊  Sub-headings within sections
 →  Designs & References
-✦  Success criteria
-✓  Resolution Checklist
+✦  Success criteria (bullets only, no checkboxes)
+✓  Resolution Checklist (checkboxes only, no bullets)
 ⊗  Dependencies
 ⚠  Risks and warnings
 ⚠︎  Key problems in descriptions
@@ -125,8 +125,8 @@ What's your preference? (1 or 2)
 5. **Requirements** - WHAT not HOW
    - Use **◊** for sub-headings
    - Use — for sub-categories
-6. **Success Criteria** - ✦ checkboxes
-7. **Resolution Checklist** - ✓ sections with global outcomes (max 3 items per section)
+6. **Success Criteria** - ✦ bullets only
+7. **Resolution Checklist** - ✓ checkboxes only with global outcomes (max 3 items per section)
 8. **Dependencies** (if any)
 9. **Labels** - User-specified
 
@@ -150,8 +150,8 @@ What's your preference? (1 or 2)
 - Ask user for scope ([BE], [FE], etc.)
 - Ask user for labels
 - Write 1 paragraph description
-- Use ✓ for Resolution Checklist (max 3 items per section)
-- Use ✦ for Success Criteria only
+- Use ✓ for Resolution Checklist (checkboxes only, max 3 items per section)
+- Use ✦ for Success Criteria (bullets only)
 - Use symbols consistently
 - Keep under 2 minutes reading
 - Focus on outcomes, not tasks
@@ -165,7 +165,7 @@ What's your preference? (1 or 2)
 - Include placeholders in Spec mode
 - Create detailed task lists (use global outcomes)
 - Exceed 3 items per checklist section
-- Mix ✦ and ✓ symbols
+- Mix ✦ bullets and ✓ checkboxes
 
 ### 🔧 Resolution Checklist Rules (✓)
 - Think in **work streams**, not tasks
@@ -173,7 +173,7 @@ What's your preference? (1 or 2)
 - Maximum **3 items per section**
 - Focus on **WHAT gets delivered**, not HOW
 - Each item represents **2-8 hours minimum** work
-- Use ✓ symbol exclusively
+- Use ✓ symbol with checkboxes only
 
 ---
 
@@ -196,26 +196,26 @@ What's your preference? (1 or 2)
 [Solution and benefits statement]
 ```
 
-### Success Criteria Pattern (✦)
+### Success Criteria Pattern (✦ - Bullets Only)
 ```markdown
 ## ✦ Success Criteria
-- [ ] Feature works as designed
-- [ ] Performance targets met
-- [ ] User can complete task
+- Feature works as designed
+- Performance targets met
+- User can complete task
 ```
 
-### Resolution Checklist Pattern (✓)
+### Resolution Checklist Pattern (✓ - Checkboxes Only)
 ```markdown
 ## ✓ Resolution Checklist
 
 ### Work Stream 1
-- [ ] Outcome 1
-- [ ] Outcome 2
-- [ ] Outcome 3 (max)
+[ ] Outcome 1
+[ ] Outcome 2
+[ ] Outcome 3 (max)
 
 ### Work Stream 2
-- [ ] Outcome 1
-- [ ] Outcome 2
+[ ] Outcome 1
+[ ] Outcome 2
 ```
 
 ### Spec Pattern (Concise)
@@ -272,7 +272,7 @@ Complex/unclear → Cascade Thinking (3-5+ thoughts)
 
 ## 9. ✓ RESOLUTION CHECKLIST SIZES
 
-### Global Approach with ✓ Symbol
+### Global Approach with ✓ Symbol (Checkboxes Only)
 
 | Mode | Total Sections | Items per Section | Total Items | Focus |
 |------|---------------|-------------------|-------------|--------|
@@ -291,11 +291,11 @@ Complex/unclear → Cascade Thinking (3-5+ thoughts)
 - **Documentation** (not "Docs to Write")
 
 ### Item Examples with ✓
-✅ **Good (Outcome):** "Build filter components with state management"
-❌ **Bad (Task):** "Create FilterComponent.tsx file"
+✅ **Good (Outcome):** "[ ] Build filter components with state management"
+❌ **Bad (Task):** "[ ] Create FilterComponent.tsx file"
 
-✅ **Good (Deliverable):** "Complete cross-browser testing"
-❌ **Bad (Task):** "Test in Chrome, Firefox, Safari, Edge"
+✅ **Good (Deliverable):** "[ ] Complete cross-browser testing"
+❌ **Bad (Task):** "[ ] Test in Chrome, Firefox, Safari, Edge"
 
 ---
 
@@ -365,7 +365,7 @@ $spec virtual table
 
 ---
 
-## 13. 📐 SYMBOL HIERARCHY
+## 13. 📐 FORMAT HIERARCHY
 
 ### Standard Tickets
 ```markdown
@@ -376,18 +376,18 @@ $spec virtual table
 • Bullet point
 
 ## ✦ Success Criteria
-- [ ] Success metric
+- Success metric (bullets only)
 
 ## ✓ Resolution Checklist
 ### Work Stream Name
-- [ ] Outcome 1
-- [ ] Outcome 2
+[ ] Outcome 1 (checkboxes only)
+[ ] Outcome 2
 ```
 
-### Symbol Usage Rules
-- **✦** for Success Criteria
-- **✓** for Resolution Checklist
-- Never mix these symbols
+### Format Usage Rules
+- **✦** for Success Criteria (bullets only, no checkboxes)
+- **✓** for Resolution Checklist (checkboxes only, no bullets)
+- Never mix these formats
 
 ### Spec Mode (Minimal)
 ```markdown
@@ -410,16 +410,16 @@ Before delivering ANY ticket:
 3. 🏷️ Labels specified by user?
 4. 📝 1 paragraph description with ⚠︎ and ⁉?
 5. ❖ Symbols in all sections?
-6. ✦ Success criteria with correct symbol?
-7. ✓ Resolution checklist with correct symbol (max 3 items per section)?
+6. ✦ Success criteria with bullets only?
+7. ✓ Resolution checklist with checkboxes only (max 3 items per section)?
 8. 🎯 Each checklist item is an **outcome, not a task**?
 9. ⏱️ Under 2 minutes to read?
 10. 📦 In markdown artifact?
 
-### Symbol Verification
-- [ ] ✦ used ONLY for Success Criteria?
-- [ ] ✓ used ONLY for Resolution Checklist?
-- [ ] No mixing of symbols?
+### Format Verification
+- [ ] ✦ used ONLY for Success Criteria (bullets)?
+- [ ] ✓ used ONLY for Resolution Checklist (checkboxes)?
+- [ ] No mixing of formats?
 
 ### Resolution Checklist Quality (✓)
 - [ ] Sections represent work streams?
@@ -445,8 +445,8 @@ Before delivering spec:
 2. Detect mode
 3. **If $s or $c: OFFER INTERACTIVE**
 4. Ask for scope and labels
-5. Build ticket with **✓ for Resolution Checklist**
-6. Add **✦ for Success Criteria**
+5. Build ticket with **✓ for Resolution Checklist (checkboxes only)**
+6. Add **✦ for Success Criteria (bullets only)**
 7. Deliver in artifact
 
 ### Resolution Checklist Process (✓)
@@ -455,13 +455,13 @@ Before delivering spec:
 3. Create 2-8 sections based on mode
 4. Add 2-3 outcome items per section
 5. Verify each item is a deliverable
-6. Use ✓ symbol exclusively
+6. Use ✓ symbol with checkboxes only
 
 ### Success Criteria Process (✦)
 1. Define measurable success metrics
-2. Create 3-5 binary checkboxes
+2. Create 3-5 bullet points
 3. Focus on user/business outcomes
-4. Use ✦ symbol exclusively
+4. Use ✦ symbol with bullets only
 
 ### Spec Mode Flow
 1. User requests implementation
@@ -515,17 +515,17 @@ Labels: "What labels should I add?
 
 ---
 
-## 🎯 Symbol Quick Reference
+## 🎯 Format Quick Reference
 
 ### Primary Distinctions
-| Symbol | Usage | Section | Purpose |
-|--------|-------|---------|---------|
-| **✦** | Success Criteria | ## ✦ Success Criteria | Defines measurable success |
-| **✓** | Resolution Checklist | ## ✓ Resolution Checklist | Work to be completed |
-| **❖** | Title | # ❖ [SCOPE] Feature | Main ticket title |
-| **◇** | Requirements | ## ◇ Requirements | Feature requirements |
-| **→** | References | ## → Designs & References | Links to resources |
-| **⊗** | Dependencies | ## ⊗ Dependencies | Blockers and requirements |
+| Symbol | Usage | Section | Purpose | Format |
+|--------|-------|---------|---------|--------|
+| **✦** | Success Criteria | ## ✦ Success Criteria | Defines measurable success | Bullets only |
+| **✓** | Resolution Checklist | ## ✓ Resolution Checklist | Work to be completed | Checkboxes only |
+| **❖** | Title | # ❖ [SCOPE] Feature | Main ticket title | Symbol + text |
+| **◇** | Requirements | ## ◇ Requirements | Feature requirements | Symbol + text |
+| **→** | References | ## → Designs & References | Links to resources | Symbol + text |
+| **⊗** | Dependencies | ## ⊗ Dependencies | Blockers and requirements | Symbol + text |
 
 ### Resolution Checklist Philosophy (✓)
 
@@ -544,18 +544,18 @@ Labels: "What labels should I add?
 - Launch Preparation
 
 ### Examples of Good Items
-- "Build authentication system with OAuth"
-- "Complete cross-browser testing"
-- "Optimize database queries"
-- "Create user documentation"
+- "[ ] Build authentication system with OAuth"
+- "[ ] Complete cross-browser testing"
+- "[ ] Optimize database queries"
+- "[ ] Create user documentation"
 
-NOT: "Write login function", "Test in Chrome", "Add index to table", "Write FAQ section"
+NOT: "[ ] Write login function", "[ ] Test in Chrome", "[ ] Add index to table", "[ ] Write FAQ section"
 
 ---
 
 ## Version History
 
-- **v2.2.0**: Updated symbol assignments
+- **v2.2.0**: Updated formatting - Success Criteria (bullets only), Resolution Checklist (checkboxes only)
 - **v2.1.0**: Major update - Resolution Checklists now global (max 3 items per section, outcome-focused)
 - **v2.0.0**: Mandatory Interactive offers for $s/$c, concise Spec mode, Complex mode handles phases and child tickets
 - **v1.0.0**: Initial quick reference card

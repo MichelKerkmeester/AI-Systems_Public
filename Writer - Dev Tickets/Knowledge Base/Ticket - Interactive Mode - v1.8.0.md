@@ -28,7 +28,7 @@ Interactive mode is the **DEFAULT** mode for all ticket creation. It provides co
 - Maintains 2-minute readability
 - Optional Figma integration for UI features
 - Guides users through scope and label selection
-- **Uses distinct symbols**: ✦ for Success Criteria, ✓ for Resolution Checklist
+- **Uses distinct formatting**: ✦ for Success Criteria (bullets only), ✓ for Resolution Checklist (checkboxes only)
 - Offered as enhancement for $standard and $complex modes
 
 ### When Active
@@ -87,8 +87,8 @@ I'll walk you through creating tickets by:
 1. Understanding what users need
 2. Identifying the right scope and labels
 3. Clarifying business value
-4. Defining success criteria (✦)
-5. Creating outcome-focused checklists (✓)
+4. Defining success criteria (✦ - bullets only)
+5. Creating outcome-focused checklists (✓ - checkboxes only)
 6. **Optional:** Reviewing Figma designs for UI features
 
 **Key Rule:** Every ticket must be readable in under 2 minutes!
@@ -135,8 +135,8 @@ System builds ticket incrementally:
 2. Applies domain patterns
 3. Asks for scope clarification
 4. Requests appropriate labels
-5. **Creates Success Criteria with ✦ symbol**
-6. **Creates Resolution Checklist with ✓ symbol** (max 3 items per section)
+5. **Creates Success Criteria with ✦ symbol (bullets only)**
+6. **Creates Resolution Checklist with ✓ symbol (checkboxes only, max 3 items per section)**
 7. Determines complexity (might suggest Complex mode)
 8. Offers Figma integration
 9. Creates complete structure
@@ -146,7 +146,7 @@ System builds ticket incrementally:
 Delivers:
 - Complete ticket in artifact
 - Visual quality dashboard
-- Learning points about symbols and global approach
+- Learning points about formatting and global approach
 - Next steps
 
 ---
@@ -276,15 +276,15 @@ Interactive mode can help ensure we don't miss critical requirements. What's you
 - Thank them for choosing guidance
 - Start with Phase 2 questions
 - Build ticket conversationally
-- Provide educational value about symbols (✦ vs ✓)
+- Provide educational value about formatting (✦ bullets vs ✓ checkboxes)
 
 **If user chooses Direct (2):**
 - Respect their choice
 - Still ask for scope
 - Still ask for labels
 - Create ticket with available info
-- Use ✦ for Success Criteria
-- Use ✓ for Resolution Checklist
+- Use ✦ for Success Criteria (bullets only)
+- Use ✓ for Resolution Checklist (checkboxes only)
 - Note any assumptions made
 
 ---
@@ -381,7 +381,7 @@ System: Perfect! What types of filters would be most helpful?
 
 User: Categories, price range, availability
 
-System: Excellent. For the resolution checklist (using ✓), I'm thinking of these work streams:
+System: Excellent. For the resolution checklist (using ✓ checkboxes), I'm thinking of these work streams:
 - Foundation work (API and components)
 - Core development (filter implementation)
 - Testing & validation
@@ -392,7 +392,7 @@ Does that capture the major areas?
 User: Yes, that sounds right
 
 System: A few more details:
-- How will we measure success? (This will be our ✦ Success Criteria)
+- How will we measure success? (This will be our ✦ Success Criteria - bullets only)
 - What labels should this ticket have?
 
 User: Success: 50% reduction in search abandonment
@@ -403,10 +403,10 @@ System: Do you have any Figma designs for the filter interface?
 User: No, not yet
 
 System: No problem! Here's your comprehensive ticket with:
-- ✦ Success Criteria (what defines success)
-- ✓ Resolution Checklist (work to be done)
+- ✦ Success Criteria (bullets only - what defines success)
+- ✓ Resolution Checklist (checkboxes only - work to be done)
 
-[Delivers complete ticket with [FS] scope, specified labels, and properly symbolized sections]
+[Delivers complete ticket with [FS] scope, specified labels, and properly formatted sections]
 ```
 
 ### Example 2: Complex Detection During Interactive
@@ -445,7 +445,7 @@ System: Perfect! Now let's think about phases. Would you prefer:
 
 User: Phased development
 
-System: Great! For the resolution checklist (✓), I'll organize it by phases with global outcomes:
+System: Great! For the resolution checklist (✓ checkboxes only), I'll organize it by phases with global outcomes:
 - Phase 1: Foundation (infrastructure, presence system)
 - Phase 2: Core Features (OT algorithm, cursor tracking)
 - Phase 3: Production Ready (optimization, monitoring)
@@ -454,9 +454,9 @@ Each section will have 2-3 major deliverables. Sound good?
 
 User: Perfect!
 
-System: Let me ask about success criteria (✦) - what metrics will prove this is working?
+System: Let me ask about success criteria (✦ bullets only) - what metrics will prove this is working?
 
-[Continues building Complex mode ticket with distinct symbols]
+[Continues building Complex mode ticket with distinct formatting]
 ```
 
 ---
@@ -475,25 +475,25 @@ Overall Quality Score: 4.5/5 ⭐
 ✓ Labels added: feature, search, filters, priority-high
 ✓ Business goal measurable
 ✓ Requirements outcome-focused
-✓ Success criteria (✦) verifiable
+✓ Success criteria (✦) formatted as bullets
 ✓ Dependencies identified
-✓ All symbols properly used
-✓ Resolution checklist (✓) global (max 3 items per section)
+✓ Resolution checklist (✓) formatted as checkboxes
+✓ Resolution checklist global (max 3 items per section)
 ✓ 2-minute read test: PASS (1:45)
 ✓ Interactive guidance: ACCEPTED
 
-📐 Symbol Usage:
-Success Criteria: ✦ (correctly used)
-Resolution Checklist: ✓ (correctly used)
-Requirements: ◇
-Dependencies: ⊗
+📐 Format Usage:
+Success Criteria: ✦ (bullets only) ✓
+Resolution Checklist: ✓ (checkboxes only) ✓
+Requirements: ◇ ✓
+Dependencies: ⊗ ✓
 
 📋 Resolution Checklist Quality:
 Global Approach   ██████████ 100%
 Outcome Focus     █████████░ 95%
 Section Count     4 sections ✓
 Items per Section 2-3 items ✓
-Symbol Usage      ✓ throughout ✓
+Format Usage      ✓ checkboxes only ✓
 
 Guidance Impact:
 • Questions asked: 8
@@ -501,7 +501,7 @@ Guidance Impact:
 • Potential issues avoided: 3
 • Mode suggestion: Standard → Complex (when applicable)
 • Checklist approach: Global outcomes achieved
-• Symbol distinction: Properly applied
+• Format distinction: Properly applied
 
 Scope & Labels:
 • Scope: [FS] Full Stack
@@ -509,8 +509,8 @@ Scope & Labels:
 • Team Impact: Backend & Frontend
 
 Learning Points:
-• Notice how ✦ is used for Success Criteria (what defines success)
-• The ✓ symbol is for Resolution Checklist (work to be done)
+• Notice how ✦ is used for Success Criteria (bullets only)
+• The ✓ symbol is for Resolution Checklist (checkboxes only)
 • Success criteria are specific and measurable
 • Resolution checklist focuses on deliverables, not tasks
 • Each checklist item represents meaningful work
@@ -535,11 +535,11 @@ Next Steps:
 [Simplified question with example]"
 ```
 
-**Symbol Confusion:**
+**Format Confusion:**
 ```markdown
-"Quick clarification on symbols:
-- ✦ is for Success Criteria (what success looks like)
-- ✓ is for Resolution Checklist (the work to be done)
+"Quick clarification on formatting:
+- ✦ is for Success Criteria (bullets only, no checkboxes)
+- ✓ is for Resolution Checklist (checkboxes only, no bullets)
 
 This helps developers quickly scan different sections!"
 ```
@@ -567,7 +567,7 @@ Common options:
 ```markdown
 "I notice we're getting into task-level details. Let's think bigger:
 What are the major deliverables or milestones?
-Remember: each ✓ item should represent 2-8 hours minimum work."
+Remember: each ✓ checkbox should represent 2-8 hours minimum work."
 ```
 
 ---
@@ -579,9 +579,9 @@ Remember: each ✓ item should represent 2-8 hours minimum work."
 - Accept user's choice gracefully
 - Ask for scope ([BE], [FE], [Mobile], [FS], [DevOps], [QA])
 - Ask for appropriate labels
-- **Use ✦ for Success Criteria**
-- **Use ✓ for Resolution Checklist**
-- **Explain symbol distinction** when teaching
+- **Use ✦ for Success Criteria (bullets only)**
+- **Use ✓ for Resolution Checklist (checkboxes only)**
+- **Explain format distinction** when teaching
 - **Use global checklist approach** (max 3 items per section)
 - **Focus on outcomes** not tasks in checklists
 - Keep conversations natural and encouraging
@@ -599,7 +599,7 @@ Remember: each ✓ item should represent 2-8 hours minimum work."
 - Don't force Interactive if declined
 - Don't assume scope - always ask
 - Don't assume labels - always ask
-- Don't mix ✦ and ✓ symbols
+- Don't mix ✦ bullets and ✓ checkboxes
 - Don't ask about technical implementation (unless for spec mode)
 - Don't overwhelm with jargon
 - Don't require all questions answered
@@ -614,11 +614,11 @@ Remember: each ✓ item should represent 2-8 hours minimum work."
 - Every ticket includes all required sections
 - User-specified scope in every title
 - User-specified labels in every ticket
-- Proper symbol hierarchy throughout
-- **Distinct symbols**: ✦ for Success, ✓ for Resolution
+- Proper format throughout
+- **Distinct formatting**: ✦ for Success (bullets), ✓ for Resolution (checkboxes)
 - Clear user value statement (or briefing for spec)
-- Measurable success criteria with ✦
-- **Global resolution checklist with ✓**
+- Measurable success criteria with ✦ bullets
+- **Global resolution checklist with ✓ checkboxes**
 - Educational dashboard
 - One artifact per conversation
 
@@ -630,7 +630,7 @@ Remember: each ✓ item should represent 2-8 hours minimum work."
 - 100% have proper scope identification
 - 100% have appropriate labels
 - 100% maintain 2-minute readability
-- **100% use correct symbols (✦ vs ✓)**
+- **100% use correct formatting (✦ bullets vs ✓ checkboxes)**
 - **100% use global checklist approach**
 - 60% learn product thinking principles
 - 30% use Figma integration for UI features
@@ -650,13 +650,13 @@ Help users define measurable success:
 - "What metrics prove this works?"
 - "How do users show they're successful?"
 - "What business metrics improve?"
-- "Each ✦ should be binary - met or not met"
+- "Each ✦ bullet should be binary - met or not met"
 
 ---
 
 ## Version History
 
-- **v1.8.0**: Updated symbol assignments
+- **v1.8.0**: Updated formatting - Success Criteria (bullets only), Resolution Checklist (checkboxes only)
 - **v1.7.0**: Updated for global Resolution Checklist approach (max 3 items per section, outcome-focused)
 - **v1.6.0**: Added mandatory offers for Standard and Complex modes
 - **v1.5.0**: Enhanced Figma integration options
