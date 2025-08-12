@@ -14,7 +14,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 | **🤖 CLI Agents** | [Claude Code Prime](#1--claude-code-prime---multi-model-agent-system--coming-soon) | CLI-based development systems |
 | **💬 MCP Agents** | [Notion Agent](#2--notion-agent), [Imagician Agent](#3--imagician-agent) | MCP tools made easy with conversational systems |
 | **✍️ Writers** | [Prompt Engineering](#4--prompt-engineering-assistant), [AI Systems](#5--ai-systems-creator), [Branded Content](#6--branded-content-writer), [Dev Ticket](#7--dev-ticket-writer) | Automated content, documentation & prompt writing |
-| **💻 Dev Systems** | [IDE System](#8--ide-system-prompt), [Claude App Builder](#9--claude-app-builder) | IDE enhancements & app prototype systems |
+| **💻 Dev Systems** | [IDE System](#8--ide-system-prompt), [Lovable System Prompts](#9--lovable-system-prompts), [Claude App Builder](#10--claude-app-builder) | IDE enhancements & specialized development modes |
 
 .
 
@@ -59,12 +59,13 @@ Some of my non-client AI systems that I made available to the public. They were 
 ##### Automated content, documentation & prompt writing systems
 ———
 
-#### 4. 🎯 Prompt Engineering Assistant (v3.1.0)
-**Turn vague requests into powerful AI prompts**
-- **5 Operating Modes**: $short, $improve, $refine, $interactive, $json
-- **3 Core Frameworks**: CRAFT (structure), SPARK (enhance), PRISM (evaluate)
-- **35-Point Evaluation**: Comprehensive quality assessment
-- **Platform Optimized**: ChatGPT, Claude, Gemini auto-detection
+#### 4. 🎯 Prompt Engineering Assistant (v4.0.0) — UPDATED
+**Transform vague requests into powerful AI prompts with Lovable platform integration**
+- **8 Operating Modes**: Including 3 new Lovable sub-modes ($lp prototype, $lw website, $la app)
+- **6 Core Frameworks**: CRAFT, SPARK, PRISM + VISION, CONVERT, SCALE for Lovable
+- **Intelligent Auto-Detection**: Weighted keyword analysis for automatic mode selection
+- **Smart MCP Selection**: Dynamic choice between Sequential (1-3) and Cascade (3-8) thinking
+- **Platform Optimization**: Deep integration with Lovable, ChatGPT, Claude, Gemini
 
 #### 5. 📐 AI Systems Creator (v3.0.0)
 **Professional specifications and documentation**
@@ -80,7 +81,6 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **3 Variations**: Concise, Authentic, Valuable versions
 - **VEST Scoring**: 20-point quality guarantee
 
-
 #### 7. 📋 Dev Ticket Writer (v4.1.0)
 **Convert any request into actionable development tickets**
 - **3 Ticket Modes**: Quick ($q), Standard ($s), Complex ($c) for any feature size
@@ -92,7 +92,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 .
 
 ## 💻 Development Systems
-##### IDE enhancements & app prototype systems
+##### IDE enhancements & specialized development modes
 ———
 
 #### 8. 🛠️ IDE System Prompt (v3.9.0)
@@ -102,7 +102,15 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **IDE Support**: Cursor, Windsurf, Claude Code, VS Code, JetBrains
 - **Modular Rules**: Toggle features based on task complexity
 
-#### 9. 🏗️ Claude App Builder (v1.3.3)
+#### 9. 🚀 Lovable System Prompts (v1.0.0) — NEW
+**Three specialized modes for the Lovable platform: Prototype, Website, or App**
+- **3 Expert Modes**: $lp (mockups), $lw (marketing sites), $la (full-stack apps)
+- **Framework-Driven**: VISION (prototypes), CONVERT (websites), SCALE (apps)
+- **Right Tool Philosophy**: No more app complexity when you need a mockup
+- **Design System First**: Mandatory establishment before any coding
+- **Production Standards**: Visual excellence, 95+ PageSpeed, TypeScript + Supabase
+
+#### 10. 🏗️ Claude App Builder (v1.3.3)
 **Build functional app prototypes directly in Claude**
 - **3 Specialized Modes**: $app (tools), $ai (chat interfaces), $data (dashboards)
 - **Fluid Responsive**: Scales perfectly 320px-1920px
@@ -115,8 +123,8 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 ### MCP Integration
 All systems support Model Context Protocol tools:
-- **Sequential Thinking**: Linear analysis and validation
-- **Cascade Thinking**: Complex exploration and branching
+- **Sequential Thinking**: Linear analysis and validation (1-3 thoughts)
+- **Cascade Thinking**: Complex exploration and branching (3-8+ thoughts)
 - **Domain-Specific**: Figma, Notion, Imagician, search tools as needed
 
 ### Intelligent Modes
@@ -146,8 +154,8 @@ mkdir "$HOME/MCP Servers"
 cd "$HOME/MCP Servers"
 
 # Clone needed tools
-git clone https://github.com/arben-adm/mcp-sequential-thinking.git
-git clone https://github.com/drewdotpro/cascade-thinking-mcp.git
+git clone https://github.com/sequentialthinking/sequential-thinking-mcp.git
+git clone https://github.com/cascadethinking/cascade-thinking-mcp.git
 git clone https://github.com/flowy11/imagician.git  # For Imagician Agent
 
 # Use AI to generate docker-compose.yml
@@ -161,18 +169,22 @@ docker-compose up -d
 
 **For Writers & Documentation:**
 - Requirements → Dev Ticket Writer (now with Interactive offers!)
-- AI prompts → Prompt Engineering Assistant
+- AI prompts → Prompt Engineering Assistant v4.0.0
 - System design → AI Systems Spec Writer
 - Marketing copy → Branded Content Writer
 
 **For Developers:**
 - Code quality → IDE System Prompt
+- Visual mockups → Lovable System Prompts ($lp mode)
+- Marketing sites → Lovable System Prompts ($lw mode)  
+- Full-stack apps → Lovable System Prompts ($la mode)
 - App prototypes → Claude App Builder
 - Implementation specs → Dev Ticket Writer ($spec mode)
 
 **For Productivity:**
 - Workspace automation → Notion Agent
 - Image file editing → Imagician Agent
+- Prompt optimization → Prompt Engineering Assistant
 
 .
 
@@ -181,6 +193,7 @@ docker-compose up -d
 - [MCP Protocol Documentation](https://modelcontextprotocol.io/)
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 - [Claude Desktop](https://claude.ai/download)
+- [Lovable Platform](https://lovable.dev)
 - Individual system READMEs for detailed setup
 
 .
