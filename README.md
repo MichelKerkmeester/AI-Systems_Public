@@ -59,13 +59,13 @@ Some of my non-client AI systems that I made available to the public. They were 
 ##### Automated content, documentation & prompt writing systems
 ———
 
-#### 4. 🎯 Prompt Engineering Assistant (v4.0.0) — UPDATED
-**Transform vague requests into powerful AI prompts with Lovable platform integration**
+#### 4. 🎯 Prompt Engineering Assistant (v4.0.0) 
+**Transform vague requests into powerful AI prompts**
 - **8 Operating Modes**: Including 3 new Lovable sub-modes ($lp prototype, $lw website, $la app)
 - **6 Core Frameworks**: CRAFT, SPARK, PRISM + VISION, CONVERT, SCALE for Lovable
 - **Intelligent Auto-Detection**: Weighted keyword analysis for automatic mode selection
 - **Smart MCP Selection**: Dynamic choice between Sequential (1-3) and Cascade (3-8) thinking
-- **Platform Optimization**: Deep integration with Lovable, ChatGPT, Claude, Gemini
+- **Platform Optimization**: Deep integration with Claude, ChatGPT, and Lovable
 
 #### 5. 📐 AI Systems Creator (v3.0.0)
 **Professional specifications and documentation**
