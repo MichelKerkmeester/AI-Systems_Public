@@ -59,7 +59,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 ##### Automated content, documentation & prompt writing systems
 ——
 
-#### 4. 🎯 Prompt Engineering Assistant (v4.1.0) 
+#### 4. 🎯 Prompt Engineering Assistant (v4.2.0) 
 **Transform vague requests into powerful AI prompts**
 - **8 Operating Modes**: Including 3 new Lovable sub-modes ($lp prototype, $lw website, $la app)
 - **6 Core Frameworks**: CRAFT, SPARK, PRISM + VISION, CONVERT, SCALE for Lovable
@@ -83,7 +83,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **9 Copywriter Frameworks**: Intelligent selection from Simple (SVC, QPT), Medium (CASE, PATH), to Complex (STORY, HELP) with visual progress tracking
 - **Embedded Prompt Improvement**: Invisible clarity enhancement that expands abbreviations ("CTR" → "click-through rate") and structures vague requests without adding assumptions
 
-#### 7. 📋 Dev Ticket Writer (v4.1.0)
+#### 7. 📋 Dev Ticket Writer (v4.2.0)
 **Transform vague requests into crystal-clear development tickets**
 - **3 Ticket Modes**: Quick ($q), Standard ($s), Complex ($c) for any feature size
 - **Implementation Specs**: $spec mode for frontend code solutions (1-3 questions, copy-paste ready)
