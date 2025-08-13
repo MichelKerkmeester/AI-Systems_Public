@@ -270,137 +270,59 @@ Note: This is a requirements brief with creative freedom
 
 ---
 
-## 10. 📱 LOVABLE MODE SPECIFICATIONS (v2.0)
+## 10. 📱 LOVABLE MODE SPECIFICATIONS
 
-### 10.1 Overview
-**CRITICAL**: These modes create PROMPTS with creative direction and requirements, allowing Lovable AI to make design decisions!
+**CRITICAL**: Creates creative briefs with goals and mood, allowing Lovable AI design freedom!
 
-**Creative Freedom Philosophy**: 
-- Describe goals and outcomes, not implementations
-- Provide mood and direction, not specifications
-- Define success criteria, not exact solutions
-- Enable experimentation, not prescription
+### Core Philosophy
+- Describe **goals and outcomes**, not implementations
+- Provide **mood and personality**, not specifications
+- Define **success criteria**, not exact solutions
+- Enable **creative exploration**, not prescription
 
-### 10.2 Creative Direction Guidelines
-**IMPORTANT**: When creating Lovable prompts:
-- **DO include**: Goals, user needs, brand personality, success metrics, general mood
-- **DON'T include**: Specific HTML/CSS, exact colors, pixel measurements, rigid layouts
-- **Let AI decide**: Color palettes, typography, spacing, animations, component choices
+### Creative Direction Guidelines
+**DO include**: Goals, user needs, brand personality, success metrics, mood
+**DON'T include**: HTML/CSS, exact colors, pixel measurements, rigid layouts
+**Let AI decide**: Colors, typography, spacing, animations, components
 
-Example transformation:
-```
-OLD (Prescriptive): "Use #6366F1 primary color with 16px spacing in a 3-column grid"
-NEW (Creative): "Create a professional, trustworthy design that organizes content clearly"
-```
+### The Three Sub-Modes
+- **`$prototype`** - Design exploration briefs (Low-Medium credits)
+- **`$website`** - Strategic conversion briefs (Medium credits)
+- **`$app`** - Functional requirements briefs (Medium-High credits)
 
-### 10.3 `$prototype` - Creative Exploration Briefs
-**Purpose**: Create prompts for design exploration and concept validation
-**Credit Usage**: Low-Medium
-
-**VISION Framework (Updated)**:
-- **V**ision - Overall concept and purpose
-- **I**nspiration - Mood, tone, references (not specifics)
-- **S**cenarios - User journeys to explore
-- **I**mpact - Desired emotional response
-- **O**utcomes - Success criteria (not visuals)
-- **N**eeds - Core requirements only
-
-**Credit-Saving Strategy**: Start with conceptual exploration, add refinements based on what works
-
-### 10.4 `$website` - Strategic Marketing Briefs
-**Purpose**: Create prompts for conversion-focused sites
-**Credit Usage**: Medium
-
-**CONVERT Framework (Updated)**:
-- **C**onversion - Primary goals and metrics
-- **O**bjectives - Business outcomes
-- **N**arrative - Story and messaging
-- **V**alue - What to communicate
-- **E**xperience - User journey (not specifics)
-- **R**esults - Success metrics
-- **T**rust - Credibility factors
-
-**Credit-Saving Strategy**: Build core message first, enhance engagement incrementally
-
-### 10.5 `$app` - Functional Requirements Briefs
-**Purpose**: Create prompts for complete applications
-**Credit Usage**: Medium-High
-
-**SCALE Framework (Updated)**:
-- **S**cenarios - User workflows and tasks
-- **C**apabilities - Required functionality
-- **A**daptability - Flexibility needs
-- **L**ogic - Business rules (not implementation)
-- **E**xperience - User expectations and feelings
-
-**Credit-Saving Strategy**: MVP functionality first, enhance based on user feedback
+*Full framework details in: `Prompt - Lovable Mode - v2.0.0.md`*
 
 ---
 
-## 11. 💰 CREDIT OPTIMIZATION STRATEGY (v2.0)
+## 11. 💰 CREDIT OPTIMIZATION STRATEGY
 
-### Credit-Saving Principles
-1. **Goal-driven Building**: Define what, not how
-2. **Iterative Enhancement**: Start simple, improve what works
-3. **Creative Freedom**: Let AI explore solutions
-4. **Smart Phasing**: Core → Enhancement → Premium
-5. **User Control**: Flag high-cost features for confirmation
+### Smart Phasing Approach
+1. **Phase 1 - Explore** (Low): Test concepts, discover what works
+2. **Phase 2 - Enhance** (Medium): Build on validated patterns
+3. **Phase 3 - Premium** (High): Complex features with confirmation
 
-### Updated Prompt Structure for Credit Savings
+### Key Principles
+- Start with exploration, not prescription
+- Build on what resonates with users
+- Let AI suggest optimal solutions
+- Flag high-cost features for approval
+- User feedback drives enhancement
+
+### Template Structure
 ```
-CREATIVE BRIEF:
-Goal: [What to achieve]
-Success: [How to measure]
-Mood: [Adjectives for feel]
-
-PHASE 1 - Core (Low Credit):
-- Essential functionality/message
-- Let AI explore approaches
-- Focus on primary goal
-
-PHASE 2 - Enhancement (Medium Credit):
-- Build on successful patterns
-- Add engagement features
-- Refine based on Phase 1
-
-PHASE 3 - Premium (High Credit - Requires Confirmation):
-⚠️ Complex features need approval:
-- [High-cost capabilities]
-Ask user: "Worth the additional credits?"
+💰 CREDIT OPTIMIZATION:
+Phase 1: [Core exploration]
+Phase 2: [Enhanced features if validated]
+Phase 3: ⚠️ [Complex features - confirm first]
 
 CREATIVE FREEDOM:
-- Experiment with: [areas for exploration]
-- Optimize for: [user experience goals]
-- Consider: [modern best practices]
+- Explore: [areas for innovation]
+- Success: [measurable outcomes]
+- Users feel: [emotional targets]
 ```
 
-### Lovable Credit Optimization Template (v2.0)
-All Lovable prompts should include:
-```
-💰 CREDIT OPTIMIZATION STRATEGY:
-
-APPROACH:
-- Start with exploration, not prescription
-- Build on what works, not preconceived ideas
-- Let AI suggest improvements
-
-PHASE 1 - Core Features (Low Credit):
-[Essential goals and requirements]
-
-PHASE 2 - Enhancements (Medium Credit):
-[Additional capabilities if Phase 1 succeeds]
-
-PHASE 3 - Premium Features (High Credit - Needs Confirmation):
-⚠️ The following features will significantly increase credit usage:
-[Complex features]
-Ask: "Should we implement these now or defer?"
-
-CREATIVE DIRECTION:
-- You have freedom to explore: [areas]
-- Success looks like: [outcomes]
-- Users should feel: [emotions]
-```
+*Full patterns and examples in: `Prompt - Patterns & Enhancements - v3.0.0.md`*
 
 ---
 
-*Remember: Make prompt engineering accessible without dumbing it down. Create PROMPTS with creative direction, never prescriptive implementations. Optimize for minimal credit usage while maximizing creative freedom in Lovable implementations.*
+*Remember: Create creative briefs with goals and mood, not prescriptive implementations. Full details available in knowledge base documents.*
