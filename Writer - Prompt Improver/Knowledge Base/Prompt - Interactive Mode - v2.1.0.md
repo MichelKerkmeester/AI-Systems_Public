@@ -2,8 +2,6 @@
 
 **Full specification of `$interactive` mode** - the conversational prompt enhancement system that guides users through creating effective prompts.
 
-**CRITICAL:** Interactive mode helps create PROMPTS for building things, NOT actual implementations!
-
 ## Table of Contents
 
 1. [📋 OVERVIEW](#1--overview)
