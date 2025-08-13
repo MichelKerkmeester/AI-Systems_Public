@@ -20,7 +20,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 ## 🤖 Agent Systems
 ##### CLI-based development systems
-———
+——
 
 #### 1. 🌟 Claude Code Prime - Multi-Model Agent System — (COMING SOON)
 **Next-generation AI development ecosystem with intelligent orchestration**
@@ -35,7 +35,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 ## 💬 Agent Systems
 ##### MCP tools made easy with conversational systems
-———
+——
 
 #### 2. 📝 Notion Agent (v1.1.0)
 **Natural language control of Notion workspaces**
@@ -57,7 +57,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 ## ✍️ Writer Systems
 ##### Automated content, documentation & prompt writing systems
-———
+——
 
 #### 4. 🎯 Prompt Engineering Assistant (v4.0.0) 
 **Transform vague requests into powerful AI prompts**
@@ -67,19 +67,29 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **Smart MCP Selection**: Dynamic choice between Sequential (1-3) and Cascade (3-8) thinking
 - **Platform Optimization**: Deep integration with Claude, ChatGPT, and Lovable
 
-#### 5. 📐 AI Systems Creator (v3.0.0)
+#### 5. 📋 AI Systems Creator (v3.0.0)
 **Professional specifications and documentation**
 - **Easy System Creation**: Spec it, Build it, Document it
 - **6 Operating Modes**: Interactive, Analyze, Create, Update, Integrate, README
 - **Educational Focus**: Learn architecture through creation
 - **Prompt Improvement**: Invisible clarity enhancement 
 
-#### 6. ✍️ Branded Content Writer (v3.0.0)
-**Marketing content with authentic voice**
-- **Natural Imperfection**: Preserved rough edges for authenticity
-- **9 Frameworks**: Simple (SVC), Medium (PATH), Complex (STORY)
-- **3 Variations**: Concise, Authentic, Valuable versions
-- **VEST Scoring**: 20-point quality guarantee
+#### 6. ✍️ Branded Content Writer (v4.0.0) — MAJOR UPDATE 🔥
+**Marketing content with systematic authenticity and failure transparency**
+
+##### 🎯 Five Revolutionary Features:
+1. **Interactive Modes**: Default conversational mode with visual clarity scoring, celebration mechanics, and guided failure discovery that uncovers campaign stories
+2. **Natural Tone Shortcuts**: Quick tone switching ($natural, $vulnerable, $collaborative) with systematic imperfections (1 per 300-400 words) for genuine authenticity
+3. **Voice & Tone Trinity**: Balanced personality system maintaining 50% Collaborative, 30% Vulnerable, 20% Empowering with audience-adaptive variations
+4. **9 Copywriter Frameworks**: Intelligent selection from Simple (SVC, QPT), Medium (CASE, PATH), to Complex (STORY, HELP) with visual progress tracking
+5. **Embedded Prompt Improvement**: Invisible clarity enhancement that expands abbreviations ("CTR" → "click-through rate") and structures vague requests without adding assumptions
+
+##### Additional Power Features:
+- **Audience Detection**: Auto-detects B2B/B2C/Creative/Technical marketers and adapts content
+- **Visual VEST Dashboard**: Real-time quality scoring with progress bars (18+ score required)
+- **Celebration System**: Gamified content creation with achievements for sharing failures
+- **Failure-First Philosophy**: Always starts with what didn't work, credits team naturally
+- **3 Variations Always**: Concise, Authentic, and Valuable versions of every piece
 
 #### 7. 📋 Dev Ticket Writer (v4.1.0)
 **Convert any request into actionable development tickets**
@@ -93,7 +103,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 ## 💻 Development Systems
 ##### IDE enhancements & App Prototyping
-———
+——
 
 #### 8. 🛠️ IDE System Prompt (v3.9.0)
 **Perfect for Webflow developers who also use Slater, GSAP and Motion**
@@ -171,7 +181,7 @@ docker-compose up -d
 - Requirements → Dev Ticket Writer (now with Interactive offers!)
 - AI prompts → Prompt Engineering Assistant v4.0.0
 - System design → AI Systems Spec Writer
-- Marketing copy → Branded Content Writer
+- Marketing copy → **Branded Content Writer v4.0.0** (Voice Trinity + Failure transparency)
 
 **For Developers:**
 - Code quality → IDE System Prompt
