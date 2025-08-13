@@ -13,7 +13,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 |----------|---------|---------|
 | **🤖 CLI Agents** | [Claude Code Prime](#1--claude-code-prime---multi-model-agent-system--coming-soon) | CLI-based development systems |
 | **💬 MCP Agents** | [Notion Agent](#2--notion-agent), [Imagician Agent](#3--imagician-agent) | MCP tools made easy with conversational systems |
-| **✍️ Writers** | [Prompt Engineering](#4--prompt-engineering-assistant), [AI Systems](#5--ai-systems-creator), [Branded Content](#6--branded-content-writer), [Dev Ticket](#7--dev-ticket-writer) | Automated content, documentation & prompt writing |
+| **✏️ Writers** | [Prompt Engineering](#4--prompt-engineering-assistant), [AI Systems](#5--ai-systems-creator), [Branded Content](#6--branded-content-writer), [Dev Ticket](#7--dev-ticket-writer) | Automated content, documentation & prompt writing |
 | **💻 Dev Systems** | [IDE System](#8--ide-system-prompt), [Lovable System Prompts](#9--lovable-system-prompts), [Claude App Builder](#10--claude-app-builder) | IDE enhancements & App Prototyping |
 
 .
@@ -55,11 +55,11 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 .
 
-## ✍️ Writer Systems
+## ✏️ Writer Systems
 ##### Automated content, documentation & prompt writing systems
 ——
 
-#### 4. 🎯 Prompt Engineering Assistant (v4.0.0) 
+#### 4. 🎯 Prompt Engineering Assistant (v4.1.0) 
 **Transform vague requests into powerful AI prompts**
 - **8 Operating Modes**: Including 3 new Lovable sub-modes ($lp prototype, $lw website, $la app)
 - **6 Core Frameworks**: CRAFT, SPARK, PRISM + VISION, CONVERT, SCALE for Lovable
@@ -68,31 +68,23 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **Platform Optimization**: Deep integration with Claude, ChatGPT, and Lovable
 
 #### 5. 📋 AI Systems Creator (v3.0.0)
-**Professional specifications and documentation**
+**Generate professional AI system specifications and documentation**
 - **Easy System Creation**: Spec it, Build it, Document it
 - **6 Operating Modes**: Interactive, Analyze, Create, Update, Integrate, README
 - **Educational Focus**: Learn architecture through creation
 - **Prompt Improvement**: Invisible clarity enhancement 
+- **Implementation Bridge**: "Would you like help implementing this?" checkpoint after every specification
 
-#### 6. ✍️ Branded Content Writer (v4.0.0) — MAJOR UPDATE 🔥
+#### 6. ✏️ Branded Content Writer (v4.0.0)
 **Marketing content with systematic authenticity and failure transparency**
-
-##### 🎯 Five Revolutionary Features:
-1. **Interactive Modes**: Default conversational mode with visual clarity scoring, celebration mechanics, and guided failure discovery that uncovers campaign stories
-2. **Natural Tone Shortcuts**: Quick tone switching ($natural, $vulnerable, $collaborative) with systematic imperfections (1 per 300-400 words) for genuine authenticity
-3. **Voice & Tone Trinity**: Balanced personality system maintaining 50% Collaborative, 30% Vulnerable, 20% Empowering with audience-adaptive variations
-4. **9 Copywriter Frameworks**: Intelligent selection from Simple (SVC, QPT), Medium (CASE, PATH), to Complex (STORY, HELP) with visual progress tracking
-5. **Embedded Prompt Improvement**: Invisible clarity enhancement that expands abbreviations ("CTR" → "click-through rate") and structures vague requests without adding assumptions
-
-##### Additional Power Features:
-- **Audience Detection**: Auto-detects B2B/B2C/Creative/Technical marketers and adapts content
-- **Visual VEST Dashboard**: Real-time quality scoring with progress bars (18+ score required)
-- **Celebration System**: Gamified content creation with achievements for sharing failures
-- **Failure-First Philosophy**: Always starts with what didn't work, credits team naturally
-- **3 Variations Always**: Concise, Authentic, and Valuable versions of every piece
+- **Interactive Modes**: Default conversational mode with visual clarity scoring, celebration mechanics, and guided failure discovery that uncovers campaign stories
+- **Natural Tone Shortcuts**: Quick tone switching ($natural, $vulnerable, $collaborative) with systematic imperfections (1 per 300-400 words) for genuine authenticity
+- **Voice & Tone Trinity**: Balanced personality system maintaining 50% Collaborative, 30% Vulnerable, 20% Empowering with audience-adaptive variations
+- **9 Copywriter Frameworks**: Intelligent selection from Simple (SVC, QPT), Medium (CASE, PATH), to Complex (STORY, HELP) with visual progress tracking
+- **Embedded Prompt Improvement**: Invisible clarity enhancement that expands abbreviations ("CTR" → "click-through rate") and structures vague requests without adding assumptions
 
 #### 7. 📋 Dev Ticket Writer (v4.1.0)
-**Convert any request into actionable development tickets**
+**Transform vague requests into crystal-clear development tickets**
 - **3 Ticket Modes**: Quick ($q), Standard ($s), Complex ($c) for any feature size
 - **Implementation Specs**: $spec mode for frontend code solutions (1-3 questions, copy-paste ready)
 - **Interactive Guidance**: Default conversational mode helps create better tickets
@@ -106,22 +98,23 @@ Some of my non-client AI systems that I made available to the public. They were 
 ——
 
 #### 8. 🛠️ IDE System Prompt (v3.9.0)
-**Perfect for Webflow developers who also use Slater, GSAP and Motion**
-- **Production Standards**: Zero technical debt, fixes root causes, not symptoms
-- **Performance First**: CSS-only solutions, REM units, lazy loading
-- **IDE Support**: Cursor, Windsurf, Claude Code, VS Code, JetBrains
-- **Modular Rules**: Toggle features based on task complexity
+**Transform any AI coding assistant into an elite software engineer**
+- **Root Cause Philosophy**: Fixes underlying issues not symptoms, delivers production-grade code with zero technical debt
+- **Performance Obsession**: CSS-first approach, REM units only, batch DOM updates, will-change optimization
+- **Pre-Code Checklist**: Define scope → Map dependencies → Identify risks → Document assumptions → Verify readiness
+- **Risk Documentation System**: "This could break if..." analysis with cascading effect monitoring and edge cases
+- **MCP Decision Tree**: Strategic tool selection for validation, documentation, and current best practices
 
-#### 9. 🚀 Lovable System Prompts (v1.0.0) — NEW
-**Three specialized modes for the Lovable platform: Prototype, Website, or App**
-- **3 Expert Modes**: $lp (mockups), $lw (marketing sites), $la (full-stack apps)
-- **Framework-Driven**: VISION (prototypes), CONVERT (websites), SCALE (apps)
-- **Right Tool Philosophy**: No more app complexity when you need a mockup
+#### 9. 🚀 Lovable System Prompts (v1.1.0)
+**Three specialized experts optimized for minimal Lovable platform credit usage**
+- **Credit Impact Scoring (CIS)**: Every feature rated 1-10 with mandatory STOP checkpoints for scores 7+
+- **Phased Implementation**: Core (20-30%) → Enhanced (30-40%) → Advanced (40% requires approval)
 - **Design System First**: Mandatory establishment before any coding
-- **Production Standards**: Visual excellence, 95+ PageSpeed, TypeScript + Supabase
+- **Component Reuse Library**: Copy-paste patterns (ReusableCard, ReusableHero, etc.) save 60-80% credits
+- **Real-time Credit Dashboard**: Phase tracking, burn rate monitoring, and CCR (Conversion-Credit Ratio) metrics
 
-#### 10. 🏗️ Claude App Builder (v1.3.3)
-**Build functional app prototypes directly in Claude**
+#### 10. 🗁 Claude App Builder (v1.3.3)
+**Build functional web applications and AI demos directly in Claude artifacts**
 - **3 Specialized Modes**: $app (tools), $ai (chat interfaces), $data (dashboards)
 - **Fluid Responsive**: Scales perfectly 320px-1920px
 - **Pre-loaded Libraries**: React, Tailwind, Three.js, Chart.js

@@ -11,9 +11,13 @@ A comprehensive system that transforms vague requests into clear, effective AI p
 - **Improved Logic Flow**: Core frameworks and enhancement methods front and center
 - **Knowledge Base Reorganized**: All support documents prioritize core content over platform-specific features
 
+.
+
 ## Overview
 
 The Prompt Engineering Assistant helps users craft powerful, precise prompts for any AI system, with specialized support for creating Lovable development PROMPTS. With six core frameworks and intelligent enhancement algorithms, it delivers professional-grade prompts that maximize AI performance while minimizing resource usage.
+
+.
 
 ## ✨ Key Features
 
@@ -26,6 +30,8 @@ The Prompt Engineering Assistant helps users craft powerful, precise prompts for
 - **Compact Progress Tracking**: Streamlined reports with framework-specific metrics
 - **Interactive Mode**: Conversational guidance with platform-aware questions
 - **Artifact-Based Delivery**: All prompts delivered in reusable markdown artifacts
+
+.
 
 ## 🚀 Quick Setup
 
@@ -63,6 +69,8 @@ $website marketing landing page
 $app build todo list
 ```
 
+.
+
 ## 🎛️ Operating Modes
 
 ### Core Modes
@@ -84,6 +92,8 @@ $app build todo list
 | **App** | `$app` | Full-stack applications | App PROMPT | Medium-High |
 
 **CRITICAL**: These modes create PROMPTS for building these things, NOT the actual prototypes/websites/apps!
+
+.
 
 ## 🗂️ Frameworks Overview
 
@@ -136,6 +146,8 @@ $app build todo list
 - **L** - Logic (essential only)
 - **E** - Endpoints (add as needed)
 
+.
+
 ## 📊 Compact Report Examples
 
 ### Standard Enhancement
@@ -169,6 +181,8 @@ Key Improvements:
 Note: This is a PROMPT for developing an app, not the app itself
 ```
 
+.
+
 ## 💰 Credit Optimization Strategy
 
 All Lovable prompts now include:
@@ -193,6 +207,8 @@ All Lovable prompts now include:
 - Custom component libraries
 - Large data processing
 
+.
+
 ## 🎨 Visual Design Matching
 
 When users provide screenshots, mockups, or visual references:
@@ -201,6 +217,8 @@ When users provide screenshots, mockups, or visual references:
 - **Responsive adaptation** guidance
 - **Design system creation** from patterns
 - **Exact replication** instructions in prompts
+
+.
 
 ## 🔧 Installing MCP Tools (Recommended)
 
@@ -280,6 +298,8 @@ The system intelligently selects thinking tools based on mode and complexity:
 - **Simple improvements** → Sequential Thinking
 - **Format changes** → Sequential Thinking
 
+.
+
 ## 🔧 Technical Details
 
 ### Platform Detection
@@ -297,6 +317,8 @@ Automatically optimizes for:
 - Credit usage indicators
 - Visual reference notes
 - Clear "PROMPT not implementation" notices
+
+.
 
 ## 📚 Example Transformations
 
@@ -326,6 +348,8 @@ Database: todos table with user_id, title, completed
 Note: This prompt is for someone to BUILD the app, not the app itself
 ```
 
+.
+
 ## 🆘 Troubleshooting
 
 ### MCP Connection Issues
@@ -351,6 +375,8 @@ Note: This prompt is for someone to BUILD the app, not the app itself
 - For NPX issues: Check Claude Desktop logs
 - For prompt issues: Use $interactive mode for step-by-step guidance
 
+.
+
 ## ⚠️ Important Notes
 
 - **Never creates content** - Only improves prompts
@@ -361,6 +387,8 @@ Note: This prompt is for someone to BUILD the app, not the app itself
 - **No em dashes** - Uses commas, colons, or periods
 - **Works without MCPs** - But enhanced with them
 
+.
+
 ## 📦 Version History
 
 - **v4.1.0**: Reorganized architecture prioritizing core prompt improvement logic
@@ -369,6 +397,8 @@ Note: This prompt is for someone to BUILD the app, not the app itself
 - **v3.0.0**: Streamlined reports and reduced cognitive load
 - **v2.0.0**: Complete rewrite with 5 modes, visual dashboards
 - **v1.0.0**: Initial CRAFT framework implementation
+
+.
 
 ## 🎯 Key Principles
 
@@ -379,6 +409,8 @@ Note: This prompt is for someone to BUILD the app, not the app itself
 5. **Scale complexity** to match task requirements
 6. **Preserve user intent** while maximizing effectiveness
 7. **Reduce cognitive load** through compact reporting
+
+.
 
 ## 📚 Additional Resources
 
