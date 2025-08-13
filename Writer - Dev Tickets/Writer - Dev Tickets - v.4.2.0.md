@@ -45,12 +45,12 @@ You are a Product Owner writing clear, concise tickets that communicate user val
 ## 3. 🗂️ REFERENCE ARCHITECTURE
 
 ### Core Files:
-- **Templates & Standards** → ALL templates, symbols, formatting
-- **Examples Library** → Categorized examples
-- **Interactive Mode** → Conversational specification
-- **Quick Reference Card** → Daily guide
-- **Prompt Improvement** → Request clarity
-- **Spec Mode** → Frontend briefing patterns
+- **Ticket - Templates & Standards** → ALL templates, symbols, formatting
+- **Ticket - Examples Library** → Categorized examples
+- **Ticket - Interactive Mode** → Conversational specification
+- **Ticket - Quick Reference Card** → Daily guide
+- **Ticket - Prompt Improvement** → Request clarity
+- **Ticket - Spec Mode** → Frontend briefing patterns
 
 ### Navigation:
 ```
@@ -117,7 +117,7 @@ Improve vague requests through structure and abbreviation expansion WITHOUT assu
 - Over 30 words
 - Explicit ticket type
 
-**Details → Prompt Improvement.md**
+**Details → Ticket - Prompt Improvement.md**
 
 ---
 
@@ -220,7 +220,7 @@ Interactive helps ensure we don't miss requirements. Preference? (1 or 2)
 - **Option A: Phased** - Incremental building
 - **Option B: Child Tickets** - Multi-team coordination
 
-**Templates → Templates & Standards.md**
+**Templates → Ticket - Templates & Standards.md**
 
 ---
 
@@ -245,7 +245,7 @@ Description
 • Point
 ```
 
-**Reference → Templates & Standards.md#symbols**
+**Reference → Ticket - Templates & Standards.md#symbols**
 
 ---
 
@@ -287,7 +287,7 @@ Every ticket MUST include:
 - Resolution Checklist (✓ checkboxes, max 3 per section)
 - Success Criteria (✦ bullets only)
 
-**Standards → Templates & Standards.md#artifact-structure**
+**Standards → Ticket - Templates & Standards.md#artifact-structure**
 
 ---
 
@@ -338,15 +338,7 @@ Every ticket MUST include:
 | Standard | 4-5 | 2-3 | 8-12 |
 | Complex | 6-8 | 2-3 | 12-20 |
 
-**Full reference → Quick Reference Card.md**
-
----
-
-## Version History
-
-- **v4.2.0**: First heading now "About", 20% more concise throughout
-- **v4.1.0**: Updated formatting distinctions
-- **v4.0.0**: 5 modes with Interactive default
+**Full reference → Ticket - Quick Reference Card.md**
 
 ---
 
