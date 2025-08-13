@@ -146,8 +146,8 @@ CRAFT Coverage: C:80% R:100% A:80% F:60% T:100%
 Before → After: 3 words (2/10 clarity) → 87 words (9/10 clarity)
 
 Key Improvements:
-✓ Specificity: added metrics, timeframes • Role: expert persona defined
-✓ Structure: clear sections • Format: output structure specified
+✔ Specificity: added metrics, timeframes • Role: expert persona defined
+✔ Structure: clear sections • Format: output structure specified
 ```
 
 ### Lovable App PROMPT Enhancement
@@ -162,9 +162,9 @@ Visual Reference: Matched provided mockup
 Implementation Phases: 3 (Core → Enhanced → Premium)
 
 Key Improvements:
-✓ Tech stack: React + Supabase defined • Database: Complete schema
-✓ Features: Phased implementation • Auth: Basic first approach
-✓ Components: Reuse strategy • Visual: Exact mockup matching
+✔ Tech stack: React + Supabase defined • Database: Complete schema
+✔ Features: Phased implementation • Auth: Basic first approach
+✔ Components: Reuse strategy • Visual: Exact mockup matching
 
 Note: This is a PROMPT for developing an app, not the app itself
 ```
@@ -202,13 +202,85 @@ When users provide screenshots, mockups, or visual references:
 - **Design system creation** from patterns
 - **Exact replication** instructions in prompts
 
-## 🔧 Technical Details
+## 🔧 Installing MCP Tools (Recommended)
 
-### MCP Selection Logic
-- **Simple/Clear tasks** → Sequential (1-2 thoughts)
-- **Standard improvements** → Sequential (2-3 thoughts)
-- **Complex/Unclear** → Cascade (3-5 thoughts)
-- **Full refinement** → Cascade (5+ thoughts)
+The system intelligently selects between Sequential and Cascade Thinking based on prompt complexity. Choose either Docker (stable) or NPX (quick) installation:
+
+### Option A: AI-Powered Docker Setup (Recommended)
+
+**Prerequisites:**
+- Docker Desktop installed ([Download Docker Desktop](https://www.docker.com/products/docker-desktop/))
+- Claude Desktop app ([Download Claude](https://claude.ai/download))
+
+**AI-Assisted Installation:**
+
+Copy this prompt to Claude, ChatGPT, or any AI assistant:
+
+```
+Help me set up Docker containers for the Prompt Engineering Assistant MCP tools.
+
+I need to:
+1. Create a directory at "$HOME/MCP Servers"
+2. Clone these repos:
+   - https://github.com/sequentialthinking/sequential-thinking-mcp
+   - https://github.com/cascadethinking/cascade-thinking-mcp
+3. Create a docker-compose.yml file with services for both
+4. Configure Claude Desktop's claude_desktop_config.json
+5. Start the containers with docker-compose
+
+I'm on [Windows/Mac/Linux]. Please give me the exact commands to run.
+```
+
+The AI will provide step-by-step commands for your operating system.
+
+**Verification:**
+1. Check Docker Desktop for 2 running containers
+2. Look for the 🔌 icon in Claude Desktop showing available tools
+3. Test with: "$improve write a blog post about AI"
+
+### Option B: NPX Installation (Quick but Less Stable)
+
+Add to Claude Desktop config file:
+- **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
+- **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
+
+```json
+{
+  "mcpServers": {
+    "sequential-thinking": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+    },
+    "cascade-thinking": {
+      "command": "npx",
+      "args": ["-y", "cascade-thinking-mcp"]
+    }
+  }
+}
+```
+
+Save and restart Claude Desktop.
+
+### MCP Tool Selection
+
+The system intelligently selects thinking tools based on mode and complexity:
+
+| Mode | Tool Selection | Thoughts Used |
+|------|---------------|---------------|
+| **$short** | Sequential | 1-2 thoughts for clarity |
+| **$improve** | Sequential | 2-3 thoughts for enhancement |
+| **$refine** | Cascade | 5+ thoughts with branches |
+| **$interactive** | Cascade | 3-5 thoughts with exploration |
+| **$json** | Sequential | 1-2 thoughts for formatting |
+| **Lovable modes** | Sequential/Cascade | 2-5 based on complexity |
+
+**Complexity Triggers:**
+- **Unclear requests** → Cascade Thinking
+- **Multi-step refinement** → Cascade Thinking
+- **Simple improvements** → Sequential Thinking
+- **Format changes** → Sequential Thinking
+
+## 🔧 Technical Details
 
 ### Platform Detection
 Automatically optimizes for:
@@ -254,6 +326,31 @@ Database: todos table with user_id, title, completed
 Note: This prompt is for someone to BUILD the app, not the app itself
 ```
 
+## 🆘 Troubleshooting
+
+### MCP Connection Issues
+- **Docker not running**: Start Docker Desktop
+- **Can't connect**: Restart Claude Desktop
+- **Wrong directory**: Check you're in "$HOME/MCP Servers"
+- **Permission errors**: Run terminal as administrator (Windows) or use sudo (Mac/Linux)
+
+### Common Setup Problems
+- **"Command not found"**: Ensure Node.js is installed for NPX method
+- **Containers won't start**: Check Docker Desktop is running
+- **Tools not showing**: Restart Claude Desktop after config changes
+- **Rate limits**: Both tools handle this gracefully with retries
+
+### Prompt Issues
+- **Too vague?** Use $interactive mode for guidance
+- **Not enhanced enough?** Try $refine for full optimization
+- **Wrong platform?** System auto-detects but you can specify
+- **Credit concerns?** All Lovable prompts include phased implementation
+
+### Getting Help
+- For Docker issues: Check container logs in Docker Desktop
+- For NPX issues: Check Claude Desktop logs
+- For prompt issues: Use $interactive mode for step-by-step guidance
+
 ## ⚠️ Important Notes
 
 - **Never creates content** - Only improves prompts
@@ -262,6 +359,7 @@ Note: This prompt is for someone to BUILD the app, not the app itself
 - **Credit optimization included** - Phased approach for all Lovable prompts
 - **Visual matching supported** - Extracts design from references
 - **No em dashes** - Uses commas, colons, or periods
+- **Works without MCPs** - But enhanced with them
 
 ## 📦 Version History
 
@@ -289,6 +387,9 @@ Note: This prompt is for someone to BUILD the app, not the app itself
 - [React Documentation](https://react.dev)
 - [Tailwind CSS](https://tailwindcss.com)
 - [MCP Protocol Guide](https://modelcontextprotocol.io/)
+- [Docker Desktop Help](https://docs.docker.com/desktop/)
+- [Sequential Thinking MCP](https://github.com/sequentialthinking/sequential-thinking-mcp)
+- [Cascade Thinking MCP](https://github.com/cascadethinking/cascade-thinking-mcp)
 
 ---
 
