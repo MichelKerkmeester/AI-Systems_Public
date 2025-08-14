@@ -1,10 +1,12 @@
-# Dev Ticket Writer - User Guide v4.2.0
+# Dev Ticket Writer - User Guide v4.2.1
 
 The Dev Ticket Writer helps teams create professional development tickets that are "clear at first glance" for developers while teaching product thinking principles. By focusing on WHAT needs doing and WHY it matters (not HOW to implement), it bridges the communication gap between product and development. When implementation details are needed, the concise Spec mode provides focused, copy-paste ready solutions.
 
-## 🆕 What's New in v4.2.0
+## 🆕 What's New in v4.2.1
 
-- **First Heading "About"**: All tickets now start with `# ■ About` in the body (feature name in artifact title only)
+- **About Icon Updated**: All tickets now start with `# ⌘ About` in the body
+- **Checkbox Format**: Resolution checklists now use `[]` format (no space)
+- **Requirements Dividers**: Clear visual separation between requirement subsections
 - **20% More Concise**: All tickets reduced by 20% while maintaining clarity
 - **Streamlined Documentation**: Cleaner, more focused instructions throughout
 - **Enhanced Readability**: Faster ticket scanning with improved structure
@@ -19,7 +21,7 @@ The Dev Ticket Writer helps teams create professional development tickets that a
 - **Interactive Offers**: Automatic guidance offers for $standard and $complex modes
 - **Global Resolution Approach**: Max 3 items per section, outcome-focused checklists
 - **Concise Spec Mode**: Minimal conversation (1-3 questions), working code examples
-- **Enhanced Symbol System**: Professional symbols (■, ◇, **◊**, →, ✦, ✓, ⊗, ⚠️, ≈)
+- **Enhanced Symbol System**: Professional symbols (⌘, ◇, **◊**, →, ✦, ✓, ⊗, ⚠️, ≈)
 - **Prompt Improvement**: Clarifies vague requests without assumptions
 - **Educational Focus**: Interactive mode teaches product management through practice
 - **2-Minute Rule**: All tickets readable in under 2 minutes
@@ -32,22 +34,22 @@ The Dev Ticket Writer helps teams create professional development tickets that a
 1. Go to claude.ai
 2. Click "Projects" in sidebar
 3. Click "Create project"
-4. Name it "Dev Ticket Writer v4.2"
+4. Name it "Dev Ticket Writer v4.2.1"
 
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Writer - Dev Tickets - v4.2.0.md`
+3. Copy and paste: `Writer - Dev Tickets - v4.2.1.md`
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
 Add these to your project's knowledge base:
-- `Ticket - Templates & Standards - v4.2.0.md`
-- `Ticket - Examples Library - v4.2.0.md`
-- `Ticket - Interactive Mode - v4.2.0.md`
-- `Ticket - Quick Reference Card - v4.2.0.md`
-- `Ticket - Spec Mode - v4.2.0.md`
-- `Ticket - Prompt Improvement - v4.2.0.md`
+- `Ticket - Templates & Standards - v4.2.1.md`
+- `Ticket - Examples Library - v4.2.1.md`
+- `Ticket - Interactive Mode - v4.2.1.md`
+- `Ticket - Quick Reference Card - v4.2.1.md`
+- `Ticket - Spec Mode - v4.2.1.md`
+- `Ticket - Prompt Improvement - v4.2.1.md`
 
 ### Step 4: Start Creating Tickets
 Simply describe what you need:
@@ -165,7 +167,7 @@ Add to Claude Desktop config:
 ## 🆘 Troubleshooting
 
 ### Ticket Issues
-- **Not seeing "About"?** - First heading always `# ■ About`
+- **Not seeing "About"?** - First heading always `# ⌘ About`
 - **Too verbose?** - v4.2 is 20% more concise
 - **Wrong scope?** - System asks, never assumes
 - **Missing labels?** - System prompts for them
@@ -179,6 +181,7 @@ Add to Claude Desktop config:
 - **Too many items?** - Max 3 per section
 - **Too detailed?** - Think deliverables
 - **Not sure grouping?** - Use work streams
+- **Format?** - Now uses `[]` without space
 
 ### MCP Connection
 - **Docker not running**: Start Docker Desktop
@@ -189,7 +192,7 @@ Add to Claude Desktop config:
 
 ## ⚠️ Important Notes
 
-- **First heading always "About"** - Feature name in title only
+- **First heading always "About"** - Feature name in title only, uses ⌘ icon
 - **20% more concise** - All tickets shorter
 - **Global checklists** - Max 3 items/section
 - **Interactive offers required** - For $s and $c
@@ -199,11 +202,14 @@ Add to Claude Desktop config:
 - **Spec concise** - 1-3 questions, working code
 - **Always artifacts** - Every ticket in markdown
 - **Works without MCPs** - Enhanced with them
+- **Checkbox format** - Uses `[]` without space
+- **Requirements dividers** - Clear separation between subsections
 
 .
 
 ## 📦 Version History
 
+- **v4.2.1**: Updated About icon (⌘), checkbox format `[]`, requirement dividers
 - **v4.2.0**: First heading "About", 20% more concise throughout
 - **v4.1.0**: Global Resolution Checklists (max 3 items/section)
 - **v4.0.0**: 5 modes, Interactive offers, concise Spec mode
@@ -226,4 +232,4 @@ Add to Claude Desktop config:
 
 ---
 
-*Transform vague requests into crystal-clear tickets. First heading always "About". 20% more concise. Interactive guidance by default. Create implementation specs with minimal conversation. Complex mode adapts to your needs. Resolution Checklists use global, outcome-focused approach. Every ticket scannable in under 2 minutes.*
+*Transform vague requests into crystal-clear tickets. First heading always "About" with ⌘ icon. 20% more concise. Interactive guidance by default. Create implementation specs with minimal conversation. Complex mode adapts to your needs. Resolution Checklists use global, outcome-focused approach with `[]` format. Every ticket scannable in under 2 minutes.*
