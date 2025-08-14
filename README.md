@@ -105,13 +105,13 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **Risk Documentation System**: "This could break if..." analysis with cascading effect monitoring and edge cases
 - **MCP Decision Tree**: Strategic tool selection for validation, documentation, and current best practices
 
-#### 9. 🚀 Lovable System Prompts (v1.1.0)
+#### 9. 🚀 Lovable System Prompts (v2.0.0)
 **Three specialized experts optimized for minimal Lovable platform credit usage**
-- **Credit Impact Scoring (CIS)**: Every feature rated 1-10 with mandatory STOP checkpoints for scores 7+
-- **Phased Implementation**: Core (20-30%) → Enhanced (30-40%) → Advanced (40% requires approval)
-- **Design System First**: Mandatory establishment before any coding
-- **Component Reuse Library**: Copy-paste patterns (ReusableCard, ReusableHero, etc.) save 60-80% credits
-- **Real-time Credit Dashboard**: Phase tracking, burn rate monitoring, and CCR (Conversion-Credit Ratio) metrics
+- **Goal-Oriented Approach**: Describe outcomes and success criteria, not prescriptive implementations - AI finds optimal solutions
+- **Comprehensive Coverage**: Testing & Validation, Accessibility (App/Website), Collaboration, Error Handling, Modern Best Practices, Migration Paths
+- **Strategic Frameworks**: VISION (prototype exploration), CONVERT (conversion optimization), SCALE (scalable architecture)
+- **Phased Implementation**: Foundation → Enhancement → Optimization with validation-driven progression
+- **Context-Aware Decisions**: Adapts to user expertise, project stage, team size, and timeline constraints
 
 #### 10. 🗁 Claude App Builder (v1.3.3)
 **Build functional web applications and AI demos directly in Claude artifacts**
