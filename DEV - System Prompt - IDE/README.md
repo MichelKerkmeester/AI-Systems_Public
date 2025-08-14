@@ -32,7 +32,7 @@ IDE System Prompt is a comprehensive set of rules that elevates AI coding assist
 
 Most AI coding assistants generate "good enough" code that accumulates technical debt over time. They fix symptoms instead of root causes, leading to fragile applications that break with each change.
 
-The IDE System Prompt transforms this approach entirely. By enforcing 11 core engineering principles directly in your IDE, it ensures your AI assistant thinks like a senior engineer: analyzing root causes, optimizing performance relentlessly, and delivering production-grade code from the start. Whether you're building with Webflow + Slater or any modern stack, these rules create an AI partner that maintains the standards of elite engineering teams.
+The IDE System Prompt transforms this approach entirely. By enforcing 11 core engineering principles directly in your IDE, it ensures your AI assistant thinks like a senior engineer: analyzing root causes, optimizing performance relentlessly, and delivering production-grade code from the start. Whether you're building with Webflow + Miyagi (https://www.getmiyagi.com) or any modern stack, these rules create an AI partner that maintains the standards of elite engineering teams.
 
 The integration with MCP (Model Context Protocol) tools takes this further, adding systematic reasoning validation right in your development environment. It's not just about writing code; it's about engineering solutions that scale.
 
@@ -43,7 +43,7 @@ The integration with MCP (Model Context Protocol) tools takes this further, addi
 - **Performance Optimization**: CSS-first approach, zero unnecessary JavaScript
 - **Risk Management**: Document what could break before it does
 - **Phased Development**: Strategic planning before tactical execution
-- **Framework Flexibility**: Optimized for Webflow + Slater, adaptable to any stack
+- **Framework Flexibility**: Optimized for Webflow + Miyagi, adaptable to any stack
 - **Modular Rule System**: Enable/disable specific behaviors per task
 
 .

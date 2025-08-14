@@ -1,314 +1,327 @@
-# DEV - System Prompt - Lovable v1.1.0
+# Lovable System Prompts v2.0
 
-Transform Lovable AI into three specialized, credit-optimized experts: Visual Prototyper, Website Builder, or Full-Stack Developer.
+Transform Lovable AI into three specialized, goal-oriented development modes focused on creative freedom, intelligent credit optimization, and outcome-driven implementation.
 
-## 🚀 What's New in v1.1.0
+## 🚀 What's New in v2.0
 
-### 💰 **Aggressive Credit Optimization**
-- **Credit Impact Score (CIS)** - Every feature rated 1-10 for credit usage
-- **Phased Implementation** - Build MVPs at 30% of standard credit cost
-- **STOP Checkpoints** - Mandatory approval gates before high-credit operations
-- **Reuse Libraries** - Copy-paste patterns to save 60-80% credits
+### 🎨 **Goal-Oriented Philosophy**
+- **Outcome-Focused Direction** - Describe what to achieve, not how to build it
+- **Creative Freedom Framework** - Enable AI exploration within guided constraints
+- **Success Metrics Over Specifications** - Define goals and let AI find optimal solutions
+- **Mood and Personality Guidance** - Set tone and feeling rather than rigid implementations
 
-### 📊 **New Metrics**
-- **CCR (Conversion-Credit Ratio)** - ROI evaluation for websites
-- **Credit Burn Rate** - Real-time tracking across all modes
-- **Architecture Decision Records** - Document credit-saving choices
+### 💡 **Intelligent Credit Strategy**
+- **Value-Based Prioritization** - Features evaluated by impact versus cost
+- **Progressive Enhancement Model** - Build incrementally based on validation
+- **Phased Implementation Approach** - Core → Enhanced → Advanced progression
+- **Data-Driven Investment** - Enhance only what's proven to work
 
-### 🎯 **Visual Matching System**
-- **Pixel-Perfect Extraction** - Match screenshots/mockups exactly
-- **Design System Capture** - Auto-extract colors, spacing, typography
-- **Component Identification** - Catalog reusable elements
+### 🎯 **Strategic Frameworks**
+- **VISION Framework** - Prototype exploration and concept validation
+- **CONVERT Framework** - Conversion-focused website development
+- **SCALE Framework** - Scalable application architecture
+
+### 🆕 **Comprehensive Coverage**
+- **Testing & Validation** - Systematic quality assurance approaches
+- **Accessibility & Inclusivity** - WCAG compliance and universal design (App & Website modes)
+- **Collaboration & Iteration** - User feedback integration and stakeholder communication
+- **Error Handling & Recovery** - Graceful degradation and debugging strategies
+- **Modern Best Practices** - SEO, performance, PWA, and security considerations
+- **Migration & Evolution Paths** - Scaling and refactoring guidance
 
 ---
 
 ## ⚡ Quick Start
 
-### Choose Your Mode
+### Choose Your Development Mode
 
 ```bash
-$prototype ($lp)  # Visual mockups, animations, no backend (CIS: 1-3)
-$website ($lw)    # Landing pages, SEO, conversions (CIS: 2-6)
-$app ($la)        # Full-stack apps with Supabase (CIS: 3-10)
+$prototype    # Visual exploration and concept validation
+$website      # Conversion-optimized marketing sites
+$app          # Full-stack application development
 ```
 
-### Credit-Conscious Usage
+### Development Philosophy
 
-**Prototype (Low Credit):**
+**Prototype Mode:**
 ```
-$lp Create static dashboard design
+Create an exploration of dashboard concepts
 ```
-→ Static mockup, no animations (Saves 70% credits)
+→ Focus on visual communication and user experience discovery
 
-**Website (Medium Credit):**
+**Website Mode:**
 ```
-$lw Build landing page, defer integrations
+Build a site that converts visitors into customers
 ```
-→ Core pages only, static forms (Saves 60% credits)
+→ Optimize for conversion goals and trust building
 
-**App (Optimized):**
+**App Mode:**
 ```
-$la Create todo app with mock data first
+Develop a task management solution
 ```
-→ Functional UI, no backend initially (Saves 80% credits)
+→ Start with core functionality, enhance based on usage
 
 ---
 
-## 💰 Credit Impact Scores (CIS)
+## 🎯 Mode Comparison
 
-| Score | Category | Action | Examples |
-|-------|----------|--------|----------|
-| **1-3** | Low | Auto-implement | Static layouts, Tailwind utilities, mock data |
-| **4-6** | Medium | Ask first | Forms, basic animations, simple auth |
-| **7-10** | High | Require approval | Real-time, file uploads, complex state |
-
----
-
-## 🎯 Mode Comparison v1.1.0
-
-| Mode | Framework | Credit Budget | Phases | Best For |
-|------|-----------|--------------|---------|----------|
-| **Prototype** | VISION | 20-40% | Static → Interactive → Animated | Mockups, demos |
-| **Website** | CONVERT | 30-60% | Core → Trust → Advanced | Landing pages |
-| **App** | SCALE | 30-100% | MVP → Enhanced → Production | SaaS, dashboards |
+| Mode | Purpose | Philosophy | Approach | Sections |
+|------|---------|------------|----------|----------|
+| **Prototype** | Visual exploration | Discover what resonates | Static first, enhance selectively | 16 |
+| **Website** | Drive conversions | Maximize impact per credit | Focus on primary goal | 17 |
+| **App** | Functional solutions | Build incrementally | Validate before investing | 15 |
 
 ---
 
-## 🏗️ Implementation Phases
+## 📊 Development Principles
 
-### Phase 1: Core (Auto-Build)
-- **Budget:** 20-30% credits
-- **Focus:** Essential functionality only
-- **Strategy:** Static first, mock data, reuse everything
+### 1. 🌟 Core Philosophy
+- **Goals Over Specifications** - Define success, not implementation
+- **Outcomes Over Outputs** - Focus on what users achieve
+- **Exploration Over Prescription** - Enable creative problem-solving
+- **Validation Over Assumption** - Test before building
 
-### Phase 2: Enhanced (Ask First)
-- **Budget:** 30-40% credits
-- **Focus:** Proven features only
-- **Strategy:** Add after validation, simple implementations
+### 2. 💰 Credit Optimization
+- **Value-Based Decisions** - Invest where impact is highest
+- **Progressive Enhancement** - Start simple, evolve based on data
+- **Strategic Phasing** - Core features first, enhancements later
+- **Efficiency Through Simplicity** - Simple solutions often perform best
 
-### Phase 3: Advanced (Explicit Approval)
-- **Budget:** 30-40% credits
-- **Focus:** Complex features if justified
-- **Strategy:** Require metrics, provide alternatives
-
----
-
-## 📊 New Metrics & Tracking
-
-### Credit Dashboard (All Modes)
-```tsx
-// Real-time credit tracking
-Phase 1: 18% / 30% ✅
-Phase 2: 0% / 35% ⏸️
-Phase 3: 0% / 35% 🔒
-Total Savings: 72%
-```
-
-### Conversion-Credit Ratio (Website Mode)
-```
-Feature: Contact Form
-Impact: 8/10 | Cost: 3/10
-CCR: 2.67 ✅ (Above 2.0 threshold)
-```
-
-### Architecture Decision Records (App Mode)
-```
-Decision: Local state vs Redux
-Choice: Local state
-Savings: 40% credits
-Migration: Add Redux if needed later
-```
+### 3. 🎨 Creative Direction
+- **Mood and Tone** - Set emotional targets, not visual specs
+- **Brand Personality** - Define character, not specific colors
+- **User Feelings** - Describe emotional journey, not UI details
+- **Success Criteria** - Measurable outcomes, not feature lists
 
 ---
 
-## 🎨 Visual Reference Matching
+## 🔄 Implementation Workflow
 
-### When Providing Screenshots/Mockups:
+### Phase 1: Foundation
+**Focus:** Essential functionality and visual accuracy
+- Establish core user experience
+- Validate primary value proposition
+- Create reusable component foundation
+- Measure initial user response
 
-1. **Automatic Extraction**
-   - Colors, typography, spacing
-   - Layout structure
-   - Component inventory
+### Phase 2: Enhancement
+**Focus:** Proven improvements based on data
+- Add features validated by usage
+- Improve conversion elements
+- Enhance user workflows
+- Build on successful patterns
 
-2. **Exact Replication**
-   - Pixel-perfect matching
-   - Preserve all visual details
-   - Match before optimizing
-
-3. **Credit Optimization**
-   - Reuse identified patterns
-   - Static first approach
-   - Defer animations
+### Phase 3: Optimization
+**Focus:** Advanced features with clear ROI
+- Implement complex functionality
+- Add sophisticated integrations
+- Scale for growth
+- Optimize performance
 
 ---
 
-## 💡 Credit-Saving Patterns
+## 🎯 Success Metrics
 
-### Universal Strategies
-```bash
-# Pattern 1: Mock First
-Mock data → Local storage → Database
-Saves: 60-80% initial credits
+### Universal Goals
+- **User Value Delivered** - Core functionality working effectively
+- **Credit Efficiency** - Maximum impact per investment
+- **Visual Excellence** - Accurate implementation of design vision
+- **Clear Upgrade Path** - Structured approach to enhancement
+- **Validated Growth** - Features justified by real usage
 
-# Pattern 2: Static First  
-Static → CSS animations → JS animations
-Saves: 50-70% animation credits
-
-# Pattern 3: Reuse Everything
-ShadCN → Tailwind utilities → Custom only if needed
-Saves: 40-60% component credits
-```
-
-### Mode-Specific Savings
+### Mode-Specific Targets
 
 **Prototype:**
-- 70% static, 20% basic interactions, 10% advanced
-- Use CSS transitions over JS animations
-- Limit to 3-5 screens initially
+- Design vision communicated clearly
+- User experience validated efficiently
+- Exploration insights captured
+- Reusable patterns identified
 
 **Website:**
-- Homepage gets 40% budget, other pages 10% each
-- Static forms before integrations
-- One conversion goal at a time
+- Primary conversion goal achieved
+- Trust and credibility established
+- Performance optimized through simplicity
+- Mobile experience prioritized
 
 **App:**
-- MVP at 30% budget maximum
-- Mock all data initially
-- Add backend only after validation
+- Core workflows functioning smoothly
+- User adoption demonstrated
+- Scalability path maintained
+- Technical debt minimized
 
 ---
 
-## 🚨 STOP Checkpoints
+## 💡 Best Practices
 
-### Mandatory Approval Points:
+### Strategic Approach
+- Start with the simplest effective solution
+- Validate assumptions before major investments
+- Document architectural decisions and rationale
+- Maintain flexibility for future enhancements
+
+### Communication Excellence
+- Transparent about trade-offs and implications
+- Present alternatives with clear value propositions
+- Focus discussions on outcomes and goals
+- Use metrics to guide decision-making
+
+### Technical Excellence
+- Prioritize maintainable, clean code
+- Maximize component and pattern reuse
+- Achieve visual accuracy efficiently
+- Build with future growth in mind
+
+---
+
+## 🚀 Integration with Prompt Engineering
+
+Enhanced synergy with goal-oriented prompt creation:
 
 ```
-🛑 CIS 7+ Feature Detected
-━━━━━━━━━━━━━━━━━━━━━━
-Feature: Real-time updates
-Credit Impact: HIGH (50% budget)
-Alternative: Polling (10% budget)
-
-Proceed? [Use Alternative] [Approve] [Defer]
+Create a prompt for building a project management app
 ```
+→ Generates creative brief → Lovable implements with freedom
+
+### Integration Benefits:
+- **Aligned Philosophy** - Goals and outcomes over specifications
+- **Creative Freedom** - AI explores optimal solutions
+- **Phased Approach** - Progressive enhancement strategy
+- **Success Focus** - Measurable outcomes drive development
 
 ---
 
-## 📋 Quick Reference v1.1.0
+## 📊 System Prompt Structure
 
-```bash
-# Prototype - Visual mockups (Low Credit)
-$lp [element] static first, animate if needed
+### Common Core Sections (All Modes)
+1. **Role & Philosophy** - Mode-specific identity and approach
+2. **Credit Optimization Philosophy** - Strategic resource management
+3. **Implementation Strategy/Workflow** - Development approach
+4. **Visual Implementation** - Design and interface considerations
+5. **Phased Development Approach** - Progressive enhancement stages
+6. **Testing & Validation Strategy** - Quality assurance
+7. **Collaboration & Iteration** - Feedback and refinement
+8. **Error Handling & Recovery** - Resilience and debugging
+9. **Modern Best Practices** - Current web standards
+10. **Migration & Evolution Paths** - Growth and scaling
+11. **Decision Framework** - Implementation criteria
+12. **Communication Approach** - Stakeholder interaction
+13. **Core Principles Summary** - Key takeaways
 
-# Website - Marketing sites (Medium Credit)
-$lw [site type] core pages only, enhance later
+### Mode-Specific Additions
+- **App Mode**: Accessibility & Inclusivity, Development Strategy (15 total sections)
+- **Website Mode**: Accessibility & Inclusivity, Conversion Strategy, Content & Messaging, Forms & Interactions (17 total sections)
+- **Prototype Mode**: Visual Extraction, Design Fidelity, Interaction Philosophy, Component Strategy (16 total sections)
 
-# App - Full applications (Phased Credit)
-$la [app type] MVP first, validate, then enhance
-```
+### VISION Framework (Prototype)
+- **V**ision - Overall concept and exploration goals
+- **I**nspiration - Mood, tone, and creative direction
+- **S**cenarios - User journeys to validate
+- **I**mpact - Desired emotional responses
+- **O**utcomes - Success criteria and learnings
+- **N**eeds - Core requirements for validation
 
-### Credit Commands
-```bash
-# Check credit usage
-Show credit dashboard
+### CONVERT Framework (Website)
+- **C**onversion - Primary action goals
+- **O**bjectives - Business outcomes
+- **N**arrative - Story and messaging
+- **V**alue - Core propositions
+- **E**xperience - User journey optimization
+- **R**esults - Success metrics
+- **T**rust - Credibility building
 
-# Evaluate feature
-Calculate CIS for [feature]
-
-# Find alternatives
-Suggest low-credit alternative for [feature]
-```
-
----
-
-## 🔧 Component Reuse Library
-
-### Copy-Paste Ready (CIS: 1)
-- ReusableCard
-- ReusableHero
-- ReusableTable
-- ReusableForm
-- ReusableMetricCard
-- ReusableAppShell
-
-*Full implementations included in each mode document*
-
----
-
-## ⚠️ Important Notes v1.1.0
-
-- **Always extract visual references first** - Match exactly before optimizing
-- **Credit awareness is mandatory** - Track and report usage
-- **Phase implementation required** - Never build everything at once
-- **Reuse before creating** - Check library first
-- **Mock before real** - Always start with mock data
-- **Ask before CIS 7+** - High-credit features need approval
+### SCALE Framework (App)
+- **S**cenarios - User workflows and tasks
+- **C**apabilities - Core feature set
+- **A**daptability - Flexibility requirements
+- **L**ogic - Business rules and processes
+- **E**xperience - User expectations and satisfaction
 
 ---
 
-## 📈 Success Metrics
+## 📚 Framework Details
 
-### Target Performance
-- **Credit Usage:** <40% of standard approach
-- **Reuse Rate:** >60% components
-- **Visual Match:** 100% accuracy
-- **Phase 1 Delivery:** Functional MVP always
+### Instead of Prescriptive Specs:
+❌ "Use #6366F1 header with 64px font"
+✅ "Create a professional, trustworthy feeling"
 
-### Quality Standards
-- Pixel-perfect to references
-- Clean, maintainable code
-- Clear credit documentation
-- Progressive enhancement path
+❌ "3-column grid with 16px spacing"
+✅ "Organize information clearly and effectively"
 
----
+❌ "Add parallax scrolling animation"
+✅ "Create an engaging, modern experience"
 
-## 🚀 Integration with Prompt Improver
-
-Enhanced integration with [Prompt Engineering Assistant](https://github.com/yourusername/prompt-improver):
-
-```
-$improve $lovable-app "project manager"
-```
-→ Optimized prompt → Credit-efficient implementation
-
-### New Integration Features:
-- Credit optimization in prompts
-- Visual reference extraction
-- Phased implementation plans
-- Component reuse suggestions
+### Focus on Goals:
+- What should users achieve?
+- How should they feel?
+- What problems are we solving?
+- What success looks like?
 
 ---
 
-## 📚 Resources
+## 🎨 Creative Direction Principles
 
-- [Prompt Engineering Assistant v7.0.0](https://github.com/yourusername/prompt-improver)
-- [Component Library](./components) - Ready-to-use patterns
-- [Credit Optimization Guide](./optimization) - Best practices
-- [Visual Matching Guide](./visual-matching) - Extraction techniques
+### Continuous Improvement Cycle
+1. **Build** - Create minimal viable solution
+2. **Measure** - Track usage and effectiveness
+3. **Learn** - Understand what works
+4. **Enhance** - Improve based on insights
+5. **Iterate** - Repeat for continuous growth
 
-### Tech Stack
-- [React](https://react.dev) • [Tailwind](https://tailwindcss.com) • [Supabase](https://supabase.com)
-- [ShadCN](https://ui.shadcn.com) • [Vite](https://vitejs.dev) • [TypeScript](https://typescriptlang.org)
+### Upgrade Path Strategy
+- Start with foundation
+- Validate through usage
+- Enhance proven features
+- Scale successful patterns
+- Optimize when justified
 
 ---
 
-## 🎯 Version History
+## 📈 Evolution and Growth
 
-### v1.1.0 (Current)
-- Added Credit Impact Scoring (CIS)
-- Implemented phased development approach
-- Enhanced visual reference matching
-- Added component reuse library
-- Introduced credit tracking dashboard
-- Added STOP checkpoints
+1. **Describe goals, not implementations**
+2. **Enable creativity within constraints**
+3. **Build incrementally based on validation**
+4. **Optimize for value, not features**
+5. **Communicate transparently about trade-offs**
+6. **Focus on outcomes and user success**
+7. **Maintain flexibility for growth**
+8. **Trust AI to find optimal solutions**
+
+---
+
+## 🌟 Core Principles Summary
+
+### v2.0 (Current)
+- Shifted to goal-oriented, non-prescriptive approach
+- Removed code examples in favor of strategic guidance
+- Enhanced creative freedom philosophy
+- Aligned with modern prompt engineering principles
+- Focus on outcomes over outputs
+- Emphasized emotional and experiential targets
+- Added comprehensive new sections:
+  - Testing & Validation Strategy
+  - Accessibility & Inclusivity (App and Website modes)
+  - Collaboration & Iteration
+  - Error Handling & Recovery
+  - Modern Best Practices
+  - Migration & Evolution Paths
+- Enhanced context-aware decision making
+- Expanded core principles for each mode
+
+### v1.1.0
+- Added Credit Impact Scoring
+- Implemented phased development
+- Enhanced visual matching
+- Added component libraries
+- Introduced tracking dashboards
 
 ### v1.0.0
 - Initial three-mode system
-- Basic frameworks (VISION, CONVERT, SCALE)
+- Basic framework introduction
 - Mode-specific optimizations
 
 ---
 
-*Right tool, right budget, right results. Build smarter, not harder.*
+*Build with purpose. Optimize with intelligence. Deliver with impact.*
 
-**Remember:** Every credit saved is a feature you can build later. Start simple, validate, enhance.
+**Remember:** The best solution achieves the goal efficiently while maintaining flexibility for future growth. Define what success looks like, then trust the creative process to find the optimal path.
