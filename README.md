@@ -9,8 +9,8 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 ## 🎯 Quick Navigation
 
-| Category | Systems | Purpose |
-|----------|---------|---------|
+| Category | Systems |
+|----------|---------|
 | **🤖 Code Agents** | [Multi-Model Agent System (COMING SOON)](#1--multi-model-agent-system--coming-soon) 
 | **💬 MCP Agents** | [ClickUp Agent](#2--clickup-agent), [Notion Agent](#3--notion-agent), [Imagician Agent](#4--imagician-agent) 
 | **✏️ Writers** | [Prompt Engineering](#5--prompt-engineering-assistant), [AI Systems](#6--ai-systems-creator), [Branded Content](#7--branded-content-writer), [Dev Ticket](#8--dev-ticket-writer) 
