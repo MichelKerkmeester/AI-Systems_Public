@@ -113,9 +113,7 @@ User: 10, React, yes, yes
 [1-2 sentences]
 
 ## Implementation
-```css/js
-[Working code]
-```
+[css/js code block]
 
 ## Browser Compatibility
 - Chrome/Edge: ✓
@@ -134,22 +132,10 @@ User: 10, React, yes, yes
 [One sentence]
 
 ## Implementation
-```typescript
-interface Props {
-  data: string[];
-  onSelect: (item: string) => void;
-}
-
-export const Component = ({ data, onSelect }: Props) => {
-  // Implementation
-  return <div>...</div>;
-};
-```
+[typescript code block with interface and component]
 
 ## Usage
-```typescript
-<Component data={items} onSelect={handleSelect} />
-```
+[typescript usage example]
 
 ## Key Points
 - [Performance]
@@ -164,19 +150,13 @@ export const Component = ({ data, onSelect }: Props) => {
 [2-3 sentences for complex]
 
 ## Core Implementation
-```typescript
-[Main code]
-```
+[Main code block]
 
 ## State Management
-```typescript
 [Only if needed]
-```
 
 ## Performance
-```typescript
 [Only if requested]
-```
 ```
 
 ---
@@ -206,21 +186,23 @@ export const Component = ({ data, onSelect }: Props) => {
 ## 6. 💡 EXAMPLES
 
 ### CSS Solution (Instant)
+
+**User:** `$spec hide scrollbar`
+
+**System:** Browser compatibility?
+
+**User:** yes
+
+**Output:**
 ```markdown
-User: $spec hide scrollbar
-
-System: Browser compatibility?
-
-User: yes
-
----
-
 # Hidden Scrollbar
 
 ## Objective
 Hide scrollbar, maintain scroll.
 
 ## Implementation
+```
+
 ```css
 .scrollable {
   overflow-y: auto;
@@ -233,6 +215,7 @@ Hide scrollbar, maintain scroll.
 }
 ```
 
+```markdown
 ## Browser Compatibility
 - Chrome/Edge: ✓
 - Firefox: ✓
@@ -246,23 +229,25 @@ Hide scrollbar, maintain scroll.
 ```
 
 ### Component (2 Questions)
-```markdown
-User: $spec autocomplete
 
-System: Quick setup:
+**User:** `$spec autocomplete`
+
+**System:** Quick setup:
 1. React/Vue?
 2. Local/API?
 
-User: React, local
+**User:** React, local
 
----
-
+**Output:**
+```markdown
 # Autocomplete Component
 
 ## Objective
 Filterable input with suggestions.
 
 ## Implementation
+```
+
 ```typescript
 import { useState, useMemo } from 'react';
 
@@ -308,6 +293,7 @@ export const Autocomplete = ({ items, onSelect }) => {
 };
 ```
 
+```markdown
 ## Key Points
 - Memoized filtering
 - Max 10 suggestions
@@ -315,24 +301,26 @@ export const Autocomplete = ({ items, onSelect }) => {
 ```
 
 ### Performance (3 Questions)
-```markdown
-User: $spec virtual table
 
-System: Performance:
+**User:** `$spec virtual table`
+
+**System:** Performance:
 1. Row count?
 2. React/Vue?
 3. Selection?
 
-User: 50k, React, yes
+**User:** 50k, React, yes
 
----
-
+**Output:**
+```markdown
 # Virtual Table
 
 ## Objective
 Render 50k rows efficiently with selection.
 
 ## Implementation
+```
+
 ```typescript
 import { FixedSizeList } from 'react-window';
 import { useState } from 'react';
@@ -374,6 +362,7 @@ export const VirtualTable = ({ data }) => {
 };
 ```
 
+```markdown
 ## Key Points
 - Only renders visible
 - Selection state outside list
@@ -435,14 +424,6 @@ $spec [what you need]
 - **Instant patterns**: Immediate
 - **Simple**: 1 exchange
 - **Complex**: 2 exchanges max
-
----
-
-## Version History
-
-- **v4.2.1**: Maintained conciseness standards
-- **v4.2.0**: 20% more concise, streamlined examples
-- **v4.0.0**: Initial spec mode specification
 
 ---
 
