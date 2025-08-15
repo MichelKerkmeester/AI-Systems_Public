@@ -40,7 +40,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 #### 2. 🚀 ClickUp Agent (v1.0.0)
 **Natural language control of ClickUp workspaces and team collaboration**
 - **Natural Language**: "Organize my sprints" → Complete workspace with lists, views, and custom fields
-- **Best Practices**: Professional patterns automatically applied for agile, agencies, and teams
+- **Best Practices**: Professional patterns automatically applied
 - **Smart Structure**: Spaces, folders, lists, and task relationships optimized
 - **Advanced Features**: Time tracking, dependencies, automations, and dashboard creation
 - **Educational Mode**: Learn ClickUp while building your workspace
