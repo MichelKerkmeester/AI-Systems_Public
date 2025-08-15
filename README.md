@@ -5,18 +5,18 @@ Some of my non-client AI systems that I made available to the public. They were 
 > - 99.999% of people won't try these systems. Beat the odds?
 > - Don't reward me with unwanted coffee: https://buymeacoffee.com/michelkerkmeester
 
-.
+---
 
 ## 🎯 Quick Navigation
 
 | Category | Systems |
-|----------|---------|
-| **🤖 Code Agents** | [Multi-Model Agent System (COMING SOON)](#1--multi-model-agent-system--coming-soon) 
-| **💬 MCP Agents** | [ClickUp Agent](#2--clickup-agent), [Notion Agent](#3--notion-agent), [Imagician Agent](#4--imagician-agent) 
-| **✏️ Writers** | [Prompt Engineering](#5--prompt-engineering-assistant), [AI Systems](#6--ai-systems-creator), [Branded Content](#7--branded-content-writer), [Dev Ticket](#8--dev-ticket-writer) 
-| **💻 Dev Systems** | [IDE System](#9--ide-system-prompt), [Lovable System Prompts](#10--lovable-system-prompts), [Claude App Builder](#11--claude-app-builder) 
+|:---------|:--------|
+| **🤖 Code Agents** | [Multi-Model Agent System (COMING SOON)](#1--multi-model-agent-system--coming-soon) |
+| **💬 MCP Agents** | [ClickUp Agent](#2--clickup-agent) • [Notion Agent](#3--notion-agent) • [Imagician Agent](#4--imagician-agent) |
+| **✏️ Writers** | [Prompt Engineering](#5--prompt-engineering-assistant) • [AI Systems](#6--ai-systems-creator) • [Branded Content](#7--branded-content-writer) • [Dev Ticket](#8--dev-ticket-writer) |
+| **💻 Dev Systems** | [IDE System](#9--ide-system-prompt) • [Lovable System Prompts](#10--lovable-system-prompts) • [Claude App Builder](#11--claude-app-builder) |
 
-.
+---
 
 ## 🤖 Code Agents
 ##### CLI-based development systems
@@ -215,5 +215,3 @@ docker-compose up -d
 - Individual system READMEs for detailed setup
 
 .
-
-*Professional AI systems that transform how you work. Pick one, or use them all.*
