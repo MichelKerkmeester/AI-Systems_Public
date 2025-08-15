@@ -11,10 +11,10 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 | Category | Systems | Purpose |
 |----------|---------|---------|
-| **🤖 Code Agents** | [Multi-Model Agent System (COMING SOON)](#1--multi-model-agent-system--coming-soon) | CLI-based development systems |
-| **💬 MCP Agents** | [ClickUp Agent](#2--clickup-agent), [Notion Agent](#3--notion-agent), [Imagician Agent](#4--imagician-agent) | MCP tools made easy with conversational systems |
-| **✏️ Writers** | [Prompt Engineering](#5--prompt-engineering-assistant), [AI Systems](#6--ai-systems-creator), [Branded Content](#7--branded-content-writer), [Dev Ticket](#8--dev-ticket-writer) | Automated content, documentation & prompt writing |
-| **💻 Dev Systems** | [IDE System](#9--ide-system-prompt), [Lovable System Prompts](#10--lovable-system-prompts), [Claude App Builder](#11--claude-app-builder) | IDE enhancements & App Prototyping |
+| **🤖 Code Agents** | [Multi-Model Agent System (COMING SOON)](#1--multi-model-agent-system--coming-soon) 
+| **💬 MCP Agents** | [ClickUp Agent](#2--clickup-agent), [Notion Agent](#3--notion-agent), [Imagician Agent](#4--imagician-agent) 
+| **✏️ Writers** | [Prompt Engineering](#5--prompt-engineering-assistant), [AI Systems](#6--ai-systems-creator), [Branded Content](#7--branded-content-writer), [Dev Ticket](#8--dev-ticket-writer) 
+| **💻 Dev Systems** | [IDE System](#9--ide-system-prompt), [Lovable System Prompts](#10--lovable-system-prompts), [Claude App Builder](#11--claude-app-builder) 
 
 .
 
