@@ -91,13 +91,14 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **9 Copywriter Frameworks**: Intelligent selection from Simple (SVC, QPT), Medium (CASE, PATH), to Complex (STORY, HELP) with visual progress tracking
 - **Embedded Prompt Improvement**: Invisible clarity enhancement that expands abbreviations ("CTR" → "click-through rate") and structures vague requests without adding assumptions
 
-#### 8. 📋 Dev Ticket Writer (v4.3.0)
-**Transform vague requests into crystal-clear development tickets with instant workspace integration**
-- **Platform Integration**: Direct ClickUp/Notion workspace creation after every ticket
-- **5 Operating Modes**: Interactive (default), Quick ($q), Standard ($s), Complex ($c), Spec ($spec)
-- **Interactive Guidance**: Default conversational mode teaches product thinking through practice
-- **Implementation Specs**: $spec mode delivers frontend solutions (1-3 questions, copy-paste ready)
+#### 8. 📋 Dev Ticket Writer (v4.4.0)
+**Transform vague requests into crystal-clear development tickets and product documentation with instant workspace integration**
+- **6 Operating Modes**: Interactive (default), Quick ($q), Standard ($s), Complex ($c), Spec ($spec), Documentation ($doc) NEW!
+- **Interactive Guidance**: Default conversational mode teaches product thinking and documentation structure through practice
+- **Platform Integration**: Direct ClickUp/Notion workspace creation after every ticket or documentation
 - **Automatic Prompt Improvement**: "fix auth" → "create bug fix ticket for authentication"
+- **Documentation Mode**: $doc mode creates user-focused product guides with feature sections and interactive audience questions
+- **Implementation Specs**: $spec mode delivers frontend solutions (1-3 questions, copy-paste ready)
 
 .
 
@@ -121,7 +122,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **Phased Implementation**: Foundation → Enhancement → Optimization with validation-driven progression
 - **Context-Aware Decisions**: Adapts to user expertise, project stage, team size, and timeline constraints
 
-#### 11. 🏗 Claude App Builder (v1.3.3)
+#### 11. 🗜 Claude App Builder (v1.3.3)
 **Build functional web applications and AI demos directly in Claude artifacts**
 - **3 Specialized Modes**: $app (tools), $ai (chat interfaces), $data (dashboards)
 - **Fluid Responsive**: Scales perfectly 320px-1920px
@@ -182,7 +183,8 @@ docker-compose up -d
 ## 🎯 Choosing the Right System
 
 **For Writers & Documentation:**
-- Requirements → Dev Ticket Writer (now with Interactive offers!)
+- Requirements → Dev Ticket Writer (now with Documentation mode!)
+- User guides → Dev Ticket Writer ($doc mode for product documentation)
 - AI prompts → Prompt Engineering Assistant v4.0.0
 - System design → AI Systems Spec Writer
 - Marketing copy → **Branded Content Writer v4.0.0** (Voice Trinity + Failure transparency)
@@ -197,6 +199,7 @@ docker-compose up -d
 
 **For Productivity:**
 - Sprint management → ClickUp Agent
+- Knowledge bases → Notion Agent (works great with Dev Ticket Writer docs!)
 - Workspace automation → Notion Agent
 - Image file editing → Imagician Agent
 - Prompt optimization → Prompt Engineering Assistant
