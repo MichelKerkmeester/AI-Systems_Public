@@ -91,11 +91,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **9 Copywriter Frameworks**: Intelligent selection from Simple (SVC, QPT), Medium (CASE, PATH), to Complex (STORY, HELP) with visual progress tracking
 - **Embedded Prompt Improvement**: Invisible clarity enhancement that expands abbreviations ("CTR" → "click-through rate") and structures vague requests without adding assumptions
 
-<<<<<<< Updated upstream
-#### 7. 📋 Dev Ticket Writer (v4.2.1)
-=======
 #### 8. 📋 Dev Ticket Writer (v4.2.0)
->>>>>>> Stashed changes
 **Transform vague requests into crystal-clear development tickets**
 - **3 Ticket Modes**: Quick ($q), Standard ($s), Complex ($c) for any feature size
 - **Implementation Specs**: $spec mode for frontend code solutions (1-3 questions, copy-paste ready)
