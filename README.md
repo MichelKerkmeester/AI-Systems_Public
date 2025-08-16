@@ -111,9 +111,9 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 #### 8. 📋 Product & Dev Writer (v4.4.0)
 **Transform vague requests into crystal-clear development tickets and product documentation with instant workspace integration**
-- **6 Operating Modes**: Interactive (default), Quick ($q), Standard ($s), Complex ($c), Spec ($spec), Documentation ($doc) NEW!
+- **6 Operating Modes**: Interactive (default), Quick ($q), Standard ($s), Complex ($c), Spec ($spec), Documentation ($doc)
 - **Interactive Guidance**: Default conversational mode teaches product thinking and documentation structure through practice
-- **Platform Integration**: Direct ClickUp/Notion workspace creation after every ticket or documentation
+- **Platform Integration**: Add created tickets or documentation directly to your ClickUp or Notion workspace
 - **Automatic Prompt Improvement**: "fix auth" → "create bug fix ticket for authentication"
 - **Documentation Mode**: $doc mode creates user-focused product guides with feature sections and interactive audience questions
 - **Implementation Specs**: $spec mode delivers frontend solutions (1-3 questions, copy-paste ready)
