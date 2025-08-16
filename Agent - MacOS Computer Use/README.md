@@ -1,4 +1,4 @@
-# macOS Computer Use Agent - User Guide v1.0.0
+# macOS Computer Use Agent - User Guide v1.1.0
 
 The macOS Computer Use Agent transforms natural language into precise UI operations, making computer control 10x easier. By focusing on WHAT you want to accomplish (not HOW to click), it bridges the gap between intention and automation. Interactive mode guides you through complex workflows with smart questions.
 
@@ -7,7 +7,7 @@ The macOS Computer Use Agent transforms natural language into precise UI operati
 ## ✨ Key Features
 
 - **Natural Language First**: Describe what you want to do in plain English
-- **5 Specialized Modes**: $interactive (default), $quick, $workflow, $navigate, $type
+- **3 Specialized Modes**: $interactive (default), $quick, $workflow
 - **Triple MCP Support**: macOS Use MCP (core), Sequential Thinking (simple), Cascade Thinking (complex)
 - **Interactive Guidance**: Default mode guides step-by-step through automations
 - **Best Practices Built-in**: Uses keyboard shortcuts when faster than clicking
@@ -24,18 +24,18 @@ The macOS Computer Use Agent transforms natural language into precise UI operati
 1. Go to claude.ai
 2. Click "Projects" in sidebar
 3. Click "Create project"
-4. Name it "macOS Computer Use Agent v1.0"
+4. Name it "macOS Computer Use Agent v1.1"
 
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Agent - macOS Computer Use MCP - v1.0.0.md`
+3. Copy and paste: `Agent - macOS Computer Use MCP - v1.1.0.md`
 4. Save the project
 
 ### Step 3: Upload Reference Documents
-Add these 3 streamlined documents to your project:
-- `Interactive Mode - v1.0.0.md` (Conversational automation specification)
-- `Patterns & Workflows - v1.0.0.md` (All patterns and operation mappings)
+Add these streamlined documents to your project:
+- `Interactive Mode - v1.1.0.md` (Conversational automation specification)
+- `Patterns & Workflows - v1.1.0.md` (All patterns and operation mappings)
 - `Application Intelligence - v1.0.0.md` (App-specific best practices)
 
 ### Step 4: Build and Configure macOS Use MCP
@@ -49,25 +49,25 @@ The macOS Use MCP needs to be built from source:
 Simply describe what you need:
 ```
 help me write an email           # Interactive mode (default)
-$q open Safari                    # Quick mode
-$w research and summarize topic   # Workflow mode
-$n find preferences              # Navigate mode
-$t type my report                # Type mode
+find the preferences menu         # Interactive mode handles element finding
+$q open Safari                    # Quick mode for immediate action
+$q type my report                 # Quick mode for simple typing
+$w research and summarize topic   # Workflow mode for multi-app tasks
 ```
 
 .
 
 ## 🧠 Intelligent MCP Selection
 
-The v1.0.0 release brings intelligent MCP tool selection:
+The v1.1.0 release brings intelligent MCP tool selection with streamlined modes:
 
 ### Automatic Tool Selection
 
 | Tool | When Used | Thought Count | Purpose |
 |------|-----------|---------------|---------|
 | **macOS Use MCP** | Always | N/A | All actual UI operations |
-| **Sequential Thinking** | Simple operations | 2-3 thoughts | Linear tasks, single apps |
-| **Cascade Thinking** | Complex workflows | 5-7 thoughts | Multi-app workflows, exploration |
+| **Sequential Thinking** | Simple operations | 2-3 thoughts | Linear tasks, single apps, quick typing |
+| **Cascade Thinking** | Complex workflows | 5-7 thoughts | Multi-app workflows, element finding, complex text |
 
 ### Selection by Mode
 
@@ -76,8 +76,6 @@ The v1.0.0 release brings intelligent MCP tool selection:
 | **Interactive** | Cascade | Adaptive | Yes (Default) |
 | **Quick** | Sequential | Low | No |
 | **Workflow** | Cascade | High | Optional |
-| **Navigate** | Sequential | Medium | Optional |
-| **Type** | Sequential | Low | No |
 
 ### Example Intelligence
 
@@ -106,13 +104,37 @@ Which format for the comparison?
 
 | Mode | Command | When to Use | MCP Strategy | Focus |
 |------|---------|-------------|--------------|-------|
-| **Interactive** | DEFAULT | No mode specified, guidance needed | Cascade (5-7) | Step-by-step guidance |
-| **Quick** | `$q` | Single operations (explicit) | Sequential (2-3) | Speed over explanation |
-| **Workflow** | `$w` | Multi-app sequences (explicit) | Cascade (5-7) | Complete automation |
-| **Navigate** | `$n` | Finding UI elements (explicit) | Sequential (3-4) | Element discovery |
-| **Type** | `$t` | Text input focus (explicit) | Sequential (2-3) | Efficient typing |
+| **Interactive** | DEFAULT | Guidance needed, finding elements, complex text | Cascade (5-7) | Step-by-step guidance |
+| **Quick** | `$q` | Single operations, simple typing | Sequential (2-3) | Speed over explanation |
+| **Workflow** | `$w` | Multi-app sequences | Cascade (5-7) | Complete automation |
 
 **Note:** Interactive mode is the default unless explicitly specified with $.
+
+### Mode Capabilities
+
+**Interactive Mode (Default)**
+- Guided automation with questions
+- Finding UI elements
+- Complex text composition
+- Form filling assistance
+- Multi-step operations
+- Educational explanations
+
+**Quick Mode ($q)**
+- Immediate single actions
+- Simple text input
+- Direct clicks
+- Basic navigation
+- No explanations
+- Fast execution
+
+**Workflow Mode ($w)**
+- Multi-app orchestration
+- Complex sequences
+- Document creation
+- Research workflows
+- Data processing
+- Automated pipelines
 
 .
 
@@ -132,25 +154,25 @@ The default conversational experience:
 ### Quality Indicators
 ```markdown
 🖱️ Automation Report
-━━━━━━━━━━━━━━━━━━━━━━━━━━
+────────────────────────
 MCP Used: Cascade Thinking (5 thoughts)
 Complexity: Medium
 Time to Complete: 15 seconds
 
 ✅ Completed Successfully:
-✓ Opened Mail app
-✓ Created new message
-✓ Added recipient
-✓ Typed subject
-✓ Composed email body
-✓ Attached 3 files
+✔ Opened Mail app
+✔ Created new message
+✔ Added recipient
+✔ Typed subject
+✔ Composed email body
+✔ Attached 3 files
 
 💡 macOS Tip: Press ⌘⇧D to send emails quickly
 ```
 
 .
 
-## 🔍 Automation Patterns
+## 📝 Automation Patterns
 
 Every automation uses intelligent patterns:
 
@@ -185,6 +207,28 @@ Form Automation:
 ├── Space for checkboxes
 ├── Arrow keys for dropdowns
 └── Return to submit
+```
+
+### Element Finding
+```markdown
+Finding UI Elements:
+├── Refresh UI tree
+├── Search by label
+├── Check similar names
+├── Verify position
+├── Click when found
+└── Confirm success
+```
+
+### Text Input
+```markdown
+Text Entry:
+├── Identify text field
+├── Click to focus
+├── Type content
+├── Format if needed
+├── Tab to continue
+└── Save when complete
 ```
 
 .
@@ -228,11 +272,26 @@ I'll help you write an email! Which app would you like to use?
 • Outlook
 ```
 
+```
+User: find the save button
+System: [Uses Interactive mode for element finding]
+Let me find the save button for you...
+🔍 Searching UI elements...
+✔ Found "Save" button at top toolbar
+Clicking it now...
+```
+
 ### Quick Mode
 ```
 User: $q click Safari
 System: [Uses Sequential Thinking for immediate action]
-✓ Clicked Safari
+✔ Clicked Safari
+```
+
+```
+User: $q type Hello World
+System: [Quick typing without guidance]
+✔ Typed: "Hello World"
 ```
 
 ### Workflow Mode
@@ -403,7 +462,7 @@ Add to Claude Desktop config (after the macos-use entry):
 | Issue | Solution |
 |-------|----------|
 | **"Can't control apps"** | Grant accessibility permissions in System Settings |
-| **"Element not found"** | Refresh UI tree, try different description |
+| **"Element not found"** | Use Interactive mode to help find elements |
 | **"App won't open"** | Check if app is installed, try Spotlight |
 | **"Clicking wrong place"** | Use more specific element description |
 | **"Permission denied"** | System Settings → Privacy & Security → Accessibility |
@@ -433,16 +492,6 @@ System Settings → Privacy & Security → Accessibility
 # Restart Claude Desktop
 ```
 
-**Docker Issues:**
-```bash
-# Check if running
-docker ps
-# View logs
-docker logs sequential-thinking-mcp
-# Restart
-docker-compose restart
-```
-
 **NPX Issues:**
 - Ensure Node.js installed
 - Check config file syntax
@@ -450,8 +499,9 @@ docker-compose restart
 
 ### Interactive Mode Help
 - **Too many steps?** System breaks down complex tasks
-- **Want direct action?** Use explicit mode ($q, $w, $n, $t)
+- **Want direct action?** Use explicit mode ($q, $w)
 - **Need different app?** System adapts to available apps
+- **Can't find element?** Interactive mode guides the search
 
 ### MCP Connection Issues
 - **Build failed**: Ensure Xcode Command Line Tools installed
@@ -493,14 +543,15 @@ docker-compose restart
 
 ## 📦 Version History
 
-- **v1.0.0**: Initial release with 5 modes, app intelligence, GitHub integration
+- **v1.1.0**: Streamlined to 3 modes (removed Navigate and Type modes)
+- **v1.0.0**: Initial release with 5 modes
 
 .
 
 ## 📚 Resources
 
 ### Core Tools
-- [macOS Use MCP](https://github.com/mediar-ai/mcp-server-macos-use) (Included in Claude)
+- [macOS Use MCP](https://github.com/mediar-ai/mcp-server-macos-use) (Required)
 - [Sequential Thinking MCP](https://github.com/modelcontextprotocol/server-sequential-thinking) (Optional)
 - [Cascade Thinking MCP](https://github.com/cascadethinking/cascade-thinking-mcp) (Optional)
 
@@ -508,7 +559,6 @@ docker-compose restart
 - [macOS Accessibility Guide](https://support.apple.com/guide/mac-help/control-mac-accessibility-shortcuts-mh43607/mac)
 - [macOS Keyboard Shortcuts](https://support.apple.com/en-us/HT201236)
 - [MCP Protocol](https://modelcontextprotocol.io/)
-- [Docker Desktop](https://docs.docker.com/desktop/)
 
 ### Quick Links
 - [System Settings](x-apple.systempreferences:com.apple.preference.security?Privacy_Accessibility)

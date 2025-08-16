@@ -56,7 +56,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 ##### MCP tools made easy with conversational systems
 ——
 
-#### 2. 🖱️ macOS Computer Use Agent (v1.0.0)
+#### 2. 🖱️ macOS Computer Use Agent (v1.1.0)
 **Natural language control of macOS applications and workflows**
 - **Natural Language**: "Help me write an email" → Opens Mail, creates message, guides through composition
 - **Best Practices**: Keyboard shortcuts preferred over clicking when faster
@@ -94,13 +94,12 @@ Some of my non-client AI systems that I made available to the public. They were 
 ##### Automated content, documentation & prompt writing systems
 ——
 
-#### 6. 🎯 Prompt Engineering Assistant (v4.2.0) 
-**Transform vague requests into powerful AI prompts**
-- **8 Operating Modes**: Including 3 new Lovable sub-modes ($lp prototype, $lw website, $la app)
-- **6 Core Frameworks**: CRAFT, SPARK, PRISM + VISION, CONVERT, SCALE for Lovable
+#### 6. 🎯 Prompt Engineering Assistant (v5.0.0) 
+**Transform vague requests into powerful AI prompts for ANY platform**
+- **8 Operating Modes**: Including 3 universal Builder sub-modes ($prototype, $website, $app)
 - **Intelligent Auto-Detection**: Weighted keyword analysis for automatic mode selection
 - **Smart MCP Selection**: Dynamic choice between Sequential (1-3) and Cascade (3-8) thinking
-- **Platform Optimization**: Deep integration with Claude, ChatGPT, and Lovable
+- **Platform-Agnostic Prompts**: Creative briefs that let each platform leverage its unique strengths
 
 #### 7. 📋 AI Systems Creator (v3.0.0)
 **Generate professional AI system specifications and documentation**
@@ -209,37 +208,14 @@ docker-compose up -d
 
 .
 
-## 🎯 Choosing the Right System
-
-**For Writers & Documentation:**
-- Requirements → Product & Dev Writer (now with Documentation mode!)
-- User guides → Product & Dev Writer ($doc mode for product documentation)
-- AI prompts → Prompt Engineering Assistant v4.0.0
-- System design → AI Systems Spec Writer
-- Marketing copy → **Branded Content Writer v4.0.0** (Voice Trinity + Failure transparency)
-
-**For Developers:**
-- Code quality → IDE System Prompt
-- Visual mockups → Lovable System Prompts ($lp mode)
-- Marketing sites → Lovable System Prompts ($lw mode)  
-- Full-stack apps → Lovable System Prompts ($la mode)
-- App prototypes → Claude App Builder
-- Implementation specs → Product & Dev Writer ($spec mode)
-
-**For Productivity:**
-- macOS automation → **macOS Computer Use Agent** (control apps with natural language!)
-- Sprint management → ClickUp Agent
-- Knowledge bases → Notion Agent (works great with Product & Dev Writer docs!)
-- Workspace automation → Notion Agent
-- Image file editing → Imagician Agent
-- Prompt optimization → Prompt Engineering Assistant
-
-.
-
 ## 📚 Resources
 
 - [MCP Protocol Documentation](https://modelcontextprotocol.io/)
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 - [Claude Desktop](https://claude.ai/download)
-- [Lovable Platform](https://lovable.dev)
+- [Bolt.new](https://bolt.new) (AI platform)
+- [MagicPatterns](https://magicpatterns.com) (AI platform)
+- [v0 by Vercel](https://v0.dev) (AI platform)
+- [Cursor](https://cursor.sh) (AI platform)
+- [Lovable Platform](https://lovable.dev) (AI platform)
 - Individual system READMEs for detailed setup

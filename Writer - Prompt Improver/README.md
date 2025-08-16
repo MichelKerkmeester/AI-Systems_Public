@@ -1,32 +1,34 @@
-# Prompt Engineering Assistant - User Guide v4.2.0
+# Prompt Engineering Assistant - User Guide v5.0.0
 
-A comprehensive system that transforms vague requests into clear, effective AI prompts using proven frameworks, systematic evaluation, and intelligent refinement. Features 8 operating modes including 3 specialized Lovable sub-modes for creating creative briefs that enable AI design freedom while maintaining credit efficiency.
+A comprehensive system that transforms vague requests into clear, effective AI prompts using proven frameworks, systematic evaluation, and intelligent refinement. Features 8 operating modes including 3 specialized Builder sub-modes for creating universal creative briefs that work on ANY AI development platform while maintaining resource efficiency.
 
-## 🆕 What's New in v4.2.0
+## 🆕 What's New in v5.0.0
 
-- **Creative Direction Philosophy**: Lovable modes now create creative briefs with goals and mood, not prescriptive specifications
-- **AI Design Freedom**: Removed HTML/CSS requirements, enabling Lovable AI to explore optimal solutions
-- **Goal-Oriented Prompts**: Focus on outcomes, user feelings, and success metrics rather than rigid implementations
-- **Enhanced Credit Efficiency**: Build on what works through exploration, not predetermined features
-- **Mood Over Specs**: Describe desired feelings and brand personality, not exact measurements
-- **Exploration-First Approach**: Phase 1 focuses on discovering what resonates before enhancement
+- **Universal Platform Support**: Builder modes now work on ALL AI platforms (Bolt.new, MagicPatterns, v0, Cursor, Windsurf, Replit, Lovable, etc.)
+- **Builder Mode Evolution**: Formerly "Lovable modes" now create universal creative briefs
+- **Platform-Agnostic Language**: Prompts adapt to any AI development platform
+- **Creative Direction Philosophy**: Focus on goals and mood, not prescriptive specifications
+- **AI Design Freedom**: Each platform can leverage its unique strengths
+- **Resource Optimization**: Universal three-phase approach for all platforms
+- **Exploration-First Approach**: Discover what works before committing resources
 
 .
 
 ## Overview
 
-The Prompt Engineering Assistant helps users craft powerful, precise prompts for any AI system, with specialized support for creating Lovable creative briefs. With six core frameworks and intelligent enhancement algorithms, it delivers professional-grade prompts that maximize AI creativity and performance while minimizing resource usage.
+The Prompt Engineering Assistant helps users craft powerful, precise prompts for any AI system, with specialized support for creating universal Builder briefs that work on ANY AI development platform. With six core frameworks and intelligent enhancement algorithms, it delivers professional-grade prompts that maximize AI creativity and performance while minimizing resource usage.
 
 .
 
 ## ✨ Key Features
 
-- **8 Specialized Modes**: Including 3 Lovable sub-modes for creative exploration
+- **8 Specialized Modes**: Including 3 Builder sub-modes for universal AI platforms
+- **Universal Compatibility**: Works with Bolt.new, MagicPatterns, v0, Cursor, Windsurf, Replit, Lovable, and more
 - **Creative Brief Approach**: Goals, mood, and outcomes over prescriptive specifications
 - **6 Core Frameworks**: Universal (CRAFT, SPARK, PRISM) + Creative-focused (VISION, CONVERT, SCALE)
 - **Intelligent MCP Selection**: Automatic choice between Sequential and Cascade thinking
-- **Creative Direction Matching**: Extract mood and goals from references, not rigid specs
-- **Smart Credit Optimization**: Exploration-first strategies to validate before building
+- **Platform Flexibility**: Each AI platform can interpret creatively
+- **Smart Resource Optimization**: Exploration-first strategies work everywhere
 - **AI Design Freedom**: Enable creativity within guided constraints
 - **Compact Progress Tracking**: Streamlined reports with creative metrics
 - **Interactive Mode**: Conversational guidance focusing on goals and feelings
@@ -40,25 +42,24 @@ The Prompt Engineering Assistant helps users craft powerful, precise prompts for
 1. Go to claude.ai
 2. Click "Projects" in sidebar
 3. Click "Create project"
-4. Name it "Prompt Engineering Assistant v4.2.0"
+4. Name it "Prompt Engineering Assistant v5.0.0"
 
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Writer - Prompt Improver - v5.0.0.md` (internally v5, labeled as v4.2.0 for consistency)
+3. Copy and paste: `Writer - Prompt Improver - v5.0.0.md`
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
-Add these updated documents to your project's knowledge base:
-- `Prompt - Quick Reference Card - v3.0.0.md` (Updated with creative direction)
-- `Prompt - Artifact Standards & Templates - v3.0.0.md`
-- `Prompt - Evaluation & Refinement - v2.1.0.md`
-- `Prompt - Examples & Case Studies - v3.0.0.md` (Transformed to creative briefs)
-- `Prompt - Interactive Mode - v2.1.0.md`
-- `Prompt - Patterns & Enhancements - v3.0.0.md` (New creative patterns)
-- `Prompt - Lovable Mode - v2.0.0.md` (Major update: Creative briefs not specs)
+Add these documents to your project's knowledge base:
+- `Prompt - Quick Reference Card - v3.0.0.md` (Universal platform support)
+- `Prompt - Artifacts, Templates & Examples - v3.0.0.md` (Consolidated file)
+- `Prompt - Evaluation & Refinement.md`
+- `Prompt - Interactive Mode.md`
+- `Prompt - Patterns & Enhancements.md`
+- `Prompt - Builder Mode.md` (Universal AI platform creative briefs)
 
-### Step 4: Start Creating Creative Briefs
+### Step 4: Start Creating Universal Prompts
 Simply paste your prompt or describe what you need:
 ```
 write about dogs
@@ -67,6 +68,7 @@ $interactive
 $prototype explore dashboard concepts
 $website conversion-focused landing
 $app task management solution
+$builder create a SaaS platform
 ```
 
 .
@@ -83,19 +85,31 @@ $app task management solution
 | **$interactive** | `$interactive` | Guided help with Q&A | Learning/exploring | Guided creative prompt |
 | **$json** | `$json` or `$j` | API-ready JSON format | Programmatic use | Structured creative brief |
 
-### Lovable Sub-Modes (Creates Creative Briefs, Not Prescriptive Specs!)
+### Builder Sub-Modes (Universal AI Platform Support!)
 
-| Sub-Mode | Activation | Purpose | Creates | Credit Usage |
-|----------|------------|---------|---------|--------------|
-| **Prototype** | `$prototype` | Visual exploration and concepts | Exploration Brief | Low-Medium |
-| **Website** | `$website` | Conversion-focused sites | Strategic Brief | Medium |
-| **App** | `$app` | Functional applications | Requirements Brief | Medium-High |
+| Sub-Mode | Activation | Purpose | Creates | Platform Support |
+|----------|------------|---------|---------|-----------------|
+| **Builder** | `$builder` or `$build` | Auto-detect platform needs | Universal Brief | ALL platforms |
+| **Prototype** | `$prototype` | Visual exploration and concepts | Exploration Brief | ALL platforms |
+| **Website** | `$website` | Conversion-focused sites | Strategic Brief | ALL platforms |
+| **App** | `$app` | Functional applications | Requirements Brief | ALL platforms |
 
-**CRITICAL**: These modes create creative briefs with goals and mood, NOT prescriptive implementations!
+**CRITICAL**: These modes create universal creative briefs that work on ANY AI platform!
+
+### Supported Platforms Include:
+- **Bolt.new** - Instant deployment, full-stack
+- **MagicPatterns** - Design-first, Figma integration
+- **v0 by Vercel** - Next.js, shadcn/ui components
+- **Cursor/Windsurf** - AI-assisted coding
+- **Replit** - Collaborative, cloud-based
+- **Lovable** - Supabase, React, credits
+- **Webflow/Framer** - Visual builders
+- **WordPress** - CMS platforms
+- **ANY AI Platform** - Universal principles apply
 
 .
 
-## 🗂️ Frameworks Overview (v4.2.0)
+## 🗂️ Frameworks Overview (v5.0.0)
 
 ### Universal Frameworks
 
@@ -120,7 +134,7 @@ $app task management solution
 - **S** - Structure (15%)
 - **M** - Measurability (15%)
 
-### Lovable Creative Frameworks (v4.2.0)
+### Builder Creative Frameworks (Universal)
 
 #### VISION Framework (Prototype Exploration)
 - **V** - Vision (overall concept and purpose)
@@ -148,7 +162,7 @@ $app task management solution
 
 .
 
-## 🎨 Creative Direction Philosophy (New in v4.2.0)
+## 🎨 Creative Direction Philosophy (Universal in v5.0.0)
 
 ### Instead of Specifications, We Provide:
 
@@ -168,11 +182,11 @@ $app task management solution
 - Actions feel natural and intuitive
 - Experience creates positive impression
 
-**Creative Freedom Areas**
-- "Explore different approaches to [challenge]"
-- "Experiment with [design element]"
-- "Consider various ways to [achieve goal]"
-- "Optimize for [user need]"
+**Platform Freedom**
+- Each platform interprets creatively
+- Leverage native platform strengths
+- No forced uniformity
+- Celebrate platform diversity
 
 .
 
@@ -187,47 +201,50 @@ Before → After: 3 words (2/10 clarity) → 87 words (9/10 clarity)
 
 Key Improvements:
 ✔ Goals clarified • Success defined
-✔ Mood established • Freedom areas identified
 ✔ Context provided • Outcomes specified
+✔ Format structured • Audience identified
 ```
 
-### Lovable App Creative Brief
+### Universal App Builder Brief
 ```
 📊 Enhancement: 92% ↗ | Mode: $app | Method: SCALE Framework
 
 SCALE Coverage: S:100% C:80% A:100% L:80% E:90%
 Before → After: 5 words (3/10 clarity) → 450 words (10/10 clarity)
-Credit Usage: Medium-High
+Platform Compatibility: Universal ✔
+Resource Usage: Medium-High
 Creative Direction: Professional yet approachable
 User Experience: Empowered and productive
 Implementation Phases: 3 (Explore → Enhance → Premium)
 
 Key Improvements:
+✔ Universal compatibility • Works on ANY platform
 ✔ User goals defined • Success metrics clear
 ✔ Mood established • Creative freedom areas identified
 ✔ Phased exploration • Build on what works
 
-Note: This is a creative brief for developing an app, not prescriptive specs
+Note: This creative brief works on Bolt.new, v0, Cursor, or ANY AI platform
 ```
 
 .
 
-## 💰 Smart Credit Optimization (v4.2.0)
+## 💰 Smart Resource Optimization (Universal)
 
-All Lovable prompts now include exploration-first approach:
+All Builder prompts include universal resource optimization:
 
 ### Phased Implementation
-1. **Phase 1 - Core Exploration (Low Credit)**: Discover what works through simple prototypes
-2. **Phase 2 - Enhancement (Medium Credit)**: Build on validated patterns
-3. **Phase 3 - Premium (High Credit)**: Add complex features only if justified
+1. **Phase 1 - Core Exploration (Minimal Resources)**: Discover what works through simple prototypes
+2. **Phase 2 - Enhancement (Moderate Resources)**: Build on validated patterns
+3. **Phase 3 - Premium (High Resources)**: Add complex features only if justified
 
-### Credit-Saving Principles (Updated)
+### Resource-Saving Principles (Universal)
+- Use platform free tiers
 - Explore concepts before committing
-- Let AI suggest optimal solutions
+- Let each platform's AI suggest optimal solutions
 - Build on successful patterns
 - Test before enhancing
 - User feedback drives features
-- Simple explorations first
+- Platform-specific optimizations
 
 ### High-Cost Features (Still Flagged)
 - Complex animations
@@ -236,6 +253,7 @@ All Lovable prompts now include exploration-first approach:
 - Advanced state management
 - Large data processing
 - Third-party services
+- Enterprise features
 
 .
 
@@ -249,10 +267,10 @@ When users provide references, we extract:
 - **Emotional targets** to achieve
 
 We DON'T extract:
-- Specific HTML/CSS code
+- Platform-specific code
 - Exact pixel measurements
 - Rigid component structures
-- Fixed color codes (unless specifically requested)
+- Fixed implementations
 - Prescriptive layouts
 
 .
@@ -313,9 +331,10 @@ Add to Claude Desktop config file:
 
 ### Creative Direction Issues
 - **Too prescriptive?** Focus on goals and feelings, not specifications
+- **Platform-specific?** Use universal language that works everywhere
 - **Not creative enough?** Add mood descriptors and freedom areas
 - **Unclear direction?** Use $interactive to clarify goals
-- **Credit concerns?** Start with exploration phase only
+- **Resource concerns?** Start with exploration phase only
 
 ### MCP Connection Issues
 - **Docker not running**: Start Docker Desktop
@@ -329,21 +348,23 @@ Add to Claude Desktop config file:
 
 .
 
-## ⚠️ Important Notes (v4.2.0)
+## ⚠️ Important Notes (v5.0.0)
 
+- **Universal platform support** - Works on ANY AI development platform
 - **Creates creative briefs** - Goals and mood, not specifications
 - **Enables AI creativity** - Freedom within guided constraints
-- **Lovable modes create PROMPTS** - Not actual implementations
+- **Builder modes create PROMPTS** - Not actual implementations
 - **Always uses artifacts** - Ensures reusability
-- **Smart credit optimization** - Explore first, build what works
+- **Smart resource optimization** - Works across all platforms
 - **Creative matching supported** - Extracts mood from references
-- **No prescriptive code** - Describes outcomes, not HTML/CSS
+- **No prescriptive code** - Platform-agnostic approach
 - **Works without MCPs** - But enhanced with them
 
 .
 
 ## 📦 Version History
 
+- **v5.0.0**: Universal platform support, Builder mode replaces Lovable, works on ALL AI platforms
 - **v4.2.0**: Creative direction philosophy, AI design freedom, exploration-first approach
 - **v4.1.0**: Reorganized architecture prioritizing core prompt improvement logic
 - **v4.0.0**: Lovable platform integration, 3 sub-modes, 6 frameworks
@@ -354,24 +375,33 @@ Add to Claude Desktop config file:
 
 .
 
-## 🎯 Key Principles (v4.2.0)
+## 🎯 Key Principles (v5.0.0)
 
-1. **Create creative briefs, not prescriptive specs** - Enable AI creativity
-2. **Goals over specifications** - Focus on outcomes and feelings
-3. **Explore before building** - Validate concepts with simple prototypes
-4. **Mood over measurements** - Describe feelings, not pixels
-5. **Trust AI creativity** - Provide direction, not rigid constraints
-6. **User feedback drives features** - Build what works, not what's planned
-7. **Preserve creative freedom** - Enable innovation within guidelines
+1. **Universal compatibility** - Works on ANY AI platform
+2. **Create creative briefs, not prescriptive specs** - Enable AI creativity
+3. **Goals over specifications** - Focus on outcomes and feelings
+4. **Explore before building** - Validate concepts with simple prototypes
+5. **Platform flexibility** - Each platform can excel differently
+6. **Trust AI creativity** - Provide direction, not rigid constraints
+7. **User feedback drives features** - Build what works, not what's planned
+8. **Preserve creative freedom** - Enable innovation within guidelines
 
 .
 
 ## 📚 Additional Resources
 
-- [Lovable Platform Documentation](https://lovable.dev/docs)
-- [Supabase Documentation](https://supabase.com/docs)
-- [React Documentation](https://react.dev)
-- [Tailwind CSS](https://tailwindcss.com)
+### AI Development Platforms
+- [Bolt.new](https://bolt.new) - Instant full-stack deployment
+- [MagicPatterns](https://magicpatterns.com) - Design-first development
+- [v0 by Vercel](https://v0.dev) - AI-powered UI generation
+- [Cursor](https://cursor.sh) - AI-first code editor
+- [Windsurf](https://codeium.com/windsurf) - AI coding assistant
+- [Replit](https://replit.com) - Collaborative development
+- [Lovable](https://lovable.dev) - Supabase-powered apps
+- [Webflow](https://webflow.com) - Visual web builder
+- [Framer](https://framer.com) - Interactive design tool
+
+### MCP Tools
 - [MCP Protocol Guide](https://modelcontextprotocol.io/)
 - [Docker Desktop Help](https://docs.docker.com/desktop/)
 - [Sequential Thinking MCP](https://github.com/sequentialthinking/sequential-thinking-mcp)
@@ -379,4 +409,4 @@ Add to Claude Desktop config file:
 
 ---
 
-*Transform vague requests into creative briefs. Enable AI creativity through goals and mood. Create exploration prompts, not rigid specifications. Optimize for discovery and iteration.*
+*Transform vague requests into universal creative briefs. Enable AI creativity through goals and mood across ANY platform. Create exploration prompts, not rigid specifications. Optimize for discovery and iteration on all AI development tools.*
