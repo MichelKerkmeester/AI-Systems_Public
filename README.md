@@ -13,20 +13,21 @@ Some of my non-client AI systems that I made available to the public. They were 
 1. [Multi-Model Agent System (COMING SOON)](#1--multi-model-agent-system--coming-soon)
 
 ### 💬 MCP Agents
-2. [ClickUp Agent](#2--clickup-agent)
-3. [Notion Agent](#3--notion-agent)
-4. [Imagician Agent](#4--imagician-agent)
+2. [macOS Computer Use Agent](#2--macos-computer-use-agent)
+3. [ClickUp Agent](#3--clickup-agent)
+4. [Notion Agent](#4--notion-agent)
+5. [Imagician Agent](#5--imagician-agent)
 
-### ✍️ Writer Systems
-5. [Prompt Engineering Assistant](#5--prompt-engineering-assistant)
-6. [AI Systems Creator](#6--ai-systems-creator)
-7. [Branded Content Writer](#7--branded-content-writer)
-8. [Product & Dev Writer](#8--product--dev-writer)
+### ✏️ Writer Systems
+6. [Prompt Engineering Assistant](#6--prompt-engineering-assistant)
+7. [AI Systems Creator](#7--ai-systems-creator)
+8. [Branded Content Writer](#8--branded-content-writer)
+9. [Product & Dev Writer](#9--product--dev-writer)
 
 ### 💻 Development Systems
-9. [IDE System Prompt](#9--ide-system-prompt)
-10. [Lovable System Prompts](#10--lovable-system-prompts)
-11. [Claude App Builder](#11--claude-app-builder)
+10. [IDE System Prompt](#10--ide-system-prompt)
+11. [Lovable System Prompts](#11--lovable-system-prompts)
+12. [Claude App Builder](#12--claude-app-builder)
 
 ### 🔧 Additional Sections
 - [Common Features](#-common-features)
@@ -55,7 +56,15 @@ Some of my non-client AI systems that I made available to the public. They were 
 ##### MCP tools made easy with conversational systems
 ——
 
-#### 2. 🚀 ClickUp Agent (v1.0.0)
+#### 2. 🖱️ macOS Computer Use Agent (v1.0.0)
+**Natural language control of macOS applications and workflows**
+- **Natural Language**: "Help me write an email" → Opens Mail, creates message, guides through composition
+- **Best Practices**: Keyboard shortcuts preferred over clicking when faster
+- **Smart Automation**: Multi-app workflows, form filling, and complex sequences
+- **Safety First**: Always confirms before destructive operations (closing, deleting)
+- **Educational Mode**: Teaches shortcuts and macOS features while automating
+
+#### 3. 🚀 ClickUp Agent (v1.0.0)
 **Natural language control of ClickUp workspaces and team collaboration**
 - **Natural Language**: "Organize my sprints" → Complete workspace with lists, views, and custom fields
 - **Best Practices**: Professional patterns automatically applied
@@ -63,7 +72,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **Advanced Features**: Time tracking, dependencies, automations, and dashboard creation
 - **Educational Mode**: Learn ClickUp while building your workspace
 
-#### 3. 📝 Notion Agent (v1.1.0)
+#### 4. 📝 Notion Agent (v1.1.0)
 **Natural language control of Notion workspaces**
 - **Natural Language**: "Organize my projects" → Complete workspace
 - **Best Practices**: Professional patterns automatically applied
@@ -71,7 +80,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **Error Recovery**: Graceful handling with alternatives
 - **Educational Mode**: Learn Notion while building
 
-#### 4. 🖼️ Imagician Agent (v1.2.0)
+#### 5. 🖼️ Imagician Agent (v1.2.0)
 **Image file editing and conversion through conversation**
 - **8 Core Operations**: Resize, compress, convert, crop, rotate, flip, batch process, metadata
 - **5 Smart Modes**: Interactive (default), Quick ($q), Batch ($b), Platform ($p), Web ($w)
@@ -81,11 +90,11 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 .
 
-## ✍️ Writer Systems
+## ✏️ Writer Systems
 ##### Automated content, documentation & prompt writing systems
 ——
 
-#### 5. 🎯 Prompt Engineering Assistant (v4.2.0) 
+#### 6. 🎯 Prompt Engineering Assistant (v4.2.0) 
 **Transform vague requests into powerful AI prompts**
 - **8 Operating Modes**: Including 3 new Lovable sub-modes ($lp prototype, $lw website, $la app)
 - **6 Core Frameworks**: CRAFT, SPARK, PRISM + VISION, CONVERT, SCALE for Lovable
@@ -93,7 +102,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **Smart MCP Selection**: Dynamic choice between Sequential (1-3) and Cascade (3-8) thinking
 - **Platform Optimization**: Deep integration with Claude, ChatGPT, and Lovable
 
-#### 6. 📋 AI Systems Creator (v3.0.0)
+#### 7. 📋 AI Systems Creator (v3.0.0)
 **Generate professional AI system specifications and documentation**
 - **Easy System Creation**: Spec it, Build it, Document it
 - **6 Operating Modes**: Interactive, Analyze, Create, Update, Integrate, README
@@ -101,7 +110,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **Prompt Improvement**: Invisible clarity enhancement 
 - **Implementation Bridge**: "Would you like help implementing this?" checkpoint after every specification
 
-#### 7. ✍️ Branded Content Writer (v4.0.0)
+#### 8. ✏️ Branded Content Writer (v4.0.0)
 **Marketing content with systematic authenticity and failure transparency**
 - **Interactive Modes**: Default conversational mode with visual clarity scoring, celebration mechanics, and guided failure discovery that uncovers campaign stories
 - **Natural Tone Shortcuts**: Quick tone switching ($natural, $vulnerable, $collaborative) with systematic imperfections (1 per 300-400 words) for genuine authenticity
@@ -109,7 +118,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **9 Copywriter Frameworks**: Intelligent selection from Simple (SVC, QPT), Medium (CASE, PATH), to Complex (STORY, HELP) with visual progress tracking
 - **Embedded Prompt Improvement**: Invisible clarity enhancement that expands abbreviations ("CTR" → "click-through rate") and structures vague requests without adding assumptions
 
-#### 8. 📋 Product & Dev Writer (v4.4.0)
+#### 9. 📋 Product & Dev Writer (v4.4.0)
 **Transform vague requests into crystal-clear development tickets and product documentation with instant workspace integration**
 - **6 Operating Modes**: Interactive (default), Quick ($q), Standard ($s), Complex ($c), Spec ($spec), Documentation ($doc)
 - **Interactive Guidance**: Default conversational mode teaches product thinking and documentation structure through practice
@@ -124,7 +133,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 ##### IDE enhancements & App Prototyping
 ——
 
-#### 9. 🛠️ IDE System Prompt (v3.9.0)
+#### 10. 🛠️ IDE System Prompt (v3.9.0)
 **Transform any AI coding assistant into an elite software engineer**
 - **Root Cause Philosophy**: Fixes underlying issues not symptoms, delivers production-grade code with zero technical debt
 - **Performance Obsession**: CSS-first approach, REM units only, batch DOM updates, will-change optimization
@@ -132,7 +141,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **Risk Documentation System**: "This could break if..." analysis with cascading effect monitoring and edge cases
 - **MCP Decision Tree**: Strategic tool selection for validation, documentation, and current best practices
 
-#### 10. 🚀 Lovable System Prompts (v2.0.0)
+#### 11. 🚀 Lovable System Prompts (v2.0.0)
 **Three specialized experts optimized for minimal Lovable platform credit usage**
 - **Goal-Oriented Approach**: Describe outcomes and success criteria, not prescriptive implementations - AI finds optimal solutions
 - **Comprehensive Coverage**: Testing & Validation, Accessibility (App/Website), Collaboration, Error Handling, Modern Best Practices, Migration Paths
@@ -140,7 +149,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **Phased Implementation**: Foundation → Enhancement → Optimization with validation-driven progression
 - **Context-Aware Decisions**: Adapts to user expertise, project stage, team size, and timeline constraints
 
-#### 11. 🗜 Claude App Builder (v1.3.3)
+#### 12. 🗜 Claude App Builder (v1.3.3)
 **Build functional web applications and AI demos directly in Claude artifacts**
 - **3 Specialized Modes**: $app (tools), $ai (chat interfaces), $data (dashboards)
 - **Fluid Responsive**: Scales perfectly 320px-1920px
@@ -155,7 +164,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 All systems support Model Context Protocol tools:
 - **Sequential Thinking**: Linear analysis and validation (1-3 thoughts)
 - **Cascade Thinking**: Complex exploration and branching (3-8+ thoughts)
-- **Domain-Specific**: Figma, Notion, ClickUp, Imagician, search tools as needed
+- **Domain-Specific**: Figma, Notion, ClickUp, Imagician, macOS Use, search tools as needed
 
 ### Intelligent Modes
 - **Interactive Default**: Conversational guidance for beginners
@@ -187,9 +196,11 @@ cd "$HOME/MCP Servers"
 git clone https://github.com/sequentialthinking/sequential-thinking-mcp.git
 git clone https://github.com/cascadethinking/cascade-thinking-mcp.git
 git clone https://github.com/flowy11/imagician.git  # For Imagician Agent
+git clone https://github.com/mediar-ai/mcp-server-macos-use.git  # For macOS Computer Use
 
 # Note: ClickUp MCP is built into Claude Desktop - no installation needed!
 # Note: Notion MCP requires separate installation
+# Note: macOS Use MCP requires Swift build - see its README
 
 # Use AI to generate docker-compose.yml
 # Start containers
@@ -216,6 +227,7 @@ docker-compose up -d
 - Implementation specs → Product & Dev Writer ($spec mode)
 
 **For Productivity:**
+- macOS automation → **macOS Computer Use Agent** (control apps with natural language!)
 - Sprint management → ClickUp Agent
 - Knowledge bases → Notion Agent (works great with Product & Dev Writer docs!)
 - Workspace automation → Notion Agent
