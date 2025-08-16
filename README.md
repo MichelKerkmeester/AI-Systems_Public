@@ -17,11 +17,11 @@ Some of my non-client AI systems that I made available to the public. They were 
 3. [Notion Agent](#3--notion-agent)
 4. [Imagician Agent](#4--imagician-agent)
 
-### ✏️ Writer Systems
+### ✍️ Writer Systems
 5. [Prompt Engineering Assistant](#5--prompt-engineering-assistant)
 6. [AI Systems Creator](#6--ai-systems-creator)
 7. [Branded Content Writer](#7--branded-content-writer)
-8. [Dev Ticket Writer](#8--dev-ticket-writer)
+8. [Product & Dev Writer](#8--product--dev-writer)
 
 ### 💻 Development Systems
 9. [IDE System Prompt](#9--ide-system-prompt)
@@ -81,7 +81,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 .
 
-## ✏️ Writer Systems
+## ✍️ Writer Systems
 ##### Automated content, documentation & prompt writing systems
 ——
 
@@ -101,7 +101,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **Prompt Improvement**: Invisible clarity enhancement 
 - **Implementation Bridge**: "Would you like help implementing this?" checkpoint after every specification
 
-#### 7. ✏️ Branded Content Writer (v4.0.0)
+#### 7. ✍️ Branded Content Writer (v4.0.0)
 **Marketing content with systematic authenticity and failure transparency**
 - **Interactive Modes**: Default conversational mode with visual clarity scoring, celebration mechanics, and guided failure discovery that uncovers campaign stories
 - **Natural Tone Shortcuts**: Quick tone switching ($natural, $vulnerable, $collaborative) with systematic imperfections (1 per 300-400 words) for genuine authenticity
@@ -109,7 +109,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **9 Copywriter Frameworks**: Intelligent selection from Simple (SVC, QPT), Medium (CASE, PATH), to Complex (STORY, HELP) with visual progress tracking
 - **Embedded Prompt Improvement**: Invisible clarity enhancement that expands abbreviations ("CTR" → "click-through rate") and structures vague requests without adding assumptions
 
-#### 8. 📋 Dev Ticket Writer (v4.4.0)
+#### 8. 📋 Product & Dev Writer (v4.4.0)
 **Transform vague requests into crystal-clear development tickets and product documentation with instant workspace integration**
 - **6 Operating Modes**: Interactive (default), Quick ($q), Standard ($s), Complex ($c), Spec ($spec), Documentation ($doc) NEW!
 - **Interactive Guidance**: Default conversational mode teaches product thinking and documentation structure through practice
@@ -201,8 +201,8 @@ docker-compose up -d
 ## 🎯 Choosing the Right System
 
 **For Writers & Documentation:**
-- Requirements → Dev Ticket Writer (now with Documentation mode!)
-- User guides → Dev Ticket Writer ($doc mode for product documentation)
+- Requirements → Product & Dev Writer (now with Documentation mode!)
+- User guides → Product & Dev Writer ($doc mode for product documentation)
 - AI prompts → Prompt Engineering Assistant v4.0.0
 - System design → AI Systems Spec Writer
 - Marketing copy → **Branded Content Writer v4.0.0** (Voice Trinity + Failure transparency)
@@ -213,11 +213,11 @@ docker-compose up -d
 - Marketing sites → Lovable System Prompts ($lw mode)  
 - Full-stack apps → Lovable System Prompts ($la mode)
 - App prototypes → Claude App Builder
-- Implementation specs → Dev Ticket Writer ($spec mode)
+- Implementation specs → Product & Dev Writer ($spec mode)
 
 **For Productivity:**
 - Sprint management → ClickUp Agent
-- Knowledge bases → Notion Agent (works great with Dev Ticket Writer docs!)
+- Knowledge bases → Notion Agent (works great with Product & Dev Writer docs!)
 - Workspace automation → Notion Agent
 - Image file editing → Imagician Agent
 - Prompt optimization → Prompt Engineering Assistant

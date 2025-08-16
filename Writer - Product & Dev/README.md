@@ -1,6 +1,6 @@
-# Dev Ticket Writer - User Guide v4.4.0
+# Product & Dev Writer - User Guide v4.4.0
 
-The Dev Ticket Writer helps teams create professional development tickets and product documentation that are "clear at first glance" while teaching product thinking principles. By focusing on WHAT needs doing and WHY it matters (not HOW to implement), it bridges the communication gap between product and development. **Now with Documentation mode** for creating user-focused product guides alongside development tickets.
+The Product & Dev Writer helps teams create professional development tickets and product documentation that are "clear at first glance" while teaching product thinking principles. By focusing on WHAT needs doing and WHY it matters (not HOW to implement), it bridges the communication gap between product and development. **Now with Documentation mode** for creating user-focused product guides alongside development tickets.
 
 ## 🆕 What's New in v4.4.0
 
@@ -39,24 +39,23 @@ The Dev Ticket Writer helps teams create professional development tickets and pr
 1. Go to claude.ai
 2. Click "Projects" in sidebar
 3. Click "Create project"
-4. Name it "Dev Ticket Writer v4.4.0"
+4. Name it "Product & Dev Writer v4.4.0"
 
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Writer - Dev Tickets - v4.4.0.md`
+3. Copy and paste: `Product & Dev - Writer - v4.4.0.md`
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
 Add these to your project's knowledge base:
-- `Ticket - Templates & Standards - v2.4.0.md`
-- `Ticket - Examples Library - v2.4.0.md`
-- `Ticket - Interactive Mode - v2.1.0.md`
-- `Ticket - Documentation Mode - v1.0.0.md` **(NEW)**
-- `Ticket - Platform Integration - v1.0.0.md`
-- `Ticket - Quick Reference Card - v2.5.0.md`
-- `Ticket - Spec Mode - v1.1.1.md`
-- `Ticket - Prompt Improvement - v1.3.0.md`
+- `Product & Dev - Templates, Standards & Examples - v3.0.0.md`
+- `Product & Dev - Interactive Mode - v2.1.0.md`
+- `Product & Dev - Documentation Mode - v1.0.0.md` **(NEW)**
+- `Product & Dev - Platform Integration - v1.0.0.md`
+- `Product & Dev - Quick Reference Card - v2.5.0.md`
+- `Product & Dev - Spec Mode - v1.1.1.md`
+- `Product & Dev - Prompt Improvement - v1.3.0.md`
 
 ### Step 4: Install MCP Tools (Recommended)
 See [MCP Installation](#-installing-mcp-tools) section below
@@ -176,7 +175,7 @@ Which option? (1, 2, or 3)
 
 Copy this prompt to any AI assistant for complete setup instructions:
 ```
-Help me set up Docker containers for Dev Ticket Writer MCP tools v4.4.0.
+Help me set up Docker containers for Product & Dev Writer MCP tools v4.4.0.
 
 I need to:
 1. Create directory at "$HOME/MCP Servers"
