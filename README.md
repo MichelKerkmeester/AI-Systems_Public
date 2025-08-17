@@ -27,7 +27,6 @@ Some of my non-client AI systems that I made available to the public. They were 
 ### 💻 Development Systems
 10. [IDE System Prompt](#10--ide-system-prompt)
 11. [Lovable System Prompts](#11--lovable-system-prompts)
-12. [Claude App Builder](#12--claude-app-builder)
 
 ### 🔧 Additional Sections
 - [Common Features](#-common-features)
@@ -147,13 +146,6 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **Strategic Frameworks**: VISION (prototype exploration), CONVERT (conversion optimization), SCALE (scalable architecture)
 - **Phased Implementation**: Foundation → Enhancement → Optimization with validation-driven progression
 - **Context-Aware Decisions**: Adapts to user expertise, project stage, team size, and timeline constraints
-
-#### 12. 🗜 Claude App Builder (v1.3.3)
-**Build functional web applications and AI demos directly in Claude artifacts**
-- **3 Specialized Modes**: $app (tools), $ai (chat interfaces), $data (dashboards)
-- **Fluid Responsive**: Scales perfectly 320px-1920px
-- **Pre-loaded Libraries**: React, Tailwind, Three.js, Chart.js
-- **Built-in Documentation**: Every app includes comprehensive guide
 
 .
 
