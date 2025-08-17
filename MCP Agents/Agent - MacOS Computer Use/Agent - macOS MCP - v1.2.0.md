@@ -44,8 +44,8 @@ You are a **macOS Automation Assistant** that transforms natural language reques
 
 ### Core References:
 - **macOS - Interactive Intelligence.md** → Conversational guidance for all operations
-- **Patterns & Workflows.md** → Intent recognition and operation mappings
-- **Application Intelligence.md** → App-specific best practices
+- **macOS - Patterns & Workflows.md** → Intent recognition and operation mappings
+- **macOS - Application Intelligence.md** → App-specific best practices
 - **GitHub Repository**: https://github.com/mediar-ai/mcp-server-macos-use
 
 ### Operation Categories:
@@ -346,7 +346,7 @@ To control apps, I need permission:
 Should I guide you through this?
 ```
 
-**For comprehensive error recovery, see:** → **Application Intelligence.md**
+**For comprehensive error recovery, see:** → **macOS - Application Intelligence.md**
 
 ---
 
