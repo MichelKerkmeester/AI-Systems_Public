@@ -2,23 +2,42 @@
 
 The ClickUp Agent transforms natural language into organized ClickUp workspaces, making task management and team collaboration 10x easier. Through intelligent conversation, it understands WHAT you want to organize and automatically handles HOW to build it. No modes, no commands, just describe what you need.
 
-## Table of Contents
+## 📑 Table of Contents
 
-1. [✨ Key Features](#✨-key-features)
-2. [🚀 Quick Setup](#🚀-quick-setup)
-3. [🧠 Intelligent MCP Selection](#🧠-intelligent-mcp-selection)
-4. [💬 Interactive Intelligence](#💬-interactive-intelligence)
-5. [📊 Workspace Patterns](#📊-workspace-patterns)
-6. [🎨 Smart Defaults](#🎨-smart-defaults)
-7. [📋 Examples](#📋-examples)
-8. [🔧 Installing MCPs (Required & Optional)](#🔧-installing-mcps-required--optional)
-9. [🆘 Troubleshooting](#🆘-troubleshooting)
-10. [⚠️ Important Notes](#⚠️-important-notes)
-11. [🆕 What's New in v1.1.0](#🆕-whats-new-in-v110)
-12. [📦 Version History](#📦-version-history)
-13. [📚 Resources](#📚-resources)
+- [🆕 What's New in v1.1.0](#-whats-new-in-v110)
+- [✨ Key Features](#-key-features)
+- [🚀 Quick Setup](#-quick-setup)
+- [🧠 Intelligent MCP Selection](#-intelligent-mcp-selection)
+- [💬 Interactive Intelligence](#-interactive-intelligence)
+- [📊 Workspace Patterns](#-workspace-patterns)
+- [🎨 Smart Defaults](#-smart-defaults)
+- [📋 Examples](#-examples)
+- [🔧 Installing MCPs (Required & Optional)](#-installing-mcps-required--optional)
+- [🆘 Troubleshooting](#-troubleshooting)
+- [⚠️ Important Notes](#️-important-notes)
+- [📦 Version History](#-version-history)
+- [📚 Resources](#-resources)
 
----
+.
+
+## 🆕 What's New in v1.1.0
+
+### Major Simplification
+- **Single Unified Approach**: Removed all mode commands ($w, $c, $o)
+- **Interactive Intelligence**: One smart system handles everything
+- **Reduced to 3 Documents**: From 5 files to just 3 essential references
+- **Cleaner System Prompt**: Examples moved to reference docs
+- **Automatic Intent Detection**: System recognizes what you need
+- **Smarter Conversations**: Better at detecting complexity and adjusting approach
+
+### Maintained Excellence
+- All v1.0.0 capabilities preserved
+- Enhanced MCP intelligence
+- Same 5-minute setup promise
+- Professional patterns still applied
+- Educational approach retained
+
+.
 
 ## ✨ Key Features
 
@@ -32,7 +51,7 @@ The ClickUp Agent transforms natural language into organized ClickUp workspaces,
 - **5-Minute Setup**: Complete workspace systems ready in minutes
 - **Zero Technical Knowledge**: No understanding of ClickUp's interface required
 
----
+.
 
 ## 🚀 Quick Setup
 
@@ -69,7 +88,7 @@ track sprints for my team        # Sets up agile workspace
 help me with task management     # Interactive guidance
 ```
 
----
+.
 
 ## 🧠 Intelligent MCP Selection
 
@@ -93,7 +112,7 @@ The system automatically determines the right conversation depth:
 | **Medium (0.50-0.79)** | Brief clarification | "track projects" → "Client or internal?" |
 | **Low (<0.50)** | Full guidance | "help" → Complete conversation |
 
----
+.
 
 ## 💬 Interactive Intelligence
 
@@ -144,7 +163,7 @@ System: I'll help you get organized! Let's start with what matters most:
         What would have the biggest impact for you?
 ```
 
----
+.
 
 ## 📊 Workspace Patterns
 
@@ -179,7 +198,7 @@ Personal Workspace:
 └── Weekly Reviews (templates)
 ```
 
----
+.
 
 ## 🎨 Smart Defaults
 
@@ -199,7 +218,7 @@ Every list gets appropriate fields:
 - Bugs → Severity, Environment, Reporter
 - Content → Publish Date, Channel, Author
 
----
+.
 
 ## 📋 Examples
 
@@ -235,7 +254,7 @@ System: Creating meeting notes for you!
         Would you like a template for recurring meetings?
 ```
 
----
+.
 
 ## 🔧 Installing MCPs (Required & Optional)
 
@@ -346,7 +365,7 @@ docker-compose restart
 - For ClickUp issues: Verify you're logged in
 - For general issues: The AI assistant can help diagnose problems
 
----
+.
 
 ## ⚠️ Important Notes
 
@@ -361,31 +380,14 @@ docker-compose restart
 - **Visual feedback always** - See what's created
 - **5-minute guarantee** - Complex systems ready fast
 
----
-
-## 🆕 What's New in v1.1.0
-
-### Major Simplification
-- **Single Unified Approach**: Removed all mode commands ($w, $c, $o)
-- **Interactive Intelligence**: One smart system handles everything
-- **Reduced to 3 Documents**: From 5 files to just 3 essential references
-- **Cleaner System Prompt**: Examples moved to reference docs
-- **Automatic Intent Detection**: System recognizes what you need
-- **Smarter Conversations**: Better at detecting complexity and adjusting approach
-
-### Maintained Excellence
-- All v1.0.0 capabilities preserved
-- Enhanced MCP intelligence
-- Same 5-minute setup promise
-- Professional patterns still applied
-- Educational approach retained
+.
 
 ## 📦 Version History
 
 - **v1.1.0**: Unified interactive intelligence, removed mode system, enhanced conversation flow
 - **v1.0.0**: Initial release with multiple modes
 
----
+.
 
 ## 📚 Resources
 
@@ -405,6 +407,6 @@ docker-compose restart
 - [Claude Projects](https://claude.ai)
 - [ClickUp Features Guide](https://help.clickup.com/hc/en-us/categories/6314476398999-Features)
 
----
+.
 
 *Transform ideas into organized ClickUp workspaces through natural conversation. The system understands what you need and guides appropriately. Complex systems ready in under 5 minutes. Just describe what you want to organize and watch your workspace build itself.*
