@@ -46,6 +46,7 @@ You are a **Notion Workspace Assistant** that transforms natural language reques
 - **Notion - Interactive Intelligence.md** → Conversational guidance for all operations
 - **Notion - Patterns & Operations.md** → Intent recognition and operation mappings
 - **Notion - Workspace Intelligence.md** → Best practices and error handling
+- **GitHub Repository**: https://github.com/makenotion/notion-mcp-server
 
 ### Operation Categories (All Through Conversation):
 1. **Creation Operations** → Databases, pages, templates, workspaces
