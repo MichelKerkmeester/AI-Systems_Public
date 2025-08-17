@@ -1,20 +1,54 @@
-# macOS Computer Use Agent - User Guide v1.1.0
+# macOS Computer Use Agent - User Guide v1.2.0
 
-The macOS Computer Use Agent transforms natural language into precise UI operations, making computer control 10x easier. By focusing on WHAT you want to accomplish (not HOW to click), it bridges the gap between intention and automation. Interactive mode guides you through complex workflows with smart questions.
+The macOS Computer Use Agent transforms natural language into precise UI operations, making computer control accessible through conversation. No technical knowledge required - just describe what you want to do and the system handles all complexity through intelligent dialogue.
+
+## 📑 Table of Contents
+
+- [🆕 What's New in v1.2.0](#-whats-new-in-v120)
+- [✨ Key Features](#-key-features)
+- [🚀 Quick Setup](#-quick-setup)
+- [🧠 Intelligent Conversation System](#-intelligent-conversation-system)
+- [💬 Conversation Examples](#-conversation-examples)
+- [📊 Visual Feedback Standards](#-visual-feedback-standards)
+- [🔧 Installing MCPs](#-installing-mcps)
+- [📋 Common Automation Patterns](#-common-automation-patterns)
+- [🆘 Troubleshooting](#-troubleshooting)
+- [⚠️ Important Notes](#️-important-notes)
+- [📊 Quality Standards](#-quality-standards)
+- [📦 Version History](#-version-history)
+- [📚 Resources](#-resources)
+
+.
+
+## 🆕 What's New in v1.2.0
+
+### Major Simplification
+- **Unified Conversational Interface**: Removed all explicit modes and commands
+- **Automatic Adaptation**: System adjusts conversation depth based on request clarity
+- **Confidence-Based Response**: Dynamic interaction from immediate execution to full guidance
+- **Intelligent MCP Selection**: Automatic tool selection based on complexity
+- **Enhanced Element Finding**: Improved UI element discovery through conversation
+
+### Maintained Excellence
+- All v1.1.0 capabilities preserved
+- Zero technical knowledge requirement
+- Educational insights during automation
+- Visual feedback for every action
+- Safe operations with confirmation for destructive actions
 
 .
 
 ## ✨ Key Features
 
-- **Natural Language First**: Describe what you want to do in plain English
-- **3 Specialized Modes**: $interactive (default), $quick, $workflow
-- **Triple MCP Support**: macOS Use MCP (core), Sequential Thinking (simple), Cascade Thinking (complex)
-- **Interactive Guidance**: Default mode guides step-by-step through automations
-- **Best Practices Built-in**: Uses keyboard shortcuts when faster than clicking
-- **Visual Feedback**: Shows what's being clicked, typed, or navigated
-- **Educational Focus**: Teaches shortcuts while automating
-- **Safe Automation**: Always confirms before destructive operations
-- **Zero Technical Knowledge**: No understanding of accessibility trees or coordinates required
+- **Conversational Control**: Natural language interface with adaptive dialogue depth
+- **Intelligent MCP Selection**: Automatic tool selection based on complexity
+- **No Modes Required**: Unified conversational interface adapts to your needs
+- **Element Finding**: Helps locate any UI element through conversation
+- **Text Composition**: Assists with writing emails, documents, and forms
+- **Visual Feedback**: Clear confirmation of every action taken
+- **Educational Insights**: Learn shortcuts naturally during automation
+- **Safe Operations**: Confirms before destructive actions
+- **Zero Technical Knowledge**: No understanding of PIDs, coordinates, or commands needed
 
 .
 
@@ -24,19 +58,19 @@ The macOS Computer Use Agent transforms natural language into precise UI operati
 1. Go to claude.ai
 2. Click "Projects" in sidebar
 3. Click "Create project"
-4. Name it "macOS Computer Use Agent v1.1"
+4. Name it "macOS Computer Use Agent v1.2"
 
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Agent - macOS Computer Use MCP - v1.1.0.md`
+3. Copy and paste: `Agent - macOS Computer Use MCP - v1.2.0.md`
 4. Save the project
 
 ### Step 3: Upload Reference Documents
-Add these streamlined documents to your project:
-- `Interactive Mode - v1.1.0.md` (Conversational automation specification)
-- `Patterns & Workflows - v1.1.0.md` (All patterns and operation mappings)
-- `Application Intelligence - v1.0.0.md` (App-specific best practices)
+Add these core documents to your project:
+- `macOS - Interactive Intelligence - v1.2.0.md` (Conversational interface specification)
+- `macOS - Patterns & Workflows - v1.2.0.md` (All patterns and operation mappings)
+- `macOS - Application Intelligence - v1.1.0.md` (App-specific best practices)
 
 ### Step 4: Build and Configure macOS Use MCP
 The macOS Use MCP needs to be built from source:
@@ -48,285 +82,203 @@ The macOS Use MCP needs to be built from source:
 ### Step 5: Start Automating
 Simply describe what you need:
 ```
-help me write an email           # Interactive mode (default)
-find the preferences menu         # Interactive mode handles element finding
-$q open Safari                    # Quick mode for immediate action
-$q type my report                 # Quick mode for simple typing
-$w research and summarize topic   # Workflow mode for multi-app tasks
+open Safari                      # High confidence - immediate execution
+help me write an email          # Medium confidence - guided composition
+find the save button            # Element finding with assistance
+research climate change         # Complex workflow with planning
+help                           # Full guidance through capabilities
 ```
 
 .
 
-## 🧠 Intelligent MCP Selection
+## 🧠 Intelligent Conversation System
 
-The v1.1.0 release brings intelligent MCP tool selection with streamlined modes:
+### Confidence-Based Response
 
-### Automatic Tool Selection
+The system automatically adjusts conversation depth based on request clarity:
+
+| Confidence | Range | Response Strategy | Example |
+|------------|-------|------------------|---------|
+| **Exact** | >0.95 | Immediate execution | "open Safari" → Opens immediately |
+| **High** | 0.80-0.95 | Single clarification | "browse the web" → "Safari or Chrome?" |
+| **Medium** | 0.50-0.79 | Guided exploration | "do something online" → Options provided |
+| **Low** | <0.50 | Full guidance | "help" → Complete capability overview |
+
+### Intelligent MCP Selection
+
+When thinking MCPs are available:
 
 | Tool | When Used | Thought Count | Purpose |
 |------|-----------|---------------|---------|
-| **macOS Use MCP** | Always | N/A | All actual UI operations |
-| **Sequential Thinking** | Simple operations | 2-3 thoughts | Linear tasks, single apps, quick typing |
-| **Cascade Thinking** | Complex workflows | 5-7 thoughts | Multi-app workflows, element finding, complex text |
+| **Sequential Thinking** | Simple operations | 2-3 thoughts | Linear tasks, single apps |
+| **Cascade Thinking** | Complex workflows | 5-7 thoughts | Multi-app, element finding |
+| **macOS Use MCP** | Always | N/A | Actual UI operations |
 
-### Selection by Mode
-
-| Mode | Primary MCP | Complexity | Interactive? |
-|------|------------|------------|--------------|
-| **Interactive** | Cascade | Adaptive | Yes (Default) |
-| **Quick** | Sequential | Low | No |
-| **Workflow** | Cascade | High | Optional |
-
-### Example Intelligence
-
-```markdown
-User: I need to research laptops and create a comparison
-
-System: [Selects Cascade Thinking for multi-app workflow]
-I'll help you research laptops and create a comparison!
-
-Let me set up an efficient workflow:
-1. Open Safari for research
-2. Create comparison document
-3. Organize findings
-
-Which format for the comparison?
-• Spreadsheet (Numbers/Excel)
-• Document (Pages/Word)
-• Notes (quick capture)
-
-[Based on answer, orchestrates complete workflow]
-```
+The system automatically selects the appropriate tool based on:
+- Request complexity
+- Number of apps involved
+- Element finding needs
+- Text composition requirements
+- User confidence level
 
 .
 
-## 🎛️ Operating Modes
+## 💬 Conversation Examples
 
-| Mode | Command | When to Use | MCP Strategy | Focus |
-|------|---------|-------------|--------------|-------|
-| **Interactive** | DEFAULT | Guidance needed, finding elements, complex text | Cascade (5-7) | Step-by-step guidance |
-| **Quick** | `$q` | Single operations, simple typing | Sequential (2-3) | Speed over explanation |
-| **Workflow** | `$w` | Multi-app sequences | Cascade (5-7) | Complete automation |
+### High Confidence - Direct Execution
+```
+User: open Safari
 
-**Note:** Interactive mode is the default unless explicitly specified with $.
-
-### Mode Capabilities
-
-**Interactive Mode (Default)**
-- Guided automation with questions
-- Finding UI elements
-- Complex text composition
-- Form filling assistance
-- Multi-step operations
-- Educational explanations
-
-**Quick Mode ($q)**
-- Immediate single actions
-- Simple text input
-- Direct clicks
-- Basic navigation
-- No explanations
-- Fast execution
-
-**Workflow Mode ($w)**
-- Multi-app orchestration
-- Complex sequences
-- Document creation
-- Research workflows
-- Data processing
-- Automated pipelines
-
-.
-
-## 💬 Interactive Mode Flow
-
-The default conversational experience:
-
-### Typical Flow
-1. User describes need (no mode specified)
-2. System identifies apps and complexity
-3. Asks strategic questions if needed
-4. Shows automation preview
-5. Executes operations step-by-step
-6. Provides visual confirmation
-7. Suggests logical next steps
-
-### Quality Indicators
-```markdown
-🖱️ Automation Report
-────────────────────────
-MCP Used: Cascade Thinking (5 thoughts)
-Complexity: Medium
-Time to Complete: 15 seconds
-
-✅ Completed Successfully:
-✔ Opened Mail app
-✔ Created new message
-✔ Added recipient
-✔ Typed subject
-✔ Composed email body
-✔ Attached 3 files
-
-💡 macOS Tip: Press ⌘⇧D to send emails quickly
+System: Opening Safari for you!
+        
+        ✔ Safari launched and ready
+        
+        Would you like to navigate to a website or search for something?
 ```
 
-.
-
-## 📝 Automation Patterns
-
-Every automation uses intelligent patterns:
-
-### Email Workflow
-```markdown
-Email Composition:
-├── Open Mail (⌘Space → "Mail")
-├── New Message (⌘N)
-├── Fill recipient (Tab navigation)
-├── Add subject (Tab)
-├── Type content (with formatting)
-└── Send (⌘⇧D)
+### Medium Confidence - Brief Clarification
 ```
+User: I need to browse
 
-### Research Workflow
-```markdown
-Web Research:
-├── Open Safari (new window)
-├── Create tab group
-├── Search multiple sources
-├── Use Reader mode (⌘⇧R)
-├── Copy key points
-└── Create summary document
-```
-
-### Form Filling
-```markdown
-Form Automation:
-├── Click first field
-├── Type content
-├── Tab to next field
-├── Space for checkboxes
-├── Arrow keys for dropdowns
-└── Return to submit
+System: I'll help you browse the web! 
+        
+        Which browser would you prefer:
+        • Safari (Mac's default)
+        • Chrome
+        • Firefox
+        
+        Or just tell me what you're looking for and I'll use Safari.
 ```
 
 ### Element Finding
-```markdown
-Finding UI Elements:
-├── Refresh UI tree
-├── Search by label
-├── Check similar names
-├── Verify position
-├── Click when found
-└── Confirm success
+```
+User: where's the print option?
+
+System: I'll help you find the print option!
+
+        🔍 Let me check the current application...
+        You're in Safari.
+
+        Found print options in multiple locations:
+        1. File menu → Print (⌘P)
+        2. Right-click context menu → Print
+        3. Share button → Print
+
+        The quickest way is pressing ⌘P. 
+
+        Would you like me to:
+        • Open the print dialog now
+        • Show you where to click
+        • Just remember the shortcut
 ```
 
-### Text Input
-```markdown
-Text Entry:
-├── Identify text field
-├── Click to focus
-├── Type content
-├── Format if needed
-├── Tab to continue
-└── Save when complete
+### Complex Text Composition
+```
+User: help me write a thank you email to my boss
+
+System: I'll help you write a professional thank you email to your boss!
+
+        Let me set this up properly.
+
+        Opening Mail app...
+        ✔ Mail ready
+
+        Creating new message...
+        ✔ New email opened
+
+        First, what's your boss's email address?
+
+User: boss@company.com
+
+System: Adding recipient...
+        ✔ Added boss@company.com
+
+        Now for the subject. For a thank you email, I suggest:
+        • "Thank You - [Specific Reason]"
+        • "Appreciation for Your Support"
+        • "Grateful for the Opportunity"
+
+        What are you thanking them for?
+
+[Continues with guided composition...]
 ```
 
-.
-
-## 🔌 UI Operations
-
-The system provides these core operations:
-
-### Essential Operations
-- **open_application_and_traverse** - Launch and explore apps
-- **click_and_traverse** - Click elements and update UI tree
-- **type_and_traverse** - Input text with verification
-- **press_key_and_traverse** - Keyboard shortcuts
-- **refresh_traversal** - Update UI understanding
-
-### Smart Defaults
-- **Browser needed** → Safari (default) or Chrome
-- **Text editing** → TextEdit or Notes
-- **Email** → Mail app
-- **Settings** → System Settings
-- **Documents** → Pages or Word
-
-### Common Shortcuts Applied
-- **⌘N** → New window/document
-- **⌘T** → New tab
-- **⌘W** → Close window
-- **⌘Tab** → Switch apps
-- **⌘Space** → Spotlight search
-
-.
-
-## 📋 Examples
-
-### Interactive Mode (Default)
+### Multi-App Workflow
 ```
-User: help me write an email
-System: [Starts conversation, selects Cascade Thinking]
-I'll help you write an email! Which app would you like to use?
-• Mail (Apple's email app)
-• Gmail in browser
-• Outlook
-```
+User: I need to research something and take notes
 
-```
-User: find the save button
-System: [Uses Interactive mode for element finding]
-Let me find the save button for you...
-🔍 Searching UI elements...
-✔ Found "Save" button at top toolbar
-Clicking it now...
-```
+System: I'll help you research and take notes efficiently!
 
-### Quick Mode
-```
-User: $q click Safari
-System: [Uses Sequential Thinking for immediate action]
-✔ Clicked Safari
-```
+        Here's my plan:
+        1. Open Safari for research
+        2. Open Notes app alongside
+        3. Help you search and capture information
 
-```
-User: $q type Hello World
-System: [Quick typing without guidance]
-✔ Typed: "Hello World"
-```
+        What topic are you researching?
 
-### Workflow Mode
-```
-User: $w research and summarize AI trends
-System: [Uses Cascade Thinking for complete workflow]
-Creating research workflow...
-Opening Safari, setting up tabs, preparing document...
-```
+User: climate change impacts
 
-### Complex System Example
-```markdown
-User: help me prepare for my presentation
-System: I'll help you prepare your presentation!
+System: Perfect! Setting up your research workspace...
 
-What do you need help with?
-1. Creating slides (Keynote/PowerPoint)
-2. Research and content gathering
-3. Speaker notes preparation
-4. All of the above
+        Opening Safari...
+        ✔ Safari ready
 
-[Creates integrated workflow across multiple apps]
+        Navigating to Google...
+        ✔ Search page loaded
 
-✅ Presentation Prep Complete:
-• Research tabs organized in Safari
-• Keynote presentation created
-• 10 slides with titles
-• Speaker notes added
-• Images inserted
-• Transitions configured
+        Searching for "climate change impacts"...
+        ✔ Results loaded
+
+        Now opening Notes app...
+        ✔ Notes ready
+
+        Arranging windows side by side...
+        ✔ Windows arranged for easy reference
+
+        💡 Tip: Use ⌘Tab to quickly switch between apps!
+
+[Continues with research assistance...]
 ```
 
 .
 
-## 🔧 Installing MCPs (Required & Optional)
+## 📊 Visual Feedback Standards
+
+Every operation includes clear visual confirmation:
+
+```
+🖱️ Automating: Write and send email
+📍 Current: Mail app
+────────────────────────
+Opening Mail...
+✔ Mail opened (PID: 1234)
+
+Creating new message...
+✔ New email window opened
+
+Adding recipient...
+✔ Added: boss@company.com
+
+Typing subject...
+✔ Subject: "Thank You - Project Approval"
+
+Composing message...
+✔ Email body completed (247 words)
+
+✅ Complete! Email ready to send
+
+💡 Mail tip: Press ⌘⇧D to send quickly
+
+Next steps:
+• Send email (⌘⇧D)
+• Add attachment (⌘⇧A)
+• Save as draft
+• Start another email
+```
+
+.
+
+## 🔧 Installing MCPs
 
 ### Required: macOS Use MCP
 
@@ -392,36 +344,9 @@ Add to Claude Desktop config:
 
 For even better automation design, add thinking tools:
 
-#### Option A: AI-Powered Installation Assistant
-
-**Prerequisites:**
-- Node.js installed ([Download Node.js](https://nodejs.org/))
-- Claude Desktop app already configured
-
-**AI-Assisted Installation:**
-
-Copy this prompt to Claude, ChatGPT, or any AI assistant:
-
-```
-Help me set up the thinking MCPs for the macOS Computer Use Agent.
-
-I need to:
-1. Install Node.js if not already installed
-2. Configure Claude Desktop's config file at ~/.config/claude/claude_desktop_config.json
-3. Add the Sequential Thinking and Cascade Thinking MCPs using NPX
-4. Verify the tools are connected
-
-I'm on macOS. Please give me the exact commands to run.
-```
-
-The AI will provide step-by-step commands for your setup.
-
-#### Option B: Manual NPX Setup
+#### NPX Setup
 
 Add to Claude Desktop config (after the macos-use entry):
-
-**Config Location:**
-- Mac: `~/.config/claude/claude_desktop_config.json`
 
 ```json
 {
@@ -441,17 +366,71 @@ Add to Claude Desktop config (after the macos-use entry):
 }
 ```
 
-**Verification:**
-1. Restart Claude Desktop
-2. Look for the 🔌 icon showing all three tools connected
-3. Test with: "help me organize my desktop"
-
 **Benefits of Thinking MCPs:**
-- **Sequential Thinking**: 2x faster simple operations
-- **Cascade Thinking**: Smarter workflow design
+- **Sequential Thinking**: Faster simple operations
+- **Cascade Thinking**: Better complex workflow design
 - **Automatic selection**: Agent chooses the right tool
-- **Better patterns**: Explores all automation options
-- **Intelligent decisions**: Evaluates most efficient approach
+- **Intelligent patterns**: Explores all automation options
+
+.
+
+## 📋 Common Automation Patterns
+
+### Application Control
+```markdown
+Navigation:
+├── Open app (⌘Space → app name)
+├── Switch windows (⌘Tab)
+├── New document (⌘N)
+├── Settings (⌘,)
+└── Quit (⌘Q)
+```
+
+### Text Operations
+```markdown
+Text Entry:
+├── Click field to focus
+├── Type content
+├── Tab to next field
+├── Format with shortcuts
+├── Save (⌘S)
+└── Review and confirm
+```
+
+### Element Finding
+```markdown
+Finding UI Elements:
+├── Check current window
+├── Scan toolbar and menus
+├── Search File/Edit/View menus
+├── Look for keyboard shortcuts
+├── Check preferences
+└── Suggest alternatives
+```
+
+### Form Filling
+```markdown
+Form Automation:
+├── Analyze form structure
+├── Click first field
+├── Type content
+├── Tab navigation
+├── Validate format
+├── Review before submit
+└── Confirm submission
+```
+
+### Research Workflow
+```markdown
+Web Research:
+├── Open browser
+├── Create tab group
+├── Search multiple sources
+├── Activate reader mode
+├── Copy key points
+├── Organize in Notes
+└── Create summary
+```
 
 .
 
@@ -462,15 +441,14 @@ Add to Claude Desktop config (after the macos-use entry):
 | Issue | Solution |
 |-------|----------|
 | **"Can't control apps"** | Grant accessibility permissions in System Settings |
-| **"Element not found"** | Use Interactive mode to help find elements |
-| **"App won't open"** | Check if app is installed, try Spotlight |
-| **"Clicking wrong place"** | Use more specific element description |
+| **"Element not found"** | System will help find through conversation |
+| **"App won't open"** | Check if installed, try Spotlight search |
+| **"Clicking wrong place"** | Provide more specific description |
 | **"Permission denied"** | System Settings → Privacy & Security → Accessibility |
 | **"MCP not connected"** | Restart Claude Desktop |
+| **"Text not typing"** | Click field first, check focus |
 
-### Quick Fixes
-
-**Build Issues:**
+### Build Issues
 ```bash
 # Check Swift version
 swift --version
@@ -480,55 +458,29 @@ cd "$HOME/MCP Servers/mcp-server-macos-use"
 swift package clean
 swift build -c debug
 
-# Check if server is built
+# Verify build
 ls -la .build/debug/mcp-server-macos-use
 ```
 
-**Accessibility Issues:**
-```bash
-# Check accessibility permissions
-System Settings → Privacy & Security → Accessibility
-# Enable for Claude Desktop
-# Restart Claude Desktop
-```
-
-**NPX Issues:**
-- Ensure Node.js installed
-- Check config file syntax
-- Restart Claude Desktop
-
-### Interactive Mode Help
-- **Too many steps?** System breaks down complex tasks
-- **Want direct action?** Use explicit mode ($q, $w)
-- **Need different app?** System adapts to available apps
-- **Can't find element?** Interactive mode guides the search
-
-### MCP Connection Issues
+### Connection Issues
 - **Build failed**: Ensure Xcode Command Line Tools installed
 - **Server not found**: Check path in config matches built executable
 - **Can't connect**: Restart Claude Desktop after config changes
 - **Accessibility blocked**: Grant permissions and restart
-- **Wrong path**: Use absolute path to the built executable
-
-### Common Setup Problems
-- **"swift: command not found"**: Install Xcode Command Line Tools
-- **Build errors**: Ensure you're on macOS Monterey or later
-- **Config not working**: Check JSON syntax and absolute paths
-- **No UI control**: Accessibility permissions required
-- **Frozen automation**: Press Esc to cancel, restart if needed
 
 ### Getting Help
 - For build issues: Check Swift version with `swift --version`
 - For config issues: Verify JSON syntax and paths
 - For UI issues: Verify accessibility permissions
-- For general issues: The AI assistant can help diagnose problems
-- For technical support: Reach out to matt@mediar.ai or Discord: m13v_
+- For automation help: Just ask - the system will guide you
+- For technical support: matt@mediar.ai or Discord: m13v_
 
 .
 
 ## ⚠️ Important Notes
 
-- **Interactive is default** - No $ prefix needed
+- **Conversational by default** - No modes or commands needed
+- **Adaptive intelligence** - Automatically adjusts to your needs
 - **Accessibility required** - Must grant permissions
 - **Build from source** - macOS Use MCP requires Swift build
 - **Safety first** - Confirms destructive operations
@@ -541,9 +493,31 @@ System Settings → Privacy & Security → Accessibility
 
 .
 
+## 📊 Quality Standards
+
+Every automation ensures:
+- ✅ Intent understood through conversation
+- ✅ Appropriate guidance depth
+- ✅ Elements found intelligently
+- ✅ Operations executed efficiently
+- ✅ Success confirmed visually
+- ✅ Shortcuts taught naturally
+- ✅ Next steps suggested
+- ✅ Errors handled gracefully
+
+Performance Metrics:
+- **Intent Recognition**: >95% accuracy
+- **Element Finding**: >90% success rate
+- **User Satisfaction**: Natural conversation flow
+- **Task Completion**: >90% success rate
+- **Education Adoption**: >70% use taught shortcuts
+
+.
+
 ## 📦 Version History
 
-- **v1.1.0**: Streamlined to 3 modes (removed Navigate and Type modes)
+- **v1.2.0**: Unified conversational interface, removed explicit modes
+- **v1.1.0**: Streamlined to 3 modes (Interactive, Quick, Workflow)
 - **v1.0.0**: Initial release with 5 modes
 
 .
@@ -569,4 +543,4 @@ System Settings → Privacy & Security → Accessibility
 
 ---
 
-*Transform natural language into precise macOS UI operations through conversation. Interactive mode guides you step-by-step. Complex workflows automated in seconds. Just describe what you want to do and watch your Mac respond.*
+*Transform natural language into precise macOS UI operations through intelligent conversation. The system adapts to your needs automatically - no technical knowledge required. Just describe what you want to do and watch your Mac respond.*
