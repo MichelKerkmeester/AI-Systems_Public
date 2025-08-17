@@ -1,4 +1,4 @@
-# Quick Reference Card - v5.0.0
+# Quick Reference Card - v3.0.0
 
 Daily companion for creating professional tickets, specs, and documentation with intelligent guidance and platform integration.
 

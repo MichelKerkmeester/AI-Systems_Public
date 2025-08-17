@@ -1,4 +1,4 @@
-# Prompt Improvement - v5.0.0
+# Prompt Improvement - v1.4.0
 
 Lightweight request clarity enhancement for Product Owner system with unified mode detection.
 

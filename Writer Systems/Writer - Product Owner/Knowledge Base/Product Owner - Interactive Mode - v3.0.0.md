@@ -1,4 +1,4 @@
-# Interactive Mode - v5.0.0
+# Interactive Mode - v3.0.0
 
 Complete specification for the unified interactive system that guides users through creating tickets, specs, and documentation with intelligent complexity detection and platform integration.
 
