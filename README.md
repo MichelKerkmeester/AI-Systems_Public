@@ -22,7 +22,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 6. [Prompt Engineering Assistant](#6--prompt-engineering-assistant)
 7. [AI Systems Creator](#7--ai-systems-creator)
 8. [Branded Content Writer](#8--branded-content-writer)
-9. [Product & Dev Writer](#9--product--dev-writer)
+9. [Product Owner Writer](#9--product-owner-writer)
 
 ### 💻 Development Systems
 10. [IDE System Prompt](#10--ide-system-prompt)
@@ -55,37 +55,37 @@ Some of my non-client AI systems that I made available to the public. They were 
 ##### MCP tools made easy with conversational systems
 ——
 
-#### 2. 🖱️ macOS Computer Use Agent (v1.1.0)
+#### 2. 🖱️ macOS Computer Use Agent (v1.2.0)
 **Natural language control of macOS applications and workflows**
-- **Natural Language**: "Help me write an email" → Opens Mail, creates message, guides through composition
-- **Best Practices**: Keyboard shortcuts preferred over clicking when faster
-- **Smart Automation**: Multi-app workflows, form filling, and complex sequences
+- **Conversational Control**: "Help me write an email" → Guides through Mail app with natural dialogue
+- **Confidence-Based Response**: Adapts conversation depth from immediate action to full guidance
+- **Element Finding**: "Where's the save button?" → Helps locate UI elements through conversation
+- **Multi-App Workflows**: Complex sequences across applications with educational insights
 - **Safety First**: Always confirms before destructive operations (closing, deleting)
-- **Educational Mode**: Teaches shortcuts and macOS features while automating
 
-#### 3. 🚀 ClickUp Agent (v1.0.0)
+#### 3. 🚀 ClickUp Agent (v1.1.0)
 **Natural language control of ClickUp workspaces and team collaboration**
 - **Natural Language**: "Organize my sprints" → Complete workspace with lists, views, and custom fields
-- **Best Practices**: Professional patterns automatically applied
-- **Smart Structure**: Spaces, folders, lists, and task relationships optimized
-- **Advanced Features**: Time tracking, dependencies, automations, and dashboard creation
-- **Educational Mode**: Learn ClickUp while building your workspace
+- **Unified Interface**: Single conversational approach that adapts to request clarity
+- **Triple MCP Support**: ClickUp MCP with Sequential/Cascade Thinking for optimal performance
+- **Smart Guidance**: Asks only 2-3 essential questions for perfect setup
+- **5-Minute Setup**: Complex workspace systems ready in minutes
 
-#### 4. 📝 Notion Agent (v1.1.0)
+#### 4. 📝 Notion Agent (v1.2.0)
 **Natural language control of Notion workspaces**
 - **Natural Language**: "Organize my projects" → Complete workspace
-- **Best Practices**: Professional patterns automatically applied
-- **Smart Structure**: Databases, views, and relations optimized
-- **Error Recovery**: Graceful handling with alternatives
-- **Educational Mode**: Learn Notion while building
+- **Automatic Detection**: Recognizes workspaces vs pages vs organization tasks
+- **Interactive Intelligence**: Adaptive conversation for perfect workspace setup
+- **CMS Excellence**: Collections, relations, and views optimized automatically
+- **Educational Focus**: Teaches Notion concepts while building
 
-#### 5. 🖼️ Imagician Agent (v1.2.0)
+#### 5. 🖼️ Imagician Agent (v1.3.0)
 **Image file editing and conversion through conversation**
 - **8 Core Operations**: Resize, compress, convert, crop, rotate, flip, batch process, metadata
-- **5 Smart Modes**: Interactive (default), Quick ($q), Batch ($b), Platform ($p), Web ($w)
-- **Smart Understanding**: "Make it smaller" → Intelligently chooses resize vs compress
-- **Visual Feedback**: Before/after comparisons with size and quality metrics
-- **Platform Optimized**: Instagram, Facebook, Twitter, LinkedIn, YouTube specifications built-in
+- **Interactive Intelligence**: "Optimize my photo" → Asks use case, applies perfect settings
+- **Smart Path Handling**: Asks for paths conversationally only when needed
+- **Auto-Detection**: Recognizes web vs email vs social media optimization needs
+- **Visual Feedback**: Before/after metrics with file size and quality comparisons
 
 .
 
@@ -116,14 +116,15 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **9 Copywriter Frameworks**: Intelligent selection from Simple (SVC, QPT), Medium (CASE, PATH), to Complex (STORY, HELP) with visual progress tracking
 - **Embedded Prompt Improvement**: Invisible clarity enhancement that expands abbreviations ("CTR" → "click-through rate") and structures vague requests without adding assumptions
 
-#### 9. 📋 Product & Dev Writer (v4.4.0)
-**Transform vague requests into crystal-clear development tickets and product documentation with instant workspace integration**
-- **6 Operating Modes**: Interactive (default), Quick ($q), Standard ($s), Complex ($c), Spec ($spec), Documentation ($doc)
+#### 9. 📋 Product Owner Writer (v5.0.0)
+**Transform vague requests into professional dev tickets and documentation**
+- **4 Intelligent Modes**: Discovery (default), $ticket (auto-scaling), $spec (implementation), $doc (documentation)
 - **Interactive Guidance**: Default conversational mode teaches product thinking and documentation structure through practice
 - **Platform Integration**: Add created tickets or documentation directly to your ClickUp or Notion workspace
 - **Automatic Prompt Improvement**: "fix auth" → "create bug fix ticket for authentication"
+- **Ticket Mode**: Tickets automatically scale from simple (2-3 sections) to complex (6-8 sections)
 - **Documentation Mode**: $doc mode creates user-focused product guides with feature sections and interactive audience questions
-- **Implementation Specs**: $spec mode delivers frontend solutions (1-3 questions, copy-paste ready)
+- **Spec Mode**: $spec mode delivers frontend solutions (1-3 questions, copy-paste ready)
 
 .
 
