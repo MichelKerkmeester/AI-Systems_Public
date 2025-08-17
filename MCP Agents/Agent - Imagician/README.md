@@ -1,323 +1,271 @@
-# Imagician Agent - User Guide v1.2.0
+# Imagician Agent - User Guide v1.3.0
 
-## 🆕 What's New in v1.2.0
+The Imagician Agent transforms natural language into professional image operations, making image editing 10x easier. Through intelligent conversation, it understands WHAT you want to optimize and automatically handles HOW to process it. No modes, no commands, just describe what you need.
 
-- **🚨 MANDATORY PATH ASKING**: System now ALWAYS asks for file paths before ANY operation
-- **📁 Path-First Protocol**: Every interaction starts with "Where is your image located on your Mac?"
-- **✅ Explicit Confirmation**: Always confirms paths before processing
-- **🖥️ macOS Optimization**: Perfect integration with Mac filesystem
-- **🎯 Zero Ambiguity**: Never processes without knowing exact input and output locations
-- **📚 Path Education**: Teaches proper Mac file path usage
-- **All v1.1.0 features preserved**: Sequential and Cascade Thinking still included
+## 📑 Table of Contents
 
-## ⚠️ CRITICAL CHANGE IN v1.2.0
+- [🆕 What's New in v1.3.0](#-whats-new-in-v130)
+- [✨ Key Features](#-key-features)
+- [🚀 Quick Setup](#-quick-setup)
+- [🧠 Intelligent Conversation System](#-intelligent-conversation-system)
+- [💬 Example Interactions](#-example-interactions)
+- [📊 What Gets Optimized](#-what-gets-optimized)
+- [🔧 Installing MCPs (Required & Optional)](#-installing-mcps-required--optional)
+- [🆘 Troubleshooting](#-troubleshooting)
+- [⚠️ Important Notes](#️-important-notes)
+- [📦 Version History](#-version-history)
+- [📚 Resources](#-resources)
 
-**The system now ALWAYS asks for file paths first - NO EXCEPTIONS**
+.
 
-This means:
-- Even if you say "edit photo.jpg", it asks "Where is photo.jpg located?"
-- Even in quick mode, it asks for paths
-- It never assumes files are on Desktop
-- It always asks where to save results
+## 🆕 What's New in v1.3.0
 
-**Why this change?** 100% accuracy, zero confusion, perfect file tracking
+### Major Simplification
+- **Single Unified Approach**: Removed all mode commands ($interactive, $quick, etc.)
+- **Interactive Intelligence**: One smart system handles everything through conversation
+- **Smarter Path Handling**: Asks for paths conversationally when needed, not mandatorily
+- **Confidence-Based Response**: Dynamic interaction from immediate execution to full guidance
+- **Cleaner Documentation**: Reduced to 3 essential reference documents
+- **Automatic Intent Detection**: System recognizes what you need and adapts
 
----
+### Maintained Excellence
+- All v1.2.0 image processing capabilities preserved
+- Enhanced MCP intelligence (Sequential and Cascade Thinking)
+- Same professional optimization patterns
+- Educational approach retained
+- Visual feedback for every operation
 
-## 🚀 What is This?
+.
 
-The Imagician Agent transforms natural language into professional image operations, making image editing 10x easier. **v1.2.0 ensures perfect accuracy by always asking for file paths first.**
+## ✨ Key Features
 
-**Key Benefits:**
-- **NEW: Always knows exactly which file to process**
-- Transform conversations into optimized images
-- No confusion between chat uploads and local files
-- Clear tracking of input and output locations
-- Interactive mode guides you through editing decisions
-- Professional results for web, email, and social media
-- Enhanced intelligence through MCP thinking tools
+- **Natural Language Only**: Just describe what you want to do with your images
+- **Interactive Intelligence**: Adaptive conversation for perfect optimization
+- **Automatic Detection**: Recognizes web vs email vs social media needs
+- **Triple MCP Support**: Imagician MCP (core), Sequential Thinking (simple), Cascade Thinking (complex)
+- **Smart Guidance**: Asks only essential questions (2-3 max)
+- **Best Practices Built-in**: Professional optimization patterns applied automatically
+- **Visual Feedback**: Clear before/after metrics and success confirmations
+- **Educational Focus**: Teaches image optimization concepts while working
+- **5-Minute Setup**: Complete optimization workflows ready in minutes
+- **Zero Technical Knowledge**: No understanding of formats or compression required
 
-**Key Principle:** The agent will ALWAYS ask where your files are before processing.
+.
 
----
+## 🚀 Quick Setup
 
-## 🖥️ How It Works on Mac
-
-### The Path-First Workflow (NEW in v1.2.0)
-
-**EVERY operation follows this sequence:**
-
-1. **You request something**: "optimize my photo"
-2. **Agent asks for path**: "Where is your photo located on your Mac?"
-3. **You provide path**: "~/Desktop/vacation.jpg"
-4. **Agent confirms**: "Found vacation.jpg (4.2MB). Is this correct?"
-5. **Agent asks output**: "Where should I save the result?"
-6. **You choose**: "Same folder" or custom path
-7. **Agent processes**: Shows exactly what it's doing
-8. **Agent confirms**: "Saved to ~/Desktop/vacation-optimized.jpg"
-
-### Understanding Mac File Paths
-
-**Valid path formats the agent accepts:**
-```bash
-~/Desktop/photo.jpg          # Most common - home directory shorthand
-~/Downloads/image.png        # Downloads folder
-~/Pictures/vacation/pic.jpg  # Nested folders
-/Users/john/Desktop/pic.jpg  # Full absolute path
-./images/photo.jpg           # Relative to current directory
-```
-
-**Common Mac directories:**
-- `~/Desktop/` - Your desktop
-- `~/Downloads/` - Downloaded files
-- `~/Documents/` - Document storage
-- `~/Pictures/` - Photo library
-- `~/Library/Mobile Documents/com~apple~CloudDocs/` - iCloud Drive
-
----
-
-## 📋 Quick Setup in Claude Desktop
-
-### Step 1: Install Imagician MCP
-1. Install Claude Desktop from [claude.ai/download](https://claude.ai/download)
-2. Install Docker Desktop from [docker.com](https://www.docker.com/products/docker-desktop/)
-3. Set up Imagician (see installation section below)
-
-### Step 2: Create a New Project in Claude
-1. Go to [claude.ai](https://claude.ai)
-2. Click "Projects" in the sidebar
+### Step 1: Create a Claude Project
+1. Go to claude.ai
+2. Click "Projects" in sidebar
 3. Click "Create project"
-4. Name it "Imagician Agent v1.2"
+4. Name it "Imagician Agent v1.3"
 
-### Step 3: Add the System Instructions
+### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
-2. Find the "Custom instructions" section
-3. Copy and paste: `Agent - Imagician MCP - v1.2.0.md`
+2. Find "Custom instructions" section
+3. Copy and paste: `Agent - Imagician MCP - v1.3.0.md`
 4. Save the project
 
-### Step 4: Upload Reference Documents
-Upload these to your project:
-- `Imagician - Interactive Mode - v1.2.0.md` (conversational guidance with path-first)
-- `Imagician - Patterns & Workflows - v1.2.0.md` (operation mappings with macOS paths)
-- `Imagician - Platform Specs & Defaults - v1.2.0.md` (platform specifications with path handling)
+### Step 3: Upload Reference Documents
+Add these 3 streamlined documents to your project:
+- `Imagician - Interactive Intelligence - v1.4.0.md` (Conversation examples and patterns)
+- `Imagician - Patterns & Workflows - v1.3.0.md` (All patterns and operation mappings)
+- `Imagician - Image Intelligence - v1.3.0.md` (Best practices and optimization strategies)
 
-### Step 5: Save Your Images Locally
-**IMPORTANT**: Save any images you want to edit to your Mac FIRST (Desktop, Downloads, etc.)
+### Step 4: Install Imagician MCP
+Follow the installation guide in the Installing MCPs section below to set up the Imagician MCP server.
 
-### Step 6: Start Editing!
-Begin any conversation, and Claude will ALWAYS ask for file paths first.
-
----
-
-## 🎨 Core Capabilities
-
-### What the Agent Can Do
-1. **Resize** - Change dimensions (always asks where file is first)
-2. **Convert** - Transform formats (asks for input/output paths)
-3. **Compress** - Reduce file size (confirms paths before processing)
-4. **Crop** - Extract regions (validates file location)
-5. **Rotate** - Rotate by angle (asks where to save)
-6. **Flip** - Mirror image (confirms both paths)
-7. **Get Info** - Extract metadata (asks for file path)
-8. **Batch Process** - Multiple images (asks for directory)
-
-### The Path-First Approach (v1.2.0)
-- **EVERY operation** starts with asking for file location
-- **NO assumptions** about where files are
-- **EXPLICIT confirmation** before processing
-- **CLEAR output paths** always specified
-
----
-
-## 🎯 How to Use (v1.2.0 Workflow)
-
-### Basic Usage - Path First!
-
-**Example 1: Simple Optimization**
+### Step 5: Start Optimizing
+Simply describe what you need:
 ```
-You: optimize my photo
-
-Agent: I'll help you optimize your photo! First, I need to know:
-
-📁 Where is your photo located on your Mac?
-
-Common locations:
-• Desktop: ~/Desktop/filename.jpg
-• Downloads: ~/Downloads/filename.jpg
-• Pictures: ~/Pictures/filename.jpg
-
-Please provide the complete path:
-
-You: ~/Desktop/sunset.jpg
-
-Agent: Great! I found sunset.jpg on your Desktop.
-
-📍 Input: ~/Desktop/sunset.jpg
-✓ Size: 5.2MB
-✓ Dimensions: 3840x2160
-
-Is this correct? (yes/no)
-
-You: yes
-
-Agent: Perfect! Now, where should I save the optimized version?
-
-Options:
-1. Same folder: ~/Desktop/sunset-optimized.jpg
-2. New subfolder: ~/Desktop/optimized/sunset.jpg
-3. Custom location (specify path)
-
-Your choice (1/2/3):
+optimize for web
+make this smaller
+convert to modern format
+prepare for email
+create thumbnails
+resize for Instagram
+compress these photos
 ```
 
-**Example 2: Even with Filename Provided**
+No modes or commands needed! The system automatically understands your intent.
+
+.
+
+## 🧠 Intelligent Conversation System
+
+### Confidence-Based Response
+
+The system automatically adjusts conversation depth based on request clarity:
+
+| Confidence | Range | Response Strategy | Example |
+|------------|-------|------------------|---------|
+| **Exact** | >0.95 | Immediate execution | "resize to 800px" → Resizes immediately |
+| **High** | 0.80-0.95 | Single clarification | "make smaller" → "Target size or percentage?" |
+| **Medium** | 0.50-0.79 | Guided exploration | "optimize this" → "For web, email, or storage?" |
+| **Low** | <0.50 | Full guidance | "help" → Complete capability overview |
+
+### Intelligent MCP Selection
+
+When thinking MCPs are available:
+
+| Tool | When Used | Thought Count | Purpose |
+|------|-----------|---------------|---------|
+| **Sequential Thinking** | Simple operations | 2-3 thoughts | Single resize, convert |
+| **Cascade Thinking** | Complex workflows | 5-7 thoughts | Responsive sets, batch |
+| **Imagician MCP** | Always | N/A | Actual image operations |
+
+The system automatically selects the appropriate tool based on:
+- Request complexity
+- Number of images involved
+- Optimization decisions needed
+- Quality trade-offs required
+- User confidence level
+
+.
+
+## 💬 Example Interactions
+
+### Simple Optimization
 ```
-You: resize photo.jpg to 800px
+User: optimize my photo
 
-Agent: I'll help you resize photo.jpg! To ensure I'm working with the right file:
+System: I'll optimize your photo! 
 
-📁 What's the complete path to photo.jpg on your Mac?
+What's your primary use:
+• Web display (fast loading)
+• Email attachment (under 5MB)
+• Social media (platform-specific)
+• General storage (balanced)
 
-For example:
-• ~/Desktop/photo.jpg
-• ~/Downloads/photo.jpg
-• ~/Documents/photo.jpg
-
-Please provide the full path:
-```
-
-### Mode Selection - All Require Paths!
-
-| Mode | Command | Path Requirement | First Question |
-|------|---------|------------------|----------------|
-| **Interactive** | Default | ALWAYS asks | "Where is your image located?" |
-| **Quick** | `$q` | STILL asks | "Where is your image located?" |
-| **Batch** | `$b` | Asks for directory | "Where are your images located?" |
-| **Platform** | `$p` | Asks first | "Where is your image located?" |
-| **Web** | `$w` | Asks first | "Where is your image located?" |
-
-**NO MODE SKIPS PATH COLLECTION IN v1.2.0**
-
----
-
-## 🧠 Intelligent MCP System
-
-### How It Works
-The v1.2.0 system includes two thinking tools that enhance decision-making:
-
-**Sequential Thinking (2-3 thoughts):**
-- Used for simple, single operations
-- Fast execution for clear requests
-- Direct path from request to result
-- Example: "Resize to 800px" → Immediate execution
-
-**Cascade Thinking (5-7 thoughts):**
-- Used for complex workflows and exploration
-- Evaluates multiple options and trade-offs
-- Plans multi-step operations intelligently
-- Example: "Optimize for my website" → Explores format options, sizes, quality balance
-
-### Automatic Selection
-The agent automatically chooses the right thinking tool AFTER collecting paths:
-
-| Your Request | MCP Selected | Why |
-|--------------|--------------|-----|
-| "Resize to 800px" | Sequential | Single clear operation |
-| "Make it smaller" | Cascade | Needs to explore resize vs compress |
-| "For my website" | Cascade | Multiple optimization decisions |
-| "Convert to JPEG" | Sequential | Direct format conversion |
-| "All social media" | Cascade | Complex multi-platform workflow |
-
-**Note:** Path collection ALWAYS happens first, before MCP selection.
-
----
-
-## ❌ Common Mistakes (What NOT to Do)
-
-### Mistake 1: Uploading to Chat
-```
-❌ WRONG: [Upload image to Claude chat] "optimize this"
-✅ RIGHT: Save to Desktop first, then say "optimize ~/Desktop/photo.jpg"
+[Optimizes based on choice with smart defaults]
 ```
 
-### Mistake 2: Assuming Agent Knows Location
+### Specific Operation
 ```
-❌ WRONG: "edit photo.jpg" (expecting it to find the file)
-✅ RIGHT: Wait for agent to ask "Where is photo.jpg located?"
-```
+User: resize to 1200px wide
 
-### Mistake 3: Using Windows Paths
-```
-❌ WRONG: "C:\Users\John\photo.jpg"
-✅ RIGHT: "~/Desktop/photo.jpg" or "/Users/john/Desktop/photo.jpg"
-```
+System: Resizing to 1200px width now!
 
----
+Processing...
+✅ Complete!
+Original: 3840x2160 (4.2MB)
+Result: 1200x675 (387KB)
 
-## ✅ Output Format (v1.2.0)
-
-### Every Operation Shows Full Paths
-```
-📸 Processing Image
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-📍 Reading from: ~/Desktop/vacation.jpg
-🔄 Applying optimizations...
-📍 Saving to: ~/Desktop/vacation-web.webp
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Before: ~/Desktop/vacation.jpg (4.2MB, JPEG)
-After: ~/Desktop/vacation-web.webp (1.1MB, WebP)
-
-✅ Complete! Your optimized image is at:
-~/Desktop/vacation-web.webp
+Maintained aspect ratio and optimized quality.
 ```
 
----
+### Complex Workflow
+```
+User: prepare images for my website
+
+System: I'll optimize your images for web! 
+
+Creating web-ready versions:
+• Maximum 1920px width
+• Converting to WebP (30% smaller)
+• Quality 85% (perfect balance)
+• Progressive loading enabled
+
+[Processes all images with web optimization]
+```
+
+### Uncertain Request
+```
+User: help with these photos
+
+System: I'm here to help with your photos!
+
+What would you like to do:
+• Resize or crop them
+• Optimize for web/email
+• Convert to different format
+• Reduce file size
+• Create multiple versions
+
+Just describe what you need!
+```
+
+.
+
+## 📊 What Gets Optimized
+
+Every optimization uses intelligent patterns:
+
+### Web Optimization
+```
+Web-Ready Images:
+├── Resized to max 1920px
+├── Converted to WebP format
+├── Quality 85% (sweet spot)
+├── Progressive encoding
+└── Metadata stripped
+Result: 60-70% smaller, loads 3x faster
+```
+
+### Email Preparation
+```
+Email-Ready:
+├── Max 1024px width
+├── JPEG format (universal)
+├── Under 5MB total
+├── Quality 80-85%
+└── Compatible everywhere
+Result: Attachable to any email
+```
+
+### Social Media
+```
+Platform Optimized:
+├── Instagram: 1080x1080 square
+├── Facebook: 1200x630 link preview
+├── Twitter/X: 1200x675 card
+├── LinkedIn: 1200x627 share
+└── All at 90% quality
+Result: Perfect for each platform
+```
+
+### Responsive Sets
+```
+Multiple Sizes:
+├── 320px (mobile)
+├── 640px (tablet)
+├── 1024px (desktop)
+├── 1920px (full)
+└── 150px (thumbnail)
+Result: Complete responsive image set
+```
+
+.
 
 ## 🔧 Installing MCPs (Required & Optional)
 
 ### Required: Imagician MCP
 
-The Imagician MCP provides core image editing capabilities.
-
-#### Option A: AI-Powered Docker Setup (Recommended)
+#### Option A: Docker Setup (Recommended)
 
 **Prerequisites:**
 - Docker Desktop installed ([Download Docker Desktop](https://www.docker.com/products/docker-desktop/))
 - Claude Desktop app ([Download Claude](https://claude.ai/download))
-- macOS (Intel or Apple Silicon)
 
-**AI-Assisted Installation:**
+**Installation Steps:**
+```bash
+# 1. Create directory
+mkdir -p "$HOME/MCP Servers"
+cd "$HOME/MCP Servers"
 
-Copy this prompt to Claude, ChatGPT, or any AI assistant:
+# 2. Clone repository
+git clone https://github.com/flowy11/imagician.git
+cd imagician
 
+# 3. Build Docker image
+docker build -t imagician-mcp .
+
+# 4. Run container
+docker run -d \
+  --name imagician-mcp \
+  -v ~/Pictures:/images \
+  imagician-mcp
 ```
-Help me set up Docker containers for the Imagician MCP image editing tools.
-
-I need to:
-1. Create a directory at "$HOME/MCP Servers"
-2. Clone these repos:
-   - https://github.com/flowy11/imagician.git (main tool)
-   - https://github.com/modelcontextprotocol/server-sequential-thinking.git (optional)
-   - https://github.com/cascadethinking/cascade-thinking-mcp.git (optional)
-3. Set up volume mounts for Mac directories (Desktop, Downloads, Documents, Pictures)
-4. Create Dockerfiles if needed
-5. Create a docker-compose.yml file with all services
-6. Configure Claude Desktop's claude_desktop_config.json
-7. Build and start the containers with docker-compose
-
-I'm on macOS. Please give me the exact commands to run, including how to:
-- Mount my Mac folders so Imagician can access them
-- Set up the proper permissions
-- Configure Claude Desktop to use the Docker containers
-```
-
-The AI will provide step-by-step commands for your Mac.
-
-**Verification:**
-1. Check Docker Desktop for running containers (imagician-mcp, and optionally sequential-thinking-mcp, cascade-thinking-mcp)
-2. Look for the 🔌 icon in Claude Desktop showing connected tools
-3. Test with: "I want to optimize an image" (agent should ask for file path)
 
 #### Option B: NPX Setup (Quick but Less Stable)
 
@@ -332,7 +280,7 @@ Add to Claude Desktop config:
   "mcpServers": {
     "imagician": {
       "command": "npx",
-      "args": ["-y", "@flowy11/imagician"]
+      "args": ["-y", "@flowy11/imagician-mcp"]
     }
   }
 }
@@ -340,13 +288,14 @@ Add to Claude Desktop config:
 
 ### Optional: Thinking MCPs (Enhanced Intelligence)
 
-For better optimization decisions, add thinking tools:
+For even better optimization decisions, add thinking tools:
 
 ```json
 {
   "mcpServers": {
     "imagician": {
-      // ... imagician config above
+      "command": "npx",
+      "args": ["-y", "@flowy11/imagician-mcp"]
     },
     "sequential-thinking": {
       "command": "npx",
@@ -362,32 +311,31 @@ For better optimization decisions, add thinking tools:
 
 **Benefits of Thinking MCPs:**
 - **Sequential Thinking**: 2x faster simple operations
-- **Cascade Thinking**: Smarter optimization workflows
+- **Cascade Thinking**: Smarter workflow planning
 - **Automatic selection**: Agent chooses the right tool
-- **Better decisions**: Explores all optimization options
-- **Intelligent analysis**: Evaluates quality trade-offs
+- **Better optimization**: Explores all options
 
-### Quick Verification
-1. Look for 🔌 icon in Claude Desktop showing all tools
-2. Test with: "optimize my photo" (should ask for path)
-3. Check Docker Desktop for running containers
+.
 
----
-
-## 🆘 Troubleshooting v1.2.0
+## 🆘 Troubleshooting
 
 ### Common Issues & Solutions
 
 | Issue | Solution |
 |-------|----------|
-| **"Why does it always ask for paths?"** | This is intentional in v1.2.0 for 100% accuracy |
-| **"I uploaded to chat"** | Save to Mac first, then provide path like ~/Desktop/image.jpg |
-| **"File not found"** | Check spelling (case-sensitive), include extension (.jpg) |
-| **"Too many questions"** | Path questions ensure accuracy: location → confirm → output → proceed |
-| **"MCP not connected"** | Restart Claude Desktop, check Docker is running |
-| **"Permission denied"** | Check file permissions, try copying to Desktop |
+| **"Can't find image"** | Provide full path like ~/Desktop/photo.jpg |
+| **"Format not supported"** | Check if JPEG, PNG, WebP, or AVIF |
+| **"Permission denied"** | Check file permissions or try different location |
+| **"Quality looks bad"** | Increase quality percentage or use less compression |
+| **"File still too large"** | Try more aggressive optimization or resize |
+| **"MCP not connected"** | Restart Claude Desktop |
 
 ### Quick Fixes
+
+**Path Issues:**
+- Use full paths starting with ~ or /
+- Escape spaces: `~/My Photos/pic.jpg` or `~/My\ Photos/pic.jpg`
+- Common locations: ~/Desktop/, ~/Downloads/, ~/Pictures/
 
 **Docker Issues:**
 ```bash
@@ -396,7 +344,7 @@ docker ps
 # View logs
 docker logs imagician-mcp
 # Restart
-docker-compose restart
+docker restart imagician-mcp
 ```
 
 **NPX Issues:**
@@ -404,140 +352,55 @@ docker-compose restart
 - Check config file syntax
 - Restart Claude Desktop
 
-### Path Finding Commands
-```bash
-# List images on Desktop
-ls ~/Desktop/*.{jpg,png,jpeg,webp}
-
-# Find a specific image
-find ~ -name "photo.jpg" 2>/dev/null
-
-# Check current directory
-pwd
-
-# Check file permissions
-ls -la ~/Desktop/photo.jpg
-```
-
-### MCP Connection Issues
-- **Docker not running**: Start Docker Desktop first
-- **Can't connect**: Restart Claude Desktop after config changes
-- **Wrong directory**: Ensure you're in "$HOME/MCP Servers"
-- **Permission errors**: Run terminal as administrator (Windows) or use sudo (Mac/Linux)
-- **Containers won't build**: Check Docker Desktop has enough resources allocated
-
-### Common Setup Problems
-- **"Command not found"**: Install Node.js for NPX method
-- **Tools not showing**: Restart Claude Desktop after config changes
-- **Volume mount issues**: Ensure Docker has permission to access your Mac folders
-- **Path not accessible**: Check Docker Desktop file sharing settings
-
-### AI Assistant Help
-If you encounter issues, ask an AI assistant:
-```
-I'm trying to set up Imagician MCP on Mac but getting [ERROR].
-Docker shows [STATUS].
-Claude Desktop shows [WHAT YOU SEE].
-Help me fix this.
-```
-
 ### Getting Help
-- For Docker issues: Check container logs in Docker Desktop
-- For NPX issues: Check Claude Desktop console logs
-- For path issues: Verify file exists with `ls` command
-- For general issues: The AI assistant can help diagnose problems
+- For image issues: The agent provides educational explanations
+- For MCP issues: Check container/process logs
+- For path issues: Agent guides you to correct format
 
----
+.
 
 ## ⚠️ Important Notes
 
-- **v1.2.0 ALWAYS asks for paths** - This is not optional
-- **Files must be on your Mac** - Not in chat uploads
-- **Original files preserved** - Never overwrites without permission
-- **Full paths shown** - Always know where files are
-- **macOS optimized** - Works with Mac filesystem
-- **MCP intelligence** - Sequential and Cascade Thinking enhance operations
+- **No commands needed** - Just describe what you want
+- **Conversation adapts** - From quick execution to full guidance
+- **Smart path handling** - Asks when needed, not always
+- **Best practices automatic** - Professional patterns applied
+- **Original preserved** - Never overwrites without permission
+- **Works without thinking MCPs** - But enhanced with them
+- **Educational by design** - Teaches while optimizing
+- **2-3 questions max** - Respects your time
+- **Visual feedback always** - See the optimization impact
+- **5-minute setup** - Ready to optimize quickly
 
----
+.
 
 ## 📦 Version History
 
-- **v1.2.0**: MANDATORY path asking, zero ambiguity operations, macOS optimization
-- **v1.1.0**: Added Sequential and Cascade Thinking MCP support
-- **v1.0.0**: Initial release with 5 operational modes
+- **v1.3.0**: Unified interactive intelligence, removed mode system, smarter path handling
+- **v1.2.0**: Mandatory path asking, enhanced safety
+- **v1.1.0**: Added MCP thinking tools
+- **v1.0.0**: Initial release
 
----
-
-## 🎯 Key Principles (v1.2.0)
-
-1. **Paths first, always** - Never process without explicit paths
-2. **Zero assumptions** - Always confirm file locations
-3. **Full transparency** - Show input and output paths
-4. **Education focus** - Teach proper Mac path usage
-5. **Error prevention** - Path validation prevents all file errors
-6. **User control** - You always know what's being processed
-7. **Intelligent processing** - MCP tools optimize decisions after paths confirmed
-
----
-
-## 📚 Quick Reference
-
-### The v1.2.0 Workflow (ALWAYS)
-1. **ASK** → "Where is your image located?"
-2. **VALIDATE** → Check file exists
-3. **CONFIRM** → "Is this correct?"
-4. **ASK OUTPUT** → "Where to save?"
-5. **PROCESS** → With confirmed paths
-6. **CONFIRM** → "Saved to [path]"
-
-### Common Operations (All Ask Paths First)
-| Request | First Question | Then What |
-|---------|---------------|-----------|
-| "make it smaller" | "Where is your image?" | Size/compress options |
-| "for my website" | "Where is your image?" | Web optimization |
-| "Instagram ready" | "Where is your image?" | 1080x1080 square |
-| "create thumbnail" | "Where is your image?" | 150x150 preview |
-| "batch process" | "Where are your images?" | Folder operations |
-
-### Mac Path Cheat Sheet
-| What You Want | Use This Path |
-|---------------|---------------|
-| Desktop file | `~/Desktop/filename.jpg` |
-| Downloads | `~/Downloads/filename.jpg` |
-| Pictures folder | `~/Pictures/filename.jpg` |
-| iCloud Drive | `~/Library/Mobile Documents/com~apple~CloudDocs/` |
-| Current folder | `./filename.jpg` |
-
-### Platform Specifications Quick Reference
-| Platform | Post | Story/Reel | Profile | Cover/Header |
-|----------|------|------------|---------|--------------|
-| Instagram | 1080x1080 | 1080x1920 | 320x320 | - |
-| Facebook | 1200x630 | 1080x1920 | 400x400 | 820x312 |
-| Twitter | 1200x675 | - | 400x400 | 1500x500 |
-| LinkedIn | 1200x627 | - | 400x400 | 1584x396 |
-| YouTube | - | - | 800x800 | 2560x1440 |
-| Pinterest | 1000x1500 | 1080x1920 | - | - |
-
----
+.
 
 ## 📚 Resources
 
 ### Core Tools
-- [Imagician MCP GitHub](https://github.com/flowy11/imagician) (Required)
-- [Claude Desktop](https://claude.ai/download) (Required)
-- [Docker Desktop](https://www.docker.com/products/docker-desktop/) (Required)
-
-### Optional Intelligence MCPs
-- [Sequential Thinking MCP](https://github.com/modelcontextprotocol/server-sequential-thinking)
-- [Cascade Thinking MCP](https://github.com/cascadethinking/cascade-thinking-mcp)
+- [Imagician MCP](https://github.com/flowy11/imagician) (Required)
+- [Sequential Thinking MCP](https://github.com/modelcontextprotocol/server-sequential-thinking) (Optional)
+- [Cascade Thinking MCP](https://github.com/cascadethinking/cascade-thinking-mcp) (Optional)
 
 ### Documentation
+- [WebP Information](https://developers.google.com/speed/webp)
+- [Image Optimization Guide](https://web.dev/fast/#optimize-your-images)
 - [MCP Protocol](https://modelcontextprotocol.io/)
-- [macOS Terminal Guide](https://support.apple.com/guide/terminal/welcome/mac)
-- [Understanding File Paths](https://www.howtogeek.com/181774/htg-explains-what-is-the-path-variable/)
-- [Web Image Optimization](https://web.dev/fast/#optimize-your-images)
-- [Social Media Image Sizes](https://sproutsocial.com/insights/social-media-image-sizes-guide/)
+- [Docker Desktop](https://docs.docker.com/desktop/)
 
----
+### Image Tools
+- [ImageMagick](https://imagemagick.org/) - Command line processing
+- [Sharp](https://sharp.pixelplumbing.com/) - Node.js library
+- [Squoosh](https://squoosh.app/) - Browser-based optimizer
 
-*v1.2.0 ensures perfect accuracy by always asking for file paths first. Every operation starts with "Where is your image located on your Mac?" - no exceptions. This guarantees you always know exactly what's being processed and where results are saved.*
+.
+
+*Transform natural language into optimized images through intelligent conversation. The system understands what you need and applies professional optimization automatically. Every image processed with the perfect balance of quality and file size.*
