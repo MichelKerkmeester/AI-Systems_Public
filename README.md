@@ -19,10 +19,10 @@ Some of my non-client AI systems that I made available to the public. They were 
 5. [Imagician Agent](#5--imagician-agent)
 
 ### ✏️ Writer Systems
-6. [Prompt Engineering Assistant](#6--prompt-engineering-assistant)
-7. [AI Systems Creator](#7--ai-systems-creator)
-8. [Branded Content Writer](#8--branded-content-writer)
-9. [Product Owner Writer](#9--product-owner-writer)
+6. [Product Owner Writer](#6--product-owner-writer)
+7. [Branded Content Writer](#7--branded-content-writer)
+8. [Prompt Engineering Assistant](#8--prompt-engineering-assistant)
+9. [AI Systems Creator](#9--ai-systems-creator)
 
 ### 💻 Development Systems
 10. [IDE System Prompt](#10--ide-system-prompt)
@@ -93,30 +93,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 ##### Automated content, documentation & prompt writing systems
 ——
 
-#### 6. 🎯 Prompt Engineering Assistant (v5.0.0) 
-**Transform vague requests into powerful AI prompts for ANY platform**
-- **8 Operating Modes**: Including 3 universal Builder sub-modes ($prototype, $website, $app)
-- **Intelligent Auto-Detection**: Weighted keyword analysis for automatic mode selection
-- **Smart MCP Selection**: Dynamic choice between Sequential (1-3) and Cascade (3-8) thinking
-- **Platform-Agnostic Prompts**: Creative briefs that let each platform leverage its unique strengths
-
-#### 7. 📋 AI Systems Creator (v3.0.0)
-**Generate professional AI system specifications and documentation**
-- **Easy System Creation**: Spec it, Build it, Document it
-- **6 Operating Modes**: Interactive, Analyze, Create, Update, Integrate, README
-- **Educational Focus**: Learn architecture through creation
-- **Prompt Improvement**: Invisible clarity enhancement 
-- **Implementation Bridge**: "Would you like help implementing this?" checkpoint after every specification
-
-#### 8. ✏️ Branded Content Writer (v4.0.0)
-**Marketing content with systematic authenticity and failure transparency**
-- **Interactive Modes**: Default conversational mode with visual clarity scoring, celebration mechanics, and guided failure discovery that uncovers campaign stories
-- **Natural Tone Shortcuts**: Quick tone switching ($natural, $vulnerable, $collaborative) with systematic imperfections (1 per 300-400 words) for genuine authenticity
-- **Voice & Tone Trinity**: Balanced personality system maintaining 50% Collaborative, 30% Vulnerable, 20% Empowering with audience-adaptive variations
-- **9 Copywriter Frameworks**: Intelligent selection from Simple (SVC, QPT), Medium (CASE, PATH), to Complex (STORY, HELP) with visual progress tracking
-- **Embedded Prompt Improvement**: Invisible clarity enhancement that expands abbreviations ("CTR" → "click-through rate") and structures vague requests without adding assumptions
-
-#### 9. 📋 Product Owner Writer (v5.0.0)
+#### 6. 📋 Product Owner Writer (v5.0.0)
 **Transform vague requests into professional dev tickets and documentation**
 - **4 Intelligent Modes**: Discovery (default), $ticket (auto-scaling), $spec (implementation), $doc (documentation)
 - **Interactive Guidance**: Default conversational mode teaches product thinking and documentation structure through practice
@@ -125,6 +102,29 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **Ticket Mode**: Tickets automatically scale from simple (2-3 sections) to complex (6-8 sections)
 - **Documentation Mode**: $doc mode creates user-focused product guides with feature sections and interactive audience questions
 - **Spec Mode**: $spec mode delivers frontend solutions (1-3 questions, copy-paste ready)
+
+#### 7. ✏️ Branded Content Writer (v4.0.0)
+**Marketing content with systematic authenticity and failure transparency**
+- **Interactive Modes**: Default conversational mode with visual clarity scoring, celebration mechanics, and guided failure discovery that uncovers campaign stories
+- **Natural Tone Shortcuts**: Quick tone switching ($natural, $vulnerable, $collaborative) with systematic imperfections (1 per 300-400 words) for genuine authenticity
+- **Voice & Tone Trinity**: Balanced personality system maintaining 50% Collaborative, 30% Vulnerable, 20% Empowering with audience-adaptive variations
+- **9 Copywriter Frameworks**: Intelligent selection from Simple (SVC, QPT), Medium (CASE, PATH), to Complex (STORY, HELP) with visual progress tracking
+- **Embedded Prompt Improvement**: Invisible clarity enhancement that expands abbreviations ("CTR" → "click-through rate") and structures vague requests without adding assumptions
+
+#### 8. 🎯 Prompt Engineering Assistant (v5.0.0) 
+**Transform vague requests into powerful AI prompts for ANY platform**
+- **8 Operating Modes**: Including 3 universal Builder sub-modes ($prototype, $website, $app)
+- **Intelligent Auto-Detection**: Weighted keyword analysis for automatic mode selection
+- **Smart MCP Selection**: Dynamic choice between Sequential (1-3) and Cascade (3-8) thinking
+- **Platform-Agnostic Prompts**: Creative briefs that let each platform leverage its unique strengths
+
+#### 9. 📋 AI Systems Creator (v3.0.0)
+**Generate professional AI system specifications and documentation**
+- **Easy System Creation**: Spec it, Build it, Document it
+- **6 Operating Modes**: Interactive, Analyze, Create, Update, Integrate, README
+- **Educational Focus**: Learn architecture through creation
+- **Prompt Improvement**: Invisible clarity enhancement 
+- **Implementation Bridge**: "Would you like help implementing this?" checkpoint after every specification
 
 .
 
