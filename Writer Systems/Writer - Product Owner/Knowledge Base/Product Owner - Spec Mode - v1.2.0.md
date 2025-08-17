@@ -1,4 +1,4 @@
-# Spec Mode - v1.2.0
+# Product Owner - Spec Mode - v1.2.0
 
 Interactive frontend implementation specs that skip discovery and go straight to building solutions.
 

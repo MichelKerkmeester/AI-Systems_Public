@@ -1,4 +1,4 @@
-# Patterns & Workflows - v1.2.0
+# macOS - Patterns & Workflows - v1.2.0
 
 Comprehensive pattern library for natural language to macOS UI operation mapping with intelligent conversation-based approach.
 

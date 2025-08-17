@@ -1,4 +1,4 @@
-# Interactive Intelligence - v1.2.0
+# macOS - Interactive Intelligence - v1.2.0
 
 The complete specification for the unified conversational interface that handles all macOS automation through adaptive dialogue.
 

@@ -1,4 +1,4 @@
-# Platform Integration - v1.1.0
+# Product Owner - Platform Integration - v1.1.0
 
 Lightweight integration between Product Owner system and intelligent ClickUp/Notion MCPs.
 

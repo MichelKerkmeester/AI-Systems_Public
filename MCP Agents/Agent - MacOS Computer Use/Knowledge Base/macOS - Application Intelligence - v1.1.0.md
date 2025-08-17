@@ -1,4 +1,4 @@
-# Application Intelligence - v1.1.0
+# macOS -Application Intelligence - v1.1.0
 
 App-specific best practices, shortcuts, and automation patterns for macOS applications with enhanced Interactive Intelligence integration.
 

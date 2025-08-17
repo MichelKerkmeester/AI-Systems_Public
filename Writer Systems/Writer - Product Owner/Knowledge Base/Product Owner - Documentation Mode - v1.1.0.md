@@ -1,4 +1,4 @@
-# Documentation Mode - v1.1.0
+# Product Owner - Documentation Mode - v1.1.0
 
 Complete specification for `$doc` mode - creating user-focused product documentation through interactive guidance.
 
