@@ -18,8 +18,7 @@ A sophisticated marketing content system that transforms challenges into authent
 - **Celebration System**: Gamified content creation with failure achievements
 - **Framework Combinations**: Mix frameworks for complex narratives
 - **Platform-Specific Optimization**: Adapts voice for LinkedIn, Twitter, Email, Blog
-
-.
+- **Native Thinking Integration**: Customizable thinking rounds for deeper analysis
 
 ## Overview
 
@@ -38,8 +37,6 @@ Natural imperfections are deliberately engineered, not random:
 - Frequency: 1 per 300-400 words
 - Types: "Still testing...", "Not sure why...", "... anyway."
 - Purpose: Build trust through genuine uncertainty
-
-.
 
 ## 🚀 Quick Setup
 
@@ -70,17 +67,15 @@ $improve make this sound less corporate
 Our email campaign finally worked (triggers interactive exploration)
 ```
 
-.
-
 ## 🎛️ Five Interactive Modes
 
-| Mode | Activation | Purpose | Visual Features | MCP Usage |
-|------|------------|---------|-----------------|-----------|
-| **$interactive** | `$interactive` / `$int` (DEFAULT) | Guided story discovery | Clarity scores, celebrations, progress bars | Cascade (3-5+) |
-| **$write** | `$write` / `$w` | General content | Optional progress | Sequential (2-3) |
-| **$share** | `$share` / `$s` | Campaign insights | Audience detection | Sequential (2-3) |
-| **$connect** | `$connect` / `$c` | Community building | Engagement metrics | Sequential/Cascade |
-| **$improve** | `$improve` / `$i` | Optimize existing | Full VEST dashboard | Cascade (3-5+) |
+| Mode | Activation | Purpose | Visual Features | Thinking Approach |
+|------|------------|---------|-----------------|-------------------|
+| **$interactive** | `$interactive` / `$int` (DEFAULT) | Guided story discovery | Clarity scores, celebrations, progress bars | User-defined rounds |
+| **$write** | `$write` / `$w` | General content | Optional progress | User-defined rounds |
+| **$share** | `$share` / `$s` | Campaign insights | Audience detection | User-defined rounds |
+| **$connect** | `$connect` / `$c` | Community building | Engagement metrics | User-defined rounds |
+| **$improve** | `$improve` / `$i` | Optimize existing | Full VEST dashboard | User-defined rounds |
 
 ### Interactive Mode Magic
 ```
@@ -92,8 +87,6 @@ You shared what didn't work!
 
 Next: Tell me about the metric that surprised everyone...
 ```
-
-.
 
 ## 🏗️ Nine Copywriter Frameworks
 
@@ -121,8 +114,6 @@ S: ████ Stakes revealed
 E: ██░░ Evolution pending
 ```
 
-.
-
 ## 🎨 Natural Tone Shortcuts
 
 ### Quick Tone Switching
@@ -140,8 +131,6 @@ E: ██░░ Evolution pending
 - Self-correction: "Wait, better example:"
 - Enthusiasm: "This actually worked!"
 - Trailing: "... anyway." "... still figuring it out."
-
-.
 
 ## 🎯 Audience Detection & Routing
 
@@ -167,13 +156,11 @@ E: ██░░ Evolution pending
 - Adapts: Data depth, code snippets, accuracy focus
 - Metrics: Model accuracy, API response, attribution
 
-.
-
 ## 📊 Visual VEST Dashboard
 
 ```
 📊 Marketing Content Effectiveness Report
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Overall Score: 19.2/20 (VEST Framework)
 
@@ -181,7 +168,7 @@ Value     ████████░░ 85% → Clear benefit
 Economy   █████████░ 90% → Concise delivery
 Sound     ████████░░ 87% → Authentic voice
 Truth     ██████████ 95% ✓ Evidence-based
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Total: 18.6/20 ✅ Ship it!
 
 Voice Trinity Balance:
@@ -199,8 +186,6 @@ Marketing Story Excellence:
 🎉 Achievement: "Quality Champion!"
 ```
 
-.
-
 ## 🔧 Embedded Prompt Improvement
 
 ### Invisible Clarity Enhancement
@@ -217,86 +202,21 @@ The system automatically improves vague requests without you noticing:
 - "urgently need" → stays "urgently need" (urgency maintained)
 - Mode commands ($write, $improve) → never modified
 
-.
+## 🧠 Native Thinking Integration
 
-## 🔧 Installing MCP Tools (Recommended)
+### How Thinking Works
+The system uses Claude's native thinking capabilities to analyze your request and create better content. For every request, you'll be asked how many rounds of thinking you'd like (unless in discovery phase).
 
-The system intelligently selects between Sequential and Cascade Thinking based on content complexity. Choose either Docker (stable) or NPX (quick) installation:
+**Thinking Rounds Guide:**
+- **1-2 rounds**: Simple edits, quick rewrites
+- **3-4 rounds**: Standard content creation
+- **5-6 rounds**: Complex narratives, multiple audiences
+- **7+ rounds**: Comprehensive campaigns, deep analysis
 
-### Option A: AI-Powered Docker Setup (Recommended)
-
-**Prerequisites:**
-- Docker Desktop installed ([Download Docker Desktop](https://www.docker.com/products/docker-desktop/))
-- Claude Desktop app ([Download Claude](https://claude.ai/download))
-
-**AI-Assisted Installation:**
-
-Copy this prompt to Claude, ChatGPT, or any AI assistant:
-
-```
-Help me set up Docker containers for the Branded Content Writer MCP tools.
-
-I need to:
-1. Create a directory at "$HOME/MCP Servers"
-2. Clone these repos:
-   - https://github.com/arben-adm/mcp-sequential-thinking.git
-   - https://github.com/drewdotpro/cascade-thinking-mcp.git
-3. Create a docker-compose.yml file with services for both
-4. Configure Claude Desktop's claude_desktop_config.json
-5. Start the containers with docker-compose
-
-I'm on [Windows/Mac/Linux]. Please give me the exact commands to run.
-```
-
-The AI will provide step-by-step commands for your operating system.
-
-**Verification:**
-1. Check Docker Desktop for 2 running containers
-2. Look for the 🔌 icon in Claude Desktop showing available tools
-3. Test with: "$write a post about marketing automation"
-
-### Option B: NPX Installation (Quick but Less Stable)
-
-Add to Claude Desktop config file:
-- **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
-- **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
-
-```json
-{
-  "mcpServers": {
-    "sequential-thinking": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
-    },
-    "cascade-thinking": {
-      "command": "npx",
-      "args": ["-y", "cascade-thinking-mcp"]
-    }
-  }
-}
-```
-
-Save and restart Claude Desktop.
-
-### MCP Tool Selection
-
-The system intelligently selects thinking tools based on mode and complexity:
-
-| Mode | Tool Selection | Thoughts Used |
-|------|---------------|---------------|
-| **Interactive** | **Always Cascade** | 3-5+ thoughts with exploration |
-| **Write ($w)** | Sequential | 2-3 thoughts for content |
-| **Share ($s)** | Sequential | 2-3 thoughts for insights |
-| **Connect ($c)** | Sequential/Cascade | 2-4 thoughts based on complexity |
-| **Improve ($i)** | Cascade | 3-5+ thoughts with branches |
-
-**Content Complexity Triggers:**
-- **Mixed audiences** → Cascade Thinking
-- **Campaign narratives** → Cascade Thinking
-- **Simple edits** → Sequential Thinking
-- **Framework application** → Sequential Thinking
-
-.
+**When to Skip Thinking Prompt:**
+- During interactive discovery questions
+- When gathering initial information
+- Before having enough context to create
 
 ## 💡 Pro Tips
 
@@ -335,8 +255,6 @@ Understanding: ████████░░ 82% ↗
 Next unlock: Share team insight → ⭐ Achievement
 ```
 
-.
-
 ## 🎨 Customization
 
 ### Transform to Any Brand Voice
@@ -351,8 +269,6 @@ Transform into [YOUR BRAND] voice:
 - Preserve celebration mechanics
 ```
 
-.
-
 ## 🆘 Troubleshooting
 
 ### Content Issues
@@ -361,12 +277,10 @@ Transform into [YOUR BRAND] voice:
 - **Wrong audience**: System will auto-detect from keywords
 - **Low VEST score**: Use $improve mode for automatic enhancement
 
-### MCP Issues
-- **Tools not showing**: Restart Claude Desktop after config
-- **Docker errors**: Ensure Docker Desktop is running
-- **Cascade not working**: Check repository is cloned correctly
-
-.
+### Thinking Issues
+- **Too shallow**: Increase thinking rounds
+- **Taking too long**: Reduce thinking rounds
+- **Not sure how many**: Start with 3-4 rounds
 
 ## 📚 System Architecture
 
@@ -386,8 +300,6 @@ Transform into [YOUR BRAND] voice:
 - **Imperfections**: Systematically included
 - **Team Credit**: Naturally integrated
 
-.
-
 ## ⚠️ Important Principles
 
 1. **Failure First**: Always start with what didn't work
@@ -396,12 +308,10 @@ Transform into [YOUR BRAND] voice:
 4. **Test Everything**: End with actionable next steps
 5. **Stay Human**: Systematic authenticity beats perfect polish
 
-.
-
 ## 📦 Version History
 
-- **v4.0.0**: Voice Trinity, 5 modes, embedded improvement, visual celebrations
-- **v3.0.0**: Interactive default, VEST scoring, MCP integration
+- **v4.0.0**: Voice Trinity, 5 modes, embedded improvement, visual celebrations, native thinking
+- **v3.0.0**: Interactive default, VEST scoring
 - **v2.0.0**: Framework library, improve mode
 - **v1.0.0**: Initial Sarah Chen implementation
 

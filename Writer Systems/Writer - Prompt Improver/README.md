@@ -1,40 +1,33 @@
-# Prompt Engineering Assistant - User Guide v5.0.0
+# Prompt Engineering Assistant - User Guide v6.0.0
 
 A comprehensive system that transforms vague requests into clear, effective AI prompts using proven frameworks, systematic evaluation, and intelligent refinement. Features 8 operating modes including 3 specialized Builder sub-modes for creating universal creative briefs that work on ANY AI development platform while maintaining resource efficiency.
 
-## 🆕 What's New in v5.0.0
+## 🆕 What's New in v6.0.0
 
-- **Universal Platform Support**: Builder modes now work on ALL AI platforms (Bolt.new, MagicPatterns, v0, Cursor, Windsurf, Replit, Lovable, etc.)
-- **Builder Mode Evolution**: Formerly "Lovable modes" now create universal creative briefs
-- **Platform-Agnostic Language**: Prompts adapt to any AI development platform
-- **Creative Direction Philosophy**: Focus on goals and mood, not prescriptive specifications
-- **AI Design Freedom**: Each platform can leverage its unique strengths
-- **Resource Optimization**: Universal three-phase approach for all platforms
-- **Exploration-First Approach**: Discover what works before committing resources
-
-.
+- **Native Claude Thinking Integration**: Leverages Claude's built-in thinking capabilities
+- **User-Controlled Thinking Rounds**: You decide how many thinking rounds for optimal results
+- **Interactive Thinking Selection**: System asks for your preference on complexity
+- **No External Dependencies**: Works entirely with Claude's native features
+- **Universal Platform Support**: Builder modes work on ALL AI platforms
+- **Enhanced Decision Making**: Transparent thinking process for better results
 
 ## Overview
 
 The Prompt Engineering Assistant helps users craft powerful, precise prompts for any AI system, with specialized support for creating universal Builder briefs that work on ANY AI development platform. With six core frameworks and intelligent enhancement algorithms, it delivers professional-grade prompts that maximize AI creativity and performance while minimizing resource usage.
 
-.
-
 ## ✨ Key Features
 
 - **8 Specialized Modes**: Including 3 Builder sub-modes for universal AI platforms
+- **Native Claude Thinking**: Built-in thinking capabilities, no external tools needed
+- **User-Controlled Complexity**: You choose the thinking depth (1-10 rounds)
 - **Universal Compatibility**: Works with Bolt.new, MagicPatterns, v0, Cursor, Windsurf, Replit, Lovable, and more
 - **Creative Brief Approach**: Goals, mood, and outcomes over prescriptive specifications
 - **6 Core Frameworks**: Universal (CRAFT, SPARK, PRISM) + Creative-focused (VISION, CONVERT, SCALE)
-- **Intelligent MCP Selection**: Automatic choice between Sequential and Cascade thinking
-- **Platform Flexibility**: Each AI platform can interpret creatively
 - **Smart Resource Optimization**: Exploration-first strategies work everywhere
 - **AI Design Freedom**: Enable creativity within guided constraints
 - **Compact Progress Tracking**: Streamlined reports with creative metrics
 - **Interactive Mode**: Conversational guidance focusing on goals and feelings
 - **Artifact-Based Delivery**: All prompts delivered in reusable markdown artifacts
-
-.
 
 ## 🚀 Quick Setup
 
@@ -42,12 +35,12 @@ The Prompt Engineering Assistant helps users craft powerful, precise prompts for
 1. Go to claude.ai
 2. Click "Projects" in sidebar
 3. Click "Create project"
-4. Name it "Prompt Engineering Assistant v5.0.0"
+4. Name it "Prompt Engineering Assistant v6.0.0"
 
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Writer - Prompt Improver - v5.0.0.md`
+3. Copy and paste: `Writer - Prompt Improver - v6.0.0.md`
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
@@ -70,8 +63,6 @@ $website conversion-focused landing
 $app task management solution
 $builder create a SaaS platform
 ```
-
-.
 
 ## 🎛️ Operating Modes
 
@@ -107,9 +98,25 @@ $builder create a SaaS platform
 - **WordPress** - CMS platforms
 - **ANY AI Platform** - Universal principles apply
 
-.
+## 🧠 Native Claude Thinking
 
-## 🗂️ Frameworks Overview (v5.0.0)
+### How Thinking Works in v6.0.0
+
+The system uses Claude's native thinking capability to analyze and enhance prompts. You control the depth:
+
+**Thinking Rounds Guide:**
+- **1-2 rounds**: Simple enhancements, clear requests
+- **3-4 rounds**: Standard improvements, moderate complexity
+- **5-6 rounds**: Complex analysis, multiple requirements
+- **7-8 rounds**: Deep optimization, comprehensive refinement
+- **9-10 rounds**: Maximum depth, full framework application
+
+### User Interaction
+The system will ask: **"How many thinking rounds would you like me to use? (1-10, or 'auto' for my recommendation)"**
+
+This happens for all modes except during discovery phases in interactive mode.
+
+## 🗂️ Frameworks Overview (v6.0.0)
 
 ### Universal Frameworks
 
@@ -160,9 +167,7 @@ $builder create a SaaS platform
 - **L** - Logic (business rules, not implementation)
 - **E** - Experience (user expectations and feelings)
 
-.
-
-## 🎨 Creative Direction Philosophy (Universal in v5.0.0)
+## 🎨 Creative Direction Philosophy (Universal in v6.0.0)
 
 ### Instead of Specifications, We Provide:
 
@@ -188,13 +193,11 @@ $builder create a SaaS platform
 - No forced uniformity
 - Celebrate platform diversity
 
-.
-
 ## 📊 Compact Report Examples
 
 ### Standard Enhancement
 ```
-📊 Enhancement: 85% ↗ | Mode: $improve | Method: CRAFT + SPARK
+📊 Enhancement: 85% ↗ | Mode: $improve | Thinking: 3 rounds
 
 CRAFT Coverage: C:80% R:100% A:80% F:60% T:100%
 Before → After: 3 words (2/10 clarity) → 87 words (9/10 clarity)
@@ -207,7 +210,7 @@ Key Improvements:
 
 ### Universal App Builder Brief
 ```
-📊 Enhancement: 92% ↗ | Mode: $app | Method: SCALE Framework
+📊 Enhancement: 92% ↗ | Mode: $app | Thinking: 5 rounds
 
 SCALE Coverage: S:100% C:80% A:100% L:80% E:90%
 Before → After: 5 words (3/10 clarity) → 450 words (10/10 clarity)
@@ -225,8 +228,6 @@ Key Improvements:
 
 Note: This creative brief works on Bolt.new, v0, Cursor, or ANY AI platform
 ```
-
-.
 
 ## 💰 Smart Resource Optimization (Universal)
 
@@ -255,8 +256,6 @@ All Builder prompts include universal resource optimization:
 - Third-party services
 - Enterprise features
 
-.
-
 ## 🎨 Creative Direction Matching 
 
 When users provide references, we extract:
@@ -273,60 +272,6 @@ We DON'T extract:
 - Fixed implementations
 - Prescriptive layouts
 
-.
-
-## 🔧 Installing MCP Tools (Recommended)
-
-The system intelligently selects between Sequential and Cascade Thinking based on prompt complexity. Choose either Docker (stable) or NPX (quick) installation:
-
-### Option A: AI-Powered Docker Setup (Recommended)
-
-**Prerequisites:**
-- Docker Desktop installed ([Download Docker Desktop](https://www.docker.com/products/docker-desktop/))
-- Claude Desktop app ([Download Claude](https://claude.ai/download))
-
-**AI-Assisted Installation:**
-
-Copy this prompt to Claude, ChatGPT, or any AI assistant:
-
-```
-Help me set up Docker containers for the Prompt Engineering Assistant MCP tools.
-
-I need to:
-1. Create a directory at "$HOME/MCP Servers"
-2. Clone these repos:
-   - https://github.com/sequentialthinking/sequential-thinking-mcp
-   - https://github.com/cascadethinking/cascade-thinking-mcp
-3. Create a docker-compose.yml file with services for both
-4. Configure Claude Desktop's claude_desktop_config.json
-5. Start the containers with docker-compose
-
-I'm on [Windows/Mac/Linux]. Please give me the exact commands to run.
-```
-
-### Option B: NPX Installation (Quick but Less Stable)
-
-Add to Claude Desktop config file:
-- **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
-- **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
-
-```json
-{
-  "mcpServers": {
-    "sequential-thinking": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
-    },
-    "cascade-thinking": {
-      "command": "npx",
-      "args": ["-y", "cascade-thinking-mcp"]
-    }
-  }
-}
-```
-
-.
-
 ## 🆘 Troubleshooting
 
 ### Creative Direction Issues
@@ -336,20 +281,21 @@ Add to Claude Desktop config file:
 - **Unclear direction?** Use $interactive to clarify goals
 - **Resource concerns?** Start with exploration phase only
 
-### MCP Connection Issues
-- **Docker not running**: Start Docker Desktop
-- **Can't connect**: Restart Claude Desktop
-- **Tools not showing**: Restart Claude Desktop after config changes
+### Thinking Rounds Selection
+- **Not sure how many?** Choose 'auto' for system recommendation
+- **Simple task?** 1-3 rounds usually sufficient
+- **Complex requirements?** 5-7 rounds recommended
+- **Maximum quality?** 8-10 rounds for comprehensive analysis
 
 ### Common Setup Problems
-- **"Command not found"**: Ensure Node.js is installed for NPX method
-- **Containers won't start**: Check Docker Desktop is running
-- **Rate limits**: Both tools handle this gracefully with retries
+- **Mode not recognized**: Check spelling and prefix ($)
+- **Output unclear**: Request more thinking rounds
+- **Too complex**: Break into smaller requests
 
-.
+## ⚠️ Important Notes (v6.0.0)
 
-## ⚠️ Important Notes (v5.0.0)
-
+- **Native thinking integration** - Uses Claude's built-in capabilities
+- **User-controlled complexity** - You choose thinking depth
 - **Universal platform support** - Works on ANY AI development platform
 - **Creates creative briefs** - Goals and mood, not specifications
 - **Enables AI creativity** - Freedom within guided constraints
@@ -358,12 +304,10 @@ Add to Claude Desktop config file:
 - **Smart resource optimization** - Works across all platforms
 - **Creative matching supported** - Extracts mood from references
 - **No prescriptive code** - Platform-agnostic approach
-- **Works without MCPs** - But enhanced with them
-
-.
 
 ## 📦 Version History
 
+- **v6.0.0**: Native Claude thinking, user-controlled rounds, no external dependencies
 - **v5.0.0**: Universal platform support, Builder mode replaces Lovable, works on ALL AI platforms
 - **v4.2.0**: Creative direction philosophy, AI design freedom, exploration-first approach
 - **v4.1.0**: Reorganized architecture prioritizing core prompt improvement logic
@@ -373,20 +317,17 @@ Add to Claude Desktop config file:
 - **v2.0.0**: Complete rewrite with 5 modes, visual dashboards
 - **v1.0.0**: Initial CRAFT framework implementation
 
-.
+## 🎯 Key Principles (v6.0.0)
 
-## 🎯 Key Principles (v5.0.0)
-
-1. **Universal compatibility** - Works on ANY AI platform
-2. **Create creative briefs, not prescriptive specs** - Enable AI creativity
-3. **Goals over specifications** - Focus on outcomes and feelings
-4. **Explore before building** - Validate concepts with simple prototypes
-5. **Platform flexibility** - Each platform can excel differently
-6. **Trust AI creativity** - Provide direction, not rigid constraints
-7. **User feedback drives features** - Build what works, not what's planned
-8. **Preserve creative freedom** - Enable innovation within guidelines
-
-.
+1. **User-controlled thinking** - You decide the analysis depth
+2. **Universal compatibility** - Works on ANY AI platform
+3. **Create creative briefs, not prescriptive specs** - Enable AI creativity
+4. **Goals over specifications** - Focus on outcomes and feelings
+5. **Explore before building** - Validate concepts with simple prototypes
+6. **Platform flexibility** - Each platform can excel differently
+7. **Trust AI creativity** - Provide direction, not rigid constraints
+8. **User feedback drives features** - Build what works, not what's planned
+9. **Preserve creative freedom** - Enable innovation within guidelines
 
 ## 📚 Additional Resources
 
@@ -401,12 +342,6 @@ Add to Claude Desktop config file:
 - [Webflow](https://webflow.com) - Visual web builder
 - [Framer](https://framer.com) - Interactive design tool
 
-### MCP Tools
-- [MCP Protocol Guide](https://modelcontextprotocol.io/)
-- [Docker Desktop Help](https://docs.docker.com/desktop/)
-- [Sequential Thinking MCP](https://github.com/sequentialthinking/sequential-thinking-mcp)
-- [Cascade Thinking MCP](https://github.com/cascadethinking/cascade-thinking-mcp)
-
 ---
 
-*Transform vague requests into universal creative briefs. Enable AI creativity through goals and mood across ANY platform. Create exploration prompts, not rigid specifications. Optimize for discovery and iteration on all AI development tools.*
+*Transform vague requests into universal creative briefs. Enable AI creativity through goals and mood across ANY platform. Create exploration prompts, not rigid specifications. Optimize for discovery and iteration on all AI development tools. Now with native Claude thinking - you control the depth!*

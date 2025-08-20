@@ -1,10 +1,10 @@
-# Product Owner System - User Guide v5.0.0
+# Product Owner System - User Guide v5.1.0
 
 The Product Owner system helps teams create professional development tickets, implementation specs, and product documentation through intelligent interactive guidance. By focusing on WHAT needs doing and WHY it matters (not HOW to implement), it bridges the communication gap between product and development teams.
 
 ## 📑 Table of Contents
 
-- [🆕 What's New in v5.0.0](#-whats-new-in-v500)
+- [🆕 What's New in v5.1.0](#-whats-new-in-v510)
 - [✨ Key Features](#-key-features)
 - [🚀 Quick Setup](#-quick-setup)
 - [🎛️ Operating Modes](#️-operating-modes)
@@ -20,30 +20,31 @@ The Product Owner system helps teams create professional development tickets, im
 
 .
 
-## 🆕 What's New in v5.0.0
+## 🆕 What's New in v5.1.0
 
-### Unified & Intelligent System 🎯
-- **Unified $ticket mode**: Replaces $quick/$standard/$complex with intelligent auto-scaling
-- **All modes interactive**: Every creation flow uses conversational guidance
-- **Smart complexity detection**: System automatically scales ticket complexity
-- **Skip discovery**: $ticket, $spec, and $doc skip the "what to create" phase
-- **Symbol update**: ⌥ replaces ≈ for "Reasons why"
-- **Streamlined experience**: Less choices, better outcomes
+### Native Thinking Integration 🧠
+- **Native Claude thinking**: Replaced external MCPs with Claude's native thinking capabilities
+- **User-controlled thinking**: System asks for desired thinking rounds (1-10)
+- **Smart thinking skip**: Discovery phase skips thinking round question
+- **Maintained intelligence**: All auto-scaling and detection features preserved
+- **Simplified setup**: No external tool dependencies required
 
 ### Maintained Excellence
-- **Platform Integration**: Direct ClickUp/Notion workspace creation
+- **Unified $ticket mode**: Intelligent auto-scaling remains
+- **All modes interactive**: Every creation flow uses conversational guidance
+- **Platform Integration**: Direct ClickUp workspace creation
 - **Professional formatting**: Consistent symbols and structure
 - **Educational focus**: Teaches best practices through interaction
-- **2-minute rule**: All content readable in under 2 minutes
 
 .
 
 ## ✨ Key Features
 
 - **4 Intelligent Modes**: Discovery (default), $ticket (auto-scaling), $spec (implementation), $doc (documentation)
+- **Native Thinking**: User-controlled thinking rounds for quality output
 - **Interactive Everything**: All modes guide users through creation
 - **Automatic Complexity**: Tickets scale from simple (2-3 sections) to complex (6-8 sections)
-- **Platform Ready**: Direct ClickUp/Notion integration after creation
+- **Platform Ready**: Direct ClickUp integration after creation
 - **Smart Detection**: System recognizes intent and adjusts accordingly
 - **Professional Symbols**: ⌘, ◇, ◻️, ◊, →, ✦, ✓, ⊗, ⚠️, ⌥, 📚
 - **Developer Clarity**: User-specified scope, structured descriptions
@@ -57,25 +58,25 @@ The Product Owner system helps teams create professional development tickets, im
 1. Go to claude.ai
 2. Click "Projects" in sidebar
 3. Click "Create project"
-4. Name it "Product Owner v5.0.0"
+4. Name it "Product Owner v5.1.0"
 
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Product Owner - Writer - v5.0.0.md`
+3. Copy and paste: `Product Owner - Writer - v5.1.0.md`
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
 Add these to your project's knowledge base:
-- `Product Owner - Templates, Standards & Examples - v5.0.0.md`
-- `Product Owner - Interactive Mode - v5.0.0.md`
-- `Product Owner - Documentation Mode - v5.0.0.md`
-- `Product Owner - Spec Mode - v5.0.0.md`
-- `Product Owner - Platform Integration - v5.0.0.md`
-- `Product Owner - Quick Reference Card - v5.0.0.md`
-- `Product Owner - Prompt Improvement - v5.0.0.md`
+- `Product Owner - Templates, Standards & Examples - v5.1.0.md`
+- `Product Owner - Interactive Mode - v5.1.0.md`
+- `Product Owner - Documentation Mode - v5.1.0.md`
+- `Product Owner - Spec Mode - v5.1.0.md`
+- `Product Owner - Platform Integration - v5.1.0.md`
+- `Product Owner - Quick Reference Card - v5.1.0.md`
+- `Product Owner - Prompt Improvement - v5.1.0.md`
 
-### Step 4: Install MCP Tools (Recommended)
+### Step 4: Install MCP Tools (Optional - for ClickUp only)
 See [MCP Installation](#-installing-mcp-tools) section below
 
 ### Step 5: Start Creating
@@ -90,8 +91,7 @@ After any creation:
 ```
 📦 Add to your workspace?
 1. ClickUp - Task management, sprints
-2. Notion - Documentation, wikis
-3. Skip - Keep as artifact only
+2. Skip - Keep as artifact only
 ```
 
 .
@@ -122,6 +122,14 @@ What would you like to create?
 - `$spec` → Straight to implementation questions
 - `$doc` → Straight to documentation questions
 
+**Thinking Rounds (asked after initial input):**
+```
+How many thinking rounds should I use? (1-10)
+- Simple requests: 1-2 rounds
+- Standard features: 3-5 rounds  
+- Complex initiatives: 6-10 rounds
+```
+
 .
 
 ## 🎯 Automatic Complexity Detection
@@ -130,11 +138,11 @@ What would you like to create?
 
 The system intelligently detects complexity based on your responses:
 
-| Indicators | Complexity | Sections | Resolution Items |
-|------------|------------|----------|------------------|
-| Bug fix, small change | **Simple** | 2-3 | 4-6 |
-| Feature, clear scope | **Standard** | 4-5 | 8-12 |
-| Platform, integration | **Complex** | 6-8 | 12-20 |
+| Indicators | Complexity | Sections | Resolution Items | Suggested Thinking |
+|------------|------------|----------|------------------|-------------------|
+| Bug fix, small change | **Simple** | 2-3 | 4-6 | 1-2 rounds |
+| Feature, clear scope | **Standard** | 4-5 | 8-12 | 3-5 rounds |
+| Platform, integration | **Complex** | 6-8 | 12-20 | 6-10 rounds |
 
 ### Example Flow
 ```
@@ -142,7 +150,12 @@ User: $ticket payment platform
 
 System: Let's create your payment platform ticket! 🎯
 
-Tell me about this payment platform:
+How many thinking rounds should I use? (1-10)
+Suggested: 6-8 for complex platform work
+
+User: 7
+
+System: Tell me about this payment platform:
 - What payment methods?
 - New or updating?
 - Compliance needs?
@@ -161,7 +174,12 @@ User: $spec data table
 
 System: Let's build your data table! 🔧
 
-Quick setup:
+How many thinking rounds should I use? (1-10)
+Suggested: 2-3 for component implementation
+
+User: 3
+
+System: Quick setup:
 1. Framework? (React/Vue/Vanilla)
 2. Features? (sorting, filtering, pagination)
 3. Data size?
@@ -179,7 +197,12 @@ User: $doc user dashboard
 
 System: Let's document the user dashboard! 📚
 
-1. Who will read this? (end users/internal/both)
+How many thinking rounds should I use? (1-10)
+Suggested: 2-3 for documentation
+
+User: 2
+
+System: 1. Who will read this? (end users/internal/both)
 2. How many features to cover?
 3. Documentation depth?
 
@@ -195,22 +218,19 @@ System: Let's document the user dashboard! 📚
 📦 **Add to your workspace?**
 
 1. **ClickUp** - Task management, sprints, time tracking
-2. **Notion** - Documentation, knowledge base, wikis
-3. **Skip** - Keep as artifact only
+2. **Skip** - Keep as artifact only
 
-Which option? (1, 2, or 3)
+Which option? (1 or 2)
 ```
 
 ### Smart Detection
-- **ClickUp** detects: Sprints, bugs, tasks, time tracking
-- **Notion** detects: Documentation, wikis, knowledge bases
-- **Both** handle: General features, project management
+- **ClickUp** detects: Sprints, bugs, tasks, time tracking, help center
 
 .
 
 ## 🔧 Installing MCP Tools
 
-### Docker Setup (AI-Assisted)
+### Docker Setup (AI-Assisted) - For ClickUp Integration Only
 
 **Prerequisites:**
 - Docker Desktop ([Download](https://www.docker.com/products/docker-desktop/))
@@ -220,19 +240,15 @@ Which option? (1, 2, or 3)
 
 Copy this prompt to any AI assistant:
 ```
-Help me set up Docker containers for Product Owner MCP tools v5.0.0.
+Help me set up Docker container for ClickUp MCP tool.
 
 I need to:
 1. Create directory at "$HOME/MCP Servers"
-2. Clone these repos:
-   - https://github.com/sequentialthinking/sequential-thinking-mcp
-   - https://github.com/cascadethinking/cascade-thinking-mcp
-   - https://github.com/taazkareem/clickup-mcp-server
-   - https://github.com/makenotion/notion-mcp-server
-3. Create docker-compose.yml for all 4 services
+2. Clone: https://github.com/taazkareem/clickup-mcp-server
+3. Create docker-compose.yml for the service
 4. Configure claude_desktop_config.json
-5. Set up environment variables for ClickUp/Notion API keys
-6. Start all containers
+5. Set up environment variables for ClickUp API key
+6. Start container
 
 I'm on [Windows/Mac/Linux]. Give me exact commands.
 ```
@@ -244,28 +260,23 @@ I'm on [Windows/Mac/Linux]. Give me exact commands.
 2. Generate Personal Token
 3. Add to `.env`
 
-**Notion:**
-1. Go to [notion.so/my-integrations](https://www.notion.so/my-integrations)
-2. Create integration
-3. Copy token
-4. Add to `.env`
-
 .
 
 ## 🆘 Troubleshooting
 
 ### Mode Issues
 - **Discovery not working?** - That's the default, no command needed
+- **Thinking rounds confusing?** - System suggests based on complexity
 - **Ticket complexity wrong?** - System auto-detects, provide more context
 - **Spec/Doc discovery?** - They skip discovery, go straight to questions
 
 ### Platform Integration
 - **Not seeing offer?** - Appears after every creation in chat
-- **MCP unavailable?** - Check Docker containers
+- **MCP unavailable?** - Check Docker container for ClickUp
 - **Wrong workspace?** - MCPs auto-detect patterns
 
 ### Common Issues
-- **Too many choices?** - v5.0 reduced choices, trust the system
+- **Too many choices?** - v5.1 uses native thinking, simpler setup
 - **Missing ⌥ symbol?** - Replaces ≈ for "Reasons why"
 - **Want old modes?** - $ticket now handles all complexities
 
@@ -273,12 +284,12 @@ I'm on [Windows/Mac/Linux]. Give me exact commands.
 
 ## ⚠️ Important Notes
 
-### Core Changes in v5.0.0
+### Core Changes in v5.1.0
+- **Native thinking** - No external thinking tools needed
+- **User-controlled rounds** - Choose thinking depth (1-10)
 - **Unified ticket mode** - One command, intelligent scaling
 - **All interactive** - Every mode guides users
-- **Skips discovery** - Modes know their purpose
 - **Symbol update** - ⌥ for "Reasons why"
-- **Smarter system** - Less user choice, better outcomes
 
 ### Key Principles
 - **Interactive always** - Guidance for quality
@@ -286,11 +297,13 @@ I'm on [Windows/Mac/Linux]. Give me exact commands.
 - **Platform neutral** - User chooses destination
 - **Outcome focused** - Resolution not tasks
 - **2-minute readable** - Concise and clear
+- **Thinking transparency** - User controls depth
 
 .
 
 ## 📦 Version History
 
+- **v5.1.0**: Native Claude thinking, user-controlled rounds, removed external MCPs
 - **v5.0.0**: Unified $ticket mode, all modes interactive, auto-scaling complexity, ⌥ symbol
 - **v4.4.0**: Documentation mode, user guides
 - **v4.3.0**: Platform integration
@@ -311,8 +324,7 @@ I'm on [Windows/Mac/Linux]. Give me exact commands.
 
 ### Platform Documentation
 - [ClickUp API Docs](https://clickup.com/api)
-- [Notion API Guide](https://developers.notion.com/)
-- [MCP Protocol Guide](https://modelcontextprotocol.io/)
+- [Claude Projects Guide](https://claude.ai/docs/projects)
 
 ### Technical Resources
 - [MDN Web Docs](https://developer.mozilla.org/)
@@ -321,4 +333,4 @@ I'm on [Windows/Mac/Linux]. Give me exact commands.
 
 ---
 
-*Product Owner v5.0.0: Unified, intelligent, interactive. One ticket mode that scales automatically. All creation flows guide users to quality. Platform integration seamless. Less choices, better outcomes.*
+*Product Owner v5.1.0: Native thinking, user-controlled depth, unified intelligence. One ticket mode that scales automatically. All creation flows guide users to quality. Platform integration seamless. Simpler setup, better outcomes.*
