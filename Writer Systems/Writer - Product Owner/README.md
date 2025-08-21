@@ -27,14 +27,13 @@ The Product Owner system helps teams create professional development tickets, im
 
 **New $text Mode:**
 - Quick snippets and descriptions without elaborate process
-- Perfect for error messages, component descriptions, marketing copy
-- 1-2 thinking rounds typical
+- Perfect for component descriptions
+- 1-3 thinking rounds typical
 - Direct response or simple artifact
 
 **Optimized Architecture:**
 - **Reduced from 8 to 5 documents** - Better organization
 - **52% smaller token footprint** - Faster processing
-- **Tables of contents** - Easy navigation in all docs
 - **Single source of truth** - No more redundancy
 - **Inline prompt improvement** - Smarter request handling
 
