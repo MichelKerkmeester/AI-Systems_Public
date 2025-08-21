@@ -56,7 +56,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 ##### Automated content, documentation & prompt writing systems
 ——
 
-#### 2. 📋 Product Owner Writer (v6.0.0)
+#### 2. 📋 Product Owner Writer (v6.1.0)
 **Transform vague requests into professional dev tickets, specs, docs, and text snippets**
 - **5 Intelligent Modes**: Discovery (default), $ticket (auto-scaling), $spec (implementation), $doc (documentation), $text (quick snippets)
 - **Interactive Guidance**: Conversational mode teaches product thinking through practice with user-controlled thinking rounds (1-10)
