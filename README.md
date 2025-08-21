@@ -18,12 +18,8 @@ Some of my non-client AI systems that I made available to the public. They were 
 4. [Imagician Agent](#4--imagician-agent)
 
 ### ✏️ Writer Systems
-<<<<<<< Updated upstream
 5. [Product Owner Writer](#5--product-owner-writer)
 6. [Document Beautifier](#6--document-beautifier)
-=======
-6. [Product Owner Writer](#6--product-owner-writer)
->>>>>>> Stashed changes
 7. [Branded Content Writer](#7--branded-content-writer)
 8. [Prompt Engineering Assistant](#8--prompt-engineering-assistant)
 9. [AI Systems Creator](#9--ai-systems-creator)
@@ -59,25 +55,12 @@ Some of my non-client AI systems that I made available to the public. They were 
 ##### MCP tools made easy with conversational systems
 ——
 
-<<<<<<< Updated upstream
 #### 2. 🚀 ClickUp Agent (v1.2.0)
-=======
-#### 2. 🖱️ macOS Computer Use Agent (v1.2.0)
-**Natural language control of macOS applications and workflows**
-- **Conversational Control**: "Help me write an email" → Guides through Mail app with natural dialogue
-- **Confidence-Based Response**: Adapts conversation depth from immediate action to full guidance
-- **Element Finding**: "Where's the save button?" → Helps locate UI elements through conversation
-- **Multi-App Workflows**: Complex sequences across applications with educational insights
-- **Safety First**: Always confirms before destructive operations (closing, deleting)
-
-#### 3. 🚀 ClickUp Agent (v1.1.0)
->>>>>>> Stashed changes
 **Natural language control of ClickUp workspaces and team collaboration**
 - **Natural Language**: "Organize my sprints" → Complete workspace with lists, views, and custom fields
 - **Unified Interface**: Single conversational approach that adapts to request clarity
 - **Triple MCP Support**: ClickUp MCP with Sequential/Cascade Thinking for optimal performance
 - **Smart Guidance**: Asks only 2-3 essential questions for perfect setup
-<<<<<<< Updated upstream
 
 #### 3. 📊 Notion Agent (v1.3.0)
 **Transform natural language into organized Notion workspaces with transparent thinking**
@@ -87,19 +70,6 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **5-Minute Setup**: Professional workspace systems ready instantly with educational insights
 
 #### 4. 🖼️ Imagician Agent (v1.4.0)
-=======
-- **5-Minute Setup**: Complex workspace systems ready in minutes
-
-#### 4. 📝 Notion Agent (v1.2.0)
-**Natural language control of Notion workspaces**
-- **Natural Language**: "Organize my projects" → Complete workspace
-- **Automatic Detection**: Recognizes workspaces vs pages vs organization tasks
-- **Interactive Intelligence**: Adaptive conversation for perfect workspace setup
-- **CMS Excellence**: Collections, relations, and views optimized automatically
-- **Educational Focus**: Teaches Notion concepts while building
-
-#### 5. 🖼️ Imagician Agent (v1.3.0)
->>>>>>> Stashed changes
 **Image file editing and conversion through conversation**
 - **8 Core Operations**: Resize, compress, convert, crop, rotate, flip, batch process, metadata
 - **Interactive Intelligence**: "Optimize my photo" → Asks use case, applies perfect settings
@@ -113,25 +83,16 @@ Some of my non-client AI systems that I made available to the public. They were 
 ##### Automated content, documentation & prompt writing systems
 ——
 
-<<<<<<< Updated upstream
 #### 5. 📋 Product Owner Writer (v5.1.0)
 **Transform vague requests into professional dev tickets and documentation**
 - **4 Intelligent Modes**: Discovery (default), $ticket (auto-scaling), $spec (implementation), $doc (documentation)
 - **Interactive Guidance**: Default conversational mode teaches product thinking and documentation structure through practice
 - **Platform Integration**: Add created tickets or documentation directly to your ClickUp workspace
-=======
-#### 6. 📋 Product Owner Writer (v5.0.0)
-**Transform vague requests into professional dev tickets and documentation**
-- **4 Intelligent Modes**: Discovery (default), $ticket (auto-scaling), $spec (implementation), $doc (documentation)
-- **Interactive Guidance**: Default conversational mode teaches product thinking and documentation structure through practice
-- **Platform Integration**: Add created tickets or documentation directly to your ClickUp or Notion workspace
->>>>>>> Stashed changes
 - **Automatic Prompt Improvement**: "fix auth" → "create bug fix ticket for authentication"
 - **Ticket Mode**: Tickets automatically scale from simple (2-3 sections) to complex (6-8 sections)
 - **Documentation Mode**: $doc mode creates user-focused product guides with feature sections and interactive audience questions
 - **Spec Mode**: $spec mode delivers frontend solutions (1-3 questions, copy-paste ready)
 
-<<<<<<< Updated upstream
 #### 6. 📄 Document Beautifier (v1.1.0)
 **Transform unstructured documents into beautifully organized, professional content**
 - **4 Formatting Modes**: Interactive (default), $technical, $academic, $business with intelligent structure detection
@@ -141,9 +102,6 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **Quality Guarantee**: FORM scorecard (Flow, Organization, Readability, Metadata) with 70-95% professional standards
 
 #### 7. ✏️ Branded Content Writer (v4.1.0)
-=======
-#### 7. ✏️ Branded Content Writer (v4.0.0)
->>>>>>> Stashed changes
 **Marketing content with systematic authenticity and failure transparency**
 - **Interactive Modes**: Default conversational mode with visual clarity scoring, celebration mechanics, and guided failure discovery that uncovers campaign stories
 - **Natural Tone Shortcuts**: Quick tone switching ($natural, $vulnerable, $collaborative) with systematic imperfections (1 per 300-400 words) for genuine authenticity
@@ -151,22 +109,14 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **9 Copywriter Frameworks**: Intelligent selection from Simple (SVC, QPT), Medium (CASE, PATH), to Complex (STORY, HELP) with visual progress tracking
 - **Embedded Prompt Improvement**: Invisible clarity enhancement that expands abbreviations ("CTR" → "click-through rate") and structures vague requests without adding assumptions
 
-<<<<<<< Updated upstream
 #### 8. 🎯 Prompt Engineering Assistant (v5.1.0) 
-=======
-#### 8. 🎯 Prompt Engineering Assistant (v5.0.0) 
->>>>>>> Stashed changes
 **Transform vague requests into powerful AI prompts for ANY platform**
 - **8 Operating Modes**: Including 3 universal Builder sub-modes ($prototype, $website, $app)
 - **Intelligent Auto-Detection**: Weighted keyword analysis for automatic mode selection
 - **Smart MCP Selection**: Dynamic choice between Sequential (1-3) and Cascade (3-8) thinking
 - **Platform-Agnostic Prompts**: Creative briefs that let each platform leverage its unique strengths
 
-<<<<<<< Updated upstream
 #### 9. 📋 AI Systems Creator (v3.1.0)
-=======
-#### 9. 📋 AI Systems Creator (v3.0.0)
->>>>>>> Stashed changes
 **Generate professional AI system specifications and documentation**
 - **Easy System Creation**: Spec it, Build it, Document it
 - **6 Operating Modes**: Interactive, Analyze, Create, Update, Integrate, README
