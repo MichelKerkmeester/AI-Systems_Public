@@ -12,21 +12,22 @@ Some of my non-client AI systems that I made available to the public. They were 
 ### 🤖 Code Agents
 1. [Multi-Model Agent System (COMING SOON)](#1--multi-model-agent-system--coming-soon)
 
-### 💬 MCP Agents
-2. [ClickUp Agent](#2--clickup-agent)
-3. [Notion Agent](#3--notion-agent)
-4. [Imagician Agent](#4--imagician-agent)
-
 ### ✏️ Writer Systems
-5. [Product Owner Writer](#5--product-owner-writer)
-6. [Document Beautifier](#6--document-beautifier)
-7. [Branded Content Writer](#7--branded-content-writer)
-8. [Prompt Engineering Assistant](#8--prompt-engineering-assistant)
-9. [AI Systems Creator](#9--ai-systems-creator)
+2. [Product Owner Writer](#2--product-owner-writer)
+3. [Branded Content Writer](#3--branded-content-writer)
+4. [Document Beautifier](#4--document-beautifier)
+5. [Prompt Engineering Assistant](#5--prompt-engineering-assistant)
+6. [AI Systems Creator](#6--ai-systems-creator)
+
+### 💬 MCP Agents
+7. [Webflow Agent](#7--webflow-agent)
+8. [ClickUp Agent](#8--clickup-agent)
+9. [Notion Agent](#9--notion-agent)
+10. [Imagician Agent](#10--imagician-agent)
 
 ### 💻 Development Systems
-10. [IDE System Prompt](#10--ide-system-prompt)
-11. [Lovable System Prompts](#11--lovable-system-prompts)
+11. [IDE System Prompt](#11--ide-system-prompt)
+12. [Lovable System Prompts](#12--lovable-system-prompts)
 
 ### 🔧 Additional Sections
 - [Common Features](#-common-features)
@@ -51,57 +52,20 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 .
 
-## 💬 MCP Agents
-##### MCP tools made easy with conversational systems
-——
-
-#### 2. 🚀 ClickUp Agent (v1.2.0)
-**Natural language control of ClickUp workspaces and team collaboration**
-- **Natural Language**: "Organize my sprints" → Complete workspace with lists, views, and custom fields
-- **Unified Interface**: Single conversational approach that adapts to request clarity
-- **Triple MCP Support**: ClickUp MCP with Sequential/Cascade Thinking for optimal performance
-- **Smart Guidance**: Asks only 2-3 essential questions for perfect setup
-
-#### 3. 📊 Notion Agent (v1.3.0)
-**Transform natural language into organized Notion workspaces with transparent thinking**
-- **Interactive Intelligence**: Adaptive conversation scales from simple pages to complex business systems
-- **Zero Learning Curve**: "organize my projects" → Complete system with databases, views, and dashboards
-- **Smart Pattern Library**: 7 workspace templates with automatic best practices and scalability built-in
-- **5-Minute Setup**: Professional workspace systems ready instantly with educational insights
-
-#### 4. 🖼️ Imagician Agent (v1.4.0)
-**Image file editing and conversion through conversation**
-- **8 Core Operations**: Resize, compress, convert, crop, rotate, flip, batch process, metadata
-- **Interactive Intelligence**: "Optimize my photo" → Asks use case, applies perfect settings
-- **Smart Path Handling**: Asks for paths conversationally only when needed
-- **Auto-Detection**: Recognizes web vs email vs social media optimization needs
-- **Visual Feedback**: Before/after metrics with file size and quality comparisons
-
-.
-
 ## ✏️ Writer Systems
 ##### Automated content, documentation & prompt writing systems
 ——
 
-#### 5. 📋 Product Owner Writer (v5.1.0)
+#### 2. 📋 Product Owner Writer (v5.1.0)
 **Transform vague requests into professional dev tickets and documentation**
 - **4 Intelligent Modes**: Discovery (default), $ticket (auto-scaling), $spec (implementation), $doc (documentation)
 - **Interactive Guidance**: Default conversational mode teaches product thinking and documentation structure through practice
 - **Platform Integration**: Add created tickets or documentation directly to your ClickUp workspace
-- **Automatic Prompt Improvement**: "fix auth" → "create bug fix ticket for authentication"
 - **Ticket Mode**: Tickets automatically scale from simple (2-3 sections) to complex (6-8 sections)
 - **Documentation Mode**: $doc mode creates user-focused product guides with feature sections and interactive audience questions
 - **Spec Mode**: $spec mode delivers frontend solutions (1-3 questions, copy-paste ready)
 
-#### 6. 📄 Document Beautifier (v1.1.0)
-**Transform unstructured documents into beautifully organized, professional content**
-- **4 Formatting Modes**: Interactive (default), $technical, $academic, $business with intelligent structure detection
-- **MCP-Powered Analysis**: Sequential Thinking for linear docs (1-3 thoughts), Cascade Thinking for exploration (3-5 thoughts)
-- **Interactive Depth Levels**: Quick Format (5 min read), Standard Format (15 min), Deep Restructure (30+ min with multiple options)
-- **Intelligent Frameworks**: SCAN, HIERARCHY, PREP frameworks auto-applied based on content patterns
-- **Quality Guarantee**: FORM scorecard (Flow, Organization, Readability, Metadata) with 70-95% professional standards
-
-#### 7. ✏️ Branded Content Writer (v4.1.0)
+#### 3. ✏️ Branded Content Writer (v4.1.0)
 **Marketing content with systematic authenticity and failure transparency**
 - **Interactive Modes**: Default conversational mode with visual clarity scoring, celebration mechanics, and guided failure discovery that uncovers campaign stories
 - **Natural Tone Shortcuts**: Quick tone switching ($natural, $vulnerable, $collaborative) with systematic imperfections (1 per 300-400 words) for genuine authenticity
@@ -109,14 +73,22 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **9 Copywriter Frameworks**: Intelligent selection from Simple (SVC, QPT), Medium (CASE, PATH), to Complex (STORY, HELP) with visual progress tracking
 - **Embedded Prompt Improvement**: Invisible clarity enhancement that expands abbreviations ("CTR" → "click-through rate") and structures vague requests without adding assumptions
 
-#### 8. 🎯 Prompt Engineering Assistant (v5.1.0) 
+#### 4. 📄 Document Beautifier (v1.1.0)
+**Transform unstructured documents into beautifully organized, professional content**
+- **4 Formatting Modes**: Interactive (default), $technical, $academic, $business with intelligent structure detection
+- **MCP-Powered Analysis**: Sequential Thinking for linear docs (1-3 thoughts), Cascade Thinking for exploration (3-5 thoughts)
+- **Interactive Depth Levels**: Quick Format (5 min read), Standard Format (15 min), Deep Restructure (30+ min with multiple options)
+- **Intelligent Frameworks**: SCAN, HIERARCHY, PREP frameworks auto-applied based on content patterns
+- **Quality Guarantee**: FORM scorecard (Flow, Organization, Readability, Metadata) with 70-95% professional standards
+
+#### 5. 🎯 Prompt Engineering Assistant (v5.1.0) 
 **Transform vague requests into powerful AI prompts for ANY platform**
 - **8 Operating Modes**: Including 3 universal Builder sub-modes ($prototype, $website, $app)
 - **Intelligent Auto-Detection**: Weighted keyword analysis for automatic mode selection
 - **Smart MCP Selection**: Dynamic choice between Sequential (1-3) and Cascade (3-8) thinking
 - **Platform-Agnostic Prompts**: Creative briefs that let each platform leverage its unique strengths
 
-#### 9. 📋 AI Systems Creator (v3.1.0)
+#### 6. 📋 AI Systems Creator (v3.1.0)
 **Generate professional AI system specifications and documentation**
 - **Easy System Creation**: Spec it, Build it, Document it
 - **6 Operating Modes**: Interactive, Analyze, Create, Update, Integrate, README
@@ -126,11 +98,46 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 .
 
+## 💬 MCP Agents
+##### MCP tools made easy with conversational systems
+——
+
+#### 7. 🎨 Webflow Agent (v1.0.0)
+**Natural language CMS management with automatic design integration and image optimization**
+- **Design-First Workflow**: "set up blog with Figma design" → Complete CMS with extracted tokens in 60 seconds
+- **Triple MCP Orchestra**: Webflow CMS + Figma design extraction + Imagician optimization working in harmony
+- **The 85% Rule**: Automatic image optimization sweet spot (60% smaller, imperceptible quality loss)
+- **Adaptive Intelligence**: Confidence-based responses from immediate execution (>0.95) to full guidance (<0.50)
+
+#### 8. 🚀 ClickUp Agent (v1.2.0)
+**Natural language control of ClickUp workspaces and team collaboration**
+- **Natural Language**: "Organize my sprints" → Complete workspace with lists, views, and custom fields
+- **Unified Interface**: Single conversational approach that adapts to request clarity
+- **Triple MCP Support**: ClickUp MCP with Sequential/Cascade Thinking for optimal performance
+- **Smart Guidance**: Asks only 2-3 essential questions for perfect setup
+
+#### 9. 📊 Notion Agent (v1.3.0)
+**Transform natural language into organized Notion workspaces with transparent thinking**
+- **Interactive Intelligence**: Adaptive conversation scales from simple pages to complex business systems
+- **Zero Learning Curve**: "organize my projects" → Complete system with databases, views, and dashboards
+- **Smart Pattern Library**: 7 workspace templates with automatic best practices and scalability built-in
+- **5-Minute Setup**: Professional workspace systems ready instantly with educational insights
+
+#### 10. 🖼️ Imagician Agent (v1.4.0)
+**Image file editing and conversion through conversation**
+- **8 Core Operations**: Resize, compress, convert, crop, rotate, flip, batch process, metadata
+- **Interactive Intelligence**: "Optimize my photo" → Asks use case, applies perfect settings
+- **Smart Path Handling**: Asks for paths conversationally only when needed
+- **Auto-Detection**: Recognizes web vs email vs social media optimization needs
+- **Visual Feedback**: Before/after metrics with file size and quality comparisons
+
+.
+
 ## 💻 Development Systems
 ##### IDE enhancements & App Prototyping
 ——
 
-#### 10. 🛠️ IDE System Prompt (v3.9.0)
+#### 11. 🛠️ IDE System Prompt (v3.9.0)
 **Transform any AI coding assistant into an elite software engineer**
 - **Root Cause Philosophy**: Fixes underlying issues not symptoms, delivers production-grade code with zero technical debt
 - **Performance Obsession**: CSS-first approach, REM units only, batch DOM updates, will-change optimization
@@ -138,7 +145,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **Risk Documentation System**: "This could break if..." analysis with cascading effect monitoring and edge cases
 - **MCP Decision Tree**: Strategic tool selection for validation, documentation, and current best practices
 
-#### 11. 🚀 Lovable System Prompts (v2.0.0)
+#### 12. 🚀 Lovable System Prompts (v2.0.0)
 **Three specialized experts optimized for minimal Lovable platform credit usage**
 - **Goal-Oriented Approach**: Describe outcomes and success criteria, not prescriptive implementations - AI finds optimal solutions
 - **Comprehensive Coverage**: Testing & Validation, Accessibility (App/Website), Collaboration, Error Handling, Modern Best Practices, Migration Paths

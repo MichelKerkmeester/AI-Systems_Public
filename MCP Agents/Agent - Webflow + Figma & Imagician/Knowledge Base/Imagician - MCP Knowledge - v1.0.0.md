@@ -1,4 +1,4 @@
-# Imagician MCP - Intelligence - v2.0.0
+# Imagician - MCP Intelligence - v1.0.0
 
 Streamlined image optimization reference for Webflow asset integration with standardized performance metrics and automation patterns.
 

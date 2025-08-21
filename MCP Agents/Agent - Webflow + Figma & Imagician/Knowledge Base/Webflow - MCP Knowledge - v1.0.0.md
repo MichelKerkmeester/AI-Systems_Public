@@ -1,4 +1,4 @@
-# Webflow - Knowledge - v2.0.0
+# Webflow - Knowledge - v1.0.0
 
 The complete unified knowledge system for Webflow CMS operations through natural language conversation, with seamless Figma design integration and Imagician image optimization.
 

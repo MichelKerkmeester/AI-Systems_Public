@@ -1,4 +1,4 @@
-# Figma MCP - Knowledge - v2.0.0
+# Figma - MCP Knowledge - v1.0.0
 
 Streamlined design extraction and style application reference for Webflow site building with standardized performance metrics and comprehensive design patterns.
 
