@@ -1,18 +1,20 @@
-# Document Beautifier System - User Guide v1.2.0
+# Document Beautifier System - User Guide v1.3.0
 
-The Document Beautifier system transforms unstructured documents into beautifully organized, professional content through intelligent analysis and guided formatting options. By combining systematic structure detection with reader-optimized layouts, it bridges the gap between raw content and polished documentation.
+The Document Beautifier system transforms unstructured documents into beautifully organized, professional content through intelligent analysis and guided formatting options. By combining systematic structure detection with reader-optimized layouts and **user-controlled content enhancement**, it bridges the gap between raw content and polished documentation.
 
 ## 📑 Table of Contents
 
-- [🆕 What's New in v1.2.0](#-whats-new-in-v120)
+- [🆕 What's New in v1.3.0](#-whats-new-in-v130)
 - [✨ Key Features](#-key-features)
 - [🚀 Quick Setup](#-quick-setup)
 - [🎛️ Operating Modes](#️-operating-modes)
+- [🔒 Content Integrity Options](#-content-integrity-options)
 - [🎯 Automatic Structure Detection](#-automatic-structure-detection)
 - [💬 Interactive Mode](#-interactive-mode-interactive)
 - [📚 Mode Specifications](#-mode-specifications)
 - [🤔 Native Thinking Integration](#-native-thinking-integration)
 - [📊 Formatting Patterns](#-formatting-patterns)
+- [🔧 Special Commands](#-special-commands)
 - [🆘 Troubleshooting](#-troubleshooting)
 - [⚠️ Important Notes](#️-important-notes)
 - [📦 Version History](#-version-history)
@@ -20,17 +22,17 @@ The Document Beautifier system transforms unstructured documents into beautifull
 
 .
 
-## 🆕 What's New in v1.2.0
+## 🆕 What's New in v1.3.0
 
-### Native Claude Thinking 🎯
-- **Built-in Analysis**: Uses Claude's native thinking capabilities
-- **User-controlled depth**: Always asks how many thinking rounds (1-5)
-- **Linear thinking**: For straightforward document structures (1-3 rounds)
-- **Exploratory thinking**: For discovering multiple organization patterns (3-5 rounds)
-- **Intelligent defaults**: Suggests appropriate rounds based on complexity
-- **Pattern recognition**: Analyzes before formatting decisions
+### Content Integrity Control 🔒
+- **User-controlled enhancement**: Choose between Strict (preserve only) or Enhanced (add improvements)
+- **Complete transparency**: Every addition marked with [AI-ADDED] tags in Enhanced mode
+- **Integrity reporting**: Detailed report of all changes in every delivery
+- **New commands**: $strict, $enhanced, and $check for content control
+- **Trust by default**: Strict mode is default - no surprises
 
 ### Maintained Excellence
+- **Native thinking**: Built-in analysis with user-controlled depth (1-5 rounds)
 - **4 intelligent modes**: Interactive (default), Technical, Academic, Business
 - **Professional formatting**: SCAN, HIERARCHY, PREP frameworks
 - **Guided experience**: Interactive mode with Quick/Standard/Deep options
@@ -42,11 +44,13 @@ The Document Beautifier system transforms unstructured documents into beautifull
 ## ✨ Key Features
 
 - **4 Formatting Modes**: Interactive (default), $technical, $academic, $business
+- **Content Control**: Strict mode (preserve only) or Enhanced mode (with improvements)
 - **Interactive Everything**: Default mode guides users through formatting choices
 - **Automatic Detection**: Structure patterns recognized and applied intelligently
 - **Native Thinking**: Built-in analysis with user-controlled depth
 - **Smart Frameworks**: SCAN, HIERARCHY, PREP for different document types
 - **Professional Output**: Consistent formatting with quality metrics
+- **Complete Transparency**: All additions tracked and reported
 - **Before/After Templates**: Proven transformations for common scenarios
 - **Pattern Library**: Reusable formatting patterns for consistency
 
@@ -58,12 +62,12 @@ The Document Beautifier system transforms unstructured documents into beautifull
 1. Go to claude.ai
 2. Click "Projects" in sidebar
 3. Click "Create project"
-4. Name it "Document Beautifier v1.2.0"
+4. Name it "Document Beautifier v1.3.0"
 
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Document Beautifier - v1.2.0.md`
+3. Copy and paste: `Document Beautifier - v1.3.0.md`
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
@@ -80,11 +84,17 @@ $academic research paper          # Direct academic formatting
 $business quarterly report        # Direct business formatting
 ```
 
+System will ask:
+1. "How many thinking rounds?" (1-5)
+2. "Strict or Enhanced mode?"
+3. Then format accordingly
+
 After formatting:
 ```
 📄 Document beautified successfully!
+- Mode: STRICT/ENHANCED
 - Structure: X sections, Y subsections
-- Readability: Improved by Z%
+- Content: 100% preserved / +X improvements
 - Quality Score: XX/100
 - Thinking Rounds Used: X
 ```
@@ -93,12 +103,12 @@ After formatting:
 
 ## 🎛️ Operating Modes
 
-| Mode | Command | Purpose | Output | Thinking Type | Default Rounds |
-|------|---------|---------|--------|---------------|----------------|
-| **Interactive** | DEFAULT | Guided formatting with options | Quick/Standard/Deep | Exploratory | 3-5 |
-| **Technical** | `$technical` | Documentation, specs | Technical standards | Linear | 2-3 |
-| **Academic** | `$academic` | Papers, research | Academic conventions | Linear | 2-3 |
-| **Business** | `$business` | Reports, proposals | Executive-friendly | Linear | 2-3 |
+| Mode | Command | Purpose | Output | Content Options | Default Rounds |
+|------|---------|---------|--------|-----------------|----------------|
+| **Interactive** | DEFAULT | Guided formatting with options | Quick/Standard/Deep | Strict/Enhanced | 3-5 |
+| **Technical** | `$technical` | Documentation, specs | Technical standards | Strict/Enhanced | 2-3 |
+| **Academic** | `$academic` | Papers, research | Academic conventions | Strict/Enhanced | 2-3 |
+| **Business** | `$business` | Reports, proposals | Executive-friendly | Strict/Enhanced | 2-3 |
 
 ### The Interactive Flow
 
@@ -106,13 +116,16 @@ After formatting:
 ```
 Hello! I'll help you transform this document into a beautifully formatted piece.
 
-I can see your document is about [topic]. It appears to be [type] with approximately [word count] words.
-
 How many rounds of thinking should I use to analyze your document?
 - 1-2 rounds: Quick analysis for simple structure
 - 3-4 rounds: Standard analysis for typical documents
 - 5 rounds: Deep analysis for complex restructuring
 (Recommended for your document: X rounds)
+
+How should I handle your content?
+1️⃣ Strict Mode - Preserve and reorganize only
+2️⃣ Enhanced Mode - Add helpful improvements
+(Default: Strict)
 
 Would you like:
 1. Quick Format (5 minute read)
@@ -120,10 +133,58 @@ Would you like:
 3. Deep Restructure (30+ minute read)
 ```
 
-**With mode specified:**
-- `$technical` → Asks for thinking rounds, then technical formatting
-- `$academic` → Asks for thinking rounds, then academic structure
-- `$business` → Asks for thinking rounds, then business template
+.
+
+## 🔒 Content Integrity Options
+
+### 🔐 Strict Mode (Default)
+**What it does:**
+- Reorganizes and formats existing content
+- Adds only structural elements (headers, TOC, numbering)
+- Zero content additions or explanations
+- 100% faithful to original text
+
+**Best for:**
+- Technical documentation
+- Legal documents
+- Final drafts
+- Academic papers
+- When accuracy is critical
+
+### Enhanced Mode (Opt-in)
+**What it does:**
+- All Strict mode features PLUS:
+- Adds helpful transitions between sections
+- Includes clarifying examples
+- Expands acronyms and technical terms
+- Adds context for better understanding
+- All additions marked with [AI-ADDED]
+
+**Best for:**
+- Learning materials
+- Draft documents
+- Presentations
+- Internal documentation
+- When clarity is priority
+
+### Content Integrity Report
+Every delivery includes:
+```
+## 📊 Content Integrity Report
+Mode: STRICT/ENHANCED
+Original Content: 100% preserved
+Word Count: 1,234 → 1,234 (Strict) or 1,234 → 1,456 (+222) (Enhanced)
+
+Structural Additions:
+• Headers: 5 added
+• TOC: Generated
+• Lists: 3 created
+
+Content Additions (Enhanced only):
+• Transitions: 3 added [marked inline]
+• Clarifications: 2 added [marked inline]
+• Examples: 1 added [marked inline]
+```
 
 .
 
@@ -146,25 +207,19 @@ The system intelligently detects structure patterns:
 ```
 User: [pastes wall of text about project management]
 
-System: I'll analyze this document about project management.
-
-How many rounds of thinking should I use?
-- 1-2 rounds: Basic structure analysis
-- 3-4 rounds: Explore multiple organization patterns
-- 5 rounds: Comprehensive restructuring options
+System: How many rounds of thinking should I use?
 (Your document has mixed content, I recommend 4 rounds)
 
 User: Let's do 4 rounds
 
+System: How should I handle your content?
+- Strict: Preserve and reorganize only
+- Enhanced: Add helpful improvements
+
+User: Strict mode please
+
 System: [Thinking: 4 rounds analyzing patterns]
-[Detects: Mixed business/technical content]
-
-I can format this as:
-1. Business Report (executive-focused)
-2. Technical Documentation (detail-focused)
-3. Hybrid Structure (both audiences)
-
-Which would work best?
+[Applies formatting with NO content additions]
 ```
 
 .
@@ -182,14 +237,19 @@ How many thinking rounds should I use for analysis? (1-5)
 
 User: 4 rounds
 
+System: How should I handle your content?
+- Strict: Preserve exactly as is
+- Enhanced: Add helpful improvements
+
+User: Enhanced
+
 System: [Thinking: 4 rounds exploring patterns]
 
 Quick questions:
 1. Purpose? (inform/persuade/document/guide)
 2. Audience? (executives/technical/general/academic)
-3. Preference? (quick scan/detailed/comprehensive)
 
-[Presents tailored options]
+[Presents tailored options with enhancement note]
 ```
 
 ### Three Depth Levels
@@ -225,9 +285,15 @@ System: How many thinking rounds for analysis? (1-5)
 
 User: 3
 
+System: How should I handle your content?
+- Strict: Technical structure only
+- Enhanced: Add code examples and clarifications
+
+User: Enhanced
+
 System: [Thinking: 3 rounds on technical structure]
 Applying technical documentation standards...
-[Applies decimal numbering, code blocks, parameter tables]
+[Adds examples marked with [AI-ADDED]]
 ```
 
 ### Academic Mode ($academic)
@@ -239,9 +305,13 @@ System: How many thinking rounds for analysis? (1-5)
 
 User: 2
 
+System: Strict or Enhanced mode?
+
+User: Strict
+
 System: [Thinking: 2 rounds on academic format]
 Formatting for academic standards...
-[Creates abstract, citations, bibliography structure]
+[Creates structure without adding content]
 ```
 
 ### Business Mode ($business)
@@ -253,9 +323,13 @@ System: How many thinking rounds for analysis? (1-5)
 
 User: 3
 
+System: How should I handle your content?
+
+User: Enhanced - add executive insights
+
 System: [Thinking: 3 rounds on executive structure]
 Creating executive-friendly format...
-[Adds executive summary, KPIs, action items]
+[Adds clarifications marked with [AI-ADDED]]
 ```
 
 .
@@ -266,7 +340,8 @@ Creating executive-friendly format...
 
 **User Always Chooses:**
 - System ALWAYS asks for thinking rounds (1-5)
-- Provides recommendation based on complexity
+- Then asks for content mode (Strict/Enhanced)
+- Provides recommendations for both
 - Exception: During discovery questions (before final output)
 
 ### Linear Thinking (1-3 rounds)
@@ -276,12 +351,6 @@ Creating executive-friendly format...
 - Academic papers
 - Business reports with standard format
 - Simple formatting needs
-- Step-by-step guides
-
-**Round Scaling:**
-- 1 round: Very clear structure, minimal complexity
-- 2 rounds: Standard documents, normal formatting
-- 3 rounds: Complex but linear organization
 
 ### Exploratory Thinking (3-5 rounds)
 **When to use:**
@@ -290,12 +359,6 @@ Creating executive-friendly format...
 - Multiple valid structures
 - Interactive mode (exploring options)
 - Complex restructuring needed
-- User needs options
-
-**Round Scaling:**
-- 3 rounds: Few options to explore
-- 4 rounds: Multiple patterns analysis
-- 5 rounds: Complete restructure with all possibilities
 
 .
 
@@ -308,6 +371,7 @@ Creating executive-friendly format...
 - **Tables**: Aligned columns with clear headers
 - **Code**: Syntax highlighting with language tags
 - **Quotes**: Blockquotes for important notes
+- **[AI-ADDED]**: Marks enhanced content (Enhanced mode only)
 
 ### Framework Applications
 
@@ -342,7 +406,51 @@ P - Plan/Proposal
 
 .
 
+## 🔧 Special Commands
+
+### $strict
+```
+User: Actually, $strict - just reorganize, don't add anything
+
+System: Switching to Strict mode. I'll preserve your content exactly.
+[Removes any additions, keeps only original content]
+```
+
+### $enhanced
+```
+User: $enhanced - please add helpful examples
+
+System: Switching to Enhanced mode. I'll add clarifications and examples.
+[Adds improvements marked with [AI-ADDED]]
+```
+
+### $check
+```
+User: $check
+
+System: 🔍 Content Integrity Check
+Original words: 1,234
+Current words: 1,456
+Additions detected: 12
+
+Options:
+1. Remove all additions (strict version)
+2. Keep current version
+3. Mark additions more prominently
+4. Generate comparison view
+
+What would you prefer?
+```
+
+.
+
 ## 🆘 Troubleshooting
+
+### Content Issues
+- **Unwanted additions?** - Use $strict or $check command
+- **Need more clarity?** - Switch to $enhanced mode
+- **Too many [AI-ADDED] tags?** - Use $strict for cleaner output
+- **Lost content?** - Never happens, all content preserved
 
 ### Mode Issues
 - **Interactive not working?** - That's the default, no command needed
@@ -351,27 +459,25 @@ P - Plan/Proposal
 
 ### Thinking Integration
 - **Not asked about rounds?** - System always asks before final output
+- **Not asked about content mode?** - System asks after thinking rounds
 - **Wrong analysis depth?** - Specify different number of rounds
 - **Need more exploration?** - Request 4-5 rounds
-
-### Common Issues
-- **Lost content?** - Never happens, all content preserved
-- **Too many sections?** - Try Quick format in Interactive
-- **Not enough structure?** - Try Deep restructure option
 
 .
 
 ## ⚠️ Important Notes
 
-### Core Changes in v1.2.0
-- **Native thinking** - Built-in Claude analysis capabilities
-- **User control** - Always asks for thinking rounds
-- **Intelligent suggestions** - Recommends appropriate depth
-- **Discovery exception** - No round question during exploration
-- **Pattern detection** - Analyzes before formatting
+### Core Changes in v1.3.0
+- **Content control** - User chooses Strict or Enhanced mode
+- **Complete transparency** - All additions marked and reported
+- **Default safety** - Strict mode by default
+- **Verification tools** - $check command for integrity
+- **Mode switching** - Change anytime with $strict/$enhanced
 
 ### Key Principles
-- **Content preservation** - Never lose original text
+- **User control** - Every choice is explicit
+- **Content preservation** - Original always maintained
+- **Transparency** - Every change tracked
 - **Reader-focused** - Every choice improves readability
 - **Quality metrics** - FORM scorecard ensures standards
 - **Flexible frameworks** - Adapt to content needs
@@ -381,6 +487,7 @@ P - Plan/Proposal
 
 ## 📦 Version History
 
+- **v1.3.0**: Content integrity control, Strict/Enhanced modes, $check command, transparency
 - **v1.2.0**: Native Claude thinking, user-controlled rounds, always-ask principle
 - **v1.1.0**: MCP integration (deprecated)
 - **v1.0.0**: Initial release, 4 modes, Interactive default, frameworks
@@ -402,4 +509,4 @@ P - Plan/Proposal
 
 ---
 
-*Document Beautifier v1.2.0: Transform walls of text into professional documents. Native thinking analysis with user-controlled depth ensures optimal structure. Interactive mode guides to perfect formatting. Every document deserves to be beautifully readable.*
+*Document Beautifier v1.3.0: Transform walls of text into professional documents with complete control. Choose your thinking depth (1-5 rounds), choose your content handling (Strict/Enhanced), get perfect formatting with total transparency. Every document deserves to be beautifully readable.*

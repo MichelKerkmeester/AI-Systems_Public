@@ -12,7 +12,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 ### 🤖 Code Agents
 1. [Multi-Model Agent System (COMING SOON)](#1--multi-model-agent-system--coming-soon)
 
-### ✏️ Writer Systems
+### ✍️ Writer Systems
 2. [Product Owner Writer](#2--product-owner-writer)
 3. [Branded Content Writer](#3--branded-content-writer)
 4. [Document Beautifier](#4--document-beautifier)
@@ -52,7 +52,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 .
 
-## ✏️ Writer Systems
+## ✍️ Writer Systems
 ##### Automated content, documentation & prompt writing systems
 ——
 
@@ -65,7 +65,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **Documentation Mode**: $doc mode creates user-focused product guides with feature sections and interactive audience questions
 - **Spec Mode**: $spec mode delivers frontend solutions (1-3 questions, copy-paste ready)
 
-#### 3. ✏️ Branded Content Writer (v4.1.0)
+#### 3. ✍️ Branded Content Writer (v4.1.0)
 **Marketing content with systematic authenticity and failure transparency**
 - **Interactive Modes**: Default conversational mode with visual clarity scoring, celebration mechanics, and guided failure discovery that uncovers campaign stories
 - **Natural Tone Shortcuts**: Quick tone switching ($natural, $vulnerable, $collaborative) with systematic imperfections (1 per 300-400 words) for genuine authenticity
@@ -73,13 +73,13 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **9 Copywriter Frameworks**: Intelligent selection from Simple (SVC, QPT), Medium (CASE, PATH), to Complex (STORY, HELP) with visual progress tracking
 - **Embedded Prompt Improvement**: Invisible clarity enhancement that expands abbreviations ("CTR" → "click-through rate") and structures vague requests without adding assumptions
 
-#### 4. 📄 Document Beautifier (v1.1.0)
-**Transform unstructured documents into beautifully organized, professional content**
-- **4 Formatting Modes**: Interactive (default), $technical, $academic, $business with intelligent structure detection
-- **MCP-Powered Analysis**: Sequential Thinking for linear docs (1-3 thoughts), Cascade Thinking for exploration (3-5 thoughts)
-- **Interactive Depth Levels**: Quick Format (5 min read), Standard Format (15 min), Deep Restructure (30+ min with multiple options)
-- **Intelligent Frameworks**: SCAN, HIERARCHY, PREP frameworks auto-applied based on content patterns
-- **Quality Guarantee**: FORM scorecard (Flow, Organization, Readability, Metadata) with 70-95% professional standards
+#### 4. 📄 Document Beautifier (v1.3.0)
+**Transform unstructured documents into beautifully organized, professional content with content integrity control**
+- **Content Integrity Control**: Choose Strict mode (preserve only) or Enhanced mode (add improvements) - all additions marked with [AI-ADDED] tags, full transparency with integrity reports
+- **4 Formatting Modes**: Interactive (default), $technical, $academic, $business with intelligent structure detection and user-controlled thinking depth (1-5 rounds)
+- **Interactive Depth Levels**: Quick Format (5 min), Standard Format (15 min), Deep Restructure (30+ min) with SCAN, HIERARCHY, PREP frameworks
+- **Special Commands**: $strict (force preservation), $enhanced (allow improvements), $check (verify all changes) for complete control over modifications
+- **Quality Guarantee**: FORM scorecard (Flow, Organization, Readability, Metadata) ensures 70-95% professional standards with word count tracking
 
 #### 5. 🎯 Prompt Engineering Assistant (v5.1.0) 
 **Transform vague requests into powerful AI prompts for ANY platform**
