@@ -1,17 +1,17 @@
-# Product Owner System - User Guide v6.0.0
+# Product Owner System - User Guide v6.2.0
 
 The Product Owner system helps teams create professional development tickets, implementation specs, product documentation, and text snippets through intelligent interactive guidance. By focusing on WHAT needs doing and WHY it matters (not HOW to implement), it bridges the communication gap between product and development teams.
 
 ## 📑 Table of Contents
 
-- [🆕 What's New in v6.0.0](#-whats-new-in-v600)
+- [🆕 What's New in v6.2.0](#-whats-new-in-v620)
 - [✨ Key Features](#-key-features)
 - [🚀 Quick Setup](#-quick-setup)
 - [🎛️ Operating Modes](#️-operating-modes)
 - [🎯 Automatic Complexity Detection](#-automatic-complexity-detection)
 - [💻 Implementation Specs](#-implementation-specs-spec)
 - [📚 Documentation](#-documentation-doc)
-- [✍️ Text Snippets](#️-text-snippets-text-new)
+- [✏️ Text Snippets](#️-text-snippets-text)
 - [📗 Platform Integration](#-platform-integration)
 - [🔧 Installing MCP Tools](#-installing-mcp-tools)
 - [🆘 Troubleshooting](#-troubleshooting)
@@ -19,30 +19,29 @@ The Product Owner system helps teams create professional development tickets, im
 - [📦 Version History](#-version-history)
 - [📚 Additional Resources](#-additional-resources)
 
-.
+---
 
-## 🆕 What's New in v6.0.0
+## 🆕 What's New in v6.2.0
 
-### Major Enhancements 🚀
+### Critical Updates 🔴
 
-**New $text Mode:**
-- Quick snippets and descriptions without elaborate process
-- Perfect for component descriptions
-- 1-3 thinking rounds typical
-- Direct response or simple artifact
+**Stricter Formatting Standards:**
+- **Table of Contents** - Now MANDATORY for ALL tickets (no exceptions)
+- **Section Dividers** - Required between ALL sections (---)
+- **Key Problems Format** - Must use `### → Key problems:` with minimum 2 items
+- **Reasons Why Format** - Must use `### → Reasons why:` with minimum 2 items
+- **Bullet Format** - Always use `- text` format, never bullet symbols
+- **Designs & References** - Required section with ◳ symbol (placeholders ok)
 
-**Optimized Architecture:**
-- **Reduced from 8 to 5 documents** - Better organization
-- **52% smaller token footprint** - Faster processing
-- **Single source of truth** - No more redundancy
-- **Inline prompt improvement** - Smarter request handling
+**Updated Symbols:**
+- **◳** - Designs & References section (was ◘ in v6.0)
+- **⋈** - Dependencies section (was ⊗ in v6.0)
 
-**Enhanced Features:**
-- **Expanded examples** - Real-world tickets and documentation
-- **Complete troubleshooting guide** - Self-service problem solving
-- **Decision trees** - Faster mode routing
-- **Recovery strategies** - Better error handling
-- **Smart patterns** - Context-aware responses
+**Enhanced Quality Control:**
+- **Automatic format validation** - System ensures all requirements met
+- **Improved troubleshooting** - Specific fixes for common formatting issues
+- **Clearer standards** - No ambiguity in requirements
+- **Better examples** - All examples show proper formatting
 
 ### Maintained Excellence
 - **Native thinking** - User-controlled rounds (1-10)
@@ -50,8 +49,9 @@ The Product Owner system helps teams create professional development tickets, im
 - **All modes interactive** - Conversational guidance
 - **Platform Integration** - Direct ClickUp workspace creation
 - **Professional formatting** - Consistent symbols and structure
+- **$text mode** - Quick snippets without elaborate process
 
-.
+---
 
 ## ✨ Key Features
 
@@ -61,12 +61,13 @@ The Product Owner system helps teams create professional development tickets, im
 - **Automatic Complexity**: Tickets scale from simple (2-3 sections) to complex (6-8 sections)
 - **Platform Ready**: Direct ClickUp integration after creation
 - **Smart Detection**: System recognizes intent and adjusts accordingly
-- **Professional Symbols**: ⌘, ◇, ◻️, ◊, →, ✦, ✔, ⊗, ⚠️, ⌥, 📚
+- **Professional Symbols**: ◘, ◇, ◻️, ◊, ◳, →, ✦, ✓, ⋈, ⚡, 📚
+- **Strict Formatting**: TOC, dividers, proper Key Problems/Reasons format
 - **Developer Clarity**: User-specified scope, structured descriptions
 - **Copy-paste Code**: Spec mode delivers working implementations
 - **Quick Content**: Text mode for rapid snippet generation
 
-.
+---
 
 ## 🚀 Quick Setup
 
@@ -74,20 +75,21 @@ The Product Owner system helps teams create professional development tickets, im
 1. Go to claude.ai
 2. Click "Projects" in sidebar
 3. Click "Create project"
-4. Name it "Product Owner v6.0.0"
+4. Name it "Product Owner v6.2.0"
 
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Writer - Product Owner - v6.1.0.md`
+3. Copy and paste: `Writer - Product Owner - v6.2.0.md`
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
-Add these **5 streamlined documents** to your project's knowledge base:
-- `Product Owner - Reference Guide.md` (symbols, templates, standards)
-- `Product Owner - Interactive Flows.md` (all mode interactions)
-- `Product Owner - Quick Card.md` (daily command reference)
-- `Product Owner - Platform Integration.md` (ClickUp handoff)
+Add these **5 core documents** to your project's knowledge base:
+- `Product Owner - Reference Guide - v1.1.0.md` (symbols, templates, standards)
+- `Product Owner - Interactive Flows - v1.1.0.md` (all mode interactions)
+- `Product Owner - Quick Reference Card - v4.1.0.md` (daily command reference)
+- `Product Owner - Platform Integration - v2.1.0.md` (ClickUp handoff)
+- `Product Owner - Prompt Improvement - v2.1.0.md` (request clarity enhancement)
 
 ### Step 4: Install MCP Tools (Optional - for ClickUp only)
 See [MCP Installation](#-installing-mcp-tools) section below
@@ -98,7 +100,7 @@ need user authentication         # Discovery flow
 $ticket payment integration      # Direct ticket (auto-scales)
 $spec modal component           # Direct implementation
 $doc analytics dashboard        # Direct documentation
-$text error message            # Direct snippet (NEW!)
+$text error message            # Direct snippet
 ```
 
 After any creation:
@@ -108,7 +110,7 @@ After any creation:
 2. Skip - Keep as artifact only
 ```
 
-.
+---
 
 ## 🎛️ Operating Modes
 
@@ -139,7 +141,7 @@ Which best fits? (1-4)
 - `$ticket` → Straight to ticket questions (auto-scales complexity)
 - `$spec` → Straight to implementation questions
 - `$doc` → Straight to documentation questions
-- `$text` → Minimal questions for quick content (NEW!)
+- `$text` → Minimal questions for quick content
 
 **Thinking Rounds (asked after mode selection):**
 ```
@@ -151,7 +153,7 @@ How many thinking rounds should I use? (1-10)
 Suggested for your request: [X-Y rounds]
 ```
 
-.
+---
 
 ## 🎯 Automatic Complexity Detection
 
@@ -164,6 +166,16 @@ The system intelligently detects complexity based on your responses:
 | Bug fix, small change | **Simple** | 2-3 | 4-6 | 1-2 rounds |
 | Feature, clear scope | **Standard** | 4-5 | 8-12 | 3-5 rounds |
 | Platform, integration | **Complex** | 6-8 | 12-20 with phases | 6-10 rounds |
+
+### Mandatory Formatting (ALL Tickets)
+
+Every ticket MUST include:
+- **Table of Contents** - Complete navigation structure
+- **Dividers** - Between ALL sections (---)
+- **Key Problems** - `### → Key problems:` with 2+ items using `- text`
+- **Reasons Why** - `### → Reasons why:` with 2+ items using `- text`
+- **Designs & References** - Section with ◳ symbol (placeholders if no links)
+- **Dependencies** - Section with ⋈ symbol when applicable
 
 ### Enhanced Detection Keywords
 
@@ -182,32 +194,44 @@ The system intelligently detects complexity based on your responses:
 - "compliance", "security", "multi-tenant"
 - Multiple teams, > 1 month timeline
 
-### Example Flow with Phases (Complex)
+### Example Flow with Proper Formatting
+```markdown
+[BE] Authentication Fix
+
+## 📑 Table of Contents
+- [◘ About](#-about)
+- [Key Problems & Reasons](#key-problems--reasons)
+- [◳ Designs & References](#-designs--references)
+- [◇ Requirements](#-requirements)
+- [✦ Success Criteria](#-success-criteria)
+- [✓ Resolution Checklist](#-resolution-checklist)
+
+# ◘ About
+
+Users cannot log in due to token validation error.
+
+---
+
+### → Key problems:
+- Authentication tokens expiring prematurely
+- All users blocked from platform access
+
+### → Reasons why:
+- Critical blocker preventing all user access
+- Revenue impact of $50K per hour of downtime
+
+---
+
+## ◳ Designs & References
+- [System architecture diagram - to be added]
+- [Error logs dashboard - link pending]
+
+---
+
+[Continues with all sections and dividers]
 ```
-User: $ticket payment platform
 
-System: Let's create your payment platform ticket! 🎯
-
-How many thinking rounds should I use? (1-10)
-Suggested for payment platform: 6-8 rounds
-
-User: 7
-
-System: Tell me about this payment platform:
-- What payment methods?
-- New or updating?
-- Compliance needs?
-
-[System detects "platform" + compliance = Complex ticket]
-[Automatically creates 6-8 section ticket with:]
-- Phase 1: Foundation (Week 1-3)
-- Phase 2: Core Features (Week 4-6)
-- Phase 3: Advanced Features (Week 7-9)
-- Dependencies section (⊗)
-- Risks section (⚡)
-```
-
-.
+---
 
 ## 💻 Implementation Specs ($spec)
 
@@ -254,7 +278,7 @@ User: Yes, skeleton loaders, retry logic
 [Generates complete, optimized implementation]
 ```
 
-.
+---
 
 ## 📚 Documentation ($doc)
 
@@ -264,6 +288,12 @@ User: Yes, skeleton loaders, retry logic
 1. **Overview** - High-level, 1-2 paragraphs per feature
 2. **Detailed** - Step-by-step, 3-4 paragraphs
 3. **Comprehensive** - All details, tips, workflows
+
+### Documentation Symbol Usage
+- **◻️** - Feature sections (never in tickets)
+- **◊** - Sub-headings (bold)
+- **→** - References
+- **📚** - Additional resources
 
 ### Interactive Documentation Flow
 ```
@@ -286,21 +316,24 @@ System: I'll help create clear API documentation.
 [Creates structured documentation with code examples]
 ```
 
-.
+---
 
-## ✍️ Text Snippets ($text) - NEW!
+## ✏️ Text Snippets ($text)
 
 ### Quick Content Generation
 
 Perfect for:
 - Component descriptions
+- Error messages
+- Marketing copy
 - UX writing
+- Email templates
 
 ### Minimal Process
 ```
 User: $text error message for payment failure
 
-System: Let's write your error message! ✍️
+System: Let's write your error message! ✏️
 
 How many thinking rounds should I use? (1-2 typical)
 
@@ -315,29 +348,12 @@ User: Customer-facing UI
 
 System: "We couldn't process your payment. Please check your 
 card details and try again. If the problem persists, 
-contact support at help@example.com"
+contact support."
 
 [Direct response, no artifact needed for single items]
 ```
 
-### Multiple Snippets
-```
-User: $text form validation messages
-
-System: Let's write your validation messages! ✍️
-
-How many thinking rounds should I use? (1-2 typical)
-
-User: 2
-
-System: What type of form and tone?
-
-User: User registration, friendly
-
-[Creates artifact with multiple messages]
-```
-
-.
+---
 
 ## 📗 Platform Integration
 
@@ -352,12 +368,13 @@ Which option? (1 or 2)
 ```
 
 ### Smart Handoff
-- System creates content with proper structure
+- System creates content with proper structure (TOC, dividers, etc.)
 - User chooses platform
 - MCP handles workspace creation
+- All formatting preserved
 - No manual configuration needed
 
-.
+---
 
 ## 🔧 Installing MCP Tools
 
@@ -391,11 +408,24 @@ I'm on [Windows/Mac/Linux]. Give me exact commands.
 2. Generate Personal Token
 3. Add to `.env` file
 
-.
+---
 
 ## 🆘 Troubleshooting
 
 ### Common Issues & Solutions
+
+**Formatting Issues:**
+- **Missing TOC?** - Required for ALL tickets, no exceptions
+- **No dividers?** - Add `---` between ALL sections
+- **Wrong Key Problems?** - Use `### → Key problems:` with 2+ items
+- **Wrong Reasons Why?** - Use `### → Reasons why:` with 2+ items
+- **Bullet symbols?** - Always use `- text` format
+- **No Designs section?** - Add with ◳ symbol and placeholders
+
+**Symbol Issues:**
+- **Wrong symbols?** - ◳ for Designs, ⋈ for Dependencies
+- **Missing symbols?** - Every major section needs its symbol
+- **Old symbols?** - Update from v6.0 symbols
 
 **Mode Selection:**
 - **Discovery not working?** - That's the default, no command needed
@@ -406,11 +436,6 @@ I'm on [Windows/Mac/Linux]. Give me exact commands.
 - **Not sure how many?** - System suggests based on complexity
 - **Too many/few rounds?** - Adjust based on quality needs
 - **Skipped thinking?** - Only skipped during discovery questions
-
-**Output Issues:**
-- **Symbols not showing?** - Check markdown artifact type
-- **Wrong structure?** - Verify mode and complexity
-- **Missing sections?** - May need higher complexity
 
 **Platform Integration:**
 - **Not seeing offer?** - Appears after creation in chat
@@ -423,40 +448,49 @@ I'm on [Windows/Mac/Linux]. Give me exact commands.
 - Use manual copy option
 - Restart with different mode
 
-.
+---
 
 ## ⚠️ Important Notes
 
-### Core Architecture in v6.0.0
-- **5 documents total** - Down from 8, better organized
-- **52% smaller** - ~20K tokens vs original 35K
+### Critical Requirements in v6.2.0
+- **Table of Contents** - MANDATORY for all tickets
+- **Dividers** - REQUIRED between all sections
+- **Key Problems/Reasons** - MUST use ### → format with 2+ items
+- **Bullet Format** - ONLY use `- text` never symbols
+- **Designs Section** - ALWAYS include with ◳ symbol
+- **Dependencies** - Include with ⋈ when needed
+
+### Core Architecture
+- **5 documents** - Optimized and consolidated
 - **Native thinking** - No external tools needed
 - **User-controlled rounds** - Choose thinking depth (1-10)
 - **Unified ticket mode** - One command, intelligent scaling
-- **New $text mode** - Quick snippets without process
-- **Tables of contents** - All docs have navigation
+- **$text mode** - Quick snippets without process
+- **Strict standards** - Consistent formatting enforced
 
 ### Key Principles
 - **Interactive always** - Guidance for quality
 - **Auto-detection** - System recognizes patterns
 - **Platform neutral** - User chooses destination
 - **Outcome focused** - Resolution not tasks
-- **2-minute readable** - Concise and clear
+- **Format compliance** - Strict standards maintained
 - **Thinking transparency** - User controls depth
 - **Single source of truth** - No redundancy
 
-### Migration from v5.1.0
-- All existing commands work
-- New $text mode available
-- Better performance (smaller system)
-- Enhanced examples and troubleshooting
-- Simplified document structure
+### Migration from v6.0.0
+- Update symbols (◳ for Designs, ⋈ for Dependencies)
+- Ensure TOC in all tickets
+- Add dividers between all sections
+- Use ### → format for Key Problems/Reasons
+- Replace bullet symbols with `- text`
 
-.
+---
 
 ## 📦 Version History
 
-- **v6.0.0**: New $text mode, 52% size reduction, 5-doc architecture, enhanced troubleshooting, decision trees
+- **v6.2.0**: Stricter formatting standards, updated symbols (◳, ⋈), mandatory TOC/dividers, enforced Key Problems/Reasons format
+- **v6.1.0**: Enhanced troubleshooting, improved examples, format validation
+- **v6.0.0**: New $text mode, 52% size reduction, 5-doc architecture, decision trees
 - **v5.1.0**: Native Claude thinking, user-controlled rounds, removed external MCPs
 - **v5.0.0**: Unified $ticket mode, all modes interactive, auto-scaling complexity
 - **v4.4.0**: Documentation mode, user guides
@@ -467,7 +501,7 @@ I'm on [Windows/Mac/Linux]. Give me exact commands.
 - **v2.0.0**: Interactive default
 - **v1.0.0**: WHAT/WHY philosophy
 
-.
+---
 
 ## 📚 Additional Resources
 
@@ -488,13 +522,14 @@ I'm on [Windows/Mac/Linux]. Give me exact commands.
 - [Docker Desktop Help](https://docs.docker.com/desktop/)
 - [Claude Desktop Setup](https://claude.ai/docs/desktop)
 
-### System Documents
-- Writer - Product Owner (Core system prompt)
-- Reference Guide (Symbols, templates, standards)
-- Interactive Flows (All mode interactions)
-- Quick Card (Daily command reference)
-- Platform Integration (ClickUp handoff)
+### System Documents (v6.2.0)
+- Writer - Product Owner - v6.2.0 (Core system prompt)
+- Reference Guide - v1.1.0 (Symbols, templates, standards)
+- Interactive Flows - v1.1.0 (All mode interactions)
+- Quick Card - v4.1.0 (Daily command reference)
+- Platform Integration - v2.1.0 (ClickUp handoff)
+- Prompt Improvement - v2.1.0 (Request clarity)
 
-.
+---
 
-*Product Owner v6.0.0: Optimized architecture. Five intelligent modes including new $text. Native thinking with user control. Unified ticket scaling. Enhanced troubleshooting. 52% smaller, 100% powerful. Single source of truth for better, faster outcomes.*
+*Product Owner v6.2.0: Stricter formatting standards. Updated symbols (◳, ⋈). Mandatory TOC and dividers. Enforced Key Problems/Reasons format. Five intelligent modes. Native thinking with user control. Unified ticket scaling. Single source of truth for consistent, professional outcomes.*
