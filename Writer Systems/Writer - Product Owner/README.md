@@ -293,12 +293,8 @@ System: I'll help create clear API documentation.
 ### Quick Content Generation
 
 Perfect for:
-- Error messages
 - Component descriptions
-- Marketing copy
-- UI text
-- Email templates
-- Status messages
+- UX writing
 
 ### Minimal Process
 ```
