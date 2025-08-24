@@ -66,7 +66,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **Commands**: $strict, $enhanced, $check for modification control
 - **Quality**: FORM scorecard ensures 70-95% professional standards
 
-#### 4. 🎯 Prompt Engineering Assistant (v5.1.0) 
+#### 4. 🎯 Prompt Engineering Assistant (v6.0.0) 
 **Transform vague requests into powerful AI prompts for ANY platform**
 - **8 Modes**: Including 3 Builder sub-modes ($prototype, $website, $app)
 - **Auto-Detection**: Weighted keyword analysis for mode selection
