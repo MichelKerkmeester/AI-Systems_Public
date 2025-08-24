@@ -275,11 +275,67 @@ Result: Professional podcast audio
 
 ## 📦 Installing Video-Audio MCP
 
-### Option A: NPM Global Install (Recommended)
+The Video-Audio MCP provides all media processing capabilities.
+
+### Option A: AI-Powered Docker Setup (Recommended)
+
+**Prerequisites:**
+- Docker Desktop installed ([Download Docker Desktop](https://www.docker.com/products/docker-desktop/))
+- Claude Desktop app ([Download Claude](https://claude.ai/download))
+- FFmpeg will be included in the container
+
+**AI-Assisted Installation:**
+
+Copy this prompt to Claude, ChatGPT, or any AI assistant:
+
+```
+Help me set up Docker container for the Video-Audio Agent MCP tool.
+
+I need to:
+1. Create a directory at "$HOME/MCP Servers"
+2. Clone this repo: https://github.com/misbahsy/video-audio-mcp.git
+3. Create Dockerfile with FFmpeg and all required codecs
+4. Create docker-compose.yml file with proper volume mounts
+5. Configure Claude Desktop's claude_desktop_config.json
+6. Build and start the container
+7. Set up volume mounts for input/output media files
+
+My details:
+- Media directory: [YOUR_MEDIA_DIRECTORY_PATH]
+- Operating system: [Windows/Mac/Linux]
+
+Please give me the exact commands to run, including:
+- Dockerfile with FFmpeg and all codecs
+- docker-compose.yml with media volume mounts
+- Claude Desktop configuration
+```
+
+The AI will provide step-by-step commands for your operating system.
+
+**Quick Docker Template:**
+
+If you want to set up manually, here's what the AI will help you create:
+
+```yaml
+# docker-compose.yml example structure
+version: '3.8'
+services:
+  video-audio-mcp:
+    build: .
+    volumes:
+      - ~/Videos:/media/input
+      - ~/Videos/output:/media/output
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+```
+
+### Option B: NPM Global Install (Alternative)
 
 **Prerequisites:**
 - Node.js 18+ installed ([Download Node.js](https://nodejs.org/))
-- Claude Desktop app ([Download Claude](https://claude.ai/download))
+- FFmpeg installed separately ([Download FFmpeg](https://ffmpeg.org/download.html))
+- Claude Desktop app
 
 **Installation Steps:**
 ```bash
@@ -289,17 +345,29 @@ npm install -g @misbahsy/video-audio-mcp
 # 2. Verify installation
 video-audio-mcp --version
 
-# 3. Get config path
-video-audio-mcp --config
+# 3. Check FFmpeg is available
+ffmpeg -version
 ```
-
-### Option B: NPX Setup (Quick)
 
 Add to Claude Desktop config:
 
 **Config Location:**
 - Mac/Linux: `~/.config/claude/claude_desktop_config.json`
 - Windows: `%APPDATA%\Claude\claude_desktop_config.json`
+
+```json
+{
+  "mcpServers": {
+    "video-audio": {
+      "command": "video-audio-mcp"
+    }
+  }
+}
+```
+
+### Option C: NPX Setup (Quick but Less Stable)
+
+For quick testing without installation:
 
 ```json
 {
@@ -312,23 +380,32 @@ Add to Claude Desktop config:
 }
 ```
 
-### Option C: Local Development
+**Note:** NPX requires FFmpeg to be installed separately on your system.
 
+### Verifying Installation
+
+**For Docker:**
 ```bash
-# 1. Clone repository
-git clone https://github.com/misbahsy/video-audio-mcp.git
-cd video-audio-mcp
+# Check container is running
+docker ps | grep video-audio
 
-# 2. Install dependencies
-npm install
+# Test FFmpeg in container
+docker exec video-audio-mcp ffmpeg -version
 
-# 3. Build the project
-npm run build
-
-# 4. Add to Claude config with local path
+# Check logs
+docker logs video-audio-mcp
 ```
 
-**Note:** Only the Video-Audio MCP is required. Native Claude thinking is built-in!
+**For NPM/NPX:**
+```bash
+# Check FFmpeg
+ffmpeg -version
+
+# Check codecs
+ffmpeg -codecs | grep -E "h264|h265|aac|mp3"
+```
+
+Then restart Claude Desktop and test with: "compress test video"
 
 .
 
@@ -339,11 +416,40 @@ npm run build
 | Issue | Solution |
 |-------|----------|
 | **"Can't find video"** | Provide full path like ~/Desktop/video.mp4 |
-| **"Codec not supported"** | Check if H.264, H.265, or VP9 |
-| **"File too large"** | Try smaller segments or lower resolution |
+| **"Codec not supported"** | Check FFmpeg installation includes all codecs |
+| **"File too large"** | Process in segments or check Docker memory allocation |
 | **"Quality looks bad"** | Choose "Thorough" thinking for better optimization |
-| **"Processing failed"** | Check available disk space and memory |
-| **"MCP not connected"** | Restart Claude Desktop |
+| **"Processing failed"** | Check available disk space and Docker resources |
+| **"MCP not connected"** | Check Docker container is running |
+| **"FFmpeg not found"** | For NPM setup, install FFmpeg separately |
+
+### Docker-Specific Issues
+
+**Container Problems:**
+```bash
+# Check container status
+docker ps -a | grep video-audio
+
+# View detailed logs
+docker logs --tail 50 video-audio-mcp
+
+# Restart container
+docker restart video-audio-mcp
+
+# Check resource usage
+docker stats video-audio-mcp
+
+# Rebuild if needed
+docker-compose down
+docker-compose build --no-cache
+docker-compose up -d
+```
+
+**Common Docker Fixes:**
+- **Memory issues**: Increase Docker Desktop memory to at least 4GB
+- **Disk space**: Ensure enough space for video processing (10GB+ recommended)
+- **Volume permissions**: Check mount points have read/write access
+- **Codec issues**: Rebuild container to ensure FFmpeg has all codecs
 
 ### Thinking-Related Issues
 
@@ -359,24 +465,27 @@ npm run build
 - Default to Standard (4-6) for most tasks
 - The system will suggest based on complexity
 
-### Quick Fixes
+### Path Issues
 
-**Path Issues:**
+**Correct Path Formats:**
 - Use full paths starting with ~ or /
 - Escape spaces: `~/My Videos/clip.mp4`
-- Common locations: ~/Desktop/, ~/Downloads/, ~/Movies/
+- Common locations: 
+  - Mac: ~/Movies/, ~/Desktop/
+  - Windows: ~/Videos/, ~/Desktop/
+  - Linux: ~/Videos/, ~/Downloads/
 
-**Memory Issues:**
+**FFmpeg Codec Issues:**
 ```bash
-# For large files, process in segments
-# Or reduce resolution first
-# Consider closing other applications
-```
+# Check available codecs
+ffmpeg -codecs
 
-**Codec Issues:**
-- Fallback to H.264 if H.265 unavailable
-- Use MP4 container for compatibility
-- Check ffmpeg installation
+# Essential codecs needed:
+# Video: h264, h265, vp9
+# Audio: aac, mp3, opus
+
+# If missing, rebuild Docker container or reinstall FFmpeg
+```
 
 .
 
@@ -384,7 +493,7 @@ npm run build
 
 - **Native thinking integrated** - Uses Claude's built-in capabilities
 - **Always asks thinking preference** - Before execution, not during discovery
-- **No additional MCPs needed** - Just Video-Audio MCP required
+- **Docker recommended** - Includes FFmpeg with all codecs
 - **Smart discovery** - Gathers info first, then asks about thinking
 - **Conversation adapts** - From quick execution to full guidance
 - **Best practices automatic** - Professional encoding patterns applied
@@ -392,6 +501,7 @@ npm run build
 - **Educational by design** - Teaches while processing
 - **Visual feedback always** - See the optimization impact
 - **User in control** - You choose optimization depth
+- **FFmpeg required** - Either in Docker or system-installed
 
 .
 
@@ -405,6 +515,10 @@ npm run build
 
 ### Core Tool
 - [Video-Audio MCP](https://github.com/misbahsy/video-audio-mcp) (Required)
+
+### Dependencies
+- [FFmpeg](https://ffmpeg.org/) - Media processing engine
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) - Container platform
 
 ### Documentation
 - [FFmpeg Documentation](https://ffmpeg.org/documentation.html)
@@ -424,6 +538,6 @@ npm run build
 - [TikTok Video Requirements](https://support.tiktok.com/en/using-tiktok/creating-videos)
 - [Podcast Standards](https://podcasters.spotify.com/resources/learn/create/podcast-audio-requirements)
 
-.
+---
 
 *Transform natural language into optimized media through intelligent conversation with customizable thinking depth. The system uses native Claude thinking to understand what you need and applies professional encoding automatically. You control how thorough the optimization should be. Every video and audio file processed with the perfect balance of quality and file size.*

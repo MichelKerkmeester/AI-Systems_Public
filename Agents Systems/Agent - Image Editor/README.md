@@ -279,39 +279,114 @@ Result: Complete responsive image set
 
 ## 📦 Installing Imagician MCP
 
-### Option A: Docker Setup (Recommended)
+The Imagician MCP provides all image processing capabilities.
+
+### Option A: AI-Powered Docker Setup (Recommended)
 
 **Prerequisites:**
 - Docker Desktop installed ([Download Docker Desktop](https://www.docker.com/products/docker-desktop/))
 - Claude Desktop app ([Download Claude](https://claude.ai/download))
 
-**Installation Steps:**
-```bash
-# 1. Create directory
-mkdir -p "$HOME/MCP Servers"
-cd "$HOME/MCP Servers"
+**AI-Assisted Installation:**
 
-# 2. Clone repository
-git clone https://github.com/flowy11/imagician.git
-cd imagician
+Copy this prompt to Claude, ChatGPT, or any AI assistant:
 
-# 3. Build Docker image
-docker build -t imagician-mcp .
+```
+Help me set up Docker container for the Imagician Agent MCP tool.
 
-# 4. Run container
-docker run -d \
-  --name imagician-mcp \
-  -v ~/Pictures:/images \
-  imagician-mcp
+I need to:
+1. Create a directory at "$HOME/MCP Servers"
+2. Clone this repo: https://github.com/flowy11/imagician-mcp.git
+3. Create Dockerfile with image processing libraries (Sharp, ImageMagick)
+4. Create docker-compose.yml file with proper volume mounts
+5. Configure Claude Desktop's claude_desktop_config.json
+6. Build and start the container
+7. Set up volume mounts for input/output image directories
+
+My details:
+- Image directory: [YOUR_IMAGE_DIRECTORY_PATH]
+- Output directory: [YOUR_OUTPUT_DIRECTORY_PATH]
+- Operating system: [Windows/Mac/Linux]
+
+Please give me the exact commands to run, including:
+- Dockerfile with Sharp and ImageMagick
+- docker-compose.yml with image volume mounts
+- Claude Desktop configuration
 ```
 
-### Option B: NPX Setup (Quick)
+The AI will provide step-by-step commands for your operating system.
+
+**Docker Setup Template:**
+
+The AI will help you create something like:
+
+```yaml
+# docker-compose.yml example structure
+version: '3.8'
+services:
+  imagician-mcp:
+    build: .
+    volumes:
+      - ~/Pictures:/images/input
+      - ~/Pictures/optimized:/images/output
+      - /tmp:/tmp  # For temporary processing
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+```
+
+### Option B: NPM Global Install (Alternative)
+
+**Prerequisites:**
+- Node.js 18+ installed ([Download Node.js](https://nodejs.org/))
+- ImageMagick installed ([Download ImageMagick](https://imagemagick.org/))
+- Claude Desktop app
+
+**Installation Steps:**
+```bash
+# 1. Install ImageMagick first (OS-specific)
+# Mac:
+brew install imagemagick
+
+# Ubuntu/Debian:
+sudo apt-get install imagemagick
+
+# Windows:
+# Download installer from imagemagick.org
+
+# 2. Install Imagician globally
+npm install -g @flowy11/imagician-mcp
+
+# 3. Verify installation
+imagician-mcp --version
+
+# 4. Check ImageMagick
+convert -version
+```
 
 Add to Claude Desktop config:
 
 **Config Location:**
 - Mac/Linux: `~/.config/claude/claude_desktop_config.json`
 - Windows: `%APPDATA%\Claude\claude_desktop_config.json`
+
+```json
+{
+  "mcpServers": {
+    "imagician": {
+      "command": "imagician-mcp",
+      "env": {
+        "IMAGE_INPUT_PATH": "~/Pictures",
+        "IMAGE_OUTPUT_PATH": "~/Pictures/optimized"
+      }
+    }
+  }
+}
+```
+
+### Option C: NPX Setup (Quick but Less Stable)
+
+For quick testing without installation:
 
 ```json
 {
@@ -324,7 +399,38 @@ Add to Claude Desktop config:
 }
 ```
 
-**Note:** Only the Imagician MCP is required. Native Claude thinking replaces the need for thinking MCPs!
+**Note:** NPX may have performance issues with large images. Docker is strongly recommended.
+
+### Verifying Installation
+
+**For Docker:**
+```bash
+# Check container is running
+docker ps | grep imagician
+
+# Test image processing libraries
+docker exec imagician-mcp node -e "console.log('Sharp:', require('sharp').versions)"
+
+# Check logs
+docker logs imagician-mcp
+
+# Verify volume mounts
+docker exec imagician-mcp ls -la /images/input
+```
+
+**For NPM/NPX:**
+```bash
+# Check ImageMagick
+convert -version
+
+# Check supported formats
+identify -list format | grep -E "JPEG|PNG|WebP|AVIF"
+
+# Test with a sample image
+convert sample.jpg -quality 85 test.jpg
+```
+
+Then restart Claude Desktop and test with: "optimize test image"
 
 .
 
@@ -336,10 +442,39 @@ Add to Claude Desktop config:
 |-------|----------|
 | **"Can't find image"** | Provide full path like ~/Desktop/photo.jpg |
 | **"Format not supported"** | Check if JPEG, PNG, WebP, or AVIF |
-| **"Permission denied"** | Check file permissions or try different location |
+| **"Permission denied"** | Check Docker volume permissions |
 | **"Quality looks bad"** | Choose "Thorough" thinking for better optimization |
 | **"File still too large"** | Try "Thorough" thinking with aggressive compression |
-| **"MCP not connected"** | Restart Claude Desktop |
+| **"MCP not connected"** | Check Docker container is running |
+| **"Out of memory"** | Increase Docker memory allocation |
+
+### Docker-Specific Issues
+
+**Container Problems:**
+```bash
+# Check container status
+docker ps -a | grep imagician
+
+# View detailed logs
+docker logs --tail 50 imagician-mcp
+
+# Restart container
+docker restart imagician-mcp
+
+# Check resource usage
+docker stats imagician-mcp
+
+# Rebuild if needed
+docker-compose down
+docker-compose build --no-cache
+docker-compose up -d
+```
+
+**Common Docker Fixes:**
+- **Memory issues**: Increase Docker Desktop memory to at least 2GB
+- **Permission issues**: Ensure volume directories are accessible
+- **Large files**: Process in batches or increase memory limit
+- **Format issues**: Rebuild container to ensure all libraries installed
 
 ### Thinking-Related Issues
 
@@ -355,21 +490,26 @@ Add to Claude Desktop config:
 - Default to Standard (4-6) for most tasks
 - The system will suggest based on complexity
 
-### Quick Fixes
+### Path Issues
 
-**Path Issues:**
+**Correct Path Formats:**
 - Use full paths starting with ~ or /
 - Escape spaces: `~/My Photos/pic.jpg`
-- Common locations: ~/Desktop/, ~/Downloads/, ~/Pictures/
+- Common locations:
+  - Mac: ~/Pictures/, ~/Desktop/, ~/Downloads/
+  - Windows: ~/Pictures/, ~/Desktop/, ~/Documents/
+  - Linux: ~/Pictures/, ~/Downloads/, /tmp/
 
-**Docker Issues:**
+**Image Format Support:**
 ```bash
-# Check if running
-docker ps
-# View logs
-docker logs imagician-mcp
-# Restart
-docker restart imagician-mcp
+# Check supported formats in Docker
+docker exec imagician-mcp node -e "console.log(require('sharp').format)"
+
+# Essential formats:
+# Input: JPEG, PNG, GIF, WebP, AVIF, TIFF, SVG
+# Output: JPEG, PNG, WebP, AVIF
+
+# If missing, rebuild Docker container
 ```
 
 .
@@ -378,7 +518,7 @@ docker restart imagician-mcp
 
 - **Native thinking integrated** - Uses Claude's built-in capabilities
 - **Always asks thinking preference** - Before execution, not during discovery
-- **No additional MCPs needed** - Just Imagician MCP required
+- **Docker recommended** - Includes all image processing libraries
 - **Smart discovery** - Gathers info first, then asks about thinking
 - **Conversation adapts** - From quick execution to full guidance
 - **Best practices automatic** - Professional patterns applied
@@ -386,6 +526,7 @@ docker restart imagician-mcp
 - **Educational by design** - Teaches while optimizing
 - **Visual feedback always** - See the optimization impact
 - **User in control** - You choose optimization depth
+- **Memory aware** - Large images may need Docker memory increase
 
 .
 
@@ -402,7 +543,12 @@ docker restart imagician-mcp
 ## 📚 Resources
 
 ### Core Tool
-- [Imagician MCP](https://github.com/flowy11/imagician) (Required)
+- [Imagician MCP](https://github.com/flowy11/imagician-mcp) (Required)
+
+### Dependencies
+- [Sharp](https://sharp.pixelplumbing.com/) - High-performance image processing
+- [ImageMagick](https://imagemagick.org/) - Comprehensive image manipulation
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) - Container platform
 
 ### Documentation
 - [WebP Information](https://developers.google.com/speed/webp)
@@ -414,7 +560,14 @@ docker restart imagician-mcp
 - [ImageMagick](https://imagemagick.org/) - Command line processing
 - [Sharp](https://sharp.pixelplumbing.com/) - Node.js library
 - [Squoosh](https://squoosh.app/) - Browser-based optimizer
+- [TinyPNG](https://tinypng.com/) - Online compression
 
-.
+### Format Specifications
+- [JPEG](https://jpeg.org/jpeg/) - Universal compatibility
+- [PNG](https://www.w3.org/TR/PNG/) - Lossless with transparency
+- [WebP](https://developers.google.com/speed/webp) - Modern web format
+- [AVIF](https://aomediacodec.github.io/av1-avif/) - Next-gen compression
+
+---
 
 *Transform natural language into optimized images through intelligent conversation with customizable thinking depth. The system uses native Claude thinking to understand what you need and applies professional optimization automatically. You control how thorough the optimization should be. Every image processed with the perfect balance of quality and file size.*

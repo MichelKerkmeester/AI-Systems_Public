@@ -12,6 +12,7 @@ The ClickUp Agent transforms natural language into organized ClickUp workspaces,
 - [📊 Workspace Patterns](#-workspace-patterns)
 - [🎨 Smart Defaults](#-smart-defaults)
 - [📋 Examples](#-examples)
+- [🔧 Installing ClickUp MCP](#-installing-clickup-mcp)
 - [🆘 Troubleshooting](#-troubleshooting)
 - [⚠️ Important Notes](#️-important-notes)
 - [📦 Version History](#-version-history)
@@ -71,14 +72,18 @@ Add these 4 streamlined documents to your project:
 - `ClickUp - Interactive Intelligence - v1.2.0.md` (Conversational guidance specification)
 - `ClickUp - Patterns & Operations - v1.2.0.md` (All patterns and operation mappings)
 - `ClickUp - Workspace Intelligence - v1.2.0.md` (Best practices and error recovery)
+- `README.md` (This guide)
 
-### Step 4: Enable ClickUp MCP
-The ClickUp MCP is already available in Claude Desktop! Just ensure it's enabled:
-1. Open Claude Desktop settings
-2. Check that ClickUp MCP is active
-3. No API key needed - it uses your ClickUp session
+### Step 4: Get Your ClickUp API Key
+1. Go to [ClickUp Settings](https://app.clickup.com/settings/apps)
+2. Click "Apps" in the left sidebar
+3. Generate a personal API token
+4. Copy the token for MCP configuration
 
-### Step 5: Start Creating Workspaces
+### Step 5: Install ClickUp MCP
+Follow the installation guide in the Installing ClickUp MCP section below.
+
+### Step 6: Start Creating Workspaces
 Simply describe what you need:
 ```
 organize my projects              # Guided conversation begins
@@ -305,6 +310,155 @@ User: standard but hurry
 
 .
 
+## 🔧 Installing ClickUp MCP
+
+The ClickUp MCP provides all task management and workspace operations.
+
+### Option A: AI-Powered Docker Setup (Recommended)
+
+**Prerequisites:**
+- Docker Desktop installed ([Download Docker Desktop](https://www.docker.com/products/docker-desktop/))
+- Claude Desktop app ([Download Claude](https://claude.ai/download))
+- ClickUp API token from [ClickUp Settings](https://app.clickup.com/settings/apps)
+
+**AI-Assisted Installation:**
+
+Copy this prompt to Claude, ChatGPT, or any AI assistant:
+
+```
+Help me set up Docker container for the ClickUp Agent MCP tool.
+
+I need to:
+1. Create a directory at "$HOME/MCP Servers"
+2. Clone this repo: https://github.com/clickup/mcp-server-clickup.git
+3. Create Dockerfile for the ClickUp MCP
+4. Create docker-compose.yml file
+5. Configure Claude Desktop's claude_desktop_config.json
+6. Build and start the container
+7. Set up environment variables for API authentication
+
+My details:
+- ClickUp API token: [YOUR_CLICKUP_API_TOKEN]
+- Operating system: [Windows/Mac/Linux]
+
+Please give me the exact commands to run, including:
+- Dockerfile with Node.js environment
+- docker-compose.yml with proper configuration
+- Claude Desktop configuration for Docker
+```
+
+The AI will provide step-by-step commands for your operating system.
+
+**Docker Setup Template:**
+
+The AI will help you create something like:
+
+```yaml
+# docker-compose.yml example structure
+version: '3.8'
+services:
+  clickup-mcp:
+    build: .
+    environment:
+      - CLICKUP_API_TOKEN=your-token-here
+      - NODE_ENV=production
+    restart: unless-stopped
+    ports:
+      - "3000:3000"  # If needed for MCP communication
+```
+
+### Option B: NPM Global Install (Alternative)
+
+**Prerequisites:**
+- Node.js 18+ installed ([Download Node.js](https://nodejs.org/))
+- Claude Desktop app
+
+**Installation Steps:**
+```bash
+# 1. Install globally
+npm install -g @clickup/mcp-server-clickup
+
+# 2. Verify installation
+clickup-mcp --version
+
+# 3. Set up API token
+export CLICKUP_API_TOKEN="your-token-here"
+```
+
+Add to Claude Desktop config:
+
+**Config Location:**
+- Mac/Linux: `~/.config/claude/claude_desktop_config.json`
+- Windows: `%APPDATA%\Claude\claude_desktop_config.json`
+
+```json
+{
+  "mcpServers": {
+    "clickup": {
+      "command": "clickup-mcp",
+      "env": {
+        "CLICKUP_API_TOKEN": "your-api-token-here"
+      }
+    }
+  }
+}
+```
+
+### Option C: NPX Setup (Quick but Less Stable)
+
+For quick testing without installation:
+
+```json
+{
+  "mcpServers": {
+    "clickup": {
+      "command": "npx",
+      "args": ["-y", "@clickup/mcp-server-clickup"],
+      "env": {
+        "CLICKUP_API_TOKEN": "your-api-token-here"
+      }
+    }
+  }
+}
+```
+
+**Note:** NPX may have connection stability issues. Docker is recommended for production use.
+
+### Option D: Built-in Claude Desktop Support
+
+**Note:** ClickUp MCP may already be available in Claude Desktop. Check if it's pre-installed:
+1. Open Claude Desktop settings
+2. Look for ClickUp in available MCPs
+3. If present, just add your API token
+
+### Verifying Installation
+
+**For Docker:**
+```bash
+# Check container is running
+docker ps | grep clickup
+
+# Check logs
+docker logs clickup-mcp
+
+# Test API connection
+docker exec clickup-mcp curl -H "Authorization: YOUR_TOKEN" \
+  https://api.clickup.com/api/v2/user
+```
+
+**For NPM/NPX:**
+```bash
+# Test API token
+curl -H "Authorization: YOUR_TOKEN" \
+  https://api.clickup.com/api/v2/user
+
+# Should return your user info if token is valid
+```
+
+Then restart Claude Desktop and test with: "create a test task"
+
+.
+
 ## 🆘 Troubleshooting
 
 ### Common Issues & Solutions
@@ -314,26 +468,59 @@ User: standard but hurry
 | **"How many rounds?"** | Choose based on complexity (Quick for simple, Standard for most) |
 | **"Don't know what depth"** | System provides recommendations based on request |
 | **"Can't find workspace"** | Check you're in the right ClickUp workspace |
-| **"Permission denied"** | Verify your ClickUp permissions |
+| **"Permission denied"** | Verify your API token has full access |
 | **"Too many options"** | Choose "Quick" to start simple |
 | **"Taking too long"** | Use fewer thinking rounds next time |
+| **"MCP not connected"** | Check Docker container or restart Claude Desktop |
+| **"Invalid API token"** | Regenerate token in ClickUp settings |
 
-### Quick Fixes
+### Docker-Specific Issues
 
-**ClickUp Connection:**
-- Ensure you're logged into ClickUp
-- Restart Claude Desktop if needed
-- Check ClickUp MCP is enabled
+**Container Problems:**
+```bash
+# Check container status
+docker ps -a | grep clickup
 
-**Thinking Depth:**
-- Start with Standard (4-6) if unsure
-- Use Quick (2-3) for urgent needs
-- Try Thorough (7-10) for complex systems
+# View detailed logs
+docker logs --tail 50 clickup-mcp
+
+# Restart container
+docker restart clickup-mcp
+
+# Rebuild if needed
+docker-compose down
+docker-compose build --no-cache
+docker-compose up -d
+```
+
+**Common Docker Fixes:**
+- **Connection issues**: Check API token in docker-compose.yml
+- **Port conflicts**: Ensure port 3000 isn't in use
+- **Memory issues**: Usually minimal, ClickUp MCP is lightweight
+- **Network issues**: Restart Docker Desktop
+
+### API Token Issues
+
+**Getting a Valid Token:**
+1. Go to [ClickUp Settings](https://app.clickup.com/settings/apps)
+2. Click "Apps" → "Generate Token"
+3. Copy the entire token string
+4. Test with: `curl -H "Authorization: pk_YOUR_TOKEN" https://api.clickup.com/api/v2/user`
+
+### Thinking Depth Selection
+
+**Quick Guide:**
+- **Unsure?** Start with Standard (4-6)
+- **Urgent?** Use Quick (2-3)
+- **Complex?** Go Thorough (7-10)
+- **Can always adjust** in next request
 
 ### Getting Help
-- For ClickUp issues: Verify you're logged in
+- For Docker issues: Check container logs in Docker Desktop
+- For NPM issues: Check Claude Desktop logs
+- For ClickUp issues: Verify you're logged into ClickUp
 - For thinking questions: Ask for recommendation
-- For general issues: The agent explains and guides
+- For API issues: Check [ClickUp API Docs](https://clickup.com/api)
 
 .
 
@@ -342,13 +529,14 @@ User: standard but hurry
 - **No commands needed** - Just describe what you want
 - **You control thinking** - Always your choice on depth
 - **Conversation adapts** - From quick execution to full guidance
-- **ClickUp login required** - Be logged into ClickUp
+- **API token required** - Get from ClickUp settings
 - **No overwrites** - Always creates new or asks
 - **Best practices automatic** - Professional patterns applied
 - **Thinking scales features** - More depth = more features
 - **Educational by design** - Teaches while building
 - **2-3 questions max** - Respects your time
 - **Visual feedback always** - See what's created
+- **Docker recommended** - Most stable connection
 
 .
 
@@ -363,18 +551,28 @@ User: standard but hurry
 ## 📚 Resources
 
 ### Core Tools
-- [ClickUp MCP](https://github.com/clickup/mcp-server-clickup) (Included in Claude)
+- [ClickUp MCP Server](https://github.com/clickup/mcp-server-clickup) (Required)
+- [Claude Projects](https://claude.ai) (Platform)
 
 ### Documentation
 - [ClickUp API Docs](https://clickup.com/api)
 - [ClickUp Help Center](https://help.clickup.com/)
 - [MCP Protocol](https://modelcontextprotocol.io/)
+- [Docker Desktop](https://docs.docker.com/desktop/)
 
 ### Quick Links
 - [ClickUp Login](https://app.clickup.com)
-- [Claude Projects](https://claude.ai)
+- [Get API Token](https://app.clickup.com/settings/apps)
+- [Claude Desktop](https://claude.ai/download)
 - [ClickUp Features Guide](https://help.clickup.com/hc/en-us/categories/6314476398999-Features)
 
-.
+### Performance Guidelines
+- **Simple operations**: 2-3 thinking rounds
+- **Standard workspaces**: 4-6 thinking rounds
+- **Complex systems**: 7-10 thinking rounds
+- **Enterprise architecture**: 10+ thinking rounds
+- **Emergency fixes**: Quick (2-3) with follow-up
+
+---
 
 *Transform ideas into organized ClickUp workspaces through natural conversation with user-controlled thinking depth. The system understands what you need and guides appropriately. You choose how thoroughly to analyze. Complex systems ready in under 5 minutes. Just describe what you want to organize and select your thinking preference!*

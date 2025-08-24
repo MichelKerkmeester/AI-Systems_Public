@@ -9,7 +9,7 @@ The Webflow Agent transforms natural language into precise Webflow CMS operation
 - [🧠 How It Works](#-how-it-works)
 - [💬 Example Interactions](#-example-interactions)
 - [📊 What Gets Created](#-what-gets-created)
-- [🔧 Installing Webflow MCP (Required)](#-installing-webflow-mcp-required)
+- [🔧 Installing MCPs (Required)](#-installing-mcps-required)
 - [🆘 Troubleshooting](#-troubleshooting)
 - [⚠️ Important Notes](#️-important-notes)
 - [📦 Version History](#-version-history)
@@ -58,10 +58,10 @@ Add these 7 essential documents to your project:
 - `Imagician - MCP Knowledge - v1.0.0.md` (Image optimization)
 - `README.md` (This guide)
 
-### Step 4: Get Your Webflow API Key
-1. Go to [Webflow Account Settings](https://webflow.com/dashboard/account/apps)
-2. Generate an API key
-3. Copy the key for MCP configuration
+### Step 4: Get Your API Keys
+1. **Webflow API Key**: Go to [Webflow Account Settings](https://webflow.com/dashboard/account/apps)
+2. **Figma API Token**: Go to [Figma Settings](https://www.figma.com/developers/api#access-tokens)
+3. Save both keys for MCP configuration
 
 ### Step 5: Start Building
 Simply describe what you need:
@@ -97,7 +97,7 @@ The system automatically detects what you need based on confidence levels:
 - Always prioritized for CMS and site operations
 - Handles collections, items, pages, publishing
 
-**Secondary MCP Integration:**
+**Integrated MCP Services:**
 - **Figma MCP**: Design system import (30-45s)
 - **Imagician MCP**: Image optimization (2-3s per image)
 
@@ -270,13 +270,93 @@ Performance:
 
 .
 
-## 🔧 Installing Webflow MCP (Required)
+## 🔧 Installing MCPs (Required)
 
-The Webflow MCP provides core functionality for all operations.
+The Webflow Agent requires three MCP tools for full functionality. All can be installed via Docker for maximum stability.
 
-### Option A: NPX Setup (Recommended)
+### Option A: AI-Powered Docker Setup (Recommended)
 
-Add to Claude Desktop config:
+**Prerequisites:**
+- Docker Desktop installed ([Download Docker Desktop](https://www.docker.com/products/docker-desktop/))
+- Claude Desktop app ([Download Claude](https://claude.ai/download))
+- Webflow API key from [Webflow Account Settings](https://webflow.com/dashboard/account/apps)
+- Figma API token from [Figma Settings](https://www.figma.com/developers/api#access-tokens)
+
+**Complete AI-Assisted Installation:**
+
+Copy this prompt to Claude, ChatGPT, or any AI assistant for a complete setup:
+
+```
+Help me set up Docker containers for all Webflow Agent MCP tools.
+
+I need to install 3 MCPs:
+1. Webflow MCP (primary) - https://github.com/webflow/mcp-server-webflow.git
+2. Figma MCP (design import) - https://github.com/figma/mcp-server-figma.git
+3. Imagician MCP (image optimization) - https://github.com/flowy11/imagician-mcp.git
+
+Tasks needed:
+1. Create directory structure at "$HOME/MCP Servers"
+2. Clone all three repositories
+3. Create a unified docker-compose.yml for all services
+4. Set up environment variables for API keys
+5. Configure Claude Desktop's claude_desktop_config.json
+6. Build and start all containers
+7. Set up proper volume mounts for image processing
+
+My details:
+- Webflow API key: [YOUR_WEBFLOW_KEY_HERE]
+- Figma API token: [YOUR_FIGMA_TOKEN_HERE]
+- Image directory: [YOUR_IMAGE_DIRECTORY_PATH]
+- Operating system: [Windows/Mac/Linux]
+
+Please give me the exact commands to run and file contents to create.
+```
+
+The AI will provide complete step-by-step commands for your operating system.
+
+**Quick Setup for Individual MCPs:**
+
+If you prefer to set up MCPs one at a time, use these individual prompts:
+
+**Webflow MCP Docker Setup:**
+```
+Help me set up Docker container for Webflow MCP.
+
+Repository: https://github.com/webflow/mcp-server-webflow.git
+API key: [YOUR_WEBFLOW_KEY]
+Directory: "$HOME/MCP Servers/webflow"
+OS: [Windows/Mac/Linux]
+
+Need: Dockerfile, docker-compose.yml, and Claude config.
+```
+
+**Figma MCP Docker Setup:**
+```
+Help me set up Docker container for Figma MCP.
+
+Repository: https://github.com/figma/mcp-server-figma.git
+API token: [YOUR_FIGMA_TOKEN]
+Directory: "$HOME/MCP Servers/figma"
+OS: [Windows/Mac/Linux]
+
+Need: Dockerfile, docker-compose.yml, and Claude config.
+```
+
+**Imagician MCP Docker Setup:**
+```
+Help me set up Docker container for Imagician MCP.
+
+Repository: https://github.com/flowy11/imagician-mcp.git
+Image directory to mount: [YOUR_IMAGE_PATH]
+Directory: "$HOME/MCP Servers/imagician"
+OS: [Windows/Mac/Linux]
+
+Need: Dockerfile, docker-compose.yml with volume mounts, and Claude config.
+```
+
+### Option B: NPX Setup (Quick but Less Stable)
+
+If you need a quick setup without Docker, add all three MCPs to Claude Desktop config:
 
 **Config Location:**
 - Mac/Linux: `~/.config/claude/claude_desktop_config.json`
@@ -289,58 +369,50 @@ Add to Claude Desktop config:
       "command": "npx",
       "args": ["-y", "@webflow/mcp-server-webflow"],
       "env": {
-        "WEBFLOW_API_KEY": "your-api-key-here"
+        "WEBFLOW_API_KEY": "your-webflow-key-here"
       }
+    },
+    "figma": {
+      "command": "npx",
+      "args": ["-y", "@figma/mcp-server-figma"],
+      "env": {
+        "FIGMA_API_KEY": "your-figma-token-here"
+      }
+    },
+    "imagician": {
+      "command": "npx",
+      "args": ["-y", "@flowy11/imagician-mcp"]
     }
   }
 }
 ```
 
-### Option B: Docker Setup (Advanced)
+**Note:** NPX setup may have stability issues. Docker is strongly recommended for production use.
 
-For production stability, use Docker:
+### Verifying Installation
 
+After setup, verify all MCPs are running:
+
+**For Docker:**
 ```bash
-# Create directory
-mkdir -p "$HOME/MCP Servers/webflow"
-cd "$HOME/MCP Servers/webflow"
+# Check all containers are running
+docker ps
 
-# Create docker-compose.yml
-cat > docker-compose.yml << EOF
-version: '3.8'
-services:
-  webflow-mcp:
-    image: node:18-alpine
-    command: npx -y @webflow/mcp-server-webflow
-    environment:
-      - WEBFLOW_API_KEY=your-api-key
-    restart: unless-stopped
-EOF
+# Should show:
+# webflow-mcp     Running
+# figma-mcp       Running
+# imagician-mcp   Running
 
-# Start container
-docker-compose up -d
+# Check logs if needed
+docker logs webflow-mcp
+docker logs figma-mcp
+docker logs imagician-mcp
 ```
 
-### Additional MCPs (Optional but Recommended)
-
-**Figma MCP** (Design Integration):
-```json
-"figma": {
-  "command": "npx",
-  "args": ["-y", "@figma/mcp-server-figma"],
-  "env": {
-    "FIGMA_API_KEY": "your-figma-key"
-  }
-}
-```
-
-**Imagician MCP** (Image Optimization):
-```json
-"imagician": {
-  "command": "npx",
-  "args": ["-y", "@flowy11/imagician-mcp"]
-}
-```
+**For NPX:**
+1. Restart Claude Desktop
+2. Check the MCP indicator in Claude
+3. Try a simple command like "test Webflow connection"
 
 .
 
@@ -352,12 +424,37 @@ docker-compose up -d
 |-------|----------|
 | **"Collection not found"** | Check collection name, list available |
 | **"Rate limit exceeded"** | Wait 60s, auto-resumes |
-| **"Design sync failed"** | Check Figma permissions |
-| **"Image too large"** | Auto-optimizes with Imagician |
-| **"API key invalid"** | Verify key in config |
-| **"MCP not connected"** | Restart Claude Desktop |
+| **"Design sync failed"** | Check Figma permissions and Docker logs |
+| **"Image too large"** | Check Imagician container has enough memory |
+| **"API key invalid"** | Verify keys in docker-compose.yml |
+| **"MCP not connected"** | Check Docker containers are running |
 | **"Can't find site"** | Check site ID in Webflow |
 | **"Permissions error"** | Verify API key has full access |
+
+### Docker-Specific Issues
+
+**Container Issues:**
+```bash
+# Check container status
+docker ps -a
+
+# Restart all containers
+docker-compose restart
+
+# Rebuild if needed
+docker-compose down
+docker-compose build --no-cache
+docker-compose up -d
+
+# Check resource usage
+docker stats
+```
+
+**Common Docker Fixes:**
+- **Memory issues**: Increase Docker Desktop memory allocation
+- **Network issues**: Restart Docker Desktop
+- **Permission issues**: Check volume mount permissions
+- **Port conflicts**: Ensure ports aren't in use
 
 ### API Rate Limits
 
@@ -377,27 +474,12 @@ All services follow standardized limits:
 | **Bulk 50 items** | <3min | 30-50 | 85% |
 | **Full site** | <8min | 50-100 | 88% |
 
-### Quick Fixes
-
-**Check MCP Status:**
-```bash
-# For NPX
-ps aux | grep webflow
-
-# For Docker
-docker ps
-docker logs webflow-mcp
-```
-
-**Restart Services:**
-- NPX: Restart Claude Desktop
-- Docker: `docker-compose restart`
-
 ### Getting Help
+- For Docker issues: Check container logs in Docker Desktop
+- For NPX issues: Check Claude Desktop logs
 - For Webflow issues: Check [API documentation](https://developers.webflow.com/)
 - For Figma issues: Verify file permissions
 - For Image issues: Check file formats (JPEG, PNG, WebP supported)
-- For MCP issues: Review config syntax
 
 .
 
@@ -415,6 +497,7 @@ docker logs webflow-mcp
 - **Performance guaranteed** - Standardized timing for all operations
 - **Design consistency** - Figma integration seamless
 - **Image optimization** - Automatic via Imagician when detected
+- **Docker recommended** - Most stable with all three MCPs
 
 .
 
@@ -427,15 +510,16 @@ docker logs webflow-mcp
 ## 📚 Resources
 
 ### Core Tools
-- [Webflow API](https://developers.webflow.com/) (Required)
+- [Webflow MCP Server](https://github.com/webflow/mcp-server-webflow) (Required)
+- [Figma MCP Server](https://github.com/figma/mcp-server-figma) (Design integration)
+- [Imagician MCP](https://github.com/flowy11/imagician-mcp) (Image optimization)
 - [Claude Projects](https://claude.ai) (Platform)
-- [Figma API](https://www.figma.com/developers/api) (Design integration)
-- [Imagician MCP](https://github.com/flowy11/imagician) (Image optimization)
 
 ### Documentation
 - [Webflow CMS Guide](https://university.webflow.com/lesson/intro-to-the-webflow-cms)
 - [MCP Protocol](https://modelcontextprotocol.io/)
 - [API Rate Limits](https://developers.webflow.com/reference/rate-limits)
+- [Docker Desktop](https://docs.docker.com/desktop/)
 
 ### Quick Links
 - [Get Webflow API Key](https://webflow.com/dashboard/account/apps)
