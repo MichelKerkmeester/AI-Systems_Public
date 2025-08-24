@@ -2,8 +2,37 @@
 
 A comprehensive system that transforms vague requests into clear, effective AI prompts using proven frameworks, systematic evaluation, and intelligent refinement. Features 8 operating modes including 3 specialized Builder sub-modes for creating universal creative briefs that work on ANY AI development platform while maintaining resource efficiency.
 
+## 📑 Table of Contents
+
+- [🆕 What's New in v6.0.0](#-whats-new-in-v600)
+- [📖 Overview](#-overview)
+- [✨ Key Features](#-key-features)
+- [🚀 Quick Setup](#-quick-setup)
+- [🎛️ Operating Modes](#️-operating-modes)
+  - [Core Modes](#core-modes)
+  - [Builder Sub-Modes](#builder-sub-modes-universal-ai-platform-support)
+  - [Supported Platforms](#supported-platforms-include)
+- [🧠 Native Claude Thinking](#-native-claude-thinking)
+  - [How Thinking Works](#how-thinking-works-in-v600)
+  - [User Interaction](#user-interaction)
+- [🗂️ Frameworks Overview](#️-frameworks-overview-v600)
+  - [Universal Frameworks](#universal-frameworks)
+  - [Builder Creative Frameworks](#builder-creative-frameworks-universal)
+- [🎨 Creative Direction Philosophy](#-creative-direction-philosophy-universal-in-v600)
+- [📊 Compact Report Examples](#-compact-report-examples)
+- [💰 Smart Resource Optimization](#-smart-resource-optimization-universal)
+- [🎨 Creative Direction Matching](#-creative-direction-matching)
+- [🆘 Troubleshooting](#-troubleshooting)
+- [⚠️ Important Notes](#️-important-notes-v600)
+- [📦 Version History](#-version-history)
+- [🎯 Key Principles](#-key-principles-v600)
+- [📚 Additional Resources](#-additional-resources)
+
+.
+
 ## 🆕 What's New in v6.0.0
 
+- **Consolidated Core Reference**: Single source of truth combining all definitions, frameworks, and quick patterns
 - **Native Claude Thinking Integration**: Leverages Claude's built-in thinking capabilities
 - **User-Controlled Thinking Rounds**: You decide how many thinking rounds for optimal results
 - **Interactive Thinking Selection**: System asks for your preference on complexity
@@ -11,9 +40,13 @@ A comprehensive system that transforms vague requests into clear, effective AI p
 - **Universal Platform Support**: Builder modes work on ALL AI platforms
 - **Enhanced Decision Making**: Transparent thinking process for better results
 
-## Overview
+.
+
+## 📖 Overview
 
 The Prompt Engineering Assistant helps users craft powerful, precise prompts for any AI system, with specialized support for creating universal Builder briefs that work on ANY AI development platform. With six core frameworks and intelligent enhancement algorithms, it delivers professional-grade prompts that maximize AI creativity and performance while minimizing resource usage.
+
+.
 
 ## ✨ Key Features
 
@@ -29,6 +62,8 @@ The Prompt Engineering Assistant helps users craft powerful, precise prompts for
 - **Interactive Mode**: Conversational guidance focusing on goals and feelings
 - **Artifact-Based Delivery**: All prompts delivered in reusable markdown artifacts
 
+.
+
 ## 🚀 Quick Setup
 
 ### Step 1: Create a Claude Project
@@ -40,17 +75,16 @@ The Prompt Engineering Assistant helps users craft powerful, precise prompts for
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Writer - Prompt Improver - v6.0.0.md`
+3. Copy and paste: `Writer - Prompt Improver v5.3.0.md`
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
 Add these documents to your project's knowledge base:
-- `Prompt - Quick Reference Card - v3.0.0.md` (Universal platform support)
-- `Prompt - Artifacts, Templates & Examples - v3.0.0.md` (Consolidated file)
-- `Prompt - Evaluation & Refinement.md`
-- `Prompt - Interactive Mode.md`
-- `Prompt - Patterns & Enhancements.md`
+- `Prompt - Core System & Quick Reference.md` (Consolidated single source of truth)
 - `Prompt - Builder Mode.md` (Universal AI platform creative briefs)
+- `Prompt - Evaluation & Refinement.md` (Quality assessment)
+- `Prompt - Interactive Mode.md` (Guided enhancement)
+- `Prompt - Patterns & Enhancements.md` (Templates and techniques)
 
 ### Step 4: Start Creating Universal Prompts
 Simply paste your prompt or describe what you need:
@@ -64,6 +98,8 @@ $app task management solution
 $builder create a SaaS platform
 ```
 
+.
+
 ## 🎛️ Operating Modes
 
 ### Core Modes
@@ -72,7 +108,7 @@ $builder create a SaaS platform
 |------|------------|---------|----------|---------|
 | **$short** | `$short` or `$s` | Quick minimal refinement | Simple clarity boost | Enhanced prompt |
 | **$improve** | `$improve` or `$i` (DEFAULT) | Smart enhancement | Most improvements | Enhanced prompt with goals |
-| **$refine** | `$full`, `$refine`, or `$r` | Full 3-phase optimization | Maximum quality | Complete creative brief |
+| **$refine** | `$refine` or `$r` | Full 3-phase optimization | Maximum quality | Complete creative brief |
 | **$interactive** | `$interactive` | Guided help with Q&A | Learning/exploring | Guided creative prompt |
 | **$json** | `$json` or `$j` | API-ready JSON format | Programmatic use | Structured creative brief |
 
@@ -98,6 +134,8 @@ $builder create a SaaS platform
 - **WordPress** - CMS platforms
 - **ANY AI Platform** - Universal principles apply
 
+.
+
 ## 🧠 Native Claude Thinking
 
 ### How Thinking Works in v6.0.0
@@ -115,6 +153,8 @@ The system uses Claude's native thinking capability to analyze and enhance promp
 The system will ask: **"How many thinking rounds would you like me to use? (1-10, or 'auto' for my recommendation)"**
 
 This happens for all modes except during discovery phases in interactive mode.
+
+.
 
 ## 🗂️ Frameworks Overview (v6.0.0)
 
@@ -167,6 +207,8 @@ This happens for all modes except during discovery phases in interactive mode.
 - **L** - Logic (business rules, not implementation)
 - **E** - Experience (user expectations and feelings)
 
+.
+
 ## 🎨 Creative Direction Philosophy (Universal in v6.0.0)
 
 ### Instead of Specifications, We Provide:
@@ -192,6 +234,8 @@ This happens for all modes except during discovery phases in interactive mode.
 - Leverage native platform strengths
 - No forced uniformity
 - Celebrate platform diversity
+
+.
 
 ## 📊 Compact Report Examples
 
@@ -229,6 +273,8 @@ Key Improvements:
 Note: This creative brief works on Bolt.new, v0, Cursor, or ANY AI platform
 ```
 
+.
+
 ## 💰 Smart Resource Optimization (Universal)
 
 All Builder prompts include universal resource optimization:
@@ -256,6 +302,8 @@ All Builder prompts include universal resource optimization:
 - Third-party services
 - Enterprise features
 
+.
+
 ## 🎨 Creative Direction Matching 
 
 When users provide references, we extract:
@@ -271,6 +319,8 @@ We DON'T extract:
 - Rigid component structures
 - Fixed implementations
 - Prescriptive layouts
+
+.
 
 ## 🆘 Troubleshooting
 
@@ -292,8 +342,11 @@ We DON'T extract:
 - **Output unclear**: Request more thinking rounds
 - **Too complex**: Break into smaller requests
 
+.
+
 ## ⚠️ Important Notes (v6.0.0)
 
+- **Consolidated reference document** - Single source of truth for all definitions
 - **Native thinking integration** - Uses Claude's built-in capabilities
 - **User-controlled complexity** - You choose thinking depth
 - **Universal platform support** - Works on ANY AI development platform
@@ -305,9 +358,11 @@ We DON'T extract:
 - **Creative matching supported** - Extracts mood from references
 - **No prescriptive code** - Platform-agnostic approach
 
+.
+
 ## 📦 Version History
 
-- **v6.0.0**: Native Claude thinking, user-controlled rounds, no external dependencies
+- **v6.0.0**: Consolidated Core System & Quick Reference, native Claude thinking, user-controlled rounds
 - **v5.0.0**: Universal platform support, Builder mode replaces Lovable, works on ALL AI platforms
 - **v4.2.0**: Creative direction philosophy, AI design freedom, exploration-first approach
 - **v4.1.0**: Reorganized architecture prioritizing core prompt improvement logic
@@ -317,19 +372,31 @@ We DON'T extract:
 - **v2.0.0**: Complete rewrite with 5 modes, visual dashboards
 - **v1.0.0**: Initial CRAFT framework implementation
 
+.
+
 ## 🎯 Key Principles (v6.0.0)
 
-1. **User-controlled thinking** - You decide the analysis depth
-2. **Universal compatibility** - Works on ANY AI platform
-3. **Create creative briefs, not prescriptive specs** - Enable AI creativity
-4. **Goals over specifications** - Focus on outcomes and feelings
-5. **Explore before building** - Validate concepts with simple prototypes
-6. **Platform flexibility** - Each platform can excel differently
-7. **Trust AI creativity** - Provide direction, not rigid constraints
-8. **User feedback drives features** - Build what works, not what's planned
-9. **Preserve creative freedom** - Enable innovation within guidelines
+1. **Single source of truth** - Consolidated Core System & Quick Reference
+2. **User-controlled thinking** - You decide the analysis depth
+3. **Universal compatibility** - Works on ANY AI platform
+4. **Create creative briefs, not prescriptive specs** - Enable AI creativity
+5. **Goals over specifications** - Focus on outcomes and feelings
+6. **Explore before building** - Validate concepts with simple prototypes
+7. **Platform flexibility** - Each platform can excel differently
+8. **Trust AI creativity** - Provide direction, not rigid constraints
+9. **User feedback drives features** - Build what works, not what's planned
+10. **Preserve creative freedom** - Enable innovation within guidelines
+
+.
 
 ## 📚 Additional Resources
+
+### Core Documentation
+- **Prompt - Core System & Quick Reference** - All mode definitions, frameworks, commands, and quick patterns in one consolidated document
+- **Prompt - Builder Mode** - Universal AI platform creative brief specifications
+- **Prompt - Evaluation & Refinement** - Quality assessment and improvement techniques
+- **Prompt - Interactive Mode** - Conversational enhancement guidance
+- **Prompt - Patterns & Enhancements** - Templates and enhancement methods
 
 ### AI Development Platforms
 - [Bolt.new](https://bolt.new) - Instant full-stack deployment
@@ -344,4 +411,4 @@ We DON'T extract:
 
 ---
 
-*Transform vague requests into universal creative briefs. Enable AI creativity through goals and mood across ANY platform. Create exploration prompts, not rigid specifications. Optimize for discovery and iteration on all AI development tools. Now with native Claude thinking - you control the depth!*
+*Transform vague requests into universal creative briefs. Enable AI creativity through goals and mood across ANY platform. Create exploration prompts, not rigid specifications. Optimize for discovery and iteration on all AI development tools. Now with native Claude thinking and consolidated reference documentation - you control the depth!*
