@@ -9,7 +9,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 ## 📑 Table of Contents
 
-### ✍️ Writer Systems
+### ✏️ Writer Systems
 1. [Product Owner Writer](#1--product-owner-writer)
 2. [Branded Content Writer](#2--branded-content-writer)
 3. [Document Beautifier](#3--document-beautifier)
@@ -23,11 +23,12 @@ Some of my non-client AI systems that I made available to the public. They were 
 7. [ClickUp Agent](#7--clickup-agent)
 8. [Notion Agent](#8--notion-agent)
 9. [Imagician Agent](#9--imagician-agent)
-10. [Webflow Agent](#10--webflow-agent)
+10. [Video Audio Agent](#10--video-audio-agent)
+11. [Webflow Agent](#11--webflow-agent)
 
 ### 💻 Development Systems
-11. [IDE System Prompt](#11--ide-system-prompt)
-12. [Lovable System Prompts](#12--lovable-system-prompts)
+12. [IDE System Prompt](#12--ide-system-prompt)
+13. [Lovable System Prompts](#13--lovable-system-prompts)
 
 ### 🔧 Additional Sections
 - [Common Features](#-common-features)
@@ -37,7 +38,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 ---
 
-## ✍️ Writer Systems
+## ✏️ Writer Systems
 ##### Automated content, documentation & prompt writing systems
 ——
 
@@ -49,7 +50,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **ClickUp Integration**: Direct workspace creation with MCP handoff
 - **Enhanced Features**: Troubleshooting guides, decision trees, recovery strategies
 
-#### 2. ✍️ Branded Content Writer (v4.1.0)
+#### 2. ✏️ Branded Content Writer (v4.1.0)
 **Marketing content with systematic authenticity and failure transparency**
 - **Interactive Modes**: Visual clarity scoring, celebration mechanics, guided failure discovery
 - **Tone Shortcuts**: $natural, $vulnerable, $collaborative with 1 imperfection per 300-400 words
@@ -124,7 +125,15 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **Visual Feedback**: Before/after with size and quality metrics
 - **Platform Optimized**: Instagram, Facebook, Twitter, LinkedIn, YouTube specs
 
-#### 10. 🎨 Webflow Agent (v1.0.0)
+#### 10. 🎬 Video Audio Agent (v1.0.0)
+**Video and audio processing through natural conversation**
+- **Natural Language**: "Compress this video" → Optimal settings applied
+- **Smart Codecs**: H.264/H.265 for video, AAC/MP3 for audio with auto-selection
+- **Platform Ready**: YouTube, Instagram, TikTok, podcast optimizations
+- **Batch Processing**: Multiple files with consistent or per-file optimization
+- **Visual Feedback**: Before/after metrics for size, quality, and processing time
+
+#### 11. 🎨 Webflow Agent (v1.0.0)
 **Natural language CMS management with design integration**
 - **Design-First**: "Setup blog with Figma" → Complete CMS in 60 seconds
 - **Triple MCP**: Webflow + Figma + Imagician in harmony
@@ -138,7 +147,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 ##### IDE enhancements & App Prototyping
 ——
 
-#### 11. 🛠️ IDE System Prompt (v3.9.0)
+#### 12. 🛠️ IDE System Prompt (v3.9.0)
 **Transform any AI coding assistant into an elite software engineer**
 - **Root Cause**: Fixes underlying issues, not symptoms
 - **Performance**: CSS-first, REM units, batch DOM, will-change
@@ -146,7 +155,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **Risk System**: "This could break if..." analysis
 - **MCP Tree**: Strategic tool selection for validation
 
-#### 12. 🚀 Lovable System Prompts (v2.0.0)
+#### 13. 🚀 Lovable System Prompts (v2.0.0)
 **Three specialized experts for minimal Lovable platform credit usage**
 - **Goal-Oriented**: Describe outcomes, not implementations
 - **Coverage**: Testing, Accessibility, Collaboration, Error Handling
