@@ -275,7 +275,7 @@ Result: Professional podcast audio
 
 ## 📦 Installing Video-Audio MCP
 
-The Video-Audio MCP provides all media processing capabilities.
+The Video-Audio MCP provides all media processing capabilities with secure, isolated Docker volumes.
 
 ### Option A: AI-Powered Docker Setup (Recommended)
 
@@ -292,45 +292,63 @@ Copy this prompt to Claude, ChatGPT, or any AI assistant:
 Help me set up Docker container for the Video-Audio Agent MCP tool.
 
 I need to:
-1. Create a directory at "$HOME/MCP Servers"
-2. Clone this repo: https://github.com/misbahsy/video-audio-mcp.git
-3. Create Dockerfile with FFmpeg and all required codecs
-4. Create docker-compose.yml file with proper volume mounts
-5. Configure Claude Desktop's claude_desktop_config.json
+1. Create a directory at "$HOME/MCP Servers/mcp-video-audio"
+2. Set up a Docker container with Python and FFmpeg for media processing
+3. Create docker-compose.yml with isolated volume mounts
+4. Configure volume mapping: /videos with Original/ and New/ folders
+5. Update Claude Desktop's configuration at:
+   - Mac/Linux: ~/Library/Application Support/Claude/claude_desktop_config.json
+   - Windows: %APPDATA%\Claude\claude_desktop_config.json
 6. Build and start the container
-7. Set up volume mounts for input/output media files
 
 My details:
-- Media directory: [YOUR_MEDIA_DIRECTORY_PATH]
 - Operating system: [Windows/Mac/Linux]
+- I want to store videos in: [default: $HOME/MCP Servers/mcp-video-audio/videos]
 
-Please give me the exact commands to run, including:
-- Dockerfile with FFmpeg and all codecs
-- docker-compose.yml with media volume mounts
-- Claude Desktop configuration
+Please provide:
+- Complete Dockerfile with Python, FFmpeg and all codecs
+- docker-compose.yml with /videos volume mount only
+- Claude Desktop configuration JSON snippet
+- Commands to build and run the container
+- How to use the Original/ and New/ folders
 ```
 
-The AI will provide step-by-step commands for your operating system.
+The AI will provide complete setup instructions for your system.
 
-**Quick Docker Template:**
+**What Gets Created:**
 
-If you want to set up manually, here's what the AI will help you create:
-
-```yaml
-# docker-compose.yml example structure
-version: '3.8'
-services:
-  video-audio-mcp:
-    build: .
-    volumes:
-      - ~/Videos:/media/input
-      - ~/Videos/output:/media/output
-    environment:
-      - NODE_ENV=production
-    restart: unless-stopped
+The setup creates this secure structure:
+```
+mcp-video-audio/
+├── docker-compose.yml
+├── Dockerfile
+└── videos/
+    ├── Original/  ← Place your media here
+    └── New/       ← Find processed media here
 ```
 
-### Option B: NPM Global Install (Alternative)
+**Quick Reference After Setup:**
+
+```bash
+# Start the container
+cd ~/MCP\ Servers/mcp-video-audio
+docker-compose up -d
+
+# Copy videos to process
+cp ~/Desktop/video.mp4 videos/Original/
+
+# In Claude, reference as:
+# Input: /videos/Original/video.mp4
+# Output: /videos/New/video_compressed.mp4
+
+# Check container status
+docker ps | grep mcp-video-audio
+
+# Restart if needed
+docker-compose restart
+```
+
+### Option B: NPX Setup (Quick but Less secure)
 
 **Prerequisites:**
 - Node.js 18+ installed ([Download Node.js](https://nodejs.org/))
@@ -364,48 +382,6 @@ Add to Claude Desktop config:
   }
 }
 ```
-
-### Option C: NPX Setup (Quick but Less Stable)
-
-For quick testing without installation:
-
-```json
-{
-  "mcpServers": {
-    "video-audio": {
-      "command": "npx",
-      "args": ["-y", "@misbahsy/video-audio-mcp"]
-    }
-  }
-}
-```
-
-**Note:** NPX requires FFmpeg to be installed separately on your system.
-
-### Verifying Installation
-
-**For Docker:**
-```bash
-# Check container is running
-docker ps | grep video-audio
-
-# Test FFmpeg in container
-docker exec video-audio-mcp ffmpeg -version
-
-# Check logs
-docker logs video-audio-mcp
-```
-
-**For NPM/NPX:**
-```bash
-# Check FFmpeg
-ffmpeg -version
-
-# Check codecs
-ffmpeg -codecs | grep -E "h264|h265|aac|mp3"
-```
-
-Then restart Claude Desktop and test with: "compress test video"
 
 .
 

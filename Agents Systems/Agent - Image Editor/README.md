@@ -279,7 +279,7 @@ Result: Complete responsive image set
 
 ## 📦 Installing Imagician MCP
 
-The Imagician MCP provides all image processing capabilities.
+The Imagician MCP provides all image processing capabilities with secure, isolated Docker volumes.
 
 ### Option A: AI-Powered Docker Setup (Recommended)
 
@@ -295,96 +295,65 @@ Copy this prompt to Claude, ChatGPT, or any AI assistant:
 Help me set up Docker container for the Imagician Agent MCP tool.
 
 I need to:
-1. Create a directory at "$HOME/MCP Servers"
-2. Clone this repo: https://github.com/flowy11/imagician-mcp.git
-3. Create Dockerfile with image processing libraries (Sharp, ImageMagick)
-4. Create docker-compose.yml file with proper volume mounts
-5. Configure Claude Desktop's claude_desktop_config.json
+1. Create a directory at "$HOME/MCP Servers/mcp-imagician"
+2. Set up a Docker container with Node.js and Sharp for image processing
+3. Create docker-compose.yml with isolated volume mounts
+4. Configure volume mapping: /images with Original/ and New/ folders
+5. Update Claude Desktop's configuration at:
+   - Mac/Linux: ~/Library/Application Support/Claude/claude_desktop_config.json
+   - Windows: %APPDATA%\Claude\claude_desktop_config.json
 6. Build and start the container
-7. Set up volume mounts for input/output image directories
 
 My details:
-- Image directory: [YOUR_IMAGE_DIRECTORY_PATH]
-- Output directory: [YOUR_OUTPUT_DIRECTORY_PATH]
 - Operating system: [Windows/Mac/Linux]
+- I want to store images in: [default: $HOME/MCP Servers/mcp-imagician/images]
 
-Please give me the exact commands to run, including:
-- Dockerfile with Sharp and ImageMagick
-- docker-compose.yml with image volume mounts
-- Claude Desktop configuration
+Please provide:
+- Complete Dockerfile with Node.js and Sharp
+- docker-compose.yml with /images volume mount only
+- Claude Desktop configuration JSON snippet
+- Commands to build and run the container
+- How to use the Original/ and New/ folders
 ```
 
-The AI will provide step-by-step commands for your operating system.
+The AI will provide complete setup instructions for your system.
 
-**Docker Setup Template:**
+**What Gets Created:**
 
-The AI will help you create something like:
-
-```yaml
-# docker-compose.yml example structure
-version: '3.8'
-services:
-  imagician-mcp:
-    build: .
-    volumes:
-      - ~/Pictures:/images/input
-      - ~/Pictures/optimized:/images/output
-      - /tmp:/tmp  # For temporary processing
-    environment:
-      - NODE_ENV=production
-    restart: unless-stopped
+The setup creates this secure structure:
+```
+mcp-imagician/
+├── docker-compose.yml
+├── Dockerfile
+├── dist/
+│   └── index.js
+└── images/
+    ├── Original/  ← Place your images here
+    └── New/       ← Find processed images here
 ```
 
-### Option B: NPM Global Install (Alternative)
+**Quick Reference After Setup:**
 
-**Prerequisites:**
-- Node.js 18+ installed ([Download Node.js](https://nodejs.org/))
-- ImageMagick installed ([Download ImageMagick](https://imagemagick.org/))
-- Claude Desktop app
-
-**Installation Steps:**
 ```bash
-# 1. Install ImageMagick first (OS-specific)
-# Mac:
-brew install imagemagick
+# Start the container
+cd ~/MCP\ Servers/mcp-imagician
+docker-compose up -d
 
-# Ubuntu/Debian:
-sudo apt-get install imagemagick
+# Copy images to process
+cp ~/Desktop/photo.jpg images/Original/
 
-# Windows:
-# Download installer from imagemagick.org
+# In Claude, reference as:
+# Input: /images/Original/photo.jpg
+# Output: /images/New/photo_processed.jpg
 
-# 2. Install Imagician globally
-npm install -g @flowy11/imagician-mcp
+# Check container status
+docker ps | grep mcp-imagician
 
-# 3. Verify installation
-imagician-mcp --version
-
-# 4. Check ImageMagick
-convert -version
+# Restart if needed
+docker-compose restart
 ```
 
-Add to Claude Desktop config:
-
-**Config Location:**
-- Mac/Linux: `~/.config/claude/claude_desktop_config.json`
-- Windows: `%APPDATA%\Claude\claude_desktop_config.json`
-
-```json
-{
-  "mcpServers": {
-    "imagician": {
-      "command": "imagician-mcp",
-      "env": {
-        "IMAGE_INPUT_PATH": "~/Pictures",
-        "IMAGE_OUTPUT_PATH": "~/Pictures/optimized"
-      }
-    }
-  }
-}
-```
-
-### Option C: NPX Setup (Quick but Less Stable)
+### Option B: NPX Setup (Quick but Less secure)
 
 For quick testing without installation:
 
