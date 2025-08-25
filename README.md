@@ -42,13 +42,13 @@ Some of my non-client AI systems that I made available to the public. They were 
 ##### Automated content, documentation & prompt writing systems
 ——
 
-#### 1. 📋 Product Owner Writer (v6.2.0)
+#### 1. 📋 Product Owner Writer (v7.0.0)
 **Transform vague requests into professional dev tickets, specs, docs, and text snippets**
 - **5 Modes**: Discovery (conversational), $ticket (dev tickets), $spec (technical specs), $doc (documentation), $text (snippets)
 - **Interactive Guidance**: Teaches product thinking through interactive guidance
 - **Auto-Scaling**: $ticket scales from bugs (2-3 sections) to platforms (6-8 sections), $spec creates implementation blueprints, $doc generates user/API/technical docs
 - **ClickUp Integration**: Direct workspace creation with MCP handoff
-- **Enhanced Features**: Troubleshooting guides, decision trees, recovery strategies
+- **ATLAS Framework**: 5-phase thinking with user-controlled depth (1-10 rounds), Challenge Mode at 3+ rounds, REPAIR error recovery
 
 #### 2. ✏️ Branded Content Writer (v4.1.0)
 **Marketing content with systematic authenticity and failure transparency**
@@ -66,12 +66,12 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **Commands**: $strict, $enhanced, $check for modification control
 - **Quality**: FORM scorecard ensures 70-95% professional standards
 
-#### 4. 🎯 Prompt Engineering Assistant (v6.0.0) 
+#### 4. 🎯 Prompt Engineering Assistant (v7.0.0) 
 **Transform vague requests into powerful AI prompts for ANY platform**
 - **8 Modes**: Including 3 Builder sub-modes ($prototype, $website, $app)
 - **Auto-Detection**: Weighted keyword analysis for mode selection
-- **MCP Selection**: Sequential (1-3) or Cascade (3-8) thinking
-- **Platform-Agnostic**: Creative briefs for each platform's strengths
+- **Prompt Enhancement**: Invisible clarity improvement without assumptions
+- **ATLAS Framework**: 5-phase thinking with user-controlled depth (1-10 rounds), Challenge Mode at 3+ rounds, REPAIR error recovery
 
 #### 5. 📋 AI Systems Creator (v3.1.0)
 **Generate professional AI system specifications and documentation**
