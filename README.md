@@ -16,18 +16,18 @@ Some of my non-client AI systems that I made available to the public. They were 
 4. [Prompt Engineering Assistant](#4--prompt-engineering-assistant)
 
 ### ⚡ Automation Agents  
-6. [GPT - Scheduled Tasks](#6--gpt---scheduled-tasks)
+5. [GPT - Scheduled Tasks](#6--gpt---scheduled-tasks)
 
 ### 💬 MCP Agents
-7. [ClickUp Agent](#7--clickup-agent)
-8. [Notion Agent](#8--notion-agent)
-9. [Imagician Agent](#9--imagician-agent)
-10. [Video Audio Agent](#10--video-audio-agent)
-11. [Webflow Agent](#11--webflow-agent)
+6. [ClickUp Agent](#7--clickup-agent)
+7. [Notion Agent](#8--notion-agent)
+8. [Imagician Agent](#9--imagician-agent)
+9. [Video Audio Agent](#10--video-audio-agent)
+10. [Webflow Agent](#11--webflow-agent)
 
 ### 💻 Development Systems
-12. [IDE System Prompt](#12--ide-system-prompt)
-13. [Lovable System Prompts](#13--lovable-system-prompts)
+11. [IDE System Prompt](#12--ide-system-prompt)
+12. [Lovable System Prompts](#13--lovable-system-prompts)
 
 ### 🔧 Additional Sections
 - [Common Features](#-common-features)
@@ -78,7 +78,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 ##### Transform natural language into intelligent automation workflows
 ——
 
-#### 6. ⏰ GPT - Scheduled Tasks (v1.0.0)
+#### 5. ⏰ GPT - Scheduled Tasks (v1.0.0)
 **Maximize ChatGPT's 10 scheduled task slots through intelligent optimization**
 - **Natural Language**: Describe what you want - no modes or commands
 - **Optimization**: Auto-detects merge opportunities and test protocols
@@ -92,7 +92,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 ##### MCP tools made easy with conversational systems
 ——
 
-#### 7. 🚀 ClickUp Agent (v1.2.0)
+#### 6. 🚀 ClickUp Agent (v1.2.0)
 **Natural language control of ClickUp workspaces**
 - **Natural Language**: "Organize my sprints" → Complete workspace
 - **Best Practices**: Professional patterns auto-applied
@@ -100,7 +100,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **Advanced**: Time tracking, dependencies, automations, dashboards
 - **Educational**: Learn ClickUp while building
 
-#### 8. 📝 Notion Agent (v1.3.0)
+#### 7. 📝 Notion Agent (v1.3.0)
 **Natural language control of Notion workspaces**
 - **Natural Language**: "Organize my projects" → Complete workspace
 - **Best Practices**: Professional patterns auto-applied
@@ -108,7 +108,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **Error Recovery**: Graceful handling with alternatives
 - **Educational**: Learn Notion while building
 
-#### 9. 🖼️ Imagician Agent (v1.4.0)
+#### 8. 🖼️ Imagician Agent (v1.4.0)
 **Image file editing and conversion through conversation**
 - **8 Operations**: Resize, compress, convert, crop, rotate, flip, batch, metadata
 - **5 Modes**: Interactive, Quick ($q), Batch ($b), Platform ($p), Web ($w)
@@ -116,7 +116,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **Visual Feedback**: Before/after with size and quality metrics
 - **Platform Optimized**: Instagram, Facebook, Twitter, LinkedIn, YouTube specs
 
-#### 10. 🎬 Video Audio Agent (v1.0.0)
+#### 9. 🎬 Video Audio Agent (v1.0.0)
 **Video and audio processing through natural conversation**
 - **Natural Language**: "Compress this video" → Optimal settings applied
 - **Smart Codecs**: H.264/H.265 for video, AAC/MP3 for audio with auto-selection
@@ -124,7 +124,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **Batch Processing**: Multiple files with consistent or per-file optimization
 - **Visual Feedback**: Before/after metrics for size, quality, and processing time
 
-#### 11. 🎨 Webflow Agent (v1.0.0)
+#### 10. 🎨 Webflow Agent (v1.0.0)
 **Natural language CMS management with design integration**
 - **Design-First**: "Setup blog with Figma" → Complete CMS in 60 seconds
 - **Triple MCP**: Webflow + Figma + Imagician in harmony
@@ -138,7 +138,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 ##### IDE enhancements & App Prototyping
 ——
 
-#### 12. 🛠️ IDE System Prompt (v3.9.0)
+#### 11. 🛠️ IDE System Prompt (v3.9.0)
 **Transform any AI coding assistant into an elite software engineer**
 - **Root Cause**: Fixes underlying issues, not symptoms
 - **Performance**: CSS-first, REM units, batch DOM, will-change
@@ -146,7 +146,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **Risk System**: "This could break if..." analysis
 - **MCP Tree**: Strategic tool selection for validation
 
-#### 13. 🚀 Lovable System Prompts (v2.0.0)
+#### 12. 🚀 Lovable System Prompts (v2.0.0)
 **Three specialized experts for minimal Lovable platform credit usage**
 - **Goal-Oriented**: Describe outcomes, not implementations
 - **Coverage**: Testing, Accessibility, Collaboration, Error Handling
