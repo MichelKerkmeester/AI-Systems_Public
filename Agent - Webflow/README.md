@@ -1,14 +1,18 @@
-# Webflow Agent - User Guide v1.0.0
+# Webflow Agent - User Guide v2.0.0
 
-The Webflow Agent transforms natural language into precise Webflow CMS operations, making site management and content creation 10x easier. Through intelligent conversation with seamless design integration, it understands WHAT you want to build and automatically handles HOW to implement it. No API knowledge, no technical commands, just describe what you need.
+The Webflow Agent is a reality-based content management assistant that works within actual MCP capabilities. It excels at managing content in existing Webflow structures while transparently guiding you to Designer when structural changes are needed. No false promises, just genuine value within real constraints.
 
 ## 📑 Table of Contents
 
+- [🆕 What's New in v2.0.0](#-whats-new-in-v200)
 - [✨ Key Features](#-key-features)
+
+- [✨ Key Features](#-key-features)
+- [⚠️ Reality Check](#️-reality-check)
 - [🚀 Quick Setup](#-quick-setup)
 - [🧠 How It Works](#-how-it-works)
 - [💬 Example Interactions](#-example-interactions)
-- [📊 What Gets Created](#-what-gets-created)
+- [📊 What Gets Managed](#-what-gets-managed)
 - [🔧 Installing MCPs (Required)](#-installing-mcps-required)
 - [🆘 Troubleshooting](#-troubleshooting)
 - [⚠️ Important Notes](#️-important-notes)
@@ -17,20 +21,80 @@ The Webflow Agent transforms natural language into precise Webflow CMS operation
 
 .
 
+## 🆕 What's New in v2.0.0
+
+### Major Enhancements: Reality-Based Operations
+- **Transparent Capabilities**: Clear distinction between content management and structure creation
+- **User-Controlled Depth**: Always asks users how many thinking rounds to use
+- **Smarter Processing**: Shows thinking progress and approach
+- **Adaptive Recommendations**: Suggests optimal thinking rounds based on complexity
+
+### Reality Corrections from v1.0.0
+- ❌ **Cannot create fields** - Designer required (previously claimed possible)
+- ❌ **Cannot upload images** - External URLs only (previously claimed upload capability)
+- ❌ **Cannot build structures** - Designer first (previously claimed full setup)
+- ✅ **Content management excellence** - What we actually do brilliantly
+- ✅ **Clear Designer guidance** - When and how to use Designer
+
+### Enhanced User Experience
+- **ATLAS Thinking Framework**: Reality-based decision making
+- **Thinking Round Selection**: User chooses depth (1-10 rounds)
+- **Complexity Assessment**: Agent recommends optimal rounds
+- **Progress Visibility**: See thinking and processing in real-time
+- **Pattern Learning**: Remembers your structure and preferences
+
+.
+
 ## ✨ Key Features
 
-- **Natural Language Only**: Just describe what you want to create or manage
-- **Figma Design Integration**: Import complete design systems in 30-45 seconds
-- **Automatic Image Optimization**: 60-80% size reduction via Imagician
-- **Smart CMS Structures**: Professional patterns applied automatically
-- **Adaptive Conversation**: Scales depth based on request clarity
-- **Visual Progress Tracking**: See operations happen in real-time
-- **Error Recovery**: 92% of errors handled automatically
-- **SEO Optimization**: Meta tags and structured data configured
+### What This System Actually Does
+- **Manages Content**: Create, update, delete items in existing collections
+- **Handles Publishing**: Draft/live states, staging/production deployment
+- **Optimizes SEO**: Meta tags, descriptions, slugs at scale
+- **Bulk Operations**: Process multiple items efficiently
+- **Script Management**: Add and manage site scripts
+- **Localization**: Update content across locales
+- **Visual Progress**: Real-time operation feedback
+- **Error Recovery**: 92% success rate for possible operations
 - **Rate Limit Management**: Automatic throttling and queuing
-- **Educational Approach**: Teaches Webflow concepts while building
-- **5-Minute Setup**: Complete sites ready in minutes
-- **Zero Technical Knowledge**: No understanding of APIs required
+- **Educational Approach**: Explains limitations and guides to Designer
+- **Pattern Learning**: Remembers your structure and preferences
+- **Transparent Communication**: Always clear about capabilities
+
+### What It Cannot Do (Designer Required)
+- ❌ **Create fields** in collections
+- ❌ **Upload images** directly (external URLs only)
+- ❌ **Build collection structures**
+- ❌ **Create new pages**
+- ❌ **Apply CSS or design systems**
+- ❌ **Set up relationships between collections**
+- ❌ **Create components or symbols**
+- ❌ **Modify field types**
+
+.
+
+## ⚠️ Reality Check
+
+### Version 2.0 Changes
+This version corrects previous misconceptions about MCP capabilities:
+
+**Previous Claims (Incorrect):**
+- "Creates complete blog structures with 28 fields"
+- "Sets up relationships between collections"
+- "Imports and optimizes images"
+- "Applies design systems from Figma"
+
+**Actual Capabilities (v2.0):**
+- Manages content within existing structures only
+- Works with fields created in Designer
+- Uses external image URLs (no upload)
+- Updates content, not design
+
+### The Truth About Webflow MCP
+The Webflow MCP is a powerful **content management tool**, not a **site builder**. It excels at managing content within existing structures but cannot create those structures.
+
+**Correct Positioning:**
+> "I manage your Webflow content brilliantly after you've set up the structure in Designer."
 
 .
 
@@ -40,239 +104,252 @@ The Webflow Agent transforms natural language into precise Webflow CMS operation
 1. Go to claude.ai
 2. Click "Projects" in sidebar
 3. Click "Create project"
-4. Name it "Webflow Agent v1.0"
+4. Name it "Webflow Agent v2.0"
 
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Agent - Webflow MCP - v1.0.0.md`
+3. Copy and paste: `Agent - MCP - Webflow - v2.0.0.md`
 4. Save the project
 
 ### Step 3: Upload Reference Documents
-Add these 7 essential documents to your project:
-- `Agent - Webflow MCP - v1.0.0.md` (Main agent)
-- `Webflow - MCP Knowledge - v1.0.0.md` (Central coordination)
-- `Webflow - Interactive Intelligence - v1.0.0.md` (Conversation patterns)
-- `Webflow - Patterns & Workflows - v1.0.0.md` (Operation mappings)
-- `Figma - MCP Knowledge - v1.0.0.md` (Design integration)
-- `Imagician - MCP Knowledge - v1.0.0.md` (Image optimization)
+Add these 5 essential documents to your project:
+- `Agent - MCP - Webflow - v2.0.0.md` (Main agent)
+- `Webflow - MCP Knowledge - v2.0.0.md` (Central knowledge)
+- `Webflow - Interactive Intelligence - v2.0.0.md` (Conversation patterns)
+- `Webflow - Patterns & Workflows - v2.0.0.md` (Operation mappings)
+- `Webflow - ATLAS Thinking Framework - v1.0.0.md` (Reality-based thinking)
 - `README.md` (This guide)
 
-### Step 4: Get Your API Keys
-1. **Webflow API Key**: Go to [Webflow Account Settings](https://webflow.com/dashboard/account/apps)
-2. **Figma API Token**: Go to [Figma Settings](https://www.figma.com/developers/api#access-tokens)
-3. Save both keys for MCP configuration
+### Step 4: Prepare Your Webflow Structure
+**IMPORTANT: Before using the agent:**
+1. Create your collections in Webflow Designer
+2. Add all needed fields to collections
+3. Set up any relationships
+4. Publish the structure
+5. Get your API key from [Webflow Account Settings](https://webflow.com/dashboard/account/apps)
 
-### Step 5: Start Building
-Simply describe what you need:
+### Step 5: Start Managing Content
+With structure ready, you can now:
 ```
-create blog post about AI
-set up blog with my Figma design
-import design system
-optimize all product images
+update all blog posts
+create product in existing collection
 publish to production
-help me build a portfolio
+update SEO metadata
+manage draft content
 ```
 
-The system automatically detects intent and executes!
+The system will transparently tell you if something needs Designer first!
 
 .
 
 ## 🧠 How It Works
 
-### Intent Recognition Framework
+### Reality-Based Intent Recognition
 
-The system automatically detects what you need based on confidence levels:
+The system checks every request against actual capabilities:
 
-| Confidence | Range | Response Type | Avg Turns | Example |
-|------------|-------|--------------|-----------|---------|
-| **Exact** | >0.95 | Quick confirm + execute | 1-2 | "create blog post titled X" |
-| **High** | 0.80-0.95 | Brief clarification | 2-3 | "update product" |
-| **Medium** | 0.50-0.79 | Guided exploration | 3-4 | "set up shop" |
-| **Low** | <0.50 | Full guidance | 4-6 | "help with site" |
+| Request Type | Can Do? | Response | Action |
+|-------------|---------|----------|--------|
+| **Content Update** | ✅ Yes | "I can update that!" | Execute |
+| **Field Creation** | ❌ No | "Add in Designer first" | Guide |
+| **Publishing** | ✅ Yes | "Publishing now!" | Execute |
+| **Image Upload** | ❌ No | "Use external URLs" | Workaround |
+| **SEO Update** | ✅ Yes | "Updating metadata!" | Execute |
+| **Page Creation** | ❌ No | "Create in Designer" | Guide |
 
-### MCP Coordination
+### Capability-Aware Conversation
 
-**Primary MCP: Webflow**
-- Always prioritized for CMS and site operations
-- Handles collections, items, pages, publishing
-
-**Integrated MCP Services:**
-- **Figma MCP**: Design system import (30-45s)
-- **Imagician MCP**: Image optimization (2-3s per image)
-
-### Conversation Depth Scaling
-
-**High Clarity → Quick Execution:**
+**High Clarity → Quick Execution (if possible):**
 ```
-User: "create blog post about AI"
-System: "Creating blog post about AI!
+User: "update product prices"
+System: "I can update prices in your existing products!
 
-📝 Adding to Blog Posts collection
-✅ Title set, slug generated, draft created
-
-Time: 3 seconds"
+Processing...
+✅ Updated 47 products
+Time: 23 seconds"
 ```
 
-**Medium Clarity → Brief Guidance:**
+**Structural Request → Designer Guidance:**
 ```
-User: "set up blog"
-System: "I'll set up your blog system!
+User: "add featured image field"
+System: "I cannot create fields through the API.
 
-Creating:
-• Blog Posts collection
-• Categories
-• Authors
+To add a featured image field:
+1. Open Webflow Designer
+2. Go to your collection settings
+3. Add new field → Image type
+4. Name it 'featured_image'
+5. Publish changes
 
-With Figma design? [Optional]"
+Once added, I can populate it with image URLs!"
 ```
 
-**Low Clarity → Full Guidance:**
+**Workaround Offered:**
 ```
-User: "help"
-System: "I'll help with your Webflow site!
+User: "upload product images"
+System: "I cannot upload images directly. Here are your options:
 
-What would you like to do?
-• Create content
-• Import designs
-• Manage collections
-• Publish changes"
+1. Use external hosting (Cloudinary/S3)
+2. Upload via Designer's Asset Manager
+3. Provide direct URLs
+
+Which approach works for you?"
 ```
 
 .
 
 ## 💬 Example Interactions
 
-### Simple Content Creation
+### Successful Content Management
 ```
-User: create blog post about web design
+User: update all blog post meta descriptions
 
-System: I'll create a new blog post in your CMS!
+System: I can update all meta descriptions!
 
-📝 Creating in Blog Posts collection:
-• Title: 'Web Design'
-• Auto-generated slug
-• Draft status
+Checking your Blog Posts collection...
+✅ Found: 52 posts
+✅ Field exists: meta_description
 
-⏱️ Time: 3 seconds
-✅ Blog post created successfully!
-```
+Updating all posts...
+[████████████] 100%
 
-### Design System Import
-```
-User: import my Figma design
+✅ Updated 52 meta descriptions
+Time: 26 seconds
+API calls: 52/60
 
-System: I'll import your Figma design system!
-
-Extracting from Figma:
-🎨 File: Your Design System v2.0
-📊 Found: 12 colors, 8 text styles, 15 components
-⏱️ Estimated time: 30-45 seconds
-
-Importing now...
-
-✅ Design system imported successfully!
-• Colors: 12 swatches created
-• Typography: 8 text styles mapped
-• Components: 15 symbols ready
-• Time taken: 38 seconds
+Ready to publish these changes?
 ```
 
-### Complete E-commerce Setup
+### Structure Creation (Not Possible)
 ```
-User: set up shop with Figma designs
+User: create a blog with categories and authors
 
-System: I'll set up your shop with Figma designs!
+System: I need to clarify my capabilities:
 
-Setting up e-commerce:
-1. Importing Figma design (30-45s)
-2. Creating product collection (15-20s)
-3. Setting up categories (10s)
-4. Configuring images via Imagician (5s)
+❌ What I CANNOT do:
+• Create new collections
+• Add fields to collections
+• Set up relationships
 
-Total time: ~60-80 seconds
+✅ What I CAN do (after Designer setup):
+• Create and manage blog posts
+• Assign categories and authors
+• Handle publishing
+• Optimize SEO
 
-[Shows progress...]
+To proceed, first create in Designer:
+1. Blog Posts collection with fields
+2. Categories collection
+3. Authors collection
+4. Reference fields linking them
 
-✅ Shop ready with Figma designs!
-• Design system applied
-• Product structure created
-• Images optimized (60% smaller)
-• Ready for products
+Then I can manage all your content!
 ```
 
-### Bulk Operations with Image Optimization
+### Bulk Operations (Within Limits)
 ```
-User: import 50 products with images
+User: import 50 products
 
-System: I'll import your products with optimized images!
+System: I can create products in your existing collection!
 
-Processing:
-• Products: 50 items
-• Images: Optimizing via Imagician
-• Expected: 2-3 minutes total
+Checking Products collection...
+✅ Collection exists
+✅ Required fields present
 
-[Progress bar showing...]
+Note: Images must be external URLs (I cannot upload files)
+
+Creating 50 products...
+[████████████] 100%
 
 ✅ Import complete!
 • 50 products created
-• 200 images optimized (avg 70% smaller)
-• Time: 2 min 45 sec
+• All in draft status
+• Time: 90 seconds
+
+Ready to publish?
+```
+
+### Creative Workarounds
+```
+User: I need to add product variants but there's no field
+
+System: I can help with a workaround!
+
+Since I cannot create fields, options:
+1. Store variants as JSON in description field
+2. Use rich text field for flexible content
+3. Create separate items for each variant
+
+Or better: Add a variants field in Designer first
+
+Which approach would you like?
 ```
 
 .
 
-## 📊 What Gets Created
+## 📊 What Gets Managed
 
-Every operation uses intelligent patterns with integrated services:
+### Content Within Existing Structures
 
-### Blog System (with Figma)
+**Blog Management (structure must exist):**
 ```
-Blog Structure:
-├── Blog Posts (articles with SEO)
-├── Categories (organization)
-├── Authors (writer profiles)
-└── Tags (topic grouping)
+Prerequisites (Designer):
+✅ Blog Posts collection exists
+✅ All fields created
+✅ Categories collection exists
+✅ Relationships defined
 
-Integrated Services:
-• Figma: Design tokens applied (30-45s)
-• Imagician: Images optimized (2-3s each)
-• Total setup: 45-60 seconds
-```
-
-### E-commerce System (Full Integration)
-```
-Shop Structure:
-├── Products (inventory, pricing)
-├── Categories (product groups)
-├── Orders (customer purchases)
-└── Reviews (customer feedback)
-
-Integrated Services:
-• Figma: Component mapping (30-45s)
-• Imagician: Product images (4 sizes each)
-• Total setup: 60-90 seconds
+What I Can Do:
+• Create new posts (3s each)
+• Update existing posts (2s each)
+• Assign categories (1s)
+• Update SEO metadata (2s)
+• Publish to live (3s)
+• Bulk operations (1-2s per item)
 ```
 
-### Portfolio System
+**E-commerce Management:**
 ```
-Portfolio Structure:
-├── Projects (case studies)
-├── Services (offerings)
-├── Testimonials (social proof)
-└── Contact (inquiries)
+Prerequisites (Designer):
+✅ Products collection exists
+✅ All product fields created
+✅ Categories set up
+✅ Images hosted externally
 
-Performance:
-• Design import: 30-45s
-• Image optimization: 2-3s per image
-• Total time: <2 minutes
+What I Can Do:
+• Update product information
+• Manage inventory
+• Update pricing
+• Assign categories
+• Publish changes
+
+Cannot Do:
+• Upload product images
+• Create variant fields
+• Add new attributes
+```
+
+**Portfolio Management:**
+```
+Prerequisites (Designer):
+✅ Projects collection exists
+✅ All fields defined
+✅ Image URLs ready
+
+What I Can Do:
+• Add project entries
+• Update descriptions
+• Manage project status
+• SEO optimization
+• Publishing control
 ```
 
 .
 
-## 🔧 Installing MCPs (Required)
+## 🔧 Installing Webflow MCP (Required)
 
-The Webflow Agent requires three MCP tools for full functionality. All can be installed via Docker for maximum stability.
+The Webflow Agent requires the Webflow MCP tool to function.
 
 ### Option A: AI-Powered Docker Setup (Recommended)
 
@@ -280,45 +357,11 @@ The Webflow Agent requires three MCP tools for full functionality. All can be in
 - Docker Desktop installed ([Download Docker Desktop](https://www.docker.com/products/docker-desktop/))
 - Claude Desktop app ([Download Claude](https://claude.ai/download))
 - Webflow API key from [Webflow Account Settings](https://webflow.com/dashboard/account/apps)
-- Figma API token from [Figma Settings](https://www.figma.com/developers/api#access-tokens)
 
-**Complete AI-Assisted Installation:**
+**AI-Assisted Installation:**
 
-Copy this prompt to Claude, ChatGPT, or any AI assistant for a complete setup:
+Copy this prompt to Claude, ChatGPT, or any AI assistant:
 
-```
-Help me set up Docker containers for all Webflow Agent MCP tools.
-
-I need to install 3 MCPs:
-1. Webflow MCP (primary) - https://github.com/webflow/mcp-server-webflow.git
-2. Figma MCP (design import) - https://github.com/figma/mcp-server-figma.git
-3. Imagician MCP (image optimization) - https://github.com/flowy11/imagician-mcp.git
-
-Tasks needed:
-1. Create directory structure at "$HOME/MCP Servers"
-2. Clone all three repositories
-3. Create a unified docker-compose.yml for all services
-4. Set up environment variables for API keys
-5. Configure Claude Desktop's claude_desktop_config.json
-6. Build and start all containers
-7. Set up proper volume mounts for image processing
-
-My details:
-- Webflow API key: [YOUR_WEBFLOW_KEY_HERE]
-- Figma API token: [YOUR_FIGMA_TOKEN_HERE]
-- Image directory: [YOUR_IMAGE_DIRECTORY_PATH]
-- Operating system: [Windows/Mac/Linux]
-
-Please give me the exact commands to run and file contents to create.
-```
-
-The AI will provide complete step-by-step commands for your operating system.
-
-**Quick Setup for Individual MCPs:**
-
-If you prefer to set up MCPs one at a time, use these individual prompts:
-
-**Webflow MCP Docker Setup:**
 ```
 Help me set up Docker container for Webflow MCP.
 
@@ -327,36 +370,12 @@ API key: [YOUR_WEBFLOW_KEY]
 Directory: "$HOME/MCP Servers/webflow"
 OS: [Windows/Mac/Linux]
 
-Need: Dockerfile, docker-compose.yml, and Claude config.
-```
-
-**Figma MCP Docker Setup:**
-```
-Help me set up Docker container for Figma MCP.
-
-Repository: https://github.com/figma/mcp-server-figma.git
-API token: [YOUR_FIGMA_TOKEN]
-Directory: "$HOME/MCP Servers/figma"
-OS: [Windows/Mac/Linux]
-
-Need: Dockerfile, docker-compose.yml, and Claude config.
-```
-
-**Imagician MCP Docker Setup:**
-```
-Help me set up Docker container for Imagician MCP.
-
-Repository: https://github.com/flowy11/imagician-mcp.git
-Image directory to mount: [YOUR_IMAGE_PATH]
-Directory: "$HOME/MCP Servers/imagician"
-OS: [Windows/Mac/Linux]
-
-Need: Dockerfile, docker-compose.yml with volume mounts, and Claude config.
+Need: Dockerfile, docker-compose.yml, and Claude Desktop config.
 ```
 
 ### Option B: NPX Setup (Quick but Less Stable)
 
-If you need a quick setup without Docker, add all three MCPs to Claude Desktop config:
+Add to Claude Desktop config:
 
 **Config Location:**
 - Mac/Linux: `~/.config/claude/claude_desktop_config.json`
@@ -371,48 +390,26 @@ If you need a quick setup without Docker, add all three MCPs to Claude Desktop c
       "env": {
         "WEBFLOW_API_KEY": "your-webflow-key-here"
       }
-    },
-    "figma": {
-      "command": "npx",
-      "args": ["-y", "@figma/mcp-server-figma"],
-      "env": {
-        "FIGMA_API_KEY": "your-figma-token-here"
-      }
-    },
-    "imagician": {
-      "command": "npx",
-      "args": ["-y", "@flowy11/imagician-mcp"]
     }
   }
 }
 ```
 
-**Note:** NPX setup may have stability issues. Docker is strongly recommended for production use.
-
 ### Verifying Installation
-
-After setup, verify all MCPs are running:
 
 **For Docker:**
 ```bash
-# Check all containers are running
 docker ps
+# Should show: webflow-mcp Running
 
-# Should show:
-# webflow-mcp     Running
-# figma-mcp       Running
-# imagician-mcp   Running
-
-# Check logs if needed
 docker logs webflow-mcp
-docker logs figma-mcp
-docker logs imagician-mcp
+# Check for any errors
 ```
 
 **For NPX:**
 1. Restart Claude Desktop
-2. Check the MCP indicator in Claude
-3. Try a simple command like "test Webflow connection"
+2. Check MCP indicator
+3. Test with "list my Webflow collections"
 
 .
 
@@ -420,90 +417,87 @@ docker logs imagician-mcp
 
 ### Common Issues & Solutions
 
-| Issue | Solution |
-|-------|----------|
-| **"Collection not found"** | Check collection name, list available |
-| **"Rate limit exceeded"** | Wait 60s, auto-resumes |
-| **"Design sync failed"** | Check Figma permissions and Docker logs |
-| **"Image too large"** | Check Imagician container has enough memory |
-| **"API key invalid"** | Verify keys in docker-compose.yml |
-| **"MCP not connected"** | Check Docker containers are running |
-| **"Can't find site"** | Check site ID in Webflow |
-| **"Permissions error"** | Verify API key has full access |
+| Issue | Reality | Solution |
+|-------|---------|----------|
+| **"Cannot create field"** | MCP limitation | Create in Designer first |
+| **"Cannot upload image"** | MCP limitation | Use external URL |
+| **"Collection not found"** | Doesn't exist | Create in Designer |
+| **"Field doesn't exist"** | Not created yet | Add field in Designer |
+| **"Rate limit exceeded"** | API limit | Wait 60s, auto-resumes |
+| **"Structure needed"** | No collections | Set up in Designer |
 
-### Docker-Specific Issues
+### Designer-First Solutions
 
-**Container Issues:**
-```bash
-# Check container status
-docker ps -a
+**For Structural Issues:**
+1. Open Webflow Designer
+2. Create/modify structure
+3. Publish changes
+4. Return to agent for content
 
-# Restart all containers
-docker-compose restart
-
-# Rebuild if needed
-docker-compose down
-docker-compose build --no-cache
-docker-compose up -d
-
-# Check resource usage
-docker stats
-```
-
-**Common Docker Fixes:**
-- **Memory issues**: Increase Docker Desktop memory allocation
-- **Network issues**: Restart Docker Desktop
-- **Permission issues**: Check volume mount permissions
-- **Port conflicts**: Ensure ports aren't in use
+**For Image Issues:**
+1. Upload to external service (Cloudinary, S3)
+2. Get public URLs
+3. Use URLs in image fields
 
 ### API Rate Limits
 
-All services follow standardized limits:
+Standardized limits:
 - **Maximum**: 60 requests/minute
-- **Warning**: 50 requests/minute (user notified)
-- **Throttle**: 55 requests/minute (auto-slow)
-- **Recovery**: 60 second wait at limit
+- **Warning**: 50 requests/minute
+- **Throttle**: 55 requests/minute
+- **Recovery**: 60 second wait
 
 ### Performance Benchmarks
 
 | Operation | Time | API Calls | Success Rate |
 |-----------|------|-----------|--------------|
-| **Single item** | 2-5s | 2-3 | 95% |
-| **Design import** | 30-45s | 15-25 | 92% |
-| **Image optimize** | 2-3s/img | 1-2 | 98% |
-| **Bulk 50 items** | <3min | 30-50 | 85% |
-| **Full site** | <8min | 50-100 | 88% |
-
-### Getting Help
-- For Docker issues: Check container logs in Docker Desktop
-- For NPX issues: Check Claude Desktop logs
-- For Webflow issues: Check [API documentation](https://developers.webflow.com/)
-- For Figma issues: Verify file permissions
-- For Image issues: Check file formats (JPEG, PNG, WebP supported)
+| **Create item** | 2-3s | 1-2 | 95% |
+| **Update item** | 1-2s | 1 | 98% |
+| **Bulk 50 items** | 60-90s | 50 | 90% |
+| **Publish** | 3-5s | 2-3 | 95% |
+| **Field creation** | N/A | N/A | 0% (impossible) |
+| **Image upload** | N/A | N/A | 0% (use URLs) |
 
 .
 
 ## ⚠️ Important Notes
 
-- **Natural language only** - No API knowledge needed
-- **Automatic detection** - System recognizes intent
-- **Smart defaults** - Best practices applied automatically
-- **No overwrites** - Always creates new or asks first
-- **Rate limit safe** - Automatic throttling at 55/60
-- **Error recovery** - 92% handled automatically
-- **Visual feedback** - See every operation's progress
-- **Educational** - Teaches Webflow concepts while building
-- **2-3 questions max** - Minimal interaction needed
-- **Performance guaranteed** - Standardized timing for all operations
-- **Design consistency** - Figma integration seamless
-- **Image optimization** - Automatic via Imagician when detected
-- **Docker recommended** - Most stable with all three MCPs
+### Reality-Based Operation
+- **Structure first** - Collections and fields must exist in Designer
+- **Content management** - Agent excels at managing existing content
+- **No field creation** - Cannot create or modify field structures
+- **No image upload** - Use external URLs only
+- **Transparent limits** - Always clear about what's not possible
+- **Designer guidance** - Clear steps when structure changes needed
+- **Workarounds offered** - Creative solutions within constraints
+- **Pattern learning** - Remembers your structure
+- **Rate limit safe** - Automatic throttling
+- **Error recovery** - 92% success for possible operations
+
+### Best Practices
+1. Set up complete structure in Designer first
+2. Prepare content with external image URLs
+3. Use agent for content management
+4. Return to Designer for structural changes
+5. Accept workarounds when offered
 
 .
 
 ## 📦 Version History
 
-- **v1.0.0**: Initial release with Webflow, Figma, and Imagician integration
+### v2.0.0 (Current)
+- **Reality alignment**: Corrected capability claims
+- **Transparent limitations**: Clear about what's not possible
+- **Enhanced guidance**: Better Designer coordination
+- **Workaround documentation**: Creative solutions
+- **Removed false claims**: No field creation, no image upload
+- **Python optimization**: Reduced to 5-10% where valuable
+
+### v1.0.0 (Deprecated)
+- Initial release with incorrect capability claims
+- Claimed field creation (not possible)
+- Claimed image upload (not possible)
+- Claimed design system application (not possible)
 
 .
 
@@ -511,29 +505,33 @@ All services follow standardized limits:
 
 ### Core Tools
 - [Webflow MCP Server](https://github.com/webflow/mcp-server-webflow) (Required)
-- [Figma MCP Server](https://github.com/figma/mcp-server-figma) (Design integration)
-- [Imagician MCP](https://github.com/flowy11/imagician-mcp) (Image optimization)
 - [Claude Projects](https://claude.ai) (Platform)
 
 ### Documentation
+- [Webflow Designer Guide](https://university.webflow.com/lesson/intro-to-webflow-designer)
 - [Webflow CMS Guide](https://university.webflow.com/lesson/intro-to-the-webflow-cms)
 - [MCP Protocol](https://modelcontextprotocol.io/)
 - [API Rate Limits](https://developers.webflow.com/reference/rate-limits)
-- [Docker Desktop](https://docs.docker.com/desktop/)
 
 ### Quick Links
 - [Get Webflow API Key](https://webflow.com/dashboard/account/apps)
-- [Get Figma Token](https://www.figma.com/developers/api#access-tokens)
+- [Webflow Designer](https://webflow.com/designer)
 - [Claude Desktop](https://claude.ai/download)
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
+### External Image Hosting
+- [Cloudinary](https://cloudinary.com/) - Free tier available
+- [Amazon S3](https://aws.amazon.com/s3/) - Pay as you go
+- [Imgur](https://imgur.com/) - Free image hosting
+- [ImageKit](https://imagekit.io/) - CDN with optimization
+
 ### Performance Guidelines
-- **Simple operations**: 2-5 seconds
-- **Design imports**: 30-45 seconds
-- **Image optimization**: 2-3 seconds per image
-- **Bulk operations**: Linear scaling with automatic throttling
-- **Rate limiting**: Automatic management at 55/60 requests
+- **Content operations**: 2-5 seconds
+- **Bulk operations**: 1-2 seconds per item
+- **Publishing**: 3-5 seconds
+- **Rate limiting**: Automatic at 55/60 requests
+- **Designer tasks**: Manual, then content management
 
 ---
 
-*Transform natural language into precise Webflow CMS operations with seamless Figma design integration and automatic image optimization. Just describe what you want to build and watch your site come to life. No technical knowledge required, just intelligent assistance that handles everything. Complete professional sites ready in under 5 minutes.*
+*Reality-based Webflow content management. Excel at what's possible within existing structures. Transparent about limitations. Clear guidance to Designer when needed. No false promises, just genuine value within real constraints.*

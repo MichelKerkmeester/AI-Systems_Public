@@ -9,7 +9,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 ## 📑 Table of Contents
 
-### ✏️ Writer Systems
+### ✍️ Writer Systems
 1. [Product Owner Writer](#1--product-owner-writer)
 2. [Branded Content Writer](#2--branded-content-writer)
 3. [Document Beautifier](#3--document-beautifier)
@@ -19,15 +19,15 @@ Some of my non-client AI systems that I made available to the public. They were 
 5. [GPT - Scheduled Tasks](#6--gpt---scheduled-tasks)
 
 ### 💬 MCP Agents
-6. [ClickUp Agent](#7--clickup-agent)
-7. [Notion Agent](#8--notion-agent)
-8. [Imagician Agent](#9--imagician-agent)
-9. [Video Audio Agent](#10--video-audio-agent)
-10. [Webflow Agent](#11--webflow-agent)
+6. [Webflow Agent](#6--webflow-agent)
+7. [ClickUp Agent](#7--clickup-agent)
+8. [Notion Agent](#8--notion-agent)
+9. [Imagician Agent](#9--imagician-agent)
+10. [Video Audio Agent](#10--video-audio-agent)
 
 ### 💻 Development Systems
-11. [IDE System Prompt](#12--ide-system-prompt)
-12. [Lovable System Prompts](#13--lovable-system-prompts)
+11. [IDE System Prompt](#11--ide-system-prompt)
+12. [Lovable System Prompts](#12--lovable-system-prompts)
 
 ### 🔧 Additional Sections
 - [Common Features](#-common-features)
@@ -37,7 +37,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 ---
 
-## ✏️ Writer Systems
+## ✍️ Writer Systems
 ##### Automated content, documentation & prompt writing systems
 ——
 
@@ -49,7 +49,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **Auto-Scaling**: $ticket scales from bugs (2-3 sections) to platforms (6-8 sections), $spec creates implementation blueprints, $doc generates user/API/technical docs
 - **ClickUp Integration**: Direct workspace creation with MCP handoff
 
-#### 2. ✏️ Branded Content Writer (v4.1.0)
+#### 2. ✍️ Branded Content Writer (v4.1.0)
 **Marketing content with systematic authenticity and failure transparency**
 - **Interactive Modes**: Visual clarity scoring, celebration mechanics, guided failure discovery
 - **Tone Shortcuts**: $natural, $vulnerable, $collaborative with 1 imperfection per 300-400 words
@@ -92,7 +92,16 @@ Some of my non-client AI systems that I made available to the public. They were 
 ##### MCP tools made easy with conversational systems
 ——
 
-#### 6. 🚀 ClickUp Agent (v1.2.0)
+#### 6. 🌐 Webflow Agent (v2.0.0)
+**Reality-based content management for existing Webflow structures**
+- **ATLAS Framework**: User-controlled thinking depth (1-10 rounds) with complexity assessment
+- **Content Excellence**: Manage items, publish pages, update SEO within existing collections
+- **Transparent Limits**: Clear about requiring Designer for fields, images via URLs only
+- **Smart Workarounds**: Rich text flexibility, external images, field repurposing
+- **Pattern Learning**: Remembers your structure and adapts to your workflow
+
+
+#### 7. 🚀 ClickUp Agent (v1.2.0)
 **Natural language control of ClickUp workspaces**
 - **Natural Language**: "Organize my sprints" → Complete workspace
 - **Best Practices**: Professional patterns auto-applied
@@ -100,7 +109,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **Advanced**: Time tracking, dependencies, automations, dashboards
 - **Educational**: Learn ClickUp while building
 
-#### 7. 📝 Notion Agent (v1.3.0)
+#### 8. 📝 Notion Agent (v1.3.0)
 **Natural language control of Notion workspaces**
 - **Natural Language**: "Organize my projects" → Complete workspace
 - **Best Practices**: Professional patterns auto-applied
@@ -108,7 +117,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **Error Recovery**: Graceful handling with alternatives
 - **Educational**: Learn Notion while building
 
-#### 8. 🖼️ Imagician Agent (v1.4.0)
+#### 9. 🖼️ Imagician Agent (v1.4.0)
 **Image file editing and conversion through conversation**
 - **8 Operations**: Resize, compress, convert, crop, rotate, flip, batch, metadata
 - **5 Modes**: Interactive, Quick ($q), Batch ($b), Platform ($p), Web ($w)
@@ -116,21 +125,13 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **Visual Feedback**: Before/after with size and quality metrics
 - **Platform Optimized**: Instagram, Facebook, Twitter, LinkedIn, YouTube specs
 
-#### 9. 🎬 Video Audio Agent (v1.0.0)
+#### 10. 🎬 Video Audio Agent (v1.0.0)
 **Video and audio processing through natural conversation**
 - **Natural Language**: "Compress this video" → Optimal settings applied
 - **Smart Codecs**: H.264/H.265 for video, AAC/MP3 for audio with auto-selection
 - **Platform Ready**: YouTube, Instagram, TikTok, podcast optimizations
 - **Batch Processing**: Multiple files with consistent or per-file optimization
 - **Visual Feedback**: Before/after metrics for size, quality, and processing time
-
-#### 10. 🎨 Webflow Agent (v1.0.0)
-**Natural language CMS management with design integration**
-- **Design-First**: "Setup blog with Figma" → Complete CMS in 60 seconds
-- **Triple MCP**: Webflow + Figma + Imagician in harmony
-- **85% Rule**: Auto image optimization (60% smaller, same quality)
-- **Adaptive**: Confidence-based responses (>0.95 executes, <0.50 guides)
-- **Educational**: Learn Webflow while building
 
 .
 
@@ -160,7 +161,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 ### MCP Integration
 All systems support Model Context Protocol tools:
-- **Domain-Specific**: Figma, Notion, ClickUp, Imagician, search tools
+- **Domain-Specific**: Webflow, ClickUp, Notion, Imagician, search tools
 
 ### Intelligent Modes
 - **Interactive Default**: Conversational guidance
@@ -189,6 +190,7 @@ mkdir "$HOME/MCP Servers"
 cd "$HOME/MCP Servers"
 
 # Clone needed tools
+git clone https://github.com/webflow/mcp-server-webflow.git  # For Webflow Agent
 git clone https://github.com/flowy11/imagician.git  # For Imagician Agent
 
 # Use AI to generate docker-compose.yml
