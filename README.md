@@ -14,7 +14,6 @@ Some of my non-client AI systems that I made available to the public. They were 
 2. [Branded Content Writer](#2--branded-content-writer)
 3. [Document Beautifier](#3--document-beautifier)
 4. [Prompt Engineering Assistant](#4--prompt-engineering-assistant)
-5. [AI Systems Creator](#5--ai-systems-creator)
 
 ### ⚡ Automation Agents  
 6. [GPT - Scheduled Tasks](#6--gpt---scheduled-tasks)
@@ -45,10 +44,10 @@ Some of my non-client AI systems that I made available to the public. They were 
 #### 1. 📋 Product Owner Writer (v7.0.0)
 **Transform vague requests into professional dev tickets, specs, docs, and text snippets**
 - **5 Modes**: Discovery (conversational), $ticket (dev tickets), $spec (technical specs), $doc (documentation), $text (snippets)
+- **ATLAS Framework**: 5-phase thinking with user-controlled depth (1-10 rounds), Challenge Mode at 3+ rounds, REPAIR error recovery
 - **Interactive Guidance**: Teaches product thinking through interactive guidance
 - **Auto-Scaling**: $ticket scales from bugs (2-3 sections) to platforms (6-8 sections), $spec creates implementation blueprints, $doc generates user/API/technical docs
 - **ClickUp Integration**: Direct workspace creation with MCP handoff
-- **ATLAS Framework**: 5-phase thinking with user-controlled depth (1-10 rounds), Challenge Mode at 3+ rounds, REPAIR error recovery
 
 #### 2. ✏️ Branded Content Writer (v4.1.0)
 **Marketing content with systematic authenticity and failure transparency**
@@ -60,11 +59,11 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 #### 3. 📄 Document Beautifier (v1.3.0)
 **Transform unstructured documents into professional content with integrity control**
-- **Integrity Control**: Strict (preserve) or Enhanced (improve) with [AI-ADDED] tags
 - **4 Modes**: Interactive, $technical, $academic, $business
-- **Depth Levels**: Quick (5 min), Standard (15 min), Deep (30+ min)
-- **Commands**: $strict, $enhanced, $check for modification control
-- **Quality**: FORM scorecard ensures 70-95% professional standards
+- **ATLAS Framework**: 5-phase thinking with complexity challenges at every step
+- **Content Control**: Strict (preserve only) or Enhanced (improve with [AI-ADDED] tags)
+- **REPAIR Protocol**: Intelligent error recovery for over/under-formatted documents
+- **Simplification Commands**: $minimal (bare minimum), $lean (essentials only), $simplify (reduce complexity)
 
 #### 4. 🎯 Prompt Engineering Assistant (v7.0.0) 
 **Transform vague requests into powerful AI prompts for ANY platform**
@@ -72,14 +71,6 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **Auto-Detection**: Weighted keyword analysis for mode selection
 - **Prompt Enhancement**: Invisible clarity improvement without assumptions
 - **ATLAS Framework**: 5-phase thinking with user-controlled depth (1-10 rounds), Challenge Mode at 3+ rounds, REPAIR error recovery
-
-#### 5. 📋 AI Systems Creator (v3.1.0)
-**Generate professional AI system specifications and documentation**
-- **Simple Workflow**: Spec it, Build it, Document it
-- **6 Modes**: Interactive, Analyze, Create, Update, Integrate, README
-- **Educational**: Learn architecture through creation
-- **Prompt Enhancement**: Invisible clarity improvement
-- **Implementation**: "Help implementing?" checkpoint after specs
 
 .
 

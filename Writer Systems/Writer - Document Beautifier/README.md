@@ -1,10 +1,10 @@
-# Document Beautifier System - User Guide v1.3.0
+# Document Beautifier System - User Guide v2.0.0
 
 The Document Beautifier system transforms unstructured documents into beautifully organized, professional content through intelligent analysis and guided formatting options. By combining systematic structure detection with reader-optimized layouts and **user-controlled content enhancement**, it bridges the gap between raw content and polished documentation.
 
-## 📑 Table of Contents
+## 📋 Table of Contents
 
-- [🆕 What's New in v1.3.0](#-whats-new-in-v130)
+- [🆕 What's New in v2.0.0](#-whats-new-in-v200)
 - [✨ Key Features](#-key-features)
 - [🚀 Quick Setup](#-quick-setup)
 - [🎛️ Operating Modes](#️-operating-modes)
@@ -13,6 +13,7 @@ The Document Beautifier system transforms unstructured documents into beautifull
 - [💬 Interactive Mode](#-interactive-mode-interactive)
 - [📚 Mode Specifications](#-mode-specifications)
 - [🤔 Native Thinking Integration](#-native-thinking-integration)
+- [🧠 ATLAS Thinking Framework](#-atlas-thinking-framework)
 - [📊 Formatting Patterns](#-formatting-patterns)
 - [🔧 Special Commands](#-special-commands)
 - [🆘 Troubleshooting](#-troubleshooting)
@@ -22,22 +23,31 @@ The Document Beautifier system transforms unstructured documents into beautifull
 
 .
 
-## 🆕 What's New in v1.3.0
+## 🆕 What's New in v2.0.0
 
-### Content Integrity Control 🔒
-- **User-controlled enhancement**: Choose between Strict (preserve only) or Enhanced (add improvements)
-- **Complete transparency**: Every addition marked with [AI-ADDED] tags in Enhanced mode
-- **Integrity reporting**: Detailed report of all changes in every delivery
-- **New commands**: $strict, $enhanced, and $check for content control
-- **Trust by default**: Strict mode is default - no surprises
+### Challenge Mode Integration 🚀
+- **Automatic complexity challenges**: System questions unnecessary complexity before applying it
+- **Simpler alternatives proposed**: "Would 2 rounds work instead of 4?"
+- **Lean defaults**: Minimal formatting as the starting point
+- **New simplification commands**: `$minimal`, `$lean`, `$simplify`
 
-### Maintained Excellence
-- **Native thinking**: Built-in analysis with user-controlled depth (1-5 rounds)
+### ATLAS Thinking Framework 🧠
+- **Structured thinking phases**: Assess, Transform, Layer, Assess, Synthesize
+- **Challenge gates**: Each phase includes complexity challenges
+- **Pattern learning**: Adapts to user preferences over time
+- **REPAIR protocol**: Intelligent error recovery system
+
+### Enhanced User Experience
+- **Minimal format level**: New 2-minute format option (often sufficient!)
+- **Adjusted quality targets**: 65-90% (prioritizing readability over perfection)
+- **Smarter recommendations**: System suggests fewer rounds and simpler formats
+- **Learning system**: Tracks and adapts to your preferences
+
+### Core Excellence Features
+- **Content integrity control**: Strict/Enhanced modes preserved
+- **Complete transparency**: All additions marked with [AI-ADDED]
+- **Native thinking**: User-controlled depth (1-5 rounds)
 - **4 intelligent modes**: Interactive (default), Technical, Academic, Business
-- **Professional formatting**: SCAN, HIERARCHY, PREP frameworks
-- **Guided experience**: Interactive mode with Quick/Standard/Deep options
-- **2-minute rule**: All formatted documents readable in appropriate time
-- **Quality guarantee**: FORM scorecard ensures professional output
 
 .
 
@@ -62,19 +72,20 @@ The Document Beautifier system transforms unstructured documents into beautifull
 1. Go to claude.ai
 2. Click "Projects" in sidebar
 3. Click "Create project"
-4. Name it "Document Beautifier v1.3.0"
+4. Name it "Document Beautifier v2.0.0"
 
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Document Beautifier - v1.3.0.md`
+3. Copy and paste: `Document Beautifier - Main System - v2.0.0.md`
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
 Add these to your project's knowledge base:
-- `Document Beautifier - Quick Reference Card.md`
-- `Document Beautifier - Structure Templates.md`
-- `Document Beautifier - Interactive Mode Guide.md`
+- `Document Beautifier - ATLAS Thinking Framework - v2.0.0.md`
+- `Document Beautifier - Quick Reference Card - v2.0.0.md`
+- `Document Beautifier - Structure Templates - v2.0.0.md`
+- `Document Beautifier - Interactive Mode - v2.0.0.md`
 
 ### Step 4: Start Formatting
 ```
@@ -151,7 +162,7 @@ Would you like:
 - Academic papers
 - When accuracy is critical
 
-### Enhanced Mode (Opt-in)
+### ⚡ Enhanced Mode (Opt-in)
 **What it does:**
 - All Strict mode features PLUS:
 - Adds helpful transitions between sections
@@ -362,6 +373,54 @@ Creating executive-friendly format...
 
 .
 
+## 🧠 ATLAS Thinking Framework
+
+### Overview
+The Document Beautifier now uses the ATLAS framework for all document analysis, providing structured thinking with built-in complexity challenges.
+
+### The Five Phases
+
+#### A - Assess & Challenge
+- Understand document needs
+- **Challenge complexity assumptions**
+- Propose simpler alternatives
+- "Could minimal formatting work?"
+
+#### T - Transform Patterns
+- Identify optimal structures
+- Choose minimal viable format
+- **Challenge:** "Would the minimal version work?"
+
+#### L - Layer Formatting
+- Apply formatting with restraint
+- Each addition must be necessary
+- **Challenge every enhancement**
+
+#### A - Assess Readability
+- Validate improvements
+- Simplification pass
+- **Remove unnecessary formatting**
+
+#### S - Synthesize & Deliver
+- Generate artifact
+- Include integrity report
+- **Note simpler alternatives**
+
+### Challenge Integration
+The system now actively challenges at key decision points:
+- 3+ rounds requested → "Could 2 rounds work with a simpler approach?"
+- Enhanced mode chosen → "Would Strict preserve your voice better?"
+- Deep restructure → "Would Standard formatting suffice?"
+- Complex hierarchy → "Would a flatter structure be clearer?"
+
+### Pattern Learning
+The system tracks your preferences and adapts:
+- After 3 similar documents → Suggests your patterns
+- After 5 consistent choices → Updates defaults
+- Challenge acceptance rate → Adjusts recommendations
+
+.
+
 ## 📊 Formatting Patterns
 
 ### Universal Standards
@@ -408,7 +467,19 @@ P - Plan/Proposal
 
 ## 🔧 Special Commands
 
-### $strict
+### Content Control Commands
+- `$strict` - Switch to preservation only mode
+- `$enhanced` - Switch to enhanced mode with additions
+- `$check` - Verify content integrity and list all changes
+
+### NEW Simplification Commands (v2.0.0)
+- `$minimal` - Apply absolute minimum formatting
+- `$lean` - Strip to essential structure only
+- `$simplify` - Reduce current complexity
+
+### Example Usage
+
+#### $strict
 ```
 User: Actually, $strict - just reorganize, don't add anything
 
@@ -416,7 +487,7 @@ System: Switching to Strict mode. I'll preserve your content exactly.
 [Removes any additions, keeps only original content]
 ```
 
-### $enhanced
+#### $enhanced
 ```
 User: $enhanced - please add helpful examples
 
@@ -424,7 +495,7 @@ System: Switching to Enhanced mode. I'll add clarifications and examples.
 [Adds improvements marked with [AI-ADDED]]
 ```
 
-### $check
+#### $check
 ```
 User: $check
 
@@ -442,6 +513,14 @@ Options:
 What would you prefer?
 ```
 
+#### $minimal (NEW)
+```
+User: $minimal
+
+System: Applying minimal formatting - just essential structure.
+[Strips to headers and basic emphasis only]
+```
+
 .
 
 ## 🆘 Troubleshooting
@@ -456,6 +535,7 @@ What would you prefer?
 - **Interactive not working?** - That's the default, no command needed
 - **Wrong format applied?** - Specify mode explicitly ($technical, etc.)
 - **Structure unclear?** - System will ask for more thinking rounds
+- **Too complex?** - Try $minimal or $lean for simpler output
 
 ### Thinking Integration
 - **Not asked about rounds?** - System always asks before final output
@@ -467,7 +547,14 @@ What would you prefer?
 
 ## ⚠️ Important Notes
 
-### Core Changes in v1.3.0
+### Core Features in v2.0.0
+- **Challenge Mode** - System questions complexity before applying
+- **ATLAS Framework** - Structured thinking with challenge gates
+- **Minimal defaults** - Start simple, add only if needed
+- **Pattern learning** - Adapts to your preferences
+- **New commands** - $minimal, $lean, $simplify
+
+### Essential Features
 - **Content control** - User chooses Strict or Enhanced mode
 - **Complete transparency** - All additions marked and reported
 - **Default safety** - Strict mode by default
@@ -487,7 +574,9 @@ What would you prefer?
 
 ## 📦 Version History
 
-- **v1.3.0**: Content integrity control, Strict/Enhanced modes, $check command, transparency
+- **v2.0.0**: Major release - Challenge Mode, ATLAS framework, minimal defaults, pattern learning, simplification commands
+- **v1.4.0**: Enhanced content integrity control, improved transparency
+- **v1.3.0**: Content integrity control, Strict/Enhanced modes, $check command
 - **v1.2.0**: Native Claude thinking, user-controlled rounds, always-ask principle
 - **v1.1.0**: MCP integration (deprecated)
 - **v1.0.0**: Initial release, 4 modes, Interactive default, frameworks
@@ -509,4 +598,4 @@ What would you prefer?
 
 ---
 
-*Document Beautifier v1.3.0: Transform walls of text into professional documents with complete control. Choose your thinking depth (1-5 rounds), choose your content handling (Strict/Enhanced), get perfect formatting with total transparency. Every document deserves to be beautifully readable.*
+*Document Beautifier v2.0.0: Transform walls of text into professional documents with intelligent challenge-based formatting. Choose your thinking depth (1-5 rounds), choose your content handling (Strict/Enhanced), get perfect formatting with total transparency and smarter recommendations. Every document deserves to be beautifully readable - with the minimum necessary intervention.*
