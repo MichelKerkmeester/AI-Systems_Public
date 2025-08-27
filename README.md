@@ -11,8 +11,8 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 ### ✏️ Writer Systems
 1. [Product Owner Writer](#1--product-owner-writer)
-2. [Branded Content Writer](#2--branded-content-writer)
-3. [Document Beautifier](#3--document-beautifier)
+2. [Document Beautifier](#2--document-beautifier)
+3. [Branded Content Writer](#3--branded-content-writer)
 4. [Prompt Engineering Assistant](#4--prompt-engineering-assistant)
 
 ### ⚡ Automation Agents  
@@ -62,7 +62,28 @@ Some of my non-client AI systems that I made available to the public. They were 
   - ClickUp MCP direct workspace creation with preserved formatting
   - QA warning above checklist, placeholders for missing links
 
-#### 2. ✏️ Branded Content Writer (v4.1.0)
+#### 2. 📄 Document Beautifier (v2.1.0)
+**Transform unstructured documents into professional content with structured ATLAS thinking**
+
+- **5-Phase ATLAS Framework & Pattern Learning**: 
+  - Structured thinking: Assess/Transform/Layer/Assess/Synthesize with 1-5 rounds
+  - SessionContext tracking: Learns preferences for structure, modes, and rounds
+  - 3-level challenges: Gentle (1-2), Constructive (3-4), Strong (5) complexity questioning
+  - REPAIR protocol: Pattern-based error recovery and prevention
+
+- **4 Formatting Modes & Content Integrity**: 
+  - Modes: Interactive (guided default), $technical (docs), $academic (papers), $business (reports)
+  - Strict mode: Zero additions, preserve voice, structure only
+  - Enhanced mode: Minimal clarifications with [AI-ADDED] tracking
+  - Simplify commands: $minimal (bare), $lean (essentials), $simplify (reduce)
+
+- **Smart Frameworks & Performance Metrics**: 
+  - SCAN (Summary/Core/Additional/Next), HIERARCHY (flat preferred), PREP (Purpose/Research/Evidence/Plan)
+  - Efficiency targets: <2.5 rounds average, >60% simplification acceptance
+  - Quality metrics: >80% readability improvement, >75% first-format success
+  - Progressive formatting: Minimal → Standard → Deep only if needed
+
+#### 3. ✏️ Branded Content Writer (v4.1.0)
 **Marketing content with systematic authenticity and failure transparency**
 
 - **Voice Trinity & Tone Control**: 
@@ -82,27 +103,6 @@ Some of my non-client AI systems that I made available to the public. They were 
   - Invisible improvement without adding assumptions
   - Auto-expansion of abbreviations and vague requests
   - Intent preservation while fixing ambiguity
-
-#### 3. 📄 Document Beautifier (v1.3.0)
-**Transform unstructured documents into professional content with integrity control**
-
-- **Content Control & Modes**: 
-  - 4 modes: Interactive (guided), $technical (code), $academic (citations), $business (reports)
-  - Control types: Strict (preserve), Enhanced ([AI-ADDED] tags)
-  - Simplify commands: $minimal (bare), $lean (essentials), $simplify (50% reduction)
-  - Progressive tracking of simplification levels
-
-- **ATLAS Framework Integration**: 
-  - 5-phase thinking at every formatting decision
-  - Complexity challenges prevent over-formatting
-  - Alternative structures with 1-10 round depth control
-  - Smart detection of formatting needs
-
-- **REPAIR Protocol**: 
-  - Over-formatted detection and auto-simplification
-  - Under-formatted enhancement suggestions
-  - Structure mismatch corrections
-  - Conflict recovery from formatting errors
 
 #### 4. 🎯 Prompt Engineering Assistant (v7.0.0)
 **Transform vague requests into powerful AI prompts for ANY platform**
