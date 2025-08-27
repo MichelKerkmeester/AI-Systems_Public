@@ -52,6 +52,12 @@ The Product Owner system transforms requests into professional development ticke
 - Smart calibration based on complexity factors
 - Session awareness with preference tracking
 
+**Streamlined Documentation:**
+- 50% reduction in system documentation size
+- Improved maintainability and clarity
+- Smart references between documents
+- Balanced detail with external references
+
 ### Enhanced from v6.2.0
 - All formatting standards maintained (TOC, dividers, Key Problems/Reasons)
 - Symbol consistency (◳ for Designs, ⋈ for Dependencies)
@@ -71,7 +77,7 @@ The Product Owner system transforms requests into professional development ticke
 - **📊 Thinking Calibration**: Formula-based recommendations (1-10 rounds)
 - **🎛️ 5 Intelligent Modes**: Discovery, $ticket, $spec, $doc, $text
 - **🔗 Platform Ready**: Direct ClickUp integration after creation
-- **📐 Professional Symbols**: ⌘, ◇, ◻️, ◊, ◳, →, ✦, ✓, ⋈, ⚡, 📚
+- **📝 Professional Symbols**: 📘, ◇, ◻️, ◊, ◳, →, ✦, ✓, ⋈, ⚡, 📚
 - **📋 Strict Formatting**: TOC, dividers, proper Key Problems/Reasons format
 - **⚡ Phased Delivery**: Automatic breakdown of large initiatives
 - **🎪 Session Context**: Tracks preferences and adapts behavior
@@ -89,17 +95,17 @@ The Product Owner system transforms requests into professional development ticke
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `product-owner-v7.md`
+3. Copy and paste: `product-owner-main-updated.md`
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
-Add these **8 core documents** to your project's knowledge base:
-- `product-owner-universal-atlas-framework-v1.md` (ATLAS thinking methodology)
-- `product-owner-reference-guide-v2-fixed.md` (symbols, templates, standards)
-- `product-owner-interactive-flows-v2.md` (all mode interactions with Challenge Mode)
-- `product-owner-quick-card-v5.md` (daily command reference)
-- `product-owner-platform-integration-v2-fixed.md` (ClickUp handoff)
-- `product-owner-prompt-improvement-v3.md` (request clarity enhancement)
+Add these **6 essential documents** to your project's knowledge base:
+- `Product Owner - ATLAS Thinking Framework.md` (ATLAS thinking methodology)
+- `Product Owner - Reference Guide.md` (symbols, templates, standards)
+- `Product Owner - Interactive Flows.md` (all mode interactions with Challenge Mode)
+- `Product Owner - Quick Card.md` (daily command reference)
+- `Product Owner - Platform Integration.md` (ClickUp handoff)
+- `Product Owner - Prompt Improvement.md` (request clarity enhancement)
 
 ### Step 4: Install MCP Tools (Optional - for ClickUp only)
 See [MCP Installation](#-installing-mcp-tools) section below
@@ -110,7 +116,7 @@ need user authentication         # Discovery flow with intelligent guidance
 $ticket payment integration      # Direct ticket with auto-scaling
 $spec modal component           # Direct implementation spec
 $doc analytics dashboard        # Direct documentation
-$text error message            # Direct snippet (minimal process)
+$text error message            # Direct snippet (always artifact)
 ```
 
 .
@@ -123,7 +129,7 @@ $text error message            # Direct snippet (minimal process)
 | **Ticket** | `$ticket` | Development tickets | Auto-scales 2-8 sections | Yes |
 | **Spec** | `$spec` | Frontend implementations | Code blocks | Yes |
 | **Documentation** | `$doc` | User guides | Feature docs | Yes |
-| **Text** | `$text` | Quick snippets | Direct/Simple | Minimal |
+| **Text** | `$text` | Quick snippets | Artifact always | Minimal |
 
 ### Discovery Flow (Default)
 When no mode is specified, the system helps determine what to create:
@@ -164,10 +170,11 @@ The system intelligently detects complexity based on your responses:
 ### Mandatory Formatting (ALL Tickets)
 
 Every ticket MUST include:
-- **Table of Contents** - Complete navigation structure
+- **Table of Contents** - Sections only (no subsections)
 - **Dividers** - Between ALL sections (---)
-- **Key Problems** - `### → Key problems:` with 2+ items using `- text`
-- **Reasons Why** - `### → Reasons why:` with 2+ items using `- text`
+- **Key Problems** - `### → Key problems:` with 2+ items, NOT in TOC
+- **Reasons Why** - `### → Reasons why:` with 2+ items, NOT in TOC
+- **QA Warning** - Above Resolution Checklist
 - **Designs & References** - Section with ◳ symbol (placeholders if no links)
 - **Dependencies** - Section with ⋈ symbol when applicable
 
@@ -192,15 +199,14 @@ Every ticket MUST include:
 ```markdown
 [BE] Authentication Fix
 
-## 📑 Table of Contents
-- [⌘ About](#-about)
-- [Key Problems & Reasons](#key-problems--reasons)
+## 📋 Table of Contents
+- [📘 About](#-about)
 - [◳ Designs & References](#-designs--references)
 - [◇ Requirements](#-requirements)
 - [✦ Success Criteria](#-success-criteria)
 - [✓ Resolution Checklist](#-resolution-checklist)
 
-# ⌘ About
+# 📘 About
 
 Users cannot log in due to token validation error.
 
@@ -221,6 +227,14 @@ Users cannot log in due to token validation error.
 - [Error logs dashboard - link pending]
 
 ---
+
+## ✓ Resolution Checklist
+
+⚠️ Complete all Resolution Checklist items before moving to QA
+
+[] Fix token validation logic
+[] Add comprehensive test coverage
+[] Deploy hotfix to production
 
 [Continues with all sections and dividers]
 ```
@@ -250,19 +264,16 @@ User: $spec infinite scroll
 
 System: Let's build your infinite scroll implementation! 🔧
 
+How many thinking rounds should I use? (1-10)
+Based on your request, I recommend: 2-3 rounds
+
+User: 2
+
 Quick setup:
 1. **Framework?** (React/Vue/Vanilla)
 2. **Data source?** (API/Local)
-3. **Approximate item count?**
 
-User: React, API, thousands
-
-System: Additional details:
-4. **Virtual scrolling needed?** (for performance)
-5. **Loading indicators?**
-6. **Error handling approach?**
-
-[Generates complete, optimized implementation]
+[Generates complete, optimized implementation as artifact]
 ```
 
 .
@@ -288,13 +299,17 @@ User: $doc API authentication
 
 System: Let's document API authentication! 📚
 
+How many thinking rounds should I use? (1-10)
+Based on documentation, I recommend: 2-3 rounds
+
+User: 3
+
 I'll help create clear API documentation.
 
 1. **Who will read this?** (developers/end users/both)
 2. **Authentication methods?** (OAuth/API keys/JWT)
-3. **Current state?** (live/beta/planned)
 
-[Creates structured documentation with examples]
+[Creates structured documentation artifact]
 ```
 
 .
@@ -316,18 +331,17 @@ User: $text error message for payment failure
 
 System: Let's write your error message! ✏️
 
+How many thinking rounds should I use? (1-2 typical for snippets)
+
+User: 1
+
 Quick context - is this for:
 - Customer-facing UI
 - Internal logging
-- Email notification
 
 User: Customer-facing UI
 
-System: "We couldn't process your payment. Please check your 
-card details and try again. If the problem persists, 
-contact support."
-
-[Direct response, no artifact needed for single items]
+[Creates artifact with error message]
 ```
 
 .
@@ -349,7 +363,7 @@ Which option? (1 or 2)
 - User chooses platform
 - MCP handles workspace creation
 - All formatting preserved
-- No manual configuration needed
+- Pattern learning tracks preferences
 
 .
 
@@ -357,13 +371,13 @@ Which option? (1 or 2)
 
 ### The Five Phases
 
-| Phase | Name | Purpose | When Active | Challenge Focus |
-|-------|------|---------|-------------|-----------------|
-| **A** | Assess & Challenge | Map reality, question assumptions | Always (1-10) | "Is this necessary?" |
-| **T** | Transform & Expand | Generate solutions (safe→wild) | 3+ rounds | "What patterns exist?" |
-| **L** | Layer & Analyze | Build frameworks, add creativity | 5+ rounds | "Where's the 80/20?" |
-| **A** | Assess Impact | Red team, test assumptions | 7+ rounds | "How will this fail?" |
-| **S** | Synthesize & Ship | Decide and deliver | Always (1-10) | "Ship lean first?" |
+| Phase | Name | Purpose | When Active |
+|-------|------|---------|-------------|
+| **A** | Assess & Challenge | Map reality, challenge | Always |
+| **T** | Transform & Expand | Generate solutions | 3+ rounds |
+| **L** | Layer & Analyze | Build frameworks | 5+ rounds |
+| **A** | Assess Impact | Red team | 7+ rounds |
+| **S** | Synthesize & Ship | Decide and deliver | Always |
 
 ### Thinking Round Calibration
 
@@ -372,34 +386,25 @@ Which option? (1 or 2)
 How many thinking rounds should I use? (1-10)
 
 Based on your request, I recommend: [X rounds]
-- Complexity: [Low/Medium/High] - [specific reason]
-- Uncertainty: [Low/Medium/High] - [specific reason]
-- Stakes: [Low/Medium/High] - [specific reason]
+- Complexity: [Low/Medium/High] - [reason]
+- Uncertainty: [Low/Medium/High] - [reason]
+- Stakes: [Low/Medium/High] - [reason]
 
 Or specify your preferred number.
 ```
 
 **Automatic Calibration Formula:**
-- Base (1) + Complexity (0-6) + Uncertainty (0-4) + Stakes (0-5) = Recommendation (max 10)
+```python
+total = 1 + complexity + uncertainty + stakes
+# Adjusted by pattern learning
+```
 
 ### Phase Activation by Rounds
-```
-1-2 rounds:  A → S (Quick assess and ship)
-3-4 rounds:  A → T → S (Add exploration)
-5-6 rounds:  A → T → L → S (Add analysis)
-7-8 rounds:  A → T → L → A → S (Full cycle)
-9-10 rounds: Deep ATLAS with iterations
-```
-
-### Quick Reference Guide
-
-| Rounds | Use Case | Characteristics | ATLAS Phases |
-|--------|----------|-----------------|--------------|
-| **1-2** | Simple fixes | Clear edit, known pattern, single component | A → S |
-| **3-4** | Standard features | Clear scope, established patterns, moderate complexity | A → T → S |
-| **5-6** | Complex features | Multiple components, integration needed, some unknowns | A → T → L → S |
-| **7-8** | System design | New architecture, multiple stakeholders, high uncertainty | Full ATLAS |
-| **9-10** | Strategic decisions | Business critical, many unknowns, irreversible | Deep ATLAS with iterations |
+- **1-2 rounds:** A → S (Quick assess and ship)
+- **3-4 rounds:** A → T → S (Add exploration)
+- **5-6 rounds:** A → T → L → S (Add analysis)
+- **7-8 rounds:** Full ATLAS cycle
+- **9-10 rounds:** Deep ATLAS with iterations
 
 .
 
@@ -414,13 +419,11 @@ Challenge Mode activates automatically at 3+ thinking rounds to ensure lean, foc
 ```
 "Could this be simpler?"
 "What's the minimal version?"
-"Is there a standard pattern?"
 ```
 
 **Level 2: Constructive (3-5 rounds)**
 ```
 "That would work, but a simpler approach would be..."
-"Actually, that might cause [specific issue]. Instead..."
 "The lean approach here would be to..."
 ```
 
@@ -428,26 +431,21 @@ Challenge Mode activates automatically at 3+ thinking rounds to ensure lean, foc
 ```
 "Are we solving the right problem?"
 "This adds unnecessary complexity. We can achieve the same with..."
-"Let's challenge the premise - do users actually need this?"
 ```
 
 ### Common Challenge Patterns
 
 **Scope Challenges:**
-```
-"Could we start with 3 features instead of 10?"
-"What if we had half the time?"
-"Which 3 requirements deliver 80% of the value?"
-```
+- Start with fewer features
+- Phase the delivery
+- Focus on core value
 
 **Build vs Buy:**
-```
-"Could we use Stripe Connect instead of custom payments?"
-"Auth0 handles this - why build custom?"
-"This is a solved problem - use a library?"
-```
+- Use existing solutions
+- Leverage libraries
+- Consider platforms
 
-**Phasing:**
+**Phasing Example:**
 ```
 Original: Complete payment platform (6 months)
 Challenge: Phase it?
@@ -457,91 +455,10 @@ Result:
 - Phase 3: Optimization (2 weeks)
 ```
 
-### User Responses to Challenges
-
-**Acceptance:**
-```
-User: "You're right, let's simplify"
-System: "Excellent choice! Switching to lean approach..."
-[Reduces thinking rounds, delivers faster]
-```
-
-**Rejection with Reason:**
-```
-User: "No, we need custom for compliance"
-System: "Understood - compliance justifies complexity. Let's build it right..."
-[Proceeds with full solution, documents why]
-```
-
-**Request for Both:**
-```
-User: "Can I see both versions?"
-System: "Smart! I'll create lean version first, then show upgrade path..."
-[Creates phased approach]
-```
-
-### Enhanced Interactive Examples
-
-**Discovery with early challenge:**
-```
-Welcome! Let's figure out what you need. 🤔
-
-Quick thought first: Google Analytics might already solve this.
-Still want custom tracking?
-
-User: Yes, need custom for proprietary data
-
-What would you like to create?
-[Continues with mode selection]
-```
-
-**$ticket with phasing challenge:**
-```
-User: $ticket payment platform
-
-System: Let's create your payment platform ticket! 🎯
-
-How many thinking rounds should I use? (1-10)
-
-Based on payment platform, I recommend: 6-8 rounds
-- Complexity: High (multiple providers, compliance)
-- Uncertainty: Medium (integration dependencies)
-- Stakes: High (financial, regulatory)
-
-User: 7
-
-[ATLAS A Phase - Challenge immediately]
-System: Hold on - before we build a complex payment platform...
-
-Challenge: Could we start simpler?
-1. Single provider first (Stripe only) - 2 weeks
-2. Payment links (no integration) - 2 days
-3. Full platform (as requested) - 6-8 weeks
-
-Which approach? (1/2/3)
-```
-
-**$spec with library challenge:**
-```
-User: $spec modal from scratch
-
-System: Let's build your modal! 🔧
-
-How many thinking rounds should I use? (1-10)
-Based on modal component, I recommend: 2-3 rounds
-
-User: 3
-
-[ATLAS A Phase - Challenge]
-System: Quick challenge before we start:
-
-Are you sure you need a custom modal? Consider:
-- Native <dialog> - Built-in, accessible, 5 lines of CSS
-- Headless UI - Unstyled, accessible components
-- Custom build - Full control but more maintenance
-
-Which approach? (native/library/custom)
-```
+### User Response Handling
+- **Acceptance:** Reduce complexity, deliver faster
+- **Rejection:** Document justification, proceed
+- **Negotiation:** Create phased approach
 
 .
 
@@ -549,60 +466,29 @@ Which approach? (native/library/custom)
 
 ### The REPAIR Framework
 
-**R - Recognize**
-```
-Issue detected: [Specific problem]
-Impact: [User/System effect]
-```
-
-**E - Explain**
-```
-What happened: [Plain language]
-Why it matters: [Consequences]  
-```
-
-**P - Propose**
-```
-Three paths forward:
-1. **Complex fix:** [Original approach] - [time/effort]
-2. **Simple fix:** [Lean alternative] - [time/effort]
-3. **Workaround:** [Different solution] - [time/effort]
-```
-
-**A - Adapt**
-```
-Selected approach: [Choice]
-Adjustments made: [Changes]
-```
-
-**I - Iterate**
-```
-Testing solution...
-Confirming resolution...
-```
-
-**R - Record**
-```
-Pattern learned: [Insight]
-Future default: [Adjustment]
-```
+**R**ecognize - Detect error pattern  
+**E**xplain - Plain language impact  
+**P**ropose - Three solution options  
+**A**dapt - Adjust to user choice  
+**I**terate - Test and improve  
+**R**ecord - Prevent recurrence  
 
 ### Common Recovery Scenarios
 
 **Over-Complex Solution:**
-- Recognize: 20 sections for 2-week feature
-- Propose: Reduce to 5 core sections
+- Recognize: Too many sections for simple need
+- Propose: Core sections only
 - Result: Simplified, focused ticket
 
 **Scope Creep:**
-- Recognize: Grew from 3 to 12 requirements
-- Propose: Phase delivery over 3 sprints
-- Result: Manageable phases with early value
+- Recognize: Requirements expanded during creation
+- Propose: Phase delivery
+- Result: Manageable sprints
 
 **Unclear Requirements:**
-- Recognize: High uncertainty in requirements
-- Propose: Quick prototype, detailed gathering, or minimal start
-- Result: Validated approach before full build
+- Recognize: High uncertainty
+- Propose: Prototype, gather details, or start minimal
+- Result: Validated approach
 
 .
 
@@ -663,17 +549,17 @@ I'm on [Windows/Mac/Linux]. Give me exact commands.
 - **Not learning?** - Patterns update after each recovery
 
 ### Formatting Issues
-- **Missing TOC?** - Required for ALL tickets
+- **Missing TOC?** - Required for ALL tickets (sections only)
+- **TOC has subsections?** - Remove Key Problems/Reasons from TOC
 - **No dividers?** - Add `---` between ALL sections
 - **Wrong Key Problems?** - Use `### → Key problems:` with 2+ items
 - **Wrong Reasons Why?** - Use `### → Reasons why:` with 2+ items
-- **Bullet symbols?** - Always use `- text` format
+- **No QA warning?** - Add above Resolution Checklist
 - **No Designs section?** - Add with ◳ symbol and placeholders
 
-### Symbol Issues
-- **Wrong symbols?** - ◳ for Designs, ⋈ for Dependencies
-- **Missing symbols?** - Every major section needs its symbol
-- **Old symbols?** - Update from v6.0 symbols
+### Artifact Issues
+- **Not creating artifacts?** - ALL outputs must be artifacts
+- **Text as direct response?** - Even snippets need artifacts
 
 ### Mode Selection
 - **Discovery not working?** - That's the default, no command needed
@@ -683,7 +569,7 @@ I'm on [Windows/Mac/Linux]. Give me exact commands.
 ### Platform Integration
 - **Not seeing offer?** - Appears after creation in chat
 - **MCP unavailable?** - Check Docker container status
-- **Wrong workspace?** - MCP auto-detects from content
+- **Pattern not tracking?** - Choices recorded after 3 similar
 
 .
 
@@ -694,21 +580,20 @@ I'm on [Windows/Mac/Linux]. Give me exact commands.
 - **Challenge Mode** - Automatic at 3+ rounds
 - **REPAIR Protocol** - Structured error recovery
 - **Pattern Learning** - Session-based adaptation
-- **Phased Delivery** - Default for complex requests
-- **Constructive Pushback** - System challenges assumptions
-- **Context Preservation** - Tracks user preferences
+- **Streamlined Docs** - 50% size reduction
+- **Artifact Enforcement** - ALL outputs as artifacts
 
 ### Critical Requirements (Maintained)
-- **Table of Contents** - MANDATORY for all tickets
-- **Challenge Documentation** - Note decisions made
-- **Dividers** - REQUIRED between all sections
-- **Key Problems/Reasons** - MUST use ### → format with 2+ items
+- **Table of Contents** - MANDATORY for all tickets (sections only)
+- **Key Problems/Reasons** - NOT in TOC, ### → format, 2+ items
+- **QA Warning** - Above Resolution Checklist
+- **Dividers** - Between ALL sections
 - **Bullet Format** - ONLY use `- text` never symbols
 - **Designs Section** - ALWAYS include with ◳ symbol
 - **Dependencies** - Include with ⋈ when needed
 
 ### Core Architecture
-- **8 documents** - Includes ATLAS Framework
+- **6 essential documents** - Streamlined and consolidated
 - **Native thinking** - User-controlled rounds (1-10)
 - **Unified ticket mode** - Intelligent auto-scaling
 - **5 operating modes** - All interactive
@@ -728,7 +613,7 @@ I'm on [Windows/Mac/Linux]. Give me exact commands.
 
 ## 📦 Version History
 
-- **v7.0.0**: ATLAS Framework, Challenge Mode, REPAIR Protocol, pattern learning, phased delivery bias
+- **v7.0.0**: ATLAS Framework, Challenge Mode, REPAIR Protocol, pattern learning, streamlined docs (50% reduction)
 - **v6.2.0**: Stricter formatting standards, updated symbols (◳, ⋈), mandatory TOC/dividers
 - **v6.1.0**: Enhanced troubleshooting, improved examples, format validation
 - **v6.0.0**: New $text mode, 52% size reduction, 5-doc architecture
@@ -746,20 +631,20 @@ I'm on [Windows/Mac/Linux]. Give me exact commands.
 
 ## 📚 Additional Resources
 
-### Core System Documents (v7.0.0)
-- `product-owner-v7.md` - Main system prompt
-- `product-owner-universal-atlas-framework-v1.md` - ATLAS thinking methodology
-- `product-owner-reference-guide-v2-fixed.md` - Symbols, templates, standards
-- `product-owner-interactive-flows-v2.md` - Mode interactions with challenges
-- `product-owner-quick-card-v5.md` - Daily command reference
-- `product-owner-platform-integration-v2-fixed.md` - ClickUp handoff
-- `product-owner-prompt-improvement-v3.md` - Request clarity
+### Core System Documents
+- `product-owner-main-updated.md` - Main system prompt
+- `Product Owner - ATLAS Thinking Framework.md` - Universal thinking methodology
+- `Product Owner - Reference Guide.md` - Symbols, templates, standards
+- `Product Owner - Interactive Flows.md` - Mode interactions with challenges
+- `Product Owner - Quick Card.md` - Daily command reference
+- `Product Owner - Platform Integration.md` - ClickUp handoff
+- `Product Owner - Prompt Improvement.md` - Request clarity enhancement
 
 ### Thinking & Methodology
-- [ATLAS Framework Guide](Internal) - Universal thinking methodology
-- [Challenge Patterns](Internal) - Complexity challenging templates
-- [REPAIR Protocol](Internal) - Error recovery framework
-- [Pattern Learning](Internal) - Adaptation mechanisms
+- [ATLAS Framework Guide](Product Owner - ATLAS Thinking Framework.md) - Universal thinking methodology
+- [Challenge Patterns](Product Owner - Interactive Flows.md#challenge-mode) - Complexity challenging templates
+- [REPAIR Protocol](Product Owner - ATLAS Thinking Framework.md#repair-protocol) - Error recovery framework
+- [Pattern Learning](Product Owner - Interactive Flows.md#pattern-learning) - Adaptation mechanisms
 
 ### Product Management
 - [Product Management Basics](https://www.productplan.com/learn/product-management-basics/)
@@ -780,4 +665,4 @@ I'm on [Windows/Mac/Linux]. Give me exact commands.
 
 .
 
-*Product Owner v7.0.0: ATLAS Framework for universal thinking. Challenge Mode for lean solutions. REPAIR Protocol for graceful recovery. Pattern learning for continuous improvement. Five intelligent modes with user-controlled depth. Always challenging complexity, always seeking simplicity.*
+*Product Owner v7.0.0: Streamlined for clarity. ATLAS Framework for universal thinking. Challenge Mode for lean solutions. REPAIR Protocol for graceful recovery. Pattern learning for continuous improvement. Five intelligent modes with user-controlled depth. Always challenging complexity, always seeking simplicity.*
