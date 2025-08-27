@@ -1,10 +1,10 @@
-# Document Beautifier System - User Guide v2.0.0
+# Document Beautifier System - User Guide v2.1.0
 
-The Document Beautifier system transforms unstructured documents into beautifully organized, professional content through intelligent analysis and guided formatting options. By combining systematic structure detection with reader-optimized layouts and **user-controlled content enhancement**, it bridges the gap between raw content and polished documentation.
+Transform unstructured documents into beautifully organized, professional content through intelligent analysis and guided formatting with **structured ATLAS thinking framework**.
 
 ## 📋 Table of Contents
 
-- [🆕 What's New in v2.0.0](#-whats-new-in-v200)
+- [🆕 What's New](#-whats-new-in-v210)
 - [✨ Key Features](#-key-features)
 - [🚀 Quick Setup](#-quick-setup)
 - [🎛️ Operating Modes](#️-operating-modes)
@@ -21,71 +21,53 @@ The Document Beautifier system transforms unstructured documents into beautifull
 - [📦 Version History](#-version-history)
 - [📚 Additional Resources](#-additional-resources)
 
-.
+---
 
-## 🆕 What's New in v2.0.0
+## 🆕 What's New in v2.1.0
 
-### Challenge Mode Integration 🚀
-- **Automatic complexity challenges**: System questions unnecessary complexity before applying it
-- **Simpler alternatives proposed**: "Would 2 rounds work instead of 4?"
-- **Lean defaults**: Minimal formatting as the starting point
-- **New simplification commands**: `$minimal`, `$lean`, `$simplify`
+### Enhanced Architecture
+- **Structured ATLAS Framework**: 5-phase thinking methodology with clear activities
+- **Pattern Learning System**: SessionContext tracking for adaptive formatting
+- **3-Level Challenge Hierarchy**: Gentle, Constructive, Strong challenges
+- **Performance Metrics**: Measurable targets for efficiency and quality
+- **REPAIR Protocol**: Enhanced error recovery with pattern detection
 
-### ATLAS Thinking Framework 🧠
-- **Structured thinking phases**: Assess, Transform, Layer, Assess, Synthesize
-- **Challenge gates**: Each phase includes complexity challenges
-- **Pattern learning**: Adapts to user preferences over time
-- **REPAIR protocol**: Intelligent error recovery system
+### Streamlined Implementation
+- **Concise system prompts**: 40% reduction in main system size
+- **Python for logic only**: Used where algorithmic thinking helps clarity
+- **Enhanced references**: More pointers to knowledge base, less duplication
+- **Cleaner documentation**: Better balance between code and descriptive text
 
-### Enhanced User Experience
-- **Minimal format level**: New 2-minute format option (often sufficient!)
-- **Adjusted quality targets**: 65-90% (prioritizing readability over perfection)
-- **Smarter recommendations**: System suggests fewer rounds and simpler formats
-- **Learning system**: Tracks and adapts to your preferences
-
-### Core Excellence Features
-- **Content integrity control**: Strict/Enhanced modes preserved
-- **Complete transparency**: All additions marked with [AI-ADDED]
-- **Native thinking**: User-controlled depth (1-5 rounds)
-- **4 intelligent modes**: Interactive (default), Technical, Academic, Business
-
-.
+---
 
 ## ✨ Key Features
 
+- **Structured 5-Phase ATLAS**: Assess, Transform, Layer, Assess, Synthesize
+- **Pattern Learning with SessionContext**: Tracks preferences, adapts defaults
+- **3-Level Challenge System**: Progressive complexity questioning
 - **4 Formatting Modes**: Interactive (default), $technical, $academic, $business
-- **Content Control**: Strict mode (preserve only) or Enhanced mode (with improvements)
-- **Interactive Everything**: Default mode guides users through formatting choices
-- **Automatic Detection**: Structure patterns recognized and applied intelligently
-- **Native Thinking**: Built-in analysis with user-controlled depth
-- **Smart Frameworks**: SCAN, HIERARCHY, PREP for different document types
-- **Professional Output**: Consistent formatting with quality metrics
-- **Complete Transparency**: All additions tracked and reported
-- **Before/After Templates**: Proven transformations for common scenarios
-- **Pattern Library**: Reusable formatting patterns for consistency
+- **Content Control**: Strict (preserve only) or Enhanced (with improvements)
+- **Native Thinking**: User-controlled depth (1-5 rounds)
+- **Smart Frameworks**: SCAN, HIERARCHY, PREP for different types
+- **Complete Transparency**: All additions tracked with [AI-ADDED]
+- **Simplification Commands**: $minimal, $lean, $simplify
 
-.
+---
 
 ## 🚀 Quick Setup
 
-### Step 1: Create a Claude Project
-1. Go to claude.ai
-2. Click "Projects" in sidebar
-3. Click "Create project"
-4. Name it "Document Beautifier v2.0.0"
+### Step 1: Create Claude Project
+1. Go to claude.ai → Projects → Create project
+2. Name it "Document Beautifier v2.1.0"
 
 ### Step 2: Add System Instructions
-1. In your project, click "Edit project details"
-2. Find "Custom instructions" section
-3. Copy and paste: `Document Beautifier - Main System - v2.0.0.md`
-4. Save the project
+Copy `Document Beautifier - Main System - v2.1.0.md` to Custom Instructions
 
-### Step 3: Upload Supporting Documents
-Add these to your project's knowledge base:
-- `Document Beautifier - ATLAS Thinking Framework - v2.0.0.md`
-- `Document Beautifier - Quick Reference Card - v2.0.0.md`
-- `Document Beautifier - Structure Templates - v2.0.0.md`
-- `Document Beautifier - Interactive Mode - v2.0.0.md`
+### Step 3: Upload Knowledge Base
+- `Document Beautifier - ATLAS Thinking Framework.md`
+- `Document Beautifier - Quick Reference Card.md`
+- `Document Beautifier - Structure Templates.md`
+- `Document Beautifier - Interactive Mode Guide.md`
 
 ### Step 4: Start Formatting
 ```
@@ -96,9 +78,9 @@ $business quarterly report        # Direct business formatting
 ```
 
 System will ask:
-1. "How many thinking rounds?" (1-5)
-2. "Strict or Enhanced mode?"
-3. Then format accordingly
+1. "How many thinking rounds?" (1-5) with pattern-based recommendation
+2. "Strict or Enhanced mode?" with preference learning
+3. Then format using structured ATLAS phases
 
 After formatting:
 ```
@@ -108,20 +90,21 @@ After formatting:
 - Content: 100% preserved / +X improvements
 - Quality Score: XX/100
 - Thinking Rounds Used: X
+- Pattern Learning: Active
 ```
 
-.
+---
 
 ## 🎛️ Operating Modes
 
 | Mode | Command | Purpose | Output | Content Options | Default Rounds |
 |------|---------|---------|--------|-----------------|----------------|
-| **Interactive** | DEFAULT | Guided formatting with options | Quick/Standard/Deep | Strict/Enhanced | 3-5 |
-| **Technical** | `$technical` | Documentation, specs | Technical standards | Strict/Enhanced | 2-3 |
-| **Academic** | `$academic` | Papers, research | Academic conventions | Strict/Enhanced | 2-3 |
-| **Business** | `$business` | Reports, proposals | Executive-friendly | Strict/Enhanced | 2-3 |
+| **Interactive** | DEFAULT | Guided formatting | User choice | Strict/Enhanced | Adaptive 1-5 |
+| **Technical** | `$technical` | Documentation | Tech standards | Strict/Enhanced | 2-3 |
+| **Academic** | `$academic` | Papers | Academic format | Strict/Enhanced | 2-3 |
+| **Business** | `$business` | Reports | Executive-friendly | Strict/Enhanced | 2-3 |
 
-### The Interactive Flow
+### The Interactive Flow with Pattern Learning
 
 **No mode specified:**
 ```
@@ -131,12 +114,14 @@ How many rounds of thinking should I use to analyze your document?
 - 1-2 rounds: Quick analysis for simple structure
 - 3-4 rounds: Standard analysis for typical documents
 - 5 rounds: Deep analysis for complex restructuring
-(Recommended for your document: X rounds)
+
+Based on your document: [X rounds recommended]
+[After 3 similar docs: "You typically prefer Y rounds"]
 
 How should I handle your content?
 1️⃣ Strict Mode - Preserve and reorganize only
 2️⃣ Enhanced Mode - Add helpful improvements
-(Default: Strict)
+[Pattern detected: "You usually choose Strict"]
 
 Would you like:
 1. Quick Format (5 minute read)
@@ -144,11 +129,11 @@ Would you like:
 3. Deep Restructure (30+ minute read)
 ```
 
-.
+---
 
 ## 🔒 Content Integrity Options
 
-### 🔐 Strict Mode (Default)
+### 🔑 Strict Mode (Default)
 **What it does:**
 - Reorganizes and formats existing content
 - Adds only structural elements (headers, TOC, numbering)
@@ -197,13 +182,31 @@ Content Additions (Enhanced only):
 • Examples: 1 added [marked inline]
 ```
 
-.
+---
 
 ## 🎯 Automatic Structure Detection
 
-### Native Thinking Analysis
+### Pattern Learning with SessionContext
 
-The system intelligently detects structure patterns:
+```python
+class DocumentSessionContext:
+    def __init__(self):
+        self.user_preferences = {
+            'preferred_structure': None,  # SCAN/HIERARCHY/PREP
+            'enhancement_choice': None,  # Strict/Enhanced
+            'typical_thinking_rounds': 0,
+            'challenge_acceptance_rate': 0.0,
+            'formatting_level': None  # Minimal/Quick/Standard/Deep
+        }
+        
+        self.patterns = {
+            'successful_formats': [],
+            'rejected_formats': [],
+            'document_transformations': []
+        }
+```
+
+The system intelligently detects and learns from your choices:
 
 | Document Signals | Thinking Type | Suggested Rounds | Applied Framework |
 |-----------------|---------------|------------------|-------------------|
@@ -214,219 +217,161 @@ The system intelligently detects structure patterns:
 | Business metrics | **Linear** | 2-3 | Business template |
 | Unclear structure | **Exploratory** | 4-5 | Interactive exploration |
 
-### Example Flow
+### Example Flow with Challenge
 ```
 User: [pastes wall of text about project management]
 
 System: How many rounds of thinking should I use?
 (Your document has mixed content, I recommend 4 rounds)
+[Pattern: You typically choose 3 for similar docs]
 
 User: Let's do 4 rounds
 
-System: How should I handle your content?
-- Strict: Preserve and reorganize only
+System: [Level 2 Challenge] I could achieve good results with 3 rounds using 
+a focused approach. Would you like to try that instead?
+
+User: Sure, let's try 3
+
+System: [Updates pattern preference]
+How should I handle your content?
+- Strict: Preserve and reorganize only [Your usual choice]
 - Enhanced: Add helpful improvements
 
 User: Strict mode please
 
-System: [Thinking: 4 rounds analyzing patterns]
+System: [ATLAS Thinking: 3 rounds with A→T→S phases]
 [Applies formatting with NO content additions]
 ```
 
-.
+---
 
 ## 💬 Interactive Mode ($interactive)
 
-### Guided & Flexible
-```
-User: [pastes unstructured content]
+### Guided & Flexible with 3-Level Challenges
+Default mode that guides users through formatting choices with progressive challenge levels.
 
-System: Hello! I'll help transform this document.
+**Challenge Hierarchy:**
 
-How many thinking rounds should I use for analysis? (1-5)
-[Provides recommendation based on initial scan]
+| Level | Rounds | Challenge Type | Example |
+|-------|--------|---------------|---------|
+| **Gentle** | 1-2 | Simple questions | "Would bullets work?" |
+| **Constructive** | 3-4 | Thoughtful alternatives | "Standard might suffice..." |
+| **Strong** | 5 | Fundamental questioning | "Do we need restructuring at all?" |
 
-User: 4 rounds
+**Three Depth Levels:**
 
-System: How should I handle your content?
-- Strict: Preserve exactly as is
-- Enhanced: Add helpful improvements
+| Level | Time | Description | Challenge |
+|-------|------|-------------|-----------|
+| **Quick** | 5 min | Basic headers, emphasis, lists | "Often sufficient for most documents" |
+| **Standard** | 15 min | Complete structure with TOC | "Good balance of structure and simplicity" |
+| **Deep** | 30+ min | Complete reorganization | "Consider Standard first - usually enough" |
 
-User: Enhanced
+**Full specification → Document Beautifier - Interactive Mode Guide.md**
 
-System: [Thinking: 4 rounds exploring patterns]
-
-Quick questions:
-1. Purpose? (inform/persuade/document/guide)
-2. Audience? (executives/technical/general/academic)
-
-[Presents tailored options with enhancement note]
-```
-
-### Three Depth Levels
-
-**Quick Format (5 min read)**
-- Basic headers and sections
-- Simple emphasis
-- Bullet points for lists
-- Clean layout
-
-**Standard Format (15 min read)**
-- Complete structure with TOC
-- Numbered sections
-- Professional hierarchy
-- Cross-references
-
-**Deep Restructure (30+ min read)**
-- Complete reorganization
-- Multiple structure options
-- Advanced formatting
-- Comprehensive navigation
-
-.
+---
 
 ## 📚 Mode Specifications
 
-### Technical Mode ($technical)
-```
-User: $technical API documentation
+Each mode applies specific standards with simplicity challenges:
 
-System: How many thinking rounds for analysis? (1-5)
-(Recommended: 2-3 for technical documentation)
+- **Technical**: Clean specs with minimal hierarchy - "Could we reduce complexity?"
+- **Academic**: Essential structure - "Is full academic format necessary?"  
+- **Business**: One-page preference - "Would an executive summary suffice?"
 
-User: 3
+**Details → Document Beautifier - Structure Templates.md**
 
-System: How should I handle your content?
-- Strict: Technical structure only
-- Enhanced: Add code examples and clarifications
-
-User: Enhanced
-
-System: [Thinking: 3 rounds on technical structure]
-Applying technical documentation standards...
-[Adds examples marked with [AI-ADDED]]
-```
-
-### Academic Mode ($academic)
-```
-User: $academic research paper
-
-System: How many thinking rounds for analysis? (1-5)
-(Recommended: 2-3 for academic papers)
-
-User: 2
-
-System: Strict or Enhanced mode?
-
-User: Strict
-
-System: [Thinking: 2 rounds on academic format]
-Formatting for academic standards...
-[Creates structure without adding content]
-```
-
-### Business Mode ($business)
-```
-User: $business quarterly report
-
-System: How many thinking rounds for analysis? (1-5)
-(Recommended: 2-3 for business reports)
-
-User: 3
-
-System: How should I handle your content?
-
-User: Enhanced - add executive insights
-
-System: [Thinking: 3 rounds on executive structure]
-Creating executive-friendly format...
-[Adds clarifications marked with [AI-ADDED]]
-```
-
-.
+---
 
 ## 🤔 Native Thinking Integration
 
-### Thinking Depth Control
+### User Control with Adaptive Calculation
+System ALWAYS asks for thinking rounds (except during discovery phase):
 
-**User Always Chooses:**
-- System ALWAYS asks for thinking rounds (1-5)
-- Then asks for content mode (Strict/Enhanced)
-- Provides recommendations for both
-- Exception: During discovery questions (before final output)
+```python
+def calculate_document_rounds(document, patterns=None):
+    # Base calculation
+    complexity = assess_structure_complexity(document)  # 0-2
+    uncertainty = assess_type_uncertainty(document)  # 0-1
+    length = assess_document_length(document)  # 0-1
+    
+    total = 1 + complexity + uncertainty + length
+    
+    # Pattern adjustment from session context
+    if patterns and patterns.consistent_preference:
+        total = adjust_for_user_preference(total, patterns)
+    
+    return min(total, 5)
+```
 
-### Linear Thinking (1-3 rounds)
-**When to use:**
-- Clear document structure visible
-- Technical documentation
-- Academic papers
-- Business reports with standard format
-- Simple formatting needs
+### Challenge Integration
+```python
+if user_choice >= 3:
+    challenge("Could {user_choice-1} rounds work with simpler approach?")
+```
 
-### Exploratory Thinking (3-5 rounds)
-**When to use:**
-- Mixed content types
-- Unclear organization
-- Multiple valid structures
-- Interactive mode (exploring options)
-- Complex restructuring needed
+### Linear vs Exploratory Thinking
+- **Linear (1-3 rounds)**: Clear document structure visible
+- **Exploratory (3-5 rounds)**: Mixed content, unclear organization
 
-.
+---
 
 ## 🧠 ATLAS Thinking Framework
 
-### Overview
-The Document Beautifier now uses the ATLAS framework for all document analysis, providing structured thinking with built-in complexity challenges.
+### Structured 5-Phase Methodology
+The ATLAS Framework provides systematic thinking with built-in complexity challenges.
 
 ### The Five Phases
 
+#### Phase 0: Intake Check (Optional)
+Only for unclear documents or mixed content
+
 #### A - Assess & Challenge
-- Understand document needs
-- **Challenge complexity assumptions**
+- Map document reality
+- Challenge complexity assumptions
+- Pattern checking from session
 - Propose simpler alternatives
-- "Could minimal formatting work?"
 
 #### T - Transform Patterns
-- Identify optimal structures
+- Identify optimal structures (SCAN/HIERARCHY/PREP)
 - Choose minimal viable format
-- **Challenge:** "Would the minimal version work?"
+- Previous successful patterns considered
+- Challenge: "Would minimal version work?"
 
 #### L - Layer Formatting
 - Apply formatting with restraint
+- Essential formatting only
 - Each addition must be necessary
-- **Challenge every enhancement**
+- Challenge every enhancement
 
 #### A - Assess Readability
-- Validate improvements
+- FORM scoring (Flow, Organization, Readability, Metadata)
 - Simplification pass
-- **Remove unnecessary formatting**
+- Remove unnecessary formatting
+- Validate improvements
 
 #### S - Synthesize & Deliver
-- Generate artifact
+- Generate artifact with chosen format
+- Mark all [AI-ADDED] if Enhanced
 - Include integrity report
-- **Note simpler alternatives**
+- Note simpler alternatives
 
-### Challenge Integration
-The system now actively challenges at key decision points:
-- 3+ rounds requested → "Could 2 rounds work with a simpler approach?"
+### Challenge Integration Points
+Key decision points where system challenges complexity:
+- 3+ rounds requested → "Could 2 rounds work with simpler approach?"
 - Enhanced mode chosen → "Would Strict preserve your voice better?"
 - Deep restructure → "Would Standard formatting suffice?"
 - Complex hierarchy → "Would a flatter structure be clearer?"
 
-### Pattern Learning
-The system tracks your preferences and adapts:
-- After 3 similar documents → Suggests your patterns
-- After 5 consistent choices → Updates defaults
-- Challenge acceptance rate → Adjusts recommendations
+**Full framework → Document Beautifier - ATLAS Thinking Framework.md**
 
-.
+---
 
 ## 📊 Formatting Patterns
 
 ### Universal Standards
 - **Headers**: Clear hierarchy with consistent numbering
 - **Lists**: Parallel construction, proper nesting
-- **Emphasis**: Bold → key terms, Italic → definitions
+- **Emphasis**: Bold for key terms, italics for definitions
 - **Tables**: Aligned columns with clear headers
 - **Code**: Syntax highlighting with language tags
 - **Quotes**: Blockquotes for important notes
@@ -435,71 +380,54 @@ The system tracks your preferences and adapts:
 ### Framework Applications
 
 **SCAN Framework**
-```
-S - Summary (10% of document)
-C - Core Content (70% of document)
-A - Additional Details (15% of document)
-N - Navigation/Next Steps (5% of document)
-```
+- **S** - Summary (10% of document)
+- **C** - Core Content (70% of document)
+- **A** - Additional Details (15% of document)
+- **N** - Navigation/Next Steps (5% of document)
 
 **HIERARCHY Framework**
-```
-H - Headers → Main topics
-I - Information → Details
-E - Examples → Illustrations
-R - References → Citations
-A - Actions → Tasks
-R - Review → Summaries
-C - Connections → Links
-H - Highlights → Key points
-Y - Yield → Outcomes
-```
+- Headers → Information → Examples → References
+- Challenge: "Could a flatter structure be clearer?"
 
 **PREP Framework**
-```
-P - Purpose/Problem
-R - Research/Results
-E - Evidence/Examples
-P - Plan/Proposal
-```
+- **P** - Purpose/Problem
+- **R** - Research/Results
+- **E** - Evidence/Examples
+- **P** - Plan/Proposal
 
-.
+**Complete patterns → Document Beautifier - Quick Reference Card.md**
+
+---
 
 ## 🔧 Special Commands
 
 ### Content Control Commands
-- `$strict` - Switch to preservation only mode
-- `$enhanced` - Switch to enhanced mode with additions
-- `$check` - Verify content integrity and list all changes
+```bash
+$strict    # Switch to preservation only
+$enhanced  # Allow additions
+$check     # Verify integrity and list all changes
+```
 
-### NEW Simplification Commands (v2.0.0)
-- `$minimal` - Apply absolute minimum formatting
-- `$lean` - Strip to essential structure only
-- `$simplify` - Reduce current complexity
+### Simplification Commands
+```bash
+$minimal   # Apply absolute minimum formatting
+$lean      # Strip to essential structure only
+$simplify  # Reduce current complexity
+```
 
 ### Example Usage
-
-#### $strict
 ```
 User: Actually, $strict - just reorganize, don't add anything
 
 System: Switching to Strict mode. I'll preserve your content exactly.
 [Removes any additions, keeps only original content]
+[Updates SessionContext preference]
 ```
 
-#### $enhanced
-```
-User: $enhanced - please add helpful examples
-
-System: Switching to Enhanced mode. I'll add clarifications and examples.
-[Adds improvements marked with [AI-ADDED]]
-```
-
-#### $check
 ```
 User: $check
 
-System: 🔍 Content Integrity Check
+System: 📊 Content Integrity Check
 Original words: 1,234
 Current words: 1,456
 Additions detected: 12
@@ -513,46 +441,47 @@ Options:
 What would you prefer?
 ```
 
-#### $minimal (NEW)
-```
-User: $minimal
-
-System: Applying minimal formatting - just essential structure.
-[Strips to headers and basic emphasis only]
-```
-
-.
+---
 
 ## 🆘 Troubleshooting
 
 ### Content Issues
-- **Unwanted additions?** - Use $strict or $check command
-- **Need more clarity?** - Switch to $enhanced mode
-- **Too many [AI-ADDED] tags?** - Use $strict for cleaner output
-- **Lost content?** - Never happens, all content preserved
+- **Unwanted additions?** → Use $strict or $check command
+- **Need more clarity?** → Switch to $enhanced mode
+- **Too many [AI-ADDED] tags?** → Use $strict for cleaner output
+- **Lost content?** → Never happens, all content preserved
 
-### Mode Issues
-- **Interactive not working?** - That's the default, no command needed
-- **Wrong format applied?** - Specify mode explicitly ($technical, etc.)
-- **Structure unclear?** - System will ask for more thinking rounds
-- **Too complex?** - Try $minimal or $lean for simpler output
+### Mode Issues  
+- **Interactive not working?** → That's the default, no command needed
+- **Wrong format applied?** → Specify mode explicitly ($technical, etc.)
+- **Structure unclear?** → System will ask for more thinking rounds
+- **Too complex?** → Try $minimal or $lean for simpler output
 
 ### Thinking Integration
-- **Not asked about rounds?** - System always asks before final output
-- **Not asked about content mode?** - System asks after thinking rounds
-- **Wrong analysis depth?** - Specify different number of rounds
-- **Need more exploration?** - Request 4-5 rounds
+- **Not asked about rounds?** → System always asks before final output
+- **Not asked about content mode?** → System asks after thinking rounds
+- **Wrong analysis depth?** → Specify different number of rounds
+- **Need more exploration?** → Request 4-5 rounds
 
-.
+### REPAIR Protocol Active
+System uses structured error recovery:
+- **R**ecognize the formatting issue
+- **E**xplain impact on readability
+- **P**ropose three solution options
+- **A**dapt to user choice
+- **I**terate and verify improvement
+- **R**ecord to prevent recurrence
+
+---
 
 ## ⚠️ Important Notes
 
-### Core Features in v2.0.0
-- **Challenge Mode** - System questions complexity before applying
-- **ATLAS Framework** - Structured thinking with challenge gates
-- **Minimal defaults** - Start simple, add only if needed
-- **Pattern learning** - Adapts to your preferences
-- **New commands** - $minimal, $lean, $simplify
+### Core Architecture in v2.1.0
+- **Structured ATLAS Framework** - 5 phases with clear activities
+- **SessionContext Pattern Learning** - Tracks and adapts to preferences
+- **3-Level Challenge Hierarchy** - Progressive complexity questioning
+- **Performance Metrics** - Measurable efficiency and quality targets
+- **Enhanced REPAIR Protocol** - Pattern-based error prevention
 
 ### Essential Features
 - **Content control** - User chooses Strict or Enhanced mode
@@ -570,32 +499,48 @@ System: Applying minimal formatting - just essential structure.
 - **Flexible frameworks** - Adapt to content needs
 - **Professional output** - Consistent, scannable results
 
-.
-
-## 📦 Version History
-
-- **v2.0.0**: Major release - Challenge Mode, ATLAS framework, minimal defaults, pattern learning, simplification commands
-- **v1.4.0**: Enhanced content integrity control, improved transparency
-- **v1.3.0**: Content integrity control, Strict/Enhanced modes, $check command
-- **v1.2.0**: Native Claude thinking, user-controlled rounds, always-ask principle
-- **v1.1.0**: MCP integration (deprecated)
-- **v1.0.0**: Initial release, 4 modes, Interactive default, frameworks
-- **v0.9.0**: Beta with basic formatting patterns
-- **v0.8.0**: Structure detection algorithms
-
-.
-
-## 📚 Additional Resources
-
-### Document Formatting
-- [Plain Language Guidelines](https://www.plainlanguage.gov/)
-- [Technical Writing Standards](https://docs.microsoft.com/style-guide)
-- [Academic Writing Guide](https://owl.purdue.edu/)
-
-### Technical Resources
-- [Markdown Guide](https://www.markdownguide.org/)
-- [Claude Documentation](https://claude.ai/docs)
+### Performance Targets
+```python
+metrics = {
+    'efficiency': {
+        'average_thinking_rounds': target < 2.5,
+        'simplification_rate': target > 0.6,
+        'strict_mode_usage': target > 0.7
+    },
+    'quality': {
+        'readability_improvement': target > 0.8,
+        'first_format_success': target > 0.75,
+        'reformat_frequency': target < 0.2
+    },
+    'learning': {
+        'patterns_per_session': target > 3,
+        'preference_accuracy': target > 0.8,
+        'prevention_success': target > 0.7
+    }
+}
+```
 
 ---
 
-*Document Beautifier v2.0.0: Transform walls of text into professional documents with intelligent challenge-based formatting. Choose your thinking depth (1-5 rounds), choose your content handling (Strict/Enhanced), get perfect formatting with total transparency and smarter recommendations. Every document deserves to be beautifully readable - with the minimum necessary intervention.*
+## 📦 Version History
+
+- **v2.1.0**: Structured ATLAS framework, SessionContext pattern learning, 3-level challenges, performance metrics
+- **v2.0.0**: Challenge Mode, ATLAS framework, minimal defaults, pattern learning
+- **v1.4.0**: Enhanced content integrity control
+- **v1.3.0**: Strict/Enhanced modes, $check command
+- **v1.2.0**: Native Claude thinking, user-controlled rounds
+- **v1.0.0**: Initial release, 4 modes, Interactive default
+
+---
+
+## 📚 Additional Resources
+
+### Documentation
+- [Plain Language Guidelines](https://www.plainlanguage.gov/)
+- [Technical Writing Standards](https://docs.microsoft.com/style-guide)
+- [Academic Writing Guide](https://owl.purdue.edu/)
+- [Markdown Guide](https://www.markdownguide.org/)
+
+---
+
+*Document Beautifier v2.1.0: Transform walls of text into professional documents with structured ATLAS thinking, intelligent pattern learning, and progressive challenge-based formatting. Choose your thinking depth, control your content handling, get perfect formatting with total transparency and continuously improving recommendations.*
