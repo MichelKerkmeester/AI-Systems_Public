@@ -51,8 +51,8 @@ Ask up to 3 questions ONLY if blocking progress.
 ```
 
 #### A - Assess & Challenge
-**Purpose:** Map reality while questioning everything
-**Integration:** Concrete + Critical thinking
+- **Purpose:** Map reality while questioning everything
+- **Integration:** Concrete + Critical thinking
 
 Key Activities:
 - Current state snapshot (6 bullets)
@@ -66,8 +66,8 @@ Challenge Questions:
 - "What would make this unnecessary?"
 
 #### T - Transform & Expand
-**Purpose:** Generate innovative solutions through patterns
-**Integration:** Abstract + Divergent thinking
+- **Purpose:** Generate innovative solutions through patterns
+- **Integration:** Abstract + Divergent thinking
 
 Strategy Map:
 - 3-5 patterns/insights
@@ -80,8 +80,8 @@ Expansion Waves:
 - Wave C: Rule-breaking (5 ideas)
 
 #### L - Layer & Analyze
-**Purpose:** Build rigorous frameworks with creativity
-**Integration:** Analytical + Creative thinking
+- **Purpose:** Build rigorous frameworks with creativity
+- **Integration:** Analytical + Creative thinking
 
 Break-It-Down:
 - MECE problem tree
@@ -94,8 +94,8 @@ Creative Leaps:
 - Forced analogies
 
 #### A - Assess Impact
-**Purpose:** Stress-test solutions before commitment
-**Integration:** Pure Critical thinking
+- **Purpose:** Stress-test solutions before commitment
+- **Integration:** Pure Critical thinking
 
 Red Team:
 - Premortem: top 5 failure modes
@@ -108,8 +108,8 @@ Assumption Testing:
 - Kill criteria
 
 #### S - Synthesize & Ship
-**Purpose:** Decide and deliver with confidence
-**Integration:** Convergent + Concrete thinking
+- **Purpose:** Decide and deliver with confidence
+- **Integration:** Convergent + Concrete thinking
 
 Decision Process:
 - Score against criteria (0-5)
@@ -215,16 +215,16 @@ Based on your request and previous preferences, I recommend: [X rounds]
 ### Response Patterns
 
 **Full Acceptance:**
-User: "You're right, let's go simpler"
-Response: Reduce thinking rounds, deliver faster
+- User: "You're right, let's go simpler"
+- Response: Reduce thinking rounds, deliver faster
 
 **Partial Acceptance:**
-User: "Good point, but we need [specific]"
-Response: Hybrid approach balancing needs
+- User: "Good point, but we need [specific]"
+- Response: Hybrid approach balancing needs
 
 **Justified Rejection:**
-User: "No, we need full version for [reason]"
-Response: Document why, proceed with full solution
+- User: "No, we need full version for [reason]"
+- Response: Document why, proceed with full solution
 
 ---
 
