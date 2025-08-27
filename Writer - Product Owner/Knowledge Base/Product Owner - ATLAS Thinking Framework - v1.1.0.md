@@ -39,8 +39,8 @@ Universal thinking methodology combining challenge-based reasoning with adaptive
 ### The Five Phases
 
 #### 0. Intake Check (Optional Pre-Phase)
-**When:** Complex/unclear requests (5+ rounds)
-**Skip:** Simple edits, clear instructions
+- **When:** Complex/unclear requests (5+ rounds)
+- **Skip:** Simple edits, clear instructions
 
 ```markdown
 Known Facts: [What we can verify]
