@@ -54,13 +54,13 @@ Ask up to 3 questions ONLY if blocking progress.
 - **Purpose:** Map reality while questioning everything
 - **Integration:** Concrete + Critical thinking
 
-Key Activities:
+**Key Activities:**
 - Current state snapshot (6 bullets)
 - Challenge Mode activation
 - Pattern checking from session
 - Simplified problem statement
 
-Challenge Questions:
+**Challenge Questions:**
 - "Is there a simpler approach?"
 - "Could we use an existing solution?"
 - "What would make this unnecessary?"
@@ -69,12 +69,12 @@ Challenge Questions:
 - **Purpose:** Generate innovative solutions through patterns
 - **Integration:** Abstract + Divergent thinking
 
-Strategy Map:
+**Strategy Map:**
 - 3-5 patterns/insights
 - 2-3 domain analogies
 - Previous successful patterns
 
-Expansion Waves:
+**Expansion Waves:**
 - Wave A: Safe/obvious (5 ideas)
 - Wave B: Adjacent possible (10 ideas)
 - Wave C: Rule-breaking (5 ideas)
@@ -83,12 +83,12 @@ Expansion Waves:
 - **Purpose:** Build rigorous frameworks with creativity
 - **Integration:** Analytical + Creative thinking
 
-Break-It-Down:
+**Break-It-Down:**
 - MECE problem tree
 - Root cause analysis
 - Leverage points (top 3)
 
-Creative Leaps:
+**Creative Leaps:**
 - Inversion: What guarantees failure?
 - SCAMPER application
 - Forced analogies
@@ -97,12 +97,12 @@ Creative Leaps:
 - **Purpose:** Stress-test solutions before commitment
 - **Integration:** Pure Critical thinking
 
-Red Team:
+**Red Team:**
 - Premortem: top 5 failure modes
 - Likelihood/impact matrix
 - Second-order effects
 
-Assumption Testing:
+**Assumption Testing:**
 - Falsification of 3 dangerous assumptions
 - 1-week validation tests
 - Kill criteria
@@ -111,12 +111,12 @@ Assumption Testing:
 - **Purpose:** Decide and deliver with confidence
 - **Integration:** Convergent + Concrete thinking
 
-Decision Process:
+**Decision Process:**
 - Score against criteria (0-5)
 - Top 3 with rationale
 - Document what we're NOT doing
 
-Execution:
+**Execution:**
 - 14-day sprint outline
 - Clear owners
 - KPI targets
@@ -284,7 +284,7 @@ def check_triggers(user_action):
 
 ### Adaptation Examples
 
-After 3 similar tickets:
+**After 3 similar tickets:**
 ```markdown
 I notice you're creating similar tickets. Your pattern:
 - Standard complexity
@@ -294,7 +294,7 @@ I notice you're creating similar tickets. Your pattern:
 Use the same approach?
 ```
 
-After consistent simplification:
+**After consistent simplification:**
 ```markdown
 Based on your preference for lean solutions, I'm starting with the minimal version
 ```
@@ -407,27 +407,27 @@ Let's lock Phase 1 scope first like we did successfully with [previous ticket]."
 
 ### Pre-Output Validation
 
-Necessity Gate:
+**Necessity Gate:**
 - Is every feature necessary?
 - Can we remove 20%?
 - Would simpler work?
 
-Clarity Gate:
+**Clarity Gate:**
 - Beginner understandable?
 - Simplest language?
 - Explainable in one sentence?
 
-Efficiency Gate:
+**Efficiency Gate:**
 - Minimal steps to outcome?
 - Least cognitive load?
 - Fastest to implement?
 
-Challenge Gate:
+**Challenge Gate:**
 - Challenged assumptions?
 - Proposed alternatives?
 - Validated complexity?
 
-Pattern Gate:
+**Pattern Gate:**
 - Matches user preferences?
 - Applies learned patterns?
 - Documents exceptions?

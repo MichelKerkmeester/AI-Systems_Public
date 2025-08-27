@@ -632,7 +632,7 @@ I'm on [Windows/Mac/Linux]. Give me exact commands.
 ## 📚 Additional Resources
 
 ### Core System Documents
-- `product-owner-main-updated.md` - Main system prompt
+- `Writer - Product Owner.md` - Main system prompt
 - `Product Owner - ATLAS Thinking Framework.md` - Universal thinking methodology
 - `Product Owner - Reference Guide.md` - Symbols, templates, standards
 - `Product Owner - Interactive Flows.md` - Mode interactions with challenges

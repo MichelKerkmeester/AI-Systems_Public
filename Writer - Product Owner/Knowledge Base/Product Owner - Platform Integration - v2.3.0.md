@@ -7,10 +7,9 @@ Minimal guide for ClickUp MCP integration with formatting standards and pattern 
 1. [🎯 CORE CONCEPT](#-core-concept)
 2. [📦 INTEGRATION FLOW](#-integration-flow)
 3. [🤝 HANDOFF FORMAT](#-handoff-format)
-4. [📋 FORMATTING STANDARDS](#-formatting-standards)
-5. [📄 PATTERN TRACKING](#-pattern-tracking)
-6. [🚨 ERROR HANDLING](#-error-handling)
-7. [💡 EXAMPLES](#-examples)
+4. [📄 PATTERN TRACKING](#-pattern-tracking)
+5. [🚨 ERROR HANDLING](#-error-handling)
+6. [💡 EXAMPLES](#-examples)
 
 ---
 
@@ -68,61 +67,7 @@ Additional Context:
 
 ---
 
-## 4. 📋 FORMATTING STANDARDS
-
-### Required for All Tickets
-
-```markdown
-## 📋 Table of Contents
-- [Main sections only - no subsections]
-
-# 🔘 About
-[Introduction]
-
----
-
-### → Key problems: [NOT in TOC]
-- First problem (minimum 2)
-- Second problem
-
-### → Reasons why: [NOT in TOC]
-- First value (minimum 2)
-- Second value
-
----
-
-## ◳ Designs & References
-- [Figma designs - to be added]
-- [API docs - to be added]
-
----
-
-[Other sections with dividers between each]
-
-## ✓ Resolution Checklist
-
-⚠️ Complete all Resolution Checklist items before moving to QA
-
-[] First item
-[] Second item
-
----
-
-## ⋈ Dependencies (if needed)
-- External services
-- Team coordination
-```
-
-### Formatting Rules
-- **TOC**: Sections only, no subsections
-- **Dividers**: Between ALL sections (---)
-- **Key Problems/Reasons**: ### → format, NOT in TOC
-- **Bullets**: Use "- text" not symbols
-- **QA Warning**: Always above checklist
-
----
-
-## 5. 📄 PATTERN TRACKING
+## 4. 📄 PATTERN TRACKING
 
 ### Platform Preference Evolution
 
@@ -164,7 +109,7 @@ I notice you typically choose ClickUp for tickets.
 
 ---
 
-## 6. 🚨 ERROR HANDLING
+## 5. 🚨 ERROR HANDLING
 
 ### MCP Unavailable
 ```markdown
@@ -194,7 +139,7 @@ Your choice? (1/2)
 
 ---
 
-## 7. 💡 EXAMPLES
+## 6. 💡 EXAMPLES
 
 ### First Creation (No Pattern)
 ```markdown
