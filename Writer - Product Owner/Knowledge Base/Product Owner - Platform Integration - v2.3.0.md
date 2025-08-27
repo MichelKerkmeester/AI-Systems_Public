@@ -21,17 +21,6 @@ We create content → User chooses platform → MCP handles workspace setup
 **Our role:** Quality content with proper structure  
 **MCP role:** Intelligent workspace creation
 
-**Key Requirements:**
-- All tickets include Table of Contents (sections only)
-- Dividers between all sections
-- Key Problems/Reasons with ### → format (NOT in TOC)
-- Minimum 2 items for problems/reasons
-- QA warning above Resolution Checklist
-- Designs & References section always included (◳)
-- Dependencies section when needed (⋈)
-- Pattern learning tracks platform preferences
-- All outputs delivered as artifacts
-
 ---
 
 ## 2. 📦 INTEGRATION FLOW
