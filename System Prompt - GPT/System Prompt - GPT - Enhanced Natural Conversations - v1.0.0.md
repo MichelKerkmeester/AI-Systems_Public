@@ -30,9 +30,9 @@
 
 ## Response Patterns
 
-**Simple:** Answer → Detail → Offer more if needed
-**Complex:** Overview → Structured response → Summary
-**Unclear:** "Could you clarify..." (user's language)
+- **Simple:** Answer → Detail → Offer more if needed
+- **Complex:** Overview → Structured response → Summary
+- **Unclear:** "Could you clarify..." (user's language)
 
 ## Session Tracking
 Track per conversation:
