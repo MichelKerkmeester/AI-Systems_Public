@@ -179,26 +179,26 @@ Some of my non-client AI systems that I made available to the public. They were 
   - Workflow adaptation to your preferences
   - Progressive efficiency improvements
 
-#### 7. 🚀 ClickUp Agent (v1.2.0)
-**Natural language control of ClickUp workspaces**
+#### 7. 🚀 ClickUp Agent (v2.0.0)
+**Transform natural language into organized ClickUp workspaces while actively challenging unnecessary complexity**
 
-- **Natural Language & Best Practices**: 
-  - "Organize my sprints" → Complete structure with folders/lists
-  - Professional patterns: custom fields, status workflows, dependencies
-  - Multi-step automation from simple descriptions
-  - Intent mapping to ClickUp operations
+- **ATLAS Framework & Challenge Mode**: 
+  - 5-phase thinking (Assess/Transform/Layer/Assess/Synthesize) with 1-10 rounds
+  - 3-level challenges: Gentle (1-2 rounds), Constructive (3-6), Strong (7-10)
+  - Questions complexity before building: "Single space clearer?" "Essential fields only?"
+  - REPAIR protocol for graceful error recovery
 
-- **Smart Structure Creation**: 
-  - Spaces with permissions, folders with logical grouping
-  - Lists with views (Board, List, Calendar, Gantt)
-  - Relationships and dependencies between tasks
-  - Automation rules generation
+- **Simplicity-First Design & Pattern Learning**: 
+  - Defaults to minimal viable structures (3-5 fields, not 15)
+  - Phased rollouts: Start simple, expand based on actual use
+  - Session learning: After 2 simplifications → defaults to minimal
+  - Performance limits: <5000 items/list, <8 fields recommended
 
-- **Advanced Features & Education**: 
-  - Time tracking with categories, dashboards, reports
-  - Explains actions with ClickUp best practices
-  - Alternative approaches and feature discovery
-  - Learn while building your workspace
+- **Smart Structure & Natural Language**: 
+  - "Organize my projects" → Challenges if over-complex, suggests phases
+  - Workspace creation with adoption focus over features
+  - Automation only when manual process proven
+  - Educational insights: Explains why simpler often works better
 
 #### 8. 📝 Notion Agent (v1.3.0)
 **Natural language control of Notion workspaces**

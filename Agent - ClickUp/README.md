@@ -1,57 +1,73 @@
-# ClickUp Agent - User Guide v1.2.0
+# ClickUp Agent - User Guide v2.1.0
 
-The ClickUp Agent transforms natural language into organized ClickUp workspaces, making task management and team collaboration 10x easier. Through intelligent conversation with user-controlled thinking depth, it understands WHAT you want to organize and automatically handles HOW to build it. No modes, no commands, just describe what you need and choose your analysis depth.
+The ClickUp Agent transforms natural language into organized ClickUp workspaces while actively challenging unnecessary complexity. Through intelligent conversation with user-controlled thinking depth, it builds minimal viable structures that actually get used, not admired.
 
-## 📑 Table of Contents
+## 📋 Table of Contents
 
-- [🆕 What's New in v1.2.0](#-whats-new-in-v120)
+- [🆕 What's New in v2.1.0](#-whats-new-in-v210)
 - [✨ Key Features](#-key-features)
 - [🚀 Quick Setup](#-quick-setup)
-- [🧠 Native Thinking System](#-native-thinking-system)
-- [💬 Interactive Intelligence](#-interactive-intelligence)
-- [📊 Workspace Patterns](#-workspace-patterns)
-- [🎨 Smart Defaults](#-smart-defaults)
-- [📋 Examples](#-examples)
+- [🧠 How It Works](#-how-it-works)
+- [💬 Example Interactions](#-example-interactions)
+- [📊 What Gets Built](#-what-gets-built)
 - [🔧 Installing ClickUp MCP](#-installing-clickup-mcp)
 - [🆘 Troubleshooting](#-troubleshooting)
 - [⚠️ Important Notes](#️-important-notes)
 - [📦 Version History](#-version-history)
 - [📚 Resources](#-resources)
 
-.
+---
 
-## 🆕 What's New in v1.2.0
+## 🆕 What's New in v2.1.0
 
-### Major Updates
-- **Native Claude Thinking**: Removed dependency on external thinking MCPs
-- **User-Controlled Depth**: Always asks users how many thinking rounds to use
-- **Thinking Throughout**: Applied to ALL operations, not just complex ones
-- **Smarter Prompts**: Context-aware thinking recommendations
-- **Discovery Exception**: Only skips thinking question during exploration phase
+### Major Clarifications
+- **API Reality Documented**: Clear distinction between using existing fields vs creating new
+- **Automation Limitations**: Explains can only trigger existing automation rules
+- **Document Support Added**: Full document management when enabled
+- **Workaround Patterns**: Clear alternatives for unsupported features
+- **Better Error Messages**: Explains API limitations transparently
 
-### Key Improvements
-- No external MCP dependencies needed
-- Full control over analysis depth
-- Better performance with native thinking
-- Clearer user guidance
-- Maintained all v1.1.0 capabilities
+### Updated Features
+- **Field Management**: Uses existing custom field definitions only
+- **Automation Handling**: Works with existing rules, cannot create new
+- **Document Operations**: Create/update documents and pages (when enabled)
+- **Recurring Tasks**: Provides workarounds (not supported by API)
+- **Template Alternatives**: Copy existing tasks instead
 
-.
+---
 
 ## ✨ Key Features
 
-- **Natural Language First**: Describe what you want in plain English, no commands needed
-- **User-Controlled Thinking**: You choose analysis depth for every operation
-- **Interactive Intelligence**: Adaptive conversation that understands intent and guides when needed
-- **Native Claude Thinking**: Uses Claude's built-in reasoning capabilities
-- **Smart Guidance**: Asks only essential questions (2-3 max) for perfect setup
-- **Best Practices Built-in**: Professional workspace patterns applied automatically
-- **Visual Feedback**: Clear structure previews and success confirmations
-- **Educational Focus**: Teaches ClickUp concepts through successful creation
-- **5-Minute Setup**: Complete workspace systems ready in minutes
-- **Zero Technical Knowledge**: No understanding of ClickUp's interface required
+### Core Capabilities
+- **Natural Language First**: Describe what you want in plain English
+- **Complexity Challenges**: Questions unnecessary features before building
+- **User-Controlled Thinking**: You choose analysis depth (1-10 rounds)
+- **Pattern Learning**: Adapts to your simplicity preferences
+- **API Transparency**: Clear about what can and cannot be done
+- **Document Management**: Create/edit documents when enabled
+- **Visual Progress**: Clear structure previews and metrics
+- **Educational Insights**: Explains API limitations and workarounds
+- **Error Recovery**: REPAIR protocol handles all issues gracefully
+- **Performance Optimized**: Built for real-world usage limits
 
-.
+### What Gets Challenged
+- 🤔 **Multi-space systems** → "Single space clearer?"
+- 🤔 **Many custom fields** → "Which existing fields to use?"
+- 🤔 **New automation rules** → "Can use existing or manual?"
+- 🤔 **Deep hierarchies** → "Would flat structure work?"
+- 🤔 **Unsupported features** → "Here's a workaround..."
+
+### API Realities
+| Feature | Can Do | Cannot Do | Workaround |
+|---------|--------|-----------|------------|
+| **Custom Fields** | ✅ Use existing fields | ❌ Create new definitions | Request from admin |
+| **Automations** | ✅ Trigger existing | ❌ Create new rules | Manual process |
+| **Templates** | ✅ Copy tasks | ❌ Create templates | Duplicate existing |
+| **Recurring** | ❌ Not supported | ❌ API limitation | Create multiple |
+| **Documents** | ✅ Full support (if enabled) | ⚠️ Needs config | Enable in MCP |
+| **Attachments** | ✅ Up to 10MB | ❌ Larger files | Use external URLs |
+
+---
 
 ## 🚀 Quick Setup
 
@@ -59,20 +75,22 @@ The ClickUp Agent transforms natural language into organized ClickUp workspaces,
 1. Go to claude.ai
 2. Click "Projects" in sidebar
 3. Click "Create project"
-4. Name it "ClickUp Agent v1.2"
+4. Name it "ClickUp Agent v2.1"
 
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Agent - ClickUp MCP - v1.2.0.md`
+3. Copy and paste: `Agent - MCP - ClickUp - v2.1.0.md`
 4. Save the project
 
 ### Step 3: Upload Reference Documents
-Add these 4 streamlined documents to your project:
-- `ClickUp - Interactive Intelligence - v1.2.0.md` (Conversational guidance specification)
-- `ClickUp - Patterns & Operations - v1.2.0.md` (All patterns and operation mappings)
-- `ClickUp - Workspace Intelligence - v1.2.0.md` (Best practices and error recovery)
-- `README.md` (This guide)
+Add these updated documents to your project:
+- `Agent - MCP - ClickUp - v2.1.0.md` (Main system with API clarity)
+- `ClickUp - ATLAS Thinking Framework - v1.0.0.md` (Thinking methodology)
+- `ClickUp - Interactive Intelligence - v2.0.0.md` (Conversational interface)
+- `ClickUp - Patterns & Workflows - v2.0.0.md` (Operation patterns)
+- `ClickUp - MCP Knowledge - v1.1.0.md` (Updated with API limits)
+- `README - v2.1.0.md` (This guide)
 
 ### Step 4: Get Your ClickUp API Key
 1. Go to [ClickUp Settings](https://app.clickup.com/settings/apps)
@@ -80,333 +98,284 @@ Add these 4 streamlined documents to your project:
 3. Generate a personal API token
 4. Copy the token for MCP configuration
 
-### Step 5: Install ClickUp MCP
-Follow the installation guide in the Installing ClickUp MCP section below.
+### Step 5: Install ClickUp MCP (With Optional Features)
+Follow the installation guide below, including optional document support.
 
-### Step 6: Start Creating Workspaces
-Simply describe what you need:
+### Step 6: Start Creating (Within API Limits!)
 ```
-organize my projects              # Guided conversation begins
-I need a CRM system              # Creates complete CRM
-track sprints for my team        # Sets up agile workspace
-help me with task management     # Interactive guidance
-```
-
-.
-
-## 🧠 Native Thinking System
-
-### How It Works
-
-The v1.2.0 release uses Claude's native thinking capabilities with user control:
-
-**You Always Choose the Depth:**
-```
-System: "How many rounds of thinking should I use?
-        • Quick (2-3) - Simple operations
-        • Standard (4-6) - Most requests
-        • Thorough (7-10) - Complex systems
-        • Maximum (10+) - Comprehensive analysis
-        
-        Or just tell me a specific number!"
+organize my tasks              # Uses existing fields
+create sprint board            # Works with what exists
+set up CRM                     # Maps to available fields
+enable documents               # If configured
+help me with projects          # Guides within limits
 ```
 
-### Thinking Depth Guidelines
+---
 
-| Depth | Rounds | Best For | Analysis Time |
-|-------|--------|----------|---------------|
-| **Quick** | 2-3 | Single tasks, simple lists | ~30 seconds |
-| **Standard** | 4-6 | Team workspaces, templates | ~1 minute |
-| **Thorough** | 7-10 | Multi-team systems, integration | ~2 minutes |
-| **Maximum** | 10+ | Enterprise architecture | 2+ minutes |
+## 🧠 How It Works
 
-### When You're Asked
+### ATLAS Thinking Framework with API Awareness
 
-**Always asked before execution:**
-- After understanding your request
-- When ready to build
-- Before any operation
+Every request goes through 5 phases with API reality checks:
 
-**Only skipped during:**
-- Initial discovery questions
-- Clarification phase
-- When output isn't immediate
+**A - Assess & Challenge**
+- Understand request
+- Check if API supports it
+- Verify fields exist
+- Check user patterns
 
-.
+**T - Transform to Minimal**
+- Convert to API-possible version
+- Map to existing fields
+- Identify workarounds for unsupported
 
-## 💬 Interactive Intelligence
+**L - Layer with Scrutiny**
+- Add only what API allows
+- Use existing structures
+- Challenge each addition
 
-All operations use intelligent conversation that adapts to your needs:
+**A - Assess Impact**
+- Check performance implications
+- Validate against API limits
+- Ensure scalability
 
-### Typical Flow
-1. You describe what you need in natural language
-2. System identifies intent and complexity
-3. Asks 1-3 strategic questions if needed
-4. **Asks for your thinking preference**
-5. Shows structure preview
-6. Creates complete workspace
-7. Provides visual confirmation
-8. Suggests logical next steps
+**S - Synthesize Solution**
+- Deliver API-compliant solution
+- Document limitations
+- Provide workarounds
 
-### Example Interactions
+### API Reality Levels
 
-**Simple Request:**
+**Fully Supported ✅**
+- Task CRUD operations
+- Workspace hierarchy
+- Comments and attachments (≤10MB)
+- Time tracking
+- Document management (if enabled)
+
+**Limited Support ⚠️**
+- Custom fields (existing only)
+- Automation (trigger only)
+- Bulk operations (20 max)
+- Large files (use URLs)
+
+**Not Supported ❌**
+- Field definition creation
+- Automation rule creation
+- Recurring tasks
+- Templates
+- Dashboards/Reports
+- Goals/Portfolios
+
+---
+
+## 💬 Example Interactions
+
+### Working with Existing Fields
 ```
-User: create a task list
-System: I'll create a task management list for you!
-        Personal tasks or team collaboration?
-User: team
-System: Perfect! How many thinking rounds should I use?
-        • Quick (2-3) - Basic list
-        • Standard (4-6) - Full features (recommended)
-User: standard
-[Creates with 5 rounds of thinking]
-```
+User: create project tracker with custom fields
 
-**Complex System:**
-```
-User: I need to track everything for my agency
-System: I'll help you create a complete agency management system!
-        
-        Quick questions:
-        1. How many active clients typically?
-        2. Do you bill hourly or by project?
-        3. Team size?
-        
-User: 15 clients, both billing, team of 5
-System: This is comprehensive! Thinking depth?
-        • Standard (4-6) - Core features
-        • Thorough (7-10) - Full integration (recommended)
-        • Maximum (10+) - Enterprise scale
-        
-[Creates based on chosen depth]
-```
+System: How many thinking rounds should I use? (1-10)
+Note: I can only use existing custom fields in your workspace
+Recommended: 3 rounds (using existing fields)
 
-**Vague Request:**
-```
-User: help me organize
-System: I'll help you get organized! Let's start with what matters most:
-        • Task management for daily work
-        • Project tracking for bigger initiatives
-        • Team collaboration system
-        • Complete workspace for everything
-        
-        What would have the biggest impact for you?
-[No thinking rounds yet - still discovering]
-```
+User: 3
 
-.
+System: Let me check what fields exist in your workspace...
 
-## 📊 Workspace Patterns
+I found these existing custom fields:
+• Priority (dropdown)
+• Client (text)
+• Budget (money)
+• Phase (dropdown)
+• Due Date (date)
 
-Every workspace uses intelligent patterns automatically applied based on your thinking choice:
+Building project tracker with available fields...
+✅ Created with existing fields!
 
-### Common Systems Created
-
-**Agency Management (Default: Thorough 7-10):**
-```
-Agency Hub:
-├── Clients Space (contacts, projects, value)
-├── Projects Lists (linked to clients)
-├── Tasks (time tracking enabled)
-└── Dashboard (pipeline, metrics, workload)
+Need different fields? Ask your workspace admin to create them.
 ```
 
-**Sprint Planning (Default: Standard 4-6):**
+### Automation Limitation Example
 ```
-Development Space:
-├── Sprints Folder (2-week cycles)
-├── Product Backlog (prioritized)
-├── Bugs List (severity tracking)
-└── Velocity Dashboard (burndown, metrics)
-```
+User: set up automated task assignment
 
-**Personal Productivity (Default: Quick 2-3):**
-```
-Personal Workspace:
-├── Goals & OKRs (quarterly)
-├── Projects (linked to goals)
-├── Daily Tasks (Me Mode view)
-└── Weekly Reviews (templates)
-```
+System: I cannot create new automation rules (API limitation).
 
-.
+Let me check existing automations...
+Found: "Auto-assign by priority"
 
-## 🎨 Smart Defaults
+Options:
+1. Use this existing automation
+2. Set up manual assignment process
+3. Request new automation from admin
 
-The system applies best practices automatically, scaled by thinking depth:
+Which works for you?
 
-### Automatic Decisions by Thinking Depth
-- **List vs Space**: Based on scale and relationships
-- **Custom Fields**: Essential fields for use case (more with depth)
-- **Views**: Optimized for desktop/mobile (more with depth)
-- **Automations**: Common patterns enabled (complex with depth)
-- **Templates**: Created for repeated work (advanced with depth)
+User: use existing
 
-### Field Intelligence by Depth
-| Task Type | Quick (2-3) | Standard (4-6) | Thorough (7-10) |
-|-----------|-------------|----------------|-----------------|
-| Tasks | Priority, Due Date | + Status, Assignee, Time | + Dependencies, Categories |
-| Projects | Timeline, Owner | + Budget, Phase, Risk | + Resources, Milestones |
-| Bugs | Severity, Status | + Environment, Reporter | + Components, Test Cases |
-| Content | Publish Date | + Channel, Author | + Campaign, Analytics |
-
-.
-
-## 📋 Examples
-
-### Simple Tasks
-```
-User: I need to track my daily tasks
-System: I'll create a task management system for you!
-        Do you work with deadlines frequently?
-User: yes
-System: How many thinking rounds?
-        • Quick (2-3) - Simple list
-        • Standard (4-6) - Full tracking (recommended)
-User: quick
-[Creates with 3 rounds]
+System: ✅ Configured to use existing auto-assign automation!
 ```
 
-### Complete Systems
+### Document Management (When Enabled)
 ```
-User: set up project management for my team
-System: Perfect! I'll create a comprehensive project system.
-        Quick question: How many people on the team?
-User: 8 people
-System: Great! Thinking depth for this system?
-        • Standard (4-6) - Good for most teams
-        • Thorough (7-10) - Full features (recommended for 8 people)
-User: thorough
-[Creates with 8 rounds of analysis]
+User: create project documentation
+
+System: I can create documents if enabled in MCP!
+
+Checking configuration...
+✅ Document support is enabled
+
+Creating document structure:
+• Project overview page
+• Requirements section
+• Timeline section
+• Resources section
+
+All in markdown format.
+
+Building documentation...
+✅ Document created successfully!
 ```
 
-### Organization
+### Unsupported Feature with Workaround
 ```
-User: archive old completed stuff
-System: I'll help you archive completed tasks!
-        Should I keep them for reference or prepare for deletion?
-User: keep for reference
-System: How thorough should the archiving be?
-        • Quick (2-3) - Simple move
-        • Standard (4-6) - Organized structure
-User: standard
-[Archives with 4 rounds of thinking]
+User: create recurring weekly team meeting
+
+System: Recurring tasks aren't supported by the API.
+
+Here are good alternatives:
+1. Create next 4 weekly meetings now
+2. Set a reminder to create more monthly
+3. Use ClickUp's UI for true recurring
+
+Which approach works?
+
+User: create 4 weeks
+
+System: Creating 4 weekly meeting tasks...
+✅ Created meetings for:
+• Jan 15 - Team Meeting
+• Jan 22 - Team Meeting
+• Jan 29 - Team Meeting
+• Feb 5 - Team Meeting
+
+Set a reminder to create more on Feb 1st!
 ```
 
-### Emergency Response
+---
+
+## 📊 What Gets Built
+
+### Within API Capabilities (Reality-Based)
+
+**Task Management:**
 ```
-User: everything is on fire help NOW
-System: I'll help you get control immediately!
-        What's the biggest fire: overdue tasks, project deadlines, or team confusion?
-User: overdue tasks everywhere
-System: Creating emergency triage system!
-        Given urgency, thinking depth?
-        • Quick (2-3) - Immediate basic fix
-        • Standard (4-6) - Organized solution (recommended)
-User: standard but hurry
-[Creates with 5 rapid rounds]
+API Compliant Version:
+├── Single task list
+├── Uses existing custom fields
+├── Triggers existing automations
+└── Standard views
+
+NOT creating new field definitions
+NOT creating automation rules
+NOT setting up recurring tasks
 ```
 
-.
+**Project System:**
+```
+What Gets Built:
+├── Project list with existing fields
+├── Task list with relationships
+├── Manual workflows documented
+└── Existing automation triggers
+
+What Doesn't:
+• New custom field types
+• New automation rules
+• Custom templates
+• Analytics dashboards
+```
+
+**Document Structure (If Enabled):**
+```
+When DOCUMENT_SUPPORT=true:
+├── Markdown documents
+├── Multiple pages
+├── Basic formatting
+└── Update capabilities
+
+Requires MCP configuration
+```
+
+### Performance Limits (Enforced)
+
+| Element | Recommended | Maximum | API Reality |
+|---------|-------------|---------|-------------|
+| **Items per list** | <1,000 | 5,000 | Hard limit |
+| **Custom fields** | Existing only | 10 used | Cannot create new |
+| **Bulk batch** | 20 items | 20 items | API limit |
+| **Attachments** | <5MB | 10MB | Use URLs for larger |
+| **API calls** | 30/min | 60/min | Rate limited |
+
+---
 
 ## 🔧 Installing ClickUp MCP
 
-The ClickUp MCP provides all task management and workspace operations.
+### Complete Setup with Document Support
 
-### Option A: AI-Powered Docker Setup (Recommended)
+#### Option A: Full-Featured Docker Setup (Recommended)
 
-**Prerequisites:**
-- Docker Desktop installed ([Download Docker Desktop](https://www.docker.com/products/docker-desktop/))
-- Claude Desktop app ([Download Claude](https://claude.ai/download))
-- ClickUp API token from [ClickUp Settings](https://app.clickup.com/settings/apps)
-
-**AI-Assisted Installation:**
-
-Copy this prompt to Claude, ChatGPT, or any AI assistant:
-
+```dockerfile
+# Dockerfile
+FROM node:18-alpine
+WORKDIR /app
+RUN npm install -g @clickup/mcp-server-clickup
+CMD ["clickup-mcp"]
 ```
-Help me set up Docker container for the ClickUp Agent MCP tool.
-
-I need to:
-1. Create a directory at "$HOME/MCP Servers"
-2. Clone this repo: https://github.com/clickup/mcp-server-clickup.git
-3. Create Dockerfile for the ClickUp MCP
-4. Create docker-compose.yml file
-5. Configure Claude Desktop's claude_desktop_config.json
-6. Build and start the container
-7. Set up environment variables for API authentication
-
-My details:
-- ClickUp API token: [YOUR_CLICKUP_API_TOKEN]
-- Operating system: [Windows/Mac/Linux]
-
-Please give me the exact commands to run, including:
-- Dockerfile with Node.js environment
-- docker-compose.yml with proper configuration
-- Claude Desktop configuration for Docker
-```
-
-The AI will provide step-by-step commands for your operating system.
-
-**Docker Setup Template:**
-
-The AI will help you create something like:
 
 ```yaml
-# docker-compose.yml example structure
+# docker-compose.yml
 version: '3.8'
 services:
   clickup-mcp:
     build: .
     environment:
-      - CLICKUP_API_TOKEN=your-token-here
-      - NODE_ENV=production
+      - CLICKUP_API_KEY=${CLICKUP_API_KEY}
+      - CLICKUP_TEAM_ID=${CLICKUP_TEAM_ID}
+      - DOCUMENT_SUPPORT=true  # Enable documents
+      - LOG_LEVEL=info
     restart: unless-stopped
-    ports:
-      - "3000:3000"  # If needed for MCP communication
 ```
 
-### Option B: NPM Global Install (Alternative)
+#### Option B: NPM with Full Configuration
 
-**Prerequisites:**
-- Node.js 18+ installed ([Download Node.js](https://nodejs.org/))
-- Claude Desktop app
-
-**Installation Steps:**
 ```bash
-# 1. Install globally
+# Install globally
 npm install -g @clickup/mcp-server-clickup
 
-# 2. Verify installation
+# Verify installation
 clickup-mcp --version
-
-# 3. Set up API token
-export CLICKUP_API_TOKEN="your-token-here"
 ```
 
-Add to Claude Desktop config:
-
-**Config Location:**
-- Mac/Linux: `~/.config/claude/claude_desktop_config.json`
-- Windows: `%APPDATA%\Claude\claude_desktop_config.json`
-
+Claude Desktop config with all features:
 ```json
 {
   "mcpServers": {
     "clickup": {
       "command": "clickup-mcp",
       "env": {
-        "CLICKUP_API_TOKEN": "your-api-token-here"
+        "CLICKUP_API_KEY": "your-token-here",
+        "CLICKUP_TEAM_ID": "your-team-id",
+        "DOCUMENT_SUPPORT": "true",
+        "LOG_LEVEL": "info"
       }
     }
   }
 }
 ```
 
-### Option C: NPX Setup (Quick but Less Stable)
-
-For quick testing without installation:
+#### Option C: Quick Test Setup
 
 ```json
 {
@@ -415,138 +384,98 @@ For quick testing without installation:
       "command": "npx",
       "args": ["-y", "@clickup/mcp-server-clickup"],
       "env": {
-        "CLICKUP_API_TOKEN": "your-api-token-here"
+        "CLICKUP_API_KEY": "your-token-here",
+        "CLICKUP_TEAM_ID": "your-team-id",
+        "DOCUMENT_SUPPORT": "false"
       }
     }
   }
 }
 ```
 
-**Note:** NPX may have connection stability issues. Docker is recommended for production use.
-
-### Option D: Built-in Claude Desktop Support
-
-**Note:** ClickUp MCP may already be available in Claude Desktop. Check if it's pre-installed:
-1. Open Claude Desktop settings
-2. Look for ClickUp in available MCPs
-3. If present, just add your API token
-
-### Verifying Installation
-
-**For Docker:**
-```bash
-# Check container is running
-docker ps | grep clickup
-
-# Check logs
-docker logs clickup-mcp
-
-# Test API connection
-docker exec clickup-mcp curl -H "Authorization: YOUR_TOKEN" \
-  https://api.clickup.com/api/v2/user
-```
-
-**For NPM/NPX:**
-```bash
-# Test API token
-curl -H "Authorization: YOUR_TOKEN" \
-  https://api.clickup.com/api/v2/user
-
-# Should return your user info if token is valid
-```
-
-Then restart Claude Desktop and test with: "create a test task"
-
-.
+---
 
 ## 🆘 Troubleshooting
 
 ### Common Issues & Solutions
 
-| Issue | Solution |
-|-------|----------|
-| **"How many rounds?"** | Choose based on complexity (Quick for simple, Standard for most) |
-| **"Don't know what depth"** | System provides recommendations based on request |
-| **"Can't find workspace"** | Check you're in the right ClickUp workspace |
-| **"Permission denied"** | Verify your API token has full access |
-| **"Too many options"** | Choose "Quick" to start simple |
-| **"Taking too long"** | Use fewer thinking rounds next time |
-| **"MCP not connected"** | Check Docker container or restart Claude Desktop |
-| **"Invalid API token"** | Regenerate token in ClickUp settings |
+| Issue | Cause | Solution |
+|-------|-------|----------|
+| **"Cannot create field"** | API limitation | Use existing fields only |
+| **"Automation failed"** | Trying to create new | Use existing automation |
+| **"Recurring not working"** | Not supported | Create multiple tasks |
+| **"Template error"** | Cannot create templates | Copy existing task |
+| **"Dashboard missing"** | No API access | Use ClickUp UI directly |
+| **"Document failed"** | Not enabled | Set DOCUMENT_SUPPORT=true |
+| **"Large file error"** | >10MB limit | Upload to cloud, share URL |
 
-### Docker-Specific Issues
+### API Limitation Guidance
 
-**Container Problems:**
-```bash
-# Check container status
-docker ps -a | grep clickup
+**When you need features the API doesn't support:**
+1. **Check if it exists** - Many features must be created in ClickUp UI first
+2. **Use workarounds** - System provides alternatives
+3. **Request from admin** - Some features need workspace admin
+4. **Use ClickUp directly** - Some features only available in UI
 
-# View detailed logs
-docker logs --tail 50 clickup-mcp
+### Recovery Patterns (REPAIR)
 
-# Restart container
-docker restart clickup-mcp
+**If feature not supported:**
+1. **R**ecognize: System identifies API limitation
+2. **E**xplain: Clear explanation of what's not possible
+3. **P**ropose: Workaround options provided
+4. **A**dapt: Apply chosen alternative
+5. **I**terate: Implement workaround
+6. **R**ecord: Learn preference
 
-# Rebuild if needed
-docker-compose down
-docker-compose build --no-cache
-docker-compose up -d
-```
-
-**Common Docker Fixes:**
-- **Connection issues**: Check API token in docker-compose.yml
-- **Port conflicts**: Ensure port 3000 isn't in use
-- **Memory issues**: Usually minimal, ClickUp MCP is lightweight
-- **Network issues**: Restart Docker Desktop
-
-### API Token Issues
-
-**Getting a Valid Token:**
-1. Go to [ClickUp Settings](https://app.clickup.com/settings/apps)
-2. Click "Apps" → "Generate Token"
-3. Copy the entire token string
-4. Test with: `curl -H "Authorization: pk_YOUR_TOKEN" https://api.clickup.com/api/v2/user`
-
-### Thinking Depth Selection
-
-**Quick Guide:**
-- **Unsure?** Start with Standard (4-6)
-- **Urgent?** Use Quick (2-3)
-- **Complex?** Go Thorough (7-10)
-- **Can always adjust** in next request
-
-### Getting Help
-- For Docker issues: Check container logs in Docker Desktop
-- For NPM issues: Check Claude Desktop logs
-- For ClickUp issues: Verify you're logged into ClickUp
-- For thinking questions: Ask for recommendation
-- For API issues: Check [ClickUp API Docs](https://clickup.com/api)
-
-.
+---
 
 ## ⚠️ Important Notes
 
-- **No commands needed** - Just describe what you want
-- **You control thinking** - Always your choice on depth
-- **Conversation adapts** - From quick execution to full guidance
-- **API token required** - Get from ClickUp settings
-- **No overwrites** - Always creates new or asks
-- **Best practices automatic** - Professional patterns applied
-- **Thinking scales features** - More depth = more features
-- **Educational by design** - Teaches while building
-- **2-3 questions max** - Respects your time
-- **Visual feedback always** - See what's created
-- **Docker recommended** - Most stable connection
+### API Reality Check
+- **Cannot create new** - Field definitions, automation rules, templates
+- **Can only use existing** - Must be set up in ClickUp first
+- **Performance matters** - Keep lists under 1000 items for speed
+- **Attachments limited** - 10MB via API, use URLs for larger
+- **Documents optional** - Requires configuration flag
 
-.
+### Best Practices
+1. Check what fields exist before planning
+2. Use existing automation when possible
+3. Accept manual processes initially
+4. Create multiple tasks instead of recurring
+5. Use ClickUp UI for unsupported features
+6. Enable documents if needed
+7. Keep structures simple for performance
+
+### Performance Guidelines
+- **Simple operations**: 2-3 thinking rounds
+- **Using existing fields**: 3-4 thinking rounds  
+- **Complex mapping**: 5-6 thinking rounds
+- **Unsupported features**: Immediate alternatives
+
+---
 
 ## 📦 Version History
 
-- **v1.2.0**: Native Claude thinking, user-controlled depth, removed MCP dependencies
-- **v1.1.0**: Unified interactive intelligence, removed mode system
-- **v1.0.0**: Initial release with multiple modes
+### v2.1.0 (Current)
+- **API clarity**: Documents what can/cannot be created
+- **Field reality**: Uses existing definitions only
+- **Automation truth**: Triggers existing rules only
+- **Document support**: Full management when enabled
+- **Better errors**: Explains limitations clearly
+- **Workarounds**: Provides alternatives for unsupported
 
-.
+### v2.0.0
+- ATLAS Framework
+- Challenge Mode
+- Pattern Learning
+- REPAIR Protocol
+
+### v1.x
+- Initial releases
+- Basic functionality
+
+---
 
 ## 📚 Resources
 
@@ -555,24 +484,21 @@ docker-compose up -d
 - [Claude Projects](https://claude.ai) (Platform)
 
 ### Documentation
-- [ClickUp API Docs](https://clickup.com/api)
-- [ClickUp Help Center](https://help.clickup.com/)
-- [MCP Protocol](https://modelcontextprotocol.io/)
-- [Docker Desktop](https://docs.docker.com/desktop/)
+- [ClickUp API Docs](https://clickup.com/api) - See what's possible
+- [MCP Protocol](https://modelcontextprotocol.io/) - Technical details
+- [ClickUp Help](https://help.clickup.com/) - Platform features
+
+### Understanding Limitations
+- [ClickUp Custom Fields](https://help.clickup.com/hc/en-us/articles/6303472739863) - Must create in UI first
+- [ClickUp Automations](https://help.clickup.com/hc/en-us/articles/6318924258711) - Create rules in UI
+- [ClickUp Templates](https://help.clickup.com/hc/en-us/articles/6325298758039) - Not available via API
 
 ### Quick Links
 - [ClickUp Login](https://app.clickup.com)
 - [Get API Token](https://app.clickup.com/settings/apps)
 - [Claude Desktop](https://claude.ai/download)
-- [ClickUp Features Guide](https://help.clickup.com/hc/en-us/categories/6314476398999-Features)
-
-### Performance Guidelines
-- **Simple operations**: 2-3 thinking rounds
-- **Standard workspaces**: 4-6 thinking rounds
-- **Complex systems**: 7-10 thinking rounds
-- **Enterprise architecture**: 10+ thinking rounds
-- **Emergency fixes**: Quick (2-3) with follow-up
+- [Workspace Settings](https://app.clickup.com/settings) - Create fields here
 
 ---
 
-*Transform ideas into organized ClickUp workspaces through natural conversation with user-controlled thinking depth. The system understands what you need and guides appropriately. You choose how thoroughly to analyze. Complex systems ready in under 5 minutes. Just describe what you want to organize and select your thinking preference!*
+*Transform natural language into organized ClickUp workspaces. Work within API realities. Use existing structures wisely. Challenge unnecessary complexity. Provide clear workarounds for limitations.*
