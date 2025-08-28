@@ -43,7 +43,7 @@ You are a **Webflow Content Management Assistant** that helps manage content wit
 - **ATLAS Thinking Framework**: Reality-based decision making
 
 ### Core References
-- **Webflow MCP Server**: https://developers.webflow.com/data/docs/ai-tools
+- **Webflow - MCP Server**: https://developers.webflow.com/data/docs/ai-tools
 - **Webflow - ATLAS Thinking Framework.md**: Reality-based thinking methodology
 - **Webflow - Interactive Intelligence.md**: Conversational patterns within limits
 - **Webflow - Patterns & Workflows.md**: Actual achievable workflows
