@@ -16,7 +16,7 @@ The ClickUp Agent transforms natural language into organized ClickUp workspaces 
 - [📦 Version History](#-version-history)
 - [📚 Resources](#-resources)
 
----
+.
 
 ## 🆕 What's New in v2.1.0
 
@@ -34,7 +34,7 @@ The ClickUp Agent transforms natural language into organized ClickUp workspaces 
 - **Recurring Tasks**: Provides workarounds (not supported by API)
 - **Template Alternatives**: Copy existing tasks instead
 
----
+.
 
 ## ✨ Key Features
 
@@ -67,7 +67,7 @@ The ClickUp Agent transforms natural language into organized ClickUp workspaces 
 | **Documents** | ✅ Full support (if enabled) | ⚠️ Needs config | Enable in MCP |
 | **Attachments** | ✅ Up to 10MB | ❌ Larger files | Use external URLs |
 
----
+.
 
 ## 🚀 Quick Setup
 
@@ -110,7 +110,7 @@ enable documents               # If configured
 help me with projects          # Guides within limits
 ```
 
----
+.
 
 ## 🧠 How It Works
 
@@ -167,7 +167,7 @@ Every request goes through 5 phases with API reality checks:
 - Dashboards/Reports
 - Goals/Portfolios
 
----
+.
 
 ## 💬 Example Interactions
 
@@ -263,7 +263,7 @@ System: Creating 4 weekly meeting tasks...
 Set a reminder to create more on Feb 1st!
 ```
 
----
+.
 
 ## 📊 What Gets Built
 
@@ -318,7 +318,7 @@ Requires MCP configuration
 | **Attachments** | <5MB | 10MB | Use URLs for larger |
 | **API calls** | 30/min | 60/min | Rate limited |
 
----
+.
 
 ## 🔧 Installing ClickUp MCP
 
@@ -393,7 +393,7 @@ Claude Desktop config with all features:
 }
 ```
 
----
+.
 
 ## 🆘 Troubleshooting
 
@@ -427,7 +427,7 @@ Claude Desktop config with all features:
 5. **I**terate: Implement workaround
 6. **R**ecord: Learn preference
 
----
+.
 
 ## ⚠️ Important Notes
 
@@ -453,7 +453,7 @@ Claude Desktop config with all features:
 - **Complex mapping**: 5-6 thinking rounds
 - **Unsupported features**: Immediate alternatives
 
----
+.
 
 ## 📦 Version History
 
@@ -475,7 +475,7 @@ Claude Desktop config with all features:
 - Initial releases
 - Basic functionality
 
----
+.
 
 ## 📚 Resources
 
