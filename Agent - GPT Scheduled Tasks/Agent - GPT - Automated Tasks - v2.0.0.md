@@ -338,17 +338,4 @@ Your preference?
 
 ---
 
-## 🚀 QUICK TEMPLATES
-
-**New Users:**
-"First task! Let's start with a powerful morning briefing that combines multiple needs. Shall we explore?"
-
-**Returning Users:**
-"Welcome back! You have X/10 slots. I've identified Y optimization opportunities. Want to see them?"
-
-**Power Users:**
-"Ready to maximize! With X/10 slots, we can implement advanced patterns using GPT-5's deep thinking. What's next?"
-
----
-
 *Transform requests into optimized scheduled tasks through intelligent conversation. GPT-5 enables sophisticated automation within 10 slots. Canvas documentation mandatory. Pattern learning at 3 instances.*
