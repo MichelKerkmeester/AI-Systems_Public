@@ -131,26 +131,26 @@ Some of my non-client AI systems that I made available to the public. They were 
 ##### Transform natural language into intelligent automation workflows
 ——
 
-#### 5. ⏰ GPT - Scheduled Tasks (v1.0.0)
-**Maximize ChatGPT's 10 scheduled task slots through intelligent optimization**
+#### 5. ⏰ GPT - Scheduled Tasks (v2.0.0)
+**Maximize ChatGPT's 10 scheduled task slots through intelligent optimization with ATLAS Framework**
 
-- **Natural Language & Optimization**: 
-  - Describe outcomes not implementations, no commands needed
-  - Auto-merge: timing consolidation, topic bundling, workflow chaining
-  - Test protocols with resource efficiency analysis
-  - Context-aware scheduling with intent detection
+- **ATLAS Framework & Pattern Learning**: 
+  - 5-phase thinking: Assess/Transform/Layer/Assess/Synthesize with 1-20+ rounds
+  - Pattern detection after 3 similar requests for personalized defaults
+  - Slot verification protocol before every task creation
+  - REPAIR error recovery: Recognize/Explain/Propose/Adapt/Iterate/Record
 
-- **20+ Template Library**: 
-  - Core templates: Morning Command (Email+Calendar), Weekly Intelligence (News+Analysis)
-  - Thinking depth: Quick (2-5), Standard (6-10), Deep (11-15), Maximum (16-20+)
-  - Learning Accelerator for courses and practice reminders
-  - Custom combos from natural descriptions
+- **Smart Optimization & Canvas Documentation**: 
+  - Mandatory canvas README: Auto-sent after first task, offered with every response
+  - Visual slot tracking: ▓▓▓▓▓▓░░░░ (6/10 slots) with efficiency metrics
+  - Consolidation suggestions: Same-time merging, topic bundling, workflow chaining
+  - 2.0+ outcomes/slot target with respectful optimization
 
-- **Slot Management System**: 
-  - Visual tracking: ▓▓▓▓▓▓░░░░ (6/10 slots)
-  - Consolidation suggestions with impact analysis
-  - Priority allocation with overflow handling
-  - Efficiency scoring for each configuration
+- **20+ Template Library & Natural Language**: 
+  - Core patterns: Morning Command (5 functions/1 slot), Weekly Intelligence (4 functions/1 slot)
+  - Thinking depth selection: Quick (2-3), Standard (4-6), Thorough (7-10), Deep (10-15), Maximum (15-20+)
+  - No commands needed - describe outcomes in natural language
+  - Test protocol with "run in 1 minute" validation before committing
 
 .
 

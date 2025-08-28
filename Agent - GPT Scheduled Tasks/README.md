@@ -1,8 +1,8 @@
-# GPT - Automated Tasks - User Guide v1.0.0
+# GPT - Automated Tasks - User Guide v2.0.0
 
-A unified interactive system that transforms natural language into perfectly optimized ChatGPT scheduled tasks through intelligent conversation and GPT-5 Thinking integration. Maximizes the 10-task limit through advanced slot management and continuous optimization.
+A unified interactive system that transforms natural language into perfectly optimized ChatGPT scheduled tasks through intelligent conversation with ATLAS Framework integration. Maximizes the 10-task limit through advanced slot management, pattern learning, and mandatory canvas documentation.
 
-## 📑 Table of Contents
+## 📋 Table of Contents
 
 - [Overview](#overview)
 - [✨ Key Features](#-key-features)
@@ -11,6 +11,8 @@ A unified interactive system that transforms natural language into perfectly opt
 - [🧠 GPT-5 Thinking Integration](#-gpt-5-thinking-integration)
 - [🗂️ Pattern Library Overview](#️-pattern-library-overview)
 - [📊 Slot Management Philosophy](#-slot-management-philosophy)
+- [📄 Canvas Documentation](#-canvas-documentation)
+- [🔄 Pattern Learning System](#-pattern-learning-system)
 - [📊 Visual Dashboard Examples](#-visual-dashboard-examples)
 - [💰 Smart Slot Optimization](#-smart-slot-optimization)
 - [🎯 Success Patterns](#-success-patterns)
@@ -19,50 +21,40 @@ A unified interactive system that transforms natural language into perfectly opt
 - [🎯 Key Principles](#-key-principles)
 - [📚 Additional Resources](#-additional-resources)
 
----
+.
 
 ## Overview
 
-The Task Master System helps users create powerful, efficient scheduled tasks for ChatGPT, with specialized support for maximizing the 10-slot limit through intelligent consolidation. With GPT-5's advanced reasoning capabilities and smart optimization algorithms, it delivers professional-grade automation that transforms daily routines while maintaining maximum efficiency.
+The Task Master System v2.0 helps users create powerful, efficient scheduled tasks for ChatGPT with enhanced features including the ATLAS thinking framework, pattern learning after 3 instances, and mandatory canvas documentation. The system maximizes the 10-slot limit through intelligent consolidation while respecting user preferences and providing transparent documentation of all configurations.
+
+### What's New in v2.0
+- **ATLAS Framework**: 5-phase adaptive thinking methodology
+- **Pattern Learning**: Detects and suggests patterns after just 3 similar requests
+- **Mandatory Canvas**: All configurations documented and offered as README
+- **Slot Verification**: Confirms current usage before every creation
+- **Respectful Optimization**: Suggests improvements without forcing
 
 .
 
 ## ✨ Key Features
 
 - **Unified Interface**: No modes or commands - just natural conversation
+- **ATLAS Framework**: Adaptive thinking methodology for optimal task design
 - **GPT-5 Thinking Power**: 2-20+ rounds of advanced reasoning
 - **User-Controlled Complexity**: You choose the thinking depth
 - **Visual Dashboards**: Real-time slot usage and optimization metrics
-- **Smart Consolidation**: Automatic detection of merge opportunities
-- **20+ Pattern Library**: Proven automation templates with success rates
-- **Slot Efficiency**: Average 2.8 outcomes per slot
-- **Proactive Success**: Pre-launch quality checks and testing
-- **Interactive Flow**: Guided conversation for perfect task creation
-- **Continuous Improvement**: Weekly optimization cycles
+- **Smart Pattern Learning**: Adapts after 3 similar requests
+- **Mandatory Canvas Documentation**: Always prepares configuration README
+- **Slot Verification Protocol**: Confirms usage before creation
+- **20+ Pattern Library**: Proven automation templates
+- **Respectful Suggestions**: Optimizations offered, not forced
 
 .
 
 ## 🚀 Quick Setup
 
-### Step 1: Create a Claude Project
-1. Go to claude.ai
-2. Click "Projects" in sidebar
-3. Click "Create project"
-4. Name it "Task Master System v2.0.0"
-
-### Step 2: Add System Instructions
-1. In your project, click "Edit project details"
-2. Find "Custom instructions" section
-3. Copy and paste: `task-master-core-v2.md`
-4. Save the project
-
-### Step 3: Upload Supporting Documents
-Add these documents to your project's knowledge base:
-- `task-master-intelligence-v2.md` (Quality standards & optimization)
-- `task-master-patterns-v2.md` (Pattern library & operations)
-
-### Step 4: Start Creating Optimized Tasks
-Simply describe what you want to automate:
+### Step 1: Start a Conversation
+Simply describe what you want to automate in natural language:
 ```
 I need a morning briefing
 help me track my tasks
@@ -71,163 +63,256 @@ set up learning reminders
 build my productivity system
 ```
 
+### Step 2: System Verification
+The system will:
+1. Verify your current slot usage
+2. Check for similar patterns (after 3+ uses)
+3. Ask for your preferred thinking depth
+4. Suggest optimizations if beneficial
+
+### Step 3: Review and Confirm
+- Preview the task configuration
+- Test with "run in 1 minute" option
+- Receive canvas documentation (automatic)
+
 .
 
 ## 🎛️ Interactive Flow
 
-### Core Process
+### Enhanced Core Process with ATLAS
 
 | Phase | Purpose | User Input | System Response |
 |-------|---------|------------|-----------------|
-| **Understanding** | Discover needs | Natural language request | Clarifying questions |
-| **Optimization** | Find efficiencies | Preferences | Consolidation suggestions |
-| **Configuration** | Set parameters | Choices | Visual preview |
-| **Intelligence** | Choose depth | Thinking rounds | GPT-5 optimization |
-| **Creation** | Build task | Confirmation | Success & next steps |
+| **Verify** | Check slots | Confirm count | "You have X/10, correct?" |
+| **Assess** | Understand needs | Natural request | Clarifying questions |
+| **Transform** | Design solution | Preferences | Configuration options |
+| **Layer** | Build details | Choices | Technical setup |
+| **Assess** | Validate quality | Review | Optimization check |
+| **Synthesize** | Deliver + Canvas | Confirmation | Task + README |
 
-### Thinking Depth Selection
+### Thinking Depth Selection (Always Asked)
 
-| Rounds | Capability | Best For | Optimization Level |
-|--------|-----------|----------|-------------------|
-| **2-3** | Quick structure | Simple reminders | Minimal |
-| **4-6** | Smart patterns | Reports, summaries | Standard |
-| **7-10** | Deep analysis | Complex workflows | Advanced |
-| **10-15** | Complex reasoning | Multi-step automation | Comprehensive |
-| **15-20+** | Full orchestration | Enterprise systems | Maximum |
+| Rounds | Capability | Best For | When Suggested |
+|--------|-----------|----------|----------------|
+| **2-3** | Quick structure | Simple reminders | Basic needs |
+| **4-6** | Smart patterns | Reports, summaries | Standard tasks |
+| **7-10** | Deep analysis | Complex workflows | Multi-function |
+| **10-15** | Complex reasoning | Multi-step automation | Systems |
+| **15-20+** | Full orchestration | Enterprise systems | Platforms |
 
 .
 
 ## 🧠 GPT-5 Thinking Integration
 
-### How Thinking Works in Task Master
-
-The system uses GPT-5's advanced capabilities to optimize every task. You control the depth:
-
-**Standard Prompt:**
+### Standard Interaction
 ```
-How many thinking rounds should GPT-5 use to design this task?
+How many thinking rounds should GPT-5 use?
 
-┌─────────────────────────────────────┐
-│ 🚀 Quick (2-3 rounds)               │
-│    Simple reminders & alerts        │
-├─────────────────────────────────────┤
-│ 📊 Standard (4-6 rounds)            │
-│    Reports, summaries, digests      │
-├─────────────────────────────────────┤
-│ 🎯 Thorough (7-10 rounds)           │
-│    Complex workflows & analysis     │
-├─────────────────────────────────────┤
-│ 🧠 Deep (10-15 rounds)              │
-│    Multi-step automation & AI       │
-├─────────────────────────────────────┤
-│ ⚡ Maximum (15-20+ rounds)          │
-│    Enterprise orchestration          │
-└─────────────────────────────────────┘
+┌─────────────────────────────────────
+│ 🚀 Quick (2-3 rounds)               
+│    Simple reminders & alerts        
+├─────────────────────────────────────
+│ 📊 Standard (4-6 rounds)            
+│    Reports, summaries, digests      
+├─────────────────────────────────────
+│ 🎯 Thorough (7-10 rounds)           
+│    Complex workflows & analysis     
+├─────────────────────────────────────
+│ 🧠 Deep (10-15 rounds)              
+│    Multi-step automation & AI       
+├─────────────────────────────────────
+│ ⚡ Maximum (15-20+ rounds)          
+│    Enterprise orchestration          
+└─────────────────────────────────────
 
-Or specify any number! What's your preference?
+Based on your request, I recommend: [X rounds]
+Or specify your preferred number.
 ```
 
-### User Interaction
-This happens for every task creation, ensuring optimal intelligence application.
+### After Pattern Detection (3+ Similar Tasks)
+```
+Based on your previous choices, I recommend: [X rounds]
+(You typically prefer [Y] rounds for similar tasks)
+
+Use the same approach?
+```
 
 .
 
 ## 🗂️ Pattern Library Overview
 
-### Information Gathering Patterns
+### Top 5 Most Successful Patterns
 
-#### Daily Intelligence Briefing
-- **Triggers**: news, briefing, daily update, morning summary
-- **Combines**: News + Weather + Calendar + Tasks
-- **Thinking**: Standard (4-6) recommended
-- **Slot Usage**: 1 (saves 3-4 slots)
+#### 1. Morning Command Center
+- **Combines**: News + Tasks + Calendar + Weather + Email
+- **Slots**: 1 (saves 4)
+- **Thinking**: 6-8 rounds
+- **Efficiency**: 5 functions/slot
+- **Success Rate**: 98%
+
+#### 2. Weekly Intelligence Hub
+- **Combines**: Analytics + Reports + Planning + Review
+- **Slots**: 1 (saves 3)
+- **Thinking**: 10-12 rounds
+- **Efficiency**: 4 functions/slot
 - **Success Rate**: 95%
 
-#### Weekly Intelligence Report
-- **Triggers**: weekly summary, week review, insights
-- **Combines**: All weekly analytics
-- **Thinking**: Thorough (7-10) recommended
-- **Slot Usage**: 1 (saves 4-5 slots)
-- **Success Rate**: 92%
-
-### Task Management Patterns
-
-#### Smart Task Command Center
-- **Triggers**: tasks, todos, organize, productivity
-- **Combines**: Morning list + Deadlines + Progress + Review
-- **Thinking**: Standard (4-6) recommended
-- **Slot Usage**: 1 (saves 3-4 slots)
+#### 3. Task Management System
+- **Combines**: Lists + Deadlines + Progress + Reviews
+- **Slots**: 1 (saves 2-3)
+- **Thinking**: 5-7 rounds
+- **Efficiency**: 3-4 functions/slot
 - **Success Rate**: 94%
 
-### Workflow Automation Patterns
+#### 4. Learning Accelerator
+- **Combines**: Lessons + Practice + Progress + Resources
+- **Slots**: 1 (saves 3)
+- **Thinking**: 10-15 rounds
+- **Efficiency**: 4 functions/slot
+- **Success Rate**: 92%
 
-#### Executive Command Center
-- **Triggers**: dashboard, overview, command center
-- **Combines**: 5-7 morning functions
-- **Thinking**: Deep (10-15) recommended
-- **Slot Usage**: 1 (saves 5-6 slots)
-- **Success Rate**: 98%
+#### 5. Wellness Optimizer
+- **Combines**: Habits + Health + Motivation + Check-ins
+- **Slots**: 1 (saves 2-3)
+- **Thinking**: 4-6 rounds
+- **Efficiency**: 3-4 functions/slot
+- **Success Rate**: 90%
 
 .
 
 ## 📊 Slot Management Philosophy
 
-### Intelligent Systems
+### Verification Protocol (Before Every Task)
+```
+🔍 Verifying current tasks...
+You mentioned [X] existing tasks. Let me confirm:
 
-Instead of Multiple Tasks, We Create:
-- Morning Command Center (combines 5-7 tasks)
-- Weekly Intelligence Hub (combines 4-5 tasks)
-- Learning Ecosystem (combines 4-6 tasks)
-- Productivity Engine (combines 3-4 tasks)
+Current slots detected: [Y/10]
+[List any known tasks]
+
+Is this correct, or did I miss any?
+```
+
+### Intelligent Consolidation
+Instead of multiple single-function tasks, we create intelligent systems that combine related functions while respecting your preferences.
 
 ### Efficiency Metrics
-- Average 2.8 outcomes per slot
-- 70% consolidation rate
-- 95% first-attempt success
-- 6:1 maximum efficiency ratio
+- Average 2.0+ outcomes per slot
+- 50%+ consolidation acceptance
+- 90%+ first-attempt success
+- Pattern detection at 3 instances
 
-### Optimization Strategies
-- Same-time tasks → Always combine
-- Related topics → Bundle together
-- Similar formats → Merge outputs
-- Sequential tasks → Chain workflows
+### Optimization Suggestions (Not Requirements)
+- Same-time tasks → Suggest combination
+- Related topics → Consider bundling
+- Near slot limit → Prioritize optimization
+- User preference → Always respected
+
+.
+
+## 📄 Canvas Documentation
+
+### MANDATORY Documentation Protocol
+
+#### Automatic Delivery
+1. **After first task**: Canvas README sent automatically
+2. **Every response**: "📄 Would you like the updated configuration?"
+3. **After changes**: Updated canvas offered
+4. **Session end**: Complete summary provided
+
+#### Canvas README Contents
+```markdown
+# ChatGPT Automated Tasks Configuration
+## Status: [X/10] Slots Used | Efficiency: [Y] outcomes/slot
+
+### 📊 Active Tasks
+1. **[Task Name]** - [Schedule] - [Rounds] thinking
+   Purpose: [Description]
+   Combines: [Functions if consolidated]
+
+### 🔄 Optimization Opportunities
+- [Potential merge]: Save [X] slots
+- [Efficiency gain]: Improve by [Y]%
+
+### 📈 Performance Metrics
+- Total Outcomes: [Number]
+- Slot Efficiency: [Ratio]
+- Patterns Detected: [Count]
+
+### 🎯 Recommended Next Steps
+1. [Based on patterns]
+2. [Based on gaps]
+3. [Based on optimizations]
+```
+
+.
+
+## 🔄 Pattern Learning System
+
+### Learning Triggers (At 3 Instances)
+
+#### What Gets Tracked
+- Thinking round preferences
+- Time scheduling patterns
+- Consolidation acceptance/rejection
+- Complexity choices
+- Testing preferences
+
+#### Progressive Learning
+| Instances | System Behavior | User Experience |
+|-----------|----------------|-----------------|
+| 1-2 | Tracks quietly | No change |
+| **3** | Suggests pattern | "I notice you prefer..." |
+| 4 | Stronger recommendation | "This worked well before..." |
+| 5+ | Default with confirmation | "Using your usual setup..." |
+
+#### Example Pattern Recognition
+```
+After 3 morning tasks:
+"I notice this is your 3rd morning task. Your pattern:
+• Schedule: 7-9 AM
+• Complexity: 4-6 rounds
+• Prefer consolidation
+
+Use the same approach?"
+```
 
 .
 
 ## 📊 Visual Dashboard Examples
 
-### Standard Task Creation
+### Slot Status Display
 ```
-📊 Task Ecosystem Status
-━━━━━━━━━━━━━━━━━━━
+📊 Task Slots Status
+━━━━━━━━━━━━━━━━━━
 ▓▓▓▓▓▓░░░░ 6/10 slots used
-━━━━━━━━━━━━━━━━━━━
 
-✨ Efficiency: 2.8 outcomes per slot
+✨ Efficiency: 2.8 outcomes/slot
 🔄 Optimization: 2 merge opportunities
-📈 Potential: Could optimize to 4 slots
+📈 Patterns: 3 detected
 ```
 
-### Optimization Opportunity
+### Optimization Suggestion
 ```
 ╔═══════════════════════════════╗
-║ OPTIMIZATION OPPORTUNITY      ║
+║ 📊 OPTIMIZATION OPPORTUNITY   ║
 ╠═══════════════════════════════╣
-║ These 3 tasks can become 1:  ║
-║                               ║
-║ Current (3 slots):            ║
-║ • 'Check emails' (8am)        ║
-║ • 'Review calendar' (8:15am)  ║
-║ • 'Team updates' (8:30am)     ║
-║                               ║
-║ Optimized (1 slot):           ║
-║ 🚀 'Morning Operations Brief' ║
+║ These 3 tasks can combine:    ║
+║                                ║
+║ Current (3 slots):             ║
+║ • Email check (8:00)           ║
+║ • Calendar review (8:15)       ║
+║ • Task planning (8:30)         ║
+║                                ║
+║ Suggested (1 slot):            ║
+║ 🚀 Morning Command Center      ║
 ╠═══════════════════════════════╣
-║ Benefits:                     ║
+║ Benefits:                      ║
+║ ✅ Save 2 slots               ║
 ║ ✅ Single notification        ║
-║ ✅ Consistent format          ║
 ║ ✅ Better context             ║
-║ ✅ Saves 2 slots              ║
+║                                ║
+║ Apply optimization? [Yes/No]   ║
 ╚═══════════════════════════════╝
 ```
 
@@ -235,46 +320,44 @@ Instead of Multiple Tasks, We Create:
 
 ## 💰 Smart Slot Optimization
 
-All tasks include intelligent optimization:
+### Respectful Optimization Approach
+The system suggests optimizations when beneficial but always respects your decision to keep tasks separate.
 
-### Optimization Levels
-1. **Level 1 - Quick Win**: Save 1-2 slots with simple merges
-2. **Level 2 - Smart Consolidation**: Save 3-4 slots with intelligent bundling
-3. **Level 3 - Ecosystem Redesign**: Save 5+ slots with complete transformation
+### When Suggestions Occur
+- Similar time (within 30 minutes)
+- Related functionality
+- Near slot capacity (8-9/10)
+- Pattern detected (after 3 instances)
 
-### Slot Value Scoring
-- **95-100**: Protect at all costs
-- **70-94**: Maintain as is
-- **50-69**: Consider optimization
-- **Below 50**: Merge or remove
-
-### Efficiency Principles
-- Never use 2 slots for similar timing
-- Always consolidate related topics
-- Bundle complementary functions
-- Maximize every slot's potential
-- Review and optimize weekly
+### User Control
+- All suggestions are optional
+- "No" is always respected
+- Preferences are learned
+- Patterns adapt to your choices
 
 .
 
 ## 🎯 Success Patterns
 
-### Top Configurations
+### Top Configurations by User Type
 
-**Executive Suite (3 slots)**
+**Professionals (Executive Suite)**
+- 3 slots total
 - Morning Command Center
 - Weekly Intelligence
 - Monthly Strategic Review
 - **Efficiency**: 95% | **Satisfaction**: 96%
 
-**Productivity Master (4 slots)**
+**Productivity Enthusiasts**
+- 4 slots total
 - Task Management Hub
 - Project Tracker
 - Communication Digest
 - Weekly Planning
 - **Efficiency**: 92% | **Satisfaction**: 93%
 
-**Learning Accelerator (2 slots)**
+**Learners & Developers**
+- 2 slots total
 - Adaptive Learning System
 - Progress Analytics
 - **Efficiency**: 90% | **Satisfaction**: 95%
@@ -283,61 +366,72 @@ All tasks include intelligent optimization:
 
 ## 🆘 Troubleshooting
 
-### Slot Management Issues
-- **At 10/10 capacity?** System finds consolidation opportunities
-- **Low value tasks?** Automatic detection and merge suggestions
-- **Schedule conflicts?** Smart resolution options provided
-- **Output quality issues?** Increase thinking rounds
+### Common Issues & Solutions
 
-### Thinking Rounds Selection
-- **Not sure how many?** System provides recommendations
-- **Simple task?** 2-3 rounds sufficient
-- **Complex requirements?** 7-10 rounds recommended
-- **Maximum quality?** 15-20+ rounds for full optimization
+| Issue | Solution | Prevention |
+|-------|----------|------------|
+| **Slot limit reached** | System suggests consolidation | Regular optimization |
+| **Complex for simple need** | Reduce thinking rounds | Clear requirements |
+| **Pattern mismatch** | Override and system learns | Explicit preferences |
+| **Canvas not wanted** | Can decline viewing (still prepared) | Automatic handling |
+| **Too many suggestions** | System adapts to rejections | Learning from choices |
 
-### Common Setup Problems
-- **Tasks not running?** Test with "run in 1 minute" first
-- **Output unclear?** Specify format explicitly
-- **Too complex?** Start simple, enhance gradually
+### REPAIR Framework for Errors
+- **R**ecognize - Identify issue
+- **E**xplain - Clear description
+- **P**ropose - Multiple solutions
+- **A**dapt - Apply chosen fix
+- **I**terate - Test and confirm
+- **R**ecord - Learn for future
 
-.
+---
 
 ## ⚠️ Important Notes
 
-- **GPT-5 Thinking Integration** - Advanced reasoning capabilities
-- **User-controlled complexity** - You choose thinking depth
-- **10-slot maximum** - Hard limit requiring optimization
-- **Consolidation first** - Always look for merge opportunities
-- **Test protocol** - Always test before committing
-- **Weekly reviews** - Continuous optimization cycle
-- **Visual feedback** - Clear progress and status displays
-- **No modes needed** - Single unified interface
-- **Pattern library** - 20+ proven templates
-- **Success metrics** - Track and improve continuously
+### Core System Features
+- **ATLAS Framework** - 5-phase adaptive thinking methodology
+- **Pattern Learning** - Starts at 3 similar instances
+- **Canvas Mandatory** - Always prepared, can decline viewing
+- **Slot Verification** - Confirms before every creation
+- **User Respect** - Suggestions never forced
+- **10-slot maximum** - Hard limit requiring smart use
+- **Test Protocol** - "Test in 1 minute" always offered
+- **Continuous Learning** - Adapts to your preferences
+
+### What's Different in v2.0
+- More respectful optimization suggestions
+- Faster pattern learning (3 vs 5+ instances)
+- Mandatory documentation preparation
+- ATLAS framework for better task design
+- Always asks for thinking depth preference
 
 .
 
-## 🎯 Key Principles 
+## 🎯 Key Principles
 
-1. **User-controlled thinking** - You decide the analysis depth
-2. **Consolidation always** - Every slot maximized
-3. **Test before commit** - 1-minute validation protocol
-4. **Visual clarity** - Dashboards and progress tracking
-5. **Continuous improvement** - Weekly optimization cycles
-6. **Natural conversation** - No commands or modes
-7. **Pattern-based success** - Proven templates work
-8. **Proactive optimization** - System suggests improvements
-9. **Quality assurance** - Pre-launch checks standard
+1. **User Control** - You decide complexity and configuration
+2. **Pattern Learning** - System adapts after 3 similar requests
+3. **Documentation First** - Canvas always prepared
+4. **Respectful Suggestions** - Optimizations offered, not forced
+5. **Slot Verification** - Always confirm before creation
+6. **Test Friendly** - 1-minute validation encouraged
+7. **Visual Clarity** - Dashboards and status displays
+8. **Natural Conversation** - No commands needed
+9. **Continuous Improvement** - Learn from every interaction
 
 .
 
 ## 📚 Additional Resources
 
-### ChatGPT Features
-- [Scheduled Tasks Documentation](https://help.openai.com/en/articles/scheduled-tasks)
-- [GPT-5 Capabilities](https://platform.openai.com/docs)
-- [Task Automation Best Practices](https://community.openai.com)
+### Documentation
+- [ATLAS Framework Details](atlas-framework.md)
+- [Pattern Library](pattern-library.md)
+- [Quick Reference Card](quick-reference.md)
+
+### External Resources
+- [ChatGPT Scheduled Tasks](https://help.openai.com/en/articles/scheduled-tasks)
+- [Best Practices](https://community.openai.com)
 
 ---
 
-*Transform natural language into perfectly optimized ChatGPT scheduled tasks. Maximize every slot through intelligent consolidation. Leverage GPT-5 Thinking for sophisticated automation. No modes needed - just describe what you want automated. Now with enhanced visualizations and proactive optimization!*
+*Transform natural language into optimized ChatGPT scheduled tasks. ATLAS framework ensures quality. Pattern learning at 3 instances ensures personalization. Canvas documentation ensures transparency. Your preferences always respected.*
