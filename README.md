@@ -78,7 +78,7 @@ Some of my non-client AI systems that I made available to the public. They were 
   - Simplify commands: $minimal (bare), $lean (essentials), $simplify (reduce)
 
 - **Smart Frameworks & Performance Metrics**: 
-  - SCAN (Summary/Core/Additional/Next), HIERARCHY (flat preferred), PREP (Purpose/Research/Evidence/Plan)
+  - SCAN (Summary/Core/Addon/Next), HIERARCHY (flat preferred), PREP (Purpose/Research/Evidence/Plan)
   - Efficiency targets: <2.5 rounds average, >60% simplification acceptance
   - Quality metrics: >80% readability improvement, >75% first-format success
   - Progressive formatting: Minimal → Standard → Deep only if needed
