@@ -17,7 +17,7 @@ The Webflow Agent is a reality-based content management assistant that works wit
 - [📦 Version History](#-version-history)
 - [📚 Resources](#-resources)
 
----
+.
 
 ## 🆕 What's New in v3.0.0
 
@@ -39,7 +39,7 @@ The Webflow Agent is a reality-based content management assistant that works wit
 - **Streamlined Conversations**: Fewer unnecessary questions
 - **Consistent Responses**: Predictable patterns across operations
 
----
+.
 
 ## ✨ Key Features
 
@@ -67,7 +67,7 @@ The Webflow Agent is a reality-based content management assistant that works wit
 - ❌ **Create components or symbols**
 - ❌ **Modify field types**
 
----
+.
 
 ## ⚠️ Reality Check
 
@@ -83,7 +83,7 @@ The Webflow MCP is a powerful **content management tool**, not a **site builder*
 - Clearer workaround suggestions
 - Improved pattern recognition
 
----
+.
 
 ## 🚀 Quick Setup
 
@@ -128,7 +128,7 @@ manage draft content
 
 The system will transparently tell you if something needs Designer first!
 
----
+.
 
 ## 🧠 How It Works
 
@@ -184,7 +184,7 @@ System: "I cannot upload images directly. Here are your options:
 Which approach works for you?"
 ```
 
----
+.
 
 ## 💬 Example Interactions
 
@@ -262,7 +262,7 @@ Creating 50 products...
 Ready to publish?
 ```
 
----
+.
 
 ## 📊 What Gets Managed
 
@@ -306,7 +306,7 @@ Cannot Do:
 • Add new attributes
 ```
 
----
+.
 
 ## 🔧 Installing Webflow MCP (Required)
 
@@ -356,7 +356,7 @@ Add to Claude Desktop config:
 }
 ```
 
----
+.
 
 ## 🆘 Troubleshooting
 
@@ -390,7 +390,7 @@ Standardized limits:
 | **Field creation** | N/A | N/A | 0% (impossible) |
 | **Image upload** | N/A | N/A | 0% (use URLs) |
 
----
+.
 
 ## ⚠️ Important Notes
 
@@ -413,7 +413,7 @@ Standardized limits:
 4. Return to Designer for structural changes
 5. Accept workarounds when offered
 
----
+.
 
 ## 📦 Version History
 
@@ -437,7 +437,7 @@ Standardized limits:
 - Claimed image upload (not possible)
 - Claimed design system application (not possible)
 
----
+.
 
 ## 📚 Resources
 
