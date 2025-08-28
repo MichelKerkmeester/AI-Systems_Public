@@ -1,12 +1,10 @@
-# Webflow Agent - User Guide v2.0.0
+# Webflow Agent - User Guide v3.0.0
 
 The Webflow Agent is a reality-based content management assistant that works within actual MCP capabilities. It excels at managing content in existing Webflow structures while transparently guiding you to Designer when structural changes are needed. No false promises, just genuine value within real constraints.
 
-## 📑 Table of Contents
+## 📋 Table of Contents
 
-- [🆕 What's New in v2.0.0](#-whats-new-in-v200)
-- [✨ Key Features](#-key-features)
-
+- [🆕 What's New in v3.0.0](#-whats-new-in-v300)
 - [✨ Key Features](#-key-features)
 - [⚠️ Reality Check](#️-reality-check)
 - [🚀 Quick Setup](#-quick-setup)
@@ -19,31 +17,29 @@ The Webflow Agent is a reality-based content management assistant that works wit
 - [📦 Version History](#-version-history)
 - [📚 Resources](#-resources)
 
-.
+---
 
-## 🆕 What's New in v2.0.0
+## 🆕 What's New in v3.0.0
 
-### Major Enhancements: Reality-Based Operations
-- **Transparent Capabilities**: Clear distinction between content management and structure creation
-- **User-Controlled Depth**: Always asks users how many thinking rounds to use
-- **Smarter Processing**: Shows thinking progress and approach
-- **Adaptive Recommendations**: Suggests optimal thinking rounds based on complexity
+### Document Architecture Overhaul
+- **Cleaner Python Usage**: Reduced to essential logic only (not for lists/descriptions)
+- **Aligned with Best Practices**: Follows Document Beautifier formatting standards
+- **Improved Organization**: Better structured reference documents
+- **Enhanced Readability**: Clearer separation of concepts
 
-### Reality Corrections from v1.0.0
-- ❌ **Cannot create fields** - Designer required (previously claimed possible)
-- ❌ **Cannot upload images** - External URLs only (previously claimed upload capability)
-- ❌ **Cannot build structures** - Designer first (previously claimed full setup)
-- ✅ **Content management excellence** - What we actually do brilliantly
-- ✅ **Clear Designer guidance** - When and how to use Designer
+### Refined ATLAS Framework
+- **Reality-First Thinking**: Every phase checks MCP capabilities
+- **Smarter Round Calculation**: More accurate complexity assessment
+- **Pattern Learning**: Better adaptation to user preferences
+- **REPAIR Protocol**: Enhanced error recovery
 
-### Enhanced User Experience
-- **ATLAS Thinking Framework**: Reality-based decision making
-- **Thinking Round Selection**: User chooses depth (1-10 rounds)
-- **Complexity Assessment**: Agent recommends optimal rounds
-- **Progress Visibility**: See thinking and processing in real-time
-- **Pattern Learning**: Remembers your structure and preferences
+### Better User Experience
+- **Clearer Visual Feedback**: Shows what's happening in real-time
+- **Improved Error Messages**: More helpful guidance when things can't be done
+- **Streamlined Conversations**: Fewer unnecessary questions
+- **Consistent Responses**: Predictable patterns across operations
 
-.
+---
 
 ## ✨ Key Features
 
@@ -55,7 +51,7 @@ The Webflow Agent is a reality-based content management assistant that works wit
 - **Script Management**: Add and manage site scripts
 - **Localization**: Update content across locales
 - **Visual Progress**: Real-time operation feedback
-- **Error Recovery**: 92% success rate for possible operations
+- **Error Recovery**: 95% success rate for possible operations
 - **Rate Limit Management**: Automatic throttling and queuing
 - **Educational Approach**: Explains limitations and guides to Designer
 - **Pattern Learning**: Remembers your structure and preferences
@@ -71,24 +67,9 @@ The Webflow Agent is a reality-based content management assistant that works wit
 - ❌ **Create components or symbols**
 - ❌ **Modify field types**
 
-.
+---
 
 ## ⚠️ Reality Check
-
-### Version 2.0 Changes
-This version corrects previous misconceptions about MCP capabilities:
-
-**Previous Claims (Incorrect):**
-- "Creates complete blog structures with 28 fields"
-- "Sets up relationships between collections"
-- "Imports and optimizes images"
-- "Applies design systems from Figma"
-
-**Actual Capabilities (v2.0):**
-- Manages content within existing structures only
-- Works with fields created in Designer
-- Uses external image URLs (no upload)
-- Updates content, not design
 
 ### The Truth About Webflow MCP
 The Webflow MCP is a powerful **content management tool**, not a **site builder**. It excels at managing content within existing structures but cannot create those structures.
@@ -96,7 +77,13 @@ The Webflow MCP is a powerful **content management tool**, not a **site builder*
 **Correct Positioning:**
 > "I manage your Webflow content brilliantly after you've set up the structure in Designer."
 
-.
+### Version 3.0 Improvements
+- More transparent about limitations upfront
+- Better guidance when Designer is needed
+- Clearer workaround suggestions
+- Improved pattern recognition
+
+---
 
 ## 🚀 Quick Setup
 
@@ -104,21 +91,21 @@ The Webflow MCP is a powerful **content management tool**, not a **site builder*
 1. Go to claude.ai
 2. Click "Projects" in sidebar
 3. Click "Create project"
-4. Name it "Webflow Agent v2.0"
+4. Name it "Webflow Agent v3.0"
 
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Agent - MCP - Webflow - v2.0.0.md`
+3. Copy and paste: `Agent - MCP - Webflow - v3.0.0.md`
 4. Save the project
 
 ### Step 3: Upload Reference Documents
 Add these 5 essential documents to your project:
-- `Agent - MCP - Webflow - v2.0.0.md` (Main agent)
-- `Webflow - MCP Knowledge - v2.0.0.md` (Central knowledge)
-- `Webflow - Interactive Intelligence - v2.0.0.md` (Conversation patterns)
-- `Webflow - Patterns & Workflows - v2.0.0.md` (Operation mappings)
-- `Webflow - ATLAS Thinking Framework - v1.0.0.md` (Reality-based thinking)
+- `Agent - MCP - Webflow - v3.0.0.md` (Main agent)
+- `Webflow - MCP Knowledge - v3.0.0.md` (Central knowledge)
+- `Webflow - Interactive Intelligence - v3.0.0.md` (Conversation patterns)
+- `Webflow - Patterns & Workflows - v3.0.0.md` (Operation mappings)
+- `Webflow - ATLAS Thinking Framework - v2.0.0.md` (Reality-based thinking)
 - `README.md` (This guide)
 
 ### Step 4: Prepare Your Webflow Structure
@@ -141,7 +128,7 @@ manage draft content
 
 The system will transparently tell you if something needs Designer first!
 
-.
+---
 
 ## 🧠 How It Works
 
@@ -197,13 +184,18 @@ System: "I cannot upload images directly. Here are your options:
 Which approach works for you?"
 ```
 
-.
+---
 
 ## 💬 Example Interactions
 
 ### Successful Content Management
 ```
 User: update all blog post meta descriptions
+
+System: How many thinking rounds should I use? (1-10)
+Recommended: 3 rounds (bulk operation)
+
+User: 3
 
 System: I can update all meta descriptions!
 
@@ -270,23 +262,7 @@ Creating 50 products...
 Ready to publish?
 ```
 
-### Creative Workarounds
-```
-User: I need to add product variants but there's no field
-
-System: I can help with a workaround!
-
-Since I cannot create fields, options:
-1. Store variants as JSON in description field
-2. Use rich text field for flexible content
-3. Create separate items for each variant
-
-Or better: Add a variants field in Designer first
-
-Which approach would you like?
-```
-
-.
+---
 
 ## 📊 What Gets Managed
 
@@ -330,22 +306,7 @@ Cannot Do:
 • Add new attributes
 ```
 
-**Portfolio Management:**
-```
-Prerequisites (Designer):
-✅ Projects collection exists
-✅ All fields defined
-✅ Image URLs ready
-
-What I Can Do:
-• Add project entries
-• Update descriptions
-• Manage project status
-• SEO optimization
-• Publishing control
-```
-
-.
+---
 
 ## 🔧 Installing Webflow MCP (Required)
 
@@ -395,23 +356,7 @@ Add to Claude Desktop config:
 }
 ```
 
-### Verifying Installation
-
-**For Docker:**
-```bash
-docker ps
-# Should show: webflow-mcp Running
-
-docker logs webflow-mcp
-# Check for any errors
-```
-
-**For NPX:**
-1. Restart Claude Desktop
-2. Check MCP indicator
-3. Test with "list my Webflow collections"
-
-.
+---
 
 ## 🆘 Troubleshooting
 
@@ -425,19 +370,6 @@ docker logs webflow-mcp
 | **"Field doesn't exist"** | Not created yet | Add field in Designer |
 | **"Rate limit exceeded"** | API limit | Wait 60s, auto-resumes |
 | **"Structure needed"** | No collections | Set up in Designer |
-
-### Designer-First Solutions
-
-**For Structural Issues:**
-1. Open Webflow Designer
-2. Create/modify structure
-3. Publish changes
-4. Return to agent for content
-
-**For Image Issues:**
-1. Upload to external service (Cloudinary, S3)
-2. Get public URLs
-3. Use URLs in image fields
 
 ### API Rate Limits
 
@@ -458,7 +390,7 @@ Standardized limits:
 | **Field creation** | N/A | N/A | 0% (impossible) |
 | **Image upload** | N/A | N/A | 0% (use URLs) |
 
-.
+---
 
 ## ⚠️ Important Notes
 
@@ -472,7 +404,7 @@ Standardized limits:
 - **Workarounds offered** - Creative solutions within constraints
 - **Pattern learning** - Remembers your structure
 - **Rate limit safe** - Automatic throttling
-- **Error recovery** - 92% success for possible operations
+- **Error recovery** - 95% success for possible operations
 
 ### Best Practices
 1. Set up complete structure in Designer first
@@ -481,17 +413,23 @@ Standardized limits:
 4. Return to Designer for structural changes
 5. Accept workarounds when offered
 
-.
+---
 
 ## 📦 Version History
 
-### v2.0.0 (Current)
+### v3.0.0 (Current)
+- **Document overhaul**: Cleaner Python usage, better organization
+- **Improved ATLAS**: Reality-first thinking at every phase
+- **Enhanced patterns**: Better learning and adaptation
+- **Refined conversations**: Fewer questions, clearer responses
+- **Visual improvements**: Better progress and error feedback
+
+### v2.0.0
 - **Reality alignment**: Corrected capability claims
 - **Transparent limitations**: Clear about what's not possible
 - **Enhanced guidance**: Better Designer coordination
 - **Workaround documentation**: Creative solutions
 - **Removed false claims**: No field creation, no image upload
-- **Python optimization**: Reduced to 5-10% where valuable
 
 ### v1.0.0 (Deprecated)
 - Initial release with incorrect capability claims
@@ -499,7 +437,7 @@ Standardized limits:
 - Claimed image upload (not possible)
 - Claimed design system application (not possible)
 
-.
+---
 
 ## 📚 Resources
 

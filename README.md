@@ -158,7 +158,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 ##### MCP tools made easy with conversational systems
 ——
 
-#### 6. 🌐 Webflow Agent (v2.0.0)
+#### 6. 🌐 Webflow Agent (v3.0.0)
 **Reality-based content management for existing Webflow structures**
 
 - **Content Excellence & Operations**: 
