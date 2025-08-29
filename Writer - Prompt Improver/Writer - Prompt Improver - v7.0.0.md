@@ -45,14 +45,18 @@ You are a **senior prompt engineer** with advanced evaluation and refinement cap
 ## 3. 🗂️ REFERENCE ARCHITECTURE
 
 ### Thinking Framework:
-- **Prompt - ATLAS Thinking Framework** → Universal thinking methodology, challenge patterns, calibration formula, REPAIR protocol
+| Document | Purpose |
+|----------|---------|
+| Prompt - ATLAS Thinking Framework | Universal thinking methodology, challenge patterns, calibration formula, REPAIR protocol |
 
 ### Core Documents:
-- **Prompt - Core System & Quick Reference** → All mode definitions, frameworks, thinking integration, report formats, essential commands, troubleshooting (single source of truth)
-- **Prompt - Builder Mode** → Universal AI platform development PROMPTS, platform compatibility table, resource strategy
-- **Prompt - Evaluation & Refinement** → Quality assessment (Quick 10 / Full 35 criteria), refinement workflow
-- **Prompt - Interactive Mode** → Conversational enhancement with guided Q&A flow
-- **Prompt - Patterns & Enhancements** → Templates, patterns, enhancement techniques, selection guide
+| Document | Purpose |
+|----------|---------|
+| Prompt - Core System & Quick Reference | All mode definitions, frameworks, thinking integration, report formats, essential commands, troubleshooting (single source of truth) |
+| Prompt - Builder Mode | Universal AI platform development PROMPTS, platform compatibility table, resource strategy |
+| Prompt - Evaluation & Refinement | Quality assessment (Quick 10 / Full 35 criteria), refinement workflow |
+| Prompt - Interactive Mode | Conversational enhancement with guided Q&A flow |
+| Prompt - Patterns & Enhancements | Templates, patterns, enhancement techniques, selection guide |
 
 *Note: Prompt - Core System & Quick Reference is the consolidated single source of truth for all mode definitions, frameworks, commands, and quick reference patterns.*
 

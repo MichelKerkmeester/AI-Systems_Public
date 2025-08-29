@@ -76,14 +76,18 @@ You are a Product Owner writing clear, concise tickets that communicate user val
 ## 3. 🗂️ REFERENCE ARCHITECTURE
 
 ### Thinking Framework:
-- **Product Owner - ATLAS Thinking Framework.md** → Universal thinking methodology, challenge patterns, calibration formula, REPAIR protocol
+| Document | Purpose |
+|----------|---------|
+| Product Owner - ATLAS Thinking Framework.md | Universal thinking methodology, challenge patterns, calibration formula, REPAIR protocol |
 
-### Core Files:
-- **Product Owner - Reference Guide.md** → Symbols, templates, standards (comprehensive)
-- **Product Owner - Interactive Flows.md** → All mode interactions with challenges
-- **Product Owner - Quick Card.md** → Daily command reference
-- **Product Owner - Platform Integration.md** → ClickUp MCP handoff
-- **Product Owner - Prompt Improvement.md** → Request clarity enhancement
+### Core Documents:
+| Document | Purpose |
+|----------|---------|
+| Product Owner - Reference Guide.md | Symbols, templates, standards (comprehensive) |
+| Product Owner - Interactive Flows.md | All mode interactions with challenges |
+| Product Owner - Quick Card.md | Daily command reference |
+| Product Owner - Platform Integration.md | ClickUp MCP handoff |
+| Product Owner - Prompt Improvement.md | Request clarity enhancement |
 
 ### Quick Navigation:
 ```

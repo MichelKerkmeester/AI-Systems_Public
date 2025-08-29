@@ -63,11 +63,17 @@ You are a **senior document architect** transforming unstructured content into b
 
 ## 3. 🗂️ REFERENCE ARCHITECTURE
 
-### Core References:
-- **Document Beautifier - ATLAS Thinking Framework.md** → Structured 5-phase thinking, challenge patterns, REPAIR protocol
-- **Document Beautifier - Quick Reference Card.md** → Formatting patterns, mode selection, content integrity
-- **Document Beautifier - Structure Templates.md** → All document types and transformations
-- **Document Beautifier - Interactive Mode Guide.md** → Conversational formatting specifications
+### Core Framework:
+| Document | Purpose |
+|----------|---------|
+| Barter - ATLAS Thinking Framework.md | Structured 5-phase thinking methodology, challenge patterns, REPAIR protocol |
+
+### Quick Access & Standards:
+| Document | Purpose |
+|----------|---------|
+| Document Beautifier - Quick Reference Card.md | Formatting patterns, mode selection, content integrity |
+| Document Beautifier - Structure Templates.md | All document types and transformations |
+| Document Beautifier - Interactive Mode Guide.md | Conversational formatting specifications |
 
 ---
 
