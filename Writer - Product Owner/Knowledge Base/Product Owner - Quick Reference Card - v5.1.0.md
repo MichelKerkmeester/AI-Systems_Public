@@ -11,7 +11,7 @@ Essential commands and quick reference for daily use with ATLAS Framework, Chall
 5. [📤 ESSENTIAL SYMBOLS](#-essential-symbols)
 6. [📋 REQUIRED FORMATTING](#-required-formatting)
 7. [🧠 THINKING ROUNDS](#-thinking-rounds)
-8. [📄 PATTERN LEARNING](#-pattern-learning)
+8. [🔄 PATTERN LEARNING](#-pattern-learning)
 9. [✅ QUALITY CHECKLIST](#-quality-checklist)
 10. [🚨 COMMON FIXES](#-common-fixes)
 
@@ -109,7 +109,7 @@ need authentication system
 ## 5. 📤 ESSENTIAL SYMBOLS
 
 ```markdown
-🔘  About/Overview
+⌘  About/Overview
 ◇  Requirements
 ◊  Sub-headings (bold)
 ◳  Designs & References
@@ -129,7 +129,7 @@ need authentication system
 ## 📋 Table of Contents
 - [Sections only - no subsections]
 
-# 🔘 About
+# ⌘ About
 [Introduction]
 
 ---
@@ -193,7 +193,7 @@ Based on your request and previous preferences, I recommend: [X rounds]
 
 ---
 
-## 8. 📄 PATTERN LEARNING
+## 8. 🔄 PATTERN LEARNING
 
 ### Recognition Stages
 

@@ -5,11 +5,11 @@ Comprehensive reference for symbols, formats, templates, and quality standards w
 ## 📋 Table of Contents
 
 1. [🧠 ATLAS FRAMEWORK REFERENCE](#1--atlas-framework-reference)
-2. [🔤 SYMBOL DICTIONARY](#2--symbol-dictionary)
+2. [📤 SYMBOL DICTIONARY](#2--symbol-dictionary)
 3. [📋 TICKET TEMPLATES WITH CHALLENGES](#3--ticket-templates-with-challenges)
 4. [📚 DOCUMENTATION TEMPLATE](#4--documentation-template)
 5. [💻 SPEC TEMPLATE](#5--spec-template)
-6. [✏️ TEXT TEMPLATE](#6--text-template)
+6. [✍️ TEXT TEMPLATE](#6--text-template)
 7. [💡 CHALLENGE MODE PATTERNS](#7--challenge-mode-patterns)
 8. [🔄 PATTERN LEARNING](#8--pattern-learning)
 9. [✅ QUALITY STANDARDS](#9--quality-standards)
@@ -76,13 +76,13 @@ Ask up to 3 questions ONLY if blocking progress.
 
 ---
 
-## 2. 🔤 SYMBOL DICTIONARY
+## 2. 📤 SYMBOL DICTIONARY
 
 ### Primary Symbols with Challenge Context
 
 | Symbol | Usage | Context | Challenge Check | Pattern Note |
 |--------|-------|---------|-----------------|--------------|
-| **📘** | Section headers, "About" | All modes | Clear purpose? | User prefers minimal? |
+| **⌘** | Section headers, "About" | All modes | Clear purpose? | User prefers minimal? |
 | **◇** | Requirements header | Tickets only | All necessary? | Previous reductions? |
 | **◻️** | Feature sections | Documentation | Too detailed? | Typical depth? |
 | **◊** | Sub-headings (bold) | All modes | Can combine? | Consolidation pattern? |
@@ -99,7 +99,7 @@ Ask up to 3 questions ONLY if blocking progress.
 
 ```markdown
 ## 📋 Table of Contents [MANDATORY - sections only, no subsections]
-# 📘 Top Level (About/Overview) [Clear intro?]
+# ⌘ Top Level (About/Overview) [Clear intro?]
 ---
 ### → Key problems: [NOT in TOC - Real problems or symptoms?]
 - First problem (minimum 2)
@@ -163,13 +163,13 @@ def detect_complexity(request, session_patterns=None):
 [BE] Bug Fix: Login Token Expiration
 
 ## 📋 Table of Contents
-- [📘 About](#-about)
+- [⌘ About](#-about)
 - [◳ Designs & References](#-designs--references)
 - [◇ Requirements](#-requirements)
 - [✦ Success Criteria](#-success-criteria)
 - [✓ Resolution Checklist](#-resolution-checklist)
 
-# 📘 About
+# ⌘ About
 
 Users cannot log in due to token validation error that started after the recent deployment, blocking all platform access.
 
@@ -243,7 +243,7 @@ Users cannot log in due to token validation error that started after the recent 
 [FS] User Analytics Dashboard
 
 ## 📋 Table of Contents
-- [📘 About](#-about)
+- [⌘ About](#-about)
 - [Challenge Summary](#challenge-summary)
 - [◳ Designs & References](#-designs--references)
 - [◇ Requirements](#-requirements)
@@ -251,7 +251,7 @@ Users cannot log in due to token validation error that started after the recent 
 - [✓ Resolution Checklist](#-resolution-checklist)
 - [⋈ Dependencies](#-dependencies)
 
-# 📘 About
+# ⌘ About
 
 Real-time analytics dashboard enabling users to track their account activity, usage patterns, and performance metrics for data-driven decision making.
 
@@ -411,7 +411,7 @@ Real-time analytics dashboard enabling users to track their account activity, us
 [FS] Multi-tenant Payment Platform
 
 ## 📋 Table of Contents
-- [📘 About](#-about)
+- [⌘ About](#-about)
 - [Challenge Summary](#challenge-summary)
 - [◳ Designs & References](#-designs--references)
 - [◇ Implementation Strategy](#-implementation-strategy)
@@ -420,7 +420,7 @@ Real-time analytics dashboard enabling users to track their account activity, us
 - [⋈ Major Dependencies](#-major-dependencies)
 - [⚡ Risk Mitigation](#-risk-mitigation)
 
-# 📘 About
+# ⌘ About
 
 Enterprise payment processing system supporting multiple providers, currencies, and compliance requirements for global market expansion with focus on reliability and regulatory compliance.
 
@@ -662,7 +662,7 @@ CHALLENGE DECISIONS: [What was simplified]
 
 ---
 
-# 📘 [Feature Name] Documentation
+# ⌘ [Feature Name] Documentation
 
 [Feature overview - 2-3 sentences maximum after challenge for brevity]
 
@@ -678,7 +678,7 @@ CHALLENGE DECISIONS: [What was simplified]
 ---
 
 ## 📋 Table of Contents
-- [📘 Overview](#-overview)
+- [⌘ Overview](#-overview)
 - [◻️ Getting Started](#-getting-started)
 - [◻️ Core Features](#-core-features)
 - [◻️ Advanced Usage](#-advanced-usage)
@@ -687,7 +687,7 @@ CHALLENGE DECISIONS: [What was simplified]
 
 ---
 
-## 📘 Overview
+## ⌘ Overview
 
 ### What is [Feature Name]?
 
@@ -1142,7 +1142,7 @@ test('calls onAction when button clicked', () => {
 
 ---
 
-## 6. ✏️ TEXT TEMPLATE
+## 6. ✍️ TEXT TEMPLATE
 
 ### Quick Text Snippets with Challenge Application
 ```markdown
@@ -1383,7 +1383,7 @@ should the implementation spec also be phased?
 ✅ **MUST HAVE:**
 - Delivered as artifact (NO EXCEPTIONS)
 - Appropriate title with scope/feature
-- First heading with 📘 symbol
+- First heading with ⌘ symbol
 - Thinking rounds documented
 - Challenge decisions noted
 - Pattern applications recorded
@@ -1523,13 +1523,13 @@ All tickets receive:
 [Previous pattern detected: User fixed 3 similar cache bugs with config changes]
 
 ## 📋 Table of Contents
-- [📘 About](#-about)
+- [⌘ About](#-about)
 - [◳ Designs & References](#-designs--references)
 - [◇ Requirements](#-requirements)
 - [✦ Success Criteria](#-success-criteria)
 - [✓ Resolution Checklist](#-resolution-checklist)
 
-# 📘 About
+# ⌘ About
 
 Cache invalidation failing for user profiles causing stale data to display for up to 24 hours after updates.
 
@@ -1593,7 +1593,7 @@ Cache invalidation failing for user profiles causing stale data to display for u
 [Challenge applied: Reduced from platform to phased feature]
 
 ## 📋 Table of Contents
-- [📘 About](#-about)
+- [⌘ About](#-about)
 - [Challenge Summary](#challenge-summary)
 - [◳ Designs & References](#-designs--references)
 - [◇ Implementation Strategy](#-implementation-strategy)
@@ -1601,7 +1601,7 @@ Cache invalidation failing for user profiles causing stale data to display for u
 - [✓ Resolution Checklist](#-resolution-checklist)
 - [⋈ Dependencies](#-dependencies)
 
-# 📘 About
+# ⌘ About
 
 Self-service customer portal for account management, billing, and support ticket creation with phased rollout approach.
 

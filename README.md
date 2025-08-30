@@ -41,7 +41,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 ##### Automated content, documentation & prompt writing systems
 ——
 
-#### 1. 📋 Product Owner Writer (v7.0.0)
+#### 1. 📋 Product Owner Writer
 **Transform vague requests into professional dev tickets, specs, docs, and text snippets with built-in complexity challenging**
 
 - **ATLAS Framework & Challenge Mode**: 
@@ -62,7 +62,7 @@ Some of my non-client AI systems that I made available to the public. They were 
   - ClickUp MCP direct workspace creation with preserved formatting
   - QA warning above checklist, placeholders for missing links
 
-#### 2. 📄 Document Beautifier (v2.1.0)
+#### 2. 📄 Document Beautifier
 **Transform unstructured documents into professional content with structured ATLAS thinking**
 
 - **5-Phase ATLAS Framework & Pattern Learning**: 
@@ -83,7 +83,7 @@ Some of my non-client AI systems that I made available to the public. They were 
   - Quality metrics: >80% readability improvement, >75% first-format success
   - Progressive formatting: Minimal → Standard → Deep only if needed
 
-#### 3. ✏️ Branded Content Writer (v4.1.0)
+#### 3. ✏️ Branded Content Writer
 **Marketing content with systematic authenticity and failure transparency**
 
 - **Voice Trinity & Tone Control**: 
@@ -104,26 +104,24 @@ Some of my non-client AI systems that I made available to the public. They were 
   - Auto-expansion of abbreviations and vague requests
   - Intent preservation while fixing ambiguity
 
-#### 4. 🎯 Prompt Engineering Assistant (v7.0.0)
+#### 4. 🎯 Prompt Engineering Assistant
 **Transform vague requests into powerful AI prompts for ANY platform**
 
 - **8 Specialized Modes**: 
-  - Core modes: $analysis (data), $creative (content), $technical (code), $educational (learning)
-  - Builder modes: $prototype (proof), $website (full sites), $app (applications)
-  - Auto-detection with weighted keywords and 0-100 confidence
-  - Pattern learning from accepted suggestions
+  - Core modes: $short (minimal), $improve (default), $refine (maximum), $interactive (guided), $json (API)
+  - Builder modes: $prototype (exploration), $website (conversion), $app (functionality)
+  - Auto-detection with pattern learning and confidence scoring
+  - Session adaptation learns preferences across Recognition → Establishment → Confidence stages
 
 - **Enhancement Engine**: 
-  - Clarity boost without adding assumptions
-  - Structure injection for vague requests
-  - Platform optimization: ChatGPT, Claude, Gemini, custom
-  - Context preservation with intelligent expansion
+  - Clarity boost without adding assumptions - now with cleaner decision tables
+  - Structure injection using streamlined CRAFT framework (92% less pseudocode)
+  - Context preservation with 30-50% complexity reduction average
 
 - **ATLAS & Challenge Integration**: 
   - 5-phase thinking with 1-10 user-controlled rounds
-  - Challenge Mode at 3+ rounds for simpler alternatives
-  - REPAIR recovery for unclear requests
-  - Session adaptation to user style
+  - Challenge Mode at 3+ rounds for simpler alternatives (intensity scales with depth)
+  - REPAIR recovery protocol with table-based error handling
 
 .
 
@@ -131,7 +129,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 ##### Transform natural language into intelligent automation workflows
 ——
 
-#### 5. ⏰ GPT - Scheduled Tasks (v2.0.0)
+#### 5. ⏰ GPT - Scheduled Tasks
 **Maximize ChatGPT's 10 scheduled task slots through intelligent optimization with ATLAS Framework**
 
 - **ATLAS Framework & Pattern Learning**: 
@@ -158,7 +156,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 ##### MCP tools made easy with conversational systems
 ——
 
-#### 6. 🌐 Webflow Agent (v3.0.0)
+#### 6. 🌐 Webflow Agent
 **Reality-based content management for existing Webflow structures**
 
 - **Content Excellence & Operations**: 
@@ -179,7 +177,7 @@ Some of my non-client AI systems that I made available to the public. They were 
   - Workflow adaptation to your preferences
   - Progressive efficiency improvements
 
-#### 7. 🚀 ClickUp Agent (v2.0.0)
+#### 7. 🚀 ClickUp Agent
 **Transform natural language into organized ClickUp workspaces while actively challenging unnecessary complexity**
 
 - **ATLAS Framework & Challenge Mode**: 
@@ -200,7 +198,7 @@ Some of my non-client AI systems that I made available to the public. They were 
   - Automation only when manual process proven
   - Educational insights: Explains why simpler often works better
 
-#### 8. 📝 Notion Agent (v1.3.0)
+#### 8. 📝 Notion Agent
 **Natural language control of Notion workspaces**
 
 - **Natural Language Processing**: 
@@ -221,7 +219,7 @@ Some of my non-client AI systems that I made available to the public. They were 
   - Design principles and optimization tips
   - Migration guidance from other platforms
 
-#### 9. 🖼️ Imagician Agent (v1.4.0)
+#### 9. 🖼️ Imagician Agent
 **Image file editing and conversion through conversation**
 
 - **8 Operations & Smart Understanding**: 
@@ -242,7 +240,7 @@ Some of my non-client AI systems that I made available to the public. They were 
   - YouTube: Thumbnail (1280x720), Banner (2560x1440)
   - Auto-detection of platform requirements
 
-#### 10. 🎬 Video Audio Agent (v1.0.0)
+#### 10. 🎬 Video Audio Agent
 **Video and audio processing through natural conversation**
 
 - **Natural Language & Smart Codecs**: 
@@ -269,7 +267,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 ##### IDE enhancements & App Prototyping
 ——
 
-#### 11. 🛠️ IDE System Prompt (v3.9.0)
+#### 11. 🛠️ IDE System Prompt
 **Transform any AI coding assistant into an elite software engineer**
 
 - **Root Cause & Performance**: 
@@ -290,7 +288,7 @@ Some of my non-client AI systems that I made available to the public. They were 
   - Cross-reference documentation
   - Real-time testing protocols
 
-#### 12. 🚀 Lovable System Prompts (v2.0.0)
+#### 12. 🚀 Lovable System Prompts
 **Three specialized experts for minimal Lovable platform credit usage**
 
 - **Goal-Oriented Frameworks**: 
