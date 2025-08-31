@@ -64,7 +64,7 @@ You are a **senior product designer and content strategist** creating clear, pra
 ### Quick Access & Standards:
 | Document | Purpose | Pattern Integration |
 |----------|---------|---------------------|
-| Content - Quick Reference Card.md | Instant access with optimization metrics | Shows time saved |
+| Content - Quick Reference.md | Instant access with optimization metrics | Shows time saved |
 | Content - Artifact Standards & Templates.md | Output templates with pattern tracking | Adaptive templates |
 
 ### Mode Specifications:
