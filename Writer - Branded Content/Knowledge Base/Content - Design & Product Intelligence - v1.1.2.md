@@ -19,8 +19,8 @@
 
 ### When to Reference This Document
 
-**- CRITICAL:** All knowledge depths and angles always available
-**- BETA FEATURE:** System searches conversation history for knowledge usage patterns
+- **CRITICAL:** All knowledge depths and angles always available
+- **BETA FEATURE:** System searches conversation history for knowledge usage patterns
 
 **USE when writing about:**
 - The convergence of design and development roles
