@@ -1,4 +1,4 @@
-# Branded Content Writer - User Guide v5.1.0
+# Branded Content Writer - User Guide v5.1.2
 
 This is a flexible content creation system that currently focuses on writing content for Product Designers and design teams. The system can be easily adjusted to write content for a specific brand voice, different types of professions (marketing, engineering, education), or personal writing styles. It transforms expertise into clear, practical content through contextual enrichment, systematic thinking, and authentic process documentation.
 
@@ -10,12 +10,13 @@ This is a flexible content creation system that currently focuses on writing con
 
 .
 
-## 🆕 What's New in v5.1.0
+## 🆕 What's New in v5.1.2
 The system now uses Claude's conversation history capabilities to provide rich contextual information while maintaining complete user autonomy:
 - **Historical Context Display**: Shows patterns from previous conversations as helpful notes
 - **Never Restricts Choices**: All options always available regardless of history
 - **100% User Control**: Every question asked, every option shown
 - **Context Enrichment**: Richer experience over time without automation
+- **AI System Header**: Required formatting above all artifact details
 
 .
 
@@ -33,7 +34,7 @@ The system now uses Claude's conversation history capabilities to provide rich c
 - **Knowledge Intelligence**: Pulls relevant principles with historical usage shown
 - **Session Context Display**: Shows patterns as helpful notes, never restrictions
 - **Multiple Variations Always**: 3 options for every request (practical/insightful/collaborative)
-- **Artifact Delivery**: All content in markdown artifacts with context metadata
+- **Artifact Delivery**: All content in markdown artifacts with AI System header and context metadata
 
 ## Overview
 
@@ -61,12 +62,19 @@ Real work is messy. Content should reflect that:
 - Credit team: "Sarah spotted the issue"
 - Express uncertainty: "Still not sure why this works..."
 
-### User Autonomy (v5.1.0)
+### User Autonomy (v5.1.2)
 Complete control maintained at all times:
 - **All Questions Asked**: Never skips based on patterns
 - **All Options Shown**: Every choice always available
 - **Historical Context**: Displayed as notes, never restrictions
 - **No Automation**: User decides everything
+
+### Artifact Formatting Standards
+All content artifacts include:
+- **AI System Header**: Always appears above artifact details
+- **Bottom Placement**: Details at bottom with dash bullets
+- **Vertical Formatting**: Clean, organized structure
+- **Complete Metadata**: Framework, mode, tone, thinking rounds
 
 .
 
@@ -75,21 +83,21 @@ Complete control maintained at all times:
 ### Step 1: Create a Claude Project
 1. Go to claude.ai
 2. Click "Projects" in sidebar
-3. Create new project: "Branded Content Writer 5.1.0"
+3. Create new project: "Branded Content Writer 5.1.2"
 
 ### Step 2: Add Core System
 Copy and paste into Custom Instructions:
-- `Writer - Branded Content - v5.1.0` (Master orchestration with context enhancement)
+- `Writer - Branded Content - v5.1.2` (Master orchestration with context enhancement)
 
 ### Step 3: Upload Supporting Documents
 Add all documents to project knowledge base:
-- `Content - Artifact Standards & Templates - v2.1.0.md` (Output templates with context)
-- `Content - ATLAS Thinking Framework - v2.1.0.md` (DEPTH framework with historical notes)
-- `Content - Copywriter Frameworks - v2.1.0.md` (Framework library with usage display)
-- `Content - Design & Product Intelligence - v2.1.0.md` (Domain knowledge with context)
-- `Content - Interactive Mode - v2.1.0.md` (Conversational system - all questions asked)
-- `Content - Quick Reference - v2.1.0.md` (Navigation with context enhancement)
-- `Content - Voice & Tone Guide - v2.1.0.md` (Voice guide with historical notes)
+- `Content - Artifact Standards & Templates - v1.1.2.md` (Output templates with context)
+- `Content - ATLAS Thinking Framework - v1.1.2.md` (DEPTH framework with historical notes)
+- `Content - Copywriter Frameworks - v1.1.2.md` (Framework library with usage display)
+- `Content - Design & Product Intelligence - v1.1.2.md` (Domain knowledge with context)
+- `Content - Interactive Mode - v1.1.2.md` (Conversational system - all questions asked)
+- `Content - Quick Reference - v1.1.2.md` (Navigation with context enhancement)
+- `Content - Voice & Tone Guide - v1.1.2.md` (Voice guide with historical notes)
 
 ### Step 4: Start Creating
 Simply describe your need or let interactive mode guide you:
@@ -158,7 +166,7 @@ Could we achieve your goal with:
 All options remain available - your choice?
 ```
 
-## 🗏 Content Frameworks
+## 🏗 Content Frameworks
 
 ### Simple Frameworks (3-Part)
 - **SVC**: Story • Value • Call (Quick insights) [Usage history shown]
@@ -225,6 +233,7 @@ Process Transparency:
 ✅ Failures included: 1
 ✅ Team credited: 4 people
 ✅ Learning captured
+✅ AI System header present
 
 Historical Context:
 📄 Previous similar content: 5 times
@@ -235,7 +244,7 @@ Historical Context:
 
 .
 
-## 📈 Context Enhancement System (v5.1.0)
+## 📈 Context Enhancement System (v5.1.2)
 
 ### How the System Provides Context
 
@@ -286,8 +295,65 @@ N - Note: Context updated for future reference
     All options remain available
 ```
 
+### Common Recovery Scenarios
+- Missing AI System header → Add above details
+- Too theoretical → Add examples
+- Wrong audience → Adjust technical level
+- Missing process → Show iterations
+- No team credit → Add names
+
 .
 
+## 📦 Artifact Structure Example
+
+Every content artifact follows this format:
+
+```markdown
+[Main content goes here]
+
+---
+
+## Variations (All Available)
+
+### Most practical:
+[Action-focused version]
+
+### Most insightful:  
+[Understanding-focused version]
+
+### Most collaborative:
+[Team discussion version]
+
+---
+
+**AI System:**
+
+- **Framework:** CASE
+- **Mode:** $interactive
+- **Tone:** $natural
+
+---
+
+- **Thinking:** 5 rounds (user selected)
+- **DEPTH:** D→E→P→T→H
+
+---
+
+- **Challenge:** Applied - simplified to key metrics
+- **Platform:** LinkedIn
+- **Context:** Case study sharing
+
+---
+
+**Historical Context:**
+- Similar content created: 7 times
+- Preference patterns shown
+- All options available
+
+**Knowledge angle:** Lean UX methodology
+```
+
+.
 
 ## 🎨 Adapting the System to Your Needs
 
@@ -309,6 +375,7 @@ Configure for [YOUR BRAND]:
 - Keep the context enhancement features
 - Maintain complete user autonomy
 - Preserve the core system architecture
+- Maintain AI System header requirements
 ```
 
 ### Adapting for Different Professions
@@ -352,6 +419,7 @@ Regardless of configuration, the system maintains:
 - User-controlled depth (1-10 rounds)
 - 3 variations for every output
 - Complete user autonomy
+- AI System header requirement
 
 .
 
@@ -362,6 +430,7 @@ Regardless of configuration, the system maintains:
 - **Too complex**: Challenge Mode suggests simpler → Both options available
 - **Missing process**: Add iterations and failures → Show the journey
 - **No team credit**: Always include contributors → Name specific people
+- **Missing header**: Add AI System above details → Required formatting
 
 ### System Issues
 - **Context not helpful**: Use `$reset` to clear history
@@ -373,6 +442,8 @@ Regardless of configuration, the system maintains:
 
 ## 📦 Version History
 
+- **v5.1.2**: AI System header requirement added - Standardized artifact formatting
+- **v5.1.1**: Historical context refinements - Pattern recognition improvements
 - **v5.1.0**: Beta features integration - Historical context display with 100% user autonomy maintained
 - **v5.0.0**: Complete re-design with ATLAS/DEPTH, Challenge Mode, Pattern Learning, LEARN Protocol
 - **v4.0.0**: Voice Trinity, 5 modes, embedded improvement, visual celebrations
@@ -382,4 +453,4 @@ Regardless of configuration, the system maintains:
 
 ---
 
-*Great content, like great work, makes the complex feel approachable. Show the process, credit the team, share the failures, enable the learning. Historical context enriches the experience while maintaining complete autonomy. All questions asked, all options shown, every choice yours. Still figuring this out together.*
+*Great content, like great work, makes the complex feel approachable. Show the process, credit the team, share the failures, enable the learning. Historical context enriches the experience while maintaining complete autonomy. AI System header always appears above artifact details. All questions asked, all options shown, every choice yours. Still figuring this out together.*
