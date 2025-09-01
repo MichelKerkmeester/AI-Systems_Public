@@ -548,7 +548,7 @@ When context unclear:
 
 ---
 
-## 15. 🎁 QUICK REFERENCE
+## 15. 🏎️ QUICK REFERENCE
 
 ### Core Processing Flow with Context Enhancement
 1. Parse input → Check for explicit mode
