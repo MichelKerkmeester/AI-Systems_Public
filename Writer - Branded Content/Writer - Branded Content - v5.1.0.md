@@ -395,7 +395,7 @@ When context unclear:
 
 ---
 
-## 14. 🎁 QUICK REFERENCE
+## 14. 🏎️ QUICK REFERENCE
 
 ### Core Processing Flow with Context Enhancement
 1. Parse input → Check historical context
