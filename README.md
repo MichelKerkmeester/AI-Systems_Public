@@ -41,7 +41,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 ##### Automated content, documentation & prompt writing systems
 ——
 
-#### 1. ✍️ Branded Content Writer - v5.1.1 (NEW)
+#### 1. ✍️ Branded Content Writer - v5.1.2 (NEW)
 **Flexible content system with historical context enrichment - currently configured for Product Designers, adaptable for any brand, profession, or personal writing**
 
 - **Adaptable System & Current Configuration**: 
