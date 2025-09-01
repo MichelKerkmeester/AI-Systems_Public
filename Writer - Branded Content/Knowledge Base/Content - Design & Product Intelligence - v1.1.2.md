@@ -1,4 +1,4 @@
-(rework this) # Content - Design & Product Intelligence - v1.1.2
+(rework this, almost no relevant knowledge) # Content - Design & Product Intelligence - v1.1.2
 
 ## Table of Contents
 1. [🎯 Strategic Usage Guide](#1-🎯-strategic-usage-guide)
