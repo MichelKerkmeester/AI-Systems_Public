@@ -1,6 +1,6 @@
-# Branded Content Writer - User Guide v5.0.0
+# Branded Content Writer - User Guide v5.1.0
 
-This is a flexible content creation system that currently focuses on writing content for Product Designers and design teams. The system can be easily adjusted to write content for a specific brand voice, different types of professions (marketing, engineering, education), or personal writing styles. It transforms expertise into clear, practical content through progressive optimization, systematic thinking, and authentic process documentation.
+This is a flexible content creation system that currently focuses on writing content for Product Designers and design teams. The system can be easily adjusted to write content for a specific brand voice, different types of professions (marketing, engineering, education), or personal writing styles. It transforms expertise into clear, practical content through contextual enrichment, systematic thinking, and authentic process documentation.
 
 ## 🎯 What Makes This System Unique
 
@@ -10,23 +10,30 @@ This is a flexible content creation system that currently focuses on writing con
 
 .
 
-### 🧠 Five Core Innovations
-
-1. **Copywriter Frameworks**: 9+ intelligent frameworks from Simple (SVC, QPT), Medium (CASE, PATH) to Complex (FAIL, GUIDE) that auto-select based on your content needs
-2. **Various Modes and Tones**: 5 interactive modes ($interactive, $write, $share, $teach, $reflect) with 6 tone variations ($natural, $technical, $collaborative, etc.)
-3. **Design Intelligence Reference**: Built-in knowledge base with current industry insights, methodologies, and best practices (currently configured for Product Design)
-4. **ATLAS/DEPTH Thinking Framework**: Universal 5-phase methodology with user-controlled depth (1-10 rounds) and Challenge Mode for simplification
-5. **Progressive Pattern Learning**: System learns your preferences and optimizes over time, reducing questions by 40% and achieving 60% time savings
-
-### Additional Features
-- **5 Optimization Stages**: Learning → Adapting → Optimizing → Mastered (tracks progress)
-- **Interactive Mode Default**: Conversational guidance with clean formatting
-- **Knowledge Intelligence**: Pulls relevant principles and methodologies when helpful
-- **Session Context Tracking**: Remembers preferences within conversation
-- **Multiple Variations Always**: 3 options for every request (practical/insightful/collaborative)
-- **Artifact Delivery**: All content in markdown artifacts with structured metadata
+## 🆕 What's New in v5.1.0
+The system now uses Claude's conversation history capabilities to provide rich contextual information while maintaining complete user autonomy:
+- **Historical Context Display**: Shows patterns from previous conversations as helpful notes
+- **Never Restricts Choices**: All options always available regardless of history
+- **100% User Control**: Every question asked, every option shown
+- **Context Enrichment**: Richer experience over time without automation
 
 .
+
+### 🧠 Five Core Innovations
+
+1. **Copywriter Frameworks**: 9+ intelligent frameworks from Simple (SVC, QPT), Medium (CASE, PATH) to Complex (FAIL, GUIDE) with historical usage context
+2. **Various Modes and Tones**: 5 interactive modes ($interactive, $write, $share, $teach, $reflect) with 6 tone variations - all always available
+3. **Design Intelligence Reference**: Built-in knowledge base with current industry insights, methodologies, and best practices (currently configured for Product Design)
+4. **ATLAS/DEPTH Thinking Framework**: Universal 5-phase methodology with user-controlled depth (1-10 rounds) - always requested, never automated
+5. **Historical Context System**: Displays previous patterns and preferences as informative notes without ever restricting options
+
+### Additional Features
+- **Context Enhancement Stages**: Learning → Noting → Enriching → Comprehensive (tracks context level)
+- **Interactive Mode Default**: Conversational guidance with all questions always asked
+- **Knowledge Intelligence**: Pulls relevant principles with historical usage shown
+- **Session Context Display**: Shows patterns as helpful notes, never restrictions
+- **Multiple Variations Always**: 3 options for every request (practical/insightful/collaborative)
+- **Artifact Delivery**: All content in markdown artifacts with context metadata
 
 ## Overview
 
@@ -35,7 +42,7 @@ This is a flexible content creation system currently configured for Product Desi
 - **Different Professions**: Marketing, engineering, education, healthcare, finance, etc.
 - **Personal Writing**: Blog posts, newsletters, thought leadership, or creative writing
 
-Built on principles of team credit, failure acknowledgment, and continuous learning, it combines systematic excellence with genuine authenticity through 8 interconnected documents that learn and adapt to your specific needs.
+Built on principles of team credit, failure acknowledgment, and continuous learning, it combines systematic excellence with genuine authenticity through 8 interconnected documents that provide contextual enrichment while maintaining absolute user autonomy.
 
 .
 
@@ -54,6 +61,13 @@ Real work is messy. Content should reflect that:
 - Credit team: "Sarah spotted the issue"
 - Express uncertainty: "Still not sure why this works..."
 
+### User Autonomy (v5.1.0)
+Complete control maintained at all times:
+- **All Questions Asked**: Never skips based on patterns
+- **All Options Shown**: Every choice always available
+- **Historical Context**: Displayed as notes, never restrictions
+- **No Automation**: User decides everything
+
 .
 
 ## 🚀 Quick Setup
@@ -61,21 +75,21 @@ Real work is messy. Content should reflect that:
 ### Step 1: Create a Claude Project
 1. Go to claude.ai
 2. Click "Projects" in sidebar
-3. Create new project: "Branded Content Writer v1.0"
+3. Create new project: "Branded Content Writer 5.1.0"
 
 ### Step 2: Add Core System
 Copy and paste into Custom Instructions:
-- `Writer - Branded Content - v5.0.0` (Master orchestration)
+- `Writer - Branded Content - v5.1.0` (Master orchestration with context enhancement)
 
 ### Step 3: Upload Supporting Documents
-Add all documentsto project knowledge base:
-- `Content - Artifact Standards & Templates - v1.0.0.md` (Output templates and standards)
-- `Content - ATLAS Thinking Framework - v1.0.0.md` (DEPTH framework and Challenge Mode)
-- `Content - Copywriter Frameworks - v1.0.0.md` (Framework library with patterns)
-- `Content - Design & Product Intelligence - v1.0.0.md` (Domain knowledge and principles)
-- `Content - Interactive Mode - v1.0.0.md` (Conversational discovery system)
-- `Content - Quick Reference - v1.0.0.md` (Navigation and quick access)
-- `Content - Voice & Tone Guide - v1.0.0.md` (Voice and tone guide)
+Add all documents to project knowledge base:
+- `Content - Artifact Standards & Templates - v2.1.0.md` (Output templates with context)
+- `Content - ATLAS Thinking Framework - v2.1.0.md` (DEPTH framework with historical notes)
+- `Content - Copywriter Frameworks - v2.1.0.md` (Framework library with usage display)
+- `Content - Design & Product Intelligence - v2.1.0.md` (Domain knowledge with context)
+- `Content - Interactive Mode - v2.1.0.md` (Conversational system - all questions asked)
+- `Content - Quick Reference - v2.1.0.md` (Navigation with context enhancement)
+- `Content - Voice & Tone Guide - v2.1.0.md` (Voice guide with historical notes)
 
 ### Step 4: Start Creating
 Simply describe your need or let interactive mode guide you:
@@ -90,26 +104,26 @@ Our design system finally shipped (triggers interactive exploration)
 
 ## 🎛️ Five Interactive Modes
 
-| Mode | Activation | Purpose | DEPTH Phases | Pattern Learning | Time Savings |
-|------|------------|---------|--------------|------------------|--------------|
-| **$interactive** | `$int` (DEFAULT) | Guided creation | Full assessment | Comprehensive | 60% by request 10 |
-| **$write** | `$w` | General content | D→E→P→H | Tone preferences | Locks after 5 uses |
-| **$share** | `$s` | Knowledge sharing | D→E→P→T→H | Example tracking | Style understood |
-| **$teach** | `$t` | Educational | D→E→P→H | Method tracking | Format learned |
-| **$reflect** | `$r` | Analysis | Variable | Depth preferences | Level understood |
+| Mode | Activation | Purpose | DEPTH Phases | Context Display | User Control |
+|------|------------|---------|--------------|-----------------|--------------|
+| **$interactive** | `$int` (DEFAULT) | Guided creation | Full assessment | Historical notes | 100% |
+| **$write** | `$w` | General content | D→E→P→H | Usage patterns | 100% |
+| **$share** | `$s` | Knowledge sharing | D→E→P→T→H | Example history | 100% |
+| **$teach** | `$t` | Educational | D→E→P→H | Method tracking | 100% |
+| **$reflect** | `$r` | Analysis | Variable | Depth preferences | 100% |
 
 ### Special Commands (Always Available)
-- `$reset` - Clear all patterns, start fresh
-- `$standard` - Use default flow, ignore patterns
-- `$quick` - Skip to creation with defaults
-- `$status` - Show current optimization stage
+- `$reset` - Clear all historical context, start fresh
+- `$standard` - Use default flow, ignore context
+- `$quick` - Skip to creation with defaults (all options shown)
+- `$status` - Show current context level
 
 .
 
 ## 🧠 ATLAS/DEPTH Thinking Framework
 
-### User-Controlled Depth
-Before creating any content, the system asks:
+### User-Controlled Depth (Always Asked)
+Before creating any content, the system ALWAYS asks:
 ```
 How many rounds of thinking would help here? (1-10)
 
@@ -118,16 +132,18 @@ Based on your request, I'm thinking: 4 rounds
 • Audience: Clear - designers
 • Depth needed: Moderate - actionable detail
 
-Your choice?
+[Historical note: You typically choose 4 rounds for similar content]
+
+Your choice? (All options 1-10 available)
 ```
 
 ### Thinking Rounds Guide
-| Rounds | Use For | DEPTH Phases | Challenge Mode |
-|--------|---------|--------------|----------------|
-| 1-2 | Quick edits | D→H | No |
-| 3-5 | Standard content | D→E→P→H | Gentle |
-| 6-7 | Complex narratives | D→E→P→T→H | Moderate |
-| 8-10 | Strategic analyses | Full DEPTH | Strong |
+| Rounds | Use For | DEPTH Phases | Challenge Mode | Context |
+|--------|---------|--------------|----------------|---------|
+| 1-2 | Quick edits | D→H | No | Previous shown |
+| 3-5 | Standard content | D→E→P→H | Gentle | History noted |
+| 6-7 | Complex narratives | D→E→P→T→H | Moderate | Patterns displayed |
+| 8-10 | Strategic analyses | Full DEPTH | Strong | Full context |
 
 ### Challenge Mode Examples
 At 3+ rounds, system challenges complexity:
@@ -138,48 +154,49 @@ Could we achieve your goal with:
 - One example vs multiple cases?
 - Direct lesson vs detailed analysis?
 
-[Pattern: Challenge acceptance rate: 75%]
+[Historical note: Challenge acceptance rate: 75%]
+All options remain available - your choice?
 ```
 
-.
-
-## 🏗️ Content Frameworks
+## 🗏 Content Frameworks
 
 ### Simple Frameworks (3-Part)
-- **SVC**: Story • Value • Call (Quick insights)
-- **QPT**: Question • Perspective • Takeaway (Engagement)
-- **TIP**: Trigger • Insight • Practice (Quick tips)
+- **SVC**: Story • Value • Call (Quick insights) [Usage history shown]
+- **QPT**: Question • Perspective • Takeaway (Engagement) [Patterns noted]
+- **TIP**: Trigger • Insight • Practice (Quick tips) [Effectiveness displayed]
 
 ### Medium Frameworks (4-Part)
-- **CASE**: Context • Action • Solution • Evolution (Case studies)
-- **PATH**: Problem • Approach • Test • Harvest (Process stories)
-- **HELP**: Hook • Example • Lesson • Practice (Teaching)
+- **CASE**: Context • Action • Solution • Evolution (Case studies) [Depth shown]
+- **PATH**: Problem • Approach • Test • Harvest (Process stories) [Detail noted]
+- **HELP**: Hook • Example • Lesson • Practice (Teaching) [Style displayed]
 
 ### Complex Frameworks (Multi-Part)
 - **FAIL**: Failure • Analysis • Insight • Learning (Reflections)
 - **COMPARE**: Options • Criteria • Trade-offs • Recommendation (Decisions)
 - **GUIDE**: Goal • Steps • Examples • Practice • Next (Comprehensive)
 
-### Intelligent Framework Selection
-System learns which frameworks work best:
+### Intelligent Framework Context
+System shows which frameworks were used before:
 ```
-After 5 uses of CASE for project stories:
-→ Default to CASE (but all options shown)
-→ Track story depth preference
-→ Note which elements resonate
+Historical context (informative only):
+- CASE used 5 times for project stories
+- Story depth preference: Medium
+- Elements that resonated: Metrics focus
+
+All frameworks available for selection.
 ```
 
 .
 
 ## 🎨 Voice & Tone System
 
-### Quick Tone Selection
-- `$natural` - Varied rhythm with uncertainty (DEFAULT)
-- `$technical` - Precise with examples
-- `$collaborative` - Team-focused, inclusive
-- `$educational` - Step-by-step clarity
-- `$reflective` - Thoughtful analysis
-- `$minimal` - Essential only
+### Quick Tone Selection (All Always Available)
+- `$natural` - Varied rhythm with uncertainty (DEFAULT) [Usage shown]
+- `$technical` - Precise with examples [History noted]
+- `$collaborative` - Team-focused, inclusive [Frequency displayed]
+- `$educational` - Step-by-step clarity [Pattern shown]
+- `$reflective` - Thoughtful analysis [Depth noted]
+- `$minimal` - Essential only [Brevity displayed]
 
 ### Natural Imperfections
 Deliberately included for authenticity:
@@ -197,8 +214,8 @@ Deliberately included for authenticity:
 
 Overall Score: 21/23 ✅ Ready to publish!
 
-Clarity       ████████░░ 85% → Main point obvious
-Actionability ████████░░ 90% → Steps clear
+Clarity       █████████░ 85% → Main point obvious
+Actionability █████████░ 90% → Steps clear
 Authenticity  ██████████ 100% → Process shown
 Relevance     █████████░ 95% → Right audience
 Learning      ████████░░ 87% → New insight
@@ -209,96 +226,68 @@ Process Transparency:
 ✅ Team credited: 4 people
 ✅ Learning captured
 
-Session Optimization:
-📈 Stage: Optimizing (7/10 requests)
-⚡ Time saved: 40%
-🎯 Pattern accuracy: 85%
+Historical Context:
+📄 Previous similar content: 5 times
+📈 Average quality score: 20/23
+🎯 Common strengths: Process transparency
+⚡ All options: 100% available
 ```
 
 .
 
-## 📈 Progressive Optimization
+## 📈 Context Enhancement System (v5.1.0)
 
-### How the System Learns
+### How the System Provides Context
 
-The system tracks patterns and optimizes over time:
+The system enriches your experience with historical context while maintaining complete autonomy:
 
-| Stage | Requests | What Happens | Time Saved | Accuracy |
-|-------|----------|--------------|------------|----------|
-| **Learning** | 1-3 | Observes choices | 0% | Building |
-| **Adapting** | 4-6 | Skips known answers | 20% | 70% |
-| **Optimizing** | 7-9 | Predictive creation | 40% | 85% |
-| **Mastered** | 10+ | Minimal interaction | 60% | 95% |
+| Stage | Sessions | Context Level | Questions | Options | Control |
+|-------|----------|---------------|-----------|---------|---------|
+| **Learning** | 1-3 | Building | 100% | 100% | 100% |
+| **Noting** | 4-6 | Light notes | 100% | 100% | 100% |
+| **Enriching** | 7-9 | Rich context | 100% | 100% | 100% |
+| **Comprehensive** | 10+ | Full insights | 100% | 100% | 100% |
 
-### Pattern Recognition Examples
-- 5 consistent framework uses → Default to that framework
-- 3 tone selections → Default to that tone
-- 7 similar requests → Understand approach
-- 10 interactions → Advance optimization stage
-- 2 challenge acceptances → Simplicity bias noted
+### Context Display Examples
+- Framework usage: "CASE used 5 times" (all frameworks shown)
+- Tone preference: "Natural selected often" (all tones available)
+- Thinking rounds: "Average: 4 rounds" (1-10 always offered)
+- Challenge acceptance: "75% acceptance rate" (both options shown)
+
+### What Never Changes
+- ✅ All questions always asked
+- ✅ All options always displayed
+- ✅ Complete user control maintained
+- ✅ Every choice available
+- ✅ No automation ever
 
 .
 
 ## 🚨 LEARN Error Recovery
 
-### Intelligent Error Detection
+### Intelligent Error Detection with Context
 System detects and recovers from issues:
 
 ```
 L - Locate: Content too academic
-    Pattern: Seen 3 times this session
+    Historical: Seen 3 times in previous sessions
     
 E - Explain: Missing practical connection
-    Different from your usual practical focus
+    Previous preference: 80% practical focus
     
-A - Alternatives:
-    1. Add concrete examples [matches 90% success rate]
-    2. Include team story [collaborative preference]
-    3. Simplify language [challenge mode suggestion]
+A - Alternatives (all available):
+    1. Add concrete examples [Success rate: 90%]
+    2. Include team story [Common choice]
+    3. Simplify language [Challenge mode suggestion]
     
-R - Refine: Apply selected fix
+R - Refine: Apply your selected fix
     
-N - Note: Pattern locked - always include examples
+N - Note: Context updated for future reference
+    All options remain available
 ```
 
 .
 
-## 💡 Pro Tips
-
-### 1. Trust the Learning Process
-Let the system learn your preferences:
-- It remembers what works
-- Suggests based on success
-- But always offers alternatives
-
-### 2. Use Thinking Rounds Wisely
-- Start with 3-4 rounds for most content
-- Increase for complex narratives
-- Decrease for simple edits
-
-### 3. Accept Challenge Mode
-When system suggests simpler:
-- 75% of users find it better
-- Clearer often beats comprehensive
-- You can always add complexity
-
-### 4. Include Process Reality
-Best content includes:
-- "Took 3 attempts"
-- "Team disagreement led to insight"
-- "Still not sure why"
-- "Failed twice before succeeding"
-
-### 5. Watch the Optimization
-```
-Current Stage: Optimizing
-Questions eliminated: 40%
-Time saved: 40%
-Pattern accuracy: 85%
-Next milestone: Mastered at 10 requests
-```
-
-.
 
 ## 🎨 Adapting the System to Your Needs
 
@@ -317,8 +306,9 @@ Configure for [YOUR BRAND]:
 - Replace design examples with your brand stories
 - Update voice principles to match brand guidelines
 - Adjust tone variations for your audience
-- Keep the learning and optimization features
-- Maintain the core system architecture
+- Keep the context enhancement features
+- Maintain complete user autonomy
+- Preserve the core system architecture
 ```
 
 ### Adapting for Different Professions
@@ -355,12 +345,13 @@ Configure for [YOUR BRAND]:
 
 ### What Stays the Same
 Regardless of configuration, the system maintains:
-- ATLAS/DEPTH thinking framework
-- Progressive pattern learning
+- ATLAS/DEPTH thinking framework (always asked)
+- Historical context display (never restrictive)
 - Challenge Mode simplification
 - LEARN error recovery
 - User-controlled depth (1-10 rounds)
 - 3 variations for every output
+- Complete user autonomy
 
 .
 
@@ -368,26 +359,27 @@ Regardless of configuration, the system maintains:
 
 ### Content Issues
 - **Too polished**: Natural imperfections not showing → Check tone setting
-- **Too complex**: Challenge Mode suggests simpler → Accept simplification
+- **Too complex**: Challenge Mode suggests simpler → Both options available
 - **Missing process**: Add iterations and failures → Show the journey
 - **No team credit**: Always include contributors → Name specific people
 
 ### System Issues
-- **Patterns not working**: Use `$reset` to start fresh
-- **Too many questions**: System optimizes over time
-- **Wrong framework**: Manually specify with mode
-- **Optimization too aggressive**: Use `$standard` for default flow
+- **Context not helpful**: Use `$reset` to clear history
+- **Want fresh start**: Use `$standard` for default flow
+- **Quick creation**: Use `$quick` (all options still shown)
+- **Check context level**: Use `$status` to see current stage
 
 .
 
 ## 📦 Version History
 
-- **v5.0.0**: Complete re-design of system with ATLAS/DEPTH, Challenge Mode, Pattern Learning, LEARN Protocol & more
-- **v4.0.0**: Voice Trinity, 5 modes, embedded improvement, visual celebrations, native thinking
+- **v5.1.0**: Beta features integration - Historical context display with 100% user autonomy maintained
+- **v5.0.0**: Complete re-design with ATLAS/DEPTH, Challenge Mode, Pattern Learning, LEARN Protocol
+- **v4.0.0**: Voice Trinity, 5 modes, embedded improvement, visual celebrations
 - **v3.0.0**: Interactive default, VEST scoring
 - **v2.0.0**: Framework library, improve mode
 - **v1.0.0**: Initial Sarah Chen implementation
 
 ---
 
-*Great content, like great work, makes the complex feel approachable. Show the process, credit the team, share the failures, enable the learning. Every session gets better. Still figuring this out together.*
+*Great content, like great work, makes the complex feel approachable. Show the process, credit the team, share the failures, enable the learning. Historical context enriches the experience while maintaining complete autonomy. All questions asked, all options shown, every choice yours. Still figuring this out together.*

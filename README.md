@@ -41,8 +41,8 @@ Some of my non-client AI systems that I made available to the public. They were 
 ##### Automated content, documentation & prompt writing systems
 ——
 
-#### 1. ✍️ Branded Content Writer - v5.0.0 (NEW)
-**Flexible content system currently configured for Product Designers - adaptable for any brand, profession, or personal writing**
+#### 1. ✍️ Branded Content Writer - v5.1.0 (NEW)
+**Flexible content system with historical context enrichment - currently configured for Product Designers, adaptable for any brand, profession, or personal writing**
 
 - **Adaptable System & Current Configuration**: 
   - Currently set for Product Designers: case studies, process docs, design insights
@@ -50,17 +50,20 @@ Some of my non-client AI systems that I made available to the public. They were 
   - 9+ copywriter frameworks: Simple (SVC, QPT), Medium (CASE, PATH), Complex (FAIL, GUIDE)
   - Built-in knowledge base (currently Product Design - replaceable with your domain)
 
-- **5 Interactive Modes & 6 Tone Variations**: 
+- **5 Interactive Modes & 6 Tone Variations (All Always Available)**: 
   - Modes: $interactive (guided default), $write (general), $share (knowledge), $teach (educational), $reflect (analysis)
   - Tones: $natural (conversational), $technical (precise), $collaborative (team), $educational (clear), $reflective (thoughtful), $minimal (essential)
+  - Beta Feature: Shows historical usage patterns as helpful context, never restrictions
 
-- **ATLAS/DEPTH Framework & Intelligence**: 
-  - User-controlled thinking depth (1-10 rounds) with 5-phase methodology
-  - Progressive pattern learning: 60% time savings by interaction 20
-  - Challenge Mode at 3+ thinking rounds for simplification
-  - LEARN error recovery protocol with pattern-based prevention
+- **ATLAS/DEPTH Framework & Context Enhancement**: 
+  - User-controlled thinking depth (1-10 rounds) - always asked, never automated
+  - Historical context display: Shows patterns from previous conversations as notes
+  - Challenge Mode at 3+ thinking rounds for simplification (both options always shown)
+  - LEARN error recovery protocol with context-aware suggestions
 
-#### 2. 📋 Product Owner Writer - v7.0.0
+.
+
+#### 2. 📋 Product Owner Writer - v7.2.0
 **Transform vague requests into professional dev tickets, specs, docs, and text snippets with built-in complexity challenging**
 
 - **5 Intelligent Modes & Auto-Scaling**: 
@@ -80,6 +83,8 @@ Some of my non-client AI systems that I made available to the public. They were 
   - Auto-challenges at 3+ rounds: Gentle (1-2), Constructive (3-5), Strong (6-10)
   - REPAIR protocol: Recognize/Explain/Propose/Adapt/Iterate/Record errors
   - Pattern learning adapts to preferences and challenge acceptance
+
+.
 
 #### 3. 📄 Document Beautifier - v2.1.0
 **Transform unstructured documents into professional content with structured ATLAS thinking**
@@ -102,6 +107,8 @@ Some of my non-client AI systems that I made available to the public. They were 
   - 3-level challenges: Gentle (1-2), Constructive (3-4), Strong (5) complexity questioning
   - REPAIR protocol: Pattern-based error recovery and prevention
 
+.
+
 #### 4. 🎯 Prompt Engineering Assistant - v7.2.0 (NEW)
 **Transform vague requests into powerful AI prompts for ANY platform**
 
@@ -121,7 +128,7 @@ Some of my non-client AI systems that I made available to the public. They were 
   - Challenge Mode at 3+ rounds for simpler alternatives (intensity scales with depth)
   - REPAIR recovery protocol with table-based error handling
 
-.
+---
 
 ## ⚡ Automation Agents
 ##### Transform natural language into intelligent automation workflows
@@ -148,8 +155,7 @@ Some of my non-client AI systems that I made available to the public. They were 
   - Slot verification protocol before every task creation
   - REPAIR error recovery: Recognize/Explain/Propose/Adapt/Iterate/Record
 
-
-.
+---
 
 ## 💬 MCP Agents
 ##### MCP tools made easy with conversational systems
@@ -176,6 +182,8 @@ Some of my non-client AI systems that I made available to the public. They were 
   - Workflow adaptation to your preferences
   - Progressive efficiency improvements
 
+.
+
 #### 7. 🚀 ClickUp Agent - v2.1.0
 **Transform natural language into organized ClickUp workspaces while actively challenging unnecessary complexity**
 
@@ -196,6 +204,8 @@ Some of my non-client AI systems that I made available to the public. They were 
   - 3-level challenges: Gentle (1-2 rounds), Constructive (3-6), Strong (7-10)
   - Questions complexity before building: "Single space clearer?" "Essential fields only?"
   - REPAIR protocol for graceful error recovery
+
+.
 
 #### 8. 📝 Notion Agent - v1.3.0
 **Natural language control of Notion workspaces**
@@ -218,6 +228,8 @@ Some of my non-client AI systems that I made available to the public. They were 
   - Design principles and optimization tips
   - Migration guidance from other platforms
 
+.
+
 #### 9. 🖼️ Imagician Agent - v1.4.0
 **Image file editing and conversion through conversation**
 
@@ -238,6 +250,8 @@ Some of my non-client AI systems that I made available to the public. They were 
   - Facebook: Cover (820x312), Profile (180x180), Post (1200x630)
   - YouTube: Thumbnail (1280x720), Banner (2560x1440)
   - Auto-detection of platform requirements
+
+.
 
 #### 10. 🎬 Video Audio Agent - v1.0.0
 **Video and audio processing through natural conversation**
@@ -260,7 +274,7 @@ Some of my non-client AI systems that I made available to the public. They were 
   - Size reduction percentages and quality metrics
   - Time tracking with completion estimates
 
-.
+---
 
 ## 💻 Development Systems
 ##### IDE enhancements & App Prototyping
@@ -287,6 +301,8 @@ Some of my non-client AI systems that I made available to the public. They were 
   - Cross-reference documentation
   - Real-time testing protocols
 
+.
+
 #### 12. 🚀 Lovable System Prompts - v2.0.0
 **Three specialized experts for minimal Lovable platform credit usage**
 
@@ -308,7 +324,7 @@ Some of my non-client AI systems that I made available to the public. They were 
   - Team size and timeline considerations
   - Progressive enhancement strategy
 
-.
+---
 
 ## 🔧 Common Features
 
@@ -326,7 +342,7 @@ All systems support Model Context Protocol tools:
 - **Visual Dashboards**: Progress and quality metrics
 - **Documentation**: Every output includes guidance
 
-.
+---
 
 ## 📦 Installation
 
@@ -351,7 +367,7 @@ git clone https://github.com/flowy11/imagician.git  # For Imagician Agent
 docker-compose up -d
 ```
 
-.
+---
 
 ## 📚 Resources
 - [MCP Protocol Documentation](https://modelcontextprotocol.io)
