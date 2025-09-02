@@ -77,7 +77,7 @@ Some of my non-client AI systems that I made available to the public. They were 
   - ClickUp MCP direct workspace creation with preserved formatting
   - QA warning above checklist, placeholders for missing links
 
-  - **ATLAS Framework & Challenge Mode**: 
+- **ATLAS Framework & Challenge Mode**: 
   - 5-phase thinking (Assess/Transform/Layer/Assess/Synthesize) with 1-10 rounds
   - Auto-challenges at 3+ rounds: Gentle (1-2), Constructive (3-5), Strong (6-10)
   - REPAIR protocol: Recognize/Explain/Propose/Adapt/Iterate/Record errors
