@@ -1,10 +1,10 @@
-# Product Owner System - User Guide v8.0.0
+# Product Owner System - User Guide v8.1.0
 
 The Product Owner system transforms requests into professional development tickets, implementation specs, documentation, text snippets, and beautifully formatted documents through intelligent interactive guidance with built-in complexity challenging. By focusing on WHAT needs doing and WHY it matters (not HOW to implement), it creates lean, actionable artifacts that bridge the communication gap between product and development teams.
 
-## 📑 Table of Contents
+## 📋 Table of Contents
 
-- [🆕 What's New in v8.0.0](#-whats-new-in-v800)
+- [🆕 What's New in v8.1.0](#-whats-new-in-v810)
 - [✨ Key Features](#-key-features)
 - [🚀 Quick Setup](#-quick-setup)
 - [🎛️ Operating Modes](#️-operating-modes)
@@ -25,11 +25,19 @@ The Product Owner system transforms requests into professional development ticke
 
 .
 
-## 🆕 What's New in v8.0.0
+## 🆕 What's New in v8.1.0
 
-### Document Beautifier Mode 📄
+### Streamlined Architecture
+**Removed Prompt Improvement Module:**
+- Simplified system architecture by removing the prompt improvement layer
+- Direct mode detection without request enhancement preprocessing
+- Reduced document count from 7 to 6 essential files
+- Faster processing with cleaner request analysis
+- Focus on core functionality without intermediary transformations
 
-**NEW $beautify Mode:**
+### Maintained from v8.0.0
+
+**Document Beautifier Mode:**
 - Transform unstructured text into clean, scannable documents
 - Extreme simplification bias (challenges at 2+ rounds vs 3+ for other modes)
 - Two content modes: **Strict** (preserve only) vs **Enhanced** (add clarifications)
@@ -37,8 +45,6 @@ The Product Owner system transforms requests into professional development ticke
 - FORM scoring: Flow (20%), Organization (30%), Readability (35%), Metadata (15%)
 - Structure frameworks: SCAN (70%), HIERARCHY (20%), PREP (10%)
 - Content integrity reports for every beautified document
-
-### Enhanced from v7.0.0
 
 **ATLAS Thinking Framework:**
 - Universal thinking methodology with 5-phase structured approach
@@ -58,12 +64,6 @@ The Product Owner system transforms requests into professional development ticke
 - Pattern learning from errors
 - Graceful degradation maintaining functionality
 
-**Advanced Intelligence:**
-- Pattern learning and adaptation within sessions
-- Context preservation across interactions
-- Smart calibration based on complexity factors
-- Session awareness with preference tracking
-
 .
 
 ## ✨ Key Features
@@ -72,12 +72,12 @@ The Product Owner system transforms requests into professional development ticke
 - **🧠 ATLAS Framework**: 5-phase universal thinking methodology with adaptive depth
 - **💡 Challenge Mode**: Active complexity challenging with lean alternatives
 - **🎯 Smart Complexity**: Automatic detection and scaling
-- **🔄 Pattern Learning**: Adapts to user preferences and successful patterns
+- **📄 Pattern Learning**: Adapts to user preferences and successful patterns
 - **🚨 REPAIR Protocol**: Structured error recovery with learning
 - **📊 Thinking Calibration**: Formula-based recommendations (1-10 rounds)
 - **🎛️ 6 Intelligent Modes**: Discovery, $ticket, $spec, $doc, $text, $beautify
 - **🔗 Platform Ready**: Direct ClickUp integration after creation
-- **🔍 Professional Symbols**: ⌘, ◇, ◊, ◳, →, ✦, ✓, ⋈, ∅, ⌆
+- **📝 Professional Symbols**: ⌘, ◇, ◊, ◳, →, ✦, ✓, ⋈, ∅, ⌆
 - **📋 Strict Formatting**: TOC, dividers, proper Key Problems/Reasons format
 - **⚡ Phased Delivery**: Automatic breakdown of large initiatives
 - **🎪 Session Context**: Tracks preferences and adapts behavior
@@ -90,22 +90,21 @@ The Product Owner system transforms requests into professional development ticke
 1. Go to claude.ai
 2. Click "Projects" in sidebar
 3. Click "Create project"
-4. Name it "Product Owner v8.0.0"
+4. Name it "Product Owner v8.1.0"
 
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Writer - Product Owner - v8.0.0.md`
+3. Copy and paste: `Writer - Product Owner - v8.1.0.md`
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
-Add these **7 essential documents** to your project's knowledge base:
+Add these **6 essential documents** to your project's knowledge base:
 - `Product Owner - ATLAS Thinking Framework.md` (ATLAS thinking methodology)
 - `Product Owner - Reference Guide.md` (symbols, templates, standards, beautify templates)
 - `Product Owner - Interactive Mode.md` (all mode interactions with Challenge Mode)
 - `Product Owner - Quick Card.md` (daily command reference)
 - `Product Owner - Platform Integration.md` (ClickUp handoff)
-- `Product Owner - Prompt Improvement.md` (request clarity enhancement)
 
 ### Step 4: Install MCP Tools (Optional - for ClickUp only)
 See [MCP Installation](#-installing-mcp-tools) section below
@@ -605,12 +604,11 @@ I'm on [Windows/Mac/Linux]. Give me exact commands.
 
 ## ⚠️ Important Notes
 
-### New in v8.0.0
-- **Beautify Mode** - Document formatting with 2+ round challenges
-- **Content Modes** - Strict (preserve) vs Enhanced (clarify)
-- **Format Levels** - Minimal → Standard → Deep progression
-- **FORM Scoring** - Readability metrics for documents
-- **Structure Frameworks** - SCAN, HIERARCHY, PREP patterns
+### New in v8.1.0
+- **Streamlined Architecture** - Removed prompt improvement module for cleaner processing
+- **Direct Mode Detection** - No preprocessing layer, faster response
+- **Reduced Complexity** - 6 essential documents instead of 7
+- **Maintained Core Features** - All v8.0.0 functionality preserved
 
 ### Critical Requirements (Maintained)
 - **Table of Contents** - MANDATORY for all tickets (sections only)
@@ -622,7 +620,7 @@ I'm on [Windows/Mac/Linux]. Give me exact commands.
 - **Dependencies** - Include with ⋈ when needed
 
 ### Core Architecture
-- **7 essential documents** - Includes beautify templates in Reference Guide
+- **6 essential documents** - Streamlined documentation set
 - **Native thinking** - User-controlled rounds (1-10, 1-5 for beautify)
 - **6 operating modes** - All interactive including beautify
 - **Strict standards** - Consistent formatting
@@ -640,6 +638,7 @@ I'm on [Windows/Mac/Linux]. Give me exact commands.
 
 ## 📦 Version History
 
+- **v8.1.0**: Removed prompt improvement module, streamlined to 6 documents, direct mode detection
 - **v8.0.0**: Beautify mode added with extreme simplification bias, 2+ round challenges, Strict/Enhanced modes, FORM scoring
 - **v7.0.0**: ATLAS Framework, Challenge Mode, REPAIR Protocol, pattern learning, streamlined docs (50% reduction)
 - **v6.2.0**: Stricter formatting standards, updated symbols (◳, ⋈), mandatory TOC/dividers
@@ -660,13 +659,12 @@ I'm on [Windows/Mac/Linux]. Give me exact commands.
 ## 📚 Additional Resources
 
 ### Core System Documents
-- `Writer - Product Owner.md` - Main system prompt (v8.0.0)
+- `Writer - Product Owner.md` - Main system prompt (v8.1.0)
 - `Product Owner - ATLAS Thinking Framework.md` - Universal thinking methodology
 - `Product Owner - Reference Guide.md` - Symbols, templates, standards, beautify templates
 - `Product Owner - Interactive Mode.md` - Mode interactions with challenges
 - `Product Owner - Quick Card.md` - Daily command reference
 - `Product Owner - Platform Integration.md` - ClickUp handoff
-- `Product Owner - Prompt Improvement.md` - Request clarity enhancement
 
 ### Beautify Mode Resources
 - [Beautify Templates](Product Owner - Reference Guide.md#beautify-templates) - All format templates
@@ -699,4 +697,4 @@ I'm on [Windows/Mac/Linux]. Give me exact commands.
 
 .
 
-*Product Owner v8.0.0: Beautify mode for document transformation. Extreme simplification bias with 2+ round challenges. Strict mode preserves voice. FORM scoring ensures readability. Six intelligent modes with user-controlled depth. Always challenging complexity, always seeking simplicity.*
+*Product Owner v8.1.0: Streamlined architecture without prompt improvement layer. Beautify mode for document transformation. Extreme simplification bias with 2+ round challenges. Strict mode preserves voice. FORM scoring ensures readability. Six intelligent modes with user-controlled depth. Always challenging complexity, always seeking simplicity.*
