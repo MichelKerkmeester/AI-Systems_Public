@@ -1,4 +1,4 @@
-# Branded Content Writer - User Guide v5.1.2
+# Branded Content Writer - User Guide v5.2.0
 
 This is a flexible content creation system that currently focuses on writing content for Product Designers and design teams. The system can be easily adjusted to write content for a specific brand voice, different types of professions (marketing, engineering, education), or personal writing styles. It transforms expertise into clear, practical content through contextual enrichment, systematic thinking, and authentic process documentation.
 
@@ -10,8 +10,16 @@ This is a flexible content creation system that currently focuses on writing con
 
 .
 
-## 🆕 What's New in v5.1.2
-The system now uses Claude's conversation history capabilities to provide rich contextual information while maintaining complete user autonomy:
+## 🆕 What's New in v5.2.0
+The system now includes enhanced design intelligence and comprehensive UX/UI knowledge:
+- **Expanded Design Intelligence**: Complete UX/UI fundamentals, tool ecosystem coverage, and market insights
+- **Enhanced Knowledge Areas**: Visual hierarchy, interaction patterns, research methods, and design systems architecture
+- **Current Tool Landscape**: Figma ecosystem (72% market share), design-to-dev workflows, AI tool integration
+- **Market Reality 2025**: Hiring trends, compensation data, skill requirements, and emerging roles
+- **Atomic Design Integration**: Brad Frost's methodology for scalable design systems
+- **Metrics & ROI Framework**: Design impact measurement and business value calculation
+
+### Previous v5.1.2 Features
 - **Historical Context Display**: Shows patterns from previous conversations as helpful notes
 - **Never Restricts Choices**: All options always available regardless of history
 - **100% User Control**: Every question asked, every option shown
@@ -24,8 +32,8 @@ The system now uses Claude's conversation history capabilities to provide rich c
 
 1. **Copywriter Frameworks**: 9+ intelligent frameworks from Simple (SVC, QPT), Medium (CASE, PATH) to Complex (FAIL, GUIDE) with historical usage context
 2. **Various Modes and Tones**: 5 interactive modes ($interactive, $write, $share, $teach, $reflect) with 6 tone variations - all always available
-3. **Design Intelligence Reference**: Built-in knowledge base with current industry insights, methodologies, and best practices (currently configured for Product Design)
-4. **ATLAS/DEPTH Thinking Framework**: Universal 5-phase methodology with user-controlled depth (1-10 rounds) - always requested, never automated
+3. **Enhanced Design Intelligence (v1.2.0)**: Comprehensive knowledge base with UX/UI fundamentals, tool ecosystem, market insights, and emerging technologies
+4. **DEPTH Thinking Framework**: Universal 5-phase methodology with user-controlled depth (1-10 rounds) - always requested, never automated
 5. **Historical Context System**: Displays previous patterns and preferences as informative notes without ever restricting options
 
 ### Additional Features
@@ -62,7 +70,7 @@ Real work is messy. Content should reflect that:
 - Credit team: "Sarah spotted the issue"
 - Express uncertainty: "Still not sure why this works..."
 
-### User Autonomy (v5.1.2)
+### User Autonomy (v5.2.0)
 Complete control maintained at all times:
 - **All Questions Asked**: Never skips based on patterns
 - **All Options Shown**: Every choice always available
@@ -83,20 +91,20 @@ All content artifacts include:
 ### Step 1: Create a Claude Project
 1. Go to claude.ai
 2. Click "Projects" in sidebar
-3. Create new project: "Branded Content Writer 5.1.2"
+3. Create new project: "Branded Content Writer 5.2.0"
 
 ### Step 2: Add Core System
 Copy and paste into Custom Instructions:
-- `Writer - Branded Content - v5.1.2` (Master orchestration with context enhancement)
+- `Writer - Branded Content - v5.2.0` (Master orchestration with context enhancement)
 
 ### Step 3: Upload Supporting Documents
 Add all documents to project knowledge base:
 - `Content - Artifact Standards & Templates - v1.1.2.md` (Output templates with context)
-- `Content - ATLAS Thinking Framework - v1.1.2.md` (DEPTH framework with historical notes)
+- `Content - DEPTH Thinking Framework - v1.1.2.md` (DEPTH framework with historical notes)
 - `Content - Copywriter Frameworks - v1.1.2.md` (Framework library with usage display)
-- `Content - Design & Product Intelligence - v1.1.2.md` (Domain knowledge with context)
+- `Content - Design & Product Intelligence - v1.2.0.md` (Enhanced domain knowledge with UX/UI fundamentals)
 - `Content - Interactive Mode - v1.1.2.md` (Conversational system - all questions asked)
-- `Content - Quick Reference - v1.1.2.md` (Navigation with context enhancement)
+- `Content - Quick Reference - v1.2.0.md` (Navigation with enhanced knowledge areas)
 - `Content - Voice & Tone Guide - v1.1.2.md` (Voice guide with historical notes)
 
 ### Step 4: Start Creating
@@ -128,7 +136,7 @@ Our design system finally shipped (triggers interactive exploration)
 
 .
 
-## 🧠 ATLAS/DEPTH Thinking Framework
+## 🧠 DEPTH Thinking Framework
 
 ### User-Controlled Depth (Always Asked)
 Before creating any content, the system ALWAYS asks:
@@ -215,6 +223,39 @@ Deliberately included for authenticity:
 
 .
 
+## 💡 Enhanced Knowledge Areas (v5.2.0)
+
+### UX/UI Fundamentals
+- **Core UX Principles**: User control, consistency, recognition over recall
+- **Visual Hierarchy**: Size, color, space, position, typography
+- **Interaction Patterns**: Navigation, input, feedback patterns
+- **Accessibility Standards**: WCAG 2.1 Level AA, inclusive design
+
+### Design Process & Methodologies
+- **Design Thinking**: Empathize → Define → Ideate → Prototype → Test
+- **Lean UX**: Build → Measure → Learn cycles
+- **Double Diamond**: Discover → Define → Develop → Deliver
+- **Atomic Design**: Atoms → Molecules → Organisms → Templates → Pages
+
+### Tool Ecosystem 2025
+- **Market Leaders**: Figma (72%), design-to-dev workflows
+- **AI Integration**: 74% of teams using AI tools
+- **Collaboration Stack**: FigJam, Notion, Linear, Slack
+- **Research Tools**: Maze, Dovetail, UserTesting
+
+### Market Reality
+- **Hiring Landscape**: 300+ applicants per role average
+- **Compensation Trends**: Regional adjustments, skill premiums
+- **Emerging Roles**: AI Design Specialist, Design Engineer
+- **Team Ratios**: 1:5-8 designer-to-developer optimal
+
+### Success Metrics
+- **ROI Models**: $1 in UX returns $100 (IBM model)
+- **Design KPIs**: Task success, error rates, adoption
+- **Business Impact**: Conversion, retention, NPS correlation
+
+.
+
 ## 📊 Quality Scoring System
 
 ```
@@ -244,7 +285,7 @@ Historical Context:
 
 .
 
-## 📈 Context Enhancement System (v5.1.2)
+## 📈 Context Enhancement System (v5.2.0)
 
 ### How the System Provides Context
 
@@ -350,7 +391,7 @@ Every content artifact follows this format:
 - Preference patterns shown
 - All options available
 
-**Knowledge angle:** Lean UX methodology
+**Knowledge angle:** UX fundamentals, tool ecosystem
 ```
 
 .
@@ -364,6 +405,7 @@ The system comes pre-configured for Product Designers with:
 - Team collaboration focus
 - Iteration and failure transparency
 - Design tool references (Figma, Sketch, etc.)
+- Market insights and career guidance
 
 ### How to Adapt for Your Brand
 Simply update the core documents with:
@@ -412,7 +454,7 @@ Configure for [YOUR BRAND]:
 
 ### What Stays the Same
 Regardless of configuration, the system maintains:
-- ATLAS/DEPTH thinking framework (always asked)
+- DEPTH thinking framework (always asked)
 - Historical context display (never restrictive)
 - Challenge Mode simplification
 - LEARN error recovery
@@ -442,10 +484,11 @@ Regardless of configuration, the system maintains:
 
 ## 📦 Version History
 
+- **v5.2.0**: Enhanced Design Intelligence - UX/UI fundamentals, tool ecosystem, market insights, Atomic Design integration
 - **v5.1.2**: AI System header requirement added - Standardized artifact formatting
 - **v5.1.1**: Historical context refinements - Pattern recognition improvements
 - **v5.1.0**: Beta features integration - Historical context display with 100% user autonomy maintained
-- **v5.0.0**: Complete re-design with ATLAS/DEPTH, Challenge Mode, Pattern Learning, LEARN Protocol
+- **v5.0.0**: Complete re-design with DEPTH, Challenge Mode, Pattern Learning, LEARN Protocol
 - **v4.0.0**: Voice Trinity, 5 modes, embedded improvement, visual celebrations
 - **v3.0.0**: Interactive default, VEST scoring
 - **v2.0.0**: Framework library, improve mode
