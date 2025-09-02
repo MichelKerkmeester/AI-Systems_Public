@@ -1,17 +1,18 @@
-# Product Owner System - User Guide v7.0.0
+# Product Owner System - User Guide v8.0.0
 
-The Product Owner system transforms requests into professional development tickets, implementation specs, documentation, and text snippets through intelligent interactive guidance with built-in complexity challenging. By focusing on WHAT needs doing and WHY it matters (not HOW to implement), it creates lean, actionable artifacts that bridge the communication gap between product and development teams.
+The Product Owner system transforms requests into professional development tickets, implementation specs, documentation, text snippets, and beautifully formatted documents through intelligent interactive guidance with built-in complexity challenging. By focusing on WHAT needs doing and WHY it matters (not HOW to implement), it creates lean, actionable artifacts that bridge the communication gap between product and development teams.
 
 ## 📑 Table of Contents
 
-- [🆕 What's New in v7.0.0](#-whats-new-in-v700)
+- [🆕 What's New in v8.0.0](#-whats-new-in-v800)
 - [✨ Key Features](#-key-features)
 - [🚀 Quick Setup](#-quick-setup)
 - [🎛️ Operating Modes](#️-operating-modes)
 - [🎯 Automatic Complexity Detection](#-automatic-complexity-detection)
+- [📄 Document Beautifier](#-document-beautifier-beautify)
 - [💻 Implementation Specs](#-implementation-specs-spec)
 - [📚 Documentation](#-documentation-doc)
-- [✏️ Text Snippets](#️-text-snippets-text)
+- [✍️ Text Snippets](#️-text-snippets-text)
 - [🔗 Platform Integration](#-platform-integration)
 - [🧠 ATLAS Thinking Framework](#-atlas-thinking-framework)
 - [💡 Challenge Mode](#-challenge-mode)
@@ -24,18 +25,29 @@ The Product Owner system transforms requests into professional development ticke
 
 .
 
-## 🆕 What's New in v7.0.0
+## 🆕 What's New in v8.0.0
 
-### Revolutionary Features 🚀
+### Document Beautifier Mode 📄
+
+**NEW $beautify Mode:**
+- Transform unstructured text into clean, scannable documents
+- Extreme simplification bias (challenges at 2+ rounds vs 3+ for other modes)
+- Two content modes: **Strict** (preserve only) vs **Enhanced** (add clarifications)
+- Three format levels: **Minimal** → **Standard** → **Deep** (always starts minimal)
+- FORM scoring: Flow (20%), Organization (30%), Readability (35%), Metadata (15%)
+- Structure frameworks: SCAN (70%), HIERARCHY (20%), PREP (10%)
+- Content integrity reports for every beautified document
+
+### Enhanced from v7.0.0
 
 **ATLAS Thinking Framework:**
 - Universal thinking methodology with 5-phase structured approach
-- Adaptive depth calibration (1-10 rounds)
+- Adaptive depth calibration (1-10 rounds, 1-5 for beautify)
 - User-controlled thinking for optimal output quality
 - Different phases activate based on complexity
 
 **Challenge Mode:**
-- Automatic activation at 3+ thinking rounds
+- Automatic activation at 3+ thinking rounds (2+ for beautify)
 - Constructive pushback against unnecessary complexity
 - Three intensity levels based on thinking depth
 - Always proposes simpler, leaner alternatives
@@ -52,32 +64,20 @@ The Product Owner system transforms requests into professional development ticke
 - Smart calibration based on complexity factors
 - Session awareness with preference tracking
 
-**Streamlined Documentation:**
-- 50% reduction in system documentation size
-- Improved maintainability and clarity
-- Smart references between documents
-- Balanced detail with external references
-
-### Enhanced from v6.2.0
-- All formatting standards maintained (TOC, dividers, Key Problems/Reasons)
-- Symbol consistency (◳ for Designs, ⋈ for Dependencies)
-- Platform integration with ClickUp MCP
-- 5 operating modes with interactive guidance
-- Professional output standards
-
 .
 
 ## ✨ Key Features
 
+- **📄 NEW Beautify Mode**: Document formatting with extreme simplification bias
 - **🧠 ATLAS Framework**: 5-phase universal thinking methodology with adaptive depth
 - **💡 Challenge Mode**: Active complexity challenging with lean alternatives
-- **🎯 Smart Complexity**: Automatic detection and scaling (Simple/Standard/Complex)
+- **🎯 Smart Complexity**: Automatic detection and scaling
 - **🔄 Pattern Learning**: Adapts to user preferences and successful patterns
 - **🚨 REPAIR Protocol**: Structured error recovery with learning
 - **📊 Thinking Calibration**: Formula-based recommendations (1-10 rounds)
-- **🎛️ 5 Intelligent Modes**: Discovery, $ticket, $spec, $doc, $text
+- **🎛️ 6 Intelligent Modes**: Discovery, $ticket, $spec, $doc, $text, $beautify
 - **🔗 Platform Ready**: Direct ClickUp integration after creation
-- **📝 Professional Symbols**: 📘, ◇, ◻️, ◊, ◳, →, ✦, ✓, ⋈, ⚡, 📚
+- **🔍 Professional Symbols**: ⌘, ◇, ◊, ◳, →, ✦, ✓, ⋈, ∅, ⌆
 - **📋 Strict Formatting**: TOC, dividers, proper Key Problems/Reasons format
 - **⚡ Phased Delivery**: Automatic breakdown of large initiatives
 - **🎪 Session Context**: Tracks preferences and adapts behavior
@@ -90,19 +90,19 @@ The Product Owner system transforms requests into professional development ticke
 1. Go to claude.ai
 2. Click "Projects" in sidebar
 3. Click "Create project"
-4. Name it "Product Owner v7.0.0"
+4. Name it "Product Owner v8.0.0"
 
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `product-owner-main-updated.md`
+3. Copy and paste: `Writer - Product Owner - v8.0.0.md`
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
-Add these **6 essential documents** to your project's knowledge base:
+Add these **7 essential documents** to your project's knowledge base:
 - `Product Owner - ATLAS Thinking Framework.md` (ATLAS thinking methodology)
-- `Product Owner - Reference Guide.md` (symbols, templates, standards)
-- `Product Owner - Interactive Flows.md` (all mode interactions with Challenge Mode)
+- `Product Owner - Reference Guide.md` (symbols, templates, standards, beautify templates)
+- `Product Owner - Interactive Mode.md` (all mode interactions with Challenge Mode)
 - `Product Owner - Quick Card.md` (daily command reference)
 - `Product Owner - Platform Integration.md` (ClickUp handoff)
 - `Product Owner - Prompt Improvement.md` (request clarity enhancement)
@@ -117,19 +117,21 @@ $ticket payment integration      # Direct ticket with auto-scaling
 $spec modal component           # Direct implementation spec
 $doc analytics dashboard        # Direct documentation
 $text error message            # Direct snippet (always artifact)
+$beautify meeting notes        # Format document (NEW!)
 ```
 
 .
 
 ## 🎛️ Operating Modes
 
-| Mode | Command | Purpose | Output | Interactive |
-|------|---------|---------|--------|-------------|
-| **Discovery** | DEFAULT | Figure out what to create | Varies | Yes |
-| **Ticket** | `$ticket` | Development tickets | Auto-scales 2-8 sections | Yes |
-| **Spec** | `$spec` | Frontend implementations | Code blocks | Yes |
-| **Documentation** | `$doc` | User guides | Feature docs | Yes |
-| **Text** | `$text` | Quick snippets | Artifact always | Minimal |
+| Mode | Command | Purpose | Output | Interactive | Challenge |
+|------|---------|---------|--------|-------------|-----------|
+| **Discovery** | DEFAULT | Figure out what to create | Varies | Yes | 3+ rounds |
+| **Ticket** | `$ticket` | Development tickets | Auto-scales 2-8 sections | Yes | 3+ rounds |
+| **Spec** | `$spec` | Frontend implementations | Code blocks | Yes | 3+ rounds |
+| **Documentation** | `$doc` | User guides | Feature docs | Yes | 3+ rounds |
+| **Text** | `$text` | Quick snippets | Artifact always | Minimal | Rarely |
+| **Beautify** | `$beautify` | Format documents | Clean structure | Yes | **2+ rounds** |
 
 ### Discovery Flow (Default)
 When no mode is specified, the system helps determine what to create:
@@ -142,8 +144,9 @@ What would you like to create?
 2. Implementation spec - Frontend code/styling solution
 3. Product documentation - User guide or feature docs
 4. Text snippet - Quick description or copy
+5. Document formatting - Clean up and organize existing text
 
-Which best fits? (1-4)
+Which best fits? (1-5)
 ```
 
 ### Direct Mode Activation
@@ -152,6 +155,7 @@ Use $ prefix to skip discovery:
 - `$spec` → Straight to implementation questions
 - `$doc` → Straight to documentation questions
 - `$text` → Minimal questions for quick content
+- `$beautify` → Straight to formatting options
 
 .
 
@@ -167,6 +171,16 @@ The system intelligently detects complexity based on your responses:
 | Feature, dashboard | **Standard** | 4-5 | 8-12 |
 | Platform, architecture | **Complex** | 6-8 with phases | 12-20 |
 
+### For $beautify Mode
+
+Document complexity based on length and structure:
+
+| Word Count | Format Level | Elements | Challenge |
+|------------|--------------|----------|-----------|
+| <500 | **Minimal** | Headers only, no TOC | Never |
+| 500-2000 | **Standard** | Headers + TOC + sections | If complex |
+| >2000 | **Deep** | Full restructure | Always |
+
 ### Mandatory Formatting (ALL Tickets)
 
 Every ticket MUST include:
@@ -178,66 +192,6 @@ Every ticket MUST include:
 - **Designs & References** - Section with ◳ symbol (placeholders if no links)
 - **Dependencies** - Section with ⋈ symbol when applicable
 
-### Enhanced Detection Keywords
-
-**Simple Triggers:**
-- "fix", "bug", "broken", "error", "typo"
-- "update", "change", "modify", "adjust"
-- Single component, < 1 week timeline
-
-**Standard Triggers:**
-- "feature", "dashboard", "workflow", "process"
-- "integration" (single), "redesign"
-- Multiple components, 1-3 week timeline
-
-**Complex Triggers:**
-- "platform", "architecture", "migration", "enterprise"
-- "compliance", "security", "multi-tenant"
-- Multiple teams, > 1 month timeline
-
-### Example Structure
-```markdown
-[BE] Authentication Fix
-
-## 📋 Table of Contents
-- [📘 About](#-about)
-- [◳ Designs & References](#-designs--references)
-- [◇ Requirements](#-requirements)
-- [✦ Success Criteria](#-success-criteria)
-- [✓ Resolution Checklist](#-resolution-checklist)
-
-# 📘 About
-
-Users cannot log in due to token validation error.
-
----
-
-### → Key problems:
-- Authentication tokens expiring prematurely
-- All users blocked from platform access
-
-### → Reasons why:
-- Critical blocker preventing all user access
-- Revenue impact of $50K per hour of downtime
-
----
-
-## ◳ Designs & References
-- [System architecture diagram - to be added]
-- [Error logs dashboard - link pending]
-
----
-
-## ✓ Resolution Checklist
-
-⚠️ Complete all Resolution Checklist items before moving to QA
-
-[] Fix token validation logic
-[] Add comprehensive test coverage
-[] Deploy hotfix to production
-
-[Continues with all sections and dividers]
-```
 
 .
 
@@ -288,33 +242,14 @@ Quick setup:
 3. **Comprehensive** - All details, tips, workflows
 
 ### Documentation Symbol Usage
-- **◻️** - Feature sections
+- **◇** - Feature sections
 - **◊** - Sub-headings (bold)
 - **→** - References
-- **📚** - Additional resources
-
-### Interactive Flow
-```
-User: $doc API authentication
-
-System: Let's document API authentication! 📚
-
-How many thinking rounds should I use? (1-10)
-Based on documentation, I recommend: 2-3 rounds
-
-User: 3
-
-I'll help create clear API documentation.
-
-1. **Who will read this?** (developers/end users/both)
-2. **Authentication methods?** (OAuth/API keys/JWT)
-
-[Creates structured documentation artifact]
-```
+- **⌆** - Additional resources
 
 .
 
-## ✏️ Text Snippets ($text)
+## ✍️ Text Snippets ($text)
 
 ### Quick Content Generation
 
@@ -329,7 +264,7 @@ Perfect for:
 ```
 User: $text error message for payment failure
 
-System: Let's write your error message! ✏️
+System: Let's write your error message! ✍️
 
 How many thinking rounds should I use? (1-2 typical for snippets)
 
@@ -346,6 +281,97 @@ User: Customer-facing UI
 
 .
 
+## 📄 Document Beautifier ($beautify)
+
+### Transform Unstructured Text
+
+The beautify mode transforms messy, unformatted text into clean, professional documents with extreme simplification bias.
+
+### Interactive Flow
+```
+User: $beautify [pastes unformatted text]
+
+System: Let's transform your document for clarity! 📄
+
+How many thinking rounds should I use? (1-5)
+Based on your document, I recommend: 2 rounds
+
+User: 2
+
+[CHALLENGE ACTIVATES at 2+ rounds for beautify]
+System: I could achieve excellent results with just 1 round using minimal formatting.
+
+Would you like:
+1. Lean approach (1 round, minimal) - recommended
+2. Full analysis (2 rounds) as requested
+
+User: 1
+
+System: What format level would work best?
+
+1. **Minimal** - Just headers and emphasis (usually perfect!)
+   • 3-5 main headers
+   • Bold for 3 key points
+   • No TOC needed
+
+2. **Standard** - Headers + TOC + sections
+   • Full section structure
+   • Table of contents
+
+3. **Deep** - Complete restructuring
+   • Reorganize all content
+   • Multiple hierarchy levels
+
+Which suits your needs? [I recommend Minimal]
+
+User: 1
+
+System: How should I handle your content?
+
+1️⃣ **Strict Mode** - Preserve Only (Recommended)
+   • Zero content additions
+   • Maintains your authentic voice
+
+2️⃣ **Enhanced Mode** - Improve & Clarify
+   • Add helpful transitions [AI-ADDED]
+   • Expand acronyms [AI-ADDED]
+
+Which would you prefer? (1 or 2) [Default: 1]
+```
+
+### Structure Frameworks
+
+**SCAN Framework (70% of documents):**
+- **S**ummary - Top-level overview (10%)
+- **C**ore Content - Main body (70%)
+- **A**dditional Details - Supporting info (15%)
+- **N**avigation/Next Steps - Actions (5%)
+
+**HIERARCHY Framework (20% of documents):**
+- Nested structure with maximum 2 levels
+- Challenged first - "Could flatter structure be clearer?"
+
+**PREP Framework (10% of documents):**
+- **P**urpose/Problem
+- **R**esearch/Results
+- **E**vidence/Examples
+- **P**lan/Proposal
+
+### Content Integrity Report
+
+Every beautified document includes:
+```markdown
+## 📊 Content Integrity Report
+✅ Mode: STRICT (preserved exactly)
+✅ Format: Minimal (headers only)
+✅ Changes: 3 headers added
+✅ FORM Score: 75/100
+✅ Alternative: None needed - minimal is optimal
+```
+
+.
+
+
 ## 🔗 Platform Integration
 
 ### After Every Creation
@@ -358,12 +384,22 @@ User: Customer-facing UI
 Which option? (1 or 2)
 ```
 
+### Beautify Mode Platform Offer
+```markdown
+📦 **Save your formatted document?**
+
+1. **ClickUp** - As document/wiki page
+2. **Skip** - Keep as artifact only
+
+[Pattern: You typically skip platform for formatted docs]
+```
+
 ### Smart Handoff
 - System creates content with proper structure
 - User chooses platform
 - MCP handles workspace creation
 - All formatting preserved
-- Pattern learning tracks preferences
+- Pattern learning tracks preferences by mode
 
 .
 
@@ -397,6 +433,7 @@ Or specify your preferred number.
 ```python
 total = 1 + complexity + uncertainty + stakes
 # Adjusted by pattern learning
+# Beautify mode capped at 5 rounds
 ```
 
 ### Phase Activation by Rounds
@@ -411,7 +448,8 @@ total = 1 + complexity + uncertainty + stakes
 ## 💡 Challenge Mode
 
 ### Automatic Activation
-Challenge Mode activates automatically at 3+ thinking rounds to ensure lean, focused solutions.
+- **Most modes:** Activates at 3+ thinking rounds
+- **Beautify mode:** Activates at 2+ thinking rounds (lower threshold)
 
 ### Challenge Hierarchy
 
@@ -419,46 +457,36 @@ Challenge Mode activates automatically at 3+ thinking rounds to ensure lean, foc
 ```
 "Could this be simpler?"
 "What's the minimal version?"
+"Would minimal formatting be cleaner?" (beautify)
 ```
 
 **Level 2: Constructive (3-5 rounds)**
 ```
 "That would work, but a simpler approach would be..."
 "The lean approach here would be to..."
+"Strict mode preserves your voice better?" (beautify)
 ```
 
 **Level 3: Strong (6-10 rounds)**
 ```
 "Are we solving the right problem?"
 "This adds unnecessary complexity. We can achieve the same with..."
+"Are we over-formatting?" (beautify)
 ```
 
-### Common Challenge Patterns
+### Beautify-Specific Challenges
 
-**Scope Challenges:**
-- Start with fewer features
-- Phase the delivery
-- Focus on core value
+**Format Level:**
+- "Minimal format often sufficient - try it?"
+- "Could we use fewer hierarchy levels?"
 
-**Build vs Buy:**
-- Use existing solutions
-- Leverage libraries
-- Consider platforms
+**Content Mode:**
+- "Strict preserves your voice - better?"
+- "These additions may help but change your tone"
 
-**Phasing Example:**
-```
-Original: Complete payment platform (6 months)
-Challenge: Phase it?
-Result: 
-- Phase 1: Cards only (2 weeks)
-- Phase 2: Alternative payments (2 weeks)
-- Phase 3: Optimization (2 weeks)
-```
-
-### User Response Handling
-- **Acceptance:** Reduce complexity, deliver faster
-- **Rejection:** Document justification, proceed
-- **Negotiation:** Create phased approach
+**Structure:**
+- "Would flatter structure be clearer?"
+- "Could we consolidate to 3-4 sections?"
 
 .
 
@@ -480,15 +508,16 @@ Result:
 - Propose: Core sections only
 - Result: Simplified, focused ticket
 
+**Over-Formatted Document (Beautify):**
+- Recognize: Excessive formatting (5+ heading levels)
+- Explain: Formatting overwhelming content
+- Propose: Strip to essential headers only
+- Result: Clean, minimal structure
+
 **Scope Creep:**
 - Recognize: Requirements expanded during creation
 - Propose: Phase delivery
 - Result: Manageable sprints
-
-**Unclear Requirements:**
-- Recognize: High uncertainty
-- Propose: Prototype, gather details, or start minimal
-- Result: Validated approach
 
 .
 
@@ -528,25 +557,26 @@ I'm on [Windows/Mac/Linux]. Give me exact commands.
 
 ## 🆘 Troubleshooting
 
+### Beautify Mode Issues
+- **Over-formatting?** - Default to minimal, challenge at 2+ rounds
+- **Wrong content mode?** - Strict preserves voice, Enhanced changes it
+- **Too many sections?** - SCAN framework works for 70% of docs
+- **No FORM score?** - Included in every content integrity report
+
 ### Challenge Mode Issues
 - **Too aggressive?** - Specify lower thinking rounds
-- **Not challenging?** - Check if 3+ rounds selected
+- **Not challenging?** - Check if threshold met (3+ rounds, 2+ for beautify)
 - **Wrong alternatives?** - Provide more context
 
 ### ATLAS Framework
 - **Phase confusion?** - Check thinking round mapping
 - **Skipped phases?** - Normal for low-round requests
-- **Too much thinking?** - Reduce rounds
+- **Too much thinking?** - Reduce rounds (beautify capped at 5)
 
 ### Pattern Learning
 - **Not adapting?** - Patterns establish after 3 similar requests
 - **Wrong defaults?** - Will adjust after 2 overrides
-- **Too rigid?** - System learns from rejections
-
-### REPAIR Protocol
-- **Not recognizing errors?** - Flag explicitly
-- **Wrong proposals?** - Choose different path
-- **Not learning?** - Patterns update after each recovery
+- **Different by mode?** - System tracks patterns per mode
 
 ### Formatting Issues
 - **Missing TOC?** - Required for ALL tickets (sections only)
@@ -568,20 +598,19 @@ I'm on [Windows/Mac/Linux]. Give me exact commands.
 
 ### Platform Integration
 - **Not seeing offer?** - Appears after creation in chat
-- **MCP unavailable?** - Check Docker container status
+- **Different for beautify?** - Offers document/wiki page option
 - **Pattern not tracking?** - Choices recorded after 3 similar
 
 .
 
 ## ⚠️ Important Notes
 
-### New in v7.0.0
-- **ATLAS Framework** - Universal thinking methodology
-- **Challenge Mode** - Automatic at 3+ rounds
-- **REPAIR Protocol** - Structured error recovery
-- **Pattern Learning** - Session-based adaptation
-- **Streamlined Docs** - 50% size reduction
-- **Artifact Enforcement** - ALL outputs as artifacts
+### New in v8.0.0
+- **Beautify Mode** - Document formatting with 2+ round challenges
+- **Content Modes** - Strict (preserve) vs Enhanced (clarify)
+- **Format Levels** - Minimal → Standard → Deep progression
+- **FORM Scoring** - Readability metrics for documents
+- **Structure Frameworks** - SCAN, HIERARCHY, PREP patterns
 
 ### Critical Requirements (Maintained)
 - **Table of Contents** - MANDATORY for all tickets (sections only)
@@ -593,26 +622,25 @@ I'm on [Windows/Mac/Linux]. Give me exact commands.
 - **Dependencies** - Include with ⋈ when needed
 
 ### Core Architecture
-- **6 essential documents** - Streamlined and consolidated
-- **Native thinking** - User-controlled rounds (1-10)
-- **Unified ticket mode** - Intelligent auto-scaling
-- **5 operating modes** - All interactive
+- **7 essential documents** - Includes beautify templates in Reference Guide
+- **Native thinking** - User-controlled rounds (1-10, 1-5 for beautify)
+- **6 operating modes** - All interactive including beautify
 - **Strict standards** - Consistent formatting
-- **Challenge integration** - Lean bias throughout
+- **Challenge integration** - Earlier for beautify (2+ rounds)
 
 ### Key Principles
-- **Challenge complexity** - Always seek simpler solutions
-- **Learn continuously** - Adapt from every interaction
-- **Phase delivery** - Break down large initiatives
-- **User empowerment** - Control thinking depth
-- **Constructive pushback** - Don't just accept
-- **Pattern recognition** - Apply successful approaches
-- **Error recovery** - REPAIR and learn
+- **Challenge complexity** - Even earlier for beautify mode
+- **Preserve voice** - Strict mode default (90% usage)
+- **Start minimal** - Add only if proven necessary
+- **Learn continuously** - Mode-specific patterns
+- **FORM optimize** - Balance all readability factors
+- **Pattern recognition** - Different preferences by mode
 
 .
 
 ## 📦 Version History
 
+- **v8.0.0**: Beautify mode added with extreme simplification bias, 2+ round challenges, Strict/Enhanced modes, FORM scoring
 - **v7.0.0**: ATLAS Framework, Challenge Mode, REPAIR Protocol, pattern learning, streamlined docs (50% reduction)
 - **v6.2.0**: Stricter formatting standards, updated symbols (◳, ⋈), mandatory TOC/dividers
 - **v6.1.0**: Enhanced troubleshooting, improved examples, format validation
@@ -632,25 +660,31 @@ I'm on [Windows/Mac/Linux]. Give me exact commands.
 ## 📚 Additional Resources
 
 ### Core System Documents
-- `Writer - Product Owner.md` - Main system prompt
+- `Writer - Product Owner.md` - Main system prompt (v8.0.0)
 - `Product Owner - ATLAS Thinking Framework.md` - Universal thinking methodology
-- `Product Owner - Reference Guide.md` - Symbols, templates, standards
-- `Product Owner - Interactive Flows.md` - Mode interactions with challenges
+- `Product Owner - Reference Guide.md` - Symbols, templates, standards, beautify templates
+- `Product Owner - Interactive Mode.md` - Mode interactions with challenges
 - `Product Owner - Quick Card.md` - Daily command reference
 - `Product Owner - Platform Integration.md` - ClickUp handoff
 - `Product Owner - Prompt Improvement.md` - Request clarity enhancement
 
+### Beautify Mode Resources
+- [Beautify Templates](Product Owner - Reference Guide.md#beautify-templates) - All format templates
+- [FORM Scoring](Product Owner - Reference Guide.md#form-scoring) - Readability metrics
+- [Structure Frameworks](Product Owner - Reference Guide.md#structure-frameworks) - SCAN, HIERARCHY, PREP
+- [Content Modes](Product Owner - Reference Guide.md#content-modes) - Strict vs Enhanced
+
 ### Thinking & Methodology
 - [ATLAS Framework Guide](Product Owner - ATLAS Thinking Framework.md) - Universal thinking methodology
-- [Challenge Patterns](Product Owner - Interactive Flows.md#challenge-mode) - Complexity challenging templates
+- [Challenge Patterns](Product Owner - Interactive Mode.md#challenge-mode) - Complexity challenging templates
 - [REPAIR Protocol](Product Owner - ATLAS Thinking Framework.md#repair-protocol) - Error recovery framework
-- [Pattern Learning](Product Owner - Interactive Flows.md#pattern-learning) - Adaptation mechanisms
+- [Pattern Learning](Product Owner - Interactive Mode.md#pattern-learning) - Adaptation mechanisms
 
 ### Product Management
 - [Product Management Basics](https://www.productplan.com/learn/product-management-basics/)
 - [User Story Writing](https://www.atlassian.com/agile/project-management/user-stories)
 - [Lean Product Development](https://www.agilealliance.org/agile101/subway-map-to-agile-practices/)
-- [Phased Delivery](https://www.productplan.com/glossary/iterative-development/)
+- [Document Design Principles](https://www.nngroup.com/articles/how-users-read-on-the-web/)
 
 ### Platform Documentation
 - [ClickUp API Docs](https://clickup.com/api)
@@ -665,4 +699,4 @@ I'm on [Windows/Mac/Linux]. Give me exact commands.
 
 .
 
-*Product Owner v7.0.0: Streamlined for clarity. ATLAS Framework for universal thinking. Challenge Mode for lean solutions. REPAIR Protocol for graceful recovery. Pattern learning for continuous improvement. Five intelligent modes with user-controlled depth. Always challenging complexity, always seeking simplicity.*
+*Product Owner v8.0.0: Beautify mode for document transformation. Extreme simplification bias with 2+ round challenges. Strict mode preserves voice. FORM scoring ensures readability. Six intelligent modes with user-controlled depth. Always challenging complexity, always seeking simplicity.*
