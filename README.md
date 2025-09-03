@@ -56,7 +56,6 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **DEPTH Framework & Context Enhancement**: 
   - User-controlled thinking depth (1-10 rounds) - always asked, never automated
   - Challenge Mode at 3+ thinking rounds for simplification (both options always shown)
-  - Pattern learning and session tracking learns your personal preferences
   - Emergency commands: $reset (clear context), $standard (default flow), $quick (fast creation), $status (show patterns)
 
 .
@@ -79,7 +78,6 @@ Some of my non-client AI systems that I made available to the public. They were 
   - 5-phase thinking (Assess/Transform/Layer/Assess/Synthesize) with 1-10 rounds
   - Auto-challenges at 3+ rounds: Gentle (1-2), Constructive (3-5), Strong (6-10)
   - REPAIR protocol: Recognize/Explain/Propose/Adapt/Iterate/Record errors
-  - Pattern learning and session tracking learns your personal preferences
 
 .
 
@@ -102,14 +100,12 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **ATLAS Framework with Format Transform**: 
   - 6-phase thinking: Assess/Transform/Layer/Assess/Synthesize + Format Transform
   - Challenge Mode at 3+ rounds includes format necessity ("SMILE worth +25% tokens?")
-  - Pattern learning tracks format preferences (Standard 65%, JSON 15%, SMILE 20% typical)
   - REPAIR protocol handles format-related issues
 
 - **SMILE Format Features**: 
   - Research-backed for better instruction following (Dr. Thomas Ager, Cardiff University)
   - Semantic brackets: `(: :)` sections, `[: :]` rigid rules, `[= =]` exact following, `[! !]` emphasis
   - Depth control: Minimal/Moderate/Heavy based on complexity
-  - Compatible with all major LLMs, optional always
 
 ---
 
