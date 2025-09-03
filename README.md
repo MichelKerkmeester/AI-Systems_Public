@@ -41,12 +41,11 @@ Some of my non-client AI systems that I made available to the public. They were 
 ——
 
 #### 1. ✏️ Branded Content Writer - v5.4.0 
-**Flexible content system with historical context enrichment and emergency commands - currently configured for Product Designers, adaptable for any brand, profession, or personal writing**
+**Flexible content system with historical context enrichment, adaptable for any brand, profession, or personal writing**
 
 - **Adaptable System & Current Configuration**: 
   - Currently set for Product Designers: case studies, process docs, design insights
   - Easily reconfigured for: Marketing, engineering, education, healthcare, personal blogs
-  - 9+ copywriter frameworks: Simple (SVC, QPT), Medium (CASE, PATH), Complex (FAIL, GUIDE)
   - Built-in knowledge base (currently Product Design - replaceable with your domain)
 
 - **5 Interactive Modes & 6 Tone Variations (All Always Available)**: 
