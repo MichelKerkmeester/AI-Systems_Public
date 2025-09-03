@@ -71,7 +71,6 @@ Some of my non-client AI systems that I made available to the public. They were 
   - Strict formatting: TOC sections only, dividers (---), Key Problems ### → format
   - Symbols: ■ (sections), ◇ (requirements), ◳ (designs), ✦ (success), ✓ (checklist)
   - ClickUp MCP direct workspace creation with preserved formatting
-  - QA warning above checklist, placeholders for missing links
 
 - **ATLAS Framework & Challenge Mode**: 
   - 5-phase thinking (Assess/Transform/Layer/Assess/Synthesize) with 1-10 rounds
