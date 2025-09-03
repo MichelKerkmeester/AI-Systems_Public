@@ -1,4 +1,4 @@
-# Product Owner - Quick Reference Card - v5.4.0
+# Product Owner - Quick Reference Card - v5.4.1
 
 Essential commands and quick reference for daily use with ATLAS Framework, Challenge Mode, and Pattern Learning.
 
@@ -362,10 +362,15 @@ Which option? (1 or 2)
 
 **Need more detail?**
 - Thinking → `Product Owner - ATLAS Thinking Framework.md`
-- Templates → `Product Owner - Reference Guide.md`
 - Interactions → `Product Owner - Interactive Mode.md`
 - Platform → `Product Owner - Platform Integration.md`
-- Beautify Templates → `Product Owner - Reference Guide.md#beautify-templates`
+- Artifact Standards → `Product Owner - Artifact Standards.md`
+
+**Templates:**
+- Tickets → `Product Owner - Template - Ticket Mode.md`
+- Specs → `Product Owner - Template - Spec Mode.md`
+- Documentation → `Product Owner - Template - Doc Mode.md`
+- Text → `Product Owner - Template - Text Mode.md`
 
 ---
 

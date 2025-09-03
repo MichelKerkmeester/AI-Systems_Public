@@ -9,7 +9,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 ## 📑 Table of Contents
 
-### ✍️ Writer Systems
+### ✏️ Writer Systems
 1. [Branded Content Writer](#1--branded-content-writer)
 2. [Product Owner Writer](#2--product-owner-writer)
 3. [Prompt Engineering Assistant](#3--prompt-engineering-assistant)
@@ -36,11 +36,11 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 ---
 
-## ✍️ Writer Systems
+## ✏️ Writer Systems
 ##### Automated content, documentation & prompt writing systems
 ——
 
-#### 1. ✍️ Branded Content Writer - v5.3.0 (NEW)
+#### 1. ✏️ Branded Content Writer - v5.3.0 
 **Flexible content system with historical context enrichment - currently configured for Product Designers, adaptable for any brand, profession, or personal writing**
 
 - **Adaptable System & Current Configuration**: 
@@ -62,7 +62,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 .
 
-#### 2. 📋 Product Owner Writer - v8.1.0 (NEW)
+#### 2. 📋 Product Owner Writer - v8.1.0 
 **Transform vague requests into professional dev tickets, specs, docs, and beautifully formatted documents with built-in complexity challenging**
 
 - **5 Intelligent Modes & Auto-Scaling**: 
@@ -73,7 +73,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 - **Professional Standards & Platform Integration**: 
   - Strict formatting: TOC sections only, dividers (---), Key Problems ### → format
-  - Symbols: ❖ (sections), ◇ (requirements), ◳ (designs), ✦ (success), ✓ (checklist)
+  - Symbols: ■ (sections), ◇ (requirements), ◳ (designs), ✦ (success), ✓ (checklist)
   - ClickUp MCP direct workspace creation with preserved formatting
   - QA warning above checklist, placeholders for missing links
 
@@ -85,24 +85,33 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 .
 
-#### 3. 🎯 Prompt Engineering Assistant - v7.2.0 (NEW)
-**Transform vague requests into powerful AI prompts for ANY platform**
+#### 3. 🎯 Prompt Engineering Assistant - v8.0.0
+**Transform vague requests into powerful AI prompts for ANY platform with multi-format support including SMILE format**
 
-- **8 Specialized Modes**: 
-  - Core modes: $short (minimal), $improve (default), $refine (maximum), $interactive (guided), $json (API)
+- **8 Specialized Modes + Format Options**: 
+  - Core modes: $short (minimal), $improve (default), $refine (maximum), $interactive (guided)
   - Builder modes: $prototype (exploration), $website (conversion), $app (functionality)
-  - Auto-detection with pattern learning and confidence scoring
-  - Session adaptation learns preferences across Recognition → Establishment → Confidence stages
+  - Format outputs: Standard (natural language) $smile (emoticon-structured for better instruction following, $json (API)
+  - Auto-detection with pattern learning including format preferences
 
-- **Enhancement Engine**: 
-  - Clarity boost without adding assumptions - now with cleaner decision tables
-  - Structure injection using streamlined CRAFT framework (92% less pseudocode)
-  - Context preservation with 30-50% complexity reduction average
+- **Multi-Format Enhancement Engine**: 
+  - Standard format: Natural language clarity (baseline tokens)
+  - JSON format: Structured for APIs (-5% to +5% tokens)
+  - SMILE format: ((: format) with emoticon brackets for complex instructions (+20-30% tokens)
+  - Format recommendation based on complexity and use case
+  - Always shows token impact, never forces format choice
 
-- **ATLAS & Challenge Integration**: 
-  - 5-phase thinking with 1-10 user-controlled rounds
-  - Challenge Mode at 3+ rounds for simpler alternatives (intensity scales with depth)
-  - REPAIR recovery protocol with table-based error handling
+- **ATLAS Framework with Format Transform**: 
+  - 6-phase thinking: Assess/Transform/Layer/Assess/Synthesize + Format Transform
+  - Challenge Mode at 3+ rounds includes format necessity ("SMILE worth +25% tokens?")
+  - Pattern learning tracks format preferences (Standard 65%, JSON 15%, SMILE 20% typical)
+  - REPAIR protocol handles format-related issues
+
+- **SMILE Format Features**: 
+  - Research-backed for better instruction following (Dr. Thomas Ager, Cardiff University)
+  - Semantic brackets: `(: :)` sections, `[: :]` rigid rules, `[= =]` exact following, `[! !]` emphasis
+  - Depth control: Minimal/Moderate/Heavy based on complexity
+  - Compatible with all major LLMs, optional always
 
 ---
 
