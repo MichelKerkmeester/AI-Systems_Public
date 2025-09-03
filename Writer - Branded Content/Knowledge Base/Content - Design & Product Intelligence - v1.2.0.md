@@ -20,8 +20,8 @@
 
 ### When to Reference This Document
 
-**BETA ENHANCEMENT:** System searches conversation history for knowledge usage patterns
-**CRITICAL:** All knowledge depths and angles always available
+- **BETA FEATURE:** System searches conversation history for knowledge usage patterns
+- **CRITICAL:** All knowledge depths and angles always available
 
 **USE when writing about:**
 - Product design fundamentals and best practices

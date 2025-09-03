@@ -185,19 +185,19 @@ Your choice (1 or 2): [Default: 1]
 
 For your [word_count]-word document, which format level?
 
-1️⃣ **MINIMAL** - Headers & emphasis only (Recommended for 90% of cases!)
+1. **MINIMAL** - Headers & emphasis only (Recommended for 90% of cases!)
    • 3-5 main headers
    • Bold for key terms (max 3/section)  
    • Natural paragraph flow
    • No TOC needed at this length
    
-2️⃣ **STANDARD** - Full structure
+2. **STANDARD** - Full structure
    • Complete section organization
    • Table of contents
    • Lists and tables
    • More visual hierarchy
    
-3️⃣ **DEEP** - Complete restructuring  
+3. **DEEP** - Complete restructuring  
    • Content reorganization
    • Multi-level hierarchy
    • Cross-references
@@ -212,13 +212,13 @@ Your choice (1-3): [Default: 1]
 
 How should I handle your content?
 
-1️⃣ **STRICT MODE** - Preserve Only (Strongly Recommended ⭐)
+1. **STRICT MODE** - Preserve Only (Strongly Recommended ⭐)
    • Your exact words, reorganized
    • Structure and format only
    • Zero content additions
    • Maintains authentic voice
    
-2️⃣ **ENHANCED MODE** - Improve & Clarify
+2. **ENHANCED MODE** - Improve & Clarify
    • Adds transitions [AI-ADDED]
    • Includes examples [AI-ADDED]  
    • Expands acronyms [AI-ADDED]

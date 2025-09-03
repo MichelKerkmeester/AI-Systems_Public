@@ -1,10 +1,10 @@
-# Product Owner System - User Guide v8.1.0
+# Product Owner System - User Guide v8.3.0
 
 The Product Owner system transforms requests into professional development tickets, implementation specs, documentation, text snippets, and beautifully formatted documents through intelligent interactive guidance with built-in complexity challenging. By focusing on WHAT needs doing and WHY it matters (not HOW to implement), it creates lean, actionable artifacts that bridge the communication gap between product and development teams.
 
 ## 📋 Table of Contents
 
-- [🆕 What's New in v8.1.0](#-whats-new-in-v810)
+- [🆕 What's New in v8.3.0](#-whats-new-in-v830)
 - [✨ Key Features](#-key-features)
 - [🚀 Quick Setup](#-quick-setup)
 - [🎛️ Operating Modes](#️-operating-modes)
@@ -12,7 +12,7 @@ The Product Owner system transforms requests into professional development ticke
 - [📄 Document Beautifier](#-document-beautifier-beautify)
 - [💻 Implementation Specs](#-implementation-specs-spec)
 - [📚 Documentation](#-documentation-doc)
-- [✍️ Text Snippets](#️-text-snippets-text)
+- [✏️ Text Snippets](#️-text-snippets-text)
 - [🔗 Platform Integration](#-platform-integration)
 - [🧠 ATLAS Thinking Framework](#-atlas-thinking-framework)
 - [💡 Challenge Mode](#-challenge-mode)
@@ -25,17 +25,24 @@ The Product Owner system transforms requests into professional development ticke
 
 .
 
-## 🆕 What's New in v8.1.0
+## 🆕 What's New in v8.3.0
 
-### Streamlined Architecture
-**Removed Prompt Improvement Module:**
-- Simplified system architecture by removing the prompt improvement layer
-- Direct mode detection without request enhancement preprocessing
-- Reduced document count from 7 to 6 essential files
-- Faster processing with cleaner request analysis
-- Focus on core functionality without intermediary transformations
+### Enhanced Template Architecture
+**Separated Template System:**
+- Individual template files for each mode (5 dedicated templates)
+- Comprehensive Beautify Mode template with all format examples
+- Cleaner main system prompt without embedded templates
+- Total of 11 documents: 6 core + 5 mode-specific templates
+- Version references removed from all path references for cleaner maintenance
 
-### Maintained from v8.0.0
+### Symbol-Enhanced Documentation
+**Documentation Improvements:**
+- Strategic symbolic organization throughout all documents
+- Enhanced visual hierarchy with consistent symbol usage
+- Improved readability with structured Table of Contents
+- Clear separation between sections with visual markers
+
+### Maintained from v8.0.0 - v8.2.0
 
 **Document Beautifier Mode:**
 - Transform unstructured text into clean, scannable documents
@@ -72,12 +79,12 @@ The Product Owner system transforms requests into professional development ticke
 - **🧠 ATLAS Framework**: 5-phase universal thinking methodology with adaptive depth
 - **💡 Challenge Mode**: Active complexity challenging with lean alternatives
 - **🎯 Smart Complexity**: Automatic detection and scaling
-- **📄 Pattern Learning**: Adapts to user preferences and successful patterns
+- **🔄 Pattern Learning**: Adapts to user preferences and successful patterns
 - **🚨 REPAIR Protocol**: Structured error recovery with learning
 - **📊 Thinking Calibration**: Formula-based recommendations (1-10 rounds)
 - **🎛️ 6 Intelligent Modes**: Discovery, $ticket, $spec, $doc, $text, $beautify
 - **🔗 Platform Ready**: Direct ClickUp integration after creation
-- **📝 Professional Symbols**: ⌘, ◇, ◊, ◳, →, ✦, ✓, ⋈, ∅, ⌆
+- **🔤 Professional Symbols**: ⌘, ◇, ◊, ◳, →, ✦, ✓, ⋈, ∅, ⌆
 - **📋 Strict Formatting**: TOC, dividers, proper Key Problems/Reasons format
 - **⚡ Phased Delivery**: Automatic breakdown of large initiatives
 - **🎪 Session Context**: Tracks preferences and adapts behavior
@@ -90,21 +97,31 @@ The Product Owner system transforms requests into professional development ticke
 1. Go to claude.ai
 2. Click "Projects" in sidebar
 3. Click "Create project"
-4. Name it "Product Owner v8.1.0"
+4. Name it "Product Owner v8.3.0"
 
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Writer - Product Owner - v8.1.0.md`
+3. Copy and paste: `Writer - Product Owner.md`
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
-Add these **6 essential documents** to your project's knowledge base:
-- `Product Owner - ATLAS Thinking Framework.md` (ATLAS thinking methodology)
-- `Product Owner - Reference Guide.md` (symbols, templates, standards, beautify templates)
-- `Product Owner - Interactive Mode.md` (all mode interactions with Challenge Mode)
-- `Product Owner - Quick Card.md` (daily command reference)
-- `Product Owner - Platform Integration.md` (ClickUp handoff)
+Add these **11 essential documents** to your project's knowledge base:
+
+**Core Documents (6):**
+- `Product Owner - ATLAS Thinking Framework.md` (Universal thinking methodology)
+- `Product Owner - Artifact Standards.md` (Enforcement rules and quality gates)
+- `Product Owner - Interactive Mode.md` (All mode interactions with Challenge Mode)
+- `Product Owner - Platform Integration.md` (ClickUp MCP handoff)
+- `Product Owner - Quick Reference Card.md` (Daily command reference)
+- `Feed v3 Documentation - Enhanced Symbol System.md` (Symbol-enhanced documentation)
+
+**Template Documents (5):**
+- `Product Owner - Template - Ticket Mode.md` (Ticket templates all complexities)
+- `Product Owner - Template - Spec Mode.md` (Implementation spec templates)
+- `Product Owner - Template - Doc Mode.md` (Documentation templates)
+- `Product Owner - Template - Beautify Mode.md` (Complete beautify templates)
+- `Product Owner - Template - Text Mode.md` (Text snippet templates)
 
 ### Step 4: Install MCP Tools (Optional - for ClickUp only)
 See [MCP Installation](#-installing-mcp-tools) section below
@@ -248,7 +265,7 @@ Quick setup:
 
 .
 
-## ✍️ Text Snippets ($text)
+## ✏️ Text Snippets ($text)
 
 ### Quick Content Generation
 
@@ -263,7 +280,7 @@ Perfect for:
 ```
 User: $text error message for payment failure
 
-System: Let's write your error message! ✍️
+System: Let's write your error message! ✏️
 
 How many thinking rounds should I use? (1-2 typical for snippets)
 
@@ -554,90 +571,9 @@ I'm on [Windows/Mac/Linux]. Give me exact commands.
 
 .
 
-## 🆘 Troubleshooting
-
-### Beautify Mode Issues
-- **Over-formatting?** - Default to minimal, challenge at 2+ rounds
-- **Wrong content mode?** - Strict preserves voice, Enhanced changes it
-- **Too many sections?** - SCAN framework works for 70% of docs
-- **No FORM score?** - Included in every content integrity report
-
-### Challenge Mode Issues
-- **Too aggressive?** - Specify lower thinking rounds
-- **Not challenging?** - Check if threshold met (3+ rounds, 2+ for beautify)
-- **Wrong alternatives?** - Provide more context
-
-### ATLAS Framework
-- **Phase confusion?** - Check thinking round mapping
-- **Skipped phases?** - Normal for low-round requests
-- **Too much thinking?** - Reduce rounds (beautify capped at 5)
-
-### Pattern Learning
-- **Not adapting?** - Patterns establish after 3 similar requests
-- **Wrong defaults?** - Will adjust after 2 overrides
-- **Different by mode?** - System tracks patterns per mode
-
-### Formatting Issues
-- **Missing TOC?** - Required for ALL tickets (sections only)
-- **TOC has subsections?** - Remove Key Problems/Reasons from TOC
-- **No dividers?** - Add `---` between ALL sections
-- **Wrong Key Problems?** - Use `### → Key problems:` with 2+ items
-- **Wrong Reasons Why?** - Use `### → Reasons why:` with 2+ items
-- **No QA warning?** - Add above Resolution Checklist
-- **No Designs section?** - Add with ◳ symbol and placeholders
-
-### Artifact Issues
-- **Not creating artifacts?** - ALL outputs must be artifacts
-- **Text as direct response?** - Even snippets need artifacts
-
-### Mode Selection
-- **Discovery not working?** - That's the default, no command needed
-- **Wrong mode triggered?** - Use $ prefix for direct mode
-- **Complexity wrong?** - Provide more context for better detection
-
-### Platform Integration
-- **Not seeing offer?** - Appears after creation in chat
-- **Different for beautify?** - Offers document/wiki page option
-- **Pattern not tracking?** - Choices recorded after 3 similar
-
-.
-
-## ⚠️ Important Notes
-
-### New in v8.1.0
-- **Streamlined Architecture** - Removed prompt improvement module for cleaner processing
-- **Direct Mode Detection** - No preprocessing layer, faster response
-- **Reduced Complexity** - 6 essential documents instead of 7
-- **Maintained Core Features** - All v8.0.0 functionality preserved
-
-### Critical Requirements (Maintained)
-- **Table of Contents** - MANDATORY for all tickets (sections only)
-- **Key Problems/Reasons** - NOT in TOC, ### → format, 2+ items
-- **QA Warning** - Above Resolution Checklist
-- **Dividers** - Between ALL sections
-- **Bullet Format** - ONLY use `- text` never symbols
-- **Designs Section** - ALWAYS include with ◳ symbol
-- **Dependencies** - Include with ⋈ when needed
-
-### Core Architecture
-- **6 essential documents** - Streamlined documentation set
-- **Native thinking** - User-controlled rounds (1-10, 1-5 for beautify)
-- **6 operating modes** - All interactive including beautify
-- **Strict standards** - Consistent formatting
-- **Challenge integration** - Earlier for beautify (2+ rounds)
-
-### Key Principles
-- **Challenge complexity** - Even earlier for beautify mode
-- **Preserve voice** - Strict mode default (90% usage)
-- **Start minimal** - Add only if proven necessary
-- **Learn continuously** - Mode-specific patterns
-- **FORM optimize** - Balance all readability factors
-- **Pattern recognition** - Different preferences by mode
-
-.
-
 ## 📦 Version History
 
+- **v8.3.0**: Separated template architecture, 11 documents (6 core + 5 templates), symbol-enhanced Feed v3, clean path references
 - **v8.1.0**: Removed prompt improvement module, streamlined to 6 documents, direct mode detection
 - **v8.0.0**: Beautify mode added with extreme simplification bias, 2+ round challenges, Strict/Enhanced modes, FORM scoring
 - **v7.0.0**: ATLAS Framework, Challenge Mode, REPAIR Protocol, pattern learning, streamlined docs (50% reduction)
@@ -658,43 +594,15 @@ I'm on [Windows/Mac/Linux]. Give me exact commands.
 
 ## 📚 Additional Resources
 
-### Core System Documents
-- `Writer - Product Owner.md` - Main system prompt (v8.1.0)
-- `Product Owner - ATLAS Thinking Framework.md` - Universal thinking methodology
-- `Product Owner - Reference Guide.md` - Symbols, templates, standards, beautify templates
-- `Product Owner - Interactive Mode.md` - Mode interactions with challenges
-- `Product Owner - Quick Card.md` - Daily command reference
-- `Product Owner - Platform Integration.md` - ClickUp handoff
-
-### Beautify Mode Resources
-- [Beautify Templates](Product Owner - Reference Guide.md#beautify-templates) - All format templates
-- [FORM Scoring](Product Owner - Reference Guide.md#form-scoring) - Readability metrics
-- [Structure Frameworks](Product Owner - Reference Guide.md#structure-frameworks) - SCAN, HIERARCHY, PREP
-- [Content Modes](Product Owner - Reference Guide.md#content-modes) - Strict vs Enhanced
-
-### Thinking & Methodology
-- [ATLAS Framework Guide](Product Owner - ATLAS Thinking Framework.md) - Universal thinking methodology
-- [Challenge Patterns](Product Owner - Interactive Mode.md#challenge-mode) - Complexity challenging templates
-- [REPAIR Protocol](Product Owner - ATLAS Thinking Framework.md#repair-protocol) - Error recovery framework
-- [Pattern Learning](Product Owner - Interactive Mode.md#pattern-learning) - Adaptation mechanisms
-
-### Product Management
-- [Product Management Basics](https://www.productplan.com/learn/product-management-basics/)
-- [User Story Writing](https://www.atlassian.com/agile/project-management/user-stories)
-- [Lean Product Development](https://www.agilealliance.org/agile101/subway-map-to-agile-practices/)
-- [Document Design Principles](https://www.nngroup.com/articles/how-users-read-on-the-web/)
-
 ### Platform Documentation
 - [ClickUp API Docs](https://clickup.com/api)
 - [Claude Projects Guide](https://claude.ai/docs/projects)
 - [MCP Protocol](https://modelcontextprotocol.io/docs)
 
 ### Technical Resources
-- [MDN Web Docs](https://developer.mozilla.org/)
-- [React Documentation](https://react.dev/)
 - [Docker Desktop Help](https://docs.docker.com/desktop/)
 - [Claude Desktop Setup](https://claude.ai/docs/desktop)
 
 .
 
-*Product Owner v8.1.0: Streamlined architecture without prompt improvement layer. Beautify mode for document transformation. Extreme simplification bias with 2+ round challenges. Strict mode preserves voice. FORM scoring ensures readability. Six intelligent modes with user-controlled depth. Always challenging complexity, always seeking simplicity.*
+*Product Owner v8.3.0: Separated template architecture with 11 essential documents. Beautify mode for document transformation. Extreme simplification bias with 2+ round challenges. Strict mode preserves voice. FORM scoring ensures readability. Six intelligent modes with user-controlled depth. Always challenging complexity, always seeking simplicity.*
