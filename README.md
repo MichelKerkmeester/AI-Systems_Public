@@ -40,8 +40,8 @@ Some of my non-client AI systems that I made available to the public. They were 
 ##### Automated content, documentation & prompt writing systems
 ——
 
-#### 1. ✏️ Branded Content Writer - v5.3.0 
-**Flexible content system with historical context enrichment - currently configured for Product Designers, adaptable for any brand, profession, or personal writing**
+#### 1. ✏️ Branded Content Writer - v5.4.0 
+**Flexible content system with historical context enrichment and emergency commands - currently configured for Product Designers, adaptable for any brand, profession, or personal writing**
 
 - **Adaptable System & Current Configuration**: 
   - Currently set for Product Designers: case studies, process docs, design insights
@@ -54,11 +54,12 @@ Some of my non-client AI systems that I made available to the public. They were 
   - Tones: $natural (conversational), $technical (precise), $collaborative (team), $educational (clear), $reflective (thoughtful), $minimal (essential)
   - Beta Feature: Shows historical usage patterns as helpful context, never restrictions
 
-- **ATLAS/DEPTH Framework & Context Enhancement**: 
+- **DEPTH Framework & Context Enhancement**: 
   - User-controlled thinking depth (1-10 rounds) - always asked, never automated
   - Historical context display: Shows patterns from previous conversations as notes
   - Challenge Mode at 3+ thinking rounds for simplification (both options always shown)
   - LEARN error recovery protocol with context-aware suggestions
+  - Emergency commands: $reset (clear context), $standard (default flow), $quick (fast creation), $status (show patterns)
 
 .
 

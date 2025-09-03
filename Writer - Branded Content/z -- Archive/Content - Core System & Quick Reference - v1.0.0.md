@@ -158,13 +158,6 @@
 | **`$quick`** | Skip to creation | Still asks thinking rounds |
 | **`$status`** | Show current context | Display patterns |
 
-### File Header Reference
-Each documentation file should include this header comment:
-```markdown
-<!-- Emergency: $reset | $standard | $quick | $status
-     Full details: See Core System Rules & Quick Reference -->
-```
-
 ---
 
 ## 5. 🔄 Challenge Mode
