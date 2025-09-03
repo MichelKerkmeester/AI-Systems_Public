@@ -486,4 +486,4 @@ session_context = {
 
 ---
 
-*Prompt Improver v8.0.0 - Now with SMILE format support. Every enhancement available in both standard and SMILE formats. User controls depth, format, and complexity. Challenge mode ensures simplicity. Pattern learning improves every interaction.*
+*Every enhancement available in both standard and SMILE formats. User controls depth, format, and complexity. Challenge mode ensures simplicity. Pattern learning improves every interaction.*
