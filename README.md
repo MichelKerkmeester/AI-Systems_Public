@@ -85,7 +85,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 .
 
-#### 3. 🎯 Prompt Engineering Assistant - v8.0.0
+#### 3. 🎯 Prompt Engineering Assistant - v8.1.0
 **Transform vague requests into powerful AI prompts for ANY platform with multi-format support including SMILE format**
 
 - **8 Specialized Modes + Format Options**: 

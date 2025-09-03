@@ -1,10 +1,10 @@
-# Prompt Engineering Assistant - User Guide v8.0.0
+# Prompt Engineering Assistant - User Guide v8.1.0
 
-A comprehensive system that transforms vague requests into clear, effective AI prompts using the ATLAS thinking framework, challenge-based simplification, and intelligent refinement. Now with SMILE format support for better instruction following! Features 8 operating modes including 3 specialized Builder sub-modes for creating universal creative briefs that work on ANY AI development platform while aggressively minimizing complexity and resource usage.
+A comprehensive system that transforms vague requests into clear, effective AI prompts using the ATLAS thinking framework, challenge-based simplification, and intelligent refinement. Now with MANDATORY thinking rounds, professional artifact standards, enhanced pattern learning, and SMILE format support for better instruction following! Features 8 operating modes including 3 specialized Builder sub-modes for creating universal creative briefs that work on ANY AI development platform while aggressively minimizing complexity and resource usage.
 
 ## 📑 Table of Contents
 
-- [🆕 What's New in v8.0.0](#-whats-new-in-v800)
+- [🆕 What's New in v8.1.0](#-whats-new-in-v810)
 - [📖 Overview](#-overview)
 - [✨ Key Features](#-key-features)
 - [🚀 Quick Setup](#-quick-setup)
@@ -12,11 +12,11 @@ A comprehensive system that transforms vague requests into clear, effective AI p
   - [Core Modes](#core-modes)
   - [Builder Sub-Modes](#builder-sub-modes-universal-ai-platform-support)
   - [Supported Platforms](#supported-platforms-include)
-- [🔄 Format Options](#-format-options-new)
+- [📄 Format Options](#-format-options-new)
   - [Standard Format](#standard-format-default)
   - [JSON Format](#json-format)
   - [SMILE Format](#smile-format)
-- [🗂️ Frameworks Overview](#️-frameworks-overview-v800)
+- [🗂️ Frameworks Overview](#️-frameworks-overview-v810)
   - [Core Frameworks](#core-frameworks)
   - [Builder Creative Frameworks](#builder-creative-frameworks-universal)
 - [📊 Enhanced Report Examples](#-enhanced-report-examples)
@@ -28,74 +28,82 @@ A comprehensive system that transforms vague requests into clear, effective AI p
 - [🚀 Challenge Mode Philosophy](#-challenge-mode-philosophy)
 - [🚨 REPAIR Error Protocol](#-repair-error-protocol)
 - [🆘 Troubleshooting](#-troubleshooting)
-- [⚠️ Important Notes](#️-important-notes-v800)
+- [⚠️ Important Notes](#️-important-notes-v810)
 - [📦 Version History](#-version-history)
-- [🎯 Key Principles](#-key-principles-v800)
+- [🎯 Key Principles](#-key-principles-v810)
 - [📈 Performance Metrics](#-performance-metrics)
 - [📚 Additional Resources](#-additional-resources)
 
 .
 
-## 🆕 What's New in v8.0.0
+## 🆕 What's New in v8.1.0
 
-### SMILE Format Integration 🙂
-- **New Format Option**: SMILE ((: format) - Emoticon-structured prompts for better instruction following
+### Critical System Improvements 🔴
+- **MANDATORY Thinking Rounds**: System ALWAYS asks "How many thinking rounds? (1-10)" - NO EXCEPTIONS, even for simple requests
+- **Professional Artifact Standards**: New document enforcing AI System details at bottom, proper formatting
+- **Enhanced Interactive Mode**: Clean formatting with **bold headers** and • bullet points
+- **Advanced Pattern Learning**: Uses `conversation_search()` and `recent_chats()` for intelligent context
+
+### Enhanced Features from v8.0.0
+- **SMILE Format Integration**: Emoticon-structured prompts for better instruction following
 - **Multi-Format Support**: Every enhancement now available in Standard, JSON, and SMILE formats
-- **Intelligent Format Selection**: System recommends optimal format based on complexity
+- **Intelligent Format Selection**: System recommends optimal format based on complexity and patterns
 - **Token Transparency**: Always shows token impact for SMILE format (+20-30% typical)
-- **Pattern Learning**: Tracks your format preferences and adapts recommendations
+- **Pattern Learning**: Now searches conversation history for your preferences
 
-### SMILE Format Features
-- **Better Instruction Following**: Research suggests improved LLM compliance
-- **Structured Clarity**: Uses emoticon brackets for semantic organization
-- **Complexity Handling**: Excellent for multi-step, complex instructions
-- **Optional Always**: Never forced - Standard format always available
-- **Depth Control**: Minimal/Moderate/Heavy structure based on needs
+### v8.1.0 Mandatory Process
+```markdown
+**How many thinking rounds would you like? (1-10, or 'auto' for my recommendation)**
 
-### Format Transform Phase
-- **New ATLAS Phase**: F - Format Transform (optional post-enhancement)
-- **Automatic Assessment**: Evaluates which format(s) add value
-- **User Choice**: Always presents options, never forces format
-- **Pattern Tracking**: Learns your format preferences over time
+Based on your request, I recommend: **[X] rounds**
+• **Clarity:** [Low/Medium/High] - [specific reason]
+• **Complexity:** [Simple/Standard/Complex] - [specific aspect]
+• **Enhancement:** [Minimal/Moderate/Comprehensive] - [opportunity level]
 
-### Continuing Excellence from v7.2.0
-- **92% Reduction in Pseudocode**: Clean, readable documentation
-- **Table-Based Logic**: Complex decisions now visual
-- **ATLAS Framework**: Universal 5-phase methodology
-- **Challenge Mode**: Automatic complexity challenges
-- **Smart Defaults**: 60% fewer questions
-- **Pattern Learning**: Now includes format preferences
+[Previous patterns: You typically choose [X] rounds for similar prompts]
+
+Your choice?
+```
+**System WAITS for response - NO AUTO-PROCEEDING**
 
 .
 
 ## 📖 Overview
 
-The Prompt Engineering Assistant helps users craft powerful, precise prompts through systematic simplification and challenge-based thinking. Version 8.0.0 introduces SMILE format support - an emoticon-based structure that can improve instruction following for complex prompts. The system actively questions complexity while delivering professional-grade prompts that maximize clarity, minimize unnecessary specifications, and now offers multiple format options to suit different use cases.
+The Prompt Engineering Assistant helps users craft powerful, precise prompts through systematic simplification and challenge-based thinking. Version 8.1.0 MANDATES thinking rounds for every enhancement, enforces professional artifact standards with AI System details at bottom, and uses conversation history for intelligent pattern learning. The system actively questions complexity while delivering professional-grade prompts that maximize clarity, minimize unnecessary specifications, and offers multiple format options to suit different use cases.
 
 ### What is SMILE Format?
 SMILE ((: Smile) is an open-source prompt instruction language created by Dr. Thomas Ager, Ph.D. at Cardiff University. It uses emoticon-based brackets to structure prompts for Large Language Models, designed to increase instruction following while maintaining readability.
+
+### v8.1.0 Core Changes
+- **Thinking Rounds**: MANDATORY - asked every time, no exceptions
+- **Artifact Standards**: Professional formatting with AI System at bottom
+- **Pattern Learning**: Searches your conversation history for context
+- **User Control**: Absolute - all options always available
 
 .
 
 ## ✨ Key Features
 
 ### Core Capabilities
+- **MANDATORY Thinking Rounds**: 1-10 or 'auto' - ALWAYS ASKED
+- **Professional Artifacts**: AI System details at bottom, proper formatting
+- **Pattern Learning**: Uses conversation history for intelligent suggestions
 - **Multi-Format Output**: Standard, JSON, and SMILE formats
 - **ATLAS Thinking Framework**: 5-phase systematic enhancement + Format Transform
 - **Challenge Mode**: Automatic at 3+ rounds - "Could this be simpler?"
-- **Smart Defaults**: Reduces questions by 60%
-- **Pattern Learning**: Adapts to preferences including format choices
+- **Smart Defaults**: Reduces questions by 60% using patterns
 - **REPAIR Protocol**: Recognize, Explain, Propose, Adapt, Iterate, Record
 - **30-50% Complexity Reduction**: Measurable simplification
 - **Universal Platform Support**: Works on ALL AI platforms
-- **User-Controlled Depth**: Choose 1-10 thinking rounds or 'auto'
 
-### v8.0.0 Format Enhancements
-- **Format Intelligence**: Recommends best format for your use case
+### v8.1.0 Enhancements
+- **Conversation Search**: Finds patterns in your history
+- **Recent Chats**: Analyzes recent interactions
+- **Format Intelligence**: Learns your format preferences
 - **Token Impact Display**: Shows overhead for each format
-- **Format Conversion**: Can transform between formats
-- **Pattern-Based Selection**: Learns your format preferences
-- **Always Optional**: Standard format always available
+- **Interactive Formatting**: Professional bold headers and bullets
+- **Never Restrictive**: Patterns as context only
 
 .
 
@@ -105,32 +113,37 @@ SMILE ((: Smile) is an open-source prompt instruction language created by Dr. Th
 1. Go to claude.ai
 2. Click "Projects" in sidebar
 3. Click "Create project"
-4. Name it "Prompt Engineering Assistant v8"
+4. Name it "Prompt Engineering Assistant v8.1"
 
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Writer - Prompt Improver - v8.0.0.md`
+3. Copy and paste: `Writer - Prompt Improver - v8.1.0.md`
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
-Add these v8.0.0 documents to your project's knowledge base:
-- `Prompt - ATLAS Thinking Framework - v2.0.0.md` (Now with Format Transform)
-- `Prompt - Core System & Quick Reference - v3.0.0.md` (SMILE definitions)
-- `Prompt - Builder Mode.md` (Table-based platform guide)
+Add these v8.1.0 documents to your project's knowledge base:
+
+**Critical Documents (v8.1.0):**
+- `Prompt - Core System & Quick Reference - v3.2.0.md` (Mandatory behaviors)
+- `Prompt - Artifact Standards & Templates - v1.0.0.md` (NEW - Required formatting)
+- `Prompt - ATLAS Thinking Framework - v2.0.0.md` (With Format Transform)
+
+**Mode Documents (v8.1.0):**
+- `Prompt - Interactive Mode - v6.1.0.md` (Professional formatting)
+- `Prompt - Builder Mode - v4.1.0.md` (Table-based platform guide)
 - `Prompt - Evaluation & Refinement - v6.0.0.md` (Format assessment)
-- `Prompt - Interactive Mode - v6.0.0.md` (Format selection phase)
 - `Prompt - Patterns & Enhancements - v6.0.0.md` (Multi-format templates)
 
-### Step 4: Start Creating with Format Options
+### Step 4: Start Creating with Mandatory Process
 Simply paste your prompt or describe what you need:
 ```
-write about dogs                       # Standard format by default
-$improve analyze customer data         # Offers format options
-$smile create complex workflow         # SMILE format primary
-$json api integration specs           # JSON format primary
-$interactive                          # Guides to best format
-$prototype explore dashboard concepts # Standard or SMILE
+write about dogs                       # Asks thinking rounds, then enhances
+$improve analyze customer data         # Asks thinking rounds, offers formats
+$smile create complex workflow         # Asks thinking rounds, SMILE primary
+$json api integration specs           # Asks thinking rounds, JSON primary
+$interactive                          # Guided with professional formatting
+$prototype explore dashboard concepts # Asks thinking rounds, then builds
 ```
 
 .
@@ -139,23 +152,23 @@ $prototype explore dashboard concepts # Standard or SMILE
 
 ### Core Modes
 
-| Mode | Activation | Purpose | Best For | Challenge Focus | Format Support |
-|------|------------|---------|----------|-----------------|----------------|
-| **$short** | `$short` or `$s` | Quick minimal refinement | Simple clarity | "Even this needed?" | Standard only |
-| **$improve** | `$improve` or `$i` (DEFAULT) | Smart enhancement | Most improvements | Balance completeness | All formats |
-| **$refine** | `$refine` or `$r` | Full optimization | Maximum quality | Multiple alternatives | All formats |
-| **$interactive** | `$interactive` | Guided help | Learning | Smart defaults | User choice |
-| **$json** | `$json` or `$j` | API format | Programmatic | Minimize overhead | JSON primary |
-| **$smile** | `$smile` or `$sm` | SMILE format | Complex instructions | Structure necessity | SMILE primary |
+| Mode | Activation | Purpose | Best For | Challenge Focus | Thinking Mandatory | Format Support |
+|------|------------|---------|----------|-----------------|-------------------|----------------|
+| **$short** | `$short` or `$s` | Quick minimal refinement | Simple clarity | "Even this needed?" | YES (1-2) | Standard only |
+| **$improve** | `$improve` or `$i` (DEFAULT) | Smart enhancement | Most improvements | Balance completeness | YES (3-4) | All formats |
+| **$refine** | `$refine` or `$r` | Full optimization | Maximum quality | Multiple alternatives | YES (5-8) | All formats |
+| **$interactive** | `$interactive` | Guided help | Learning | Smart defaults | YES (variable) | User choice |
+| **$json** | `$json` or `$j` | API format | Programmatic | Minimize overhead | YES (2-3) | JSON primary |
+| **$smile** | `$smile` or `$sm` | SMILE format | Complex instructions | Structure necessity | YES (2-3) | SMILE primary |
 
 ### Builder Sub-Modes (Universal AI Platform Support!)
 
-| Sub-Mode | Activation | Purpose | Challenge Priority | Default Phase | Format Options |
-|----------|------------|---------|-------------------|---------------|----------------|
-| **Builder** | `$builder` | Auto-detect needs | "Simpler platform?" | Phase 1 only | Standard/SMILE |
-| **Prototype** | `$prototype` | Visual exploration | "Paper prototype?" | MVP exploration | Standard/SMILE |
-| **Website** | `$website` | Conversion sites | "Landing page first?" | Core message | Standard |
-| **App** | `$app` | Applications | "Which features critical?" | Essential only | Standard/SMILE |
+| Sub-Mode | Activation | Purpose | Challenge Priority | Default Phase | Thinking Mandatory | Format Options |
+|----------|------------|---------|-------------------|---------------|-------------------|----------------|
+| **Builder** | `$builder` | Auto-detect needs | "Simpler platform?" | Phase 1 only | YES | Standard/SMILE |
+| **Prototype** | `$prototype` | Visual exploration | "Paper prototype?" | MVP exploration | YES | Standard/SMILE |
+| **Website** | `$website` | Conversion sites | "Landing page first?" | Core message | YES | Standard |
+| **App** | `$app` | Applications | "Which features critical?" | Essential only | YES | Standard/SMILE |
 
 ### Supported Platforms Include:
 - **Bolt.new** - Challenge: "Start with Phase 1"
@@ -169,7 +182,7 @@ $prototype explore dashboard concepts # Standard or SMILE
 
 .
 
-## 🔄 Format Options (NEW!)
+## 📄 Format Options (NEW!)
 
 ### Standard Format (Default)
 - **Purpose**: Natural language clarity, maximum readability
@@ -188,6 +201,7 @@ Create an executive summary with actionable insights.
 - **Token Impact**: Usually -5% to +5%
 - **Best For**: Technical integration, system interfaces, structured data
 - **Availability**: When structured data benefits
+- **Pattern Learning**: System tracks when you prefer JSON
 
 Example:
 ```json
@@ -205,6 +219,7 @@ Example:
 - **Token Impact**: +20-30% typically
 - **Best For**: Complex multi-step instructions, detailed requirements
 - **Availability**: Complexity > 3 or when structure helps
+- **Pattern Tracking**: System learns your SMILE usage preferences
 
 Example:
 ```
@@ -227,13 +242,13 @@ Example:
 ) :)
 ```
 
-### Format Selection Guide
+### Format Selection Guide (v8.1.0 Enhanced)
 
-| Complexity | Recommended | Alternative | Token Note |
-|------------|------------|-------------|------------|
-| Simple (1-3) | Standard | - | Baseline |
-| Moderate (4-6) | Standard | JSON if API, SMILE if structured | Monitor overhead |
-| Complex (7-10) | SMILE | Standard with sections | +20-30% justified |
+| Complexity | Recommended | Alternative | Pattern Context | Token Note |
+|------------|------------|-------------|-----------------|------------|
+| Simple (1-3) | Standard | - | Previous choices shown | Baseline |
+| Moderate (4-6) | Standard | JSON if API, SMILE if structured | Format history displayed | Monitor overhead |
+| Complex (7-10) | SMILE | Standard with sections | SMILE preference tracked | +20-30% justified |
 
 ### SMILE Symbol Reference
 
@@ -248,12 +263,12 @@ Example:
 
 .
 
-## 🗂️ Frameworks Overview v8.0.0
+## 🗂️ Frameworks Overview v8.1.0
 
 ### Core Frameworks
 
-#### ATLAS Framework (Now with Format Transform!)
-- **A** - Assess & Challenge (check complexity, format needs)
+#### ATLAS Framework (Pattern-Enhanced!)
+- **A** - Assess & Challenge (check complexity, search patterns)
 - **T** - Transform & generate alternatives (3 versions)
 - **L** - Layer & build improvements (structure for format)
 - **A** - Assess impact of changes (verify format value)
@@ -296,98 +311,163 @@ Example:
 
 .
 
+## 📊 Enhanced Report Examples
+
+### v8.1.0 Artifact Format (MANDATORY)
+```markdown
+[Enhanced prompt content here]
+
+---
+
+**Format Options:**
+• Standard format (shown above)
+• JSON format available (`$json`) - For APIs
+• SMILE format available (`$smile`) - For complex (+25% tokens)
+
+---
+
+**AI System:**
+
+- **Mode:** $improve
+- **Thinking:** 5 rounds (user selected)
+- **ATLAS:** A→T→L→A→S (full cycle)
+
+---
+
+- **Framework:** CRAFT (100% coverage)
+- **Enhancement:** 73% improvement
+- **Complexity:** Medium
+
+---
+
+- **Challenge:** Applied - reduced requirements
+- **Pattern Context:** Based on 8 similar prompts
+- **User Control:** All options available
+```
+
+**CRITICAL:** AI System ALWAYS at bottom with dash formatting
+
+.
+
+## 💰 Smart Resource Optimization (Enhanced)
+
+### Three-Phase Approach (All Modes Track Patterns)
+
+| Phase | Resource Level | Features | User Pattern | Thinking Rounds |
+|-------|----------------|----------|--------------|-----------------|
+| **Phase 1** | Minimal | Core MVP only | Tracked | 1-3 (asked) |
+| **Phase 2** | Moderate | Enhanced UX | Tracked | 3-5 (asked) |
+| **Phase 3** | High | Premium features | Tracked | 5-7 (asked) |
+
+Pattern Learning: System remembers your typical phase selections
+
+.
 
 ## 🧠 ATLAS Thinking Framework
 
-### How ATLAS Works with Formats
+### How ATLAS Works (v8.1.0 Mandatory Process)
 
-| Phase | Action | Challenge Point | Format Decision | Output |
-|-------|--------|----------------|-----------------|--------|
-| **Assess** | Map clarity, find gaps | "Is this necessary?" | Complexity check | Issue list |
-| **Transform** | Generate options | Create simpler alternatives | Consider formats | 3 versions |
-| **Layer** | Build progressively | Stop when sufficient | Structure for format | Enhanced prompt |
-| **Assess Impact** | Validate changes | Check value vs. complexity | Verify format value | Metrics |
-| **Format** | Apply optimal format | "Standard sufficient?" | User choice | Final format |
-| **Synthesize** | Select optimal | Apply final polish | Present options | Delivered artifact |
+| Phase | Action | Challenge Point | Pattern Integration | Output |
+|-------|--------|----------------|---------------------|--------|
+| **Assess** | Map clarity, find gaps | "Is this necessary?" | Search history | Issue list |
+| **Transform** | Generate options | Create simpler alternatives | Use patterns | 3 versions |
+| **Layer** | Build progressively | Stop when sufficient | Apply preferences | Enhanced prompt |
+| **Assess Impact** | Validate changes | Check value vs. complexity | Verify improvement | Metrics |
+| **Format** | Apply optimal format | "Standard sufficient?" | Check format history | Final format |
+| **Synthesize** | Select optimal | Apply final polish | Present all options | Delivered artifact |
 
 ### Challenge Mode Activation
 
-| Thinking Rounds | Intensity | Action | Format Challenge |
-|----------------|-----------|--------|------------------|
-| 1-2 | None | No challenge | Standard only |
-| 3-4 | Gentle | "Could this be simpler?" | "Need structure?" |
-| 5-6 | Constructive | Present alternatives | Consider formats |
-| 7-8 | Strong | Aggressive simplification | "SMILE worth +25% tokens?" |
-| 9-10 | Maximum | Multiple alternatives required | All formats presented |
+| Thinking Rounds | Intensity | Action | Format Challenge | Pattern Note |
+|----------------|-----------|--------|------------------|--------------|
+| 1-2 | None | No challenge | Standard only | History shown |
+| 3-4 | Gentle | "Could this be simpler?" | "Need structure?" | Preferences noted |
+| 5-6 | Constructive | Present alternatives | Consider formats | Patterns applied |
+| 7-8 | Strong | Aggressive simplification | "SMILE worth +25% tokens?" | History influences |
+| 9-10 | Maximum | Multiple alternatives required | All formats presented | Full context |
 
-### User Interaction with Format
+### User Interaction (MANDATORY v8.1.0)
 ```
-How many thinking rounds would you like? (1-10, or 'auto')
+**How many thinking rounds would you like? (1-10, or 'auto')**
 
-Based on your request, I recommend: 5 rounds
-- Clarity: Low - needs structure
-- Complexity: High - multi-step process
-- Enhancement: Comprehensive - significant improvement possible
-- Format benefit: SMILE could help with structure
+Based on your request, I recommend: **5 rounds**
+• **Clarity:** Low - needs structure
+• **Complexity:** High - multi-step process
+• **Enhancement:** Comprehensive - significant improvement possible
+• **Format benefit:** SMILE could help with structure
 
-Or specify your preferred number.
-[Pattern: You've used SMILE 40% for complex prompts]
+[Previous patterns: You've averaged 4.7 rounds for similar prompts]
+[Format history: SMILE used 40% for complex prompts]
+
+**Your choice?**
 ```
 
 .
 
 ## 🚀 Challenge Mode Philosophy
 
-### The Challenge Manifesto (Format-Aware)
-> "Every feature has a cost. Every complexity adds friction. Every format adds tokens. Start with the absolute minimum that delivers value. Let success drive expansion, not speculation."
+### The Challenge Manifesto (Format-Aware, Pattern-Enhanced)
+> "Every feature has a cost. Every complexity adds friction. Every format adds tokens. Start with the absolute minimum that delivers value. Let success drive expansion, not speculation. Learn from every choice."
 
-### Common Challenges with Format Considerations
+### Common Challenges with Pattern Context
 
-| Situation | Before | Challenge Applied | Format Choice | After |
-|-----------|--------|------------------|---------------|-------|
-| **Over-Specification** | "React, TypeScript, Redux, MUI..." | "Platform chooses tools" | Standard | "Task app, universal" |
-| **Complex Workflow** | "10-step process with conditions..." | "Structure helps?" | SMILE | `(: Workflow ( [steps] ) :)` |
-| **API Integration** | "Multiple endpoints and responses..." | "JSON for structure?" | JSON | Structured fields |
-| **Simple Request** | "Write a blog post..." | "Keep it simple" | Standard | Natural language |
+| Situation | Before | Challenge Applied | Pattern Context | After |
+|-----------|--------|------------------|-----------------|-------|
+| **Over-Specification** | "React, TypeScript, Redux, MUI..." | "Platform chooses tools" | You prefer minimal 70% | "Task app, universal" |
+| **Complex Workflow** | "10-step process with conditions..." | "Structure helps?" | SMILE helped before | `(: Workflow ( [steps] ) :)` |
+| **API Integration** | "Multiple endpoints and responses..." | "JSON for structure?" | JSON preferred for APIs | Structured fields |
+| **Simple Request** | "Write a blog post..." | "Keep it simple" | Standard typical | Natural language |
 
 .
 
 ## 🚨 REPAIR Error Protocol
 
-The REPAIR protocol now handles format issues:
+The REPAIR protocol now handles format issues and pattern violations:
 
-| Step | Name | Action | Format Handling | Example |
-|------|------|--------|-----------------|---------|
-| **R** | Recognize | Identify issue | Check format fit | "SMILE too complex" |
-| **E** | Explain | Clear explanation | Token impact shown | "+35% overhead detected" |
-| **P** | Propose | 3 options | Include format change | Standard/Simplified/Different |
-| **A** | Adapt | Apply choice | Switch if needed | User selects format |
-| **I** | Iterate | Refine quickly | Optimize for format | Final adjustments |
-| **R** | Record | Learn pattern | Track format preference | Note for future |
+| Step | Name | Action | v8.1.0 Enhancement | Example |
+|------|------|--------|-------------------|---------|
+| **R** | Recognize | Identify issue | Check standards violation | "AI System at top" |
+| **E** | Explain | Clear explanation | Show correct format | "Should be at bottom" |
+| **P** | Propose | 3 options | Include pattern context | "Based on your history..." |
+| **A** | Adapt | Apply choice | Update patterns | User selects |
+| **I** | Iterate | Refine quickly | Verify standards | Final check |
+| **R** | Record | Learn pattern | Update history | Note preference |
 
 .
 
 ## 🆘 Troubleshooting
 
-### Format-Related Solutions
+### v8.1.0 Specific Issues
 
 | Issue | Diagnosis | Solution |
 |-------|-----------|----------|
+| No thinking rounds asked? | CRITICAL VIOLATION | Report bug - MANDATORY |
+| AI System at top? | Standards violation | Must be at bottom |
+| No pattern search? | Missing context | Should use conversation_search |
+| Options restricted? | Pattern override | All options must show |
+| Poor formatting? | Interactive mode issue | Should use bold headers |
 | Too many tokens? | SMILE overhead | Try Standard format |
 | Lost clarity? | Wrong format | Switch to Standard |
 | API not working? | JSON structure issue | Validate JSON format |
 | Too rigid? | Over-structured | Reduce SMILE depth |
 | Still complex? | Format not helping | Standard + sections |
 
-### Quick Format Fixes
+### Quick Fixes (v8.1.0)
+- Say "thinking rounds" to ensure asked
 - Say "standard" for regular format
-- Say "smile" for structured format
-- Say "json" for API format
-- Say "compare" to see all formats
+- Say "patterns" to see your history
+- Say "all options" to see everything
 
 .
 
-## ⚠️ Important Notes v8.0.0
+## ⚠️ Important Notes v8.1.0
+
+### MANDATORY Elements (NO EXCEPTIONS)
+1. **Thinking Rounds Asked**: Every single time, wait for response
+2. **Artifact Standards**: AI System at bottom, dash formatting
+3. **Pattern Search**: Uses conversation_search and recent_chats
+4. **User Control**: All options always available
+5. **Professional Formatting**: Bold headers, bullet points
 
 ### Format Selection Principles
 1. **Standard First**: Always start with standard unless complexity demands structure
@@ -412,6 +492,7 @@ The REPAIR protocol now handles format issues:
 
 ## 📦 Version History
 
+- **v8.1.0**: MANDATORY thinking rounds, professional artifact standards, conversation history pattern learning, enhanced interactive formatting
 - **v8.0.0**: SMILE format integration, multi-format support, Format Transform phase, pattern-based format selection
 - **v7.2.0**: Streamlined format, 92% pseudocode reduction, table-based logic, maintained all features
 - **v7.1.0**: Enhanced pattern learning, improved confidence scoring, refined ATLAS
@@ -421,6 +502,37 @@ The REPAIR protocol now handles format issues:
 - **v4.2.0**: Creative direction philosophy, AI design freedom
 - **v4.1.0**: Reorganized architecture prioritizing core logic
 - **v4.0.0**: Lovable platform, 3 sub-modes, 6 frameworks
+
+.
+
+## 🎯 Key Principles v8.1.0
+
+### Core Mandates
+1. **Thinking Rounds**: ALWAYS asked, NO exceptions
+2. **Artifact Standards**: AI System at bottom, proper formatting
+3. **Pattern Learning**: Conversation history enhances context
+4. **User Control**: Absolute on all choices
+5. **Challenge Mode**: Active at 3+ rounds
+
+### Format Philosophy
+1. **Standard Default**: Most prompts need simplicity
+2. **JSON for APIs**: When structure essential
+3. **SMILE for Complex**: When instructions need structure
+4. **Token Transparency**: Always show impact
+5. **Never Force**: User chooses format
+
+.
+
+## 📈 Performance Metrics
+
+### v8.1.0 Compliance Targets
+- Thinking rounds asked: 100% (MANDATORY)
+- Artifact standards met: 100%
+- Pattern search used: 100%
+- Format options shown: 100%
+- User control maintained: 100%
+- Challenge applied (3+): 100%
+- Professional formatting: 100%
 
 .
 
@@ -443,6 +555,12 @@ The REPAIR protocol now handles format issues:
 - Research-backed for instruction following
 - Compatible with all major LLMs
 
+### v8.1.0 Required Documents
+- **Core System & Quick Reference v3.2.0**: Mandatory behaviors
+- **Artifact Standards v1.0.0**: Required formatting
+- **ATLAS Framework v2.0.0**: Thinking methodology
+- **Interactive Mode v6.1.0**: Professional formatting
+
 ---
 
-*Transform vague requests into clear, simple prompts with format options! Version 8.0.0 adds SMILE format support for better instruction following when complexity demands it. Challenge complexity at every step. Start minimal, enhance only if needed. Choose your format: Standard for clarity, JSON for systems, SMILE for complex instructions. Tables + ATLAS + Challenge mode + Format options = Better prompts, faster, in the right format!*
+*Transform vague requests into clear, professional prompts! Version 8.1.0 MANDATES thinking rounds for every enhancement, enforces professional artifact standards, and uses conversation history for intelligent pattern learning. Challenge complexity at every step. Start minimal, enhance only if needed. Choose your format: Standard for clarity, JSON for systems, SMILE for complex instructions. User control is absolute!*
