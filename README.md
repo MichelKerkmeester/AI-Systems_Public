@@ -52,13 +52,11 @@ Some of my non-client AI systems that I made available to the public. They were 
 - **5 Interactive Modes & 6 Tone Variations (All Always Available)**: 
   - Modes: $interactive (guided default), $write (general), $share (knowledge), $teach (educational), $reflect (analysis)
   - Tones: $natural (conversational), $technical (precise), $collaborative (team), $educational (clear), $reflective (thoughtful), $minimal (essential)
-  - Beta Feature: Shows historical usage patterns as helpful context, never restrictions
 
 - **DEPTH Framework & Context Enhancement**: 
   - User-controlled thinking depth (1-10 rounds) - always asked, never automated
-  - Historical context display: Shows patterns from previous conversations as notes
   - Challenge Mode at 3+ thinking rounds for simplification (both options always shown)
-  - LEARN error recovery protocol with context-aware suggestions
+  - Pattern learning and session tracking learns your personal preferences
   - Emergency commands: $reset (clear context), $standard (default flow), $quick (fast creation), $status (show patterns)
 
 .
@@ -81,8 +79,7 @@ Some of my non-client AI systems that I made available to the public. They were 
   - 5-phase thinking (Assess/Transform/Layer/Assess/Synthesize) with 1-10 rounds
   - Auto-challenges at 3+ rounds: Gentle (1-2), Constructive (3-5), Strong (6-10)
   - REPAIR protocol: Recognize/Explain/Propose/Adapt/Iterate/Record errors
-  - Session tracking learns your complexity preferences
-  - Pattern learning adapts to preferences and challenge acceptance
+  - Pattern learning and session tracking learns your personal preferences
 
 .
 
