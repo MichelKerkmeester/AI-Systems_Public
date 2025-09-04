@@ -23,7 +23,7 @@
 **BETA FEATURE:** 
 - System searches conversation history for framework usage patterns
 
-Frameworks guide content creation but don't dictate it. Apply based on goal, not keywords:
+**Frameworks guide content creation but don't dictate it. Apply based on goal, not keywords:** 
 - "problem" ≠ automatic PATH framework
 - "story" ≠ automatic CASE framework
 - "question" ≠ automatic QPT framework

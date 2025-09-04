@@ -17,11 +17,10 @@
 
 ## 1. 🎯 Core Voice
 
-**BETA ENHANCEMENT:** 
-- System uses conversation history for voice context
+**BETA ENHANCEMENT:** System uses conversation history for voice context
 
-**CRITICAL:** 
-- All tones and voice options always available
+**CRITICAL:** All tones and voice options always available
+
 
 ### The Voice Trinity
 1. **Knowledgeable** - Deep expertise without arrogance

@@ -24,6 +24,8 @@ Unless user explicitly specifies $write, $share, $teach, or $reflect, Interactiv
 
 `$interactive` mode is conversational content creation that asks strategic questions before crafting optimized content. It helps create better design and product content through guided exploration.
 
+---
+
 - **BETA Feature:** System searches conversation history to enrich context
 - **CRITICAL:** All questions always asked, all options always shown
 

@@ -21,8 +21,8 @@ Universal thinking methodology for design and product content - combining simpli
 
 Every content request benefits from challenging assumptions about complexity, scaling thinking appropriately, and displaying historical engagement patterns as helpful context.
 
-**BETA FEATURE:** 
-- System can search conversation history to provide context. Historical patterns inform but NEVER skip steps or reduce options.
+
+**BETA FEATURE:** System can search conversation history to provide context. Historical patterns inform but NEVER skip steps or reduce options.
 
 ### Integration with System
 - Interactive Mode requirements: See Core System Rules & Quick Reference, Section 1
