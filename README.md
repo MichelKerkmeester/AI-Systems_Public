@@ -59,7 +59,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 .
 
-#### 2. 📋 Product Owner Writer - v8.3.0 
+#### 2. 📋 Product Owner Writer - v8.4.0 
 **Transform vague requests into professional dev tickets, specs, docs, and beautifully formatted documents with built-in complexity challenging**
 
 - **5 Intelligent Modes & Auto-Scaling**: 
