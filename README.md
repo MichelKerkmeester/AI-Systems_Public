@@ -7,7 +7,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 ---
 
-## 📑 Table of Contents
+## 📋 Table of Contents
 
 ### ✏️ Writer Systems
 1. [Branded Content Writer](#1--branded-content-writer)
@@ -18,15 +18,10 @@ Some of my non-client AI systems that I made available to the public. They were 
 4. [GPT - Scheduled Tasks](#4--gpt---scheduled-tasks)
 
 ### 💬 MCP Agents
-5. [Webflow Agent](#5--webflow-agent)
-6. [ClickUp Agent](#6--clickup-agent)
-7. [Notion Agent](#7--notion-agent)
-8. [Imagician Agent](#8--imagician-agent)
-9. [Video Audio Agent](#9--video-audio-agent)
-
-### 💻 Development Systems
-10. [IDE System Prompt](#10--ide-system-prompt)
-11. [Lovable System Prompts](#11--lovable-system-prompts)
+5. [Media Editor Agent](#5--media-editor)
+6. [Webflow Agent](#6--webflow-agent)
+7. [ClickUp Agent](#7--clickup-agent)
+8. [Notion Agent](#8--notion-agent)
 
 ### 🔧 Additional Sections
 - [Common Features](#-common-features)
@@ -69,7 +64,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 - **Professional Standards & Platform Integration**: 
   - Strict formatting: TOC sections only, dividers (---), Key Problems ### → format
-  - Symbols: ■ (sections), ◇ (requirements), ◳ (designs), ✦ (success), ✓ (checklist)
+  - Symbols: ◆ (sections), ◇ (requirements), ◳ (designs), ✦ (success), ✔ (checklist)
   - ClickUp MCP direct workspace creation with preserved formatting
 
 - **ATLAS Framework & Challenge Mode**: 
@@ -138,7 +133,30 @@ Some of my non-client AI systems that I made available to the public. They were 
 ##### MCP tools made easy with conversational systems
 ——
 
-#### 5. 🌐 Webflow Agent - v3.0.0 (NEW)
+#### 5. 🎬 Media Editor Agent - v1.0.0 (NEW)
+**Unified intelligent media editing image, video, and audio files through natural conversation**
+
+- **Universal Media Operations & Intelligence**: 
+  - Image processing: Resize, convert (JPEG/PNG/WebP/AVIF), compress, crop, rotate, batch
+  - Video operations: Transcode, trim, overlay, concatenate, subtitles, extract frames
+  - Audio handling: Extract from video, convert formats, normalize, remove silence
+  - Natural language: "Make it smaller" → Smart context analysis
+
+- **MEDIA Framework & Challenge Mode**: 
+  - 5-phase thinking: Measure/Evaluate/Decide/Implement/Analyze with 1-10 rounds
+  - Challenge at 3+ rounds: "85% quality visually identical but 50% smaller"
+  - Pattern learning: Adapts to quality preferences and workflow patterns
+  - Emergency commands: $reset, $standard, $quick, $status for instant control
+
+- **Dual MCP Integration & Visual Feedback**: 
+  - Imagician MCP: High-performance image processing via Sharp
+  - Video-Audio MCP: Comprehensive media handling via FFmpeg
+  - Real-time progress: Visual bars, API usage indicators (🟢🟡🟠🔴)
+  - Educational insights: Explains why optimizations work
+
+.
+
+#### 6. 🌐 Webflow Agent - v3.0.0
 **Reality-based content management for existing Webflow structures**
 
 - **Content Excellence & Operations**: 
@@ -161,7 +179,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 .
 
-#### 6. 🚀 ClickUp Agent - v2.1.0
+#### 7. 🚀 ClickUp Agent - v2.1.0
 **Transform natural language into organized ClickUp workspaces while actively challenging unnecessary complexity**
 
 - **Simplicity-First Design & Pattern Learning**: 
@@ -184,7 +202,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 .
 
-#### 7. 📝 Notion Agent - v1.3.0
+#### 8. 📓 Notion Agent - v1.3.0
 **Natural language control of Notion workspaces**
 
 - **Natural Language Processing**: 
@@ -205,109 +223,13 @@ Some of my non-client AI systems that I made available to the public. They were 
   - Design principles and optimization tips
   - Migration guidance from other platforms
 
-.
-
-#### 8. 🖼️ Imagician Agent - v1.4.0
-**Image file editing and conversion through conversation**
-
-- **8 Operations & Smart Understanding**: 
-  - Core ops: resize, compress, convert, crop, rotate, flip, batch, metadata
-  - "Make it smaller" → Context analysis for resize vs compress
-  - 20+ formats with optimal suggestions
-  - Quality warnings before destructive operations
-
-- **5 Operating Modes**: 
-  - Modes: Interactive (guided), $q (quick), $b (batch), $p (platform), $w (web)
-  - Before/after comparisons with quality metrics
-  - Processing time estimates
-  - Visual feedback for all operations
-
-- **Platform Optimizations**: 
-  - Instagram: Stories (1080x1920), Posts (1080x1080), Reels (1080x1920)
-  - Facebook: Cover (820x312), Profile (180x180), Post (1200x630)
-  - YouTube: Thumbnail (1280x720), Banner (2560x1440)
-  - Auto-detection of platform requirements
-
-.
-
-#### 9. 🎬 Video Audio Agent - v1.0.0
-**Video and audio processing through natural conversation**
-
-- **Natural Language & Smart Codecs**: 
-  - "Compress this video" → Optimal codec selection
-  - Codecs: H.264 (universal), H.265 (efficient), AAC (audio), MP3 (legacy)
-  - Platform detection from context
-  - Batch understanding for multiple files
-
-- **Platform Optimizations**: 
-  - YouTube: 4K/1080p with optimal bitrates
-  - Instagram: Reels (1080x1920), Stories (1080x1920), IGTV (1080x1350)
-  - TikTok: Vertical video optimization
-  - Podcasts: Audio normalization and compression
-
-- **Batch Processing & Feedback**: 
-  - Multiple files with consistent or per-file settings
-  - Queue management with progress tracking
-  - Size reduction percentages and quality metrics
-  - Time tracking with completion estimates
-
----
-
-## 💻 Development Systems
-##### IDE enhancements & App Prototyping
-——
-
-#### 10. 🛠️ IDE System Prompt - v3.9.0
-**Transform any AI coding assistant into an elite software engineer**
-
-- **Root Cause & Performance**: 
-  - Fixes root issues not symptoms, identifies patterns
-  - CSS-first, REM units, batch DOM, will-change optimization
-  - Memory management and event listener cleanup
-  - Performance budgets and monitoring
-
-- **Pre-Code Process**: 
-  - 5-step: Define → Map → Identify → Document → Verify
-  - "This could break if..." analysis for every solution
-  - Edge cases enumerated before implementation
-  - Test-first development approach
-
-- **MCP Tree & Validation**: 
-  - Strategic tool selection for verification
-  - Multi-tool validation strategies
-  - Cross-reference documentation
-  - Real-time testing protocols
-
-.
-
-#### 11. 🚀 Lovable System Prompts - v2.0.0
-**Three specialized experts for minimal Lovable platform credit usage**
-
-- **Goal-Oriented Frameworks**: 
-  - VISION (prototype): rapid proof of concept
-  - CONVERT (optimize): transform to production
-  - SCALE (architecture): enterprise-ready systems
-  - Describe outcomes not implementations
-
-- **Comprehensive Coverage**: 
-  - Testing strategies, accessibility compliance, collaboration
-  - Error handling with graceful degradation
-  - Performance optimization from day one
-  - Security considerations built-in
-
-- **Phased Delivery**: 
-  - Foundation (core) → Enhancement (polish) → Optimization (performance)
-  - Context-aware adaptation to expertise level
-  - Team size and timeline considerations
-  - Progressive enhancement strategy
-
 ---
 
 ## 🔧 Common Features
 
 ### MCP Integration
 All systems support Model Context Protocol tools:
-- **Domain-Specific**: Webflow, ClickUp, Notion, Imagician, search tools
+- **Domain-Specific**: Webflow, ClickUp, Notion, Media processing tools
 
 ### Intelligent Modes
 - **Interactive Default**: Conversational guidance
@@ -335,9 +257,10 @@ All systems support Model Context Protocol tools:
 mkdir "$HOME/MCP Servers"
 cd "$HOME/MCP Servers"
 
-# Clone needed tools
+# Clone needed tools (examples)
 git clone https://github.com/webflow/mcp-server-webflow.git  # For Webflow Agent
-git clone https://github.com/flowy11/imagician.git  # For Imagician Agent
+git clone https://github.com/flowy11/imagician.git  # For Media Editor
+git clone https://github.com/misbahsy/video-audio-mcp.git  # For Media Editor
 
 # Use AI to generate docker-compose.yml
 # Start containers
