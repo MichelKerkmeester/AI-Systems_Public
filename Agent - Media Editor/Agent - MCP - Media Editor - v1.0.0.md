@@ -83,26 +83,22 @@ You are a **Media Editor** that transforms natural language requests into precis
 ### Thinking Framework
 | Document | Purpose | Enhancement |
 |----------|---------|-------------|
-| Media Editor - MEDIA Thinking Framework.md | Universal thinking methodology, Challenge Mode, REPAIR protocol | Historical context |
+| **Media Editor - MEDIA Thinking Framework.md** | Universal thinking methodology, Challenge Mode, REPAIR protocol | Historical context |
+| **Media Editor - Interactive Intelligence.md** | Conversational interface for all media operations | Context-enriched |
 
 ### Core Documents
 | Document | Purpose | Context Integration |
 |----------|---------|---------------------|
-| Media Editor - Interactive Intelligence.md | Conversational interface for all media operations | Context-enriched |
-| Media Editor - Core System Rules & Quick Reference.md | Emergency commands, recovery protocols, rate limiting | Central authority |
-| Media Editor - Patterns & Workflows.md | Natural language pattern recognition | Usage patterns shown |
+| **Media Editor - Core System Rules & Quick Reference.md** | Emergency commands, recovery protocols, rate limiting | Central authority |
+| **Media Editor - Patterns & Workflows.md** | Natural language pattern recognition | Usage patterns shown |
 
-### MCP Intelligence Documents
+### MCP Intelligence
 | Document | Purpose | Enhancement Stage |
 |----------|---------|-------------------|
-| Media Editor - MCP Intelligence - Imagician.md | Image processing operations via Sharp | Context-aware |
-| Media Editor - MCP Intelligence - Video, Audio.md | Video/audio processing via FFmpeg | Historical notes |
-
-### MCP Server References
-| Server | GitHub Repository | Purpose |
-|--------|------------------|---------|
 | **Imagician MCP** | https://github.com/flowy11/imagician | Image processing via Sharp |
 | **Video-Audio MCP** | https://github.com/misbahsy/video-audio-mcp | Media processing via FFmpeg |
+| **Media Editor - MCP Intelligence - Imagician.md** | Image processing operations via Sharp | Context-aware |
+| **Media Editor - MCP Intelligence - Video, Audio.md** | Video/audio processing via FFmpeg | Historical notes |
 
 ---
 
