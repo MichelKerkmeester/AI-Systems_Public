@@ -9,9 +9,9 @@ The Product Owner system transforms requests into professional development ticke
 - [🚀 Quick Setup](#-quick-setup)
 - [🎛️ Operating Modes](#️-operating-modes)
 - [🧠 ATLAS Thinking Framework](#-atlas-thinking-framework)
-- [⚡ Emergency Commands](#-emergency-commands)
-- [🗃️ Past Chats Integration](#️-past-chats-integration)
 - [🎯 Automatic Complexity Detection](#-automatic-complexity-detection)
+- [🗃️ Past Chats Integration](#️-past-chats-integration)
+- [⚡ Emergency Commands](#-emergency-commands)
 - [🔄 Challenge Mode](#-challenge-mode)
 - [📗 Platform Integration](#-platform-integration)
 - [🔧 Installing MCP Tools](#-installing-mcp-tools)
@@ -152,6 +152,67 @@ Which best fits? (1-5)
 
 ---
 
+## 🧠 ATLAS Thinking Framework
+
+### Enhanced with Conversation History
+
+The ATLAS framework searches past conversations to:
+- Find similar problems and solutions
+- Identify successful patterns
+- Avoid past failures
+- Calibrate challenge intensity
+
+### The Five Phases
+
+| Phase | Name | Purpose | History Integration |
+|-------|------|---------|-------------------|
+| **A** | Assess & Challenge | Map reality, challenge | Searches similar problems |
+| **T** | Transform & Expand | Generate solutions | Finds successful patterns |
+| **L** | Layer & Analyze | Build frameworks | Checks past failures |
+| **A** | Assess Impact | Red team | Uses validation patterns |
+| **S** | Synthesize & Ship | Decide and deliver | Applies past successes |
+
+### Thinking Round Calibration
+```
+How many thinking rounds should I use? (1-10)
+
+Based on your request, I recommend: [X rounds]
+- Complexity: [Low/Medium/High] - [reason]
+- Uncertainty: [Low/Medium/High] - [reason]
+- Stakes: [Low/Medium/High] - [reason]
+
+[Historical note: You typically use 4 rounds for similar requests]
+
+Or specify your preferred number (all options available).
+```
+
+---
+
+## 🎯 Automatic Complexity Detection
+
+### For $ticket Mode
+
+The system detects complexity based on keywords and patterns:
+
+| Indicators | Complexity | Sections | Resolution Items | Challenge Focus |
+|------------|------------|----------|------------------|-----------------|
+| Bug fix, update | **Simple** | 2-3 | 4-6 | "Is this really needed?" |
+| Feature, dashboard | **Standard** | 4-5 | 8-12 | "Could we do less?" |
+| Platform, architecture | **Complex** | 6-8 with phases | 12-20 | "Can we phase this?" |
+
+### Mandatory Formatting (ALL Tickets)
+
+Every ticket MUST include:
+- Table of Contents (sections only)
+- # ◆ About section
+- ### → Key problems: (NOT in TOC)
+- ### → Reasons why: (NOT in TOC)
+- ## ◳ Designs & References
+- ## ✓ Resolution Checklist with QA warning
+- Dividers (---) between ALL sections
+
+---
+
 ## ⚡ Emergency Commands
 
 ### Quick Recovery Options
@@ -216,31 +277,6 @@ The system uses two tools to search conversation history:
 
 ---
 
-## 🎯 Automatic Complexity Detection
-
-### For $ticket Mode
-
-The system detects complexity based on keywords and patterns:
-
-| Indicators | Complexity | Sections | Resolution Items | Challenge Focus |
-|------------|------------|----------|------------------|-----------------|
-| Bug fix, update | **Simple** | 2-3 | 4-6 | "Is this really needed?" |
-| Feature, dashboard | **Standard** | 4-5 | 8-12 | "Could we do less?" |
-| Platform, architecture | **Complex** | 6-8 with phases | 12-20 | "Can we phase this?" |
-
-### Mandatory Formatting (ALL Tickets)
-
-Every ticket MUST include:
-- Table of Contents (sections only)
-- # ◆ About section
-- ### → Key problems: (NOT in TOC)
-- ### → Reasons why: (NOT in TOC)
-- ## ◳ Designs & References
-- ## ✓ Resolution Checklist with QA warning
-- Dividers (---) between ALL sections
-
----
-
 ## 🔄 Challenge Mode
 
 ### Three-Level Hierarchy
@@ -299,42 +335,6 @@ Which option? (1 or 2)
 - Tracks your platform preferences by mode
 - Learns when you prefer ClickUp vs artifact-only
 - Adapts suggestions based on history
-
----
-
-## 🧠 ATLAS Thinking Framework
-
-### Enhanced with Conversation History
-
-The ATLAS framework searches past conversations to:
-- Find similar problems and solutions
-- Identify successful patterns
-- Avoid past failures
-- Calibrate challenge intensity
-
-### The Five Phases
-
-| Phase | Name | Purpose | History Integration |
-|-------|------|---------|-------------------|
-| **A** | Assess & Challenge | Map reality, challenge | Searches similar problems |
-| **T** | Transform & Expand | Generate solutions | Finds successful patterns |
-| **L** | Layer & Analyze | Build frameworks | Checks past failures |
-| **A** | Assess Impact | Red team | Uses validation patterns |
-| **S** | Synthesize & Ship | Decide and deliver | Applies past successes |
-
-### Thinking Round Calibration
-```
-How many thinking rounds should I use? (1-10)
-
-Based on your request, I recommend: [X rounds]
-- Complexity: [Low/Medium/High] - [reason]
-- Uncertainty: [Low/Medium/High] - [reason]
-- Stakes: [Low/Medium/High] - [reason]
-
-[Historical note: You typically use 4 rounds for similar requests]
-
-Or specify your preferred number (all options available).
-```
 
 ---
 
