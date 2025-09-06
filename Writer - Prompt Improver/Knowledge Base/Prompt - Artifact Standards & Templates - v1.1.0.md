@@ -1,19 +1,18 @@
-# Prompt - Artifact Standards & Templates - v1.0.0
+# Prompt - Artifact Standards & Templates - v1.1.0
 
 Comprehensive artifact delivery standards for prompt engineering system with mandatory formatting requirements, AI System details, and multi-format support.
 
 ## 📋 Table of Contents
 
 1. [📦 DELIVERY STANDARDS](#-delivery-standards)
-2. [📋 MANDATORY STRUCTURE](#-mandatory-structure)
+2. [📋 MANDATORY STRUCTURE & TEMPLATES](#-mandatory-structure--templates)
 3. [🎯 STANDARD ARTIFACT TEMPLATE](#-standard-artifact-template)
 4. [📄 FORMAT-SPECIFIC TEMPLATES](#-format-specific-templates)
-5. [🔧 MODE-SPECIFIC TEMPLATES](#-mode-specific-templates)
-6. [🎨 AI SYSTEM DETAILS](#-ai-system-details)
-7. [📊 VISUAL ELEMENTS](#-visual-elements)
-8. [✅ QUALITY CHECKLIST](#-quality-checklist)
-9. [🚨 ERROR RECOVERY](#-error-recovery)
-10. [💡 EXAMPLES](#-examples)
+5. [🎨 AI SYSTEM DETAILS](#-ai-system-details)
+6. [📊 VISUAL ELEMENTS](#-visual-elements)
+7. [✅ QUALITY CHECKLIST](#-quality-checklist)
+8. [🚨 ERROR RECOVERY](#-error-recovery)
+9. [💡 EXAMPLES](#-examples)
 
 ---
 
@@ -44,7 +43,7 @@ Comprehensive artifact delivery standards for prompt engineering system with man
 
 ---
 
-## 2. 📋 MANDATORY STRUCTURE
+## 2. 📋 MANDATORY STRUCTURE & TEMPLATES
 
 ### Content First Structure
 ```markdown
@@ -71,6 +70,100 @@ Comprehensive artifact delivery standards for prompt engineering system with man
 4. **Divider** - `---`
 5. **AI System Header** - Bold header
 6. **System Details** - Formatted with dashes
+
+### Mode-Specific Templates
+
+#### Interactive Mode Template
+```markdown
+[Enhanced prompt created through guided conversation]
+
+[Content reflecting discovered requirements]
+
+---
+
+**Format Options:**
+• Standard format (shown above)
+• JSON format (`$json`) - For API integration
+• SMILE format (`$smile`) - For complex instructions
+
+---
+
+**AI System:**
+
+- **Framework:** ATLAS
+- **Mode:** $interactive
+- **Complexity:** [Low/Medium/High]
+
+---
+
+- **Thinking:** [X] rounds (user selected)
+- **Discovery:** [X] questions asked
+- **ATLAS:** [Phases applied]
+
+---
+
+- **Challenge:** [If complexity reduced]
+- **Enhancement:** [X]% improvement
+- **Context:** [Brief description]
+
+---
+
+**Historical Context:**
+- Patterns from [X] sessions
+- All options always shown
+- User autonomy: 100%
+```
+
+#### Builder Mode Template
+```markdown
+[Universal creative brief for platform development]
+
+**GOAL:** [What users accomplish]
+**AUDIENCE:** [Target users]
+**SUCCESS:** [Measurable outcomes]
+
+Phase 1 - Core MVP:
+[Essential functionality only]
+
+Phase 2 - Enhanced Experience:
+[If validated by users]
+
+Phase 3 - Premium Features:
+[Only if needed]
+
+---
+
+**Format Options:**
+• Standard format (shown above)
+• SMILE format (`$smile`) - For structured workflow
+
+---
+
+**AI System:**
+
+- **Framework:** ATLAS
+- **Mode:** $builder
+- **Sub-mode:** [prototype/website/app]
+
+---
+
+- **Thinking:** [X] rounds
+- **Platform:** Universal (works on all)
+- **Phase Recommended:** [1/2/3]
+
+---
+
+- **Challenge:** [MVP simplification applied]
+- **Alternative:** [Simpler approach if suggested]
+- **Context:** [Brief description]
+
+---
+
+**Historical Context:**
+- Builder mode frequency: [X]%
+- Typical phase selection: [1/2/3]
+- Platform preferences: [if any]
+```
 
 ---
 
@@ -99,25 +192,24 @@ Success Criteria: [measurable outcomes]
 
 **AI System:**
 
+- **Framework:** ATLAS
 - **Mode:** $[mode used]
+- **Complexity:** [Low/Medium/High]
+
+---
+
 - **Thinking:** [X] rounds (user selected)
 - **ATLAS:** [Phases used like A→T→L→A→S]
 
 ---
 
-- **Framework:** [CRAFT/SPARK/Other or "None"]
-- **Complexity:** [Low/Medium/High]
-- **Enhancement:** [X]% improvement
-
----
-
 - **Challenge:** [Applied/Not needed - brief note]
-- **Simplification:** [If suggested]
-- **Alternatives:** [If considered]
+- **Enhancement:** [X]% improvement
+- **Context:** [Brief description]
 
 ---
 
-**Pattern Context:**
+**Historical Context:**
 - Based on [X] similar enhancements
 - Format preference: [Standard/JSON/SMILE usage %]
 - Typical thinking rounds: [X]
@@ -157,19 +249,19 @@ Success Criteria: [measurable outcomes]
 
 **AI System:**
 
+- **Framework:** ATLAS
 - **Mode:** $json
-- **Thinking:** [X] rounds (user selected)
 - **Structure:** Optimized for API use
 
 ---
 
+- **Thinking:** [X] rounds (user selected)
 - **Token Impact:** [+/-X]% vs standard
 - **Parse Reliability:** High
-- **Best For:** Programmatic interfaces
 
 ---
 
-**Pattern Context:**
+**Historical Context:**
 - JSON used [X]% for technical prompts
 - Previous JSON success rate: [X]%
 ```
@@ -208,15 +300,15 @@ Success Criteria: [measurable outcomes]
 
 **AI System:**
 
+- **Framework:** ATLAS
 - **Mode:** $smile
-- **Thinking:** [X] rounds (user selected)
 - **SMILE Depth:** [minimal/moderate/heavy]
 
 ---
 
+- **Thinking:** [X] rounds (user selected)
 - **Token Impact:** +[X]% (typical for SMILE)
 - **Instruction Following:** Enhanced
-- **Complexity Handling:** Excellent
 
 ---
 
@@ -226,7 +318,7 @@ Success Criteria: [measurable outcomes]
 
 ---
 
-**Pattern Context:**
+**Historical Context:**
 - SMILE preferred [X]% for complex prompts
 - Typical depth: [minimal/moderate/heavy]
 - Token tolerance: [High/Medium/Low]
@@ -234,130 +326,34 @@ Success Criteria: [measurable outcomes]
 
 ---
 
-## 5. 🔧 MODE-SPECIFIC TEMPLATES
-
-### Interactive Mode Artifact
-
-```markdown
-[Enhanced prompt created through guided conversation]
-
-[Content reflecting discovered requirements]
-
----
-
-**Format Options:**
-• Standard format (shown above)
-• JSON format (`$json`) - For API integration
-• SMILE format (`$smile`) - For complex instructions
-
----
-
-**AI System:**
-
-- **Mode:** $interactive
-- **Thinking:** [X] rounds (user selected)
-- **Discovery:** [X] questions asked
-
----
-
-- **Identified Elements:**
-  - Purpose: [discovered goal]
-  - Audience: [identified target]
-  - Scope: [defined boundaries]
-  - Format: [chosen structure]
-
----
-
-- **Framework:** [Selected based on discovery]
-- **Challenge:** [If complexity reduced]
-- **Refinements:** [Key improvements made]
-
----
-
-**Pattern Context:**
-- Interactive mode usage: [X]%
-- Question effectiveness: [High/Medium]
-- Format choice aligned with history
-```
-
-### Builder Mode Artifact
-
-```markdown
-[Universal creative brief for platform development]
-
-**GOAL:** [What users accomplish]
-**AUDIENCE:** [Target users]
-**SUCCESS:** [Measurable outcomes]
-
-Phase 1 - Core MVP:
-[Essential functionality only]
-
-Phase 2 - Enhanced Experience:
-[If validated by users]
-
-Phase 3 - Premium Features:
-[Only if needed]
-
----
-
-**AI System:**
-
-- **Mode:** $builder
-- **Sub-mode:** [prototype/website/app]
-- **Thinking:** [X] rounds
-
----
-
-- **Platform:** Universal (works on all)
-- **Resource Level:** [Minimal/Moderate/High]
-- **Phase Recommended:** [1/2/3]
-
----
-
-- **Challenge:** [MVP simplification applied]
-- **Alternative:** [Simpler approach if suggested]
-
----
-
-**Pattern Context:**
-- Builder mode frequency: [X]%
-- Typical phase selection: [1/2/3]
-- Platform preferences: [if any]
-```
-
----
-
-## 6. 🎨 AI SYSTEM DETAILS
+## 5. 🎨 AI SYSTEM DETAILS
 
 ### Mandatory Information Structure
 
 ```markdown
 **AI System:**
 
-- **Core Processing:**
-  - Mode: $[mode]
-  - Thinking: [X] rounds (user selected)
-  - ATLAS: [Phases applied]
+- **Framework:** ATLAS
+- **Mode:** $[mode]
+- **Complexity:** [Assessment]
 
-- **Enhancement Details:**
-  - Framework: [Name or "None"]
-  - Complexity: [Assessment]
-  - Improvement: [X]%
+---
 
-- **Quality Measures:**
-  - Clarity: [X]/10 → [Y]/10
-  - Specificity: [Improved/Maintained]
-  - Structure: [Enhanced/Clarified]
+- **Thinking:** [X] rounds (user selected)
+- **ATLAS:** [Phases applied]
 
-- **Decisions Made:**
-  - Challenge: [Applied/Not needed]
-  - Simplification: [If suggested]
-  - Format: [Recommendation]
+---
 
-- **Pattern Context:**
-  - Historical data: [X] similar prompts
-  - Patterns shown: As context only
-  - User control: 100% maintained
+- **Challenge:** [Applied/Not needed]
+- **Enhancement:** [X]%
+- **Context:** [Brief description]
+
+---
+
+**Historical Context:**
+- Historical data: [X] similar prompts
+- Patterns shown: As context only
+- User control: 100% maintained
 ```
 
 ### Formatting Rules for AI System Details
@@ -371,13 +367,13 @@ Phase 3 - Premium Features:
 
 ---
 
-## 7. 📊 VISUAL ELEMENTS
+## 6. 📊 VISUAL ELEMENTS
 
 ### Enhancement Metrics Display
 
 ```markdown
 **Enhancement Summary:**
-━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━
 Before: [X] words • Clarity: [X]/10
 After: [Y] words • Clarity: [Y]/10
 Improvement: [Z]% ↗
@@ -388,7 +384,7 @@ CRAFT Coverage:
 • Action: [X]%
 • Format: [X]%
 • Target: [X]%
-━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━
 ```
 
 ### Format Comparison Table
@@ -406,7 +402,7 @@ CRAFT Coverage:
 
 ---
 
-## 8. ✅ QUALITY CHECKLIST
+## 7. ✅ QUALITY CHECKLIST
 
 ### Artifact Requirements Checklist
 
@@ -433,7 +429,7 @@ CRAFT Coverage:
 
 ---
 
-## 9. 🚨 ERROR RECOVERY
+## 8. 🚨 ERROR RECOVERY
 
 ### Common Artifact Issues & Fixes
 
@@ -460,7 +456,7 @@ CRAFT Coverage:
 
 ---
 
-## 10. 💡 EXAMPLES
+## 9. 💡 EXAMPLES
 
 ### Example 1: Perfect Standard Artifact
 
@@ -483,25 +479,24 @@ Success Criteria: Model accuracy >85%, insights applicable within 30 days
 
 **AI System:**
 
+- **Framework:** ATLAS
 - **Mode:** $improve
+- **Complexity:** Medium
+
+---
+
 - **Thinking:** 5 rounds (user selected)
 - **ATLAS:** A→T→L→A→S (full cycle)
 
 ---
 
-- **Framework:** CRAFT (100% coverage)
-- **Complexity:** Medium
-- **Enhancement:** 73% improvement
-
----
-
 - **Challenge:** Applied - reduced from 10 requirements to 5 essential
-- **Simplification:** Focused on actionable over theoretical
-- **Alternative:** Suggested simpler statistical approach
+- **Enhancement:** 73% improvement
+- **Context:** Data analysis prompt
 
 ---
 
-**Pattern Context:**
+**Historical Context:**
 - Based on 8 similar data science prompts
 - Format preference: Standard 75%, JSON 25%
 - Typical thinking rounds: 4-6
@@ -528,27 +523,25 @@ Success Metric: <20% drop-off rate, 90% completion within first session
 
 **AI System:**
 
+- **Framework:** ATLAS
 - **Mode:** $interactive
+- **Complexity:** High
+
+---
+
 - **Thinking:** 6 rounds (user selected)
 - **Discovery:** 4 questions asked
+- **ATLAS:** A→T→L→A→S
 
 ---
 
-- **Identified Through Conversation:**
-  - Purpose: Reduce onboarding friction
-  - Audience: Mobile banking users
-  - Constraints: Regulatory requirements
-  - Format: Step-by-step flow
-
----
-
-- **Framework:** CRAFT applied
 - **Challenge:** Simplified from 10 steps to 6
-- **Pattern-Based:** Similar to 3 previous UX prompts
+- **Enhancement:** 65% improvement
+- **Context:** UX flow optimization
 
 ---
 
-**Pattern Context:**
+**Historical Context:**
 - Interactive mode used 40% of time
 - Onboarding prompts typically need 5-7 rounds
 - Format split: Standard 60%, SMILE 40%

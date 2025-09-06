@@ -1,361 +1,559 @@
 # Prompt - Artifact Standards & Templates - v1.0.0
 
-This document defines mandatory standards for delivering enhanced prompts via artifacts.
+Comprehensive artifact delivery standards for prompt engineering system with mandatory formatting requirements, AI System details, and multi-format support.
 
-## Table of Contents
+## 📋 Table of Contents
 
-1. [📦 ARTIFACT DELIVERY STANDARDS](#1--artifact-delivery-standards)
-2. [🎯 MANDATORY ARTIFACT STRUCTURE](#2--mandatory-artifact-structure)
-3. [📊 VISUAL DASHBOARD FORMAT](#3--visual-dashboard-format)
-4. [🎨 MODE-SPECIFIC TEMPLATES](#4--mode-specific-templates)
-   - [4.1 $short Mode Template](#41-short-mode-template)
-   - [4.2 $improve Mode Template (DEFAULT)](#42-improve-mode-template-default)
-   - [4.3 $refine Mode Template](#43-refine-mode-template)
-   - [4.4 $interactive Mode Template](#44-interactive-mode-template)
-   - [4.5 $json Mode Template](#45-json-mode-template)
-5. [📏 PROGRESS BAR GENERATION](#5--progress-bar-generation)
-6. [✅ QUALITY CHECKLIST](#6--quality-checklist)
-7. [🎯 SPECIAL CASES](#7--special-cases)
+1. [📦 DELIVERY STANDARDS](#-delivery-standards)
+2. [📋 MANDATORY STRUCTURE](#-mandatory-structure)
+3. [🎯 STANDARD ARTIFACT TEMPLATE](#-standard-artifact-template)
+4. [📄 FORMAT-SPECIFIC TEMPLATES](#-format-specific-templates)
+5. [🔧 MODE-SPECIFIC TEMPLATES](#-mode-specific-templates)
+6. [🎨 AI SYSTEM DETAILS](#-ai-system-details)
+7. [📊 VISUAL ELEMENTS](#-visual-elements)
+8. [✅ QUALITY CHECKLIST](#-quality-checklist)
+9. [🚨 ERROR RECOVERY](#-error-recovery)
+10. [💡 EXAMPLES](#-examples)
 
 ---
 
-## 1. 📦 ARTIFACT DELIVERY STANDARDS
+## 1. 📦 DELIVERY STANDARDS
 
-**🚨 CRITICAL:** Always use `text/markdown` artifact type when delivering enhanced prompts!
+### Critical Requirements
+**ALWAYS use `text/markdown` artifact type for all prompt deliverables**
 
-Never use `text/plain` for content with markdown formatting - this causes raw markdown to display instead of formatted text.
+### Never:
+- Use `text/plain` → Causes raw markdown display
+- Mix artifact and response text
+- Place AI System details at top or middle
+- Use horizontal formatting for details
+- Skip thinking rounds documentation
+- Forget dividers between sections
+- Omit pattern context when available
+- Restrict options based on patterns
 
-### Artifact Type Warning:
-**Never make these mistakes:**
-- Using `text/plain` → Causes raw markdown display
-- Mixing artifact and response text → Confuses users
-- Skipping visual dashboard → Reduces impact
-- Forgetting MCP notation → Loses process transparency
-
-**Always deliver enhanced prompts with:**
-- Proper `text/markdown` type
-- Complete visual dashboard (for appropriate modes)
-- Clear enhancement details
-- Consistent formatting
-
-**If user's prompt seems unclear:** Use $interactive mode rather than guessing.
-
----
-
-## 2. 🎯 MANDATORY ARTIFACT STRUCTURE
-
-**EVERY enhanced prompt must follow this EXACT structure:**
-
-```
-MODE USED: [$short/$improve/$refine/$interactive/$json]
-MCP USED: [Sequential Thinking/Cascade Thinking/None Available]
-ENHANCEMENT METHOD: [CRAFT/SPARK/Patterns/Full Framework]
-COMPLEXITY LEVEL: [Simple/Medium/Complex]
-
-[Enhanced prompt here]
+### Always:
+- Use proper `text/markdown` type
+- Complete structure with all sections
+- Include AI System details at BOTTOM
+- Document thinking rounds selected
+- Use vertical dash formatting for details
+- Include dividers (---) between major sections
+- Show historical context as notes
+- Display all format options
 
 ---
 
-## Enhancement Details
+## 2. 📋 MANDATORY STRUCTURE
 
-**Original Intent:** [Brief summary of what the user wanted]
-**Key Improvements:** [List using CRAFT/SPARK elements]
-**Usage Notes:** [Any special considerations]
+### Content First Structure
+```markdown
+[Main enhanced prompt - clean and focused]
+
+---
+
+**Format Options:**
+• Standard format (shown above)
+• JSON format available (`$json`)
+• SMILE format available (`$smile`)
+
+---
+
+**AI System:**
+
+[ARTIFACT DETAILS AT BOTTOM - vertical format with dashes]
+```
+
+### Section Order (Top to Bottom)
+1. **Main Content** - The enhanced prompt itself
+2. **Divider** - `---`
+3. **Format Options** - Available alternatives
+4. **Divider** - `---`
+5. **AI System Header** - Bold header
+6. **System Details** - Formatted with dashes
+
+---
+
+## 3. 🎯 STANDARD ARTIFACT TEMPLATE
+
+### Complete Template with All Elements
+
+```markdown
+[Enhanced prompt content here]
+
+As a [role/expertise], [main task/action] for [audience/purpose].
+
+Context: [relevant background]
+Requirements: [specific needs]
+Output: [expected format/structure]
+Success Criteria: [measurable outcomes]
+
+---
+
+**Format Options:**
+• Standard format (shown above)
+• JSON format available (`$json`) - Structured for APIs
+• SMILE format available (`$smile`) - Better instruction following (+25% tokens)
+
+---
+
+**AI System:**
+
+- **Mode:** $[mode used]
+- **Thinking:** [X] rounds (user selected)
+- **ATLAS:** [Phases used like A→T→L→A→S]
+
+---
+
+- **Framework:** [CRAFT/SPARK/Other or "None"]
+- **Complexity:** [Low/Medium/High]
+- **Enhancement:** [X]% improvement
+
+---
+
+- **Challenge:** [Applied/Not needed - brief note]
+- **Simplification:** [If suggested]
+- **Alternatives:** [If considered]
+
+---
+
+**Pattern Context:**
+- Based on [X] similar enhancements
+- Format preference: [Standard/JSON/SMILE usage %]
+- Typical thinking rounds: [X]
+- All options always available
 ```
 
 ---
 
-## 3. 📊 VISUAL DASHBOARD FORMAT
+## 4. 📄 FORMAT-SPECIFIC TEMPLATES
 
-**For $improve, $refine, and $interactive modes, include this dashboard:**
+### JSON Format Artifact
 
-```
-📊 Optimization Report
-Overall Enhancement Score: X% ↑
-
-CRAFT Framework Coverage:
-C - Context      ████████░░ X%
-R - Role         ████████░░ X%
-A - Action       ████████░░ X%
-F - Format       ████████░░ X%
-T - Target       ████████░░ X%
-
-Key Improvements:
-🎯 Specificity: +X% (added metrics, timeframes)
-👤 Role Definition: +X% (expert persona added)
-📋 Structure: +X% (clear sections defined)
-📝 Format: +X% (output structure specified)
-🎯 Success Criteria: +X% (measurable outcomes)
-
-Before: X words | Clarity: X/10
-After: X words | Clarity: X/10
-```
-
-### Dashboard Calculation Guide:
-- **CRAFT Coverage**: Score each element 0-100% based on completeness
-- **Enhancement Score**: Average of all CRAFT elements
-- **Key Improvements**: List top 3-5 changes with percentage impact
-- **Clarity Score**: 1-10 based on ambiguity removal
-
----
-
-## 4. 🎨 MODE-SPECIFIC TEMPLATES
-
-### 4.1 $short Mode Template
-```
-MODE USED: $short
-MCP USED: Sequential Thinking
-ENHANCEMENT METHOD: Essential CRAFT
-COMPLEXITY LEVEL: Simple
-
-[1-3 sentence enhanced prompt]
-
----
-
-## Enhancement Details
-
-**Original Intent:** [One line summary]
-**Key Improvements:** Added specificity and clear deliverable
-**Usage Notes:** Quick clarity boost for simple requests
-```
-
-### 4.2 $improve Mode Template (DEFAULT)
-```
-MODE USED: $improve
-MCP USED: Sequential Thinking
-ENHANCEMENT METHOD: CRAFT + SPARK
-COMPLEXITY LEVEL: Medium
-
-[Enhanced prompt with all core components]
-
----
-
-📊 Optimization Report
-Overall Enhancement Score: X% ↑
-
-CRAFT Framework Coverage:
-C - Context      ████████░░ X%
-R - Role         ████████░░ X%
-A - Action       ████████░░ X%
-F - Format       ████████░░ X%
-T - Target       ████████░░ X%
-
-Key Improvements:
-🎯 Specificity: +X% (specific changes)
-👤 Role Definition: +X% (what was added)
-📋 Structure: +X% (organization added)
-
-Before: X words | Clarity: X/10
-After: X words | Clarity: X/10
-
----
-
-## Enhancement Details
-
-**Original Intent:** [User's goal]
-**Key Improvements:** 
-- Added [CRAFT element]
-- Specified [SPARK enhancement]
-- Clarified [specific aspect]
-**Usage Notes:** [Platform-specific tips if applicable]
-```
-
-### 4.3 $refine Mode Template
-```
-MODE USED: $refine
-MCP USED: Cascade Thinking
-ENHANCEMENT METHOD: Full 3-Phase Optimization
-COMPLEXITY LEVEL: Complex
-
-[Fully optimized prompt with maximum enhancement]
-
----
-
-📊 Optimization Report - Phase 3 Complete
-Overall Enhancement Score: X% ↑
-
-PHASE 1 - SPARK Enhancement Applied ✓
-PHASE 2 - Evaluation Score: X/175 (X%) ✓
-PHASE 3 - Refinement Complete ✓
-
-CRAFT Framework Coverage:
-C - Context      ██████████ 100%
-R - Role         ██████████ 100%
-A - Action       ██████████ 100%
-F - Format       ██████████ 100%
-T - Target       ██████████ 100%
-
-PRISM Quality Score:
-P - Precision    ████████░░ X/5
-R - Relevance    ████████░░ X/5
-I - Impact       ████████░░ X/5
-S - Structure    ████████░░ X/5
-M - Measurability████████░░ X/5
-
-Key Improvements:
-🎯 Specificity: +X% (comprehensive details)
-👤 Role Definition: +X% (expert persona)
-📋 Structure: +X% (complete organization)
-📊 Metrics: +X% (measurable outcomes)
-🔍 Edge Cases: +X% (failure handling)
-
-Before: X words | Clarity: X/10
-After: X words | Clarity: X/10
-
----
-
-## Enhancement Details
-
-**Original Intent:** [Detailed analysis]
-**Key Improvements:** 
-- Phase 1: [SPARK enhancements]
-- Phase 2: [Evaluation findings]
-- Phase 3: [Refinement changes]
-**Usage Notes:** [Comprehensive guidance]
-```
-
-### 4.4 $interactive Mode Template
-```
-MODE USED: $interactive
-MCP USED: Sequential Thinking
-ENHANCEMENT METHOD: Guided CRAFT Assembly
-COMPLEXITY LEVEL: [Varies]
-
-[Enhanced prompt built from conversation]
-
----
-
-📊 Optimization Report
-Overall Enhancement Score: X% ↑
-
-Questions Asked: X
-Gaps Filled: [Purpose/Audience/Format/Scope/Constraints]
-
-CRAFT Framework Coverage:
-C - Context      ████████░░ X%
-R - Role         ████████░░ X%
-A - Action       ████████░░ X%
-F - Format       ████████░░ X%
-T - Target       ████████░░ X%
-
-Key Improvements:
-🎯 Purpose Clarified: [What user specified]
-👥 Audience Defined: [Target identified]
-📐 Format Specified: [Structure added]
-📏 Scope Bounded: [Limits defined]
-🚫 Constraints Added: [Requirements noted]
-
-Before: X words | Clarity: X/10
-After: X words | Clarity: X/10
-
----
-
-## Enhancement Details
-
-**Conversation Summary:** Asked about [topics], user provided [details]
-**Key Improvements:** Built complete prompt from [X] answers
-**Usage Notes:** Enhanced through guided conversation
-```
-
-### 4.5 $json Mode Template
-```
-MODE USED: $json
-MCP USED: Sequential Thinking
-ENHANCEMENT METHOD: Structured Parsing
-COMPLEXITY LEVEL: [Same as source]
-
+```markdown
+```json
 {
-  "role": "[expert role from CRAFT-R]",
-  "task": "[specific action from CRAFT-A]",
-  "context": {
-    "background": "[from CRAFT-C]",
-    "constraints": "[from SPARK-K]",
-    "assumptions": "[identified]"
-  },
+  "role": "[expertise/position]",
+  "task": "[main action required]",
+  "context": "[background information]",
   "requirements": [
     "[requirement 1]",
-    "[requirement 2]"
+    "[requirement 2]",
+    "[requirement 3]"
   ],
-  "format": {
-    "structure": "[from CRAFT-F]",
-    "length": "[specified]",
-    "style": "[defined]"
+  "output": {
+    "format": "[expected structure]",
+    "length": "[if applicable]",
+    "style": "[if relevant]"
   },
-  "success_criteria": {
-    "metrics": "[from CRAFT-T]",
-    "evaluation": "[how to measure]"
-  }
+  "success_criteria": [
+    "[metric 1]",
+    "[metric 2]"
+  ]
 }
-
----
-
-## Enhancement Details
-
-**Original Intent:** [Same as source mode]
-**JSON Mapping:** Direct translation of enhanced prompt
-**Usage Notes:** API-ready format for programmatic use
 ```
 
 ---
 
-## 5. 📏 PROGRESS BAR GENERATION
+**AI System:**
 
-Use these Unicode blocks for visual progress bars:
-- █ (filled block)
-- ░ (light shade)
-
-Formula: For X%, use `ceil(X/10)` filled blocks and `10 - filled` shade blocks
-
-Examples:
-- 0%:   ░░░░░░░░░░
-- 25%:  ███░░░░░░░
-- 50%:  █████░░░░░
-- 75%:  ████████░░
-- 100%: ██████████
+- **Mode:** $json
+- **Thinking:** [X] rounds (user selected)
+- **Structure:** Optimized for API use
 
 ---
 
-## 6. ✅ QUALITY CHECKLIST
-
-### Always Include:
-- [ ] Mode and MCP notation at top
-- [ ] Visual dashboard for appropriate modes
-- [ ] Complete CRAFT coverage assessment
-- [ ] Before/after metrics
-- [ ] Enhancement details section
-- [ ] Progress bars using correct Unicode
-- [ ] All content within single artifact
-
-### Never Do:
-- [ ] Mix artifact content with response text
-- [ ] Use text/plain for markdown content
-- [ ] Skip the visual dashboard for $improve/$refine
-- [ ] Forget MCP notation
-- [ ] Leave out enhancement details
-- [ ] Use inconsistent progress bar characters
+- **Token Impact:** [+/-X]% vs standard
+- **Parse Reliability:** High
+- **Best For:** Programmatic interfaces
 
 ---
 
-## 7. 🎯 SPECIAL CASES
-
-### Platform Detection
-When platform is auto-detected, add to dashboard:
-```
-Platform: [Platform]-optimized ✓
+**Pattern Context:**
+- JSON used [X]% for technical prompts
+- Previous JSON success rate: [X]%
 ```
 
-### Pattern Application
-When specific pattern used, note in enhancement method:
-```
-ENHANCEMENT METHOD: CRAFT + Expert Analysis Pattern
-```
+### SMILE Format Artifact
 
-### Error Enhancement
-For prompts submitted due to errors:
-```
-**Note:** Original prompt had formatting issues - corrected and enhanced
+```markdown
+(: Enhanced Prompt
+  [: Role [
+    [expertise definition]
+  ] :]
+  
+  [= Task =] [specific action required]
+  
+  [: Context (
+    [background information]
+    [relevant details]
+  ) :]
+  
+  [: Requirements [
+    [! Priority: [critical element] !]
+    • [requirement 1]
+    • [requirement 2]
+    • [requirement 3]
+  ] :]
+  
+  [: Output Format [
+    {Expected structure here}
+    {User provides details}
+  ] :]
+  
+  [! Success: [measurable criteria] !]
+) :)
+
+---
+
+**AI System:**
+
+- **Mode:** $smile
+- **Thinking:** [X] rounds (user selected)
+- **SMILE Depth:** [minimal/moderate/heavy]
+
+---
+
+- **Token Impact:** +[X]% (typical for SMILE)
+- **Instruction Following:** Enhanced
+- **Complexity Handling:** Excellent
+
+---
+
+- **Symbols Used:** [List key symbols]
+- **Nesting Levels:** [X]
+- **Best For:** Complex multi-step prompts
+
+---
+
+**Pattern Context:**
+- SMILE preferred [X]% for complex prompts
+- Typical depth: [minimal/moderate/heavy]
+- Token tolerance: [High/Medium/Low]
 ```
 
 ---
 
-*Remember: The visual dashboard makes improvements tangible and celebrates the transformation from vague to powerful prompts.*
+## 5. 🔧 MODE-SPECIFIC TEMPLATES
+
+### Interactive Mode Artifact
+
+```markdown
+[Enhanced prompt created through guided conversation]
+
+[Content reflecting discovered requirements]
+
+---
+
+**Format Options:**
+• Standard format (shown above)
+• JSON format (`$json`) - For API integration
+• SMILE format (`$smile`) - For complex instructions
+
+---
+
+**AI System:**
+
+- **Mode:** $interactive
+- **Thinking:** [X] rounds (user selected)
+- **Discovery:** [X] questions asked
+
+---
+
+- **Identified Elements:**
+  - Purpose: [discovered goal]
+  - Audience: [identified target]
+  - Scope: [defined boundaries]
+  - Format: [chosen structure]
+
+---
+
+- **Framework:** [Selected based on discovery]
+- **Challenge:** [If complexity reduced]
+- **Refinements:** [Key improvements made]
+
+---
+
+**Pattern Context:**
+- Interactive mode usage: [X]%
+- Question effectiveness: [High/Medium]
+- Format choice aligned with history
+```
+
+### Builder Mode Artifact
+
+```markdown
+[Universal creative brief for platform development]
+
+**GOAL:** [What users accomplish]
+**AUDIENCE:** [Target users]
+**SUCCESS:** [Measurable outcomes]
+
+Phase 1 - Core MVP:
+[Essential functionality only]
+
+Phase 2 - Enhanced Experience:
+[If validated by users]
+
+Phase 3 - Premium Features:
+[Only if needed]
+
+---
+
+**AI System:**
+
+- **Mode:** $builder
+- **Sub-mode:** [prototype/website/app]
+- **Thinking:** [X] rounds
+
+---
+
+- **Platform:** Universal (works on all)
+- **Resource Level:** [Minimal/Moderate/High]
+- **Phase Recommended:** [1/2/3]
+
+---
+
+- **Challenge:** [MVP simplification applied]
+- **Alternative:** [Simpler approach if suggested]
+
+---
+
+**Pattern Context:**
+- Builder mode frequency: [X]%
+- Typical phase selection: [1/2/3]
+- Platform preferences: [if any]
+```
+
+---
+
+## 6. 🎨 AI SYSTEM DETAILS
+
+### Mandatory Information Structure
+
+```markdown
+**AI System:**
+
+- **Core Processing:**
+  - Mode: $[mode]
+  - Thinking: [X] rounds (user selected)
+  - ATLAS: [Phases applied]
+
+- **Enhancement Details:**
+  - Framework: [Name or "None"]
+  - Complexity: [Assessment]
+  - Improvement: [X]%
+
+- **Quality Measures:**
+  - Clarity: [X]/10 → [Y]/10
+  - Specificity: [Improved/Maintained]
+  - Structure: [Enhanced/Clarified]
+
+- **Decisions Made:**
+  - Challenge: [Applied/Not needed]
+  - Simplification: [If suggested]
+  - Format: [Recommendation]
+
+- **Pattern Context:**
+  - Historical data: [X] similar prompts
+  - Patterns shown: As context only
+  - User control: 100% maintained
+```
+
+### Formatting Rules for AI System Details
+- Always use **bold** for "AI System:" header
+- Use dashes (-) for all bullet points
+- Maintain vertical list format
+- Group related items together
+- Include pattern context at end
+- Never place at top or middle
+- Always include divider before section
+
+---
+
+## 7. 📊 VISUAL ELEMENTS
+
+### Enhancement Metrics Display
+
+```markdown
+**Enhancement Summary:**
+━━━━━━━━━━━━━━━━━━━━━━
+Before: [X] words • Clarity: [X]/10
+After: [Y] words • Clarity: [Y]/10
+Improvement: [Z]% ↗
+
+CRAFT Coverage:
+• Context: [X]%
+• Role: [X]%
+• Action: [X]%
+• Format: [X]%
+• Target: [X]%
+━━━━━━━━━━━━━━━━━━━━━━
+```
+
+### Format Comparison Table
+
+```markdown
+**Format Options Comparison:**
+┌─────────────┬────────┬───────┬─────────┐
+│ Format      │ Tokens │ Clear │ Use For │
+├─────────────┼────────┼───────┼─────────┤
+│ Standard    │ Base   │ High  │ Most    │
+│ JSON        │ +5%    │ V.High│ APIs    │
+│ SMILE       │ +25%   │ High  │ Complex │
+└─────────────┴────────┴───────┴─────────┘
+```
+
+---
+
+## 8. ✅ QUALITY CHECKLIST
+
+### Artifact Requirements Checklist
+
+- [ ] **Content First:** Enhanced prompt at top
+- [ ] **Format Options:** All available formats listed
+- [ ] **AI System Header:** Bold and at bottom
+- [ ] **Thinking Rounds:** User selection documented
+- [ ] **ATLAS Phases:** Processing documented
+- [ ] **Challenge Applied:** Decision noted
+- [ ] **Pattern Context:** Historical data shown
+- [ ] **Dividers Present:** Between major sections
+- [ ] **Vertical Format:** Details use dashes
+- [ ] **User Control:** All options shown
+
+### Quality Gates
+
+- [ ] **Clarity:** Immediate understanding?
+- [ ] **Completeness:** All elements present?
+- [ ] **Structure:** Proper hierarchy?
+- [ ] **Format:** Markdown type used?
+- [ ] **Enhancement:** Clear improvement?
+- [ ] **Patterns:** Context not restrictive?
+- [ ] **Options:** All choices available?
+
+---
+
+## 9. 🚨 ERROR RECOVERY
+
+### Common Artifact Issues & Fixes
+
+| Issue | Recognition | Fix | Prevention |
+|-------|------------|-----|------------|
+| **Missing AI System** | No header at bottom | Add complete section | Use template |
+| **Wrong Position** | Details at top/middle | Move to bottom | Follow structure |
+| **No Thinking Rounds** | Undocumented rounds | Add user selection | Always ask first |
+| **Missing Dividers** | Sections blend together | Add --- between | Use template |
+| **Horizontal Format** | Details in one line | Convert to vertical | Use dashes |
+| **No Pattern Context** | Missing historical data | Add context section | Search history |
+| **Format Missing** | No alternatives shown | List all options | Include always |
+
+### REPAIR Protocol for Artifacts
+
+```markdown
+**R** - Recognize: Artifact structure issue identified
+**E** - Explain: Impact on clarity and professionalism
+**P** - Propose: Correct structure with template
+**A** - Apply: Implement proper formatting
+**I** - Iterate: Verify all requirements met
+**R** - Record: Note for future prevention
+```
+
+---
+
+## 10. 💡 EXAMPLES
+
+### Example 1: Perfect Standard Artifact
+
+```markdown
+As a data scientist with machine learning expertise, analyze customer churn patterns in the SaaS subscription dataset to identify key predictive factors and recommend retention strategies.
+
+Context: B2B SaaS platform with 10,000+ customers, 24-month historical data
+Requirements: Statistical significance testing, feature importance ranking, actionable recommendations
+Output: Executive report with visualizations and 3-5 specific retention tactics
+Success Criteria: Model accuracy >85%, insights applicable within 30 days
+
+---
+
+**Format Options:**
+• Standard format (shown above)
+• JSON format available (`$json`) - For automated processing
+• SMILE format available (`$smile`) - For complex analysis workflow
+
+---
+
+**AI System:**
+
+- **Mode:** $improve
+- **Thinking:** 5 rounds (user selected)
+- **ATLAS:** A→T→L→A→S (full cycle)
+
+---
+
+- **Framework:** CRAFT (100% coverage)
+- **Complexity:** Medium
+- **Enhancement:** 73% improvement
+
+---
+
+- **Challenge:** Applied - reduced from 10 requirements to 5 essential
+- **Simplification:** Focused on actionable over theoretical
+- **Alternative:** Suggested simpler statistical approach
+
+---
+
+**Pattern Context:**
+- Based on 8 similar data science prompts
+- Format preference: Standard 75%, JSON 25%
+- Typical thinking rounds: 4-6
+- All options always available
+```
+
+### Example 2: Interactive Mode Result
+
+```markdown
+Create a comprehensive user onboarding flow for a mobile banking app that reduces drop-off rates and ensures regulatory compliance while maintaining excellent user experience.
+
+Target Users: Age 25-45, tech-comfortable but security-conscious
+Key Requirements: KYC compliance, intuitive design, 5-minute completion time
+Success Metric: <20% drop-off rate, 90% completion within first session
+
+---
+
+**Format Options:**
+• Standard format (shown above)
+• JSON format (`$json`) - For development handoff
+• SMILE format (`$smile`) - For detailed step-by-step flow
+
+---
+
+**AI System:**
+
+- **Mode:** $interactive
+- **Thinking:** 6 rounds (user selected)
+- **Discovery:** 4 questions asked
+
+---
+
+- **Identified Through Conversation:**
+  - Purpose: Reduce onboarding friction
+  - Audience: Mobile banking users
+  - Constraints: Regulatory requirements
+  - Format: Step-by-step flow
+
+---
+
+- **Framework:** CRAFT applied
+- **Challenge:** Simplified from 10 steps to 6
+- **Pattern-Based:** Similar to 3 previous UX prompts
+
+---
+
+**Pattern Context:**
+- Interactive mode used 40% of time
+- Onboarding prompts typically need 5-7 rounds
+- Format split: Standard 60%, SMILE 40%
+```
+
+---
+
+*Artifact excellence through systematic structure and comprehensive documentation. AI System details always at bottom with proper formatting. Pattern context enriches without restricting. All format options always available. User control absolute.*
