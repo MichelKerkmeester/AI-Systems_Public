@@ -8,18 +8,13 @@ The Product Owner system transforms requests into professional development ticke
 - [✨ Key Features](#-key-features)
 - [🚀 Quick Setup](#-quick-setup)
 - [🎛️ Operating Modes](#️-operating-modes)
+- [🧠 ATLAS Thinking Framework](#-atlas-thinking-framework)
 - [⚡ Emergency Commands](#-emergency-commands)
 - [🗃️ Past Chats Integration](#️-past-chats-integration)
 - [🎯 Automatic Complexity Detection](#-automatic-complexity-detection)
 - [🔄 Challenge Mode](#-challenge-mode)
-- [💻 Implementation Specs](#-implementation-specs-spec)
-- [📚 Documentation](#-documentation-doc)
-- [✏️ Text Snippets](#️-text-snippets-text)
 - [📗 Platform Integration](#-platform-integration)
-- [🧠 ATLAS Thinking Framework](#-atlas-thinking-framework)
-- [🚨 REPAIR Error Recovery](#-repair-error-recovery)
 - [🔧 Installing MCP Tools](#-installing-mcp-tools)
-- [📊 Quality System](#-quality-system)
 - [📦 Version History](#-version-history)
 - [📚 Additional Resources](#-additional-resources)
 
@@ -287,98 +282,6 @@ Based on your history, Option A often ships faster with same value.
 
 ---
 
-## 💻 Implementation Specs ($spec)
-
-### Pattern Detection with History
-
-**Quick Patterns (1-2 questions):**
-- CSS utilities, simple components
-- Animations, layouts
-
-**Standard Patterns (2-3 questions):**
-- Data tables, forms, modals
-- State management
-
-**Complex Patterns (3-4 questions):**
-- Performance optimization
-- Real-time features
-- Accessibility compliance
-
-### Example Flow
-```
-User: $spec infinite scroll
-
-System: [Checking past component specs...]
-
-Let's build your infinite scroll implementation! 🔧
-
-[Historical: You prefer React with minimal dependencies]
-
-How many thinking rounds should I use? (1-10)
-Based on your request, I recommend: 2-3 rounds
-
-User: 2
-
-Quick setup:
-1. **Framework?** (React/Vue/Vanilla) [Default: React based on history]
-2. **Data source?** (API/Local)
-
-[Generates complete, optimized implementation as artifact]
-```
-
----
-
-## 📚 Documentation ($doc)
-
-### Depth-Based Structure
-
-**Three Depth Levels:**
-1. **Overview** - High-level, 1-2 paragraphs per feature
-2. **Detailed** - Step-by-step, 3-4 paragraphs
-3. **Comprehensive** - All details, tips, workflows
-
-### Documentation Symbol Usage
-- **◇** - Feature sections
-- **◊** - Sub-headings (bold)
-- **→** - References
-- **⌆** - Additional resources
-
----
-
-## ✏️ Text Snippets ($text)
-
-### Quick Content Generation
-
-Perfect for:
-- Component descriptions
-- Error messages
-- Marketing copy
-- UX writing
-- Email templates
-
-### Minimal Process
-```
-User: $text error message for payment failure
-
-System: [Quick check: You prefer clear, non-technical messages]
-
-Let's write your error message! ✏️
-
-How many thinking rounds should I use? (1-2 typical for snippets)
-
-User: 1
-
-Quick context - is this for:
-- Customer-facing UI
-- Internal logging
-
-User: Customer-facing UI
-
-[Creates artifact with error message matching your style]
-```
-
----
-
 ## 📗 Platform Integration
 
 ### After Every Creation
@@ -435,34 +338,6 @@ Or specify your preferred number (all options available).
 
 ---
 
-## 🚨 REPAIR Error Recovery
-
-### Enhanced with Historical Learning
-
-The REPAIR framework:
-- **R**ecognize - Detect error pattern with history
-- **E**xplain - Plain language impact
-- **P**ropose - Three solution options
-- **A**dapt - Adjust to user choice
-- **I**terate - Test and improve
-- **R**ecord - Prevent recurrence
-
-### Example Recovery
-```markdown
-R: Detected scope creep
-   [History: This happened 3 times before]
-E: Timeline expanded 3× from original
-P: Three options:
-   1. Full scope (12 weeks)
-   2. Original only (4 weeks)
-   3. Phased (4 weeks/phase) ← Your successful pattern
-A: [Based on choice and history]
-I: Implement selected
-R: Pattern updated for prevention
-```
-
----
-
 ## 🔧 Installing MCP Tools
 
 ### Docker Setup (AI-Assisted) - For ClickUp Integration Only
@@ -487,25 +362,6 @@ I need to:
 
 I'm on [Windows/Mac/Linux]. Give me exact commands.
 ```
-
----
-
-## 📊 Quality System
-
-### Quality Gates (Rule #4)
-Before any output:
-- ☑ **Necessity check** - Is everything needed?
-- ☑ **Simplicity check** - Could it be simpler?
-- ☑ **Alternative check** - Did we present options?
-
-### Professional Standards
-- Use professional symbols throughout
-- Maintain consistent formatting
-- Include all required sections
-- Provide clear TOC
-- Separate concerns properly
-- Link to resources
-- Define scope clearly
 
 ---
 
@@ -549,4 +405,4 @@ Before any output:
 
 ---
 
-*Product Owner v8.5.0: Professional structure with 44 organized rules, three-level Challenge Mode, and enhanced REPAIR protocol. Historical context enriches but never restricts. User autonomy is absolute. Past patterns inform decisions without limiting options. Emergency commands provide instant recovery. Focus on WHAT needs doing and WHY it matters, not HOW to implement. Always challenging complexity, always seeking simplicity, always learning from the past.*
+*Product Owner v8.6.0: Professional structure with 44 organized rules, three-level Challenge Mode, and enhanced REPAIR protocol. Historical context enriches but never restricts. User autonomy is absolute. Past patterns inform decisions without limiting options. Emergency commands provide instant recovery. Focus on WHAT needs doing and WHY it matters, not HOW to implement. Always challenging complexity, always seeking simplicity, always learning from the past.*
