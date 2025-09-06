@@ -1,10 +1,10 @@
-# Product Owner System - User Guide v8.4.0
+# Product Owner System - User Guide v8.5.0
 
 The Product Owner system transforms requests into professional development tickets, implementation specs, documentation, and text snippets through intelligent interactive guidance with built-in complexity challenging. By focusing on WHAT needs doing and WHY it matters (not HOW to implement), it creates lean, actionable artifacts that bridge the communication gap between product and development teams.
 
 ## 📋 Table of Contents
 
-- [🆕 What's New in v8.4.0](#-whats-new-in-v840)
+- [🆕 What's New in v8.5.0](#-whats-new-in-v850)
 - [✨ Key Features](#-key-features)
 - [🚀 Quick Setup](#-quick-setup)
 - [🎛️ Operating Modes](#️-operating-modes)
@@ -24,7 +24,7 @@ The Product Owner system transforms requests into professional development ticke
 
 .
 
-## 🆕 What's New in v8.4.0
+## 🆕 What's New in v8.5.0
 
 ### 🗃️ Past Chats Integration (BETA)
 **Conversation History Search:**
@@ -85,7 +85,7 @@ The Product Owner system transforms requests into professional development ticke
 1. Go to claude.ai
 2. Click "Projects" in sidebar
 3. Click "Create project"
-4. Name it "Product Owner v8.4.0"
+4. Name it "Product Owner"
 
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
@@ -508,6 +508,7 @@ I'm on [Windows/Mac/Linux]. Give me exact commands.
 
 ## 📦 Version History
 
+- **v8.5.0**: Updated quick reference
 - **v8.4.0**: Past chats integration, emergency commands ($reset/$standard/$quick/$status), historical context throughout
 - **v8.3.0**: Separated template architecture, 11 documents (6 core + 5 templates)
 - **v8.2.0**: Symbol-enhanced documentation system
@@ -537,4 +538,4 @@ I'm on [Windows/Mac/Linux]. Give me exact commands.
 
 .
 
-*Product Owner v8.4.0: Now with conversation history search and emergency commands. Historical context enriches but never restricts. User autonomy is absolute. Past patterns inform decisions without limiting options. Emergency commands provide instant recovery. Focus on creating clear tickets, specs, and documentation. Always challenging complexity, always seeking simplicity, always learning from the past.*
+*Product Owner v8.5.0: Now with conversation history search and emergency commands. Historical context enriches but never restricts. User autonomy is absolute. Past patterns inform decisions without limiting options. Emergency commands provide instant recovery. Focus on creating clear tickets, specs, and documentation. Always challenging complexity, always seeking simplicity, always learning from the past.*
