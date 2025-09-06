@@ -89,43 +89,30 @@ You are a Product Owner writing clear, concise tickets that communicate user val
 ## 3. 🗂️ REFERENCE ARCHITECTURE
 
 ### Thinking Framework:
-| Document | Purpose | Enhancement |
-|----------|---------|-------------|
-| Product Owner - ATLAS Thinking Framework.md | Universal thinking methodology, challenge patterns, calibration formula, REPAIR protocol | Historical context |
+| Document | Purpose |
+|----------|---------|
+| **Product Owner - ATLAS Thinking Framework.md** | Universal thinking methodology, challenge patterns, calibration formula, REPAIR protocol | Historical context |
+| **Product Owner - Interactive Mode.md** | All mode interactions with challenges | Context-enriched |
+
+### Quick Access & Standards:
+| Document | Purpose | Context Integration |
+|----------|---------|---------------------|
+| **Product Owner - Core System Rules & Quick Reference.md** | Mandatory behaviors & emergency commands | Central authority |
+| **Product Owner - Artifact Standards.md** | Enforcement rules and quality gates | Historical preferences |
 
 ### Core Documents:
 | Document | Purpose | Context Integration |
 |----------|---------|---------------------|
-| Product Owner - Interactive Mode.md | All mode interactions with challenges | Context-enriched |
-| Product Owner - Platform Integration.md | ClickUp MCP handoff | Usage patterns shown |
-| Product Owner - Core System Rules & Quick Reference.md | Mandatory behaviors & emergency commands | Central authority |
-| Product Owner - Artifact Standards.md | Enforcement rules and quality gates | Historical preferences |
+| **Product Owner - Platform Integration.md** | ClickUp MCP handoff | Usage patterns shown |
 
 ### Mode Templates:
 | Document | Purpose | Enhancement Stage |
 |----------|---------|-------------------|
-| Product Owner - Template - Ticket Mode.md | Ticket templates (simple/standard/complex) | Usage patterns shown |
-| Product Owner - Template - Spec Mode.md | Implementation specs and code templates | Context-aware |
-| Product Owner - Template - Doc Mode.md | Documentation templates (user guides, API, FAQ) | Historical notes |
-| Product Owner - Template - Text Mode.md | Text snippets and copy templates | Preference display |
-| Product Owner - Template - Beautify Mode.md | Document formatting and restructuring templates | Complete specifications |
-
-### Quick Navigation:
-```
-Thinking methodology → Product Owner - ATLAS Thinking Framework.md
-Mode interactions → Product Owner - Interactive Mode.md
-Commands → Product Owner - Core System Rules & Quick Reference.md
-Platform → Product Owner - Platform Integration.md
-
-Templates:
-Tickets → Product Owner - Template - Ticket Mode.md
-Specs → Product Owner - Template - Spec Mode.md
-Documentation → Product Owner - Template - Doc Mode.md
-Text → Product Owner - Template - Text Mode.md
-Beautify → Product Owner - Template - Beautify Mode.md
-
-Standards → Product Owner - Artifact Standards.md
-```
+| **Product Owner - Template - Ticket Mode.md** | Ticket templates (simple/standard/complex) | Usage patterns shown |
+| **Product Owner - Template - Spec Mode.md** | Implementation specs and code templates | Context-aware |
+| **Product Owner - Template - Doc Mode.md** | Documentation templates (user guides, API, FAQ) | Historical notes |
+| **Product Owner - Template - Text Mode.md** | Text snippets and copy templates | Preference display |
+| **Product Owner - Template - Beautify Mode.md** | Document formatting and restructuring templates | Complete specifications |
 
 ---
 
