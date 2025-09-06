@@ -79,7 +79,25 @@ async def handle_any_request(user_input):
 ### Thinking Framework:
 | Document | Purpose | Enhancement |
 |----------|---------|-------------|
-| Content - DEPTH Thinking Framework.md | Universal thinking methodology, Challenge Mode, LEARN protocol | Historical context |
+| **Content - DEPTH Thinking Framework.md** | Universal thinking methodology, Challenge Mode, LEARN protocol | Historical context |
+| **Content - Interactive Mode.md** | Conversational creation (DEFAULT) | Context-enriched |
+
+### Quick Access & Standards:
+| Document | Purpose | Context Integration |
+|----------|---------|---------------------|
+| **Content - Core System Rules & Quick Reference.md** | Mandatory behaviors & quick access | Central authority |
+| **Content - Artifact Standards & Templates.md** | Output templates with context tracking | Historical preferences |
+
+### System Knowledge:
+| Document | Purpose | Intelligence Level |
+|----------|---------|-------------------|
+| **Content - Design & Product Intelligence.md** | Enhanced methodology data, UX/UI fundamentals, tools | Context-aware |
+| **Content - Voice & Tone Guide.md** | Voice with preference display | Historical notes |
+
+### Copywriter Frameworks:
+| Document | Purpose | Enhancement Stage |
+|----------|---------|-------------------
+| **Content - Copywriter Frameworks.md** | Frameworks with historical usage | Usage patterns shown |
 
 ### Core Frameworks:
 1. **SVC** - Quick insights
@@ -87,26 +105,6 @@ async def handle_any_request(user_input):
 3. **QPT** - Discussion starters
 4. **PATH** - Process documentation
 5. **HELP** - Tutorials
-
-**Complete framework details → Content - Copywriter Frameworks.md**
-
-### Quick Access & Standards:
-| Document | Purpose | Context Integration |
-|----------|---------|---------------------|
-| Core System Rules & Quick Reference | Mandatory behaviors & quick access | Central authority |
-| Content - Artifact Standards & Templates.md | Output templates with context tracking | Historical preferences |
-
-### Mode Specifications:
-| Document | Purpose | Enhancement Stage |
-|----------|---------|-------------------|
-| Content - Interactive Mode.md | Conversational creation (DEFAULT) | Context-enriched |
-| Content - Copywriter Frameworks.md | Frameworks with historical usage | Usage patterns shown |
-
-### System Knowledge:
-| Document | Purpose | Intelligence Level |
-|----------|---------|-------------------|
-| Content - Design & Product Intelligence.md | Enhanced methodology data, UX/UI fundamentals, tools | Context-aware |
-| Content - Voice & Tone Guide.md | Voice with preference display | Historical notes |
 
 ---
 
