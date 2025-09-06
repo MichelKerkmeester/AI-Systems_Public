@@ -1,4 +1,4 @@
-# Branded Content Writer - User Guide v5.4.0
+# Branded Content Writer - User Guide v5.5.0
 
 This is a flexible content creation system that currently focuses on writing content for Product Designers and design teams. The system can be easily adjusted to write content for a specific brand voice, different types of professions (marketing, engineering, education), or personal writing styles. It transforms expertise into clear, practical content through contextual enrichment, systematic thinking, and authentic process documentation.
 
@@ -11,78 +11,85 @@ This is a flexible content creation system that currently focuses on writing con
 ---
 
 ## 📑 Table of Contents
-- [🆕 What's New in v5.4.0 - Emergency Commands & Enhanced Documentation](#-whats-new-in-v540---emergency-commands--enhanced-documentation)
+- [🆕 What's New in v5.5.0 - Major Alignment & Structure Update](#-whats-new-in-v700---major-alignment--structure-update)
 - [🚀 Quick Setup](#-quick-setup)
 - [🎛️ System Architecture](#-system-architecture)
 - [🧠 DEPTH Thinking Framework](#-depth-thinking-framework)
 - [🏗 Content Frameworks](#-content-frameworks)
 - [🎨 Voice & Tone System](#-voice--tone-system)
-- [📊 Quality Scoring System (23 Points)](#-quality-scoring-system-23-points)
-- [⚡ Emergency Commands (New)](#-emergency-commands-new)
+- [🔄 Challenge Mode](#-challenge-mode)
+- [⚡ Emergency Commands](#-emergency-commands)
 - [📦 Standard Artifact Structure](#-standard-artifact-structure)
+- [🚨 Error Recovery - LEARN Protocol](#-error-recovery---learn-protocol)
+- [🗃️ Past Chats Integration](#-past-chats-integration)
 - [🎨 Adapting the System](#-adapting-the-system)
+- [📊 Quality System](#-quality-system)
 - [🔧 Troubleshooting](#-troubleshooting)
 - [📦 Version History](#-version-history)
 
-.
+---
 
-## 🆕 What's New in v5.4.0 - Emergency Commands & Enhanced Documentation
+## 🆕 What's New in v5.5.0 - Major Alignment & Structure Update
+
+### Major Structural Changes
+The system has been completely realigned for better consistency and clarity:
+- **30 Critical Rules System**: Expanded from 27 to 30 numbered rules for comprehensive coverage
+- **Enhanced Challenge Mode**: Three-level hierarchy (Gentle/Constructive/Strong) with better triggers
+- **Improved LEARN Protocol**: More detailed error recovery with pattern tracking
+- **Better Organization**: Aligned with modern system architecture patterns
 
 ### New Features
-The system now features comprehensive emergency command documentation across all core files:
-- **Complete Emergency Command System**: Four new commands for quick control and recovery
-- **Enhanced Core System Rules**: Expanded with detailed command usage and examples
-- **Improved Accessibility**: Emergency commands accessible from any document
-- **Context-Aware Command Guidance**: Each document shows command impact specific to its functionality
+- **Challenge Hierarchy**: Progressive challenge levels based on thinking rounds
+- **Format Verification**: Rule #30 ensures consistent formatting and structure
+- **Enhanced Pattern Recognition**: Better tracking and display of historical patterns
+- **Improved Past Chats Integration**: More sophisticated context enhancement journey
 
 ### Documentation Improvements
-- **Emergency Commands Everywhere**: Commands documented in every core file for easy access
-- **Detailed Usage Examples**: Every command includes specific examples and scenarios
-- **Impact Descriptions**: Clear explanations of what each command affects
-- **Troubleshooting Guide**: Common issues and their command-based solutions
-- **Command Combinations**: How to chain commands for specific workflows
+- **Content - Quick Reference v1.0.0**: New compact reference matching Product Owner style
+- **Content - Artifact Standards v2.0.0**: Merged sections for better clarity
+- **Writer - Branded Content v5.5.0**: Complete restructure with 30 rules
 
-### Maintained from v5.3.0
-- **Centralized Core Rules**: Core System Rules & Quick Reference as single source of truth
-- **20% Size Reduction**: Streamlined from 8,500 to 6,800 lines
-- **Eliminated Redundancy**: Removed duplicate content
-- **8 Optimized Documents**: Clear purpose for each file
+### Maintained from v6.0.0
+- **Core System Rules**: Central authority for mandatory behaviors
+- **Emergency Commands**: Four commands for quick control
+- **DEPTH Framework**: 5-phase thinking methodology
+- **Interactive Mode Default**: Always starts conversational
 
-.
+---
 
 ### 🧠 Five Core Innovations
 
 1. **Copywriter Frameworks**: 9+ intelligent frameworks from Simple (SVC, QPT), Medium (CASE, PATH) to Complex (FAIL, GUIDE) with historical usage context
 2. **Various Modes and Tones**: 5 interactive modes ($interactive, $write, $share, $teach, $reflect) with 6 tone variations - all always available
 3. **Enhanced Design Intelligence**: Comprehensive knowledge base with UX/UI fundamentals, tool ecosystem, market insights, and emerging technologies
-4. **DEPTH Thinking Framework**: Universal 5-phase methodology with user-controlled depth (1-10 rounds) - always requested, never automated
+4. **DEPTH Thinking Framework**: Universal 5-phase methodology with user-controlled depth (1-10 rounds) and Challenge Mode
 5. **Historical Context System**: Displays previous patterns and preferences as informative notes without ever restricting options
 
-.
+---
 
 ## 🚀 Quick Setup
 
 ### Step 1: Create a Claude Project
 1. Go to claude.ai
 2. Click "Projects" in sidebar
-3. Create new project: "Branded Content Writer v5.4.0"
+3. Create new project: "Branded Content Writer"
 
-### Step 2: Add Core System Files (Updated Structure)
-Copy and paste into Custom Instructions:
-- `Core System Rules & Quick Reference v1.0.1` (Comprehensive emergency commands reference)
+### Step 2: Add to Custom Instructions
+Copy the main system prompt:
+- `Writer - Branded Content v5.5.0` (Master orchestration)
 
 ### Step 3: Upload Supporting Documents
 Add all documents to project knowledge base:
-- `Writer - Branded Content v5.3.1` (Master orchestration with emergency protocols)
-- `Content - Artifact Standards & Templates v1.2.0` (Output templates)
-- `Content - Copywriter Frameworks v1.2.1` (Framework library with command integration)
-- `Content - DEPTH Thinking Framework v1.3.1` (DEPTH methodology with emergency scenarios)
+- `Content - Quick Reference v1.0.0` (Compact reference guide)
+- `Content - Artifact Standards & Templates v2.0.0` (Output templates)
+- `Content - Copywriter Frameworks v1.2.1` (Framework library)
+- `Content - DEPTH Thinking Framework v1.3.1` (DEPTH methodology)
 - `Content - Design & Product Intelligence v1.2.0` (Domain knowledge)
-- `Content - Interactive Mode v1.2.2` (Default mode with command guidance)
+- `Content - Interactive Mode v1.2.2` (Default mode)
 - `Content - Voice & Tone Guide v1.2.0` (Voice system)
 
 ### Step 4: Start Creating
-Simply describe your need or use commands for quick control:
+Simply describe your need or use commands:
 ```
 Need help with case study (triggers interactive mode)
 $write LinkedIn post about navigation redesign
@@ -91,50 +98,48 @@ $reset (start fresh with new topic)
 $status (see current context)
 ```
 
-.
+---
 
 ## 🎛️ System Architecture
 
-### Core System Rules & Quick Reference (v1.0.1)
-**Purpose:** Single source of truth for all mandatory behaviors and emergency commands
-- 6 core rules that can never be skipped
-- Comprehensive emergency command documentation
-- Mode activation table
-- Framework quick guide
-- DEPTH phases reference
-- Standard artifact structure
-- LEARN protocol reference
-
-### Document Structure & Dependencies
+### Document Structure (v5.5.0)
 
 | Document | Version | Purpose | Key Features |
 |----------|---------|---------|--------------|
-| **Core System Rules** | v1.0.1 | Mandatory behaviors | Full command reference |
-| **Writer - Branded Content** | v5.3.1 | Master orchestration | Emergency protocols |
-| **Content - Artifact Standards** | v1.2.0 | Output templates | Format requirements |
-| **Content - Copywriter Frameworks** | v1.2.1 | Frameworks | Command impact on frameworks |
-| **Content - DEPTH Framework** | v1.3.1 | DEPTH methodology | DEPTH-specific commands |
-| **Content - Interactive Mode** | v1.2.2 | Default mode | Mode-specific commands |
-| **Content - Voice & Tone** | v1.2.0 | Voice system | Voice consistency |
+| **Writer - Branded Content** | v5.5.0 | Master orchestration | 30 critical rules |
+| **Content - Quick Reference** | v1.0.0 | Compact reference | All rules & patterns |
+| **Content - Artifact Standards** | v2.0.0 | Output templates | Merged structure |
+| **Content - Copywriter Frameworks** | v1.2.1 | Frameworks | 9+ frameworks |
+| **Content - DEPTH Framework** | v1.3.1 | DEPTH methodology | 5-phase system |
+| **Content - Interactive Mode** | v1.2.2 | Default mode | Discovery flow |
+| **Content - Voice & Tone** | v1.2.0 | Voice system | 6 tones |
 | **Content - Design Intelligence** | v1.2.0 | Knowledge base | UX/UI expertise |
 
-.
+### 30 Critical Rules Structure
+- **Rules 1-7:** Core Process Rules
+- **Rules 8-14:** Output Requirements
+- **Rules 15-17:** Formatting Requirements
+- **Rules 18-20:** Design-Specific Voice
+- **Rules 21-27:** System Behavior
+- **Rules 28-30:** Challenge & Quality Rules
+
+---
 
 ## 🧠 DEPTH Thinking Framework
 
 ### User-Controlled Depth (Always Asked)
 Before creating any content, the system ALWAYS asks:
 ```
-How many rounds of thinking would help here? (1-10)
+How many thinking rounds should I use? (1-10)
 
-Based on your request, I'm thinking: 4 rounds
-• Complexity: Medium - multiple concepts
-• Audience: Clear - designers
-• Depth needed: Moderate - actionable detail
+Based on your request, I recommend: [X rounds]
+• Complexity: [Low/Medium/High] - [reason]
+• Audience: [Technical/Mixed/General] - [reason]
+• Depth needed: [Low/Medium/High] - [reason]
 
-[Historical note: You typically choose 4 rounds for similar content]
+[Historical note: You typically choose X rounds for similar requests]
 
-Your choice? (All options 1-10 available)
+Or specify your preferred number.
 ```
 
 ### The Five DEPTH Phases
@@ -144,13 +149,15 @@ Your choice? (All options 1-10 available)
 - **T - Test & Validate:** Quality assurance
 - **H - Help & Enable:** Deliver with clarity
 
-### DEPTH Emergency Controls
-- `$quick`: Minimal DEPTH (D→H only) for fast creation
-- `$standard`: Default DEPTH mapping without patterns
-- `$reset`: Clear all DEPTH preferences
-- `$status`: Show DEPTH usage history
+### DEPTH Phases by Rounds
+| Rounds | Phases | Use Case | Challenge Level |
+|--------|--------|----------|-----------------|
+| **1-2** | D→H | Quick edits | None |
+| **3-4** | D→E→P→H | Standard content | Gentle |
+| **5-6** | D→E→P→T→H | Deep dives | Moderate |
+| **7-10** | Full DEPTH+ | Strategic work | Strong |
 
-.
+---
 
 ## 🏗 Content Frameworks
 
@@ -169,13 +176,7 @@ Your choice? (All options 1-10 available)
 - **COMPARE**: Options • Criteria • Trade-offs • Recommendation
 - **GUIDE**: Goal • Steps • Examples • Practice • Next
 
-### Framework Emergency Controls
-- `$quick`: Bypass framework selection entirely
-- `$standard`: Default framework suggestions
-- `$reset`: Clear framework usage history
-- `$status`: Show framework patterns
-
-.
+---
 
 ## 🎨 Voice & Tone System
 
@@ -185,88 +186,66 @@ Your choice? (All options 1-10 available)
 3. **Empowering** - Enable others to build better
 
 ### Available Tones (All Always Available)
-- `$natural` - Varied rhythm with uncertainty (DEFAULT)
-- `$technical` - Precise with examples
-- `$collaborative` - Team-focused, inclusive
-- `$educational` - Step-by-step clarity
-- `$reflective` - Thoughtful analysis
-- `$minimal` - Essential only
+| Tone | Command | Key Markers |
+|------|---------|-------------|
+| **Natural** | `$natural` | Varied rhythm with uncertainty (DEFAULT) |
+| **Technical** | `$technical` | Precise with examples |
+| **Collaborative** | `$collaborative` | Team-focused, inclusive |
+| **Educational** | `$educational` | Step-by-step clarity |
+| **Reflective** | `$reflective` | Thoughtful analysis |
+| **Minimal** | `$minimal` | Essential only |
 
-.
+---
 
-## 📊 Quality Scoring System (23 Points)
+## 🔄 Challenge Mode
 
-- **Clarity (4 pts):** Main point obvious
-- **Actionability (8 pts):** Steps clear, applicable
-- **Authenticity (4 pts):** Process transparent
-- **Relevance (4 pts):** Right audience
-- **Learning Value (3 pts):** New insights
+### Three-Level Hierarchy
+Challenge Mode automatically activates at 3+ thinking rounds with progressive intensity:
 
-**Score Targets:**
-- 21-23: Ready to ship
-- 18-20: Strong, minor polish
-- 15-17: Good foundation
-- Below 15: Needs work
+**Level 1: Gentle (1-2 rounds)**
+- "Could this be shorter?"
+- "Is the methodology necessary?"
+- "Would simpler language work better?"
 
-.
+**Level 2: Constructive (3-5 rounds)**
+- "That's comprehensive, but focused might be stronger..."
+- "Full framework works, but highlighting one aspect might be clearer..."
 
-## ⚡ Emergency Commands (New)
+**Level 3: Strong (6-10 rounds)**
+- "Are we overcomplicating this?"
+- "Would practitioners actually use this approach?"
+
+### Challenge Template
+```markdown
+**Quick thought before we proceed:**
+
+Could we achieve your goal more simply?
+- Option A: Single insight (1-2 rounds)
+- Option B: Key example (3-4 rounds)
+- Option C: Full framework (5+ rounds)
+
+[Historical: Challenge acceptance rate if available]
+```
+
+---
+
+## ⚡ Emergency Commands
 
 ### Complete Command Reference
 
 | Command | Action | Result | Best Used When |
 |---------|--------|--------|----------------|
-| **`$reset`** | Clear all historical context | Start fresh with no patterns | Switching topics or context feels wrong |
-| **`$standard`** | Use default flow | Ignore all context patterns | Want clean, unbiased process |
+| **`$reset`** | Clear all historical context | Start fresh with no patterns | Switching topics |
+| **`$standard`** | Use default flow | Ignore all context patterns | Want clean process |
 | **`$quick`** | Skip to creation | Bypass discovery, minimal DEPTH | Know exactly what you want |
-| **`$status`** | Show current context | Display all patterns and stats | Understanding what's tracked |
-
-### Command Usage Examples
-
-**Starting Fresh:**
-```
-$reset
-→ Clears all patterns, preferences, and history
-→ Perfect for new projects or topic changes
-```
-
-**Fast Creation:**
-```
-$quick - Just need a quick rewrite
-→ Skips discovery questions
-→ Uses minimal DEPTH (D→H only)
-→ Still asks thinking rounds
-```
-
-**Check Context:**
-```
-$status
-→ Shows mode usage, framework patterns
-→ Displays average thinking rounds
-→ Lists quality score averages
-```
-
-**Clean Process:**
-```
-$standard
-→ Uses default system flow
-→ Ignores historical patterns
-→ Good for testing or comparison
-```
+| **`$status`** | Show current context | Display all patterns and stats | Understanding tracking |
 
 ### Command Combinations
 - `$reset` + `$quick`: Fresh start with fast creation
 - `$status` + `$standard`: Check patterns then ignore them
 - `$reset` + Interactive Mode: Completely clean exploration
 
-### Impact Across System
-- **Interactive Mode**: Affects discovery questions
-- **DEPTH Framework**: Changes phase processing
-- **Frameworks**: Alters selection process
-- **Voice/Tone**: Resets style patterns
-- **Quality Scoring**: Clears averages
-
-.
+---
 
 ## 📦 Standard Artifact Structure
 
@@ -278,47 +257,86 @@ $standard
 ## Variations
 
 ### Most practical:
-[Action-focused]
+[Direct, action-focused version]
 
 ---
 
 ### Most insightful:
-[Understanding-focused]
+[Deeper understanding version]
 
 ---
 
 ### Most collaborative:
-[Team discussion]
+[Team discussion version]
 
 ---
 
 **AI System:**
 
-- **Framework:** [Name]
-- **Mode:** $[mode]
-- **Tone:** $[tone]
+- **Framework:** [Name or "None"]
+- **Mode:** $[mode used]
+- **Tone:** $[tone selected]
 
 ---
 
 - **Thinking:** [X rounds - user selected]
-- **DEPTH:** [Phases used]
+- **DEPTH:** [Phases used like D→E→P→H]
 
 ---
 
-- **Challenge:** [Yes/No]
+- **Challenge:** [Applied/Not applied]
 - **Platform:** [If specified]
 - **Context:** [Use case]
 
 ---
 
 **Historical Context:**
-- Patterns shown
-- All options available
+- Patterns from [X] sessions
+- All options always shown
+- User autonomy: 100%
 
 **Knowledge angle:** [If applicable]
 ```
 
-.
+---
+
+## 🚨 Error Recovery - LEARN Protocol
+
+### The LEARN Framework
+**L** - Locate issue with historical context  
+**E** - Explain impact on clarity  
+**A** - Alternatives (provide 3 options)  
+**R** - Refine approach  
+**N** - Note pattern for future  
+
+### Common Recovery Scenarios
+| Issue | Fix | Pattern Note |
+|-------|-----|--------------|
+| Too academic | Add examples | Track preference |
+| Wrong audience | Adjust technical level | Note effectiveness |
+| Missing process | Show iterations | Always works |
+| No team credit | Add contributors | Build trust |
+| Format issues | Fix structure | Strict rule |
+
+---
+
+## 🗃️ Past Chats Integration
+
+### Context Enhancement Journey
+| Stage | Interactions | What Happens | Context Level | User Control |
+|-------|-------------|--------------|---------------|--------------|
+| Learning | 1-3 | Standard flow | Building | 100% |
+| Adapting | 4-6 | Context appears | Light notes | 100% |
+| Enriched | 7-9 | Rich context | Detailed | 100% |
+| Comprehensive | 10+ | Full history | Maximum | 100% |
+
+### Tool Selection
+- **conversation_search**: Topic/keyword-based search for specific discussions
+- **recent_chats**: Time-based retrieval for chronological context
+
+**Critical:** Historical context enriches but NEVER restricts options
+
+---
 
 ## 🎨 Adapting the System
 
@@ -335,11 +353,29 @@ Update core documents with your brand stories, voice guidelines, and audience wh
 - **Healthcare:** Case studies, treatment approaches
 - **Personal:** Blog posts, thought leadership
 
-.
+---
+
+## 📊 Quality System
+
+### Quality Gates (Rule #29)
+Before any output:
+- ☑ **Necessity check** - Is everything needed?
+- ☑ **Clarity check** - Is the message getting through?
+- ☑ **Authenticity check** - Would practitioners recognize this?
+
+### Format Verification (Rule #30)
+Every artifact checked for:
+- Consistent formatting
+- Proper dividers (---)
+- Correct structure
+- AI System header placement
+- Dash bullet formatting
+
+---
 
 ## 🔧 Troubleshooting
 
-### Common Issues & Command Solutions
+### Common Issues & Solutions
 
 **Context seems wrong:**
 ```
@@ -372,25 +408,25 @@ Use 1-2 thinking rounds
 - **Missing process:** Show iterations
 - **No team credit:** Name contributors
 
-.
+---
 
 ## 📦 Version History
 
-### v5.4.0 (Current - December 2024)
-- **Emergency Commands System:** Four new commands ($reset, $standard, $quick, $status)
-- **Enhanced Documentation:** Commands integrated across all 8 core files
-- **Improved Core System Rules:** Comprehensive command reference with examples
-- **Better User Control:** Quick recovery and control options from any point
+### v5.5.0 
+- **30 Critical Rules:** Expanded and reorganized rule system
+- **Enhanced Challenge Mode:** Three-level hierarchy with better triggers
+- **Improved LEARN Protocol:** More detailed error recovery
+- **Better Structure:** Aligned with modern system patterns
+- **New Quick Reference:** Compact v1.0.0 matching Product Owner style
+- **Updated Artifact Standards:** v2.0.0 with merged sections
 
-### v5.3.0 (November 2024)
-- **Major Consolidation:** Core System Rules centralization
-- **20% Size Reduction:** Streamlined to 6,800 lines
-- **Eliminated Redundancy:** Removed duplicate content
-- **Improved Navigation:** Clear cross-references
+### v5.4.0
+- **Emergency Commands System:** Four commands ($reset, $standard, $quick, $status)
+- **Enhanced Documentation:** Commands integrated across all files
 
 ### Previous Versions
-- **v5.2.0:** Enhanced Design Intelligence - UX/UI fundamentals
-- **v5.1.2:** AI System header requirement
+- **v5.3.0:** Core System Rules centralization, 20% size reduction
+- **v5.2.0:** Enhanced Design Intelligence
 - **v5.1.0:** Historical context display
 - **v5.0.0:** Complete redesign with DEPTH
 - **v4.0.0:** Voice Trinity, 5 modes
@@ -400,4 +436,4 @@ Use 1-2 thinking rounds
 
 ---
 
-*Great content makes the complex feel approachable. The v5.4.0 system now provides complete emergency command access from any point, maintaining all functionality while improving user control. All questions asked, all options shown, every choice yours.*
+*Great content makes the complex feel approachable. The v5.5.0 system provides comprehensive structure with 30 critical rules, enhanced Challenge Mode, and improved error recovery. All questions asked, all options shown, every choice yours. Interactive Mode is DEFAULT. Thinking rounds are MANDATORY. User control is absolute.*
