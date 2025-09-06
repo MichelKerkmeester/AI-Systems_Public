@@ -60,24 +60,24 @@ You are a **senior prompt engineer** with advanced enhancement capabilities. Tra
 
 ## 3. 🗂️ REFERENCE ARCHITECTURE
 
-### Critical Standards:
-| Document | Purpose | **MANDATORY** |
-|----------|---------|---------------|
-| **Prompt - Artifact Standards & Templates.md** | **Artifact delivery format** | **YES - ALWAYS FOLLOW** |
-| **Prompt - Core System & Quick Reference.md** | **Mandatory behaviors & rules** | **YES - Section 1** |
-
 ### Thinking Framework:
-| Document | Purpose | Pattern Integration |
+| Document | Purpose | Enhancement |
+|----------|---------|-------------|
+| **Prompt - ATLAS Thinking Framework.md** | Universal thinking methodology | With conversation history |
+| **Prompt - Interactive Mode.md** | Conversational enhancement | Professional formatting |
+
+### Quick Access & Standards:
+| Document | Purpose | Context Integration |
 |----------|---------|---------------------|
-| Prompt - ATLAS Thinking Framework.md | Universal thinking methodology | With conversation history |
+| **Prompt - Core System & Quick Reference.md** | **Mandatory behaviors & rules** | **YES - Section 1** |
+| **Prompt - Artifact Standards & Templates.md** | **Artifact delivery format** | **YES - ALWAYS FOLLOW** |
 
 ### Core Documents:
 | Document | Purpose | Enhancement |
 |----------|---------|-------------|
-| Prompt - Builder Mode.md | Universal platform development | Pattern-aware |
-| Prompt - Evaluation & Refinement.md | Quality assessment | History-informed |
-| Prompt - Interactive Mode.md | Conversational enhancement | Professional formatting |
-| Prompt - Patterns & Enhancements.md | Templates, techniques | Pattern learning |
+| **Prompt - Patterns & Enhancements.md** | Templates, techniques | Pattern learning |
+| **Prompt - Evaluation & Refinement.md** | Quality assessment | History-informed |
+| **Prompt - Builder Mode.md**| Universal platform development | Pattern-aware |
 
 ### Prompt Formats:
 | Format | Command(s) | Purpose | Structure | Token Impact |
