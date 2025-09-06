@@ -1,83 +1,81 @@
-# Product Owner System - User Guide v8.5.0
+# Product Owner System - User Guide v8.6.0
 
 The Product Owner system transforms requests into professional development tickets, implementation specs, documentation, and text snippets through intelligent interactive guidance with built-in complexity challenging. By focusing on WHAT needs doing and WHY it matters (not HOW to implement), it creates lean, actionable artifacts that bridge the communication gap between product and development teams.
 
 ## 📋 Table of Contents
 
-- [🆕 What's New in v8.5.0](#-whats-new-in-v850)
+- [🆕 What's New in v8.6.0 - Major Structural Enhancement](#-whats-new-in-v900---major-structural-enhancement)
 - [✨ Key Features](#-key-features)
 - [🚀 Quick Setup](#-quick-setup)
 - [🎛️ Operating Modes](#️-operating-modes)
 - [⚡ Emergency Commands](#-emergency-commands)
 - [🗃️ Past Chats Integration](#️-past-chats-integration)
 - [🎯 Automatic Complexity Detection](#-automatic-complexity-detection)
+- [🔄 Challenge Mode](#-challenge-mode)
 - [💻 Implementation Specs](#-implementation-specs-spec)
 - [📚 Documentation](#-documentation-doc)
-- [✍️ Text Snippets](#️-text-snippets-text)
+- [✏️ Text Snippets](#️-text-snippets-text)
 - [📗 Platform Integration](#-platform-integration)
 - [🧠 ATLAS Thinking Framework](#-atlas-thinking-framework)
-- [💡 Challenge Mode](#-challenge-mode)
 - [🚨 REPAIR Error Recovery](#-repair-error-recovery)
 - [🔧 Installing MCP Tools](#-installing-mcp-tools)
+- [📊 Quality System](#-quality-system)
 - [📦 Version History](#-version-history)
 - [📚 Additional Resources](#-additional-resources)
 
-.
+---
 
-## 🆕 What's New in v8.5.0
+## 🆕 What's New in v8.6.0 - Major Structural Enhancement
 
-### 🗃️ Past Chats Integration (BETA)
-**Conversation History Search:**
-- System can search past conversations for context
-- Uses `conversation_search` for topic-based lookup
-- Uses `recent_chats` for time-based retrieval
-- Historical patterns inform but NEVER restrict options
-- All choices always remain available
-- Context enriches decision-making without limiting autonomy
+### Major Structural Changes
+The system has been completely reorganized for better consistency and professional standards:
+- **44 Critical Rules System**: Organized into 7 logical groups for comprehensive coverage
+- **Enhanced Challenge Mode**: Three-level hierarchy (Gentle/Constructive/Strong) with calibration
+- **Improved REPAIR Protocol**: More structured error recovery with pattern tracking
+- **Better Professional Approach**: New section emphasizing WHAT not HOW philosophy
 
-### ⚡ Emergency Commands
-**Quick Recovery Options:**
-- `$reset` - Clear all historical context and patterns
-- `$standard` - Use default flow, ignore all context
-- `$quick` - Skip to creation (still asks thinking rounds)
-- `$status` - Show current context and patterns
+### New Features
+- **Challenge Hierarchy**: Progressive challenge levels based on thinking rounds
+- **Challenge Calibration**: Adapts intensity based on historical acceptance rate
+- **Professional Standards Section**: Clear philosophy and trust-building elements
+- **Enhanced Pattern Recognition**: Better tracking across all 44 rules
 
-### 📋 Core System Improvements
-**Enhanced Architecture:**
-- Updated all core files with past chats integration
-- ATLAS Framework now searches conversation history
-- Pattern learning across conversations
-- Challenge calibration based on historical acceptance
-- Better separation of concerns across files
+### Documentation Improvements
+- **Writer - Product Owner v8.6.0**: Complete restructure with better organization
+- **16 Sections**: Comprehensive coverage of all system aspects
+- **Clearer Rule Groups**: Process, Output, Content, System, Developer, Formatting, Platform/Challenge
+- **Professional Focus**: Emphasis on lean thinking and value delivery
 
-### 🔄 Context Enhancement Journey
-**Progressive Learning Stages:**
-| Stage | Interactions | Context Level | User Control |
-|-------|-------------|---------------|--------------|
-| Learning | 1-3 | Building | 100% |
-| Adapting | 4-6 | Light notes | 100% |
-| Enriched | 7-9 | Detailed | 100% |
-| Comprehensive | 10+ | Maximum | 100% |
+### Maintained from v8.5.0
+- **Past Chats Integration**: Conversation history search
+- **Emergency Commands**: Four commands for quick control
+- **ATLAS Framework**: 5-phase thinking methodology
+- **Interactive Mode Default**: Always starts conversational
+- **Platform Integration**: ClickUp handoff after creation
 
-.
+---
 
 ## ✨ Key Features
 
-- **🗃️ NEW Past Chats Integration**: Searches conversation history for context
-- **⚡ NEW Emergency Commands**: $reset, $standard, $quick, $status
+### Core Capabilities
 - **🧠 ATLAS Framework**: 5-phase universal thinking methodology with adaptive depth
-- **💡 Challenge Mode**: Active complexity challenging with lean alternatives
+- **💡 Challenge Mode**: Three-level hierarchy with historical calibration
 - **🎯 Smart Complexity**: Automatic detection and scaling for tickets
-- **📄 Pattern Learning**: Adapts to user preferences across conversations
+- **🗃️ Past Chats Integration**: Searches conversation history for context
+- **⚡ Emergency Commands**: $reset, $standard, $quick, $status
+- **🔄 Pattern Learning**: Adapts to user preferences across conversations
 - **🚨 REPAIR Protocol**: Structured error recovery with learning
 - **📊 Thinking Calibration**: Formula-based recommendations (1-10 rounds)
+
+### Professional Standards
 - **🎛️ 6 Intelligent Modes**: Discovery, $ticket, $spec, $doc, $text, $beautify
 - **📗 Platform Ready**: Direct ClickUp integration after creation
 - **📤 Professional Symbols**: ◆, ◇, ◊, ◳, →, ✦, ✓, ⋈, ∅, ⌆
 - **📋 Strict Formatting**: TOC, dividers, proper Key Problems/Reasons format
 - **⚡ Phased Delivery**: Automatic breakdown of large initiatives
+- **👤 User Autonomy**: Historical context enriches but never restricts
 
-.
+---
 
 ## 🚀 Quick Setup
 
@@ -90,25 +88,25 @@ The Product Owner system transforms requests into professional development ticke
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Writer - Product Owner.md`
+3. Copy and paste: `Writer - Product Owner v8.6.0.md`
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
 Add these **10 essential documents** to your project's knowledge base:
 
 **Core Documents (5):**
-- `Product Owner - ATLAS Thinking Framework.md` (Universal thinking methodology with past chats)
+- `Product Owner - ATLAS Thinking Framework.md` (Universal thinking methodology)
 - `Product Owner - Artifact Standards.md` (Enforcement rules and quality gates)
-- `Product Owner - Interactive Mode.md` (All mode interactions with context search)
+- `Product Owner - Interactive Mode.md` (All mode interactions)
 - `Product Owner - Platform Integration.md` (ClickUp MCP handoff)
-- `Product Owner - Core System Rules & Quick Reference.md` (Mandatory behaviors & emergency commands)
+- `Product Owner - Quick Reference.md` (44 rules compact reference)
 
 **Template Documents (5):**
-- `Product Owner - Template - Ticket Mode.md` (Ticket templates all complexities)
-- `Product Owner - Template - Spec Mode.md` (Implementation spec templates)
+- `Product Owner - Template - Ticket Mode.md` (All complexity templates)
+- `Product Owner - Template - Spec Mode.md` (Implementation specs)
 - `Product Owner - Template - Doc Mode.md` (Documentation templates)
-- `Product Owner - Template - Beautify Mode.md` (Document formatting templates)
-- `Product Owner - Template - Text Mode.md` (Text snippet templates)
+- `Product Owner - Template - Beautify Mode.md` (Document formatting)
+- `Product Owner - Template - Text Mode.md` (Text snippets)
 
 ### Step 4: Install MCP Tools (Optional - for ClickUp only)
 See [MCP Installation](#-installing-mcp-tools) section below
@@ -124,7 +122,7 @@ $reset                         # Clear all context and start fresh
 $status                        # Show current patterns and preferences
 ```
 
-.
+---
 
 ## 🎛️ Operating Modes
 
@@ -138,7 +136,7 @@ $status                        # Show current patterns and preferences
 | **Beautify** | `$beautify` | Format documents | Clean structure | Yes | 2+ rounds |
 
 ### Discovery Flow with Historical Context
-When no mode is specified, the system searches past conversations and helps determine what to create:
+When no mode is specified:
 
 ```
 [Searching conversation history for context...]
@@ -157,26 +155,18 @@ What would you like to create?
 Which best fits? (1-5)
 ```
 
-### Direct Mode Activation
-Use $ prefix to skip discovery:
-- `$ticket` → Straight to ticket questions
-- `$spec` → Straight to implementation questions
-- `$doc` → Straight to documentation questions
-- `$text` → Minimal questions for quick content
-- `$beautify` → Document formatting mode
-
-.
+---
 
 ## ⚡ Emergency Commands
 
 ### Quick Recovery Options
 
-| Command | Action | Result | Past Chats Impact |
-|---------|--------|--------|-------------------|
-| **`$reset`** | Clear all context | Start completely fresh | Stops history search |
-| **`$standard`** | Default flow | Ignore all patterns | No historical context |
-| **`$quick`** | Fast creation | Skip discovery phase | Minimal history use |
-| **`$status`** | Show context | Display current patterns | Shows all tracking |
+| Command | Action | Result | When to Use |
+|---------|--------|--------|-------------|
+| **`$reset`** | Clear all context | Start completely fresh | New project/topic |
+| **`$standard`** | Default flow | Ignore all patterns | Want unbiased process |
+| **`$quick`** | Fast creation | Skip discovery phase | Know exactly what needed |
+| **`$status`** | Show context | Display current patterns | Understand tracking |
 
 ### Usage Examples
 
@@ -198,13 +188,7 @@ $quick - Need auth ticket
 # Minimal pattern checking for speed
 ```
 
-### Command Combinations
-```markdown
-$reset then $quick      # Fresh start + fast creation
-$status then $standard  # Check patterns then ignore them
-```
-
-.
+---
 
 ## 🗃️ Past Chats Integration
 
@@ -221,22 +205,13 @@ The system uses two tools to search conversation history:
 - Tracks temporal patterns
 - Maintains session continuity
 
-### Context Display Example
-```markdown
-[Searching past conversations about authentication...]
-
-Found relevant context from 3 previous conversations:
-- Auth ticket created last week (7 rounds, custom implementation)
-- Security requirements discussed Tuesday
-- Compliance needs from project kickoff
-
-Historical Context (informative only):
-- You typically use Standard complexity for auth features
-- Average thinking rounds: 4
-- Challenge acceptance: 70%
-
-All options remain available.
-```
+### Context Enhancement Journey
+| Stage | Interactions | What Happens | Context Level | User Control |
+|-------|-------------|--------------|---------------|--------------|
+| Learning | 1-3 | Standard flow | Building | 100% |
+| Adapting | 4-6 | Context appears | Light notes | 100% |
+| Enriched | 7-9 | Rich context | Detailed | 100% |
+| Comprehensive | 10+ | Full history | Maximum | 100% |
 
 ### Critical Principles
 - **Enriches but never restricts**: Historical context provides information, not limitations
@@ -244,35 +219,73 @@ All options remain available.
 - **User autonomy absolute**: You can always override any suggestion
 - **Emergency commands available**: $reset clears all history instantly
 
-.
+---
 
 ## 🎯 Automatic Complexity Detection
 
-### For $ticket Mode with Historical Context
+### For $ticket Mode
 
-The system detects complexity based on keywords and past patterns:
+The system detects complexity based on keywords and patterns:
 
-| Indicators | Complexity | Sections | Resolution Items | Historical Note |
+| Indicators | Complexity | Sections | Resolution Items | Challenge Focus |
 |------------|------------|----------|------------------|-----------------|
-| Bug fix, update | **Simple** | 2-3 | 4-6 | [You typically use Simple for bugs] |
-| Feature, dashboard | **Standard** | 4-5 | 8-12 | [Most common in your history] |
-| Platform, architecture | **Complex** | 6-8 with phases | 12-20 | [You prefer phased delivery] |
+| Bug fix, update | **Simple** | 2-3 | 4-6 | "Is this really needed?" |
+| Feature, dashboard | **Standard** | 4-5 | 8-12 | "Could we do less?" |
+| Platform, architecture | **Complex** | 6-8 with phases | 12-20 | "Can we phase this?" |
 
 ### Mandatory Formatting (ALL Tickets)
 
 Every ticket MUST include:
+- Table of Contents (sections only)
+- # ◆ About section
+- ### → Key problems: (NOT in TOC)
+- ### → Reasons why: (NOT in TOC)
+- ## ◳ Designs & References
+- ## ✓ Resolution Checklist with QA warning
+- Dividers (---) between ALL sections
 
+---
+
+## 🔄 Challenge Mode
+
+### Three-Level Hierarchy
+
+**Level 1: Gentle (1-2 rounds)**
+- Questions assumptions lightly
+- Suggests minor simplifications
+- Maintains original scope mostly
+
+**Level 2: Constructive (3-5 rounds)**
+- Proposes meaningful alternatives
+- Questions scope boundaries
+- Suggests phasing options
+
+**Level 3: Strong (6-10 rounds)**
+- Challenges core assumptions
+- Proposes radical simplification
+- Suggests splitting or deferring
+
+### Historical Calibration
+The system adapts challenge intensity based on your acceptance rate:
+- **>70% acceptance**: Strong challenges (you appreciate them)
+- **30-70% acceptance**: Constructive balance
+- **<30% acceptance**: Gentle challenges (minimal disruption)
+
+### Example Challenge
 ```markdown
-• Table of Contents (sections only)
-• # ◆ About section
-• ### → Key problems: (NOT in TOC)
-• ### → Reasons why: (NOT in TOC)
-• ## ◳ Designs & References
-• ## ✓ Resolution Checklist with QA warning
-• Dividers (---) between ALL sections
+[Historical: You've accepted simplification 8 of 10 times]
+
+**Quick thought before we proceed:**
+
+Could we achieve your goal more simply?
+- Option A: Minimal MVP (1-2 rounds) - Just core feature
+- Option B: Standard approach (3-4 rounds) - Full feature
+- Option C: Complete platform (5+ rounds) - All bells and whistles
+
+Based on your history, Option A often ships faster with same value.
 ```
 
-.
+---
 
 ## 💻 Implementation Specs ($spec)
 
@@ -313,7 +326,7 @@ Quick setup:
 [Generates complete, optimized implementation as artifact]
 ```
 
-.
+---
 
 ## 📚 Documentation ($doc)
 
@@ -330,15 +343,9 @@ Quick setup:
 - **→** - References
 - **⌆** - Additional resources
 
-### Historical Context
-The system remembers your documentation preferences:
-- Typical depth level
-- Audience focus (developers/users/mixed)
-- Structure preferences
+---
 
-.
-
-## ✍️ Text Snippets ($text)
+## ✏️ Text Snippets ($text)
 
 ### Quick Content Generation
 
@@ -349,13 +356,13 @@ Perfect for:
 - UX writing
 - Email templates
 
-### Minimal Process with Pattern Recognition
+### Minimal Process
 ```
 User: $text error message for payment failure
 
 System: [Quick check: You prefer clear, non-technical messages]
 
-Let's write your error message! ✍️
+Let's write your error message! ✏️
 
 How many thinking rounds should I use? (1-2 typical for snippets)
 
@@ -370,7 +377,7 @@ User: Customer-facing UI
 [Creates artifact with error message matching your style]
 ```
 
-.
+---
 
 ## 📗 Platform Integration
 
@@ -390,13 +397,13 @@ Which option? (1 or 2)
 - Learns when you prefer ClickUp vs artifact-only
 - Adapts suggestions based on history
 
-.
+---
 
 ## 🧠 ATLAS Thinking Framework
 
 ### Enhanced with Conversation History
 
-The ATLAS framework now searches past conversations to:
+The ATLAS framework searches past conversations to:
 - Find similar problems and solutions
 - Identify successful patterns
 - Avoid past failures
@@ -412,8 +419,7 @@ The ATLAS framework now searches past conversations to:
 | **A** | Assess Impact | Red team | Uses validation patterns |
 | **S** | Synthesize & Ship | Decide and deliver | Applies past successes |
 
-### Thinking Round Calibration with Context
-
+### Thinking Round Calibration
 ```
 How many thinking rounds should I use? (1-10)
 
@@ -427,41 +433,19 @@ Based on your request, I recommend: [X rounds]
 Or specify your preferred number (all options available).
 ```
 
-.
-
-## 💡 Challenge Mode
-
-### Calibrated by History
-
-Challenge intensity adapts based on your past acceptance rate:
-- **>70% acceptance**: Strong challenges (you appreciate them)
-- **<30% acceptance**: Gentle challenges (minimal disruption)
-- **30-70%**: Constructive balance
-
-### Challenge Triggers
-- **Standard**: Activates at 3+ thinking rounds
-- **Beautify**: Activates at 2+ thinking rounds (lower threshold)
-
-### Examples with Context
-```markdown
-[Historical: You've accepted simplification 8 of 10 times]
-
-"Let's go lean here - could we ship just the search feature
-instead of the full dashboard? I know you appreciate getting 
-value out quickly."
-```
-
-.
+---
 
 ## 🚨 REPAIR Error Recovery
 
 ### Enhanced with Historical Learning
 
-The REPAIR framework now:
-- Checks if errors occurred before
-- References past solutions
-- Prevents recurring issues
-- Learns from failures
+The REPAIR framework:
+- **R**ecognize - Detect error pattern with history
+- **E**xplain - Plain language impact
+- **P**ropose - Three solution options
+- **A**dapt - Adjust to user choice
+- **I**terate - Test and improve
+- **R**ecord - Prevent recurrence
 
 ### Example Recovery
 ```markdown
@@ -477,7 +461,7 @@ I: Implement selected
 R: Pattern updated for prevention
 ```
 
-.
+---
 
 ## 🔧 Installing MCP Tools
 
@@ -504,18 +488,45 @@ I need to:
 I'm on [Windows/Mac/Linux]. Give me exact commands.
 ```
 
-.
+---
+
+## 📊 Quality System
+
+### Quality Gates (Rule #4)
+Before any output:
+- ☑ **Necessity check** - Is everything needed?
+- ☑ **Simplicity check** - Could it be simpler?
+- ☑ **Alternative check** - Did we present options?
+
+### Professional Standards
+- Use professional symbols throughout
+- Maintain consistent formatting
+- Include all required sections
+- Provide clear TOC
+- Separate concerns properly
+- Link to resources
+- Define scope clearly
+
+---
 
 ## 📦 Version History
 
-- **v8.5.0**: Updated quick reference
-- **v8.4.0**: Past chats integration, emergency commands ($reset/$standard/$quick/$status), historical context throughout
-- **v8.3.0**: Separated template architecture, 11 documents (6 core + 5 templates)
-- **v8.2.0**: Symbol-enhanced documentation system
-- **v8.1.0**: Streamlined to core documents
+### v8.6.0 
+- **44 Rules Organization**: Better structure in 7 groups
+- **Challenge Hierarchy**: Three-level system with calibration
+- **Professional Approach**: New philosophy section
+- **Enhanced REPAIR**: More structured error recovery
+- **Better Documentation**: 16 comprehensive sections
+
+### v8.5.0
+- **Past Chats Integration**: Conversation history search
+- **Emergency Commands**: $reset/$standard/$quick/$status
+- **Context Enhancement Journey**: Progressive learning stages
+
+### Previous Versions
+- **v8.3.0**: Separated template architecture
 - **v8.0.0**: Beautify mode added, FORM scoring
 - **v7.0.0**: ATLAS Framework, Challenge Mode, REPAIR Protocol
-- **v6.2.0**: Stricter formatting standards
 - **v6.0.0**: New $text mode, 52% size reduction
 - **v5.0.0**: Unified $ticket mode, all modes interactive
 - **v4.0.0**: Multiple modes, interactive offers
@@ -523,7 +534,7 @@ I'm on [Windows/Mac/Linux]. Give me exact commands.
 - **v2.0.0**: Interactive default
 - **v1.0.0**: WHAT/WHY philosophy
 
-.
+---
 
 ## 📚 Additional Resources
 
@@ -536,6 +547,6 @@ I'm on [Windows/Mac/Linux]. Give me exact commands.
 - [Docker Desktop Help](https://docs.docker.com/desktop/)
 - [Claude Desktop Setup](https://claude.ai/docs/desktop)
 
-.
+---
 
-*Product Owner v8.5.0: Now with conversation history search and emergency commands. Historical context enriches but never restricts. User autonomy is absolute. Past patterns inform decisions without limiting options. Emergency commands provide instant recovery. Focus on creating clear tickets, specs, and documentation. Always challenging complexity, always seeking simplicity, always learning from the past.*
+*Product Owner v8.5.0: Professional structure with 44 organized rules, three-level Challenge Mode, and enhanced REPAIR protocol. Historical context enriches but never restricts. User autonomy is absolute. Past patterns inform decisions without limiting options. Emergency commands provide instant recovery. Focus on WHAT needs doing and WHY it matters, not HOW to implement. Always challenging complexity, always seeking simplicity, always learning from the past.*
