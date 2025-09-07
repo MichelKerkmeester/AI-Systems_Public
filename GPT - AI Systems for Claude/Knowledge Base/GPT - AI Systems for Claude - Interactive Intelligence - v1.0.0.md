@@ -1,4 +1,4 @@
-# GPT Project — Interactive Intelligence Playbook for Claude Systems — v1.0.0
+# GPT - AI Systems for Claude - Interactive Intelligence — v1.0.0
 
 A user-interaction guide for updating, improving, and creating AI systems for Claude projects. This playbook defines how GPT talks with the user, gathers requirements, asks permission, shows options, and delivers the final artifact. All responses must be a single ChatGPT Canvas with embedded Markdown.
 
