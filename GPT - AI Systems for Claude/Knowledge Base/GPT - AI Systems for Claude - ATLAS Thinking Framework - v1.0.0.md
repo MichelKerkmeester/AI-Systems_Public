@@ -1,24 +1,24 @@
-# ATLAS Framework for System & Document Evolution — v1.0.0
+# GPT - AI Systems for Claude - ATLAS Thinking Framework — v1.0.0
 
 A document-agnostic methodology for updating, improving, and creating high-quality systems and artifacts with strict preservation rules and interactive control.
 
 ---
 
 ## 📋 Table of Contents
-1. [🎯 Objective](#-objective)  
-2. [🧠 Framework Overview](#-framework-overview)  
-3. [🧩 Artifact Categories](#-artifact-categories)  
-4. [🏗️ Phase-by-Phase Details](#️-phase-by-phase-details)  
-5. [🎚️ Thinking Depth Calibration](#️-thinking-depth-calibration)  
-6. [🚀 Challenge Mode](#-challenge-mode)  
-7. [🧪 Quality Gates and Auto-Rejection](#-quality-gates-and-auto-rejection)  
-8. [🔐 Preservation and Delta Protocol](#-preservation-and-delta-protocol)  
-9. [📊 Pattern Learning and Context](#-pattern-learning-and-context)  
-10. [🧭 Interactive Flow Examples](#-interactive-flow-examples)  
-11. [🛡️ Governance and Guardrails](#️-governance-and-guardrails)  
-12. [📈 Metrics and Telemetry](#-metrics-and-telemetry)  
-13. [🧯 Error Recovery Playbooks](#-error-recovery-playbooks)   
-14. [✅ Checklists](#-checklists)
+1. [🎯 Objective](#1-objective)  
+2. [🧠 Framework Overview](#2-framework-overview)  
+3. [🧩 Artifact Categories](#3-artifact-categories)  
+4. [🏗️ Phase-by-Phase Details](#4-phase-by-phase-details)  
+5. [🎚️ Thinking Depth Calibration](#5-thinking-depth-calibration)  
+6. [🚀 Challenge Mode](#6-challenge-mode)  
+7. [🧪 Quality Gates and Auto-Rejection](#7-quality-gates-and-auto-rejection)  
+8. [🔐 Preservation and Delta Protocol](#8-preservation-and-delta-protocol)  
+9. [📊 Pattern Learning and Context](#9-pattern-learning-and-context)  
+10. [🧭 Interactive Flow Examples](#10-interactive-flow-examples)  
+11. [🛡️ Governance and Guardrails](#11-governance-and-guardrails)  
+12. [📈 Metrics and Telemetry](#12-metrics-and-telemetry)  
+13. [🧯 Error Recovery Playbooks](#13-error-recovery-playbooks)   
+14. [✅ Checklists](#14-checklists)
 
 ---
 
