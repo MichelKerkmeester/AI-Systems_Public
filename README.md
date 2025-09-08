@@ -13,15 +13,16 @@ Some of my non-client AI systems that I made available to the public. They were 
 1. [Branded Content Writer](#1--branded-content-writer)
 2. [Product Owner Writer](#2--product-owner-writer)
 3. [Prompt Engineering Assistant](#3--prompt-engineering-assistant)
+4. [GPT - AI System Improver](#4--gpt---ai-system-improver)
 
 ### ⚡ Automation Agents  
-4. [GPT - Scheduled Tasks](#4--gpt---scheduled-tasks)
+5. [GPT - Scheduled Tasks](#5--gpt---scheduled-tasks)
 
 ### 💬 MCP Agents
-5. [Media Editor Agent](#5--media-editor)
-6. [Webflow Agent](#6--webflow-agent)
-7. [ClickUp Agent](#7--clickup-agent)
-8. [Notion Agent](#8--notion-agent)
+6. [Media Editor Agent](#6--media-editor)
+7. [Webflow Agent](#7--webflow-agent)
+8. [ClickUp Agent](#8--clickup-agent)
+9. [Notion Agent](#9--notion-agent)
 
 ### 🔧 Additional Sections
 - [Common Features](#-common-features)
@@ -35,7 +36,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 ##### Automated content, documentation & prompt writing systems
 ——
 
-#### 1. ✏️ Branded Content Writer - v5.4.0 
+#### 1. ✏️ Branded Content Writer - v5.6.0 
 **Flexible content system with historical context enrichment, adaptable for any brand, profession, or personal writing**
 
 - **Adaptable System & Current Configuration**: 
@@ -54,7 +55,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 .
 
-#### 2. 📋 Product Owner Writer - v8.4.0 
+#### 2. 📋 Product Owner Writer - v8.7.0 
 **Transform vague requests into professional dev tickets, specs, docs, and beautifully formatted documents with built-in complexity challenging**
 
 - **5 Intelligent Modes & Auto-Scaling**: 
@@ -64,7 +65,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 - **Professional Standards & Platform Integration**: 
   - Strict formatting: TOC sections only, dividers (---), Key Problems ### → format
-  - Symbols: ◆ (sections), ◇ (requirements), ◳ (designs), ✦ (success), ✔ (checklist)
+  - Symbols: ◆ (sections), ◇ (requirements), ◳ (designs), ✦ (success), ✓ (checklist)
   - ClickUp MCP direct workspace creation with preserved formatting
 
 - **ATLAS Framework & Challenge Mode**: 
@@ -74,7 +75,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 .
 
-#### 3. 🎯 Prompt Engineering Assistant - v8.1.0
+#### 3. 🎯 Prompt Engineering Assistant - v8.3.0
 **Transform vague requests into powerful AI prompts for ANY platform with multi-format support including SMILE format**
 
 - **8 Specialized Modes + Format Options**: 
@@ -100,13 +101,28 @@ Some of my non-client AI systems that I made available to the public. They were 
   - Semantic brackets: `(: :)` sections, `[: :]` rigid rules, `[= =]` exact following, `[! !]` emphasis
   - Depth control: Minimal/Moderate/Heavy based on complexity
 
+.
+
+#### 4. 🔧 GPT - AI System Improver - v1.1.0 
+**Improves Claude system artifacts through GPT-5 High Deep Reasoning mode and preservation-first editing (ChatGPT)**
+
+- **Deep Reasoning & ATLAS Framework**: 
+  - Always uses maximum thinking depth (GPT-5 High mode)
+  - Interactive Discovery for unclear requests, Direct mode for clear ones
+  - ATLAS phases scale automatically based on complexity
+
+- **Preservation & Professional Delivery**: 
+  - Structural changes need consent, always returns complete files
+  - Emergency commands: $quick, $standard, $reset, $status
+  - Session tracking (ChatGPT only) - resets each chat
+
 ---
 
 ## ⚡ Automation Agents
 ##### Transform natural language into intelligent automation workflows
 ——
 
-#### 4. ⏰ GPT - Scheduled Tasks - v2.0.0
+#### 5. ⏰ GPT - Scheduled Tasks - v2.0.0
 **Maximize ChatGPT's 10 scheduled task slots through intelligent optimization with ATLAS Framework**
 
 - **20+ Template Library & Natural Language**: 
@@ -133,7 +149,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 ##### MCP tools made easy with conversational systems
 ——
 
-#### 5. 🎬 Media Editor Agent - v1.0.0 (NEW)
+#### 6. 🎬 Media Editor Agent - v1.0.0 (NEW)
 **Unified intelligent media editing image, video, and audio files through natural conversation**
 
 - **Universal Media Operations & Intelligence**: 
@@ -156,7 +172,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 .
 
-#### 6. 🌐 Webflow Agent - v3.0.0
+#### 7. 🌐 Webflow Agent - v3.0.0
 **Reality-based content management for existing Webflow structures**
 
 - **Content Excellence & Operations**: 
@@ -179,7 +195,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 .
 
-#### 7. 🚀 ClickUp Agent - v2.1.0
+#### 8. 🚀 ClickUp Agent - v2.1.0
 **Transform natural language into organized ClickUp workspaces while actively challenging unnecessary complexity**
 
 - **Simplicity-First Design & Pattern Learning**: 
@@ -202,7 +218,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 .
 
-#### 8. 📓 Notion Agent - v1.3.0
+#### 9. 📓 Notion Agent - v1.3.0
 **Natural language control of Notion workspaces**
 
 - **Natural Language Processing**: 
@@ -243,35 +259,8 @@ All systems support Model Context Protocol tools:
 
 ---
 
-## 📦 Installation
-
-### Quick Start (Any System)
-1. Create a Claude project
-2. Add system instructions
-3. Upload reference documents
-4. Configure MCP tools (optional but recommended)
-
-### MCP Setup (Docker Recommended)
-```bash
-# Create MCP directory
-mkdir "$HOME/MCP Servers"
-cd "$HOME/MCP Servers"
-
-# Clone needed tools (examples)
-git clone https://github.com/webflow/mcp-server-webflow.git  # For Webflow Agent
-git clone https://github.com/flowy11/imagician.git  # For Media Editor
-git clone https://github.com/misbahsy/video-audio-mcp.git  # For Media Editor
-
-# Use AI to generate docker-compose.yml
-# Start containers
-docker-compose up -d
-```
-
----
-
 ## 📚 Resources
 - [MCP Protocol Documentation](https://modelcontextprotocol.io)
 - [Docker Desktop](https://docker.com/products/docker-desktop)
 - [Claude Desktop](https://claude.ai/desktop)
-- [Lovable Platform](https://lovable.dev)
 - Individual system READMEs for detailed setup
