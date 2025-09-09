@@ -192,7 +192,7 @@ $reset                               # Clear all context and start fresh
 .
 
 
-## 🗂️ Frameworks Overview v8.2.0
+## 🗂️ Frameworks Overview
 
 ### Core Frameworks
 

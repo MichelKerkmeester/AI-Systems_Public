@@ -13,17 +13,17 @@ This is a flexible content creation system that currently focuses on writing con
 ## 📑 Table of Contents
 - [🆕 What's New in v5.5.0 - Major Alignment & Structure Update](#-whats-new-in-v700---major-alignment--structure-update)
 - [🚀 Quick Setup](#-quick-setup)
+- [🛠️ Adapting the System](#-adapting-the-system)
 - [🎛️ System Architecture](#-system-architecture)
-- [🧠 DEPTH Thinking Framework](#-depth-thinking-framework)
 - [🏗 Content Frameworks](#-content-frameworks)
 - [🎨 Voice & Tone System](#-voice--tone-system)
+- [📊 Quality System](#-quality-system)
+- [🧠 DEPTH Thinking Framework](#-depth-thinking-framework)
 - [🔄 Challenge Mode](#-challenge-mode)
-- [⚡ Emergency Commands](#-emergency-commands)
-- [📦 Standard Artifact Structure](#-standard-artifact-structure)
 - [🚨 Error Recovery - LEARN Protocol](#-error-recovery---learn-protocol)
 - [🗃️ Past Chats Integration](#-past-chats-integration)
-- [🎨 Adapting the System](#-adapting-the-system)
-- [📊 Quality System](#-quality-system)
+- [⚡ Emergency Commands](#-emergency-commands)
+- [📦 Standard Artifact Structure](#-standard-artifact-structure)
 - [🔧 Troubleshooting](#-troubleshooting)
 - [📦 Version History](#-version-history)
 
@@ -100,6 +100,23 @@ $status (see current context)
 
 ---
 
+## 🛠️ Adapting the System
+
+### Current: Product Designer Content
+Pre-configured with design process documentation, UX/UI principles, team collaboration focus, and design tool references.
+
+### Adapt for Your Brand
+Update core documents with your brand stories, voice guidelines, and audience while maintaining the system architecture.
+
+### Other Professions
+- **Marketing:** Campaign stories, ROI focus
+- **Engineering:** Technical documentation, architecture
+- **Education:** Lesson planning, student success
+- **Healthcare:** Case studies, treatment approaches
+- **Personal:** Blog posts, thought leadership
+
+---
+
 ## 🎛️ System Architecture
 
 ### Document Structure (v5.5.0)
@@ -122,40 +139,6 @@ $status (see current context)
 - **Rules 18-20:** Design-Specific Voice
 - **Rules 21-27:** System Behavior
 - **Rules 28-30:** Challenge & Quality Rules
-
----
-
-## 🧠 DEPTH Thinking Framework
-
-### User-Controlled Depth (Always Asked)
-Before creating any content, the system ALWAYS asks:
-```
-How many thinking rounds should I use? (1-10)
-
-Based on your request, I recommend: [X rounds]
-• Complexity: [Low/Medium/High] - [reason]
-• Audience: [Technical/Mixed/General] - [reason]
-• Depth needed: [Low/Medium/High] - [reason]
-
-[Historical note: You typically choose X rounds for similar requests]
-
-Or specify your preferred number.
-```
-
-### The Five DEPTH Phases
-- **D - Discover & Understand:** Map needs and challenge assumptions
-- **E - Explore & Generate:** Create multiple approaches
-- **P - Process & Synthesize:** Integrate knowledge and experience
-- **T - Test & Validate:** Quality assurance
-- **H - Help & Enable:** Deliver with clarity
-
-### DEPTH Phases by Rounds
-| Rounds | Phases | Use Case | Challenge Level |
-|--------|--------|----------|-----------------|
-| **1-2** | D→H | Quick edits | None |
-| **3-4** | D→E→P→H | Standard content | Gentle |
-| **5-6** | D→E→P→T→H | Deep dives | Moderate |
-| **7-10** | Full DEPTH+ | Strategic work | Strong |
 
 ---
 
@@ -197,6 +180,58 @@ Or specify your preferred number.
 
 ---
 
+## 📊 Quality System
+
+### Quality Gates (Rule #29)
+Before any output:
+- ☑ **Necessity check** - Is everything needed?
+- ☑ **Clarity check** - Is the message getting through?
+- ☑ **Authenticity check** - Would practitioners recognize this?
+
+### Format Verification (Rule #30)
+Every artifact checked for:
+- Consistent formatting
+- Proper dividers (---)
+- Correct structure
+- AI System header placement
+- Dash bullet formatting
+
+---
+
+## 🧠 DEPTH Thinking Framework
+
+### User-Controlled Depth (Always Asked)
+Before creating any content, the system ALWAYS asks:
+```
+How many thinking rounds should I use? (1-10)
+
+Based on your request, I recommend: [X rounds]
+• Complexity: [Low/Medium/High] - [reason]
+• Audience: [Technical/Mixed/General] - [reason]
+• Depth needed: [Low/Medium/High] - [reason]
+
+[Historical note: You typically choose X rounds for similar requests]
+
+Or specify your preferred number.
+```
+
+### The Five DEPTH Phases
+- **D - Discover & Understand:** Map needs and challenge assumptions
+- **E - Explore & Generate:** Create multiple approaches
+- **P - Process & Synthesize:** Integrate knowledge and experience
+- **T - Test & Validate:** Quality assurance
+- **H - Help & Enable:** Deliver with clarity
+
+### DEPTH Phases by Rounds
+| Rounds | Phases | Use Case | Challenge Level |
+|--------|--------|----------|-----------------|
+| **1-2** | D→H | Quick edits | None |
+| **3-4** | D→E→P→H | Standard content | Gentle |
+| **5-6** | D→E→P→T→H | Deep dives | Moderate |
+| **7-10** | Full DEPTH+ | Strategic work | Strong |
+
+---
+
 ## 🔄 Challenge Mode
 
 ### Three-Level Hierarchy
@@ -226,6 +261,44 @@ Could we achieve your goal more simply?
 
 [Historical: Challenge acceptance rate if available]
 ```
+
+---
+
+## 🚨 Error Recovery - LEARN Protocol
+
+### The LEARN Framework
+**L** - Locate issue with historical context  
+**E** - Explain impact on clarity  
+**A** - Alternatives (provide 3 options)  
+**R** - Refine approach  
+**N** - Note pattern for future  
+
+### Common Recovery Scenarios
+| Issue | Fix | Pattern Note |
+|-------|-----|--------------|
+| Too academic | Add examples | Track preference |
+| Wrong audience | Adjust technical level | Note effectiveness |
+| Missing process | Show iterations | Always works |
+| No team credit | Add contributors | Build trust |
+| Format issues | Fix structure | Strict rule |
+
+---
+
+## 🗃️ Past Chats Integration
+
+### Context Enhancement Journey
+| Stage | Interactions | What Happens | Context Level | User Control |
+|-------|-------------|--------------|---------------|--------------|
+| Learning | 1-3 | Standard flow | Building | 100% |
+| Adapting | 4-6 | Context appears | Light notes | 100% |
+| Enriched | 7-9 | Rich context | Detailed | 100% |
+| Comprehensive | 10+ | Full history | Maximum | 100% |
+
+### Tool Selection
+- **conversation_search**: Topic/keyword-based search for specific discussions
+- **recent_chats**: Time-based retrieval for chronological context
+
+**Critical:** Historical context enriches but NEVER restricts options
 
 ---
 
@@ -297,79 +370,6 @@ Could we achieve your goal more simply?
 
 **Knowledge angle:** [If applicable]
 ```
-
----
-
-## 🚨 Error Recovery - LEARN Protocol
-
-### The LEARN Framework
-**L** - Locate issue with historical context  
-**E** - Explain impact on clarity  
-**A** - Alternatives (provide 3 options)  
-**R** - Refine approach  
-**N** - Note pattern for future  
-
-### Common Recovery Scenarios
-| Issue | Fix | Pattern Note |
-|-------|-----|--------------|
-| Too academic | Add examples | Track preference |
-| Wrong audience | Adjust technical level | Note effectiveness |
-| Missing process | Show iterations | Always works |
-| No team credit | Add contributors | Build trust |
-| Format issues | Fix structure | Strict rule |
-
----
-
-## 🗃️ Past Chats Integration
-
-### Context Enhancement Journey
-| Stage | Interactions | What Happens | Context Level | User Control |
-|-------|-------------|--------------|---------------|--------------|
-| Learning | 1-3 | Standard flow | Building | 100% |
-| Adapting | 4-6 | Context appears | Light notes | 100% |
-| Enriched | 7-9 | Rich context | Detailed | 100% |
-| Comprehensive | 10+ | Full history | Maximum | 100% |
-
-### Tool Selection
-- **conversation_search**: Topic/keyword-based search for specific discussions
-- **recent_chats**: Time-based retrieval for chronological context
-
-**Critical:** Historical context enriches but NEVER restricts options
-
----
-
-## 🎨 Adapting the System
-
-### Current: Product Designer Content
-Pre-configured with design process documentation, UX/UI principles, team collaboration focus, and design tool references.
-
-### Adapt for Your Brand
-Update core documents with your brand stories, voice guidelines, and audience while maintaining the system architecture.
-
-### Other Professions
-- **Marketing:** Campaign stories, ROI focus
-- **Engineering:** Technical documentation, architecture
-- **Education:** Lesson planning, student success
-- **Healthcare:** Case studies, treatment approaches
-- **Personal:** Blog posts, thought leadership
-
----
-
-## 📊 Quality System
-
-### Quality Gates (Rule #29)
-Before any output:
-- ☑ **Necessity check** - Is everything needed?
-- ☑ **Clarity check** - Is the message getting through?
-- ☑ **Authenticity check** - Would practitioners recognize this?
-
-### Format Verification (Rule #30)
-Every artifact checked for:
-- Consistent formatting
-- Proper dividers (---)
-- Correct structure
-- AI System header placement
-- Dash bullet formatting
 
 ---
 

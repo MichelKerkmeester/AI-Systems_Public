@@ -75,7 +75,7 @@ The ClickUp Agent transforms natural language into organized ClickUp workspaces 
 1. Go to claude.ai
 2. Click "Projects" in sidebar
 3. Click "Create project"
-4. Name it "ClickUp Agent v2.1"
+4. Name it "ClickUp Agent"
 
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"

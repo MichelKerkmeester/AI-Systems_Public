@@ -72,7 +72,7 @@ The Media Editor is an intelligent media processing system that transforms natur
 1. Go to claude.ai
 2. Click "Projects" in sidebar
 3. Click "Create project"
-4. Name it "Media Editor v1.0.0"
+4. Name it "Media Editor"
 
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"

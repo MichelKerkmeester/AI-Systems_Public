@@ -91,7 +91,7 @@ The Webflow MCP is a powerful **content management tool**, not a **site builder*
 1. Go to claude.ai
 2. Click "Projects" in sidebar
 3. Click "Create project"
-4. Name it "Webflow Agent v3.0"
+4. Name it "Webflow Agent"
 
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"

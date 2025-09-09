@@ -23,11 +23,11 @@ A unified interactive system that transforms natural language into perfectly opt
 
 .
 
-## Overview
+## 🆕 What's New in v2.0.0 - Major Structural Enhancement
 
 The Task Master System v2.0 helps users create powerful, efficient scheduled tasks for ChatGPT with enhanced features including the ATLAS thinking framework, pattern learning after 3 instances, and mandatory canvas documentation. The system maximizes the 10-slot limit through intelligent consolidation while respecting user preferences and providing transparent documentation of all configurations.
 
-### What's New in v2.0
+### New Features
 - **ATLAS Framework**: 5-phase adaptive thinking methodology
 - **Pattern Learning**: Detects and suggests patterns after just 3 similar requests
 - **Mandatory Canvas**: All configurations documented and offered as README

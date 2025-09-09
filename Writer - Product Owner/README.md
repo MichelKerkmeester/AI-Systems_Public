@@ -10,9 +10,9 @@ The Product Owner system transforms requests into professional development ticke
 - [🎛️ Operating Modes](#️-operating-modes)
 - [🧠 ATLAS Thinking Framework](#-atlas-thinking-framework)
 - [🎯 Automatic Complexity Detection](#-automatic-complexity-detection)
+- [🔄 Challenge Mode](#-challenge-mode)
 - [🗃️ Past Chats Integration](#️-past-chats-integration)
 - [⚡ Emergency Commands](#-emergency-commands)
-- [🔄 Challenge Mode](#-challenge-mode)
 - [📗 Platform Integration](#-platform-integration)
 - [🔧 Installing MCP Tools](#-installing-mcp-tools)
 - [📦 Version History](#-version-history)
@@ -213,6 +213,47 @@ Every ticket MUST include:
 
 ---
 
+## 🔄 Challenge Mode
+
+### Three-Level Hierarchy
+
+**Level 1: Gentle (1-2 rounds)**
+- Questions assumptions lightly
+- Suggests minor simplifications
+- Maintains original scope mostly
+
+**Level 2: Constructive (3-5 rounds)**
+- Proposes meaningful alternatives
+- Questions scope boundaries
+- Suggests phasing options
+
+**Level 3: Strong (6-10 rounds)**
+- Challenges core assumptions
+- Proposes radical simplification
+- Suggests splitting or deferring
+
+### Historical Calibration
+The system adapts challenge intensity based on your acceptance rate:
+- **>70% acceptance**: Strong challenges (you appreciate them)
+- **30-70% acceptance**: Constructive balance
+- **<30% acceptance**: Gentle challenges (minimal disruption)
+
+### Example Challenge
+```markdown
+[Historical: You've accepted simplification 8 of 10 times]
+
+**Quick thought before we proceed:**
+
+Could we achieve your goal more simply?
+- Option A: Minimal MVP (1-2 rounds) - Just core feature
+- Option B: Standard approach (3-4 rounds) - Full feature
+- Option C: Complete platform (5+ rounds) - All bells and whistles
+
+Based on your history, Option A often ships faster with same value.
+```
+
+---
+
 ## ⚡ Emergency Commands
 
 ### Quick Recovery Options
@@ -274,47 +315,6 @@ The system uses two tools to search conversation history:
 - **All options always available**: Every choice remains open regardless of patterns
 - **User autonomy absolute**: You can always override any suggestion
 - **Emergency commands available**: $reset clears all history instantly
-
----
-
-## 🔄 Challenge Mode
-
-### Three-Level Hierarchy
-
-**Level 1: Gentle (1-2 rounds)**
-- Questions assumptions lightly
-- Suggests minor simplifications
-- Maintains original scope mostly
-
-**Level 2: Constructive (3-5 rounds)**
-- Proposes meaningful alternatives
-- Questions scope boundaries
-- Suggests phasing options
-
-**Level 3: Strong (6-10 rounds)**
-- Challenges core assumptions
-- Proposes radical simplification
-- Suggests splitting or deferring
-
-### Historical Calibration
-The system adapts challenge intensity based on your acceptance rate:
-- **>70% acceptance**: Strong challenges (you appreciate them)
-- **30-70% acceptance**: Constructive balance
-- **<30% acceptance**: Gentle challenges (minimal disruption)
-
-### Example Challenge
-```markdown
-[Historical: You've accepted simplification 8 of 10 times]
-
-**Quick thought before we proceed:**
-
-Could we achieve your goal more simply?
-- Option A: Minimal MVP (1-2 rounds) - Just core feature
-- Option B: Standard approach (3-4 rounds) - Full feature
-- Option C: Complete platform (5+ rounds) - All bells and whistles
-
-Based on your history, Option A often ships faster with same value.
-```
 
 ---
 

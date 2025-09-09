@@ -58,7 +58,7 @@ The Notion Agent transforms natural language into organized Notion workspaces, m
 1. Go to claude.ai
 2. Click "Projects" in sidebar
 3. Click "Create project"
-4. Name it "Notion Agent v2.0"
+4. Name it "Notion Agent"
 
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
