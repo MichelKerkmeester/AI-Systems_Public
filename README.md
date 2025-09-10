@@ -44,7 +44,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 #### 1. ✏️ Branded Content Writer - v5.6.0
 
-**Flexible content system with historical context enrichment, adaptable for any brand, profession, or personal writing**
+Adaptable content system for any brand or profession with context enrichment.
 
 - **Adaptable System & Current Configuration**:
   - Currently for Product Designers: case studies, process docs
@@ -62,7 +62,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 #### 2. 📋 Product Owner Writer - v8.7.0
 
-**Transform vague requests into professional dev tickets, specs, docs, and beautifully formatted documents with built-in complexity challenging**
+Transform vague requests into professional dev tickets, docs and specs.
 
 - **5 Intelligent Modes & Auto-Scaling**:
   - Modes: $ticket, $spec, $doc, $text, $beautify
@@ -81,7 +81,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 #### 3. 🎯 Prompt Engineering Assistant - v8.3.0
 
-**Transform vague requests into powerful AI prompts for ANY platform with multi-format support including SMILE format**
+Convert vague requests into powerful AI prompts with multi-format support.
 
 - **8 Specialized Modes + Format Options**:
   - Core: $short, $improve, $refine, $interactive
@@ -100,7 +100,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 #### 4. 🔧 GPT - AI System Improver - v1.1.0
 
-**Improves Claude system artifacts through GPT-5 High Deep Reasoning mode and preservation-first editing (ChatGPT)**
+Improve Claude systems via GPT-5 deep reasoning and preservation-first editing.
 
 - **Deep Reasoning & ATLAS Framework**:
   - Always maximum thinking (GPT-5 High)
@@ -121,7 +121,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 #### 5. ⏰ GPT - Scheduled Tasks - v2.0.0
 
-**Maximize ChatGPT’s 10 scheduled task slots through intelligent optimization with ATLAS Framework**
+Create scheduled tasks with intelligent optimization.
 
 - **20+ Template Library & Natural Language**:
   - Morning Command (5 functions/1 slot), Weekly Intelligence (4/1)
@@ -146,7 +146,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 #### 6. 🎬 Media Editor Agent - v1.0.0 (NEW)
 
-**Unified intelligent media editing image, video, and audio files through natural conversation**
+Edit image, video, and audio files via natural language.
 
 - **Universal Media Operations & Intelligence**:
   - Image: Resize, convert, compress, crop, batch
@@ -165,7 +165,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 #### 7. 🌐 Webflow Agent - v3.0.0
 
-**Reality-based content management for existing Webflow structures**
+Automate Webflow actions through natural language.
 
 - **Content Excellence & Operations**:
   - CMS management, SEO publishing
@@ -184,7 +184,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 #### 8. 🚀 ClickUp Agent - v2.1.0
 
-**Transform natural language into organized ClickUp workspaces while actively challenging unnecessary complexity**
+Automate ClickUp actions through natural language.
 
 - **Simplicity-First Design & Pattern Learning**:
   - Defaults to minimal (3-5 fields)
@@ -203,7 +203,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 #### 9. 📓 Notion Agent - v1.3.0
 
-**Natural language control of Notion workspaces**
+Automate Notion actions through natural language.
 
 - **Natural Language Processing**:
   - Converts descriptions to databases
