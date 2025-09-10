@@ -1,44 +1,36 @@
-# Prompt Engineering Assistant - User Guide v8.2.0
+# Prompt Engineering Assistant - User Guide v0.820
 
 A comprehensive system that transforms vague requests into clear, effective AI prompts using the ATLAS thinking framework, challenge-based simplification, and intelligent refinement. Now with MANDATORY thinking rounds, professional artifact standards, enhanced pattern learning with conversation history search, and emergency commands for quick recovery! Features 8 operating modes including 3 specialized Builder sub-modes for creating universal creative briefs that work on ANY AI development platform while aggressively minimizing complexity and resource usage.
 
 ## 📋 Table of Contents
 
-- [🆕 What's New in v8.2.0](#-whats-new-in-v820)
-- [📖 Overview](#-overview)
-- [✨ Key Features](#-key-features)
-- [🚀 Quick Setup](#-quick-setup)
-- [🎛️ Operating Modes](#️-operating-modes)
-  - [Core Modes](#core-modes)
-  - [Builder Sub-Modes](#builder-sub-modes-universal-ai-platform-support)
-  - [Supported Platforms](#supported-platforms-include)
-- [📄 Format Options](#-format-options)
+- [🆕 What's New in v0.820](#whats-new-in-v820)
+- [📖 Overview](#overview)
+- [✨ Key Features](#key-features)
+- [🚀 Quick Setup](#quick-setup)
+- [🎛️ Operating Modes](#operating-modes)
+- [📄 Format Options](#format-options)
   - [Standard Format](#standard-format-default)
   - [JSON Format](#json-format)
   - [SMILE Format](#smile-format)
-- [⚡ Emergency Commands](#-emergency-commands-new)
-- [🗂️ Frameworks Overview](#️-frameworks-overview-v820)
-  - [Core Frameworks](#core-frameworks)
-  - [Builder Creative Frameworks](#builder-creative-frameworks-universal)
-- [📊 Enhanced Report Examples](#-enhanced-report-examples)
-- [💰 Smart Resource Optimization](#-smart-resource-optimization-enhanced)
-- [🧠 ATLAS Thinking Framework](#-atlas-thinking-framework)
-  - [How ATLAS Works](#how-atlas-works)
-  - [Challenge Mode](#challenge-mode)
-  - [User Interaction](#user-interaction)
-- [🚀 Challenge Mode Philosophy](#-challenge-mode-philosophy)
-- [🗃️ Past Chats Integration](#️-past-chats-integration-enhanced)
-- [🚨 REPAIR Error Protocol](#-repair-error-protocol)
-- [🆘 Troubleshooting](#-troubleshooting)
-- [⚠️ Important Notes](#️-important-notes-v820)
-- [📦 Version History](#-version-history)
-- [🎯 Key Principles](#-key-principles-v820)
-- [📈 Performance Metrics](#-performance-metrics)
-- [📚 Additional Resources](#-additional-resources)
+- [⚡ Emergency Commands](#emergency-commands)
+- [🗂️ Frameworks Overview](#frameworks-overview)
+- [📊 Enhanced Report Examples](#enhanced-report-examples)
+- [💰 Smart Resource Optimization](#smart-resource-optimization)
+- [🧠 ATLAS Thinking Framework](#atlas-thinking-framework)
+- [🚀 Challenge Mode Philosophy](#challenge-mode-philosophy)
+- [🗃️ Past Chats Integration](#past-chats-integration)
+- [🚨 REPAIR Error Protocol](#repair-error-protocol)
+- [🆘 Troubleshooting](#troubleshooting)
+- [⚠️ Important Notes](#important-notes)
+- [📦 Version History](#version-history)
+- [🎯 Key Principles](#key-principles)
+- [📈 Performance Metrics](#performance-metrics)
+- [📚 Additional Resources](#additional-resources)
 
 .
 
-## 🆕 What's New in v8.2.0
+## 🆕 What's New in v0.820
 
 ### Major Enhancements 🚀
 - **Emergency Commands**: New `$reset`, `$standard`, `$quick`, and `$status` commands for quick recovery and system control
@@ -48,14 +40,14 @@ A comprehensive system that transforms vague requests into clear, effective AI p
 - **Challenge Calibration**: Adapts challenge intensity based on your acceptance history
 - **Improved REPAIR Protocol**: Now includes historical context and pattern tracking
 
-### Refinements from v8.1.0
+### Refinements from v0.810
 - **Better Format Selection**: More sophisticated logic with pattern awareness
 - **Tone Templates**: Adaptive personality system for different modes
 - **Reference Architecture**: Clearer document organization
 - **Interactive Mode Flow**: Enhanced with historical notes
 - **Quality Gates**: Necessity, simplicity, and alternative checks before output
 
-### v8.2.0 System Process
+### v0.820 System Process
 ```markdown
 **How many thinking rounds would you like? (1-10, or 'auto' for my recommendation)**
 
@@ -79,7 +71,7 @@ The Prompt Engineering Assistant helps users craft powerful, precise prompts thr
 ### What is SMILE Format?
 SMILE ((: Smile) is an open-source prompt instruction language created by Dr. Thomas Ager, Ph.D. at Cardiff University. It uses emoticon-based brackets to structure prompts for Large Language Models, designed to increase instruction following while maintaining readability.
 
-### v8.2.0 Core Improvements
+### v0.820 Core Improvements
 - **Emergency Recovery**: Quick commands for system control
 - **Progressive Context**: Learning journey from basic to comprehensive
 - **Status Visibility**: Full transparency on tracked patterns
@@ -102,7 +94,7 @@ SMILE ((: Smile) is an open-source prompt instruction language created by Dr. Th
 - **30-50% Complexity Reduction**: Measurable simplification
 - **Universal Platform Support**: Works on ALL AI platforms
 
-### v8.2.0 Enhancements
+### v0.820 Enhancements
 - **Conversation Search**: Advanced pattern detection in history
 - **Recent Chats Analysis**: Time-based context retrieval
 - **Challenge Calibration**: Adapts intensity to your preferences
@@ -123,23 +115,23 @@ SMILE ((: Smile) is an open-source prompt instruction language created by Dr. Th
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Writer - Prompt Improver - v8.2.0.md`
+3. Copy and paste: `Writer - Prompt Improver - v0.820.md`
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
-Add these v8.2.0 documents to your project's knowledge base:
+Add these v0.820 documents to your project's knowledge base:
 
-**Critical Documents (v8.2.0):**
-- `Prompt - Core System & Quick Reference - v3.2.0.md` (Mandatory behaviors)
-- `Prompt - Artifact Standards & Templates - v1.0.0.md` (Required formatting)
-- `Prompt - ATLAS Thinking Framework - v2.0.0.md` (With Format Transform)
+**Critical Documents (v0.820):**
+- `Prompt - Core System & Quick Reference - v0.320.md` (Mandatory behaviors)
+- `Prompt - Artifact Standards & Templates - v0.100.md` (Required formatting)
+- `Prompt - ATLAS Thinking Framework - v0.200.md` (With Format Transform)
 
-**Mode Documents (v8.2.0):**
-- `Prompt - Interactive Mode - v6.1.0.md` (Professional formatting)
-- `Prompt - Builder Mode - v4.1.0.md` (Table-based platform guide)
-- `Prompt - Evaluation & Refinement - v6.0.0.md` (Format assessment)
-- `Prompt - Patterns & Enhancements - v6.0.0.md` (Multi-format templates)
-- `Prompt - Quick Reference - v1.0.0.md` (Complete command reference)
+**Mode Documents (v0.820):**
+- `Prompt - Interactive Mode - v0.610.md` (Professional formatting)
+- `Prompt - Builder Mode - v0.410.md` (Table-based platform guide)
+- `Prompt - Evaluation & Refinement - v0.600.md` (Format assessment)
+- `Prompt - Patterns & Enhancements - v0.600.md` (Multi-format templates)
+- `Prompt - Quick Reference - v0.100.md` (Complete command reference)
 
 ### Step 4: Start Creating with Enhanced Process
 Simply paste your prompt or describe what you need:
@@ -309,7 +301,7 @@ Example:
 ) :)
 ```
 
-### Format Selection Guide (v8.2.0 Enhanced)
+### Format Selection Guide (v0.820 Enhanced)
 
 | Complexity | Recommended | Alternative | Pattern Context | Token Note |
 |------------|------------|-------------|-----------------|------------|
@@ -321,7 +313,7 @@ Example:
 
 ## 🧠 ATLAS Thinking Framework
 
-### How ATLAS Works (v8.2.0 Enhanced Process)
+### How ATLAS Works (v0.820 Enhanced Process)
 
 | Phase | Action | Challenge Point | Pattern Integration | Output |
 |-------|--------|----------------|---------------------|--------|
@@ -342,7 +334,7 @@ Example:
 | 7-8 | Strong | User preference | Customized | History influences |
 | 9-10 | Maximum | Past responses | Full context | Complete tracking |
 
-### User Interaction (MANDATORY v8.2.0)
+### User Interaction (MANDATORY v0.820)
 ```
 **How many thinking rounds would you like? (1-10, or 'auto')**
 
@@ -479,17 +471,17 @@ System: **Current System Status Report**
 
 ## 📦 Version History
 
-- **v8.2.0**: Emergency commands, enhanced past chats integration, context journey stages, challenge calibration, status reports
-- **v8.1.0**: MANDATORY thinking rounds, professional artifact standards, conversation history pattern learning
-- **v8.0.0**: SMILE format integration, multi-format support, Format Transform phase
-- **v7.2.0**: Streamlined format, 92% pseudocode reduction, table-based logic
-- **v7.1.0**: Enhanced pattern learning, improved confidence scoring
-- **v7.0.0**: ATLAS framework, Challenge mode, REPAIR protocol
-- **v6.0.0**: Consolidated Core System, native Claude thinking
-- **v5.0.0**: Universal platform support, Builder mode for ALL platforms
-- **v4.2.0**: Creative direction philosophy, AI design freedom
-- **v4.1.0**: Reorganized architecture prioritizing core logic
-- **v4.0.0**: Lovable platform, 3 sub-modes, 6 frameworks
+- **v0.820**: Emergency commands, enhanced past chats integration, context journey stages, challenge calibration, status reports
+- **v0.810**: MANDATORY thinking rounds, professional artifact standards, conversation history pattern learning
+- **v0.800**: SMILE format integration, multi-format support, Format Transform phase
+- **v0.720**: Streamlined format, 92% pseudocode reduction, table-based logic
+- **v0.710**: Enhanced pattern learning, improved confidence scoring
+- **v0.700**: ATLAS framework, Challenge mode, REPAIR protocol
+- **v0.600**: Consolidated Core System, native Claude thinking
+- **v0.500**: Universal platform support, Builder mode for ALL platforms
+- **v0.420**: Creative direction philosophy, AI design freedom
+- **v0.410**: Reorganized architecture prioritizing core logic
+- **v0.400**: Lovable platform, 3 sub-modes, 6 frameworks
 
 .
 
@@ -512,13 +504,13 @@ System: **Current System Status Report**
 - Research-backed for instruction following
 - Compatible with all major LLMs
 
-### v8.2.0 Required Documents
-- **Writer - Prompt Improver v8.2.0**: Main system instructions
-- **Core System & Quick Reference v3.2.0**: Mandatory behaviors
-- **Artifact Standards v1.0.0**: Required formatting
-- **ATLAS Framework v2.0.0**: Thinking methodology
-- **Interactive Mode v6.1.0**: Professional formatting
-- **Quick Reference v1.0.0**: Complete command reference
+### v0.820 Required Documents
+- **Writer - Prompt Improver v0.820**: Main system instructions
+- **Core System & Quick Reference v0.320**: Mandatory behaviors
+- **Artifact Standards v0.100**: Required formatting
+- **ATLAS Framework v0.200**: Thinking methodology
+- **Interactive Mode v0.610**: Professional formatting
+- **Quick Reference v0.100**: Complete command reference
 
 ---
 

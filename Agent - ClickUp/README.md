@@ -1,24 +1,24 @@
-# ClickUp Agent - User Guide v2.1.0
+# ClickUp Agent - User Guide v0.210
 
 The ClickUp Agent transforms natural language into organized ClickUp workspaces while actively challenging unnecessary complexity. Through intelligent conversation with user-controlled thinking depth, it builds minimal viable structures that actually get used, not admired.
 
 ## 📋 Table of Contents
 
-- [🆕 What's New in v2.1.0](#-whats-new-in-v210)
-- [✨ Key Features](#-key-features)
-- [🚀 Quick Setup](#-quick-setup)
-- [🧠 How It Works](#-how-it-works)
-- [💬 Example Interactions](#-example-interactions)
-- [📊 What Gets Built](#-what-gets-built)
-- [🔧 Installing ClickUp MCP](#-installing-clickup-mcp)
-- [🆘 Troubleshooting](#-troubleshooting)
-- [⚠️ Important Notes](#️-important-notes)
-- [📦 Version History](#-version-history)
-- [📚 Resources](#-resources)
+- [🆕 What's New in v0.210](#whats-new-in-v210)
+- [✨ Key Features](#key-features)
+- [🚀 Quick Setup](#quick-setup)
+- [🧠 How It Works](#how-it-works)
+- [💬 Example Interactions](#example-interactions)
+- [📊 What Gets Built](#what-gets-built)
+- [🔧 Installing ClickUp MCP](#installing-clickup-mcp)
+- [🆘 Troubleshooting](#troubleshooting)
+- [⚠️ Important Notes](#important-notes)
+- [📦 Version History](#version-history)
+- [📚 Resources](#resources)
 
 .
 
-## 🆕 What's New in v2.1.0
+## 🆕 What's New in v0.210
 
 ### Major Clarifications
 - **API Reality Documented**: Clear distinction between using existing fields vs creating new
@@ -80,17 +80,17 @@ The ClickUp Agent transforms natural language into organized ClickUp workspaces 
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Agent - MCP - ClickUp - v2.1.0.md`
+3. Copy and paste: `Agent - MCP - ClickUp - v0.210.md`
 4. Save the project
 
 ### Step 3: Upload Reference Documents
 Add these updated documents to your project:
-- `Agent - MCP - ClickUp - v2.1.0.md` (Main system with API clarity)
-- `ClickUp - ATLAS Thinking Framework - v1.0.0.md` (Thinking methodology)
-- `ClickUp - Interactive Intelligence - v2.0.0.md` (Conversational interface)
-- `ClickUp - Patterns & Workflows - v2.0.0.md` (Operation patterns)
-- `ClickUp - MCP Knowledge - v1.1.0.md` (Updated with API limits)
-- `README - v2.1.0.md` (This guide)
+- `Agent - MCP - ClickUp - v0.210.md` (Main system with API clarity)
+- `ClickUp - ATLAS Thinking Framework - v0.100.md` (Thinking methodology)
+- `ClickUp - Interactive Intelligence - v0.200.md` (Conversational interface)
+- `ClickUp - Patterns & Workflows - v0.200.md` (Operation patterns)
+- `ClickUp - MCP Knowledge - v0.110.md` (Updated with API limits)
+- `README - v0.210.md` (This guide)
 
 ### Step 4: Get Your ClickUp API Key
 1. Go to [ClickUp Settings](https://app.clickup.com/settings/apps)
@@ -457,7 +457,7 @@ Claude Desktop config with all features:
 
 ## 📦 Version History
 
-### v2.1.0 (Current)
+### v0.210 (Current)
 - **API clarity**: Documents what can/cannot be created
 - **Field reality**: Uses existing definitions only
 - **Automation truth**: Triggers existing rules only
@@ -465,7 +465,7 @@ Claude Desktop config with all features:
 - **Better errors**: Explains limitations clearly
 - **Workarounds**: Provides alternatives for unsupported
 
-### v2.0.0
+### v0.200
 - ATLAS Framework
 - Challenge Mode
 - Pattern Learning

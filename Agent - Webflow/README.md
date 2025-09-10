@@ -1,25 +1,25 @@
-# Webflow Agent - User Guide v3.0.0
+# Webflow Agent - User Guide v0.300
 
 The Webflow Agent is a reality-based content management assistant that works within actual MCP capabilities. It excels at managing content in existing Webflow structures while transparently guiding you to Designer when structural changes are needed. No false promises, just genuine value within real constraints.
 
 ## 📋 Table of Contents
 
-- [🆕 What's New in v3.0.0](#-whats-new-in-v300)
-- [✨ Key Features](#-key-features)
-- [⚠️ Reality Check](#️-reality-check)
-- [🚀 Quick Setup](#-quick-setup)
-- [🧠 How It Works](#-how-it-works)
-- [💬 Example Interactions](#-example-interactions)
-- [📊 What Gets Managed](#-what-gets-managed)
-- [🔧 Installing MCPs (Required)](#-installing-mcps-required)
-- [🆘 Troubleshooting](#-troubleshooting)
-- [⚠️ Important Notes](#️-important-notes)
-- [📦 Version History](#-version-history)
-- [📚 Resources](#-resources)
+- [🆕 What's New in v0.300](#whats-new-in-v300)
+- [✨ Key Features](#key-features)
+- [⚠️ Reality Check](#reality-check)
+- [🚀 Quick Setup](#quick-setup)
+- [🧠 How It Works](#how-it-works)
+- [💬 Example Interactions](#example-interactions)
+- [📊 What Gets Managed](#what-gets-managed)
+- [🔧 Installing Webflow MCP (Required)](#installing-webflow-mcp-required)
+- [🆘 Troubleshooting](#troubleshooting)
+- [⚠️ Important Notes](#important-notes)
+- [📦 Version History](#version-history)
+- [📚 Resources](#resources)
 
 .
 
-## 🆕 What's New in v3.0.0
+## 🆕 What's New in v0.300
 
 ### Document Architecture Overhaul
 - **Cleaner Python Usage**: Reduced to essential logic only (not for lists/descriptions)
@@ -96,16 +96,16 @@ The Webflow MCP is a powerful **content management tool**, not a **site builder*
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Agent - MCP - Webflow - v3.0.0.md`
+3. Copy and paste: `Agent - MCP - Webflow - v0.300.md`
 4. Save the project
 
 ### Step 3: Upload Reference Documents
 Add these 5 essential documents to your project:
-- `Agent - MCP - Webflow - v3.0.0.md` (Main agent)
-- `Webflow - MCP Knowledge - v3.0.0.md` (Central knowledge)
-- `Webflow - Interactive Intelligence - v3.0.0.md` (Conversation patterns)
-- `Webflow - Patterns & Workflows - v3.0.0.md` (Operation mappings)
-- `Webflow - ATLAS Thinking Framework - v2.0.0.md` (Reality-based thinking)
+- `Agent - MCP - Webflow - v0.300.md` (Main agent)
+- `Webflow - MCP Knowledge - v0.300.md` (Central knowledge)
+- `Webflow - Interactive Intelligence - v0.300.md` (Conversation patterns)
+- `Webflow - Patterns & Workflows - v0.300.md` (Operation mappings)
+- `Webflow - ATLAS Thinking Framework - v0.200.md` (Reality-based thinking)
 - `README.md` (This guide)
 
 ### Step 4: Prepare Your Webflow Structure
@@ -417,21 +417,21 @@ Standardized limits:
 
 ## 📦 Version History
 
-### v3.0.0 (Current)
+### v0.300 (Current)
 - **Document overhaul**: Cleaner Python usage, better organization
 - **Improved ATLAS**: Reality-first thinking at every phase
 - **Enhanced patterns**: Better learning and adaptation
 - **Refined conversations**: Fewer questions, clearer responses
 - **Visual improvements**: Better progress and error feedback
 
-### v2.0.0
+### v0.200
 - **Reality alignment**: Corrected capability claims
 - **Transparent limitations**: Clear about what's not possible
 - **Enhanced guidance**: Better Designer coordination
 - **Workaround documentation**: Creative solutions
 - **Removed false claims**: No field creation, no image upload
 
-### v1.0.0 (Deprecated)
+### v0.100 (Deprecated)
 - Initial release with incorrect capability claims
 - Claimed field creation (not possible)
 - Claimed image upload (not possible)

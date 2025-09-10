@@ -1,4 +1,4 @@
-# GPT - AI System Improver for Claude Projects - User Guide v1.1.0
+# GPT - AI System Improver for Claude Projects - User Guide v0.110
 
 The GPT Improver transforms requests into professional Claude system artifacts through **GPT-5 High Deep Reasoning mode**, interactive discovery, automatic complexity challenging, and preservation-first editing. Always applies maximum thinking depth for optimal quality.
 
@@ -6,16 +6,14 @@ The GPT Improver transforms requests into professional Claude system artifacts t
 
 ## 📋 Table of Contents
 
-- [🆕 What's New in v1.1.0](#-whats-new-in-v110)
-- [✨ Key Features](#-key-features)
-- [🚀 Quick Setup](#-quick-setup)
-- [🧠 Deep Reasoning Mode](#-deep-reasoning-mode)
-- [🔄 Interactive Discovery](#-interactive-discovery)
-- [🚀 Challenge Mode](#-challenge-mode)
-- [⚡ Emergency Commands](#-emergency-commands)
-- [🔍 Session Tracking](#-session-tracking)
-- [📊 ATLAS Framework](#-atlas-framework)
-- [📦 Version History](#-version-history)
+- [✨ Key Features](#key-features)
+- [🚀 Quick Setup](#quick-setup)
+- [🧠 Deep Reasoning Mode](#deep-reasoning-mode)
+- [🔄 Interactive Discovery](#interactive-discovery)
+- [📊 ATLAS Framework](#atlas-framework)
+- [🚀 Challenge Mode](#challenge-mode)
+- [🔍 Session Tracking](#session-tracking)
+- [📦 Version History](#version-history)
 
 ---
 
@@ -53,8 +51,8 @@ The GPT Improver transforms requests into professional Claude system artifacts t
 
 ### Step 3: Upload Reference Documents
 Add these three core files:
-- **GPT - AI System Improver - ATLAS Thinking Framework - v1.1.0** - Thinking methodology
-- **GPT - AI System Improver - Interactive Intelligence - v1.1.0** - Conversation patterns
+- **GPT - AI System Improver - ATLAS Thinking Framework - v0.110** - Thinking methodology
+- **GPT - AI System Improver - Interactive Intelligence - v0.110** - Conversation patterns
 
 ### Step 4: Start Using
 ```
@@ -233,7 +231,7 @@ session_data = {
 
 ## 📦 Version History
 
-### v1.1.0 (Current - December 2024)
+### v0.110 (Current - December 2024)
 - GPT-5 High Deep Reasoning mode (always on)
 - Automatic complexity assessment and phase selection
 - Interactive Discovery as default mode
@@ -244,7 +242,7 @@ session_data = {
 - 8 quality gates mandatory
 - All emergency commands functional
 
-### v1.0.0 (Initial Release)
+### v0.100 (Initial Release)
 - Preservation-first editing with consent checkpoints
 - Single interactive flow, no modes
 - Options menu with Minimal, Standard, Comprehensive passes
@@ -271,4 +269,4 @@ session_data = {
 
 ---
 
-**GPT - AI System Improver v1.1.0** applies GPT-5 High Deep Reasoning mode to every request. Automatic complexity assessment determines optimal ATLAS phases. Interactive discovery when needed. Challenge alternatives based on deep analysis. Session learning enhances without restricting. All options always available. Deep thinking is absolute.
+**GPT - AI System Improver v0.110** applies GPT-5 High Deep Reasoning mode to every request. Automatic complexity assessment determines optimal ATLAS phases. Interactive discovery when needed. Challenge alternatives based on deep analysis. Session learning enhances without restricting. All options always available. Deep thinking is absolute.

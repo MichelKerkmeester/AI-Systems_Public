@@ -1,24 +1,24 @@
-# Notion Agent - User Guide v2.0.0
+# Notion Agent - User Guide v0.200
 
 The Notion Agent transforms natural language into organized Notion workspaces, making database creation and workspace management 10x easier. Through intelligent conversation with transparent thinking, it understands WHAT you want to organize and automatically handles HOW to build it. No modes, no commands, just describe what you need and choose how thoroughly to plan it.
 
 ## 📑 Table of Contents
 
-- [🆕 What's New in v2.0.0](#-whats-new-in-v200)
-- [✨ Key Features](#-key-features)
-- [🚀 Quick Setup](#-quick-setup)
-- [🧠 How It Works](#-how-it-works)
-- [💬 Example Interactions](#-example-interactions)
-- [📊 What Gets Created](#-what-gets-created)
-- [🔧 Installing Notion MCP (Required)](#-installing-notion-mcp-required)
-- [🆘 Troubleshooting](#-troubleshooting)
-- [⚠️ Important Notes](#️-important-notes)
-- [📦 Version History](#-version-history)
-- [📚 Resources](#-resources)
+- [🆕 What's New in v0.200](#whats-new-in-v200)
+- [✨ Key Features](#key-features)
+- [🚀 Quick Setup](#quick-setup)
+- [🧠 How It Works](#how-it-works)
+- [💬 Example Interactions](#example-interactions)
+- [📊 What Gets Created](#what-gets-created)
+- [🔧 Installing Notion MCP (Required)](#installing-notion-mcp-required)
+- [🆘 Troubleshooting](#troubleshooting)
+- [⚠️ Important Notes](#important-notes)
+- [📦 Version History](#version-history)
+- [📚 Resources](#resources)
 
 •
 
-## 🆕 What's New in v2.0.0
+## 🆕 What's New in v0.200
 
 ### Major Enhancement: Native Claude Thinking
 - **Removed MCP Dependencies**: No longer requires Sequential or Cascade Thinking MCPs
@@ -28,7 +28,7 @@ The Notion Agent transforms natural language into organized Notion workspaces, m
 - **Adaptive Recommendations**: Suggests optimal thinking rounds based on complexity
 
 ### Maintained Excellence
-- All v1.2.0 capabilities preserved
+- All v0.120 capabilities preserved
 - Same natural language interface
 - Professional patterns still applied
 - Educational approach retained
@@ -63,15 +63,15 @@ The Notion Agent transforms natural language into organized Notion workspaces, m
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Agent - Notion - v2.0.0.md`
+3. Copy and paste: `Agent - Notion - v0.200.md`
 4. Save the project
 
 ### Step 3: Upload Reference Documents
 Add these 4 streamlined documents to your project:
-- `Notion - Interactive Intelligence - v2.0.0.md` (Conversation examples and patterns)
-- `Notion - Patterns & Operations - v2.0.0.md` (All patterns and operation mappings)
-- `Notion - Workspace Intelligence - v2.0.0.md` (Best practices and error recovery)
-- `README - v2.0.0.md` (This guide)
+- `Notion - Interactive Intelligence - v0.200.md` (Conversation examples and patterns)
+- `Notion - Patterns & Operations - v0.200.md` (All patterns and operation mappings)
+- `Notion - Workspace Intelligence - v0.200.md` (Best practices and error recovery)
+- `README - v0.200.md` (This guide)
 
 ### Step 4: Get Your Notion API Key
 1. Go to [https://www.notion.so/my-integrations](https://www.notion.so/my-integrations)
@@ -381,10 +381,10 @@ docker-compose restart
 
 ## 📦 Version History
 
-- **v2.0.0**: Native Claude thinking, user-controlled rounds, removed MCP dependencies
-- **v1.2.0**: Unified to single approach, removed modes, cleaner architecture
-- **v1.1.0**: Streamlined to 3 documents, enhanced MCP intelligence
-- **v1.0.0**: Initial release with 5 reference documents
+- **v0.200**: Native Claude thinking, user-controlled rounds, removed MCP dependencies
+- **v0.120**: Unified to single approach, removed modes, cleaner architecture
+- **v0.110**: Streamlined to 3 documents, enhanced MCP intelligence
+- **v0.100**: Initial release with 5 reference documents
 
 •
 

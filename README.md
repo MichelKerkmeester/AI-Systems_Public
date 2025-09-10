@@ -10,25 +10,23 @@ Some of my non-client AI systems that I made available to the public. They were 
 ## 📋 Table of Contents
 
 ### ✏️ Writer Systems
-1. [Branded Content Writer](#1--branded-content-writer)
-2. [Product Owner Writer](#2--product-owner-writer)
-3. [Prompt Engineering Assistant](#3--prompt-engineering-assistant)
-4. [GPT - AI System Improver](#4--gpt---ai-system-improver)
+1. [Branded Content Writer](#1-branded-content-writer---v560)
+2. [Product Owner Writer](#2-product-owner-writer---v870)
+3. [Prompt Engineering Assistant](#3-prompt-engineering-assistant---v830)
+4. [GPT - AI System Improver](#4-gpt---ai-system-improver---v110)
 
 ### ⚡ Automation Agents  
-5. [GPT - Scheduled Tasks](#5--gpt---scheduled-tasks)
+5. [GPT - Scheduled Tasks](#5-gpt---scheduled-tasks---v200)
 
 ### 💬 MCP Agents
-6. [Media Editor Agent](#6--media-editor)
-7. [Webflow Agent](#7--webflow-agent)
-8. [ClickUp Agent](#8--clickup-agent)
-9. [Notion Agent](#9--notion-agent)
+6. [Media Editor Agent](#6-media-editor-agent---v100-new)
+7. [Webflow Agent](#7-webflow-agent---v300)
+8. [ClickUp Agent](#8-clickup-agent---v210)
+9. [Notion Agent](#9-notion-agent---v130)
 
 ### 🔧 Additional Sections
-- [Common Features](#-common-features)
-- [Installation](#-installation)
-- [Choosing the Right System](#-choosing-the-right-system)
-- [Resources](#-resources)
+- [Common Features](#common-features)
+- [Resources](#resources)
 
 ---
 
@@ -36,7 +34,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 ##### Automated content, documentation & prompt writing systems
 ——
 
-#### 1. ✏️ Branded Content Writer - v5.6.0 
+#### 1. ✏️ Branded Content Writer - v0.560 
 **Flexible content system with historical context enrichment, adaptable for any brand, profession, or personal writing**
 
 - **Adaptable System & Current Configuration**: 
@@ -55,7 +53,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 .
 
-#### 2. 📋 Product Owner Writer - v8.7.0 
+#### 2. 📋 Product Owner Writer - v0.870 
 **Transform vague requests into professional dev tickets, specs, docs, and beautifully formatted documents with built-in complexity challenging**
 
 - **5 Intelligent Modes & Auto-Scaling**: 
@@ -75,7 +73,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 .
 
-#### 3. 🎯 Prompt Engineering Assistant - v8.3.0
+#### 3. 🎯 Prompt Engineering Assistant - v0.830
 **Transform vague requests into powerful AI prompts for ANY platform with multi-format support including SMILE format**
 
 - **8 Specialized Modes + Format Options**: 
@@ -103,7 +101,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 .
 
-#### 4. 🔧 GPT - AI System Improver - v1.1.0 
+#### 4. 🔧 GPT - AI System Improver - v0.110 
 **Improves Claude system artifacts through GPT-5 High Deep Reasoning mode and preservation-first editing (ChatGPT)**
 
 - **Deep Reasoning & ATLAS Framework**: 
@@ -122,7 +120,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 ##### Transform natural language into intelligent automation workflows
 ——
 
-#### 5. ⏰ GPT - Scheduled Tasks - v2.0.0
+#### 5. ⏰ GPT - Scheduled Tasks - v0.200
 **Maximize ChatGPT's 10 scheduled task slots through intelligent optimization with ATLAS Framework**
 
 - **20+ Template Library & Natural Language**: 
@@ -149,7 +147,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 ##### MCP tools made easy with conversational systems
 ——
 
-#### 6. 🎬 Media Editor Agent - v1.0.0 (NEW)
+#### 6. 🎬 Media Editor Agent - v0.100 (NEW)
 **Unified intelligent media editing image, video, and audio files through natural conversation**
 
 - **Universal Media Operations & Intelligence**: 
@@ -172,7 +170,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 .
 
-#### 7. 🌐 Webflow Agent - v3.0.0
+#### 7. 🌐 Webflow Agent - v0.300
 **Reality-based content management for existing Webflow structures**
 
 - **Content Excellence & Operations**: 
@@ -195,7 +193,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 .
 
-#### 8. 🚀 ClickUp Agent - v2.1.0
+#### 8. 🚀 ClickUp Agent - v0.210
 **Transform natural language into organized ClickUp workspaces while actively challenging unnecessary complexity**
 
 - **Simplicity-First Design & Pattern Learning**: 
@@ -218,7 +216,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 .
 
-#### 9. 📓 Notion Agent - v1.3.0
+#### 9. 📓 Notion Agent - v0.130
 **Natural language control of Notion workspaces**
 
 - **Natural Language Processing**: 

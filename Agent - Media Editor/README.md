@@ -1,20 +1,20 @@
-# Media Editor System - User Guide v1.0.0
+# Media Editor System - User Guide v0.100
 
 The Media Editor is an intelligent media processing system that transforms natural language requests into optimized images, videos, and audio through conversational guidance. It combines two powerful MCP servers (Imagician for images, Video-Audio for media) with smart defaults, challenge mode, and comprehensive pattern learning to deliver professional media operations accessible to everyone.
 
 ## 📋 Table of Contents
 
-- [✨ Key Features](#-key-features)
-- [🚀 Quick Setup](#-quick-setup)
-- [🧠 How It Works](#-how-it-works)
-- [🎛️ Operating Modes](#️-operating-modes)
-- [⚡ Emergency Commands](#-emergency-commands)
-- [💬 Example Interactions](#-example-interactions)
-- [📊 Visual Feedback](#-visual-feedback)
-- [🔧 Installing MCP Tools](#-installing-mcp-tools)
-- [🆘 Troubleshooting](#-troubleshooting)
-- [⚠️ Important Notes](#️-important-notes)
-- [📚 Resources](#-resources)
+- [✨ Key Features](#key-features)
+- [🚀 Quick Setup](#quick-setup)
+- [🧠 How It Works](#how-it-works)
+- [🎛️ Operating Modes](#operating-modes)
+- [⚡ Emergency Commands](#emergency-commands)
+- [💬 Example Interactions](#example-interactions)
+- [📊 Visual Feedback](#visual-feedback)
+- [🔧 Installing MCP Tools](#installing-mcp-tools)
+- [🆘 Troubleshooting](#troubleshooting)
+- [⚠️ Important Notes](#important-notes)
+- [📚 Resources](#resources)
 
 .
 
@@ -77,12 +77,12 @@ The Media Editor is an intelligent media processing system that transforms natur
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Agent - MCP - Media Editor - v1.1.1.md`
+3. Copy and paste: `Agent - MCP - Media Editor - v0.111.md`
 4. Save the project
 
 ### Step 3: Upload Reference Documents
 Add these 7 essential documents to your project:
-- `Agent - MCP - Media Editor - v1.1.1.md` (Main system)
+- `Agent - MCP - Media Editor - v0.111.md` (Main system)
 - `Media Editor - Core System Rules & Quick Reference.md` (Emergency commands)
 - `Media Editor - Interactive Intelligence.md` (Conversation interface)
 - `Media Editor - Patterns & Workflows.md` (Pattern recognition)
