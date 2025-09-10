@@ -38,10 +38,6 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 ## ✏️ Writer Systems
 
-##### Automated content, documentation & prompt writing systems
-
-——
-
 #### 1. ✏️ Branded Content Writer - v5.6.0
 
 Adaptable content system for any brand or profession with context enrichment.
@@ -115,10 +111,6 @@ Improve Claude systems via GPT-5 deep reasoning and preservation-first editing.
 
 ## ⚡ Automation Agents
 
-##### Transform natural language into intelligent automation workflows
-
-——
-
 #### 5. ⏰ GPT - Scheduled Tasks - v2.0.0
 
 Create scheduled tasks with intelligent optimization.
@@ -139,10 +131,6 @@ Create scheduled tasks with intelligent optimization.
 -----
 
 ## 💬 MCP Agents
-
-##### MCP tools made easy with conversational systems
-
-——
 
 #### 6. 🎬 Media Editor Agent - v1.0.0 (NEW)
 
