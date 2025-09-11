@@ -33,7 +33,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 ## ✏️ Writer Systems
 
 #### 1. ✏️ Branded Content Writer - v0.560
-Adaptable content system for any brand or profession with context enrichment.
+Content system for any brand or profession with context enrichment.
 
 - **Adaptable System & Current Configuration**:
   - Currently for Product Designers: case studies, process docs
