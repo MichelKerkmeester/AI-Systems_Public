@@ -1,551 +1,867 @@
-# Product Owner - Template - Doc Mode - v0.102
+# Product Owner - Template: Doc Mode - v0.102
 
-## 📋 Table of Contents
+## 📋 TABLE OF CONTENTS
 
-1. [📚 DOC MODE OVERVIEW](#-doc-mode-overview)
-2. [📖 DOCUMENTATION TYPES](#-documentation-types)
-3. [📦 PRODUCT DOCUMENTATION TEMPLATE](#-product-documentation-template)
-4. [⚙️ FEATURE DOCUMENTATION TEMPLATE](#-feature-documentation-template)
-5. [🧮 ALGORITHM DOCUMENTATION TEMPLATE](#-algorithm-documentation-template)
-6. [🔌 API DOCUMENTATION TEMPLATE](#-api-documentation-template)
-7. [📊 PERFORMANCE TRACKING TEMPLATE](#-performance-tracking-template)
-8. [📘 USER GUIDE TEMPLATE](#-user-guide-template)
-9. [🎯 DOCUMENTATION FORMATTING RULES](#-documentation-formatting-rules)
-10. [💬 INTERACTIVE QUESTIONS](#-interactive-questions)
+1. [📚 DOC MODE OVERVIEW](#1-📚-doc-mode-overview)
+2. [📊 DOCUMENTATION TYPES](#2-📊-documentation-types)
+3. [📝 USER GUIDE TEMPLATE](#3-📝-user-guide-template)
+4. [🔧 TECHNICAL DOCUMENTATION TEMPLATE](#4-🔧-technical-documentation-template)
+5. [📖 API DOCUMENTATION TEMPLATE](#5-📖-api-documentation-template)
+6. [✏️ DOCUMENT FORMATTING MODE](#6-✏️-document-formatting-mode)
+7. [🎨 FORMATTING STANDARDS](#7-🎨-formatting-standards)
+8. [💬 INTERACTIVE QUESTIONS](#8-💬-interactive-questions)
 
-* * *
+---
 
-## 📚 DOC MODE OVERVIEW
+## 1. 📚 DOC MODE OVERVIEW
 
-### Command: `$doc`
+### COMMAND: `$doc`
 
-- **Purpose:** Create product documentation, feature specs, and technical guides
+- **Purpose:** Create documentation or format existing text
 - **Output:** Always as artifact
 - **Thinking Rounds:** 6-10
-- **Challenge Activation:** If complex or over-documented
-- **Focus:** Clear structure, actionable information, business alignment
+- **Challenge Activation:** 6+ rounds (for complexity)
+- **Two Modes:**
+  - **Creation:** Write new documentation
+  - **Formatting:** Clean up and structure existing text
 
-* * *
+---
 
-## 📖 DOCUMENTATION TYPES
+## 2. 📊 DOCUMENTATION TYPES
 
-### Quick Reference
+### SUPPORTED FORMATS
+| Type | Use Case | Typical Length |
+|------|----------|----------------|
+| **User Guide** | End-user instructions | 2-10 pages |
+| **Technical Docs** | Developer/API docs | 5-20 pages |
+| **API Reference** | Endpoint documentation | Variable |
+| **README** | Project overview | 1-3 pages |
+| **Tutorial** | Step-by-step guide | 3-8 pages |
+| **FAQ** | Questions & answers | 2-5 pages |
+| **Formatted** | Clean up existing | Same as input |
 
-| Type | Audience | Purpose | Structure |
-|------|----------|---------|-----------|
-| **Product Doc** | Product team | Feature specifications | About, Features, Overview, Patterns |
-| **Feature Doc** | Dev team | Implementation details | About, Designs, Algorithm, Tracking |
-| **Algorithm Doc** | Engineers | Technical logic | Weights, calculations, thresholds |
-| **API Reference** | Developers | Endpoint documentation | Standard API format |
-| **Performance Doc** | Analytics team | Metrics tracking | Targets, thresholds, actions |
-| **User Guide** | End users | How to use | Progressive disclosure |
+### FORMATTING LEVELS (FOR EXISTING TEXT)
+| Level | Changes Applied | Use When |
+|-------|----------------|----------|
+| **Minimal** | Headers, bullets, emphasis | Quick cleanup |
+| **Standard** | Structure, TOC, sections | Full organization |
+| **Deep** | Complete rewrite, restructure | Major overhaul |
 
-* * *
+---
 
-## 📦 PRODUCT DOCUMENTATION TEMPLATE
+## 3. 📝 USER GUIDE TEMPLATE
 
 ```markdown
-# • [Feature Name]
+# [Product Name] User Guide
 
-**Parent:** [Parent Feature] | **Version:** 1.0 | **Reading Time:** [X] minutes
-* * *
-# ◘ About
-* * *
-[Brief description of the feature, its purpose, and value proposition. 2-3 paragraphs explaining what it does and why it matters to users and the business.]
-* * *
-## ◻︎ Designs & References
-* * *
-Here's where you'll find all the [feature]-related designs:
-* * *
-*   [Flow | [Context]](figma-link)
-*   [Page | [Context]](figma-link)
-*   [Component | [Context]](figma-link)
-*   [Modal | [Context]](figma-link)
-* * *
-## ◻︎ Features
-* * *
-1. **[Feature Name]**
-* * *
-[Description of the feature and its business value]
-* * *
-2. **[Feature Name]**
-* * *
-[Description of the feature and its business value]
-* * *
-3. **[Feature Name]**
-* * *
-[Description of the feature and its business value]
-* * *
-## ◻︎ Overview
-* * *
-[High-level explanation of how the feature works, including key components and user journey]
+## TABLE OF CONTENTS
+- [Getting Started](#getting-started)
+- [Key Features](#key-features)
+- [Basic Usage](#basic-usage)
+- [Advanced Features](#advanced-features)
+- [Troubleshooting](#troubleshooting)
+- [Support](#support)
 
-| Component | Purpose | Business Value | User Value |
-|-----------|---------|----------------|------------|
-| **[Component]** | [What it does] | [Business impact] | [User benefit] |
-| **[Component]** | [What it does] | [Business impact] | [User benefit] |
+---
 
-#
+## GETTING STARTED
 
-# ▪ [Section Name]
-* * *
-## ◻︎ Pattern
-* * *
-### ◊ **[Pattern Name]**
-* * *
-[Description of the pattern or behavior]
-* * *
-1. **[Step/Component]**
+### WHAT IS [PRODUCT NAME]?
+[Brief description of the product and its value proposition]
 
-[Details about this step or component]
+### SYSTEM REQUIREMENTS
+- Requirement 1
+- Requirement 2
+- Requirement 3
 
-* * *
-2. **[Step/Component]**
+### INSTALLATION
+1. Step one with clear instructions
+2. Step two with any important notes
+3. Step three with verification
 
-[Details about this step or component]
+---
 
-* * *
-3. **Repeat** 🔄
-* * *
-### ◊ Algorithm
-* * *
-[Description of how the algorithm works]
-* * *
-**[Factor Name]** → Weight: [X]%
-_[Description of what this factor measures]_
-* * *
-*   **[Sub-factor]** ([X]%)
-    *   [Condition]: [weight multiplier]
-    *   [Condition]: [weight multiplier]
-* * *
-*   **[Sub-factor]** ([X]%)
-    *   [Condition]: [weight multiplier]
-    *   [Condition]: [weight multiplier]
-* * *
-#
+## KEY FEATURES
 
-# ▪ Performance Tracking
-* * *
-We track metrics throughout the [feature] journey to [primary goal], [secondary goal], and [tertiary goal].
-* * *
-**Notice:** Check the documentation here for more details on: Private ([link])
-* * *
-## ◻︎ Target Metrics Framework
-* * *
-This framework helps us measure [what we're measuring] so we can [why we're measuring]. But metrics are only useful if we act on them - here's what we actually do.
-* * *
-### ◊ **[Metric Category]**
-* * *
-#### **– Targets**
-* * *
-*   [Metric name]
-*   [Metric name]
-*   [Metric name]
-* * *
-#### **– Thresholds & Actions**
-* * *
-1. **[Metric condition]** = [threshold]
-* * *
-**Situation:** [What this means]
-**Action:** [What we do] → [Next step] → [Final step]
-* * *
-2. **[Metric condition]** = [threshold]
-* * *
-**Situation:** [What this means]
-**Action:** [What we do] → [Next step] → [Final step]
-* * *
+### FEATURE 1: [NAME]
+**What it does:** [Description]
+**Why use it:** [Value proposition]
+**How to access:** [Navigation path]
+
+### FEATURE 2: [NAME]
+**What it does:** [Description]
+**Why use it:** [Value proposition]
+**How to access:** [Navigation path]
+
+---
+
+## BASIC USAGE
+
+### TASK 1: [COMMON TASK]
+
+1. **Open the application**
+   - Click on [icon/menu]
+   - Navigate to [location]
+
+2. **Select your option**
+   - Choose from [list]
+   - Configure [settings]
+
+3. **Complete the action**
+   - Click [button]
+   - Verify [result]
+
+💡 **Tip:** [Helpful hint for this task]
+
+### TASK 2: [ANOTHER COMMON TASK]
+
+1. **Navigate to [section]**
+2. **Input your data**
+3. **Save your work**
+
+⚠️ **Important:** [Critical information]
+
+---
+
+## ADVANCED FEATURES
+
+### CUSTOMIZATION OPTIONS
+- **Themes:** How to change appearance
+- **Settings:** Configuration options
+- **Shortcuts:** Keyboard combinations
+
+### INTEGRATION CAPABILITIES
+- **Export options:** Available formats
+- **Import features:** Supported file types
+- **API access:** For developers
+
+---
+
+## TROUBLESHOOTING
+
+### COMMON ISSUES
+
+**Problem:** [Description]
+**Solution:** [Step-by-step fix]
+
+**Problem:** [Description]
+**Solution:** [Step-by-step fix]
+
+### ERROR MESSAGES
+
+| Error | Meaning | Solution |
+|-------|---------|----------|
+| Error 101 | [Description] | [Fix] |
+| Error 202 | [Description] | [Fix] |
+
+---
+
+## SUPPORT
+
+### CONTACT INFORMATION
+- **Email:** support@example.com
+- **Phone:** 1-800-EXAMPLE
+- **Hours:** Monday-Friday, 9am-5pm EST
+
+### ADDITIONAL RESOURCES
+- [Knowledge Base](link)
+- [Video Tutorials](link)
+- [Community Forum](link)
+
+---
+
+**Document Version:** 1.0
+**Last Updated:** [Date]
+**Next Review:** [Date]
 ```
 
-* * *
+---
 
-## ⚙️ FEATURE DOCUMENTATION TEMPLATE
+## 5. 🔧 TECHNICAL DOCUMENTATION TEMPLATE
 
 ```markdown
-# • [Feature Name]
+# [System/Component] Technical Documentation
 
-**Parent:** [Parent] | **Version:** 1.0 | **Reading Time:** [X] minutes
-* * *
-# ◘ About
-* * *
-[Core description of what this feature does and why it exists]
-* * *
-## ◻︎ Key Benefits
-* * *
-1. **[Benefit Name]**
-* * *
-[How this benefit works and why it matters]
-* * *
-2. **[Benefit Name]**
-* * *
-[How this benefit works and why it matters]
-* * *
-## ◻︎ How It Works
-* * *
-### ◊ **[Component/Phase Name]**
-* * *
-#### **– Logic**
-* * *
-1. [First step in the process]
-2. [Second step in the process]
-3. [Result or outcome]
-* * *
-#### **– Algorithm**
-* * *
-**[Primary Factor]** → Weight: [X]%
-_[What this measures and why]_
-* * *
-*   **[Component]** ([X]%)
-    *   [Condition A]: [weight]
-    *   [Condition B]: [weight]
-    *   [Condition C]: [weight]
-* * *
-### ◊ **Edge Cases**
-* * *
-*   **[Scenario]:** [How it's handled]
-*   **[Scenario]:** [How it's handled]
-* * *
-## ◻︎ Expansion States
-* * *
-### ◊ **[State Name]**
-* * *
-[Description of when this state occurs]
-* * *
-#### **– Logic**
-* * *
-1. [Trigger condition]
-2. [System response]
-3. [User sees]
-4. [Next action]
-* * *
-> _"[User-facing message]" **[CTA Button]**_
-* * *
+## TABLE OF CONTENTS
+- [Overview](#overview)
+- [Architecture](#architecture)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [API Reference](#api-reference)
+- [Development](#development)
+- [Deployment](#deployment)
+- [Monitoring](#monitoring)
+
+---
+
+## OVERVIEW
+
+### PURPOSE
+[Technical description of what this system/component does]
+
+### KEY COMPONENTS
+1. **Component A:** [Description]
+2. **Component B:** [Description]
+3. **Component C:** [Description]
+
+### DEPENDENCIES
+- Dependency 1 (version)
+- Dependency 2 (version)
+- Dependency 3 (version)
+
+---
+
+## ARCHITECTURE
+
+### SYSTEM DESIGN
+```
+┌─────────────┐     ┌─────────────┐
+│   Client    │────▶│   Server    │
+└─────────────┘     └─────────────┘
+       │                   │
+       ▼                   ▼
+┌─────────────┐     ┌─────────────┐
+│    Cache    │     │   Database  │
+└─────────────┘     └─────────────┘
 ```
 
-* * *
+### DATA FLOW
+1. Request initiated from client
+2. Server processes request
+3. Database query executed
+4. Response formatted
+5. Cache updated
+6. Response sent to client
 
-## 🧮 ALGORITHM DOCUMENTATION TEMPLATE
+---
 
-```markdown
-# • [Algorithm Name]
+## INSTALLATION
 
-**Parent:** [Feature] | **Version:** 1.0 | **Reading Time:** [X] minutes
-* * *
-# ◘ About
-* * *
-[High-level description of what this algorithm does and its business purpose]
-* * *
-## ◻︎ Algorithm Overview
-* * *
-[Explanation of the core logic and approach]
-* * *
-### ◊ **Weighting System**
-* * *
-| Factor | Weight | Purpose | Impact |
-|--------|--------|---------|--------|
-| **[Factor]** | [X]% | [Why included] | [What it affects] |
-| **[Factor]** | [X]% | [Why included] | [What it affects] |
-| **[Factor]** | [X]% | [Why included] | [What it affects] |
+### PREREQUISITES
+```bash
+# Check Node version
+node --version  # Should be 16+
 
-#
-
-# ▪ Algorithm Details
-* * *
-## ◻︎ Primary Algorithm
-* * *
-### ◊ **[Factor Category 1]** → Weight: [X]%
-_[Description of what this category optimizes for]_
-* * *
-*   **[Sub-factor A]** ([X]%)
-    *   [Specific condition]: [multiplier]x weight
-    *   [Specific condition]: [multiplier]x weight
-    *   [Specific condition]: [multiplier]x weight
-* * *
-*   **[Sub-factor B]** ([X]%)
-    *   **[Tier/Level]:** [Description]: [multiplier]x weight
-    *   **[Tier/Level]:** [Description]: [multiplier]x weight
-    *   **[Tier/Level]:** [Description]: [multiplier]x weight
-* * *
-### ◊ **[Factor Category 2]** → Weight: [X]%
-_[Description of what this category optimizes for]_
-* * *
-*   **[Metric Type]** ([X]%)
-    *   [Range/Condition]: [multiplier]x weight
-    *   [Range/Condition]: [multiplier]x weight
-    *   [Range/Condition]: [multiplier]x weight
-* * *
-## ◻︎ Fallback Logic
-* * *
-When primary algorithm conditions aren't met:
-* * *
-1. **Tier 1 Fallback:** [What happens]
-2. **Tier 2 Fallback:** [What happens]
-3. **Default State:** [Final fallback]
-* * *
+# Check npm version
+npm --version   # Should be 8+
 ```
 
-* * *
+### SETUP STEPS
+```bash
+# Clone repository
+git clone https://github.com/example/repo.git
 
-## 🔌 API DOCUMENTATION TEMPLATE
+# Install dependencies
+npm install
 
-```markdown
-# • [API Name] Documentation
+# Configure environment
+cp .env.example .env
 
-**Parent:** Platform APIs | **Version:** 1.0 | **Reading Time:** [X] minutes
-* * *
-# ◘ About
-* * *
-[API purpose and capabilities]
-* * *
-**Base URL:** `https://api.example.com/v1`
-**Authentication:** [Type]
-**Rate Limit:** [Requests/minute]
-* * *
-## ◻︎ Endpoints
-* * *
-### ◊ GET /[resource]
-* * *
-[Description of what this endpoint does]
-* * *
-**Parameters:**
-*   `param1` (type, required/optional): [Description]
-*   `param2` (type, required/optional): [Description]
-* * *
-**Response:**
+# Run migrations
+npm run migrate
+
+# Start development server
+npm run dev
+```
+
+---
+
+## CONFIGURATION
+
+### ENVIRONMENT VARIABLES
+```env
+# Application
+APP_NAME=MyApp
+APP_ENV=development
+APP_PORT=3000
+
+# Database
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=myapp
+DB_USER=admin
+DB_PASS=secret
+
+# Cache
+REDIS_HOST=localhost
+REDIS_PORT=6379
+```
+
+### CONFIGURATION FILE
 ```json
 {
-  "data": {
-    "field1": "value",
-    "field2": 123
+  "app": {
+    "name": "MyApp",
+    "version": "1.0.0",
+    "debug": true
   },
-  "meta": {
-    "total": 100
+  "features": {
+    "authentication": true,
+    "caching": true,
+    "logging": true
   }
 }
 ```
-* * *
-### ◊ POST /[resource]
-* * *
-[Description of what this endpoint does]
-* * *
-**Request Body:**
-```json
+
+---
+
+## API REFERENCE
+
+### AUTHENTICATION
+```http
+POST /api/auth/login
+Content-Type: application/json
+
 {
-  "field1": "value",
-  "field2": 123
+  "email": "user@example.com",
+  "password": "secretpass"
+}
+
+Response: 200 OK
+{
+  "token": "jwt_token_here",
+  "user": { ... }
 }
 ```
-* * *
+
+### ENDPOINTS
+
+#### GET /api/users
+Retrieve list of users
+
+**Parameters:**
+- `page` (integer): Page number
+- `limit` (integer): Items per page
+
 **Response:**
 ```json
 {
-  "data": {
-    "id": "123",
-    "status": "created"
+  "data": [...],
+  "pagination": { ... }
+}
+```
+
+---
+
+## DEVELOPMENT
+
+### LOCAL SETUP
+```bash
+# Install dev dependencies
+npm install --save-dev
+
+# Run tests
+npm test
+
+# Run linter
+npm run lint
+
+# Build for production
+npm run build
+```
+
+### CODING STANDARDS
+- Use ESLint configuration
+- Follow conventional commits
+- Write tests for new features
+- Document all public APIs
+
+---
+
+## DEPLOYMENT
+
+### PRODUCTION BUILD
+```bash
+# Build application
+npm run build
+
+# Run production server
+npm run start:prod
+```
+
+### DOCKER DEPLOYMENT
+```dockerfile
+FROM node:16-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --only=production
+COPY . .
+EXPOSE 3000
+CMD ["npm", "start"]
+```
+
+---
+
+## MONITORING
+
+### HEALTH CHECK
+```http
+GET /health
+
+Response: 200 OK
+{
+  "status": "healthy",
+  "uptime": 3600,
+  "version": "1.0.0"
+}
+```
+
+### METRICS
+- **Response Time:** < 200ms p95
+- **Error Rate:** < 0.1%
+- **Uptime:** > 99.9%
+
+### LOGGING
+```javascript
+// Log levels
+logger.debug('Debug message');
+logger.info('Info message');
+logger.warn('Warning message');
+logger.error('Error message');
+```
+
+---
+
+**Documentation Version:** 1.0
+**API Version:** v1
+**Last Updated:** [Date]
+```
+
+---
+
+## 6. 📖 API DOCUMENTATION TEMPLATE
+
+```markdown
+# [API Name] Documentation
+
+## TABLE OF CONTENTS
+- [Introduction](#introduction)
+- [Authentication](#authentication)
+- [Base URL](#base-url)
+- [Rate Limiting](#rate-limiting)
+- [Endpoints](#endpoints)
+- [Error Handling](#error-handling)
+- [Examples](#examples)
+
+---
+
+## INTRODUCTION
+
+### API OVERVIEW
+[Description of what the API does and its main features]
+
+### GETTING STARTED
+1. Register for an API key
+2. Include key in requests
+3. Make your first call
+
+---
+
+## AUTHENTICATION
+
+### API KEY AUTHENTICATION
+```http
+GET /api/resource
+Authorization: Bearer YOUR_API_KEY
+```
+
+### OAUTH 2.0
+```http
+POST /oauth/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=client_credentials
+&client_id=YOUR_CLIENT_ID
+&client_secret=YOUR_CLIENT_SECRET
+```
+
+---
+
+## BASE URL
+
+### ENVIRONMENTS
+| Environment | URL |
+|------------|-----|
+| Production | `https://api.example.com/v1` |
+| Staging | `https://staging-api.example.com/v1` |
+| Development | `http://localhost:3000/v1` |
+
+---
+
+## RATE LIMITING
+
+### LIMITS
+- **Standard:** 100 requests/minute
+- **Premium:** 1000 requests/minute
+- **Enterprise:** Unlimited
+
+### HEADERS
+```http
+X-RateLimit-Limit: 100
+X-RateLimit-Remaining: 99
+X-RateLimit-Reset: 1623456789
+```
+
+---
+
+## ENDPOINTS
+
+### RESOURCES
+
+#### CREATE RESOURCE
+```http
+POST /api/resources
+Content-Type: application/json
+
+{
+  "name": "Resource Name",
+  "type": "resource_type",
+  "metadata": {}
+}
+```
+
+**Response: 201 Created**
+```json
+{
+  "id": "res_123",
+  "name": "Resource Name",
+  "type": "resource_type",
+  "metadata": {},
+  "created_at": "2024-01-01T00:00:00Z"
+}
+```
+
+#### GET RESOURCE
+```http
+GET /api/resources/{id}
+```
+
+**Response: 200 OK**
+```json
+{
+  "id": "res_123",
+  "name": "Resource Name",
+  "type": "resource_type",
+  "metadata": {},
+  "created_at": "2024-01-01T00:00:00Z",
+  "updated_at": "2024-01-01T00:00:00Z"
+}
+```
+
+#### UPDATE RESOURCE
+```http
+PATCH /api/resources/{id}
+Content-Type: application/json
+
+{
+  "name": "Updated Name"
+}
+```
+
+**Response: 200 OK**
+```json
+{
+  "id": "res_123",
+  "name": "Updated Name",
+  "updated_at": "2024-01-01T00:00:00Z"
+}
+```
+
+#### DELETE RESOURCE
+```http
+DELETE /api/resources/{id}
+```
+
+**Response: 204 No Content**
+
+---
+
+## ERROR HANDLING
+
+### ERROR RESPONSE FORMAT
+```json
+{
+  "error": {
+    "code": "RESOURCE_NOT_FOUND",
+    "message": "The requested resource was not found",
+    "details": {
+      "resource_id": "res_123"
+    }
   }
 }
 ```
-* * *
-## ◻︎ Error Handling
-* * *
-| Code | Status | Description | Action |
-|------|--------|-------------|--------|
-| `ERROR_CODE` | 400 | [Description] | [What to do] |
-| `ERROR_CODE` | 401 | [Description] | [What to do] |
-| `ERROR_CODE` | 404 | [Description] | [What to do] |
+
+### COMMON ERROR CODES
+| Code | HTTP Status | Description |
+|------|------------|-------------|
+| `INVALID_REQUEST` | 400 | Request validation failed |
+| `UNAUTHORIZED` | 401 | Authentication required |
+| `FORBIDDEN` | 403 | Access denied |
+| `NOT_FOUND` | 404 | Resource not found |
+| `RATE_LIMITED` | 429 | Too many requests |
+| `SERVER_ERROR` | 500 | Internal server error |
+
+---
+
+## EXAMPLES
+
+### JAVASCRIPT
+```javascript
+const response = await fetch('https://api.example.com/v1/resources', {
+  method: 'GET',
+  headers: {
+    'Authorization': 'Bearer YOUR_API_KEY',
+    'Content-Type': 'application/json'
+  }
+});
+
+const data = await response.json();
+console.log(data);
 ```
 
-* * *
+### PYTHON
+```python
+import requests
 
-## 📊 PERFORMANCE TRACKING TEMPLATE
+headers = {
+    'Authorization': 'Bearer YOUR_API_KEY',
+    'Content-Type': 'application/json'
+}
 
+response = requests.get(
+    'https://api.example.com/v1/resources',
+    headers=headers
+)
+
+data = response.json()
+print(data)
+```
+
+### CURL
+```bash
+curl -X GET https://api.example.com/v1/resources \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json"
+```
+
+---
+
+**API Version:** v1
+**Documentation Version:** 1.0
+**Last Updated:** [Date]
+```
+
+---
+
+## 7. ✏️ DOCUMENT FORMATTING MODE
+
+### FORMATTING PROCESS
 ```markdown
-# • Performance Tracking
+User: $doc format my requirements document
 
-**Parent:** [Feature] | **Version:** 1.0 | **Reading Time:** [X] minutes
-* * *
-# ◘ About
-* * *
-This document defines the performance tracking framework for [feature/product]. It establishes metrics to monitor, intervention thresholds, and response protocols for maintaining health and growth.
-* * *
-## ◻︎ Metric Definitions
-* * *
-Core metrics for tracking [what we're tracking].
-* * *
-| Metric | Description | Target | Current |
-|--------|-------------|--------|---------|
-| **[Metric]** | [What it measures] | [Goal] | [Actual] |
-| **[Metric]** | [What it measures] | [Goal] | [Actual] |
+System: I'll format your existing document. 📚
 
-#
+**How many thinking rounds should I use? (6-10)**
 
-# ▪ [Category] Performance
-* * *
-We track [description of what and why we track].
-* * *
-## ◻︎ Target Metrics Framework
-* * *
-### ◊ **[Metric Category]**
-* * *
-#### – Targets
-* * *
-*   [Specific metric]
-*   [Specific metric]
-*   [Specific metric]
-* * *
-#### – Thresholds & Actions
-* * *
-1. **[Metric name]** = below [X]%
-* * *
-**Situation:** [What this indicates]
-**Action:** [Immediate action] → [Follow-up action] → [Long-term solution]
-* * *
-2. **[Metric name]** = above [X]
-* * *
-**Situation:** [What this indicates]
-**Action:** [Immediate action] → [Follow-up action] → [Long-term solution]
-* * *
-### ◊ **[Metric Category]**
-* * *
-#### – Targets
-* * *
-*   [Metric] → [Metric] conversion rate
-*   [Metric] → [Metric] rate
-*   [Time-based metric]
-* * *
-#### – Thresholds & Actions
-* * *
-1. **[Conversion metric]** = below [X]%
-* * *
-**Situation:** [Problem description]
-**Action:** [Solution steps with arrows between them]
-* * *
+For document formatting, I recommend: 6 rounds
+- Structure analysis and organization
+- Clean formatting application
+
+Your choice?
+
+[WAIT FOR USER INPUT]
+
+User: 6
+
+System: Perfect! For formatting:
+
+Which level of formatting would you prefer?
+- **Minimal:** Headers, bullets, light emphasis (recommended)
+- **Standard:** Full structure with TOC, sections
+- **Deep:** Complete reorganization and rewrite
+
+Your choice? (minimal/standard/deep)
+
+[WAIT FOR USER RESPONSE]
+
+User: minimal
+
+System: Great! Please paste your document and I'll apply minimal formatting.
+
+[USER PASTES DOCUMENT]
+
+[SYSTEM FORMATS WITH:]
+- Clear headers
+- Organized bullets
+- Proper emphasis
+- Clean spacing
+- Logical flow
 ```
 
-* * *
-
-## 📘 USER GUIDE TEMPLATE
-
+### MINIMAL FORMATTING EXAMPLE
 ```markdown
-# • [Feature] User Guide
+# INPUT (UNFORMATTED):
+project requirements
+we need a login system that works with email and password
+users should be able to reset passwords
+admin users need different permissions
+the system should remember users
+security is important
+use modern standards
 
-**Parent:** User Guides | **Version:** 1.0 | **Reading Time:** [X] minutes
-* * *
-# ◘ About
-* * *
-[User-friendly description of what this feature does and how it helps]
-* * *
-## ◻︎ Getting Started
-* * *
-### ◊ Prerequisites
-* * *
-*   [What user needs before starting]
-*   [Access requirements]
-*   [Technical requirements]
-* * *
-### ◊ Quick Start
-* * *
-1. **[Action]:** [How to do it]
-2. **[Action]:** [How to do it]
-3. **[Action]:** [How to do it]
-* * *
-✅ **Success:** [What user should see when done]
-* * *
-## ◻︎ Key Features
-* * *
-### ◊ [Feature Name]
-* * *
-[What it does and why user cares]
-* * *
-**How to use:**
-1. [Step one]
-2. [Step two]
-3. [Expected result]
-* * *
-## ◻︎ Common Tasks
-* * *
-### ◊ [Task Name]
-* * *
-**Goal:** [What user accomplishes]
-* * *
-1. **[Step name]:** [Detailed instruction]
-   * [Sub-detail if needed]
-   * [Sub-detail if needed]
-* * *
-2. **[Step name]:** [Detailed instruction]
-* * *
-3. **Verify:** [How to confirm success]
-* * *
-## ◻︎ Troubleshooting
-* * *
-| Problem | Solution |
-|---------|----------|
-| [Issue description] | [Step-by-step fix] |
-| [Issue description] | [Step-by-step fix] |
-* * *
-## ◻︎ Need Help?
-* * *
-* 📺 [Video Tutorial](link) - [Duration]
-* 📚 [Full Documentation](link)
-* 💬 [Support](link)
+# OUTPUT (MINIMAL FORMATTING):
+
+# Project Requirements
+
+## Authentication System
+
+### Core Features
+- **Email/password login** - Standard authentication flow
+- **Password reset** - Self-service password recovery
+- **Remember me** - Persistent sessions for returning users
+
+### User Roles
+- **Standard users** - Basic access permissions
+- **Admin users** - Extended permissions and controls
+
+### Security Requirements
+- Modern authentication standards
+- Secure password storage
+- Session management
+- HTTPS enforcement
 ```
 
-* * *
-
-## 🎯 DOCUMENTATION FORMATTING RULES
-
-### Essential Standards
-
-- ✅ **Structure:** Parent | Version | Reading Time header
-- ✅ **Symbols:** ◘ for main sections, ◻︎ for subsections, ◊ for details, ▪ for major divisions
-- ✅ **Dividers:** Use `* * *` between sections, not `---`
-- ✅ **Headers:** Single `#` for document title with bullet (•), `#` with ◘ for About
-- ✅ **Algorithms:** Always show weights and percentages
-- ✅ **Tables:** Use for comparisons, metrics, thresholds
-- ✅ **Performance:** Include thresholds and actions
-- ✅ **Cross-references:** Link to related docs with privacy notices
-
-### Structure Guidelines
-
-| Element | Usage | Example |
-|---------|-------|---------|
-| Title | `# • [Name]` | `# • Filters` |
-| About | `# ◘ About` | Main description |
-| Sections | `## ◻︎ [Name]` | `## ◻︎ Features` |
-| Subsections | `### ◊ [Name]` | `### ◊ Algorithm` |
-| Major breaks | `# ▪ [Name]` | `# ▪ Performance` |
-| Dividers | `* * *` | Between all sections |
-| Emphasis | Bold for terms | `**Weight:** 50%` |
-
-### Algorithm Documentation
-
-- **Weight format:** `**[Factor]** → Weight: [X]%`
-- **Description:** Italics under weight `_[What this measures]_`
-- **Sub-factors:** Bulleted with percentages in parentheses
-- **Conditions:** Sub-bullets with multipliers
-
-### Performance Metrics
-
-- **Targets:** Bulleted list of metrics
-- **Thresholds:** Numbered with condition and equals sign
-- **Actions:** **Situation:** and **Action:** with arrow chains
-
-* * *
-
-## 💬 Interactive Questions
-
-Questions to ask during documentation creation.
-
-**Reference:** Full interactive flows → `Product Owner - Interactive Mode.md`
-
+### STANDARD FORMATTING EXAMPLE
 ```markdown
-1. "Documentation type? [product/feature/algorithm/api/performance/user guide]"
-2. "Target audience? [product team/developers/end users/analytics team]"
-3. "Scope? [single feature/full product/integration/system]"
-4. [If algorithm] "Include weight breakdowns? [yes/no]"
-5. [If performance] "Include thresholds and actions? [yes/no]"
-6. [If user guide] "Technical level? [beginner/intermediate/advanced]"
+# [Adds complete structure with TOC, detailed sections, and subsections]
 ```
 
-* * *
+### DEEP FORMATTING EXAMPLE
+```markdown
+# [Complete rewrite with enhanced clarity, professional structure, and comprehensive organization]
+```
 
-*Documentation with consistent structure and business alignment. All outputs as artifacts. Use actual documentation patterns.*
+---
+
+## 8. 🎨 FORMATTING STANDARDS
+
+### DOCUMENT STRUCTURE
+1. **Title:** Clear and descriptive
+2. **Table of Contents:** For documents > 3 sections
+3. **Sections:** Logical grouping
+4. **Subsections:** 2-3 levels maximum
+5. **Conclusion:** Summary or next steps
+
+### TEXT FORMATTING
+- **Headers:** Hierarchical (H1 → H2 → H3)
+- **Emphasis:** Bold for key terms, italic for examples
+- **Lists:** Bullets for unordered, numbers for sequential
+- **Code:** Backticks for inline, blocks for multi-line
+- **Links:** Descriptive text, not raw URLs
+
+### VISUAL ELEMENTS
+- **Tables:** For comparative data
+- **Diagrams:** ASCII art or mermaid
+- **Callouts:** Tips, warnings, notes
+- **Dividers:** Between major sections
+- **Spacing:** Consistent throughout
+
+### TONE & STYLE
+- **Professional:** Clear and concise
+- **Consistent:** Same voice throughout
+- **Active voice:** Preferred over passive
+- **Present tense:** For current state
+- **Future tense:** For plans/roadmap
+
+---
+
+## 9. 💬 INTERACTIVE QUESTIONS
+
+### CREATION MODE FLOW
+```markdown
+User: $doc user guide for auth system
+
+System: Let's create your authentication system user guide! 📚
+
+**How many thinking rounds should I use? (6-10)**
+
+Based on user guide complexity, I recommend: 7 rounds
+- Comprehensive coverage needed
+- Multiple user flows
+- Security considerations
+
+Your choice?
+
+[WAIT FOR USER INPUT]
+
+User: 7
+
+System: Good choice! Let me clarify the scope:
+
+1. **Target audience?** (end-users/developers/both)
+2. **Include screenshots?** (yes/no/placeholders)
+3. **Technical depth?** (basic/intermediate/advanced)
+
+[WAIT FOR ANSWERS]
+
+User:
+1. end-users
+2. placeholders
+3. basic
+
+[SYSTEM CREATES USER-FRIENDLY GUIDE WITH PLACEHOLDER IMAGES]
+```
+
+### FORMATTING MODE FLOW
+```markdown
+User: $doc format [pastes messy text]
+
+System: I'll help format your document! 📚
+
+**How many thinking rounds should I use? (6-10)**
+
+For this formatting task, I recommend: 6 rounds
+- Text organization
+- Structure improvement
+
+Your choice?
+
+[WAIT FOR USER INPUT]
+
+User: 6
+
+System: Which formatting level?
+- **Minimal:** Light touch-up
+- **Standard:** Full structure
+- **Deep:** Complete rewrite
+
+Your choice?
+
+[WAIT FOR USER RESPONSE]
+
+[THEN FORMATS ACCORDING TO SELECTION]
+```
+
+### DETECTION PATTERNS
+```python
+def detect_doc_type(request):
+    """Auto-detect documentation type needed"""
+
+    doc_types = {
+        'user_guide': ['guide', 'manual', 'how to', 'tutorial'],
+        'technical': ['api', 'developer', 'technical', 'implementation'],
+        'readme': ['readme', 'overview', 'introduction'],
+        'format': ['format', 'clean up', 'structure', 'organize']
+    }
+
+    request_lower = request.lower()
+    for doc_type, keywords in doc_types.items():
+        if any(k in request_lower for k in keywords):
+            return doc_type
+
+    return 'user_guide'  # Default
+```
+
+---
+
+*All documentation delivered as artifacts. Support both creation and formatting modes. Always ask thinking rounds and wait. For formatting, ask level preference. Use clear structure and professional tone. Include all necessary sections for completeness.*

@@ -51,8 +51,8 @@ Adaptable content system for any brand or profession with context enrichment.
 
 .
 
-#### 2. 📋 Product Owner Writer - v0.873
-**Transform vague requests into professional dev tickets, specs, docs, and beautifully formatted documents with built-in complexity challenging**
+#### 2. 📋 Product Owner Writer - v0.875
+**Transform vague requests into professional dev tickets, specs and docs**
 
 Transform vague requests into professional dev tickets, docs and specs.
 
