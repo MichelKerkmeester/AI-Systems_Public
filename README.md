@@ -33,8 +33,6 @@ Some of my non-client AI systems that I made available to the public. They were 
 ## ✏️ Writer Systems
 
 #### 1. ✏️ Branded Content Writer - v0.560
-**Flexible content system with historical context enrichment, adaptable for any brand, profession, or personal writing**
-
 Adaptable content system for any brand or profession with context enrichment.
 
 - **Adaptable System & Current Configuration**:
@@ -52,8 +50,6 @@ Adaptable content system for any brand or profession with context enrichment.
 .
 
 #### 2. 📋 Product Owner Writer - v0.875
-**Transform vague requests into professional dev tickets, specs and docs**
-
 Transform vague requests into professional dev tickets, docs and specs.
 
 - **3 Intelligent Modes & Auto-Scaling**:
@@ -68,8 +64,6 @@ Transform vague requests into professional dev tickets, docs and specs.
 .
 
 #### 3. 🎯 Prompt Engineering Assistant - v0.830
-**Transform vague requests into powerful AI prompts for ANY platform with multi-format support including SMILE format**
-
 Convert vague requests into powerful AI prompts with multi-format support.
 
 - **8 Specialized Modes + Format Options**:
@@ -88,8 +82,6 @@ Convert vague requests into powerful AI prompts with multi-format support.
 .
 
 #### 4. 🔧 GPT - AI System Improver - v0.110
-**Improves Claude system artifacts through GPT-5 High Deep Reasoning mode and preservation-first editing (ChatGPT)**
-
 Improve Claude systems via GPT-5 deep reasoning and preservation-first editing.
 
 - **Deep Reasoning & ATLAS Framework**:
@@ -106,8 +98,6 @@ Improve Claude systems via GPT-5 deep reasoning and preservation-first editing.
 ## ⚡ Automation Agents
 
 #### 5. ⏰ GPT - Scheduled Tasks - v0.200
-**Maximize ChatGPT's 10 scheduled task slots through intelligent optimization with ATLAS Framework**
-
 Create scheduled tasks with intelligent optimization.
 
 - **20+ Template Library & Natural Language**:
@@ -128,8 +118,6 @@ Create scheduled tasks with intelligent optimization.
 ## 💬 MCP Agents
 
 #### 6. 🎬 Media Editor Agent - v0.100 (NEW)
-**Unified intelligent media editing image, video, and audio files through natural conversation**
-
 Edit image, video, and audio files via natural language.
 
 - **Universal Media Operations & Intelligence**:
@@ -148,8 +136,6 @@ Edit image, video, and audio files via natural language.
 .
 
 #### 7. 🌐 Webflow Agent - v0.300
-**Reality-based content management for existing Webflow structures**
-
 Automate Webflow actions through natural language.
 
 - **Content Excellence & Operations**:
@@ -168,8 +154,6 @@ Automate Webflow actions through natural language.
 .
 
 #### 8. 🚀 ClickUp Agent - v0.210
-**Transform natural language into organized ClickUp workspaces while actively challenging unnecessary complexity**
-
 Automate ClickUp actions through natural language.
 
 - **Simplicity-First Design & Pattern Learning**:
@@ -188,8 +172,6 @@ Automate ClickUp actions through natural language.
 .
 
 #### 9. 📓 Notion Agent - v0.130
-**Natural language control of Notion workspaces**
-
 Automate Notion actions through natural language.
 
 - **Natural Language Processing**:
