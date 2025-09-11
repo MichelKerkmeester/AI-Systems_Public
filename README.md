@@ -15,7 +15,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 3. [Prompt Engineering Assistant](#3-prompt-engineering-assistant---v830)
 4. [GPT - AI System Improver](#4-gpt---ai-system-improver---v110)
 
-### ⚡ Automation Agents  
+### ⚡ Automation Agents
 5. [GPT - Scheduled Tasks](#5-gpt---scheduled-tasks---v200)
 
 ### 💬 MCP Agents
@@ -32,7 +32,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 ## ✏️ Writer Systems
 
-#### 1. ✏️ Branded Content Writer - v0.560 
+#### 1. ✏️ Branded Content Writer - v0.560
 **Flexible content system with historical context enrichment, adaptable for any brand, profession, or personal writing**
 
 Adaptable content system for any brand or profession with context enrichment.
@@ -51,7 +51,7 @@ Adaptable content system for any brand or profession with context enrichment.
 
 .
 
-#### 2. 📋 Product Owner Writer - v0.870 
+#### 2. 📋 Product Owner Writer - v0.873
 **Transform vague requests into professional dev tickets, specs, docs, and beautifully formatted documents with built-in complexity challenging**
 
 Transform vague requests into professional dev tickets, docs and specs.
@@ -91,7 +91,7 @@ Convert vague requests into powerful AI prompts with multi-format support.
 
 .
 
-#### 4. 🔧 GPT - AI System Improver - v0.110 
+#### 4. 🔧 GPT - AI System Improver - v0.110
 **Improves Claude system artifacts through GPT-5 High Deep Reasoning mode and preservation-first editing (ChatGPT)**
 
 Improve Claude systems via GPT-5 deep reasoning and preservation-first editing.
