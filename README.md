@@ -50,7 +50,7 @@ Content system for any brand or profession with context enrichment.
 .
 
 #### 2. 📋 Product Owner Writer - v0.875
-Transform vague requests into professional dev tickets, docs and specs.
+Create professional dev tickets, docs and specs.
 
 - **3 Intelligent Modes & Auto-Scaling**:
   - Modes: $ticket, $spec, $doc
@@ -64,7 +64,7 @@ Transform vague requests into professional dev tickets, docs and specs.
 .
 
 #### 3. 🎯 Prompt Engineering Assistant - v0.830
-Convert vague requests into powerful AI prompts with multi-format support.
+Generate powerful AI prompts with multi-format support.
 
 - **8 Specialized Modes + Format Options**:
   - Core: $short, $improve, $refine, $interactive
