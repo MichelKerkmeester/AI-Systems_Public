@@ -50,7 +50,7 @@ Content system for any brand or profession with context enrichment.
 .
 
 #### 2. 📋 Product Owner Writer - v0.875
-Create professional dev tickets, docs and specs.
+Create professional dev tickets, specs and documentation.
 
 - **3 Intelligent Modes & Auto-Scaling**:
   - Modes: $ticket, $spec, $doc
