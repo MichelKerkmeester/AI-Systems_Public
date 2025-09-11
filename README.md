@@ -56,14 +56,10 @@ Adaptable content system for any brand or profession with context enrichment.
 
 Transform vague requests into professional dev tickets, docs and specs.
 
-- **5 Intelligent Modes & Auto-Scaling**:
-  - Modes: $ticket, $spec, $doc, $text, $beautify
-  - Auto-complexity: Simple (2-3), Standard (4-5), Complex (6-8)
-  - 6 core files + 5 mode templates
-- **Professional Standards & Platform Integration**:
-  - TOC sections, dividers (—), Key Problems ###
-  - Symbols: ◆ ◇ ◳ ✦ ✓
-  - ClickUp MCP direct creation
+- **3 Intelligent Modes & Auto-Scaling**:
+  - Modes: $ticket, $spec, $doc
+  - Auto-complexity scaling: Simple (1-2), Standard (3-5), Complex (6-10)
+  - 4 core files + 3 mode templates
 - **ATLAS Framework & Challenge Mode**:
   - 5-phase thinking with 1-10 rounds
   - Auto-challenges: Gentle (1-2), Constructive (3-5), Strong (6-10)
