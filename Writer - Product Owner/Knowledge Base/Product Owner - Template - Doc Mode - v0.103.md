@@ -1,4 +1,4 @@
-# Product Owner – Template: Doc Mode — v0.104
+# Product Owner – Template: Doc Mode — v0.103
 
 ## 📋 Table of Contents
 
