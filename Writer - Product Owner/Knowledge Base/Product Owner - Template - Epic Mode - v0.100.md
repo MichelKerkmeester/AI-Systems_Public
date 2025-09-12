@@ -799,3 +799,7 @@ System: Creating a Detailed Epic with:
 
 [CREATES DETAILED EPIC WITH FULL SPECIFICATIONS]
 ```
+
+---
+
+*All epics delivered as artifacts with auto-scaled complexity. Always ask thinking rounds and wait for response. Challenge when 6+ rounds. Use proper symbols and formatting. Include AI System footer with process documentation.*

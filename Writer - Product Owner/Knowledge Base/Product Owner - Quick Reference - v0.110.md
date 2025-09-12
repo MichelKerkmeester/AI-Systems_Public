@@ -1,4 +1,4 @@
-# Product Owner - Quick Reference - v0.107
+# Product Owner - Quick Reference - v0.110
 
 ## Table Of Contents
 1. [🚨 Core Mandatory Rules](#1-🚨-core-mandatory-rules)
