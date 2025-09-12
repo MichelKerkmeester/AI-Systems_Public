@@ -50,16 +50,20 @@ Content system for any brand or profession with context enrichment.
 .
 
 #### 2. 📋 Product Owner Writer - v0.875
-Create professional dev tickets, specs and documentation.
+Create professional dev tickets and enhanced documentation.
 
-- **3 Intelligent Modes & Auto-Scaling**:
-  - Modes: $ticket, $spec, $doc
-  - Auto-complexity scaling: Simple (1-2), Standard (3-5), Complex (6-10)
-  - 4 core files + 3 mode templates
+- **4 Intelligent Modes & Auto-Scaling**:
+  - Modes: $ticket (dev work), $doc (guides/formatting), $interactive (discovery), $quick (instant)
+  - Auto-complexity for tickets: Simple (2-3), Standard (4-5), Complex (6-8 sections)
+  - Enhanced doc templates: User guides, API docs, FAQs, formatting service
 - **ATLAS Framework & Challenge Mode**:
-  - 5-phase thinking with 1-10 rounds
-  - Auto-challenges: Gentle (1-2), Constructive (3-5), Strong (6-10)
-  - REPAIR error protocol
+  - 5-phase thinking with 6-10 rounds (user-controlled)
+  - Auto-challenges at 6+ rounds: Constructive or Strong based on history
+  - $quick mode: Zero waiting, 6 rounds auto, no challenges
+- **Professional Standards & Patterns**:
+  - REPAIR error recovery protocol
+  - Past chats integration for context
+  - 7 essential files: 4 core + 3 templates
 
 .
 
