@@ -10,8 +10,8 @@ Some of my non-client AI systems that I made available to the public. They were 
 ## 📋 Table of Contents
 
 ### ✏️ Writer Systems
-1. [Branded Content Writer](#1-branded-content-writer---v560)
-2. [Product Owner Writer](#2-product-owner-writer---v880)
+1. [Product Owner Writer](#1-product-owner-writer---v881)
+2. [Branded Content Writer](#2-branded-content-writer---v560)
 3. [Prompt Engineering Assistant](#3-prompt-engineering-assistant---v830)
 4. [GPT - AI System Improver](#4-gpt---ai-system-improver---v110)
 
@@ -32,24 +32,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 ## ✏️ Writer Systems
 
-#### 1. ✏️ Branded Content Writer - v0.560
-Content system for any brand or profession with context enrichment.
-
-- **Adaptable System & Current Configuration**:
-  - Currently for Product Designers: case studies, process docs
-  - Reconfigurable for any domain: marketing, engineering, education
-  - Replaceable domain knowledge base
-- **5 Interactive Modes & 6 Tone Variations**:
-  - Modes: $interactive, $write, $share, $teach, $reflect
-  - Tones: $natural, $technical, $collaborative, $educational, $reflective, $minimal
-- **DEPTH Framework & Context Enhancement**:
-  - User-controlled depth (1-10 rounds) - always asked
-  - Challenge Mode at 3+ rounds (both options shown)
-  - Commands: $reset, $standard, $quick, $status
-
-.
-
-#### 2. 📋 Product Owner Writer - v0.880
+#### 1. 📋 Product Owner Writer - v0.881
 Create professional dev tickets and enhanced documentation.
 
 - **4 Intelligent Modes & Auto-Scaling**:
@@ -64,6 +47,23 @@ Create professional dev tickets and enhanced documentation.
   - REPAIR error recovery protocol
   - Past chats integration for context
   - 7 essential files: 4 core + 3 templates
+
+.
+
+#### 2. ✏️ Branded Content Writer - v0.560
+Content system for any brand or profession with context enrichment.
+
+- **Adaptable System & Current Configuration**:
+  - Currently for Product Designers: case studies, process docs
+  - Reconfigurable for any domain: marketing, engineering, education
+  - Replaceable domain knowledge base
+- **5 Interactive Modes & 6 Tone Variations**:
+  - Modes: $interactive, $write, $share, $teach, $reflect
+  - Tones: $natural, $technical, $collaborative, $educational, $reflective, $minimal
+- **DEPTH Framework & Context Enhancement**:
+  - User-controlled depth (1-10 rounds) - always asked
+  - Challenge Mode at 3+ rounds (both options shown)
+  - Commands: $reset, $standard, $quick, $status
 
 .
 
