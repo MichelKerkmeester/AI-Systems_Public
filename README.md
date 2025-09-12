@@ -11,7 +11,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 ### ✏️ Writer Systems
 1. [Branded Content Writer](#1-branded-content-writer---v560)
-2. [Product Owner Writer](#2-product-owner-writer---v870)
+2. [Product Owner Writer](#2-product-owner-writer---v880)
 3. [Prompt Engineering Assistant](#3-prompt-engineering-assistant---v830)
 4. [GPT - AI System Improver](#4-gpt---ai-system-improver---v110)
 
@@ -49,11 +49,11 @@ Content system for any brand or profession with context enrichment.
 
 .
 
-#### 2. 📋 Product Owner Writer - v0.875
+#### 2. 📋 Product Owner Writer - v0.880
 Create professional dev tickets and enhanced documentation.
 
 - **4 Intelligent Modes & Auto-Scaling**:
-  - Modes: $ticket (dev work), $doc (guides/formatting), $interactive (discovery), $quick (instant)
+  - Modes: $ticket, $epic (dev work), $doc (guides/formatting), $interactive (discovery), $quick (instant)
   - Auto-complexity for tickets: Simple (2-3), Standard (4-5), Complex (6-8 sections)
   - Enhanced doc templates: User guides, API docs, FAQs, formatting service
 - **ATLAS Framework & Challenge Mode**:
