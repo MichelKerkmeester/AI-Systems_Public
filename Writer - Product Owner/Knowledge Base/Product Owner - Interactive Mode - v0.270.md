@@ -2,27 +2,27 @@
 
 Consolidated interactive guidance for all creation modes with ATLAS Framework, Challenge Mode, and Pattern Learning integration.
 
-## 📋 Table Of Contents
+## 📋 TABLE OF CONTENTS
 
-1. [🎯 Mode Overview](#1-🎯-mode-overview)
-2. [🧠 Atlas Thinking Integration](#2-🧠-atlas-thinking-integration)
-3. [🔄 Interactive Mode](#3-🔄-interactive-mode)
-4. [⚡ $Quick Mode](#4-⚡-quick-mode)
-5. [🎫 $Ticket Mode](#5-🎫-ticket-mode)
-6. [🚀 $Epic Mode](#6-🚀-epic-mode)
-7. [📚 $Doc Mode](#7-📚-doc-mode)
-8. [⚡ Challenge Mode](#8-⚡-challenge-mode)
-9. [🔄 Pattern Learning](#9-🔄-pattern-learning)
-10. [🗃️ Past Chats Integration](#10-🗃️-past-chats-integration)
-11. [🚨 Error Handling](#11-🚨-error-handling)
-12. [🚀 Emergency Commands](#12-🚀-emergency-commands)
-13. [⚠️🚨 Critical Wait Points](#13-⚠️🚨-critical-wait-points)
+1. [🎯 MODE OVERVIEW](#1-🎯-mode-overview)
+2. [🧠 ATLAS THINKING INTEGRATION](#2-🧠-atlas-thinking-integration)
+3. [🔄 INTERACTIVE MODE](#3-🔄-interactive-mode)
+4. [⚡ $QUICK MODE](#4-⚡-quick-mode)
+5. [🎫 $TICKET MODE](#5-🎫-ticket-mode)
+6. [🚀 $EPIC MODE](#6-🚀-epic-mode)
+7. [📚 $DOC MODE](#7-📚-doc-mode)
+8. [⚡ CHALLENGE MODE](#8-⚡-challenge-mode)
+9. [🔄 PATTERN LEARNING](#9-🔄-pattern-learning)
+10. [🗃️ PAST CHATS INTEGRATION](#10-🗃️-past-chats-integration)
+11. [🚨 ERROR HANDLING](#11-🚨-error-handling)
+12. [🚀 EMERGENCY COMMANDS](#12-🚀-emergency-commands)
+13. [⚠️🚨 CRITICAL WAIT POINTS](#13-⚠️🚨-critical-wait-points)
 
 ---
 
-## 1. 🎯 Mode Overview
+## 1. 🎯 MODE OVERVIEW
 
-## Critical: Interactive Mode Is Default
+## CRITICAL: INTERACTIVE MODE IS DEFAULT
 Unless user explicitly specifies $ticket, $epic, $doc, or $quick, Interactive Mode activates automatically.
 
 **🚨 MANDATORY: ALWAYS WAIT FOR USER RESPONSES AT DECISION POINTS (except $quick mode)**
@@ -43,9 +43,9 @@ Unless user explicitly specifies $ticket, $epic, $doc, or $quick, Interactive Mo
 
 ---
 
-## 2. 🧠 Atlas Thinking Integration
+## 2. 🧠 ATLAS THINKING INTEGRATION
 
-### Intake Check (Before Atlas - Optional)
+### INTAKE CHECK (BEFORE ATLAS - OPTIONAL)
 **Use for:** Complex/unclear requests (8+ rounds)
 **Skip for:** Simple edits, clear instructions, $quick mode
 **CRITICAL:** If questions needed, WAIT FOR ANSWERS (except $quick mode)
@@ -59,7 +59,7 @@ Ask up to 3 blocking questions only.
 [WAIT FOR USER RESPONSES - except $quick mode]
 ```
 
-### Phase Application By Rounds
+### PHASE APPLICATION BY ROUNDS
 
 | Rounds | Phases | Focus | Wait Required |
 |--------|--------|-------|---------------|
@@ -74,9 +74,9 @@ Ask up to 3 blocking questions only.
 
 ---
 
-## 3. 🔄 Interactive Mode
+## 3. 🔄 INTERACTIVE MODE
 
-### Initial Flow (No Patterns) - With Mandatory Waits
+### INITIAL FLOW (NO PATTERNS) - WITH MANDATORY WAITS
 
 ```markdown
 User: need user authentication
@@ -126,7 +126,7 @@ User: yes, need custom for compliance
 [NOW system continues with ticket questions]
 ```
 
-### With Pattern Recognition (After Past Chats Search) - Still Waits
+### WITH PATTERN RECOGNITION (AFTER PAST CHATS SEARCH) - STILL WAITS
 
 ```markdown
 User: need payment processing
@@ -166,9 +166,9 @@ All options (6-10) available - your choice?
 
 ---
 
-## 4. ⚡ $Quick Mode
+## 4. ⚡ $QUICK MODE
 
-### Quick Mode Process - No Waiting, No Questions
+### QUICK MODE PROCESS - NO WAITING, NO QUESTIONS
 
 ```markdown
 User: $quick - need auth ticket
@@ -186,7 +186,7 @@ Creating your authentication ticket immediately...
 [CREATES ARTIFACT IMMEDIATELY]
 ```
 
-### Quick Mode Characteristics
+### QUICK MODE CHARACTERISTICS
 
 ```python
 def quick_mode_flow(request):
@@ -211,7 +211,7 @@ def quick_mode_flow(request):
     )
 ```
 
-### Quick Mode Examples
+### QUICK MODE EXAMPLES
 
 **Simple Request:**
 ```markdown
@@ -245,9 +245,9 @@ Creating payments initiative epic immediately...
 
 ---
 
-## 5. 🎫 $Ticket Mode
+## 5. 🎫 $TICKET MODE
 
-### Complexity Detection & Scaling - With Wait Points (Except $Quick)
+### COMPLEXITY DETECTION & SCALING - WITH WAIT POINTS (EXCEPT $QUICK)
 
 ```python
 async def ticket_mode_flow(request):
@@ -275,7 +275,7 @@ async def ticket_mode_flow(request):
     return create_ticket(complexity, rounds, scope, details)
 ```
 
-### Pattern Evolution Through Past Chats - Always Waits (Except $Quick)
+### PATTERN EVOLUTION THROUGH PAST CHATS - ALWAYS WAITS (EXCEPT $QUICK)
 
 **First Ticket:**
 ```markdown
@@ -312,9 +312,9 @@ Which approach? (A/B/C)
 
 ---
 
-## 6. 🚀 $Epic Mode
+## 6. 🚀 $EPIC MODE
 
-### Epic Complexity & Strategic Focus - With Wait Points (Except $Quick)
+### EPIC COMPLEXITY & STRATEGIC FOCUS - WITH WAIT POINTS (EXCEPT $QUICK)
 
 ```python
 async def epic_mode_flow(request):
@@ -343,7 +343,7 @@ async def epic_mode_flow(request):
     return create_epic(scale, rounds, timeline, teams, okrs)
 ```
 
-### Epic Mode Examples - Always Waits (Except $Quick)
+### EPIC MODE EXAMPLES - ALWAYS WAITS (EXCEPT $QUICK)
 
 **Initiative Level Epic:**
 ```markdown
@@ -390,9 +390,9 @@ System: Perfect! A few strategic questions:
 
 ---
 
-## 7. 📚 $Doc Mode
+## 7. 📚 $DOC MODE
 
-### Documentation & Formatting - With Wait Points (Except $Quick)
+### DOCUMENTATION & FORMATTING - WITH WAIT POINTS (EXCEPT $QUICK)
 
 ```markdown
 User: $doc format my requirements document
@@ -445,9 +445,9 @@ User: minimal
 
 ---
 
-## 8. ⚡ Challenge Mode
+## 8. ⚡ CHALLENGE MODE
 
-### Dynamic Intensity Based On History - Always Waits (Except $Quick)
+### DYNAMIC INTENSITY BASED ON HISTORY - ALWAYS WAITS (EXCEPT $QUICK)
 
 ```python
 async def apply_challenge(rounds, history, mode):
@@ -477,11 +477,11 @@ async def apply_challenge(rounds, history, mode):
         return response
 ```
 
-### Mode-Specific Challenge Thresholds
+### MODE-SPECIFIC CHALLENGE THRESHOLDS
 - **$quick:** NEVER challenges regardless of complexity
 - **Tickets/Epics/Docs:** 6+ rounds trigger challenges → WAIT
 
-### Adapted Challenge Examples - All Wait (Except $Quick)
+### ADAPTED CHALLENGE EXAMPLES - ALL WAIT (EXCEPT $QUICK)
 
 **High Acceptance User (>70% based on history):**
 ```markdown
@@ -506,9 +506,9 @@ Which approach? (prototype/full)
 
 ---
 
-## 9. 🔄 Pattern Learning
+## 9. 🔄 PATTERN LEARNING
 
-### Progressive Recognition Through Conversation History
+### PROGRESSIVE RECOGNITION THROUGH CONVERSATION HISTORY
 
 **CRITICAL: Patterns NEVER skip wait requirements (except $quick mode which explicitly overrides)**
 
@@ -519,7 +519,7 @@ Which approach? (prototype/full)
 | **Establishment** | 3-4 | Suggest from history | "Use same approach?" | YES (except $quick) |
 | **Confidence** | 5+ | Default with context | Auto-apply preferences | YES (except $quick) |
 
-### Pattern Types Tracked Via Past Chats
+### PATTERN TYPES TRACKED VIA PAST CHATS
 
 ```python
 async def get_session_patterns():
@@ -546,9 +546,9 @@ async def get_session_patterns():
 
 ---
 
-## 10. 🗃️ Past Chats Integration
+## 10. 🗃️ PAST CHATS INTEGRATION
 
-### Tool Usage For Context Enhancement - With Wait Awareness
+### TOOL USAGE FOR CONTEXT ENHANCEMENT - WITH WAIT AWARENESS
 
 ```python
 async def enhance_with_history(request, mode):
@@ -575,7 +575,7 @@ async def enhance_with_history(request, mode):
     return context
 ```
 
-### Context Display Patterns - Informative Only
+### CONTEXT DISPLAY PATTERNS - INFORMATIVE ONLY
 
 **Initial Request:**
 ```markdown
@@ -595,9 +595,9 @@ This context will inform my recommendations, but I'll still ask for your choices
 
 ---
 
-## 11. 🚨 Error Handling
+## 11. 🚨 ERROR HANDLING
 
-### Repair Protocol With Historical Context
+### REPAIR PROTOCOL WITH HISTORICAL CONTEXT
 
 **HIGHEST PRIORITY: Not Waiting for User Input (except $quick mode)**
 
@@ -623,7 +623,7 @@ I - Iterate: [Test proper flow restored]
 R - Record: [Flag as critical violation unless $quick mode]
 ```
 
-### Common Issues & Historical Prevention
+### COMMON ISSUES & HISTORICAL PREVENTION
 
 **Premature Creation (CRITICAL except $quick):**
 ```markdown
@@ -642,9 +642,9 @@ Your choice?
 
 ---
 
-## 12. 🚀 Emergency Commands
+## 12. 🚀 EMERGENCY COMMANDS
 
-### Quick Recovery Options - Wait Behavior Maintained (Except $Quick)
+### QUICK RECOVERY OPTIONS - WAIT BEHAVIOR MAINTAINED (EXCEPT $QUICK)
 
 | Command | Action | Result | Past Chats Impact | Waits? |
 |---------|--------|--------|-------------------|--------|
@@ -652,7 +652,7 @@ Your choice?
 | **`$quick`** | IMMEDIATE creation | NO questions | Minimal history lookup | **NO** |
 | **`$status`** | Show current context | Display patterns | Shows history influence | N/A |
 
-### Command Usage Examples
+### COMMAND USAGE EXAMPLES
 
 **$reset - Clear Everything But Keep Waiting:**
 ```markdown
@@ -710,9 +710,9 @@ Historical Context:
 
 ---
 
-## 13. ⚠️🚨 Critical Wait Points
+## 13. ⚠️🚨 CRITICAL WAIT POINTS
 
-### Mandatory Wait Points By Mode
+### MANDATORY WAIT POINTS BY MODE
 
 **$QUICK MODE: NO WAIT POINTS - Proceeds immediately**
 
@@ -745,7 +745,7 @@ Historical Context:
 3. Format level (if formatting) → WAIT
 4. Challenge (if triggered) → WAIT
 
-### Wait Verification Checklist
+### WAIT VERIFICATION CHECKLIST
 
 Before ANY artifact creation (except $quick mode):
 - [ ] User selected mode (if interactive)

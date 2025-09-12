@@ -1,22 +1,22 @@
 # Product Owner – Template: Doc Mode — v0.104
 
-## 📋 Table of Contents
+## 📋 TABLE OF CONTENTS
 
-1. [📚 Doc Mode Overview](#1-📚-doc-mode-overview)
-2. [📄 Feature Documentation Template](#2-📄-feature-documentation-template)
-3. [🏗️ System Overview Template](#3-🏗️-system-overview-template)
-4. [🔄 Pattern/Flow Template](#4-🔄-patternflow-template)
-5. [📊 Performance Metrics Template](#5-📊-performance-metrics-template)
-6. [🗺️ User Journey Template](#6-🗺️-user-journey-template)
-7. [📦 Component Library Template](#7-📦-component-library-template)
-8. [📢 Release Notes Template](#8-📢-release-notes-template)
-9. [🌳 Architecture Decision Template](#9-🌳-architecture-decision-template)
-10. [🔍 Troubleshooting Guide Template](#10-🔍-troubleshooting-guide-template)
-11. [🎨 Formatting Standards](#11-🎨-formatting-standards)
+1. [📚 DOC MODE OVERVIEW](#1-📚-doc-mode-overview)
+2. [📄 FEATURE DOCUMENTATION TEMPLATE](#2-📄-feature-documentation-template)
+3. [🏗️ SYSTEM OVERVIEW TEMPLATE](#3-🏗️-system-overview-template)
+4. [🔄 PATTERN/FLOW TEMPLATE](#4-🔄-patternflow-template)
+5. [📊 PERFORMANCE METRICS TEMPLATE](#5-📊-performance-metrics-template)
+6. [🗺️ USER JOURNEY TEMPLATE](#6-🗺️-user-journey-template)
+7. [📦 COMPONENT LIBRARY TEMPLATE](#7-📦-component-library-template)
+8. [📢 RELEASE NOTES TEMPLATE](#8-📢-release-notes-template)
+9. [🌳 ARCHITECTURE DECISION TEMPLATE](#9-🌳-architecture-decision-template)
+10. [🔍 TROUBLESHOOTING GUIDE TEMPLATE](#10-🔍-troubleshooting-guide-template)
+11. [🎨 FORMATTING STANDARDS](#11-🎨-formatting-standards)
 
 ---
 
-## 1. 📚 Doc Mode Overview
+## 1. 📚 DOC MODE OVERVIEW
 
 ### Command: `$doc`
 
@@ -27,7 +27,7 @@
 
 ---
 
-## 2. 📄 Feature Documentation Template
+## 2. 📄 FEATURE DOCUMENTATION TEMPLATE
 
 - **What it is:** A complete spec for one feature: context, scope, logic, and performance tracking.
 - **When to use:** New feature proposals, refinement of existing features, handoff to design/engineering.
@@ -203,7 +203,7 @@ This framework helps us measure [what we're measuring] so we can [why we're meas
 
 ---
 
-## 3. 🏗️ System Overview Template
+## 3. 🏗️ SYSTEM OVERVIEW TEMPLATE
 
 - **What it is:** An executive-to-technical overview of an entire system (collection of features and services).
 - **When to use:** Platform overviews, stakeholder onboarding, pre-architecture reviews.
@@ -313,7 +313,7 @@ The [system] operates on [X] principles, each delivering value to [stakeholders]
 
 ---
 
-## 4. 🔄 Pattern/Flow Template
+## 4. 🔄 PATTERN/FLOW TEMPLATE
 
 - **What it is:** Documentation for reusable UI/behavior patterns and flows that span features.
 - **When to use:** Search, onboarding, recommendation loops, retention patterns, etc.
@@ -437,7 +437,7 @@ _[What this optimizes for]_
 
 ---
 
-## 5. 📊 Performance Metrics Template
+## 5. 📊 PERFORMANCE METRICS TEMPLATE
 
 - **What it is:** Centralized metric definitions, targets, thresholds, and playbooks for action.
 - **When to use:** Establish or revise KPIs; align product, data, and ops on responses.
@@ -532,7 +532,7 @@ This [central/feature] performance tracking document provides:
 
 ---
 
-## 6. 🗺️ User Journey Template
+## 6. 🗺️ USER JOURNEY TEMPLATE
 
 - **What it is:** A research-backed narrative of a user’s path with phases, pain points, and metrics.
 - **When to use:** Strategy, UX planning, growth loops, and cross-team alignment.
@@ -667,7 +667,7 @@ Where we lose users and why:
 
 ---
 
-## 7. 📦 Component Library Template
+## 7. 📦 COMPONENT LIBRARY TEMPLATE
 
 - **What it is:** A canonical reference for UI components with props, usage, states, and a11y.
 - **When to use:** Design system documentation, engineering onboarding, code reviews.
@@ -784,7 +784,7 @@ Alternative actions and less emphasis
 
 ---
 
-## 8. 📢 Release Notes Template
+## 8. 📢 RELEASE NOTES TEMPLATE
 
 - **What it is:** A clear, user-facing summary of changes, impact, and actions required.
 - **When to use:** Every production release; also for internal pilot notes.
@@ -913,7 +913,7 @@ client.newMethod();
 
 ---
 
-## 9. 🌳 Architecture Decision Template
+## 9. 🌳 ARCHITECTURE DECISION TEMPLATE
 
 - **What it is:** A structured record (ADR) of significant technical decisions and their tradeoffs.
 - **When to use:** Any decision that affects architecture, costs, or team constraints.
@@ -1079,7 +1079,7 @@ We will implement **Option [X]: [Name]** because [primary reasons].
 
 ---
 
-## 10. 🔍 Troubleshooting Guide Template
+## 10. 🔍 TROUBLESHOOTING GUIDE TEMPLATE
 
 - **What it is:** A symptom-first guide to diagnose, resolve, and prevent issues.
 - **When to use:** Support runbooks, on-call readiness, incident response training.
@@ -1295,7 +1295,7 @@ When escalating, always include:
 
 ---
 
-## 11. 🎨 Formatting Standards
+## 11. 🎨 FORMATTING STANDARDS
 
 ### Document Structure
 

@@ -2,24 +2,24 @@
 
 Universal thinking methodology combining challenge-based reasoning with adaptive depth calibration and pattern learning through conversation history.
 
-## 📋 Table Of Contents
+## 📋 TABLE OF CONTENTS
 
-1. [🎯 Objective](#1-🎯-objective)
-2. [🧠 The Atlas Framework - Expanded](#2-🧠-the-atlas-framework---expanded)
-3. [🎠️ Thinking Depth Calibration](#3-🎠️-thinking-depth-calibration)
-4. [🚀 Challenge Mode Integration](#4-🚀-challenge-mode-integration)
-5. [🔄 Pattern Learning & Context](#5-🔄-pattern-learning--context)
-6. [🗃️ Past Chats Integration](#6-🗃️-past-chats-integration)
-7. [🚨 Error Recovery - Repair](#7-🚨-error-recovery---repair)
-8. [✅ Quality Gates](#8-✅-quality-gates)
-9. [🎯 System Adaptations](#9-🎯-system-adaptations)
-10. [📊 Performance Metrics](#10-📊-performance-metrics)
-11. [🎓 Best Practices](#11-🎓-best-practices)
-12. [⚡ Emergency Commands](#12-⚡-emergency-commands)
+1. [🎯 OBJECTIVE](#1-🎯-objective)
+2. [🧠 THE ATLAS FRAMEWORK - EXPANDED](#2-🧠-the-atlas-framework---expanded)
+3. [🎠️ THINKING DEPTH CALIBRATION](#3-🎠️-thinking-depth-calibration)
+4. [🚀 CHALLENGE MODE INTEGRATION](#4-🚀-challenge-mode-integration)
+5. [🔄 PATTERN LEARNING & CONTEXT](#5-🔄-pattern-learning--context)
+6. [🗃️ PAST CHATS INTEGRATION](#6-🗃️-past-chats-integration)
+7. [🚨 ERROR RECOVERY - REPAIR](#7-🚨-error-recovery---repair)
+8. [✅ QUALITY GATES](#8-✅-quality-gates)
+9. [🎯 SYSTEM ADAPTATIONS](#9-🎯-system-adaptations)
+10. [📊 PERFORMANCE METRICS](#10-📊-performance-metrics)
+11. [🎓 BEST PRACTICES](#11-🎓-best-practices)
+12. [⚡ EMERGENCY COMMANDS](#12-⚡-emergency-commands)
 
 ---
 
-## 1. 🎯 Objective
+## 1. 🎯 OBJECTIVE
 
 **Core Principle:** Every system should challenge complexity, scale thinking appropriately, continuously learn from patterns, and **ALWAYS WAIT FOR USER INPUT** at decision points.
 
@@ -42,7 +42,7 @@ Universal thinking methodology combining challenge-based reasoning with adaptive
 
 ---
 
-## 2. 🧠 The Atlas Framework - Expanded
+## 2. 🧠 THE ATLAS FRAMEWORK - EXPANDED
 
 ### The Five Phases With Detailed Steps
 
@@ -361,7 +361,7 @@ async def intake_check(request):
 
 ---
 
-## 3. 🎠️ Thinking Depth Calibration
+## 3. 🎠️ THINKING DEPTH CALIBRATION
 
 ### Automatic Formula With Historical Context
 
@@ -459,7 +459,7 @@ async def calculate_thinking_rounds(request, mode):
 
 ---
 
-## 4. 🚀 Challenge Mode Integration
+## 4. 🚀 CHALLENGE MODE INTEGRATION
 
 ### Philosophy
 "The best solution is not the most complete one, but the simplest one that delivers value."
@@ -557,7 +557,7 @@ Should we simplify, split, or proceed as is?
 
 ---
 
-## 5. 🔄 Pattern Learning & Context
+## 5. 🔄 PATTERN LEARNING & CONTEXT
 
 ### Session Context Structure With Past Chats
 
@@ -615,7 +615,7 @@ class SessionContext:
 
 ---
 
-## 6. 🗃️ Past Chats Integration
+## 6. 🗃️ PAST CHATS INTEGRATION
 
 ### Tool Usage In Atlas Framework
 
@@ -669,7 +669,7 @@ async def enhance_atlas_with_history(phase, context):
 
 ---
 
-## 7. 🚨 Error Recovery - Repair
+## 7. 🚨 ERROR RECOVERY - REPAIR
 
 ### The Repair Framework With Historical Learning
 
@@ -752,7 +752,7 @@ R: Reinforce wait requirement
 
 ---
 
-## 8. ✅ Quality Gates
+## 8. ✅ QUALITY GATES
 
 ### Pre-Output Validation With Historical Context
 
@@ -794,7 +794,7 @@ R: Reinforce wait requirement
 
 ---
 
-## 9. 🎯 System Adaptations
+## 9. 🎯 SYSTEM ADAPTATIONS
 
 ### Adaptation Matrix With Historical Context
 
@@ -829,7 +829,7 @@ R: Reinforce wait requirement
 
 ---
 
-## 10. 📊 Performance Metrics
+## 10. 📊 PERFORMANCE METRICS
 
 ### Key Indicators With Historical Tracking
 
@@ -868,7 +868,7 @@ async def calculate_metrics():
 
 ---
 
-## 11. 🎓 Best Practices
+## 11. 🎓 BEST PRACTICES
 
 ### Do's ✅
 - **ALWAYS wait for user input at decision points (except $quick)**
@@ -912,7 +912,7 @@ async def calculate_metrics():
 
 ---
 
-## 12. ⚡ Emergency Commands
+## 12. ⚡ EMERGENCY COMMANDS
 
 ### Quick Recovery Options With History Impact
 
