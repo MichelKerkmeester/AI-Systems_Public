@@ -1,14 +1,15 @@
-# Product Owner System - User Guide v0.875
+# Product Owner System - User Guide v0.880
 
-The Product Owner system transforms requests into professional development tickets and documentation through intelligent interactive guidance with built-in complexity challenging. By focusing on WHAT needs doing and WHY it matters (not HOW to implement), it creates lean, actionable artifacts that bridge the communication gap between product and development teams.
+The Product Owner system transforms requests into professional development tickets, strategic epics, and documentation through intelligent interactive guidance with built-in complexity challenging. By focusing on WHAT needs doing and WHY it matters (not HOW to implement), it creates lean, actionable artifacts that bridge the communication gap between product and development teams.
 
 ## 📋 Table of Contents
 
-- [🆕 What's New In V0.875 - Refined Focus](#whats-new-in-v0875---refined-focus)
+- [🆕 What's New In V0.880 - Strategic Epic Mode](#whats-new-in-v0880---strategic-epic-mode)
 - [✨ Key Features](#key-features)
 - [🚀 Quick Setup](#quick-setup)
 - [🎛️ Operating Modes](#operating-modes)
 - [⚡ $Quick Mode](#quick-mode)
+- [🚀 Epic Mode](#epic-mode)
 - [🧠 Atlas Thinking Framework](#atlas-thinking-framework)
 - [🎯 Automatic Complexity Detection](#automatic-complexity-detection)
 - [🔄 Challenge Mode](#challenge-mode)
@@ -19,28 +20,35 @@ The Product Owner system transforms requests into professional development ticke
 
 .
 
-## 🆕 What's New In V0.875 - Refined Focus
+## 🆕 What's New In V0.880 - Strategic Epic Mode
 
-### Major Update: Refined Mode System
-The system has been further refined to focus on its core strengths:
-- **Removed Spec Mode**: System now focuses exclusively on tickets and documentation
-- **4 Intelligent Modes**: Interactive (default), $quick, $ticket, $doc
-- **Streamlined Templates**: Reduced to 7 essential documents (was 8)
-- **Clearer Purpose**: Tickets for development work, docs for guides and formatting
+### Major Addition: Epic Mode for Strategic Initiatives
+The system now includes powerful epic management capabilities:
+- **New $epic Mode**: Create strategic initiatives with OKR alignment
+- **3 Epic Complexity Levels**: Initiative (quarterly), Program (half-year), Strategic (annual)
+- **5 Intelligent Modes**: Interactive (default), $quick, $ticket, **$epic**, $doc
+- **8 Essential Documents**: Added Epic Mode template to the system
+- **Strategic Focus**: OKRs, KPIs, timeline management, child ticket tracking
+
+### Epic Mode Features
+- **Strategic Alignment**: Built-in OKR and KPI tracking
+- **Timeline Management**: Phased delivery with clear milestones
+- **Child Ticket Tracking**: Map epics to their component tickets
+- **Team Coordination**: Multi-team dependency management
+- **Scale Detection**: Automatic complexity scaling for epics
 
 ### Continued Excellence: $Quick Mode
 The revolutionary **$quick mode** continues to prioritize speed:
 - **ZERO Questions**: No thinking rounds ask, no challenges, no additional prompts
+- **Works with Epics**: Can create epic artifacts immediately
 - **Automatic Settings**: Uses 6 thinking rounds with A→T→L→S phases
 - **Immediate Creation**: Bypasses all wait points for maximum speed
-- **Smart Defaults**: Detects complexity automatically without asking
 
 ### Core Improvements
-- **43 Core Rules**: Maintained with refined focus
-- **Enhanced Wait Requirements**: System ALWAYS waits for user input (except $quick mode)
-- **Interactive Mode Clarity**: Better documentation that Interactive is DEFAULT
-- **ATLAS Framework Updates**: Minimum 6 rounds for all modes
-- **Challenge Mode Refinement**: Triggers at 6+ rounds consistently
+- **43 Core Rules**: Maintained with epic mode integration
+- **Enhanced Strategic Thinking**: ATLAS framework adapted for strategic planning
+- **Challenge Mode for Epics**: Phasing challenges for large initiatives
+- **Pattern Learning**: Tracks epic scale preferences
 
 .
 
@@ -49,8 +57,9 @@ The revolutionary **$quick mode** continues to prioritize speed:
 ### Core Capabilities
 - **🧠 ATLAS Framework**: 5-phase universal thinking methodology with adaptive depth
 - **⚡ $Quick Mode**: Zero-wait immediate creation with smart defaults
+- **🚀 Epic Mode**: Strategic initiative planning with OKR alignment
 - **💡 Challenge Mode**: Three-level hierarchy with historical calibration (6+ rounds)
-- **🎯 Smart Complexity**: Automatic detection and scaling for tickets
+- **🎯 Smart Complexity**: Automatic detection and scaling for tickets and epics
 - **🗃️ Past Chats Integration**: Searches conversation history for context
 - **⚡ Emergency Commands**: $reset, $quick, $status
 - **🔄 Pattern Learning**: Adapts to user preferences across conversations
@@ -58,8 +67,8 @@ The revolutionary **$quick mode** continues to prioritize speed:
 - **📊 Thinking Calibration**: Formula-based recommendations (6-10 rounds)
 
 ### Professional Standards
-- **🎛️ 4 Intelligent Modes**: Interactive (default), $quick, $ticket, $doc
-- **🔤 Professional Symbols**: ◆, ◇, ◊, ◳, →, ✦, ✓, ≈, ∅, ✥
+- **🎛️ 5 Intelligent Modes**: Interactive (default), $quick, $ticket, $epic, $doc
+- **📤 Professional Symbols**: ◆, ◇, ◊, ◳, →, ✦, ✓, ≈, ∅, ✥, 🎯, 🗓, 📊
 - **📋 Strict Formatting**: TOC, dividers, proper Key Problems/Reasons format
 - **⚡ Phased Delivery**: Automatic breakdown of large initiatives
 - **👤 User Autonomy**: Complete control at every step (except $quick mode by choice)
@@ -77,26 +86,28 @@ The revolutionary **$quick mode** continues to prioritize speed:
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Writer - Product Owner - v0.875.md`
+3. Copy and paste: `Writer - Product Owner - v0.900.md`
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
-Add these **7 essential documents** to your project's knowledge base:
+Add these **8 essential documents** to your project's knowledge base:
 
 **Core Documents (4):**
-- `Product Owner - ATLAS Thinking Framework - v0.164.md` (Universal thinking methodology)
-- `Product Owner - Artifact Standards - v0.123.md` (Enforcement rules and quality gates)
-- `Product Owner - Interactive Mode - v0.264.md` (All mode interactions)
-- `Product Owner - Quick Reference - v0.104.md` (43 rules compact reference)
+- `Product Owner - ATLAS Thinking Framework - v0.170.md` (Universal thinking methodology)
+- `Product Owner - Artifact Standards - v0.130.md` (Enforcement rules and quality gates)
+- `Product Owner - Interactive Mode - v0.270.md` (All mode interactions)
+- `Product Owner - Quick Reference - v0.107.md` (43 rules compact reference)
 
-**Template Documents (3):**
-- `Product Owner - Template - Ticket Mode - v0.102.md` (All complexity templates)
-- `Product Owner - Template - Doc Mode - v0.103.md` (Documentation templates)
+**Template Documents (4):**
+- `Product Owner - Template - Ticket Mode - v0.110.md` (All complexity templates)
+- `Product Owner - Template - Epic Mode - v0.100.md` (Strategic initiative templates)
+- `Product Owner - Template - Doc Mode - v0.104.md` (Documentation templates)
 
 ### Step 4: Start Creating
 ```
 need user authentication         # Interactive discovery flow (waits for input)
-$quick auth ticket              # Immediate creation, no questions
+$quick auth epic                # Immediate epic creation, no questions
+$epic payment platform          # Direct epic (asks thinking rounds)
 $ticket payment integration     # Direct ticket (asks thinking rounds)
 $doc analytics dashboard       # Direct documentation
 $reset                       # Clear all context and start fresh
@@ -111,7 +122,8 @@ $status                     # Show current patterns and preferences
 |------|---------|---------|--------|-----------|-----------|-------------|
 | **Interactive** | DEFAULT | Figure out what to create | Varies | Adaptive | 6+ rounds | Multiple |
 | **$Quick** | `$quick` | **Fast creation** | Any type | **NONE** | **NEVER** | **NONE** |
-| **Ticket** | `$ticket` | Development tickets | Auto-scales 2-8 sections | 2-4 | 6+ rounds | Rounds, Challenge |
+| **Epic** | `$epic` | Strategic initiatives | 4-10 sections | 3-5 | 6+ rounds | Rounds, Challenge |
+| **Ticket** | `$ticket` | Development tickets | 2-8 sections | 2-4 | 6+ rounds | Rounds, Challenge |
 | **Documentation** | `$doc` | User guides/formatting | Feature docs | 3-4 | If complex | Rounds, Format |
 
 ### Interactive Flow (Default)
@@ -122,49 +134,33 @@ When no mode is specified, system enters discovery:
 
 Welcome! Let's figure out what you need. 🤔
 
-[Historical note: You've created 3 tickets recently]
+[Historical note: You've created 3 tickets and 1 epic recently]
 
 What would you like to create?
 1. Development ticket - Feature or bug for developers
-2. Product documentation - User guide, feature docs, or format existing text
+2. Epic ticket - Strategic initiative or program
+3. Product documentation - User guide, feature docs, or format existing text
 
-Which best fits? (1-2)
+Which best fits? (1-3)
 
 [SYSTEM WAITS FOR YOUR RESPONSE]
 ```
-
-### Enhanced Documentation Mode ($Doc)
-The $doc mode now features significantly improved templates:
-
-**Available Templates:**
-- **User Guides**: Comprehensive feature documentation with examples
-- **API Documentation**: Structured endpoint and integration guides  
-- **FAQ Documents**: Well-organized Q&A formats
-- **Formatting Service**: Clean up and structure existing text
-- **Process Documentation**: Step-by-step workflows and procedures
-
-**Key Improvements:**
-- Richer template structures with professional formatting
-- Better organization with proper sections and navigation
-- Enhanced use of professional symbols (✥ for resources, ◆ for sections)
-- Smart detection of documentation type based on content
-- Flexible formatting levels (minimal, standard, deep restructuring)
 
 .
 
 ## ⚡ $Quick Mode
 
-### Zero-Wait Creation
+### Zero-Wait Creation (Including Epics)
 The revolutionary $quick mode prioritizes speed over customization:
 
 ```markdown
-User: $quick - need auth ticket
+User: $quick - Q1 payments initiative
 
 System: **Quick Mode Activated** ⚡
 
-Creating your authentication ticket immediately...
+Creating your payments initiative epic immediately...
 - Using 6 thinking rounds (auto)
-- Standard complexity detected
+- Initiative level detected
 - No challenges applied
 - Maximum speed delivery
 
@@ -178,6 +174,7 @@ Creating your authentication ticket immediately...
 - **NO challenge presentation** - Skips regardless of complexity
 - **NO additional questions** - Proceeds immediately
 - **Smart complexity detection** - Auto-scales without asking
+- **Works with all modes** - Tickets, epics, and docs
 - **Immediate artifact creation** - Maximum speed priority
 
 ### When To Use $Quick Mode
@@ -186,6 +183,49 @@ Creating your authentication ticket immediately...
 - Standard approach is acceptable
 - You trust the system's defaults
 - Iteration is planned anyway
+
+.
+
+## 🚀 Epic Mode
+
+### Strategic Initiative Planning
+The new $epic mode creates strategic initiatives with proper alignment:
+
+```markdown
+User: $epic authentication overhaul
+
+System: Let's structure your authentication overhaul epic! 🚀
+
+**How many thinking rounds should I use? (6-10)**
+
+Based on authentication overhaul scope, I recommend: 7 rounds
+- Complexity: Medium (single team, quarterly scope)
+- Uncertainty: Low (well-defined domain)
+- Stakes: High (security critical)
+
+Your choice?
+[WAITS FOR USER INPUT]
+```
+
+### Epic Complexity Levels
+
+| Level | Sections | Child Tickets | Scope | Timeline | Example |
+|-------|----------|---------------|-------|----------|---------|
+| **Initiative** | 4-5 | 3-5 tickets | Single team | Quarterly | Feature rollout |
+| **Program** | 6-7 | 6-10 tickets | Multi-team | Half-year | Platform upgrade |
+| **Strategic** | 8-10 | 10+ tickets | Company-wide | Annual | Digital transformation |
+
+### Epic Structure Components
+- **Strategic Overview**: Business context and vision
+- **Success Metrics**: OKRs and KPIs with targets
+- **Timeline & Phases**: Quarterly breakdown with milestones
+- **Child Tickets**: Mapped component tickets with teams
+- **Dependencies**: Cross-team and external requirements
+
+### Epic-Specific Symbols
+- **🎯** - Success Metrics (OKRs/KPIs)
+- **🗓** - Timeline & Phases
+- **📊** - Child Tickets
 
 .
 
@@ -225,9 +265,9 @@ Or specify your preferred number (6-10).
 | Rounds | Phases | Use Case | Wait Required |
 |--------|--------|----------|---------------|
 | 6 | A→T→L→S | Standard depth, **$quick mode default** | After rounds + challenge |
-| 6-7 | A→T→L→A→S | Standard tickets/docs | After rounds + challenge |
-| 8-9 | Full Atlas+ | Complex features | Multiple points |
-| 10 | Deep Atlas | Strategic analysis | Multiple points |
+| 6-7 | A→T→L→A→S | Standard tickets/epics/docs | After rounds + challenge |
+| 8-9 | Full Atlas+ | Complex features/programs | Multiple points |
+| 10 | Deep Atlas | Strategic analysis/epics | Multiple points |
 
 .
 
@@ -235,25 +275,29 @@ Or specify your preferred number (6-10).
 
 ### For $Ticket Mode (Including $Quick)
 
-The system detects complexity based on keywords and patterns:
-
 | Indicators | Complexity | Sections | Resolution Items | Challenge Focus |
 |------------|------------|----------|------------------|-----------------|
 | Bug fix, update | **Simple** | 2-3 | 4-6 | "Is this really needed?" |
 | Feature, dashboard | **Standard** | 4-5 | 8-12 | "Could we do less?" |
 | Platform, architecture | **Complex** | 6-8 with phases | 12-20 | "Can we phase this?" |
 
+### For $Epic Mode (Including $Quick)
+
+| Indicators | Complexity | Sections | Child Tickets | Challenge Focus |
+|------------|------------|----------|---------------|-----------------|
+| Single feature, quarterly | **Initiative** | 4-5 | 3-5 | "Can we deliver faster?" |
+| Multi-team, integration | **Program** | 6-7 | 6-10 | "Should we phase this?" |
+| Platform, transformation | **Strategic** | 8-10 | 10+ | "Break into quarters?" |
+
 **Note:** In $quick mode, complexity is detected but challenges are never presented.
 
-### Mandatory Formatting (All Tickets)
+### Mandatory Formatting (All Artifacts)
 
-Every ticket MUST include:
+Every ticket/epic MUST include:
 - Table of Contents (sections only)
 - # ◆ About section
-- ### → Key problems: (NOT in TOC)
-- ### → Reasons why: (NOT in TOC)
-- ## ◳ Designs & References
-- ## ✓ Resolution Checklist with QA warning
+- ### → Key problems/Strategic problems: (NOT in TOC)
+- ### → Reasons why/Strategic value: (NOT in TOC)
 - Dividers (---) between ALL sections
 
 .
@@ -274,27 +318,21 @@ Every ticket MUST include:
 - Suggests splitting or deferring
 - **WAITS for user decision**
 
+### Epic-Specific Challenges
+```markdown
+"This epic spans multiple quarters. Should we:
+- Phase it into quarterly initiatives?
+- Focus on the highest-impact quarter first?
+- Keep the full strategic scope?"
+
+[WAIT FOR USER RESPONSE]
+```
+
 ### Updated Trigger: 6+ Rounds
 Challenge Mode now activates at 6+ thinking rounds for optimal balance
 
 ### $Quick Mode Exception
 $quick mode NEVER presents challenges regardless of complexity or rounds
-
-### Example Challenge (Standard Modes)
-```markdown
-[Historical: You've accepted simplification 8 of 10 times]
-
-**Quick thought before we proceed:**
-
-Could we achieve your goal more simply?
-- Option A: Essential version (6 rounds)
-- Option B: Standard approach (7-8 rounds)
-- Option C: Full implementation (9-10 rounds)
-
-Your choice? (A/B/C)
-
-[SYSTEM WAITS FOR YOUR RESPONSE]
-```
 
 .
 
@@ -307,6 +345,7 @@ The system uses conversation history while maintaining user control:
 **conversation_search**: Topic/keyword-based search
 - Finds relevant past work by subject
 - Identifies successful patterns
+- Tracks epic scale preferences
 - Never skips wait points (except $quick mode)
 
 **recent_chats**: Time-based retrieval
@@ -347,8 +386,8 @@ $reset
 # Clears all historical context and patterns
 # System still waits for all inputs
 
-$quick - need auth ticket
-# Creates immediately with NO questions
+$quick - Q1 payments epic
+# Creates epic immediately with NO questions
 # Uses 6 rounds automatically
 # No challenges presented
 # Maximum speed delivery
@@ -357,13 +396,22 @@ $status
 # Shows current patterns, preferences, and context
 # Displays challenge acceptance rate
 # Shows typical thinking rounds
+# Shows epic scale preferences
 ```
 
 .
 
 ## 📦 Version History
 
-### v0.875 (Current)
+### v0.880 (Current)
+- **Epic Mode Added**: New $epic mode for strategic initiatives
+- **5 Operating Modes**: Interactive, $quick, $ticket, $epic, $doc
+- **8 Essential Documents**: Added Epic Mode template
+- **Strategic Features**: OKR/KPI tracking, timeline management, child tickets
+- **3 Epic Complexity Levels**: Initiative, Program, Strategic
+- **Epic Pattern Learning**: Tracks scale preferences and phasing patterns
+
+### v0.875
 - **Refined Focus**: Removed spec mode to focus on tickets and documentation
 - **4 Operating Modes**: Interactive, $quick, $ticket, $doc
 - **7 Essential Documents**: Reduced from 8 with spec template removal
@@ -406,14 +454,15 @@ $status
 ## 📚 Additional Resources
 
 ### System Documentation
-- **Writer - Product Owner v0.875**: Main system instructions (43 rules)
-- **Atlas Thinking Framework v0.164**: Complete thinking methodology
-- **Interactive Mode v0.264**: Detailed mode interactions
-- **Quick Reference v0.104**: Compact rule reference
+- **Writer - Product Owner v0.900**: Main system instructions (43 rules)
+- **Atlas Thinking Framework v0.170**: Complete thinking methodology
+- **Interactive Mode v0.270**: Detailed mode interactions
+- **Quick Reference v0.107**: Compact rule reference
 
 ### Template Resources
-- **Ticket Templates v0.102**: Simple/Standard/Complex structures
-- **Doc Templates v0.103**: User guides and documentation
+- **Ticket Templates v0.110**: Simple/Standard/Complex structures
+- **Epic Templates v0.100**: Initiative/Program/Strategic structures
+- **Doc Templates v0.104**: User guides and documentation
 
 ### Technical Resources
 - [Claude Projects Guide](https://claude.ai/docs/projects)
@@ -421,4 +470,4 @@ $status
 
 ---
 
-*Product Owner v0.875: Refined focus on tickets and documentation. Revolutionary $quick mode for immediate creation with zero waiting. Interactive Mode remains the thoughtful default with complete user control at every step. Choose $quick when speed matters, Interactive when customization matters. Historical context enriches but never restricts. User autonomy is absolute (except when explicitly choosing $quick for speed). Challenge Mode triggers at 6+ rounds for optimal balance. Always focusing on WHAT needs doing and WHY it matters, not HOW to implement.*
+*Product Owner v0.880: Strategic epic mode for initiative planning with OKR alignment. Revolutionary $quick mode for immediate creation with zero waiting. Interactive Mode remains the thoughtful default with complete user control at every step. Choose $quick when speed matters, Interactive when customization matters, $epic when strategy matters. Historical context enriches but never restricts. User autonomy is absolute (except when explicitly choosing $quick for speed). Challenge Mode triggers at 6+ rounds for optimal balance. Always focusing on WHAT needs doing and WHY it matters, not HOW to implement.*
