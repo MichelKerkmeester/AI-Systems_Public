@@ -1,89 +1,83 @@
-# Webflow Agent - User Guide v0.300
+# Webflow Agent - User Guide v0.400
 
-The Webflow Agent is a reality-based content management assistant that works within actual MCP capabilities. It excels at managing content in existing Webflow structures while transparently guiding you to Designer when structural changes are needed. No false promises, just genuine value within real constraints.
+The Webflow Agent is a full-stack development assistant that creates and manages Webflow sites through natural language. With Designer and Data API integration, it can build complete structures, design components, and manage content - transforming ideas into functioning Webflow sites.
 
 ## 📋 Table of Contents
 
-- [🆕 What's New in v0.300](#whats-new-in-v300)
+- [🆕 What's New in v0.400](#whats-new-in-v0400)
 - [✨ Key Features](#key-features)
-- [⚠️ Reality Check](#reality-check)
 - [🚀 Quick Setup](#quick-setup)
 - [🧠 How It Works](#how-it-works)
 - [💬 Example Interactions](#example-interactions)
-- [📊 What Gets Managed](#what-gets-managed)
-- [🔧 Installing Webflow MCP (Required)](#installing-webflow-mcp-required)
+- [📊 What Gets Created](#what-gets-created)
+- [🔧 Installing Webflow MCP](#installing-webflow-mcp)
+- [🎨 Designer API Setup](#designer-api-setup)
 - [🆘 Troubleshooting](#troubleshooting)
 - [⚠️ Important Notes](#important-notes)
 - [📦 Version History](#version-history)
 - [📚 Resources](#resources)
 
-.
+---
 
-## 🆕 What's New in v0.300
+## 🆕 What's New in v0.400
 
-### Document Architecture Overhaul
-- **Cleaner Python Usage**: Reduced to essential logic only (not for lists/descriptions)
-- **Aligned with Best Practices**: Follows Document Beautifier formatting standards
-- **Improved Organization**: Better structured reference documents
-- **Enhanced Readability**: Clearer separation of concepts
+### Complete Transformation
+- **Full Designer API Integration**: Create elements, styles, and components directly
+- **Structure Creation**: Build collections and fields programmatically
+- **Component Systems**: Design reusable components with variants
+- **Responsive Design**: Control breakpoints and responsive behavior
+- **Design Tokens**: Manage variables for consistent design systems
 
-### Refined ATLAS Framework
-- **Reality-First Thinking**: Every phase checks MCP capabilities
-- **Smarter Round Calculation**: More accurate complexity assessment
-- **Pattern Learning**: Better adaptation to user preferences
-- **REPAIR Protocol**: Enhanced error recovery
+### Designer + Data API Coordination
+- Create complete features from structure to design
+- Build data-driven components
+- Design responsive layouts with dynamic content
+- Establish design systems with content management
 
-### Better User Experience
-- **Clearer Visual Feedback**: Shows what's happening in real-time
-- **Improved Error Messages**: More helpful guidance when things can't be done
-- **Streamlined Conversations**: Fewer unnecessary questions
-- **Consistent Responses**: Predictable patterns across operations
+### What Changed from v0.300
+- ✅ **CAN NOW** create fields and collections
+- ✅ **CAN NOW** build page structures
+- ✅ **CAN NOW** create and apply styles
+- ✅ **CAN NOW** register components
+- ⚠️ **STILL** requires external URLs for images
+- ⚠️ **REQUIRES** MCP Bridge App for Designer operations
 
-.
+---
 
 ## ✨ Key Features
 
-### What This System Actually Does
-- **Manages Content**: Create, update, delete items in existing collections
-- **Handles Publishing**: Draft/live states, staging/production deployment
-- **Optimizes SEO**: Meta tags, descriptions, slugs at scale
-- **Bulk Operations**: Process multiple items efficiently
-- **Script Management**: Add and manage site scripts
-- **Localization**: Update content across locales
-- **Visual Progress**: Real-time operation feedback
-- **Error Recovery**: 95% success rate for possible operations
-- **Rate Limit Management**: Automatic throttling and queuing
-- **Educational Approach**: Explains limitations and guides to Designer
-- **Pattern Learning**: Remembers your structure and preferences
-- **Transparent Communication**: Always clear about capabilities
+### Complete Development Capabilities
 
-### What It Cannot Do (Designer Required)
-- ❌ **Create fields** in collections
-- ❌ **Upload images** directly (external URLs only)
-- ❌ **Build collection structures**
-- ❌ **Create new pages**
-- ❌ **Apply CSS or design systems**
-- ❌ **Set up relationships between collections**
-- ❌ **Create components or symbols**
-- ❌ **Modify field types**
+**Designer API Features (NEW):**
+- **Element Creation**: Build any element type on canvas
+- **Style Management**: Create and apply CSS classes
+- **Component Building**: Design reusable components
+- **Responsive Control**: Manage breakpoints and layouts
+- **Variable System**: Create design tokens
+- **Real-time Preview**: See changes instantly in Designer
 
-.
+**Data API Features (Enhanced):**
+- **Collection Creation**: Build complete data structures
+- **Field Management**: Add any field type to collections
+- **Relationship Design**: Create references between collections
+- **Content Operations**: Full CRUD on items
+- **Publishing Control**: Manage draft/live states
+- **SEO Optimization**: Meta tags and structured data
 
-## ⚠️ Reality Check
+**Integrated Workflows:**
+- Create blog with structure and templates
+- Build e-commerce catalogs with components
+- Design landing pages with dynamic content
+- Establish complete design systems
+- Develop responsive layouts
+- Manage multi-language sites
 
-### The Truth About Webflow MCP
-The Webflow MCP is a powerful **content management tool**, not a **site builder**. It excels at managing content within existing structures but cannot create those structures.
+### Remaining Limitations
+- ⚠️ **Image uploads** require external URLs (Cloudinary, S3)
+- ⚠️ **Companion app** required for Designer operations
+- ⚠️ **Authorization** requires owner/admin access
 
-**Correct Positioning:**
-> "I manage your Webflow content brilliantly after you've set up the structure in Designer."
-
-### Version 3.0 Improvements
-- More transparent about limitations upfront
-- Better guidance when Designer is needed
-- Clearer workaround suggestions
-- Improved pattern recognition
-
-.
+---
 
 ## 🚀 Quick Setup
 
@@ -96,245 +90,216 @@ The Webflow MCP is a powerful **content management tool**, not a **site builder*
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Agent - MCP - Webflow - v0.300.md`
+3. Copy and paste: `Agent - MCP - Webflow - v0.400.md`
 4. Save the project
 
 ### Step 3: Upload Reference Documents
-Add these 5 essential documents to your project:
-- `Agent - MCP - Webflow - v0.300.md` (Main agent)
-- `Webflow - MCP Knowledge - v0.300.md` (Central knowledge)
+Add these 6 essential documents to your project:
+- `Agent - MCP - Webflow - v0.400.md` (Main agent)
+- `Webflow - MCP Knowledge - v0.300.md` (Full API knowledge)
 - `Webflow - Interactive Intelligence - v0.300.md` (Conversation patterns)
-- `Webflow - Patterns & Workflows - v0.300.md` (Operation mappings)
-- `Webflow - ATLAS Thinking Framework - v0.200.md` (Reality-based thinking)
+- `Webflow - Patterns & Workflows - v0.300.md` (Development patterns)
+- `Webflow - ATLAS Thinking Framework - v0.300.md` (Adaptive thinking)
 - `README.md` (This guide)
 
-### Step 4: Prepare Your Webflow Structure
-**IMPORTANT: Before using the agent:**
-1. Create your collections in Webflow Designer
-2. Add all needed fields to collections
-3. Set up any relationships
-4. Publish the structure
-5. Get your API key from [Webflow Account Settings](https://webflow.com/dashboard/account/apps)
+### Step 4: Install Webflow MCP Server
+Follow the installation guide in the [Installing Webflow MCP](#installing-webflow-mcp) section below.
 
-### Step 5: Start Managing Content
-With structure ready, you can now:
+### Step 5: Setup Designer Access
+1. Open your site in Webflow Designer
+2. Press 'E' to open Apps panel
+3. Launch "Webflow MCP Bridge App"
+4. Keep it open for Designer operations
+
+### Step 6: Start Building!
+You can now:
 ```
-update all blog posts
-create product in existing collection
-publish to production
-update SEO metadata
-manage draft content
+Create complete blog with categories
+Build hero component with animations
+Design responsive navigation
+Setup e-commerce catalog
+Create design system
+Build landing pages
 ```
 
-The system will transparently tell you if something needs Designer first!
-
-.
+---
 
 ## 🧠 How It Works
 
-### Reality-Based Intent Recognition
+### Full Stack Development Flow
 
-The system checks every request against actual capabilities:
+The system coordinates Designer and Data APIs to create complete Webflow features:
 
-| Request Type | Can Do? | Response | Action |
-|-------------|---------|----------|--------|
-| **Content Update** | ✅ Yes | "I can update that!" | Execute |
-| **Field Creation** | ❌ No | "Add in Designer first" | Guide |
-| **Publishing** | ✅ Yes | "Publishing now!" | Execute |
-| **Image Upload** | ❌ No | "Use external URLs" | Workaround |
-| **SEO Update** | ✅ Yes | "Updating metadata!" | Execute |
-| **Page Creation** | ❌ No | "Create in Designer" | Guide |
+| Request Type | APIs Used | Creates | Time |
+|--------------|-----------|---------|------|
+| **"Create blog"** | Data | Collections, fields, relationships | 10-15s |
+| **"Build hero"** | Designer | Elements, styles, component | 10-12s |
+| **"Design page"** | Both | Structure + visual design | 20-30s |
+| **"Setup e-commerce"** | Both | Products + components | 30-45s |
 
-### Capability-Aware Conversation
+### Capability Matrix
 
-**High Clarity → Quick Execution (if possible):**
+**Immediate Execution:**
 ```
-User: "update product prices"
-System: "I can update prices in your existing products!
-
-Processing...
-✅ Updated 47 products
-Time: 23 seconds"
+User: "Create product catalog"
+System: "Creating product structure...
+✅ Products collection created
+✅ 12 fields added
+✅ Categories linked
+✅ Ready for content!"
 ```
 
-**Structural Request → Designer Guidance:**
+**Designer Operations (App Required):**
 ```
-User: "add featured image field"
-System: "I cannot create fields through the API.
-
-To add a featured image field:
-1. Open Webflow Designer
-2. Go to your collection settings
-3. Add new field → Image type
-4. Name it 'featured_image'
-5. Publish changes
-
-Once added, I can populate it with image URLs!"
+User: "Build card component"
+System: "Checking Designer connection...
+✅ MCP Bridge App connected
+Creating card component...
+✅ Elements structured
+✅ Styles applied
+✅ Component registered!"
 ```
 
-**Workaround Offered:**
+**Full Stack Coordination:**
 ```
-User: "upload product images"
-System: "I cannot upload images directly. Here are your options:
-
-1. Use external hosting (Cloudinary/S3)
-2. Upload via Designer's Asset Manager
-3. Provide direct URLs
-
-Which approach works for you?"
+User: "Create blog with templates"
+System: "Building complete blog system...
+Data: ✅ Collections created
+Design: ✅ Components built
+Integration: ✅ Connected
+Ready for content!"
 ```
 
-.
+---
 
 ## 💬 Example Interactions
 
-### Successful Content Management
+### Creating Complete Structures
 ```
-User: update all blog post meta descriptions
+User: Create a team directory with profiles
 
 System: How many thinking rounds should I use? (1-10)
-Recommended: 3 rounds (bulk operation)
+Recommended: 5 rounds (structure + components)
 
-User: 3
+User: 5
 
-System: I can update all meta descriptions!
+System: Creating team directory system!
 
-Checking your Blog Posts collection...
-✅ Found: 52 posts
-✅ Field exists: meta_description
+Data Structure:
+✅ Team Members collection created:
+   - name, role, bio
+   - profile_image (URL)
+   - email, phone
+   - department (reference)
+   - social_links
 
-Updating all posts...
-[████████████] 100%
+✅ Departments collection created
+✅ Relationships configured
 
-✅ Updated 52 meta descriptions
-Time: 26 seconds
-API calls: 52/60
+Design Components:
+✅ Team card component created
+✅ Profile layout designed
+✅ Responsive grid applied
 
-Ready to publish these changes?
+Ready to add team members!
 ```
 
-### Structure Creation (Not Possible)
+### Building Design Systems
 ```
-User: create a blog with categories and authors
+User: Create a design system with typography and colors
 
-System: I need to clarify my capabilities:
+System: Building design system...
 
-❌ What I CANNOT do:
-• Create new collections
-• Add fields to collections
-• Set up relationships
+Typography Scale:
+✅ 8 heading styles created
+✅ 3 body text styles
+✅ Responsive sizing applied
 
-✅ What I CAN do (after Designer setup):
-• Create and manage blog posts
-• Assign categories and authors
-• Handle publishing
-• Optimize SEO
+Color System:
+✅ Primary palette (5 shades)
+✅ Secondary palette (5 shades)
+✅ Neutral scale (10 shades)
+✅ Semantic colors (success, warning, error)
 
-To proceed, first create in Designer:
-1. Blog Posts collection with fields
-2. Categories collection
-3. Authors collection
-4. Reference fields linking them
+✅ Variables registered
+✅ Styles ready to apply
 
-Then I can manage all your content!
+Design system complete!
 ```
 
-### Bulk Operations (Within Limits)
+### Full Page Development
 ```
-User: import 50 products
+User: Design a landing page with hero, features, and testimonials
 
-System: I can create products in your existing collection!
+System: Creating complete landing page...
 
-Checking Products collection...
-✅ Collection exists
-✅ Required fields present
+Structure:
+✅ Features collection created
+✅ Testimonials collection created
+✅ Fields configured
 
-Note: Images must be external URLs (I cannot upload files)
+Components:
+✅ Hero section with CTA
+✅ 3-column feature grid
+✅ Testimonial carousel
+✅ Responsive breakpoints
 
-Creating 50 products...
-[████████████] 100%
+Styling:
+✅ Consistent design tokens
+✅ Hover interactions
+✅ Mobile optimization
 
-✅ Import complete!
-• 50 products created
-• All in draft status
-• Time: 90 seconds
-
-Ready to publish?
-```
-
-.
-
-## 📊 What Gets Managed
-
-### Content Within Existing Structures
-
-**Blog Management (structure must exist):**
-```
-Prerequisites (Designer):
-✅ Blog Posts collection exists
-✅ All fields created
-✅ Categories collection exists
-✅ Relationships defined
-
-What I Can Do:
-• Create new posts (3s each)
-• Update existing posts (2s each)
-• Assign categories (1s)
-• Update SEO metadata (2s)
-• Publish to live (3s)
-• Bulk operations (1-2s per item)
+Page ready for content!
+Time: 35 seconds
 ```
 
-**E-commerce Management:**
-```
-Prerequisites (Designer):
-✅ Products collection exists
-✅ All product fields created
-✅ Categories set up
-✅ Images hosted externally
+---
 
-What I Can Do:
-• Update product information
-• Manage inventory
-• Update pricing
-• Assign categories
-• Publish changes
+## 📊 What Gets Created
 
-Cannot Do:
-• Upload product images
-• Create variant fields
-• Add new attributes
-```
+### Blog System Example
+```javascript
+// Data Structure Created
+Collections: {
+  BlogPosts: {
+    fields: ['title', 'content', 'excerpt', 'featured_image', 
+             'author', 'categories', 'published_date', 'meta_fields']
+  },
+  Authors: {
+    fields: ['name', 'bio', 'avatar', 'social_links']
+  },
+  Categories: {
+    fields: ['name', 'slug', 'description']
+  }
+}
 
-.
+// Components Created
+Components: {
+  BlogCard: 'Responsive card with image, title, excerpt',
+  AuthorBio: 'Author information block',
+  CategoryFilter: 'Dynamic filtering component'
+}
 
-## 🔧 Installing Webflow MCP (Required)
-
-The Webflow Agent requires the Webflow MCP tool to function.
-
-### Option A: AI-Powered Docker Setup (Recommended)
-
-**Prerequisites:**
-- Docker Desktop installed ([Download Docker Desktop](https://www.docker.com/products/docker-desktop/))
-- Claude Desktop app ([Download Claude](https://claude.ai/download))
-- Webflow API key from [Webflow Account Settings](https://webflow.com/dashboard/account/apps)
-
-**AI-Assisted Installation:**
-
-Copy this prompt to Claude, ChatGPT, or any AI assistant:
-
-```
-Help me set up Docker container for Webflow MCP.
-
-Repository: https://github.com/webflow/mcp-server-webflow.git
-API key: [YOUR_WEBFLOW_KEY]
-Directory: "$HOME/MCP Servers/webflow"
-OS: [Windows/Mac/Linux]
-
-Need: Dockerfile, docker-compose.yml, and Claude Desktop config.
+// Styles Applied
+Styles: {
+  Typography: 'Complete scale from h1 to body',
+  Colors: 'Brand palette with semantic colors',
+  Layout: 'Grid system with responsive breakpoints'
+}
 ```
 
-### Option B: NPX Setup (Quick but Less Stable)
+### Performance Metrics
+- Collection creation: 3-5 seconds
+- Field addition: 1-2 seconds per field
+- Component building: 5-10 seconds
+- Style application: 1-2 seconds
+- Full feature: 20-45 seconds
+
+---
+
+## 🔧 Installing Webflow MCP
+
+### Recommended: OAuth Remote Setup
 
 Add to Claude Desktop config:
 
@@ -347,129 +312,191 @@ Add to Claude Desktop config:
   "mcpServers": {
     "webflow": {
       "command": "npx",
-      "args": ["-y", "@webflow/mcp-server-webflow"],
+      "args": ["mcp-remote", "https://mcp.webflow.com/sse"]
+    }
+  }
+}
+```
+
+After saving:
+1. Restart Claude Desktop (Cmd/Ctrl + R)
+2. Browser opens for OAuth authorization
+3. Authorize the sites you want to access
+4. MCP Bridge App auto-installs to authorized sites
+
+### Alternative: Token-Based Setup
+
+```json
+{
+  "mcpServers": {
+    "webflow": {
+      "command": "npx",
+      "args": ["-y", "@webflow/mcp-server"],
       "env": {
-        "WEBFLOW_API_KEY": "your-webflow-key-here"
+        "WEBFLOW_TOKEN": "your-api-token-here"
       }
     }
   }
 }
 ```
 
-.
-
-## 🆘 Troubleshooting
-
-### Common Issues & Solutions
-
-| Issue | Reality | Solution |
-|-------|---------|----------|
-| **"Cannot create field"** | MCP limitation | Create in Designer first |
-| **"Cannot upload image"** | MCP limitation | Use external URL |
-| **"Collection not found"** | Doesn't exist | Create in Designer |
-| **"Field doesn't exist"** | Not created yet | Add field in Designer |
-| **"Rate limit exceeded"** | API limit | Wait 60s, auto-resumes |
-| **"Structure needed"** | No collections | Set up in Designer |
-
-### API Rate Limits
-
-Standardized limits:
-- **Maximum**: 60 requests/minute
-- **Warning**: 50 requests/minute
-- **Throttle**: 55 requests/minute
-- **Recovery**: 60 second wait
-
-### Performance Benchmarks
-
-| Operation | Time | API Calls | Success Rate |
-|-----------|------|-----------|--------------|
-| **Create item** | 2-3s | 1-2 | 95% |
-| **Update item** | 1-2s | 1 | 98% |
-| **Bulk 50 items** | 60-90s | 50 | 90% |
-| **Publish** | 3-5s | 2-3 | 95% |
-| **Field creation** | N/A | N/A | 0% (impossible) |
-| **Image upload** | N/A | N/A | 0% (use URLs) |
-
-.
-
-## ⚠️ Important Notes
-
-### Reality-Based Operation
-- **Structure first** - Collections and fields must exist in Designer
-- **Content management** - Agent excels at managing existing content
-- **No field creation** - Cannot create or modify field structures
-- **No image upload** - Use external URLs only
-- **Transparent limits** - Always clear about what's not possible
-- **Designer guidance** - Clear steps when structure changes needed
-- **Workarounds offered** - Creative solutions within constraints
-- **Pattern learning** - Remembers your structure
-- **Rate limit safe** - Automatic throttling
-- **Error recovery** - 95% success for possible operations
-
-### Best Practices
-1. Set up complete structure in Designer first
-2. Prepare content with external image URLs
-3. Use agent for content management
-4. Return to Designer for structural changes
-5. Accept workarounds when offered
-
-.
-
-## 📦 Version History
-
-### v0.300 (Current)
-- **Document overhaul**: Cleaner Python usage, better organization
-- **Improved ATLAS**: Reality-first thinking at every phase
-- **Enhanced patterns**: Better learning and adaptation
-- **Refined conversations**: Fewer questions, clearer responses
-- **Visual improvements**: Better progress and error feedback
-
-### v0.200
-- **Reality alignment**: Corrected capability claims
-- **Transparent limitations**: Clear about what's not possible
-- **Enhanced guidance**: Better Designer coordination
-- **Workaround documentation**: Creative solutions
-- **Removed false claims**: No field creation, no image upload
-
-### v0.100 (Deprecated)
-- Initial release with incorrect capability claims
-- Claimed field creation (not possible)
-- Claimed image upload (not possible)
-- Claimed design system application (not possible)
-
-.
-
-## 📚 Resources
-
-### Core Tools
-- [Webflow MCP Server](https://github.com/webflow/mcp-server-webflow) (Required)
-- [Claude Projects](https://claude.ai) (Platform)
-
-### Documentation
-- [Webflow Designer Guide](https://university.webflow.com/lesson/intro-to-webflow-designer)
-- [Webflow CMS Guide](https://university.webflow.com/lesson/intro-to-the-webflow-cms)
-- [MCP Protocol](https://modelcontextprotocol.io/)
-- [API Rate Limits](https://developers.webflow.com/reference/rate-limits)
-
-### Quick Links
-- [Get Webflow API Key](https://webflow.com/dashboard/account/apps)
-- [Webflow Designer](https://webflow.com/designer)
-- [Claude Desktop](https://claude.ai/download)
-- [Docker Desktop](https://www.docker.com/products/docker-desktop/)
-
-### External Image Hosting
-- [Cloudinary](https://cloudinary.com/) - Free tier available
-- [Amazon S3](https://aws.amazon.com/s3/) - Pay as you go
-- [Imgur](https://imgur.com/) - Free image hosting
-- [ImageKit](https://imagekit.io/) - CDN with optimization
-
-### Performance Guidelines
-- **Content operations**: 2-5 seconds
-- **Bulk operations**: 1-2 seconds per item
-- **Publishing**: 3-5 seconds
-- **Rate limiting**: Automatic at 55/60 requests
-- **Designer tasks**: Manual, then content management
+Get your token from [Webflow API Settings](https://webflow.com/dashboard/account/apps).
 
 ---
 
-*Reality-based Webflow content management. Excel at what's possible within existing structures. Transparent about limitations. Clear guidance to Designer when needed. No false promises, just genuine value within real constraints.*
+## 🎨 Designer API Setup
+
+### Enabling Designer Operations
+
+1. **Open Webflow Designer**
+   - Navigate to your project
+   - Open in Designer mode
+
+2. **Launch MCP Bridge App**
+   - Press 'E' to open Apps panel
+   - Find "Webflow MCP Bridge App"
+   - Click to launch
+   - Keep open during session
+
+3. **Verify Connection**
+   - App shows "Connected" status
+   - Agent confirms Designer access
+   - Ready for visual operations
+
+### Designer Capabilities
+With the app connected, you can:
+- Create any element type
+- Apply styles and CSS
+- Build components
+- Manage responsive design
+- Control animations
+- Set interactions
+
+---
+
+## 🆘 Troubleshooting
+
+### Common Solutions
+
+| Issue | Cause | Solution |
+|-------|-------|----------|
+| **"Cannot create elements"** | App disconnected | Open MCP Bridge App in Designer |
+| **"Designer unavailable"** | App not running | Launch app from Apps panel |
+| **"Cannot upload images"** | API limitation | Use Cloudinary/S3 URLs |
+| **"Unauthorized"** | Not owner/admin | Get proper permissions |
+| **"Rate limit hit"** | Too many requests | Wait 60 seconds |
+| **"Collection exists"** | Duplicate name | Use unique names |
+
+### Designer Connection Issues
+
+**App Won't Connect:**
+1. Refresh Designer
+2. Re-launch MCP Bridge App
+3. Check authorization status
+4. Re-authenticate if needed
+
+**Operations Failing:**
+1. Verify app shows "Connected"
+2. Check console for errors
+3. Try simpler operation first
+4. Restart app if needed
+
+### Performance Tips
+- Keep operations under 50 API calls/minute
+- Batch similar operations
+- Create structures before content
+- Build components once, reuse many times
+
+---
+
+## ⚠️ Important Notes
+
+### Full Stack Capabilities
+- **Structure creation** - Collections, fields, relationships
+- **Visual design** - Elements, styles, components
+- **Content management** - Full CRUD operations
+- **Publishing control** - Draft/live states
+- **SEO optimization** - Meta tags, structured data
+- **Responsive design** - Breakpoint management
+- **Component systems** - Reusable design patterns
+- **Design tokens** - Variables for consistency
+
+### Requirements
+- **MCP Bridge App** - Must be open for Designer operations
+- **Authorization** - Owner/admin access required
+- **External images** - URLs required (no direct upload)
+- **Rate limits** - 60 requests per minute
+- **Node.js** - Version 22.3.0+ for MCP server
+
+### Best Practices
+1. Create data structure first
+2. Build reusable components
+3. Apply consistent styles
+4. Use design tokens
+5. Plan responsive behavior
+6. Optimize for performance
+7. Include SEO from start
+
+---
+
+## 📦 Version History
+
+### v0.400 (Current - Major Update)
+- **Designer API integration** - Full visual development
+- **Structure creation** - Collections and fields
+- **Component building** - Reusable design systems
+- **Style management** - CSS and design tokens
+- **Complete transformation** - From content-only to full-stack
+
+### v0.300 (Deprecated)
+- Limited to content management only
+- Could not create fields or structures
+- Required Designer for all structure
+- Many workarounds needed
+
+### v0.200 (Deprecated)
+- Initial reality-based approach
+- Transparent about limitations
+- Content management focus
+
+### v0.100 (Deprecated)
+- Initial release with incorrect claims
+
+---
+
+## 📚 Resources
+
+### Essential Links
+- [Webflow MCP Server](https://github.com/webflow/mcp-server) - Official repository
+- [Designer API Docs](https://developers.webflow.com/designer/reference) - Designer capabilities
+- [Data API Docs](https://developers.webflow.com/data/reference) - Data operations
+- [MCP Protocol](https://modelcontextprotocol.io/) - Protocol documentation
+
+### Quick References
+- [Get API Token](https://webflow.com/dashboard/account/apps)
+- [Webflow Designer](https://webflow.com/designer)
+- [Claude Desktop](https://claude.ai/download)
+- [Cloudinary](https://cloudinary.com/) - Image hosting
+
+### API Capabilities
+
+**Designer API:**
+- Elements: Create, modify, position
+- Styles: Classes, CSS, responsive
+- Components: Build, register, reuse
+- Variables: Design tokens, colors
+
+**Data API:**
+- Collections: Create with fields
+- Items: Full CRUD operations
+- Publishing: Draft/live control
+- SEO: Meta tags, slugs
+
+### Support
+- [Webflow Support](https://support.webflow.com)
+- [Developer Forum](https://forum.webflow.com)
+- Email: developers@webflow.com
+
+---
+
+*Full-stack Webflow development through natural language. Create structures, design components, manage content. From idea to live site, all through conversation.*
