@@ -125,19 +125,17 @@ Your choice? (A/B/C)
 
 | Symbol | Purpose | Context | Format Rule |
 |--------|---------|---------|-------------|
-| **◆** | Sections/"About" heading | Headers | Main section |
-| **◇** | Requirements | Functional needs | Section header |
-| **◊** | Sub-headings (bold) | Categories | **Use — for items, each on own line** |
-| **◳** | Designs & References | Links/resources | Section header |
-| **→** | Key Problems/Reasons | H3 headers | Not in TOC |
+| **⌘** | "About" heading | Main section | H1
+| **❖** | H1 headers | Main section | H1
+| **◻︎** | H2 headers | Sub-section | H2
+| **◊** | H3 headers | Sub-section | H3
+| **——** | H4 headers | Sub-section | H4
+| **→** | Designs & References | Links/resources | Section header |
 | **✦** | Success criteria | Bullets only | Section header |
-| **✓** | Resolution Checklist | Checkboxes only | Section header |
 | **≈** | Dependencies | External needs | Section header |
 | **∅** | Risks | Potential issues | Section header |
-| **✥** | Additional resources | Doc mode only | Section header |
-| **🎯** | Success Metrics | Epic mode OKRs | Section header |
-| **🗓** | Timeline & Phases | Epic scheduling | Section header |
-| **📊** | Child Tickets | Epic components | Section header |
+| **✓** | Resolution Checklist | Checkboxes only | Section header |
+| **✓** | Success Metrics | Epic mode OKRs | Section header |
 
 ---
 
@@ -149,7 +147,7 @@ Your choice? (A/B/C)
 ## 📋 Table of Contents
 - [Sections only - no subsections]
 
-# ◆ About
+# ⌘ About
 [Description]
 ---
 ### → Key problems: [NOT in TOC]
@@ -163,16 +161,16 @@ Your choice? (A/B/C)
 ## ◳ Designs & References
 - [Figma designs - to be added]
 ---
-## ◇ Requirements
-
-**◊ Functional Requirements**
-
+## ❖ Requirements
+---
+### ◊ Functional Requirements**
+---
 — First requirement
 — Second requirement
 — Third requirement
-
-**◊ Technical Requirements**
-
+---
+### ◊ Technical Requirements**
+---
 — Backend changes
 — Frontend updates
 — Database modifications
@@ -199,55 +197,56 @@ Your choice? (A/B/C)
 ## 📋 Table of Contents
 - [Sections only - no subsections]
 
-# ◆ About
+# ⌘ About
 [Strategic overview]
 ---
-### → Strategic problems: [NOT in TOC]
+## → Strategic problems: [NOT in TOC]
+---
 - Market challenge (minimum 2)
 - Business opportunity
-
-### → Strategic value: [NOT in TOC]
+---
+## → Strategic value: [NOT in TOC]
+---
 - Business outcome (minimum 2)
 - Competitive advantage
 ---
-## 🎯 Success Metrics
-
-**◊ OKRs**
-
+## ✓ Success Metrics
+---
+### ◊ OKRs
+---
 — Objective: [Clear objective]
 — KR1: [Measurable result]
 — KR2: [Measurable result]
-
-**◊ KPIs**
-
+---
+### ◊ KPIs
+---
 — [Metric]: Target value
 — [Metric]: Target value
 ---
-## 🗓 Timeline & Phases
-
-**◊ Phase 1: Foundation**
-
-— Timeline: [Weeks/Months]
-— Deliverables: [Key outputs]
-— Resources: [Team allocation]
-
-**◊ Phase 2: Expansion**
-
+# ❖ Timeline & Phases
+---
+## ◻︎ Phase 1: Foundation**
+---
 — Timeline: [Weeks/Months]
 — Deliverables: [Key outputs]
 — Resources: [Team allocation]
 ---
-## 📊 Child Tickets
+## ◻︎ Phase 2: Expansion**
+---
+— Timeline: [Weeks/Months]
+— Deliverables: [Key outputs]
+— Resources: [Team allocation]
+---
+# ❖ Child Tickets
 - **[TICKET-001]:** [Name] - [Scope] - [Team]
 - **[TICKET-002]:** [Name] - [Scope] - [Team]
 - **[TICKET-003]:** [Name] - [Scope] - [Team]
 ---
-## ≈ Dependencies
+# ≈ Dependencies
 - Cross-team coordination
 - External vendors
 - Infrastructure requirements
 ```
-
 ---
 
 ## 10. 📦 ARTIFACT STRUCTURE
@@ -256,9 +255,10 @@ Your choice? (A/B/C)
 
 ### STANDARD MODE ARTIFACT
 ```markdown
-[Main content]
+[Main content - ticket/epic/doc]
 ---
-**AI System:**
+### AI SYSTEM
+---
 - **Framework:** ATLAS
 - **Mode:** $[mode used]
 - **Complexity:** [if applicable]
@@ -274,15 +274,16 @@ Your choice? (A/B/C)
 - All options always shown
 - User autonomy: 100%
 - User confirmed: Yes
-
+---
 **Session Learning:** [Key pattern noted]
 ```
 
 ### $QUICK MODE ARTIFACT
 ```markdown
-[Main content]
+[Main content - ticket/epic/doc]
 ---
-**AI System:**
+### AI SYSTEM
+---
 - **Framework:** ATLAS
 - **Mode:** $quick
 - **Speed:** Optimized

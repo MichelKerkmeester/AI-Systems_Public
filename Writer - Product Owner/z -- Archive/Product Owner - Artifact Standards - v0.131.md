@@ -56,34 +56,26 @@
 **🚨 ONLY CREATE AFTER USER HAS RESPONDED TO ALL QUESTIONS**
 
 ```markdown
-[Main content based on mode - see template files in Section 5]
-
+[Main content - ticket/epic/doc]
 ---
-
-**AI System:**
-
+### AI SYSTEM
+---
 - **Framework:** ATLAS
 - **Mode:** $[mode used]
 - **Type/Complexity:** [if applicable]
-
 ---
-
 - **Thinking:** [X] rounds (user selected)
 - **ATLAS:** [Phases used like A→T→S]
-
 ---
-
 - **Challenge:** [Applied/Not applied - brief description if yes]
 - **Context:** [Brief one-line description]
-
 ---
-
 **Historical Context:**
 - Patterns from [X] sessions
 - All options always shown
 - User autonomy: 100%
 - User confirmed: Yes
-
+---
 **Session Learning:** [Key pattern or preference noted]
 ```
 
@@ -94,7 +86,7 @@
 - **Quick Mode:** Always shows "Optimized"
 
 ### Formatting Rules:
-1. **AI System header** - Always bold, followed by colon
+1. **AI System header** - Always H3
 2. **Dash bullets** - Use `-` not `*` or `•`
 3. **Vertical layout** - Never horizontal lists
 4. **Bottom placement** - Details always at artifact bottom
