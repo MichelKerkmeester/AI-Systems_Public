@@ -1,12 +1,12 @@
-# Webflow Agent - User Guide v0.400
+# Webflow Agent - User Guide v0.410
 
 The Webflow Agent is a full-stack development assistant that creates and manages Webflow sites through natural language. With Designer and Data API integration, it can build complete structures, design components, and manage content - transforming ideas into functioning Webflow sites.
 
 ## 📋 Table of Contents
 
-- [🆕 What's New in v0.400](#whats-new-in-v0400)
-- [✨ Key Features](#key-features)
-- [🚀 Quick Setup](#quick-setup)
+- [✨ What's New in v0.410](#whats-new-in-v0410)
+- [🚀 Key Features](#key-features)
+- [⚡ Quick Setup](#quick-setup)
 - [🧠 How It Works](#how-it-works)
 - [💬 Example Interactions](#example-interactions)
 - [📊 What Gets Created](#what-gets-created)
@@ -19,36 +19,36 @@ The Webflow Agent is a full-stack development assistant that creates and manages
 
 ---
 
-## 🆕 What's New in v0.400
+## ✨ What's New in v0.410
 
-### Complete Transformation
-- **Full Designer API Integration**: Create elements, styles, and components directly
-- **Structure Creation**: Build collections and fields programmatically
-- **Component Systems**: Design reusable components with variants
-- **Responsive Design**: Control breakpoints and responsive behavior
-- **Design Tokens**: Manage variables for consistent design systems
+### Improved User Experience
+- **User-Controlled Thinking**: You choose processing depth (1-10 rounds)
+- **Simplified Commands**: Just 3 emergency commands for quick recovery
+- **Cleaner Architecture**: Reduced redundancy, focused documentation
+- **REPAIR Protocol**: Structured error recovery with clear alternatives
+- **Visual Standardization**: Consistent feedback format across all operations
 
-### Designer + Data API Coordination
-- Create complete features from structure to design
-- Build data-driven components
-- Design responsive layouts with dynamic content
-- Establish design systems with content management
+### Core Capabilities Remain
+- Full Designer API integration for visual development
+- Complete Data API for structure and content
+- Create collections, fields, and relationships
+- Build components and design systems
+- Manage responsive layouts and SEO
 
-### What Changed from v0.300
-- ✅ **CAN NOW** create fields and collections
-- ✅ **CAN NOW** build page structures
-- ✅ **CAN NOW** create and apply styles
-- ✅ **CAN NOW** register components
-- ⚠️ **STILL** requires external URLs for images
-- ⚠️ **REQUIRES** MCP Bridge App for Designer operations
+### What Changed from v0.400
+- ✅ **Simplified thinking rounds** - User always chooses depth
+- ✅ **Streamlined commands** - Only $reset, $status, $quick
+- ✅ **Better error handling** - REPAIR protocol throughout
+- ✅ **Cleaner documentation** - No redundancy between files
+- ✅ **Pattern clarity** - "Patterns inform but never restrict"
 
 ---
 
-## ✨ Key Features
+## 🚀 Key Features
 
 ### Complete Development Capabilities
 
-**Designer API Features (NEW):**
+**Designer API Features:**
 - **Element Creation**: Build any element type on canvas
 - **Style Management**: Create and apply CSS classes
 - **Component Building**: Design reusable components
@@ -56,7 +56,7 @@ The Webflow Agent is a full-stack development assistant that creates and manages
 - **Variable System**: Create design tokens
 - **Real-time Preview**: See changes instantly in Designer
 
-**Data API Features (Enhanced):**
+**Data API Features:**
 - **Collection Creation**: Build complete data structures
 - **Field Management**: Add any field type to collections
 - **Relationship Design**: Create references between collections
@@ -72,14 +72,15 @@ The Webflow Agent is a full-stack development assistant that creates and manages
 - Develop responsive layouts
 - Manage multi-language sites
 
-### Remaining Limitations
-- ⚠️ **Image uploads** require external URLs (Cloudinary, S3)
-- ⚠️ **Companion app** required for Designer operations
-- ⚠️ **Authorization** requires owner/admin access
+### User Control Features
+- **Choose Your Depth**: Select 1-10 thinking rounds for any operation
+- **Emergency Commands**: Quick recovery with $reset, $status, $quick
+- **Pattern Learning**: System adapts but never restricts options
+- **Clear Feedback**: Visual progress for every operation
 
 ---
 
-## 🚀 Quick Setup
+## ⚡ Quick Setup
 
 ### Step 1: Create a Claude Project
 1. Go to claude.ai
@@ -90,17 +91,15 @@ The Webflow Agent is a full-stack development assistant that creates and manages
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Agent - MCP - Webflow - v0.400.md`
+3. Copy and paste: `Agent - MCP - Webflow.md`
 4. Save the project
 
 ### Step 3: Upload Reference Documents
-Add these 6 essential documents to your project:
-- `Agent - MCP - Webflow - v0.400.md` (Main agent)
-- `Webflow - MCP Knowledge - v0.300.md` (Full API knowledge)
-- `Webflow - Interactive Intelligence - v0.300.md` (Conversation patterns)
-- `Webflow - Patterns & Workflows - v0.300.md` (Development patterns)
-- `Webflow - ATLAS Thinking Framework - v0.300.md` (Adaptive thinking)
-- `README.md` (This guide)
+Add these 5 essential documents to your project:
+- `Webflow - MCP Knowledge.md` (Single source of truth)
+- `Webflow - Interactive Intelligence.md` (Conversation patterns)
+- `Webflow - Patterns & Workflows.md` (Development patterns)
+- `Webflow - ATLAS Thinking Framework.md` (Adaptive thinking)
 
 ### Step 4: Install Webflow MCP Server
 Follow the installation guide in the [Installing Webflow MCP](#installing-webflow-mcp) section below.
@@ -112,7 +111,6 @@ Follow the installation guide in the [Installing Webflow MCP](#installing-webflo
 4. Keep it open for Designer operations
 
 ### Step 6: Start Building!
-You can now:
 ```
 Create complete blog with categories
 Build hero component with animations
@@ -126,143 +124,131 @@ Build landing pages
 
 ## 🧠 How It Works
 
-### Full Stack Development Flow
+### User-Controlled Thinking
 
-The system coordinates Designer and Data APIs to create complete Webflow features:
+For every operation, you choose the processing depth:
 
-| Request Type | APIs Used | Creates | Time |
-|--------------|-----------|---------|------|
-| **"Create blog"** | Data | Collections, fields, relationships | 10-15s |
-| **"Build hero"** | Designer | Elements, styles, component | 10-12s |
-| **"Design page"** | Both | Structure + visual design | 20-30s |
-| **"Setup e-commerce"** | Both | Products + components | 30-45s |
+```markdown
+How many thinking rounds should I use? (1-10)
 
-### Capability Matrix
+Based on your request, I recommend: [X rounds]
+- Creating: [what you're building]
+- Complexity: [Simple/Standard/Complex]
 
-**Immediate Execution:**
-```
-User: "Create product catalog"
-System: "Creating product structure...
-✅ Products collection created
-✅ 12 fields added
-✅ Categories linked
-✅ Ready for content!"
+Or specify your preferred number.
 ```
 
-**Designer Operations (App Required):**
-```
-User: "Build card component"
-System: "Checking Designer connection...
-✅ MCP Bridge App connected
-Creating card component...
-✅ Elements structured
-✅ Styles applied
-✅ Component registered!"
-```
+### Thinking Depth Guide
 
-**Full Stack Coordination:**
-```
-User: "Create blog with templates"
-System: "Building complete blog system...
-Data: ✅ Collections created
-Design: ✅ Components built
-Integration: ✅ Connected
-Ready for content!"
-```
+| Rounds | Best For | Example Operations |
+|--------|----------|-------------------|
+| **1-2** | Simple updates | Edit content, update field |
+| **3-4** | Structure creation | Create collection with fields |
+| **5-6** | Component building | Design cards, navigation |
+| **7-8** | Page design | Full layouts with components |
+| **9-10** | Complete systems | Design systems, full sites |
+
+### Emergency Commands
+
+Only 3 commands for quick recovery:
+
+| Command | Purpose | When to Use |
+|---------|---------|-------------|
+| **$reset** | Clear all context | Start completely fresh |
+| **$status** | Show current state | Check what's happening |
+| **$quick** | Skip to execution | Fast mode, minimal questions |
 
 ---
 
 ## 💬 Example Interactions
 
-### Creating Complete Structures
+### Creating with Thinking Rounds
 ```
-User: Create a team directory with profiles
+User: Create a blog system
 
-System: How many thinking rounds should I use? (1-10)
-Recommended: 5 rounds (structure + components)
+System: I'll create a complete blog system for you!
 
-User: 5
+How many thinking rounds should I use? (1-10)
+Recommended: 4 rounds for structure creation
 
-System: Creating team directory system!
+User: 4
 
-Data Structure:
-✅ Team Members collection created:
-   - name, role, bio
-   - profile_image (URL)
-   - email, phone
-   - department (reference)
-   - social_links
+System: [Using 4 rounds of thinking...]
 
-✅ Departments collection created
-✅ Relationships configured
+🔧 Webflow Operation
+════════════════════════════════════════
+Thinking: 4 rounds
+Operation: Blog structure creation
+APIs: Data API
 
-Design Components:
-✅ Team card component created
-✅ Profile layout designed
-✅ Responsive grid applied
+📂 Processing:
+├── Creating collections ✓
+├── Adding fields ✓
+└── Setting relationships ✓
 
-Ready to add team members!
-```
+Progress: [████████████████] 100%
+Time: 12 seconds
+API calls: 15/60 🟢
 
-### Building Design Systems
-```
-User: Create a design system with typography and colors
+✅ Operation Complete!
 
-System: Building design system...
+📊 Results:
+├── Collections: 3 created
+├── Fields: 18 added
+├── Relationships: 2 configured
+└── Performance: Optimal
 
-Typography Scale:
-✅ 8 heading styles created
-✅ 3 body text styles
-✅ Responsive sizing applied
+💡 Insight:
+Reference fields link your content for dynamic relationships!
 
-Color System:
-✅ Primary palette (5 shades)
-✅ Secondary palette (5 shades)
-✅ Neutral scale (10 shades)
-✅ Semantic colors (success, warning, error)
-
-✅ Variables registered
-✅ Styles ready to apply
-
-Design system complete!
+🎯 Next Steps:
+• Add sample content
+• Create page templates
+• Build components
 ```
 
-### Full Page Development
+### Using Emergency Commands
 ```
-User: Design a landing page with hero, features, and testimonials
+User: $status
 
-System: Creating complete landing page...
+System: 🔧 Current System Status
+════════════════════════════════════════
+• Collections created: 3
+• Components built: 2
+• Thinking patterns: Blog structures
+• API usage: 23/60 🟢
+• Companion app: Connected
 
-Structure:
-✅ Features collection created
-✅ Testimonials collection created
-✅ Fields configured
+All options available.
+```
 
-Components:
-✅ Hero section with CTA
-✅ 3-column feature grid
-✅ Testimonial carousel
-✅ Responsive breakpoints
+```
+User: $quick - add product collection
 
-Styling:
-✅ Consistent design tokens
-✅ Hover interactions
-✅ Mobile optimization
+System: Quick Mode Active!
 
-Page ready for content!
-Time: 35 seconds
+How many thinking rounds? (1-10)
+[Quick mode suggests: 2 rounds]
+
+User: 2
+
+System: [Using 2 rounds - fast execution]
+Creating Products collection...
+✅ Collection created with basic fields
+Done! Need additional customization?
 ```
 
 ---
 
 ## 📊 What Gets Created
 
-### Blog System Example
+### Full Stack Example - Blog System
+
 ```javascript
-// Data Structure Created
+// Data Structure (4 rounds thinking)
 Collections: {
   BlogPosts: {
-    fields: ['title', 'content', 'excerpt', 'featured_image', 
+    fields: ['title', 'content', 'excerpt', 'featured_image',
              'author', 'categories', 'published_date', 'meta_fields']
   },
   Authors: {
@@ -273,35 +259,37 @@ Collections: {
   }
 }
 
-// Components Created
+// Components (5-6 rounds thinking)
 Components: {
   BlogCard: 'Responsive card with image, title, excerpt',
   AuthorBio: 'Author information block',
   CategoryFilter: 'Dynamic filtering component'
 }
 
-// Styles Applied
-Styles: {
-  Typography: 'Complete scale from h1 to body',
-  Colors: 'Brand palette with semantic colors',
-  Layout: 'Grid system with responsive breakpoints'
+// Complete Page (7-8 rounds thinking)
+Page: {
+  Hero: 'Featured post section',
+  Grid: 'Blog post grid layout',
+  Sidebar: 'Categories and archives',
+  Responsive: 'Mobile-optimized design'
 }
 ```
 
-### Performance Metrics
-- Collection creation: 3-5 seconds
-- Field addition: 1-2 seconds per field
-- Component building: 5-10 seconds
-- Style application: 1-2 seconds
-- Full feature: 20-45 seconds
+### Performance by Thinking Depth
+
+| Depth | Speed | Quality | Best For |
+|-------|-------|---------|----------|
+| 1-2 rounds | Fastest | Basic | Quick fixes |
+| 3-4 rounds | Fast | Good | Standard operations |
+| 5-6 rounds | Moderate | Better | Complex structures |
+| 7-8 rounds | Slower | Best | Full features |
+| 9-10 rounds | Slowest | Maximum | Complete systems |
 
 ---
 
 ## 🔧 Installing Webflow MCP
 
 ### Recommended: OAuth Remote Setup
-
-Add to Claude Desktop config:
 
 **Config Location:**
 - Mac/Linux: `~/.config/claude/claude_desktop_config.json`
@@ -363,104 +351,103 @@ Get your token from [Webflow API Settings](https://webflow.com/dashboard/account
    - Agent confirms Designer access
    - Ready for visual operations
 
-### Designer Capabilities
-With the app connected, you can:
-- Create any element type
-- Apply styles and CSS
-- Build components
-- Manage responsive design
-- Control animations
-- Set interactions
+### What Requires the App
+
+**Needs App (Designer API):**
+- Creating elements
+- Applying styles
+- Building components
+- Managing responsive design
+
+**Works Without App (Data API):**
+- Creating collections
+- Adding fields
+- Managing content
+- Publishing items
 
 ---
 
 ## 🆘 Troubleshooting
 
-### Common Solutions
+### REPAIR Protocol
 
-| Issue | Cause | Solution |
-|-------|-------|----------|
-| **"Cannot create elements"** | App disconnected | Open MCP Bridge App in Designer |
-| **"Designer unavailable"** | App not running | Launch app from Apps panel |
-| **"Cannot upload images"** | API limitation | Use Cloudinary/S3 URLs |
-| **"Unauthorized"** | Not owner/admin | Get proper permissions |
-| **"Rate limit hit"** | Too many requests | Wait 60 seconds |
-| **"Collection exists"** | Duplicate name | Use unique names |
+When errors occur, the system uses REPAIR:
 
-### Designer Connection Issues
+**R**ecognize - Identify the issue
+**E**xplain - Clear explanation
+**P**ropose - Multiple solutions
+**A**dapt - Based on your choice
+**I**terate - Try the solution
+**R**ecord - Learn from it
 
-**App Won't Connect:**
-1. Refresh Designer
-2. Re-launch MCP Bridge App
-3. Check authorization status
-4. Re-authenticate if needed
+### Common Issues & Solutions
 
-**Operations Failing:**
-1. Verify app shows "Connected"
-2. Check console for errors
-3. Try simpler operation first
-4. Restart app if needed
+| Issue | Solution | Command |
+|-------|----------|---------|
+| **Confused context** | Clear everything | `$reset` |
+| **Want current state** | Check status | `$status` |
+| **Need speed** | Fast execution | `$quick` |
+| **App disconnected** | Open MCP Bridge App | - |
+| **Rate limited** | Wait 60 seconds | - |
+| **Images failing** | Use external URLs | - |
 
-### Performance Tips
-- Keep operations under 50 API calls/minute
-- Batch similar operations
-- Create structures before content
-- Build components once, reuse many times
+### Designer Connection
+
+**If Designer operations fail:**
+1. Check MCP Bridge App is open
+2. Look for "Connected" status
+3. Refresh Designer if needed
+4. Re-launch app from Apps panel
 
 ---
 
 ## ⚠️ Important Notes
 
-### Full Stack Capabilities
-- **Structure creation** - Collections, fields, relationships
-- **Visual design** - Elements, styles, components
-- **Content management** - Full CRUD operations
-- **Publishing control** - Draft/live states
-- **SEO optimization** - Meta tags, structured data
-- **Responsive design** - Breakpoint management
-- **Component systems** - Reusable design patterns
-- **Design tokens** - Variables for consistency
+### System Principles
+- **User Control**: You always choose thinking depth (1-10)
+- **Pattern Learning**: System adapts but never restricts options
+- **Clear Recovery**: Only 3 emergency commands needed
+- **Visual Feedback**: Every operation shows progress
+- **Best Practices**: Applied automatically unless overridden
 
 ### Requirements
-- **MCP Bridge App** - Must be open for Designer operations
-- **Authorization** - Owner/admin access required
-- **External images** - URLs required (no direct upload)
-- **Rate limits** - 60 requests per minute
-- **Node.js** - Version 22.3.0+ for MCP server
+- **MCP Bridge App**: Must be open for Designer operations
+- **Authorization**: Owner/admin access required
+- **External Images**: URLs required (no direct upload)
+- **Rate Limits**: 60 requests per minute
+- **Node.js**: Version 22.3.0+ for MCP server
 
-### Best Practices
-1. Create data structure first
-2. Build reusable components
-3. Apply consistent styles
-4. Use design tokens
-5. Plan responsive behavior
-6. Optimize for performance
-7. Include SEO from start
+### Limitations
+- Cannot upload images directly (use Cloudinary/S3)
+- Designer API requires companion app
+- Rate limited to 60 API calls/minute
+- Must have owner/admin permissions
 
 ---
 
 ## 📦 Version History
 
-### v0.400 (Current - Major Update)
-- **Designer API integration** - Full visual development
-- **Structure creation** - Collections and fields
-- **Component building** - Reusable design systems
-- **Style management** - CSS and design tokens
-- **Complete transformation** - From content-only to full-stack
+### v0.410 (Current - UX Update)
+- **User-controlled thinking** - Choose 1-10 rounds
+- **Simplified commands** - Only $reset, $status, $quick
+- **REPAIR protocol** - Structured error recovery
+- **Cleaner architecture** - Reduced redundancy
+- **Pattern clarity** - Inform but never restrict
 
-### v0.300 (Deprecated)
-- Limited to content management only
-- Could not create fields or structures
-- Required Designer for all structure
-- Many workarounds needed
+### v0.400
+- Designer API integration
+- Full visual development
+- Component building
+- Style management
 
-### v0.200 (Deprecated)
-- Initial reality-based approach
-- Transparent about limitations
-- Content management focus
+### v0.300
+- Content management only
+- Could not create structures
+- Many limitations
 
-### v0.100 (Deprecated)
-- Initial release with incorrect claims
+### Earlier Versions
+- v0.200: Reality-based approach
+- v0.100: Initial release
 
 ---
 
@@ -468,7 +455,7 @@ With the app connected, you can:
 
 ### Essential Links
 - [Webflow MCP Server](https://github.com/webflow/mcp-server) - Official repository
-- [Designer API Docs](https://developers.webflow.com/designer/reference) - Designer capabilities
+- [Designer API Docs](https://developers.webflow.com/designer/reference) - Visual operations
 - [Data API Docs](https://developers.webflow.com/data/reference) - Data operations
 - [MCP Protocol](https://modelcontextprotocol.io/) - Protocol documentation
 
@@ -478,20 +465,6 @@ With the app connected, you can:
 - [Claude Desktop](https://claude.ai/download)
 - [Cloudinary](https://cloudinary.com/) - Image hosting
 
-### API Capabilities
-
-**Designer API:**
-- Elements: Create, modify, position
-- Styles: Classes, CSS, responsive
-- Components: Build, register, reuse
-- Variables: Design tokens, colors
-
-**Data API:**
-- Collections: Create with fields
-- Items: Full CRUD operations
-- Publishing: Draft/live control
-- SEO: Meta tags, slugs
-
 ### Support
 - [Webflow Support](https://support.webflow.com)
 - [Developer Forum](https://forum.webflow.com)
@@ -499,4 +472,4 @@ With the app connected, you can:
 
 ---
 
-*Full-stack Webflow development through natural language. Create structures, design components, manage content. From idea to live site, all through conversation.*
+*Full-stack Webflow development through natural language. You choose the depth. Patterns guide but never restrict. Create complete sites through conversation.*
