@@ -20,7 +20,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 ### 💬 MCP Agents
 6. [Media Editor Agent](#6-media-editor-agent---v100-new)
-7. [Webflow Agent](#7-webflow-agent---v300)
+7. [Webflow Agent](#7-webflow-agent---v410)
 8. [ClickUp Agent](#8-clickup-agent---v210)
 9. [Notion Agent](#9-notion-agent---v130)
 
@@ -139,21 +139,24 @@ Edit image, video, and audio files via natural language.
 
 .
 
-#### 7. 🌐 Webflow Agent - v0.300
-Automate Webflow actions through natural language.
+#### 7. 🌐 Webflow Agent - v0.410
+Full-stack Webflow development through natural language with Designer and Data APIs.
 
-- **Content Excellence & Operations**:
-  - CMS management, SEO publishing
-  - Batch operations with rollback
-  - ATLAS Framework (1-10 rounds)
-- **Transparent Limitations & Workarounds**:
-  - Clear limits: Designer for fields, URLs for images
-  - Rich text flex, external images
-  - Alternative paths provided
-- **Pattern Learning System**:
-  - Remembers structures and conventions
-  - Learns operations, suggests optimizations
-  - Progressive efficiency
+- **Complete Development Capabilities**:
+  - Create collections, fields, and relationships
+  - Build components and design systems
+  - User-controlled thinking depth (1-10 rounds)
+  - ATLAS Framework with emergency commands ($reset, $status, $quick)
+- **Designer + Data API Coordination**:
+  - Visual elements with companion app
+  - Structure creation without leaving Claude
+  - Responsive designs and SEO optimization
+  - REPAIR protocol for structured error recovery
+- **Intelligent Pattern Learning**:
+  - Adapts to your workflow preferences
+  - Patterns inform but never restrict options
+  - All capabilities always available
+  - User autonomy is absolute
 
 .
 
