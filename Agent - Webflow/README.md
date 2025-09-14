@@ -1,12 +1,13 @@
-# Webflow Agent - User Guide v0.410
+# Webflow Agent - User Guide v0.411
 
 The Webflow Agent is a full-stack development assistant that creates and manages Webflow sites through natural language. With Designer and Data API integration, it can build complete structures, design components, and manage content - transforming ideas into functioning Webflow sites.
 
 ## 📋 Table of Contents
 
-- [✨ What's New in v0.410](#whats-new-in-v0410)
+- [✨ What's New in v0.411](#whats-new-in-v0411)
 - [🚀 Key Features](#key-features)
 - [⚡ Quick Setup](#quick-setup)
+- [🔌 Connection Verification](#connection-verification)
 - [🧠 How It Works](#how-it-works)
 - [💬 Example Interactions](#example-interactions)
 - [📊 What Gets Created](#what-gets-created)
@@ -19,7 +20,12 @@ The Webflow Agent is a full-stack development assistant that creates and manages
 
 ---
 
-## ✨ What's New in v0.410
+## ✨ What's New in v0.411
+
+### Critical Updates
+- **Connection Verification**: System now checks MCP connection before any operations
+- **Native API Only**: Explicit clarification - NEVER writes custom code, uses only Webflow APIs
+- **Consistent Formatting**: Standardized divider style throughout (─────────────────)
 
 ### Improved User Experience
 - **User-Controlled Thinking**: You choose processing depth (1-10 rounds)
@@ -35,12 +41,11 @@ The Webflow Agent is a full-stack development assistant that creates and manages
 - Build components and design systems
 - Manage responsive layouts and SEO
 
-### What Changed from v0.400
-- ✅ **Simplified thinking rounds** - User always chooses depth
-- ✅ **Streamlined commands** - Only $reset, $status, $quick
-- ✅ **Better error handling** - REPAIR protocol throughout
-- ✅ **Cleaner documentation** - No redundancy between files
-- ✅ **Pattern clarity** - "Patterns inform but never restrict"
+### What Changed from v0.410
+- ✅ **Connection check first** - Verifies MCP before operations
+- ✅ **Native API emphasis** - No custom code generation ever
+- ✅ **Consistent dividers** - Clean visual formatting
+- ✅ **Test query protocol** - Validates connection with simple query
 
 ---
 
@@ -48,13 +53,15 @@ The Webflow Agent is a full-stack development assistant that creates and manages
 
 ### Complete Development Capabilities
 
-**Designer API Features:**
-- **Element Creation**: Build any element type on canvas
-- **Style Management**: Create and apply CSS classes
-- **Component Building**: Design reusable components
-- **Responsive Control**: Manage breakpoints and layouts
-- **Variable System**: Create design tokens
+**Designer API Features (NO CUSTOM CODE):**
+- **Element Creation**: Build elements using native Webflow Designer API
+- **Style Management**: Apply styles through API calls only
+- **Component Building**: Create reusable components natively
+- **Responsive Control**: Manage breakpoints via API
+- **Variable System**: Use Webflow's design tokens
 - **Real-time Preview**: See changes instantly in Designer
+
+**Important**: The system NEVER writes custom JavaScript, CSS, or HTML code. All operations use native Webflow APIs exclusively.
 
 **Data API Features:**
 - **Collection Creation**: Build complete data structures
@@ -95,7 +102,7 @@ The Webflow Agent is a full-stack development assistant that creates and manages
 4. Save the project
 
 ### Step 3: Upload Reference Documents
-Add these 5 essential documents to your project:
+Add these 4 essential documents to your project:
 - `Webflow - MCP Knowledge.md` (Single source of truth)
 - `Webflow - Interactive Intelligence.md` (Conversation patterns)
 - `Webflow - Patterns & Workflows.md` (Development patterns)
@@ -110,7 +117,18 @@ Follow the installation guide in the [Installing Webflow MCP](#installing-webflo
 3. Launch "Webflow MCP Bridge App"
 4. Keep it open for Designer operations
 
-### Step 6: Start Building!
+### Step 6: Verify Connection
+The system will automatically check connection on first use:
+```
+🔧 Webflow Connection Check
+─────────────────
+✓ MCP Server: Connected
+✓ Data API: Ready
+✓ Designer API: Ready (app required)
+✓ Authentication: Valid
+```
+
+### Step 7: Start Building!
 ```
 Create complete blog with categories
 Build hero component with animations
@@ -122,7 +140,64 @@ Build landing pages
 
 ---
 
+## 🔌 Connection Verification
+
+### Automatic Connection Check
+
+The system now automatically verifies MCP connection before any operations:
+
+```markdown
+🔧 Webflow Connection Check
+─────────────────
+Verifying MCP server connection...
+
+✓ MCP Server: Connected
+✓ Data API: Available
+✓ Designer API: Available (requires app)
+✓ Authentication: Valid
+
+Connection established successfully!
+```
+
+### Test Query Protocol
+
+Before executing operations, the system runs a simple test query:
+- Executes `webflow:sites_list()` to verify connection
+- If successful: Proceeds with operations
+- If failed: Applies REPAIR protocol
+
+### Connection Troubleshooting
+
+| Issue | Solution | Action |
+|-------|----------|--------|
+| **MCP not connected** | Restart Claude | Cmd/Ctrl+R |
+| **Auth failed** | Re-authorize | Check OAuth |
+| **Config issue** | Check config file | See installation |
+| **App disconnected** | Open Bridge App | Press 'E' in Designer |
+
+---
+
 ## 🧠 How It Works
+
+### Native API Operations Only
+
+**CRITICAL**: The system uses ONLY native Webflow APIs:
+
+```markdown
+✅ CORRECT Approach:
+─────────────────
+• Uses webflow:components_create()
+• Uses webflow:pages_update_static_content()
+• Uses webflow:collections_items_create_item_live()
+• All operations through MCP server
+
+❌ NEVER Does This:
+─────────────────
+• Write custom JavaScript code
+• Create CSS snippets
+• Generate HTML templates
+• Build code outside Webflow
+```
 
 ### User-Controlled Thinking
 
@@ -162,11 +237,17 @@ Only 3 commands for quick recovery:
 
 ## 💬 Example Interactions
 
-### Creating with Thinking Rounds
+### Creating with Connection Check
 ```
 User: Create a blog system
 
-System: I'll create a complete blog system for you!
+System: 
+🔧 Webflow Connection Check
+─────────────────
+✓ MCP Server: Connected
+✓ Data API: Ready
+
+I'll create a complete blog system for you!
 
 How many thinking rounds should I use? (1-10)
 Recommended: 4 rounds for structure creation
@@ -176,15 +257,15 @@ User: 4
 System: [Using 4 rounds of thinking...]
 
 🔧 Webflow Operation
-════════════════════════════════════════
+─────────────────
 Thinking: 4 rounds
 Operation: Blog structure creation
 APIs: Data API
 
 📂 Processing:
-├── Creating collections ✓
-├── Adding fields ✓
-└── Setting relationships ✓
+├── Creating collections ✔
+├── Adding fields ✔
+└── Setting relationships ✔
 
 Progress: [████████████████] 100%
 Time: 12 seconds
@@ -211,8 +292,10 @@ Reference fields link your content for dynamic relationships!
 ```
 User: $status
 
-System: 🔧 Current System Status
-════════════════════════════════════════
+System: 
+🔧 Current System Status
+─────────────────
+• MCP Connection: Connected ✅
 • Collections created: 3
 • Components built: 2
 • Thinking patterns: Blog structures
@@ -225,8 +308,9 @@ All options available.
 ```
 User: $quick - add product collection
 
-System: Quick Mode Active!
-
+System: 
+Quick Mode Active!
+─────────────────
 How many thinking rounds? (1-10)
 [Quick mode suggests: 2 rounds]
 
@@ -242,10 +326,10 @@ Done! Need additional customization?
 
 ## 📊 What Gets Created
 
-### Full Stack Example - Blog System
+### Full Stack Example - Blog System (Native APIs Only)
 
 ```javascript
-// Data Structure (4 rounds thinking)
+// Data Structure (4 rounds thinking) - Created via Data API
 Collections: {
   BlogPosts: {
     fields: ['title', 'content', 'excerpt', 'featured_image',
@@ -259,19 +343,19 @@ Collections: {
   }
 }
 
-// Components (5-6 rounds thinking)
+// Components (5-6 rounds thinking) - Created via Designer API
 Components: {
-  BlogCard: 'Responsive card with image, title, excerpt',
-  AuthorBio: 'Author information block',
-  CategoryFilter: 'Dynamic filtering component'
+  BlogCard: 'Native Webflow component with image, title, excerpt',
+  AuthorBio: 'Native author information block',
+  CategoryFilter: 'Native dynamic filtering component'
 }
 
-// Complete Page (7-8 rounds thinking)
+// Complete Page (7-8 rounds thinking) - Built with both APIs
 Page: {
-  Hero: 'Featured post section',
-  Grid: 'Blog post grid layout',
-  Sidebar: 'Categories and archives',
-  Responsive: 'Mobile-optimized design'
+  Hero: 'Native featured post section',
+  Grid: 'Native blog post grid layout',
+  Sidebar: 'Native categories and archives',
+  Responsive: 'Native mobile-optimized design'
 }
 ```
 
@@ -311,6 +395,7 @@ After saving:
 2. Browser opens for OAuth authorization
 3. Authorize the sites you want to access
 4. MCP Bridge App auto-installs to authorized sites
+5. System verifies connection automatically
 
 ### Alternative: Token-Based Setup
 
@@ -334,7 +419,7 @@ Get your token from [Webflow API Settings](https://webflow.com/dashboard/account
 
 ## 🎨 Designer API Setup
 
-### Enabling Designer Operations
+### Enabling Designer Operations (Native API Only)
 
 1. **Open Webflow Designer**
    - Navigate to your project
@@ -349,14 +434,14 @@ Get your token from [Webflow API Settings](https://webflow.com/dashboard/account
 3. **Verify Connection**
    - App shows "Connected" status
    - Agent confirms Designer access
-   - Ready for visual operations
+   - Ready for native operations
 
 ### What Requires the App
 
 **Needs App (Designer API):**
-- Creating elements
-- Applying styles
-- Building components
+- Creating native elements
+- Applying native styles
+- Building native components
 - Managing responsive design
 
 **Works Without App (Data API):**
@@ -364,6 +449,16 @@ Get your token from [Webflow API Settings](https://webflow.com/dashboard/account
 - Adding fields
 - Managing content
 - Publishing items
+
+### Important: No Custom Code
+
+The Designer API creates elements using Webflow's native capabilities only:
+- ✅ Uses Webflow's element creation API
+- ✅ Applies styles through native API calls
+- ✅ Builds components with Webflow's system
+- ❌ Never writes custom JavaScript
+- ❌ Never creates custom CSS
+- ❌ Never generates HTML templates
 
 ---
 
@@ -384,6 +479,7 @@ When errors occur, the system uses REPAIR:
 
 | Issue | Solution | Command |
 |-------|----------|---------|
+| **MCP not connected** | Restart Claude | Cmd/Ctrl+R |
 | **Confused context** | Clear everything | `$reset` |
 | **Want current state** | Check status | `$status` |
 | **Need speed** | Fast execution | `$quick` |
@@ -391,19 +487,37 @@ When errors occur, the system uses REPAIR:
 | **Rate limited** | Wait 60 seconds | - |
 | **Images failing** | Use external URLs | - |
 
+### Connection Issues
+
+**If MCP connection fails:**
+```markdown
+⚠️ MCP Connection Issue
+─────────────────
+1. Restart Claude Desktop (Cmd/Ctrl+R)
+2. Check config file location
+3. Verify OAuth authorization
+4. Run test query again
+```
+
 ### Designer Connection
 
 **If Designer operations fail:**
+```markdown
+⚠️ Designer API Unavailable
+─────────────────
 1. Check MCP Bridge App is open
 2. Look for "Connected" status
 3. Refresh Designer if needed
 4. Re-launch app from Apps panel
+```
 
 ---
 
 ## ⚠️ Important Notes
 
 ### System Principles
+- **Connection First**: Always verifies MCP connection before operations
+- **Native APIs Only**: Never generates custom code, uses Webflow APIs exclusively
 - **User Control**: You always choose thinking depth (1-10)
 - **Pattern Learning**: System adapts but never restricts options
 - **Clear Recovery**: Only 3 emergency commands needed
@@ -411,6 +525,7 @@ When errors occur, the system uses REPAIR:
 - **Best Practices**: Applied automatically unless overridden
 
 ### Requirements
+- **MCP Connection**: Must be verified before operations
 - **MCP Bridge App**: Must be open for Designer operations
 - **Authorization**: Owner/admin access required
 - **External Images**: URLs required (no direct upload)
@@ -419,6 +534,7 @@ When errors occur, the system uses REPAIR:
 
 ### Limitations
 - Cannot upload images directly (use Cloudinary/S3)
+- Cannot write custom code (native APIs only)
 - Designer API requires companion app
 - Rate limited to 60 API calls/minute
 - Must have owner/admin permissions
@@ -427,7 +543,13 @@ When errors occur, the system uses REPAIR:
 
 ## 📦 Version History
 
-### v0.410 (Current - UX Update)
+### v0.411 (Current - Connection & Clarity Update)
+- **Connection verification** - Checks MCP before operations
+- **Native API emphasis** - No custom code generation
+- **Consistent formatting** - Standardized dividers
+- **Test query protocol** - Validates connection
+
+### v0.410 (UX Update)
 - **User-controlled thinking** - Choose 1-10 rounds
 - **Simplified commands** - Only $reset, $status, $quick
 - **REPAIR protocol** - Structured error recovery
@@ -472,4 +594,4 @@ When errors occur, the system uses REPAIR:
 
 ---
 
-*Full-stack Webflow development through natural language. You choose the depth. Patterns guide but never restrict. Create complete sites through conversation.*
+*Full-stack Webflow development through natural language. Native APIs only - no custom code. Connection verified before operations. You choose the depth. Patterns guide but never restrict.*
