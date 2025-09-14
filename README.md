@@ -35,7 +35,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 ## 💬 MCP Agents
 
-MCPs made easy with conversational systems
+→ MCPs made easy with conversational systems
 
 #### 1. 🎬 Media Editor Agent - v0.112
 
@@ -98,6 +98,8 @@ Seamlessly coordinate task management (ClickUp) and knowledge management (Notion
 -----
 
 ## ✏️ Writer Systems
+
+→ Automate prompt, content, documentation, and ticket writing 
 
 #### 4. 📋 Product Owner Writer - v0.882
 
@@ -171,6 +173,8 @@ Improve Claude systems via GPT-5 deep reasoning and preservation-first editing.
 -----
 
 ## ⚡ Automation Agents
+
+→ Create automated workflows with ease 
 
 #### 8. ⏰ GPT - Scheduled Tasks - v0.200
 
