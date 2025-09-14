@@ -1,26 +1,27 @@
-# Media Editor System - User Guide v0.100
+# Media Editor System - User Guide v0.111
 
 The Media Editor is an intelligent media processing system that transforms natural language requests into optimized images, videos, and audio through conversational guidance. It combines two powerful MCP servers (Imagician for images, Video-Audio for media) with smart defaults, challenge mode, and comprehensive pattern learning to deliver professional media operations accessible to everyone.
 
 ## 📋 Table of Contents
 
-- [✨ Key Features](#key-features)
-- [🚀 Quick Setup](#quick-setup)
-- [🧠 How It Works](#how-it-works)
-- [🎛️ Operating Modes](#operating-modes)
-- [⚡ Emergency Commands](#emergency-commands)
-- [💬 Example Interactions](#example-interactions)
-- [📊 Visual Feedback](#visual-feedback)
-- [🔧 Installing MCP Tools](#installing-mcp-tools)
-- [🆘 Troubleshooting](#troubleshooting)
-- [⚠️ Important Notes](#important-notes)
-- [📚 Resources](#resources)
+- [✨ Key Features](#✨-key-features)
+- [🚀 Quick Setup](#🚀-quick-setup)
+- [🧠 How It Works](#🧠-how-it-works)
+- [🎛️ Operating Modes](#🎛️-operating-modes)
+- [⚡ Emergency Commands](#⚡-emergency-commands)
+- [💬 Example Interactions](#💬-example-interactions)
+- [📊 Visual Feedback](#📊-visual-feedback)
+- [🔧 Installing MCP Tools](#🔧-installing-mcp-tools)
+- [🆘 Troubleshooting](#🆘-troubleshooting)
+- [⚠️ Important Notes](#⚠️-important-notes)
+- [📚 Resources](#📚-resources)
 
-.
+---
 
 ## ✨ Key Features
 
 ### Core Capabilities
+- **MCP Connection Verification**: Always checks server availability before operations
 - **Universal Media Processing**: Images, videos, and audio in one intelligent system
 - **Natural Language Understanding**: Describe what you want in plain words
 - **MEDIA Framework**: 5-phase thinking methodology (Measure, Evaluate, Decide, Implement, Analyze)
@@ -64,7 +65,7 @@ The Media Editor is an intelligent media processing system that transforms natur
 - ❌ Files larger than system memory
 - ❌ Advanced filters or transformations
 
-.
+---
 
 ## 🚀 Quick Setup
 
@@ -77,24 +78,30 @@ The Media Editor is an intelligent media processing system that transforms natur
 ### Step 2: Add System Instructions
 1. In your project, click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Agent - MCP - Media Editor - v0.111.md`
+3. Copy and paste: `Agent - MCP - Media Editor.md`
 4. Save the project
 
 ### Step 3: Upload Reference Documents
-Add these 7 essential documents to your project:
-- `Agent - MCP - Media Editor - v0.111.md` (Main system)
-- `Media Editor - Core System Rules & Quick Reference.md` (Emergency commands)
+Add these 5 essential documents to your project:
 - `Media Editor - Interactive Intelligence.md` (Conversation interface)
 - `Media Editor - Patterns & Workflows.md` (Pattern recognition)
 - `Media Editor - MEDIA Thinking Framework.md` (Thinking methodology)
 - `Media Editor - MCP Intelligence - Imagician.md` (Image operations)
 - `Media Editor - MCP Intelligence - Video, Audio.md` (Video/audio operations)
-- `README.md` (This guide)
 
 ### Step 4: Install MCP Tools
-See [Installing MCP Tools](#-installing-mcp-tools) section below for detailed setup
+See [Installing MCP Tools](#🔧-installing-mcp-tools) section below for detailed setup
 
-### Step 5: Start Processing
+### Step 5: Verify Connection
+The system will automatically check MCP connections when you start:
+```
+🔌 Checking MCP Connections...
+─────────────────
+• Imagician (Images): [Status]
+• Video-Audio (Media): [Status]
+```
+
+### Step 6: Start Processing
 ```
 optimize my vacation photos          # Interactive discovery
 $image resize to 1920px              # Direct image mode
@@ -104,9 +111,22 @@ $quick resize photo.jpg              # Fast processing
 $status                              # Check current patterns
 ```
 
-.
+---
 
 ## 🧠 How It Works
+
+### MCP Connection Verification
+
+The system always verifies MCP server connections before attempting any operation:
+
+```markdown
+🔌 MCP Connection Check
+─────────────────
+• Imagician: ✅ Connected
+• Video-Audio: ✅ Connected
+
+All media operations available.
+```
 
 ### Intent Recognition & Routing
 
@@ -122,11 +142,12 @@ The system analyzes your request and routes to appropriate processing:
 ### MEDIA Thinking Framework
 
 Every operation uses the MEDIA methodology:
-1. **M - Measure & Assess**: Analyze source media
-2. **E - Evaluate Options**: Generate processing strategies
-3. **D - Decide Strategy**: Select best approach
-4. **I - Implement**: Execute with monitoring
-5. **A - Analyze & Adapt**: Verify and learn
+1. **Pre-Check**: Verify MCP connections
+2. **M - Measure & Assess**: Analyze source media
+3. **E - Evaluate Options**: Generate processing strategies
+4. **D - Decide Strategy**: Select best approach
+5. **I - Implement**: Execute with monitoring
+6. **A - Analyze & Adapt**: Verify and learn
 
 ### Challenge Mode
 
@@ -149,7 +170,7 @@ Simpler alternative:
 Which approach? (Both available)
 ```
 
-.
+---
 
 ## 🎛️ Operating Modes
 
@@ -165,7 +186,10 @@ Which approach? (Both available)
 **Interactive Mode (Default):**
 ```
 User: help with my media files
-System: Let's figure out what you need!
+System: [Checking MCP connections...]
+✅ Media processing ready!
+
+Let's figure out what you need!
 
 What type of media?
 • Images (photos, graphics)
@@ -177,13 +201,16 @@ What type of media?
 **Direct Mode:**
 ```
 User: $image resize photo.jpg to 800px
-System: I'll resize your image to 800px!
+System: [Checking Imagician connection...]
+✅ Imagician connected!
+
+I'll resize your image to 800px!
 
 How many thinking rounds? (1-10)
 Recommended: 2-3 for simple resize
 ```
 
-.
+---
 
 ## ⚡ Emergency Commands
 
@@ -210,13 +237,14 @@ $quick resize photo.jpg
 # Still asks thinking depth
 
 $status
-# Shows your patterns:
+# Shows your patterns and MCP status:
+# - MCP Connections: ✅
 # - Preferred quality: 85%
 # - Common format: WebP
 # - Average rounds: 4
 ```
 
-.
+---
 
 ## 💬 Example Interactions
 
@@ -224,7 +252,10 @@ $status
 ```
 User: optimize photo for web
 
-System: I'll optimize your photo for the web!
+System: [Checking MCP connections...]
+✅ Imagician connected!
+
+I'll optimize your photo for the web!
 
 How many thinking rounds should I use? (1-10)
 Recommended: 4 rounds (standard optimization)
@@ -234,7 +265,7 @@ User: 4
 System: [Using 4 rounds of MEDIA thinking]
 
 🎬 Image Processing Operation
-════════════════════════════════════════
+─────────────────
 Thinking: Standard (4 rounds)
 Media Type: Image
 Operation: Web optimization
@@ -272,7 +303,10 @@ API calls: 2/60 🟢
 ```
 User: create instagram versions of my product video
 
-System: I'll create Instagram-optimized versions!
+System: [Checking Video-Audio MCP...]
+✅ Video-Audio MCP connected!
+
+I'll create Instagram-optimized versions!
 
 How many thinking rounds? (1-10)
 This is complex - I recommend 7 rounds
@@ -305,7 +339,10 @@ Total size reduction: 72%
 ```
 User: convert all PNGs to WebP
 
-System: I'll convert all your PNG files to WebP!
+System: [Checking Imagician connection...]
+✅ Imagician connected!
+
+I'll convert all your PNG files to WebP!
 
 Found: 15 PNG files in folder
 
@@ -317,7 +354,7 @@ User: 3
 System: [Processing batch]
 
 📊 Batch Processing
-════════════════════════════════════════
+─────────────────
 Files: 15/15
 Format: PNG → WebP
 Quality: 85%
@@ -330,7 +367,7 @@ Progress: [████████████████████] 100%
 • Average quality: 85%
 ```
 
-.
+---
 
 ## 📊 Visual Feedback
 
@@ -339,7 +376,7 @@ All operations display real-time feedback directly in chat:
 ### Standard Operation Display
 ```markdown
 🎬 Media Processing Operation
-════════════════════════════════════════
+─────────────────
 Thinking: [Mode] ([X] rounds)
 Media Type: [Type]
 Operation: [Description]
@@ -355,6 +392,16 @@ API calls: [X/60] [Status indicator]
 📁 Output: [Location]
 ```
 
+### MCP Connection Status
+```markdown
+📊 MCP Status
+─────────────────
+• Imagician: ✅ Connected
+• Video-Audio: ✅ Connected
+• FFmpeg: v6.0 installed
+• Performance: Normal
+```
+
 ### API Usage Indicators
 - 🟢 **Green (0-30)**: Safe zone
 - 🟡 **Yellow (31-45)**: Caution
@@ -362,11 +409,17 @@ API calls: [X/60] [Status indicator]
 - 🔴 **Red (51-55)**: Critical
 - ⛔ **Limit (60)**: Wait required
 
-.
+---
 
 ## 🔧 Installing MCP Tools
 
 The Media Editor requires two MCP servers to function:
+
+### Prerequisites
+- Node.js (for Imagician)
+- Python 3.8+ (for Video-Audio)
+- FFmpeg (for Video-Audio)
+- Claude Desktop app
 
 ### Option A: Docker Setup (Recommended)
 
@@ -403,6 +456,10 @@ I'm on [Windows/Mac/Linux].
 ```
 
 **Video-Audio (Python/UV):**
+1. Install FFmpeg first
+2. Clone the repository
+3. Install UV package manager
+4. Configure:
 ```json
 {
   "mcpServers": {
@@ -420,10 +477,24 @@ I'm on [Windows/Mac/Linux].
 ```
 
 **Config Location:**
-- Mac/Linux: `~/.config/claude/claude_desktop_config.json`
+- Mac: `~/Library/Application Support/Claude/claude_desktop_config.json`
 - Windows: `%APPDATA%\Claude\claude_desktop_config.json`
+- Linux: `~/.config/claude/claude_desktop_config.json`
 
-.
+### Verification
+After installation, restart Claude Desktop and check:
+```markdown
+🔧 Setup Verification
+─────────────────
+✓ Imagician: Connected
+✓ Video-Audio: Connected
+✓ FFmpeg: Installed
+✓ Configuration: Valid
+
+Ready for media processing!
+```
+
+---
 
 ## 🆘 Troubleshooting
 
@@ -431,18 +502,34 @@ I'm on [Windows/Mac/Linux].
 
 | Issue | Cause | Solution |
 |-------|-------|----------|
+| **MCP not connected** | Server not running | Restart Claude Desktop |
+| **FFmpeg not found** | Not installed | Install FFmpeg for your OS |
 | **Format not supported** | Invalid format | Check supported list |
 | **File not found** | Wrong path | Verify file location |
 | **Quality too low** | Over-compression | Increase quality % |
 | **Processing slow** | Large file | Use $quick mode |
 | **Rate limit hit** | Too many requests | Wait 60 seconds |
-| **MCP not connected** | Config issue | Check installation |
+
+### MCP Connection Issues
+
+**If servers won't connect:**
+```markdown
+⚠️ MCP Connection Failed
+─────────────────
+1. Check configuration file
+2. Verify installation paths
+3. Restart Claude Desktop
+4. Check server logs
+5. Reinstall if needed
+
+Need help? Check the setup guide.
+```
 
 ### Quick Fixes
 
 **Context Issues:**
 ```
-$status    # Check current state
+$status    # Check current state & MCP status
 $reset     # Clear if needed
 $standard  # Use defaults
 ```
@@ -461,11 +548,12 @@ Use lossless formats
 Challenge compression
 ```
 
-.
+---
 
 ## ⚠️ Important Notes
 
 ### Best Practices
+- **Check connections**: System verifies MCP servers automatically
 - **Start simple**: Use fewer thinking rounds for basic operations
 - **Accept challenges**: They often lead to better results
 - **Watch rate limits**: Monitor API usage indicator
@@ -473,6 +561,7 @@ Challenge compression
 - **Batch wisely**: Process similar files together
 
 ### Performance Guidelines
+- **MCP Check**: <1 second
 - **Images**: <5 seconds for most operations
 - **Videos**: 30-120 seconds depending on size
 - **Audio**: 5-30 seconds for extraction
@@ -486,7 +575,7 @@ Challenge compression
 - **Archival**: Lossless formats, maximum quality
 - **General use**: 85-90% quality balance
 
-.
+---
 
 ## 📚 Resources
 
@@ -507,4 +596,4 @@ Challenge compression
 
 ---
 
-Transform natural language into professional media operations. Intelligent processing for images, video, and audio. Challenge complexity, embrace optimization, deliver quality. Every file processed with the perfect balance of size and fidelity.*
+*Transform natural language into professional media operations. MCP connections verified automatically. Intelligent processing for images, video, and audio. Challenge complexity, embrace optimization, deliver quality. Every file processed with the perfect balance of size and fidelity.*
