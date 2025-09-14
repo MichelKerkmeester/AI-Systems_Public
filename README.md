@@ -35,6 +35,8 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 ## 💬 MCP Agents
 
+MCPs made easy with conversational systems
+
 #### 1. 🎬 Media Editor Agent - v0.112
 
 Edit image, video, and audio files via natural language.
