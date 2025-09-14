@@ -60,15 +60,15 @@ Here's where you'll find all the [feature]-related designs:
 ---
 [Description of what this enables and why it matters]
 ---
-1. **[Key Feature 2]**
+2. **[Key Feature 2]**
 ---
 [Description of what this enables and why it matters]
 ---
-1. **[Key Feature 3]**
+3. **[Key Feature 3]**
 ---
 [Description of what this enables and why it matters]
 ---
-1. **[Key Feature 4]**
+4. **[Key Feature 4]**
 [Description of what this enables and why it matters]
 ---
 ## ◻︎ Overview
@@ -165,7 +165,7 @@ This framework helps us measure [what we're measuring] so we can [why we're meas
 **Situation:** [What this indicates]
 **Action:** [Specific action] → [Follow-up action] → [Test & iterate]
 ---
-1. **[Metric] rises** = above [X]%
+2. **[Metric] rises** = above [X]%
 **Situation:** [What this indicates]
 **Action:** [Specific action] → [Follow-up action] → [Test & iterate]
 ---
@@ -248,7 +248,7 @@ The [system] operates on [X] principles, each delivering value to [stakeholders]
 *   **Business:** [Strategic value captured]
 
 ---
-1. **[Principle 2 Name]**
+2. **[Principle 2 Name]**
 ---
 
 [Description of how this principle works and why it matters]
@@ -273,7 +273,7 @@ The [system] operates on [X] principles, each delivering value to [stakeholders]
 ---
 [What this enables and why it matters]
 ---
-1. **[Feature Name]**
+2. **[Feature Name]**
 ---
 [What this enables and why it matters]
 ---
@@ -301,11 +301,11 @@ The [system] operates on [X] principles, each delivering value to [stakeholders]
 ---
 [What this measures and why]
 ---
-1. **[Tracking principle 2]**
+2. **[Tracking principle 2]**
 ---
 [What this reveals about system health]
 ---
-1. **[Tracking principle 3]**
+3. **[Tracking principle 3]**
 ---
 [How this drives decision-making]
 ---
@@ -343,11 +343,11 @@ Here's where you'll find all the [pattern]-related designs:
 ---
 [How patterns work together]
 ---
-1. **[Engagement Feature]**
+2. **[Engagement Feature]**
 ---
 [How patterns create loops]
 ---
-1. **[Adaptation Feature]**
+3. **[Adaptation Feature]**
 ---
 [How patterns personalize]
 ---
@@ -387,12 +387,12 @@ Here's where you'll find all the [pattern]-related designs:
 [Description of what this shows/does]
 
 ---
-1. **[Component Name]**
+2. **[Component Name]**
 
 [Description of what this shows/does]
 
 ---
-1. **Repeat** 🔄
+3. **Repeat** 🔄
 ---
 ### ◊ **Dynamic**
 [Elements that change or rotate]
@@ -402,7 +402,7 @@ Here's where you'll find all the [pattern]-related designs:
 [Description and variation logic]
 
 ---
-1. **[Component Name]**
+2. **[Component Name]**
 
 [Description and variation logic]
 
@@ -499,7 +499,7 @@ This [central/feature] performance tracking document provides:
 **Situation:** [What this indicates is happening]
 **Action:** [Primary intervention] → [Secondary action] → [Tertiary action] → [Measurement]
 ---
-1. **[Metric condition]** = [threshold]
+2. **[Metric condition]** = [threshold]
 ---
 **Situation:** [Problem this represents]
 **Action:** [Solution pathway] → [Implementation steps] → [Success criteria]
@@ -520,7 +520,7 @@ This [central/feature] performance tracking document provides:
 **Situation:** [Specific problem this indicates]
 **Action:** [Targeted solution] → [Follow-up action] → [Iteration plan]
 ---
-1. **[Complex multi-part threshold]**
+2. **[Complex multi-part threshold]**
 **Situation:**
 *   [Condition 1] < [threshold]
 *   [Condition 2] < [threshold]
