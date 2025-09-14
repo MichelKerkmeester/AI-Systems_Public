@@ -10,18 +10,18 @@ Some of my non-client AI systems that I made available to the public. They were 
 ## 📋 Table of Contents
 
 ### ✏️ Writer Systems
-1. [Product Owner Writer](#1-product-owner-writer---v882)
-2. [Branded Content Writer](#2-branded-content-writer---v560)
-3. [Prompt Engineering Assistant](#3-prompt-engineering-assistant---v830)
-4. [GPT - AI System Improver](#4-gpt---ai-system-improver---v110)
+1. [Product Owner Writer](#1-product-owner-writer---v0882)
+2. [Branded Content Writer](#2-branded-content-writer---v0560)
+3. [Prompt Engineering Assistant](#3-prompt-engineering-assistant---v0830)
+4. [GPT - AI System Improver](#4-gpt---ai-system-improver---v0110)
 
 ### ⚡ Automation Agents
-5. [GPT - Scheduled Tasks](#5-gpt---scheduled-tasks---v200)
+5. [GPT - Scheduled Tasks](#5-gpt---scheduled-tasks---v0200)
 
 ### 💬 MCP Agents
-6. [Media Editor Agent](#6-media-editor-agent---v100-new)
-7. [Webflow Agent](#7-webflow-agent---v410)
-8. [ClickUp & Notion Agent](#8-clickup-agent---v100)
+6. [Media Editor Agent](#6-media-editor-agent---v0112)
+7. [Webflow Agent](#7-webflow-agent---v0411)
+8. [ClickUp & Notion Agent](#8-clickup--notion-agent---v0100)
 
 ### 🔧 Additional Sections
 - [Common Features](#common-features)
@@ -120,7 +120,7 @@ Create scheduled tasks with intelligent optimization.
 
 ## 💬 MCP Agents
 
-#### 6. 🎬 Media Editor Agent - v0.100 (NEW)
+#### 6. 🎬 Media Editor Agent - v0.112
 Edit image, video, and audio files via natural language.
 
 - **Universal Media Operations & Intelligence**:
@@ -138,7 +138,7 @@ Edit image, video, and audio files via natural language.
 
 .
 
-#### 7. 🌐 Webflow Agent - v0.410
+#### 7. 🌐 Webflow Agent - v0.411
 Full-stack Webflow development through natural language with Designer and Data APIs.
 
 - **Complete Development Capabilities**:
@@ -159,22 +159,21 @@ Full-stack Webflow development through natural language with Designer and Data A
 
 .
 
-#### 8. 🚀 ClickUp & Notion Agent - v0.100
-Automate ClickUp actions through natural language.
+#### 8. 📚 ClickUp & Notion Agent - v0.100
+Seamlessly coordinate task management (ClickUp) and knowledge management (Notion) through natural language.
 
-- **Simplicity-First Design & Pattern Learning**:
-  - Defaults to minimal (3-5 fields)
-  - Phased rollouts: Start simple, expand later
-  - Session learning starts after 3 requests
-- **Smart Structure & Natural Language**:
-  - Challenges over-complexity, suggests phases
-  - Adoption focus over features
-  - Explains why simpler works
-- **ATLAS Framework & Challenge Mode**:
-  - 5-phase thinking (1-10 rounds)
-  - 3-level challenges by round count
-  - REPAIR error recovery
-
+- **Dual-Platform Intelligence & MCP Verification**:
+  - Notion: Databases, pages, rich content, wikis
+  - ClickUp: Tasks, time tracking, sprints, projects
+  - Always verifies MCP connections before operations
+- **Platform Selection & SYNC Framework**:
+  - Interactive mode asks which platform fits best
+  - User-controlled thinking (1-10 rounds)
+  - Challenge Mode at 3+ rounds for simplicity
+- **Pattern Learning & Emergency Commands**:
+  - Learns preferences but never restricts options
+  - Commands: $reset, $quick, $status
+  - Past chats integration for context
 
 ---
 
