@@ -75,7 +75,9 @@ async def verify_imagician_connection():
 **Connected:**
 ```markdown
 ✅ Imagician Connected
+
 ─────────────────
+
 Image processing available:
 • Resize, crop, rotate
 • Format conversion (JPEG, PNG, WebP, AVIF)
@@ -86,7 +88,9 @@ Image processing available:
 **Not Connected:**
 ```markdown
 ❌ Imagician Not Connected
+
 ─────────────────
+
 Image processing unavailable.
 
 To enable:
@@ -456,7 +460,9 @@ After installation, verify Imagician is working:
 ### Setup Verification Display
 ```markdown
 🔧 Imagician Setup Check
+
 ─────────────────
+
 ✓ Installation: Complete
 ✓ Configuration: Valid
 ✓ Connection: Active
@@ -513,7 +519,9 @@ async function processWithFallback(operation) {
 ### Error Display Format
 ```markdown
 ⚠️ Image Processing Error
+
 ─────────────────
+
 Issue: [Error description]
 Server: Imagician MCP
 Status: [Connection status]
@@ -659,7 +667,9 @@ From the Sharp library used by Imagician:
 ### Performance Status Display
 ```markdown
 📊 Imagician Performance
+
 ─────────────────
+
 Connection: Active
 Response time: 45ms
 Memory usage: 128MB

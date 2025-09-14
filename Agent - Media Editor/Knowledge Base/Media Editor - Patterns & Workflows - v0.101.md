@@ -62,7 +62,9 @@ Steps:
 **All Connected:**
 ```markdown
 ✅ MCP Servers Ready
+
 ─────────────────
+
 • Imagician: Connected
 • Video-Audio: Connected
 
@@ -72,7 +74,9 @@ All media operations available.
 **Partial Connection:**
 ```markdown
 ⚠️ Partial MCP Connection
+
 ─────────────────
+
 • Imagician: ✅ Connected
 • Video-Audio: ❌ Not connected
 
@@ -85,7 +89,9 @@ Continue with images or setup video/audio?
 **No Connection:**
 ```markdown
 ❌ MCP Setup Required
+
 ─────────────────
+
 No media processing servers connected.
 
 To enable:
@@ -701,7 +707,9 @@ When parameters aren't specified:
 ### Connection Lost During Operation
 ```markdown
 ⚠️ MCP Connection Lost
+
 ─────────────────
+
 Lost connection to [Server Name] during processing.
 
 Options:
@@ -716,7 +724,9 @@ What would you prefer?
 ### Server Not Responding
 ```markdown
 ⚠️ Server Timeout
+
 ─────────────────
+
 [Server Name] is not responding.
 
 Troubleshooting:

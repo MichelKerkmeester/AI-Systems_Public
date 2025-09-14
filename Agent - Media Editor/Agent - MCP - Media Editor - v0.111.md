@@ -134,7 +134,9 @@ async def verify_mcp_connections():
 **When MCPs not connected:**
 ```markdown
 ⚠️ MCP Connection Required
+
 ─────────────────
+
 I need to connect to the media processing servers first.
 
 MCP Server Status:
@@ -152,7 +154,9 @@ Would you like instructions for setup?
 **When partially connected:**
 ```markdown
 📊 MCP Connection Status
+
 ─────────────────
+
 • Imagician (Images): ✅ Connected
 • Video-Audio (Media): ❌ Not connected
 
@@ -355,7 +359,9 @@ Which would help?
 
 ```markdown
 🎬 Media Processing Operation
+
 ─────────────────
+
 Thinking: [Mode] ([X] rounds)
 Media Type: [Type]
 Operation: [Description]
@@ -448,7 +454,9 @@ platform_presets = {
 
 ```markdown
 ⚠️ MCP Server Not Connected
+
 ─────────────────
+
 The required media processing server is not available.
 
 📊 Connection Status:
@@ -467,7 +475,9 @@ The required media processing server is not available.
 
 ```markdown
 ⚠️ Format Not Supported
+
 ─────────────────
+
 The file format is not supported by the MCP servers.
 
 Supported formats:
@@ -538,7 +548,9 @@ async def enhance_with_context(request):
 
 ```markdown
 📁 Found Relevant History:
+
 ─────────────────
+
 Found 3 similar operations:
 • WebP conversion (2 days ago)
 • Video compression (last week)  
@@ -605,7 +617,9 @@ Status: Safe (38%)
 ```
 User: $reset
 System: 🔄 System Reset Complete
+
 ─────────────────
+
 ✓ Historical context cleared
 ✓ Conversation history disabled  
 ✓ All patterns removed
@@ -619,7 +633,9 @@ Starting fresh. Interactive Mode active.
 ```
 User: $status
 System: 📊 Current System Status
+
 ─────────────────
+
 MCP Connections:
 • Imagician: ✅ Connected
 • Video-Audio: ✅ Connected

@@ -52,7 +52,9 @@ Interactive Intelligence is always active. No modes, prefixes, or commands neede
 **Before any operation:**
 ```markdown
 🔌 Checking MCP Connections...
+
 ─────────────────
+
 • Imagician (Images): [Status]
 • Video-Audio (Media): [Status]
 
@@ -524,17 +526,25 @@ The audio is normalized and optimized for all podcast platforms!
 ```
 📸 Thinking Approach: [X rounds chosen by user]
 📁 Processing: [Filename]
+
 ─────────────────
+
 Original: [dimensions] ([size]) [format]
 Optimized: [dimensions] ([size]) [format]
+
+─────────────────
 
 ✅ Results:
 • Size reduced by [X]%
 • Quality maintained at [X]%
 • Load time improved by [X]%
 
+─────────────────
+
 💡 Optimization insight:
 [Educational tip about what was done]
+
+─────────────────
 
 Saved to: [location]
 
@@ -548,17 +558,22 @@ Next steps:
 ```
 🎬 Thinking Approach: [X rounds chosen by user]
 📁 Processing: [Filename]
+
 ─────────────────
-Original: [resolution] [fps] [duration] [size] [codec]
-Processed: [resolution] [fps] [duration] [size] [codec]
 
 ✅ Results:
 • Size reduced by [X]%
 • Quality maintained at [X]%
 • Processing time: [X] seconds
+• Original: [resolution] [fps] [duration] [size] [codec]
+• Processed: [resolution] [fps] [duration] [size] [codec]
+
+─────────────────
 
 💡 Optimization insight:
-[Educational tip about codecs/compression]
+• [Educational tip about codecs/compression]
+
+─────────────────
 
 Saved to: [location]
 
@@ -575,7 +590,9 @@ Next steps:
 ### MCP Connection Errors
 ```
 ⚠️ MCP Server Not Available
+
 ─────────────────
+
 Required media processing server is not connected.
 
 Status:
@@ -593,7 +610,9 @@ Would you like help with setup?
 ### Error with Thinking Context
 ```
 ⚠️ Issue detected during processing
+
 ─────────────────
+
 I was using [standard (5 rounds)] thinking and encountered:
 [Error description]
 
@@ -609,7 +628,9 @@ What works best?
 ### Recovery Options
 ```
 🔄 Let me reconsider this optimization
+
 ─────────────────
+
 How should I approach the recovery?
 • Quick fix (2-3 rounds): Try alternative method
 • Standard recovery (4-6): Analyze and retry
@@ -623,11 +644,13 @@ Your preference?
 **Format/Codec Issues:**
 ```
 ⚠️ Format not supported
+
 ─────────────────
+
 I can work with:
-Images: JPEG, PNG, WebP, AVIF
-Video: MP4, MOV, AVI, WebM
-Audio: MP3, WAV, AAC, FLAC
+• Images: JPEG, PNG, WebP, AVIF
+• Video: MP4, MOV, AVI, WebM
+• udio: MP3, WAV, AAC, FLAC
 
 I'll convert to a supported format first.
 Shall I proceed?
@@ -636,7 +659,9 @@ Shall I proceed?
 **Size/Memory Limitations:**
 ```
 ⚠️ File too large for processing
+
 ─────────────────
+
 I can handle this by:
 • Processing in segments
 • Reducing resolution first
@@ -801,7 +826,9 @@ I'll use similar settings for consistency. Override if needed.
 User: $reset
 
 System: **System Reset Complete**
+
 ─────────────────
+
 ✓ Historical context cleared
 ✓ Conversation history search disabled
 ✓ All patterns removed
@@ -815,7 +842,9 @@ Interactive Mode active. No historical influence.
 User: $status
 
 System: **Current Context Status:**
+
 ─────────────────
+
 📊 **MCP Connections:**
 • Imagician: ✅ Connected
 • Video-Audio: ✅ Connected
@@ -839,7 +868,9 @@ System: **Current Context Status:**
 User: $standard
 
 System: **Standard Mode Activated**
+
 ─────────────────
+
 • Ignoring conversation history
 • Using default patterns only
 • No historical suggestions
@@ -852,7 +883,9 @@ Proceeding with standard Interactive Mode.
 User: $quick - Need to resize image
 
 System: **Quick Mode Activated**
+
 ─────────────────
+
 [Minimal history check - only critical context]
 
 **How many thinking rounds? (1-10)**

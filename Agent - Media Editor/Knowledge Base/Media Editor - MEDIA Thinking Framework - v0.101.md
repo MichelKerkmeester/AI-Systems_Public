@@ -52,7 +52,9 @@ Universal thinking methodology combining quality-aware reasoning with adaptive d
 
 ```markdown
 🔌 MCP Connection Check
+
 ─────────────────
+
 • Imagician: [Status]
 • Video-Audio: [Status]
 
@@ -521,7 +523,9 @@ async def recognize_error(error_pattern):
 **E - Explain**
 ```markdown
 Plain language explanation
+
 ─────────────────
+
 [Historical: This occurred in 3 past conversations]
 Reference previous occurrence if applicable
 Focus on impact not technical details
@@ -530,7 +534,9 @@ Focus on impact not technical details
 **P - Propose**
 ```markdown
 Three ways forward:
+
 ─────────────────
+
 1. **Complex fix:** [Original modified] - [effort]
 2. **Simple fix:** [Alternative] - [effort] ← Worked in past
 3. **Workaround:** [Different path] - [effort]
@@ -561,7 +567,9 @@ Three ways forward:
 **MCP Not Connected:**
 ```markdown
 ⚠️ MCP Server Not Connected
+
 ─────────────────
+
 Required media processing server is not available.
 
 Status:
@@ -579,7 +587,6 @@ Would you like help with setup?
 **Format Not Supported:**
 ```markdown
 R: Format not supported by MCP server
-─────────────────
    [History: You encountered this 2 times before]
 E: Cannot process this format directly
    Previous solution was conversion first
@@ -595,7 +602,6 @@ R: Pattern reinforced/exception noted
 **Quality Too Low:**
 ```markdown
 R: Output quality below expectations
-─────────────────
    [History: Common with aggressive compression]
 E: Compression was too aggressive
    Similar to [previous incident]
@@ -793,7 +799,9 @@ Every 10 interactions evaluate:
 User: $reset
 
 System: **System Reset Complete**
+
 ─────────────────
+
 ✓ Historical context cleared
 ✓ Conversation history disabled
 ✓ MEDIA patterns removed
@@ -809,7 +817,9 @@ No historical influences active.
 User: $standard
 
 System: **Standard MEDIA Activated**
+
 ─────────────────
+
 Using default processing flow:
 • Ignoring conversation history
 • Standard phase mapping
@@ -825,7 +835,9 @@ Proceeding with base MEDIA framework.
 User: $quick - Need simple resize
 
 System: **Quick Mode: Minimal MEDIA**
+
 ─────────────────
+
 [Checking MCP connections...]
 Using M→A phases only
 Skipping conversation history
@@ -838,7 +850,9 @@ Skipping conversation history
 User: $status
 
 System: **Current MEDIA Status**
+
 ─────────────────
+
 📊 **MCP Connections:**
 • Imagician: ✅ Connected
 • Video-Audio: ✅ Connected

@@ -79,7 +79,9 @@ async def verify_video_audio_connection():
 **Connected:**
 ```markdown
 ✅ Video-Audio MCP Connected
+
 ─────────────────
+
 Media processing available:
 • Video conversion and transcoding
 • Audio extraction and processing
@@ -90,7 +92,9 @@ Media processing available:
 **Not Connected:**
 ```markdown
 ❌ Video-Audio MCP Not Connected
+
 ─────────────────
+
 Video/audio processing unavailable.
 
 To enable:
@@ -120,7 +124,9 @@ def check_dependencies():
 ### FFmpeg Verification
 ```markdown
 🔧 FFmpeg Status Check
+
 ─────────────────
+
 FFmpeg: [Installed/Not Found]
 Version: [version info]
 Codecs: [available codecs count]
@@ -529,7 +535,9 @@ ffmpeg -version
 ### Setup Verification Display
 ```markdown
 🔧 Video-Audio MCP Setup Check
+
 ─────────────────
+
 ✓ FFmpeg: Installed (v[version])
 ✓ Python: Compatible
 ✓ Dependencies: Complete
@@ -593,7 +601,9 @@ settings = {
 ### Resource Management
 ```markdown
 📊 Resource Configuration
+
 ─────────────────
+
 CPU Threads: [available/in use]
 Memory Limit: [configured]
 Temp Space: [available]
@@ -652,7 +662,9 @@ async def process_with_fallback(operation):
 ### Error Display Format
 ```markdown
 ⚠️ Media Processing Error
+
 ─────────────────
+
 Issue: [Error description]
 Server: Video-Audio MCP
 FFmpeg: [Status]
@@ -802,7 +814,9 @@ Media Editor: [Checking Video-Audio MCP connection...]
 ### Performance Status Display
 ```markdown
 📊 Video-Audio MCP Performance
+
 ─────────────────
+
 Connection: Active
 FFmpeg: Running
 CPU Usage: 45%

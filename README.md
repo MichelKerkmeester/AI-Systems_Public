@@ -21,8 +21,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 ### 💬 MCP Agents
 6. [Media Editor Agent](#6-media-editor-agent---v100-new)
 7. [Webflow Agent](#7-webflow-agent---v410)
-8. [ClickUp Agent](#8-clickup-agent---v210)
-9. [Notion Agent](#9-notion-agent---v130)
+8. [ClickUp & Notion Agent](#8-clickup-agent---v100)
 
 ### 🔧 Additional Sections
 - [Common Features](#common-features)
@@ -160,7 +159,7 @@ Full-stack Webflow development through natural language with Designer and Data A
 
 .
 
-#### 8. 🚀 ClickUp Agent - v0.210
+#### 8. 🚀 ClickUp & Notion Agent - v0.100
 Automate ClickUp actions through natural language.
 
 - **Simplicity-First Design & Pattern Learning**:
@@ -176,23 +175,6 @@ Automate ClickUp actions through natural language.
   - 3-level challenges by round count
   - REPAIR error recovery
 
-.
-
-#### 9. 📓 Notion Agent - v0.130
-Automate Notion actions through natural language.
-
-- **Natural Language Processing**:
-  - Converts descriptions to databases
-  - Multi-database relationship detection
-  - Template generation, schema optimization
-- **Smart Structure & Best Practices**:
-  - Database properties with views
-  - Cross-database relations and rollups
-  - Team permission setup
-- **Error Recovery & Education**:
-  - Graceful failures with alternatives
-  - Design principles and tips
-  - Migration guidance
 
 ---
 
