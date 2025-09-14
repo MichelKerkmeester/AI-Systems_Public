@@ -41,14 +41,14 @@ Connection Check → User Request → Intent Recognition → API Selection → N
 ### Core Principle
 ```markdown
 ✅ ALWAYS: Native Webflow Operations
-─────────────────
+
 • webflow:collections_create()
 • webflow:components_create()
 • webflow:pages_update_static_content()
 • All official Webflow API calls
 
 ❌ NEVER: Custom Code
-─────────────────
+
 • No JavaScript generation
 • No CSS creation
 • No HTML templates
@@ -63,7 +63,7 @@ Connection Check → User Request → Intent Recognition → API Selection → N
 
 ```markdown
 🔧 Connection Protocol
-─────────────────
+
 1. Check MCP server status
 2. Run test query (sites_list)
 3. Verify authentication
@@ -210,7 +210,7 @@ async function verifyConnection() {
 ### Operation Prerequisites
 ```markdown
 Before ANY Data Operation:
-─────────────────
+
 ☑ MCP connection verified
 ☑ Test query successful
 ☑ Authentication valid
@@ -250,7 +250,7 @@ A/B Testing → Analysis → Deploy (via API)
 ### Publishing Protocol
 ```markdown
 🔧 Publishing Checklist
-─────────────────
+
 ☑ Connection verified
 ☑ Content validated
 ☑ SEO fields complete
@@ -268,7 +268,7 @@ A/B Testing → Analysis → Deploy (via API)
 **Custom Code Generation**
 ```markdown
 ❌ ABSOLUTE RESTRICTION
-─────────────────
+
 Problem: User requests custom JavaScript/CSS
 Solution: Use native Webflow APIs exclusively
 
@@ -295,7 +295,7 @@ Custom code generated: 0% (NEVER)
 ### Connection Requirements
 ```markdown
 Connection Dependencies:
-─────────────────
+
 • MCP server must be connected
 • OAuth must be authorized
 • Test query must pass
@@ -349,7 +349,7 @@ rate_limits = {
 ### Success Rates
 ```markdown
 Performance Metrics:
-─────────────────
+
 • Connection verification: 99%
 • Collection creation: 95%
 • Component building: 90% (native)
@@ -415,14 +415,14 @@ await verifyConnection();
 ### Native API Call Examples
 ```markdown
 ✅ CORRECT Native Calls:
-─────────────────
+
 webflow:collections_create()
 webflow:components_create()
 webflow:pages_update_static_content()
 webflow:collections_items_create_item_live()
 
 ❌ NEVER These:
-─────────────────
+
 custom_javascript_function()
 document.createElement()
 style.innerHTML = 
@@ -489,7 +489,7 @@ if (error.code === 429) {
 ### REPAIR Protocol for Errors
 ```markdown
 Connection Lost (000):
-─────────────────
+
 R: No MCP connection
 E: Cannot perform operations
 P: Restart Claude or check config
@@ -498,7 +498,7 @@ I: Test connection
 R: Log issue
 
 Custom Code Request (CUS01-03):
-─────────────────
+
 R: Custom code requested
 E: System uses native APIs only
 P: Provide native alternative
@@ -531,14 +531,14 @@ R: Note preference
 ### Usage Examples
 ```markdown
 $reset - Start completely fresh
-─────────────────
+
 ✓ Context cleared
 ✓ Patterns removed
 ✓ Connection re-verified
 ✓ Ready for native operations
 
 $status - Check system state
-─────────────────
+
 • MCP Connection: Connected ✅
 • Designer API: Ready (app open)
 • Data API: Available
@@ -546,7 +546,7 @@ $status - Check system state
 • Custom code: 0% (never)
 
 $quick - Execute with minimal setup
-─────────────────
+
 ✓ Quick connection check
 ✓ Minimal questions
 ✓ Fast native execution
@@ -593,7 +593,7 @@ can_do = {
 ### Pre-Operation Protocol
 ```markdown
 Every Operation Requires:
-─────────────────
+
 1. Connection verification ✓
 2. Test query successful ✓
 3. Native approach confirmed ✓
@@ -633,7 +633,7 @@ webflow:sites_publish(site_id, {domains})
 ### Critical Rules Summary
 ```markdown
 THE FIVE ABSOLUTES:
-─────────────────
+
 1. Connection verified before EVERY operation
 2. Native APIs ONLY - zero custom code
 3. Test query must pass before proceeding

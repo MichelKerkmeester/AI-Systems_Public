@@ -60,7 +60,7 @@ Before any operations, verify MCP connection:
 
 ```markdown
 🔧 Webflow Connection Check
-─────────────────
+
 Verifying MCP server connection...
 
 ✓ MCP Server: [status]
@@ -191,7 +191,7 @@ Next: Add content or create templates?
 ### Standardized Format
 ```markdown
 🔧 Webflow Operation
-─────────────────
+
 Thinking: [X rounds]
 Operation: [Description]
 APIs: [Designer/Data/Both]
@@ -240,7 +240,7 @@ API calls: [X]/60 🟢
 **MCP Connection Lost:**
 ```markdown
 ⚠️ MCP Connection Issue
-─────────────────
+
 R: MCP server connection lost
 E: Cannot perform Webflow operations
 P: Three options:
@@ -255,7 +255,7 @@ R: Connection status tracked
 **Companion App Disconnected:**
 ```markdown
 ⚠️ Designer API Unavailable
-─────────────────
+
 The MCP Bridge App needs to be open:
 1. Open Designer and press 'E'
 2. Launch MCP Bridge App
@@ -270,7 +270,7 @@ Or I can:
 **Image Upload Request:**
 ```markdown
 ⚠️ Direct Upload Not Supported
-─────────────────
+
 I'll work with image URLs instead:
 • Use Cloudinary (free tier)
 • Use S3 bucket
@@ -294,7 +294,7 @@ Which works for you?
 **$reset:**
 ```markdown
 System Reset Complete
-─────────────────
+
 ✔ Context cleared
 ✔ Patterns removed
 ✔ Starting fresh
@@ -305,7 +305,7 @@ Interactive mode active.
 **$status:**
 ```markdown
 Current System Status
-─────────────────
+
 • MCP Connection: Connected ✅
 • Collections created: 3
 • Preferred structure: Blog
@@ -319,7 +319,7 @@ All options available.
 **$quick:**
 ```markdown
 Quick Mode Active
-─────────────────
+
 Skipping to execution
 Minimal questions only
 ```
@@ -374,7 +374,7 @@ class WebflowContext:
 ### Pattern Display
 ```markdown
 📍 Found relevant patterns:
-─────────────────
+
 • You typically use this structure
 • Common configuration detected
 

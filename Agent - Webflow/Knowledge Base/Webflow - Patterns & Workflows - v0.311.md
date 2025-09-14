@@ -32,7 +32,7 @@ This document defines pattern recognition and workflow orchestration for natural
 ### Core Pattern Principle
 ```markdown
 Every Pattern Follows:
-─────────────────
+
 1. Verify MCP connection
 2. Identify native API approach
 3. Reject custom code requests
@@ -68,7 +68,7 @@ Steps:
 ### Recovery Patterns
 ```markdown
 Connection Lost Pattern:
-─────────────────
+
 Trigger: Any API call fails
 Response:
   1. Immediate connection check
@@ -200,7 +200,7 @@ Custom_Code: NEVER
 ### Structure Creation Protocol
 ```markdown
 For Every Structure:
-─────────────────
+
 1. Verify MCP connection
 2. Use webflow:collections_create()
 3. Add fields via native API
@@ -270,7 +270,7 @@ Custom_Code: NEVER
 ### Component Creation Protocol
 ```markdown
 For Every Component:
-─────────────────
+
 1. Verify MCP connection
 2. Check companion app status
 3. Use webflow:components_create()
@@ -284,7 +284,7 @@ For Every Component:
 ### Native Component Alternatives
 ```markdown
 When User Requests Custom:
-─────────────────
+
 "Custom animation" → Webflow Interactions
 "Custom styling" → Designer API styles
 "Custom behavior" → Native components
@@ -350,7 +350,7 @@ Custom_Deploy_Scripts: NEVER
 ### Content Operation Protocol
 ```markdown
 For Every Content Operation:
-─────────────────
+
 1. Verify MCP connection
 2. Check rate limits
 3. Use native CRUD APIs
@@ -418,7 +418,7 @@ Custom_Import_Scripts: NEVER
 ### Workflow Execution Protocol
 ```markdown
 Every Workflow Must:
-─────────────────
+
 ☑ Start with connection check
 ☑ Use native APIs exclusively
 ☑ Reject custom code requests
@@ -431,7 +431,7 @@ Every Workflow Must:
 ### Multi-Step Workflow Pattern
 ```markdown
 Complex Workflow Structure:
-─────────────────
+
 BEGIN
   → Verify MCP Connection
     → Failed? Apply REPAIR
@@ -461,7 +461,7 @@ END (100% native execution)
 ### When to Ask Thinking Depth
 ```markdown
 Ask About Thinking:
-─────────────────
+
 ✓ Connection verified
 ✓ Native approach confirmed
 ✓ Requirements gathered
@@ -469,7 +469,7 @@ Ask About Thinking:
 ✓ No custom code requested
 
 Don't Ask Yet:
-─────────────────
+
 ✗ Still checking connection
 ✗ During connection recovery
 ✗ While clarifying native vs custom
@@ -572,7 +572,7 @@ Recovery:
 ### Emergency Command Implementation
 ```markdown
 $reset Implementation:
-─────────────────
+
 1. Clear all context
 2. Reset patterns
 3. Re-verify MCP connection
@@ -581,7 +581,7 @@ $reset Implementation:
 6. Ready for operations
 
 $status Implementation:
-─────────────────
+
 Show:
 • MCP connection status
 • Designer API availability
@@ -591,7 +591,7 @@ Show:
 • Rate limit usage
 
 $quick Implementation:
-─────────────────
+
 1. Quick connection check
 2. Minimal questions
 3. Fast native execution
@@ -649,7 +649,7 @@ When multiple patterns match:
 
 ```markdown
 THE PATTERN ABSOLUTES:
-─────────────────
+─
 1. Connection verification BEFORE any pattern
 2. Native APIs ONLY in every pattern
 3. Custom code NEVER in any pattern

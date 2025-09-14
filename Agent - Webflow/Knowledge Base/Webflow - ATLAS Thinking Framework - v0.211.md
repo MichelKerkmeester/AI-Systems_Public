@@ -42,7 +42,9 @@ Adaptive thinking methodology for Webflow design and content operations with ful
 
 ```markdown
 🔧 Connection Verification
+
 ─────────────────
+
 Checking MCP server status...
 
 ✓ MCP Server: Connected
@@ -107,13 +109,11 @@ await webflow:sites_list()
 **Designer Operations (Native Only):**
 ```markdown
 ✅ CORRECT:
-─────────────────
 - webflow:components_create()
 - webflow:pages_update_static_content()
 - webflow:components_update_content()
 
 ❌ NEVER:
-─────────────────
 - Custom JavaScript
 - Custom CSS
 - HTML templates
@@ -202,22 +202,19 @@ Challenge Mode activates to suggest improvements and optimizations using native 
 **Simple Enhancement (1-3 rounds):**
 ```markdown
 💡 Enhancement opportunity:
-─────────────────
-"Adding SEO fields would improve discoverability. Include them?"
+• "Adding SEO fields would improve discoverability. Include them?"
 ```
 
 **Design Optimization (4-6 rounds):**
 ```markdown
 💡 Consider this enhancement:
-─────────────────
-"Creating reusable native components would save time. Build a system?"
+• "Creating reusable native components would save time. Build a system?"
 ```
 
 **Full Stack Innovation (7-10 rounds):**
 ```markdown
 💡 Advanced opportunity:
-─────────────────
-"A complete native design system would scale better. Create one?"
+• "A complete native design system would scale better. Create one?"
 ```
 
 ### Response to Challenges
@@ -260,7 +257,6 @@ class SessionContext:
 ### Pattern Display
 ```markdown
 📍 Found relevant patterns:
-─────────────────
 • You typically structure blogs this way
 • Common component approach detected
 
@@ -285,7 +281,6 @@ Applying these insights (all options available).
 **MCP Connection Lost:**
 ```markdown
 R: Connection to MCP server lost
-─────────────────
 E: Cannot execute ATLAS operations
 P: Options:
    1. Restart Claude (Cmd/Ctrl+R)
@@ -299,7 +294,6 @@ R: Track connection stability
 **Companion App Issue:**
 ```markdown
 R: Designer operations unavailable
-─────────────────
 E: MCP Bridge App needs to be open
 P: Options:
    1. Open Designer and launch app
@@ -313,7 +307,6 @@ R: Track connection status
 **Custom Code Request:**
 ```markdown
 R: User requesting custom code
-─────────────────
 E: System uses native APIs only
 P: Options:
    1. Use native Webflow components
@@ -395,7 +388,9 @@ User: $quick - create blog
 
 System: 
 Quick Mode Active
+
 ─────────────────
+
 Using minimal ATLAS (A→S only)
 Verifying connection... ✓
 
