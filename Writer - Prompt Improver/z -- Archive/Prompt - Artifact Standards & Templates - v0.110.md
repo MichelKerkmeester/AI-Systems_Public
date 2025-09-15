@@ -1,248 +1,552 @@
 # Prompt - Artifact Standards & Templates - v0.110
 
-This document defines mandatory standards for delivering enhanced prompts via artifacts.
+Comprehensive artifact delivery standards for prompt engineering system with mandatory formatting requirements, AI System details, and multi-format support.
 
-## Table of Contents
+## 📋 Table of Contents
 
-1. [📦 ARTIFACT DELIVERY STANDARDS](#1--artifact-delivery-standards)
-2. [🎯 MANDATORY ARTIFACT STRUCTURE](#2--mandatory-artifact-structure)
-3. [📊 COMPACT OPTIMIZATION REPORT](#3--compact-optimization-report)
-4. [🎨 MODE-SPECIFIC TEMPLATES](#4--mode-specific-templates)
-   - [4.1 $short Mode Template](#41-short-mode-template)
-   - [4.2 $improve Mode Template (DEFAULT)](#42-improve-mode-template-default)
-   - [4.3 $refine Mode Template](#43-refine-mode-template)
-   - [4.4 $interactive Mode Template](#44-interactive-mode-template)
-   - [4.5 $json Mode Template](#45-json-mode-template)
-5. [✅ QUALITY CHECKLIST](#6--quality-checklist)
-6. [🎯 SPECIAL CASES](#7--special-cases)
+1. [📦 DELIVERY STANDARDS](#-delivery-standards)
+2. [📋 MANDATORY STRUCTURE & TEMPLATES](#-mandatory-structure--templates)
+3. [🎯 STANDARD ARTIFACT TEMPLATE](#-standard-artifact-template)
+4. [📄 FORMAT-SPECIFIC TEMPLATES](#-format-specific-templates)
+5. [🎨 AI SYSTEM DETAILS](#-ai-system-details)
+6. [📊 VISUAL ELEMENTS](#-visual-elements)
+7. [✅ QUALITY CHECKLIST](#-quality-checklist)
+8. [🚨 ERROR RECOVERY](#-error-recovery)
+9. [💡 EXAMPLES](#-examples)
 
 ---
 
-## 1. 📦 ARTIFACT DELIVERY STANDARDS
+## 1. 📦 DELIVERY STANDARDS
 
-**🚨 CRITICAL:** Always use `text/markdown` artifact type when delivering enhanced prompts!
+### Critical Requirements
+**ALWAYS use `text/markdown` artifact type for all prompt deliverables**
 
-Never use `text/plain` for content with markdown formatting - this causes raw markdown to display instead of formatted text.
+### Never:
+- Use `text/plain` → Causes raw markdown display
+- Mix artifact and response text
+- Place AI System details at top or middle
+- Use horizontal formatting for details
+- Skip thinking rounds documentation
+- Forget dividers between sections
+- Omit pattern context when available
+- Restrict options based on patterns
 
-### Artifact Type Warning:
-**Never make these mistakes:**
-- Using `text/plain` → Causes raw markdown display
-- Mixing artifact and response text → Confuses users
-- Skipping optimization report → Reduces impact
-- Forgetting MCP notation → Loses process transparency
-
-**Always deliver enhanced prompts with:**
-- Proper `text/markdown` type
-- Complete optimization report (for appropriate modes)
-- Clear enhancement details
-- Consistent formatting
-
-**If user's prompt seems unclear:** Use $interactive mode rather than guessing.
-
----
-
-## 2. 🎯 MANDATORY ARTIFACT STRUCTURE
-
-**EVERY enhanced prompt must follow this EXACT structure:**
-
-```
-MODE USED: [$short/$improve/$refine/$interactive/$json]
-MCP USED: [Sequential Thinking/Cascade Thinking/None Available]
-ENHANCEMENT METHOD: [CRAFT/SPARK/Patterns/Full Framework]
-COMPLEXITY LEVEL: [Simple/Medium/Complex]
-
-[Enhanced prompt here]
+### Always:
+- Use proper `text/markdown` type
+- Complete structure with all sections
+- Include AI System details at BOTTOM
+- Document thinking rounds selected
+- Use vertical dash formatting for details
+- Include dividers (---) between major sections
+- Show historical context as notes
+- Display all format options
 
 ---
 
-[Optimization Report - if applicable]
+## 2. 📋 MANDATORY STRUCTURE & TEMPLATES
+
+### Content First Structure
+```markdown
+[Main enhanced prompt - clean and focused]
+
+---
+
+**Format Options:**
+• Standard format (shown above)
+• JSON format available (`$json`)
+• SMILE format available (`$smile`)
+
+---
+
+**AI System:**
+
+[ARTIFACT DETAILS AT BOTTOM - vertical format with dashes]
+```
+
+### Section Order (Top to Bottom)
+1. **Main Content** - The enhanced prompt itself
+2. **Divider** - `---`
+3. **Format Options** - Available alternatives
+4. **Divider** - `---`
+5. **AI System Header** - Bold header
+6. **System Details** - Formatted with dashes
+
+### Mode-Specific Templates
+
+#### Interactive Mode Template
+```markdown
+[Enhanced prompt created through guided conversation]
+
+[Content reflecting discovered requirements]
+
+---
+
+**Format Options:**
+• Standard format (shown above)
+• JSON format (`$json`) - For API integration
+• SMILE format (`$smile`) - For complex instructions
+
+---
+
+**AI System:**
+
+- **Framework:** ATLAS
+- **Mode:** $interactive
+- **Complexity:** [Low/Medium/High]
+
+---
+
+- **Thinking:** [X] rounds (user selected)
+- **Discovery:** [X] questions asked
+- **ATLAS:** [Phases applied]
+
+---
+
+- **Challenge:** [If complexity reduced]
+- **Enhancement:** [X]% improvement
+- **Context:** [Brief description]
+
+---
+
+**Historical Context:**
+- Patterns from [X] sessions
+- All options always shown
+- User autonomy: 100%
+```
+
+#### Builder Mode Template
+```markdown
+[Universal creative brief for platform development]
+
+**GOAL:** [What users accomplish]
+**AUDIENCE:** [Target users]
+**SUCCESS:** [Measurable outcomes]
+
+Phase 1 - Core MVP:
+[Essential functionality only]
+
+Phase 2 - Enhanced Experience:
+[If validated by users]
+
+Phase 3 - Premium Features:
+[Only if needed]
+
+---
+
+**Format Options:**
+• Standard format (shown above)
+• SMILE format (`$smile`) - For structured workflow
+
+---
+
+**AI System:**
+
+- **Framework:** ATLAS
+- **Mode:** $builder
+- **Sub-mode:** [prototype/website/app]
+
+---
+
+- **Thinking:** [X] rounds
+- **Platform:** Universal (works on all)
+- **Phase Recommended:** [1/2/3]
+
+---
+
+- **Challenge:** [MVP simplification applied]
+- **Alternative:** [Simpler approach if suggested]
+- **Context:** [Brief description]
+
+---
+
+**Historical Context:**
+- Builder mode frequency: [X]%
+- Typical phase selection: [1/2/3]
+- Platform preferences: [if any]
 ```
 
 ---
 
-## 3. 📊 COMPACT OPTIMIZATION REPORT
+## 3. 🎯 STANDARD ARTIFACT TEMPLATE
 
-**For $improve, $refine, and $interactive modes, include this compact report:**
+### Complete Template with All Elements
 
-```
-📊 Enhancement: X% ↑ | Mode: $[mode] | Method: [method used]
+```markdown
+[Enhanced prompt content here]
 
-CRAFT Coverage: C:X% R:X% A:X% F:X% T:X%
-Before → After: X words (X/10 clarity) → X words (X/10 clarity)
+As a [role/expertise], [main task/action] for [audience/purpose].
 
-Key Improvements:
-✓ [Improvement 1] • [Improvement 2]
-✓ [Improvement 3] • [Improvement 4]
-✓ [Additional improvements as needed]
-
-[Additional mode-specific info if needed]
-```
-
-### Report Components:
-- **Header Line**: Score, mode, and method in one line
-- **CRAFT Coverage**: All scores inline without progress bars
-- **Before/After**: Single line comparison with word count and clarity
-- **Key Improvements**: Bullet-separated items, 2-3 per line
-- **Mode-specific info**: Only if relevant (e.g., questions asked for $interactive)
+Context: [relevant background]
+Requirements: [specific needs]
+Output: [expected format/structure]
+Success Criteria: [measurable outcomes]
 
 ---
 
-## 4. 🎨 MODE-SPECIFIC TEMPLATES
-
-### 4.1 $short Mode Template
-```
-MODE USED: $short
-MCP USED: Sequential Thinking
-ENHANCEMENT METHOD: Essential CRAFT
-COMPLEXITY LEVEL: Simple
-
-[1-3 sentence enhanced prompt]
-```
-
-### 4.2 $improve Mode Template (DEFAULT)
-```
-MODE USED: $improve
-MCP USED: Sequential Thinking
-ENHANCEMENT METHOD: CRAFT + SPARK
-COMPLEXITY LEVEL: Medium
-
-[Enhanced prompt with all core components]
+**Format Options:**
+• Standard format (shown above)
+• JSON format available (`$json`) - Structured for APIs
+• SMILE format available (`$smile`) - Better instruction following (+25% tokens)
 
 ---
 
-📊 Enhancement: X% ↑ | Mode: $improve | Method: CRAFT + SPARK
+**AI System:**
 
-CRAFT Coverage: C:X% R:X% A:X% F:X% T:X%
-Before → After: X words (X/10 clarity) → X words (X/10 clarity)
-
-Key Improvements:
-✓ Specificity: [what was added] • Role: [expert defined]
-✓ Structure: [organization added] • Format: [output specified]
-✓ Context: [background provided] • Success criteria: [metrics added]
-```
-
-### 4.3 $refine Mode Template
-```
-MODE USED: $refine
-MCP USED: Cascade Thinking
-ENHANCEMENT METHOD: Full 3-Phase Optimization
-COMPLEXITY LEVEL: Complex
-
-[Fully optimized prompt with maximum enhancement]
+- **Framework:** ATLAS
+- **Mode:** $[mode used]
+- **Complexity:** [Low/Medium/High]
 
 ---
 
-📊 Enhancement: X% ↑ | Mode: $refine | Method: 3-Phase Optimization
-
-CRAFT Coverage: C:100% R:100% A:100% F:100% T:100%
-Before → After: X words (X/10 clarity) → X words (10/10 clarity)
-
-Evaluation Score: X/175 (X%)
-Phases Complete: ✓ SPARK Enhancement ✓ Full Evaluation ✓ Targeted Refinement
-
-Key Improvements:
-✓ Complete specificity • Expert role defined • Clear deliverables
-✓ Structured format • Success metrics • Edge case handling
-✓ Context provided • Validation steps • Quality criteria
-```
-
-### 4.4 $interactive Mode Template
-```
-MODE USED: $interactive
-MCP USED: Sequential Thinking
-ENHANCEMENT METHOD: Guided CRAFT Assembly
-COMPLEXITY LEVEL: [Varies]
-
-[Enhanced prompt built from conversation]
+- **Thinking:** [X] rounds (user selected)
+- **ATLAS:** [Phases used like A→T→L→A→S]
 
 ---
 
-📊 Enhancement: X% ↑ | Mode: $interactive | Method: Guided CRAFT Assembly
+- **Challenge:** [Applied/Not needed - brief note]
+- **Enhancement:** [X]% improvement
+- **Context:** [Brief description]
 
-CRAFT Coverage: C:X% R:X% A:X% F:X% T:X%
-Before → After: X words (X/10 clarity) → X words (X/10 clarity)
+---
 
-Key Improvements:
-✓ Purpose: [user's goal] • Audience: [target defined]
-✓ Format: [structure specified] • Scope: [boundaries set]
-✓ Context: [background added] • Constraints: [requirements noted]
-
-Questions asked: [Purpose, Audience, Format, etc.]
+**Historical Context:**
+- Based on [X] similar enhancements
+- Format preference: [Standard/JSON/SMILE usage %]
+- Typical thinking rounds: [X]
+- All options always available
 ```
 
-### 4.5 $json Mode Template
-```
-MODE USED: $json
-MCP USED: Sequential Thinking
-ENHANCEMENT METHOD: Structured Parsing
-COMPLEXITY LEVEL: [Same as source]
+---
 
+## 4. 📄 FORMAT-SPECIFIC TEMPLATES
+
+### JSON Format Artifact
+
+```markdown
+```json
 {
-  "role": "[expert role from CRAFT-R]",
-  "task": "[specific action from CRAFT-A]",
-  "context": {
-    "background": "[from CRAFT-C]",
-    "constraints": "[from SPARK-K]",
-    "assumptions": "[identified]"
-  },
+  "role": "[expertise/position]",
+  "task": "[main action required]",
+  "context": "[background information]",
   "requirements": [
     "[requirement 1]",
-    "[requirement 2]"
+    "[requirement 2]",
+    "[requirement 3]"
   ],
-  "format": {
-    "structure": "[from CRAFT-F]",
-    "length": "[specified]",
-    "style": "[defined]"
+  "output": {
+    "format": "[expected structure]",
+    "length": "[if applicable]",
+    "style": "[if relevant]"
   },
-  "success_criteria": {
-    "metrics": "[from CRAFT-T]",
-    "evaluation": "[how to measure]"
-  }
+  "success_criteria": [
+    "[metric 1]",
+    "[metric 2]"
+  ]
 }
 ```
 
 ---
 
-## 5. ✅ QUALITY CHECKLIST
+**AI System:**
 
-### Always Include:
-- [ ] Mode and MCP notation at top
-- [ ] Compact optimization report for appropriate modes
-- [ ] CRAFT coverage assessment inline
-- [ ] Before/after metrics on one line
-- [ ] Key improvements with bullet separators
-- [ ] All content within single artifact
-
-### Never Do:
-- [ ] Mix artifact content with response text
-- [ ] Use text/plain for markdown content
-- [ ] Include verbose Enhancement Details section
-- [ ] Use progress bars or multi-line displays
-- [ ] Leave out the optimization report
-- [ ] Forget MCP notation
+- **Framework:** ATLAS
+- **Mode:** $json
+- **Structure:** Optimized for API use
 
 ---
 
-## 6. 🎯 SPECIAL CASES
+- **Thinking:** [X] rounds (user selected)
+- **Token Impact:** [+/-X]% vs standard
+- **Parse Reliability:** High
 
-### Platform Detection
-When platform is auto-detected, add to report:
-```
-Platform: [Platform]-optimized ✓
-```
+---
 
-### Pattern Application
-When specific pattern used, note in enhancement method:
-```
-ENHANCEMENT METHOD: CRAFT + Expert Analysis Pattern
+**Historical Context:**
+- JSON used [X]% for technical prompts
+- Previous JSON success rate: [X]%
 ```
 
-### Error Enhancement
-For prompts submitted due to errors:
-```
-Note: Original prompt had formatting issues - corrected and enhanced
+### SMILE Format Artifact
+
+```markdown
+(: Enhanced Prompt
+  [: Role [
+    [expertise definition]
+  ] :]
+  
+  [= Task =] [specific action required]
+  
+  [: Context (
+    [background information]
+    [relevant details]
+  ) :]
+  
+  [: Requirements [
+    [! Priority: [critical element] !]
+    • [requirement 1]
+    • [requirement 2]
+    • [requirement 3]
+  ] :]
+  
+  [: Output Format [
+    {Expected structure here}
+    {User provides details}
+  ] :]
+  
+  [! Success: [measurable criteria] !]
+) :)
+
+---
+
+**AI System:**
+
+- **Framework:** ATLAS
+- **Mode:** $smile
+- **SMILE Depth:** [minimal/moderate/heavy]
+
+---
+
+- **Thinking:** [X] rounds (user selected)
+- **Token Impact:** +[X]% (typical for SMILE)
+- **Instruction Following:** Enhanced
+
+---
+
+- **Symbols Used:** [List key symbols]
+- **Nesting Levels:** [X]
+- **Best For:** Complex multi-step prompts
+
+---
+
+**Historical Context:**
+- SMILE preferred [X]% for complex prompts
+- Typical depth: [minimal/moderate/heavy]
+- Token tolerance: [High/Medium/Low]
 ```
 
 ---
 
-*Remember: The compact format reduces cognitive load while maintaining all essential information. Every line should provide value.*
+## 5. 🎨 AI SYSTEM DETAILS
+
+### Mandatory Information Structure
+
+```markdown
+**AI System:**
+
+- **Framework:** ATLAS
+- **Mode:** $[mode]
+- **Complexity:** [Assessment]
+
+---
+
+- **Thinking:** [X] rounds (user selected)
+- **ATLAS:** [Phases applied]
+
+---
+
+- **Challenge:** [Applied/Not needed]
+- **Enhancement:** [X]%
+- **Context:** [Brief description]
+
+---
+
+**Historical Context:**
+- Historical data: [X] similar prompts
+- Patterns shown: As context only
+- User control: 100% maintained
+```
+
+### Formatting Rules for AI System Details
+- Always use **bold** for "AI System:" header
+- Use dashes (-) for all bullet points
+- Maintain vertical list format
+- Group related items together
+- Include pattern context at end
+- Never place at top or middle
+- Always include divider before section
+
+---
+
+## 6. 📊 VISUAL ELEMENTS
+
+### Enhancement Metrics Display
+
+```markdown
+**Enhancement Summary:**
+━━━━━━━━━━━━━━━━━━━━━
+Before: [X] words • Clarity: [X]/10
+After: [Y] words • Clarity: [Y]/10
+Improvement: [Z]% ↗
+
+CRAFT Coverage:
+• Context: [X]%
+• Role: [X]%
+• Action: [X]%
+• Format: [X]%
+• Target: [X]%
+━━━━━━━━━━━━━━━━━━━━━
+```
+
+### Format Comparison Table
+
+```markdown
+**Format Options Comparison:**
+┌─────────────┬────────┬───────┬─────────┐
+│ Format      │ Tokens │ Clear │ Use For │
+├─────────────┼────────┼───────┼─────────┤
+│ Standard    │ Base   │ High  │ Most    │
+│ JSON        │ +5%    │ V.High│ APIs    │
+│ SMILE       │ +25%   │ High  │ Complex │
+└─────────────┴────────┴───────┴─────────┘
+```
+
+---
+
+## 7. ✅ QUALITY CHECKLIST
+
+### Artifact Requirements Checklist
+
+- [ ] **Content First:** Enhanced prompt at top
+- [ ] **Format Options:** All available formats listed
+- [ ] **AI System Header:** Bold and at bottom
+- [ ] **Thinking Rounds:** User selection documented
+- [ ] **ATLAS Phases:** Processing documented
+- [ ] **Challenge Applied:** Decision noted
+- [ ] **Pattern Context:** Historical data shown
+- [ ] **Dividers Present:** Between major sections
+- [ ] **Vertical Format:** Details use dashes
+- [ ] **User Control:** All options shown
+
+### Quality Gates
+
+- [ ] **Clarity:** Immediate understanding?
+- [ ] **Completeness:** All elements present?
+- [ ] **Structure:** Proper hierarchy?
+- [ ] **Format:** Markdown type used?
+- [ ] **Enhancement:** Clear improvement?
+- [ ] **Patterns:** Context not restrictive?
+- [ ] **Options:** All choices available?
+
+---
+
+## 8. 🚨 ERROR RECOVERY
+
+### Common Artifact Issues & Fixes
+
+| Issue | Recognition | Fix | Prevention |
+|-------|------------|-----|------------|
+| **Missing AI System** | No header at bottom | Add complete section | Use template |
+| **Wrong Position** | Details at top/middle | Move to bottom | Follow structure |
+| **No Thinking Rounds** | Undocumented rounds | Add user selection | Always ask first |
+| **Missing Dividers** | Sections blend together | Add --- between | Use template |
+| **Horizontal Format** | Details in one line | Convert to vertical | Use dashes |
+| **No Pattern Context** | Missing historical data | Add context section | Search history |
+| **Format Missing** | No alternatives shown | List all options | Include always |
+
+### REPAIR Protocol for Artifacts
+
+```markdown
+**R** - Recognize: Artifact structure issue identified
+**E** - Explain: Impact on clarity and professionalism
+**P** - Propose: Correct structure with template
+**A** - Apply: Implement proper formatting
+**I** - Iterate: Verify all requirements met
+**R** - Record: Note for future prevention
+```
+
+---
+
+## 9. 💡 EXAMPLES
+
+### Example 1: Perfect Standard Artifact
+
+```markdown
+As a data scientist with machine learning expertise, analyze customer churn patterns in the SaaS subscription dataset to identify key predictive factors and recommend retention strategies.
+
+Context: B2B SaaS platform with 10,000+ customers, 24-month historical data
+Requirements: Statistical significance testing, feature importance ranking, actionable recommendations
+Output: Executive report with visualizations and 3-5 specific retention tactics
+Success Criteria: Model accuracy >85%, insights applicable within 30 days
+
+---
+
+**Format Options:**
+• Standard format (shown above)
+• JSON format available (`$json`) - For automated processing
+• SMILE format available (`$smile`) - For complex analysis workflow
+
+---
+
+**AI System:**
+
+- **Framework:** ATLAS
+- **Mode:** $improve
+- **Complexity:** Medium
+
+---
+
+- **Thinking:** 5 rounds (user selected)
+- **ATLAS:** A→T→L→A→S (full cycle)
+
+---
+
+- **Challenge:** Applied - reduced from 10 requirements to 5 essential
+- **Enhancement:** 73% improvement
+- **Context:** Data analysis prompt
+
+---
+
+**Historical Context:**
+- Based on 8 similar data science prompts
+- Format preference: Standard 75%, JSON 25%
+- Typical thinking rounds: 4-6
+- All options always available
+```
+
+### Example 2: Interactive Mode Result
+
+```markdown
+Create a comprehensive user onboarding flow for a mobile banking app that reduces drop-off rates and ensures regulatory compliance while maintaining excellent user experience.
+
+Target Users: Age 25-45, tech-comfortable but security-conscious
+Key Requirements: KYC compliance, intuitive design, 5-minute completion time
+Success Metric: <20% drop-off rate, 90% completion within first session
+
+---
+
+**Format Options:**
+• Standard format (shown above)
+• JSON format (`$json`) - For development handoff
+• SMILE format (`$smile`) - For detailed step-by-step flow
+
+---
+
+**AI System:**
+
+- **Framework:** ATLAS
+- **Mode:** $interactive
+- **Complexity:** High
+
+---
+
+- **Thinking:** 6 rounds (user selected)
+- **Discovery:** 4 questions asked
+- **ATLAS:** A→T→L→A→S
+
+---
+
+- **Challenge:** Simplified from 10 steps to 6
+- **Enhancement:** 65% improvement
+- **Context:** UX flow optimization
+
+---
+
+**Historical Context:**
+- Interactive mode used 40% of time
+- Onboarding prompts typically need 5-7 rounds
+- Format split: Standard 60%, SMILE 40%
+```
+
+---
+
+*Artifact excellence through systematic structure and comprehensive documentation. AI System details always at bottom with proper formatting. Pattern context enriches without restricting. All format options always available. User control absolute.*

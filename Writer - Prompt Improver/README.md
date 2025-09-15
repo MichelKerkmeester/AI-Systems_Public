@@ -1,10 +1,10 @@
-# Prompt Engineering Assistant - User Guide v0.820
+# Prompt Engineering Assistant - User Guide v0.831
 
 A system that transforms vague requests into clear, effective AI prompts using the ATLAS framework, challenge-based simplification, and intelligent refinement.
 
 ## 📋 Table of Contents
 
-- [🆕 What's New in v0.820](#whats-new-in-v0820)
+- [🆕 What's New in v0.830](#whats-new-in-v0830)
 - [✨ Key Features](#key-features)
 - [🚀 Quick Setup](#quick-setup)
 - [🎛️ Operating Modes](#operating-modes)
@@ -17,22 +17,29 @@ A system that transforms vague requests into clear, effective AI prompts using t
 - [🆘 Troubleshooting](#troubleshooting)
 - [📦 Version History](#version-history)
 
-.
+---
 
-## 🆕 What's New in v0.820
+## 🆕 What's New in v0.831
 
 ### Major Enhancements 🚀
-- **Emergency Commands**: `$reset`, `$standard`, `$quick`, `$status` for quick recovery
-- **Enhanced Past Chats**: Sophisticated conversation search with context stages
-- **Context Enhancement Journey**: Progressive learning (Learning → Adapting → Enriched → Comprehensive)
-- **Status Command**: Shows all tracked patterns
-- **Challenge Calibration**: Adapts intensity based on your acceptance history
+- **Dedicated Format Guide**: New comprehensive JSON & SMILE Format Guide with complete specifications
+- **Reduced Redundancy**: Streamlined all documents by centralizing format information
+- **Improved Architecture**: Cleaner file structure with single source of truth for formats
+- **Enhanced Format Documentation**: Detailed conversion methods, templates, and best practices
+- **Performance Metrics**: Added format-specific tracking and optimization strategies
 
-.
+### System Improvements
+- Centralized format documentation in one authoritative guide
+- Removed duplicate format information across 6 core files
+- Better maintainability with focused, purpose-driven documents
+- Consistent format references throughout the system
+
+---
 
 ## ✨ Key Features
 
 - **MANDATORY Thinking Rounds**: 1-10 or 'auto' - always asked
+- **Comprehensive Format Guide**: Complete JSON & SMILE specifications
 - **Emergency Commands**: Quick system control
 - **Progressive Context Learning**: Stages from Learning to Comprehensive
 - **Multi-Format Output**: Standard, JSON, and SMILE formats
@@ -43,7 +50,7 @@ A system that transforms vague requests into clear, effective AI prompts using t
 - **30-50% Complexity Reduction**: Measurable simplification
 - **Universal Platform Support**: Works on ALL AI platforms
 
-.
+---
 
 ## 🚀 Quick Setup
 
@@ -55,23 +62,26 @@ A system that transforms vague requests into clear, effective AI prompts using t
 ### Step 2: Add System Instructions
 1. Click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Writer - Prompt Improver.md`
+3. Copy and paste: `Writer - Prompt Improver - v0.831.md`
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
 Add these documents to your project's knowledge base:
 
-**Critical Documents:**
+**Core System Documents:**
 - `Prompt - Core System & Quick Reference.md`
-- `Prompt - Artifact Standards & Templates.md`
-- `Prompt - ATLAS Thinking Framework.md`
+- `Prompt - Quick Reference - v0.100.md`
 
-**Mode Documents:**
-- `Prompt - Interactive Mode.md`
-- `Prompt - Builder Mode.md`
-- `Prompt - Evaluation & Refinement.md`
-- `Prompt - Patterns & Enhancements.md`
-- `Prompt - Quick Reference.md`
+**Framework Documents:**
+- `Prompt - ATLAS Thinking Framework - v0.201.md`
+- `Prompt - Artifact Standards & Templates - v0.111.md`
+- `Prompt - JSON & SMILE Format Guide - v1.000.md` ⭐ **NEW**
+
+**Mode & Enhancement Documents:**
+- `Prompt - Interactive Mode - v0.612.md`
+- `Prompt - Builder Mode - v0.410.md`
+- `Prompt - Evaluation & Refinement - v0.601.md`
+- `Prompt - Patterns & Enhancements - v0.601.md`
 
 ### Step 4: Start Creating
 ```
@@ -81,7 +91,7 @@ $interactive                  # Guided with professional formatting
 $status                      # See your current patterns
 ```
 
-.
+---
 
 ## 🎛️ Operating Modes
 
@@ -108,9 +118,19 @@ $status                      # See your current patterns
 ### Supported Platforms
 Bolt.new, MagicPatterns, v0 by Vercel, Cursor/Windsurf, Replit, Lovable, and ANY AI platform
 
-.
+---
 
 ## 📄 Format Options
+
+**Complete specifications available in: `Prompt - JSON & SMILE Format Guide - v1.000.md`**
+
+### Quick Comparison
+
+| Format | Token Impact | Best For | Structure |
+|--------|--------------|----------|-----------|
+| **Standard** | Baseline | Most prompts | Natural language |
+| **JSON** | +5-10% | APIs, structured data | Key-value pairs |
+| **SMILE** | +20-30% | Complex workflows | Semantic markers |
 
 ### Standard Format (Default)
 Natural language clarity, maximum readability
@@ -120,7 +140,7 @@ Create an executive summary with actionable insights.
 ```
 
 ### JSON Format
-Structured for APIs and programmatic use (+/- 5% tokens)
+Structured for APIs and programmatic use
 ```json
 {
   "role": "data_analyst",
@@ -131,7 +151,7 @@ Structured for APIs and programmatic use (+/- 5% tokens)
 ```
 
 ### SMILE Format
-Enhanced instruction following (+20-30% tokens)
+Enhanced instruction following with visual structure
 ```
 (: Sales Analysis Task
   [: Role [ Data analyst ] :]
@@ -140,7 +160,9 @@ Enhanced instruction following (+20-30% tokens)
 ) :)
 ```
 
-.
+**For detailed syntax, conversion methods, and advanced patterns → See Format Guide**
+
+---
 
 ## 🧠 ATLAS Thinking Framework
 
@@ -166,7 +188,7 @@ Your choice?
 - **S** - Synthesize & deliver optimal version
 - **F** - Format Transform (apply Standard/JSON/SMILE)
 
-.
+---
 
 ## 🚀 Challenge Mode Philosophy
 
@@ -179,7 +201,7 @@ Your choice?
 | 30-70% | Constructive | "Simpler might work better..." |
 | > 70% | Strong | "Let's focus on the core ask" |
 
-.
+---
 
 ## 🗃️ Past Chats Integration
 
@@ -195,7 +217,7 @@ Your choice?
 - **conversation_search**: Topic/keyword-based search
 - **recent_chats**: Time-based retrieval (1-20 chats)
 
-.
+---
 
 ## ⚡ Emergency Commands
 
@@ -206,18 +228,19 @@ Your choice?
 | **`$quick`** | Skip to enhancement | Know what you want |
 | **`$status`** | Show patterns | Check system state |
 
-.
+---
 
 ## 🚨 REPAIR Error Protocol
 
 Enhanced error recovery with historical context tracking:
-- Recognize issue with historical context
-- Explain impact on clarity
-- Alternatives (provide 3 options)
-- Refine approach
-- Note pattern for future
+- **R**ecognize issue with historical context
+- **E**xplain impact on clarity
+- **P**ropose alternatives (provide 3 options)
+- **A**dapt approach
+- **I**terate and test
+- **R**ecord pattern for future
 
-.
+---
 
 ## 🆘 Troubleshooting
 
@@ -239,10 +262,23 @@ $status → See current state
 Interactive Mode → Default exploration
 ```
 
-.
+**Format confusion:**
+```
+See: Prompt - JSON & SMILE Format Guide
+Contains: Complete specifications, examples, conversion methods
+```
+
+---
 
 ## 📦 Version History
 
+### v0.831 (Current)
+- **NEW**: Comprehensive JSON & SMILE Format Guide
+- **IMPROVED**: Centralized format documentation
+- **CLEANED**: Removed redundant information across files
+- **ENHANCED**: Better system architecture and maintainability
+
+### Previous Versions
 - **v0.820**: Emergency commands, enhanced past chats, context journey stages
 - **v0.810**: MANDATORY thinking rounds, professional standards
 - **v0.800**: SMILE format integration, multi-format support
@@ -250,4 +286,21 @@ Interactive Mode → Default exploration
 
 ---
 
-*Transform vague requests into clear, professional prompts! Interactive Mode is DEFAULT. Thinking rounds are MANDATORY. User control is absolute.*
+## 📚 Documentation Structure
+
+### Primary Documents
+- **Writer - Prompt Improver**: Main system instructions
+- **JSON & SMILE Format Guide**: Complete format specifications ⭐
+
+### Supporting Documents
+- **ATLAS Thinking Framework**: Core thinking methodology
+- **Artifact Standards**: Output formatting requirements
+- **Interactive Mode**: Conversational enhancement
+- **Builder Mode**: Platform-specific prompts
+- **Evaluation & Refinement**: Quality assessment
+- **Patterns & Enhancements**: Advanced techniques
+- **Quick Reference**: Compact rule reference
+
+---
+
+*Transform vague requests into clear, professional prompts! Interactive Mode is DEFAULT. Thinking rounds are MANDATORY. User control is absolute. All format specifications in the dedicated Format Guide.*

@@ -1,4 +1,4 @@
-# Prompt - Artifact Standards & Templates - v0.110
+# Prompt - Artifact Standards & Templates - v0.111
 
 Comprehensive artifact delivery standards for prompt engineering system with mandatory formatting requirements, AI System details, and multi-format support.
 
@@ -220,7 +220,9 @@ Success Criteria: [measurable outcomes]
 
 ## 4. 📄 FORMAT-SPECIFIC TEMPLATES
 
-### JSON Format Artifact
+**For complete format specifications and advanced patterns, see → Prompt - JSON & SMILE Format Guide.md**
+
+### JSON Format Artifact (Basic Template)
 
 ```markdown
 ```json
@@ -266,7 +268,7 @@ Success Criteria: [measurable outcomes]
 - Previous JSON success rate: [X]%
 ```
 
-### SMILE Format Artifact
+### SMILE Format Artifact (Basic Template)
 
 ```markdown
 (: Enhanced Prompt
@@ -312,8 +314,7 @@ Success Criteria: [measurable outcomes]
 
 ---
 
-- **Symbols Used:** [List key symbols]
-- **Nesting Levels:** [X]
+- **Complexity:** [Assessment]
 - **Best For:** Complex multi-step prompts
 
 ---
@@ -373,7 +374,7 @@ Success Criteria: [measurable outcomes]
 
 ```markdown
 **Enhancement Summary:**
-━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━
 Before: [X] words • Clarity: [X]/10
 After: [Y] words • Clarity: [Y]/10
 Improvement: [Z]% ↗
@@ -384,10 +385,10 @@ CRAFT Coverage:
 • Action: [X]%
 • Format: [X]%
 • Target: [X]%
-━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━
 ```
 
-### Format Comparison Table
+### Format Options Comparison
 
 ```markdown
 **Format Options Comparison:**
@@ -549,4 +550,4 @@ Success Metric: <20% drop-off rate, 90% completion within first session
 
 ---
 
-*Artifact excellence through systematic structure and comprehensive documentation. AI System details always at bottom with proper formatting. Pattern context enriches without restricting. All format options always available. User control absolute.*
+*Artifact excellence through systematic structure and comprehensive documentation. AI System details always at bottom with proper formatting. Pattern context enriches without restricting. All format options always available. User control absolute. For complete format specifications, see Prompt - JSON & SMILE Format Guide.md*
