@@ -16,7 +16,7 @@ An intelligent media processing system that transforms natural language requests
 - [⚠️ Important Notes](#important-notes)
 - [📚 Resources](#resources)
 
----
+
 
 ## ✨ Key Features
 
@@ -62,7 +62,7 @@ An intelligent media processing system that transforms natural language requests
 - ❌ Upload to platforms
 - ❌ Files larger than system memory
 
----
+
 
 ## 🚀 Quick Setup
 
@@ -96,7 +96,7 @@ $video compress presentation.mp4     # Direct video mode
 $quick resize photo.jpg              # Fast processing
 ```
 
----
+
 
 ## 🔧 Installing MCP Tools
 
@@ -154,7 +154,7 @@ I'm on [Windows/Mac/Linux].
 After installation, restart Claude Desktop and check:
 ```
 🔧 Setup Verification
-─────────────────
+
 ✔ Imagician: Connected
 ✔ Video-Audio: Connected
 ✔ FFmpeg: Installed
@@ -163,7 +163,7 @@ After installation, restart Claude Desktop and check:
 Ready for media processing!
 ```
 
----
+
 
 ## 🧠 How It Works
 
@@ -172,7 +172,7 @@ Ready for media processing!
 System always verifies MCP connections first:
 ```
 📌 MCP Connection Check
-─────────────────
+
 • Imagician: ✅ Connected
 • Video-Audio: ✅ Connected
 
@@ -210,7 +210,7 @@ Simpler alternative:
 Which approach?
 ```
 
----
+.
 
 ## 🎛️ Operating Modes
 
@@ -245,7 +245,7 @@ How many thinking rounds? (1-10)
 Recommended: 2-3 for simple resize
 ```
 
----
+.
 
 ## 💬 Example Interactions
 
@@ -263,7 +263,7 @@ User: 4
 System: [Using 4 rounds of MEDIA thinking]
 
 🎬 Image Processing Operation
-─────────────────
+
 Thinking: Standard (4 rounds)
 Operation: Web optimization
 
@@ -291,7 +291,7 @@ API calls: 2/60 🟢
 📝 Output: photo-web.webp
 ```
 
----
+.
 
 ## 📊 Visual Feedback
 
@@ -300,7 +300,7 @@ All operations display real-time feedback:
 ### Standard Operation Display
 ```
 🎬 Media Processing Operation
-─────────────────
+
 Thinking: [Mode] ([X] rounds)
 Media Type: [Type]
 Operation: [Description]
@@ -322,7 +322,7 @@ API calls: [X/60] [Status indicator]
 - 🔴 **Red (51-55)**: Critical
 - ⛔ **Limit (60)**: Wait required
 
----
+.
 
 ## ⚡ Emergency Commands
 
@@ -345,7 +345,7 @@ $status
 # Shows MCP status and patterns
 ```
 
----
+.
 
 ## 🆘 Troubleshooting
 
@@ -363,7 +363,7 @@ $status
 ### MCP Connection Issues
 ```
 ⚠️ MCP Connection Failed
-─────────────────
+
 1. Check configuration file
 2. Verify installation paths
 3. Restart Claude Desktop
@@ -377,7 +377,7 @@ $reset     # Clear if needed
 $quick     # Fast mode
 ```
 
----
+.
 
 ## ⚠️ Important Notes
 
@@ -404,7 +404,7 @@ $quick     # Fast mode
 - **Archival**: Lossless formats, maximum quality
 - **General use**: 85-90% quality balance
 
----
+.
 
 ## 📚 Resources
 

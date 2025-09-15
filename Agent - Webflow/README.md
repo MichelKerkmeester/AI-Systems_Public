@@ -243,7 +243,7 @@ Or specify your preferred number.
 | **$status** | Show current state | Check what's happening |
 | **$quick** | Skip to execution | Fast mode |
 
----
+.
 
 ## 💬 Example Interactions
 
@@ -289,7 +289,7 @@ API calls: 15/60 🟢
 💡 Reference fields link your content!
 ```
 
----
+.
 
 ## 📊 What Gets Created
 
@@ -328,7 +328,7 @@ Components: {
 | 7-8 rounds | Slower | Best | Full features |
 | 9-10 rounds | Slowest | Maximum | Complete systems |
 
----
+.
 
 ## 🆘 Troubleshooting
 
@@ -353,7 +353,7 @@ When errors occur, the system uses REPAIR:
 | **Need speed** | Fast execution | `$quick` |
 | **App disconnected** | Open MCP Bridge App | - |
 
----
+.
 
 ## ⚠️ Important Notes
 
@@ -380,7 +380,7 @@ When errors occur, the system uses REPAIR:
 - Rate limited to 60 API calls/minute
 - Must have owner/admin permissions
 
----
+.
 
 ## 📦 Version History
 
@@ -399,7 +399,7 @@ When errors occur, the system uses REPAIR:
 - v0.300: Content management only
 - v0.200: Reality-based approach
 
----
+.
 
 ## 📚 Resources
 
