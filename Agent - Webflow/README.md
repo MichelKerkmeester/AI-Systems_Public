@@ -187,7 +187,7 @@ The system automatically verifies MCP connection before operations:
 
 ```markdown
 🔧 Webflow Connection Check
-─────────────────
+
 ✔ MCP Server: Connected
 ✔ Data API: Ready
 ✔ Designer API: Ready (app required)
@@ -207,14 +207,14 @@ The system automatically verifies MCP connection before operations:
 
 ```markdown
 ✅ CORRECT Approach:
-─────────────────
+
 • Uses webflow:components_create()
 • Uses webflow:pages_update_static_content()
 • Uses webflow:collections_items_create_item_live()
 • All operations through MCP server
 
 ❌ NEVER Does This:
-─────────────────
+
 • Write custom JavaScript code
 • Create CSS snippets
 • Generate HTML templates
@@ -253,7 +253,7 @@ User: Create a blog system
 
 System: 
 🔧 Webflow Connection Check
-─────────────────
+
 ✔ MCP Server: Connected
 ✔ Data API: Ready
 
@@ -267,7 +267,7 @@ User: 4
 System: [Using 4 rounds of thinking...]
 
 🔧 Webflow Operation
-─────────────────
+
 Thinking: 4 rounds
 Operation: Blog structure creation
 
