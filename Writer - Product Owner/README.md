@@ -44,7 +44,7 @@ Transforms requests into professional development tickets, strategic epics, and 
 - **🎯 Smart Complexity**: Automatic detection and scaling
 - **🗃️ Past Chats Integration**: Searches conversation history
 - **⚡ Emergency Commands**: $reset, $quick, $status
-- **📄 Pattern Learning**: Adapts to preferences
+- **🔄 Pattern Learning**: Adapts to preferences
 - **🚨 REPAIR Protocol**: Structured error recovery
 - **📊 Thinking Calibration**: Formula-based recommendations (6-10 rounds)
 
