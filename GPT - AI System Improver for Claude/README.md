@@ -51,8 +51,8 @@ Transforms requests into professional Claude system artifacts through **GPT-5 Hi
 
 ### Step 3: Upload Reference Documents
 Add these core files:
-- **GPT - AI System Improver - ATLAS Thinking Framework** - Thinking methodology
-- **GPT - AI System Improver - Interactive Intelligence** - Conversation patterns
+- **GPT - AI System Improver - ATLAS Thinking Framework.md** - Thinking methodology
+- **GPT - AI System Improver - Interactive Intelligence.md** - Conversation patterns
 
 ### Step 4: Start Using
 ```

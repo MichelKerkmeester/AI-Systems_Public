@@ -69,19 +69,18 @@ A system that transforms vague requests into clear, effective AI prompts using t
 Add these documents to your project's knowledge base:
 
 **Core System Documents:**
-- `Prompt - Core System & Quick Reference.md`
-- `Prompt - Quick Reference - v0.100.md`
+- `Prompt - Quick Reference.md`
 
 **Framework Documents:**
-- `Prompt - ATLAS Thinking Framework - v0.201.md`
-- `Prompt - Artifact Standards & Templates - v0.111.md`
-- `Prompt - JSON & SMILE Format Guide - v1.000.md` ⭐ **NEW**
+- `Prompt - ATLAS Thinking Framework.md`
+- `Prompt - Artifact Standards & Templates.md`
+- `Prompt - JSON & SMILE Format Guide.md` ⭐ **NEW**
 
 **Mode & Enhancement Documents:**
-- `Prompt - Interactive Mode - v0.612.md`
-- `Prompt - Builder Mode - v0.410.md`
-- `Prompt - Evaluation & Refinement - v0.601.md`
-- `Prompt - Patterns & Enhancements - v0.601.md`
+- `Prompt - Interactive Mode.md`
+- `Prompt - Builder Mode.md`
+- `Prompt - Evaluation & Refinement.md`
+- `Prompt - Patterns & Enhancements.md`
 
 ### Step 4: Start Creating
 ```
