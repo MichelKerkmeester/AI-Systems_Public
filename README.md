@@ -18,7 +18,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 ### ✏️ Writer Systems
 
 1. [Product Owner Writer](#4-product-owner-writer---v0882)
-1. [Branded Content Writer](#5-branded-content-writer---v0560)
+1. [Branded Content Writer](#5-branded-content-writer---v0600)
 1. [Prompt Engineering Assistant](#6-prompt-engineering-assistant---v0831)
 1. [GPT - AI System Improver](#7-gpt---ai-system-improver---v0110)
 
@@ -45,10 +45,12 @@ Edit image, video, and audio files via natural language.
   - Image: Resize, convert, compress, crop, batch
   - Video: Transcode, trim, overlay, subtitles
   - Audio: Extract, convert, normalize
+
 - **MEDIA Framework & Challenge Mode**:
   - 5-phase: Measure/Evaluate/Decide/Implement/Analyze
   - Challenge at 3+ rounds (“85% quality, 50% smaller”)
   - Commands: $reset, $standard, $quick, $status
+
 - **Dual MCP Integration & Visual Feedback**:
   - Imagician MCP (Sharp), Video-Audio MCP (FFmpeg)
   - Progress bars, API indicators (🟢🟡🟠🔴)
@@ -65,11 +67,13 @@ Full-stack Webflow development through natural language with Designer and Data A
   - Build components and design systems
   - User-controlled thinking depth (1-10 rounds)
   - ATLAS Framework with emergency commands ($reset, $status, $quick)
+
 - **Designer + Data API Coordination**:
   - Visual elements with companion app
   - Structure creation without leaving Claude
   - Responsive designs and SEO optimization
   - REPAIR protocol for structured error recovery
+
 - **Intelligent Pattern Learning**:
   - Adapts to your workflow preferences
   - Patterns inform but never restrict options
@@ -86,10 +90,12 @@ Seamlessly coordinate task management (ClickUp) and knowledge management (Notion
   - Notion: Databases, pages, rich content, wikis
   - ClickUp: Tasks, time tracking, sprints, projects
   - Always verifies MCP connections before operations
+
 - **Platform Selection & SYNC Framework**:
   - Interactive mode asks which platform fits best
   - User-controlled thinking (1-10 rounds)
   - Challenge Mode at 3+ rounds for simplicity
+
 - **Pattern Learning & Emergency Commands**:
   - Learns preferences but never restricts options
   - Commands: $reset, $quick, $status
@@ -108,33 +114,30 @@ Create professional dev tickets and enhanced documentation.
 - **4 Intelligent Modes & Auto-Scaling**:
   - Modes: $ticket, $epic (dev work), $doc (guides/formatting), $interactive (discovery), $quick (instant)
   - Auto-complexity for tickets: Simple (2-3), Standard (4-5), Complex (6-8 sections)
-  - Enhanced doc templates: User guides, API docs, FAQs, formatting service
+
 - **ATLAS Framework & Challenge Mode**:
   - 5-phase thinking with 6-10 rounds (user-controlled)
   - Auto-challenges at 6+ rounds: Constructive or Strong based on history
   - $quick mode: Zero waiting, 6 rounds auto, no challenges
-- **Professional Standards & Patterns**:
-  - REPAIR error recovery protocol
-  - Past chats integration for context
-  - 7 essential files: 4 core + 3 templates
 
 .
 
-#### 5. ✏️ Branded Content Writer - v0.560
+#### 5. ✏️ Branded Content Writer - v0.600
 
-Content system for any brand or profession with context enrichment.
+Content writing system, fully reconfigurable for any domain: marketing, engineering, education
 
-- **Adaptable System & Current Configuration**:
-  - Currently for Product Designers: case studies, process docs
-  - Reconfigurable for any domain: marketing, engineering, education
-  - Replaceable domain knowledge base
-- **5 Interactive Modes & 6 Tone Variations**:
-  - Modes: $interactive, $write, $share, $teach, $reflect
-  - Tones: $natural, $technical, $collaborative, $educational, $reflective, $minimal
-- **DEPTH Framework & Context Enhancement**:
-  - User-controlled depth (1-10 rounds) - always asked
-  - Challenge Mode at 3+ rounds (both options shown)
-  - Commands: $reset, $standard, $quick, $status
+- **Interactive Modes & Tone Variations**:  
+  - **7 Operating Modes**: $interactive (DEFAULT), $write, $share, $teach, $reflect, $improve, $quick  
+  - **6 Tone Variations**: $natural, $technical, $collaborative, $educational, $reflective, $minimal
+
+- **ATLAS Thinking Framework**:  
+  - 5-phase adaptive methodology (replaces DEPTH)  
+  - User-controlled depth (1-10 rounds) – always asked  
+  - Challenge Mode at exactly 6+ rounds (not 3+)  
+
+- **Web Verification & Variation Scaling**:  
+  - Mandatory web verification for all market intelligence claims  
+  - Scaled variations: 9/6/3 based on word count (1-30/31-150/151+)
 
 .
 
@@ -146,10 +149,12 @@ Generate powerful AI prompts with multi-format support.
   - Core: $short, $improve, $refine, $interactive
   - Builder: $prototype, $website, $app
   - Formats: Standard, $smile (emoticon-structured), $json
+
 - **Multi-Format Enhancement Engine**:
   - Standard: Natural language (baseline tokens)
   - JSON: API-structured (-5% to +5% tokens)
   - SMILE: Emoticon brackets (+20-30% tokens)
+
 - **ATLAS Framework with Format Transform**:
   - 6-phase thinking + Format Transform
   - Challenge at 3+ rounds (“SMILE worth +25% tokens?”)
@@ -165,6 +170,7 @@ Improve Claude systems via GPT-5 deep reasoning and preservation-first editing.
   - Always maximum thinking (GPT-5 High)
   - Interactive Discovery or Direct mode
   - ATLAS auto-scaling
+
 - **Preservation & Professional Delivery**:
   - Structural changes need consent
   - Commands: $quick, $standard, $reset, $status
@@ -184,10 +190,12 @@ Create scheduled tasks with intelligent optimization.
   - Morning Command (5 functions/1 slot), Weekly Intelligence (4/1)
   - Thinking: Quick (2-3), Standard (4-6), Deep (10-15), Maximum (15-20+)
   - Natural language input, test before commit
+
 - **Smart Optimization & Canvas Documentation**:
   - Mandatory canvas README after first task
   - Visual tracking: ▓▓▓▓▓▓░░░░ (6/10 slots)
   - 2.0+ outcomes/slot target
+
 - **ATLAS Framework & Pattern Learning**:
   - 5-phase thinking with 1-20+ rounds
   - Pattern detection after 3 similar requests

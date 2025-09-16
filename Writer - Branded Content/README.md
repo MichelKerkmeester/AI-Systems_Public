@@ -1,50 +1,46 @@
-# Branded Content Writer - User Guide v0.550
+# Product Design Writer - User Guide v0.600
 
-A flexible content creation system that transforms expertise into clear, practical content through contextual enrichment, systematic thinking, and authentic process documentation. Currently configured for Product Designers but easily adaptable for any brand voice or profession.
+A specialized content creation system for product designers that combines ATLAS thinking methodology, web-verified intelligence, and pattern learning to deliver content optimized for design teams, developers, and stakeholders.
 
 ## 📋 Table of Contents
 
-- [🆕 What's New in v0.550](#whats-new-in-v0550---major-alignment--structure-update)
+- [🆕 What's New in v0.600](#whats-new-in-v0.600---atlas--verification-update)
 - [✨ Key Features](#key-features)
 - [🚀 Quick Setup](#quick-setup)
 - [🛠️ Adapting the System](#adapting-the-system)
 - [🎛️ System Architecture](#system-architecture)
 - [🗂 Content Frameworks](#content-frameworks)
 - [🎨 Voice & Tone System](#voice--tone-system)
-- [🧠 DEPTH Thinking Framework](#depth-thinking-framework)
-- [📄 Challenge Mode](#challenge-mode)
+- [🧠 ATLAS Thinking Framework](#atlas-thinking-framework)
+- [🔄 Challenge Mode](#challenge-mode)
 - [🗃️ Past Chats Integration](#past-chats-integration)
 - [⚡ Emergency Commands](#emergency-commands)
-- [🚨 Error Recovery - LEARN Protocol](#error-recovery---learn-protocol)
+- [🚨 Error Recovery - REPAIR Protocol](#error-recovery---repair-protocol)
 - [📦 Standard Artifact Structure](#standard-artifact-structure)
 - [🔧 Troubleshooting](#troubleshooting)
 - [📦 Version History](#version-history)
 
 .
 
-## 🆕 What's New in v0.550 - Major Alignment & Structure Update
+## 🆕 What's New in v0.600 - ATLAS & Verification Update
 
-### Major Structural Changes
-- **30 Critical Rules System**: Expanded from 27 to 30 for comprehensive coverage
-- **Enhanced Challenge Mode**: Three-level hierarchy (Gentle/Constructive/Strong)
-- **Improved LEARN Protocol**: More detailed error recovery with pattern tracking
-- **Better Organization**: Aligned with modern system architecture patterns
+### Major Structural Rework for Superior Content Output
+- **Comprehensive System Overhaul**: Major restructuring of content generation logic for clarity, flexibility, and higher-quality outputs.
 
-### New Features
-- **Challenge Hierarchy**: Progressive challenge levels based on thinking rounds
-- **Format Verification**: Rule #30 ensures consistent formatting
-- **Enhanced Pattern Recognition**: Better tracking and display
-- **Improved Past Chats Integration**: More sophisticated context enhancement
+### New & Enhanced Features
+- **ATLAS Framework Integration**: DEPTH replaced by a robust, 5-phase adaptive thinking methodology for deeper, more user-driven ideation.
+- **Mandatory Web Verification**: Every market intelligence claim must be web-verified—no exceptions.
+- **Refined Variation Scaling**: Output variations now scale exactly—3/2/1—based on precise word count bands for consistency and control.
 
 .
 
 ## ✨ Key Features
 
 ### Five Core Innovations
-1. **Copywriter Frameworks**: 9+ intelligent frameworks (Simple, Medium, Complex)
-2. **Various Modes and Tones**: 5 interactive modes with 6 tone variations
-3. **Enhanced Design Intelligence**: Comprehensive UX/UI knowledge base
-4. **DEPTH Thinking Framework**: 5-phase methodology with user control (1-10 rounds)
+1. **ATLAS Thinking Framework**: 5-phase methodology with user control (1-10 rounds)
+2. **7 Operating Modes**: Interactive (DEFAULT), Write, Share, Teach, Reflect, Improve, Quick
+3. **Web-Verified Intelligence**: Comprehensive design data with MANDATORY verification
+4. **Scaled Variations**: 9/6/3 variations based on exact word count (1-30/31-150/151+)
 5. **Historical Context System**: Displays patterns without restricting options
 
 .
@@ -54,30 +50,34 @@ A flexible content creation system that transforms expertise into clear, practic
 ### Step 1: Create a Claude Project
 1. Go to claude.ai
 2. Click "Projects" in sidebar
-3. Create new project: "Branded Content Writer"
+3. Create new project: "Writer → {Name}"
 
 ### Step 2: Add System Instructions
 1. Click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Writer - Branded Content.md`
+3. Copy and paste: Writer - Branded Content.md
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
 Add these documents to your project:
-- `Content - Quick Reference.md`
-- `Content - Artifact Standards & Templates.md`
-- `Content - Copywriter Frameworks.md`
-- `Content - DEPTH Thinking Framework.md`
-- `Content - Design & Product Intelligence.md`
-- `Content - Interactive Mode.md`
-- `Content - Voice & Tone Guide.md`
+- Content - Quick Reference.md
+- Content - ATLAS Thinking Framework.md
+- Content - Interactive Mode.md
+- Content - Artifact Standards & Templates.md
+- Content - Copywriter Framework.md
+- Content - Voice & Tone Guide.md
+- Content - Design & Product Intelligence.md 
 
 ### Step 4: Start Creating
 ```
-Need help with case study          # Interactive mode
-$write LinkedIn post about design  # Direct writing
-$quick - Just rewrite this        # Fast processing
-$reset                            # Start fresh
+- Need help with design content       
+  - _# Interactive mode (DEFAULT)_
+
+- $write $natural $technical LinkedIn post about systems   
+  -  _# Direct writing mode_
+
+- $quick Rewrite this headline
+  - _# Fast processing - no questions_
 ```
 
 .
@@ -85,14 +85,14 @@ $reset                            # Start fresh
 ## 🛠️ Adapting the System
 
 ### Current Setup
-Pre-configured for Product Designers with design process documentation, UX/UI principles, and team collaboration focus.
+Pre-configured for Product Designers with design process documentation, UX/UI principles, team collaboration focus, and verified market intelligence.
 
 ### Adapt for Your Needs
-- **Your Brand**: Update documents with your voice guidelines
-- **Marketing**: Campaign stories, ROI focus
-- **Engineering**: Technical documentation
-- **Education**: Lesson planning, student success
-- **Personal**: Blog posts, thought leadership
+- **Your Design Team**: Update voice guidelines for your brand
+- **Development Teams**: Technical documentation focus
+- **Stakeholders**: ROI and business impact emphasis
+- **Agencies**: Client work and case studies
+- **Freelancers**: Portfolio and thought leadership
 
 .
 
@@ -102,21 +102,14 @@ Pre-configured for Product Designers with design process documentation, UX/UI pr
 
 | Document | Purpose | Key Features |
 |----------|---------|--------------|
-| **Writer - Branded Content** | Master orchestration | 30 critical rules |
-| **Content - Quick Reference** | Compact reference | All rules & patterns |
-| **Content - Artifact Standards** | Output templates | Merged structure |
-| **Content - Copywriter Frameworks** | Frameworks | 9+ frameworks |
-| **Content - DEPTH Framework** | Thinking methodology | 5-phase system |
-| **Content - Interactive Mode** | Default mode | Discovery flow |
-| **Content - Voice & Tone** | Voice system | 6 tones |
-
-### 30 Critical Rules Structure
-- **Rules 1-7:** Core Process Rules
-- **Rules 8-14:** Output Requirements
-- **Rules 15-17:** Formatting Requirements
-- **Rules 18-20:** Design-Specific Voice
-- **Rules 21-27:** System Behavior
-- **Rules 28-30:** Challenge & Quality Rules
+| **Writer - Branded Content.md** | Master orchestration | Core rules, mode activation |
+| **Content - Quick Reference.md** | Compact reference | All rules & verification |
+| **Content - ATLAS Thinking Framework.md** | Thinking methodology | 5-phase system |
+| **Content - Interactive Mode.md** | Default mode | Clean questions |
+| **Content - Artifact Standards & Templates.md** | Output templates | 3/2/1 variations |
+| **Content - Copywriter Framework.md** | Writing frameworks | 9+ frameworks |
+| **Content - Voice & Tone Guide.md** | Voice system | 6 tones |
+| **Content - Design & Product Intelligence.md** | Market data | MANDATORY verification |
 
 .
 
@@ -124,101 +117,113 @@ Pre-configured for Product Designers with design process documentation, UX/UI pr
 
 ### Simple Frameworks (3-Part)
 - **SVC**: Story • Value • Call (Quick insights)
-- **QPT**: Question • Perspective • Takeaway (Engagement)
-- **TIP**: Trigger • Insight • Practice (Quick tips)
+- **QPT**: Question • Perspective • Takeaway (Discussions)
+- **PATH**: Problem • Approach • Test • Harvest (Process)
 
 ### Medium Frameworks (4-Part)
 - **CASE**: Context • Action • Solution • Evolution (Case studies)
-- **PATH**: Problem • Approach • Test • Harvest (Process stories)
 - **HELP**: Hook • Example • Lesson • Practice (Teaching)
 
-### Complex Frameworks
-- **FAIL**: Failure • Analysis • Insight • Learning (Reflections)
-- **COMPARE**: Options • Criteria • Trade-offs • Recommendation
-- **GUIDE**: Goal • Steps • Examples • Practice • Next
+### Complex Frameworks (5+ Part)
+- **Design Process**: Discover • Define • Develop • Deliver • Document
+- **Iteration Story**: Try • Fail • Learn • Ship
 
 .
 
 ## 🎨 Voice & Tone System
 
 ### The Voice Trinity
-1. **Knowledgeable** - Deep expertise without arrogance
-2. **Curious** - Still learning, asking questions
-3. **Empowering** - Enable others to build better
+1. **Process-Transparent** - Show iterations, not just outcomes
+2. **Team-Empowering** - Credit everyone, enable collaboration
+3. **Genuinely-Uncertain** - Natural imperfections welcome
 
 ### Available Tones
 | Tone | Command | Key Markers |
 |------|---------|-------------|
 | **Natural** | `$natural` | Varied rhythm (DEFAULT) |
-| **Technical** | `$technical` | Precise with examples |
-| **Collaborative** | `$collaborative` | Team-focused |
+| **Collaborative** | `$collaborative` | Team focus, inclusive |
+| **Technical** | `$technical` | Precise terms, data |
 | **Educational** | `$educational` | Step-by-step |
 | **Reflective** | `$reflective` | Thoughtful analysis |
-| **Minimal** | `$minimal` | Essential only |
+| **Minimal** | `$minimal` | Essential words only |
 
 .
 
-## 🧠 DEPTH Thinking Framework
+## 🧠 ATLAS Thinking Framework
 
 ### User-Controlled Depth
 ```
 How many thinking rounds should I use? (1-10)
 
 Based on your request, I recommend: [X rounds]
-• Complexity: [Low/Medium/High]
-• Audience: [Technical/Mixed/General]
-• Depth needed: [Low/Medium/High]
+• Complexity: [Low/Medium/High] - [reason]
+• Audience: [Designer/Developer/Stakeholder]
+• Stakes: [Low/Medium/High] - [impact]
+• Verification: [Will verify market data if needed]
 
 [Historical note: You typically choose X rounds]
 
 Your choice?
 ```
 
-### The Five DEPTH Phases
-- **D** - Discover & Understand: Map needs and challenge
-- **E** - Explore & Generate: Create multiple approaches
-- **P** - Process & Synthesize: Integrate knowledge
-- **T** - Test & Validate: Quality assurance
-- **H** - Help & Enable: Deliver with clarity
+### The Five ATLAS Phases
+- **A** - Assess & Challenge: Map needs and check history
+- **T** - Transform & Expand: Apply frameworks
+- **L** - Layer & Analyze: Add intelligence [VERIFY ALL STATS]
+- **A2** - Assess Impact: MEQT scoring
+- **S** - Synthesize & Ship: Deliver artifact
 
-### DEPTH Phases by Rounds
-| Rounds | Phases | Use Case | Challenge Level |
-|--------|--------|----------|-----------------|
-| **1-2** | D→H | Quick edits | None |
-| **3-4** | D→E→P→H | Standard content | Gentle |
-| **5-6** | D→E→P→T→H | Deep dives | Moderate |
-| **7-10** | Full DEPTH+ | Strategic work | Strong |
+### ATLAS Phases by Rounds
+| Rounds | Phases | Use Case | Challenge | Verification |
+|--------|--------|----------|-----------|--------------|
+| **1-2** | A→S | Quick edits | None | None needed |
+| **3-5** | A→T→S | Standard content | None | If stats used |
+| **6-7** | A→T→L→S | Complex content | **AUTOMATIC** | Full verification |
+| **8-10** | Full ATLAS | Strategic work | **AUTOMATIC** | Comprehensive |
 
 .
 
-## 📄 Challenge Mode
+## 🔄 Challenge Mode
 
-### Three-Level Hierarchy
-Automatically activates at 3+ thinking rounds:
-
-**Level 1: Gentle (1-2 rounds)**
-- "Could this be shorter?"
-- "Would simpler language work?"
-
-**Level 2: Constructive (3-5 rounds)**
-- "Focused might be stronger..."
-- "Highlighting one aspect might be clearer..."
-
-**Level 3: Strong (6-10 rounds)**
-- "Are we overcomplicating?"
-- "Would practitioners actually use this?"
+### Triggers at EXACTLY 6+ Thinking Rounds
+NOT at 3+ as older versions - EXACTLY at 6+
 
 ### Challenge Template
 ```
-Quick thought before we proceed:
+**🔄 Challenge Mode Activated** (6+ thinking rounds detected)
 
 Could we achieve your goal more simply?
-- Option A: Single insight (1-2 rounds)
-- Option B: Key example (3-4 rounds)
-- Option C: Full framework (5+ rounds)
+
+1. **Ultra-simple:** Single principle or stat [will verify]
+2. **Balanced:** Your original approach [2-3 verified points]
+3. **Enhanced:** With additional elements [full verification]
+
+Which approach would you prefer? (1/2/3)
 
 [Historical: Challenge acceptance rate if available]
 ```
+
+**SYSTEM MUST WAIT FOR USER CHOICE** (except $quick mode)
+
+.
+
+## 🚨 Error Recovery - REPAIR Protocol
+
+### The REPAIR Framework
+**R** - Recognize issue with historical context  
+**E** - Explain impact on clarity  
+**P** - Propose 3 fixes  
+**A** - Adapt approach  
+**I** - Iterate/test  
+**R** - Record pattern for future  
+
+### Common Recovery Scenarios
+| Issue | Fix | Pattern Note |
+|-------|-----|--------------|
+| Wrong variations | Apply 3/2/1 by word count | Check exact count |
+| Poor format | Add line breaks/dividers | Strict requirement |
+| Outdated stats | Web verify and update | MANDATORY |
+| Unverified claims | Search immediately | MANDATORY |
 
 .
 
@@ -234,7 +239,7 @@ Could we achieve your goal more simply?
 
 ### Tool Selection
 - **conversation_search**: Topic/keyword-based search
-- **recent_chats**: Time-based retrieval
+- **recent_chats**: Time-based retrieval (1-20 chats)
 
 **Critical:** Historical context enriches but NEVER restricts
 
@@ -245,34 +250,16 @@ Could we achieve your goal more simply?
 | Command | Action | Result | Best Used When |
 |---------|--------|--------|----------------|
 | **`$reset`** | Clear all context | Start fresh | Switching topics |
-| **`$standard`** | Use default flow | Ignore patterns | Want clean process |
-| **`$quick`** | Skip to creation | Fast mode | Know what you want |
-| **`$status`** | Show current context | Display patterns | Understanding tracking |
+| **`$quick`** | Skip to creation | 2 rounds auto, no questions | Know what you want |
+| **`$status`** | Show current context | Display patterns & verification | Understanding tracking |
+| **`$verify`** | Force verification | Re-verify all statistics | Stats seem outdated |
 
 ### Command Combinations
 - `$reset` + `$quick`: Fresh start with fast creation
-- `$status` + `$standard`: Check patterns then ignore them
+- `$status` + `$verify`: Check patterns then verify all stats
 
 .
 
-## 🚨 Error Recovery - LEARN Protocol
-
-### The LEARN Framework
-**L** - Locate issue with historical context  
-**E** - Explain impact on clarity  
-**A** - Alternatives (provide 3 options)  
-**R** - Refine approach  
-**N** - Note pattern for future  
-
-### Common Recovery Scenarios
-| Issue | Fix | Pattern Note |
-|-------|-----|--------------|
-| Too academic | Add examples | Track preference |
-| Wrong audience | Adjust technical level | Note effectiveness |
-| Missing process | Show iterations | Always works |
-| Format issues | Fix structure | Strict rule |
-
-.
 
 ## 📦 Standard Artifact Structure
 
@@ -283,32 +270,51 @@ Could we achieve your goal more simply?
 
 ## Variations
 
-### Most practical:
-[Direct, action-focused version]
+### Most concise:
+[3/2/1 versions based on word count]
 
 ---
 
-### Most insightful:
-[Deeper understanding version]
+### Most valuable:
+[3/2/1 versions based on word count]
 
 ---
 
-### Most collaborative:
-[Team discussion version]
+### Most authentic:
+[3/2/1 versions based on word count]
 
 ---
 
-**AI System:**
+## AI System:
+
 - **Framework:** [Name or "None"]
 - **Mode:** $[mode used]
 - **Tone:** $[tone selected]
+
+---
+
 - **Thinking:** [X rounds - user selected]
-- **DEPTH:** [Phases used]
-- **Challenge:** [Applied/Not applied]
+- **ATLAS:** [Phases used]
+
+---
+
+- **Challenge:** [Applied at 6+/Not applied]
+- **Platform:** [Platform/Not specified]
+
+---
+
+- **Web Verification:** [MANDATORY SECTION]
+  - Stats verified: [Yes/No - count]
+  - Topics searched: [List queries]
+  - Verification status: [Complete/Partial/Failed]
+  - Fallback used: [Yes/No]
+
+---
 
 **Historical Context:**
 - Patterns from [X] sessions
 - All options always shown
+- User autonomy: 100%
 ```
 
 .
@@ -317,39 +323,24 @@ Could we achieve your goal more simply?
 
 ### Common Issues
 ```
-Context seems wrong:
-$status → Check what's tracked
-$reset → Clear if needed
+Stats seem outdated:
+$verify → Force re-verification
+$status → Check verification status
 
-Too many suggestions:
-$standard → Clean process
-$quick → Skip to essentials
-
-Lost in the system:
-$status → See current state
-Interactive Mode → Default exploration
-
-Need fast turnaround:
-$quick → Minimal process
+Too many questions:
+$quick → Skip all interaction
 Use 1-2 thinking rounds
+
+Wrong variation count:
+Check exact word count
+Apply 3/2/1 rule
+Verify formatting
+
+Need different approach:
+$reset → Clear patterns
+Interactive Mode → Full exploration
 ```
-
-.
-
-## 📦 Version History
-
-### v0.550 (Current)
-- 30 Critical Rules expanded and reorganized
-- Enhanced Challenge Mode with three-level hierarchy
-- Improved LEARN Protocol
-- Better structure alignment
-
-### Previous Versions
-- **v0.540**: Emergency Commands System
-- **v0.530**: Core System Rules centralization
-- **v0.520**: Enhanced Design Intelligence
-- **v0.500**: Complete redesign with DEPTH
 
 ---
 
-*Great content makes the complex feel approachable. Interactive Mode is DEFAULT. Thinking rounds are MANDATORY. User control is absolute.*
+*Product Design content excellence through ATLAS thinking. Interactive Mode is DEFAULT. Web verification is MANDATORY. Challenge at exactly 6+ rounds. User control is absolute.*
