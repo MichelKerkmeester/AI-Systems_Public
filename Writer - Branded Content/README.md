@@ -69,16 +69,11 @@ Add these documents to your project:
 - Content - Design & Product Intelligence.md 
 
 ### Step 4: Start Creating
-```
-- Need help with design content       
-  - _# Interactive mode (DEFAULT)_
 
-- $write $natural $technical LinkedIn post about systems   
-  -  _# Direct writing mode_
+- Need help with design content (**Interactive mode**)
+- **$write $natural $technical** LinkedIn post about systems (Direct writing mode)
+- **$quick** Rewrite this headline (Fast processing,no questions)
 
-- $quick Rewrite this headline
-  - _# Fast processing - no questions_
-```
 
 .
 
