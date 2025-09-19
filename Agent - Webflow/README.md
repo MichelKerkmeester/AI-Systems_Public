@@ -1,4 +1,4 @@
-# Webflow Agent - User Guide v0.413
+# Webflow Agent - User Guide v0.414
 
 A full-stack development assistant that creates and manages Webflow sites through natural language. With Designer and Data API integration, it builds complete structures, design components, and manages content - transforming ideas into functioning Webflow sites with automatic UltraThink processing.
 
@@ -20,7 +20,7 @@ A full-stack development assistant that creates and manages Webflow sites throug
 
 .
 
-## ✨ What's New in v0.413
+## ✨ What's New in v0.414
 
 ### Major Update: Automatic UltraThink Processing
 - **UltraThink Automatic**: System now uses 10 rounds of thinking automatically - no user prompts
@@ -417,32 +417,6 @@ When errors occur, the system uses REPAIR:
 - Designer API requires companion app
 - Rate limited to 60 API calls/minute
 - Must have owner/admin permissions
-
-.
-
-## 📦 Version History
-
-### v0.413 (Current)
-- **UltraThink automatic** - 10 rounds for all operations, no user prompts
-- **$quick mode enhanced** - Adaptive 1-5 rounds based on complexity
-- **Silent processing** - No thinking depth questions
-- Connection verification - Checks MCP before operations
-- Native API emphasis - No custom code generation
-
-### v0.411
-- Connection verification - Checks MCP before operations
-- Native API emphasis - No custom code generation
-- Consistent formatting - Standardized dividers
-
-### v0.410
-- User-controlled thinking - Choose 1-10 rounds (now removed)
-- Simplified commands - Only $reset, $status, $quick
-- REPAIR protocol - Structured error recovery
-
-### Previous Versions
-- v0.400: Designer API integration
-- v0.300: Content management only
-- v0.200: Reality-based approach
 
 .
 
