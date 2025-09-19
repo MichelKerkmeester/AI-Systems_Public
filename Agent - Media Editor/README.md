@@ -1,4 +1,4 @@
-# Media Editor System - User Guide v0.113
+# Media Editor System - User Guide v0.114
 
 An intelligent media processing system that transforms natural language requests into optimized images, videos, and audio through conversational guidance. Features automatic deep analysis with 10 rounds of professional optimization, ensuring every media operation achieves optimal results without manual configuration.
 
@@ -75,16 +75,16 @@ An intelligent media processing system that transforms natural language requests
 ### Step 2: Add System Instructions
 1. Click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Agent - MCP - Media Editor - v0.113.md`
+3. Copy and paste: `Agent - MCP - Media Editor.md`
 4. Save the project
 
 ### Step 3: Upload Reference Documents
-Add these documents to your project (all v0.103):
-- `Media Editor - Interactive Intelligence - v0.103.md`
-- `Media Editor - Patterns & Workflows - v0.103.md`
-- `Media Editor - MEDIA Thinking Framework - v0.103.md`
-- `Media Editor - MCP Intelligence - Imagician - v0.103.md`
-- `Media Editor - MCP Intelligence - Video, Audio - v0.103.md`
+Add these documents to your project:
+- `Media Editor - Interactive Intelligence.md`
+- `Media Editor - Patterns & Workflows.md`
+- `Media Editor - MEDIA Thinking Framework.md`
+- `Media Editor - MCP Intelligence - Imagician.md`
+- `Media Editor - MCP Intelligence - Video, Audio.md`
 
 ### Step 4: Install MCP Tools
 See next section for detailed setup
