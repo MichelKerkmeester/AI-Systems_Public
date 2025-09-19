@@ -17,7 +17,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 ### ✏️ Writer Systems
 
-1. [Product Owner Writer](#4-product-owner-writer---v0882)
+1. [Product Owner Writer](#4-product-owner-writer---v0890)
 1. [Branded Content Writer](#5-branded-content-writer---v0600)
 1. [Prompt Engineering Assistant](#6-prompt-engineering-assistant---v0831)
 1. [GPT - AI System Improver](#7-gpt---ai-system-improver---v0110)
@@ -107,12 +107,12 @@ Seamlessly coordinate task management (ClickUp) and knowledge management (Notion
 
 → Automate prompt, content, documentation, and ticket writing 
 
-#### 4. 📋 Product Owner Writer - v0.882
+#### 4. 📋 Product Owner Writer - v0.890
 
 Create professional dev tickets and enhanced documentation.
 
 - **4 Intelligent Modes & Auto-Scaling**:
-  - Modes: $ticket, $epic (dev work), $doc (guides/formatting), $interactive (discovery), $quick (instant)
+  - Modes: $ticket & $epic (dev work), $doc (guides/formatting), $interactive (discovery), $quick (instant)
   - Auto-complexity for tickets: Simple (2-3), Standard (4-5), Complex (6-8 sections)
 
 - **ATLAS Framework & Challenge Mode**:

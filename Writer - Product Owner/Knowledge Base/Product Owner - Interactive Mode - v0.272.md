@@ -36,8 +36,8 @@ Unless user explicitly specifies $ticket, $epic, $doc, or $quick, Interactive Mo
 | Interactive | (default) or $interactive | Varies | Varies by selection | After 6+ | Tracks mode preference | Multiple | Mode-specific |
 | **$quick** | Direct | Any type | 6 (auto) | NEVER | Minimal | NONE | Mode-appropriate |
 | $ticket | Direct | Scaled ticket | 6-10 | Active 6+ | Applies structure | Rounds, Challenge | ⌘, ❖, ◻︎, ◊, — |
-| $epic | Direct | Strategic initiative | 6-10 | Active 6+ | Strategic patterns | Rounds, Challenge | ⌘, ❖, ◻︎, ◊, —— |
-| $doc | Direct | Documentation/Format | 6-10 | If complex | Learns detail level | Rounds, Format | ⌘, ❖, ◻︎, ◊, —— |
+| $epic | Direct | Strategic initiative | 6-10 | Active 6+ | Strategic patterns | Rounds, Challenge | ⌘, ❖, ◻︎, ◊, — |
+| $doc | Direct | Documentation/Format | 6-10 | If complex | Learns detail level | Rounds, Format | ⌘, ❖, ◻︎, ◊, — |
 
 **ALL outputs delivered as artifacts ONLY AFTER user confirmation (except $quick mode which proceeds immediately).**
 
@@ -350,7 +350,7 @@ async def epic_mode_flow(request):
 ```
 
 ### EPIC MODE FORMATTING RULES
-- **Symbols:** ⌘ (About), ❖ (Main sections H1), ◻︎ (Sub-sections H2), ◊ (Components H3), —— (Details H4)
+- **Symbols:** ⌘ (About), ❖ (Main sections H1), ◻︎ (Sub-sections H2), ◊ (Components H3), — (Details H4)
 - **Lists:** Use `—` for items under **◊** headers
 - **Structure:** Maintain strategic hierarchy
 - **Status notes:** Include where applicable
@@ -416,7 +416,7 @@ User: minimal
 When formatting "Situation:" and "Action:" content:
 
 ```markdown
-#### —— Thresholds & Actions
+#### — Thresholds & Actions
 
 1. **[Metric condition]** = [threshold]
 
@@ -444,7 +444,7 @@ Situation: [text] Action: [text]  ✗ (all on one line)
 ```
 
 #### Doc Mode Symbol Rules
-- **Symbols:** ⌘ (About), ❖ (Main sections H1), ◻︎ (Sub-sections H2), ◊ (Components H3), —— (Details H4)
+- **Symbols:** ⌘ (About), ❖ (Main sections H1), ◻︎ (Sub-sections H2), ◊ (Components H3), — (Details H4)
 - **Lists:** Use `—` for items under **◊** headers
 - **Separators:** Use `* * *` for document section breaks
 - **Line breaks:** Ensure proper spacing between Situation/Action blocks
@@ -776,13 +776,13 @@ Historical Context:
 - Sub-headings: `**—**` for bold within H4
 
 **Epic Mode:**
-- Symbols: ⌘, ❖, ◻︎, ◊, ——
+- Symbols: ⌘, ❖, ◻︎, ◊, —
 - Lists: `—` under ◊ headers
 - Strategic structure maintained
 - Status callouts included
 
 **Doc Mode:**
-- Symbols: ⌘, ❖, ◻︎, ◊, ——
+- Symbols: ⌘, ❖, ◻︎, ◊, —
 - **Critical:** Situation/Action on separate lines
 - **Line breaks:** Between all major elements
 - **Separators:** `* * *` between sections

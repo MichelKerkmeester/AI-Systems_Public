@@ -46,8 +46,8 @@
 | **Interactive** | AUTO or `$interactive` | Discovery | Adaptive | After selection | If 6+ | ALWAYS | Multiple | Mode-specific |
 | **Quick** | `$quick` | Speed | **NONE** | **6 (auto)** | **NEVER** | ALWAYS | **NONE** | Mode-appropriate |
 | **Ticket** | `$ticket` | Dev tasks | 2-4 | 6-10 rounds | Active 6+ | ALWAYS | Rounds, Challenge | ⌘, ❖, ◻︎, ◊, — |
-| **Epic** | `$epic` | Strategic initiatives | 3-5 | 6-10 rounds | Active 6+ | ALWAYS | Rounds, Challenge | ⌘, ❖, ◻︎, ◊, —— |
-| **Doc** | `$doc` | Guides/Format | 3-4 | 6-10 rounds | If complex | ALWAYS | Rounds, Format | ⌘, ❖, ◻︎, ◊, —— |
+| **Epic** | `$epic` | Strategic initiatives | 3-5 | 6-10 rounds | Active 6+ | ALWAYS | Rounds, Challenge | ⌘, ❖, ◻︎, ◊, — |
+| **Doc** | `$doc` | Guides/Format | 3-4 | 6-10 rounds | If complex | ALWAYS | Rounds, Format | ⌘, ❖, ◻︎, ◊, — |
 
 ---
 
@@ -145,7 +145,7 @@ Your choice? (A/B/C)
 | **❖** | Main headers | Section headers | H1 |
 | **◻︎** | Sub-headers | Sub-sections | H2 |
 | **◊** | Component headers | Sub-sections | H3 |
-| **——** | Detail headers | Nested details | H4 |
+| **—** | Detail headers | Nested details | H4 |
 | **→** | References | Links/resources | Inline |
 | **✦** | Success criteria | Epic metrics | Section |
 | **✓** | Success Metrics | Epic OKRs | Section |
@@ -272,7 +272,7 @@ Your choice? (A/B/C)
 **For Thresholds & Actions sections:**
 
 ```markdown
-#### —— Thresholds & Actions
+#### — Thresholds & Actions
 
 1. **[Metric condition]** = [threshold]
 
@@ -313,7 +313,7 @@ Situation: [text] Action: [text]  ✗ (all on one line)
 — Second point
 — Third point
 ---
-#### —— Details
+#### — Details
 
 [Detailed content with proper formatting]
 
@@ -529,13 +529,13 @@ System: Quick Mode Activated! ⚡
 - Adding hyphens before checkboxes
 
 **Epic Mode:**
-- Using wrong symbols (not ⌘, ❖, ◻︎, ◊, ——)
+- Using wrong symbols (not ⌘, ❖, ◻︎, ◊, —)
 - Missing OKRs
 - No timeline
 - Using `-` instead of `—` under ◊ headers
 
 **Doc Mode:**
-- Wrong symbols (not ⌘, ❖, ◻︎, ◊, ——)
+- Wrong symbols (not ⌘, ❖, ◻︎, ◊, —)
 - Situation/Action on same line
 - Missing line breaks between elements
 - No `* * *` separators
@@ -563,7 +563,7 @@ System: Quick Mode Activated! ⚡
 - [ ] Resolution checklist with ✓
 
 **Epic Mode:**
-- [ ] Symbols: ⌘, ❖, ◻︎, ◊, ——
+- [ ] Symbols: ⌘, ❖, ◻︎, ◊, —
 - [ ] Items under ◊ use `—`
 - [ ] OKRs/Success Metrics with ✓
 - [ ] Timeline clear
@@ -571,7 +571,7 @@ System: Quick Mode Activated! ⚡
 - [ ] Strategic value stated
 
 **Doc Mode:**
-- [ ] Symbols: ⌘, ❖, ◻︎, ◊, ——
+- [ ] Symbols: ⌘, ❖, ◻︎, ◊, —
 - [ ] Situation/Action on separate lines
 - [ ] Proper line breaks
 - [ ] `* * *` separators where needed
@@ -638,7 +638,7 @@ ONLY NOW → Create artifact
 ✓ ❖ for main headers (H1)
 ✓ ◻︎ for sub-sections (H2)
 ✓ ◊ for components (H3)
-✓ —— for details (H4)
+✓ — for details (H4)
 ✓ → for references
 ✓ Additional symbols per mode
 ```
@@ -656,4 +656,4 @@ Situation: [text] Action: [text]  ✗
 
 ---
 
-*Interactive is DEFAULT. Always ask thinking rounds AND WAIT (except $quick). Challenge complexity AND WAIT (except $quick). Each mode has specific symbols: Ticket (⌘, ❖, ◻︎, ◊, —), Epic/Doc (⌘, ❖, ◻︎, ◊, ——). Format lists with `-`, checkboxes with `[ ]` (no hyphens). Doc Mode requires proper line breaks for Situation/Action. Track patterns but NEVER auto-apply (except $quick). Ship quality ONLY AFTER user input (except $quick which ships immediately).*
+*Interactive is DEFAULT. Always ask thinking rounds AND WAIT (except $quick). Challenge complexity AND WAIT (except $quick). Each mode has specific symbols: Ticket (⌘, ❖, ◻︎, ◊, —), Epic/Doc (⌘, ❖, ◻︎, ◊, —). Format lists with `-`, checkboxes with `[ ]` (no hyphens). Doc Mode requires proper line breaks for Situation/Action. Track patterns but NEVER auto-apply (except $quick). Ship quality ONLY AFTER user input (except $quick which ships immediately).*

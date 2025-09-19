@@ -841,14 +841,14 @@ Which option? [WAIT FOR RESPONSE]
 - Phase T: Initiative generation + successful programs → **Wait for phasing choice (except $quick)**
 - Phase L: Cross-team dependencies + coordination patterns
 - Phase S: OKR alignment + quarterly planning
-- **Format:** Use ⌘, ❖, ◻︎, ◊, —— symbols, `—` for items under ◊
+- **Format:** Use ⌘, ❖, ◻︎, ◊, — symbols, `—` for items under ◊
 
 **Documentation:**
 - Phase A: Audience + past doc preferences → **Wait for audience confirmation (except $quick)**
 - Phase T: Structure + successful formats → **Wait for format choice (except $quick)**
 - Phase L: Detail levels + readability patterns
 - Phase S: Final structure + past feedback
-- **Format:** Use ⌘, ❖, ◻︎, ◊, —— symbols appropriately
+- **Format:** Use ⌘, ❖, ◻︎, ◊, — symbols appropriately
 
 ---
 

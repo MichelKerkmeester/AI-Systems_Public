@@ -153,7 +153,7 @@
 - **❖ (H1):** Main section headers
 - **◻︎ (H2):** Sub-section headers  
 - **◊ (H3):** Component/detail headers
-- **—— (H4):** Nested detail headers
+- **— (H4):** Nested detail headers
 - **→:** References and links
 - **Bold:** Key concepts
 - **Code blocks:** Technical details
@@ -199,7 +199,7 @@
 5. Optional Sections
 
 **Key Format Rules:**
-- Use hierarchical symbols (⌘, ❖, ◻︎, ◊, ——)
+- Use hierarchical symbols (⌘, ❖, ◻︎, ◊, —)
 - Use `–` for items under **◊** headers
 - Each item on separate line
 - No dividers within subsections
@@ -214,7 +214,7 @@
 5. Dependencies & Risks
 
 **Key Format Rules:**
-- Use hierarchical symbols (⌘, ❖, ◻︎, ◊, ——)
+- Use hierarchical symbols (⌘, ❖, ◻︎, ◊, —)
 - Use `–` for items under **◊** headers
 - Maintain hierarchical structure
 - Status notes where applicable
@@ -229,7 +229,7 @@
 5. Appendices
 
 **Key Format Rules:**
-- Use hierarchical symbols (⌘, ❖, ◻︎, ◊, ——)
+- Use hierarchical symbols (⌘, ❖, ◻︎, ◊, —)
 - Use `–` for items under **◊** headers
 - Use `* * *` for doc separators
 - Clear section hierarchy
@@ -260,7 +260,7 @@
 - [ ] **❖** used for main headers (H1)?
 - [ ] **◻︎** used for sub-sections (H2)?
 - [ ] **◊** used for components (H3)?
-- [ ] **——** used for details (H4)?
+- [ ] **—** used for details (H4)?
 - [ ] **→** used for references?
 - [ ] **✦** used for success criteria?
 - [ ] **✓** used for checklists and metrics?
@@ -317,7 +317,7 @@
 **Detection:** Old symbols used instead of new hierarchy
 **Recovery:**
 1. Replace with correct hierarchical symbols
-2. ⌘ for About, ❖ for H1, ◻︎ for H2, ◊ for H3, —— for H4
+2. ⌘ for About, ❖ for H1, ◻︎ for H2, ◊ for H3, — for H4
 3. Verify all sections updated
 4. Check header levels match symbols
 
@@ -327,7 +327,7 @@
 1. Verify H1 uses ⌘ or ❖
 2. Verify H2 uses ◻︎
 3. Verify H3 uses ◊
-4. Verify H4 uses ——
+4. Verify H4 uses —
 5. Update all mismatched headers
 
 #### Error: Created Without User Input

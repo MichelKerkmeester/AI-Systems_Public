@@ -23,7 +23,7 @@
 * **Purpose:** Create product documentation using the standardized templates below.
 * **Output:** Always returned as a single artifact.
 * **Thinking Rounds:** 6–10 recommended.
-* **Symbol Hierarchy:** ⌘, ❖, ◻︎, ◊, ——
+* **Symbol Hierarchy:** ⌘, ❖, ◻︎, ◊, —
 * **Critical:** Proper line breaks for readability, especially Situation/Action blocks
 * **Tip:** Choose the template that matches the audience and lifecycle stage (discovery → delivery → support).
 
@@ -101,7 +101,7 @@ Features:
 ---
 [Description of how this works]
 ---
-#### —— [Detail Level]
+#### — [Detail Level]
 ---
 *   [Bullet point detail]
 *   [Bullet point detail]
@@ -155,14 +155,14 @@ This framework helps us measure [what we're measuring] so we can [why we're meas
 ---
 ### ◊ **Engagement**
 ---
-#### —— Targets
+#### — Targets
 ---
 *   [Metric 1]
 *   [Metric 2]
 *   [Metric 3]
 *   [Metric 4]
 ---
-#### —— Thresholds & Actions
+#### — Thresholds & Actions
 ---
 1. **[Metric] drops** = below [X]%
 
@@ -178,13 +178,13 @@ This framework helps us measure [what we're measuring] so we can [why we're meas
 ---
 ### ◊ **Conversion**
 ---
-#### —— Targets
+#### — Targets
 ---
 *   [Step] → [Step] rate
 *   [Action] → [Result] rate
 *   [Feature] → [Outcome] rate
 ---
-#### —— Thresholds & Actions
+#### — Thresholds & Actions
 ---
 1. **[Conversion metric]** = below [X]%
 
@@ -194,13 +194,13 @@ This framework helps us measure [what we're measuring] so we can [why we're meas
 ---
 ### ◊ **Retention**
 ---
-#### —— Targets
+#### — Targets
 ---
 *   [X]-day retention
 *   [Behavior] persistence
 *   [Feature] correlation with platform retention
 ---
-#### —— Thresholds & Actions
+#### — Thresholds & Actions
 ---
 1. **[Retention metric] drops** = below [X]%
 
@@ -422,7 +422,7 @@ Here's where you'll find all the [pattern]-related designs:
 ---
 [Description of when and why this state appears]
 ---
-#### —— Logic
+#### — Logic
 ---
 1. [Step 1 of the flow]
 2. [Step 2 of the flow]
@@ -495,14 +495,14 @@ This [central/feature] performance tracking document provides:
 ---
 ### ◊ [Metric Group]
 ---
-#### —— Targets
+#### — Targets
 ---
 *   [Metric name and unit]
 *   [Metric name and unit]
 *   [Metric name and unit]
 *   [Metric name and unit]
 ---
-#### —— Thresholds & Actions
+#### — Thresholds & Actions
 ---
 1. **[Metric condition]** = [threshold]
 
@@ -518,14 +518,14 @@ This [central/feature] performance tracking document provides:
 ---
 ### ◊ [Metric Group 2]
 ---
-#### —— Targets
+#### — Targets
 ---
 *   [Funnel metric with conversion points]
 *   [Rate or ratio metrics]
 *   [Time-based metrics]
 *   [Quality metrics]
 ---
-#### —— Thresholds & Actions
+#### — Thresholds & Actions
 ---
 1. **[Conversion metric]** = below [X]%
 
@@ -633,14 +633,14 @@ Where we lose users and why:
 ---
 ### ◊ **Phase Completion**
 ---
-#### —— Targets
+#### — Targets
 ---
 *   Completion rate: [X]%
 *   Time to complete: [X] minutes
 *   Error rate: <[X]%
 *   Satisfaction: [X]/5
 ---
-#### —— Thresholds & Actions
+#### — Thresholds & Actions
 ---
 1. **Completion drops** = below [X]%
 
@@ -753,7 +753,7 @@ import { Button } from '@company/components';
 ---
 ### ◊ **Variants**
 ---
-#### —— Primary
+#### — Primary
 ---
 Default action style for main CTAs
 ---
@@ -761,7 +761,7 @@ Default action style for main CTAs
 <Button variant="primary">Primary Action</Button>
 ```
 ---
-#### —— Secondary
+#### — Secondary
 ---
 Alternative actions and less emphasis
 ---
@@ -1134,7 +1134,7 @@ For urgent issues, contact:
 *   [Error messages displayed]
 *   [When it typically occurs]
 ---
-#### —— Quick Fix
+#### — Quick Fix
 ---
 Try these steps first:
 ---
@@ -1142,7 +1142,7 @@ Try these steps first:
 2. [Simple solution step 2]
 3. [Test if resolved]
 ---
-#### —— Detailed Solution
+#### — Detailed Solution
 ---
 If quick fix doesn't work:
 ---
@@ -1168,11 +1168,11 @@ If quick fix doesn't work:
    service restart [name]
    ```
 ---
-#### —— Root Cause
+#### — Root Cause
 ---
 This typically happens when [explanation of why this occurs].
 ---
-#### —— Prevention
+#### — Prevention
 ---
 To avoid this issue:
 *   [Preventive measure 1]
@@ -1247,7 +1247,7 @@ awk '/ERROR/ {print $4}' app.log | sort | uniq -c | sort -rn
 ---
 ### ◊ **Diagnosis**
 ---
-#### —— Identify Bottleneck
+#### — Identify Bottleneck
 ---
 1. **Check response times**
    ```bash
@@ -1266,13 +1266,13 @@ awk '/ERROR/ {print $4}' app.log | sort | uniq -c | sort -rn
 ---
 ### ◊ **Solutions**
 ---
-#### —— Quick Optimizations
+#### — Quick Optimizations
 ---
 *   **Clear cache:** `cache-clear --all`
 *   **Restart services:** `systemctl restart [service]`
 *   **Increase limits:** Update configuration
 ---
-#### —— Long-term Fixes
+#### — Long-term Fixes
 ---
 *   **Scale horizontally:** Add more instances
 *   **Optimize queries:** Add indexes
@@ -1321,7 +1321,7 @@ When escalating, always include:
 5. **Main sections:** Use `# ❖ [Section Name]`
 6. **Subsections:** Use `## ◻︎ [Subsection Name]`
 7. **Components:** Use `### ◊ [Component Name]`
-8. **Details:** Use `#### —— [Detail Name]`
+8. **Details:** Use `#### — [Detail Name]`
 
 ### Symbol Hierarchy
 
@@ -1329,7 +1329,7 @@ When escalating, always include:
 * **❖ (H1):** Main section headers
 * **◻︎ (H2):** Sub-section headers
 * **◊ (H3):** Component headers
-* **—— (H4):** Detail headers
+* **— (H4):** Detail headers
 * **→:** References and links
 
 ### Critical Formatting for Readability
@@ -1379,7 +1379,7 @@ Situation: [text] Action: [text]  ✗ (all on one line)
 
 ### Special Characters
 
-* **Section headers:** ⌘ (About), ❖ (Main), ◻︎ (Sub), ◊ (Component), —— (Detail)
+* **Section headers:** ⌘ (About), ❖ (Main), ◻︎ (Sub), ◊ (Component), — (Detail)
 * **Arrows:** → (references, flows)
 * **Emoji:** Used sparingly for visual hierarchy (🔄 for repeat)
 * **Checkmarks:** ✅ for pros, ❌ for cons

@@ -1,10 +1,10 @@
-# Product Owner System - User Guide v0.880
+# Product Owner System - User Guide v0.890
 
 Transforms requests into professional development tickets, strategic epics, and documentation through intelligent interactive guidance with built-in complexity challenging.
 
 ## 📋 Table of Contents
 
-- [🆕 What's New In V0.880](#whats-new-in-v0880---strategic-epic-mode)
+- [🆕 What's New In V0.890](#whats-new-in-v0890---mode-specific-formatting)
 - [✨ Key Features](#key-features)
 - [🚀 Quick Setup](#quick-setup)
 - [🎛️ Operating Modes](#operating-modes)
@@ -16,22 +16,25 @@ Transforms requests into professional development tickets, strategic epics, and 
 - [💡 Challenge Mode](#challenge-mode)
 - [🗃️ Past Chats Integration](#past-chats-integration)
 - [⚡ Emergency Commands](#emergency-commands)
+- [📝 Symbol & Formatting Reference](#symbol--formatting-reference)
 - [🆘 Troubleshooting](#troubleshooting)
 - [📦 Version History](#version-history)
 
 .
 
-## 🆕 What's New In V0.880 - Strategic Epic Mode
+## 🆕 What's New In V0.890 - Mode-Specific Formatting
 
-### Major Addition: Epic Mode for Strategic Initiatives
-- **New $epic Mode**: Create strategic initiatives with OKR alignment
-- **3 Epic Complexity Levels**: Initiative (quarterly), Program (half-year), Strategic (annual)
-- **Strategic Focus**: OKRs, KPIs, timeline management, child ticket tracking
+### Critical Updates: Symbol Systems & Formatting
+- **Mode-Specific Symbols**: Each mode now has its own symbol hierarchy
+- **Ticket Mode**: ⌘, ❖, ◻︎, ◊, — (streamlined for development)
+- **Epic/Doc Mode**: ⌘, ❖, ◻︎, ◊, — (hierarchical for strategy)
+- **Doc Mode Fix**: Situation/Action blocks now properly formatted on separate lines
+- **List Standardization**: Always `-` for lists, `[ ]` for checkboxes (no hyphens)
 
-### Core Features
+### Core Features Maintained
 - **5 Intelligent Modes**: Interactive (default), $quick, $ticket, $epic, $doc
 - **$Quick Mode**: ZERO questions for maximum speed
-- **43 Core Rules**: Maintained with epic mode integration
+- **46 Core Rules**: Updated with mode-specific formatting requirements
 
 .
 
@@ -44,9 +47,10 @@ Transforms requests into professional development tickets, strategic epics, and 
 - **🎯 Smart Complexity**: Automatic detection and scaling
 - **🗃️ Past Chats Integration**: Searches conversation history
 - **⚡ Emergency Commands**: $reset, $quick, $status
-- **🔄 Pattern Learning**: Adapts to preferences
+- **📄 Pattern Learning**: Adapts to preferences
 - **🚨 REPAIR Protocol**: Structured error recovery
 - **📊 Thinking Calibration**: Formula-based recommendations (6-10 rounds)
+- **🖋️ Mode-Specific Formatting**: Each mode uses appropriate symbols
 
 .
 
@@ -60,22 +64,22 @@ Transforms requests into professional development tickets, strategic epics, and 
 ### Step 2: Add System Instructions
 1. Click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Writer - Product Owner.md`
+3. Copy and paste: `Writer - Product Owner - v0.883.md`
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
 Add these documents to your project:
 
 **Core Documents:**
-- `Product Owner - ATLAS Thinking Framework.md`
-- `Product Owner - Artifact Standards.md`
-- `Product Owner - Interactive Mode.md`
-- `Product Owner - Quick Reference.md`
+- `Product Owner - ATLAS Thinking Framework - v0.172.md`
+- `Product Owner - Artifact Standards - v0.133.md`
+- `Product Owner - Interactive Mode - v0.272.md`
+- `Product Owner - Quick Reference - v0.113.md`
 
 **Template Documents:**
-- `Product Owner - Template - Ticket Mode.md`
-- `Product Owner - Template - Epic Mode.md`
-- `Product Owner - Template - Doc Mode.md`
+- `Product Owner - Template - Ticket Mode - v0.110.md`
+- `Product Owner - Template - Epic Mode - v0.102.md`
+- `Product Owner - Template - Doc Mode - v0.107.md`
 
 ### Step 4: Start Creating
 ```
@@ -89,13 +93,13 @@ $ticket payment integration     # Direct ticket mode
 
 ## 🎛️ Operating Modes
 
-| Mode | Command | Output | Questions | Wait Points |
-|------|---------|--------|-----------|-------------|
-| **Interactive** | DEFAULT | Varies | Adaptive | Multiple |
-| **$Quick** | `$quick` | Any type | **NONE** | **NONE** |
-| **Epic** | `$epic` | Strategic initiatives | 3-5 | Rounds, Challenge |
-| **Ticket** | `$ticket` | Development tickets | 2-4 | Rounds, Challenge |
-| **Documentation** | `$doc` | User guides | 3-4 | Rounds, Format |
+| Mode | Command | Output | Questions | Wait Points | Symbol System |
+|------|---------|--------|-----------|-------------|---------------|
+| **Interactive** | DEFAULT | Varies | Adaptive | Multiple | Mode-specific |
+| **$Quick** | `$quick` | Any type | **NONE** | **NONE** | Mode-appropriate |
+| **Epic** | `$epic` | Strategic initiatives | 3-5 | Rounds, Challenge | ⌘, ❖, ◻︎, ◊, —— |
+| **Ticket** | `$ticket` | Development tickets | 2-4 | Rounds, Challenge | ⌘, ❖, ◻︎, ◊, — |
+| **Documentation** | `$doc` | User guides | 3-4 | Rounds, Format | ⌘, ❖, ◻︎, ◊, —— |
 
 ### Interactive Flow (Default)
 ```
@@ -127,6 +131,7 @@ Creating your payments initiative epic immediately...
 - NO challenge presentation - Skips regardless
 - NO additional questions - Proceeds immediately
 - Works with all modes - Tickets, epics, and docs
+- Uses mode-appropriate formatting automatically
 
 .
 
@@ -136,10 +141,10 @@ Creating your payments initiative epic immediately...
 ```
 User: $ticket payment integration
 
-System: Let's create your payment integration ticket!
+System: Let's create your payment integration ticket! 🎯
 
 How many thinking rounds should I use? (6-10)
-Based on payment integration, I recommend: 6 rounds
+Based on payment integration, I recommend: 8 rounds
 
 Your choice?
 ```
@@ -151,12 +156,25 @@ Your choice?
 | **Standard** | 4-5 | 8-12 items | Feature, dashboard |
 | **Complex** | 6-8 with phases | 12-20 items | Platform, architecture |
 
-### Ticket Structure
-- **About**: Context and background
-- **Key Problems**: Issues to solve
-- **Reasons Why**: Business value
-- **Resolution**: Clear actions
-- **Acceptance Criteria**: Definition of done
+### Ticket Structure & Symbols
+- **⌘ About**: Context and background (H1)
+- **❖ Requirements**: Main sections (H2)
+- **◻︎ Functional/Technical**: Sub-sections (H3)
+- **◊ Components**: Detail headers (H4)
+- **— Bold sub-headings**: Within H4 sections
+
+### List Formatting
+```markdown
+### ◻︎ Functional Requirements
+
+- First requirement    ✓ (use hyphen for lists)
+- Second requirement   ✓
+
+## ✓ Resolution Checklist
+
+[ ] First item        ✓ (no hyphen before checkbox)
+[ ] Second item       ✓
+```
 
 .
 
@@ -181,12 +199,21 @@ Your choice?
 | **Program** | 6-7 | 6-10 tickets | Half-year | Platform upgrade |
 | **Strategic** | 8-10 | 10+ tickets | Annual | Digital transformation |
 
-### Epic Components
-- **Strategic Overview**: Business context and vision
-- **Success Metrics**: OKRs and KPIs with targets
-- **Timeline & Phases**: Quarterly breakdown with milestones
-- **Child Tickets**: Mapped component tickets with teams
-- **Dependencies**: Cross-team and external requirements
+### Epic Structure & Symbols
+- **⌘ About**: Strategic overview (H1)
+- **❖ Timeline & Phases**: Main sections (H1)
+- **◻︎ Phase Details**: Sub-sections (H2)
+- **◊ Components**: Sub-components (H3)
+- **—— Details**: Nested details (H4)
+
+### Epic-Specific Formatting
+```markdown
+### ◊ OKRs
+
+— Objective: [Clear objective]     ✓ (use em dash under ◊)
+— KR1: [Measurable result]         ✓
+— KR2: [Measurable result]         ✓
+```
 
 .
 
@@ -196,10 +223,10 @@ Your choice?
 ```
 User: $doc API guide
 
-System: Let's create your API documentation!
+System: Let's create your API documentation! 📚
 
 How many thinking rounds should I use? (6-10)
-Recommended: 5 rounds for technical guide
+Recommended: 6 rounds for technical guide
 
 Your choice?
 ```
@@ -209,6 +236,28 @@ Your choice?
 - **Feature Docs**: Capability explanations
 - **Technical Specs**: API and integration details
 - **Process Docs**: Workflow documentation
+
+### Doc Structure & Symbols
+- **⌘ About**: Document overview (H1)
+- **❖ Main Sections**: Primary content (H1)
+- **◻︎ Subsections**: Secondary content (H2)
+- **◊ Components**: Detailed items (H3)
+- **—— Details**: Granular content (H4)
+
+### Critical Doc Formatting
+**Thresholds & Actions - CORRECT:**
+```markdown
+1. **[Metric condition]** = [threshold]
+
+**Situation:** [What this indicates]
+
+**Action:** [Step 1] → [Step 2] → [Step 3]
+```
+
+**INCORRECT:**
+```markdown
+Situation: [text] Action: [text]  ✗ (never on one line)
+```
 
 .
 
@@ -339,16 +388,48 @@ $status
 
 .
 
+## 📝 Symbol & Formatting Reference
+
+### Ticket Mode Symbols
+| Symbol | Purpose | Header Level |
+|--------|---------|--------------|
+| **⌘** | About section | H1 |
+| **❖** | Main headers | H2 |
+| **◻︎** | Sub-headers | H3 |
+| **◊** | Components | H4 |
+| **—** | Bold sub-headings | Bold text |
+
+### Epic & Doc Mode Symbols
+| Symbol | Purpose | Header Level |
+|--------|---------|--------------|
+| **⌘** | About section | H1 |
+| **❖** | Main headers | H1 |
+| **◻︎** | Sub-headers | H2 |
+| **◊** | Components | H3 |
+| **——** | Detail headers | H4 |
+
+### Universal Formatting Rules
+- **Lists**: Always use `-` for regular lists
+- **Checkboxes**: Always use `[ ]` without hyphens
+- **References**: Use → for links and references
+- **Success Criteria**: Use ✦ for bullets, ✓ for checkboxes
+- **Dependencies**: Use ≈ symbol
+- **Doc Formatting**: Situation/Action on separate lines
+
+.
+
 ## 🆘 Troubleshooting
 
 ### Common Issues
 | Issue | Solution |
 |-------|----------|
+| **Wrong symbols appearing** | Check mode - each has specific symbols |
+| **Doc text on one line** | Situation/Action must be on separate lines |
+| **Checkbox formatting wrong** | Use `[ ]` without hyphens |
 | **Too complex for need** | Reduce thinking rounds |
 | **Pattern mismatch** | Override and system learns |
 | **Want speed** | Use $quick mode |
 | **Confused context** | Use $reset |
-| **Too many suggestions** | System adapts to rejections |
 
 ### REPAIR Framework for Errors
 - **R**ecognize - Identify issue
@@ -362,7 +443,13 @@ $status
 
 ## 📦 Version History
 
-### v0.880 (Current)
+### v0.890 (Current)
+- **Mode-Specific Symbols**: Each mode has unique hierarchy
+- **Doc Mode Fix**: Proper line breaks for Situation/Action
+- **List Standardization**: Consistent formatting rules
+- **46 Core Rules**: Including mode-specific formatting
+
+### v0.880
 - **Epic Mode Added**: Strategic initiatives with OKR/KPI tracking
 - **5 Operating Modes**: Interactive, $quick, $ticket, $epic, $doc
 - **3 Epic Complexity Levels**: Initiative, Program, Strategic
@@ -386,4 +473,4 @@ $status
 
 ---
 
-*Revolutionary $quick mode for immediate creation. Interactive Mode remains the thoughtful default. Choose $quick when speed matters, Interactive when customization matters, $epic when strategy matters. User autonomy is absolute.*
+*Mode-specific formatting ensures professional output. Each mode uses appropriate symbols: Ticket (⌘, ❖, ◻︎, ◊, —), Epic/Doc (⌘, ❖, ◻︎, ◊, ——). Revolutionary $quick mode for immediate creation. Interactive Mode remains the thoughtful default. Choose $quick when speed matters, Interactive when customization matters, $epic when strategy matters. User autonomy is absolute.*
