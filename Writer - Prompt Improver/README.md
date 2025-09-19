@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 # Prompt Engineering Assistant - User Guide v0.831
+=======
+# Prompt Engineering Assistant - User Guide v8.2.0
+>>>>>>> parent of 77d4afb (Owner = Lean + Versioning)
 
 A system that transforms vague requests into clear, effective AI prompts using the ATLAS framework, challenge-based simplification, and intelligent refinement.
 
 ## 📋 Table of Contents
 
+<<<<<<< HEAD
 - [🆕 What's New in v0.830](#whats-new-in-v0830)
 - [✨ Key Features](#key-features)
 - [🚀 Quick Setup](#quick-setup)
@@ -20,6 +25,43 @@ A system that transforms vague requests into clear, effective AI prompts using t
 .
 
 ## 🆕 What's New in v0.831
+=======
+- [🆕 What's New in v8.2.0](#-whats-new-in-v820)
+- [📖 Overview](#-overview)
+- [✨ Key Features](#-key-features)
+- [🚀 Quick Setup](#-quick-setup)
+- [🎛️ Operating Modes](#️-operating-modes)
+  - [Core Modes](#core-modes)
+  - [Builder Sub-Modes](#builder-sub-modes-universal-ai-platform-support)
+  - [Supported Platforms](#supported-platforms-include)
+- [📄 Format Options](#-format-options)
+  - [Standard Format](#standard-format-default)
+  - [JSON Format](#json-format)
+  - [SMILE Format](#smile-format)
+- [⚡ Emergency Commands](#-emergency-commands-new)
+- [🗂️ Frameworks Overview](#️-frameworks-overview-v820)
+  - [Core Frameworks](#core-frameworks)
+  - [Builder Creative Frameworks](#builder-creative-frameworks-universal)
+- [📊 Enhanced Report Examples](#-enhanced-report-examples)
+- [💰 Smart Resource Optimization](#-smart-resource-optimization-enhanced)
+- [🧠 ATLAS Thinking Framework](#-atlas-thinking-framework)
+  - [How ATLAS Works](#how-atlas-works)
+  - [Challenge Mode](#challenge-mode)
+  - [User Interaction](#user-interaction)
+- [🚀 Challenge Mode Philosophy](#-challenge-mode-philosophy)
+- [🗃️ Past Chats Integration](#️-past-chats-integration-enhanced)
+- [🚨 REPAIR Error Protocol](#-repair-error-protocol)
+- [🆘 Troubleshooting](#-troubleshooting)
+- [⚠️ Important Notes](#️-important-notes-v820)
+- [📦 Version History](#-version-history)
+- [🎯 Key Principles](#-key-principles-v820)
+- [📈 Performance Metrics](#-performance-metrics)
+- [📚 Additional Resources](#-additional-resources)
+
+.
+
+## 🆕 What's New in v8.2.0
+>>>>>>> parent of 77d4afb (Owner = Lean + Versioning)
 
 ### Major Enhancements 🚀
 - **Dedicated Format Guide**: New comprehensive JSON & SMILE Format Guide with complete specifications
@@ -28,11 +70,51 @@ A system that transforms vague requests into clear, effective AI prompts using t
 - **Enhanced Format Documentation**: Detailed conversion methods, templates, and best practices
 - **Performance Metrics**: Added format-specific tracking and optimization strategies
 
+<<<<<<< HEAD
 ### System Improvements
 - Centralized format documentation in one authoritative guide
 - Removed duplicate format information across 6 core files
 - Better maintainability with focused, purpose-driven documents
 - Consistent format references throughout the system
+=======
+### Refinements from v8.1.0
+- **Better Format Selection**: More sophisticated logic with pattern awareness
+- **Tone Templates**: Adaptive personality system for different modes
+- **Reference Architecture**: Clearer document organization
+- **Interactive Mode Flow**: Enhanced with historical notes
+- **Quality Gates**: Necessity, simplicity, and alternative checks before output
+
+### v8.2.0 System Process
+```markdown
+**How many thinking rounds would you like? (1-10, or 'auto' for my recommendation)**
+
+Based on your request, I recommend: **[X] rounds**
+• **Clarity:** [Low/Medium/High] - [specific reason]
+• **Complexity:** [Simple/Standard/Complex] - [specific aspect]
+• **Enhancement:** [Minimal/Moderate/Comprehensive] - [opportunity level]
+
+[Previous patterns: You typically choose [X] rounds for similar prompts]
+
+Your choice?
+```
+**System WAITS for response - NO AUTO-PROCEEDING**
+
+.
+
+## 📖 Overview
+
+The Prompt Engineering Assistant helps users craft powerful, precise prompts through systematic simplification and challenge-based thinking. Version 8.2.0 introduces emergency commands for quick recovery, enhanced conversation history integration, and progressive context learning stages. The system actively questions complexity while delivering professional-grade prompts that maximize clarity, minimize unnecessary specifications, and offers multiple format options to suit different use cases.
+
+### What is SMILE Format?
+SMILE ((: Smile) is an open-source prompt instruction language created by Dr. Thomas Ager, Ph.D. at Cardiff University. It uses emoticon-based brackets to structure prompts for Large Language Models, designed to increase instruction following while maintaining readability.
+
+### v8.2.0 Core Improvements
+- **Emergency Recovery**: Quick commands for system control
+- **Progressive Context**: Learning journey from basic to comprehensive
+- **Status Visibility**: Full transparency on tracked patterns
+- **Adaptive Challenge**: Calibrates based on your preferences
+- **Historical Integration**: Searches past conversations for context
+>>>>>>> parent of 77d4afb (Owner = Lean + Versioning)
 
 .
 
@@ -50,6 +132,17 @@ A system that transforms vague requests into clear, effective AI prompts using t
 - **30-50% Complexity Reduction**: Measurable simplification
 - **Universal Platform Support**: Works on ALL AI platforms
 
+<<<<<<< HEAD
+=======
+### v8.2.0 Enhancements
+- **Conversation Search**: Advanced pattern detection in history
+- **Recent Chats Analysis**: Time-based context retrieval
+- **Challenge Calibration**: Adapts intensity to your preferences
+- **Status Reports**: Complete visibility of system patterns
+- **Quality Gates**: Triple-check before output
+- **Never Restrictive**: Patterns as enriching context only
+
+>>>>>>> parent of 77d4afb (Owner = Lean + Versioning)
 .
 
 ## 🚀 Quick Setup
@@ -62,6 +155,7 @@ A system that transforms vague requests into clear, effective AI prompts using t
 ### Step 2: Add System Instructions
 1. Click "Edit project details"
 2. Find "Custom instructions" section
+<<<<<<< HEAD
 3. Copy and paste: `Writer - Prompt Improver.md`
 4. Save the project
 
@@ -75,6 +169,25 @@ Add these documents to your project's knowledge base:
 - `Prompt - ATLAS Thinking Framework.md`
 - `Prompt - Artifact Standards & Templates.md`
 - `Prompt - JSON & SMILE Format Guide.md`
+=======
+3. Copy and paste: `Writer - Prompt Improver - v8.2.0.md`
+4. Save the project
+
+### Step 3: Upload Supporting Documents
+Add these v8.2.0 documents to your project's knowledge base:
+
+**Critical Documents (v8.2.0):**
+- `Prompt - Core System & Quick Reference - v3.2.0.md` (Mandatory behaviors)
+- `Prompt - Artifact Standards & Templates - v1.0.0.md` (Required formatting)
+- `Prompt - ATLAS Thinking Framework - v2.0.0.md` (With Format Transform)
+
+**Mode Documents (v8.2.0):**
+- `Prompt - Interactive Mode - v6.1.0.md` (Professional formatting)
+- `Prompt - Builder Mode - v4.1.0.md` (Table-based platform guide)
+- `Prompt - Evaluation & Refinement - v6.0.0.md` (Format assessment)
+- `Prompt - Patterns & Enhancements - v6.0.0.md` (Multi-format templates)
+- `Prompt - Quick Reference - v1.0.0.md` (Complete command reference)
+>>>>>>> parent of 77d4afb (Owner = Lean + Versioning)
 
 **Mode & Enhancement Documents:**
 - `Prompt - Interactive Mode.md`
@@ -159,13 +272,48 @@ Enhanced instruction following with visual structure
 ) :)
 ```
 
+<<<<<<< HEAD
 **For detailed syntax, conversion methods, and advanced patterns → See Format Guide**
+=======
+### Format Selection Guide (v8.2.0 Enhanced)
+
+| Complexity | Recommended | Alternative | Pattern Context | Token Note |
+|------------|------------|-------------|-----------------|------------|
+| Simple (1-3) | Standard | - | Previous choices shown | Baseline |
+| Moderate (4-6) | Standard | JSON if API, SMILE if structured | Format history displayed | Monitor overhead |
+| Complex (7-10) | SMILE | Standard with sections | SMILE preference tracked | +20-30% justified |
+>>>>>>> parent of 77d4afb (Owner = Lean + Versioning)
 
 .
 
 ## 🧠 ATLAS Thinking Framework
 
+<<<<<<< HEAD
 ### User-Controlled Process
+=======
+### How ATLAS Works (v8.2.0 Enhanced Process)
+
+| Phase | Action | Challenge Point | Pattern Integration | Output |
+|-------|--------|----------------|---------------------|--------|
+| **Assess** | Map clarity, find gaps | "Is this necessary?" | Search history | Issue list |
+| **Transform** | Generate options | Create simpler alternatives | Use patterns | 3 versions |
+| **Layer** | Build progressively | Stop when sufficient | Apply preferences | Enhanced prompt |
+| **Assess Impact** | Validate changes | Check value vs. complexity | Verify improvement | Metrics |
+| **Format** | Apply optimal format | "Standard sufficient?" | Check format history | Final format |
+| **Synthesize** | Select optimal | Apply final polish | Present all options | Delivered artifact |
+
+### Challenge Mode with Calibration
+
+| Thinking Rounds | Base Intensity | Calibrated By | Final Challenge | Pattern Note |
+|----------------|----------------|---------------|-----------------|--------------|
+| 1-2 | None | - | No challenge | History shown |
+| 3-4 | Gentle | Acceptance rate | Adaptive | Preferences noted |
+| 5-6 | Constructive | Historical data | Personalized | Patterns applied |
+| 7-8 | Strong | User preference | Customized | History influences |
+| 9-10 | Maximum | Past responses | Full context | Complete tracking |
+
+### User Interaction (MANDATORY v8.2.0)
+>>>>>>> parent of 77d4afb (Owner = Lean + Versioning)
 ```
 How many thinking rounds would you like? (1-10, or 'auto')
 
@@ -275,6 +423,7 @@ Contains: Complete specifications, examples, conversion methods
 - **Writer - Prompt Improver**: Main system instructions
 - **JSON & SMILE Format Guide**: Complete format specifications ⭐
 
+<<<<<<< HEAD
 ### Supporting Documents
 - **ATLAS Thinking Framework**: Core thinking methodology
 - **Artifact Standards**: Output formatting requirements
@@ -283,6 +432,48 @@ Contains: Complete specifications, examples, conversion methods
 - **Evaluation & Refinement**: Quality assessment
 - **Patterns & Enhancements**: Advanced techniques
 - **Quick Reference**: Compact rule reference
+=======
+- **v8.2.0**: Emergency commands, enhanced past chats integration, context journey stages, challenge calibration, status reports
+- **v8.1.0**: MANDATORY thinking rounds, professional artifact standards, conversation history pattern learning
+- **v8.0.0**: SMILE format integration, multi-format support, Format Transform phase
+- **v7.2.0**: Streamlined format, 92% pseudocode reduction, table-based logic
+- **v7.1.0**: Enhanced pattern learning, improved confidence scoring
+- **v7.0.0**: ATLAS framework, Challenge mode, REPAIR protocol
+- **v6.0.0**: Consolidated Core System, native Claude thinking
+- **v5.0.0**: Universal platform support, Builder mode for ALL platforms
+- **v4.2.0**: Creative direction philosophy, AI design freedom
+- **v4.1.0**: Reorganized architecture prioritizing core logic
+- **v4.0.0**: Lovable platform, 3 sub-modes, 6 frameworks
+
+.
+
+
+## 📚 Additional Resources
+
+### AI Development Platforms
+- [Bolt.new](https://bolt.new) - Start with Phase 1
+- [MagicPatterns](https://magicpatterns.com) - Simple components first
+- [v0 by Vercel](https://v0.dev) - Essential features only
+- [Cursor](https://cursor.sh) - Reduce dependencies
+- [Windsurf](https://codeium.com/windsurf) - Clean architecture
+- [Replit](https://replit.com) - MVP approach
+- [Lovable](https://lovable.dev) - Credit efficiency
+- [No-code platforms](https://bubble.io) - Consider first
+
+### SMILE Format Resources
+- Created by Dr. Thomas Ager, Ph.D., Cardiff University
+- Open-source prompt instruction language
+- Research-backed for instruction following
+- Compatible with all major LLMs
+
+### v8.2.0 Required Documents
+- **Writer - Prompt Improver v8.2.0**: Main system instructions
+- **Core System & Quick Reference v3.2.0**: Mandatory behaviors
+- **Artifact Standards v1.0.0**: Required formatting
+- **ATLAS Framework v2.0.0**: Thinking methodology
+- **Interactive Mode v6.1.0**: Professional formatting
+- **Quick Reference v1.0.0**: Complete command reference
+>>>>>>> parent of 77d4afb (Owner = Lean + Versioning)
 
 ---
 

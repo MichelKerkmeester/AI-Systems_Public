@@ -1,4 +1,4 @@
-# GPT - AI System Improver for Claude Projects - User Guide v0.110
+# GPT - AI System Improver for Claude Projects - User Guide v1.1.0
 
 Transforms requests into professional Claude system artifacts through **GPT-5 High Deep Reasoning mode**, interactive discovery, automatic complexity challenging, and preservation-first editing. Always applies maximum thinking depth for optimal quality.
 
@@ -6,6 +6,7 @@ Transforms requests into professional Claude system artifacts through **GPT-5 Hi
 
 ## 📋 Table of Contents
 
+<<<<<<< HEAD
 - [✨ Key Features](#key-features)
 - [🚀 Quick Setup](#quick-setup)
 - [📄 Interactive Discovery](#interactive-discovery)
@@ -14,6 +15,18 @@ Transforms requests into professional Claude system artifacts through **GPT-5 Hi
 - [🚀 Challenge Mode](#challenge-mode)
 - [📝 Session Tracking](#session-tracking)
 - [📦 Version History](#version-history)
+=======
+- [🆕 What's New in v1.1.0](#-whats-new-in-v110)
+- [✨ Key Features](#-key-features)
+- [🚀 Quick Setup](#-quick-setup)
+- [🧠 Deep Reasoning Mode](#-deep-reasoning-mode)
+- [🔄 Interactive Discovery](#-interactive-discovery)
+- [🚀 Challenge Mode](#-challenge-mode)
+- [⚡ Emergency Commands](#-emergency-commands)
+- [🔍 Session Tracking](#-session-tracking)
+- [📊 ATLAS Framework](#-atlas-framework)
+- [📦 Version History](#-version-history)
+>>>>>>> parent of 77d4afb (Owner = Lean + Versioning)
 
 .
 
@@ -50,9 +63,15 @@ Transforms requests into professional Claude system artifacts through **GPT-5 Hi
 3. Save configuration
 
 ### Step 3: Upload Reference Documents
+<<<<<<< HEAD
 Add these core files:
 - **GPT - AI System Improver - ATLAS Thinking Framework.md** - Thinking methodology
 - **GPT - AI System Improver - Interactive Intelligence.md** - Conversation patterns
+=======
+Add these three core files:
+- **GPT - AI System Improver - ATLAS Thinking Framework - v1.1.0** - Thinking methodology
+- **GPT - AI System Improver - Interactive Intelligence - v1.1.0** - Conversation patterns
+>>>>>>> parent of 77d4afb (Owner = Lean + Versioning)
 
 ### Step 4: Start Using
 ```
@@ -216,4 +235,49 @@ session_data = {
 
 ---
 
+<<<<<<< HEAD
 **GPT - AI System Improver v0.110** applies GPT-5 High Deep Reasoning mode to every request. Automatic complexity assessment determines optimal ATLAS phases. Interactive discovery when needed. Challenge alternatives based on deep analysis. Session learning enhances without restricting. All options always available. Deep thinking is absolute.
+=======
+
+## 📦 Version History
+
+### v1.1.0 (Current - December 2024)
+- GPT-5 High Deep Reasoning mode (always on)
+- Automatic complexity assessment and phase selection
+- Interactive Discovery as default mode
+- Challenge Mode based on complexity detection
+- Session-only tracking (ChatGPT compatible)
+- Enhanced ATLAS with automatic phases
+- Professional formatting standards
+- 8 quality gates mandatory
+- All emergency commands functional
+
+### v1.0.0 (Initial Release)
+- Preservation-first editing with consent checkpoints
+- Single interactive flow, no modes
+- Options menu with Minimal, Standard, Comprehensive passes
+- Canvas-first delivery with optional status card
+- History as informative notes, never constraints
+- Basic Challenge Mode for clarity and scope control
+- REPAIR protocol for robust error handling
+
+---
+
+## 📚 Additional Resources
+
+### Core Documents
+- **System Prompt**: Main instructions with deep reasoning
+- **ATLAS Framework**: Automatic phase selection methodology
+- **Interactive Intelligence**: Conversation patterns with deep analysis
+
+### Best Practices
+1. Let the system apply deep reasoning automatically
+2. Answer discovery questions when asked
+3. Consider Challenge Mode alternatives
+4. Use emergency commands for control
+5. Check $status to see session insights
+
+---
+
+**GPT - AI System Improver v1.1.0** applies GPT-5 High Deep Reasoning mode to every request. Automatic complexity assessment determines optimal ATLAS phases. Interactive discovery when needed. Challenge alternatives based on deep analysis. Session learning enhances without restricting. All options always available. Deep thinking is absolute.
+>>>>>>> parent of 77d4afb (Owner = Lean + Versioning)

@@ -1,9 +1,10 @@
-# GPT - Automated Tasks - User Guide v0.200
+# GPT - Automated Tasks - User Guide v2.0.0
 
 A unified interactive system that transforms natural language into perfectly optimized ChatGPT scheduled tasks through intelligent conversation with ATLAS Framework integration. Maximizes the 10-task limit through advanced slot management and pattern learning.
 
 ## 📋 Table of Contents
 
+<<<<<<< HEAD
 - [🆕 What's New in v0.200](#whats-new-in-v0200---major-structural-enhancement)
 - [✨ Key Features](#key-features)
 - [🚀 Quick Setup](#quick-setup)
@@ -20,10 +21,28 @@ A unified interactive system that transforms natural language into perfectly opt
 - [⚠️ Important Notes](#important-notes)
 - [🎯 Key Principles](#key-principles)
 - [📚 Additional Resources](#additional-resources)
+=======
+- [Overview](#overview)
+- [✨ Key Features](#-key-features)
+- [🚀 Quick Setup](#-quick-setup)
+- [🎛️ Interactive Flow](#️-interactive-flow)
+- [🧠 GPT-5 Thinking Integration](#-gpt-5-thinking-integration)
+- [🗂️ Pattern Library Overview](#️-pattern-library-overview)
+- [📊 Slot Management Philosophy](#-slot-management-philosophy)
+- [📄 Canvas Documentation](#-canvas-documentation)
+- [🔄 Pattern Learning System](#-pattern-learning-system)
+- [📊 Visual Dashboard Examples](#-visual-dashboard-examples)
+- [💰 Smart Slot Optimization](#-smart-slot-optimization)
+- [🎯 Success Patterns](#-success-patterns)
+- [🆘 Troubleshooting](#-troubleshooting)
+- [⚠️ Important Notes](#️-important-notes)
+- [🎯 Key Principles](#-key-principles)
+- [📚 Additional Resources](#-additional-resources)
+>>>>>>> parent of 77d4afb (Owner = Lean + Versioning)
 
 .
 
-## 🆕 What's New in v0.200 - Major Structural Enhancement
+## 🆕 What's New in v2.0.0 - Major Structural Enhancement
 
 ### New Features
 - **ATLAS Framework**: 5-phase adaptive thinking methodology

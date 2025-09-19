@@ -1,4 +1,4 @@
-# Prompt - Builder Mode - v0.410
+# Prompt - Builder Mode - v4.1.0
 
 Universal AI development PROMPT optimization for ALL platforms with enhanced ATLAS thinking integration and intelligent session-based pattern learning. Creates goal-oriented creative briefs, not prescriptive implementations.
 
