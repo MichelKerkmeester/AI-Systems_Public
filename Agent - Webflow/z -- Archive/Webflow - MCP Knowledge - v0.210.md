@@ -1,4 +1,4 @@
-# Webflow - MCP Knowledge - v2.1.0
+# Webflow - MCP Knowledge - v0.210
 
 Central knowledge system for Webflow content management operations through natural language, based on actual MCP capabilities.
 

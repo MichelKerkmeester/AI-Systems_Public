@@ -1,4 +1,4 @@
-# ClickUp - Interactive Intelligence - v2.0.0
+# ClickUp - Interactive Intelligence - v0.200
 
 Conversational interface for ClickUp workspace creation with built-in complexity challenges and pattern-based adaptation.
 

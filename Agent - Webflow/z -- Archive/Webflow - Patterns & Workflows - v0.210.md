@@ -1,4 +1,4 @@
-# Webflow - Patterns & Workflows - v2.1.0
+# Webflow - Patterns & Workflows - v0.210
 
 Complete pattern library for Webflow content management operations within actual MCP capabilities.
 

@@ -1,4 +1,4 @@
-# ClickUp - ATLAS Thinking Framework - v1.0.0
+# ClickUp - ATLAS Thinking Framework - v0.100
 
 Adaptive thinking methodology for ClickUp workspace operations with built-in complexity challenges and pattern learning.
 

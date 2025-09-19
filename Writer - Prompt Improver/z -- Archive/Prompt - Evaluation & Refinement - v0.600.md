@@ -1,4 +1,4 @@
-# Prompt - Evaluation & Refinement - v6.0.0
+# Prompt - Evaluation & Refinement - v0.600
 
 Systematic quality assessment and improvement for optimizing prompts through ATLAS-powered evaluation, intelligent challenge-based refinement, adaptive pattern learning, and multi-format support including SMILE assessment.
 

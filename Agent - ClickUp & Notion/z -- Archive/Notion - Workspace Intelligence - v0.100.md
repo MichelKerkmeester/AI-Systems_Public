@@ -1,4 +1,4 @@
-# Notion - Workspace Intelligence - v1.0.0
+# Notion - Workspace Intelligence - v0.100
 
 Best practices, decision frameworks, and error recovery for optimal Notion workspace design.
 

@@ -1,4 +1,4 @@
-# ClickUp - Patterns & Operations - v1.0.0
+# ClickUp - Patterns & Operations - v0.100
 
 Comprehensive pattern library and operation reference for natural language to ClickUp mapping.
 

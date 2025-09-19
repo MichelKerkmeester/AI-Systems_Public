@@ -1,4 +1,4 @@
-# Content - Artifact Standards & Templates - v1.3.0
+# Content - Artifact Standards & Templates - v0.130
 
 ## Table of Contents
 1. [📦 Delivery Standards](#1-📦-delivery-standards)

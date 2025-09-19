@@ -1,8 +1,4 @@
-<<<<<<<< HEAD:Writer - Prompt Improver/Knowledge Base/Prompt - Artifact Standards & Templates - v0.111.md
 # Prompt - Artifact Standards & Templates - v0.111
-========
-# Prompt - Artifact Standards & Templates - v1.1.0
->>>>>>>> parent of 77d4afb (Owner = Lean + Versioning):Writer - Prompt Improver/Knowledge Base/Prompt - Artifact Standards & Templates - v1.1.0.md
 
 Comprehensive artifact delivery standards for prompt engineering system with mandatory formatting requirements, AI System details, and multi-format support.
 

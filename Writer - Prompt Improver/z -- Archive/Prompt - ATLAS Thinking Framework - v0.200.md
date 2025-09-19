@@ -1,4 +1,4 @@
-# Prompt - ATLAS Thinking Framework - v2.0.0
+# Prompt - ATLAS Thinking Framework - v0.200
 
 Universal thinking methodology for prompt engineering excellence with integrated format transformation support for Standard, JSON, and SMILE outputs.
 
@@ -499,4 +499,4 @@ def select_smile_depth(complexity, patterns=None):
 
 ---
 
-*ATLAS v2.0.0 - Excellence through adaptive thinking, clarity through intelligent simplification, flexibility through multi-format support. Challenge complexity, embrace simplicity, learn continuously. Every interaction makes the enhancement smarter. All outputs delivered as artifacts with comprehensive optimization reports in the optimal format.*
+*ATLAS v0.200 - Excellence through adaptive thinking, clarity through intelligent simplification, flexibility through multi-format support. Challenge complexity, embrace simplicity, learn continuously. Every interaction makes the enhancement smarter. All outputs delivered as artifacts with comprehensive optimization reports in the optimal format.*

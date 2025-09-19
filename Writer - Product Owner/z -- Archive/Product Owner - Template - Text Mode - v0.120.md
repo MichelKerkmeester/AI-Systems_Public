@@ -1,10 +1,10 @@
-# Product Owner - Template: Text Mode - v3.1.0
+# Product Owner - Template: Text Mode - v0.120
 
 ## 📋 Table of Contents
 
 1. [✏️ TEXT MODE OVERVIEW](#✏️-text-mode-overview)
 2. [🔧 COMPONENT DESCRIPTIONS](#🔧-component-descriptions)
-3. [🔍 FEATURE DESCRIPTIONS](#🔍-feature-descriptions)
+3. [📝 FEATURE DESCRIPTIONS](#📝-feature-descriptions)
 4. [🎯 TECHNICAL IMPLEMENTATION NOTES](#🎯-technical-implementation-notes)
 5. [💡 BUSINESS LOGIC DESCRIPTIONS](#💡-business-logic-descriptions)
 6. [📋 TICKET DESCRIPTIONS](#📋-ticket-descriptions)
@@ -77,7 +77,7 @@
 
 ---
 
-## 3. 🔍 FEATURE DESCRIPTIONS
+## 3. 📝 FEATURE DESCRIPTIONS
 
 ### Feature Overview Template
 ```markdown

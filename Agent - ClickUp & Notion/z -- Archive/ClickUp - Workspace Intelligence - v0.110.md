@@ -1,4 +1,4 @@
-# ClickUp - Workspace Intelligence - v1.1.0
+# ClickUp - Workspace Intelligence - v0.110
 
 Best practices, decision frameworks, and error recovery for optimal ClickUp workspace design. All decisions made through intelligent conversation.
 

@@ -1,4 +1,4 @@
-# ClickUp - Interactive Mode - v1.0.0
+# ClickUp - Interactive Mode - v0.100
 
 The complete specification for `$interactive` mode, the default conversational interface for guided ClickUp workspace creation.
 

@@ -1,14 +1,9 @@
-<<<<<<< HEAD
 # Media Editor System - User Guide v0.114
-=======
-# Media Editor System - User Guide v1.0.0
->>>>>>> parent of 77d4afb (Owner = Lean + Versioning)
 
 An intelligent media processing system that transforms natural language requests into optimized images, videos, and audio through conversational guidance. Features automatic deep analysis with 10 rounds of professional optimization, ensuring every media operation achieves optimal results without manual configuration.
 
 ## 📋 Table of Contents
 
-<<<<<<< HEAD
 - [✨ Key Features](#key-features)
 - [🚀 Quick Setup](#quick-setup)
 - [🔧 Installing MCP Tools](#installing-mcp-tools)
@@ -20,19 +15,6 @@ An intelligent media processing system that transforms natural language requests
 - [🆘 Troubleshooting](#troubleshooting)
 - [⚠️ Important Notes](#important-notes)
 - [📚 Resources](#resources)
-=======
-- [✨ Key Features](#-key-features)
-- [🚀 Quick Setup](#-quick-setup)
-- [🧠 How It Works](#-how-it-works)
-- [🎛️ Operating Modes](#️-operating-modes)
-- [⚡ Emergency Commands](#-emergency-commands)
-- [💬 Example Interactions](#-example-interactions)
-- [📊 Visual Feedback](#-visual-feedback)
-- [🔧 Installing MCP Tools](#-installing-mcp-tools)
-- [🆘 Troubleshooting](#-troubleshooting)
-- [⚠️ Important Notes](#️-important-notes)
-- [📚 Resources](#-resources)
->>>>>>> parent of 77d4afb (Owner = Lean + Versioning)
 
 .
 
@@ -93,7 +75,6 @@ An intelligent media processing system that transforms natural language requests
 ### Step 2: Add System Instructions
 1. Click "Edit project details"
 2. Find "Custom instructions" section
-<<<<<<< HEAD
 3. Copy and paste: `Agent - MCP - Media Editor.md`
 4. Save the project
 
@@ -104,21 +85,6 @@ Add these documents to your project:
 - `Media Editor - MEDIA Thinking Framework.md`
 - `Media Editor - MCP Intelligence - Imagician.md`
 - `Media Editor - MCP Intelligence - Video, Audio.md`
-=======
-3. Copy and paste: `Agent - MCP - Media Editor - v1.1.1.md`
-4. Save the project
-
-### Step 3: Upload Reference Documents
-Add these 7 essential documents to your project:
-- `Agent - MCP - Media Editor - v1.1.1.md` (Main system)
-- `Media Editor - Core System Rules & Quick Reference.md` (Emergency commands)
-- `Media Editor - Interactive Intelligence.md` (Conversation interface)
-- `Media Editor - Patterns & Workflows.md` (Pattern recognition)
-- `Media Editor - MEDIA Thinking Framework.md` (Thinking methodology)
-- `Media Editor - MCP Intelligence - Imagician.md` (Image operations)
-- `Media Editor - MCP Intelligence - Video, Audio.md` (Video/audio operations)
-- `README.md` (This guide)
->>>>>>> parent of 77d4afb (Owner = Lean + Versioning)
 
 ### Step 4: Install MCP Tools
 See next section for detailed setup

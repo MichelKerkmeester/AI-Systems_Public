@@ -1,4 +1,4 @@
-# Content - Voice & Tone Guide - v1.2.0
+# Content - Voice & Tone Guide - v0.120
 
 ## Table of Contents
 1. [🎯 Core Voice](#1-🎯-core-voice)

@@ -1,4 +1,4 @@
-# ClickUp - Interactive Intelligence - v1.2.0
+# ClickUp - Interactive Intelligence - v0.120
 
 The complete specification for the unified conversational interface that handles all ClickUp workspace creation through adaptive dialogue with user-controlled thinking depth.
 

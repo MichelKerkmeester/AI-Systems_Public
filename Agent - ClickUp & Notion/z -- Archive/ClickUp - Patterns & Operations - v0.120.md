@@ -1,4 +1,4 @@
-# ClickUp - Patterns & Operations - v1.2.0
+# ClickUp - Patterns & Operations - v0.120
 
 Comprehensive pattern library and operation reference for natural language to ClickUp mapping. All patterns executed through intelligent conversation with user-controlled thinking depth.
 

@@ -1,4 +1,4 @@
-# Media Editor - Interactive Intelligence - v1.0.0
+# Media Editor - Interactive Intelligence - v0.100
 
 The complete specification for the unified conversational interface that handles all image, video, and audio processing operations through adaptive dialogue with native Claude thinking.
 

@@ -1,4 +1,4 @@
-# Notion Assistant - Best Practices Guide v1.0.0
+# Notion Assistant - Best Practices Guide v0.100
 
 This guide encodes Notion expertise into actionable best practices that the assistant applies automatically. Each practice includes rationale, implementation, and examples to ensure optimal workspace design.
 

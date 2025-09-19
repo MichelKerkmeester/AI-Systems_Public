@@ -1,4 +1,4 @@
-# Media Editor - MEDIA Thinking Framework - v1.0.0
+# Media Editor - MEDIA Thinking Framework - v0.100
 
 Universal thinking methodology combining quality-aware reasoning with adaptive depth calibration and pattern learning through conversation history.
 

@@ -1,4 +1,4 @@
-# Prompt - Quick Reference - v1.0.0
+# Prompt - Quick Reference - v0.100
 
 ## Table of Contents
 1. [🚨 Core Mandatory Rules](#1-core-mandatory-rules)

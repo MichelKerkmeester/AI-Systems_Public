@@ -1,4 +1,4 @@
-# Media Editor - MCP Intelligence - Imagician - v1.0.0
+# Media Editor - MCP Intelligence - Imagician - v0.100
 
 Complete technical reference for the Imagician MCP server integration for image processing operations.
 

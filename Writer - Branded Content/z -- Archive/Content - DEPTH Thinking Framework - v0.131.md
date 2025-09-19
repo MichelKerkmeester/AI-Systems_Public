@@ -1,4 +1,4 @@
-# Content - DEPTH Thinking Framework - v1.3.1
+# Content - DEPTH Thinking Framework - v0.131
 
 Universal thinking methodology for design and product content - combining simplicity-based reasoning with adaptive depth calibration and historical context enrichment.
 

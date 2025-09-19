@@ -1,4 +1,4 @@
-# Media Editor - Patterns & Workflows - v1.0.0
+# Media Editor - Patterns & Workflows - v0.100
 
 Complete pattern library and workflow specifications for natural language media processing operations (images, video, and audio) with native Claude thinking integration.
 

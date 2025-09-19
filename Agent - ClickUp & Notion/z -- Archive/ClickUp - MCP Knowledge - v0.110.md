@@ -1,4 +1,4 @@
-# ClickUp - MCP Knowledge - v1.1.0
+# ClickUp - MCP Knowledge - v0.110
 
 Central knowledge system for ClickUp workspace operations through natural language, with built-in complexity challenges and pattern learning.
 

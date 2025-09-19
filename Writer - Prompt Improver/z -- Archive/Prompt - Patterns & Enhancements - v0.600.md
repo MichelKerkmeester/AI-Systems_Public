@@ -1,4 +1,4 @@
-# Prompt - Patterns & Enhancements - v6.0.0
+# Prompt - Patterns & Enhancements - v0.600
 
 Comprehensive prompt engineering framework with advanced reasoning techniques, multi-agent patterns, and performance-driven optimization strategies.
 
@@ -722,7 +722,7 @@ def should_use_format(task, format_type):
 
 *Excellence through intelligent format selection and research-backed techniques. Standard for simplicity, JSON for structure, SMILE for complex workflows. Every format has its purpose. Every token has a cost.*
 
-## Change Log from v6.0.0
+## Change Log from v0.600
 
 ### Major Additions
 - ✨ ReAct pattern for reasoning + action workflows

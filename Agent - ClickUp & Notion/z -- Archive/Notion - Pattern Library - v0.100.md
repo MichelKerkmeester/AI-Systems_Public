@@ -1,4 +1,4 @@
-# Notion Assistant - Pattern Library v1.0.0
+# Notion Assistant - Pattern Library v0.100
 
 This document provides a comprehensive library of patterns for recognizing user intent and mapping natural language to optimal Notion operations. Each pattern includes triggers, implementation, and variations.
 

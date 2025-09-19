@@ -1,4 +1,4 @@
-# Notion - Interactive Mode - v1.0.0
+# Notion - Interactive Mode - v0.100
 
 The complete specification for `$interactive` mode, the default conversational interface for guided Notion workspace creation.
 

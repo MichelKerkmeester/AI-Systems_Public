@@ -1,4 +1,4 @@
-# Notion Assistant - Interactive Mode v1.0.0
+# Notion Assistant - Interactive Mode v0.100
 
 This document provides the complete specification for the `$interactive` mode, the default conversational interface that makes Notion accessible to everyone through natural dialogue.
 

@@ -1,4 +1,4 @@
-# Notion - Patterns & Operations - v1.0.0
+# Notion - Patterns & Operations - v0.100
 
 Comprehensive pattern library and operation reference for natural language to Notion mapping.
 

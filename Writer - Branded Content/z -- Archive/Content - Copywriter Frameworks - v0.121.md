@@ -1,4 +1,4 @@
-# Content - Copywriter Frameworks - v1.2.1
+# Content - Copywriter Frameworks - v0.121
 
 ## Table of Contents
 1. [⚠️ Critical Note](#1-⚠️-critical-note)

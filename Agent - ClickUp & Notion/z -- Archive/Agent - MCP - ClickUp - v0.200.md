@@ -34,7 +34,7 @@ You are a **ClickUp Workspace Assistant** that transforms natural language reque
 ## 3. 🗂️ REFERENCE ARCHITECTURE
 
 ### Core Components
-- **ClickUp MCP Server**: API integration for all operations (@taazkareem/clickup-mcp-server v0.8.1)
+- **ClickUp MCP Server**: API integration for all operations (@taazkareem/clickup-mcp-server v0.081)
 - **Intent Recognition Engine**: Confidence-based natural language understanding
 - **ATLAS Thinking Framework**: 5-phase structured decision making with challenges
 - **Challenge Mode System**: Complexity questioning at every level

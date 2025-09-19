@@ -1,14 +1,9 @@
-<<<<<<< HEAD
 # Webflow Agent - User Guide v0.414
-=======
-# Webflow Agent - User Guide v3.0.0
->>>>>>> parent of 77d4afb (Owner = Lean + Versioning)
 
 A full-stack development assistant that creates and manages Webflow sites through natural language. With Designer and Data API integration, it builds complete structures, design components, and manages content - transforming ideas into functioning Webflow sites with automatic UltraThink processing.
 
 ## 📋 Table of Contents
 
-<<<<<<< HEAD
 - [✨ What's New in v0.413](#whats-new-in-v0413)
 - [🚀 Key Features](#key-features)
 - [⚡ Quick Setup](#quick-setup)
@@ -26,24 +21,6 @@ A full-stack development assistant that creates and manages Webflow sites throug
 .
 
 ## ✨ What's New in v0.414
-=======
-- [🆕 What's New in v3.0.0](#-whats-new-in-v300)
-- [✨ Key Features](#-key-features)
-- [⚠️ Reality Check](#️-reality-check)
-- [🚀 Quick Setup](#-quick-setup)
-- [🧠 How It Works](#-how-it-works)
-- [💬 Example Interactions](#-example-interactions)
-- [📊 What Gets Managed](#-what-gets-managed)
-- [🔧 Installing MCPs (Required)](#-installing-mcps-required)
-- [🆘 Troubleshooting](#-troubleshooting)
-- [⚠️ Important Notes](#️-important-notes)
-- [📦 Version History](#-version-history)
-- [📚 Resources](#-resources)
-
-.
-
-## 🆕 What's New in v3.0.0
->>>>>>> parent of 77d4afb (Owner = Lean + Versioning)
 
 ### Major Update: Automatic UltraThink Processing
 - **UltraThink Automatic**: System now uses 10 rounds of thinking automatically - no user prompts
@@ -107,7 +84,6 @@ A full-stack development assistant that creates and manages Webflow sites throug
 ### Step 2: Add System Instructions
 1. Click "Edit project details"
 2. Find "Custom instructions" section
-<<<<<<< HEAD
 3. Copy and paste: `Agent - MCP - Webflow.md` (v0.413)
 4. Save the project
 
@@ -117,19 +93,6 @@ Add these documents to your project:
 - `Webflow - Interactive Intelligence.md` (v0.313)
 - `Webflow - Patterns & Workflows.md` (v0.313)
 - `Webflow - ATLAS Thinking Framework.md` (v0.213)
-=======
-3. Copy and paste: `Agent - MCP - Webflow - v3.0.0.md`
-4. Save the project
-
-### Step 3: Upload Reference Documents
-Add these 5 essential documents to your project:
-- `Agent - MCP - Webflow - v3.0.0.md` (Main agent)
-- `Webflow - MCP Knowledge - v3.0.0.md` (Central knowledge)
-- `Webflow - Interactive Intelligence - v3.0.0.md` (Conversation patterns)
-- `Webflow - Patterns & Workflows - v3.0.0.md` (Operation mappings)
-- `Webflow - ATLAS Thinking Framework - v2.0.0.md` (Reality-based thinking)
-- `README.md` (This guide)
->>>>>>> parent of 77d4afb (Owner = Lean + Versioning)
 
 ### Step 4: Continue to MCP Installation
 Follow the installation guide in the next section
@@ -448,38 +411,12 @@ When errors occur, the system uses REPAIR:
 - **Rate Limits**: 60 requests per minute
 - **Node.js**: Version 22.3.0+ for MCP server
 
-<<<<<<< HEAD
 ### Limitations
 - Cannot upload images directly (use Cloudinary/S3)
 - Cannot write custom code (native APIs only)
 - Designer API requires companion app
 - Rate limited to 60 API calls/minute
 - Must have owner/admin permissions
-=======
-.
-
-## 📦 Version History
-
-### v3.0.0 (Current)
-- **Document overhaul**: Cleaner Python usage, better organization
-- **Improved ATLAS**: Reality-first thinking at every phase
-- **Enhanced patterns**: Better learning and adaptation
-- **Refined conversations**: Fewer questions, clearer responses
-- **Visual improvements**: Better progress and error feedback
-
-### v2.0.0
-- **Reality alignment**: Corrected capability claims
-- **Transparent limitations**: Clear about what's not possible
-- **Enhanced guidance**: Better Designer coordination
-- **Workaround documentation**: Creative solutions
-- **Removed false claims**: No field creation, no image upload
-
-### v1.0.0 (Deprecated)
-- Initial release with incorrect capability claims
-- Claimed field creation (not possible)
-- Claimed image upload (not possible)
-- Claimed design system application (not possible)
->>>>>>> parent of 77d4afb (Owner = Lean + Versioning)
 
 .
 

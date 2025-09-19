@@ -1,4 +1,4 @@
-# Notion - Interactive Intelligence - v1.2.0
+# Notion - Interactive Intelligence - v0.120
 
 The complete specification for the intelligent conversational interface that handles all Notion workspace creation through natural dialogue.
 

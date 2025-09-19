@@ -1,4 +1,4 @@
-# Content - Design & Product Intelligence - v1.2.0
+# Content - Design & Product Intelligence - v0.120
 
 ## Table of Contents
 1. [🎯 Strategic Usage Guide](#1-🎯-strategic-usage-guide)

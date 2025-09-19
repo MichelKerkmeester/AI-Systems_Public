@@ -1,14 +1,9 @@
-<<<<<<< HEAD
 # Product Design Writer - User Guide v0.600
-=======
-# Branded Content Writer - User Guide v5.5.0
->>>>>>> parent of 77d4afb (Owner = Lean + Versioning)
 
 A specialized content creation system for product designers that combines ATLAS thinking methodology, web-verified intelligence, and pattern learning to deliver content optimized for design teams, developers, and stakeholders.
 
 ## 📋 Table of Contents
 
-<<<<<<< HEAD
 - [🆕 What's New in v0.600](#whats-new-in-v0.600---atlas--verification-update)
 - [✨ Key Features](#key-features)
 - [🚀 Quick Setup](#quick-setup)
@@ -24,38 +19,10 @@ A specialized content creation system for product designers that combines ATLAS 
 - [📦 Standard Artifact Structure](#standard-artifact-structure)
 - [🔧 Troubleshooting](#troubleshooting)
 - [📦 Version History](#version-history)
-=======
-### Current Setup & Flexibility
-**Currently configured for:** Product Designers creating case studies, process documentation, and design insights  
-**Easily adaptable for:** Any brand voice, profession, or personal writing style
-
----
-
-## 📑 Table of Contents
-- [🆕 What's New in v5.5.0 - Major Alignment & Structure Update](#-whats-new-in-v700---major-alignment--structure-update)
-- [🚀 Quick Setup](#-quick-setup)
-- [🛠️ Adapting the System](#-adapting-the-system)
-- [🎛️ System Architecture](#-system-architecture)
-- [🏗 Content Frameworks](#-content-frameworks)
-- [🎨 Voice & Tone System](#-voice--tone-system)
-- [📊 Quality System](#-quality-system)
-- [🧠 DEPTH Thinking Framework](#-depth-thinking-framework)
-- [🔄 Challenge Mode](#-challenge-mode)
-- [🚨 Error Recovery - LEARN Protocol](#-error-recovery---learn-protocol)
-- [🗃️ Past Chats Integration](#-past-chats-integration)
-- [⚡ Emergency Commands](#-emergency-commands)
-- [📦 Standard Artifact Structure](#-standard-artifact-structure)
-- [🔧 Troubleshooting](#-troubleshooting)
-- [📦 Version History](#-version-history)
->>>>>>> parent of 77d4afb (Owner = Lean + Versioning)
 
 .
 
-<<<<<<< HEAD
 ## 🆕 What's New in v0.600 - ATLAS & Verification Update
-=======
-## 🆕 What's New in v5.5.0 - Major Alignment & Structure Update
->>>>>>> parent of 77d4afb (Owner = Lean + Versioning)
 
 ### Major Structural Rework for Superior Content Output
 - **Comprehensive System Overhaul**: Major restructuring of content generation logic for clarity, flexibility, and higher-quality outputs.
@@ -65,22 +32,9 @@ A specialized content creation system for product designers that combines ATLAS 
 - **Mandatory Web Verification**: Every market intelligence claim must be web-verified—no exceptions.
 - **Refined Variation Scaling**: Output variations now scale exactly—3/2/1—based on precise word count bands for consistency and control.
 
-<<<<<<< HEAD
 .
 
 ## ✨ Key Features
-=======
-### Documentation Improvements
-- **Content - Quick Reference v1.0.0**: New compact reference matching Product Owner style
-- **Content - Artifact Standards v2.0.0**: Merged sections for better clarity
-- **Writer - Branded Content v5.5.0**: Complete restructure with 30 rules
-
-### Maintained from v6.0.0
-- **Core System Rules**: Central authority for mandatory behaviors
-- **Emergency Commands**: Four commands for quick control
-- **DEPTH Framework**: 5-phase thinking methodology
-- **Interactive Mode Default**: Always starts conversational
->>>>>>> parent of 77d4afb (Owner = Lean + Versioning)
 
 ### Five Core Innovations
 1. **ATLAS Thinking Framework**: 5-phase methodology with user control (1-10 rounds)
@@ -98,7 +52,6 @@ A specialized content creation system for product designers that combines ATLAS 
 2. Click "Projects" in sidebar
 3. Create new project: "Writer → {Name}"
 
-<<<<<<< HEAD
 ### Step 2: Add System Instructions
 1. Click "Edit project details"
 2. Find "Custom instructions" section
@@ -114,21 +67,6 @@ Add these documents to your project:
 - Content - Copywriter Framework.md
 - Content - Voice & Tone Guide.md
 - Content - Design & Product Intelligence.md 
-=======
-### Step 2: Add to Custom Instructions
-Copy the main system prompt:
-- `Writer - Branded Content v5.5.0` (Master orchestration)
-
-### Step 3: Upload Supporting Documents
-Add all documents to project knowledge base:
-- `Content - Quick Reference v1.0.0` (Compact reference guide)
-- `Content - Artifact Standards & Templates v2.0.0` (Output templates)
-- `Content - Copywriter Frameworks v1.2.1` (Framework library)
-- `Content - DEPTH Thinking Framework v1.3.1` (DEPTH methodology)
-- `Content - Design & Product Intelligence v1.2.0` (Domain knowledge)
-- `Content - Interactive Mode v1.2.2` (Default mode)
-- `Content - Voice & Tone Guide v1.2.0` (Voice system)
->>>>>>> parent of 77d4afb (Owner = Lean + Versioning)
 
 ### Step 4: Start Creating
 
@@ -155,7 +93,6 @@ Pre-configured for Product Designers with design process documentation, UX/UI pr
 
 ## 🎛️ System Architecture
 
-<<<<<<< HEAD
 ### Document Structure
 
 | Document | Purpose | Key Features |
@@ -168,20 +105,6 @@ Pre-configured for Product Designers with design process documentation, UX/UI pr
 | **Content - Copywriter Framework.md** | Writing frameworks | 9+ frameworks |
 | **Content - Voice & Tone Guide.md** | Voice system | 6 tones |
 | **Content - Design & Product Intelligence.md** | Market data | MANDATORY verification |
-=======
-### Document Structure (v5.5.0)
-
-| Document | Version | Purpose | Key Features |
-|----------|---------|---------|--------------|
-| **Writer - Branded Content** | v5.5.0 | Master orchestration | 30 critical rules |
-| **Content - Quick Reference** | v1.0.0 | Compact reference | All rules & patterns |
-| **Content - Artifact Standards** | v2.0.0 | Output templates | Merged structure |
-| **Content - Copywriter Frameworks** | v1.2.1 | Frameworks | 9+ frameworks |
-| **Content - DEPTH Framework** | v1.3.1 | DEPTH methodology | 5-phase system |
-| **Content - Interactive Mode** | v1.2.2 | Default mode | Discovery flow |
-| **Content - Voice & Tone** | v1.2.0 | Voice system | 6 tones |
-| **Content - Design Intelligence** | v1.2.0 | Knowledge base | UX/UI expertise |
->>>>>>> parent of 77d4afb (Owner = Lean + Versioning)
 
 .
 
@@ -415,34 +338,4 @@ Interactive Mode → Full exploration
 
 ---
 
-<<<<<<< HEAD
 *Product Design content excellence through ATLAS thinking. Interactive Mode is DEFAULT. Web verification is MANDATORY. Challenge at exactly 6+ rounds. User control is absolute.*
-=======
-## 📦 Version History
-
-### v5.5.0 
-- **30 Critical Rules:** Expanded and reorganized rule system
-- **Enhanced Challenge Mode:** Three-level hierarchy with better triggers
-- **Improved LEARN Protocol:** More detailed error recovery
-- **Better Structure:** Aligned with modern system patterns
-- **New Quick Reference:** Compact v1.0.0 matching Product Owner style
-- **Updated Artifact Standards:** v2.0.0 with merged sections
-
-### v5.4.0
-- **Emergency Commands System:** Four commands ($reset, $standard, $quick, $status)
-- **Enhanced Documentation:** Commands integrated across all files
-
-### Previous Versions
-- **v5.3.0:** Core System Rules centralization, 20% size reduction
-- **v5.2.0:** Enhanced Design Intelligence
-- **v5.1.0:** Historical context display
-- **v5.0.0:** Complete redesign with DEPTH
-- **v4.0.0:** Voice Trinity, 5 modes
-- **v3.0.0:** Interactive default
-- **v2.0.0:** Framework library
-- **v1.0.0:** Initial implementation
-
----
-
-*Great content makes the complex feel approachable. The v5.5.0 system provides comprehensive structure with 30 critical rules, enhanced Challenge Mode, and improved error recovery. All questions asked, all options shown, every choice yours. Interactive Mode is DEFAULT. Thinking rounds are MANDATORY. User control is absolute.*
->>>>>>> parent of 77d4afb (Owner = Lean + Versioning)

@@ -1,4 +1,4 @@
-# Notion Assistant - Quick Operation Reference v1.0.0
+# Notion Assistant - Quick Operation Reference v0.100
 
 This document provides a rapid lookup reference mapping common user requests to their Notion implementations. Each operation includes trigger phrases, implementation details, and success indicators.
 

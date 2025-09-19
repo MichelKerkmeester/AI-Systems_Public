@@ -1,4 +1,4 @@
-# Content - Interactive Mode - v1.2.2
+# Content - Interactive Mode - v0.122
 
 ## Table of Contents
 1. [📋 Overview](#1-📋-overview)
