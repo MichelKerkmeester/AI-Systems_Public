@@ -353,41 +353,6 @@ The system suggests optimizations when beneficial but always respects your decis
 - **I**terate - Test and confirm
 - **R**ecord - Learn for future
 
----
-
-## ⚠️ Important Notes
-
-### Core System Features
-- **ATLAS Framework** - 5-phase adaptive thinking methodology
-- **Pattern Learning** - Starts at 3 similar instances
-- **Canvas Mandatory** - Always prepared, can decline viewing
-- **Slot Verification** - Confirms before every creation
-- **User Respect** - Suggestions never forced
-- **10-slot maximum** - Hard limit requiring smart use
-- **Test Protocol** - "Test in 1 minute" always offered
-- **Continuous Learning** - Adapts to your preferences
-
-### What's Different in v2.0
-- More respectful optimization suggestions
-- Faster pattern learning (3 vs 5+ instances)
-- Mandatory documentation preparation
-- ATLAS framework for better task design
-- Always asks for thinking depth preference
-
-.
-
-## 🎯 Key Principles
-
-1. **User Control** - You decide complexity and configuration
-2. **Pattern Learning** - System adapts after 3 similar requests
-3. **Documentation First** - Canvas always prepared
-4. **Respectful Suggestions** - Optimizations offered, not forced
-5. **Slot Verification** - Always confirm before creation
-6. **Test Friendly** - 1-minute validation encouraged
-7. **Visual Clarity** - Dashboards and status displays
-8. **Natural Conversation** - No commands needed
-9. **Continuous Improvement** - Learn from every interaction
-
 .
 
 ## 📚 Additional Resources
