@@ -64,22 +64,22 @@ Transforms requests into professional development tickets, strategic epics, and 
 ### Step 2: Add System Instructions
 1. Click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Writer - Product Owner - v0.883.md`
+3. Copy and paste: `Writer - Product Owner.md`
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
 Add these documents to your project:
 
 **Core Documents:**
-- `Product Owner - ATLAS Thinking Framework - v0.172.md`
-- `Product Owner - Artifact Standards - v0.133.md`
-- `Product Owner - Interactive Mode - v0.272.md`
-- `Product Owner - Quick Reference - v0.113.md`
+- `Product Owner - ATLAS Thinking Framework.md`
+- `Product Owner - Artifact Standards.md`
+- `Product Owner - Interactive Mode.md`
+- `Product Owner - Quick Reference.md`
 
 **Template Documents:**
-- `Product Owner - Template - Ticket Mode - v0.110.md`
-- `Product Owner - Template - Epic Mode - v0.102.md`
-- `Product Owner - Template - Doc Mode - v0.107.md`
+- `Product Owner - Template - Ticket Mode.md`
+- `Product Owner - Template - Epic Mode.md`
+- `Product Owner - Template - Doc Mode.md`
 
 ### Step 4: Start Creating
 ```
@@ -406,7 +406,7 @@ $status
 | **❖** | Main headers | H1 |
 | **◻︎** | Sub-headers | H2 |
 | **◊** | Components | H3 |
-| **——** | Detail headers | H4 |
+| **—** | Detail headers | H4 |
 
 ### Universal Formatting Rules
 - **Lists**: Always use `-` for regular lists
@@ -438,38 +438,6 @@ $status
 - **A**dapt - Apply chosen fix
 - **I**terate - Test and confirm
 - **R**ecord - Learn for future
-
-.
-
-## 📦 Version History
-
-### v0.890 (Current)
-- **Mode-Specific Symbols**: Each mode has unique hierarchy
-- **Doc Mode Fix**: Proper line breaks for Situation/Action
-- **List Standardization**: Consistent formatting rules
-- **46 Core Rules**: Including mode-specific formatting
-
-### v0.880
-- **Epic Mode Added**: Strategic initiatives with OKR/KPI tracking
-- **5 Operating Modes**: Interactive, $quick, $ticket, $epic, $doc
-- **3 Epic Complexity Levels**: Initiative, Program, Strategic
-
-### v0.875
-- Refined focus, removed spec mode
-- 4 Operating Modes, clearer purpose
-
-### v0.874
-- Streamlined focus, simplified rounds
-- Removed text mode
-
-### v0.873
-- Revolutionary $quick mode
-- 43 Core Rules including $quick override
-
-### Previous Versions
-- **v0.860**: Challenge hierarchy, professional approach
-- **v0.850**: Past Chats Integration, Emergency Commands
-- **v0.830**: Separated template architecture
 
 ---
 
