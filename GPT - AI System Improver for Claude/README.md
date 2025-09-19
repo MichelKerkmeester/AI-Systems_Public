@@ -214,28 +214,6 @@ session_data = {
 }
 ```
 
-.
-
-## 📦 Version History
-
-### v0.110 (Current - December 2024)
-- GPT-5 High Deep Reasoning mode (always on)
-- Automatic complexity assessment and phase selection
-- Interactive Discovery as default mode
-- Challenge Mode based on complexity detection
-- Session-only tracking (ChatGPT compatible)
-- Enhanced ATLAS with automatic phases
-- Professional formatting standards
-- 8 quality gates mandatory
-- All emergency commands functional
-
-### v0.100 (Initial Release)
-- Preservation-first editing with consent checkpoints
-- Single interactive flow, no modes
-- Options menu with Minimal, Standard, Comprehensive
-- Canvas-first delivery with optional status card
-- History as informative notes, never constraints
-
 ---
 
 **GPT - AI System Improver v0.110** applies GPT-5 High Deep Reasoning mode to every request. Automatic complexity assessment determines optimal ATLAS phases. Interactive discovery when needed. Challenge alternatives based on deep analysis. Session learning enhances without restricting. All options always available. Deep thinking is absolute.
