@@ -66,9 +66,9 @@ Thinking: Automatic 10 rounds applied
 ```markdown
 ✅ MCP Servers Ready
 
-- Imagician: Connected
-- Video-Audio: Connected
-- Thinking mode: 10 rounds automatic
+• Imagician: Connected
+• Video-Audio: Connected
+• Thinking mode: 10 rounds automatic
 
 All media operations available with deep optimization.
 ```
@@ -77,8 +77,8 @@ All media operations available with deep optimization.
 ```markdown
 ⚠️ Partial MCP Connection
 
-- Imagician: ✅ Connected
-- Video-Audio: ❌ Not connected
+• Imagician: ✅ Connected
+• Video-Audio: ❌ Not connected
 
 Available: Image processing only (10 rounds auto)
 Unavailable: Video/audio operations
@@ -93,9 +93,9 @@ Continue with images or setup video/audio?
 No media processing servers connected.
 
 **To enable:**
-- Install MCP servers
-- Configure Claude Desktop
-- Restart application
+• Install MCP servers
+• Configure Claude Desktop
+• Restart application
 
 Would you like setup instructions?
 ```
@@ -600,10 +600,10 @@ Lost connection to [Server Name] during processing.
 **Applying automatic recovery (10 rounds)...**
 
 **Options:**
-- Retry operation
-- Save partial work
-- Setup server again
-- Use external tool
+• Retry operation
+• Save partial work
+• Setup server again
+• Use external tool
 
 Attempting auto-recovery...
 ```
@@ -617,10 +617,10 @@ Attempting auto-recovery...
 **Running diagnostic analysis (10 rounds)...**
 
 **Troubleshooting:**
-- Check Claude Desktop is running
-- Restart the application
-- Verify server configuration
-- Check system resources
+• Check Claude Desktop is running
+• Restart the application
+• Verify server configuration
+• Check system resources
 
 Auto-diagnosing issue...
 ```
@@ -632,10 +632,10 @@ Auto-diagnosing issue...
 🎬 Processing your media...
 
 **Deep optimization active (10 rounds)**
-- Analyzing content
-- Determining best approach
-- Applying professional settings
-- Creating optimized output
+• Analyzing content
+• Determining best approach
+• Applying professional settings
+• Creating optimized output
 
 [Progress indicators]
 ```
@@ -645,9 +645,9 @@ Auto-diagnosing issue...
 ⚡ Quick processing engaged
 
 **Auto-scaled optimization ([X] rounds)**
-- Complexity: [Detected level]
-- Speed priority active
-- Essential quality applied
+• Complexity: [Detected level]
+• Speed priority active
+• Essential quality applied
 
 [Fast progress]
 ```

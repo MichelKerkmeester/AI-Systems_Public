@@ -84,11 +84,11 @@ async def verify_video_audio_connection():
 ✅ Video-Audio MCP Connected
 
 Media processing available:
-- Video conversion and transcoding
-- Audio extraction and processing
-- Trimming, overlays, subtitles
-- FFmpeg version: [version]
-- **Deep analysis: 10 rounds automatic**
+• Video conversion and transcoding
+• Audio extraction and processing
+• Trimming, overlays, subtitles
+• FFmpeg version: [version]
+• **Deep analysis: 10 rounds automatic**
 ```
 
 **Not Connected:**
@@ -98,11 +98,11 @@ Media processing available:
 Video/audio processing unavailable.
 
 **To enable:**
-- Install FFmpeg on your system
-- Clone video-audio-mcp repository
-- Install with UV: uv sync
-- Configure Claude Desktop
-- Restart application
+• Install FFmpeg on your system
+• Clone video-audio-mcp repository
+• Install with UV: uv sync
+• Configure Claude Desktop
+• Restart application
 
 Need setup help?
 ```
@@ -538,9 +538,9 @@ async def process_with_fallback(operation, mode='standard'):
 **Auto-recovery:** Applying 10 rounds of analysis...
 
 **Solutions:**
-- [Primary solution]
-- [Alternative approach]
-- [Fallback option]
+• [Primary solution]
+• [Alternative approach]
+• [Fallback option]
 
 Attempting automatic resolution...
 ```

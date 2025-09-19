@@ -79,11 +79,11 @@ async def verify_imagician_connection():
 ✅ Imagician Connected
 
 Image processing available:
-- Resize, crop, rotate
-- Format conversion (JPEG, PNG, WebP, AVIF)
-- Quality optimization
-- Batch processing
-- **Deep analysis: 10 rounds automatic**
+• Resize, crop, rotate
+• Format conversion (JPEG, PNG, WebP, AVIF)
+• Quality optimization
+• Batch processing
+• **Deep analysis: 10 rounds automatic**
 ```
 
 **Not Connected:**
@@ -93,9 +93,9 @@ Image processing available:
 Image processing unavailable.
 
 **To enable:**
-- Install: npx -y @flowy11/imagician
-- Configure Claude Desktop
-- Restart application
+• Install: npx -y @flowy11/imagician
+• Configure Claude Desktop
+• Restart application
 
 Need setup help?
 ```
@@ -466,9 +466,9 @@ async function processWithFallback(operation, mode='standard') {
 **Auto-recovery:** Applying 10 rounds of analysis...
 
 **Solutions:**
-- [Primary solution]
-- [Alternative approach]
-- [Fallback option]
+• [Primary solution]
+• [Alternative approach]
+• [Fallback option]
 
 Attempting automatic resolution...
 ```

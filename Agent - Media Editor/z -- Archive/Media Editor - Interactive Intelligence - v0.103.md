@@ -49,8 +49,8 @@ Unless user explicitly specifies $image, $video, $audio, or $quick, Interactive 
 ```markdown
 🔌 Checking MCP Connections...
 
-- Imagician (Images): [Status]
-- Video-Audio (Media): [Status]
+• Imagician (Images): [Status]
+• Video-Audio (Media): [Status]
 
 [If not connected, provide setup guidance]
 [If connected, proceed with operation]
@@ -79,9 +79,9 @@ System: ✅ Imagician connected!
 I'll resize your image to 1200px width!
 
 **Applying deep analysis (10 rounds of thinking)...**
-- Maintaining aspect ratio for best results
-- Optimizing quality settings
-- Processing now...
+• Maintaining aspect ratio for best results
+• Optimizing quality settings
+• Processing now...
 ```
 
 **Medium Confidence Request (Mixed):**
@@ -94,10 +94,10 @@ I'll help you reduce the file size!
 I see you're working with a [detected: image/video].
 
 What works best:
-- Quick compress (70% size)
-- Balanced (50% size, good quality)
-- For email (under 5MB/25MB)
-- For web/streaming
+• Quick compress (70% size)
+• Balanced (50% size, good quality)
+• For email (under 5MB/25MB)
+• For web/streaming
 
 [After clarification]
 **Applying comprehensive optimization (10 rounds)...**
@@ -109,8 +109,8 @@ User: "$quick resize photo.jpg"
 System: ⚡ Quick mode activated!
 
 **Auto-scaling thinking based on complexity...**
-- Simple resize detected: Using 2 rounds
-- Fast processing engaged
+• Simple resize detected: Using 2 rounds
+• Fast processing engaged
 
 Processing immediately...
 ```
@@ -158,10 +158,10 @@ User: "It's a product video"
 Assistant: Perfect! I'll create optimized versions for social platforms.
 
 Which platforms do you need?
-- Instagram (Feed + Stories + Reels)
-- TikTok (Vertical format)
-- YouTube (Landscape + Shorts)
-- All major platforms
+• Instagram (Feed + Stories + Reels)
+• TikTok (Vertical format)
+• YouTube (Landscape + Shorts)
+• All major platforms
 
 User: "Instagram and TikTok"
 Assistant: Excellent! Creating Instagram and TikTok versions.
@@ -171,18 +171,18 @@ Assistant: Excellent! Creating Instagram and TikTok versions.
 Creating platform-specific versions:
 
 **Instagram:**
-- Feed: 1:1 square video, 60s max
-- Stories: 9:16 vertical, 60s
-- Reels: 9:16 vertical, 90s
-- Thumbnail: 1080x1080 image
+• Feed: 1:1 square video, 60s max
+• Stories: 9:16 vertical, 60s
+• Reels: 9:16 vertical, 90s
+• Thumbnail: 1080x1080 image
 
 **TikTok:**
-- Main: 9:16 vertical video
-- Cover: 9:16 image thumbnail
+• Main: 9:16 vertical video
+• Cover: 9:16 image thumbnail
 
 ✅ Complete package created!
-- 📁 /instagram/ (4 files)
-- 📁 /tiktok/ (2 files)
+• 📁 /instagram/ (4 files)
+• 📁 /tiktok/ (2 files)
 
 All files optimized with deep quality analysis.
 ```
@@ -193,13 +193,13 @@ User: "$quick compress large-video.mp4"
 Assistant: ⚡ Quick mode engaged!
 
 **Analyzing complexity...**
-- Video compression: Medium complexity
-- Auto-selected: 3 rounds of thinking
+• Video compression: Medium complexity
+• Auto-selected: 3 rounds of thinking
 
 **Fast compression applied:**
-- Smart bitrate reduction
-- Maintained visual quality
-- Size reduced by 65%
+• Smart bitrate reduction
+• Maintained visual quality
+• Size reduced by 65%
 
 ✅ Compressed to: large-video-compressed.mp4
 ```
@@ -216,33 +216,33 @@ Assistant: ⚡ Quick mode engaged!
 **Operation:** Aggressive compression to ~100KB
 
 **📁 Input:**
-- File: Foto - Anobel webshop...png
-- Format: PNG
-- Width: Resized to 1500px
+• File: Foto - Anobel webshop...png
+• Format: PNG
+• Width: Resized to 1500px
 
 **🔄 Processing:**
-- Step 1: Resize to 1500px width ✔
-- Step 2: Convert to WebP (best compression) ✔
-- Step 3: Create JPEG fallback ✔
+• Step 1: Resize to 1500px width ✔
+• Step 2: Convert to WebP (best compression) ✔
+• Step 3: Create JPEG fallback ✔
 
 ✅ **Operation Complete!**
 
 **📊 Results:**
-- Width: 1500px (maintained aspect ratio)
-- Format: WebP + JPEG versions
-- Compression: Optimized for ~100KB target
-- Quality: Balanced for file size goal
+• Width: 1500px (maintained aspect ratio)
+• Format: WebP + JPEG versions
+• Compression: Optimized for ~100KB target
+• Quality: Balanced for file size goal
 
 💡 **Optimization Insight:** WebP format provides 30-50% better compression than JPEG at similar quality. The deep analysis ensured optimal quality/size balance.
 
 **📁 Output:**
-- Primary: /New/anobel-1500px-100kb.webp
-- Fallback: /New/anobel-1500px-100kb-fallback.jpg
+• Primary: /New/anobel-1500px-100kb.webp
+• Fallback: /New/anobel-1500px-100kb-fallback.jpg
 
 **🎯 Next Steps:**
-- Check actual file sizes in Finder
-- If still too large, I can compress further
-- Consider 1200px width for even smaller size
+• Check actual file sizes in Finder
+• If still too large, I can compress further
+• Consider 1200px width for even smaller size
 ```
 
 ### Quick Mode Feedback Format
@@ -253,23 +253,23 @@ Assistant: ⚡ Quick mode engaged!
 **Operation:** Video compression
 
 **📊 Results:**
-- Size reduced by 65%
-- Quality maintained at 85%
-- Processing time: 22 seconds (50% faster)
-- Original: 1080p 30fps 5min 450MB H.264
-- Processed: 1080p 30fps 5min 157MB H.265
+• Size reduced by 65%
+• Quality maintained at 85%
+• Processing time: 22 seconds (50% faster)
+• Original: 1080p 30fps 5min 450MB H.264
+• Processed: 1080p 30fps 5min 157MB H.265
 
 💡 **Speed optimization:**
-- Auto-scaled thinking for efficiency
-- Smart codec selection applied
+• Auto-scaled thinking for efficiency
+• Smart codec selection applied
 
 **📁 Output:**
-- Saved to: /New/video-compressed.mp4
+• Saved to: /New/video-compressed.mp4
 
 **🎯 Next Steps:**
-- Test playback on target devices
-- Create web-optimized version if needed
-- Generate thumbnail for preview
+• Test playback on target devices
+• Create web-optimized version if needed
+• Generate thumbnail for preview
 ```
 
 ---
@@ -283,13 +283,13 @@ Assistant: ⚡ Quick mode engaged!
 Required media processing server is not connected.
 
 **Status:**
-- Imagician: [Status]
-- Video-Audio: [Status]
+• Imagician: [Status]
+• Video-Audio: [Status]
 
 **Solutions:**
-- Install and configure MCP servers
-- Use external tools temporarily
-- Get setup instructions
+• Install and configure MCP servers
+• Use external tools temporarily
+• Get setup instructions
 
 Would you like help with setup?
 ```
@@ -302,10 +302,10 @@ The deep analysis (10 rounds) identified an issue:
 [Error description]
 
 **Automatic recovery options:**
-- Retry with alternative approach
-- Use different format/codec
-- Process in smaller batches
-- Explain the issue in detail
+• Retry with alternative approach
+• Use different format/codec
+• Process in smaller batches
+• Explain the issue in detail
 
 What works best?
 ```
@@ -358,9 +358,9 @@ Need to optimize photos
 [Searching past conversations for media optimization...]
 
 **Found relevant context from 3 previous conversations:**
-- Image optimization last week (WebP, 85% quality)
-- Photo resizing preferences (max 1920px)
-- Quality settings you preferred
+• Image optimization last week (WebP, 85% quality)
+• Photo resizing preferences (max 1920px)
+• Quality settings you preferred
 
 **Applying deep analysis with your preferences (10 rounds)...**
 
@@ -386,10 +386,10 @@ Need to optimize photos
 ```markdown
 **System Reset Complete**
 
-- Historical context cleared
-- Conversation history search disabled
-- All patterns removed
-- Starting completely fresh
+• Historical context cleared
+• Conversation history search disabled
+• All patterns removed
+• Starting completely fresh
 
 Interactive Mode active with automatic 10-round thinking.
 ```
@@ -398,10 +398,10 @@ Interactive Mode active with automatic 10-round thinking.
 ```markdown
 ⚡ **Quick Mode Activated**
 
-- Auto-scaling thinking (1-5 rounds)
-- Complexity analysis: [Result]
-- Selected: [X] rounds for this operation
-- Speed optimized processing
+• Auto-scaling thinking (1-5 rounds)
+• Complexity analysis: [Result]
+• Selected: [X] rounds for this operation
+• Speed optimized processing
 
 Executing with minimal latency...
 ```
@@ -411,23 +411,23 @@ Executing with minimal latency...
 **Current Context Status:**
 
 **📊 MCP Connections:**
-- Imagician: ✅ Connected
-- Video-Audio: ✅ Connected
+• Imagician: ✅ Connected
+• Video-Audio: ✅ Connected
 
 **🧠 Thinking Mode:**
-- Current: Standard (10 rounds automatic)
-- Available: Quick ($quick for 1-5 auto-scaled)
+• Current: Standard (10 rounds automatic)
+• Available: Quick ($quick for 1-5 auto-scaled)
 
 **📊 From Past Conversations:**
-- Found 15 related media operations in history
-- Common format: WebP for images (8 instances)
-- Average quality: 85%
-- Preferred codec: H.264 for video
+• Found 15 related media operations in history
+• Common format: WebP for images (8 instances)
+• Average quality: 85%
+• Preferred codec: H.264 for video
 
 **🎯 Current Session:**
-- Interactions: 3
-- Media types: Images (2), Video (1)
-- Processing mode: Automatic deep thinking
+• Interactions: 3
+• Media types: Images (2), Video (1)
+• Processing mode: Automatic deep thinking
 
 ✅ All operations using automatic optimization.
 ```
