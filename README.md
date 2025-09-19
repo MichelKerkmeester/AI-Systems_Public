@@ -11,20 +11,20 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 ### 💬 MCP Agents
 
-1. [Media Editor Agent](#1-media-editor-agent---v0113)
-1. [Webflow Agent](#2-webflow-agent---v0411)
-1. [ClickUp & Notion Agent](#3-clickup--notion-agent---v0100)
+1. [Media Editor Agent](#1-media-editor-agent)
+1. [Webflow Agent](#2-webflow-agent)
+1. [ClickUp & Notion Agent](#3-clickup--notion-agent)
 
 ### ✏️ Writer Systems
 
-1. [Product Owner Writer](#4-product-owner-writer---v0890)
-1. [Branded Content Writer](#5-branded-content-writer---v0600)
-1. [Prompt Engineering Assistant](#6-prompt-engineering-assistant---v0831)
-1. [GPT - AI System Improver](#7-gpt---ai-system-improver---v0110)
+1. [Product Owner Writer](#4-product-owner-writer)
+1. [Branded Content Writer](#5-branded-content-writer)
+1. [Prompt Engineering Assistant](#6-prompt-engineering-assistant)
+1. [GPT - AI System Improver](#7-gpt---ai-system-improver)
 
 ### ⚡ Automation Agents
 
-1. [GPT - Scheduled Tasks](#8-gpt---scheduled-tasks---v0200)
+1. [GPT - Scheduled Tasks](#8-gpt---scheduled-tasks)
 
 ### 🔧 Additional Sections
 
@@ -37,7 +37,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 → MCPs made easy with conversational systems
 
-#### 1. 🎬 Media Editor Agent - v0.113
+#### 1. 🎬 Media Editor Agent
 
 Edit image, video, and audio files via natural language.
 
@@ -58,7 +58,7 @@ Edit image, video, and audio files via natural language.
 
 .
 
-#### 2. 🌐 Webflow Agent - v0.411
+#### 2. 🌐 Webflow Agent
 
 Full-stack Webflow development through natural language with Designer and Data APIs.
 
@@ -82,7 +82,7 @@ Full-stack Webflow development through natural language with Designer and Data A
 
 .
 
-#### 3. 📚 ClickUp & Notion Agent - v0.100
+#### 3. 📚 ClickUp & Notion Agent
 
 Seamlessly coordinate task management (ClickUp) and knowledge management (Notion) through natural language.
 
@@ -107,7 +107,7 @@ Seamlessly coordinate task management (ClickUp) and knowledge management (Notion
 
 → Automate prompt, content, documentation, and ticket writing 
 
-#### 4. 📋 Product Owner Writer - v0.890
+#### 4. 📋 Product Owner Writer
 
 Create professional dev tickets and enhanced documentation.
 
@@ -122,7 +122,7 @@ Create professional dev tickets and enhanced documentation.
 
 .
 
-#### 5. ✏️ Branded Content Writer - v0.600
+#### 5. ✏️ Branded Content Writer
 
 Content writing system, fully reconfigurable for any domain: marketing, engineering, education
 
@@ -141,7 +141,7 @@ Content writing system, fully reconfigurable for any domain: marketing, engineer
 
 .
 
-#### 6. 🎯 Prompt Engineering Assistant - v0.831
+#### 6. 🎯 Prompt Engineering Assistant
 
 Generate powerful AI prompts with multi-format support.
 
@@ -162,7 +162,7 @@ Generate powerful AI prompts with multi-format support.
 
 .
 
-#### 7. 🔧 GPT - AI System Improver - v0.110
+#### 7. 🔧 GPT - AI System Improver
 
 Improve Claude systems via GPT-5 deep reasoning and preservation-first editing.
 
@@ -182,7 +182,7 @@ Improve Claude systems via GPT-5 deep reasoning and preservation-first editing.
 
 → Create automated workflows with ease 
 
-#### 8. ⏰ GPT - Scheduled Tasks - v0.200
+#### 8. ⏰ GPT - Scheduled Tasks
 
 Create scheduled tasks with intelligent optimization.
 

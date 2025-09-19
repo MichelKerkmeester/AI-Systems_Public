@@ -12,9 +12,8 @@ Complete technical reference for the Notion MCP server integration for workspace
 7. [🔍 SEARCH OPERATIONS](#7-🔍-search-operations)
 8. [💬 COMMENT OPERATIONS](#8-💬-comment-operations)
 9. [👥 USER OPERATIONS](#9-👥-user-operations)
-10. [💾 INSTALLATION & SETUP](#10-💾-installation--setup)
-11. [🚨 ERROR HANDLING](#11-🚨-error-handling)
-12. [⚡ USAGE EXAMPLES](#12-⚡-usage-examples)
+10. [🚨 ERROR HANDLING](#10-🚨-error-handling)
+11. [⚡ USAGE EXAMPLES](#11-⚡-usage-examples)
 
 ---
 
@@ -507,88 +506,7 @@ API-get-self: {}
 
 ---
 
-## 10. 💾 INSTALLATION & SETUP
-
-### Installation Methods
-
-**1. NPM Installation:**
-```bash
-npm install -g @makenotion/notion-mcp-server
-
-# Then in config:
-{
-  "mcpServers": {
-    "notion": {
-      "command": "notion-mcp-server"
-    }
-  }
-}
-```
-
-**2. Local Installation:**
-```bash
-npm install @makenotion/notion-mcp-server
-
-# Then in config:
-{
-  "mcpServers": {
-    "notion": {
-      "command": "node",
-      "args": ["/path/to/notion-mcp-server/index.js"]
-    }
-  }
-}
-```
-
-### Configuration with API Token
-
-```json
-{
-  "mcpServers": {
-    "notion": {
-      "command": "notion-mcp-server",
-      "env": {
-        "NOTION_API_TOKEN": "secret_xxx..."
-      }
-    }
-  }
-}
-```
-
-### Getting Notion API Token
-1. Go to https://www.notion.so/my-integrations
-2. Create new integration
-3. Copy the "Internal Integration Token"
-4. Share pages/databases with integration
-5. Add token to MCP config
-
-### Configuration Locations
-- **Claude Desktop Mac**: `~/Library/Application Support/Claude/claude_desktop_config.json`
-- **Claude Desktop Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
-
-### Verification
-After installation, verify Notion MCP is working:
-1. Restart Claude Desktop
-2. Check MCP server status
-3. Test with API-get-self operation
-4. Confirm connection with simple search
-
-### Setup Verification Display
-```markdown
-🔧 Notion Setup Check
-
-✔ Installation: Complete
-✔ Configuration: Valid
-✔ API Token: Active
-✔ Connection: Active
-✔ Test operation: Success
-
-Ready for workspace operations!
-```
-
----
-
-## 11. 🚨 ERROR HANDLING
+## 10. 🚨 ERROR HANDLING
 
 ### Common Issues
 
@@ -653,7 +571,7 @@ Need help troubleshooting?
 
 ---
 
-## 12. ⚡ USAGE EXAMPLES
+## 11. ⚡ USAGE EXAMPLES
 
 ### Example Prompts for ClickUp & Notion Helper
 

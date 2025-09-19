@@ -12,9 +12,8 @@ Complete technical reference for the ClickUp MCP server integration for task man
 7. [⏱️ TIME TRACKING OPERATIONS](#7-⏱️-time-tracking-operations)
 8. [📄 DOCUMENT OPERATIONS](#8-📄-document-operations)
 9. [💬 COMMENT & ATTACHMENT OPERATIONS](#9-💬-comment--attachment-operations)
-10. [💾 INSTALLATION & SETUP](#10-💾-installation--setup)
-11. [🚨 ERROR HANDLING](#11-🚨-error-handling)
-12. [⚡ USAGE EXAMPLES](#12-⚡-usage-examples)
+10. [🚨 ERROR HANDLING](#10-🚨-error-handling)
+11. [⚡ USAGE EXAMPLES](#11-⚡-usage-examples)
 
 ---
 
@@ -531,88 +530,7 @@ attach_task_file: {
 
 ---
 
-## 10. 💾 INSTALLATION & SETUP
-
-### Installation Methods
-
-**1. NPM Installation:**
-```bash
-npm install -g @clickup/mcp-server-clickup
-
-# Then in config:
-{
-  "mcpServers": {
-    "clickup": {
-      "command": "clickup-mcp-server"
-    }
-  }
-}
-```
-
-**2. Local Installation:**
-```bash
-npm install @clickup/mcp-server-clickup
-
-# Then in config:
-{
-  "mcpServers": {
-    "clickup": {
-      "command": "node",
-      "args": ["/path/to/clickup-mcp-server/index.js"]
-    }
-  }
-}
-```
-
-### Configuration with API Key
-
-```json
-{
-  "mcpServers": {
-    "clickup": {
-      "command": "clickup-mcp-server",
-      "env": {
-        "CLICKUP_API_KEY": "pk_xxx..."
-      }
-    }
-  }
-}
-```
-
-### Getting ClickUp API Key
-1. Log into ClickUp
-2. Go to Settings → Apps
-3. Navigate to "API Token" section
-4. Generate personal token
-5. Copy and add to MCP config
-
-### Configuration Locations
-- **Claude Desktop Mac**: `~/Library/Application Support/Claude/claude_desktop_config.json`
-- **Claude Desktop Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
-
-### Verification
-After installation, verify ClickUp MCP is working:
-1. Restart Claude Desktop
-2. Check MCP server status
-3. Test with get_workspace_hierarchy
-4. Confirm connection with simple task creation
-
-### Setup Verification Display
-```markdown
-🔧 ClickUp Setup Check
-
-✔ Installation: Complete
-✔ Configuration: Valid
-✔ API Key: Active
-✔ Connection: Active
-✔ Test operation: Success
-
-Ready for task operations!
-```
-
----
-
-## 11. 🚨 ERROR HANDLING
+## 10. 🚨 ERROR HANDLING
 
 ### Common Issues
 
@@ -677,7 +595,7 @@ Need help troubleshooting?
 
 ---
 
-## 12. ⚡ USAGE EXAMPLES
+## 11. ⚡ USAGE EXAMPLES
 
 ### Example Prompts for ClickUp & Notion Helper
 
