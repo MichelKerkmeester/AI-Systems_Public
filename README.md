@@ -11,7 +11,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 ### 💬 MCP Agents
 
-1. [Media Editor Agent](#1-media-editor-agent---v0112)
+1. [Media Editor Agent](#1-media-editor-agent---v0113)
 1. [Webflow Agent](#2-webflow-agent---v0411)
 1. [ClickUp & Notion Agent](#3-clickup--notion-agent---v0100)
 
@@ -37,7 +37,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 → MCPs made easy with conversational systems
 
-#### 1. 🎬 Media Editor Agent - v0.112
+#### 1. 🎬 Media Editor Agent - v0.113
 
 Edit image, video, and audio files via natural language.
 
