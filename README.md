@@ -2,8 +2,8 @@
 
 Some of my non-client AI systems that I made available to the public. They were designed to work with Claude, but you can tweak them to fit with other AI setups too.
 
-> - 99.999% of people won’t try these systems. Beat the odds?
-> - Don’t reward me with unwanted coffee: https://buymeacoffee.com/michelkerkmeester
+> - 99.999% of people won't try these systems. Beat the odds?
+> - Don't reward me with unwanted coffee: https://buymeacoffee.com/michelkerkmeester
 
 -----
 
@@ -20,7 +20,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 1. [Product Owner Writer](#4-product-owner-writer)
 1. [Branded Content Writer](#5-branded-content-writer)
 1. [Prompt Engineering Assistant](#6-prompt-engineering-assistant)
-1. [GPT - AI System Improver](#7-gpt---ai-system-improver)
+1. [AI System Improver (GPT & Claude)](#7-ai-system-improver-gpt--claude)
 
 ### ⚡ Automation Agents
 
@@ -48,7 +48,7 @@ Edit image, video, and audio files via natural language.
 
 - **MEDIA Framework & Challenge Mode**:
   - 5-phase: Measure/Evaluate/Decide/Implement/Analyze
-  - Challenge at 3+ rounds (“85% quality, 50% smaller”)
+  - Challenge at 3+ rounds ("85% quality, 50% smaller")
   - Commands: $reset, $standard, $quick, $status
 
 - **Dual MCP Integration & Visual Feedback**:
@@ -82,7 +82,7 @@ Full-stack Webflow development through natural language with Designer and Data A
 
 .
 
-#### 3. 📚 ClickUp & Notion Agent
+#### 3. 📊 ClickUp & Notion Agent
 
 Seamlessly coordinate task management (ClickUp) and knowledge management (Notion) through natural language.
 
@@ -132,7 +132,7 @@ Content writing system, fully reconfigurable for any domain: marketing, engineer
 
 - **ATLAS Thinking Framework**:  
   - 5-phase adaptive methodology (replaces DEPTH)  
-  - User-controlled depth (1-10 rounds) – always asked  
+  - User-controlled depth (1-10 rounds) — always asked  
   - Challenge Mode at exactly 6+ rounds (not 3+)  
 
 - **Web Verification & Variation Scaling**:  
@@ -157,24 +157,29 @@ Generate powerful AI prompts with multi-format support.
 
 - **ATLAS Framework with Format Transform**:
   - 6-phase thinking + Format Transform
-  - Challenge at 3+ rounds (“SMILE worth +25% tokens?”)
+  - Challenge at 3+ rounds ("SMILE worth +25% tokens?")
   - REPAIR handles format issues
 
 .
 
-#### 7. 🔧 GPT - AI System Improver
+#### 7. 🔧 AI System Improver (GPT & Claude)
 
-Improve Claude systems via GPT-5 deep reasoning and preservation-first editing.
+Transform and improve AI system prompts across both GPT and Claude platforms with preservation-first editing.
 
-- **Deep Reasoning & ATLAS Framework**:
-  - Always maximum thinking (GPT-5 High)
-  - Interactive Discovery or Direct mode
-  - ATLAS auto-scaling
+- **Dual Platform Support**:
+  - **GPT Version**: Uses GPT-5 High Deep Reasoning mode with ChatGPT custom instructions
+  - **Claude Version**: Uses Ultrathink mode with Claude Projects knowledge base
+  - Both versions share core ATLAS Framework and principles
 
-- **Preservation & Professional Delivery**:
-  - Structural changes need consent
-  - Commands: $quick, $standard, $reset, $status
-  - Session tracking (ChatGPT only)
+- **Intelligent Analysis & Interactive Discovery**:
+  - Auto-activates discovery for unclear requests (2-4 questions)
+  - Complexity scoring determines ATLAS phases (A→S to Full ATLAS)
+  - Challenge Mode at 6+ complexity score
+
+- **Professional Delivery & Preservation**:
+  - Complete files only (never excerpts)
+  - Structural changes require explicit consent
+  - Session tracking enriches but never restricts
 
 -----
 
@@ -223,7 +228,7 @@ All systems support Model Context Protocol tools:
 - **Visual Dashboards**: Progress and quality metrics
 - **Documentation**: Every output includes guidance
 
------
+.
 
 ## 📚 Resources
 
