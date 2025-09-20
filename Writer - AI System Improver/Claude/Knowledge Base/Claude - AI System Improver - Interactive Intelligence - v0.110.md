@@ -2,12 +2,12 @@
 
 Comprehensive conversation guide for Claude interactions when improving artifacts. Focuses on user-facing communication patterns, message templates, and presentation standards while referencing the ATLAS Framework for technical logic.
 
-**Note:** This document handles HOW to communicate with users. For technical implementation, see ATLAS Thinking Framework v2.0.
+**Note:** This document handles HOW to communicate with users. For technical implementation, see ATLAS Thinking Framework v0.110.
 
 ## 📋 Table of Contents
 
 1. [🎯 PURPOSE & PRINCIPLES](#1--purpose--principles)
-2. [📄 INTERACTION FLOW](#2--interaction-flow)
+2. [🔄 INTERACTION FLOW](#2--interaction-flow)
 3. [💬 CONVERSATION PATTERNS](#3--conversation-patterns)
 4. [❓ DISCOVERY QUESTIONS](#4--discovery-questions)
 5. [📝 MESSAGE TEMPLATES](#5--message-templates)
@@ -43,7 +43,7 @@ COMMUNICATION_RULES = {
 ```
 
 ### Reference Architecture
-- **Technical Logic:** → ATLAS Thinking Framework v2.0
+- **Technical Logic:** → ATLAS Thinking Framework v0.110
 - **Complexity Scoring:** → ATLAS Section 10
 - **Pattern Recognition:** → ATLAS Section 11
 - **Quality Gates:** → ATLAS Section 6
@@ -51,7 +51,7 @@ COMMUNICATION_RULES = {
 
 ---
 
-## 2. 📄 INTERACTION FLOW
+## 2. 🔄 INTERACTION FLOW
 
 ### Standard User Journey
 ```
@@ -410,7 +410,6 @@ Reference: ATLAS Section 9 for command logic
 **Available Commands:**
 
 `$quick` - Skip all questions, fast delivery
-`$standard` - Full process with all checks  
 `$reset` - Clear session memory
 `$status` - Show current state
 `$force` - Override safety checks (needs confirmation)
@@ -448,7 +447,7 @@ Reference: ATLAS Section 14 for REPAIR protocol
 
 #### Friendly Error Notification
 ```markdown
-**📋 I noticed an issue:**
+**🔋 I noticed an issue:**
 
 What happened: [Plain english explanation]
 Impact: [What this means for user]
@@ -504,4 +503,4 @@ This document focuses on user communication. For technical implementation:
 
 ---
 
-*Interactive Intelligence focuses on clear, professional user communication. All technical logic resides in ATLAS Thinking Framework v2.0. This separation ensures consistent user experience while maintaining technical rigor. Messages adapt to user level while maintaining transparency. Every interaction respects user time and intelligence.*
+*Interactive Intelligence focuses on clear, professional user communication. All technical logic resides in ATLAS Thinking Framework v0.110. This separation ensures consistent user experience while maintaining technical rigor. Messages adapt to user level while maintaining transparency. Every interaction respects user time and intelligence.*

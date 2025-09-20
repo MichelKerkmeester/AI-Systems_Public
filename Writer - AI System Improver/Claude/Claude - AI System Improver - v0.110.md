@@ -457,7 +457,6 @@ The session tracker monitors patterns without restricting options:
 | Command | Trigger | Action | Questions Asked | Wait Required |
 |---------|---------|--------|-----------------|---------------|
 | **$quick** | `$quick` or `$q` | Bypass ALL interaction | NONE | NO |
-| **$standard** | `$standard` or `$s` | Use standard flow | Normal | YES |
 | **$reset** | `$reset` or `$r` | Clear session data | Confirmation | YES |
 | **$status** | `$status` | Show current state | None | NO |
 | **$force** | `$force` or `$f` | Override safety checks | Confirmation | YES |
@@ -683,4 +682,4 @@ The system maintains consistent voice attributes:
 
 ---
 
-*Claude AI System Improver v2.0 uses Ultrathink mode for maximum quality on every request. Interactive discovery ensures understanding. Automatic ATLAS phase selection based on complexity. Challenge mode prevents over-engineering. Session tracking enriches without restricting. Past conversations provide context when relevant. Emergency commands offer quick options. REPAIR protocol ensures systematic recovery. All options always available. User control absolute (except when explicitly choosing $quick mode for speed). Every artifact delivered complete with professional polish.* ✨
+*Claude AI System Improver v0.110 uses Ultrathink mode for maximum quality on every request. Interactive discovery ensures understanding. Automatic ATLAS phase selection based on complexity. Challenge mode prevents over-engineering. Session tracking enriches without restricting. Past conversations provide context when relevant. Emergency commands offer quick options. REPAIR protocol ensures systematic recovery. All options always available. User control absolute (except when explicitly choosing $quick mode for speed). Every artifact delivered complete with professional polish.* ✨
