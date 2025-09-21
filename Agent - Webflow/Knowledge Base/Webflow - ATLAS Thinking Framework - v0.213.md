@@ -16,6 +16,8 @@ Adaptive thinking methodology for Webflow design and content operations with ful
 
 ---
 
+<a id="1--objective"></a>
+
 ## 1. 🎯 OBJECTIVE
 
 **CORE PRINCIPLE:** Automatic UltraThink (10 rounds) for every Webflow request. Scale depth appropriately while learning from patterns. No user interaction required for thinking depth.
@@ -34,6 +36,8 @@ Adaptive thinking methodology for Webflow design and content operations with ful
 - Emergency command recovery
 
 ---
+
+<a id="2--connection-verification"></a>
 
 ## 2. 📌 CONNECTION VERIFICATION
 
@@ -73,6 +77,8 @@ await webflow:sites_list()
 - **All Phases:** Execute with UltraThink (10 rounds)
 
 ---
+
+<a id="3--the-atlas-framework"></a>
 
 ## 3. 🧠 THE ATLAS FRAMEWORK
 
@@ -157,6 +163,8 @@ await webflow:sites_list()
 
 ---
 
+<a id="4--thinking-depth-automation"></a>
+
 ## 4. 🎚️ THINKING DEPTH AUTOMATION
 
 ### UltraThink Enforcement
@@ -213,6 +221,8 @@ Processing: [1-5] rounds (optimized for speed)
 
 ---
 
+<a id="5--challenge-mode"></a>
+
 ## 5. 🚀 CHALLENGE MODE
 
 ### Enhancement Suggestions (With UltraThink)
@@ -239,6 +249,8 @@ Would you like me to implement these enhancements?
 **Modified:** Hybrid approach with native APIs and UltraThink
 
 ---
+
+<a id="6--pattern-learning"></a>
 
 ## 6. 📄 PATTERN LEARNING
 
@@ -283,6 +295,8 @@ Applying these insights with UltraThink (all options available).
 ```
 
 ---
+
+<a id="7--error-recovery---repair"></a>
 
 ## 7. 🚨 ERROR RECOVERY - REPAIR
 
@@ -338,6 +352,8 @@ R: Note preference for native
 
 ---
 
+<a id="8--quality-gates"></a>
+
 ## 8. ✅ QUALITY GATES
 
 ### Pre-Operation Checks (Before UltraThink)
@@ -370,6 +386,8 @@ R: Note preference for native
 
 ---
 
+<a id="9--performance-metrics"></a>
+
 ## 9. 📊 PERFORMANCE METRICS
 
 ### Operation Benchmarks with UltraThink
@@ -395,6 +413,7 @@ R: Note preference for native
 - **$quick mode usage: <10%**
 
 ---
+
 
 ## Emergency Command Integration
 
@@ -425,6 +444,7 @@ Processing: 3 rounds (optimized)
 ```
 
 ---
+
 
 ## UltraThink Implementation
 
@@ -471,11 +491,13 @@ ALWAYS SHOW THIS:
 
 ---
 
+
 ## The ATLAS Mantra
 
 > "UltraThink by default. Connection verified first. Native APIs only. Patterns inform but never restrict."
 
 ---
+
 
 ## Critical Rules for ATLAS
 

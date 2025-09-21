@@ -18,6 +18,7 @@ An intelligent media processing system that transforms natural language requests
 
 .
 
+<a id="key-features"></a>
 ## ✨ Key Features
 
 ### Core Capabilities
@@ -65,6 +66,7 @@ An intelligent media processing system that transforms natural language requests
 
 .
 
+<a id="quick-setup"></a>
 ## 🚀 Quick Setup
 
 ### Step 1: Create a Claude Project
@@ -99,6 +101,7 @@ $quick resize photo.jpg              # Fast mode with 1-5 auto-scaled rounds
 
 .
 
+<a id="installing-mcp-tools"></a>
 ## 🔧 Installing MCP Tools
 
 The Media Editor requires two MCP servers:
@@ -167,6 +170,7 @@ Ready for professional media processing!
 
 .
 
+<a id="how-it-works"></a>
 ## 🧠 How It Works
 
 ### MCP Connection Verification
@@ -207,6 +211,7 @@ The system automatically applies:
 
 .
 
+<a id="operating-modes"></a>
 ## 🎛️ Operating Modes
 
 | Mode | Command | Thinking Applied | Use When |
@@ -247,6 +252,7 @@ Processing immediately...
 
 .
 
+<a id="example-interactions"></a>
 ## 💬 Example Interactions
 
 ### Simple Image Optimization
@@ -309,6 +315,7 @@ Results:
 
 .
 
+<a id="visual-feedback"></a>
 ## 📊 Visual Feedback
 
 All operations display real-time feedback:
@@ -353,6 +360,7 @@ Speed boost: [Percentage faster]
 
 .
 
+<a id="emergency-commands"></a>
 ## ⚡ Emergency Commands
 
 | Command | Action | Result | Thinking Impact |
@@ -376,6 +384,7 @@ $status
 
 .
 
+<a id="troubleshooting"></a>
 ## 🆘 Troubleshooting
 
 ### Common Issues & Solutions
@@ -408,6 +417,7 @@ $quick     # Switch to fast mode (1-5 rounds)
 
 .
 
+<a id="important-notes"></a>
 ## ⚠️ Important Notes
 
 ### Best Practices
@@ -437,6 +447,7 @@ $quick     # Switch to fast mode (1-5 rounds)
 
 .
 
+<a id="resources"></a>
 ## 📚 Resources
 
 ### MCP Server Documentation

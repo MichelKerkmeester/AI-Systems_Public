@@ -16,6 +16,8 @@ Complete technical reference for the Imagician MCP server integration for image 
 
 ---
 
+<a id="1-📋-overview"></a>
+
 ## 1. 📋 OVERVIEW
 
 ### MCP Server Details
@@ -44,6 +46,8 @@ Imagician serves as the primary image processing engine within the Media Editor 
 **AUTOMATIC**: All operations use 10 rounds of deep thinking (no user choice).
 
 ---
+
+<a id="2-🔌-connection-verification"></a>
 
 ## 2. 🔌 CONNECTION VERIFICATION
 
@@ -116,6 +120,8 @@ def check_imagician_health():
 
 ---
 
+<a id="3-🛠️-core-operations"></a>
+
 ## 3. 🛠️ CORE OPERATIONS
 
 ### Available MCP Tools with Automatic Thinking
@@ -145,6 +151,8 @@ When multiple operations are needed, Imagician applies them in optimal order:
 - Quality optimization
 
 ---
+
+<a id="4-📊-supported-formats"></a>
 
 ## 4. 📊 SUPPORTED FORMATS
 
@@ -184,6 +192,8 @@ def select_output_format(input_format, use_case, mode='standard'):
 ```
 
 ---
+
+<a id="5-⚙️-operation-details"></a>
 
 ## 5. ⚙️ OPERATION DETAILS
 
@@ -258,6 +268,8 @@ compress: {
 
 ---
 
+<a id="6-🎯-quality--compression"></a>
+
 ## 6. 🎯 QUALITY & COMPRESSION
 
 ### Quality Settings with Automatic Deep Analysis
@@ -318,6 +330,8 @@ async function smartCompress(image, targetUseCase, mode='standard') {
 
 ---
 
+<a id="7-📐-resize--crop"></a>
+
 ## 7. 📐 RESIZE & CROP
 
 ### Resize Strategies with Automatic Optimization
@@ -372,6 +386,8 @@ crop: {
 
 ---
 
+<a id="8-🔄-rotation--flipping"></a>
+
 ## 8. 🔄 ROTATION & FLIPPING
 
 ### Rotation Operation with Auto-Analysis
@@ -408,6 +424,8 @@ Imagician auto-corrects image orientation with deep analysis:
 - All via 10-round thinking
 
 ---
+
+<a id="9-🚨-error-handling"></a>
 
 ## 9. 🚨 ERROR HANDLING
 
@@ -474,6 +492,8 @@ Attempting automatic resolution...
 ```
 
 ---
+
+<a id="10-⚡-usage-examples"></a>
 
 ## 10. ⚡ USAGE EXAMPLES
 
@@ -595,6 +615,7 @@ User: "$quick compress batch of images"
 → Balanced speed and optimization
 ```
 
+
 ## Key Differences from Generic Processing
 
 This document reflects the **actual Imagician MCP server** implementation with automatic thinking:
@@ -608,6 +629,7 @@ This document reflects the **actual Imagician MCP server** implementation with a
 - Actual installation methods from the repository
 - Real usage examples with automatic optimization
 - Sharp library optimizations and limitations
+
 
 ## Performance Notes
 

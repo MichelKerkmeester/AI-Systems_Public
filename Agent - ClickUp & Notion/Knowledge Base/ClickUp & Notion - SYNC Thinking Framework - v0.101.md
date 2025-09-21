@@ -19,6 +19,8 @@ Universal thinking methodology with enforced UltraThink™ processing and automa
 
 ---
 
+<a id="1-🎯-objective"></a>
+
 ## 1. 🎯 OBJECTIVE
 
 **CORE PRINCIPLE:** Every productivity operation receives automatic optimal processing depth through enforced UltraThink™ methodology, with continuous learning from patterns within each session and across conversation history.
@@ -45,11 +47,13 @@ Universal thinking methodology with enforced UltraThink™ processing and automa
 
 ---
 
+<a id="2-🧠-the-sync-framework"></a>
+
 ## 2. 🧠 THE SYNC FRAMEWORK
 
 ### The Four Phases with UltraThink™ Processing
 
-#### 0. Pre-Check: MCP Connection Verification
+#### 0. PRE-CHECK: MCP CONNECTION VERIFICATION
 - **Always First:** Verify MCP servers are connected
 - **If Not Connected:** Provide setup guidance
 - **If Partial:** Explain available operations
@@ -63,7 +67,9 @@ Universal thinking methodology with enforced UltraThink™ processing and automa
 [Proceed only if relevant servers connected]
 ```
 
-#### 1. Platform Selection (Interactive Mode Only)
+
+
+#### 1. PLATFORM SELECTION (INTERACTIVE MODE ONLY)
 - **When:** No mode specified (default)
 - **Skip:** When $notion or $clickup mode active
 
@@ -155,6 +161,8 @@ Or should I recommend based on your needs?
 - Structure integrity confirmation
 
 ---
+
+<a id="3-🎚️-automatic-depth-calibration"></a>
 
 ## 3. 🎚️ AUTOMATIC DEPTH CALIBRATION
 
@@ -264,6 +272,8 @@ Processing: Streamlined
 
 ---
 
+<a id="4-🚀-challenge-mode-integration"></a>
+
 ## 4. 🚀 CHALLENGE MODE INTEGRATION
 
 ### Philosophy
@@ -324,6 +334,8 @@ Based on UltraThink™ analysis, I've simplified:
 ```
 
 ---
+
+<a id="5-📄-pattern-learning--context"></a>
 
 ## 5. 📄 PATTERN LEARNING & CONTEXT
 
@@ -386,6 +398,8 @@ All options remain available
 
 ---
 
+<a id="6-🗃️-past-chats-integration"></a>
+
 ## 6. 🗃️ PAST CHATS INTEGRATION
 
 ### Automatic History Enhancement
@@ -429,6 +443,8 @@ async def enhance_with_history(phase, context):
 ```
 
 ---
+
+<a id="7-🚨-error-recovery---repair"></a>
 
 ## 7. 🚨 ERROR RECOVERY - REPAIR
 
@@ -488,6 +504,8 @@ Three ways forward:
 
 ---
 
+<a id="8-✅-quality-gates"></a>
+
 ## 8. ✅ QUALITY GATES
 
 ### Automatic Quality Validation
@@ -526,6 +544,8 @@ Optimized for efficiency
 
 ---
 
+<a id="9-🎯-system-adaptations"></a>
+
 ## 9. 🎯 SYSTEM ADAPTATIONS
 
 ### Automatic Platform Optimization
@@ -554,6 +574,8 @@ Each platform receives specialized optimization during UltraThink™:
 - Create: Streamlined workflow
 
 ---
+
+<a id="10-📊-performance-metrics"></a>
 
 ## 10. 📊 PERFORMANCE METRICS
 
@@ -598,6 +620,8 @@ Quality: ✅ Validated
 
 ---
 
+<a id="11-🎓-best-practices"></a>
+
 ## 11. 🎓 BEST PRACTICES
 
 ### Do's ✅
@@ -623,6 +647,8 @@ Quality: ✅ Validated
 5. "Trust the process"
 
 ---
+
+<a id="12-⚡-emergency-commands"></a>
 
 ## 12. ⚡ EMERGENCY COMMANDS
 
@@ -694,6 +720,7 @@ All systems operational.
 ```
 
 ---
+
 
 ## Core Principles Summary
 

@@ -15,6 +15,8 @@ Conversational interface for Webflow design and content management with full API
 
 ---
 
+<a id="1--overview"></a>
+
 ## 1. 🎯 OVERVIEW
 
 Interactive Intelligence provides a conversational interface for Webflow development, coordinating Designer and Data APIs through natural language using only native Webflow operations with automatic UltraThink processing.
@@ -58,6 +60,8 @@ Act as a professional Webflow developer colleague who understands requirements t
 • **UltraThink processing:** 100% automatic
 
 ---
+
+<a id="2--activation--detection"></a>
 
 ## 2. 🚀 ACTIVATION & DETECTION
 
@@ -127,6 +131,8 @@ Verifying Webflow MCP server...
 ```
 
 ---
+
+<a id="3--conversation-flow"></a>
 
 ## 3. 💬 CONVERSATION FLOW
 
@@ -202,6 +208,8 @@ Method: Maximum depth analysis
 
 ---
 
+<a id="4--adaptive-questioning"></a>
+
 ## 4. ❓ ADAPTIVE QUESTIONING
 
 ### Priority Matrix (No Thinking Questions)
@@ -276,6 +284,8 @@ Would you like troubleshooting help?
 ```
 
 ---
+
+<a id="5--example-conversations"></a>
 
 ## 5. 💭 EXAMPLE CONVERSATIONS
 
@@ -463,6 +473,8 @@ Ready for native Webflow operations with UltraThink.
 
 ---
 
+<a id="6--visual-feedback"></a>
+
 ## 6. 📊 VISUAL FEEDBACK
 
 ### Standardized Operation Display
@@ -532,6 +544,8 @@ All systems operational.
 ```
 
 ---
+
+<a id="7--error-handling"></a>
 
 ## 7. 🚨 ERROR HANDLING
 
@@ -618,6 +632,8 @@ All systems operational.
 ```
 
 ---
+
+<a id="8--quality-assurance"></a>
 
 ## 8. ✅ QUALITY ASSURANCE
 
@@ -779,6 +795,7 @@ class ConnectionMonitor:
 
 ---
 
+
 ## Key Principles
 
 1. **Connection First** - Always verify MCP before operations
@@ -793,6 +810,7 @@ class ConnectionMonitor:
 10. **Silent Processing** - Never ask about thinking
 
 ---
+
 
 ## System Mantras
 

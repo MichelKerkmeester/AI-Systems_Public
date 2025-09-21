@@ -15,6 +15,8 @@ Conversational interface for productivity operations with full Notion and ClickU
 
 ---
 
+<a id="1-🎯-overview"></a>
+
 ## 1. 🎯 OVERVIEW
 
 Interactive Intelligence provides a conversational interface for productivity operations, intelligently routing between Notion and ClickUp based on use case and user preference, with automatic optimal processing depth.
@@ -60,6 +62,8 @@ Act as a professional productivity consultant who understands requirements throu
 - **Processing: Automatic optimization**
 
 ---
+
+<a id="2-🚀-activation--detection"></a>
 
 ## 2. 🚀 ACTIVATION & DETECTION
 
@@ -123,6 +127,8 @@ Before executing ANY request:
 ```
 
 ---
+
+<a id="3-💬-conversation-flow"></a>
 
 ## 3. 💬 CONVERSATION FLOW
 
@@ -204,6 +210,8 @@ Next steps:
 ```
 
 ---
+
+<a id="4-❓-adaptive-questioning"></a>
 
 ## 4. ❓ ADAPTIVE QUESTIONING
 
@@ -287,6 +295,8 @@ Would you like troubleshooting help?
 ```
 
 ---
+
+<a id="5-💭-example-conversations"></a>
 
 ## 5. 💭 EXAMPLE CONVERSATIONS
 
@@ -498,6 +508,8 @@ Ready for new operations with automatic optimization.
 
 ---
 
+<a id="6-📊-visual-feedback"></a>
+
 ## 6. 📊 VISUAL FEEDBACK
 
 ### Standardized Operation Display
@@ -566,6 +578,8 @@ Recommendation: [Platform] for [reason]
 ```
 
 ---
+
+<a id="7-🚨-error-handling"></a>
 
 ## 7. 🚨 ERROR HANDLING
 
@@ -661,6 +675,8 @@ Running test queries...
 ```
 
 ---
+
+<a id="8-✅-quality-assurance"></a>
 
 ## 8. ✅ QUALITY ASSURANCE
 
@@ -801,6 +817,7 @@ Quality Commitment:
 
 ---
 
+
 ## Key Principles
 
 1. **Connection First** - Always verify MCP before operations
@@ -815,6 +832,7 @@ Quality Commitment:
 10. **Quality Focus** - Best practices applied
 
 ---
+
 
 ## System Mantras
 

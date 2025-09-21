@@ -17,6 +17,8 @@ Complete technical reference for the ClickUp MCP server integration for task man
 
 ---
 
+<a id="1-📋-overview"></a>
+
 ## 1. 📋 OVERVIEW
 
 ### MCP Server Details
@@ -44,6 +46,8 @@ ClickUp MCP serves as the task management and project tracking engine within the
 **CRITICAL**: Always verify connection before operations.
 
 ---
+
+<a id="2-🔌-connection-verification"></a>
 
 ## 2. 🔌 CONNECTION VERIFICATION
 
@@ -116,6 +120,8 @@ def check_clickup_health():
 
 ---
 
+<a id="3-🛠️-core-operations"></a>
+
 ## 3. 🛠️ CORE OPERATIONS
 
 ### Available MCP Tools
@@ -149,6 +155,8 @@ When multiple operations are needed, ClickUp applies them in optimal order:
 7. Start time tracking
 
 ---
+
+<a id="4-📊-task-operations"></a>
 
 ## 4. 📊 TASK OPERATIONS
 
@@ -254,6 +262,8 @@ get_workspace_tasks: {
 
 ---
 
+<a id="5-📁-list--folder-operations"></a>
+
 ## 5. 📁 LIST & FOLDER OPERATIONS
 
 ### Create List
@@ -312,6 +322,8 @@ delete_list: {
 ```
 
 ---
+
+<a id="6-🏢-space--workspace-operations"></a>
 
 ## 6. 🏢 SPACE & WORKSPACE OPERATIONS
 
@@ -375,6 +387,8 @@ remove_tag_from_task: {
 
 ---
 
+<a id="7-⏱️-time-tracking-operations"></a>
+
 ## 7. ⏱️ TIME TRACKING OPERATIONS
 
 ### Start Time Tracking
@@ -437,6 +451,8 @@ get_current_time_entry: {}
 
 ---
 
+<a id="8-📄-document-operations"></a>
+
 ## 8. 📄 DOCUMENT OPERATIONS
 
 ### Create Document
@@ -490,6 +506,8 @@ list_documents: {
 
 ---
 
+<a id="9-💬-comment--attachment-operations"></a>
+
 ## 9. 💬 COMMENT & ATTACHMENT OPERATIONS
 
 ### Create Comment
@@ -529,6 +547,8 @@ attach_task_file: {
 ```
 
 ---
+
+<a id="10-🚨-error-handling"></a>
 
 ## 10. 🚨 ERROR HANDLING
 
@@ -594,6 +614,8 @@ Need help troubleshooting?
 ```
 
 ---
+
+<a id="11-⚡-usage-examples"></a>
 
 ## 11. ⚡ USAGE EXAMPLES
 
@@ -724,6 +746,7 @@ Helper: [Checking ClickUp connection...]
 
 ---
 
+
 ## Key Differences from Generic Task Tools
 
 This document reflects the **actual ClickUp MCP server** implementation:
@@ -737,6 +760,7 @@ This document reflects the **actual ClickUp MCP server** implementation:
 - Official ClickUp API limitations and requirements
 
 ---
+
 
 ## Performance Notes
 

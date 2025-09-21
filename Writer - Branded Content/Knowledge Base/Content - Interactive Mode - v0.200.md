@@ -33,7 +33,9 @@ Conversational content creation through strategic Q&A flow (DEFAULT mode when no
 
 ---
 
-## 1. ⚙️ How It Works
+<a id="1-⚙️-how-it-works"></a>
+
+## 1. ⚙️ HOW IT WORKS
 
 ### Core Flow with Checkpoints
 
@@ -56,7 +58,9 @@ Conversational content creation through strategic Q&A flow (DEFAULT mode when no
 
 ---
 
-## 2. 📊 Interactive State Management
+<a id="2-📊-interactive-state-management"></a>
+
+## 2. 📊 INTERACTIVE STATE MANAGEMENT
 
 ### Core State Elements:
 ```
@@ -84,9 +88,14 @@ state = {
 
 ---
 
-## 3. 🔄 Question Architecture
+<a id="3-🔄-question-architecture"></a>
+
+## 3. 🔄 QUESTION ARCHITECTURE
 
 ### Question Architecture (PRIMARY SOURCE for Q&A)
+
+
+<a id="4-💬-example-conversation"></a>
 
 ## Phase 1: Welcome & User Type
 
@@ -115,6 +124,9 @@ Welcome back to Design Content Creation!
 
 [Same question options as above]
 ```
+
+
+<a id="5-🚨-error-handling"></a>
 
 ## Phase 2: Strategic Questions by Audience
 
@@ -178,6 +190,9 @@ What business impact matters most?
 Which is your priority? (roi/cost/productivity/quality/risk)
 ```
 
+
+<a id="6-📊-visual-dashboard"></a>
+
 ## Phase 3: Content Length (CRITICAL)
 
 **Universal Length Question:**
@@ -193,6 +208,9 @@ Which fits best? (quick/short/medium/full)
 
 [This determines variation scaling: 1-30=9, 31-150=6, 151+=3]
 ```
+
+
+<a id="7-🧠-atlas-integration"></a>
 
 ## Phase 4: Thinking Rounds
 
@@ -216,7 +234,9 @@ Your choice? (1-10 or "default" for my recommendation)
 
 ---
 
-## 4. 💬 Example Conversation
+
+
+## 4. 💬 EXAMPLE CONVERSATION
 
 ### Complete Flow Example
 
@@ -310,7 +330,9 @@ System: [WAITS FOR RESPONSE - Creates after user selects]
 
 ---
 
-## 5. 🚨 Error Handling
+
+
+## 5. 🚨 ERROR HANDLING
 
 ### REPAIR Protocol Implementation
 
@@ -343,7 +365,9 @@ Your choice? (1/2/3)
 
 ---
 
-## 6. 📊 Visual Dashboard
+
+
+## 6. 📊 VISUAL DASHBOARD
 
 ### Content Creation Report Template (PRIMARY SOURCE)
 
@@ -371,7 +395,9 @@ For full dashboard template with detailed metrics → Use existing expanded form
 
 ---
 
-## 7. 🧠 ATLAS Integration
+
+
+## 7. 🧠 ATLAS INTEGRATION
 
 ### Thinking Integration
 - Thinking methodology: See ATLAS Framework
@@ -408,7 +434,9 @@ def map_to_atlas(word_count, thinking_rounds):
 
 ---
 
-## 8. 🔄 Interactive Pattern Tracking
+<a id="8-🔄-interactive-pattern-tracking"></a>
+
+## 8. 🔄 INTERACTIVE PATTERN TRACKING
 
 ### Session Patterns to Track:
 
@@ -439,7 +467,9 @@ def map_to_atlas(word_count, thinking_rounds):
 
 ---
 
-## 9. 🗃️ Past Chats Integration
+<a id="9-🗃️-past-chats-integration"></a>
+
+## 9. 🗃️ PAST CHATS INTEGRATION
 
 ### Tool Usage Strategy
 
@@ -460,7 +490,9 @@ def map_to_atlas(word_count, thinking_rounds):
 
 ---
 
-## 10. ⚡ Emergency Commands
+<a id="10-⚡-emergency-commands"></a>
+
+## 10. ⚡ EMERGENCY COMMANDS
 
 ### Command Implementation in Interactive
 

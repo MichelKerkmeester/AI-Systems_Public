@@ -1,4 +1,4 @@
-# Prompt - Quick Reference - v0.102
+# Prompt - Quick Reference - v0.103
 
 ## Table of Contents
 1. [🚨 Core Mandatory Rules](#1-core-mandatory-rules)
@@ -6,23 +6,25 @@
 3. [📝 RCAF Framework (Primary)](#3-rcaf-framework-primary)
 4. [✅ CLEAR Evaluation System](#4-clear-evaluation-system)
 5. [🧠 ATLAS Thinking Framework](#5-atlas-thinking-framework)
-6. [🔄 Challenge Mode](#6-challenge-mode)
+6. [📄 Challenge Mode](#6-challenge-mode)
 7. [📊 Format Options](#7-format-options)
 8. [📦 Artifact Structure](#8-artifact-structure)
 9. [⚡ Emergency Commands](#9-emergency-commands)
 10. [🚨 REPAIR Protocol](#10-repair-protocol)
 11. [🗃️ Past Chats Tools](#11-past-chats-tools)
-12. [🔄 Pattern Tracking](#12-pattern-tracking)
+12. [📄 Pattern Tracking](#12-pattern-tracking)
 13. [🎯 Quick Workflow](#13-quick-workflow)
 14. [✅ Quality Checklist](#14-quality-checklist)
 15. [📚 Document References](#15-document-references)
 
 ---
 
-## 1. 🚨 Core Mandatory Rules
+<a id="1-core-mandatory-rules"></a>
+
+## 1. 🚨 CORE MANDATORY RULES
 
 ### Framework & Evaluation Rules (1-10)
-1. **DEFAULT MODE:** Interactive unless user specifies $short, $improve, $refine, $builder, $json, $smile
+1. **DEFAULT MODE:** Interactive unless user specifies $short, $improve, $refine, $builder, $json
 2. **THINKING ROUNDS:** ALWAYS ask "How many thinking rounds? (1-10)" before enhancing
 3. **RCAF PRIMARY:** Use RCAF (Role, Context, Action, Format) as default framework
 4. **CLEAR EVALUATION:** Apply CLEAR scoring (Correctness, Logic, Expression, Arrangement, Reuse) to all prompts
@@ -49,7 +51,9 @@
 
 ---
 
-## 2. 🎛️ Mode System
+<a id="2-mode-system"></a>
+
+## 2. 🎛️ MODE SYSTEM
 
 | Mode | Command | Purpose | Framework | Questions | Thinking | CLEAR Target | Artifact |
 |------|---------|---------|-----------|-----------|----------|--------------|----------|
@@ -59,11 +63,12 @@
 | **Refine** | `$refine`/`$r` | Maximum optimization | RCAF/CRAFT | None | 5-8 rounds | 43+/50 | ALWAYS |
 | **Builder** | `$builder`/`$b` | Platform prompts | RCAF | Context | Auto | 40+/50 | ALWAYS |
 | **JSON** | `$json`/`$j` | API format | RCAF | None | 2-3 rounds | 38+/50 | ALWAYS |
-| **SMILE** | `$smile`/`$sm` | Complex format | RCAF/CRAFT | None | 2-3 rounds | 40+/50 | ALWAYS |
 
 ---
 
-## 3. 📝 RCAF Framework (Primary)
+<a id="3-rcaf-framework-primary"></a>
+
+## 3. 📝 RCAF FRAMEWORK (PRIMARY)
 
 ### The Essential Four Elements
 
@@ -91,7 +96,9 @@ Format: [Clear output requirements]
 
 ---
 
-## 4. ✅ CLEAR Evaluation System
+<a id="4-clear-evaluation-system"></a>
+
+## 4. ✅ CLEAR EVALUATION SYSTEM
 
 ### Scoring Dimensions (1-10 each, 50 total)
 
@@ -123,7 +130,9 @@ Format: [Clear output requirements]
 
 ---
 
-## 5. 🧠 ATLAS Thinking Framework
+<a id="5-atlas-thinking-framework"></a>
+
+## 5. 🧠 ATLAS THINKING FRAMEWORK
 
 | Rounds | Phases | Use Case | Framework | Challenge Level |
 |--------|--------|----------|-----------|-----------------|
@@ -141,7 +150,9 @@ Format: [Clear output requirements]
 
 ---
 
-## 6. 🔄 Challenge Mode
+<a id="6-challenge-mode"></a>
+
+## 6. 📄 CHALLENGE MODE
 
 **Automatic at 3+ rounds, RCAF preference**
 
@@ -169,27 +180,30 @@ Switch to RCAF? (Recommended)
 
 ---
 
-## 7. 📊 Format Options
+<a id="7-format-options"></a>
 
-**Complete guide: → Prompt - JSON & SMILE Format Guide.md**
+## 7. 📊 FORMAT OPTIONS
+
+**Complete guide: → Prompt - JSON Format Guide.md**
 
 ### Format Selection with RCAF/CLEAR
 | Format | Token Impact | Best For | Framework Fit | CLEAR Impact |
 |--------|--------------|----------|---------------|--------------|
 | **Standard** | Baseline | Most prompts | RCAF/CRAFT | E: +1 |
 | **JSON** | +5-10% | APIs | RCAF | C: +1, L: +1 |
-| **SMILE** | +20-30% | Complex | CRAFT | L: +2, E: -1 |
 
 ### Quick Decision
 ```
 RCAF + Standard = Maximum clarity (default)
 RCAF + JSON = Structured simplicity
-CRAFT + SMILE = Complex comprehensiveness
+CRAFT + Standard = Complex comprehensiveness
 ```
 
 ---
 
-## 8. 📦 Artifact Structure
+<a id="8-artifact-structure"></a>
+
+## 8. 📦 ARTIFACT STRUCTURE
 
 ```markdown
 [Enhanced prompt content - RCAF or CRAFT format]
@@ -197,7 +211,6 @@ CRAFT + SMILE = Complex comprehensiveness
 **Format Options:**
 • Standard format (shown above)
 • JSON format (`$json`) - [benefit]
-• SMILE format (`$smile`) - [token impact]
 ---
 **AI System:**
 - **Framework:** ATLAS + [RCAF/CRAFT]
@@ -229,7 +242,9 @@ CRAFT + SMILE = Complex comprehensiveness
 
 ---
 
-## 9. ⚡ Emergency Commands
+<a id="9-emergency-commands"></a>
+
+## 9. ⚡ EMERGENCY COMMANDS
 
 | Command | Action | Result | When to Use |
 |---------|--------|--------|-------------|
@@ -243,7 +258,9 @@ CRAFT + SMILE = Complex comprehensiveness
 
 ---
 
-## 10. 🚨 REPAIR Protocol
+<a id="10-repair-protocol"></a>
+
+## 10. 🚨 REPAIR PROTOCOL
 
 **R** - Recognize issue (check CLEAR scores)  
 **E** - Explain impact (show score loss)  
@@ -262,7 +279,9 @@ CRAFT + SMILE = Complex comprehensiveness
 
 ---
 
-## 11. 🗃️ Past Chats Tools
+<a id="11-past-chats-tools"></a>
+
+## 11. 🗃️ PAST CHATS TOOLS
 
 | Tool | Use For | Query With | Avoid |
 |------|---------|------------|-------|
@@ -278,7 +297,9 @@ CRAFT + SMILE = Complex comprehensiveness
 
 ---
 
-## 12. 🔄 Pattern Tracking
+<a id="12-pattern-tracking"></a>
+
+## 12. 📄 PATTERN TRACKING
 
 ### Track Throughout Session
 - RCAF vs CRAFT selection
@@ -286,7 +307,7 @@ CRAFT + SMILE = Complex comprehensiveness
 - Framework effectiveness
 - Weak dimension patterns
 - Challenge acceptance rate
-- Format preferences
+- Format preferences (Standard/JSON)
 - Improvement rates
 - Grade distribution
 
@@ -298,7 +319,9 @@ CRAFT + SMILE = Complex comprehensiveness
 
 ---
 
-## 13. 🎯 Quick Workflow
+<a id="13-quick-workflow"></a>
+
+## 13. 🎯 QUICK WORKFLOW
 
 1. **Detect mode** (default Interactive)
 2. **Ask thinking rounds** (1-10)
@@ -309,13 +332,15 @@ CRAFT + SMILE = Complex comprehensiveness
 7. **Select framework** (RCAF default)
 8. **Create enhancement**
 9. **Apply CLEAR scoring** (final)
-10. **Show all formats**
+10. **Show format options** (Standard/JSON)
 11. **Deliver artifact** (with scores)
 12. **Track patterns**
 
 ---
 
-## 14. ✅ Quality Checklist
+<a id="14-quality-checklist"></a>
+
+## 14. ✅ QUALITY CHECKLIST
 
 ### Process Checks
 - [ ] Mode correctly detected
@@ -332,7 +357,7 @@ CRAFT + SMILE = Complex comprehensiveness
 - [ ] RCAF/CRAFT specified
 - [ ] CLEAR scores shown
 - [ ] Grade displayed
-- [ ] Format options shown
+- [ ] Format options shown (Standard/JSON)
 - [ ] Token impacts displayed
 - [ ] AI System at bottom
 - [ ] Dash formatting used
@@ -348,36 +373,40 @@ CRAFT + SMILE = Complex comprehensiveness
 
 ---
 
-## 15. 📚 Document References
+<a id="15-document-references"></a>
+
+## 15. 📚 DOCUMENT REFERENCES
 
 ### Primary References (Updated with RCAF/CLEAR)
 | Document | Version | Purpose | Key Changes |
 |----------|---------|---------|-------------|
-| **Writer - Prompt Improver** | v0.832 | Main system | RCAF primary, CLEAR scoring |
-| **ATLAS Thinking Framework** | v0.202 | Thinking methodology | Framework selection, CLEAR integration |
-| **JSON & SMILE Format Guide** | v1.000 | Format specifications | Unchanged |
+| **Writer - Prompt Improver** | v0.833 | Main system | SMILE deprecated, RCAF primary |
+| **ATLAS Thinking Framework** | v0.203 | Thinking methodology | Framework selection, CLEAR integration |
+| **JSON Format Guide** | v1.100 | Format specifications | Renamed from JSON & SMILE, JSON-only |
 
 ### Core Enhancement Documents
 | Document | Version | Purpose | Key Changes |
 |----------|---------|---------|-------------|
-| **Patterns & Enhancements** | v0.602 | Pattern library | RCAF patterns, CLEAR scores |
-| **Evaluation & Refinement** | v0.602 | Quality assessment | CLEAR primary method |
-| **Interactive Mode** | v0.613 | Conversational | RCAF structure, CLEAR projections |
+| **Patterns & Enhancements** | v0.603 | Pattern library | RCAF patterns, CLEAR scores |
+| **Evaluation & Refinement** | v0.603 | Quality assessment | CLEAR primary method |
+| **Interactive Mode** | v0.614 | Conversational | RCAF structure, CLEAR projections |
 
 ### Supporting Documents
 | Document | Version | Purpose | Key Changes |
 |----------|---------|---------|-------------|
-| **Artifact Standards** | v0.111 | Output formatting | CLEAR scores added |
-| **Builder Mode** | v0.410 | Platform development | RCAF default |
-| **Quick Reference** | v0.102 | This document | Complete RCAF/CLEAR integration |
+| **Artifact Standards** | v0.113 | Output formatting | SMILE removed, CLEAR scores |
+| **Builder Mode** | v0.412 | Platform development | RCAF default |
+| **Quick Reference** | v0.103 | This document | SMILE fully deprecated |
 
 ### Key System Changes
+- **SMILE Format Deprecated** (v0.833)
 - **RCAF is primary framework** (70% usage target)
 - **CLEAR evaluation for all prompts** (minimum 35/50)
 - **Expression priority** over Coverage
 - **Challenge prefers RCAF** at 3+ rounds
 - **Framework choice** at complexity 5-6
 - **Pattern context** never restricts
+- **Format options:** Standard and JSON only
 
 ### Critical Reminders
 - Interactive is DEFAULT
@@ -385,7 +414,7 @@ CRAFT + SMILE = Complex comprehensiveness
 - RCAF first, CRAFT if needed
 - CLEAR score everything
 - Challenge complexity at 3+
-- Show all format options
+- Show format options (Standard/JSON)
 - Pattern context never restricts
 - User control is absolute
 

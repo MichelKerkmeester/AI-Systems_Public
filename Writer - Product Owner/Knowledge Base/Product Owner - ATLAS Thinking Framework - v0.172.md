@@ -19,6 +19,8 @@ Universal thinking methodology combining challenge-based reasoning with adaptive
 
 ---
 
+<a id="1-🎯-objective"></a>
+
 ## 1. 🎯 OBJECTIVE
 
 **Core Principle:** Every system should challenge complexity, scale thinking appropriately, continuously learn from patterns, and **ALWAYS WAIT FOR USER INPUT** at decision points.
@@ -42,11 +44,13 @@ Universal thinking methodology combining challenge-based reasoning with adaptive
 
 ---
 
+<a id="2-🧠-the-atlas-framework---expanded"></a>
+
 ## 2. 🧠 THE ATLAS FRAMEWORK - EXPANDED
 
 ### The Five Phases With Detailed Steps
 
-#### 0. Intake Check (Optional Pre-Phase)
+#### 0. INTAKE CHECK (OPTIONAL PRE-PHASE)
 **When:** Complex/unclear requests (8+ rounds)
 **Skip:** Simple edits, clear instructions, $quick mode
 **CRITICAL:** If unclear, ASK USER AND WAIT
@@ -361,6 +365,8 @@ async def intake_check(request):
 
 ---
 
+<a id="3-🎮-thinking-depth-calibration"></a>
+
 ## 3. 🎮 THINKING DEPTH CALIBRATION
 
 ### Automatic Formula With Historical Context
@@ -458,6 +464,8 @@ async def calculate_thinking_rounds(request, mode):
 | **10** | Strategic decisions/epics | Deep ATLAS | Multiple cycles → External validation → Scenario planning |
 
 ---
+
+<a id="4-🚀-challenge-mode-integration"></a>
 
 ## 4. 🚀 CHALLENGE MODE INTEGRATION
 
@@ -557,6 +565,8 @@ Should we simplify, split, or proceed as is?
 
 ---
 
+<a id="5-📄-pattern-learning--context"></a>
+
 ## 5. 📄 PATTERN LEARNING & CONTEXT
 
 ### Session Context Structure With Past Chats
@@ -615,6 +625,8 @@ class SessionContext:
 
 ---
 
+<a id="6-🗃️-past-chats-integration"></a>
+
 ## 6. 🗃️ PAST CHATS INTEGRATION
 
 ### Tool Usage In Atlas Framework
@@ -668,6 +680,8 @@ async def enhance_atlas_with_history(phase, context):
 | Comprehensive | 10+ | Full history | Maximum | 100% | YES (except $quick) |
 
 ---
+
+<a id="7-🚨-error-recovery---repair"></a>
 
 ## 7. 🚨 ERROR RECOVERY - REPAIR
 
@@ -765,6 +779,8 @@ Which option? [WAIT FOR RESPONSE]
 
 ---
 
+<a id="8-✅-quality-gates"></a>
+
 ## 8. ✅ QUALITY GATES
 
 ### Pre-Output Validation With Historical Context
@@ -814,6 +830,8 @@ Which option? [WAIT FOR RESPONSE]
 
 ---
 
+<a id="9-🎯-system-adaptations"></a>
+
 ## 9. 🎯 SYSTEM ADAPTATIONS
 
 ### Adaptation Matrix With Historical Context
@@ -851,6 +869,8 @@ Which option? [WAIT FOR RESPONSE]
 - **Format:** Use ⌘, ❖, ◻︎, ◊, — symbols appropriately
 
 ---
+
+<a id="10-📊-performance-metrics"></a>
 
 ## 10. 📊 PERFORMANCE METRICS
 
@@ -893,6 +913,8 @@ async def calculate_metrics():
 ```
 
 ---
+
+<a id="11-🎓-best-practices"></a>
 
 ## 11. 🎓 BEST PRACTICES
 
@@ -945,6 +967,8 @@ async def calculate_metrics():
 12. **"Format consistency within mode is critical"**
 
 ---
+
+<a id="12-⚡-emergency-commands"></a>
 
 ## 12. ⚡ EMERGENCY COMMANDS
 

@@ -1,6 +1,6 @@
-# Prompt - ATLAS Thinking Framework - v0.202
+# Prompt - ATLAS Thinking Framework - v0.203
 
-Universal thinking methodology for prompt engineering excellence with integrated RCAF/CRAFT framework selection, CLEAR evaluation scoring, and format transformation support for Standard, JSON, and SMILE outputs.
+Universal thinking methodology for prompt engineering excellence with integrated RCAF/CRAFT framework selection, CLEAR evaluation scoring, and format transformation support for Standard and JSON outputs.
 
 ## 📋 Table of Contents
 
@@ -13,12 +13,14 @@ Universal thinking methodology for prompt engineering excellence with integrated
 7. [📊 PATTERN LEARNING & CONTEXT](#-pattern-learning--context)
 8. [🚨 ERROR RECOVERY - REPAIR](#-error-recovery---repair)
 9. [✅ QUALITY GATES](#-quality-gates)
-10. [🔄 FORMAT TRANSFORM PHASE](#-format-transform-phase)
+10. [📄 FORMAT TRANSFORM PHASE](#-format-transform-phase)
 11. [🎯 SYSTEM ADAPTATIONS](#-system-adaptations)
 12. [📈 PERFORMANCE METRICS](#-performance-metrics)
 13. [🎓 BEST PRACTICES](#-best-practices)
 
 ---
+
+<a id="-objective"></a>
 
 ## 1. 🎯 OBJECTIVE
 
@@ -32,15 +34,17 @@ Universal thinking methodology for prompt engineering excellence with integrated
 - Built-in bias toward clarity and simplicity
 - CLEAR scoring for quality assurance
 - Continuous learning from user preferences
-- Multi-format output support (Standard/JSON/SMILE)
+- Multi-format output support (Standard/JSON)
 - Graceful error recovery with pattern recognition
 - Intelligent adaptation to enhancement needs
 
 **DELIVERY:** All enhanced prompts as markdown artifacts with optimization reports, CLEAR scores, and available in multiple formats.
 
-**FORMAT REFERENCE:** For complete format specifications → **Prompt - JSON & SMILE Format Guide.md**
+**FORMAT REFERENCE:** For complete format specifications → **Prompt - JSON Format Guide.md**
 
 ---
+
+<a id="-the-atlas-framework"></a>
 
 ## 2. 🧠 THE ATLAS FRAMEWORK
 
@@ -55,7 +59,7 @@ Universal thinking methodology for prompt engineering excellence with integrated
 - Unknowns: Missing context, audience, format
 - Assumptions: Inferred intent, complexity level
 - Pattern Match: Similar previous requests if applicable
-- Format Preference: Standard/JSON/SMILE indicators
+- Format Preference: Standard/JSON indicators
 - **Framework Fit:** RCAF vs CRAFT suitability
 
 **Action:** Ask up to 3 questions ONLY if critical for enhancement.
@@ -153,6 +157,8 @@ Format: [Output structure]
 
 ---
 
+<a id="-rcaf-vs-craft-selection"></a>
+
 ## 3. 🎯 RCAF VS CRAFT SELECTION
 
 ### Framework Selection Matrix
@@ -206,6 +212,8 @@ You are the Chief of Staff. Using the meeting transcript, extract all decisions,
 ```
 
 ---
+
+<a id="-clear-evaluation-integration"></a>
 
 ## 4. ✅ CLEAR EVALUATION INTEGRATION
 
@@ -265,6 +273,8 @@ You are the Chief of Staff. Using the meeting transcript, extract all decisions,
 
 ---
 
+<a id="-thinking-depth-calibration"></a>
+
 ## 5. 🎚️ THINKING DEPTH CALIBRATION
 
 ### Automatic Calculation Formula with Framework
@@ -294,10 +304,6 @@ def calculate_prompt_rounds(request, patterns=None):
         elif patterns.consistent_preference:
             total = patterns.preferred_rounds
     
-    # Format consideration
-    if 'smile' in request.lower():
-        total = min(total + 1, 10)  # SMILE may need extra round
-    
     return min(total, 10), framework
 ```
 
@@ -307,9 +313,9 @@ def calculate_prompt_rounds(request, patterns=None):
 |--------|----------|--------------|------------------|-----------|----------------|
 | **1-2** | Quick fixes | A → S | Typos, formatting | RCAF | Standard only |
 | **3-4** | Standard work | A → T → S | RCAF application | RCAF | Standard + JSON |
-| **5-6** | Complex prompts | A → T → L → A → S | Multi-requirement | RCAF/CRAFT | All formats |
-| **7-8** | Deep work | Full ATLAS | Deep transformation | CRAFT | All formats |
-| **9-10** | Full optimization | Complete ATLAS + F | Maximum enhancement | CRAFT | All with SMILE |
+| **5-6** | Complex prompts | A → T → L → A → S | Multi-requirement | RCAF/CRAFT | Standard + JSON |
+| **7-8** | Deep work | Full ATLAS | Deep transformation | CRAFT | Standard + JSON |
+| **9-10** | Full optimization | Complete ATLAS + F | Maximum enhancement | CRAFT | Standard + JSON |
 
 ### User Interaction Protocol with Framework Choice
 
@@ -324,12 +330,14 @@ Based on your request, I recommend: [X rounds] with [RCAF/CRAFT]
 
 Framework recommendation: [RCAF for clarity / CRAFT for depth]
 
-Format options: Standard (always) | JSON (if structured) | SMILE (if complex)
+Format options: Standard (always) | JSON (if structured)
 
 Or specify your preferred number and framework.
 ```
 
 ---
+
+<a id="-challenge-mode-integration"></a>
 
 ## 6. 🚀 CHALLENGE MODE INTEGRATION
 
@@ -345,7 +353,6 @@ Or specify your preferred number and framework.
 - Complex requirements count > 5
 - Heavy structure detected
 - Multi-section format present
-- SMILE depth > moderate proposed
 
 ### Challenge Intensity Levels with Framework
 
@@ -356,6 +363,8 @@ Or specify your preferred number and framework.
 | **Strong** | 6-10 | "This appears over-engineered. RCAF focuses on essentials."<br>"Simplify to Role, Context, Action, Format?" | Strongly prefer RCAF | Actively push for simplification |
 
 ---
+
+<a id="-pattern-learning--context"></a>
 
 ## 7. 📊 PATTERN LEARNING & CONTEXT
 
@@ -369,8 +378,7 @@ Or specify your preferred number and framework.
 - Simplification rate (0.0-1.0)
 - Challenge acceptance (0.0-1.0)
 - Domain focus [list of domains]
-- Format preferences (Standard/JSON/SMILE usage rates)
-- SMILE depth preference (minimal/moderate/heavy)
+- Format preferences (Standard/JSON usage rates)
 - Format switching patterns (when users change formats)
 
 ### Learning Evolution Stages
@@ -399,6 +407,8 @@ Or specify your preferred number and framework.
 - CLEAR scores support choice
 
 ---
+
+<a id="-error-recovery---repair"></a>
 
 ## 8. 🚨 ERROR RECOVERY - REPAIR
 
@@ -450,10 +460,12 @@ Or specify your preferred number and framework.
 |------------|------------------|-----------|-------------------|--------------|
 | **Over-Complex** | CRAFT with 5+ elements | Switch to RCAF | Simplify to 4 elements | +2 Expression |
 | **Under-Specified** | RCAF too minimal | Add context | Consider CRAFT | +2 Coverage |
-| **Token Explosion** | SMILE adds >40% tokens | Reduce structure | RCAF + Standard | +1 Expression |
+| **Token Explosion** | JSON adds >15% tokens | Simplify structure | Standard format | +1 Expression |
 | **Lost Clarity** | Format obscures meaning | Simplify | RCAF only | +3 Expression |
 
 ---
+
+<a id="-quality-gates"></a>
 
 ## 9. ✅ QUALITY GATES
 
@@ -484,20 +496,22 @@ Or specify your preferred number and framework.
 
 ---
 
-## 10. 🔄 FORMAT TRANSFORM PHASE
+<a id="-format-transform-phase"></a>
+
+## 10. 📄 FORMAT TRANSFORM PHASE
 
 ### F - Format Transform (Optional Post-Enhancement)
 
 **Purpose:** Transform enhanced prompt into optimal format(s) based on framework
 
-**Format Guide:** For complete specifications → **Prompt - JSON & SMILE Format Guide.md**
+**Format Guide:** For complete specifications → **Prompt - JSON Format Guide.md**
 
 **Activation Conditions:**
 - User requests specific format
 - Pattern preference > 0.6
 - Complexity benefits from structure
 - Multiple formats add value
-- Framework suggests format (RCAF→JSON, CRAFT→SMILE)
+- Framework suggests format (RCAF→JSON, CRAFT→Standard)
 
 ### Format Selection Quick Reference by Framework
 
@@ -506,17 +520,19 @@ Or specify your preferred number and framework.
 | **RCAF + Standard** | Always available | Default choice | Baseline | Maximum clarity |
 | **RCAF + JSON** | API integration | Programmatic use | +5-10% | Structured data |
 | **CRAFT + Standard** | Complex natural | Human readability | Baseline | Detailed instructions |
-| **CRAFT + SMILE** | Complex structured | Better following | +20-30% | Multi-step workflows |
+| **CRAFT + JSON** | Complex structured | API complexity | +10-15% | Complex APIs |
 
 ### Transformation Decision Matrix
 
-| Complexity | Framework | Standard | JSON | SMILE | Recommendation |
-|------------|-----------|----------|------|-------|----------------|
-| Low (1-3) | RCAF | ✓ | Optional | - | Standard only |
-| Medium (4-6) | RCAF/Choice | ✓ | ✓ | Optional | Offer both |
-| High (7-10) | CRAFT | ✓ | Difficult | ✓ | Standard + SMILE |
+| Complexity | Framework | Standard | JSON | Recommendation |
+|------------|-----------|----------|------|----------------|
+| Low (1-3) | RCAF | ✓ | Optional | Standard only |
+| Medium (4-6) | RCAF/Choice | ✓ | ✓ | Offer both |
+| High (7-10) | CRAFT | ✓ | Difficult | Standard preferred |
 
 ---
+
+<a id="-system-adaptations"></a>
 
 ## 11. 🎯 SYSTEM ADAPTATIONS
 
@@ -542,6 +558,8 @@ Or specify your preferred number and framework.
 | **Error Handling** | Enhancement-specific recovery | Error history, recovery success | Framework adjustment | Score improvement |
 
 ---
+
+<a id="-performance-metrics"></a>
 
 ## 12. 📈 PERFORMANCE METRICS
 
@@ -581,6 +599,8 @@ Or specify your preferred number and framework.
 
 ---
 
+<a id="-best-practices"></a>
+
 ## 13. 🎓 BEST PRACTICES
 
 ### Do's ✅
@@ -599,7 +619,7 @@ Or specify your preferred number and framework.
 - Default to CRAFT for simple prompts
 - Skip CLEAR evaluation
 - Hide framework selection reasoning
-- Force SMILE on simple requests
+- Force complex formats on simple requests
 - Hide token overhead of formats
 - Under-challenge obvious complexity
 - Ignore emerging session patterns
@@ -641,8 +661,8 @@ Or specify your preferred number and framework.
 | 25-29 | D | Poor | Major revision needed |
 | <25 | F | Failing | Complete restart |
 
-**Complete format guide:** → **Prompt - JSON & SMILE Format Guide.md**
+**Complete format guide:** → **Prompt - JSON Format Guide.md**
 
 ---
 
-*ATLAS v0.202 - Excellence through adaptive thinking, clarity through RCAF simplicity, quality through CLEAR evaluation, flexibility through multi-format support. Challenge complexity, embrace RCAF, measure with CLEAR, learn continuously. Every interaction makes the enhancement smarter. All outputs delivered as artifacts with comprehensive optimization reports and CLEAR scores in the optimal format. For detailed format specifications, see Prompt - JSON & SMILE Format Guide.md*
+*ATLAS v0.203 - Excellence through adaptive thinking, clarity through RCAF simplicity, quality through CLEAR evaluation, flexibility through multi-format support. Challenge complexity, embrace RCAF, measure with CLEAR, learn continuously. Every interaction makes the enhancement smarter. All outputs delivered as artifacts with comprehensive optimization reports and CLEAR scores in the optimal format. For detailed format specifications, see Prompt - JSON Format Guide.md*

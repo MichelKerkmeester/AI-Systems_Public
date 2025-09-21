@@ -16,6 +16,8 @@ Conversation guide for GPT interactions when improving Claude artifacts using GP
 
 ---
 
+<a id="1--purpose--principles"></a>
+
 ## 1. 🎯 PURPOSE & PRINCIPLES
 
 ### Core Philosophy
@@ -45,6 +47,8 @@ GOLDEN_RULES = {
 - Complete artifacts with comprehensive documentation
 
 ---
+
+<a id="2--interaction-flow"></a>
 
 ## 2. 🔄 INTERACTION FLOW
 
@@ -85,6 +89,8 @@ def needs_discovery(request, deep_analysis):
 - Emergency command used
 
 ---
+
+<a id="3--conversation-patterns"></a>
 
 ## 3. 💬 CONVERSATION PATTERNS
 
@@ -154,6 +160,8 @@ Why: [Deep reasoning for maximum]
 
 ---
 
+<a id="4--discovery-questions"></a>
+
 ## 4. ❓ DISCOVERY QUESTIONS
 
 ### Questions After Deep Analysis
@@ -204,6 +212,8 @@ def generate_discovery_questions(deep_analysis):
 
 ---
 
+<a id="5--session-tracking"></a>
+
 ## 5. 🔍 SESSION TRACKING
 
 ### Session Tracking with Deep Reasoning
@@ -238,6 +248,8 @@ class SessionTracking:
 ```
 
 ---
+
+<a id="6--message-templates"></a>
 
 ## 6. 📝 MESSAGE TEMPLATES
 
@@ -295,6 +307,8 @@ The Delta Log below tracks all specific changes.
 
 ---
 
+<a id="7--formatting-standards"></a>
+
 ## 7. 🎨 FORMATTING STANDARDS
 
 ### Professional Visual Hierarchy
@@ -326,6 +340,8 @@ The Delta Log below tracks all specific changes.
 
 ---
 
+<a id="8--quality-checks"></a>
+
 ## 8. ✅ QUALITY CHECKS
 
 ### Every Interaction Must Have
@@ -354,6 +370,8 @@ def assess_interaction_quality(interaction):
 ```
 
 ---
+
+<a id="9--quick-patterns"></a>
 
 ## 9. ⚡ QUICK PATTERNS
 

@@ -12,6 +12,8 @@
 
 ---
 
+<a id="1-🚀-epic-mode-overview"></a>
+
 ## 1. 🚀 EPIC MODE OVERVIEW
 
 ### Command: `$epic`
@@ -24,6 +26,8 @@
 
 ---
 
+<a id="2-📈-complexity-auto-scaling"></a>
+
 ## 2. 📈 COMPLEXITY AUTO-SCALING
 
 | Complexity        | Detail Level         | Features       | Documentation | Design Status |
@@ -33,6 +37,8 @@
 | **Comprehensive** | Specification-level  | 20+ features   | 10+ docs      | Full coverage |
 
 ---
+
+<a id="3-🧩-detailed-epic-template"></a>
 
 ## 3. 🧩 DETAILED EPIC TEMPLATE
 
@@ -254,6 +260,8 @@ Check out all the Epic's related documentation and designs:
 ```
 
 ---
+
+<a id="4-🔍-feature-specification-template"></a>
 
 ## 4. 🔍 FEATURE SPECIFICATION TEMPLATE
 
@@ -502,6 +510,8 @@ Check out all the Feature's related documentation and designs:
 
 ---
 
+<a id="5-🧭-transformation-epic-template"></a>
+
 ## 5. 🧭 TRANSFORMATION EPIC TEMPLATE
 
 * **What it is:** A vision-to-execution epic that reimagines a system and phases delivery (P1→P3).
@@ -698,6 +708,8 @@ The first phase mainly focuses on [specific improvements] that have a direct pos
 
 ---
 
+<a id="6-🗂️-epic-formatting-rules"></a>
+
 ## 6. 🗂️ EPIC FORMATTING RULES
 
 ### Hierarchical Detail Structure
@@ -759,6 +771,8 @@ The first phase mainly focuses on [specific improvements] that have a direct pos
 7. **UI Details:** Specific behaviors and interactions
 
 ---
+
+<a id="7-🗣️-interactive-questions"></a>
 
 ## 7. 🗣️ INTERACTIVE QUESTIONS
 

@@ -22,6 +22,7 @@ Transforms requests into professional development tickets, strategic epics, and 
 
 .
 
+<a id="whats-new-in-v0890---mode-specific-formatting"></a>
 ## 🆕 What's New In V0.890 - Mode-Specific Formatting
 
 ### Critical Updates: Symbol Systems & Formatting
@@ -38,6 +39,7 @@ Transforms requests into professional development tickets, strategic epics, and 
 
 .
 
+<a id="key-features"></a>
 ## ✨ Key Features
 
 - **🧠 ATLAS Framework**: 5-phase thinking methodology
@@ -54,6 +56,7 @@ Transforms requests into professional development tickets, strategic epics, and 
 
 .
 
+<a id="quick-setup"></a>
 ## 🚀 Quick Setup
 
 ### Step 1: Create A Claude Project
@@ -91,6 +94,7 @@ $ticket payment integration     # Direct ticket mode
 
 .
 
+<a id="operating-modes"></a>
 ## 🎛️ Operating Modes
 
 | Mode | Command | Output | Questions | Wait Points | Symbol System |
@@ -135,6 +139,7 @@ Creating your payments initiative epic immediately...
 
 .
 
+<a id="ticket-mode"></a>
 ## 🎫 Ticket Mode
 
 ### Development Ticket Creation
@@ -178,6 +183,7 @@ Your choice?
 
 .
 
+<a id="epic-mode"></a>
 ## 🚀 Epic Mode
 
 ### Strategic Initiative Planning
@@ -217,6 +223,7 @@ Your choice?
 
 .
 
+<a id="doc-mode"></a>
 ## 📄 Doc Mode
 
 ### Documentation Creation
@@ -261,6 +268,7 @@ Situation: [text] Action: [text]  ✗ (never on one line)
 
 .
 
+<a id="atlas-thinking-framework"></a>
 ## 🧠 Atlas Thinking Framework
 
 ### User Control Points
@@ -296,6 +304,7 @@ Your choice?
 
 .
 
+<a id="automatic-complexity-detection"></a>
 ## 🎯 Automatic Complexity Detection
 
 ### For Tickets
@@ -316,6 +325,7 @@ Your choice?
 
 .
 
+<a id="challenge-mode"></a>
 ## 💡 Challenge Mode
 
 ### Three-Level Hierarchy (6+ Rounds)
@@ -344,6 +354,7 @@ Your choice?
 
 .
 
+<a id="past-chats-integration"></a>
 ## 🗃️ Past Chats Integration
 
 ### Tool Usage
@@ -366,6 +377,7 @@ Your choice?
 
 .
 
+<a id="emergency-commands"></a>
 ## ⚡ Emergency Commands
 
 | Command | Action | Result | Waits? |
@@ -388,6 +400,7 @@ $status
 
 .
 
+<a id="symbol--formatting-reference"></a>
 ## 📝 Symbol & Formatting Reference
 
 ### Ticket Mode Symbols
@@ -418,6 +431,7 @@ $status
 
 .
 
+<a id="troubleshooting"></a>
 ## 🆘 Troubleshooting
 
 ### Common Issues

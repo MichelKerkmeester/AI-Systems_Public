@@ -17,6 +17,8 @@ Complete technical reference for the Notion MCP server integration for workspace
 
 ---
 
+<a id="1-📋-overview"></a>
+
 ## 1. 📋 OVERVIEW
 
 ### MCP Server Details
@@ -44,6 +46,8 @@ Notion MCP serves as the knowledge management and documentation engine within th
 **CRITICAL**: Always verify connection before operations.
 
 ---
+
+<a id="2-🔌-connection-verification"></a>
 
 ## 2. 🔌 CONNECTION VERIFICATION
 
@@ -116,6 +120,8 @@ def check_notion_health():
 
 ---
 
+<a id="3-🛠️-core-operations"></a>
+
 ## 3. 🛠️ CORE OPERATIONS
 
 ### Available MCP Tools
@@ -147,6 +153,8 @@ When multiple operations are needed, Notion applies them in optimal order:
 6. Apply views/filters
 
 ---
+
+<a id="4-📊-database-operations"></a>
 
 ## 4. 📊 DATABASE OPERATIONS
 
@@ -236,6 +244,8 @@ API-post-database-query: {
 
 ---
 
+<a id="5-📄-page-operations"></a>
+
 ## 5. 📄 PAGE OPERATIONS
 
 ### Create Page
@@ -305,6 +315,8 @@ API-patch-page: {
 - Templates can be created and reused
 
 ---
+
+<a id="6-🧱-block-operations"></a>
 
 ## 6. 🧱 BLOCK OPERATIONS
 
@@ -380,6 +392,8 @@ rich_text: [{
 
 ---
 
+<a id="7-🔍-search-operations"></a>
+
 ## 7. 🔍 SEARCH OPERATIONS
 
 ### Search by Title
@@ -423,6 +437,8 @@ sort: {
 
 ---
 
+<a id="8-💬-comment-operations"></a>
+
 ## 8. 💬 COMMENT OPERATIONS
 
 ### Create Comment
@@ -458,6 +474,8 @@ API-retrieve-a-comment: {
 - Comment on specific blocks
 
 ---
+
+<a id="9-👥-user-operations"></a>
 
 ## 9. 👥 USER OPERATIONS
 
@@ -505,6 +523,8 @@ API-get-self: {}
 - Can be assigned to properties
 
 ---
+
+<a id="10-🚨-error-handling"></a>
 
 ## 10. 🚨 ERROR HANDLING
 
@@ -570,6 +590,8 @@ Need help troubleshooting?
 ```
 
 ---
+
+<a id="11-⚡-usage-examples"></a>
 
 ## 11. ⚡ USAGE EXAMPLES
 
@@ -675,6 +697,7 @@ Helper: [Checking Notion connection...]
 
 ---
 
+
 ## Key Differences from Generic Workspace Tools
 
 This document reflects the **actual Notion MCP server** implementation:
@@ -688,6 +711,7 @@ This document reflects the **actual Notion MCP server** implementation:
 - Official Notion API limitations and requirements
 
 ---
+
 
 ## Performance Notes
 

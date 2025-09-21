@@ -19,6 +19,8 @@ Central knowledge system and single source of truth for Webflow capabilities thr
 
 ---
 
+<a id="1--overview"></a>
+
 ## 1. 🎯 OVERVIEW
 
 This document is the single source of truth for all Webflow MCP capabilities, API operations, and technical specifications. All operations use native Webflow APIs exclusively with automatic UltraThink processing - no custom code generation.
@@ -60,6 +62,8 @@ Connection Check → User Request → Intent Recognition → UltraThink Processi
 ```
 
 ---
+
+<a id="2--connection-verification"></a>
 
 ## 2. 📌 CONNECTION VERIFICATION
 
@@ -104,6 +108,8 @@ async function verifyConnection() {
 
 ---
 
+<a id="3--core-capabilities"></a>
+
 ## 3. 📌 CORE CAPABILITIES
 
 ### What You CAN Do ✅
@@ -140,6 +146,8 @@ async function verifyConnection() {
 - **Cannot ask about thinking depth** - UltraThink is automatic
 
 ---
+
+<a id="4--designer-api-operations"></a>
 
 ## 4. 🎨 DESIGNER API OPERATIONS
 
@@ -179,6 +187,8 @@ async function verifyConnection() {
 - **Processing:** UltraThink automatic (10 rounds)
 
 ---
+
+<a id="5--data-api-operations"></a>
 
 ## 5. 📊 DATA API OPERATIONS
 
@@ -235,6 +245,8 @@ Before ANY Data Operation:
 
 ---
 
+<a id="6--publishing-workflows"></a>
+
 ## 6. 🚀 PUBLISHING WORKFLOWS
 
 ### Publishing States (With UltraThink)
@@ -275,6 +287,8 @@ A/B Testing → Analysis → Deploy (via API with UltraThink)
 ```
 
 ---
+
+<a id="7--limitations"></a>
 
 ## 7. ⚠️ LIMITATIONS
 
@@ -359,6 +373,8 @@ rate_limits = {
 
 ---
 
+<a id="8--performance-metrics"></a>
+
 ## 8. 📈 PERFORMANCE METRICS
 
 ### Operation Benchmarks (With Connection + UltraThink)
@@ -406,6 +422,8 @@ Performance Metrics:
 | Recovery | REPAIR protocol | Restart | Managed | N/A |
 
 ---
+
+<a id="9--api-reference"></a>
 
 ## 9. 📌 API REFERENCE
 
@@ -474,6 +492,8 @@ Asking about thinking depth
 ```
 
 ---
+
+<a id="10--error-codes"></a>
 
 ## 10. 🚨 ERROR CODES
 
@@ -573,6 +593,8 @@ R: Maintain automatic processing
 
 ---
 
+<a id="11--emergency-commands"></a>
+
 ## 11. ⚡ EMERGENCY COMMANDS
 
 ### System Commands
@@ -621,6 +643,8 @@ $quick - Execute with minimal setup
 ```
 
 ---
+
+<a id="12--ultrathink-processing"></a>
 
 ## 12. 🧠 ULTRATHINK PROCESSING
 
@@ -688,6 +712,7 @@ Automatic 10-Round Processing Ensures:
 ```
 
 ---
+
 
 ## Quick Reference Card
 
@@ -785,6 +810,7 @@ THE SIX ABSOLUTES:
 ```
 
 ---
+
 
 ## System Mantras
 

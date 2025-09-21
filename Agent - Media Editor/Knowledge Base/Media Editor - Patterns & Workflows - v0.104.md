@@ -17,6 +17,8 @@ Complete pattern library and workflow specifications for natural language media 
 
 ---
 
+<a id="1-📋-overview"></a>
+
 ## 1. 📋 OVERVIEW
 
 This document defines all pattern recognition and workflow orchestration logic for the Media Editor with automatic deep thinking. Each pattern maps natural language to specific operations with smart defaults and automatic optimization across images, video, and audio.
@@ -43,6 +45,8 @@ This document defines all pattern recognition and workflow orchestration logic f
 - Platform detection → Preset application → Optimized output
 
 ---
+
+<a id="2-🔌-mcp-verification-patterns"></a>
 
 ## 2. 🔌 MCP VERIFICATION PATTERNS
 
@@ -113,6 +117,8 @@ Would you like setup instructions?
 
 ---
 
+<a id="3-🎯-intent-patterns"></a>
+
 ## 3. 🎯 INTENT PATTERNS
 
 ### Universal Compression Intents with Automatic Optimization
@@ -148,6 +154,8 @@ Would you like setup instructions?
 | "$quick to mp3" | MP3 | 128 kbps | 2 rounds auto | Video-Audio |
 
 ---
+
+<a id="4-🔄-workflow-patterns"></a>
 
 ## 4. 🔄 WORKFLOW PATTERNS
 
@@ -236,6 +244,8 @@ Result: Platform-optimized package
 
 ---
 
+<a id="5-📐-dimension--resolution-patterns"></a>
+
 ## 5. 📐 DIMENSION & RESOLUTION PATTERNS
 
 ### Universal Dimension Recognition with Auto-Optimization
@@ -279,6 +289,8 @@ Quality: Auto-optimized per size
 
 ---
 
+<a id="6-🎨-format--codec-patterns"></a>
+
 ## 6. 🎨 FORMAT & CODEC PATTERNS
 
 ### Format Selection Logic with Automatic Analysis
@@ -306,6 +318,8 @@ Quality: Auto-optimized per size
 | $quick | H.264 | AAC | MP4 | 2-3 rounds auto | Fast processing | Video-Audio |
 
 ---
+
+<a id="7-⚡-optimization-patterns"></a>
 
 ## 7. ⚡ OPTIMIZATION PATTERNS
 
@@ -366,6 +380,8 @@ Result: 40-50% size reduction (fast)
 
 ---
 
+<a id="8-📱-platform-patterns"></a>
+
 ## 8. 📱 PLATFORM PATTERNS
 
 ### Unified Social Media Specifications with Auto-Optimization
@@ -403,6 +419,8 @@ Output:
 
 ---
 
+<a id="9-💾-path-patterns"></a>
+
 ## 9. 💾 PATH PATTERNS
 
 ### Universal Path Recognition with Auto-Processing
@@ -432,6 +450,8 @@ Ask: If not found
 ```
 
 ---
+
+<a id="10-🚀-complete-workflows"></a>
 
 ## 10. 🚀 COMPLETE WORKFLOWS
 
@@ -514,6 +534,8 @@ Output: Fast results with essential quality
 
 ---
 
+<a id="11-🧠-thinking-patterns"></a>
+
 ## 11. 🧠 THINKING PATTERNS
 
 ### Automatic Thinking Depth by Operation
@@ -549,6 +571,7 @@ Output: Fast results with essential quality
 - Skip automatic optimization
 - Compromise on MCP verification
 
+
 ## Pattern Matching Priority
 
 When multiple patterns match, use this priority:
@@ -562,6 +585,7 @@ When multiple patterns match, use this priority:
 - **General optimization** (compress, smaller)
 
 Always verify MCP connections first, then apply automatic thinking depth.
+
 
 ## Smart Default Selection with Automatic Optimization
 
@@ -588,6 +612,7 @@ When parameters aren't specified:
 - Thinking: 10 rounds auto (or 1-5 for $quick)
 - Output location: Same folder with suffix
 - Metadata: Strip for web, keep for archive
+
 
 ## MCP Error Handling Patterns with Auto-Recovery
 
@@ -624,6 +649,7 @@ Attempting auto-recovery...
 
 Auto-diagnosing issue...
 ```
+
 
 ## Processing Status Displays
 

@@ -4,6 +4,7 @@ An intelligent productivity system that transforms natural language requests int
 
 ## 📋 Table of Contents
 
+- [What's New in v0.101](#whats-new-in-v0101)
 - [✨ Key Features](#key-features)
 - [🚀 Quick Setup](#quick-setup)
 - [🔧 Installing MCP Tools](#installing-mcp-tools)
@@ -18,6 +19,7 @@ An intelligent productivity system that transforms natural language requests int
 
 .
 
+<a id="whats-new-in-v0101"></a>
 ## What's New in v0.101
 
 ### 🧠 UltraThink™ Processing
@@ -41,6 +43,7 @@ An intelligent productivity system that transforms natural language requests int
 
 .
 
+<a id="key-features"></a>
 ## ✨ Key Features
 
 ### Core Capabilities
@@ -86,6 +89,7 @@ An intelligent productivity system that transforms natural language requests int
 
 .
 
+<a id="quick-setup"></a>
 ## 🚀 Quick Setup
 
 ### Step 1: Create a Claude Project
@@ -120,6 +124,7 @@ $quick add task "Review proposal"    # Quick mode (auto-scaled)
 
 .
 
+<a id="installing-mcp-tools"></a>
 ## 🔧 Installing MCP Tools
 
 The system requires two MCP servers:
@@ -197,6 +202,7 @@ Ready for productivity operations!
 
 .
 
+<a id="how-it-works"></a>
 ## 🧠 How It Works
 
 ### MCP Connection Verification
@@ -261,6 +267,7 @@ $quick setup tracker → 4-5 rounds
 
 .
 
+<a id="operating-modes"></a>
 ## 🎛️ Operating Modes
 
 | Mode | Command | Purpose | Processing | Use When |
@@ -304,6 +311,7 @@ Creating tasks efficiently...
 
 .
 
+<a id="example-interactions"></a>
 ## 💬 Example Interactions
 
 ### Creating a Knowledge Base
@@ -363,6 +371,7 @@ Creating task...
 
 .
 
+<a id="visual-feedback"></a>
 ## 📊 Visual Feedback
 
 All operations display real-time feedback:
@@ -397,6 +406,7 @@ API calls: [X/60] [Status]
 
 .
 
+<a id="emergency-commands"></a>
 ## ⚡ Emergency Commands
 
 | Command | Action | Result | Use When |
@@ -421,6 +431,7 @@ $status
 
 .
 
+<a id="troubleshooting"></a>
 ## 🆘 Troubleshooting
 
 ### Common Issues & Solutions
@@ -453,6 +464,7 @@ $quick     # Fast mode
 
 .
 
+<a id="important-notes"></a>
 ## ⚠️ Important Notes
 
 ### Best Practices
@@ -484,6 +496,7 @@ $quick     # Fast mode
 
 .
 
+<a id="resources"></a>
 ## 📚 Resources
 
 ### MCP Server Documentation

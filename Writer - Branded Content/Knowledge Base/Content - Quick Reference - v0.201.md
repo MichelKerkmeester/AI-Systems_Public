@@ -25,7 +25,9 @@
 
 ---
 
-## 1. 🚨 Core Mandatory Rules
+<a id="1-🚨-core-mandatory-rules"></a>
+
+## 1. 🚨 CORE MANDATORY RULES
 
 | **#** | **Rule** | **Details** | **Never Violate** |
 |-------|----------|-------------|-------------------|
@@ -44,7 +46,9 @@
 
 ---
 
-## 2. 📊 Variation Scaling
+<a id="2-📊-variation-scaling"></a>
+
+## 2. 📊 VARIATION SCALING
 
 ### Exact Word Count Rules
 
@@ -64,7 +68,9 @@
 
 ---
 
-## 3. 🎛️ Mode System
+<a id="3-🎛️-mode-system"></a>
+
+## 3. 🎛️ MODE SYSTEM
 
 | **Mode** | **Command** | **Trigger** | **Key Focus** | **Variations** | **Wait?** |
 |----------|-------------|-------------|---------------|----------------|-----------|
@@ -81,7 +87,9 @@ improve, refine, enhance, optimize, better version, new version, make better, po
 
 ---
 
-## 4. 🎨 Tone System
+<a id="4-🎨-tone-system"></a>
+
+## 4. 🎨 TONE SYSTEM
 
 | **Tone** | **Code** | **Key Markers** | **When to Use** | **Reality Check** |
 |----------|----------|-----------------|-----------------|-------------------|
@@ -97,7 +105,9 @@ improve, refine, enhance, optimize, better version, new version, make better, po
 
 ---
 
-## 5. 🧠 ATLAS Thinking Framework
+<a id="5-🧠-atlas-thinking-framework"></a>
+
+## 5. 🧠 ATLAS THINKING FRAMEWORK
 
 | **Rounds** | **ATLAS Phases** | **Use Case** | **Challenge** | **$Quick Override** |
 |-----------|------------------|--------------|--------------|-------------------|
@@ -115,7 +125,9 @@ improve, refine, enhance, optimize, better version, new version, make better, po
 
 ---
 
-## 6. 🔄 Challenge Mode
+<a id="6-🔄-challenge-mode"></a>
+
+## 6. 🔄 CHALLENGE MODE
 
 ### TRIGGERS AT EXACTLY 6 THINKING ROUNDS
 
@@ -139,7 +151,9 @@ Which approach would you prefer? (1/2/3)
 
 ---
 
-## 7. 📚 Frameworks
+<a id="7-📚-frameworks"></a>
+
+## 7. 📚 FRAMEWORKS
 
 ### Simplified Framework Selection
 ```
@@ -162,7 +176,9 @@ DEFAULT → Match goal to framework
 
 ---
 
-## 8. 🔴 Web Verification Requirements
+<a id="8-🔴-web-verification-requirements"></a>
+
+## 8. 🔴 WEB VERIFICATION REQUIREMENTS
 
 ### Verification Triggers
 - ANY percentage or statistic
@@ -189,7 +205,9 @@ DEFAULT → Match goal to framework
 
 ---
 
-## 9. 💰 Five Stats That Matter
+<a id="9-💰-five-stats-that-matter"></a>
+
+## 9. 💰 FIVE STATS THAT MATTER
 
 | **#** | **Stat** | **Usage** | **Search Query** | **Natural Version** |
 |-------|----------|-----------|------------------|---------------------|
@@ -201,7 +219,9 @@ DEFAULT → Match goal to framework
 
 ---
 
-## 10. 🆒 Trust Builders
+<a id="10-🆒-trust-builders"></a>
+
+## 10. 🆒 TRUST BUILDERS
 
 | **Rank** | **Trust Element** | **Copy Example** | **When to Use** | **Natural Version** |
 |----------|------------------|------------------|-----------------|---------------------|
@@ -213,7 +233,9 @@ DEFAULT → Match goal to framework
 
 ---
 
-## 11. 🎯 Four Universal Objections
+<a id="11-🎯-four-universal-objections"></a>
+
+## 11. 🎯 FOUR UNIVERSAL OBJECTIONS
 
 | **Objection** | **Reality** | **Counter** | **Natural Response** |
 |------------|------------|------------|----------------------|
@@ -224,7 +246,9 @@ DEFAULT → Match goal to framework
 
 ---
 
-## 12. 💎 Voice Essentials
+<a id="12-💎-voice-essentials"></a>
+
+## 12. 💎 VOICE ESSENTIALS
 
 ### Never Say / Always Say (MORE NATURAL)
 
@@ -243,7 +267,9 @@ DEFAULT → Match goal to framework
 
 ---
 
-## 13. 📦 Artifact Structure
+<a id="13-📦-artifact-structure"></a>
+
+## 13. 📦 ARTIFACT STRUCTURE
 
 ### Mandatory Format Template
 ```markdown
@@ -294,7 +320,9 @@ DEFAULT → Match goal to framework
 
 ---
 
-## 14. ⚡ Emergency Commands
+<a id="14-⚡-emergency-commands"></a>
+
+## 14. ⚡ EMERGENCY COMMANDS
 
 | **Command** | **Action** | **Result** | **Questions?** |
 |------------|-----------|----------|----------------|
@@ -315,7 +343,9 @@ DEFAULT → Match goal to framework
 
 ---
 
-## 15. 🚨 REPAIR Protocol
+<a id="15-🚨-repair-protocol"></a>
+
+## 15. 🚨 REPAIR PROTOCOL
 
 **R** - Recognize issue  
 **E** - Explain impact  
@@ -338,7 +368,9 @@ DEFAULT → Match goal to framework
 
 ---
 
-## 16. 📝 Copy Formulas (NATURAL VOICE)
+<a id="16-📝-copy-formulas"></a>
+
+## 16. 📝 COPY FORMULAS (NATURAL VOICE)
 
 | **Formula** | **Pattern** | **Example** | **When to Use** |
 |------------|-------------|-------------|-----------------|
@@ -352,9 +384,11 @@ DEFAULT → Match goal to framework
 
 ---
 
-## 17. ✅ MEQT Scoring
+<a id="17-✅-meqt-scoring"></a>
 
-### 23-Point Breakdown
+## 17. ✅ MEQT SCORING
+
+### 23 -POINT BREAKDOWN
 
 | **Component** | **Points** | **Minimum** | **Challenge at 6+** |
 |--------------|-----------|-------------|-------------------|
@@ -373,7 +407,9 @@ DEFAULT → Match goal to framework
 
 ---
 
-## 18. 🎓 Quick Workflow
+<a id="18-🎓-quick-workflow"></a>
+
+## 18. 🎓 QUICK WORKFLOW
 
 ### Default Copy Creation Process
 1. **Detect mode** → Default to Interactive
@@ -397,7 +433,9 @@ DEFAULT → Match goal to framework
 
 ---
 
-## 19. ❌ Common Mistakes
+<a id="19-❌-common-mistakes"></a>
+
+## 19. ❌ COMMON MISTAKES
 
 | **Mistake** | **Impact** | **Prevention** | **Natural Fix** |
 |------------|-----------|---------------|-----------------|
@@ -444,7 +482,9 @@ DEFAULT → Match goal to framework
 
 ---
 
-## 20. 📁 File Reference Guide
+<a id="20-📁-file-reference-guide"></a>
+
+## 20. 📁 FILE REFERENCE GUIDE
 
 | **File** | **Purpose** | **Reference For** | **Latest Version** |
 |---------|-------------|------------------|-------------------|

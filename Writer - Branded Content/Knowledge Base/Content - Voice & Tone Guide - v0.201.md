@@ -16,7 +16,9 @@
 
 ---
 
-## 1. 🎯 Core Voice
+<a id="1-🎯-core-voice"></a>
+
+## 1. 🎯 CORE VOICE
 
 ### The Trinity (PRIMARY SOURCE)
 1. **Process-Transparent** - Show iterations, not just outcomes
@@ -42,7 +44,12 @@ We're all just people trying to ship good products. Nobody has it all figured ou
 
 ---
 
-## 2. 🎨 Tone System
+<a id="2-🎨-tone-system"></a>
+
+## 2. 🎨 TONE SYSTEM
+
+
+<a id="3-✏️-dos-and-donts"></a>
 
 ## Tone System (PRIMARY SOURCE - ALL NATURAL)
 
@@ -60,7 +67,9 @@ We're all just people trying to ship good products. Nobody has it all figured ou
 
 ---
 
-## 3. ✏️ DO's and DON'T's
+
+
+## 3. ✏️ DO'S AND DON'T'S
 
 ### Always DO ✅
 - Start with the actual problem
@@ -95,7 +104,9 @@ We're all just people trying to ship good products. Nobody has it all figured ou
 
 ---
 
-## 4. 💬 Implementation
+<a id="4-💬-implementation"></a>
+
+## 4. 💬 IMPLEMENTATION
 
 ### Designer Copy Example
 
@@ -176,7 +187,9 @@ We're all just people trying to ship good products. Nobody has it all figured ou
 
 ---
 
-## 5. 🎭 Tone Combinations
+<a id="5-🎭-tone-combinations"></a>
+
+## 5. 🎭 TONE COMBINATIONS
 
 ### Natural + Collaborative Example
 
@@ -226,7 +239,9 @@ We're all just people trying to ship good products. Nobody has it all figured ou
 
 ---
 
-## 6. 🔎 Natural Tone Deep Dive
+<a id="6-🔎-natural-tone-deep-dive"></a>
+
+## 6. 🔎 NATURAL TONE DEEP DIVE
 
 ### The Default - How We Actually Talk
 
@@ -271,7 +286,12 @@ We're all just people trying to ship good products. Nobody has it all figured ou
 
 ---
 
-## 7. 🚫 Language Rules
+<a id="7-🚫-language-rules"></a>
+
+## 7. 🚫 LANGUAGE RULES
+
+
+<a id="9-🎯-voice-consistency"></a>
 
 ## Language Rules (PRIMARY SOURCE - MORE NATURAL)
 
@@ -322,7 +342,12 @@ We're all just people trying to ship good products. Nobody has it all figured ou
 
 ---
 
-## 8. 🎪 Platform-Specific Voice
+<a id="8-🎪-platform-specific-voice"></a>
+
+## 8. 🎪 PLATFORM-SPECIFIC VOICE
+
+
+<a id="11-🚨-repair-protocol-for-voice"></a>
 
 ## Platform-Specific Voice (All More Natural Now)
 
@@ -397,7 +422,9 @@ Version 3: Just right (with data to prove it)
 
 ---
 
-## 9. 🎯 Voice Consistency
+
+
+## 9. 🎯 VOICE CONSISTENCY
 
 ### Check Every Piece
 1. Would a real designer say this?
@@ -444,7 +471,10 @@ Version 3: Just right (with data to prove it)
 
 ---
 
-## 10. 🔄 Voice Pattern Tracking
+<a id="10-🔄-voice-pattern-tracking"></a>
+
+## 10. 🔄 VOICE PATTERN TRACKING
+
 
 ## Voice Pattern Tracking
 
@@ -501,7 +531,9 @@ Apply patterns:
 
 ---
 
-## 11. 🚨 REPAIR Protocol for Voice
+
+
+## 11. 🚨 REPAIR PROTOCOL FOR VOICE
 
 ### Voice Issue Recovery
 

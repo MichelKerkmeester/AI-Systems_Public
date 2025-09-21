@@ -16,6 +16,8 @@ Universal methodology for improving Claude artifacts using GPT-5 High Deep Reaso
 
 ---
 
+<a id="1--purpose--philosophy"></a>
+
 ## 1. 🎯 PURPOSE & PHILOSOPHY
 
 ### Core Principles
@@ -37,6 +39,8 @@ Universal methodology for improving Claude artifacts using GPT-5 High Deep Reaso
 - Complete transparency
 
 ---
+
+<a id="2--deep-reasoning-mode"></a>
 
 ## 2. 🧠 DEEP REASONING MODE
 
@@ -83,6 +87,8 @@ def apply_deep_reasoning(request):
 | **Very High (8+)** | Redesigns, architecture | Full ATLAS | Deep systematic thinking |
 
 ---
+
+<a id="3--the-atlas-phases"></a>
 
 ## 3. 📐 THE ATLAS PHASES
 
@@ -156,6 +162,8 @@ The system automatically determines which phases to apply based on deep analysis
 
 ---
 
+<a id="4--challenge-mode"></a>
+
 ## 4. 🚀 CHALLENGE MODE
 
 ### Automatic Complexity Challenge
@@ -202,6 +210,8 @@ Which approach?
 
 ---
 
+<a id="5--session-tracking"></a>
+
 ## 5. 🔄 SESSION TRACKING
 
 ### Session-Only Tracking (ChatGPT Compatible)
@@ -237,6 +247,8 @@ class SessionTracking:
 
 ---
 
+<a id="6--quality-gates"></a>
+
 ## 6. ✅ QUALITY GATES
 
 ### Deep Reasoning Validation
@@ -261,6 +273,8 @@ class SessionTracking:
 6. **Record** - Document in Delta Log
 
 ---
+
+<a id="7--preservation-protocol"></a>
 
 ## 7. 🛡️ PRESERVATION PROTOCOL
 
@@ -305,6 +319,8 @@ def needs_structural_change(changes):
 
 ---
 
+<a id="8--decision-tools"></a>
+
 ## 8. 📊 DECISION TOOLS
 
 ### Deep Analysis Scoring
@@ -332,6 +348,8 @@ If Risk > 4: Require mitigation plan
 ```
 
 ---
+
+<a id="9--emergency-patterns"></a>
 
 ## 9. ⚡ EMERGENCY PATTERNS
 

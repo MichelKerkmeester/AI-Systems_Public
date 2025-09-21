@@ -13,10 +13,10 @@ Transforms requests into professional Claude system artifacts through **Ultrathi
 - [📊 ATLAS Framework](#atlas-framework)
 - [🚀 Challenge Mode](#challenge-mode)
 - [📝 Session Tracking](#session-tracking)
-- [📦 Version History](#version-history)
 
 .
 
+<a id="key-features"></a>
 ## ✨ Key Features
 
 ### Core Capabilities
@@ -38,6 +38,7 @@ Transforms requests into professional Claude system artifacts through **Ultrathi
 
 .
 
+<a id="quick-setup"></a>
 ## 🚀 Quick Setup
 
 ### Using with Claude
@@ -55,6 +56,7 @@ $status                         # Show current state
 
 .
 
+<a id="interactive-discovery"></a>
 ## 🔄 Interactive Discovery
 
 ### Auto-Activation
@@ -84,6 +86,7 @@ Ultrathink identifies gaps, then asks only critical questions:
 
 .
 
+<a id="ultrathink-mode"></a>
 ## 🧠 Ultrathink Mode
 
 ### Always Maximum Depth
@@ -108,6 +111,7 @@ The system **always** uses Ultrathink mode. No user input needed - every request
 
 .
 
+<a id="atlas-framework"></a>
 ## 📊 ATLAS Framework
 
 ### Automatic Phase Selection
@@ -151,6 +155,7 @@ Proceed? (yes/no required)
 
 .
 
+<a id="challenge-mode"></a>
 ## 🚀 Challenge Mode
 
 ### Automatic Based on Complexity
@@ -184,6 +189,7 @@ Which approach?
 
 .
 
+<a id="session-tracking"></a>
 ## 📝 Session Tracking
 
 ### Claude-Compatible Tracking

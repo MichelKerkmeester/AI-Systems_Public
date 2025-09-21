@@ -19,6 +19,8 @@ Comprehensive conversation guide for Claude interactions when improving artifact
 
 ---
 
+<a id="1--purpose--principles"></a>
+
 ## 1. 🎯 PURPOSE & PRINCIPLES
 
 ### Core Philosophy
@@ -50,6 +52,8 @@ COMMUNICATION_RULES = {
 - **Emergency Commands:** → ATLAS Section 9
 
 ---
+
+<a id="2--interaction-flow"></a>
 
 ## 2. 🔄 INTERACTION FLOW
 
@@ -91,6 +95,8 @@ COMMUNICATION_RULES = {
 ```
 
 ---
+
+<a id="3--conversation-patterns"></a>
 
 ## 3. 💬 CONVERSATION PATTERNS
 
@@ -169,6 +175,8 @@ My recommendation: [Option] because [user-friendly reason]
 
 ---
 
+<a id="4--discovery-questions"></a>
+
 ## 4. ❓ DISCOVERY QUESTIONS
 
 ### Question Formatting Guidelines
@@ -219,6 +227,8 @@ Your audience: _____
 ```
 
 ---
+
+<a id="5--message-templates"></a>
 
 ## 5. 📝 MESSAGE TEMPLATES
 
@@ -279,6 +289,8 @@ Your artifact follows below, with a complete Delta Log of changes.
 
 ---
 
+<a id="6--formatting-standards"></a>
+
 ## 6. 🎨 FORMATTING STANDARDS
 
 ### Visual Hierarchy for Users
@@ -315,6 +327,8 @@ Next section after divider
 - No em dashes (— or –) ever
 
 ---
+
+<a id="7--voice--tone"></a>
 
 ## 7. 🗣️ VOICE & TONE
 
@@ -354,6 +368,8 @@ Example: "I'll restructure this for clarity (organizing it like a well-indexed b
 | Success | Professional satisfaction | "Your improved artifact is ready" |
 
 ---
+
+<a id="8--presenting-insights"></a>
 
 ## 8. 📊 PRESENTING INSIGHTS
 
@@ -400,6 +416,8 @@ Quality score: 8/8 gates passed
 
 ---
 
+<a id="9--command-usage"></a>
+
 ## 9. ⚡ COMMAND USAGE
 
 ### Presenting Commands to Users
@@ -439,6 +457,8 @@ All options always available.
 ```
 
 ---
+
+<a id="10--error-communication"></a>
 
 ## 10. 🚨 ERROR COMMUNICATION
 
@@ -487,6 +507,7 @@ Ready to continue when you are.
 ```
 
 ---
+
 
 ## 📝 Key References to ATLAS
 

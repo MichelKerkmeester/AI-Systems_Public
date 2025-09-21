@@ -20,7 +20,12 @@ Consolidated interactive guidance for all creation modes with ATLAS Framework, C
 
 ---
 
+<a id="1-🎯-mode-overview"></a>
+
 ## 1. 🎯 MODE OVERVIEW
+
+
+<a id="2-🧠-atlas-thinking-integration"></a>
 
 ## CRITICAL: INTERACTIVE MODE IS DEFAULT
 Unless user explicitly specifies $ticket, $epic, $doc, or $quick, Interactive Mode activates automatically.
@@ -42,6 +47,8 @@ Unless user explicitly specifies $ticket, $epic, $doc, or $quick, Interactive Mo
 **ALL outputs delivered as artifacts ONLY AFTER user confirmation (except $quick mode which proceeds immediately).**
 
 ---
+
+
 
 ## 2. 🧠 ATLAS THINKING INTEGRATION
 
@@ -73,6 +80,8 @@ Ask up to 3 blocking questions only.
 **Full framework → Product Owner - ATLAS Thinking Framework.md**
 
 ---
+
+<a id="3-📄-interactive-mode"></a>
 
 ## 3. 📄 INTERACTIVE MODE
 
@@ -166,6 +175,8 @@ All options (6-10) available - your choice?
 
 ---
 
+<a id="4-⚡-quick-mode"></a>
+
 ## 4. ⚡ $QUICK MODE
 
 ### QUICK MODE PROCESS - NO WAITING, NO QUESTIONS
@@ -245,6 +256,8 @@ Creating payments initiative epic immediately...
 
 ---
 
+<a id="5-🎫-ticket-mode"></a>
+
 ## 5. 🎫 $TICKET MODE
 
 ### COMPLEXITY DETECTION & SCALING - WITH WAIT POINTS (EXCEPT $QUICK)
@@ -318,6 +331,8 @@ Which approach? (A/B/C)
 
 ---
 
+<a id="6-🚀-epic-mode"></a>
+
 ## 6. 🚀 $EPIC MODE
 
 ### EPIC COMPLEXITY & STRATEGIC FOCUS - WITH WAIT POINTS (EXCEPT $QUICK)
@@ -358,6 +373,8 @@ async def epic_mode_flow(request):
 **Template details → Product Owner - Template - Epic Mode.md**
 
 ---
+
+<a id="7-📚-doc-mode"></a>
 
 ## 7. 📚 $DOC MODE
 
@@ -453,6 +470,8 @@ Situation: [text] Action: [text]  ✗ (all on one line)
 
 ---
 
+<a id="8-⚡-challenge-mode"></a>
+
 ## 8. ⚡ CHALLENGE MODE
 
 ### DYNAMIC INTENSITY BASED ON HISTORY - ALWAYS WAITS (EXCEPT $QUICK)
@@ -514,6 +533,8 @@ Which approach? (prototype/full)
 
 ---
 
+<a id="9-📄-pattern-learning"></a>
+
 ## 9. 📄 PATTERN LEARNING
 
 ### PROGRESSIVE RECOGNITION THROUGH CONVERSATION HISTORY
@@ -554,6 +575,8 @@ async def get_session_patterns():
 ```
 
 ---
+
+<a id="10-🗃️-past-chats-integration"></a>
 
 ## 10. 🗃️ PAST CHATS INTEGRATION
 
@@ -603,6 +626,8 @@ This context will inform my recommendations, but I'll still ask for your choices
 ```
 
 ---
+
+<a id="11-🚨-error-handling"></a>
 
 ## 11. 🚨 ERROR HANDLING
 
@@ -656,6 +681,8 @@ R - Record: Update formatting preferences
 ```
 
 ---
+
+<a id="12-🚀-emergency-commands"></a>
 
 ## 12. 🚀 EMERGENCY COMMANDS
 
@@ -731,6 +758,8 @@ Historical Context:
 ```
 
 ---
+
+<a id="13-⚠️🚨-critical-wait-points"></a>
 
 ## 13. ⚠️🚨 CRITICAL WAIT POINTS
 

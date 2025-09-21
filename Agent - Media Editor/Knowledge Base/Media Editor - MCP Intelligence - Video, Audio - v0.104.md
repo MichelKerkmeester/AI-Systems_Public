@@ -17,6 +17,8 @@ Complete technical reference for the Video-Audio MCP server integration for vide
 
 ---
 
+<a id="1-📋-overview"></a>
+
 ## 1. 📋 OVERVIEW
 
 ### MCP Server Details
@@ -48,6 +50,8 @@ Video-Audio MCP serves as the video and audio processing engine within the Media
 **AUTOMATIC**: All operations use 10 rounds of deep thinking (no user choice).
 
 ---
+
+<a id="2-🔌-connection-verification"></a>
 
 ## 2. 🔌 CONNECTION VERIFICATION
 
@@ -137,6 +141,8 @@ def check_dependencies():
 
 ---
 
+<a id="3-🛠️-core-operations"></a>
+
 ## 3. 🛠️ CORE OPERATIONS
 
 ### Available MCP Tools with Automatic Thinking
@@ -168,6 +174,8 @@ From the GitHub repository documentation:
 | **remove_silence** | Automatically remove silent portions | Audio cleanup | 10 rounds auto |
 
 ---
+
+<a id="4-🎬-video-operations"></a>
 
 ## 4. 🎬 VIDEO OPERATIONS
 
@@ -265,6 +273,8 @@ adjust_video_speed:
 
 ---
 
+<a id="5-🎵-audio-operations"></a>
+
 ## 5. 🎵 AUDIO OPERATIONS
 
 ### Audio Extraction with Deep Optimization
@@ -323,6 +333,8 @@ convert_audio_properties:
 | 96000 Hz | High-res audio | Specialized use | 10 rounds |
 
 ---
+
+<a id="6-🎨-advanced-features"></a>
 
 ## 6. 🎨 ADVANCED FEATURES
 
@@ -437,6 +449,8 @@ remove_silence:
 
 ---
 
+<a id="7-📊-supported-formats"></a>
+
 ## 7. 📊 SUPPORTED FORMATS
 
 ### Video Formats with Automatic Optimization
@@ -477,6 +491,8 @@ Based on FFmpeg capabilities:
 - **Opus**: Best for streaming (10 rounds analysis)
 
 ---
+
+<a id="8-💾-installation--setup"></a>
 
 ## 8. 🚨 ERROR HANDLING
 
@@ -561,6 +577,8 @@ pip list | grep mcp
 ```
 
 ---
+
+<a id="9-⚙️-configuration"></a>
 
 ## 9. ⚡ USAGE EXAMPLES
 
@@ -690,6 +708,9 @@ User: "$quick extract audio from presentation.mp4"
 → Direct stream copy when possible
 → Completed in seconds
 ```
+
+
+<a id="10-🚨-error-handling"></a>
 
 ## Performance Notes
 

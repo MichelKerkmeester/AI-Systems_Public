@@ -12,19 +12,19 @@ Some of my non-client AI systems that I made available to the public. They were 
 ### 💬 MCP Agents
 
 1. [Media Editor Agent](#1-media-editor-agent)
-1. [Webflow Agent](#2-webflow-agent)
-1. [ClickUp & Notion Agent](#3-clickup--notion-agent)
+2. [Webflow Agent](#2-webflow-agent)
+3. [ClickUp & Notion Agent](#3-clickup--notion-agent)
 
 ### ✏️ Writer Systems
 
-1. [Product Owner Writer](#4-product-owner-writer)
-1. [Branded Content Writer](#5-branded-content-writer)
-1. [Prompt Engineering Assistant](#6-prompt-engineering-assistant)
-1. [AI System Improver (GPT & Claude)](#7-ai-system-improver-gpt--claude)
+4. [Product Owner Writer](#4-product-owner-writer)
+5. [Branded Content Writer](#5-branded-content-writer)
+6. [Prompt Engineering Assistant](#6-prompt-engineering-assistant)
+7. [AI System Improver (GPT & Claude)](#7-ai-system-improver-gpt--claude)
 
 ### ⚡ Automation Agents
 
-1. [GPT - Scheduled Tasks](#8-gpt---scheduled-tasks)
+8. [GPT - Scheduled Tasks](#8-gpt---scheduled-tasks)
 
 ### 🔧 Additional Sections
 
@@ -37,6 +37,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 → MCPs made easy with conversational systems
 
+<a id="1-media-editor-agent"></a>
 #### 1. 🎬 Media Editor Agent
 
 Edit image, video, and audio files via natural language.
@@ -58,6 +59,7 @@ Edit image, video, and audio files via natural language.
 
 .
 
+<a id="2-webflow-agent"></a>
 #### 2. 🌐 Webflow Agent
 
 Full-stack Webflow development through natural language with Designer and Data APIs.
@@ -82,6 +84,7 @@ Full-stack Webflow development through natural language with Designer and Data A
 
 .
 
+<a id="3-clickup--notion-agent"></a>
 #### 3. 📊 ClickUp & Notion Agent
 
 Seamlessly coordinate task management (ClickUp) and knowledge management (Notion) through natural language.
@@ -107,6 +110,7 @@ Seamlessly coordinate task management (ClickUp) and knowledge management (Notion
 
 → Automate prompt, content, documentation, and ticket writing 
 
+<a id="4-product-owner-writer"></a>
 #### 4. 📋 Product Owner Writer
 
 Create professional dev tickets and enhanced documentation.
@@ -122,6 +126,7 @@ Create professional dev tickets and enhanced documentation.
 
 .
 
+<a id="5-branded-content-writer"></a>
 #### 5. ✏️ Branded Content Writer
 
 Content writing system, fully reconfigurable for any domain: marketing, engineering, education
@@ -141,6 +146,7 @@ Content writing system, fully reconfigurable for any domain: marketing, engineer
 
 .
 
+<a id="6-prompt-engineering-assistant"></a>
 #### 6. 🎯 Prompt Engineering Assistant
 
 Generate powerful AI prompts with measurable quality improvements.
@@ -151,10 +157,10 @@ Generate powerful AI prompts with measurable quality improvements.
   - Every prompt gets a score (0-50) and grade (F to A+)
   - Typical improvement: +20-25 points (100-200% gains)
 
-- **8 Specialized Modes + Multi-Format**:
+- **7 Specialized Modes + Multi-Format**:
   - Core: $interactive (DEFAULT), $short, $improve, $refine
   - Builder: $prototype, $website, $app (phased approach)
-  - Formats: Standard (RCAF), JSON (+5% tokens), SMILE (+25% tokens)
+  - Formats: Standard (Markdown), JSON (structured, +5-10% tokens)
   - Framework choice: RCAF for clarity (70% usage), CRAFT for complexity
 
 - **ATLAS Framework with Challenge Mode**:
@@ -165,6 +171,7 @@ Generate powerful AI prompts with measurable quality improvements.
 
 .
 
+<a id="7-ai-system-improver-gpt--claude"></a>
 #### 7. 🔧 AI System Improver (GPT & Claude)
 
 Transform and improve AI system prompts across both GPT and Claude platforms with preservation-first editing.
@@ -190,6 +197,7 @@ Transform and improve AI system prompts across both GPT and Claude platforms wit
 
 → Create automated workflows with ease 
 
+<a id="8-gpt---scheduled-tasks"></a>
 #### 8. ⏰ GPT - Scheduled Tasks
 
 Create scheduled tasks with intelligent optimization.
@@ -211,6 +219,7 @@ Create scheduled tasks with intelligent optimization.
 
 -----
 
+<a id="common-features"></a>
 ## 🔧 Common Features
 
 ### MCP Integration
@@ -233,6 +242,7 @@ All systems support Model Context Protocol tools:
 
 .
 
+<a id="resources"></a>
 ## 📚 Resources
 
 - [MCP Protocol Documentation](https://modelcontextprotocol.io)

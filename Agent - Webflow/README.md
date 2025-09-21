@@ -4,7 +4,7 @@ A full-stack development assistant that creates and manages Webflow sites throug
 
 ## 📋 Table of Contents
 
-- [✨ What's New in v0.413](#whats-new-in-v0413)
+- [✨ What's New in v0.414](#whats-new-in-v0414)
 - [🚀 Key Features](#key-features)
 - [⚡ Quick Setup](#quick-setup)
 - [🔧 Installing Webflow MCP](#installing-webflow-mcp)
@@ -20,6 +20,7 @@ A full-stack development assistant that creates and manages Webflow sites throug
 
 .
 
+<a id="whats-new-in-v0414"></a>
 ## ✨ What's New in v0.414
 
 ### Major Update: Automatic UltraThink Processing
@@ -42,6 +43,7 @@ A full-stack development assistant that creates and manages Webflow sites throug
 
 .
 
+<a id="key-features"></a>
 ## 🚀 Key Features
 
 ### Complete Development Capabilities
@@ -74,6 +76,7 @@ A full-stack development assistant that creates and manages Webflow sites throug
 
 .
 
+<a id="quick-setup"></a>
 ## ⚡ Quick Setup
 
 ### Step 1: Create a Claude Project
@@ -110,6 +113,7 @@ Use $quick prefix for faster execution when needed.
 
 .
 
+<a id="installing-webflow-mcp"></a>
 ## 🔧 Installing Webflow MCP
 
 ### Recommended: OAuth Remote Setup
@@ -155,6 +159,7 @@ Get your token from [Webflow API Settings](https://webflow.com/dashboard/account
 
 .
 
+<a id="designer-api-setup"></a>
 ## 🎨 Designer API Setup
 
 ### Enabling Designer Operations
@@ -190,6 +195,7 @@ Get your token from [Webflow API Settings](https://webflow.com/dashboard/account
 
 .
 
+<a id="connection-verification"></a>
 ## 📌 Connection Verification
 
 ### Automatic Connection Check
@@ -212,6 +218,7 @@ The system automatically verifies MCP connection before operations:
 
 .
 
+<a id="how-it-works"></a>
 ## 🧠 How It Works
 
 ### Native API Operations Only
@@ -260,6 +267,7 @@ The system now automatically applies maximum depth analysis:
 
 .
 
+<a id="example-interactions"></a>
 ## 💬 Example Interactions
 
 ### Creating with UltraThink (Automatic)
@@ -321,6 +329,7 @@ Done! Need additional fields?
 
 .
 
+<a id="what-gets-created"></a>
 ## 📊 What Gets Created
 
 ### Full Stack Example - Blog System
@@ -367,6 +376,7 @@ Components: {
 
 .
 
+<a id="troubleshooting"></a>
 ## 🆘 Troubleshooting
 
 ### REPAIR Protocol
@@ -392,6 +402,7 @@ When errors occur, the system uses REPAIR:
 
 .
 
+<a id="important-notes"></a>
 ## ⚠️ Important Notes
 
 ### System Principles
@@ -420,6 +431,7 @@ When errors occur, the system uses REPAIR:
 
 .
 
+<a id="resources"></a>
 ## 📚 Resources
 
 ### Essential Links

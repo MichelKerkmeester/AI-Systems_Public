@@ -17,6 +17,8 @@ Complete pattern library and workflow specifications for natural language produc
 
 ---
 
+<a id="1-📋-overview"></a>
+
 ## 1. 📋 OVERVIEW
 
 This document defines all pattern recognition and workflow orchestration logic for the ClickUp & Notion Helper. Each pattern maps natural language to specific operations with smart defaults and automatic processing depth across both platforms.
@@ -42,6 +44,8 @@ This document defines all pattern recognition and workflow orchestration logic f
 - Platform detection → Feature application → Optimized output
 
 ---
+
+<a id="2-🔌-mcp-verification-patterns"></a>
 
 ## 2. 🔌 MCP VERIFICATION PATTERNS
 
@@ -111,6 +115,8 @@ Would you like setup instructions?
 
 ---
 
+<a id="3-🎯-intent-patterns"></a>
+
 ## 3. 🎯 INTENT PATTERNS
 
 ### Knowledge Management Intents
@@ -153,6 +159,8 @@ Would you like setup instructions?
 | "$quick both" | Fast setup | Minimal | Quick 5 | Essential only |
 
 ---
+
+<a id="4-📄-workflow-patterns"></a>
 
 ## 4. 📄 WORKFLOW PATTERNS
 
@@ -256,6 +264,8 @@ Result: Efficient team environment
 
 ---
 
+<a id="5-🗂-structure-patterns"></a>
+
 ## 5. 🗂 STRUCTURE PATTERNS
 
 ### Notion Structure Patterns
@@ -355,6 +365,8 @@ Integration:
 
 ---
 
+<a id="6-📊-database--list-patterns"></a>
+
 ## 6. 📊 DATABASE & LIST PATTERNS
 
 ### Notion Database Patterns
@@ -419,6 +431,8 @@ Automations:
 
 ---
 
+<a id="7-⚡-optimization-patterns"></a>
+
 ## 7. ⚡ OPTIMIZATION PATTERNS
 
 ### Automatic Simplification Patterns
@@ -462,6 +476,8 @@ Examples:
 ```
 
 ---
+
+<a id="8-📄-cross-platform-patterns"></a>
 
 ## 8. 📄 CROSS-PLATFORM PATTERNS
 
@@ -510,6 +526,8 @@ Steps (Automated):
 
 ---
 
+<a id="9-🧠-automatic-processing-patterns"></a>
+
 ## 9. 🧠 AUTOMATIC PROCESSING PATTERNS
 
 ### Processing Depth by Operation
@@ -552,6 +570,8 @@ def detect_processing_mode(request):
 | **Complex** | system, complete | 5 | "$quick workspace" |
 
 ---
+
+<a id="10-🚀-complete-workflows"></a>
 
 ## 10. 🚀 COMPLETE WORKFLOWS
 
@@ -629,6 +649,8 @@ Output: Fast team integration
 
 ---
 
+<a id="11-⚡-emergency-patterns"></a>
+
 ## 11. ⚡ EMERGENCY PATTERNS
 
 ### Command Patterns
@@ -696,6 +718,7 @@ Display:
 
 ---
 
+
 ## Pattern Matching Priority
 
 When multiple patterns match, use this priority:
@@ -710,6 +733,7 @@ When multiple patterns match, use this priority:
 Processing depth is always automatic - no user decisions required.
 
 ---
+
 
 ## Smart Default Selection
 
@@ -735,6 +759,7 @@ When parameters aren't specified:
 
 ---
 
+
 ## Critical Pattern Rules
 
 ```markdown
@@ -750,6 +775,7 @@ THE PATTERN ABSOLUTES:
 ```
 
 ---
+
 
 ## Pattern Mantras
 

@@ -11,6 +11,8 @@
 
 ---
 
+<a id="1-📦-delivery-standards"></a>
+
 ## 1. 📦 DELIVERY STANDARDS
 
 **🚨 CRITICAL:**
@@ -48,6 +50,8 @@
 - **Wait for user input before creating**
 
 ---
+
+<a id="2-📋-mandatory-structure--format"></a>
 
 ## 2. 📋 MANDATORY STRUCTURE & FORMAT
 
@@ -97,6 +101,8 @@
 
 ---
 
+<a id="3-🔄-section-dividers"></a>
+
 ## 3. 🔄 SECTION DIVIDERS
 
 ### Horizontal Dividers (`---`)
@@ -131,6 +137,8 @@
 ```
 
 ---
+
+<a id="4-💎-professional-requirements"></a>
 
 ## 4. 💎 PROFESSIONAL REQUIREMENTS
 
@@ -187,6 +195,8 @@
 
 ---
 
+<a id="5-🎯-mode-template-references"></a>
+
 ## 5. 🎯 MODE TEMPLATE REFERENCES
 
 ### Ticket Mode
@@ -235,6 +245,8 @@
 - Clear section hierarchy
 
 ---
+
+<a id="6-✅-quality-checklist"></a>
 
 ## 6. ✅ QUALITY CHECKLIST
 
@@ -308,6 +320,8 @@
 - [ ] Options documented?
 
 ---
+
+<a id="7-🚨-error-recovery"></a>
 
 ## 7. 🚨 ERROR RECOVERY
 

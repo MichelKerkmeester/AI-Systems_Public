@@ -16,6 +16,8 @@ The complete specification for the unified conversational interface that handles
 
 ---
 
+<a id="1-📋-overview"></a>
+
 ## 1. 📋 OVERVIEW
 
 Interactive Intelligence is the unified conversational interface for all media operations - images, video, and audio. It automatically adapts conversation depth based on request clarity and task complexity, while applying deep automatic thinking for optimal results.
@@ -40,6 +42,8 @@ Unless user explicitly specifies $image, $video, $audio, or $quick, Interactive 
 - Progressive complexity revelation
 
 ---
+
+<a id="2-🚀-activation--detection"></a>
 
 ## 2. 🚀 ACTIVATION & DETECTION
 
@@ -66,6 +70,8 @@ Unless user explicitly specifies $image, $video, $audio, or $quick, Interactive 
 | **Low** | <0.50 | Full guided conversation | Auto 10 rounds when ready |
 
 ---
+
+<a id="3-🔄-conversation-flow"></a>
 
 ## 3. 🔄 CONVERSATION FLOW
 
@@ -117,6 +123,8 @@ Processing immediately...
 
 ---
 
+<a id="4-❓-adaptive-questioning"></a>
+
 ## 4. ❓ ADAPTIVE QUESTIONING
 
 ### Question Priority Framework
@@ -138,6 +146,8 @@ Processing immediately...
 - Audio channel preferences
 
 ---
+
+<a id="5-💬-example-conversations"></a>
 
 ## 5. 💬 EXAMPLE CONVERSATIONS
 
@@ -205,6 +215,8 @@ Assistant: ⚡ Quick mode engaged!
 ```
 
 ---
+
+<a id="6-📊-visual-feedback"></a>
 
 ## 6. 📊 VISUAL FEEDBACK
 
@@ -274,6 +286,8 @@ Assistant: ⚡ Quick mode engaged!
 
 ---
 
+<a id="7-🚨-error-handling"></a>
+
 ## 7. 🚨 ERROR HANDLING
 
 ### MCP Connection Errors
@@ -312,6 +326,8 @@ What works best?
 
 ---
 
+<a id="8-✅-best-practices"></a>
+
 ## 8. ✅ BEST PRACTICES
 
 ### Automatic Thinking Application
@@ -346,6 +362,8 @@ What works best?
 
 ---
 
+<a id="9-🗃️-past-chats-integration"></a>
+
 ## 9. 🗃️ PAST CHATS INTEGRATION
 
 ### Context Display Patterns
@@ -368,6 +386,8 @@ Need to optimize photos
 ```
 
 ---
+
+<a id="10-⚡-emergency-commands"></a>
 
 ## 10. ⚡ EMERGENCY COMMANDS
 

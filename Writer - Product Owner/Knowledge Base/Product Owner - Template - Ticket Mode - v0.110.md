@@ -12,6 +12,8 @@
 
 ---
 
+<a id="1-🎫-ticket-mode-overview"></a>
+
 ## 1. 🎫 TICKET MODE OVERVIEW
 
 ### Command: `$ticket`
@@ -23,6 +25,8 @@
 
 ---
 
+<a id="2-🔍-complexity-auto-scaling"></a>
+
 ## 2. 🔍 COMPLEXITY AUTO-SCALING
 
 | Keywords | Complexity | Sections | Resolution Items |
@@ -32,6 +36,8 @@
 | platform, architecture, migration | Complex | 6-8 | 12-20 |
 
 ---
+
+<a id="3-🔵-simple-ticket-template-2-3-sections-4-6-resolution"></a>
 
 ## 3. 🔵 SIMPLE TICKET TEMPLATE (2-3 SECTIONS, 4-6 RESOLUTION)
 
@@ -102,6 +108,8 @@
 ```
 
 ---
+
+<a id="4-🔶-standard-ticket-template-4-5-sections-8-12-resolution"></a>
 
 ## 4. 🔶 STANDARD TICKET TEMPLATE (4-5 SECTIONS, 8-12 RESOLUTION)
 
@@ -219,6 +227,8 @@
 ```
 
 ---
+
+<a id="5-🔴-complex-ticket-template-6-8-sections-12-20-resolution"></a>
 
 ## 5. 🔴 COMPLEX TICKET TEMPLATE (6-8 SECTIONS, 12-20 RESOLUTION)
 
@@ -484,6 +494,8 @@
 
 ---
 
+<a id="6-✨-ticket-formatting-rules"></a>
+
 ## 6. ✨ TICKET FORMATTING RULES
 
 ### Mandatory Elements
@@ -563,6 +575,8 @@
 ```
 
 ---
+
+<a id="7-🗣️-interactive-questions"></a>
 
 ## 7. 🗣️ INTERACTIVE QUESTIONS
 

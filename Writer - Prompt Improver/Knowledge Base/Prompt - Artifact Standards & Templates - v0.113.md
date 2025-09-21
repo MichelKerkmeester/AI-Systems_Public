@@ -1,4 +1,4 @@
-# Prompt - Artifact Standards & Templates - v0.112
+# Prompt - Artifact Standards & Templates - v0.113
 
 Comprehensive artifact delivery standards for prompt engineering system with mandatory RCAF/CRAFT formatting, CLEAR scoring display, and multi-format support.
 
@@ -16,6 +16,8 @@ Comprehensive artifact delivery standards for prompt engineering system with man
 10. [💡 EXAMPLES](#-examples)
 
 ---
+
+<a id="-delivery-standards"></a>
 
 ## 1. 📦 DELIVERY STANDARDS
 
@@ -46,6 +48,8 @@ Comprehensive artifact delivery standards for prompt engineering system with man
 
 ---
 
+<a id="-mandatory-structure--templates"></a>
+
 ## 2. 📋 MANDATORY STRUCTURE & TEMPLATES
 
 ### Content First Structure with CLEAR
@@ -57,7 +61,6 @@ Comprehensive artifact delivery standards for prompt engineering system with man
 **Format Options:**
 • Standard format (shown above)
 • JSON format available (`$json`)
-• SMILE format available (`$smile`)
 
 ---
 
@@ -88,6 +91,8 @@ Comprehensive artifact delivery standards for prompt engineering system with man
 
 ---
 
+<a id="-standard-artifact-template-with-clear"></a>
+
 ## 3. 🎯 STANDARD ARTIFACT TEMPLATE WITH CLEAR
 
 ### Complete Template with All Elements
@@ -106,7 +111,6 @@ Format: [Output requirements]
 **Format Options:**
 • Standard format (shown above)
 • JSON format available (`$json`) - Structured for APIs
-• SMILE format available (`$smile`) - Better instruction following (+25% tokens)
 
 ---
 
@@ -151,6 +155,8 @@ Format: [Output requirements]
 
 ---
 
+<a id="-rcaf-artifact-template"></a>
+
 ## 4. 📝 RCAF ARTIFACT TEMPLATE
 
 ### RCAF-Specific Template (Primary)
@@ -166,7 +172,6 @@ Format: [Output requirements]
 **Format Options:**
 • Standard format (shown above)
 • JSON format (`$json`) - For API integration
-• SMILE format (`$smile`) - For complex workflows
 
 ---
 
@@ -210,9 +215,11 @@ Format: [Output requirements]
 
 ---
 
+<a id="-format-specific-templates"></a>
+
 ## 5. 📄 FORMAT-SPECIFIC TEMPLATES
 
-**For complete format specifications → Prompt - JSON & SMILE Format Guide.md**
+**For complete format specifications → Prompt - JSON Format Guide.md**
 
 ### JSON Format Artifact with RCAF
 
@@ -264,64 +271,9 @@ Format: [Output requirements]
 - RCAF maintains simplicity
 ```
 
-### SMILE Format Artifact with CLEAR
-
-```markdown
-(: Enhanced Prompt
-  [: Role [
-    [Expertise definition]
-  ] :]
-  
-  [= Action =] [Specific task required]
-  
-  [: Context [
-    [Essential background]
-    [Key constraints]
-  ] :]
-  
-  [: Format [
-    {Expected output structure}
-  ] :]
-) :)
-
 ---
 
-**Format:** SMILE (Complex instruction following)
-
----
-
-**CLEAR Evaluation: 40/50 (Grade: A)**
-
-• **Correctness:** 9/10 - Comprehensive
-• **Logic/Coverage:** 9/10 - Full coverage
-• **Expression:** 6/10 - Token overhead
-• **Arrangement:** 8/10 - Hierarchical
-• **Reuse:** 8/10 - Template-ready
-
-**Trade-off:** -3 Expression for +2 Coverage
-
----
-
-**AI System:**
-
-- **Framework:** ATLAS + CRAFT
-- **Mode:** $smile
-- **SMILE Depth:** Moderate
-
----
-
-- **Thinking:** [X] rounds
-- **Token Impact:** +25%
-- **When to use:** Complex multi-step only
-
----
-
-**Context:**
-- SMILE for complexity > 7
-- Consider standard RCAF first
-```
-
----
+<a id="-ai-system-details"></a>
 
 ## 6. 🎨 AI SYSTEM DETAILS
 
@@ -368,13 +320,15 @@ Format: [Output requirements]
 
 ---
 
+<a id="-visual-elements"></a>
+
 ## 7. 📊 VISUAL ELEMENTS
 
 ### CLEAR Score Display
 
 ```markdown
 **CLEAR Evaluation Summary:**
-━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━
 Before: [X]/50 (Grade: C)
 After: [Y]/50 (Grade: A)
 Improvement: +[Z] points ↗
@@ -387,7 +341,7 @@ Dimension Breakdown:
 • Reuse: [X] → [Y] (+[Z])
 
 Framework: RCAF (chosen for clarity)
-━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━
 ```
 
 ### Framework Comparison Display
@@ -406,13 +360,15 @@ Framework: RCAF (chosen for clarity)
 
 ---
 
+<a id="-quality-checklist"></a>
+
 ## 8. ✅ QUALITY CHECKLIST
 
 ### Artifact Requirements Checklist
 
 - [ ] **Content First:** Enhanced prompt at top
 - [ ] **Framework Clear:** RCAF or CRAFT identified
-- [ ] **Format Options:** All available formats listed
+- [ ] **Format Options:** Standard and JSON listed
 - [ ] **CLEAR Scores:** All 5 dimensions scored
 - [ ] **Grade Shown:** Letter grade displayed
 - [ ] **AI System Header:** Bold and at bottom
@@ -436,6 +392,8 @@ Framework: RCAF (chosen for clarity)
 - [ ] **Options:** All choices available?
 
 ---
+
+<a id="-error-recovery"></a>
 
 ## 9. 🚨 ERROR RECOVERY
 
@@ -463,6 +421,8 @@ Framework: RCAF (chosen for clarity)
 
 ---
 
+<a id="-examples"></a>
+
 ## 10. 💡 EXAMPLES
 
 ### Example 1: Perfect RCAF Artifact
@@ -478,7 +438,6 @@ Framework: RCAF (chosen for clarity)
 **Format Options:**
 • Standard format (shown above)
 • JSON format available (`$json`) - For automated processing
-• SMILE format available (`$smile`) - For complex analysis workflow
 
 ---
 
@@ -534,7 +493,6 @@ Framework: RCAF (chosen for clarity)
 **Format Options:**
 • Standard format (shown above)
 • JSON format (`$json`) - For development handoff
-• SMILE format (`$smile`) - For detailed step-by-step flow
 
 ---
 
@@ -578,4 +536,4 @@ Framework: RCAF (chosen for clarity)
 
 ---
 
-*Artifact excellence through systematic structure, RCAF clarity, and CLEAR transparency. Every artifact shows framework, scores, and improvement. AI System details always at bottom with proper formatting. Pattern context enriches without restricting. All format options always available. User control absolute. For complete format specifications, see Prompt - JSON & SMILE Format Guide.md*
+*Artifact excellence through systematic structure, RCAF clarity, and CLEAR transparency. Every artifact shows framework, scores, and improvement. AI System details always at bottom with proper formatting. Pattern context enriches without restricting. All format options always available. User control absolute. For complete format specifications, see Prompt - JSON Format Guide.md*

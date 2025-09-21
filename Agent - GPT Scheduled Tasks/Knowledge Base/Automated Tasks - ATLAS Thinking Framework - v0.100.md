@@ -17,6 +17,8 @@ Adaptive thinking methodology for ChatGPT scheduled task optimization with chall
 
 ---
 
+<a id="-objective"></a>
+
 ## 1. 🎯 OBJECTIVE
 
 **CORE PRINCIPLE:** Every scheduled task should use appropriate complexity. Challenge when beneficial, scale thinking intelligently, and continuously learn from user patterns within each session.
@@ -35,11 +37,13 @@ Adaptive thinking methodology for ChatGPT scheduled task optimization with chall
 
 ---
 
+<a id="-the-atlas-framework"></a>
+
 ## 2. 🧠 THE ATLAS FRAMEWORK
 
 ### The Five Phases
 
-#### 0. Intake Check (Optional Pre-Phase)
+#### 0. INTAKE CHECK (OPTIONAL PRE-PHASE)
 - **When:** Complex/unclear requests
 - **Skip:** Simple tasks with clear requirements
 
@@ -113,6 +117,8 @@ Ask 1-2 questions ONLY if blocking progress.
 
 ---
 
+<a id="-thinking-depth-calibration"></a>
+
 ## 3. 🎚️ THINKING DEPTH CALIBRATION
 
 ### Automatic Formula
@@ -163,6 +169,8 @@ Based on your previous preferences, I recommend: [X rounds]
 
 ---
 
+<a id="-challenge-mode-integration"></a>
+
 ## 4. 🚀 CHALLENGE MODE INTEGRATION
 
 ### Philosophy
@@ -200,6 +208,8 @@ This would [benefits], but your way is also valid."
 ```
 
 ---
+
+<a id="-pattern-learning--context"></a>
 
 ## 5. 🔄 PATTERN LEARNING & CONTEXT
 
@@ -277,6 +287,8 @@ You can always override these.
 
 ---
 
+<a id="-error-recovery---repair"></a>
+
 ## 6. 🚨 ERROR RECOVERY - REPAIR
 
 ### The REPAIR Framework
@@ -348,6 +360,8 @@ R: Update complexity preference
 
 ---
 
+<a id="-quality-gates"></a>
+
 ## 7. ✅ QUALITY GATES
 
 ### Pre-Creation Validation
@@ -381,6 +395,8 @@ R: Update complexity preference
 
 ---
 
+<a id="-task-specific-adaptations"></a>
+
 ## 8. 🎯 TASK-SPECIFIC ADAPTATIONS
 
 ### Adaptation Matrix
@@ -401,6 +417,8 @@ R: Update complexity preference
 5. Respect preferences
 
 ---
+
+<a id="-performance-metrics"></a>
 
 ## 9. 📊 PERFORMANCE METRICS
 
@@ -435,6 +453,8 @@ metrics = {
 ```
 
 ---
+
+<a id="-best-practices"></a>
 
 ## 10. 🎓 BEST PRACTICES
 

@@ -19,6 +19,8 @@ Universal thinking methodology combining automatic deep reasoning with intellige
 
 ---
 
+<a id="1-🎯-objective"></a>
+
 ## 1. 🎯 OBJECTIVE
 
 **CORE PRINCIPLE:** Every media operation automatically receives deep analysis and optimization through 10 rounds of thinking, with intelligent quick mode for speed-critical tasks.
@@ -46,11 +48,13 @@ Universal thinking methodology combining automatic deep reasoning with intellige
 
 ---
 
+<a id="2-🧠-the-media-framework"></a>
+
 ## 2. 🧠 THE MEDIA FRAMEWORK
 
 ### The Five Phases with Automatic Deep Thinking
 
-#### 0. Pre-Check: MCP Connection Verification
+#### 0. PRE-CHECK: MCP CONNECTION VERIFICATION
 - **Always First:** Verify MCP servers are connected
 - **If Not Connected:** Provide setup guidance
 - **If Partial:** Explain available operations
@@ -64,7 +68,9 @@ Universal thinking methodology combining automatic deep reasoning with intellige
 [Proceed only if relevant servers connected]
 ```
 
-#### 1. Intake Check (Optional Pre-Phase)
+
+
+#### 1. INTAKE CHECK (OPTIONAL PRE-PHASE)
 - **When:** Complex/unclear media requests (automatic deep analysis)
 - **Skip:** Simple operations get direct processing
 
@@ -181,6 +187,8 @@ async def intake_check(request):
 
 ---
 
+<a id="3-🎚️-automatic-thinking-depth"></a>
+
 ## 3. 🎚️ AUTOMATIC THINKING DEPTH
 
 ### Automatic Depth Application
@@ -255,6 +263,8 @@ Quick Mode:
 
 ---
 
+<a id="4-🚀-challenge-mode-integration"></a>
+
 ## 4. 🚀 CHALLENGE MODE INTEGRATION
 
 ### Philosophy
@@ -302,6 +312,8 @@ def should_challenge(operation_complexity, thinking_rounds):
 ```
 
 ---
+
+<a id="5-🔄-pattern-learning--context"></a>
 
 ## 5. 🔄 PATTERN LEARNING & CONTEXT
 
@@ -358,6 +370,8 @@ class SessionContext:
 
 ---
 
+<a id="6-🗃️-past-chats-integration"></a>
+
 ## 6. 🗃️ PAST CHATS INTEGRATION
 
 ### Tool Usage with Automatic Thinking
@@ -394,6 +408,8 @@ async def enhance_media_with_history(phase, context):
 | Comprehensive | 10+ | Full history | 10 rounds auto | 100% |
 
 ---
+
+<a id="7-🚨-error-recovery---repair"></a>
 
 ## 7. 🚨 ERROR RECOVERY - REPAIR
 
@@ -460,6 +476,8 @@ System will proceed with optimal choice.
 
 ---
 
+<a id="8-✅-quality-gates"></a>
+
 ## 8. ✅ QUALITY GATES
 
 ### Pre-Processing Validation with Automatic Analysis
@@ -497,6 +515,8 @@ System will proceed with optimal choice.
 
 ---
 
+<a id="9-🎯-system-adaptations"></a>
+
 ## 9. 🎯 SYSTEM ADAPTATIONS
 
 ### Adaptation Matrix with Automatic Optimization
@@ -510,6 +530,8 @@ System will proceed with optimal choice.
 | **Quick** | Speed | Minimal | 1-5 auto | Speed patterns |
 
 ---
+
+<a id="10-📊-performance-metrics"></a>
 
 ## 10. 📊 PERFORMANCE METRICS
 
@@ -549,6 +571,8 @@ async def calculate_metrics():
 ```
 
 ---
+
+<a id="11-🎓-best-practices"></a>
 
 ## 11. 🎓 BEST PRACTICES
 
@@ -592,6 +616,8 @@ async def calculate_metrics():
 10. "Deep thinking is automatic, not optional"
 
 ---
+
+<a id="12-⚡-emergency-commands"></a>
 
 ## 12. ⚡ EMERGENCY COMMANDS
 

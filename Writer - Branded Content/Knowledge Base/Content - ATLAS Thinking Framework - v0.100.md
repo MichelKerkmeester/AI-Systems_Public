@@ -20,6 +20,8 @@ Universal thinking methodology for design content excellence combining challenge
 
 ---
 
+<a id="1-🎯-objective"></a>
+
 ## 1. 🎯 OBJECTIVE
 
 ### Core Principle
@@ -51,9 +53,14 @@ Every content request should challenge assumptions about complexity, scale think
 
 ---
 
+<a id="2-🧠-the-atlas-framework"></a>
+
 ## 2. 🧠 THE ATLAS FRAMEWORK
 
 ### The Five Phases for Design Content
+
+
+<a id="3-🎚️-thinking-depth-calibration"></a>
 
 ## Phase 0: Intake Check (Optional Pre-Phase)
 
@@ -98,6 +105,9 @@ async def intake_check(request):
 
 ---
 
+
+<a id="4-🚀-challenge-mode-integration"></a>
+
 ## Phase A: Assess & Challenge
 
 ### Purpose
@@ -114,7 +124,9 @@ When $quick is active:
 
 ### Key Activities
 
-#### 1. **Landscape Assessment**
+
+
+#### 1. **LANDSCAPE ASSESSMENT**
 ```markdown
 [DEFAULT OPERATION (no command):]
 - Current content context (6 bullet points max)
@@ -133,7 +145,9 @@ When $quick is active:
 - Skip all user questions
 ```
 
-#### 2. **Historical Integration (Async)**
+
+
+#### 2. **HISTORICAL INTEGRATION (ASYNC)**
 ```python
 async def integrate_history(content_type, audience, platform):
     # Quick mode uses patterns without asking
@@ -156,7 +170,9 @@ async def integrate_history(content_type, audience, platform):
     return patterns, preferences
 ```
 
-#### 3. **Challenge Mode Activation**
+
+
+#### 3. **CHALLENGE MODE ACTIVATION**
 **CONDITIONALLY TRIGGERS AT EXACTLY 6 THINKING ROUNDS**
 
 | **Rounds** | **Default Operation** | **$Quick Mode Action** |
@@ -164,7 +180,9 @@ async def integrate_history(content_type, audience, platform):
 | 1-5 | No challenge | N/A (always 2 rounds) |
 | **6+** | **AUTOMATIC CHALLENGE** | N/A (never reached) |
 
-#### 4. **Research Pull Decision with Verification**
+
+
+#### 4. **RESEARCH PULL DECISION WITH VERIFICATION**
 ```markdown
 [DEFAULT OPERATION:]
 IF differentiation_needed OR pain_points_present:
@@ -186,6 +204,9 @@ IF objections_present:
 
 ---
 
+
+<a id="5-🔄-pattern-learning--context"></a>
+
 ## Phase T: Transform & Expand
 
 ### Purpose
@@ -200,7 +221,9 @@ Generate content variations through frameworks while maintaining proper formatti
 
 ### Key Activities
 
-#### 1. **Simplified Framework Selection**
+
+
+#### 1. **SIMPLIFIED FRAMEWORK SELECTION**
 ```
 [DEFAULT OPERATION:]
 START
@@ -229,7 +252,9 @@ DEFAULT → Match user goal to best framework
 - Skip user confirmation
 ```
 
-#### 2. **Variation Generation (Exact Word Counts)**
+
+
+#### 2. **VARIATION GENERATION (EXACT WORD COUNTS)**
 ```python
 async def generate_variations(content_word_count: int, mode: str = 'default') -> dict:
     """Create properly scaled variations based on exact word count"""
@@ -269,6 +294,9 @@ async def generate_variations(content_word_count: int, mode: str = 'default') ->
 
 ---
 
+
+<a id="6-🗃️-past-chats-integration"></a>
+
 ## Phase L: Layer & Analyze [WITH MANDATORY VERIFICATION]
 
 ### Purpose
@@ -281,7 +309,9 @@ Build content with design intelligence and trust elements. **ALL STATS MUST BE W
 
 ### Key Activities
 
-#### 1. **Intelligence Integration with Web Verification (EUR Standardized)**
+
+
+#### 1. **INTELLIGENCE INTEGRATION WITH WEB VERIFICATION (EUR STANDARDIZED)**
 ```python
 async def layer_intelligence(context: dict, mode: str = 'default') -> dict:
     """Layer intelligence with mandatory verification"""
@@ -331,7 +361,9 @@ async def layer_intelligence(context: dict, mode: str = 'default') -> dict:
         return await layer_verified_stats(verified_stats)
 ```
 
-#### 2. **Verification Priority Table for Design Content**
+
+
+#### 2. **VERIFICATION PRIORITY TABLE FOR DESIGN CONTENT**
 | **Priority** | **Element** | **Default Operation** | **$Quick Mode** | **Search Query** | **MANDATORY** |
 |-------------|-------------|----------------------|-----------------|------------------|---------------|
 | 1 | Tool stats | "Figma 72%" full context + verify | "Figma dominance" | "design tool market share" | **YES** |
@@ -341,6 +373,9 @@ async def layer_intelligence(context: dict, mode: str = 'default') -> dict:
 | 5 | Process stats | "3 iterations" + context | Skip | "design iteration average" | **YES** |
 
 ---
+
+
+<a id="7-🚨-error-recovery---repair"></a>
 
 ## Phase A2: Assess Impact
 
@@ -355,7 +390,9 @@ Validate content effectiveness and quality.
 
 ### Key Activities
 
-#### 1. **MEQT Scoring Matrix with Verification Check**
+
+
+#### 1. **MEQT SCORING MATRIX WITH VERIFICATION CHECK**
 ```markdown
 [DEFAULT OPERATION: Full 23-point evaluation]
 - Include verification status check
@@ -370,6 +407,9 @@ Validate content effectiveness and quality.
 
 ---
 
+
+<a id="8-🔍-web-verification-protocol"></a>
+
 ## Phase S: Synthesize & Ship
 
 ### Purpose
@@ -383,7 +423,9 @@ Deliver optimized content with proper documentation and verification notes.
 
 ### Key Activities
 
-#### 1. **Final Assembly with Verification**
+
+
+#### 1. **FINAL ASSEMBLY WITH VERIFICATION**
 ```markdown
 [DEFAULT OPERATION:]
 1. Apply selected framework
@@ -403,7 +445,9 @@ Deliver optimized content with proper documentation and verification notes.
 6. **Note quick verification status**
 ```
 
-#### 2. **Documentation Requirements with Verification**
+
+
+#### 2. **DOCUMENTATION REQUIREMENTS WITH VERIFICATION**
 | **Section** | **Default Operation** | **$Quick Mode** |
 |------------|----------------------|-----------------|
 | Framework | Name or "None" | "Quick/Auto" |
@@ -416,6 +460,8 @@ Deliver optimized content with proper documentation and verification notes.
 | **Verification** | **"Web verified: [stats checked]"** | **"Quick verify: [stat]"** |
 
 ---
+
+
 
 ## 3. 🎚️ THINKING DEPTH CALIBRATION
 
@@ -496,6 +542,8 @@ async def calculate_content_rounds(request: str, mode: str = 'default') -> str:
 
 ---
 
+
+
 ## 4. 🚀 CHALLENGE MODE INTEGRATION
 
 ### Core Philosophy
@@ -530,6 +578,8 @@ Which approach would you prefer? (1/2/3)
 **SYSTEM MUST WAIT FOR USER CHOICE IN DEFAULT OPERATION**
 
 ---
+
+
 
 ## 5. 🔄 PATTERN LEARNING & CONTEXT
 
@@ -568,6 +618,8 @@ Which approach would you prefer? (1/2/3)
    - After success: Strengthen pattern
 
 ---
+
+
 
 ## 6. 🗃️ PAST CHATS INTEGRATION
 
@@ -636,15 +688,21 @@ async def enhance_atlas_with_history(phase: str, context: dict, mode: str = 'def
 ---
 
 
+
+
 ## 7. 🚨 ERROR RECOVERY - REPAIR
 
 ### The REPAIR Framework
 
+
 ## R - Recognize
 Identify the error pattern and check if seen before in history
 
+
 ## E - Explain
 Clarify the impact on quality or user experience
+
+<a id="9-✅-quality-gates"></a>
 
 ## P - Propose
 Offer 3 clear solutions:
@@ -652,11 +710,17 @@ Offer 3 clear solutions:
 2. Standard approach
 3. Complete redo
 
+<a id="10-🎯-system-adaptations"></a>
+
 ## A - Adapt
 Apply selected solution immediately
 
+<a id="11-📊-performance-metrics"></a>
+
 ## I - Iterate
 Test improvement against quality gates
+
+<a id="12-🎓-best-practices"></a>
 
 ## R - Record
 Document pattern for future prevention
@@ -673,6 +737,8 @@ Document pattern for future prevention
 | **No artifact** | Plain text delivery | Create artifact | Always artifact |
 
 ---
+
+
 
 ## 8. 🔍 WEB VERIFICATION PROTOCOL
 
@@ -778,6 +844,8 @@ async def quick_mode_verification(stat_type: str = 'tool_comparison') -> str:
 
 ---
 
+
+
 ## 9. ✅ QUALITY GATES
 
 ### Pre-Delivery Validation Matrix with Verification
@@ -807,6 +875,8 @@ async def quick_mode_verification(stat_type: str = 'tool_comparison') -> str:
 
 ---
 
+
+
 ## 10. 🎯 SYSTEM ADAPTATIONS
 
 ### Content Type Matrix with $Quick Mode and Verification
@@ -821,6 +891,8 @@ async def quick_mode_verification(stat_type: str = 'tool_comparison') -> str:
 | **Reflection** | Insight | Maximum clarity | "Single learning?" | Default: 2-3, Quick: 2 | 9 (3 per) | Rarely |
 
 ---
+
+
 
 ## 11. 📊 PERFORMANCE METRICS
 
@@ -856,6 +928,8 @@ Every 10 content requests evaluate:
 - Is Challenge Mode triggering at 6+ rounds?
 
 ---
+
+
 
 ## 12. 🎓 BEST PRACTICES
 
@@ -899,6 +973,8 @@ Every 10 content requests evaluate:
 9. **"All options always available to users"**
 
 ---
+
+<a id="13-⚡-emergency-commands"></a>
 
 ## 13. ⚡ EMERGENCY COMMANDS
 

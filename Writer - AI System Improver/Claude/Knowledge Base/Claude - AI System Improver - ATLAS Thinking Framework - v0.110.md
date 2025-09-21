@@ -22,6 +22,8 @@ Universal methodology for improving Claude artifacts using Ultrathink mode with 
 
 ---
 
+<a id="1--purpose--philosophy"></a>
+
 ## 1. 🎯 PURPOSE & PHILOSOPHY
 
 ### Core Principles
@@ -53,6 +55,8 @@ The system commits to:
 - Always waiting for user responses (except $quick mode)
 
 ---
+
+<a id="2--ultrathink-mode"></a>
 
 ## 2. 🧠 ULTRATHINK MODE
 
@@ -106,6 +110,8 @@ The combined score determines the complexity level and appropriate ATLAS configu
 | 13+ | Critical | Business-critical, high-risk | ATLAS++ | Maximum depth |
 
 ---
+
+<a id="3--the-atlas-phases"></a>
 
 ## 3. 📝 THE ATLAS PHASES
 
@@ -213,6 +219,8 @@ The Ship phase ensures quality delivery:
 
 ---
 
+<a id="4--challenge-mode"></a>
+
 ## 4. 🚀 CHALLENGE MODE
 
 ### Challenge Activation Logic
@@ -258,6 +266,8 @@ Each challenge presents three options with clear metrics:
 The system recommends based on complexity analysis and provides confidence scores for each recommendation.
 
 ---
+
+<a id="5--session-tracking"></a>
 
 ## 5. 📄 SESSION TRACKING
 
@@ -312,6 +322,8 @@ These insights inform recommendations but never limit choices.
 
 ---
 
+<a id="6--quality-gates"></a>
+
 ## 6. ✅ QUALITY GATES
 
 ### Eight Mandatory Gates
@@ -345,6 +357,8 @@ Each gate failure has specific recovery:
 - Format issues → Apply standards
 
 ---
+
+<a id="7--preservation-protocol"></a>
 
 ## 7. 🛡️ PRESERVATION PROTOCOL
 
@@ -382,6 +396,8 @@ The system generates detailed impact reports for user decision-making.
 
 ---
 
+<a id="8--decision-tools"></a>
+
 ## 8. 📊 DECISION TOOLS
 
 ### Decision Matrix
@@ -415,6 +431,8 @@ Multi-dimensional scoring guides decisions:
 
 ---
 
+<a id="9--emergency-patterns"></a>
+
 ## 9. ⚡ EMERGENCY PATTERNS
 
 ### Emergency Command System
@@ -440,6 +458,8 @@ Quick mode streamlines processing:
 - Immediate delivery
 
 ---
+
+<a id="10--complexity-analysis"></a>
 
 ## 10. 📈 COMPLEXITY ANALYSIS
 
@@ -471,6 +491,8 @@ The system combines all dimensions using weighted averages to generate:
 - Phasing suggestions
 
 ---
+
+<a id="11--pattern-learning"></a>
 
 ## 11. 📈 PATTERN LEARNING
 
@@ -505,6 +527,8 @@ All patterns require >70% confidence before application. Users maintain full ove
 
 ---
 
+<a id="12--calibration-system"></a>
+
 ## 12. 🔧 CALIBRATION SYSTEM
 
 ### Dynamic Calibration
@@ -529,6 +553,8 @@ Optimizes presentation style
 All calibrations are suggestions that users can override.
 
 ---
+
+<a id="13--implementation-guide"></a>
 
 ## 13. 💡 IMPLEMENTATION GUIDE
 
@@ -567,6 +593,8 @@ All calibrations are suggestions that users can override.
 
 ---
 
+<a id="14--error-recovery"></a>
+
 ## 14. 🚨 ERROR RECOVERY
 
 ### REPAIR Protocol
@@ -595,6 +623,8 @@ The REPAIR framework provides systematic recovery:
 Each category has specific recovery strategies and prevention methods.
 
 ---
+
+<a id="15--metrics--tracking"></a>
 
 ## 15. 📊 METRICS & TRACKING
 
@@ -633,6 +663,7 @@ Metrics drive improvements through:
 All metrics are transparent and available via $status command.
 
 ---
+
 
 ## 📝 Document Separation & References
 

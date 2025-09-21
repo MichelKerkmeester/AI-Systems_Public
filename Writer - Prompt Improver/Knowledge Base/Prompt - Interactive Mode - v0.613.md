@@ -1,4 +1,4 @@
-# Prompt - Interactive Mode - v0.612
+# Prompt - Interactive Mode - v0.614
 
 Conversational prompt enhancement through RCAF-structured discovery, CLEAR scoring, ATLAS-guided questions, intelligent challenge-based refinement, and multi-format delivery options.
 
@@ -8,8 +8,8 @@ Conversational prompt enhancement through RCAF-structured discovery, CLEAR scori
 2. [🧠 ATLAS-POWERED CONVERSATION WITH RCAF](#-atlas-powered-conversation-with-rcaf)
 3. [❓ RCAF-STRUCTURED QUESTIONS](#-rcaf-structured-questions)
 4. [✅ CLEAR SCORING INTEGRATION](#-clear-scoring-integration)
-5. [🔄 FORMAT SELECTION PHASE](#-format-selection-phase)
-6. [🔄 PATTERN RECOGNITION](#-pattern-recognition)
+5. [📄 FORMAT SELECTION PHASE](#-format-selection-phase)
+6. [📄 PATTERN RECOGNITION](#-pattern-recognition)
 7. [📊 SMART GAP ANALYSIS WITH CLEAR](#-smart-gap-analysis-with-clear)
 8. [💬 FORMATTING STANDARDS](#-formatting-standards)
 9. [💡 EXAMPLES](#-examples)
@@ -19,6 +19,8 @@ Conversational prompt enhancement through RCAF-structured discovery, CLEAR scori
 13. [📈 PERFORMANCE METRICS](#-performance-metrics)
 
 ---
+
+<a id="-activation"></a>
 
 ## 1. 🚀 ACTIVATION
 
@@ -74,6 +76,8 @@ async def check_interactive_triggers(user_input):
 ```
 
 ---
+
+<a id="-atlas-powered-conversation-with-rcaf"></a>
 
 ## 2. 🧠 ATLAS-POWERED CONVERSATION WITH RCAF
 
@@ -141,6 +145,8 @@ I'll ask 2-4 focused questions to build each element.
 ```
 
 ---
+
+<a id="-rcaf-structured-questions"></a>
 
 ## 3. ❓ RCAF-STRUCTURED QUESTIONS
 
@@ -216,6 +222,8 @@ async def select_rcaf_questions(user_input, context):
 
 ---
 
+<a id="-clear-scoring-integration"></a>
+
 ## 4. ✅ CLEAR SCORING INTEGRATION
 
 ### Real-Time CLEAR Scoring During Discovery
@@ -263,11 +271,13 @@ def project_clear_score(rcaf_elements):
 
 ---
 
-## 5. 🔄 FORMAT SELECTION PHASE
+<a id="-format-selection-phase"></a>
+
+## 5. 📄 FORMAT SELECTION PHASE
 
 ### Phase 5: Format Selection with CLEAR Consideration
 
-**Format Guide Reference:** For complete specifications → **Prompt - JSON & SMILE Format Guide.md**
+**Format Guide Reference:** For complete specifications → **Prompt - JSON Format Guide.md**
 
 #### Simple Prompts (CLEAR projected 40+)
 ```markdown
@@ -294,7 +304,6 @@ Your prompt is clear, so I'll create it in standard format.
 
 **1. Standard** - Natural RCAF (projected: 37/50)
 **2. JSON** - Structured RCAF (projected: 38/50)
-**3. SMILE** - Enhanced structure (projected: 36/50)
 
 **Which format would you prefer?**
 
@@ -313,7 +322,7 @@ This has complexity that might benefit from CRAFT.
 
 **Format options:**
 **1. Standard** - Maximum readability
-**2. SMILE** - Better instruction following
+**2. JSON** - Structured for APIs
 
 **Your preferences? (Framework 1-2, Format 1-2)**
 
@@ -322,7 +331,9 @@ This has complexity that might benefit from CRAFT.
 
 ---
 
-## 6. 🔄 PATTERN RECOGNITION
+<a id="-pattern-recognition"></a>
+
+## 6. 📄 PATTERN RECOGNITION
 
 ### Interactive Pattern Categories with CLEAR Tracking
 
@@ -367,6 +378,8 @@ async def recognize_interaction_patterns():
 
 ---
 
+<a id="-smart-gap-analysis-with-clear"></a>
+
 ## 7. 📊 SMART GAP ANALYSIS WITH CLEAR
 
 ### RCAF Gap Check with CLEAR Impact
@@ -409,6 +422,8 @@ async def smart_gap_analysis(rcaf_elements):
 
 ---
 
+<a id="-formatting-standards"></a>
+
 ## 8. 💬 FORMATTING STANDARDS
 
 ### Professional RCAF Conversation Formatting
@@ -417,12 +432,12 @@ async def smart_gap_analysis(rcaf_elements):
 ```markdown
 **Building your RCAF prompt:**
 
-━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━
 **✓ Role:** [Collected role]
 **✓ Context:** [Collected context]
 **○ Action:** [Pending]
 **○ Format:** [Pending]
-━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━
 
 **Projected CLEAR: [X]/50**
 • Next improvement: +[X] points
@@ -433,7 +448,7 @@ async def smart_gap_analysis(rcaf_elements):
 #### CLEAR Score Display During Collection
 ```markdown
 **Current CLEAR projection:**
-• **C**orrectness: [X]/10 ↑
+• **C**orrectness: [X]/10 ↗
 • **L**ogic: [--]/10 (pending Action)
 • **E**xpression: [X]/10 ✓
 • **A**rrangement: [--]/10 (pending Format)
@@ -450,6 +465,8 @@ async def smart_gap_analysis(rcaf_elements):
 - **Concluding:** "RCAF complete! Projected CLEAR: [X]/50"
 
 ---
+
+<a id="-examples"></a>
 
 ## 9. 💡 EXAMPLES
 
@@ -562,6 +579,8 @@ Final projected CLEAR: 44/50
 
 ---
 
+<a id="-best-practices"></a>
+
 ## 10. 🎯 BEST PRACTICES
 
 ### RCAF Conversation Excellence
@@ -612,6 +631,8 @@ def adaptive_rcaf_questioning(context, patterns):
 
 ---
 
+<a id="-combined-modes"></a>
+
 ## 11. 🔧 COMBINED MODES
 
 ### Interactive + Other Modes with RCAF
@@ -622,7 +643,6 @@ def adaptive_rcaf_questioning(context, patterns):
 | `$improve $interactive` | Full RCAF discovery | All 4 elements | 40+/50 |
 | `$builder $interactive` | RCAF for builders | Platform-aware questions | 40+/50 |
 | `$json $interactive` | RCAF to JSON | Structure-focused | 38+/50 |
-| `$smile $interactive` | RCAF to SMILE | Complexity assessment | 40+/50 |
 
 ### Combined Mode CLEAR Optimization
 
@@ -649,6 +669,8 @@ def handle_combined_mode(primary_mode, interactive=True):
 
 ---
 
+<a id="-error-handling"></a>
+
 ## 12. 🚨 ERROR HANDLING
 
 ### Interactive Mode Error Recovery with CLEAR
@@ -674,6 +696,8 @@ Missing critical RCAF elements:
 ```
 
 ---
+
+<a id="-performance-metrics"></a>
 
 ## 13. 📈 PERFORMANCE METRICS
 
@@ -720,4 +744,4 @@ def track_interactive_session():
 
 ---
 
-*Interactive Mode with RCAF structure and CLEAR scoring: Conversational excellence through guided discovery. Every interaction builds clear RCAF elements. Every element improves CLEAR scores. Questions are professional and focused. Framework choice is transparent. CLEAR projections guide the conversation. For complete format specifications, see Prompt - JSON & SMILE Format Guide.md*
+*Interactive Mode with RCAF structure and CLEAR scoring: Conversational excellence through guided discovery. Every interaction builds clear RCAF elements. Every element improves CLEAR scores. Questions are professional and focused. Framework choice is transparent. CLEAR projections guide the conversation. For complete format specifications, see Prompt - JSON Format Guide.md*

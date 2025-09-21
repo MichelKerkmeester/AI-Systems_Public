@@ -13,10 +13,10 @@ Transforms requests into professional Claude system artifacts through **GPT-5 Hi
 - [📊 ATLAS Framework](#atlas-framework)
 - [🚀 Challenge Mode](#challenge-mode)
 - [📝 Session Tracking](#session-tracking)
-- [📦 Version History](#version-history)
 
 .
 
+<a id="key-features"></a>
 ## ✨ Key Features
 
 ### Core Capabilities
@@ -38,6 +38,7 @@ Transforms requests into professional Claude system artifacts through **GPT-5 Hi
 
 .
 
+<a id="quick-setup"></a>
 ## 🚀 Quick Setup
 
 ### Step 1: Create Custom GPT in ChatGPT
@@ -66,6 +67,7 @@ $status                         # Show current state
 
 .
 
+<a id="interactive-discovery"></a>
 ## 📄 Interactive Discovery
 
 ### Auto-Activation
@@ -95,6 +97,7 @@ Deep reasoning identifies gaps, then asks only critical questions:
 
 .
 
+<a id="deep-reasoning-mode"></a>
 ## 🧠 Deep Reasoning Mode
 
 ### Always Maximum Depth
@@ -119,6 +122,7 @@ The system **always** uses GPT-5 High Deep Reasoning mode. No user input needed 
 
 .
 
+<a id="atlas-framework"></a>
 ## 📊 ATLAS Framework
 
 ### Automatic Phase Selection
@@ -162,6 +166,7 @@ Proceed? (yes/no required)
 
 .
 
+<a id="challenge-mode"></a>
 ## 🚀 Challenge Mode
 
 ### Automatic Based on Complexity
@@ -195,6 +200,7 @@ Which approach?
 
 .
 
+<a id="session-tracking"></a>
 ## 📝 Session Tracking
 
 ### ChatGPT-Compatible Tracking

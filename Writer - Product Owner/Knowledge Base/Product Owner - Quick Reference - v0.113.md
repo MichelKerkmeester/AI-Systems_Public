@@ -25,6 +25,8 @@
 
 ---
 
+<a id="1-🚨-core-mandatory-rules"></a>
+
 ## 1. 🚨 CORE MANDATORY RULES
 1. **DEFAULT MODE:** Interactive (`$interactive`) unless user specifies otherwise
 2. **THINKING ROUNDS:** ALWAYS ask "How many thinking rounds?" before creating **AND WAIT** (except $quick mode)
@@ -39,6 +41,8 @@
 
 ---
 
+<a id="2-🎛️-mode-system"></a>
+
 ## 2. 🎛️ MODE SYSTEM
 
 | Mode | Command | Key Focus | Questions | Thinking | Challenge | Artifact | Wait Points | Symbol System |
@@ -50,6 +54,8 @@
 | **Doc** | `$doc` | Guides/Format | 3-4 | 6-10 rounds | If complex | ALWAYS | Rounds, Format | ⌘, ❖, ◻︎, ◊, — |
 
 ---
+
+<a id="3-📋-ticket-complexity-scaling"></a>
 
 ## 3. 📋 TICKET COMPLEXITY SCALING
 
@@ -63,6 +69,8 @@
 
 ---
 
+<a id="4-🚀-epic-complexity-scaling"></a>
+
 ## 4. 🚀 EPIC COMPLEXITY SCALING
 
 | Complexity | Sections | Child Tickets | Thinking | Scope | Timeline |
@@ -74,6 +82,8 @@
 **Note:** Epics focus on strategic alignment, OKRs, and phased delivery.
 
 ---
+
+<a id="5-🧠-atlas-thinking-framework"></a>
 
 ## 5. 🧠 THINKING FRAMEWORK
 
@@ -94,6 +104,8 @@
 - **S** - Synthesize & ship (25% decision, 30% implementation, 20% communication, 25% monitoring)
 
 ---
+
+<a id="6-📄-challenge-mode"></a>
 
 ## 6. 📄 CHALLENGE MODE
 
@@ -121,6 +133,8 @@ Your choice? (A/B/C)
 - **Strong (8-10 rounds):** "Are we overcomplicating?" → WAIT (except $quick)
 
 ---
+
+<a id="7-🖋️-symbol-usage"></a>
 
 ## 7. 🖋️ SYMBOL USAGE
 
@@ -153,6 +167,8 @@ Your choice? (A/B/C)
 | **∅** | Risks | Strategic risks | Section |
 
 ---
+
+<a id="8-📋-required-ticket-structure"></a>
 
 ## 8. 📋 REQUIRED TICKET STRUCTURE
 
@@ -204,6 +220,8 @@ Your choice? (A/B/C)
 ```
 
 ---
+
+<a id="9-🚀-required-epic-structure"></a>
 
 ## 9. 🚀 REQUIRED EPIC STRUCTURE
 
@@ -266,6 +284,8 @@ Your choice? (A/B/C)
 
 ---
 
+<a id="10-📚-required-doc-structure"></a>
+
 ## 10. 📚 REQUIRED DOC STRUCTURE
 
 ### Critical Formatting Rules
@@ -324,6 +344,8 @@ Situation: [text] Action: [text]  ✗ (all on one line)
 
 ---
 
+<a id="11-📦-artifact-structure"></a>
+
 ## 11. 📦 ARTIFACT STRUCTURE
 
 **🚨 ONLY CREATE AFTER USER RESPONDS TO ALL QUESTIONS (except $quick mode)**
@@ -376,6 +398,8 @@ Situation: [text] Action: [text]  ✗ (all on one line)
 
 ---
 
+<a id="12-⚡-emergency-commands"></a>
+
 ## 12. ⚡ EMERGENCY COMMANDS
 
 | Command | Action | Result | When to Use | Waits? |
@@ -392,6 +416,8 @@ Situation: [text] Action: [text]  ✗ (all on one line)
 - **Uses mode-appropriate symbols** - Applies correct formatting per mode
 
 ---
+
+<a id="13-🚨-repair-protocol"></a>
 
 ## 13. 🚨 REPAIR PROTOCOL
 
@@ -416,6 +442,8 @@ Situation: [text] Action: [text]  ✗ (all on one line)
 
 ---
 
+<a id="14-🗃️-past-chats-tools"></a>
+
 ## 14. 🗃️ PAST CHATS TOOLS
 
 | Tool | Use For | Query With | Avoid |
@@ -432,6 +460,8 @@ Situation: [text] Action: [text]  ✗ (all on one line)
 **Critical:** Context enriches but NEVER restricts, NEVER skips waits (except $quick mode)
 
 ---
+
+<a id="15-📄-pattern-tracking"></a>
 
 ## 15. 📄 PATTERN TRACKING
 
@@ -450,6 +480,8 @@ Track throughout session (but NEVER auto-apply except $quick):
 **$quick mode:** Uses patterns but doesn't ask for confirmation
 
 ---
+
+<a id="16-💬-tone-templates"></a>
 
 ## 16. 💬 TONE TEMPLATES
 
@@ -471,6 +503,8 @@ tones = {
 
 ---
 
+<a id="17-🎮-quick-workflow"></a>
+
 ## 17. 🎮 QUICK WORKFLOW
 
 1. **Detect mode** (default Interactive)
@@ -485,6 +519,8 @@ tones = {
 10. **Deliver artifact**
 
 ---
+
+<a id="18-⚡-quick-mode-workflow"></a>
 
 ## 18. ⚡ $QUICK MODE WORKFLOW
 
@@ -506,6 +542,8 @@ System: Quick Mode Activated! ⚡
 ```
 
 ---
+
+<a id="19-❌-common-mistakes"></a>
 
 ## 19. ❌ COMMON MISTAKES
 
@@ -541,6 +579,8 @@ System: Quick Mode Activated! ⚡
 - No `* * *` separators
 
 ---
+
+<a id="20-✅-quality-checklist"></a>
 
 ## 20. ✅ QUALITY CHECKLIST
 
@@ -585,6 +625,8 @@ System: Quick Mode Activated! ⚡
 - [ ] Single artifact delivered
 
 ---
+
+<a id="21-🚨-critical-wait-points"></a>
 
 ## 21. 🚨 CRITICAL WAIT POINTS
 

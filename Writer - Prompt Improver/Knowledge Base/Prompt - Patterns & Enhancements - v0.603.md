@@ -1,4 +1,4 @@
-# Prompt - Patterns & Enhancements - v0.602
+# Prompt - Patterns & Enhancements - v0.603
 
 Comprehensive prompt engineering framework with RCAF/CRAFT patterns, CLEAR evaluation, advanced reasoning techniques, and performance-driven optimization strategies.
 
@@ -12,7 +12,7 @@ Comprehensive prompt engineering framework with RCAF/CRAFT patterns, CLEAR evalu
 6. [🎯 ATLAS-ENHANCED TECHNIQUES](#-atlas-enhanced-techniques)
 7. [⚙️ REACT PATTERN - REASONING & ACTION](#-react-pattern---reasoning--action)
 8. [🌳 TREE OF THOUGHTS (TOT) PATTERN](#-tree-of-thoughts-tot-pattern)
-9. [🔄 PATTERN LEARNING & ADAPTATION](#-pattern-learning--adaptation)
+9. [📄 PATTERN LEARNING & ADAPTATION](#-pattern-learning--adaptation)
 10. [📈 EVALUATION METRICS & OPTIMIZATION](#-evaluation-metrics--optimization)
 11. [🚨 ERROR RECOVERY & REPAIR](#-error-recovery--repair)
 12. [💡 META-PROMPTING TECHNIQUES](#-meta-prompting-techniques)
@@ -20,6 +20,8 @@ Comprehensive prompt engineering framework with RCAF/CRAFT patterns, CLEAR evalu
 14. [🎓 KEY PRINCIPLES & PHILOSOPHY](#-key-principles--philosophy)
 
 ---
+
+<a id="-quick-templates"></a>
 
 ## 1. 🚀 QUICK TEMPLATES
 
@@ -43,7 +45,7 @@ Format: [Clear output requirements]
 
 ### Token Efficiency Reference
 
-**For complete format specifications and token analysis → Prompt - JSON & SMILE Format Guide.md**
+**For complete format specifications → Prompt - JSON Format Guide.md**
 
 | Framework | Elements | Token Overhead | Clarity Score |
 |-----------|----------|----------------|---------------|
@@ -51,6 +53,8 @@ Format: [Clear output requirements]
 | **CRAFT** | 5 | +10-15% | 7/10 |
 
 ---
+
+<a id="-core-patterns---rcaf--craft"></a>
 
 ## 2. 📝 CORE PATTERNS - RCAF & CRAFT
 
@@ -138,6 +142,8 @@ Format: [Output format] with [specific elements].
 
 ---
 
+<a id="-clear-evaluation-system"></a>
+
 ## 3. ✅ CLEAR EVALUATION SYSTEM
 
 ### CLEAR Framework Overview
@@ -208,6 +214,8 @@ CLEAR: C:4 L:3 E:5 A:5 R:5 = 22/50
 
 ---
 
+<a id="-advanced-reasoning-techniques"></a>
+
 ## 4. 🧠 ADVANCED REASONING TECHNIQUES
 
 ### Chain-of-Thought (CoT) with RCAF
@@ -267,6 +275,8 @@ Format: Numbered reasoning steps with clear conclusion.
 
 ---
 
+<a id="-format-efficiency"></a>
+
 ## 5. 📊 FORMAT EFFICIENCY
 
 ### Format Selection with Framework Pairing
@@ -276,7 +286,7 @@ Format: Numbered reasoning steps with clear conclusion.
 | **RCAF + Standard** | Default choice | Baseline | E:+2, A:+1 |
 | **RCAF + JSON** | API/structured | +5-10% | C:+1, L:+1 |
 | **CRAFT + Standard** | Complex natural | +10-15% | L:+2 |
-| **CRAFT + SMILE** | Complex structured | +30-40% | L:+2, A:+1 |
+| **CRAFT + JSON** | Complex structured | +15-20% | L:+2, A:+1 |
 
 ### Format Selection Algorithm with CLEAR
 
@@ -294,15 +304,17 @@ def select_optimal_format(framework, complexity, constraints):
             return 'standard', {'E': +2, 'A': +1}
     
     elif framework == 'CRAFT':
-        if complexity > 7:
-            return 'smile', {'L': +2, 'A': +1}
+        if constraints.get('api_integration'):
+            return 'json', {'L': +2, 'A': +1}
         else:
             return 'standard', {'L': +1}
 ```
 
-**Format Reference:** For complete specifications → **Prompt - JSON & SMILE Format Guide.md**
+**Format Reference:** For complete specifications → **Prompt - JSON Format Guide.md**
 
 ---
+
+<a id="-atlas-enhanced-techniques"></a>
 
 ## 6. 🎯 ATLAS-ENHANCED TECHNIQUES
 
@@ -343,6 +355,8 @@ Create three enhancement levels:
 
 ---
 
+<a id="-react-pattern---reasoning--action"></a>
+
 ## 7. ⚙️ REACT PATTERN - REASONING & ACTION
 
 ### ReAct with RCAF Structure
@@ -382,6 +396,8 @@ Format: Table with columns: Cycle | Thought | Action | Observation | Progress
 ```
 
 ---
+
+<a id="-tree-of-thoughts-tot-pattern"></a>
 
 ## 8. 🌳 TREE OF THOUGHTS (TOT) PATTERN
 
@@ -427,7 +443,9 @@ Each branch evaluated on:
 
 ---
 
-## 9. 🔄 PATTERN LEARNING & ADAPTATION
+<a id="-pattern-learning--adaptation"></a>
+
+## 9. 📄 PATTERN LEARNING & ADAPTATION
 
 ### Adaptive Pattern Selection with CLEAR
 
@@ -469,6 +487,8 @@ class PatternOptimizer:
 
 ---
 
+<a id="-evaluation-metrics--optimization"></a>
+
 ## 10. 📈 EVALUATION METRICS & OPTIMIZATION
 
 ### Comprehensive Evaluation Framework with CLEAR
@@ -506,6 +526,8 @@ def optimize_prompt_performance(prompt, clear_scores):
 
 ---
 
+<a id="-error-recovery--repair"></a>
+
 ## 11. 🚨 ERROR RECOVERY & REPAIR
 
 ### Pattern-Specific Error Recovery with CLEAR
@@ -542,6 +564,8 @@ def select_recovery_pattern(error_type, current_clear_scores):
 
 ---
 
+<a id="-meta-prompting-techniques"></a>
+
 ## 12. 💡 META-PROMPTING TECHNIQUES
 
 ### Meta-Prompt Generator with RCAF/CLEAR
@@ -552,7 +576,7 @@ Role: Expert prompt engineer optimizing for clarity and effectiveness.
 Context: Creating optimal prompt for: [task description]
 Action: Generate RCAF-structured prompt considering:
 - Appropriate reasoning pattern (CoT, ReAct, ToT)
-- Optimal format (Standard, JSON, SMILE)
+- Optimal format (Standard, JSON)
 - Target CLEAR score of 43+/50
 - Minimum complexity needed
 Format: RCAF prompt with explanation of design choices and CLEAR score projection.
@@ -585,6 +609,8 @@ Format: Framework recommendation with rationale and expected CLEAR score.
 ```
 
 ---
+
+<a id="-constitutional-ai-patterns"></a>
 
 ## 13. 🛡️ CONSTITUTIONAL AI PATTERNS
 
@@ -620,6 +646,8 @@ Format: Ethical analysis with clear recommendation and rationale.
 ```
 
 ---
+
+<a id="-key-principles--philosophy"></a>
 
 ## 14. 🎓 KEY PRINCIPLES & PHILOSOPHY
 
@@ -718,8 +746,8 @@ CLEAR: 45/50
 - Arrangement: +5
 - Reuse: +6
 
-**Format Guide:** For complete format specifications → **Prompt - JSON & SMILE Format Guide.md**
+**Format Guide:** For complete format specifications → **Prompt - JSON Format Guide.md**
 
 ---
 
-*Excellence through RCAF simplicity and CLEAR measurement. Every pattern has its purpose, but RCAF is the default. Complexity serves clarity, not ego. CLEAR scores drive decisions. For detailed format implementations, see Prompt - JSON & SMILE Format Guide.md*
+*Excellence through RCAF simplicity and CLEAR measurement. Every pattern has its purpose, but RCAF is the default. Complexity serves clarity, not ego. CLEAR scores drive decisions. For detailed format implementations, see Prompt - JSON Format Guide.md*

@@ -1,4 +1,4 @@
-# Prompt - Builder Mode - v0.411
+# Prompt - Builder Mode - v0.412
 
 Universal AI development prompt optimization with RCAF framework, CLEAR scoring, and intelligent session-based pattern learning. Creates goal-oriented creative briefs, not prescriptive implementations.
 
@@ -7,10 +7,10 @@ Universal AI development prompt optimization with RCAF framework, CLEAR scoring,
 1. [🎯 OVERVIEW](#-overview)
 2. [📝 RCAF FOR BUILDERS](#-rcaf-for-builders)
 3. [✅ CLEAR SCORING FOR BUILDERS](#-clear-scoring-for-builders)
-4. [🌐 PLATFORM COMPATIBILITY](#-platform-compatibility)
+4. [🌍 PLATFORM COMPATIBILITY](#-platform-compatibility)
 5. [💰 RESOURCE STRATEGY](#-resource-strategy)
 6. [🧠 ATLAS INTEGRATION FOR BUILDERS](#-atlas-integration-for-builders)
-7. [🔄 PATTERN LEARNING](#-pattern-learning)
+7. [📄 PATTERN LEARNING](#-pattern-learning)
 8. [🚀 CHALLENGE MODE FOR BUILDERS](#-challenge-mode-for-builders)
 9. [📝 UNIVERSAL PATTERNS](#-universal-patterns)
 10. [✅ BEST PRACTICES](#-best-practices)
@@ -18,6 +18,8 @@ Universal AI development prompt optimization with RCAF framework, CLEAR scoring,
 12. [🎓 KEY PRINCIPLES](#-key-principles)
 
 ---
+
+<a id="-overview"></a>
 
 ## 1. 🎯 OVERVIEW
 
@@ -55,6 +57,8 @@ Universal AI development prompt optimization with RCAF framework, CLEAR scoring,
 
 ---
 
+<a id="-rcaf-for-builders"></a>
+
 ## 2. 📝 RCAF FOR BUILDERS
 
 ### Builder-Specific RCAF Structure
@@ -88,6 +92,8 @@ Format: React components with MaterialUI, REST API integration, responsive grid 
 **CLEAR Score: 43/50 (Grade: A)**
 
 ---
+
+<a id="-clear-scoring-for-builders"></a>
 
 ## 3. ✅ CLEAR SCORING FOR BUILDERS
 
@@ -124,7 +130,9 @@ Format: React components with MaterialUI, REST API integration, responsive grid 
 
 ---
 
-## 4. 🌐 PLATFORM COMPATIBILITY
+<a id="-platform-compatibility"></a>
+
+## 4. 🌍 PLATFORM COMPATIBILITY
 
 ### Universal Platform Support with RCAF
 
@@ -173,6 +181,8 @@ def detect_platform_with_clear(request, target_clear):
 
 ---
 
+<a id="-resource-strategy"></a>
+
 ## 5. 💰 RESOURCE STRATEGY
 
 ### Three-Phase Approach with CLEAR
@@ -213,6 +223,8 @@ def recommend_phase_with_rcaf(rcaf_elements, patterns=None):
 | **High** | RCAF + Details | 43+/50 | Advanced | Pattern suggests: [apply] |
 
 ---
+
+<a id="-atlas-integration-for-builders"></a>
 
 ## 6. 🧠 ATLAS INTEGRATION FOR BUILDERS
 
@@ -271,7 +283,9 @@ def calibrate_builder_thinking(rcaf_elements):
 
 ---
 
-## 7. 🔄 PATTERN LEARNING
+<a id="-pattern-learning"></a>
+
+## 7. 📄 PATTERN LEARNING
 
 ### Builder Session Context with CLEAR
 
@@ -317,6 +331,8 @@ Apply same approach?
 
 ---
 
+<a id="-challenge-mode-for-builders"></a>
+
 ## 8. 🚀 CHALLENGE MODE FOR BUILDERS
 
 ### Builder-Specific Challenges with CLEAR
@@ -357,6 +373,8 @@ Start with MVP instead?
 ```
 
 ---
+
+<a id="-universal-patterns"></a>
 
 ## 9. 📝 UNIVERSAL PATTERNS
 
@@ -437,6 +455,8 @@ Platform: [Recommended based on patterns]
 
 ---
 
+<a id="-best-practices"></a>
+
 ## 10. ✅ BEST PRACTICES
 
 ### Do's with RCAF/CLEAR
@@ -473,6 +493,8 @@ Platform: [Recommended based on patterns]
 | Platform agnostic? | Universal language | Reuse | 7+/10 |
 
 ---
+
+<a id="-performance-metrics"></a>
 
 ## 11. 📊 PERFORMANCE METRICS
 
@@ -513,6 +535,8 @@ Platform: [Recommended based on patterns]
 5. Document insights
 
 ---
+
+<a id="-key-principles"></a>
 
 ## 12. 🎓 KEY PRINCIPLES
 

@@ -16,6 +16,8 @@ Pattern library for Webflow operations through natural language using native API
 
 ---
 
+<a id="1--overview"></a>
+
 ## 1. 🎯 OVERVIEW
 
 This document defines pattern recognition and workflow orchestration for natural language Webflow requests. All patterns use native Webflow APIs exclusively with automatic UltraThink processing - no custom code generation.
@@ -44,6 +46,8 @@ Every Pattern Follows:
 ```
 
 ---
+
+<a id="2--connection-patterns"></a>
 
 ## 2. 📌 CONNECTION PATTERNS
 
@@ -85,6 +89,8 @@ Response:
 ```
 
 ---
+
+<a id="3--intent-patterns"></a>
 
 ## 3. 💬 INTENT PATTERNS
 
@@ -136,6 +142,8 @@ Execute
 ```
 
 ---
+
+<a id="4--structure-patterns"></a>
 
 ## 4. 📁 STRUCTURE PATTERNS
 
@@ -224,6 +232,8 @@ For Every Structure:
 ```
 
 ---
+
+<a id="5--component-patterns"></a>
 
 ## 5. 🎨 COMPONENT PATTERNS
 
@@ -315,6 +325,8 @@ All with automatic UltraThink processing
 
 ---
 
+<a id="6--content-patterns"></a>
+
 ## 6. 📊 CONTENT PATTERNS
 
 ### Bulk Operations (Native API + UltraThink)
@@ -389,6 +401,8 @@ For Every Content Operation:
 ```
 
 ---
+
+<a id="7--workflow-patterns"></a>
 
 ## 7. 🚀 WORKFLOW PATTERNS
 
@@ -483,6 +497,8 @@ END (100% native execution with UltraThink)
 
 ---
 
+<a id="8--thinking-patterns"></a>
+
 ## 8. 🧠 THINKING PATTERNS
 
 ### Automatic Depth System (No User Interaction)
@@ -547,6 +563,8 @@ Deliver results
 ```
 
 ---
+
+<a id="9--emergency-patterns"></a>
 
 ## 9. ⚡ EMERGENCY PATTERNS
 
@@ -677,6 +695,7 @@ $quick Implementation:
 
 ---
 
+
 ## Pattern Matching Priority
 
 When multiple patterns match:
@@ -690,6 +709,7 @@ When multiple patterns match:
 8. **Content operations** - CRUD, publishing
 
 ---
+
 
 ## Smart Defaults
 
@@ -733,6 +753,7 @@ When multiple patterns match:
 
 ---
 
+
 ## Critical Pattern Rules
 
 ```markdown
@@ -748,6 +769,7 @@ THE PATTERN ABSOLUTES:
 ```
 
 ---
+
 
 ## Pattern Mantras
 
