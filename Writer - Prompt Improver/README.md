@@ -17,11 +17,8 @@ A revolutionary prompt enhancement system using RCAF framework for clarity, CLEA
 - [⚡ Emergency Commands](#emergency-commands)
 - [🚨 REPAIR Error Protocol](#repair-error-protocol)
 - [📊 Performance Metrics](#performance-metrics)
-- [🆘 Troubleshooting](#troubleshooting)
-- [📚 Documentation Structure](#documentation-structure)
-- [📦 Version History](#version-history)
 
----
+.
 
 <a id="whats-new-in-v0832"></a>
 ## 🆕 What's New in v0.832
@@ -47,7 +44,7 @@ A revolutionary prompt enhancement system using RCAF framework for clarity, CLEA
 - **70% RCAF Usage**: Simpler framework used majority of time
 - **Typical Improvement**: +20-25 CLEAR points (100%+ gains)
 
----
+.
 
 <a id="rcaf-framework"></a>
 ## ⭐ RCAF Framework
@@ -90,7 +87,7 @@ Improvement: +30 points (200% gain)
 | 5-6 | 5-6 | User choice | 41-43/50 |
 | 7-10 | 7-10 | CRAFT | 41/50 |
 
----
+.
 
 <a id="clear-evaluation-system"></a>
 ## ✅ CLEAR Evaluation System
@@ -130,7 +127,7 @@ CLEAR Evaluation: 43/50 (Grade: A)
 Improvement: 20/50 → 43/50 (+23 points, 115% gain)
 ```
 
----
+.
 
 <a id="key-features"></a>
 ## ✨ Key Features
@@ -147,7 +144,7 @@ Improvement: 20/50 → 43/50 (+23 points, 115% gain)
 - **Multi-Format Output**: Standard, JSON, and SMILE with CLEAR impacts
 - **Universal Platform Support**: Works on ALL AI platforms
 
----
+.
 
 <a id="quick-setup"></a>
 ## 🚀 Quick Setup
@@ -155,30 +152,30 @@ Improvement: 20/50 → 43/50 (+23 points, 115% gain)
 ### Step 1: Create a Claude Project
 1. Go to claude.ai
 2. Click "Projects" in sidebar
-3. Create new project named "Prompt Engineering Assistant v0.832"
+3. Create new project named "Prompt Engineering Assistant"
 
 ### Step 2: Add System Instructions
 1. Click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Writer - Prompt Improver - v0.832.md`
+3. Copy and paste: `Writer - Prompt Improver.md`
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
 Add these documents to your project's knowledge base:
 
-**Core System Documents (Updated for RCAF/CLEAR):**
-- `Prompt - Quick Reference - v0.102.md`
-- `Prompt - ATLAS Thinking Framework - v0.202.md`
+**Core System Documents:**
+- `Prompt - Quick Reference.md`
+- `Prompt - ATLAS Thinking Framework.md`
 
 **Framework & Format Documents:**
-- `Prompt - Artifact Standards & Templates - v0.112.md`
-- `Prompt - JSON & SMILE Format Guide - v1.001.md`
+- `Prompt - Artifact Standards & Templates.md`
+- `Prompt - JSON & SMILE Format Guide.md`
 
-**Mode & Enhancement Documents (All Updated):**
-- `Prompt - Interactive Mode - v0.613.md`
-- `Prompt - Builder Mode - v0.411.md`
-- `Prompt - Evaluation & Refinement - v0.602.md`
-- `Prompt - Patterns & Enhancements - v0.602.md`
+**Mode & Enhancement Documents:**
+- `Prompt - Interactive Mode.md`
+- `Prompt - Builder Mode.md`
+- `Prompt - Evaluation & Refinement.md`
+- `Prompt - Patterns & Enhancements.md`
 
 ### Step 4: Start Creating with CLEAR
 ```
@@ -189,7 +186,7 @@ $clear                       # Show current CLEAR scores
 $rcaf complex task           # Force RCAF for simplicity
 ```
 
----
+.
 
 <a id="operating-modes"></a>
 ## 🎛️ Operating Modes
@@ -214,7 +211,7 @@ $rcaf complex task           # Force RCAF for simplicity
 | **Website** | Conversion sites | 42+/50 | Enhanced (Phase 2) |
 | **App** | Applications | 43+/50 | Phased approach |
 
----
+.
 
 <a id="format-options"></a>
 ## 📄 Format Options
@@ -238,7 +235,7 @@ True complexity 7+? → SMILE CRAFT
 Default? → Standard RCAF
 ```
 
----
+.
 
 <a id="atlas-thinking-framework"></a>
 ## 🧠 ATLAS Thinking Framework
@@ -265,7 +262,7 @@ Your choice?
 - **A** - Assess CLEAR improvements
 - **S** - Synthesize with final CLEAR scores
 
----
+.
 
 <a id="challenge-mode-philosophy"></a>
 ## 🚀 Challenge Mode Philosophy
@@ -295,7 +292,7 @@ Your choice?
 | Enriched | 7-9 | Detailed patterns | Predict scores |
 | Comprehensive | 10+ | Maximum context | Auto-optimize |
 
----
+.
 
 <a id="emergency-commands"></a>
 ## ⚡ Emergency Commands
@@ -310,7 +307,7 @@ Your choice?
 | **`$craft`** | Force CRAFT framework | Need comprehensive |
 | **`$clear`** | Show CLEAR scores | Check quality |
 
----
+.
 
 <a id="repair-error-protocol"></a>
 ## 🚨 REPAIR Error Protocol
@@ -323,7 +320,7 @@ Enhanced error recovery with CLEAR tracking:
 - **I**terate and test (re-score CLEAR)
 - **R**ecord pattern (track improvement)
 
----
+.
 
 <a id="performance-metrics"></a>
 ## 📊 Performance Metrics
@@ -347,73 +344,6 @@ Enhanced error recovery with CLEAR tracking:
 | 20-29/50 (D) | 38-43/50 (B+/A) | +15-20 points |
 | 30-39/50 (C/B) | 40-45/50 (A) | +8-12 points |
 
----
-
-<a id="troubleshooting"></a>
-## 🆘 Troubleshooting
-
-**Low CLEAR scores:**
-```
-$rcaf → Force simpler framework
-$clear → Check specific dimensions
-Target weak dimensions specifically
-```
-
-**Framework confusion:**
-```
-Complexity 1-4 → RCAF automatic
-Complexity 5-6 → You choose
-Complexity 7+ → CRAFT suggested
-$rcaf or $craft → Override
-```
-
-**Not improving enough:**
-```
-Check Expression score → Should be 9+
-Check framework → RCAF usually better
-$status → See patterns and scores
-```
-
----
-
-<a id="documentation-structure"></a>
-## 📚 Documentation Structure
-
-### Primary Documents (All Updated for RCAF/CLEAR)
-- **Writer - Prompt Improver v0.832**: Main system with RCAF primary
-- **ATLAS Thinking Framework v0.202**: Framework selection logic
-- **Quick Reference v0.102**: All rules and CLEAR targets
-
-### Supporting Documents
-- **JSON & SMILE Format Guide v1.001**: Complete specifications with RCAF
-- **Evaluation & Refinement v0.602**: CLEAR as primary method
-- **Interactive Mode v0.613**: RCAF-structured discovery
-- **Patterns & Enhancements v0.602**: RCAF patterns with scores
-- **Builder Mode v0.411**: Phase-based CLEAR targets
-- **Artifact Standards v0.112**: CLEAR score display
-
----
-
-<a id="version-history"></a>
-## 📦 Version History
-
-### v0.832 (Current) - RCAF/CLEAR Revolution
-- RCAF as primary framework (70% usage)
-- CLEAR evaluation system (5 dimensions, 50 points)
-- Expression priority over Coverage
-- Measurable quality improvements
-- Framework selection intelligence
-
-### v0.831 - Format Consolidation
-- Dedicated JSON & SMILE Format Guide
-- Reduced redundancy across documents
-- Centralized format specifications
-
-### v0.830 - Pattern Learning
-- Session-based pattern recognition
-- Challenge mode calibration
-- ATLAS framework integration
-
----
+.
 
 *Transform vague requests into clear, high-scoring prompts! RCAF for simplicity. CLEAR for quality. Every prompt measured. Every improvement quantified. Interactive Mode is DEFAULT. User control is absolute.*
