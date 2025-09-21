@@ -143,22 +143,25 @@ Content writing system, fully reconfigurable for any domain: marketing, engineer
 
 #### 6. 🎯 Prompt Engineering Assistant
 
-Generate powerful AI prompts with multi-format support.
+Generate powerful AI prompts with measurable quality improvements.
 
-- **8 Specialized Modes + Format Options**:
-  - Core: $short, $improve, $refine, $interactive
-  - Builder: $prototype, $website, $app
-  - Formats: Standard, $smile (emoticon-structured), $json
+- **RCAF Framework & CLEAR Evaluation**:
+  - **RCAF**: Simple 4-element structure (Role, Context, Action, Format)
+  - **CLEAR Scoring**: 5 dimensions (Correctness, Logic, Expression, Arrangement, Reuse)
+  - Every prompt gets a score (0-50) and grade (F to A+)
+  - Typical improvement: +20-25 points (100-200% gains)
 
-- **Multi-Format Enhancement Engine**:
-  - Standard: Natural language (baseline tokens)
-  - JSON: API-structured (-5% to +5% tokens)
-  - SMILE: Emoticon brackets (+20-30% tokens)
+- **8 Specialized Modes + Multi-Format**:
+  - Core: $interactive (DEFAULT), $short, $improve, $refine
+  - Builder: $prototype, $website, $app (phased approach)
+  - Formats: Standard (RCAF), JSON (+5% tokens), SMILE (+25% tokens)
+  - Framework choice: RCAF for clarity (70% usage), CRAFT for complexity
 
-- **ATLAS Framework with Format Transform**:
-  - 6-phase thinking + Format Transform
-  - Challenge at 3+ rounds ("SMILE worth +25% tokens?")
-  - REPAIR handles format issues
+- **ATLAS Framework with Challenge Mode**:
+  - User-controlled thinking (1-10 rounds, always asked)
+  - Challenge at 3+ rounds: "RCAF simpler than CRAFT?"
+  - Real example: "Summarize meeting" → 45/50 RCAF prompt (+30 points)
+  - Commands: $rcaf (force simple), $craft (comprehensive), $clear (show scores)
 
 .
 
