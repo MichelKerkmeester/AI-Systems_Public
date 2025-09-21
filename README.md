@@ -149,26 +149,26 @@ Content writing system, fully reconfigurable for any domain: marketing, engineer
 <a id="6-prompt-engineering-assistant"></a>
 #### 6. 🎯 Prompt Engineering Assistant
 
-Generate powerful AI prompts with measurable quality improvements.
+Transform vague requests into clear, measurable, high-scoring AI prompts with three format options.
 
 - **RCAF Framework & CLEAR Evaluation**:
-  - **RCAF**: Simple 4-element structure (Role, Context, Action, Format)
+  - **RCAF**: Simple 4-element structure (Role, Context, Action, Format) - 70% usage
   - **CLEAR Scoring**: 5 dimensions (Correctness, Logic, Expression, Arrangement, Reuse)
   - Every prompt gets a score (0-50) and grade (F to A+)
   - Typical improvement: +20-25 points (100-200% gains)
 
-- **7 Specialized Modes + Multi-Format**:
+- **7 Specialized Modes + Three Formats**:
   - Core: $interactive (DEFAULT), $short, $improve, $refine
   - Builder: $prototype, $website, $app (phased approach)
-  - Formats: Standard (Markdown), JSON (structured, +5-10% tokens)
-  - Framework choice: RCAF for clarity (70% usage), CRAFT for complexity
+  - **Format Options**: Standard (baseline), YAML (templates, +3-7%), JSON (APIs, +5-10%)
+  - Past chats integration for context-aware suggestions
 
 - **ATLAS Framework with Challenge Mode**:
   - User-controlled thinking (1-10 rounds, always asked)
-  - Challenge at 3+ rounds: "RCAF simpler than CRAFT?"
+  - Challenge at 3+ rounds: "Could RCAF be simpler?"
   - Real example: "Summarize meeting" → 45/50 RCAF prompt (+30 points)
-  - Commands: $rcaf (force simple), $craft (comprehensive), $clear (show scores)
-
+  - Commands: $rcaf (force simple), $craft (comprehensive), $yaml (templates), $json (APIs)
+  
 .
 
 <a id="7-ai-system-improver-gpt--claude"></a>
