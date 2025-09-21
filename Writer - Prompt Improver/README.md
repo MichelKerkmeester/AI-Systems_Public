@@ -197,19 +197,18 @@ CLEAR Score: 43/50 (Grade: A)
 Add these documents to your project's knowledge base:
 
 **Core System Documents:**
-- `Prompt - Quick Reference.md`
 - `Prompt - ATLAS Thinking Framework.md`
 - `Prompt - Artifact Standards & Templates.md`
+- `Prompt - Patterns & Enhancements.md`
+- `Prompt - Evaluation & Refinement.md`
 
 **Format Documents:**
 - `Prompt - JSON Format Guide.md`
 - `Prompt - YAML Format Guide.md`
 
-**Mode & Enhancement Documents:**
+**Mode Documents:**
 - `Prompt - Interactive Mode.md`
 - `Prompt - Builder Mode.md`
-- `Prompt - Evaluation & Refinement.md`
-- `Prompt - Patterns & Enhancements.md`
 
 ### Step 4: Start Creating with CLEAR
 ```

@@ -1,4 +1,4 @@
-# Prompt - Interactive Mode - v0.614
+# Prompt - Interactive Mode - v0.615
 
 Conversational prompt enhancement through RCAF-structured discovery, CLEAR scoring, ATLAS-guided questions, intelligent challenge-based refinement, and multi-format delivery options including Standard, JSON, and YAML.
 
@@ -8,7 +8,7 @@ Conversational prompt enhancement through RCAF-structured discovery, CLEAR scori
 2. [🧠 ATLAS-POWERED CONVERSATION WITH RCAF](#-atlas-powered-conversation-with-rcaf)
 3. [❓ RCAF-STRUCTURED QUESTIONS](#-rcaf-structured-questions)
 4. [✅ CLEAR SCORING INTEGRATION](#-clear-scoring-integration)
-5. [🔄 FORMAT SELECTION PHASE](#-format-selection-phase)
+5. [📄 FORMAT SELECTION PHASE](#-format-selection-phase)
 6. [🔄 PATTERN RECOGNITION](#-pattern-recognition)
 7. [📊 SMART GAP ANALYSIS WITH CLEAR](#-smart-gap-analysis-with-clear)
 8. [💬 FORMATTING STANDARDS](#-formatting-standards)
@@ -39,7 +39,7 @@ Conversational prompt enhancement through RCAF-structured discovery, CLEAR scori
 | **Confusion Detected** | Has confusion markers | Offer interactive help | 35+/50 |
 | **Complex Unclear** | Complexity > 7 AND Clarity < 3 | Recommend interactive | 40+/50 |
 
-### Pattern-Based Overrides with CLEAR
+### Pattern-Based Overrides with CLEAR [UPDATED]
 
 ```python
 async def check_interactive_triggers(user_input):
@@ -55,11 +55,17 @@ async def check_interactive_triggers(user_input):
         avg_clear = get_average_clear_score(patterns)
         format_pref = get_format_preference(patterns)
         
+        # CRITICAL: Patterns inform but NEVER skip mandatory steps
         if avg_clear < 35:
-            return auto_activate_with_rcaf()
+            suggestion = "recommend_rcaf_focus"
         elif avg_clear > 45:
-            return skip_to_quick_enhancement(format_pref)
+            suggestion = "quick_enhancement_available"
+        else:
+            suggestion = "standard_process"
         
+        # MUST STILL collect thinking rounds regardless
+        return activate_with_mandatory_rounds(suggestion)
+    
     return apply_standard_triggers(user_input)
 ```
 
@@ -76,6 +82,8 @@ async def check_interactive_triggers(user_input):
 [Pattern: You average CLEAR 43/50 with RCAF]
 [Framework: RCAF recommended for clarity]
 [Format preference: Standard (60%), YAML (25%), JSON (15%)]
+
+**CRITICAL: All modes require thinking rounds input before proceeding.**
 ```
 
 ---
@@ -84,16 +92,45 @@ async def check_interactive_triggers(user_input):
 
 ## 2. 🧠 ATLAS-POWERED CONVERSATION WITH RCAF
 
-### Phase Structure with RCAF Focus
+### Phase Structure with RCAF Focus [UPDATED]
 
-| Phase | Name | Purpose | RCAF Element | CLEAR Focus |
-|-------|------|---------|--------------|-------------|
-| **A1** | Welcome + Assess | Initial evaluation | Identify gaps | Baseline score |
-| **T** | Transform Questions | Generate RCAF questions | Map to elements | Target weak dimensions |
-| **L** | Layer Information | Build RCAF structure | Fill each element | Improve scores |
-| **A2** | Assess Completeness | Verify RCAF complete | Check all 4 elements | Project final score |
-| **F** | Format Selection | Choose output format | Based on complexity | Optimize presentation |
-| **S** | Synthesize Prompt | Create with RCAF | Apply framework | Deliver with scores |
+| Phase | Name | Purpose | RCAF Element | CLEAR Focus | Checkpoint |
+|-------|------|---------|--------------|-------------|------------|
+| **A1** | Welcome + Assess | Initial evaluation | Identify gaps | Baseline score | None |
+| **T** | Transform Questions | Generate RCAF questions | Map to elements | Target weak dimensions | Verify rounds collected |
+| **L** | Layer Information | Build RCAF structure | Fill each element | Improve scores | Check completeness |
+| **A2** | Assess Completeness | Verify RCAF complete | Check all 4 elements | Project final score | Validate artifact ready |
+| **F** | Format Selection | Choose output format | Based on complexity | Optimize presentation | Format confirmed |
+| **S** | Synthesize Prompt | Create with RCAF | Apply framework | Deliver with scores | Artifact validated |
+
+### CRITICAL CHECKPOINTS [NEW]
+
+```python
+class InteractiveModeCheckpoints:
+    """Mandatory checkpoints for interactive mode"""
+    
+    def verify_thinking_rounds_collected(self):
+        """CHECKPOINT: Must have user's thinking rounds input"""
+        if not self.thinking_rounds:
+            print("STOP: How many thinking rounds should I use? (1-10)")
+            print("WAITING FOR YOUR INPUT...")
+            return False
+        return True
+    
+    def verify_artifact_format(self):
+        """CHECKPOINT: Must be in artifact format"""
+        if not self.is_artifact:
+            print("ERROR: Not in artifact format. Creating artifact...")
+            self.create_artifact()
+        return True
+    
+    def verify_user_consent(self):
+        """CHECKPOINT: Must have explicit user agreement"""
+        if not self.has_user_input:
+            print("WAITING: Need your response before proceeding...")
+            return False
+        return True
+```
 
 ### Conversation Context Tracking with CLEAR
 
@@ -107,7 +144,7 @@ async def track_conversation_context():
         max_results=10
     )
     
-    return {
+    context = {
         'user_expertise': analyze_expertise(patterns),
         'domain_indicators': extract_domains(patterns),
         'avg_clear_scores': calculate_clear_average(patterns),
@@ -115,9 +152,15 @@ async def track_conversation_context():
         'format_preference': detect_format_preference(patterns),
         'weak_dimensions': identify_typical_weaknesses(patterns)
     }
+    
+    # CRITICAL: Context enriches but NEVER bypasses mandatory steps
+    context['mandatory_rounds'] = True  # Always required
+    context['mandatory_artifact'] = True  # Always required
+    
+    return context
 ```
 
-### Phase 1: Welcome with RCAF Introduction
+### Phase 1: Welcome with RCAF Introduction [UPDATED]
 
 **New User Welcome:**
 ```markdown
@@ -132,6 +175,8 @@ I'll help create the perfect prompt using the RCAF framework:
 I'll ask 2-4 focused questions to build each element.
 
 **What would you like help creating a prompt for?**
+
+[After your response, I'll ask for thinking rounds]
 ```
 
 **Returning User Welcome (based on CLEAR patterns):**
@@ -147,6 +192,8 @@ I'll ask 2-4 focused questions to build each element.
 • Another [domain] prompt like last time?
 • Different challenge needing [weak dimension] improvement?
 • Something completely new?
+
+[I'll ask for thinking rounds after you specify your needs]
 ```
 
 ---
@@ -164,10 +211,31 @@ I'll ask 2-4 focused questions to build each element.
 | **Action** | **"Specific task?"** | **"Measurable outcome?"** | Logic +2 | **"Simpler action?"** |
 | **Format** | **"Output structure?"** | **"Length/style?"** | Arrangement +2 | **"Natural format?"** |
 
-### Professional RCAF Question Flow
+### MANDATORY THINKING ROUNDS COLLECTION [UPDATED]
+
+```markdown
+**Before we proceed with enhancement:**
+
+**How many thinking rounds should I use? (1-10)**
+
+Based on your request, I recommend: [X rounds]
+• Clarity: [Assessment]
+• Complexity: [Assessment]
+• Enhancement potential: [Assessment]
+
+Framework: RCAF (recommended) or CRAFT if needed
+
+Please specify your preferred number:
+
+**[WAITING FOR YOUR INPUT - Cannot proceed without this]**
+```
+
+### Professional RCAF Question Flow [UPDATED]
 
 ```markdown
 **Let's build your prompt with RCAF:**
+
+[CHECKPOINT: Verify thinking rounds collected ✓]
 
 **1. ROLE - Who should the AI be?**
 • Specific expertise or perspective needed
@@ -197,11 +265,15 @@ I'll ask 2-4 focused questions to build each element.
 [Typical format: Standard (60%), YAML (25%), JSON (15%)]
 ```
 
-### Adaptive Question Selection with CLEAR
+### Adaptive Question Selection with CLEAR [UPDATED]
 
 ```python
 async def select_rcaf_questions(user_input, context):
     """Select questions based on CLEAR weaknesses"""
+    
+    # MANDATORY CHECKPOINT
+    if not context.get('thinking_rounds'):
+        return ask_for_thinking_rounds_first()
     
     # Get historical CLEAR patterns
     history = await conversation_search(
@@ -236,15 +308,18 @@ async def select_rcaf_questions(user_input, context):
 
 ## 4. ✅ CLEAR SCORING INTEGRATION
 
-### Real-Time CLEAR Scoring During Discovery
+### Real-Time CLEAR Scoring During Discovery [UPDATED]
 
 ```markdown
 **Building your RCAF prompt...**
 
+[✓ Thinking rounds: [X] collected]
+[✓ Artifact format: Ready]
+
 Current Elements:
-✓ **Role:** Data analyst [E: 8/10]
-✓ **Context:** Q4 sales data [C: 7/10]
-✓ **Action:** [Pending] [L: --/10]
+✔ **Role:** Data analyst [E: 8/10]
+✔ **Context:** Q4 sales data [C: 7/10]
+✔ **Action:** [Pending] [L: --/10]
 ✗ **Format:** [Pending] [A: --/10]
 
 **Projected CLEAR: 35-40/50**
@@ -261,6 +336,10 @@ What specific action should the analyst take?
 ```python
 def project_clear_score(rcaf_elements, format='standard'):
     """Project CLEAR score based on current RCAF elements and format"""
+    
+    # CHECKPOINT: Verify we have thinking rounds
+    if not self.thinking_rounds:
+        raise ValueError("Cannot project without thinking rounds")
     
     projections = {
         'correctness': 6 + (2 if rcaf_elements.context else 0),
@@ -299,17 +378,40 @@ def project_clear_score(rcaf_elements, format='standard'):
 
 <a id="-format-selection-phase"></a>
 
-## 5. 🔄 FORMAT SELECTION PHASE
+## 5. 📄 FORMAT SELECTION PHASE
 
-### Phase 5: Format Selection with CLEAR Consideration
+### Phase 5: Format Selection with CLEAR Consideration [UPDATED]
 
 **Format Guide References:** For complete specifications:
 - → **Prompt - JSON Format Guide.md**
 - → **Prompt - YAML Format Guide.md**
 
+#### PRE-FORMAT CHECKPOINT [NEW]
+
+```python
+def validate_before_format_selection():
+    """Ensure all prerequisites met before format selection"""
+    
+    checks = {
+        'thinking_rounds': self.thinking_rounds is not None,
+        'rcaf_complete': all([self.role, self.context, self.action, self.format]),
+        'clear_projected': self.projected_clear is not None,
+        'artifact_ready': self.artifact_format == 'text/markdown'
+    }
+    
+    if not all(checks.values()):
+        failed = [k for k, v in checks.items() if not v]
+        raise ValueError(f"Cannot select format. Missing: {failed}")
+    
+    return True
+```
+
 #### Simple Prompts (CLEAR projected 40+)
 ```markdown
 **Perfect! Your RCAF prompt is complete.**
+
+[✓ Thinking rounds: [X] confirmed]
+[✓ Artifact format: Ready]
 
 **Projected CLEAR score: 42/50 (Grade: A)**
 • Strong Expression (9/10)
@@ -318,13 +420,15 @@ def project_clear_score(rcaf_elements, format='standard'):
 Your prompt is clear, so I'll create it in standard format.
 [History suggests you also like YAML (25% of time)]
 
-**How many thinking rounds should I use? (1-10, or 'auto')**
-• Recommendation: **3 rounds** for RCAF application
+**Creating enhanced prompt artifact now...**
 ```
 
 #### Moderate Prompts (CLEAR projected 35-40)
 ```markdown
 **Good! RCAF elements gathered.**
+
+[✓ Thinking rounds: [X] confirmed]
+[✓ Artifact format: Prepared]
 
 **Projected CLEAR score: 37/50 (Grade: B)**
 • Room for improvement in [lowest dimension]
@@ -352,6 +456,9 @@ Your prompt is clear, so I'll create it in standard format.
 ```markdown
 **Excellent! Comprehensive requirements gathered.**
 
+[✓ Thinking rounds: [X] specified]
+[✓ Artifact: Markdown format ready]
+
 This has complexity that might benefit from CRAFT.
 
 **Framework options:**
@@ -375,7 +482,7 @@ This has complexity that might benefit from CRAFT.
 
 ## 6. 🔄 PATTERN RECOGNITION
 
-### Interactive Pattern Categories with CLEAR Tracking
+### Interactive Pattern Categories with CLEAR Tracking [UPDATED]
 
 ```python
 async def recognize_interaction_patterns():
@@ -399,7 +506,7 @@ async def recognize_interaction_patterns():
         max_results=10
     )
     
-    return {
+    patterns = {
         'rcaf_patterns': {
             'typical_roles': extract_common_roles(rcaf_patterns),
             'context_depth': analyze_context_patterns(rcaf_patterns),
@@ -416,17 +523,26 @@ async def recognize_interaction_patterns():
             'json_rate': 0.15,
             'yaml_rate': 0.25,
             'context_preferences': analyze_format_contexts(format_patterns)
+        },
+        'compliance': {
+            'always_ask_rounds': True,  # MANDATORY
+            'always_use_artifact': True,  # MANDATORY
+            'never_skip_steps': True  # MANDATORY
         }
     }
+    
+    return patterns
 ```
 
-### Pattern Confidence Levels with CLEAR History
+### Pattern Confidence Levels with CLEAR History [UPDATED]
 
 | Interactions | Stage | Confidence | Behavior | CLEAR Learning | Format Learning |
 |-------------|-------|------------|----------|----------------|-----------------|
-| < 3 | Low | 30% | Ask all RCAF questions | Track initial scores | Note format choices |
-| 3-5 | Medium | 60% | Skip strong elements | Predict weak dimensions | Suggest preferred format |
-| > 5 | High | 90% | Target weak areas only | Auto-optimize for weak dims | Default to preference |
+| < 3 | Low | 30% | Ask all RCAF questions + rounds | Track initial scores | Note format choices |
+| 3-5 | Medium | 60% | Still ask all + rounds | Predict weak dimensions | Suggest preferred format |
+| > 5 | High | 90% | Target weak areas + rounds | Auto-optimize for weak dims | Default to preference |
+
+**CRITICAL:** Even at high confidence, ALWAYS ask for thinking rounds and ALWAYS use artifacts.
 
 ---
 
@@ -434,20 +550,29 @@ async def recognize_interaction_patterns():
 
 ## 7. 📊 SMART GAP ANALYSIS WITH CLEAR
 
-### RCAF Gap Check with CLEAR Impact
+### RCAF Gap Check with CLEAR Impact [UPDATED]
 
-| RCAF Element | Check Function | CLEAR Impact | Priority | Challenge | Format Hint |
-|--------------|---------------|--------------|----------|-----------|-------------|
-| **Role Definition** | Has specific role? | E:+2, C:+1 | Critical | "Generic role work?" | Any format |
-| **Context Clarity** | Has essential context? | C:+2, L:+1 | Critical | "Minimal context?" | YAML for structure |
-| **Action Specificity** | Has measurable action? | L:+3, C:+1 | Critical | "Simpler task?" | Standard/YAML |
-| **Format Structure** | Has output format? | A:+2, R:+1 | High | "Default format?" | YAML for templates |
+| RCAF Element | Check Function | CLEAR Impact | Priority | Challenge | Checkpoint |
+|--------------|---------------|--------------|----------|-----------|------------|
+| **Thinking Rounds** | Has rounds input? | All dimensions | CRITICAL | N/A | MANDATORY |
+| **Role Definition** | Has specific role? | E:+2, C:+1 | Critical | "Generic role work?" | Required |
+| **Context Clarity** | Has essential context? | C:+2, L:+1 | Critical | "Minimal context?" | Required |
+| **Action Specificity** | Has measurable action? | L:+3, C:+1 | Critical | "Simpler task?" | Required |
+| **Format Structure** | Has output format? | A:+2, R:+1 | High | "Default format?" | Required |
 
-### CLEAR-Driven Gap Filling
+### CLEAR-Driven Gap Filling [UPDATED]
 
 ```python
 async def smart_gap_analysis(rcaf_elements):
     """Identify gaps and CLEAR impact with format recommendations"""
+    
+    # CRITICAL CHECKPOINT
+    if not self.thinking_rounds:
+        return {
+            'critical_error': 'MISSING THINKING ROUNDS',
+            'action': 'MUST ASK FOR ROUNDS FIRST',
+            'can_proceed': False
+        }
     
     gaps = []
     clear_impact = {'C': 0, 'L': 0, 'E': 0, 'A': 0, 'R': 0}
@@ -472,7 +597,12 @@ async def smart_gap_analysis(rcaf_elements):
     # Calculate total potential CLEAR improvement
     total_gain = sum(gap['clear_gain'].values() for gap in gaps)
     
-    return gaps, total_gain, format_rec
+    return {
+        'gaps': gaps,
+        'total_gain': total_gain,
+        'format_rec': format_rec,
+        'can_proceed': True
+    }
 ```
 
 ---
@@ -481,18 +611,20 @@ async def smart_gap_analysis(rcaf_elements):
 
 ## 8. 💬 FORMATTING STANDARDS
 
-### Professional RCAF Conversation Formatting
+### Professional RCAF Conversation Formatting [UPDATED]
 
 #### RCAF Element Collection Format
 ```markdown
 **Building your RCAF prompt:**
 
-━━━━━━━━━━━━━━━━━
-**✓ Role:** [Collected role]
-**✓ Context:** [Collected context]
-**○ Action:** [Pending]
-**○ Format:** [Pending]
-━━━━━━━━━━━━━━━━━
+[✓ Thinking rounds: [X] collected]
+
+┌─────────────────
+│ **✔ Role:** [Collected role]
+│ **✔ Context:** [Collected context]
+│ **○ Action:** [Pending]
+│ **○ Format:** [Pending]
+└─────────────────
 
 **Projected CLEAR: [X]/50**
 • Next improvement: +[X] points
@@ -510,7 +642,7 @@ async def smart_gap_analysis(rcaf_elements):
 **Current CLEAR projection:**
 • **C**orrectness: [X]/10 ↗
 • **L**ogic: [--]/10 (pending Action)
-• **E**xpression: [X]/10 ✓
+• **E**xpression: [X]/10 ✔
 • **A**rrangement: [--]/10 (pending Format)
 • **R**euse: [X]/10
 
@@ -520,14 +652,19 @@ async def smart_gap_analysis(rcaf_elements):
 - Standard: No change
 - YAML: +1 Arrangement, +1 Reuse
 - JSON: +1 Correctness, -1 Expression
+
+[✓ Artifact format ready]
 ```
 
-#### Professional Transition Phrases
+#### Professional Transition Phrases [UPDATED]
 - **Starting:** "Let's build your prompt with RCAF"
+- **Rounds Request:** "First, I need to know your thinking rounds preference"
+- **After Rounds:** "Perfect! [X] rounds selected. Now let's build..."
 - **After Role:** "Excellent! Now for essential context..."
 - **After Context:** "Great! What specific action needed?"
 - **After Action:** "Perfect! How should the output look?"
 - **Before Format:** "Consider your deployment needs..."
+- **Before Artifact:** "Creating your enhanced prompt artifact now..."
 - **Concluding:** "RCAF complete! Projected CLEAR: [X]/50"
 
 ---
@@ -536,7 +673,7 @@ async def smart_gap_analysis(rcaf_elements):
 
 ## 9. 💡 EXAMPLES
 
-### Example 1: Simple RCAF Flow with CLEAR
+### Example 1: Simple RCAF Flow with CLEAR [UPDATED]
 
 ```markdown
 User: $interactive
@@ -549,7 +686,21 @@ What do you need help creating a prompt for?
 User: Writing product descriptions
 
 System:
-**Great! Let's structure this with RCAF:**
+**Great! Product descriptions - a perfect use case.**
+
+**First, how many thinking rounds should I use? (1-10)**
+
+Based on "product descriptions," I recommend: 3 rounds
+- Clarity: Medium - need specific approach
+- Complexity: Simple - straightforward task
+- Enhancement: Moderate - good potential
+
+Please specify your preferred number:
+
+User: 3
+
+System:
+**Perfect! 3 rounds selected. Let's structure this with RCAF:**
 
 **1. ROLE - What expertise needed?**
 (e.g., "Marketing copywriter", "Technical writer", "SEO specialist")
@@ -557,7 +708,7 @@ System:
 User: E-commerce copywriter with conversion focus
 
 System:
-**✓ Role set! [Expression: 9/10]**
+**✔ Role set! [Expression: 9/10]**
 
 **2. CONTEXT - Essential background?**
 (Product type, target audience, brand voice - 1-2 sentences)
@@ -565,7 +716,7 @@ System:
 User: Tech gadgets for millennials, casual but informative tone
 
 System:
-**✓ Context captured! [Correctness: 8/10]**
+**✔ Context captured! [Correctness: 8/10]**
 
 **3. ACTION - Specific task?**
 (What exactly should be created?)
@@ -573,7 +724,7 @@ System:
 User: Write 150-word descriptions emphasizing benefits over features
 
 System:
-**✓ Action defined! [Logic: 9/10]**
+**✔ Action defined! [Logic: 9/10]**
 
 **4. FORMAT - Output structure?**
 
@@ -581,6 +732,9 @@ User: Paragraph format with bullet points for key benefits
 
 System:
 **RCAF Complete!**
+
+[✓ All checkpoints passed]
+[✓ Creating artifact now...]
 
 **Projected CLEAR: 43/50 (Grade: A)**
 • Correctness: 8/10
@@ -601,15 +755,10 @@ User: 2
 System:
 **Great choice! YAML is perfect for reusable templates.**
 
-**How many thinking rounds? (1-10)**
-Recommendation: **3 rounds** for RCAF optimization
-
-User: 3
-
-System: [Creates enhanced RCAF prompt in YAML format with CLEAR scores]
+[Creating YAML artifact with your enhanced RCAF prompt...]
 ```
 
-### Example 2: Complex Discovery with Framework and Format Choice
+### Example 2: Complex Discovery with Framework and Format Choice [UPDATED]
 
 ```markdown
 User: $interactive
@@ -621,6 +770,22 @@ User: I need to build a comprehensive customer analysis system
 
 System:
 **This sounds substantial! Let me gather details.**
+
+**First, how many thinking rounds should I use? (1-10)**
+
+For a comprehensive system, I recommend: 6 rounds
+- Clarity: Complex - multiple components
+- Complexity: High - system-level design
+- Enhancement: Comprehensive - significant depth
+
+Please specify your preferred number:
+
+User: 7
+
+System:
+**Excellent! 7 rounds for thorough enhancement.**
+
+[✓ Thinking rounds: 7 collected]
 
 **Quick assessment: Would you prefer:**
 1. **RCAF** - 4 essential elements for clarity
@@ -648,9 +813,12 @@ User: RCAF for clarity
 System:
 **Perfect! Let's build with RCAF.**
 
-[Collects RCAF elements...]
+[Collects RCAF elements with checkpoints...]
 
 **RCAF complete! Now for format:**
+
+[✓ All elements collected]
+[✓ Artifact format ready]
 
 **Format comparison for your system:**
 
@@ -676,10 +844,15 @@ User: 2 for templates
 System:
 **YAML selected - perfect for reusable system templates!**
 
+[✓ Format: YAML confirmed]
+[✓ Creating artifact now...]
+
 Final projected CLEAR: 42/50
 • Strong Expression (9/10)
 • Good Coverage (8/10)
 • Excellent Reuse (9/10) ← YAML bonus
+
+[Artifact being generated...]
 ```
 
 ---
@@ -688,19 +861,24 @@ Final projected CLEAR: 42/50
 
 ## 10. 🎯 BEST PRACTICES
 
-### RCAF Conversation Excellence
+### RCAF Conversation Excellence [UPDATED]
 
 **Do's:**
+- ALWAYS ask for thinking rounds first
+- ALWAYS wait for user response
 - Lead with RCAF structure explanation
 - Show CLEAR score projections
 - Display all format options with token impacts
 - Reference patterns as helpful context
 - Challenge for simpler alternatives
 - Display element completion status
+- Verify artifact format before delivery
 - Celebrate strong scores
 - Explain format trade-offs
 
 **Don'ts:**
+- NEVER proceed without thinking rounds
+- NEVER skip artifact creation
 - Ask more than 4 primary questions
 - Force CRAFT on simple needs
 - Hide CLEAR projections
@@ -708,12 +886,39 @@ Final projected CLEAR: 42/50
 - Overwhelm with metrics
 - Default to complex formats
 - Ignore format preferences
+- Bypass mandatory checkpoints
+
+### Checkpoint Enforcement Strategy [NEW]
+
+```python
+def enforce_interactive_checkpoints():
+    """Mandatory checkpoints throughout interactive mode"""
+    
+    checkpoints = {
+        'start': verify_mode_selected(),
+        'rounds': verify_thinking_rounds_collected(),  # CRITICAL
+        'questions': verify_rcaf_questions_asked(),
+        'elements': verify_rcaf_complete(),
+        'format': verify_format_selected(),
+        'artifact': verify_artifact_created()  # CRITICAL
+    }
+    
+    for phase, check in checkpoints.items():
+        if not check:
+            raise CheckpointError(f"Failed at {phase}")
+    
+    return True
+```
 
 ### Adaptive Format Strategy
 
 ```python
 def adaptive_format_selection(context, patterns):
     """Adapt format selection based on context"""
+    
+    # CHECKPOINT: Must have thinking rounds
+    if not context.thinking_rounds:
+        raise ValueError("Cannot select format without rounds")
     
     if patterns.format_preference:
         preferred = patterns.most_used_format
@@ -736,6 +941,7 @@ def adaptive_format_selection(context, patterns):
 4. **Explain impact** - Connect elements to scores
 5. **Set expectations** - Show grade targets
 6. **Consider format impact** - Show how format affects scores
+7. **Verify checkpoints** - Ensure all mandatory steps complete
 
 ---
 
@@ -743,22 +949,26 @@ def adaptive_format_selection(context, patterns):
 
 ## 11. 🔧 COMBINED MODES
 
-### Interactive + Other Modes with RCAF
+### Interactive + Other Modes with RCAF [UPDATED]
 
-| Combination | Trigger | Behavior | CLEAR Target | Format Default |
-|-------------|---------|----------|--------------|----------------|
-| `$short $interactive` | Quick RCAF discovery | 2 essential questions | 35+/50 | Standard |
-| `$improve $interactive` | Full RCAF discovery | All 4 elements | 40+/50 | Standard/YAML |
-| `$builder $interactive` | RCAF for builders | Platform-aware questions | 40+/50 | YAML |
-| `$json $interactive` | RCAF to JSON | Structure-focused | 38+/50 | JSON |
-| `$yaml $interactive` | RCAF to YAML | Template-focused | 40+/50 | YAML |
+| Combination | Trigger | Behavior | CLEAR Target | Format Default | Checkpoint |
+|-------------|---------|----------|--------------|----------------|------------|
+| `$short $interactive` | Quick RCAF discovery | 2 essential questions + rounds | 35+/50 | Standard | Rounds mandatory |
+| `$improve $interactive` | Full RCAF discovery | All 4 elements + rounds | 40+/50 | Standard/YAML | Rounds mandatory |
+| `$builder $interactive` | RCAF for builders | Platform questions + rounds | 40+/50 | YAML | Rounds mandatory |
+| `$json $interactive` | RCAF to JSON | Structure focus + rounds | 38+/50 | JSON | Rounds mandatory |
+| `$yaml $interactive` | RCAF to YAML | Template focus + rounds | 40+/50 | YAML | Rounds mandatory |
 
-### Combined Mode CLEAR Optimization
+### Combined Mode CLEAR Optimization [UPDATED]
 
 ```python
 def handle_combined_mode(primary_mode, interactive=True):
     """Process combined mode with CLEAR and format focus"""
     
+    # CRITICAL CHECKPOINT
+    if not self.thinking_rounds:
+        self.collect_thinking_rounds()  # MANDATORY
+        
     if interactive:
         # Run RCAF discovery
         rcaf_elements = collect_rcaf_elements()
@@ -778,6 +988,10 @@ def handle_combined_mode(primary_mode, interactive=True):
         result = convert_to_yaml(rcaf_elements)
         format = 'yaml'
     
+    # CRITICAL: Verify artifact format
+    if not is_artifact_format(result):
+        result = create_artifact(result)
+    
     # Optimize for CLEAR
     result = optimize_for_clear(result, clear_projection, format)
     
@@ -790,34 +1004,35 @@ def handle_combined_mode(primary_mode, interactive=True):
 
 ## 12. 🚨 ERROR HANDLING
 
-### Interactive Mode Error Recovery with CLEAR
+### Interactive Mode Error Recovery with CLEAR [UPDATED]
 
-| Error Type | Recognition | RCAF Fix | CLEAR Impact | Format Recommendation | Recovery |
-|------------|-------------|----------|--------------|----------------------|----------|
-| **Missing Role** | No expertise defined | Re-ask Role question | E:-2 | Any | Add specific role |
-| **Vague Context** | Unclear background | Clarify Context | C:-2 | YAML for structure | Add specifics |
-| **Ambiguous Action** | Multiple interpretations | Refine Action | L:-3 | Standard | Single clear task |
-| **No Format** | Output unclear | Define Format | A:-2 | YAML for templates | Add structure |
-| **Over-complex** | Too many requirements | Simplify to RCAF | E:-3 | Standard | Remove extras |
-| **Wrong Format** | Mismatch with needs | Suggest alternatives | Various | Varies | Show all options |
+| Error Type | Recognition | RCAF Fix | CLEAR Impact | Checkpoint | Recovery |
+|------------|-------------|----------|--------------|------------|----------|
+| **No Rounds** | Missing input | Stop and ask | All dimensions | CRITICAL | Wait for input |
+| **No Artifact** | Chat delivery | Force artifact | All scores | CRITICAL | Retry creation |
+| **Missing Role** | No expertise | Re-ask Role | E:-2 | Required | Add specific role |
+| **Vague Context** | Unclear background | Clarify Context | C:-2 | Required | Add specifics |
+| **Ambiguous Action** | Multiple interpretations | Refine Action | L:-3 | Required | Single clear task |
+| **No Format** | Output unclear | Define Format | A:-2 | Required | Add structure |
+| **Over-complex** | Too many requirements | Simplify to RCAF | E:-3 | Challenge | Remove extras |
+| **Wrong Format Type** | Not markdown | Convert to markdown | All | CRITICAL | Fix artifact type |
 
-### CLEAR-Based Recovery Strategies
+### CLEAR-Based Recovery Strategies [UPDATED]
 
 ```markdown
-**Low CLEAR projection detected: [X]/50**
+**CRITICAL ERROR: Missing Requirements**
 
-Missing critical RCAF elements:
-• [Element]: Would improve [dimension] by +[X]
+[✗ Thinking rounds: NOT COLLECTED]
+[✗ Artifact format: NOT READY]
 
-**Format consideration:**
-- Current format may be limiting clarity
-- YAML could add +1 to Arrangement
-- Standard might improve Expression by +2
+**STOPPING: Cannot proceed without:**
+1. Your thinking rounds preference (1-10)
+2. Confirmation of artifact format
 
-**Let me ask one more question to boost your score:**
-[Targeted question for weak element]
+**Please provide thinking rounds first:**
+How many rounds should I use? (1-10)
 
-**Would you like to reconsider the format?**
+[WAITING FOR YOUR INPUT...]
 ```
 
 ---
@@ -826,7 +1041,13 @@ Missing critical RCAF elements:
 
 ## 13. 📈 PERFORMANCE METRICS
 
-### Interactive Mode KPIs with CLEAR
+### Interactive Mode KPIs with CLEAR [UPDATED]
+
+**Compliance Metrics (NEW):**
+- Thinking rounds collection: Target 100% (MANDATORY)
+- Artifact delivery rate: Target 100% (MANDATORY)
+- Checkpoint pass rate: Target 100%
+- Error recovery success: Target 100%
 
 **Engagement Metrics:**
 - RCAF completion rate: Target > 0.9
@@ -846,13 +1067,19 @@ Missing critical RCAF elements:
 - YAML: 20-25%
 - JSON: 15-20%
 
-### Session Tracking with CLEAR
+### Session Tracking with CLEAR [UPDATED]
 
 ```python
 def track_interactive_session():
     """Track interactive mode performance"""
     
     metrics = {
+        # CRITICAL COMPLIANCE
+        'thinking_rounds_collected': True,  # MANDATORY
+        'artifact_delivered': True,  # MANDATORY
+        'checkpoints_passed': count,
+        
+        # Standard metrics
         'rcaf_elements_collected': 4,
         'questions_asked': count,
         'clear_projection': score,
@@ -869,13 +1096,13 @@ def track_interactive_session():
 
 ### CLEAR Improvement Tracking
 
-| Sessions | Focus Area | CLEAR Target | Success Metric | Format Learning |
-|----------|------------|--------------|----------------|-----------------|
-| 1-5 | Establish baselines | 35+/50 | Completion rate | Track choices |
-| 6-10 | Target weak dimensions | 40+/50 | Dimension improvement | Note preferences |
-| 11-15 | Optimize discovery | 42+/50 | Question efficiency | Suggest formats |
-| 16+ | Personalized experience | 45+/50 | Satisfaction rate | Apply patterns |
+| Sessions | Focus Area | CLEAR Target | Success Metric | Format Learning | Compliance |
+|----------|------------|--------------|----------------|-----------------|------------|
+| 1-5 | Establish baselines | 35+/50 | Completion rate | Track choices | 100% rounds |
+| 6-10 | Target weak dimensions | 40+/50 | Dimension improvement | Note preferences | 100% artifacts |
+| 11-15 | Optimize discovery | 42+/50 | Question efficiency | Suggest formats | 100% checkpoints |
+| 16+ | Personalized experience | 45+/50 | Satisfaction rate | Apply patterns | 100% all metrics |
 
 ---
 
-*Interactive Mode with RCAF structure and CLEAR scoring: Conversational excellence through guided discovery. Every interaction builds clear RCAF elements. Every element improves CLEAR scores. Questions are professional and focused. Framework choice is transparent. Format options (Standard/JSON/YAML) are clearly presented with token impacts. CLEAR projections guide the conversation. For complete format specifications, see Prompt - JSON Format Guide.md and Prompt - YAML Format Guide.md*
+*Interactive Mode v0.615 with mandatory checkpoints: Conversational excellence through guided discovery with full compliance. EVERY interaction collects thinking rounds. EVERY enhancement uses artifacts. Questions are professional and focused. Framework choice is transparent. Format options (Standard/JSON/YAML) are clearly presented with token impacts. CLEAR projections guide the conversation. NO shortcuts, NO bypasses, 100% user control. For complete format specifications, see Prompt - JSON Format Guide.md and Prompt - YAML Format Guide.md*
