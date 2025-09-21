@@ -1,6 +1,6 @@
-# Prompt - Artifact Standards & Templates - v0.113
+# Prompt - Artifact Standards & Templates - v0.114
 
-Comprehensive artifact delivery standards for prompt engineering system with mandatory RCAF/CRAFT formatting, CLEAR scoring display, and multi-format support.
+Comprehensive artifact delivery standards for prompt engineering system with mandatory RCAF/CRAFT formatting, CLEAR scoring display, and multi-format support including Standard, JSON, and YAML.
 
 ## 📋 Table of Contents
 
@@ -8,7 +8,7 @@ Comprehensive artifact delivery standards for prompt engineering system with man
 2. [📋 MANDATORY STRUCTURE & TEMPLATES](#-mandatory-structure--templates)
 3. [🎯 STANDARD ARTIFACT TEMPLATE WITH CLEAR](#-standard-artifact-template-with-clear)
 4. [📝 RCAF ARTIFACT TEMPLATE](#-rcaf-artifact-template)
-5. [📄 FORMAT-SPECIFIC TEMPLATES](#-format-specific-templates)
+5. [🔄 FORMAT-SPECIFIC TEMPLATES](#-format-specific-templates)
 6. [🎨 AI SYSTEM DETAILS](#-ai-system-details)
 7. [📊 VISUAL ELEMENTS](#-visual-elements)
 8. [✅ QUALITY CHECKLIST](#-quality-checklist)
@@ -34,6 +34,7 @@ Comprehensive artifact delivery standards for prompt engineering system with man
 - Omit CLEAR scores
 - Skip framework identification (RCAF/CRAFT)
 - Hide improvement metrics
+- Forget to show all format options
 
 ### Always:
 - Use proper `text/markdown` type
@@ -45,6 +46,7 @@ Comprehensive artifact delivery standards for prompt engineering system with man
 - Display CLEAR scores prominently
 - Identify framework used (RCAF/CRAFT)
 - Show before/after improvements
+- Display all three format options (Standard/JSON/YAML)
 
 ---
 
@@ -61,6 +63,7 @@ Comprehensive artifact delivery standards for prompt engineering system with man
 **Format Options:**
 • Standard format (shown above)
 • JSON format available (`$json`)
+• YAML format available (`$yaml`)
 
 ---
 
@@ -82,7 +85,7 @@ Comprehensive artifact delivery standards for prompt engineering system with man
 ### Section Order (Top to Bottom)
 1. **Main Content** - The enhanced prompt (RCAF/CRAFT format)
 2. **Divider** - `---`
-3. **Format Options** - Available alternatives
+3. **Format Options** - All three alternatives with token impacts
 4. **Divider** - `---`
 5. **CLEAR Evaluation** - Scores and grade
 6. **Divider** - `---`
@@ -110,7 +113,8 @@ Format: [Output requirements]
 
 **Format Options:**
 • Standard format (shown above)
-• JSON format available (`$json`) - Structured for APIs
+• JSON format available (`$json`) - Structured for APIs (+5-10% tokens)
+• YAML format available (`$yaml`) - Human-editable templates (+3-7% tokens)
 
 ---
 
@@ -149,6 +153,7 @@ Format: [Output requirements]
 **Historical Context:**
 - Based on [X] similar enhancements
 - Framework preference: [RCAF/CRAFT usage %]
+- Format preference: [Standard/JSON/YAML usage %]
 - Average CLEAR: [X]/50
 - All options always available
 ```
@@ -171,7 +176,8 @@ Format: [Output requirements]
 
 **Format Options:**
 • Standard format (shown above)
-• JSON format (`$json`) - For API integration
+• JSON format (`$json`) - For API integration (+5-10% tokens)
+• YAML format (`$yaml`) - For configuration templates (+3-7% tokens)
 
 ---
 
@@ -210,6 +216,7 @@ Format: [Output requirements]
 
 **Session Learning:**
 - RCAF success rate: 92%
+- Format distribution: Standard 60%, YAML 25%, JSON 15%
 - Average CLEAR with RCAF: 43/50
 ```
 
@@ -217,9 +224,38 @@ Format: [Output requirements]
 
 <a id="-format-specific-templates"></a>
 
-## 5. 📄 FORMAT-SPECIFIC TEMPLATES
+## 5. 🔄 FORMAT-SPECIFIC TEMPLATES
 
-**For complete format specifications → Prompt - JSON Format Guide.md**
+**For complete format specifications:**
+- → **Prompt - JSON Format Guide.md**
+- → **Prompt - YAML Format Guide.md**
+
+### Standard Format Artifact
+
+```markdown
+Role: [expertise]
+Context: [essential background]
+Action: [specific task]
+Format: [output requirements]
+
+---
+
+**Format:** Standard (Natural language)
+
+---
+
+**CLEAR Evaluation: 43/50 (Grade: A)**
+
+• **Correctness:** 9/10 - Full accuracy
+• **Logic/Coverage:** 8/10 - Complete coverage
+• **Expression:** 10/10 - Maximum clarity
+• **Arrangement:** 8/10 - Natural flow
+• **Reuse:** 8/10 - Template ready
+
+---
+
+[AI System details...]
+```
 
 ### JSON Format Artifact with RCAF
 
@@ -239,6 +275,7 @@ Format: [Output requirements]
 ---
 
 **Format:** JSON (Optimized for API use)
+**Token Impact:** +5-10% overhead
 
 ---
 
@@ -252,23 +289,41 @@ Format: [Output requirements]
 
 ---
 
-**AI System:**
+[AI System details...]
+```
 
-- **Framework:** ATLAS + RCAF
-- **Mode:** $json
-- **Structure:** API-optimized
+### YAML Format Artifact with RCAF
+
+```markdown
+```yaml
+role: [expertise]
+context: [essential background]
+action: [specific task]
+format:
+  structure: [output type]
+  requirements:
+    - requirement one
+    - requirement two
+```
 
 ---
 
-- **Thinking:** [X] rounds
-- **Token Impact:** +8% vs standard
-- **Parse Reliability:** High
+**Format:** YAML (Optimized for human-editable templates)
+**Token Impact:** +3-7% overhead
 
 ---
 
-**Context:**
-- JSON for programmatic use
-- RCAF maintains simplicity
+**CLEAR Evaluation: 42/50 (Grade: A)**
+
+• **Correctness:** 8/10 - Clear structure
+• **Logic/Coverage:** 8/10 - All elements present
+• **Expression:** 8/10 - Readable hierarchy
+• **Arrangement:** 9/10 - Clean organization
+• **Reuse:** 9/10 - Template-optimized
+
+---
+
+[AI System details...]
 ```
 
 ---
@@ -300,8 +355,15 @@ Format: [Output requirements]
 
 ---
 
+- **Format Selected:** [Standard/JSON/YAML]
+- **Token Overhead:** [Baseline/+X%]
+- **Format Rationale:** [Why this format]
+
+---
+
 **Historical Context:**
 - Framework success: RCAF [X]%, CRAFT [Y]%
+- Format usage: Standard [X]%, JSON [Y]%, YAML [Z]%
 - Average CLEAR scores: [X]/50
 - Pattern note: [If relevant]
 - User control: 100% maintained
@@ -312,6 +374,8 @@ Format: [Output requirements]
 - Use dashes (-) for all bullet points
 - Include CLEAR improvements
 - Note framework selection reasoning
+- Note format selection reasoning
+- Display token impacts
 - Maintain vertical list format
 - Group related items together
 - Include pattern context at end
@@ -328,7 +392,7 @@ Format: [Output requirements]
 
 ```markdown
 **CLEAR Evaluation Summary:**
-━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━
 Before: [X]/50 (Grade: C)
 After: [Y]/50 (Grade: A)
 Improvement: +[Z] points ↗
@@ -341,10 +405,11 @@ Dimension Breakdown:
 • Reuse: [X] → [Y] (+[Z])
 
 Framework: RCAF (chosen for clarity)
-━━━━━━━━━━━━━━━━━━
+Format: [Standard/JSON/YAML] (chosen for [reason])
+━━━━━━━━━━━━━━━━━
 ```
 
-### Framework Comparison Display
+### Framework & Format Comparison Display
 
 ```markdown
 **Framework Analysis:**
@@ -356,6 +421,16 @@ Framework: RCAF (chosen for clarity)
 │ Simplicity  │ 10/10  │ 6/10   │ RCAF ✓  │
 │ CLEAR Score │ 43/50  │ 41/50  │ RCAF ✓  │
 └─────────────┴────────┴────────┴─────────┘
+
+**Format Analysis:**
+┌─────────────┬──────────┬────────┬────────┬─────────┐
+│ Aspect      │ Standard │ JSON   │ YAML   │ Choice  │
+├─────────────┼──────────┼────────┼────────┼─────────┤
+│ Readability │ 10/10    │ 7/10   │ 9/10   │ Std ✓   │
+│ Structure   │ 7/10     │ 10/10  │ 9/10   │         │
+│ Tokens      │ Baseline │ +5-10% │ +3-7%  │ Std ✓   │
+│ Reusability │ 7/10     │ 9/10   │ 10/10  │         │
+└─────────────┴──────────┴────────┴────────┴─────────┘
 ```
 
 ---
@@ -368,13 +443,15 @@ Framework: RCAF (chosen for clarity)
 
 - [ ] **Content First:** Enhanced prompt at top
 - [ ] **Framework Clear:** RCAF or CRAFT identified
-- [ ] **Format Options:** Standard and JSON listed
+- [ ] **Format Options:** Standard, JSON, and YAML listed
+- [ ] **Token Impacts:** Shown for each format
 - [ ] **CLEAR Scores:** All 5 dimensions scored
 - [ ] **Grade Shown:** Letter grade displayed
 - [ ] **AI System Header:** Bold and at bottom
 - [ ] **Thinking Rounds:** User selection documented
 - [ ] **ATLAS Phases:** Processing documented
 - [ ] **Challenge Applied:** Decision noted
+- [ ] **Format Selection:** Choice and rationale shown
 - [ ] **Pattern Context:** Historical data shown
 - [ ] **Dividers Present:** Between major sections
 - [ ] **Vertical Format:** Details use dashes
@@ -385,6 +462,8 @@ Framework: RCAF (chosen for clarity)
 - [ ] **CLEAR ≥ 35/50:** Minimum quality met?
 - [ ] **Expression ≥ 7/10:** Clear enough?
 - [ ] **Framework Fit:** RCAF for simple, CRAFT for complex?
+- [ ] **Format Appropriate:** Matches use case?
+- [ ] **Token Overhead Acceptable:** Under 10% average?
 - [ ] **Completeness:** All elements present?
 - [ ] **Structure:** Proper hierarchy?
 - [ ] **Enhancement:** Clear improvement shown?
@@ -407,15 +486,17 @@ Framework: RCAF (chosen for clarity)
 | **Missing Framework ID** | Not specified | Label RCAF/CRAFT | Understanding |
 | **Poor Structure** | Sections blend | Add dividers | +2 Arrangement |
 | **No Improvement** | Final only | Show before/after | Context |
+| **Missing Format Options** | Only one shown | Show all three | User choice |
+| **No Token Impact** | Format without overhead | Add percentages | Informed decision |
 
 ### REPAIR Protocol for Artifacts
 
 ```markdown
-**R** - Recognize: Missing CLEAR scores identified
-**E** - Explain: Reduces transparency and trust
-**P** - Propose: Add full CLEAR evaluation
-**A** - Apply: Include all 5 dimensions
-**I** - Iterate: Verify scores accurate
+**R** - Recognize: Missing format options identified
+**E** - Explain: Reduces user choice and transparency
+**P** - Propose: Add all three format options with impacts
+**A** - Apply: Include Standard/JSON/YAML
+**I** - Iterate: Verify token percentages accurate
 **R** - Record: Note for future prevention
 ```
 
@@ -425,7 +506,7 @@ Framework: RCAF (chosen for clarity)
 
 ## 10. 💡 EXAMPLES
 
-### Example 1: Perfect RCAF Artifact
+### Example 1: Perfect RCAF Artifact with Format Options
 
 ```markdown
 **Role:** Data scientist with machine learning expertise specializing in churn prediction.
@@ -437,7 +518,8 @@ Framework: RCAF (chosen for clarity)
 
 **Format Options:**
 • Standard format (shown above)
-• JSON format available (`$json`) - For automated processing
+• JSON format available (`$json`) - For automated processing (+7% tokens)
+• YAML format available (`$yaml`) - For template systems (+5% tokens)
 
 ---
 
@@ -473,67 +555,149 @@ Framework: RCAF (chosen for clarity)
 
 ---
 
+- **Format Selected:** Standard
+- **Token Overhead:** Baseline
+- **Format Rationale:** Maximum clarity for human review
+
+---
+
 **Historical Context:**
 - RCAF used 75% for data science prompts
+- Format preference: Standard 60%, YAML 25%, JSON 15%
 - Average CLEAR with RCAF: 43/50
 - Framework preference established
 - All options always available
 ```
 
-### Example 2: Interactive Mode Result with CLEAR
+### Example 2: YAML Format Selection
 
 ```markdown
-**Role:** UX designer specializing in mobile app onboarding.
-**Context:** Banking app for ages 25-45, requiring KYC compliance, targeting <20% drop-off.
-**Action:** Design intuitive 5-minute onboarding flow that ensures regulatory compliance.
-**Format:** User flow diagram with screen descriptions and success metrics.
+```yaml
+role: UX designer specializing in mobile app onboarding
+context: Banking app for ages 25-45, requiring KYC compliance, targeting <20% drop-off
+action:
+  primary: Design intuitive 5-minute onboarding flow
+  requirements:
+    - ensure regulatory compliance
+    - minimize friction points
+format:
+  type: user_flow_diagram
+  include:
+    - screen descriptions
+    - success metrics
+    - drop-off analysis
+```
 
 ---
 
 **Format Options:**
-• Standard format (shown above)
-• JSON format (`$json`) - For development handoff
+• Standard format - Natural language
+• JSON format (`$json`) - API integration (+8% tokens)
+• YAML format (shown above) - Template-ready (+4% tokens) ✓
 
 ---
 
-**CLEAR Evaluation: 45/50 (Grade: A+)**
+**CLEAR Evaluation: 43/50 (Grade: A)**
 
 • **Correctness:** 9/10 - Requirements complete
-• **Logic/Coverage:** 9/10 - Full flow covered
-• **Expression:** 10/10 - Perfectly clear
+• **Logic/Coverage:** 8/10 - Full flow covered
+• **Expression:** 8/10 - Clear hierarchy
 • **Arrangement:** 9/10 - Logical structure
-• **Reuse:** 8/10 - Industry applicable
+• **Reuse:** 9/10 - Perfect for templates ⭐
 
-**Strong Framework:** RCAF delivers exceptional clarity
+**Strong Framework:** RCAF delivers clarity in YAML format
 
 ---
 
 **AI System:**
 
 - **Framework:** ATLAS + RCAF
-- **Mode:** $interactive
-- **Complexity:** Medium-High
+- **Mode:** $yaml
+- **Complexity:** Medium
 
 ---
 
-- **Thinking:** 5 rounds (user selected)
-- **Discovery:** 4 RCAF questions asked
+- **Thinking:** 4 rounds (user selected)
 - **ATLAS:** A→T→L→A→S
+- **Why RCAF:** Structured simplicity
 
 ---
 
 - **Challenge:** Simplified from 10 steps to 5
-- **Enhancement:** 25/50 → 45/50 (+20 points)
+- **Enhancement:** 25/50 → 43/50 (+18 points)
 - **Context:** UX flow optimization
 
 ---
 
+- **Format Selected:** YAML
+- **Token Overhead:** +4%
+- **Format Rationale:** Reusable template structure
+
+---
+
 **Session Learning:**
-- Interactive + RCAF = High CLEAR scores
-- Expression consistently 9-10/10 with RCAF
-- User prefers clarity over coverage
+- YAML + RCAF = High reusability (9/10)
+- Expression maintains 8/10 with YAML
+- User prefers templates for UX flows
+```
+
+### Example 3: Format Comparison in Artifact
+
+```markdown
+**Role:** Marketing analyst with SEO expertise.
+**Context:** Tech blog with 50K monthly visitors needing traffic growth.
+**Action:** Audit content and identify top 5 improvement opportunities.
+**Format:** Actionable report with priority rankings.
+
+---
+
+**Alternative Formats Available:**
+
+**Standard (shown above):**
+- Clarity: 10/10
+- Tokens: Baseline
+- Best for: Executive review
+
+**JSON:**
+```json
+{
+  "role": "Marketing analyst with SEO expertise",
+  "context": "Tech blog with 50K monthly visitors needing traffic growth",
+  "action": "Audit content and identify top 5 improvement opportunities",
+  "format": "Actionable report with priority rankings"
+}
+```
+- Structure: 10/10
+- Tokens: +6%
+- Best for: API integration
+
+**YAML:**
+```yaml
+role: Marketing analyst with SEO expertise
+context: Tech blog with 50K monthly visitors needing traffic growth
+action: Audit content and identify top 5 improvement opportunities
+format: Actionable report with priority rankings
+```
+- Readability: 9/10
+- Tokens: +3%
+- Best for: Template systems
+
+---
+
+**CLEAR Evaluation: 42/50 (Grade: A)**
+[Standard format scores shown]
+
+• **Correctness:** 9/10 - Complete requirements
+• **Logic/Coverage:** 8/10 - All aspects covered
+• **Expression:** 9/10 - Very clear
+• **Arrangement:** 8/10 - Well structured
+• **Reuse:** 8/10 - Adaptable
+
+---
+
+[AI System details...]
 ```
 
 ---
 
-*Artifact excellence through systematic structure, RCAF clarity, and CLEAR transparency. Every artifact shows framework, scores, and improvement. AI System details always at bottom with proper formatting. Pattern context enriches without restricting. All format options always available. User control absolute. For complete format specifications, see Prompt - JSON Format Guide.md*
+*Artifact excellence through systematic structure, RCAF clarity, and CLEAR transparency. Every artifact shows framework, scores, and improvement. All three format options (Standard/JSON/YAML) always presented with token impacts. AI System details always at bottom with proper formatting. Pattern context enriches without restricting. User control absolute. For complete format specifications, see Prompt - JSON Format Guide.md and Prompt - YAML Format Guide.md*

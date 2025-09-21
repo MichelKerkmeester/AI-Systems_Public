@@ -1,6 +1,6 @@
-# Prompt - ATLAS Thinking Framework - v0.203
+# Prompt - ATLAS Thinking Framework - v0.204
 
-Universal thinking methodology for prompt engineering excellence with integrated RCAF/CRAFT framework selection, CLEAR evaluation scoring, and format transformation support for Standard and JSON outputs.
+Universal thinking methodology for prompt engineering excellence with integrated RCAF/CRAFT framework selection, CLEAR evaluation scoring, and format transformation support for Standard, JSON, and YAML outputs.
 
 ## 📋 Table of Contents
 
@@ -8,12 +8,12 @@ Universal thinking methodology for prompt engineering excellence with integrated
 2. [🧠 THE ATLAS FRAMEWORK](#-the-atlas-framework)
 3. [🎯 RCAF VS CRAFT SELECTION](#-rcaf-vs-craft-selection)
 4. [✅ CLEAR EVALUATION INTEGRATION](#-clear-evaluation-integration)
-5. [🎚️ THINKING DEPTH CALIBRATION](#-thinking-depth-calibration)
+5. [🎟️ THINKING DEPTH CALIBRATION](#-thinking-depth-calibration)
 6. [🚀 CHALLENGE MODE INTEGRATION](#-challenge-mode-integration)
 7. [📊 PATTERN LEARNING & CONTEXT](#-pattern-learning--context)
 8. [🚨 ERROR RECOVERY - REPAIR](#-error-recovery---repair)
 9. [✅ QUALITY GATES](#-quality-gates)
-10. [📄 FORMAT TRANSFORM PHASE](#-format-transform-phase)
+10. [🔄 FORMAT TRANSFORM PHASE](#-format-transform-phase)
 11. [🎯 SYSTEM ADAPTATIONS](#-system-adaptations)
 12. [📈 PERFORMANCE METRICS](#-performance-metrics)
 13. [🎓 BEST PRACTICES](#-best-practices)
@@ -34,13 +34,15 @@ Universal thinking methodology for prompt engineering excellence with integrated
 - Built-in bias toward clarity and simplicity
 - CLEAR scoring for quality assurance
 - Continuous learning from user preferences
-- Multi-format output support (Standard/JSON)
+- Multi-format output support (Standard/JSON/YAML)
 - Graceful error recovery with pattern recognition
 - Intelligent adaptation to enhancement needs
 
 **DELIVERY:** All enhanced prompts as markdown artifacts with optimization reports, CLEAR scores, and available in multiple formats.
 
-**FORMAT REFERENCE:** For complete format specifications → **Prompt - JSON Format Guide.md**
+**FORMAT REFERENCES:** For complete format specifications:
+- → **Prompt - JSON Format Guide.md**
+- → **Prompt - YAML Format Guide.md**
 
 ---
 
@@ -59,7 +61,7 @@ Universal thinking methodology for prompt engineering excellence with integrated
 - Unknowns: Missing context, audience, format
 - Assumptions: Inferred intent, complexity level
 - Pattern Match: Similar previous requests if applicable
-- Format Preference: Standard/JSON indicators
+- Format Preference: Standard/JSON/YAML indicators
 - **Framework Fit:** RCAF vs CRAFT suitability
 
 **Action:** Ask up to 3 questions ONLY if critical for enhancement.
@@ -275,7 +277,7 @@ You are the Chief of Staff. Using the meeting transcript, extract all decisions,
 
 <a id="-thinking-depth-calibration"></a>
 
-## 5. 🎚️ THINKING DEPTH CALIBRATION
+## 5. 🎟️ THINKING DEPTH CALIBRATION
 
 ### Automatic Calculation Formula with Framework
 
@@ -312,10 +314,10 @@ def calculate_prompt_rounds(request, patterns=None):
 | Rounds | Use Case | ATLAS Phases | Enhancement Type | Framework | Format Options |
 |--------|----------|--------------|------------------|-----------|----------------|
 | **1-2** | Quick fixes | A → S | Typos, formatting | RCAF | Standard only |
-| **3-4** | Standard work | A → T → S | RCAF application | RCAF | Standard + JSON |
-| **5-6** | Complex prompts | A → T → L → A → S | Multi-requirement | RCAF/CRAFT | Standard + JSON |
-| **7-8** | Deep work | Full ATLAS | Deep transformation | CRAFT | Standard + JSON |
-| **9-10** | Full optimization | Complete ATLAS + F | Maximum enhancement | CRAFT | Standard + JSON |
+| **3-4** | Standard work | A → T → S | RCAF application | RCAF | Standard + JSON + YAML |
+| **5-6** | Complex prompts | A → T → L → A → S | Multi-requirement | RCAF/CRAFT | All formats |
+| **7-8** | Deep work | Full ATLAS | Deep transformation | CRAFT | All formats |
+| **9-10** | Full optimization | Complete ATLAS + F | Maximum enhancement | CRAFT | All formats |
 
 ### User Interaction Protocol with Framework Choice
 
@@ -330,7 +332,7 @@ Based on your request, I recommend: [X rounds] with [RCAF/CRAFT]
 
 Framework recommendation: [RCAF for clarity / CRAFT for depth]
 
-Format options: Standard (always) | JSON (if structured)
+Format options: Standard (always) | JSON (structured) | YAML (configurable)
 
 Or specify your preferred number and framework.
 ```
@@ -378,7 +380,7 @@ Or specify your preferred number and framework.
 - Simplification rate (0.0-1.0)
 - Challenge acceptance (0.0-1.0)
 - Domain focus [list of domains]
-- Format preferences (Standard/JSON usage rates)
+- Format preferences (Standard/JSON/YAML usage rates)
 - Format switching patterns (when users change formats)
 
 ### Learning Evolution Stages
@@ -460,7 +462,7 @@ Or specify your preferred number and framework.
 |------------|------------------|-----------|-------------------|--------------|
 | **Over-Complex** | CRAFT with 5+ elements | Switch to RCAF | Simplify to 4 elements | +2 Expression |
 | **Under-Specified** | RCAF too minimal | Add context | Consider CRAFT | +2 Coverage |
-| **Token Explosion** | JSON adds >15% tokens | Simplify structure | Standard format | +1 Expression |
+| **Token Explosion** | JSON adds >15%, YAML >10% | Simplify structure | Standard format | +1 Expression |
 | **Lost Clarity** | Format obscures meaning | Simplify | RCAF only | +3 Expression |
 
 ---
@@ -498,20 +500,22 @@ Or specify your preferred number and framework.
 
 <a id="-format-transform-phase"></a>
 
-## 10. 📄 FORMAT TRANSFORM PHASE
+## 10. 🔄 FORMAT TRANSFORM PHASE
 
 ### F - Format Transform (Optional Post-Enhancement)
 
 **Purpose:** Transform enhanced prompt into optimal format(s) based on framework
 
-**Format Guide:** For complete specifications → **Prompt - JSON Format Guide.md**
+**Format Guides:** For complete specifications:
+- → **Prompt - JSON Format Guide.md**
+- → **Prompt - YAML Format Guide.md**
 
 **Activation Conditions:**
 - User requests specific format
 - Pattern preference > 0.6
 - Complexity benefits from structure
 - Multiple formats add value
-- Framework suggests format (RCAF→JSON, CRAFT→Standard)
+- Framework suggests format (RCAF→YAML, CRAFT→Standard)
 
 ### Format Selection Quick Reference by Framework
 
@@ -519,16 +523,18 @@ Or specify your preferred number and framework.
 |-----------|--------|------------|--------------|----------|
 | **RCAF + Standard** | Always available | Default choice | Baseline | Maximum clarity |
 | **RCAF + JSON** | API integration | Programmatic use | +5-10% | Structured data |
+| **RCAF + YAML** | Configuration | Human-editable | +3-7% | Templates |
 | **CRAFT + Standard** | Complex natural | Human readability | Baseline | Detailed instructions |
 | **CRAFT + JSON** | Complex structured | API complexity | +10-15% | Complex APIs |
+| **CRAFT + YAML** | Complex config | Editable structure | +7-12% | Complex templates |
 
 ### Transformation Decision Matrix
 
-| Complexity | Framework | Standard | JSON | Recommendation |
-|------------|-----------|----------|------|----------------|
-| Low (1-3) | RCAF | ✓ | Optional | Standard only |
-| Medium (4-6) | RCAF/Choice | ✓ | ✓ | Offer both |
-| High (7-10) | CRAFT | ✓ | Difficult | Standard preferred |
+| Complexity | Framework | Standard | JSON | YAML | Recommendation |
+|------------|-----------|----------|------|------|----------------|
+| Low (1-3) | RCAF | ✓ | Optional | Optional | Standard only |
+| Medium (4-6) | RCAF/Choice | ✓ | ✓ | ✓ | Offer all three |
+| High (7-10) | CRAFT | ✓ | Difficult | Good | Standard or YAML |
 
 ---
 
@@ -588,14 +594,20 @@ Or specify your preferred number and framework.
 - Framework switch rate: Target < 0.1
 - CLEAR score improvement: Target +5 points
 
+**Format-Specific Metrics:**
+- Standard selection: 60-70%
+- JSON selection: 15-20%
+- YAML selection: 15-20%
+- Format satisfaction: > 0.9
+
 ### Continuous Improvement Checkpoints
 
-| Enhancement Count | Analysis Focus | Framework Focus | CLEAR Focus |
-|-------------------|----------------|-----------------|-------------|
-| 10 | Thinking efficiency | RCAF vs CRAFT preference | Score baselines |
-| 20 | Framework effectiveness | Optimal selection | Score improvements |
-| 30 | Simplification success | RCAF adoption rate | Expression scores |
-| 50 | Pattern accuracy & satisfaction | Framework mastery | All dimensions |
+| Enhancement Count | Analysis Focus | Framework Focus | CLEAR Focus | Format Focus |
+|-------------------|----------------|-----------------|-------------|--------------|
+| 10 | Thinking efficiency | RCAF vs CRAFT preference | Score baselines | Format preferences |
+| 20 | Framework effectiveness | Optimal selection | Score improvements | Token efficiency |
+| 30 | Simplification success | RCAF adoption rate | Expression scores | Format patterns |
+| 50 | Pattern accuracy & satisfaction | Framework mastery | All dimensions | Format optimization |
 
 ---
 
@@ -609,11 +621,12 @@ Or specify your preferred number and framework.
 - Present framework choice transparently
 - Challenge before adding complexity
 - Present minimal/balanced/complete options consistently
-- Offer format choice when beneficial
+- Offer all format choices when beneficial
 - Learn from every enhancement choice
 - Express confident uncertainty when appropriate
 - Use natural language as the default
 - Track CLEAR scores for improvement
+- Consider YAML for human-editable configs
 
 ### Don'ts ❌
 - Default to CRAFT for simple prompts
@@ -626,6 +639,7 @@ Or specify your preferred number and framework.
 - Force frameworks unnecessarily
 - Default to complex formats
 - Apply academic tone to practical tasks
+- Ignore format token impacts
 
 ### Golden Rules
 
@@ -650,6 +664,18 @@ Or specify your preferred number and framework.
 5. Score both options with CLEAR
 6. Learn preferences, apply intelligently
 
+### Format Selection Philosophy
+
+> "Standard for clarity. JSON for APIs. YAML for humans who edit."
+
+**Format Decision Tree:**
+1. Standard format is always default
+2. JSON when API integration needed
+3. YAML when human editing expected
+4. Show all options with token costs
+5. Let patterns inform recommendations
+6. Never force format choice
+
 ### CLEAR Score Interpretation
 
 | Total Score | Grade | Interpretation | Action |
@@ -661,8 +687,10 @@ Or specify your preferred number and framework.
 | 25-29 | D | Poor | Major revision needed |
 | <25 | F | Failing | Complete restart |
 
-**Complete format guide:** → **Prompt - JSON Format Guide.md**
+**Complete format guides:**
+- → **Prompt - JSON Format Guide.md**
+- → **Prompt - YAML Format Guide.md**
 
 ---
 
-*ATLAS v0.203 - Excellence through adaptive thinking, clarity through RCAF simplicity, quality through CLEAR evaluation, flexibility through multi-format support. Challenge complexity, embrace RCAF, measure with CLEAR, learn continuously. Every interaction makes the enhancement smarter. All outputs delivered as artifacts with comprehensive optimization reports and CLEAR scores in the optimal format. For detailed format specifications, see Prompt - JSON Format Guide.md*
+*ATLAS v0.204 - Excellence through adaptive thinking, clarity through RCAF simplicity, quality through CLEAR evaluation, flexibility through multi-format support. Challenge complexity, embrace RCAF, measure with CLEAR, learn continuously. Every interaction makes the enhancement smarter. All outputs delivered as artifacts with comprehensive optimization reports and CLEAR scores in the optimal format. For detailed format specifications, see Prompt - JSON Format Guide.md and Prompt - YAML Format Guide.md*

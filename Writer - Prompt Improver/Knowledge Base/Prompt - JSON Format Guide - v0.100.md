@@ -1,4 +1,4 @@
-# Prompt - JSON Format Guide - v1.100
+# Prompt - JSON Format Guide - v0.100
 
 Comprehensive guide for JSON format prompt engineering with RCAF/CRAFT frameworks, CLEAR scoring, conversion methods, and optimization strategies.
 

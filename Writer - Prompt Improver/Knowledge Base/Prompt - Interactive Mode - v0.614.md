@@ -1,6 +1,6 @@
 # Prompt - Interactive Mode - v0.614
 
-Conversational prompt enhancement through RCAF-structured discovery, CLEAR scoring, ATLAS-guided questions, intelligent challenge-based refinement, and multi-format delivery options.
+Conversational prompt enhancement through RCAF-structured discovery, CLEAR scoring, ATLAS-guided questions, intelligent challenge-based refinement, and multi-format delivery options including Standard, JSON, and YAML.
 
 ## 📋 Table of Contents
 
@@ -8,8 +8,8 @@ Conversational prompt enhancement through RCAF-structured discovery, CLEAR scori
 2. [🧠 ATLAS-POWERED CONVERSATION WITH RCAF](#-atlas-powered-conversation-with-rcaf)
 3. [❓ RCAF-STRUCTURED QUESTIONS](#-rcaf-structured-questions)
 4. [✅ CLEAR SCORING INTEGRATION](#-clear-scoring-integration)
-5. [📄 FORMAT SELECTION PHASE](#-format-selection-phase)
-6. [📄 PATTERN RECOGNITION](#-pattern-recognition)
+5. [🔄 FORMAT SELECTION PHASE](#-format-selection-phase)
+6. [🔄 PATTERN RECOGNITION](#-pattern-recognition)
 7. [📊 SMART GAP ANALYSIS WITH CLEAR](#-smart-gap-analysis-with-clear)
 8. [💬 FORMATTING STANDARDS](#-formatting-standards)
 9. [💡 EXAMPLES](#-examples)
@@ -47,16 +47,18 @@ async def check_interactive_triggers(user_input):
     
     # Search conversation history for patterns
     patterns = await conversation_search(
-        query="interactive mode RCAF CLEAR scores",
+        query="interactive mode RCAF CLEAR scores format YAML JSON",
         max_results=5
     )
     
     if patterns:
         avg_clear = get_average_clear_score(patterns)
+        format_pref = get_format_preference(patterns)
+        
         if avg_clear < 35:
             return auto_activate_with_rcaf()
         elif avg_clear > 45:
-            return skip_to_quick_enhancement()
+            return skip_to_quick_enhancement(format_pref)
         
     return apply_standard_triggers(user_input)
 ```
@@ -73,6 +75,7 @@ async def check_interactive_triggers(user_input):
 
 [Pattern: You average CLEAR 43/50 with RCAF]
 [Framework: RCAF recommended for clarity]
+[Format preference: Standard (60%), YAML (25%), JSON (15%)]
 ```
 
 ---
@@ -100,7 +103,7 @@ async def track_conversation_context():
     
     recent = await recent_chats(n=5)
     patterns = await conversation_search(
-        query="RCAF CLEAR expertise domain format",
+        query="RCAF CLEAR expertise domain format standard json yaml",
         max_results=10
     )
     
@@ -109,6 +112,7 @@ async def track_conversation_context():
         'domain_indicators': extract_domains(patterns),
         'avg_clear_scores': calculate_clear_average(patterns),
         'framework_preference': detect_framework_preference(patterns),
+        'format_preference': detect_format_preference(patterns),
         'weak_dimensions': identify_typical_weaknesses(patterns)
     }
 ```
@@ -136,6 +140,7 @@ I'll ask 2-4 focused questions to build each element.
 
 [Your average CLEAR score: 42/50]
 [Framework preference: RCAF (85% of time)]
+[Format preference: Standard (60%), YAML (25%), JSON (15%)]
 
 **What prompt would you like to enhance today?**
 
@@ -189,6 +194,7 @@ I'll ask 2-4 focused questions to build each element.
 [Targeting: Arrangement]
 
 [Previous CLEAR scores: E:8 C:7 L:8 A:9 R:7]
+[Typical format: Standard (60%), YAML (25%), JSON (15%)]
 ```
 
 ### Adaptive Question Selection with CLEAR
@@ -199,11 +205,12 @@ async def select_rcaf_questions(user_input, context):
     
     # Get historical CLEAR patterns
     history = await conversation_search(
-        query=f"CLEAR scores dimensions {extract_keywords(user_input)}",
+        query=f"CLEAR scores dimensions format preferences {extract_keywords(user_input)}",
         max_results=5
     )
     
     weak_dimensions = identify_weak_dimensions(history)
+    format_history = extract_format_preferences(history)
     
     questions = []
     
@@ -216,6 +223,9 @@ async def select_rcaf_questions(user_input, context):
         questions.append(create_action_question_for_coverage())
     if 'arrangement' in weak_dimensions:
         questions.append(create_format_question_for_structure())
+    
+    # Add format preference hint
+    questions.append(f"[Previous format preference: {format_history}]")
     
     return format_questions_professionally(questions[:4])
 ```
@@ -238,6 +248,10 @@ Current Elements:
 ✗ **Format:** [Pending] [A: --/10]
 
 **Projected CLEAR: 35-40/50**
+**Format Impact:**
+- Standard: +0 tokens (baseline)
+- YAML: +3-7% tokens (human-editable)
+- JSON: +5-10% tokens (API-ready)
 
 What specific action should the analyst take?
 ```
@@ -245,8 +259,8 @@ What specific action should the analyst take?
 ### CLEAR Projection After Each Answer
 
 ```python
-def project_clear_score(rcaf_elements):
-    """Project CLEAR score based on current RCAF elements"""
+def project_clear_score(rcaf_elements, format='standard'):
+    """Project CLEAR score based on current RCAF elements and format"""
     
     projections = {
         'correctness': 6 + (2 if rcaf_elements.context else 0),
@@ -256,28 +270,42 @@ def project_clear_score(rcaf_elements):
         'reuse': 7  # Base reusability for RCAF
     }
     
+    # Format adjustments
+    if format == 'json':
+        projections['correctness'] += 1
+        projections['logic'] += 1
+        projections['expression'] -= 1
+        projections['arrangement'] += 1
+        projections['reuse'] += 1
+    elif format == 'yaml':
+        projections['logic'] += 1
+        projections['arrangement'] += 1
+        projections['reuse'] += 1
+    
     total = sum(projections.values())
     return total, projections
 ```
 
 ### Gap-to-CLEAR Mapping
 
-| Missing RCAF Element | CLEAR Impact | Score Loss | Priority |
-|---------------------|--------------|------------|----------|
-| Role | Expression -2, Correctness -1 | -3 points | High |
-| Context | Correctness -2, Logic -1 | -3 points | High |
-| Action | Logic -3, Correctness -1 | -4 points | Critical |
-| Format | Arrangement -2, Expression -1 | -3 points | Medium |
+| Missing RCAF Element | CLEAR Impact | Score Loss | Priority | Format Recommendation |
+|---------------------|--------------|------------|----------|----------------------|
+| Role | Expression -2, Correctness -1 | -3 points | High | Any |
+| Context | Correctness -2, Logic -1 | -3 points | High | Any |
+| Action | Logic -3, Correctness -1 | -4 points | Critical | Standard/YAML |
+| Format | Arrangement -2, Expression -1 | -3 points | Medium | YAML for structure |
 
 ---
 
 <a id="-format-selection-phase"></a>
 
-## 5. 📄 FORMAT SELECTION PHASE
+## 5. 🔄 FORMAT SELECTION PHASE
 
 ### Phase 5: Format Selection with CLEAR Consideration
 
-**Format Guide Reference:** For complete specifications → **Prompt - JSON Format Guide.md**
+**Format Guide References:** For complete specifications:
+- → **Prompt - JSON Format Guide.md**
+- → **Prompt - YAML Format Guide.md**
 
 #### Simple Prompts (CLEAR projected 40+)
 ```markdown
@@ -288,6 +316,7 @@ def project_clear_score(rcaf_elements):
 • Good Coverage (8/10)
 
 Your prompt is clear, so I'll create it in standard format.
+[History suggests you also like YAML (25% of time)]
 
 **How many thinking rounds should I use? (1-10, or 'auto')**
 • Recommendation: **3 rounds** for RCAF application
@@ -303,11 +332,20 @@ Your prompt is clear, so I'll create it in standard format.
 **Format options for optimization:**
 
 **1. Standard** - Natural RCAF (projected: 37/50)
-**2. JSON** - Structured RCAF (projected: 38/50)
+   - Token impact: Baseline
+   - Best for: Human readability
+
+**2. YAML** - Structured RCAF (projected: 38/50)
+   - Token impact: +3-7%
+   - Best for: Configuration, templates
+
+**3. JSON** - API-ready RCAF (projected: 38/50)
+   - Token impact: +5-10%
+   - Best for: System integration
 
 **Which format would you prefer?**
 
-[Pattern: You typically score +2 with JSON format]
+[Pattern: You typically score +1 with structured formats]
 ```
 
 #### Complex Prompts (Multiple requirements)
@@ -322,18 +360,20 @@ This has complexity that might benefit from CRAFT.
 
 **Format options:**
 **1. Standard** - Maximum readability
-**2. JSON** - Structured for APIs
+**2. YAML** - Human-editable structure
+**3. JSON** - API integration
 
-**Your preferences? (Framework 1-2, Format 1-2)**
+**Your preferences? (Framework 1-2, Format 1-3)**
 
 [Pattern: RCAF typically scores +2 in Expression]
+[Format history: Standard 60%, YAML 25%, JSON 15%]
 ```
 
 ---
 
 <a id="-pattern-recognition"></a>
 
-## 6. 📄 PATTERN RECOGNITION
+## 6. 🔄 PATTERN RECOGNITION
 
 ### Interactive Pattern Categories with CLEAR Tracking
 
@@ -353,6 +393,12 @@ async def recognize_interaction_patterns():
         max_results=10
     )
     
+    # Get format patterns
+    format_patterns = await conversation_search(
+        query="format standard json yaml preference",
+        max_results=10
+    )
+    
     return {
         'rcaf_patterns': {
             'typical_roles': extract_common_roles(rcaf_patterns),
@@ -364,17 +410,23 @@ async def recognize_interaction_patterns():
             'avg_scores': calculate_dimension_averages(clear_patterns),
             'weak_dimensions': identify_consistent_lows(clear_patterns),
             'improvement_rates': track_score_improvements(clear_patterns)
+        },
+        'format_patterns': {
+            'standard_rate': 0.60,
+            'json_rate': 0.15,
+            'yaml_rate': 0.25,
+            'context_preferences': analyze_format_contexts(format_patterns)
         }
     }
 ```
 
 ### Pattern Confidence Levels with CLEAR History
 
-| Interactions | Stage | Confidence | Behavior | CLEAR Learning |
-|-------------|-------|------------|----------|----------------|
-| < 3 | Low | 30% | Ask all RCAF questions | Track initial scores |
-| 3-5 | Medium | 60% | Skip strong elements | Predict weak dimensions |
-| > 5 | High | 90% | Target weak areas only | Auto-optimize for weak dims |
+| Interactions | Stage | Confidence | Behavior | CLEAR Learning | Format Learning |
+|-------------|-------|------------|----------|----------------|-----------------|
+| < 3 | Low | 30% | Ask all RCAF questions | Track initial scores | Note format choices |
+| 3-5 | Medium | 60% | Skip strong elements | Predict weak dimensions | Suggest preferred format |
+| > 5 | High | 90% | Target weak areas only | Auto-optimize for weak dims | Default to preference |
 
 ---
 
@@ -384,21 +436,22 @@ async def recognize_interaction_patterns():
 
 ### RCAF Gap Check with CLEAR Impact
 
-| RCAF Element | Check Function | CLEAR Impact | Priority | Challenge |
-|--------------|---------------|--------------|----------|-----------|
-| **Role Definition** | Has specific role? | E:+2, C:+1 | Critical | "Generic role work?" |
-| **Context Clarity** | Has essential context? | C:+2, L:+1 | Critical | "Minimal context?" |
-| **Action Specificity** | Has measurable action? | L:+3, C:+1 | Critical | "Simpler task?" |
-| **Format Structure** | Has output format? | A:+2, R:+1 | High | "Default format?" |
+| RCAF Element | Check Function | CLEAR Impact | Priority | Challenge | Format Hint |
+|--------------|---------------|--------------|----------|-----------|-------------|
+| **Role Definition** | Has specific role? | E:+2, C:+1 | Critical | "Generic role work?" | Any format |
+| **Context Clarity** | Has essential context? | C:+2, L:+1 | Critical | "Minimal context?" | YAML for structure |
+| **Action Specificity** | Has measurable action? | L:+3, C:+1 | Critical | "Simpler task?" | Standard/YAML |
+| **Format Structure** | Has output format? | A:+2, R:+1 | High | "Default format?" | YAML for templates |
 
 ### CLEAR-Driven Gap Filling
 
 ```python
 async def smart_gap_analysis(rcaf_elements):
-    """Identify gaps and CLEAR impact"""
+    """Identify gaps and CLEAR impact with format recommendations"""
     
     gaps = []
     clear_impact = {'C': 0, 'L': 0, 'E': 0, 'A': 0, 'R': 0}
+    format_rec = 'standard'  # default
     
     if not rcaf_elements.role:
         gaps.append({
@@ -413,11 +466,13 @@ async def smart_gap_analysis(rcaf_elements):
             'question': 'What essential background is needed?',
             'clear_gain': {'C': 2, 'L': 1}
         })
+        # Complex context might benefit from YAML
+        format_rec = 'yaml' if complexity > 5 else format_rec
         
     # Calculate total potential CLEAR improvement
     total_gain = sum(gap['clear_gain'].values() for gap in gaps)
     
-    return gaps, total_gain
+    return gaps, total_gain, format_rec
 ```
 
 ---
@@ -432,15 +487,20 @@ async def smart_gap_analysis(rcaf_elements):
 ```markdown
 **Building your RCAF prompt:**
 
-━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━
 **✓ Role:** [Collected role]
 **✓ Context:** [Collected context]
 **○ Action:** [Pending]
 **○ Format:** [Pending]
-━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━
 
 **Projected CLEAR: [X]/50**
 • Next improvement: +[X] points
+
+**Format options available:**
+- Standard (baseline)
+- YAML (+3-7% tokens)
+- JSON (+5-10% tokens)
 
 **Next question:**
 ```
@@ -455,6 +515,11 @@ async def smart_gap_analysis(rcaf_elements):
 • **R**euse: [X]/10
 
 **Total: [X]/50 → Target: 40+/50**
+
+**Format adjustments:**
+- Standard: No change
+- YAML: +1 Arrangement, +1 Reuse
+- JSON: +1 Correctness, -1 Expression
 ```
 
 #### Professional Transition Phrases
@@ -462,6 +527,7 @@ async def smart_gap_analysis(rcaf_elements):
 - **After Role:** "Excellent! Now for essential context..."
 - **After Context:** "Great! What specific action needed?"
 - **After Action:** "Perfect! How should the output look?"
+- **Before Format:** "Consider your deployment needs..."
 - **Concluding:** "RCAF complete! Projected CLEAR: [X]/50"
 
 ---
@@ -523,15 +589,27 @@ System:
 • Arrangement: 9/10
 • Reuse: 8/10
 
+**Format options:**
+1. **Standard** - Natural language (projected: 43/50)
+2. **YAML** - Template-ready (+4% tokens, projected: 42/50)
+3. **JSON** - API-ready (+7% tokens, projected: 41/50)
+
+Which format? (1-3)
+
+User: 2
+
+System:
+**Great choice! YAML is perfect for reusable templates.**
+
 **How many thinking rounds? (1-10)**
 Recommendation: **3 rounds** for RCAF optimization
 
 User: 3
 
-System: [Creates enhanced RCAF prompt with CLEAR scores]
+System: [Creates enhanced RCAF prompt in YAML format with CLEAR scores]
 ```
 
-### Example 2: Complex Discovery with Framework Choice
+### Example 2: Complex Discovery with Framework and Format Choice
 
 ```markdown
 User: $interactive
@@ -568,13 +646,40 @@ Your choice?
 User: RCAF for clarity
 
 System:
-**Perfect! Let's build with RCAF:**
+**Perfect! Let's build with RCAF.**
 
-[Continues with RCAF questions...]
+[Collects RCAF elements...]
 
-Final projected CLEAR: 44/50
-• Strong Expression (10/10)
-• Solid Coverage (8/10)
+**RCAF complete! Now for format:**
+
+**Format comparison for your system:**
+
+**1. Standard** - Natural language
+   - Projected: 43/50
+   - Tokens: Baseline
+   - Best for: Human review
+
+**2. YAML** - Configuration format
+   - Projected: 42/50
+   - Tokens: +5%
+   - Best for: System templates
+
+**3. JSON** - Data interchange
+   - Projected: 41/50
+   - Tokens: +8%
+   - Best for: API integration
+
+Which fits your needs? (1-3)
+
+User: 2 for templates
+
+System:
+**YAML selected - perfect for reusable system templates!**
+
+Final projected CLEAR: 42/50
+• Strong Expression (9/10)
+• Good Coverage (8/10)
+• Excellent Reuse (9/10) ← YAML bonus
 ```
 
 ---
@@ -588,10 +693,12 @@ Final projected CLEAR: 44/50
 **Do's:**
 - Lead with RCAF structure explanation
 - Show CLEAR score projections
+- Display all format options with token impacts
 - Reference patterns as helpful context
 - Challenge for simpler alternatives
 - Display element completion status
 - Celebrate strong scores
+- Explain format trade-offs
 
 **Don'ts:**
 - Ask more than 4 primary questions
@@ -599,26 +706,26 @@ Final projected CLEAR: 44/50
 - Hide CLEAR projections
 - Skip challenge opportunities
 - Overwhelm with metrics
+- Default to complex formats
+- Ignore format preferences
 
-### Adaptive RCAF Strategy
+### Adaptive Format Strategy
 
 ```python
-def adaptive_rcaf_questioning(context, patterns):
-    """Adapt RCAF questions based on context"""
+def adaptive_format_selection(context, patterns):
+    """Adapt format selection based on context"""
     
-    if patterns.clear_avg > 45:
-        # High performer - quick collection
-        return quick_rcaf_questions()
-    
-    elif patterns.weak_dimension == 'expression':
-        # Focus on Role clarity
-        return enhanced_role_questions()
-    
-    elif patterns.weak_dimension == 'correctness':
-        # Focus on Context accuracy
-        return detailed_context_questions()
-    
-    return standard_rcaf_questions()
+    if patterns.format_preference:
+        preferred = patterns.most_used_format
+        
+    if context.api_integration:
+        return recommend_json_with_explanation()
+    elif context.template_system:
+        return recommend_yaml_with_benefits()
+    elif context.human_editing_needed:
+        return recommend_yaml_or_standard()
+    else:
+        return recommend_standard_with_clarity()
 ```
 
 ### CLEAR Optimization During Discovery
@@ -628,6 +735,7 @@ def adaptive_rcaf_questioning(context, patterns):
 3. **Celebrate improvements** - Note score gains
 4. **Explain impact** - Connect elements to scores
 5. **Set expectations** - Show grade targets
+6. **Consider format impact** - Show how format affects scores
 
 ---
 
@@ -637,18 +745,19 @@ def adaptive_rcaf_questioning(context, patterns):
 
 ### Interactive + Other Modes with RCAF
 
-| Combination | Trigger | Behavior | CLEAR Target |
-|-------------|---------|----------|--------------|
-| `$short $interactive` | Quick RCAF discovery | 2 essential questions | 35+/50 |
-| `$improve $interactive` | Full RCAF discovery | All 4 elements | 40+/50 |
-| `$builder $interactive` | RCAF for builders | Platform-aware questions | 40+/50 |
-| `$json $interactive` | RCAF to JSON | Structure-focused | 38+/50 |
+| Combination | Trigger | Behavior | CLEAR Target | Format Default |
+|-------------|---------|----------|--------------|----------------|
+| `$short $interactive` | Quick RCAF discovery | 2 essential questions | 35+/50 | Standard |
+| `$improve $interactive` | Full RCAF discovery | All 4 elements | 40+/50 | Standard/YAML |
+| `$builder $interactive` | RCAF for builders | Platform-aware questions | 40+/50 | YAML |
+| `$json $interactive` | RCAF to JSON | Structure-focused | 38+/50 | JSON |
+| `$yaml $interactive` | RCAF to YAML | Template-focused | 40+/50 | YAML |
 
 ### Combined Mode CLEAR Optimization
 
 ```python
 def handle_combined_mode(primary_mode, interactive=True):
-    """Process combined mode with CLEAR focus"""
+    """Process combined mode with CLEAR and format focus"""
     
     if interactive:
         # Run RCAF discovery
@@ -658,13 +767,21 @@ def handle_combined_mode(primary_mode, interactive=True):
     # Apply primary mode processing
     if primary_mode in ['short', 'improve']:
         result = apply_rcaf_framework(rcaf_elements)
+        format = 'standard'
     elif primary_mode == 'builder':
         result = apply_rcaf_to_builder(rcaf_elements)
+        format = 'yaml'  # Templates preferred
+    elif primary_mode == 'json':
+        result = convert_to_json(rcaf_elements)
+        format = 'json'
+    elif primary_mode == 'yaml':
+        result = convert_to_yaml(rcaf_elements)
+        format = 'yaml'
     
     # Optimize for CLEAR
-    result = optimize_for_clear(result, clear_projection)
+    result = optimize_for_clear(result, clear_projection, format)
     
-    return result, clear_projection
+    return result, clear_projection, format
 ```
 
 ---
@@ -675,13 +792,14 @@ def handle_combined_mode(primary_mode, interactive=True):
 
 ### Interactive Mode Error Recovery with CLEAR
 
-| Error Type | Recognition | RCAF Fix | CLEAR Impact | Recovery |
-|------------|-------------|----------|--------------|----------|
-| **Missing Role** | No expertise defined | Re-ask Role question | E:-2 | Add specific role |
-| **Vague Context** | Unclear background | Clarify Context | C:-2 | Add specifics |
-| **Ambiguous Action** | Multiple interpretations | Refine Action | L:-3 | Single clear task |
-| **No Format** | Output unclear | Define Format | A:-2 | Add structure |
-| **Over-complex** | Too many requirements | Simplify to RCAF | E:-3 | Remove extras |
+| Error Type | Recognition | RCAF Fix | CLEAR Impact | Format Recommendation | Recovery |
+|------------|-------------|----------|--------------|----------------------|----------|
+| **Missing Role** | No expertise defined | Re-ask Role question | E:-2 | Any | Add specific role |
+| **Vague Context** | Unclear background | Clarify Context | C:-2 | YAML for structure | Add specifics |
+| **Ambiguous Action** | Multiple interpretations | Refine Action | L:-3 | Standard | Single clear task |
+| **No Format** | Output unclear | Define Format | A:-2 | YAML for templates | Add structure |
+| **Over-complex** | Too many requirements | Simplify to RCAF | E:-3 | Standard | Remove extras |
+| **Wrong Format** | Mismatch with needs | Suggest alternatives | Various | Varies | Show all options |
 
 ### CLEAR-Based Recovery Strategies
 
@@ -691,8 +809,15 @@ def handle_combined_mode(primary_mode, interactive=True):
 Missing critical RCAF elements:
 • [Element]: Would improve [dimension] by +[X]
 
+**Format consideration:**
+- Current format may be limiting clarity
+- YAML could add +1 to Arrangement
+- Standard might improve Expression by +2
+
 **Let me ask one more question to boost your score:**
 [Targeted question for weak element]
+
+**Would you like to reconsider the format?**
 ```
 
 ---
@@ -707,12 +832,19 @@ Missing critical RCAF elements:
 - RCAF completion rate: Target > 0.9
 - Average questions asked: Target 3-4
 - Challenge acceptance: Target > 0.5
+- Format selection time: Target < 10s
 
 **Quality Metrics (CLEAR-based):**
 - Average CLEAR projection: Target > 40/50
 - Projection accuracy: Target ±3 points
 - Weak dimension improvement: Target +2 minimum
 - Framework selection accuracy: Target > 0.8
+- Format satisfaction: Target > 0.85
+
+**Format Distribution Targets:**
+- Standard: 55-65%
+- YAML: 20-25%
+- JSON: 15-20%
 
 ### Session Tracking with CLEAR
 
@@ -727,6 +859,8 @@ def track_interactive_session():
         'clear_actual': final_score,
         'projection_accuracy': abs(projection - actual),
         'framework_selected': 'RCAF/CRAFT',
+        'format_selected': 'standard/json/yaml',
+        'format_token_overhead': percentage,
         'user_satisfied': boolean
     }
     
@@ -735,13 +869,13 @@ def track_interactive_session():
 
 ### CLEAR Improvement Tracking
 
-| Sessions | Focus Area | CLEAR Target | Success Metric |
-|----------|------------|--------------|----------------|
-| 1-5 | Establish baselines | 35+/50 | Completion rate |
-| 6-10 | Target weak dimensions | 40+/50 | Dimension improvement |
-| 11-15 | Optimize discovery | 42+/50 | Question efficiency |
-| 16+ | Personalized experience | 45+/50 | Satisfaction rate |
+| Sessions | Focus Area | CLEAR Target | Success Metric | Format Learning |
+|----------|------------|--------------|----------------|-----------------|
+| 1-5 | Establish baselines | 35+/50 | Completion rate | Track choices |
+| 6-10 | Target weak dimensions | 40+/50 | Dimension improvement | Note preferences |
+| 11-15 | Optimize discovery | 42+/50 | Question efficiency | Suggest formats |
+| 16+ | Personalized experience | 45+/50 | Satisfaction rate | Apply patterns |
 
 ---
 
-*Interactive Mode with RCAF structure and CLEAR scoring: Conversational excellence through guided discovery. Every interaction builds clear RCAF elements. Every element improves CLEAR scores. Questions are professional and focused. Framework choice is transparent. CLEAR projections guide the conversation. For complete format specifications, see Prompt - JSON Format Guide.md*
+*Interactive Mode with RCAF structure and CLEAR scoring: Conversational excellence through guided discovery. Every interaction builds clear RCAF elements. Every element improves CLEAR scores. Questions are professional and focused. Framework choice is transparent. Format options (Standard/JSON/YAML) are clearly presented with token impacts. CLEAR projections guide the conversation. For complete format specifications, see Prompt - JSON Format Guide.md and Prompt - YAML Format Guide.md*
