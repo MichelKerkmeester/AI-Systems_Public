@@ -1,9 +1,9 @@
-# Product Owner - Template - Ticket Mode - v0.110
+# Product Owner - Template - Ticket Mode - v0.111
 
 ## 📋 TABLE OF CONTENTS
 
 1. [🎫 TICKET MODE OVERVIEW](#1-🎫-ticket-mode-overview)
-2. [🔍 COMPLEXITY AUTO-SCALING](#2-🔍-complexity-auto-scaling)
+2. [📍 COMPLEXITY AUTO-SCALING](#2-📍-complexity-auto-scaling)
 3. [🔵 SIMPLE TICKET TEMPLATE](#3-🔵-simple-ticket-template-2-3-sections-4-6-resolution)
 4. [🔶 STANDARD TICKET TEMPLATE](#4-🔶-standard-ticket-template-4-5-sections-8-12-resolution)
 5. [🔴 COMPLEX TICKET TEMPLATE](#5-🔴-complex-ticket-template-6-8-sections-12-20-resolution)
@@ -22,12 +22,13 @@
 - **Output:** Always as artifact
 - **Thinking Rounds:** 6-10
 - **Challenge Activation:** 6+ rounds
+- **QA Section:** Mandatory for all tickets
 
 ---
 
-<a id="2-🔍-complexity-auto-scaling"></a>
+<a id="2-📍-complexity-auto-scaling"></a>
 
-## 2. 🔍 COMPLEXITY AUTO-SCALING
+## 2. 📍 COMPLEXITY AUTO-SCALING
 
 | Keywords | Complexity | Sections | Resolution Items |
 |----------|------------|----------|------------------|
@@ -47,7 +48,7 @@
 ## 📋 Table of Contents
 - [⌘ About](#⌘-about)
 - [→ Designs & References](#→-designs--references)
-- [❖ Requirements](#❖-requirements)
+- [◆ Requirements](#◆-requirements)
 - [✦ Success Criteria](#✦-success-criteria)
 - [✓ Resolution Checklist](#✓-resolution-checklist)
 
@@ -77,7 +78,7 @@
 
 ---
 
-## ❖ Requirements
+## ◆ Requirements
 
 ### ◻︎ Functional Requirements
 
@@ -99,12 +100,21 @@
 
 ⚠️ Complete all Resolution Checklist items before moving to QA
 
-[ ] Identify root cause through debugging
-[ ] Implement fix with appropriate solution
-[ ] Test fix locally with various scenarios
-[ ] Update unit tests if needed
-[ ] Verify no regressions occur
-[ ] Document fix in PR description
+[] Identify root cause through debugging
+[] Implement fix with appropriate solution
+[] Test fix locally with various scenarios
+[] Update unit tests if needed
+[] Verify no regressions occur
+[] Document fix in PR description
+
+---
+
+◻︎ Quality Assurance
+[] Perform visual regression testing against Figma
+[] Test all interactive elements functionality
+[] Verify responsive behavior on all breakpoints (Partner App only)
+[] Verify on iOS and Android native apps (Creator App only)
+[] Get design approval on implementation from Head of Product
 ```
 
 ---
@@ -119,8 +129,8 @@
 ## 📋 Table of Contents
 - [⌘ About](#⌘-about)
 - [→ Designs & References](#→-designs--references)
-- [❖ Requirements](#❖-requirements)
-- [❖ User Stories](#❖-user-stories)
+- [◆ Requirements](#◆-requirements)
+- [◆ User Stories](#◆-user-stories)
 - [✦ Success Criteria](#✦-success-criteria)
 - [✓ Resolution Checklist](#✓-resolution-checklist)
 - [≈ Dependencies](#≈-dependencies)
@@ -156,7 +166,7 @@
 
 ---
 
-## ❖ Requirements
+## ◆ Requirements
 
 ### ◻︎ Functional Requirements
 
@@ -178,7 +188,7 @@
 
 ---
 
-## ❖ User Stories
+## ◆ User Stories
 
 **As a** [primary user type]
 **I want to** [specific action or capability]
@@ -203,18 +213,27 @@
 
 ⚠️ Complete all Resolution Checklist items before moving to QA
 
-[ ] Implement core functionality per requirements
-[ ] Add comprehensive input validation
-[ ] Handle all identified error cases
-[ ] Write unit tests (>80% coverage)
-[ ] Write integration tests for workflows
-[ ] Update API documentation
-[ ] Add analytics tracking events
-[ ] Perform security review
-[ ] Test on all supported browsers
-[ ] Verify mobile responsiveness
-[ ] Get design approval on implementation
-[ ] Complete code review with team
+[] Implement core functionality per requirements
+[] Add comprehensive input validation
+[] Handle all identified error cases
+[] Write unit tests (>80% coverage)
+[] Write integration tests for workflows
+[] Update API documentation
+[] Add analytics tracking events
+[] Perform security review
+[] Test on all supported browsers
+[] Verify mobile responsiveness
+[] Get design approval on implementation
+[] Complete code review with team
+
+---
+
+◻︎ Quality Assurance
+[] Perform visual regression testing against Figma
+[] Test all interactive elements functionality
+[] Verify responsive behavior on all breakpoints (Partner App only)
+[] Verify on iOS and Android native apps (Creator App only)
+[] Get design approval on implementation from Head of Product
 
 ---
 
@@ -238,10 +257,10 @@
 ## 📋 Table of Contents
 - [⌘ About](#⌘-about)
 - [→ Designs & References](#→-designs--references)
-- [❖ Requirements](#❖-requirements)
-- [❖ Technical Architecture](#❖-technical-architecture)
-- [❖ User Stories](#❖-user-stories)
-- [❖ Migration Strategy](#❖-migration-strategy)
+- [◆ Requirements](#◆-requirements)
+- [◆ Technical Architecture](#◆-technical-architecture)
+- [◆ User Stories](#◆-user-stories)
+- [◆ Migration Strategy](#◆-migration-strategy)
 - [∅ Risks & Mitigations](#∅-risks--mitigations)
 - [✦ Success Criteria](#✦-success-criteria)
 - [✓ Resolution Checklist](#✓-resolution-checklist)
@@ -283,7 +302,7 @@
 
 ---
 
-## ❖ Requirements
+## ◆ Requirements
 
 ### ◻︎ Functional Requirements
 
@@ -308,7 +327,7 @@
 
 ---
 
-## ❖ Technical Architecture
+## ◆ Technical Architecture
 
 ### ◻︎ Current State
 
@@ -349,7 +368,7 @@
 
 ---
 
-## ❖ User Stories
+## ◆ User Stories
 
 **Epic: [Epic Name]**
 
@@ -370,7 +389,7 @@
 
 ---
 
-## ❖ Migration Strategy
+## ◆ Migration Strategy
 
 ### ◻︎ Phase 1: Preparation (Week 1-2)
 ---
@@ -390,7 +409,6 @@
 - Support plan development
 
 ### ◻︎ Phase 2: Implementation (Week 3-6)
----
 ---
 #### ◊ Core Deployment
 - Platform components deployment
@@ -453,32 +471,41 @@
 ⚠️ Complete all Resolution Checklist items before moving to QA
 
 ### ◻︎ Planning & Design
-[ ] Complete technical design review
-[ ] Obtain stakeholder approval
-[ ] Finalize migration strategy
-[ ] Document rollback procedures
+[] Complete technical design review
+[] Obtain stakeholder approval
+[] Finalize migration strategy
+[] Document rollback procedures
 
 ### ◻︎ Development & Testing
-[ ] Set up development environment
-[ ] Implement Phase 1 components
-[ ] Create comprehensive test suite
-[ ] Perform security audit
-[ ] Complete load testing
-[ ] Document all APIs
+[] Set up development environment
+[] Implement Phase 1 components
+[] Create comprehensive test suite
+[] Perform security audit
+[] Complete load testing
+[] Document all APIs
 
 ### ◻︎ Integration & Validation
-[ ] Conduct integration testing
-[ ] Validate data migration scripts
-[ ] Perform user acceptance testing
-[ ] Verify monitoring coverage
+[] Conduct integration testing
+[] Validate data migration scripts
+[] Perform user acceptance testing
+[] Verify monitoring coverage
 
 ### ◻︎ Deployment & Operations
-[ ] Create deployment runbooks
-[ ] Train support team
-[ ] Execute staged deployment
-[ ] Monitor system metrics
-[ ] Complete performance optimization
-[ ] Update all documentation
+[] Create deployment runbooks
+[] Train support team
+[] Execute staged deployment
+[] Monitor system metrics
+[] Complete performance optimization
+[] Update all documentation
+
+---
+
+◻︎ Quality Assurance
+[] Perform visual regression testing against Figma
+[] Test all interactive elements functionality
+[] Verify responsive behavior on all breakpoints (Partner App only)
+[] Verify on iOS and Android native apps (Creator App only)
+[] Get design approval on implementation from Head of Product
 
 ---
 
@@ -504,13 +531,14 @@
 2. **Table of Contents** - sections only (no subsections)
 3. **Key Problems/Reasons** - NOT in TOC, formatted as H3 with →
 4. **QA Warning** - Above resolution checklist
-5. **Symbol usage** - As per hierarchy
-6. **Dividers** - Use `---` between ALL major sections
+5. **Quality Assurance** - Separate section after Resolution Checklist
+6. **Symbol usage** - As per hierarchy
+7. **Dividers** - Use `---` between ALL major sections
 
 ### Symbol Reference
 
 - **⌘** - About section (H1)
-- **❖** - Main sections (H2) 
+- **◆** - Main sections (H2) 
 - **◻︎** - Sub-sections (H3)
 - **◊** - Children of Sub-sections (H4)
 - **—** - Bold text sub-headings within H4 sub-section groups (Not a H[x] heading)
@@ -519,6 +547,7 @@
 - **✓** - Resolution Checklist
 - **≈** - Dependencies
 - **∅** - Risks
+- **◻︎** - Quality Assurance header
 
 ### Formatting Standards
 
@@ -526,9 +555,21 @@
 - Tables for complex comparisons
 - Always include "to be added" for placeholder links
 - Use `**—**` for bold sub-headings within H4 sub-section groups
-- Use `- ` (hyphen + space) for all regular list items
-- Use `[ ]` for checkboxes in Resolution Checklist (no hyphen before)
+- Use `-` (hyphen + space) for all regular list items
+- Use `[]` for checkboxes in Resolution Checklist and QA (no spaces)
     - Each checkbox item on its own line
+
+### Quality Assurance Format
+
+**Always include after Resolution Checklist:**
+```markdown
+◻︎ Quality Assurance
+[] Perform visual regression testing against Figma
+[] Test all interactive elements functionality
+[] Verify responsive behavior on all breakpoints (Partner App only)
+[] Verify on iOS and Android native apps (Creator App only)
+[] Get design approval on implementation from Head of Product
+```
 
 ### Correct Formatting Examples
 
@@ -558,20 +599,20 @@
 **Correct Resolution Checklist Format:**
 ```markdown
 ### ◻︎ Planning & Design
-[ ] Complete technical design review
-[ ] Obtain stakeholder approval
-[ ] Finalize migration strategy
+[] Complete technical design review
+[] Obtain stakeholder approval
+[] Finalize migration strategy
 ```
 
 **Incorrect Formats:**
 ```markdown
 ### ◊ Functional Requirements
 
-— First requirement  ❌ (em dash for list items)
-* Second requirement ❌ (asterisk for list items)
+— First requirement  ✗ (em dash for list items)
+* Second requirement ✗ (asterisk for list items)
 
-- [ ] Checkbox item  ❌ (hyphen before checkbox)
-#### — Subheading  ❌ (H4 with em dash instead of bold)
+[ ] Checkbox item  ✗ (space in checkbox)
+#### — Subheading  ✗ (H4 with em dash instead of bold)
 ```
 
 ---
@@ -621,7 +662,7 @@ Two quick questions:
 
 [WAIT FOR ANSWERS]
 
-[THEN CREATE TICKET]
+[THEN CREATE TICKET WITH QA SECTION INCLUDED]
 ```
 
 ### Complexity Detection
@@ -640,6 +681,30 @@ def detect_complexity(request):
         return 'simple'
 ```
 
+### QA Inclusion Verification
+
+```python
+def create_ticket(complexity, details):
+    """Ensure QA section is always included"""
+    
+    ticket = generate_ticket_content(complexity, details)
+    
+    # Always append QA section
+    qa_section = """
+◻︎ Quality Assurance
+[] Perform visual regression testing against Figma
+[] Test all interactive elements functionality
+[] Verify responsive behavior on all breakpoints (Partner App only)
+[] Verify on iOS and Android native apps (Creator App only)
+[] Get design approval on implementation from Head of Product
+"""
+    
+    if qa_section not in ticket:
+        ticket += qa_section
+    
+    return ticket
+```
+
 ---
 
-*All tickets delivered as artifacts with auto-scaled complexity. Always ask thinking rounds and wait for response. Challenge when 6+ rounds. Use proper symbols and formatting. Include AI System footer with process documentation
+*All tickets delivered as artifacts with auto-scaled complexity. Always ask thinking rounds and wait for response. Challenge when 6+ rounds. Use proper symbols and formatting. Quality Assurance section is mandatory for all tickets. Include AI System footer with process documentation.*

@@ -1,9 +1,9 @@
-# Product Owner - Artifact Standards - v0.132
+# Product Owner - Artifact Standards - v0.133
 
 ## TABLE OF CONTENTS
-1. [📦 DELIVERY STANDARDS](#1-📦-delivery-standards)
+1. [🔦 DELIVERY STANDARDS](#1-🔦-delivery-standards)
 2. [📋 MANDATORY STRUCTURE & FORMAT](#2-📋-mandatory-structure--format)
-3. [🔄 SECTION DIVIDERS](#3-🔄-section-dividers)
+3. [📄 SECTION DIVIDERS](#3-📄-section-dividers)
 4. [💎 PROFESSIONAL REQUIREMENTS](#4-💎-professional-requirements)
 5. [🎯 MODE TEMPLATE REFERENCES](#5-🎯-mode-template-references)
 6. [✅ QUALITY CHECKLIST](#6-✅-quality-checklist)
@@ -11,9 +11,9 @@
 
 ---
 
-<a id="1-📦-delivery-standards"></a>
+<a id="1-🔦-delivery-standards"></a>
 
-## 1. 📦 DELIVERY STANDARDS
+## 1. 🔦 DELIVERY STANDARDS
 
 **🚨 CRITICAL:**
 - Always use `text/markdown` artifact type for all deliverables!
@@ -101,9 +101,9 @@
 
 ---
 
-<a id="3-🔄-section-dividers"></a>
+<a id="3-📄-section-dividers"></a>
 
-## 3. 🔄 SECTION DIVIDERS
+## 3. 📄 SECTION DIVIDERS
 
 ### Horizontal Dividers (`---`)
 **Use Between:**
@@ -156,7 +156,7 @@
 4. **Relevance:** On-topic
 5. **Structure:** Logical flow
 
-### Visual Hierarchy (Updated Symbol System)
+### Visual Hierarchy
 - **⌘ (H1):** "About" section header
 - **❖ (H1):** Main section headers
 - **◻︎ (H2):** Sub-section headers  
@@ -175,7 +175,7 @@
 
 ### Critical Formatting for ◊ Headers (H3)
 - **Always use H3 formatting** for ◊ symbol
-- **Always use em dash (–)** for list items under ◊ headers
+- **Always use em dash (—)** for list items under ◊ headers
 - **Each item on its own line** - never all on one line
 - **No dividers** between ◊ header and its items
 
@@ -183,14 +183,14 @@
 ```markdown
 ### ◊ Functional Requirements
 
-– First requirement
-– Second requirement
-– Third requirement
+— First requirement
+— Second requirement
+— Third requirement
 ```
 
 **Incorrect:**
 ```markdown
-### ◊ Functional Requirements – First – Second – Third
+### ◊ Functional Requirements — First — Second — Third
 ```
 
 ---
@@ -200,37 +200,42 @@
 ## 5. 🎯 MODE TEMPLATE REFERENCES
 
 ### Ticket Mode
-**Template:** `Product Owner - Template - Ticket Mode - v0.106.md`
+**Template:** `Product Owner - Template - Ticket Mode.md`
 **Structure:**
 1. Epic/Story/Task
 2. Summary
 3. Acceptance Criteria
 4. Implementation Notes
-5. Optional Sections
+5. Quality Assurance
+6. Optional Sections
 
 **Key Format Rules:**
 - Use hierarchical symbols (⌘, ❖, ◻︎, ◊, —)
-- Use `–` for items under **◊** headers
+- Use `—` for items under **◊** headers
 - Each item on separate line
 - No dividers within subsections
+- **Checkboxes:** Use `[]` format (no spaces)
+- **QA Section:** Mandatory with 5 standard items
 
 ### Epic Mode
-**Template:** `Product Owner - Template - Epic Mode - v0.102.md`
+**Template:** `Product Owner - Template - Epic Mode.md`
 **Structure:**
 1. Strategic Overview
 2. Success Metrics (OKRs/KPIs)
 3. Timeline & Phases
 4. Child Tickets
 5. Dependencies & Risks
+6. Quality Assurance
 
 **Key Format Rules:**
 - Use hierarchical symbols (⌘, ❖, ◻︎, ◊, —)
-- Use `–` for items under **◊** headers
+- Use `—` for items under **◊** headers
 - Maintain hierarchical structure
 - Status notes where applicable
+- **QA Section:** Required for all epics
 
 ### Doc Mode
-**Template:** `Product Owner - Template - Doc Mode - v0.106.md`
+**Template:** `Product Owner - Template - Doc Mode.md`
 **Structure:**
 1. Purpose
 2. Scope
@@ -240,9 +245,10 @@
 
 **Key Format Rules:**
 - Use hierarchical symbols (⌘, ❖, ◻︎, ◊, —)
-- Use `–` for items under **◊** headers
+- Use `—` for items under **◊** headers
 - Use `* * *` for doc separators
 - Clear section hierarchy
+- **Line Breaks:** Critical for Situation/Action formatting
 
 ---
 
@@ -251,73 +257,87 @@
 ## 6. ✅ QUALITY CHECKLIST
 
 ### Pre-Creation (Critical)
-- [ ] User responded to thinking rounds?
-- [ ] User responded to challenge (if shown)?
-- [ ] All required inputs received?
-- [ ] Historical context searched?
-- [ ] Options presented to user?
-- [ ] User made selection?
+- [] User responded to thinking rounds?
+- [] User responded to challenge (if shown)?
+- [] All required inputs received?
+- [] Historical context searched?
+- [] Options presented to user?
+- [] User made selection?
 
 ### Content Validation
-- [ ] Correct artifact type (`text/markdown`)?
-- [ ] AI System header included?
-- [ ] Thinking rounds documented?
-- [ ] ATLAS phases noted?
-- [ ] Challenge application documented?
-- [ ] Historical context shown?
-- [ ] Session learning captured?
+- [] Correct artifact type (`text/markdown`)?
+- [] AI System header included?
+- [] Thinking rounds documented?
+- [] ATLAS phases noted?
+- [] Challenge application documented?
+- [] Historical context shown?
+- [] Session learning captured?
 
 ### Symbol Hierarchy Validation
-- [ ] **⌘** used for "About" sections (H1)?
-- [ ] **❖** used for main headers (H1)?
-- [ ] **◻︎** used for sub-sections (H2)?
-- [ ] **◊** used for components (H3)?
-- [ ] **—** used for details (H4)?
-- [ ] **→** used for references?
-- [ ] **✦** used for success criteria?
-- [ ] **✓** used for checklists and metrics?
-- [ ] **≈** used for dependencies?
-- [ ] **∅** used for risks?
+- [] **⌘** used for "About" sections (H1)?
+- [] **❖** used for main headers (H1)?
+- [] **◻︎** used for sub-sections (H2)?
+- [] **◊** used for components (H3)?
+- [] **—** used for details (H4)?
+- [] **→** used for references?
+- [] **✦** used for success criteria?
+- [] **✓** used for checklists and metrics?
+- [] **≈** used for dependencies?
+- [] **∅** used for risks?
 
 ### Format Validation
-- [ ] **Em dash (–)** used for list items under headers?
-- [ ] **Each item on separate line?**
-- [ ] **No unnecessary dividers in subsections?**
-- [ ] **Proper header hierarchy maintained?**
+- [] **Em dash (—)** used for list items under headers?
+- [] **Each item on separate line?**
+- [] **No unnecessary dividers in subsections?**
+- [] **Proper header hierarchy maintained?**
 
 ### Mode-Specific Validation
 **Tickets:**
-- [ ] Resolution checklist present with ✓?
-- [ ] QA warning included?
-- [ ] Scope labeled?
-- [ ] Requirements properly formatted with –?
+- [] Resolution checklist present with ✓?
+- [] QA section with 5 standard items?
+- [] Scope labeled?
+- [] Requirements properly formatted with —?
+- [] Checkboxes use `[]` format (no spaces)?
 
 **Epics:**
-- [ ] OKRs/Success Metrics with ✓?
-- [ ] Timeline clear?
-- [ ] Child tickets listed?
-- [ ] Strategic value stated?
-- [ ] Sub-features use – on separate lines?
+- [] OKRs/Success Metrics with ✓?
+- [] Timeline clear?
+- [] Child tickets listed?
+- [] Strategic value stated?
+- [] Sub-features use — on separate lines?
+- [] QA section included?
 
 **Docs:**
-- [ ] Format appropriate?
-- [ ] Structure logical?
-- [ ] References complete with →?
-- [ ] All sections properly hierarchical?
+- [] Format appropriate?
+- [] Structure logical?
+- [] References complete with →?
+- [] All sections properly hierarchical?
+- [] Situation/Action on separate lines?
+
+### Quality Assurance Requirements
+**All Modes Must Include:**
+```markdown
+◻︎ Quality Assurance
+[] Perform visual regression testing against Figma
+[] Test all interactive elements functionality
+[] Verify responsive behavior on all breakpoints (Partner App only)
+[] Verify on iOS and Android native apps (Creator App only)
+[] Get design approval on implementation from Head of Product
+```
 
 ### Format Verification
-- [ ] Details at bottom only?
-- [ ] Vertical formatting used?
-- [ ] Dash bullets (`-`) used in AI System footer?
-- [ ] Dividers properly placed?
-- [ ] Spacing correct?
+- [] Details at bottom only?
+- [] Vertical formatting used?
+- [] Dash bullets (`-`) used in AI System footer?
+- [] Dividers properly placed?
+- [] Spacing correct?
 
 ### Delivery Check
-- [ ] Single artifact?
-- [ ] No mixed content?
-- [ ] User confirmation noted?
-- [ ] Process transparent?
-- [ ] Options documented?
+- [] Single artifact?
+- [] No mixed content?
+- [] User confirmation noted?
+- [] Process transparent?
+- [] Options documented?
 
 ---
 
@@ -334,6 +354,22 @@
 2. ⌘ for About, ❖ for H1, ◻︎ for H2, ◊ for H3, — for H4
 3. Verify all sections updated
 4. Check header levels match symbols
+
+#### Error: Checkbox Format
+**Detection:** Spaces in checkboxes `[ ]` instead of `[]`
+**Recovery:**
+1. Find all instances with spaces
+2. Replace with no-space format `[]`
+3. Verify functionality maintained
+4. Check all templates updated
+
+#### Error: Missing QA Section
+**Detection:** No Quality Assurance checklist
+**Recovery:**
+1. Add standard QA section to all tickets/epics
+2. Include 5 mandatory items
+3. Place after main content sections
+4. Use proper checkbox format `[]`
 
 #### Error: Improper Header Hierarchy
 **Detection:** Symbols don't match header levels
@@ -374,7 +410,7 @@
 3. Verify vertical format
 
 #### Error: Missing Mode-Specific Elements
-**Detection:** No OKRs in epic, no QA warning in ticket
+**Detection:** No OKRs in epic, no QA in ticket
 **Recovery:**
 1. Add required elements
 2. Verify against template
@@ -387,7 +423,8 @@
 4. **Validate** with checklist
 5. **Document** all decisions
 6. **Verify formatting** - em dash on separate lines
+7. **Include QA** section in all modes
 
 ---
 
-*All deliverables follow these standards. User control maintained at all times. Historical patterns inform but never restrict. Process transparency required. Quality through consistency. Epic mode requires strategic focus and clear phasing. Updated symbol hierarchy ensures clear visual structure. Always use – for items under headers on separate lines.*
+*All deliverables follow these standards. User control maintained at all times. Historical patterns inform but never restrict. Process transparency required. Quality through consistency. Epic mode requires strategic focus and clear phasing. Updated symbol hierarchy ensures clear visual structure. Always use — for items under headers on separate lines. Checkboxes use `[]` format without spaces. Quality Assurance section mandatory for all tickets and epics.*

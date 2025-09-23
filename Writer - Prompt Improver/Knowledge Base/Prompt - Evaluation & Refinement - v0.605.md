@@ -1,4 +1,4 @@
-# Prompt - Evaluation & Refinement - v0.604
+# Prompt - Evaluation & Refinement - v0.605
 
 Systematic quality assessment and improvement for optimizing prompts through CLEAR evaluation as primary method, RCAF framework preference, ATLAS-powered refinement, and multi-format support including Standard, JSON, and YAML.
 
@@ -8,11 +8,11 @@ Systematic quality assessment and improvement for optimizing prompts through CLE
 2. [⚡ QUICK EVAL WITH CLEAR](#-quick-eval-with-clear)
 3. [📊 FULL EVALUATION PROCESS](#-full-evaluation-process)
 4. [🎯 RCAF VS CRAFT EVALUATION](#-rcaf-vs-craft-evaluation)
-5. [🔄 FORMAT EVALUATION](#-format-evaluation)
+5. [📄 FORMAT EVALUATION](#-format-evaluation)
 6. [🧠 ATLAS-POWERED REFINEMENT](#-atlas-powered-refinement)
 7. [🔄 PATTERN-BASED REFINEMENT](#-pattern-based-refinement)
 8. [🚀 CHALLENGE-BASED REFINEMENT](#-challenge-based-refinement)
-9. [📝 REFINEMENT PATTERNS](#-refinement-patterns)
+9. [🔍 REFINEMENT PATTERNS](#-refinement-patterns)
 10. [💡 EXAMPLES](#-examples)
 11. [📈 PERFORMANCE METRICS](#-performance-metrics)
 12. [🎓 KEY PRINCIPLES](#-key-principles)
@@ -23,11 +23,33 @@ Systematic quality assessment and improvement for optimizing prompts through CLE
 
 ## 1. ✅ CLEAR EVALUATION SYSTEM (PRIMARY)
 
-### The CLEAR Framework
+### The CLEAR Framework with Mandatory Prerequisites [UPDATED]
 
 **Correctness, Logic/Coverage, Expression, Arrangement, Reuse**
 
 CLEAR is the primary evaluation method for all prompt assessments. Each dimension is scored 1-10, with a total possible score of 50.
+
+**CRITICAL PREREQUISITE:** Before ANY evaluation, thinking rounds MUST be collected.
+
+```python
+def validate_evaluation_prerequisites():
+    """Mandatory checks before any evaluation"""
+    
+    prerequisites = {
+        'thinking_rounds': self.thinking_rounds is not None,
+        'artifact_ready': self.artifact_format == 'text/markdown',
+        'user_consent': self.has_user_input
+    }
+    
+    if not all(prerequisites.values()):
+        failed = [k for k, v in prerequisites.items() if not v]
+        print(f"CANNOT EVALUATE. Missing: {failed}")
+        print("How many thinking rounds should I use? (1-10)")
+        print("WAITING FOR YOUR INPUT...")
+        return False
+    
+    return True
+```
 
 ### Detailed Scoring Rubric
 
@@ -93,11 +115,15 @@ CLEAR is the primary evaluation method for all prompt assessments. Each dimensio
 
 ## 2. ⚡ QUICK EVAL WITH CLEAR
 
-### Rapid CLEAR Assessment (30 seconds)
+### Rapid CLEAR Assessment with Mandatory Setup [UPDATED]
 
 ```python
 def quick_clear_eval(prompt, format='standard'):
     """Quick CLEAR scoring for rapid assessment"""
+    
+    # CRITICAL CHECKPOINT
+    if not validate_evaluation_prerequisites():
+        return None  # Cannot proceed without prerequisites
     
     scores = {
         'correctness': score_requirements_captured(prompt),  # 1-10
@@ -122,20 +148,27 @@ def quick_clear_eval(prompt, format='standard'):
     total = sum(scores.values())
     weakest = min(scores, key=scores.get)
     
-    return {
+    result = {
         'total': total,
         'grade': get_grade(total),
         'scores': scores,
         'priority_fix': weakest,
         'framework_rec': 'RCAF' if total < 35 else 'Current',
-        'format_rec': recommend_format(scores)
+        'format_rec': recommend_format(scores),
+        'thinking_rounds': self.thinking_rounds  # Include rounds used
     }
+    
+    # CRITICAL: Must deliver as artifact
+    return create_evaluation_artifact(result)
 ```
 
-### Quick CLEAR Report Template
+### Quick CLEAR Report Template [UPDATED]
 
 ```markdown
 **QUICK CLEAR EVALUATION: [X]/50 (Grade: [A-F])**
+
+[✓ Thinking rounds: [X] used]
+[✓ Artifact format: Markdown]
 
 📊 **Scores:**
 • Correctness: [X]/10
@@ -156,17 +189,19 @@ def quick_clear_eval(prompt, format='standard'):
 **Quick Win:** [One immediate improvement]
 
 Pattern: [User typically scores X in this dimension]
+
+**Refinement Ready:** Specify thinking rounds for enhancement
 ```
 
 ### Quick Fix Matrix by CLEAR Dimension
 
-| Weak Dimension | Quick Fix | Framework Switch | Format Recommendation | Expected Gain |
-|----------------|-----------|------------------|----------------------|---------------|
-| Correctness | Add verification steps | Consider CRAFT | JSON for precision | +2-3 points |
-| Logic/Coverage | Fill requirement gaps | Consider CRAFT | YAML for structure | +2-3 points |
-| Expression | Simplify with RCAF | Switch to RCAF | Standard for clarity | +3-4 points |
-| Arrangement | Apply RCAF structure | Switch to RCAF | YAML for hierarchy | +2-3 points |
-| Reuse | Parameterize elements | Either framework | YAML for templates | +2-3 points |
+| Weak Dimension | Quick Fix | Framework Switch | Format Recommendation | Expected Gain | Checkpoint |
+|----------------|-----------|------------------|----------------------|---------------|------------|
+| Correctness | Add verification steps | Consider CRAFT | JSON for precision | +2-3 points | Rounds needed |
+| Logic/Coverage | Fill requirement gaps | Consider CRAFT | YAML for structure | +2-3 points | Rounds needed |
+| Expression | Simplify with RCAF | Switch to RCAF | Standard for clarity | +3-4 points | Rounds needed |
+| Arrangement | Apply RCAF structure | Switch to RCAF | YAML for hierarchy | +2-3 points | Rounds needed |
+| Reuse | Parameterize elements | Either framework | YAML for templates | +2-3 points | Rounds needed |
 
 ---
 
@@ -174,10 +209,29 @@ Pattern: [User typically scores X in this dimension]
 
 ## 3. 📊 FULL EVALUATION PROCESS
 
-### Comprehensive CLEAR Evaluation (2-3 minutes)
+### Comprehensive CLEAR Evaluation with Checkpoints [UPDATED]
+
+#### Step 0: Prerequisite Collection [NEW]
+```markdown
+**BEFORE EVALUATION:**
+
+How many thinking rounds should I use for this evaluation? (1-10)
+
+Based on complexity, I recommend: [X] rounds
+- Simple eval: 1-2 rounds
+- Standard eval: 3-4 rounds
+- Deep analysis: 5-6 rounds
+
+Please specify your preferred number:
+
+[WAITING FOR INPUT - Cannot evaluate without this]
+```
 
 #### Step 1: Baseline CLEAR Scoring
 ```markdown
+[✓ Thinking rounds: [X] collected]
+[✓ Artifact format: Ready]
+
 **BASELINE CLEAR SCORES:**
 • C (Correctness): [X]/10 - [specific issues]
 • L (Logic/Coverage): [X]/10 - [gaps identified]
@@ -230,6 +284,8 @@ Alternative Formats:
 ```markdown
 **PROJECTED IMPROVEMENTS:**
 
+[Based on [X] thinking rounds]
+
 With RCAF + [Format]:
 • C: [Current] → [Projected] (+X)
 • L: [Current] → [Projected] (+X)
@@ -244,12 +300,15 @@ With CRAFT + [Format]:
 **Best Path:** [RCAF/CRAFT] + [Format] for [total gain]
 ```
 
-### Full Evaluation Report Template
+### Full Evaluation Report Template [UPDATED]
 
 ```markdown
 **COMPREHENSIVE CLEAR EVALUATION**
 
-━━━━━━━━━━━━━━━━━
+[✓ Thinking rounds: [X] applied]
+[✓ Delivered as artifact]
+
+┌─────────────────
 **Current State: [X]/50 (Grade: [A-F])**
 **Format: [Standard/JSON/YAML]**
 
@@ -284,7 +343,9 @@ Switch Benefit: +[X] points, +[X]% tokens
 [Apply RCAF / Enhance with CRAFT / Change format]
 
 **Expected Outcome: [X]/50 → [Y]/50**
-━━━━━━━━━━━━━━━━━
+
+**Ready for Refinement:** Confirm thinking rounds to proceed
+└─────────────────
 ```
 
 ---
@@ -293,21 +354,27 @@ Switch Benefit: +[X] points, +[X]% tokens
 
 ## 4. 🎯 RCAF VS CRAFT EVALUATION
 
-### Framework Comparison Scoring
+### Framework Comparison Scoring with Prerequisites [UPDATED]
 
-| Aspect | RCAF Impact | CRAFT Impact | Decision Factor |
-|--------|-------------|--------------|-----------------|
-| **Correctness** | +0 to +1 | +1 to +2 | Detail needs |
-| **Logic/Coverage** | -1 to 0 | +1 to +2 | Completeness needs |
-| **Expression** | +2 to +3 | -1 to 0 | Clarity priority |
-| **Arrangement** | +1 to +2 | 0 to +1 | Simplicity helps |
-| **Reuse** | +1 to +2 | 0 to +1 | Cleaner templates |
+| Aspect | RCAF Impact | CRAFT Impact | Decision Factor | Checkpoint |
+|--------|-------------|--------------|-----------------|------------|
+| **Correctness** | +0 to +1 | +1 to +2 | Detail needs | Rounds required |
+| **Logic/Coverage** | -1 to 0 | +1 to +2 | Completeness needs | Rounds required |
+| **Expression** | +2 to +3 | -1 to 0 | Clarity priority | Rounds required |
+| **Arrangement** | +1 to +2 | 0 to +1 | Simplicity helps | Rounds required |
+| **Reuse** | +1 to +2 | 0 to +1 | Cleaner templates | Rounds required |
 
-### Framework Selection Based on CLEAR
+### Framework Selection Based on CLEAR [UPDATED]
 
 ```python
 def select_framework_by_clear(current_scores, format='standard'):
-    """Choose framework based on CLEAR weaknesses and format"""
+    """Choose framework based on CLEAR weaknesses"""
+    
+    # CRITICAL CHECKPOINT
+    if not self.thinking_rounds:
+        print("ERROR: Need thinking rounds first")
+        collect_thinking_rounds()
+        return None
     
     if current_scores['expression'] < 7:
         return 'RCAF', 'Low expression score needs simplicity'
@@ -330,32 +397,34 @@ def select_framework_by_clear(current_scores, format='standard'):
 
 ### RCAF vs CRAFT Decision Matrix
 
-| Current CLEAR | Best Framework | Best Format | Rationale | Expected Gain |
-|---------------|---------------|-------------|-----------|---------------|
-| < 30/50 | RCAF | Standard | Need clarity foundation | +8-12 points |
-| 30-35/50 | RCAF | Standard/YAML | Simplification priority | +5-8 points |
-| 35-40/50 | User choice | All viable | Both frameworks work | +3-5 points |
-| 40-45/50 | Current | Current | Working well | +2-3 points |
-| > 45/50 | Current | Current | Excellent already | +0-2 points |
+| Current CLEAR | Best Framework | Best Format | Rationale | Expected Gain | Prerequisites |
+|---------------|---------------|-------------|-----------|---------------|--------------|
+| < 30/50 | RCAF | Standard | Need clarity foundation | +8-12 points | Rounds mandatory |
+| 30-35/50 | RCAF | Standard/YAML | Simplification priority | +5-8 points | Rounds mandatory |
+| 35-40/50 | User choice | All viable | Both frameworks work | +3-5 points | Rounds mandatory |
+| 40-45/50 | Current | Current | Working well | +2-3 points | Rounds mandatory |
+| > 45/50 | Current | Current | Excellent already | +0-2 points | Rounds verified |
 
 ---
 
 <a id="-format-evaluation"></a>
 
-## 5. 🔄 FORMAT EVALUATION
+## 5. 📄 FORMAT EVALUATION
 
-### Format Impact on CLEAR Scores
+### Format Impact on CLEAR Scores with Validation [UPDATED]
 
-| Format | Correctness | Logic | Expression | Arrangement | Reuse | Typical Total | Token Overhead |
-|--------|-------------|-------|------------|-------------|-------|---------------|----------------|
-| **Standard** | 0 | 0 | +1 | 0 | 0 | Baseline | 0% |
-| **YAML** | 0 | +1 | 0 | +1 | +1 | +3 net | +3-7% |
-| **JSON** | +1 | +1 | -1 | +1 | +1 | +3 net | +5-10% |
+| Format | Correctness | Logic | Expression | Arrangement | Reuse | Typical Total | Token Overhead | Prerequisite |
+|--------|-------------|-------|------------|-------------|-------|---------------|----------------|--------------|
+| **Standard** | 0 | 0 | +1 | 0 | 0 | Baseline | 0% | Rounds |
+| **YAML** | 0 | +1 | 0 | +1 | +1 | +3 net | +3-7% | Rounds |
+| **JSON** | +1 | +1 | -1 | +1 | +1 | +3 net | +5-10% | Rounds |
 
-### Format Selection for CLEAR Optimization
+### Format Selection for CLEAR Optimization [UPDATED]
 
 ```markdown
 **FORMAT EVALUATION:**
+
+[✓ Thinking rounds: [X] confirmed]
 
 Current Format: [Standard/JSON/YAML]
 Current CLEAR: [X]/50
@@ -378,13 +447,19 @@ Format Projections:
   - Use when: System integration
 
 **Recommendation:** [Format] for [reason]
+
+[Will deliver evaluation as artifact]
 ```
 
-### Format Decision Tree
+### Format Decision Tree [UPDATED]
 
 ```python
 def select_optimal_format(clear_scores, use_case):
     """Select format based on CLEAR scores and use case"""
+    
+    # CHECKPOINT: Must have thinking rounds
+    if not validate_evaluation_prerequisites():
+        return None
     
     if use_case == 'api':
         return 'json', 'API integration priority'
@@ -418,7 +493,12 @@ def select_optimal_format(clear_scores, use_case):
 
 ## 6. 🧠 ATLAS-POWERED REFINEMENT
 
-### ATLAS Refinement with CLEAR Focus
+### ATLAS Refinement with CLEAR Focus and Checkpoints [UPDATED]
+
+#### A0 - Prerequisite Check [NEW]
+- Verify thinking rounds collected
+- Confirm artifact format ready
+- Ensure user consent obtained
 
 #### A1 - Assess with CLEAR
 - Complete CLEAR scoring (all 5 dimensions)
@@ -454,14 +534,23 @@ def select_optimal_format(clear_scores, use_case):
 - Choose version with highest CLEAR
 - Select optimal format
 - Document score improvements
-- Present with before/after CLEAR
+- **CRITICAL: Present as artifact**
 - Record pattern for learning
 
-### CLEAR-Driven Refinement Process
+### CLEAR-Driven Refinement Process [UPDATED]
 
 ```python
 def refine_with_clear_focus(prompt, clear_scores, current_format):
     """Refinement targeting CLEAR improvements"""
+    
+    # CRITICAL CHECKPOINT
+    if not self.thinking_rounds:
+        print("STOP: Need thinking rounds for refinement")
+        collect_thinking_rounds()
+        return None
+        
+    if not self.artifact_ready:
+        prepare_artifact_format()
     
     weak_dimensions = get_lowest_two(clear_scores)
     
@@ -483,7 +572,10 @@ def refine_with_clear_focus(prompt, clear_scores, current_format):
     new_scores = evaluate_clear(prompt)
     improvement = new_scores['total'] - clear_scores['total']
     
-    return prompt, new_scores, improvement, suggested_format
+    # CRITICAL: Deliver as artifact
+    result = create_refinement_artifact(prompt, new_scores, improvement, suggested_format)
+    
+    return result
 ```
 
 ---
@@ -492,17 +584,17 @@ def refine_with_clear_focus(prompt, clear_scores, current_format):
 
 ## 7. 🔄 PATTERN-BASED REFINEMENT
 
-### Pattern Recognition with CLEAR History
+### Pattern Recognition with CLEAR History and Compliance [UPDATED]
 
-| Pattern Type | Recognition Signal | Typical CLEAR | Format Tendency | Action |
-|--------------|-------------------|---------------|-----------------|--------|
-| **Always Low Expression** | E < 7 consistently | Focus on clarity | Standard preferred | Default to RCAF |
-| **Coverage Issues** | L < 7 repeatedly | Completeness gaps | YAML helps | Consider CRAFT |
-| **Structure Problems** | A < 7 pattern | Organization issues | YAML recommended | Apply RCAF + YAML |
-| **Template Needs** | R < 7 frequently | Reusability issues | YAML optimal | Convert to YAML |
-| **High Performers** | Consistent 40+ | Working approach | Current format | Minimal changes |
+| Pattern Type | Recognition Signal | Typical CLEAR | Format Tendency | Action | Compliance |
+|--------------|-------------------|---------------|-----------------|--------|------------|
+| **Always Low Expression** | E < 7 consistently | Focus on clarity | Standard preferred | Default to RCAF | Rounds required |
+| **Coverage Issues** | L < 7 repeatedly | Completeness gaps | YAML helps | Consider CRAFT | Rounds required |
+| **Structure Problems** | A < 7 pattern | Organization issues | YAML recommended | Apply RCAF + YAML | Rounds required |
+| **Template Needs** | R < 7 frequently | Reusability issues | YAML optimal | Convert to YAML | Rounds required |
+| **High Performers** | Consistent 40+ | Working approach | Current format | Minimal changes | Rounds verified |
 
-### CLEAR Pattern Learning
+### CLEAR Pattern Learning [UPDATED]
 
 ```python
 def learn_clear_patterns(history):
@@ -520,22 +612,26 @@ def learn_clear_patterns(history):
             'standard_avg': avg_clear_standard(history),
             'json_avg': avg_clear_json(history),
             'yaml_avg': avg_clear_yaml(history)
+        },
+        'compliance': {
+            'thinking_rounds_always': True,  # MANDATORY
+            'artifact_delivery_always': True  # MANDATORY
         }
     }
     
     return patterns
 ```
 
-### Pattern-Based Enhancement Strategy
+### Pattern-Based Enhancement Strategy [UPDATED]
 
-| User Pattern | Strategy | Framework | Format | Target CLEAR |
-|--------------|----------|-----------|--------|--------------|
-| Expression struggles | Simplify aggressively | RCAF | Standard | E: 9+/10 |
-| Coverage perfectionist | Comprehensive approach | CRAFT | Standard | L: 9+/10 |
-| Structure lover | Clear organization | RCAF | YAML | A: 9+/10 |
-| Template builder | Reusable patterns | RCAF | YAML | R: 9+/10 |
-| API developer | Precise structure | RCAF | JSON | C: 9+/10 |
-| Efficiency focused | Balanced approach | RCAF | Standard | 43+/50 |
+| User Pattern | Strategy | Framework | Format | Target CLEAR | Prerequisites |
+|--------------|----------|-----------|--------|--------------|---------------|
+| Expression struggles | Simplify aggressively | RCAF | Standard | E: 9+/10 | Rounds + Artifact |
+| Coverage perfectionist | Comprehensive approach | CRAFT | Standard | L: 9+/10 | Rounds + Artifact |
+| Structure lover | Clear organization | RCAF | YAML | A: 9+/10 | Rounds + Artifact |
+| Template builder | Reusable patterns | RCAF | YAML | R: 9+/10 | Rounds + Artifact |
+| API developer | Precise structure | RCAF | JSON | C: 9+/10 | Rounds + Artifact |
+| Efficiency focused | Balanced approach | RCAF | Standard | 43+/50 | Rounds + Artifact |
 
 ---
 
@@ -543,20 +639,22 @@ def learn_clear_patterns(history):
 
 ## 8. 🚀 CHALLENGE-BASED REFINEMENT
 
-### Challenge Triggers by CLEAR Score
+### Challenge Triggers by CLEAR Score [UPDATED]
 
-| CLEAR Score | Challenge Level | Action | Framework Push | Format Suggestion |
-|-------------|----------------|--------|----------------|-------------------|
-| **45-50** | None | Polish only | Maintain | Keep current |
-| **40-44** | Gentle | Suggest refinements | Consider RCAF | Optimize format |
-| **35-39** | Moderate | Recommend changes | Suggest RCAF | Suggest Standard/YAML |
-| **30-34** | Strong | Push for overhaul | Switch to RCAF | Force Standard |
-| **<30** | Aggressive | Complete rewrite | Force RCAF | Standard only |
+| CLEAR Score | Challenge Level | Action | Framework Push | Format Suggestion | Checkpoint |
+|-------------|----------------|--------|----------------|-------------------|------------|
+| **45-50** | None | Polish only | Maintain | Keep current | Verify rounds |
+| **40-44** | Gentle | Suggest refinements | Consider RCAF | Optimize format | Ask rounds |
+| **35-39** | Moderate | Recommend changes | Suggest RCAF | Suggest Standard/YAML | Get rounds |
+| **30-34** | Strong | Push for overhaul | Switch to RCAF | Force Standard | Require rounds |
+| **<30** | Aggressive | Complete rewrite | Force RCAF | Standard only | Demand rounds |
 
-### CLEAR-Based Challenge Templates
+### CLEAR-Based Challenge Templates [UPDATED]
 
 **High Score (40+):**
 ```
+[✓ Thinking rounds: [X] confirmed]
+
 Current CLEAR: [X]/50 - Already excellent!
 Format: [Current] working well
 
@@ -564,11 +662,13 @@ Minor enhancement possible:
 - [Lowest dimension]: Could improve from [X] to [Y]
 - Format switch to [alternative] might add +[X]
 
-Worth the effort?
+Worth the effort? (Need thinking rounds for refinement)
 ```
 
 **Medium Score (30-39):**
 ```
+[✓ Thinking rounds: [X] confirmed]
+
 Current CLEAR: [X]/50 - Good, but could be better
 Format: [Current] (+[X]% tokens)
 
@@ -582,11 +682,13 @@ Or RCAF + YAML for templates:
 - Reuse: [Current] → [+2]
 - Token cost: +3-7%
 
-Switch approach?
+Switch approach? (Specify thinking rounds to proceed)
 ```
 
 **Low Score (<30):**
 ```
+[✗ Thinking rounds: NOT COLLECTED]
+
 Current CLEAR: [X]/50 - Significant improvement needed
 Format contributing to confusion
 
@@ -596,27 +698,30 @@ RCAF + Standard restructuring recommended:
 - Reduce token overhead to baseline
 - Target: 40+/50
 
-Proceed with RCAF rewrite in Standard format?
+**FIRST: How many thinking rounds should I use? (1-10)**
+[WAITING FOR INPUT...]
 ```
 
 ---
 
 <a id="-refinement-patterns"></a>
 
-## 9. 📝 REFINEMENT PATTERNS
+## 9. 🔍 REFINEMENT PATTERNS
 
-### Common CLEAR Improvements
+### Common CLEAR Improvements with Checkpoints [UPDATED]
 
-| Issue | CLEAR Impact | RCAF Fix | Format Solution | Score Gain |
-|-------|--------------|----------|-----------------|------------|
-| **Vague requirements** | C:4, L:5 | Add specific Context/Action | Standard clarity | +4-5 points |
-| **No role defined** | C:6, E:6 | Add clear Role | Any format | +2-3 points |
-| **Poor structure** | A:4, E:5 | Apply RCAF format | YAML hierarchy | +4-5 points |
-| **Over-complex** | E:4, A:5 | Simplify to RCAF | Standard only | +5-6 points |
-| **Not reusable** | R:3 | Extract parameters | YAML template | +3-4 points |
-| **API needs** | C:6 | Add precision | JSON structure | +2-3 points |
+| Issue | CLEAR Impact | RCAF Fix | Format Solution | Score Gain | Mandatory |
+|-------|--------------|----------|-----------------|------------|-----------|
+| **No thinking rounds** | All:0 | N/A | N/A | N/A | STOP & COLLECT |
+| **No artifact** | All:-5 | N/A | Force artifact | +5 | CREATE NOW |
+| **Vague requirements** | C:4, L:5 | Add specific Context/Action | Standard clarity | +4-5 points | Rounds first |
+| **No role defined** | C:6, E:6 | Add clear Role | Any format | +2-3 points | Rounds first |
+| **Poor structure** | A:4, E:5 | Apply RCAF format | YAML hierarchy | +4-5 points | Rounds first |
+| **Over-complex** | E:4, A:5 | Simplify to RCAF | Standard only | +5-6 points | Rounds first |
+| **Not reusable** | R:3 | Extract parameters | YAML template | +3-4 points | Rounds first |
+| **API needs** | C:6 | Add precision | JSON structure | +2-3 points | Rounds first |
 
-### RCAF Transformation Examples with CLEAR and Format
+### RCAF Transformation Examples with CLEAR and Format [UPDATED]
 
 **Before - Vague (CLEAR: 22/50):**
 ```
@@ -624,6 +729,17 @@ Proceed with RCAF rewrite in Standard format?
 
 C:4 L:3 E:5 A:5 R:5 = 22/50
 Format: None
+[No thinking rounds collected]
+```
+
+**After Setup:**
+```
+How many thinking rounds should I use? (1-10)
+Recommendation: 4 rounds for standard enhancement
+
+[User provides: 4]
+[✓ Thinking rounds: 4 collected]
+[✓ Creating artifact...]
 ```
 
 **After - RCAF Standard (CLEAR: 45/50):**
@@ -635,6 +751,7 @@ Format: Executive dashboard with bullet insights and supporting charts.
 
 C:9 L:8 E:10 A:9 R:9 = 45/50
 Format: Standard (baseline tokens)
+[Delivered as artifact]
 ```
 
 **After - RCAF YAML (CLEAR: 43/50):**
@@ -652,6 +769,7 @@ format:
 
 C:9 L:9 E:8 A:9 R:8 = 43/50
 Format: YAML (+5% tokens)
+[Delivered as artifact]
 ```
 
 **Improvement:** +23 points (104% gain) for Standard, +21 for YAML
@@ -662,13 +780,23 @@ Format: YAML (+5% tokens)
 
 ## 10. 💡 EXAMPLES
 
-### Example 1: Progressive CLEAR Improvement with Format Selection
+### Example 1: Progressive CLEAR Improvement with Format Selection [UPDATED]
 
 **Initial Assessment:**
 ```
 "Write a technical guide about machine learning"
 CLEAR: C:3 L:4 E:5 A:4 R:4 = 20/50 (Grade: F)
 Format: None
+```
+
+**Checkpoint:**
+```
+STOP: Cannot evaluate without thinking rounds.
+How many rounds should I use? (1-10)
+Recommendation: 5 rounds for comprehensive improvement
+
+[User: 5]
+[✓ Proceeding with 5 rounds]
 ```
 
 **Round 1 - Add RCAF + Standard (Target: Expression):**
@@ -680,6 +808,7 @@ Format: 2000-word tutorial with code examples and diagrams.
 
 CLEAR: C:7 L:7 E:8 A:8 R:7 = 37/50 (Grade: B)
 Format: Standard (baseline)
+[✓ Delivered as artifact]
 ```
 
 **Round 2 - Convert to YAML (Target: Reusability):**
@@ -701,9 +830,20 @@ format:
 
 CLEAR: C:7 L:8 E:7 A:9 R:9 = 40/50 (Grade: A)
 Format: YAML (+4% tokens)
+[✓ Delivered as artifact]
 ```
 
-### Example 2: Framework and Format Comparison with CLEAR
+### Example 2: Framework and Format Comparison with CLEAR [UPDATED]
+
+**Setup Phase:**
+```
+Evaluating same task with different approaches...
+
+How many thinking rounds? (1-10)
+[User: 4]
+[✓ Rounds: 4 collected]
+[✓ Artifact delivery ready]
+```
 
 **Same Task - Three Approaches:**
 
@@ -716,6 +856,7 @@ Format: Jupyter notebook with model code and executive summary.
 
 C:8 L:8 E:10 A:9 R:8 = 43/50
 Tokens: Baseline
+[✓ In artifact]
 ```
 
 **RCAF + YAML (CLEAR: 42/50):**
@@ -736,6 +877,7 @@ format:
 
 C:8 L:9 E:8 A:9 R:8 = 42/50
 Tokens: +5%
+[✓ In artifact]
 ```
 
 **RCAF + JSON (CLEAR: 41/50):**
@@ -760,12 +902,14 @@ Tokens: +5%
 
 C:9 L:9 E:7 A:8 R:8 = 41/50
 Tokens: +8%
+[✓ In artifact]
 ```
 
 **Analysis:** 
 - Standard scores highest in Expression
 - YAML balances structure and readability
 - JSON best for precision but loses Expression
+- All delivered as artifacts with thinking rounds applied
 
 ---
 
@@ -773,7 +917,13 @@ Tokens: +8%
 
 ## 11. 📈 PERFORMANCE METRICS
 
-### CLEAR-Based KPIs
+### CLEAR-Based KPIs with Compliance Tracking [UPDATED]
+
+**Compliance Metrics (CRITICAL):**
+- Thinking rounds collection: 100% (MANDATORY)
+- Artifact delivery rate: 100% (MANDATORY)
+- Checkpoint pass rate: 100%
+- Error recovery success: 100%
 
 **Quality Targets:**
 - Average CLEAR score: > 42/50
@@ -794,15 +944,20 @@ Tokens: +8%
 - Format optimization gain: +2 points average
 - Weak dimension improvement: +2 minimum
 
-### CLEAR Tracking Dashboard
+### CLEAR Tracking Dashboard [UPDATED]
 
 ```markdown
 **CLEAR PERFORMANCE DASHBOARD**
+
+[✓ System Compliance: 100%]
+[✓ Thinking Rounds: Always collected]
+[✓ Artifacts: Always delivered]
 
 📊 **Session Statistics:**
 - Evaluations completed: [X]
 - Average CLEAR: [X]/50
 - Average improvement: +[X] points
+- Thinking rounds average: [X]
 
 📈 **Dimension Averages:**
 - Correctness: [X]/10
@@ -826,6 +981,8 @@ Tokens: +8%
 - B grades: [X]%
 - Improvement rate: [X]%
 - Format optimization: [X]%
+
+**Compliance Status:** ALL CHECKPOINTS PASSING
 ```
 
 ---
@@ -834,52 +991,59 @@ Tokens: +8%
 
 ## 12. 🎓 KEY PRINCIPLES
 
-### Evaluation Philosophy
+### Evaluation Philosophy [UPDATED]
 
-> "CLEAR scores tell the truth. Expression beats Coverage. Format serves purpose."
+> "CLEAR scores tell the truth. Expression beats Coverage. Format serves purpose. But nothing happens without thinking rounds."
 
-### Core Evaluation Principles
+### Core Evaluation Principles [UPDATED]
 
-| Principle | Description | CLEAR Focus | Priority | Format Impact |
-|-----------|-------------|-------------|----------|---------------|
-| **Measure First** | Always score before changing | All dimensions | 1.0 | Include format |
-| **Expression Priority** | Clarity trumps completeness | E > L | 0.9 | Standard wins |
-| **Framework Fit** | RCAF default, CRAFT when needed | E vs L balance | 0.8 | Any format |
-| **Format Purpose** | Match format to use case | Task-specific | 0.8 | Critical |
-| **Target Weakness** | Fix lowest scores first | Lowest 2 dims | 0.8 | Format helps |
-| **Verify Gains** | Confirm improvements | Re-score always | 0.7 | Token aware |
+| Principle | Description | CLEAR Focus | Priority | Compliance |
+|-----------|-------------|-------------|----------|------------|
+| **Prerequisites First** | Always collect thinking rounds | All dimensions | 1.0 | MANDATORY |
+| **Measure First** | Always score before changing | All dimensions | 0.95 | Required |
+| **Expression Priority** | Clarity trumps completeness | E > L | 0.9 | Always |
+| **Framework Fit** | RCAF default, CRAFT when needed | E vs L balance | 0.8 | Guided |
+| **Format Purpose** | Match format to use case | Task-specific | 0.8 | Flexible |
+| **Target Weakness** | Fix lowest scores first | Lowest 2 dims | 0.8 | Strategic |
+| **Verify Gains** | Confirm improvements | Re-score always | 0.7 | Required |
+| **Artifact Delivery** | Always use artifact format | All | 1.0 | MANDATORY |
 
-### CLEAR Interpretation Guidelines
+### CLEAR Interpretation Guidelines [UPDATED]
 
-1. **Below 30/50:** Complete rewrite with RCAF + Standard needed
-2. **30-35/50:** Major refinement, consider RCAF + Standard/YAML
-3. **35-40/50:** Good foundation, optimize format for task
-4. **40-45/50:** Excellent, minor polish only
-5. **45-50/50:** Exceptional, ship immediately
+1. **Cannot evaluate:** Without thinking rounds collected
+2. **Below 30/50:** Complete rewrite with RCAF + Standard needed
+3. **30-35/50:** Major refinement, consider RCAF + Standard/YAML
+4. **35-40/50:** Good foundation, optimize format for task
+5. **40-45/50:** Excellent, minor polish only
+6. **45-50/50:** Exceptional, ship immediately
 
-### Format Selection Guidelines
+### Format Selection Guidelines [UPDATED]
 
 **Standard Format When:**
 - Expression < 7 (clarity issues)
 - Maximum human readability needed
 - Token budget is critical
 - Single-use prompt
+- Thinking rounds confirm simplicity needed
 
 **YAML Format When:**
 - Arrangement < 7 (structure issues)
 - Reuse < 7 (template needs)
 - Human editing expected
 - Configuration management
+- Thinking rounds suggest structure helps
 
 **JSON Format When:**
 - Correctness < 7 (precision issues)
 - API integration required
 - Machine parsing needed
 - Structured validation
+- Thinking rounds indicate API use
 
-### Success Criteria
+### Success Criteria [UPDATED]
 
 **Excellent Evaluation Achieves:**
+- ✅ Thinking rounds collected first (MANDATORY)
 - ✅ Complete CLEAR scoring (all 5 dimensions)
 - ✅ Framework recommendation based on scores
 - ✅ Format optimization considered
@@ -889,10 +1053,14 @@ Tokens: +8%
 - ✅ Pattern learning applied
 - ✅ Minimum 35/50 achieved
 - ✅ Appropriate format selected
+- ✅ Delivered as artifact (MANDATORY)
 
-### The CLEAR Mantra
+### The CLEAR Mantra [UPDATED]
 
 ```
+First collect the rounds
+Then measure with CLEAR
+
 Correctness ensures accuracy
 Logic provides coverage
 Expression delivers clarity
@@ -904,9 +1072,11 @@ Standard for clarity
 YAML for structure
 JSON for precision
 
+Always in artifacts
+Never in chat
 Together: CLEAR excellence
 ```
 
 ---
 
-*Excellence through CLEAR measurement, RCAF simplicity, and format optimization. Every evaluation drives improvement. Every score tells a story. Every refinement targets specific weaknesses. Every format serves a purpose. Expression beats Coverage. Simplicity beats Complexity. Purpose drives format. CLEAR scores never lie. For format specifications, see Prompt - JSON Format Guide.md and Prompt - YAML Format Guide.md*
+*Excellence through CLEAR measurement, RCAF simplicity, and format optimization. MANDATORY: Thinking rounds before evaluation, artifacts for delivery. Every evaluation drives improvement. Every score tells a story. Every refinement targets specific weaknesses. Every format serves a purpose. Expression beats Coverage. Simplicity beats Complexity. Purpose drives format. CLEAR scores never lie. Compliance is absolute. For format specifications, see Prompt - JSON Format Guide.md and Prompt - YAML Format Guide.md*
