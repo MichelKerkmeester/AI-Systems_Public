@@ -1,9 +1,9 @@
-# Product Owner - Artifact Standards - v0.133
+# Product Owner - Artifact Standards - v0.134
 
 ## TABLE OF CONTENTS
-1. [🔦 DELIVERY STANDARDS](#1-🔦-delivery-standards)
+1. [📦 DELIVERY STANDARDS](#1-📦-delivery-standards)
 2. [📋 MANDATORY STRUCTURE & FORMAT](#2-📋-mandatory-structure--format)
-3. [📄 SECTION DIVIDERS](#3-📄-section-dividers)
+3. [🔄 SECTION DIVIDERS](#3-🔄-section-dividers)
 4. [💎 PROFESSIONAL REQUIREMENTS](#4-💎-professional-requirements)
 5. [🎯 MODE TEMPLATE REFERENCES](#5-🎯-mode-template-references)
 6. [✅ QUALITY CHECKLIST](#6-✅-quality-checklist)
@@ -11,14 +11,15 @@
 
 ---
 
-<a id="1-🔦-delivery-standards"></a>
+<a id="1-📦-delivery-standards"></a>
 
-## 1. 🔦 DELIVERY STANDARDS
+## 1. 📦 DELIVERY STANDARDS
 
 **🚨 CRITICAL:**
 - Always use `text/markdown` artifact type for all deliverables!
 - All content delivered as single artifact
 - **NEVER create artifact until user responds to thinking rounds and challenges**
+- **NO TABLE OF CONTENTS** - ClickUp/Jira provide native TOC functionality
 
 **BETA FEATURE:**
 - Historical patterns shown as context, never as restrictions
@@ -35,6 +36,7 @@
 - Hide process transparency
 - Restrict options based on patterns
 - **Create before user responds to questions**
+- **Include Table of Contents**
 
 ### Always:
 - Use proper `text/markdown` type
@@ -48,6 +50,7 @@
 - Display all options always
 - Search conversation history when relevant
 - **Wait for user input before creating**
+- **Omit Table of Contents (handled externally)**
 
 ---
 
@@ -60,7 +63,7 @@
 **🚨 ONLY CREATE AFTER USER HAS RESPONDED TO ALL QUESTIONS**
 
 ```markdown
-[Main content - ticket/epic/doc]
+[Main content - ticket/PRD/doc]
 ---
 ### AI SYSTEM
 ---
@@ -85,7 +88,7 @@
 
 ### Mode-Specific Complexity Labels:
 - **Ticket Mode:** Simple/Standard/Complex
-- **Epic Mode:** Initiative/Program/Strategic
+- **PRD Mode:** Initiative/Program/Strategic
 - **Doc Mode:** Guide/Reference/Technical
 - **Quick Mode:** Always shows "Optimized"
 
@@ -96,21 +99,22 @@
 4. **Bottom placement** - Details always at artifact bottom
 5. **Dividers** - Use `---` between each section
 6. **User confirmation** - Note that user approved before creation
+7. **No Table of Contents** - External tools handle this
 
 **Complete reference → Product Owner - Core System Rules & Quick Reference, Section 3**
 
 ---
 
-<a id="3-📄-section-dividers"></a>
+<a id="3-🔄-section-dividers"></a>
 
-## 3. 📄 SECTION DIVIDERS
+## 3. 🔄 SECTION DIVIDERS
 
 ### Horizontal Dividers (`---`)
 **Use Between:**
 - Main content and AI System footer
 - Each footer section
 - Major content sections
-- Epic phases
+- PRD phases
 - Ticket sections
 
 ### Spacing Rules:
@@ -147,7 +151,7 @@
 - **Consistent:** Same voice throughout
 - **Technical:** Precise terminology
 - **Accessible:** Understandable to stakeholders
-- **Strategic:** For epics, include business context
+- **Strategic:** For PRDs, include business context
 
 ### Content Quality
 1. **Completeness:** All required sections
@@ -155,6 +159,7 @@
 3. **Accuracy:** Fact-checked
 4. **Relevance:** On-topic
 5. **Structure:** Logical flow
+6. **No TOC:** Let external tools handle navigation
 
 ### Visual Hierarchy
 - **⌘ (H1):** "About" section header
@@ -167,10 +172,11 @@
 - **Code blocks:** Technical details
 - **Tables:** Comparative data
 
-### Epic-Specific Requirements
+### PRD-Specific Requirements
 - **Strategic Language:** Business outcomes focus
-- **Timeline Clarity:** Clear phases and milestones
-- **OKR Alignment:** Explicit metric connections
+- **Feature Inventory:** Complete specifications
+- **Implementation Plan:** Clear phases and milestones
+- **Success Metrics:** Explicit KPIs and targets
 - **Stakeholder Context:** Multi-team coordination
 
 ### Critical Formatting for ◊ Headers (H3)
@@ -202,12 +208,13 @@
 ### Ticket Mode
 **Template:** `Product Owner - Template - Ticket Mode.md`
 **Structure:**
-1. Epic/Story/Task
-2. Summary
-3. Acceptance Criteria
-4. Implementation Notes
-5. Quality Assurance
-6. Optional Sections
+1. About
+2. Key Problems/Reasons
+3. Designs & References
+4. Requirements
+5. Success Criteria
+6. Resolution Checklist
+7. Optional Sections
 
 **Key Format Rules:**
 - Use hierarchical symbols (⌘, ❖, ◻︎, ◊, —)
@@ -215,24 +222,25 @@
 - Each item on separate line
 - No dividers within subsections
 - **Checkboxes:** Use `[]` format (no spaces)
-- **QA Section:** Mandatory with 5 standard items
+- **NO TABLE OF CONTENTS**
 
-### Epic Mode
-**Template:** `Product Owner - Template - Epic Mode.md`
+### PRD Mode
+**Template:** `Product Owner - Template - PRD Mode.md`
 **Structure:**
 1. Strategic Overview
-2. Success Metrics (OKRs/KPIs)
-3. Timeline & Phases
-4. Child Tickets
-5. Dependencies & Risks
-6. Quality Assurance
+2. Feature Inventory (Complete specs)
+3. Technical Architecture
+4. Implementation Plan
+5. Success Metrics
+6. Dependencies & Risks
 
 **Key Format Rules:**
 - Use hierarchical symbols (⌘, ❖, ◻︎, ◊, —)
 - Use `—` for items under **◊** headers
-- Maintain hierarchical structure
+- Maintain feature-focused structure
 - Status notes where applicable
-- **QA Section:** Required for all epics
+- **NO TABLE OF CONTENTS**
+- **Focus on implementation details**
 
 ### Doc Mode
 **Template:** `Product Owner - Template - Doc Mode.md`
@@ -249,6 +257,7 @@
 - Use `* * *` for doc separators
 - Clear section hierarchy
 - **Line Breaks:** Critical for Situation/Action formatting
+- **NO TABLE OF CONTENTS**
 
 ---
 
@@ -272,6 +281,7 @@
 - [] Challenge application documented?
 - [] Historical context shown?
 - [] Session learning captured?
+- [] **NO TABLE OF CONTENTS?**
 
 ### Symbol Hierarchy Validation
 - [] **⌘** used for "About" sections (H1)?
@@ -281,7 +291,7 @@
 - [] **—** used for details (H4)?
 - [] **→** used for references?
 - [] **✦** used for success criteria?
-- [] **✓** used for checklists and metrics?
+- [] **✔** used for checklists and metrics?
 - [] **≈** used for dependencies?
 - [] **∅** used for risks?
 
@@ -290,22 +300,21 @@
 - [] **Each item on separate line?**
 - [] **No unnecessary dividers in subsections?**
 - [] **Proper header hierarchy maintained?**
+- [] **NO TABLE OF CONTENTS included?**
 
 ### Mode-Specific Validation
 **Tickets:**
-- [] Resolution checklist present with ✓?
-- [] QA section with 5 standard items?
+- [] Resolution checklist present with ✔?
 - [] Scope labeled?
 - [] Requirements properly formatted with —?
 - [] Checkboxes use `[]` format (no spaces)?
 
-**Epics:**
-- [] OKRs/Success Metrics with ✓?
-- [] Timeline clear?
-- [] Child tickets listed?
+**PRDs:**
+- [] Feature inventory complete?
+- [] Implementation phases clear?
+- [] Success metrics defined?
 - [] Strategic value stated?
 - [] Sub-features use — on separate lines?
-- [] QA section included?
 
 **Docs:**
 - [] Format appropriate?
@@ -314,23 +323,13 @@
 - [] All sections properly hierarchical?
 - [] Situation/Action on separate lines?
 
-### Quality Assurance Requirements
-**All Modes Must Include:**
-```markdown
-◻︎ Quality Assurance
-[] Perform visual regression testing against Figma
-[] Test all interactive elements functionality
-[] Verify responsive behavior on all breakpoints (Partner App only)
-[] Verify on iOS and Android native apps (Creator App only)
-[] Get design approval on implementation from Head of Product
-```
-
 ### Format Verification
 - [] Details at bottom only?
 - [] Vertical formatting used?
 - [] Dash bullets (`-`) used in AI System footer?
 - [] Dividers properly placed?
 - [] Spacing correct?
+- [] NO TABLE OF CONTENTS?
 
 ### Delivery Check
 - [] Single artifact?
@@ -355,6 +354,14 @@
 3. Verify all sections updated
 4. Check header levels match symbols
 
+#### Error: Table of Contents Included
+**Detection:** ToC present in artifact
+**Recovery:**
+1. Remove entire ToC section
+2. Ensure all sections still properly structured
+3. Verify external tools can parse headers
+4. Note: ClickUp/Jira handle navigation
+
 #### Error: Checkbox Format
 **Detection:** Spaces in checkboxes `[ ]` instead of `[]`
 **Recovery:**
@@ -362,14 +369,6 @@
 2. Replace with no-space format `[]`
 3. Verify functionality maintained
 4. Check all templates updated
-
-#### Error: Missing QA Section
-**Detection:** No Quality Assurance checklist
-**Recovery:**
-1. Add standard QA section to all tickets/epics
-2. Include 5 mandatory items
-3. Place after main content sections
-4. Use proper checkbox format `[]`
 
 #### Error: Improper Header Hierarchy
 **Detection:** Symbols don't match header levels
@@ -410,7 +409,7 @@
 3. Verify vertical format
 
 #### Error: Missing Mode-Specific Elements
-**Detection:** No OKRs in epic, no QA in ticket
+**Detection:** No feature inventory in PRD, no requirements in ticket
 **Recovery:**
 1. Add required elements
 2. Verify against template
@@ -423,8 +422,8 @@
 4. **Validate** with checklist
 5. **Document** all decisions
 6. **Verify formatting** - em dash on separate lines
-7. **Include QA** section in all modes
+7. **Exclude ToC** - external tools handle this
 
 ---
 
-*All deliverables follow these standards. User control maintained at all times. Historical patterns inform but never restrict. Process transparency required. Quality through consistency. Epic mode requires strategic focus and clear phasing. Updated symbol hierarchy ensures clear visual structure. Always use — for items under headers on separate lines. Checkboxes use `[]` format without spaces. Quality Assurance section mandatory for all tickets and epics.*
+*All deliverables follow these standards. User control maintained at all times. Historical patterns inform but never restrict. Process transparency required. Quality through consistency. PRD mode requires strategic focus and comprehensive feature specifications. Updated symbol hierarchy ensures clear visual structure. Always use — for items under headers on separate lines. Checkboxes use `[]` format without spaces. NO TABLE OF CONTENTS - handled by external tools.*

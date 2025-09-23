@@ -1,41 +1,41 @@
-# Product Owner System - User Guide v0.891
+# Product Owner System - User Guide v0.892
 
-Transforms requests into professional development tickets, strategic epics, and documentation through intelligent interactive guidance with built-in complexity challenging.
+Transforms requests into professional development tickets, strategic PRDs, and documentation through intelligent interactive guidance with built-in complexity challenging.
 
 ## 📋 Table of Contents
 
-- [🆕 What's New In V0.890](#whats-new-in-v0891)
+- [🆕 What's New In V0.892](#whats-new-in-v0892)
 - [✨ Key Features](#key-features)
 - [🚀 Quick Setup](#quick-setup)
 - [🎛️ Operating Modes](#operating-modes)
 - [🎫 Ticket Mode](#ticket-mode)
-- [🚀 Epic Mode](#epic-mode)
+- [🚀 PRD Mode](#prd-mode)
 - [📄 Doc Mode](#doc-mode)
 - [🧠 Atlas Thinking Framework](#atlas-thinking-framework)
 - [🎯 Automatic Complexity Detection](#automatic-complexity-detection)
 - [💡 Challenge Mode](#challenge-mode)
 - [🗃️ Past Chats Integration](#past-chats-integration)
 - [⚡ Emergency Commands](#emergency-commands)
-- [📝 Symbol & Formatting Reference](#symbol--formatting-reference)
+- [📐 Symbol & Formatting Reference](#symbol--formatting-reference)
 - [🆘 Troubleshooting](#troubleshooting)
 - [📦 Version History](#version-history)
 
 .
 
-<a id="whats-new-in-v0891"></a>
-## 🆕 What's New In V0.891
+<a id="whats-new-in-v0892"></a>
+## 🆕 What's New In V0.892
 
 ### Critical Updates
-- **Checkbox Format Standardized:** All checkboxes now use `[]` format (no spaces) for production consistency
-- **Quick Reference Integrated:** Eliminated 8,982-line redundant file; unique content merged into main system
-- **Quality Assurance Mandatory:** All tickets and epics now include standard 5-item QA section
-- **Template Alignment:** Updated to match current production ticket structure
+- **PRD Mode Replaces Epic Mode:** Strategic product requirements now use `$prd` command with feature-focused structure
+- **Enhanced PRD Templates:** Comprehensive templates for Initiative/Program/Strategic level requirements
+- **Feature Inventory Focus:** PRDs now emphasize complete feature specifications and implementation details
+- **Improved Doc Mode Formatting:** Critical line break requirements for Situation/Action blocks
 
 ### Quality Improvements
-- 100% checkbox format compliance across all files
-- Mandatory QA gates for all deliverables
-- Enhanced error recovery patterns
-- Improved template accuracy to production standards
+- PRD mode aligned with strategic product planning needs
+- Enhanced feature specification templates
+- Clearer implementation plan structures
+- Maintained 100% checkbox format compliance
 
 .
 
@@ -44,7 +44,7 @@ Transforms requests into professional development tickets, strategic epics, and 
 
 - **🧠 ATLAS Framework**: 5-phase thinking methodology
 - **⚡ $Quick Mode**: Zero-wait immediate creation
-- **🚀 Epic Mode**: Strategic initiative planning with OKR alignment
+- **🚀 PRD Mode**: Strategic product requirements with feature focus
 - **💡 Challenge Mode**: Three-level hierarchy with calibration
 - **🎯 Smart Complexity**: Automatic detection and scaling
 - **🗃️ Past Chats Integration**: Searches conversation history
@@ -80,14 +80,14 @@ Add these documents to your project:
 
 **Template Documents:**
 - `Product Owner - Template - Ticket Mode.md`
-- `Product Owner - Template - Epic Mode.md`
+- `Product Owner - Template - PRD Mode.md`
 - `Product Owner - Template - Doc Mode.md`
 
 ### Step 4: Start Creating
 ```
 need user authentication         # Interactive discovery flow
-$quick auth epic                # Immediate epic creation
-$epic payment platform          # Direct epic mode
+$quick auth PRD                 # Immediate PRD creation
+$prd payment platform           # Direct PRD mode
 $ticket payment integration     # Direct ticket mode
 ```
 
@@ -100,9 +100,9 @@ $ticket payment integration     # Direct ticket mode
 |------|---------|--------|-----------|-------------|---------------|
 | **Interactive** | DEFAULT | Varies | Adaptive | Multiple | Mode-specific |
 | **$Quick** | `$quick` | Any type | **NONE** | **NONE** | Mode-appropriate |
-| **Epic** | `$epic` | Strategic initiatives | 3-5 | Rounds, Challenge | ⌘, ❖, ◻︎, ◊, —— |
+| **PRD** | `$prd` | Strategic requirements | 3-5 | Rounds, Challenge | ⌘, ❖, ◻︎, ◊, — |
 | **Ticket** | `$ticket` | Development tickets | 2-4 | Rounds, Challenge | ⌘, ❖, ◻︎, ◊, — |
-| **Documentation** | `$doc` | User guides | 3-4 | Rounds, Format | ⌘, ❖, ◻︎, ◊, —— |
+| **Documentation** | `$doc` | User guides | 3-4 | Rounds, Format | ⌘, ❖, ◻︎, ◊, — |
 
 ### Interactive Flow (Default)
 ```
@@ -110,7 +110,7 @@ Welcome! Let's figure out what you need. 🤔
 
 What would you like to create?
 1. Development ticket - Feature or bug for developers
-2. Epic ticket - Strategic initiative or program
+2. PRD (Product Requirements) - Strategic initiative or detailed specs
 3. Product documentation - User guide or format text
 
 Which best fits? (1-3)
@@ -121,7 +121,7 @@ Which best fits? (1-3)
 User: $quick - Q1 payments initiative
 
 System: **Quick Mode Activated** ⚡
-Creating your payments initiative epic immediately...
+Creating your payments initiative PRD immediately...
 - Using 6 thinking rounds (auto)
 - No challenges applied
 - Maximum speed delivery
@@ -133,7 +133,7 @@ Creating your payments initiative epic immediately...
 - NO thinking rounds question - Always uses 6
 - NO challenge presentation - Skips regardless
 - NO additional questions - Proceeds immediately
-- Works with all modes - Tickets, epics, and docs
+- Works with all modes - Tickets, PRDs, and docs
 - Uses mode-appropriate formatting automatically
 
 .
@@ -174,50 +174,50 @@ Your choice?
 - First requirement    ✓ (use hyphen for lists)
 - Second requirement   ✓
 
-## ✓ Resolution Checklist
+## ✔ Resolution Checklist
 
-[ ] First item        ✓ (no hyphen before checkbox)
-[ ] Second item       ✓
+[] First item         ✓ (no hyphen before checkbox)
+[] Second item        ✓
 ```
 
 .
 
-<a id="epic-mode"></a>
-## 🚀 Epic Mode
+<a id="prd-mode"></a>
+## 🚀 PRD Mode
 
-### Strategic Initiative Planning
+### Product Requirements Document Creation
 ```
-User: $epic authentication overhaul
+User: $prd authentication platform
 
-System: Let's structure your authentication overhaul epic! 🚀
+System: Let's structure your authentication platform PRD! 🚀
 
 How many thinking rounds should I use? (6-10)
-Recommended: 7 rounds for quarterly initiative
+Recommended: 8 rounds for platform initiative
 
 Your choice?
 ```
 
-### Epic Complexity Levels
-| Level | Sections | Child Tickets | Timeline | Example |
-|-------|----------|---------------|----------|---------|
-| **Initiative** | 4-5 | 3-5 tickets | Quarterly | Feature rollout |
-| **Program** | 6-7 | 6-10 tickets | Half-year | Platform upgrade |
-| **Strategic** | 8-10 | 10+ tickets | Annual | Digital transformation |
+### PRD Complexity Levels
+| Level | Features | Sections | Timeline | Example |
+|-------|----------|----------|----------|---------|
+| **Initiative** | 5-15 features | 5-7 | Quarterly | Single-team scope |
+| **Program** | 15-30 features | 8-10 | Half-year | Multi-team coordination |
+| **Strategic** | 30+ features | 10+ | Annual | Company-wide platform |
 
-### Epic Structure & Symbols
+### PRD Structure & Symbols
 - **⌘ About**: Strategic overview (H1)
-- **❖ Timeline & Phases**: Main sections (H1)
-- **◻︎ Phase Details**: Sub-sections (H2)
+- **❖ Scope & Features**: Main sections (H1)
+- **◻︎ Feature Details**: Sub-sections (H2)
 - **◊ Components**: Sub-components (H3)
-- **—— Details**: Nested details (H4)
+- **— Details**: Nested details (H4)
 
-### Epic-Specific Formatting
+### PRD-Specific Formatting
 ```markdown
-### ◊ OKRs
+### ◊ **Core Features**
 
-— Objective: [Clear objective]     ✓ (use em dash under ◊)
-— KR1: [Measurable result]         ✓
-— KR2: [Measurable result]         ✓
+— Feature 1: Authentication     ✓ (use em dash under ◊)
+— Feature 2: Authorization      ✓
+— Feature 3: Session Management ✓
 ```
 
 .
@@ -248,7 +248,7 @@ Your choice?
 - **❖ Main Sections**: Primary content (H1)
 - **◻︎ Subsections**: Secondary content (H2)
 - **◊ Components**: Detailed items (H3)
-- **—— Details**: Granular content (H4)
+- **— Details**: Granular content (H4)
 
 ### Critical Doc Formatting
 **Thresholds & Actions - CORRECT:**
@@ -297,9 +297,9 @@ Your choice?
 | Rounds | Phases | Use Case |
 |--------|--------|----------|
 | 6 | A→T→L→S | Standard depth, $quick default |
-| 6-7 | A→T→L→A→S | Standard tickets/epics/docs |
+| 6-7 | A→T→L→A→S | Standard tickets/PRDs/docs |
 | 8-9 | Full Atlas+ | Complex features/programs |
-| 10 | Deep Atlas | Strategic analysis/epics |
+| 10 | Deep Atlas | Strategic analysis/PRDs |
 
 .
 
@@ -313,12 +313,12 @@ Your choice?
 | Feature, dashboard | **Standard** | 4-5 | "Could we do less?" |
 | Platform, architecture | **Complex** | 6-8 | "Can we phase this?" |
 
-### For Epics
-| Indicators | Complexity | Sections | Challenge Focus |
+### For PRDs
+| Indicators | Complexity | Features | Challenge Focus |
 |------------|------------|----------|-----------------|
-| Single feature | **Initiative** | 4-5 | "Can we deliver faster?" |
-| Multi-team | **Program** | 6-7 | "Should we phase this?" |
-| Platform | **Strategic** | 8-10 | "Break into quarters?" |
+| Single team | **Initiative** | 5-15 | "Can we deliver faster?" |
+| Multi-team | **Program** | 15-30 | "Should we phase this?" |
+| Company-wide | **Strategic** | 30+ | "Break into quarters?" |
 
 **Note:** In $quick mode, complexity is detected but challenges are never presented.
 
@@ -341,7 +341,7 @@ Your choice?
 
 ### Example Challenges
 ```
-"This epic spans multiple quarters. Should we:
+"This PRD spans multiple quarters. Should we:
 - Phase it into quarterly initiatives?
 - Focus on highest-impact quarter first?
 - Keep the full strategic scope?"
@@ -390,8 +390,8 @@ Your choice?
 $reset
 # Clears all historical context and patterns
 
-$quick - Q1 payments epic
-# Creates epic immediately with NO questions
+$quick - Q1 payments PRD
+# Creates PRD immediately with NO questions
 
 $status
 # Shows current patterns and preferences
@@ -400,7 +400,7 @@ $status
 .
 
 <a id="symbol--formatting-reference"></a>
-## 📝 Symbol & Formatting Reference
+## 📐 Symbol & Formatting Reference
 
 ### Ticket Mode Symbols
 | Symbol | Purpose | Header Level |
@@ -411,7 +411,7 @@ $status
 | **◊** | Components | H4 |
 | **—** | Bold sub-headings | Bold text |
 
-### Epic & Doc Mode Symbols
+### PRD & Doc Mode Symbols
 | Symbol | Purpose | Header Level |
 |--------|---------|--------------|
 | **⌘** | About section | H1 |
@@ -422,9 +422,9 @@ $status
 
 ### Universal Formatting Rules
 - **Lists**: Always use `-` for regular lists
-- **Checkboxes**: Always use `[ ]` without hyphens
+- **Checkboxes**: Always use `[]` without hyphens
 - **References**: Use → for links and references
-- **Success Criteria**: Use ✦ for bullets, ✓ for checkboxes
+- **Success Criteria**: Use ✦ for bullets, ✔ for checkboxes
 - **Dependencies**: Use ≈ symbol
 - **Doc Formatting**: Situation/Action on separate lines
 
@@ -438,7 +438,7 @@ $status
 |-------|----------|
 | **Wrong symbols appearing** | Check mode - each has specific symbols |
 | **Doc text on one line** | Situation/Action must be on separate lines |
-| **Checkbox formatting wrong** | Use `[ ]` without hyphens |
+| **Checkbox formatting wrong** | Use `[]` without hyphens |
 | **Too complex for need** | Reduce thinking rounds |
 | **Pattern mismatch** | Override and system learns |
 | **Want speed** | Use $quick mode |
@@ -454,4 +454,4 @@ $status
 
 ---
 
-*Mode-specific formatting ensures professional output. Each mode uses appropriate symbols: Ticket (⌘, ❖, ◻︎, ◊, —), Epic/Doc (⌘, ❖, ◻︎, ◊, ——). Revolutionary $quick mode for immediate creation. Interactive Mode remains the thoughtful default. Choose $quick when speed matters, Interactive when customization matters, $epic when strategy matters. User autonomy is absolute.*
+*Mode-specific formatting ensures professional output. Each mode uses appropriate symbols: Ticket (⌘, ❖, ◻︎, ◊, —), PRD/Doc (⌘, ❖, ◻︎, ◊, —). Revolutionary $quick mode for immediate creation. Interactive Mode remains the thoughtful default. Choose $quick when speed matters, Interactive when customization matters, $prd when strategy matters. User autonomy is absolute.*

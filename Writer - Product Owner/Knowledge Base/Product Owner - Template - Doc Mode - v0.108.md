@@ -1,4 +1,4 @@
-# Product Owner – Template: Doc Mode – v0.107
+# Product Owner – Template: Doc Mode – v0.108
 
 ## 📋 TABLE OF CONTENTS
 
@@ -16,8 +16,6 @@
 
 ---
 
-<a id="1-📚-doc-mode-overview"></a>
-
 ## 1. 📚 DOC MODE OVERVIEW
 
 ### Command: `$doc`
@@ -30,8 +28,6 @@
 * **Tip:** Choose the template that matches the audience and lifecycle stage (discovery → delivery → support).
 
 ---
-
-<a id="2-📄-feature-documentation-template"></a>
 
 ## 2. 📄 FEATURE DOCUMENTATION TEMPLATE
 
@@ -216,9 +212,7 @@ This framework helps us measure [what we're measuring] so we can [why we're meas
 
 ---
 
-<a id="3-🗏-system-overview-template"></a>
-
-## 3. 🗏 SYSTEM OVERVIEW TEMPLATE
+## 3. 🏗 SYSTEM OVERVIEW TEMPLATE
 
 - **What it is:** An executive-to-technical overview of an entire system (collection of features and services).
 - **When to use:** Platform overviews, stakeholder onboarding, pre-architecture reviews.
@@ -243,7 +237,7 @@ This framework helps us measure [what we're measuring] so we can [why we're meas
 ---
 ### → References
 ---
-1. **Epic:** Private ([link])
+1. **PRD:** Private ([link])
 2. **Roadmap:** Private ([link])
 3. **Documentation:** Private ([link])
 ---
@@ -327,8 +321,6 @@ The [system] operates on [X] principles, each delivering value to [stakeholders]
 ```
 
 ---
-
-<a id="4-📄-patternflow-template"></a>
 
 ## 4. 📄 PATTERN/FLOW TEMPLATE
 
@@ -454,8 +446,6 @@ _[What this optimizes for]_
 
 ---
 
-<a id="5-📊-performance-metrics-template"></a>
-
 ## 5. 📊 PERFORMANCE METRICS TEMPLATE
 
 - **What it is:** Centralized metric definitions, targets, thresholds, and playbooks for action.
@@ -555,8 +545,6 @@ This [central/feature] performance tracking document provides:
 ```
 
 ---
-
-<a id="6-🗺️-user-journey-template"></a>
 
 ## 6. 🗺️ USER JOURNEY TEMPLATE
 
@@ -694,8 +682,6 @@ Where we lose users and why:
 
 ---
 
-<a id="7-📦-component-library-template"></a>
-
 ## 7. 📦 COMPONENT LIBRARY TEMPLATE
 
 - **What it is:** A canonical reference for UI components with props, usage, states, and a11y.
@@ -812,8 +798,6 @@ Alternative actions and less emphasis
 ````
 
 ---
-
-<a id="8-📢-release-notes-template"></a>
 
 ## 8. 📢 RELEASE NOTES TEMPLATE
 
@@ -943,8 +927,6 @@ client.newMethod();
 ````
 
 ---
-
-<a id="9-🌳-architecture-decision-template"></a>
 
 ## 9. 🌳 ARCHITECTURE DECISION TEMPLATE
 
@@ -1111,8 +1093,6 @@ We will implement **Option [X]: [Name]** because [primary reasons].
 ```
 
 ---
-
-<a id="10-🔍-troubleshooting-guide-template"></a>
 
 ## 10. 🔍 TROUBLESHOOTING GUIDE TEMPLATE
 
@@ -1330,8 +1310,6 @@ When escalating, always include:
 
 ---
 
-<a id="11-🎨-formatting-standards"></a>
-
 ## 11. 🎨 FORMATTING STANDARDS
 
 ### Document Structure
@@ -1408,4 +1386,4 @@ Situation: [text] Action: [text]  ✗ (all on one line)
 
 ---
 
-*All documentation is delivered as artifacts with auto-scaled complexity. Always ask thinking rounds and wait for response. Challenge when 6+ rounds. Use proper symbols and formatting. Include AI System footer with process documentation. Critical: Situation/Action blocks must have proper line breaks for readability.*
+*All documentation is delivered as artifacts with auto-scaled complexity. Always ask thinking rounds and wait for response. Challenge when 6+ rounds. Use proper symbols and formatting. Include AI System footer with process documentation. Critical: Situation/Action blocks must have proper line breaks for readability. No Table of Contents per external tool integration.*
