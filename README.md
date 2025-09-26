@@ -116,7 +116,7 @@ Seamlessly coordinate task management (ClickUp) and knowledge management (Notion
 Create professional dev tickets and enhanced documentation.
 
 - **4 Intelligent Modes & Auto-Scaling**:
-  - Modes: $ticket & $epic (dev work), $doc (guides/formatting), $interactive (discovery), $quick (instant)
+  - Modes: $ticket & $prd (dev work), $doc (guides/formatting), $interactive (discovery), $quick (instant)
   - Auto-complexity for tickets: Simple (2-3), Standard (4-5), Complex (6-8 sections)
 
 - **ATLAS Framework & Challenge Mode**:

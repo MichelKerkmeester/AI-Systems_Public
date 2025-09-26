@@ -1,4 +1,4 @@
-# Product Owner - Artifact Standards - v0.140
+# Product Owner - Artifact Standards - v0.141
 
 ## TABLE OF CONTENTS
 1. [📦 DELIVERY STANDARDS](#1-📦-delivery-standards)
@@ -18,13 +18,15 @@
 **🚨 CRITICAL:**
 - Always use `text/markdown` artifact type for all deliverables!
 - All content delivered as single artifact
-- **NEVER create artifact until user responds to thinking rounds and challenges**
+- **AUTOMATIC ULTRATHINK:** Apply 10 rounds for standard, 1-5 auto-scaled for $quick
+- **NEVER create artifact until user responds to content questions**
 - **NO TABLE OF CONTENTS** - ClickUp/Jira provide native TOC functionality
 
 **Template Compliance:**
-- Use templates v0.200-201 exactly
-- Symbol hierarchy: H1 (⌘/❖), H2 (◻︎/✦/⌥/✔/⌥/∅), H3 (clean)
-- Success criteria/metrics always at top
+- Use templates v0.xxx exactly
+- Symbol hierarchy: H1 (⌘/❖), H2 (◻︎/✦/⌥/✓/∅), H3: clean, H4: clean
+- About section always first
+- Success criteria/metrics after About
 - Problems integrated in About narrative
 - Designs & References as tables
 
@@ -33,32 +35,40 @@
 - **PRDs:** Initiative (5-10 features), Program (10-20), Strategic (20+)
 - **Docs:** Simple (2-3 sections), Standard (4-6), Complex (7+)
 
+**Thinking Requirements:**
+- **Standard modes:** 10-round ultrathink automatic
+- **Quick mode:** 1-5 rounds auto-scaled
+- **No user choice:** System determines depth
+- **Document in footer:** Note thinking applied
+
 ### Never:
 - Use `text/plain` → Causes raw markdown display
 - Mix artifact and response text
-- Skip thinking rounds notation
+- Ask about thinking rounds (automatic now)
 - Place artifact details at top or middle
 - Use horizontal formatting for details
 - Skip ATLAS phase documentation
 - Forget AI System header
 - Hide process transparency
-- **Create before user responds to questions**
+- **Create before user responds to content questions**
 - **Include Table of Contents**
 - **Use H3/H4 symbols**
+- **Put Success Criteria at top**
 
 ### Always:
 - Use proper `text/markdown` type
 - Include AI System header at bottom
-- Document thinking rounds
+- Document automatic thinking depth
 - Use dash bullet formatting vertically
 - Note ATLAS phases used
 - Document complexity/scaling applied
 - Show template version compliance
-- Display all options always
-- **Wait for user input before creating**
-- **Position success at top**
+- Apply ultrathink consistently
+- **Wait for user input on content (not thinking)**
+- **Position About first**
+- **Position Success Criteria after About**
 - **Integrate problems in About**
-- **Use clean H3 headers**
+- **Use clean H3/H4 headers**
 
 ---
 
@@ -68,18 +78,18 @@
 
 ### Universal Artifact Format For All Modes
 
-**🚨 ONLY CREATE AFTER USER HAS RESPONDED TO ALL QUESTIONS**
+**🚨 ONLY CREATE AFTER USER HAS RESPONDED TO ALL CONTENT QUESTIONS**
 
 ```markdown
-[Main content - ticket/PRD/doc with template v0.200-201 structure]
+[Main content - ticket/PRD/doc with template v0.xxx structure]
 ---
 ### AI SYSTEM
 ---
-- **Framework:** ATLAS
+- **Framework:** ATLAS with ultrathink
 - **Mode:** $[mode used]
 - **Type/Complexity:** [Simple/Standard/Complex or Initiative/Program/Strategic]
 ---
-- **Thinking:** [X] rounds (user selected)
+- **Thinking:** [10 rounds (standard) or X rounds (quick)]
 - **ATLAS:** [Phases used like A→T→L→S]
 ---
 - **Template:** v0.xxx compliant
@@ -93,16 +103,49 @@
 **Session Learning:** [Key pattern or preference noted]
 ```
 
+### Structure Order Requirements:
+
+**For Tickets/Stories:**
+1. Title with [SCOPE]
+2. About (⌘) - Context and integrated problems
+3. Success Criteria (✦) - Measurable outcomes
+4. Designs & References (⌥) - Table format
+5. Requirements (❖) - Specifications
+6. Resolution Checklist (✓) - If ticket
+
+**For PRDs:**
+1. Title
+2. About (⌘) - Strategic context
+3. Success Metrics (✦) - Business/product metrics
+4. Designs & References (⌥) - Table format
+5. Scope & Features (❖) - Feature inventory
+6. Technical Requirements (❖)
+7. Implementation Plan (❖)
+8. Risks (∅) - When applicable
+
+**For Docs:**
+1. Title with metadata
+2. About (⌘) - Purpose and context
+3. References & Resources (⌥) - Table format
+4. Main sections (❖) - Content areas
+
 ### Mode-Specific Complexity Labels:
 - **Ticket Mode:** Simple/Standard/Complex (2-3/4-5/6-8 sections)
 - **PRD Mode:** Initiative/Program/Strategic (5-10/10-20/20+ features)
 - **Doc Mode:** Simple/Standard/Complex (2-3/4-6/7+ sections)
 - **Quick Mode:** Shows "Auto-scaled" with detected level
 
-### Symbol Hierarchy (v0.200-201):
+### Thinking Depth Documentation:
+- **Standard operations:** "10 rounds (ultrathink)"
+- **Quick mode:** "X rounds (auto-scaled)" where X is 1-5
+- **Never show:** "User selected" or "User approved"
+- **Always show:** Automatic depth applied
+
+### Symbol Hierarchy:
 - **H1:** ⌘ (About), ❖ (Main sections)
-- **H2:** ◻︎ (Subsections), ✦ (Success), ⌥ (Designs), ✔ (Checklist), ⌥ (References), ∅ (Risks)
+- **H2:** ◻︎ (Subsections), ✦ (Success), ⌥ (Designs), ✓ (Checklist), ⌥ (References), ∅ (Risks)
 - **H3:** Clean headers (no symbols)
+- **H4:** Clean headers (no symbols)
 
 ### Formatting Rules:
 1. **AI System header** - Always H3
@@ -110,10 +153,12 @@
 3. **Vertical layout** - Never horizontal lists
 4. **Bottom placement** - Details always at artifact bottom
 5. **Dividers** - Use `---` between each section
-6. **User confirmation** - Note that user approved before creation
+6. **User confirmation** - Note user approved content (not thinking)
 7. **No Table of Contents** - External tools handle this
-8. **Success at top** - Immediately after title
-9. **Problems integrated** - In About narrative
+8. **About first** - Always start with context
+9. **Success after About** - Never at document top
+10. **Problems integrated** - In About narrative
+11. **Thinking automatic** - System controlled depth
 
 ---
 
@@ -123,8 +168,9 @@
 
 ### Horizontal Dividers (`---`)
 **Use Between:**
-- Title and Success Criteria/Metrics
-- Success Criteria and About
+- Title and About section
+- About and Success Criteria/Metrics
+- Success Criteria and Designs & References
 - All major content sections
 - Content and AI System footer
 - Each footer section
@@ -141,17 +187,17 @@
 - One blank line after divider
 - Exception: No blank line after final divider
 
-### Example Structure:
+### Example Structure (Correct Order):
 ```markdown
 [SCOPE] Feature: [Name]
 
-## ✦ Success Criteria
-[Content]
+# ⌘ About
+[Integrated narrative with problems]
 
 ---
 
-# ⌘ About
-[Integrated narrative with problems]
+## ✦ Success Criteria
+[Content - positioned AFTER About]
 
 ---
 
@@ -166,7 +212,7 @@
 ---
 
 ### AI SYSTEM
-[Footer details]
+[Footer details with thinking depth]
 ```
 
 ---
@@ -185,38 +231,43 @@
 ### Content Quality by Mode
 
 **Ticket Mode:**
-- Success criteria measurable at top
-- Problems integrated in About
+- About section first with integrated problems
+- Success criteria measurable (after About)
 - Scope clearly labeled
 - Resolution checklist scaled (4-6/8-12/12-20)
 - Designs as table with placeholders
+- **10-round ultrathink applied**
 
 **PRD Mode:**
-- Success metrics quantified at top
-- Strategic context in About narrative
+- About section first with strategic context
+- Success metrics quantified (after About)
 - Feature inventory complete (5-10/10-20/20+)
 - Implementation phases defined
 - Platform specifications clear
+- **10-round ultrathink applied**
 
 **Doc Mode:**
-- Purpose clear in About
+- About section first with purpose
 - Structure scaled to complexity
 - References in table format
 - `---` separators used appropriately
 - Content appropriate for audience
+- **10-round ultrathink applied**
 
-### Visual Hierarchy (Updated v0.200-201)
+### Visual Hierarchy
 - **H1 Headers:**
   - ⌘ - About section
   - ❖ - Main sections
 - **H2 Headers:**
   - ◻︎ - Subsections
   - ✦ - Success Criteria/Metrics
-  - ⌥ - Designs & References
-  - ✔ - Resolution Checklist
-  - ⌥ - References & Resources (Doc mode)
+  - ✓ - Resolution Checklist
+  - ⌥ - Designs & References (All Modes)
   - ∅ - Risks (when applicable)
 - **H3 Headers:**
+  - Clean text (no symbols)
+  - Standard markdown formatting
+- **H4 Headers:**
   - Clean text (no symbols)
   - Standard markdown formatting
 
@@ -237,8 +288,14 @@
 **Content Integration:**
 - Problems never listed separately
 - Always woven into About narrative
-- Success always positioned at top
+- Success positioned after About (not at top)
 - Status notes where applicable: `[Status note: "80% complete"]`
+
+**Thinking Documentation:**
+- Always note depth in AI System footer
+- Standard: "10 rounds (ultrathink)"
+- Quick: "X rounds (auto-scaled)"
+- Never mention user choice (doesn't exist)
 
 ---
 
@@ -250,11 +307,11 @@
 **Template:** `Product Owner - Template - Ticket Mode.md`
 **Structure:**
 1. [SCOPE] + Title
-2. Success Criteria (✦) - At top
-3. About (⌘) - Integrated problems
+2. About (⌘) - Integrated problems (FIRST)
+3. Success Criteria (✦) - Measurable (AFTER About)
 4. Designs & References (⌥) - Table
 5. Requirements (❖) - Scaled
-6. Resolution Checklist (✔) - Scaled items
+6. Resolution Checklist (✓) - Scaled items
 7. Optional: Risks (∅) for Complex
 
 **Scaling:**
@@ -262,18 +319,24 @@
 - Standard: 4-5 sections, 8-12 items
 - Complex: 6-8 sections, 12-20 items
 
+**Thinking:**
+- Standard mode: 10 rounds automatic
+- Quick mode: 1-5 rounds auto-scaled
+
 **Key Rules:**
-- Use H1: ⌘/❖, H2: ◻︎/✦/⌥/✔, H3: clean
+- Use H1: ⌘/❖, H2: ◻︎/✦/⌥/✓, H3: clean, H4: clean
 - Checkboxes: `[]` format
 - NO TABLE OF CONTENTS
 - Dividers between all sections
+- Ultrathink applied automatically
+- **About first, Success after**
 
 ### PRD Mode
 **Template:** `Product Owner - Template - PRD Mode.md`
 **Structure:**
 1. Title
-2. Success Metrics (✦) - At top
-3. About (⌘) - Strategic context
+2. About (⌘) - Strategic context (FIRST)
+3. Success Metrics (✦) - Metrics (AFTER About)
 4. Designs & References (⌥) - Table
 5. Scope & Features (❖) - Complete inventory
 6. Technical Requirements (❖)
@@ -285,17 +348,23 @@
 - Program: 10-20 features, half-year
 - Strategic: 20+ features, annual
 
+**Thinking:**
+- Standard mode: 10 rounds automatic
+- Quick mode: 1-5 rounds auto-scaled
+
 **Key Rules:**
-- Use H1: ⌘/❖, H2: ✦/◻︎/⌥/∅, H3: clean
+- Use H1: ⌘/❖, H2: ✦/◻︎/⌥/∅, H3: clean, H4: clean
 - Focus on implementation details
 - Status notes where applicable
 - NO TABLE OF CONTENTS
+- Ultrathink applied automatically
+- **About first, Success after**
 
 ### Doc Mode
 **Template:** `Product Owner - Template - Doc Mode.md`
 **Structure:**
 1. Title with metadata
-2. About (⌘) - Purpose
+2. About (⌘) - Purpose (FIRST)
 3. References & Resources (⌥) - Table
 4. Main sections (❖) - Scaled
 5. Additional sections as needed
@@ -305,12 +374,18 @@
 - Standard: 4-6 main sections
 - Complex: 7+ main sections
 
+**Thinking:**
+- Standard mode: 10 rounds automatic
+- Quick mode: 1-5 rounds auto-scaled
+
 **Key Rules:**
-- Use H1: ⌘/❖, H2: ◻︎/⌥, H3: clean
+- Use H1: ⌘/❖, H2: ◻︎/⌥, H3: clean, H4: clean
 - Use `---` for major separators
 - Clear section hierarchy
 - NO TABLE OF CONTENTS
 - Line breaks for readability
+- Ultrathink applied automatically
+- **About first always**
 
 ---
 
@@ -319,21 +394,22 @@
 ## 6. ✅ QUALITY CHECKLIST
 
 ### Pre-Creation (Critical)
-- [] User responded to thinking rounds?
-- [] User responded to all mode questions?
+- [] Ultrathink applied automatically? (10 rounds standard, 1-5 quick)
+- [] User responded to content questions? (not thinking)
 - [] Complexity/scaling determined?
-- [] Template version confirmed (v0.200-201)?
+- [] Template version confirmed (v0.xxx)?
 - [] All required inputs received?
-- [] User made final selection?
+- [] User made final content selection?
 
 ### Content Validation
 
 **Structure Check:**
-- [] Success criteria/metrics at top?
+- [] About section positioned FIRST?
+- [] Success criteria/metrics AFTER About?
 - [] Problems integrated in About narrative?
 - [] Correct artifact type (`text/markdown`)?
 - [] AI System header at bottom?
-- [] Thinking rounds documented?
+- [] Thinking depth documented? (automatic)
 - [] ATLAS phases noted?
 - [] Scaling documented?
 - [] NO TABLE OF CONTENTS?
@@ -344,10 +420,23 @@
 - [] H2: ◻︎ for subsections?
 - [] H2: ✦ for success criteria/metrics?
 - [] H2: ⌥ for designs & references?
-- [] H2: ✔ for resolution checklist (tickets)?
+- [] H2: ✓ for resolution checklist (tickets)?
 - [] H2: ⌥ for references (docs)?
 - [] H2: ∅ for risks (when needed)?
 - [] H3: Clean headers (no symbols)?
+- [] H4: Clean headers (no symbols)?
+
+**Position Validation:**
+- [] About is first major section?
+- [] Success comes after About?
+- [] Designs after Success?
+- [] Requirements follow logical flow?
+
+**Thinking Depth Validation:**
+- [] Standard modes: 10 rounds documented?
+- [] Quick mode: 1-5 rounds noted?
+- [] No user choice mentioned?
+- [] Automatic application confirmed?
 
 ### Format Validation
 
@@ -366,29 +455,38 @@
 
 **Tickets:**
 - [] [SCOPE] label present?
+- [] About first with integrated problems?
+- [] Success Criteria after About?
 - [] Resolution checklist scaled (4-6/8-12/12-20)?
 - [] Requirements structured?
 - [] Story format excludes checklist?
+- [] 10-round ultrathink applied?
 
 **PRDs:**
+- [] About first with strategic context?
+- [] Success Metrics after About?
 - [] Feature inventory complete (5-10/10-20/20+)?
 - [] Implementation phases clear?
 - [] Platform specifications included?
-- [] Strategic value in About?
+- [] 10-round ultrathink applied?
 
 **Docs:**
+- [] About first with purpose?
 - [] Complexity appropriate (2-3/4-6/7+)?
 - [] Structure logical?
 - [] References complete?
 - [] Separators used correctly?
+- [] 10-round ultrathink applied?
 
 ### Delivery Check
 - [] Single artifact?
 - [] No mixed content?
-- [] User confirmation noted?
+- [] User confirmation noted (for content)?
 - [] Template compliance noted?
 - [] Process transparent?
 - [] NO TABLE OF CONTENTS?
+- [] Ultrathink depth documented?
+- [] Success positioned correctly (after About)?
 
 ---
 
@@ -399,21 +497,31 @@
 ### Common Errors & Fixes
 
 #### Error: Wrong Symbol Hierarchy
-**Detection:** H3 has symbols, or wrong H1/H2 symbols
+**Detection:** H3 or H4 has symbols, or wrong H1/H2 symbols
 **Recovery:**
 1. Update hierarchy
 2. H1: ⌘/❖ only
-3. H2: ◻︎/✦/⌥/✔/⌥/∅
+3. H2: ◻︎/✦/⌥/✓/∅
 4. H3: Clean text only
+5. H4: Clean text only
 5. Verify all headers updated
 
-#### Error: Success Criteria Not at Top
-**Detection:** Success buried in document
+#### Error: Success Criteria at Top (Wrong Position)
+**Detection:** Success positioned before About section
 **Recovery:**
-1. Move success section immediately after title
-2. Add divider after success section
-3. Ensure About follows success
-4. Update all section positions
+1. Move About section to first position
+2. Position Success Criteria immediately after About
+3. Add divider between About and Success
+4. Update all subsequent sections
+5. Verify correct flow
+
+#### Error: About Section Not First
+**Detection:** Other sections appear before About
+**Recovery:**
+1. Move About to first position after title
+2. Reorder all sections appropriately
+3. Ensure Success follows About
+4. Update dividers
 
 #### Error: Problems Listed Separately
 **Detection:** Bullet list of problems instead of narrative
@@ -447,6 +555,14 @@
 3. Restart with proper flow
 4. Document violation
 
+#### Error: Thinking Depth Variance
+**Detection:** Different depths for same mode type
+**Recovery:**
+1. Ensure 10 rounds for standard modes
+2. Verify 1-5 auto-scale for quick mode
+3. Document correct depth in footer
+4. Never mention user choice
+
 #### Error: Wrong Artifact Type
 **Detection:** Used `text/plain` instead of `text/markdown`
 **Recovery:**
@@ -461,13 +577,17 @@
 2. Document all process steps
 3. Include scaling applied
 4. Note template version
+5. **Add thinking depth (automatic)**
 
 ### Prevention Strategies
-1. **Always wait** for user input (except $quick)
-2. **Check template version** for latest standards
-3. **Verify symbol hierarchy** before creation
-4. **Apply correct scaling** based on keywords
-5. **Position success at top** always
-6. **Integrate problems** in narrative
-7. **Exclude ToC** - external tools handle
-8. **Review against checklist** before delivery
+1. **Apply ultrathink automatically** (10 rounds standard, 1-5 quick)
+2. **Never ask thinking questions** to users
+3. **Wait for content input** (except $quick)
+4. **Check template version** for latest standards
+5. **Verify symbol hierarchy** before creation
+6. **Apply correct scaling** based on keywords
+7. **Position About first** always
+8. **Position Success after About** always
+9. **Integrate problems** in narrative
+10. **Exclude ToC** - external tools handle
+11. **Document thinking depth** in footer always

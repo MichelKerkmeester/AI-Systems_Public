@@ -1,9 +1,9 @@
-# Product Owner - Template - PRD Mode - v0.120
+# Product Owner - Template - PRD Mode - v0.121
 
 ## 📋 TABLE OF CONTENTS
 
 1. [📝 PRD MODE OVERVIEW](#1-📝-prd-mode-overview)
-2. [🔍 COMPLEXITY AUTO-SCALING](#2-🔍-complexity-auto-scaling)
+2. [📊 COMPLEXITY AUTO-SCALING](#2-📊-complexity-auto-scaling)
 3. [📊 DETAILED PRD TEMPLATE](#3-📊-detailed-prd-template)
 4. [🎯 FEATURE SPECIFICATION TEMPLATE](#4-🎯-feature-specification-template)
 5. [✨ PRD FORMATTING RULES](#5-✨-prd-formatting-rules)
@@ -19,15 +19,15 @@
 
 - **Purpose:** Create Product Requirements Documents with clear scope and implementation details
 - **Output:** Always as artifact
-- **Thinking Rounds:** 6-10 (simplified from previous)
+- **Thinking:** 10 rounds automatic (ultrathink), 1-5 auto-scaled for $quick
 - **Interactive Mode:** Asks PRD type, Figma connection, platform scope
 - **Key Focus:** Implementation clarity, success metrics, feature specifications
 
 ---
 
-<a id="2-🔍-complexity-auto-scaling"></a>
+<a id="2-📊-complexity-auto-scaling"></a>
 
-## 2. 🔍 COMPLEXITY AUTO-SCALING
+## 2. 📊 COMPLEXITY AUTO-SCALING
 
 | Keywords | Complexity | Scope Level | Features | Document Depth |
 |----------|------------|-------------|----------|----------------|
@@ -43,6 +43,24 @@
 
 ```markdown
 # [PRD Name]
+
+# ⌘ About
+
+[Comprehensive description of what we're building and why it matters. This narrative 
+naturally incorporates the problem we're solving, the opportunity we're capturing, 
+the impact on our users and business, and how this aligns with our strategic goals. 
+The story weaves together market context, user needs, competitive landscape, and 
+business objectives into a compelling case for why this product or feature needs 
+to exist now.]
+
+**Executive Summary**
+
+**Product:** [Clear one-sentence definition of what we're building]
+**Target Users:** [Primary segments who will benefit]
+**Core Value:** [Key benefits and differentiation]
+**Timeline:** [Duration with major milestones]
+
+---
 
 ## ✦ Success Metrics
 
@@ -61,24 +79,6 @@
 | Adoption Rate | - | [X]% | [Y]% | >[Z]% |
 | Daily Active Users | [A] | [B] | [C] | [D] |
 | Feature Usage | - | [X]% | [Y]% | >[Z]% |
-
----
-
-# ⌘ About
-
-[Comprehensive description of what we're building and why it matters. This narrative 
-naturally incorporates the problem we're solving, the opportunity we're capturing, 
-the impact on our users and business, and how this aligns with our strategic goals. 
-The story weaves together market context, user needs, competitive landscape, and 
-business objectives into a compelling case for why this product or feature needs 
-to exist now.]
-
-**Executive Summary**
-
-**Product:** [Clear one-sentence definition of what we're building]
-**Target Users:** [Primary segments who will benefit]
-**Core Value:** [Key benefits and differentiation]
-**Timeline:** [Duration with major milestones]
 
 ---
 
@@ -322,16 +322,6 @@ manual exploratory testing discovers edge cases.
 ```markdown
 # [Feature Name] PRD
 
-## ✦ Success Metrics
-
-| Metric | Week 1 | Week 2 | Month 1 | Target |
-|--------|--------|--------|---------|--------|
-| Usage | [X]% | [Y]% | [Z]% | >[A]% |
-| Errors | <[X]% | <[Y]% | <[Z]% | <[A]% |
-| Performance | [X]ms | [Y]ms | [Z]ms | <[A]ms |
-
----
-
 # ⌘ About
 
 [Clear, narrative description of the feature and its purpose. This story explains 
@@ -339,6 +329,16 @@ why this feature is being built now, who will use it, what problems it solves,
 and how it creates value for both users and the business. The description weaves 
 together user feedback, market demands, and strategic objectives into a compelling 
 case for the feature's existence.]
+
+---
+
+## ✦ Success Metrics
+
+| Metric | Week 1 | Week 2 | Month 1 | Target |
+|--------|--------|--------|---------|--------|
+| Usage | [X]% | [Y]% | [Z]% | >[A]% |
+| Errors | <[X]% | <[Y]% | <[Z]% | <[A]% |
+| Performance | [X]ms | [Y]ms | [Z]ms | <[A]ms |
 
 ---
 
@@ -486,9 +486,9 @@ anomalies. Support teams are briefed and prepared for each phase.
 
 ### Mandatory Elements
 
-1. **Success Metrics** at top (immediately after title)
-2. **About Section** with integrated narrative context
-3. **Executive Summary** with key points
+1. **About Section FIRST** with integrated narrative context
+2. **Success Metrics AFTER About** (not at top)
+3. **Executive Summary** within About section
 4. **Designs & References** as table format
 5. **Feature-First Structure** with clear specifications
 6. **Implementation Details** with technical depth
@@ -516,6 +516,22 @@ anomalies. Support teams are briefed and prepared for each phase.
 
 3. **H3 Headers** - Clean format, no symbols
    - `### [Header Name]` - Standard formatting
+
+4. **H4 Headers** - Clean format, no symbols
+   - `#### [Header Name]` - Standard formatting
+
+### Structure Order
+
+1. Title
+2. About (⌘) - Context with integrated problems
+3. Success Metrics (✦) - Measurable outcomes  
+4. Designs & References (⌥) - Table format
+5. Scope & Features (❖) - Complete inventory
+6. Technical Requirements (❖) - Architecture
+7. User Research (❖) - If applicable
+8. Implementation Plan (❖) - Phases
+9. Stakeholders & Timeline (❖) - RACI
+10. Risks (∅) - When applicable
 
 ### Content Guidelines
 
@@ -560,6 +576,8 @@ User: $prd customer dashboard
 
 System: Let's create your customer dashboard PRD! 📝
 
+**Applying comprehensive ATLAS analysis (10 rounds automatic)...**
+
 **Question 1: What type of PRD do you need?**
 - Feature PRD (single feature specification)
 - Initiative PRD (5-10 features, single team)
@@ -591,8 +609,9 @@ User: Web + Mobile
 System: Creating your Initiative-level customer dashboard PRD with:
 - 5-10 integrated features
 - Web and mobile specifications
-- Success metrics framework
+- Success metrics positioned after About
 - Implementation roadmap
+- 10-round ultrathink applied
 
 [Creates comprehensive PRD document]
 ```

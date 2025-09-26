@@ -1,9 +1,9 @@
-# Product Owner - Template - Ticket Mode - v0.120
+# Product Owner - Template - Ticket Mode - v0.121
 
 ## 📋 TABLE OF CONTENTS
 
 1. [🎫 TICKET MODE OVERVIEW](#1-🎫-ticket-mode-overview)
-2. [🔍 COMPLEXITY AUTO-SCALING](#2-🔍-complexity-auto-scaling)
+2. [📝 COMPLEXITY AUTO-SCALING](#2-📝-complexity-auto-scaling)
 3. [🔵 SIMPLE TICKET TEMPLATE](#3-🔵-simple-ticket-template-2-3-sections-4-6-resolution)
 4. [🟠 STANDARD TICKET TEMPLATE](#4-🟠-standard-ticket-template-4-5-sections-8-12-resolution)
 5. [🔴 COMPLEX TICKET TEMPLATE](#5-🔴-complex-ticket-template-6-8-sections-12-20-resolution)
@@ -20,15 +20,15 @@
 
 - **Purpose:** Create development tickets or user stories that auto-scale complexity
 - **Output:** Always as artifact
-- **Thinking Rounds:** 6-10 
+- **Thinking:** 10 rounds automatic (ultrathink), 1-5 auto-scaled for $quick
 - **Interactive Mode:** Asks ticket vs story, Figma MCP connection
 - **Key Difference:** Stories omit Resolution Checklist
 
 ---
 
-<a id="2-🔍-complexity-auto-scaling"></a>
+<a id="2-📝-complexity-auto-scaling"></a>
 
-## 2. 🔍 COMPLEXITY AUTO-SCALING
+## 2. 📝 COMPLEXITY AUTO-SCALING
 
 | Keywords | Complexity | Sections | Resolution Items |
 |----------|------------|----------|------------------|
@@ -45,19 +45,19 @@
 ```markdown
 [SCOPE] Bug Fix: [Feature Name]
 
-## ✦ Success Criteria
-
-- Issue resolved and verified in production environment
-- No regression in existing functionality
-- Performance metrics maintained or improved
-
----
-
 # ⌘ About
 
 [Brief description of the issue and its impact on users and business operations. 
 This includes context about why this needs fixing and the problems it's causing 
 for users - integrated naturally into the description rather than as separate sections.]
+
+---
+
+## ✦ Success Criteria
+
+- Issue resolved and verified in production environment
+- No regression in existing functionality
+- Performance metrics maintained or improved
 
 ---
 
@@ -81,7 +81,7 @@ for users - integrated naturally into the description rather than as separate se
 
 ---
 
-## ✔ Resolution Checklist
+## ✓ Resolution Checklist
 
 ⚠️ Complete all Resolution Checklist items before moving to QA
 
@@ -102,21 +102,21 @@ for users - integrated naturally into the description rather than as separate se
 ```markdown
 [SCOPE] Feature: [Feature Name]
 
-## ✦ Success Criteria
-
-- Measurable outcome with specific metrics
-- User acceptance criteria clearly defined
-- Performance benchmarks achieved
-- Analytics tracking implemented
-
----
-
 # ⌘ About
 
 [Comprehensive description of the feature, its purpose, and how it delivers value to users 
 and the business. This narrative naturally incorporates the problems this feature solves, 
 why it matters for users, the business value and ROI expectations, and competitive advantages 
 - all woven into a cohesive description rather than listed separately.]
+
+---
+
+## ✦ Success Criteria
+
+- Measurable outcome with specific metrics
+- User acceptance criteria clearly defined
+- Performance benchmarks achieved
+- Analytics tracking implemented
 
 ---
 
@@ -165,7 +165,7 @@ why it matters for users, the business value and ROI expectations, and competiti
 
 ---
 
-## ✔ Resolution Checklist
+## ✓ Resolution Checklist
 
 ⚠️ Complete all Resolution Checklist items before moving to QA
 
@@ -192,17 +192,6 @@ why it matters for users, the business value and ROI expectations, and competiti
 ```markdown
 [SCOPE] Platform: [Platform/Architecture Name]
 
-## ✦ Success Criteria
-
-- All systems migrated with zero data loss
-- Performance metrics meet or exceed targets
-- 99.9% uptime maintained during migration
-- User acceptance testing passed
-- Compliance requirements verified
-- Cost savings targets achieved
-
----
-
 # ⌘ About
 
 [Detailed description of the platform/architecture change, its strategic importance, and long-term vision.
@@ -211,6 +200,17 @@ technical debt preventing feature velocity, security or compliance gaps requirin
 performance bottlenecks impacting user experience, along with strategic business objective alignment,
 cost reduction or efficiency gains, risk mitigation needs, and competitive advantages - 
 all integrated into a cohesive overview rather than listed as separate problems and reasons.]
+
+---
+
+## ✦ Success Criteria
+
+- All systems migrated with zero data loss
+- Performance metrics meet or exceed targets
+- 99.9% uptime maintained during migration
+- User acceptance testing passed
+- Compliance requirements verified
+- Cost savings targets achieved
 
 ---
 
@@ -283,7 +283,7 @@ all integrated into a cohesive overview rather than listed as separate problems 
 
 ---
 
-## ✔ Resolution Checklist
+## ✓ Resolution Checklist
 
 ⚠️ Complete all Resolution Checklist items before moving to QA
 
@@ -325,8 +325,8 @@ all integrated into a cohesive overview rather than listed as separate problems 
 ### Mandatory Elements
 
 1. **[SCOPE]** prefix before title
-2. **Success Criteria** at top (right after title)
-3. **Key Problems/Reasons** integrated into About section narrative
+2. **About section FIRST** with integrated problems/reasons
+3. **Success Criteria AFTER About** (not at top)
 4. **QA Warning** - Above resolution checklist
 5. **Symbol usage** - As per hierarchy
 6. **Dividers** - Use `---` between ALL major sections
@@ -335,12 +335,23 @@ all integrated into a cohesive overview rather than listed as separate problems 
 ### Symbol Reference
 
 - **⌘** - About section (H1)
-- **❖** - Main sections (H2) 
-- **◻︎** - Sub-sections (H3)
-- **⌥** - Designs & References
-- **✦** - Success Criteria
-- **✔** - Resolution Checklist
-- **∅** - Risks (Complex tickets only)
+- **❖** - Main sections (H1) 
+- **◻︎** - Sub-sections (H2)
+- **⌥** - Designs & References (H2)
+- **✦** - Success Criteria (H2)
+- **✓** - Resolution Checklist (H2)
+- **∅** - Risks (H2, Complex tickets only)
+
+### Structure Order
+
+1. Title with [SCOPE]
+2. About (⌘) - Context and integrated problems
+3. Success Criteria (✦) - Measurable outcomes
+4. Designs & References (⌥) - Table format
+5. Requirements (❖) - Detailed specifications
+6. User Stories (❖) - If applicable
+7. Risks (∅) - Complex tickets only
+8. Resolution Checklist (✓) - QA items
 
 ### Formatting Standards
 
@@ -374,6 +385,8 @@ User: $ticket payment integration
 
 System: Let me help you create the right format for your needs.
 
+**Applying deep ATLAS analysis (10 rounds automatic)...**
+
 **Question 1: Is this a ticket or a story?**
 - Ticket = Development task with resolution checklist for QA
 - Story = User story format without checklist
@@ -397,6 +410,8 @@ System: **Question 3: What's the scope?** (BE/FE/Mobile/FS/DevOps/QA)
 User: BE
 
 System: Creating your backend payment integration ticket...
+- 10-round ultrathink applied automatically
+- Success criteria positioned after About section
 [Creates ticket based on complexity detected]
 ```
 
@@ -407,11 +422,11 @@ When user selects "Story", the template omits the Resolution Checklist:
 ```markdown
 [SCOPE] Story: [Name]
 
-## ✦ Success Criteria
-[Same as ticket]
-
 # ⌘ About
-[Same narrative format]
+[Same narrative format with integrated problems]
+
+## ✦ Success Criteria
+[Positioned after About section]
 
 ## ⌥ Designs & References
 [Same table format]
