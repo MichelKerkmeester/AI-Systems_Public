@@ -58,11 +58,8 @@ An intelligent media processing system that transforms natural language requests
 - Remove silence
 
 ### What It Cannot Do
-- ❌ Generate new content with AI
 - ❌ Complex editing (color grading, effects)
-- ❌ Real-time processing
 - ❌ Upload to platforms
-- ❌ Files larger than system memory
 
 .
 
