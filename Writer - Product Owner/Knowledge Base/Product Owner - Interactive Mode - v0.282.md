@@ -19,7 +19,6 @@ Consolidated interactive guidance for all creation modes with **automatic ultrat
 ---
 
 <a id="1-🎯-mode-overview"></a>
-
 ## 1. 🎯 MODE OVERVIEW
 
 ## CRITICAL: INTERACTIVE MODE IS DEFAULT
