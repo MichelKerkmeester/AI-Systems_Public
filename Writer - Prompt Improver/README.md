@@ -1,27 +1,26 @@
-# Prompt Engineering Assistant - User Guide v0.843
+# Prompt Engineering Assistant - User Guide v0.884
 
 A revolutionary prompt enhancement system using RCAF framework for clarity, CLEAR evaluation for quality assurance, and ATLAS thinking for intelligent optimization. Transforms vague requests into clear, measurable, high-scoring prompts with support for Standard, JSON, and YAML formats. **Now with 100% user autonomy through mandatory wait states at all decision points.**
 
 ## 📋 Table of Contents
 
-- [🆕 What's New in v0.843](#whats-new-in-v0843)
-- [⭐ RCAF Framework](#rcaf-framework)
-- [✅ CLEAR Evaluation System](#clear-evaluation-system)
+- [🆕 What's New in v0.884](#whats-new-in-v0884)
 - [✨ Key Features](#key-features)
 - [🚀 Quick Setup](#quick-setup)
 - [🎛️ Operating Modes](#operating-modes)
 - [🔄 Format Options](#format-options)
 - [🧠 ATLAS Thinking Framework](#atlas-thinking-framework)
 - [🚀 Challenge Mode Philosophy](#challenge-mode-philosophy)
-- [🗃️ Past Chats Integration](#past-chats-integration)
-- [⚡ Emergency Commands](#emergency-commands)
+- [⭐ RCAF Framework](#rcaf-framework)
+- [✅ CLEAR Evaluation System](#clear-evaluation-system)
 - [🚨 REPAIR Error Protocol](#repair-error-protocol)
 - [📊 Performance Metrics](#performance-metrics)
+- [🗃️ Past Chats Integration](#past-chats-integration)
 
 .
 
-<a id="whats-new-in-v0843"></a>
-## 🆕 What's New in v0.843
+<a id="whats-new-in-v0884"></a>
+## 🆕 What's New in v0.884
 
 ### CRITICAL UPDATE: 100% User Autonomy 🎯
 **The system now WAITS for explicit user input at EVERY decision point. No automatic selections. No pattern-based assumptions. Complete user control.**
@@ -103,7 +102,7 @@ Please select: (A, B, or C)
 ### Step 2: Add System Instructions
 1. Click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Writer - Prompt Improver - v0.843.md`
+3. Copy and paste: `Writer - Prompt Improver - v0.884.md`
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
@@ -475,24 +474,6 @@ The system uses two tools to search conversation history:
 1. Follow suggestions
 2. Make fresh choices
 3. Disable pattern display
-
-.
-
-<a id="emergency-commands"></a>
-## ⚡ Emergency Commands
-
-| Command | Action | When to Use | Wait Behavior |
-|---------|--------|-------------|---------------|
-| **`$reset`** | Clear all context | Context outdated | Preserves waits |
-| **`$standard`** | Default flow | Want clean process | All waits active |
-| **`$quick`** | Skip to enhancement | Know what you want | STILL WAITS for inputs |
-| **`$status`** | Show patterns & CLEAR | Check system state | No waits |
-| **`$rcaf`** | Force RCAF framework | Want simplicity | Still asks format |
-| **`$craft`** | Force CRAFT framework | Need comprehensive | Still asks format |
-| **`$clear`** | Show CLEAR scores | Check quality | No waits |
-| **`$json`** | Force JSON format | API integration | Still asks rounds |
-| **`$yaml`** | Force YAML format | Templates/config | Still asks rounds |
-| **`$nopatterns`** | Hide pattern suggestions | Want fresh view | All waits active |
 
 ---
 

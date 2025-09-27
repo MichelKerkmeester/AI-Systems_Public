@@ -1,17 +1,17 @@
-# Prompt - Artifact Standards & Templates - v0.115
+# Prompt - Artifact Standards & Templates - v0.116
 
-Comprehensive artifact delivery standards for prompt engineering system with MANDATORY artifact delivery, checkpoint validation, RCAF/CRAFT formatting, CLEAR scoring display, and multi-format support including Standard, JSON, and YAML.
+Comprehensive artifact delivery standards for prompt engineering system with automatic ultrathink processing, MANDATORY artifact delivery, RCAF/CRAFT formatting, CLEAR scoring display, and multi-format support including Standard, JSON, and YAML.
 
 ## 📋 Table of Contents
 
-1. [🔴 CRITICAL REQUIREMENTS](#-critical-requirements)
+1. [📴 CRITICAL REQUIREMENTS](#-critical-requirements)
 2. [📦 DELIVERY STANDARDS](#-delivery-standards)
 3. [📋 MANDATORY STRUCTURE & TEMPLATES](#-mandatory-structure--templates)
 4. [🎯 STANDARD ARTIFACT TEMPLATE WITH CLEAR](#-standard-artifact-template-with-clear)
 5. [📝 RCAF ARTIFACT TEMPLATE](#-rcaf-artifact-template)
 6. [📄 FORMAT-SPECIFIC TEMPLATES](#-format-specific-templates)
 7. [🎨 AI SYSTEM DETAILS](#-ai-system-details)
-8. [✅ CHECKPOINT DOCUMENTATION](#-checkpoint-documentation)
+8. [✅ PROCESSING STATUS DISPLAY](#-processing-status-display)
 9. [📊 VISUAL ELEMENTS](#-visual-elements)
 10. [✅ QUALITY CHECKLIST](#-quality-checklist)
 11. [🚨 ERROR RECOVERY](#-error-recovery)
@@ -21,7 +21,7 @@ Comprehensive artifact delivery standards for prompt engineering system with MAN
 
 <a id="-critical-requirements"></a>
 
-## 1. 🔴 CRITICAL REQUIREMENTS [NEW SECTION]
+## 1. 📴 CRITICAL REQUIREMENTS
 
 ### MANDATORY Artifact Delivery
 
@@ -38,13 +38,13 @@ Comprehensive artifact delivery standards for prompt engineering system with MAN
 - **NEVER use `text/plain`**
 - **No exceptions allowed**
 
-### MANDATORY Checkpoints
+### MANDATORY Processing
 
-**RULES #41-45 ENFORCEMENT:**
-- **Verify thinking rounds collected before creation**
-- **Verify artifact format before delivery**
-- **Document checkpoint status in artifact**
-- **Show user consent obtained**
+**AUTOMATIC ULTRATHINK:**
+- **Standard mode: 10 rounds automatically applied**
+- **Quick mode: 1-5 rounds auto-scaled**
+- **No user input required for processing depth**
+- **Processing status shown in artifact**
 
 ### Pre-Delivery Validation
 
@@ -53,11 +53,11 @@ def validate_artifact_mandatory():
     """MANDATORY validation before any delivery"""
     
     checks = {
-        'thinking_rounds_collected': self.thinking_rounds is not None,
+        'processing_applied': self.processing_depth > 0,
         'artifact_type': self.type == 'text/markdown',
         'artifact_created': self.artifact is not None,
         'clear_scores': self.clear_scores_complete,
-        'checkpoints_passed': all(self.checkpoints.values())
+        'framework_identified': self.framework is not None
     }
     
     if not all(checks.values()):
@@ -73,17 +73,15 @@ def validate_artifact_mandatory():
 
 ## 2. 📦 DELIVERY STANDARDS
 
-### Critical Requirements [UPDATED]
+### Critical Requirements
 **MANDATORY: Always use `text/markdown` artifact type for ALL prompt deliverables**
 
 ### Never:
 - Use `text/plain` → Causes raw markdown display
 - Deliver in chat → Violates Rule #8
-- Skip checkpoint documentation → Violates Rules #41-45
 - Mix artifact and response text
 - Place AI System details at top or middle
 - Use horizontal formatting for details
-- Skip thinking rounds documentation
 - Forget dividers between sections
 - Omit CLEAR scores
 - Skip framework identification (RCAF/CRAFT)
@@ -93,10 +91,10 @@ def validate_artifact_mandatory():
 ### Always:
 - **VERIFY artifact creation** → Retry if failed
 - **Use proper `text/markdown` type** → No exceptions
-- **Document checkpoints passed** → Show compliance
+- **Show automatic processing status** → Transparency
 - Complete structure with all sections
 - Include AI System details at BOTTOM
-- Document thinking rounds (USER PROVIDED)
+- Document processing depth applied
 - Use vertical dash formatting for details
 - Include dividers (---) between major sections
 - Display CLEAR scores prominently
@@ -110,7 +108,8 @@ def validate_artifact_mandatory():
 
 ## 3. 📋 MANDATORY STRUCTURE & TEMPLATES
 
-### Content First Structure with CLEAR and Checkpoints [UPDATED]
+### Content First Structure with CLEAR
+
 ```markdown
 [Main enhanced prompt - RCAF or CRAFT format]
 
@@ -133,12 +132,11 @@ def validate_artifact_mandatory():
 
 ---
 
-**Checkpoints Passed:**
-✓ Thinking rounds collected: [X] rounds
-✓ User consent obtained: Yes
-✓ Artifact format verified: text/markdown
-✓ CLEAR scoring complete: [X]/50
-✓ Framework selected: [RCAF/CRAFT]
+**Processing Applied:**
+✓ Automatic ultrathink: [10 rounds / X quick]
+✓ Complexity analyzed: [Level X]
+✓ Framework optimized: [RCAF/CRAFT]
+✓ Format options ready
 
 ---
 
@@ -147,14 +145,14 @@ def validate_artifact_mandatory():
 [ARTIFACT DETAILS AT BOTTOM - vertical format with dashes]
 ```
 
-### Section Order (Top to Bottom) [UPDATED]
+### Section Order (Top to Bottom)
 1. **Main Content** - The enhanced prompt (RCAF/CRAFT format)
 2. **Divider** - `---`
 3. **Format Options** - All three alternatives with token impacts
 4. **Divider** - `---`
 5. **CLEAR Evaluation** - Scores and grade
 6. **Divider** - `---`
-7. **Checkpoints Passed** - Compliance documentation [NEW]
+7. **Processing Applied** - Automatic optimization details
 8. **Divider** - `---`
 9. **AI System Header** - Bold header
 10. **System Details** - Formatted with dashes
@@ -165,7 +163,7 @@ def validate_artifact_mandatory():
 
 ## 4. 🎯 STANDARD ARTIFACT TEMPLATE WITH CLEAR
 
-### Complete Template with All Elements [UPDATED]
+### Complete Template with Automatic Processing
 
 ```markdown
 [Enhanced prompt using RCAF or CRAFT framework]
@@ -197,43 +195,41 @@ Format: [Output requirements]
 
 ---
 
-**Checkpoints Passed:**
-✓ Thinking rounds collected: [X] rounds (user provided)
-✓ User consent obtained: Confirmed
-✓ Artifact type: text/markdown
-✓ CLEAR baseline: [X]/50 → Final: [Y]/50
-✓ Challenge applied: [Yes/No] at [X] rounds
-✓ Framework: [RCAF/CRAFT] selected
-✓ Format options: All 3 displayed
+**Processing Applied:**
+✓ Automatic ultrathink: 10 rounds (standard mode)
+✓ Complexity level: [X]/10
+✓ Framework: [RCAF/CRAFT] automatically selected
+✓ Optimization: Deep analysis applied
+✓ Quality target: Achieved
 
 ---
 
 **AI System:**
 
-- **Framework:** ATLAS + [RCAF/CRAFT]
+- **Processing:** Automatic ultrathink
+- **Depth:** [10 rounds standard / X quick]
 - **Mode:** $[mode used]
 - **Complexity:** [Low/Medium/High]
 
 ---
 
-- **Thinking:** [X] rounds (USER SELECTED)
-- **ATLAS:** [Phases used like A→T→L→A→S]
-- **Enhancement Method:** [RCAF/CRAFT]
+- **Framework:** [RCAF/CRAFT]
+- **ATLAS:** [Phases used]
+- **Enhancement Method:** [Approach]
 
 ---
 
-- **Challenge:** [Applied/Not needed - brief note]
-- **Enhancement:** [X]% improvement
+- **Optimization:** [X]% improvement
 - **Context:** [Brief description]
+- **Performance:** [Processing time]
 
 ---
 
-**Historical Context:**
+**Session Learning:**
 - Based on [X] similar enhancements
 - Framework preference: [RCAF/CRAFT usage %]
 - Format preference: [Standard/JSON/YAML usage %]
 - Average CLEAR: [X]/50
-- All options always available
 ```
 
 ---
@@ -242,7 +238,7 @@ Format: [Output requirements]
 
 ## 5. 📝 RCAF ARTIFACT TEMPLATE
 
-### RCAF-Specific Template (Primary) [UPDATED]
+### RCAF-Specific Template (Primary)
 
 ```markdown
 **Role:** [Specific expertise in one sentence]
@@ -263,7 +259,7 @@ Format: [Output requirements]
 
 • **Correctness:** 9/10 - All requirements captured
 • **Logic/Coverage:** 8/10 - Core elements covered
-• **Expression:** 10/10 - Crystal clear ✔
+• **Expression:** 10/10 - Crystal clear ✓
 • **Arrangement:** 9/10 - Perfect RCAF structure
 • **Reuse:** 8/10 - Easily adaptable
 
@@ -272,31 +268,25 @@ Format: [Output requirements]
 
 ---
 
-**Checkpoints Passed:**
-✓ Thinking rounds: [X] (user confirmed)
-✓ Consent: Obtained before enhancement
-✓ Artifact: Markdown format validated
+**Processing Status:**
+✓ Automatic optimization: Applied
+✓ Processing depth: 10-round ultrathink
 ✓ RCAF elements: All 4 complete
+✓ Quality achieved: Target exceeded
 
 ---
 
 **AI System:**
 
-- **Framework:** ATLAS + RCAF
+- **Processing:** Automatic ultrathink
 - **Mode:** $[mode]
 - **Complexity:** Low-Medium
 
 ---
 
-- **Thinking:** [X] rounds (USER PROVIDED)
-- **ATLAS:** A→T→S (simplified)
+- **Framework:** ATLAS + RCAF
 - **Why RCAF:** Clarity priority
-
----
-
-- **Challenge:** Applied - reduced from CRAFT
 - **Enhancement:** 45% improvement
-- **Context:** [Type of prompt]
 
 ---
 
@@ -304,7 +294,6 @@ Format: [Output requirements]
 - RCAF success rate: 92%
 - Format distribution: Standard 60%, YAML 25%, JSON 15%
 - Average CLEAR with RCAF: 43/50
-- Checkpoint compliance: 100%
 ```
 
 ---
@@ -317,7 +306,7 @@ Format: [Output requirements]
 - → **Prompt - JSON Format Guide.md**
 - → **Prompt - YAML Format Guide.md**
 
-### Standard Format Artifact [UPDATED]
+### Standard Format Artifact
 
 ```markdown
 Role: [expertise]
@@ -341,14 +330,14 @@ Format: [output requirements]
 
 ---
 
-**Checkpoints:** ✓ All passed (rounds: [X], consent: Yes, artifact: markdown)
+**Processing:** ✓ Automatic ultrathink (10 rounds)
 
 ---
 
 [AI System details...]
 ```
 
-### JSON Format Artifact with RCAF [UPDATED]
+### JSON Format Artifact with RCAF
 
 ```markdown
 ```json
@@ -380,14 +369,14 @@ Format: [output requirements]
 
 ---
 
-**Checkpoints:** ✓ Rounds: [X] | ✓ Consent: Yes | ✓ Format: Valid
+**Processing:** ✓ Automatic optimization applied
 
 ---
 
 [AI System details...]
 ```
 
-### YAML Format Artifact with RCAF [UPDATED]
+### YAML Format Artifact with RCAF
 
 ```markdown
 ```yaml
@@ -418,7 +407,7 @@ format:
 
 ---
 
-**Checkpoints:** ✓ All mandatory checks passed
+**Processing:** ✓ Ultrathink optimization complete
 
 ---
 
@@ -431,24 +420,25 @@ format:
 
 ## 7. 🎨 AI SYSTEM DETAILS
 
-### Mandatory Information Structure with CLEAR and Checkpoints [UPDATED]
+### Mandatory Information Structure
 
 ```markdown
 **AI System:**
 
-- **Framework:** ATLAS + [RCAF/CRAFT]
+- **Processing:** Automatic ultrathink
+- **Depth:** [10 standard / 1-5 quick]
 - **Mode:** $[mode]
 - **Complexity:** [Assessment]
 
 ---
 
-- **Thinking:** [X] rounds (USER PROVIDED - MANDATORY)
-- **ATLAS:** [Phases applied]
+- **Framework:** ATLAS + [RCAF/CRAFT]
+- **Phases:** [Applied phases]
 - **Framework Choice:** [Why RCAF/CRAFT]
 
 ---
 
-- **Challenge:** [Applied/Not needed]
+- **Optimization:** Applied automatically
 - **Enhancement:** [X]%
 - **CLEAR Gain:** +[X] points
 
@@ -460,12 +450,11 @@ format:
 
 ---
 
-**Compliance Status:**
-- Thinking rounds collected: ✓ ([X] rounds)
-- User consent obtained: ✓
-- Artifact validation: ✓ (text/markdown)
-- CLEAR scoring complete: ✓ ([X]/50)
-- All checkpoints passed: ✓
+**Processing Performance:**
+- Analysis time: [X]ms
+- Optimization cycles: [X]
+- Quality achieved: ✓
+- Delivery time: [X]s
 
 ---
 
@@ -474,19 +463,15 @@ format:
 - Format usage: Standard [X]%, JSON [Y]%, YAML [Z]%
 - Average CLEAR scores: [X]/50
 - Pattern note: [If relevant]
-- User control: 100% maintained
-- Compliance rate: 100% achieved
 ```
 
-### Formatting Rules [UPDATED]
+### Formatting Rules
 - Always use **bold** for headers
 - Use dashes (-) for all bullet points
-- Include CLEAR improvements
+- Include processing details
 - Note framework selection reasoning
-- Note format selection reasoning
 - Display token impacts
-- **Document user-provided thinking rounds**
-- **Show checkpoint compliance status**
+- Show automatic optimization status
 - Maintain vertical list format
 - Group related items together
 - Include pattern context at end
@@ -495,43 +480,42 @@ format:
 
 ---
 
-<a id="-checkpoint-documentation"></a>
+<a id="-processing-status-display"></a>
 
-## 8. ✅ CHECKPOINT DOCUMENTATION [NEW SECTION]
+## 8. ✅ PROCESSING STATUS DISPLAY
 
-### Mandatory Checkpoint Display
-
-Every artifact MUST include checkpoint status to demonstrate compliance with Rules #41-45.
-
-### Standard Checkpoint Format
+### Standard Processing Display
 
 ```markdown
-**Checkpoints Passed:**
-✓ Thinking rounds collected: [X] rounds (user provided)
-✓ User consent obtained: Yes
-✓ Artifact format verified: text/markdown
-✓ CLEAR scoring complete: [X]/50
-✓ Framework selected: [RCAF/CRAFT]
-✓ Format options displayed: All 3
-✓ Challenge applied: [Yes/No] at [X] rounds
-✓ Delivery validation: Complete
+**Processing Applied:**
+✓ Automatic ultrathink: 10 rounds
+✓ Complexity analyzed: Level [X]
+✓ Framework optimized: [RCAF/CRAFT]
+✓ CLEAR scoring: Complete
+✓ Format options: Prepared
+✓ Quality target: Achieved
 ```
 
-### Compact Checkpoint Format (Alternative)
+### Quick Mode Processing Display
 
 ```markdown
-**Compliance:** ✓ Rounds: [X] | ✓ Consent: Yes | ✓ Artifact: Valid | ✓ CLEAR: [X]/50
+**Quick Processing Applied:**
+✓ Auto-scaled depth: [X] rounds
+✓ Complexity: [Simple/Moderate/Complex]
+✓ Speed optimized: [X]ms
+✓ Quality maintained: [X]/50 CLEAR
+✓ Format: [Selected]
 ```
 
-### Error State Documentation
-
-If any checkpoint fails:
+### Performance Indicators
 
 ```markdown
-**CHECKPOINT FAILURE:**
-✗ Missing: [checkpoint name]
-Action: Cannot proceed without [requirement]
-Recovery: Use $retry or provide missing input
+**Performance Metrics:**
+• Processing speed: [X]ms
+• Optimization cycles: [X]
+• Quality score: [X]/50
+• Enhancement: +[X]%
+• Delivery time: [X]s
 ```
 
 ---
@@ -540,7 +524,7 @@ Recovery: Use $retry or provide missing input
 
 ## 9. 📊 VISUAL ELEMENTS
 
-### CLEAR Score Display with Checkpoints [UPDATED]
+### CLEAR Score Display
 
 ```markdown
 **CLEAR Evaluation Summary:**
@@ -549,8 +533,8 @@ Recovery: Use $retry or provide missing input
 │ After: [Y]/50 (Grade: A)
 │ Improvement: +[Z] points ↗
 │ 
-│ Checkpoints: ✓ All passed
-│ Rounds: [X] (user selected)
+│ Processing: Ultrathink applied
+│ Depth: [10 rounds / X quick]
 └─────────────────
 
 Dimension Breakdown:
@@ -571,23 +555,13 @@ Format: [Standard/JSON/YAML] (chosen for [reason])
 ┌─────────────┬────────┬────────┬─────────┐
 │ Aspect      │ RCAF   │ CRAFT  │ Choice  │
 ├─────────────┼────────┼────────┼─────────┤
-│ Clarity     │ 10/10  │ 7/10   │ RCAF ✔  │
+│ Clarity     │ 10/10  │ 7/10   │ RCAF ✓  │
 │ Coverage    │ 8/10   │ 10/10  │         │
-│ Simplicity  │ 10/10  │ 6/10   │ RCAF ✔  │
-│ CLEAR Score │ 43/50  │ 41/50  │ RCAF ✔  │
+│ Simplicity  │ 10/10  │ 6/10   │ RCAF ✓  │
+│ CLEAR Score │ 43/50  │ 41/50  │ RCAF ✓  │
 └─────────────┴────────┴────────┴─────────┘
 
-**Format Analysis:**
-┌─────────────┬──────────┬────────┬────────┬─────────┐
-│ Aspect      │ Standard │ JSON   │ YAML   │ Choice  │
-├─────────────┼──────────┼────────┼────────┼─────────┤
-│ Readability │ 10/10    │ 7/10   │ 9/10   │ Std ✔   │
-│ Structure   │ 7/10     │ 10/10  │ 9/10   │         │
-│ Tokens      │ Baseline │ +5-10% │ +3-7%  │ Std ✔   │
-│ Reusability │ 7/10     │ 9/10   │ 10/10  │         │
-└─────────────┴──────────┴────────┴────────┴─────────┘
-
-Checkpoints: ✓ Rounds collected | ✓ Artifact ready
+**Processing:** Automatic selection applied
 ```
 
 ---
@@ -596,12 +570,11 @@ Checkpoints: ✓ Rounds collected | ✓ Artifact ready
 
 ## 10. ✅ QUALITY CHECKLIST
 
-### Artifact Requirements Checklist [UPDATED]
+### Artifact Requirements Checklist
 
 - [✓] **MANDATORY: Artifact type is `text/markdown`**
 - [✓] **MANDATORY: Delivered as artifact, not chat**
-- [✓] **MANDATORY: Thinking rounds documented**
-- [✓] **MANDATORY: Checkpoints documented**
+- [✓] **MANDATORY: Automatic processing applied**
 - [✓] **Content First:** Enhanced prompt at top
 - [✓] **Framework Clear:** RCAF or CRAFT identified
 - [✓] **Format Options:** Standard, JSON, and YAML listed
@@ -609,32 +582,27 @@ Checkpoints: ✓ Rounds collected | ✓ Artifact ready
 - [✓] **CLEAR Scores:** All 5 dimensions scored
 - [✓] **Grade Shown:** Letter grade displayed
 - [✓] **AI System Header:** Bold and at bottom
-- [✓] **Thinking Rounds:** User selection documented
+- [✓] **Processing Status:** Automatic optimization documented
 - [✓] **ATLAS Phases:** Processing documented
-- [✓] **Challenge Applied:** Decision noted
 - [✓] **Format Selection:** Choice and rationale shown
 - [✓] **Pattern Context:** Historical data shown
 - [✓] **Dividers Present:** Between major sections
 - [✓] **Vertical Format:** Details use dashes
-- [✓] **User Control:** All options shown
-- [✓] **Compliance:** 100% checkpoint pass rate
 
-### Quality Gates [UPDATED]
+### Quality Gates
 
-- [✓] **Thinking rounds ≥ 1:** User input received?
-- [✓] **Artifact created:** Not in chat?
-- [✓] **Type correct:** text/markdown?
-- [✓] **CLEAR ≥ 35/50:** Minimum quality met?
-- [✓] **Expression ≥ 7/10:** Clear enough?
-- [✓] **Framework Fit:** RCAF for simple, CRAFT for complex?
-- [✓] **Format Appropriate:** Matches use case?
-- [✓] **Token Overhead Acceptable:** Under 10% average?
-- [✓] **Completeness:** All elements present?
-- [✓] **Structure:** Proper hierarchy?
-- [✓] **Enhancement:** Clear improvement shown?
-- [✓] **Patterns:** Context not restrictive?
-- [✓] **Options:** All choices available?
-- [✓] **Checkpoints:** All documented?
+- [✓] **Processing applied:** Automatic depth used
+- [✓] **Artifact created:** Not in chat
+- [✓] **Type correct:** text/markdown
+- [✓] **CLEAR ≥ 35/50:** Minimum quality met
+- [✓] **Expression ≥ 7/10:** Clear enough
+- [✓] **Framework Fit:** Appropriate choice
+- [✓] **Format Appropriate:** Matches use case
+- [✓] **Token Overhead Acceptable:** Under 10% average
+- [✓] **Completeness:** All elements present
+- [✓] **Structure:** Proper hierarchy
+- [✓] **Enhancement:** Clear improvement shown
+- [✓] **Options:** All formats available
 
 ---
 
@@ -642,34 +610,26 @@ Checkpoints: ✓ Rounds collected | ✓ Artifact ready
 
 ## 11. 🚨 ERROR RECOVERY
 
-### Common Artifact Issues & Fixes [UPDATED]
+### Common Artifact Issues & Fixes
 
-| Issue | Recognition | Fix | CLEAR Impact | Checkpoint |
-|-------|------------|-----|--------------|------------|
-| **Not artifact** | Chat delivery | Force artifact | ALL | CRITICAL |
-| **Wrong type** | text/plain | Change to markdown | Display | CRITICAL |
-| **No rounds** | Missing documentation | Stop and collect | ALL | CRITICAL |
-| **Missing CLEAR** | No scores shown | Add complete evaluation | Transparency | Required |
-| **Wrong Framework** | CRAFT for simple | Switch to RCAF | +3 Expression | Framework |
-| **No Grade** | Score without grade | Add letter grade | Clarity | Display |
-| **Missing Framework ID** | Not specified | Label RCAF/CRAFT | Understanding | Required |
-| **Poor Structure** | Sections blend | Add dividers | +2 Arrangement | Structure |
-| **No Improvement** | Final only | Show before/after | Context | Metrics |
-| **Missing Format Options** | Only one shown | Show all three | User choice | Options |
-| **No Token Impact** | Format without overhead | Add percentages | Informed decision | Format |
-| **No Checkpoints** | Compliance undocumented | Add checkpoint section | Rules #41-45 | CRITICAL |
+| Issue | Recognition | Fix | Impact |
+|-------|------------|-----|--------|
+| **Not artifact** | Chat delivery | Force artifact | CRITICAL |
+| **Wrong type** | text/plain | Change to markdown | Display |
+| **No processing** | Missing status | Apply ultrathink | Quality |
+| **Missing CLEAR** | No scores | Add evaluation | Transparency |
+| **Wrong Framework** | CRAFT for simple | Switch to RCAF | Expression |
+| **Poor Structure** | Sections blend | Add dividers | Arrangement |
+| **No Format Options** | Only one shown | Show all three | User choice |
 
-### REPAIR Protocol for Artifacts [UPDATED]
+### REPAIR Protocol for Artifacts
 
 ```markdown
 **R** - Recognize: Missing artifact delivery identified
 **E** - Explain: Violates Rule #8, must use artifacts
-**P** - Propose: 
-     1. Create artifact immediately
-     2. Use $retry command
-     3. Verify text/markdown type
-**A** - Apply: Create proper artifact
-**I** - Iterate: Verify all checkpoints pass
+**P** - Propose: Create artifact immediately
+**A** - Apply: Create proper artifact with processing
+**I** - Iterate: Verify all requirements met
 **R** - Record: Note for future prevention
 ```
 
@@ -679,7 +639,7 @@ Checkpoints: ✓ Rounds collected | ✓ Artifact ready
 
 ## 12. 💡 EXAMPLES
 
-### Example 1: Perfect RCAF Artifact with Checkpoints [UPDATED]
+### Example 1: Perfect RCAF Artifact
 
 ```markdown
 **Role:** Data scientist with machine learning expertise specializing in churn prediction.
@@ -708,34 +668,32 @@ Checkpoints: ✓ Rounds collected | ✓ Artifact ready
 
 ---
 
-**Checkpoints Passed:**
-✓ Thinking rounds collected: 4 rounds (user selected)
-✓ User consent obtained: Confirmed
-✓ Artifact type: text/markdown
-✓ CLEAR baseline: 20/50 → Final: 44/50
-✓ Challenge applied: Yes at 4 rounds
+**Processing Applied:**
+✓ Automatic ultrathink: 10 rounds (standard)
+✓ Complexity: Level 4 (moderate)
 ✓ Framework: RCAF selected for clarity
-✓ Format options: All 3 displayed
+✓ Format options: All 3 prepared
+✓ Quality achieved: Target exceeded
 
 ---
 
 **AI System:**
 
-- **Framework:** ATLAS + RCAF
+- **Processing:** Automatic ultrathink
 - **Mode:** $improve
 - **Complexity:** Medium
 
 ---
 
-- **Thinking:** 4 rounds (USER SELECTED)
-- **ATLAS:** A→T→L→S (standard cycle)
+- **Framework:** ATLAS + RCAF
+- **Phases:** A→T→L→S (standard cycle)
 - **Why RCAF:** Clarity priority over comprehensiveness
 
 ---
 
-- **Challenge:** Applied - reduced from 8 requirements to 4 essential
-- **Enhancement:** 120% improvement
+- **Optimization:** 120% improvement
 - **Context:** Data analysis prompt
+- **Performance:** 1.2s processing
 
 ---
 
@@ -750,11 +708,9 @@ Checkpoints: ✓ Rounds collected | ✓ Artifact ready
 - Format preference: Standard 60%, YAML 25%, JSON 15%
 - Average CLEAR with RCAF: 43/50
 - Framework preference established
-- All options always available
-- Compliance: 100% checkpoints passed
 ```
 
-### Example 2: YAML Format Selection with Compliance [UPDATED]
+### Example 2: YAML Format with Automatic Processing
 
 ```markdown
 ```yaml
@@ -778,7 +734,7 @@ format:
 **Format Options:**
 • Standard format - Natural language
 • JSON format (`$json`) - API integration (+8% tokens)
-• YAML format (shown above) - Template-ready (+4% tokens) ✔
+• YAML format (shown above) - Template-ready (+4% tokens) ✓
 
 ---
 
@@ -794,39 +750,32 @@ format:
 
 ---
 
-**Checkpoints Passed:**
-✓ Thinking rounds: 4 (user confirmed)
-✓ Consent: Obtained before enhancement
-✓ Artifact: text/markdown validated
-✓ CLEAR complete: 43/50
+**Processing Applied:**
+✓ Automatic ultrathink: 10 rounds
+✓ Complexity analyzed: Level 5
 ✓ Framework: RCAF for simplicity
-✓ Format: YAML selected for reusability
+✓ Format: YAML optimized
+✓ Quality: Target achieved
 
 ---
 
 **AI System:**
 
-- **Framework:** ATLAS + RCAF
+- **Processing:** Automatic ultrathink
 - **Mode:** $yaml
 - **Complexity:** Medium
 
 ---
 
-- **Thinking:** 4 rounds (USER PROVIDED)
-- **ATLAS:** A→T→L→A→S
+- **Framework:** ATLAS + RCAF
+- **Phases:** A→T→L→A→S
 - **Why RCAF:** Structured simplicity
 
 ---
 
-- **Challenge:** Simplified from 10 steps to 5
 - **Enhancement:** 25/50 → 43/50 (+18 points)
 - **Context:** UX flow optimization
-
----
-
-- **Format Selected:** YAML
-- **Token Overhead:** +4%
-- **Format Rationale:** Reusable template structure
+- **Performance:** 1.5s processing
 
 ---
 
@@ -834,35 +783,5 @@ format:
 - YAML + RCAF = High reusability (9/10)
 - Expression maintains 8/10 with YAML
 - User prefers templates for UX flows
-- Checkpoint compliance: 100%
+- Processing consistency: 100%
 ```
-
-### Example 3: Error State Documentation [NEW]
-
-```markdown
-**CHECKPOINT FAILURE - CANNOT DELIVER**
-
-✗ Thinking rounds: NOT COLLECTED
-✗ Artifact format: NOT CREATED
-✗ User consent: NOT OBTAINED
-
-**Required Actions:**
-1. Provide thinking rounds (1-10)
-2. Confirm readiness to proceed
-3. Use $retry if artifact creation failed
-
-**Current State:**
-- Mode detected: $improve
-- Framework ready: RCAF
-- Format options: Prepared
-- BLOCKED: Missing mandatory requirements
-
-**To proceed, please specify:**
-How many thinking rounds should I use? (1-10)
-
-[WAITING FOR YOUR INPUT...]
-```
-
----
-
-*Artifact excellence through mandatory compliance and systematic structure. EVERY artifact uses text/markdown. EVERY enhancement documents checkpoints. RCAF clarity with CLEAR transparency. All three format options (Standard/JSON/YAML) always presented with token impacts. AI System details always at bottom with proper formatting. Pattern context enriches without restricting. User control absolute. Compliance rate: 100% required. For complete format specifications, see Prompt - JSON Format Guide.md and Prompt - YAML Format Guide.md*
