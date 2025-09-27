@@ -1,4 +1,4 @@
-# Product Owner - Template - PRD Mode - v0.121
+# Product Owner - Template - PRD Mode - v0.122
 
 ## 📋 TABLE OF CONTENTS
 
@@ -94,9 +94,9 @@ to exist now.]
 
 ---
 
-# ❖ Scope & Features
+# ■ Scope & Features
 
-## ◻︎ Complete Feature List
+## ◻️ Complete Feature List
 
 **Core Features (Must Have)**
 
@@ -133,7 +133,7 @@ to exist now.]
    
    Value Add: [Additional benefit this provides beyond core functionality]
 
-## ◻︎ Platform-Specific Implementation
+## ◻️ Platform-Specific Implementation
 
 **Creator Application**
 
@@ -171,9 +171,9 @@ it supports multi-tenant architectures and white-label customization options.
 
 ---
 
-# ❖ Technical Requirements
+# ■ Technical Requirements
 
-## ◻︎ Architecture
+## ◻️ Architecture
 
 **System Architecture Overview**
 
@@ -187,7 +187,7 @@ New Services: [Services to be created with their responsibilities]
 Database Changes: [Schema modifications with migration strategies]
 API Changes: [Endpoints added/modified with versioning approach]
 
-## ◻︎ Integration Points
+## ◻️ Integration Points
 
 | System | Integration Type | Data Flow | Criticality |
 |--------|-----------------|-----------|-------------|
@@ -195,7 +195,7 @@ API Changes: [Endpoints added/modified with versioning approach]
 | Internal Service | Event-driven | Publish | Medium |
 | Third-party | Webhook | Subscribe | Low |
 
-## ◻︎ Performance Requirements
+## ◻️ Performance Requirements
 
 **Response Time Targets**
 
@@ -212,9 +212,9 @@ optimization for frequently accessed data.
 
 ---
 
-# ❖ User Research & Validation
+# ■ User Research & Validation
 
-## ◻︎ Research Summary
+## ◻️ Research Summary
 
 Our research methodology combined quantitative analytics with qualitative user 
 interviews to understand pain points and validate our solution approach. The 
@@ -234,9 +234,9 @@ simplify [specific workflow] to reduce cognitive load.
 
 ---
 
-# ❖ Implementation Plan
+# ■ Implementation Plan
 
-## ◻︎ Development Phases
+## ◻️ Development Phases
 
 **Phase 1: Foundation (Weeks 1-4)**
 
@@ -263,7 +263,7 @@ Deliverables include enhanced features, performance optimizations, and
 expanded platform support. Integration testing becomes the focus, ensuring 
 all components work seamlessly together.
 
-## ◻︎ Testing Strategy
+## ◻️ Testing Strategy
 
 **Comprehensive Test Coverage**
 
@@ -280,9 +280,9 @@ manual exploratory testing discovers edge cases.
 
 ---
 
-# ❖ Stakeholders & Timeline
+# ■ Stakeholders & Timeline
 
-## ◻︎ RACI Matrix
+## ◻️ RACI Matrix
 
 | Area | Responsible | Accountable | Consulted | Informed |
 |------|-------------|-------------|-----------|----------|
@@ -292,7 +292,7 @@ manual exploratory testing discovers edge cases.
 | Quality Assurance | QA Lead | Eng Manager | PM | Stakeholders |
 | Launch | PM | VP Product | All teams | Company |
 
-## ◻︎ Milestone Timeline
+## ◻️ Milestone Timeline
 
 | Milestone | Date | Deliverable | Owner | Status |
 |-----------|------|-------------|-------|--------|
@@ -311,6 +311,9 @@ manual exploratory testing discovers edge cases.
 | **Scope Creep** | High | High | Weekly scope reviews with change control process |
 | **Technical Debt** | Medium | Medium | Dedicated refactoring sprints and code review standards |
 | **Resource Availability** | Low | High | Cross-training and comprehensive documentation |
+
+---
+Mode: $prd | Complexity: Initiative | Template: v0.121
 ```
 
 ---
@@ -353,9 +356,9 @@ case for the feature's existence.]
 
 ---
 
-# ❖ Feature Specification
+# ■ Feature Specification
 
-## ◻︎ Functional Requirements
+## ◻️ Functional Requirements
 
 **Core Functionality**
 
@@ -373,7 +376,7 @@ considered to minimize cognitive load while maximizing utility.
    
    Data Operations: [What gets created, read, updated, or deleted]
 
-## ◻︎ User Interface
+## ◻️ User Interface
 
 **Component Architecture**
 
@@ -386,7 +389,7 @@ Components include [Component 1] which handles [specific responsibility],
 [additional functionality]. These components communicate through well-defined 
 interfaces and maintain separation of concerns.
 
-## ◻︎ Business Logic
+## ◻️ Business Logic
 
 **Validation and Processing Rules**
 
@@ -400,9 +403,9 @@ error messages guiding users toward successful completion.
 
 ---
 
-# ❖ Technical Implementation
+# ■ Technical Implementation
 
-## ◻︎ API Specification
+## ◻️ API Specification
 
 **RESTful Endpoints**
 
@@ -427,9 +430,9 @@ Description: Soft deletes resource maintaining audit trail
 
 ---
 
-# ❖ Testing & Acceptance
+# ■ Testing & Acceptance
 
-## ◻︎ Acceptance Criteria
+## ◻️ Acceptance Criteria
 
 **Functional Acceptance**
 
@@ -444,7 +447,7 @@ Performance meets or exceeds targets across all supported platforms. The
 interface is responsive and accessible, meeting WCAG 2.1 AA standards. 
 Security measures prevent unauthorized access while maintaining usability.
 
-## ◻︎ Test Scenarios
+## ◻️ Test Scenarios
 
 **Comprehensive Test Coverage**
 
@@ -462,9 +465,9 @@ Security measures prevent unauthorized access while maintaining usability.
 
 ---
 
-# ❖ Rollout Plan
+# ■ Rollout Plan
 
-## ◻︎ Phased Deployment Strategy
+## ◻️ Phased Deployment Strategy
 
 **Gradual Rollout Approach**
 
@@ -476,6 +479,9 @@ Week 4: Full launch to 100% with celebration and communication plan
 Each phase includes specific success criteria and rollback procedures. 
 Monitoring dashboards track key metrics in real-time, with alerts for 
 anomalies. Support teams are briefed and prepared for each phase.
+
+---
+Mode: $prd | Complexity: Feature | Template: v0.121
 ```
 
 ---
@@ -493,12 +499,13 @@ anomalies. Support teams are briefed and prepared for each phase.
 5. **Feature-First Structure** with clear specifications
 6. **Implementation Details** with technical depth
 7. **Status Callouts** where applicable
+8. **Minimal Footer** with mode, complexity, template
 
 ### Symbol Reference
 
 - **⌘** - About section (H1)
-- **❖** - Main sections (H1)
-- **◻︎** - Sub-sections (H2)
+- **■** - Main sections (H1)
+- **◻️** - Sub-sections (H2)
 - **⌥** - Designs & References (H2)
 - **✦** - Success Metrics (H2)
 - **∅** - Risks (H2, Complex PRDs only)
@@ -507,11 +514,11 @@ anomalies. Support teams are briefed and prepared for each phase.
 
 1. **H1 Headers** - Use `#` with symbols
    - `# ⌘ About` - For About section
-   - `# ❖ [Section Name]` - For main sections
+   - `# ■ [Section Name]` - For main sections
 
 2. **H2 Headers** - Use `##` with symbols
    - `## ⌥ Designs & References` - For references
-   - `## ◻︎ [Subsection Name]` - For subsections
+   - `## ◻️ [Subsection Name]` - For subsections
    - `## ✦ Success Metrics` - For metrics
 
 3. **H3 Headers** - Clean format, no symbols
@@ -526,12 +533,13 @@ anomalies. Support teams are briefed and prepared for each phase.
 2. About (⌘) - Context with integrated problems
 3. Success Metrics (✦) - Measurable outcomes  
 4. Designs & References (⌥) - Table format
-5. Scope & Features (❖) - Complete inventory
-6. Technical Requirements (❖) - Architecture
-7. User Research (❖) - If applicable
-8. Implementation Plan (❖) - Phases
-9. Stakeholders & Timeline (❖) - RACI
+5. Scope & Features (■) - Complete inventory
+6. Technical Requirements (■) - Architecture
+7. User Research (■) - If applicable
+8. Implementation Plan (■) - Phases
+9. Stakeholders & Timeline (■) - RACI
 10. Risks (∅) - When applicable
+11. Footer - Minimal single line
 
 ### Content Guidelines
 
@@ -562,6 +570,7 @@ anomalies. Support teams are briefed and prepared for each phase.
 - Use `---` dividers between major sections
 - Narrative paragraphs for context and description
 - Avoid excessive bullet points in favor of prose
+- Single-line minimal footer at bottom
 
 ---
 
@@ -613,7 +622,7 @@ System: Creating your Initiative-level customer dashboard PRD with:
 - Implementation roadmap
 - 10-round ultrathink applied
 
-[Creates comprehensive PRD document]
+[Creates comprehensive PRD document with minimal footer]
 ```
 
 ### PRD Type Differentiation

@@ -1,4 +1,4 @@
-# Product Owner - Template - Ticket Mode - v0.121
+# Product Owner - Template - Ticket Mode - v0.122
 
 ## 📋 TABLE OF CONTENTS
 
@@ -71,9 +71,9 @@ for users - integrated naturally into the description rather than as separate se
 
 ---
 
-## ❖ Requirements
+## ■ Requirements
 
-### ◻︎ Functional Requirements
+### ◻️ Functional Requirements
 
 - Fix [specific issue with clear description]
 - Ensure [expected behavior after fix]
@@ -91,6 +91,9 @@ for users - integrated naturally into the description rather than as separate se
 [] Update unit tests if needed
 [] Verify no regressions occur
 [] Document fix in PR description
+
+---
+Mode: $ticket | Complexity: Simple | Template: v0.121
 ```
 
 ---
@@ -131,21 +134,21 @@ why it matters for users, the business value and ROI expectations, and competiti
 
 ---
 
-## ❖ Requirements
+## ■ Requirements
 
-### ◻︎ Functional Requirements
+### ◻️ Functional Requirements
 
 - Primary requirement with clear acceptance criteria
 - Secondary requirement with measurable outcome
 - Tertiary requirement with defined scope
 
-### ◻︎ Non-Functional Requirements
+### ◻️ Non-Functional Requirements
 
 - Performance requirement (e.g., <200ms response time)
 - Security requirement (e.g., OAuth 2.0 implementation)
 - Accessibility requirement (e.g., WCAG 2.1 AA compliance)
 
-### ◻︎ Technical Requirements
+### ◻️ Technical Requirements
 
 - Backend API changes needed
 - Frontend framework requirements
@@ -153,7 +156,7 @@ why it matters for users, the business value and ROI expectations, and competiti
 
 ---
 
-## ❖ User Stories
+## ■ User Stories
 
 **As a** [primary user type]
 **I want to** [specific action or capability]
@@ -181,6 +184,9 @@ why it matters for users, the business value and ROI expectations, and competiti
 [] Verify mobile responsiveness
 [] Get design approval on implementation
 [] Complete code review with team
+
+---
+Mode: $ticket | Complexity: Standard | Template: v0.121
 ```
 
 ---
@@ -226,23 +232,23 @@ all integrated into a cohesive overview rather than listed as separate problems 
 
 ---
 
-## ❖ Requirements
+## ■ Requirements
 
-### ◻︎ Functional Requirements
+### ◻️ Functional Requirements
 
 - Core platform capability with detailed specifications
 - Integration requirements with existing systems
 - Data migration and transformation needs
 - User-facing feature modifications
 
-### ◻︎ Non-Functional Requirements
+### ◻️ Non-Functional Requirements
 
 - Scalability requirement (e.g., 10,000 concurrent users)
 - Performance requirement (e.g., 99.9% uptime SLA)
 - Security requirement (e.g., SOC 2 compliance)
 - Compliance requirement (e.g., GDPR, CCPA)
 
-### ◻︎ Integration Requirements
+### ◻️ Integration Requirements
 
 - System integration with service A
 - API compatibility with existing clients
@@ -251,7 +257,7 @@ all integrated into a cohesive overview rather than listed as separate problems 
 
 ---
 
-## ❖ User Stories
+## ■ User Stories
 
 **PRD: [PRD Name]**
 
@@ -287,13 +293,13 @@ all integrated into a cohesive overview rather than listed as separate problems 
 
 ⚠️ Complete all Resolution Checklist items before moving to QA
 
-### ◻︎ Planning & Design
+### ◻️ Planning & Design
 [] Complete technical design review
 [] Obtain stakeholder approval
 [] Finalize migration strategy
 [] Document rollback procedures
 
-### ◻︎ Development & Testing
+### ◻️ Development & Testing
 [] Set up development environment
 [] Implement Phase 1 components
 [] Create comprehensive test suite
@@ -301,19 +307,22 @@ all integrated into a cohesive overview rather than listed as separate problems 
 [] Complete load testing
 [] Document all APIs
 
-### ◻︎ Integration & Validation
+### ◻️ Integration & Validation
 [] Conduct integration testing
 [] Validate data migration scripts
 [] Perform user acceptance testing
 [] Verify monitoring coverage
 
-### ◻︎ Deployment & Operations
+### ◻️ Deployment & Operations
 [] Create deployment runbooks
 [] Train support team
 [] Execute staged deployment
 [] Monitor system metrics
 [] Complete performance optimization
 [] Update all documentation
+
+---
+Mode: $ticket | Complexity: Complex | Template: v0.121
 ```
 
 ---
@@ -331,12 +340,13 @@ all integrated into a cohesive overview rather than listed as separate problems 
 5. **Symbol usage** - As per hierarchy
 6. **Dividers** - Use `---` between ALL major sections
 7. **Designs as Table** - Not bullet lists
+8. **Minimal Footer** - Single line with mode, complexity, template
 
 ### Symbol Reference
 
 - **⌘** - About section (H1)
-- **❖** - Main sections (H1) 
-- **◻︎** - Sub-sections (H2)
+- **■** - Main sections (H1) 
+- **◻️** - Sub-sections (H2)
 - **⌥** - Designs & References (H2)
 - **✦** - Success Criteria (H2)
 - **✓** - Resolution Checklist (H2)
@@ -348,10 +358,11 @@ all integrated into a cohesive overview rather than listed as separate problems 
 2. About (⌘) - Context and integrated problems
 3. Success Criteria (✦) - Measurable outcomes
 4. Designs & References (⌥) - Table format
-5. Requirements (❖) - Detailed specifications
-6. User Stories (❖) - If applicable
+5. Requirements (■) - Detailed specifications
+6. User Stories (■) - If applicable
 7. Risks (∅) - Complex tickets only
 8. Resolution Checklist (✓) - QA items
+9. Footer - Minimal single line
 
 ### Formatting Standards
 
@@ -361,6 +372,7 @@ all integrated into a cohesive overview rather than listed as separate problems 
 - Use `-` (hyphen + space) for all regular list items
 - Use `[]` for checkboxes in Resolution Checklist (no spaces)
 - Each checkbox item on its own line
+- Minimal footer at bottom
 
 ### Correct Formatting Examples
 
@@ -370,6 +382,11 @@ all integrated into a cohesive overview rather than listed as separate problems 
 |------|----------|--------|------|
 | Design | UI Flow | Ready | [Figma] |
 | API | Endpoints | Draft | [Swagger] |
+```
+
+**Correct Footer:**
+```markdown
+Mode: $ticket | Complexity: Standard | Template: v0.121
 ```
 
 ---
@@ -412,7 +429,7 @@ User: BE
 System: Creating your backend payment integration ticket...
 - 10-round ultrathink applied automatically
 - Success criteria positioned after About section
-[Creates ticket based on complexity detected]
+[Creates ticket based on complexity detected with minimal footer]
 ```
 
 ### Story Format (When Selected)
@@ -431,11 +448,14 @@ When user selects "Story", the template omits the Resolution Checklist:
 ## ⌥ Designs & References
 [Same table format]
 
-## ❖ Requirements
+## ■ Requirements
 [Same structure]
 
-## ❖ User Stories
+## ■ User Stories
 [Same format]
 
 [NOTE: No Resolution Checklist for stories]
+
+---
+Mode: $story | Complexity: [level] | Template: v0.121
 ```

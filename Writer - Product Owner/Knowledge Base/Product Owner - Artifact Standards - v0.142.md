@@ -1,4 +1,4 @@
-# Product Owner - Artifact Standards - v0.141
+# Product Owner - Artifact Standards - v0.142
 
 ## TABLE OF CONTENTS
 1. [📦 DELIVERY STANDARDS](#1-📦-delivery-standards)
@@ -24,7 +24,7 @@
 
 **Template Compliance:**
 - Use templates v0.xxx exactly
-- Symbol hierarchy: H1 (⌘/❖), H2 (◻︎/✦/⌥/✓/∅), H3: clean, H4: clean
+- Symbol hierarchy: H1 (⌘/■), H2 (◻️/✦/⌥/✓/∅), H3: clean, H4: clean
 - About section always first
 - Success criteria/metrics after About
 - Problems integrated in About narrative
@@ -39,7 +39,7 @@
 - **Standard modes:** 10-round ultrathink automatic
 - **Quick mode:** 1-5 rounds auto-scaled
 - **No user choice:** System determines depth
-- **Document in footer:** Note thinking applied
+- **Document in footer:** Note mode and template applied
 
 ### Never:
 - Use `text/plain` → Causes raw markdown display
@@ -48,7 +48,6 @@
 - Place artifact details at top or middle
 - Use horizontal formatting for details
 - Skip ATLAS phase documentation
-- Forget AI System header
 - Hide process transparency
 - **Create before user responds to content questions**
 - **Include Table of Contents**
@@ -57,12 +56,9 @@
 
 ### Always:
 - Use proper `text/markdown` type
-- Include AI System header at bottom
-- Document automatic thinking depth
+- Document mode and scaling applied
 - Use dash bullet formatting vertically
-- Note ATLAS phases used
-- Document complexity/scaling applied
-- Show template version compliance
+- Note template version compliance
 - Apply ultrathink consistently
 - **Wait for user input on content (not thinking)**
 - **Position About first**
@@ -83,24 +79,7 @@
 ```markdown
 [Main content - ticket/PRD/doc with template v0.xxx structure]
 ---
-### AI SYSTEM
----
-- **Framework:** ATLAS with ultrathink
-- **Mode:** $[mode used]
-- **Type/Complexity:** [Simple/Standard/Complex or Initiative/Program/Strategic]
----
-- **Thinking:** [10 rounds (standard) or X rounds (quick)]
-- **ATLAS:** [Phases used like A→T→L→S]
----
-- **Template:** v0.xxx compliant
-- **Scaling:** [Applied complexity level]
----
-**Historical Context:**
-- Patterns from [X] sessions
-- All options shown: Yes
-- User confirmed: Yes
----
-**Session Learning:** [Key pattern or preference noted]
+Mode: $[mode] | Complexity: [level] | Template: v0.xxx
 ```
 
 ### Structure Order Requirements:
@@ -110,7 +89,7 @@
 2. About (⌘) - Context and integrated problems
 3. Success Criteria (✦) - Measurable outcomes
 4. Designs & References (⌥) - Table format
-5. Requirements (❖) - Specifications
+5. Requirements (■) - Specifications
 6. Resolution Checklist (✓) - If ticket
 
 **For PRDs:**
@@ -118,16 +97,16 @@
 2. About (⌘) - Strategic context
 3. Success Metrics (✦) - Business/product metrics
 4. Designs & References (⌥) - Table format
-5. Scope & Features (❖) - Feature inventory
-6. Technical Requirements (❖)
-7. Implementation Plan (❖)
+5. Scope & Features (■) - Feature inventory
+6. Technical Requirements (■)
+7. Implementation Plan (■)
 8. Risks (∅) - When applicable
 
 **For Docs:**
 1. Title with metadata
 2. About (⌘) - Purpose and context
 3. References & Resources (⌥) - Table format
-4. Main sections (❖) - Content areas
+4. Main sections (■) - Content areas
 
 ### Mode-Specific Complexity Labels:
 - **Ticket Mode:** Simple/Standard/Complex (2-3/4-5/6-8 sections)
@@ -135,30 +114,23 @@
 - **Doc Mode:** Simple/Standard/Complex (2-3/4-6/7+ sections)
 - **Quick Mode:** Shows "Auto-scaled" with detected level
 
-### Thinking Depth Documentation:
-- **Standard operations:** "10 rounds (ultrathink)"
-- **Quick mode:** "X rounds (auto-scaled)" where X is 1-5
-- **Never show:** "User selected" or "User approved"
-- **Always show:** Automatic depth applied
-
 ### Symbol Hierarchy:
-- **H1:** ⌘ (About), ❖ (Main sections)
-- **H2:** ◻︎ (Subsections), ✦ (Success), ⌥ (Designs), ✓ (Checklist), ⌥ (References), ∅ (Risks)
+- **H1:** ⌘ (About), ■ (Main sections)
+- **H2:** ◻️ (Subsections), ✦ (Success), ⌥ (Designs), ✓ (Checklist), ⌥ (References), ∅ (Risks)
 - **H3:** Clean headers (no symbols)
 - **H4:** Clean headers (no symbols)
 
 ### Formatting Rules:
-1. **AI System header** - Always H3
+1. **Minimal footer** - Single line with essential info
 2. **Dash bullets** - Use `-` not `*` or `•`
 3. **Vertical layout** - Never horizontal lists
-4. **Bottom placement** - Details always at artifact bottom
+4. **Bottom placement** - Footer always at artifact bottom
 5. **Dividers** - Use `---` between each section
-6. **User confirmation** - Note user approved content (not thinking)
+6. **User confirmation** - Note user approved content
 7. **No Table of Contents** - External tools handle this
 8. **About first** - Always start with context
 9. **Success after About** - Never at document top
 10. **Problems integrated** - In About narrative
-11. **Thinking automatic** - System controlled depth
 
 ---
 
@@ -172,8 +144,7 @@
 - About and Success Criteria/Metrics
 - Success Criteria and Designs & References
 - All major content sections
-- Content and AI System footer
-- Each footer section
+- Content and minimal footer
 
 ### Doc Mode Separators (`---`)
 **Use For:**
@@ -206,13 +177,11 @@
 
 ---
 
-## ❖ Requirements
+## ■ Requirements
 [Content]
 
 ---
-
-### AI SYSTEM
-[Footer details with thinking depth]
+Mode: $ticket | Complexity: Standard | Template: v0.121
 ```
 
 ---
@@ -257,9 +226,9 @@
 ### Visual Hierarchy
 - **H1 Headers:**
   - ⌘ - About section
-  - ❖ - Main sections
+  - ■ - Main sections
 - **H2 Headers:**
-  - ◻︎ - Subsections
+  - ◻️ - Subsections
   - ✦ - Success Criteria/Metrics
   - ✓ - Resolution Checklist
   - ⌥ - Designs & References (All Modes)
@@ -291,10 +260,9 @@
 - Success positioned after About (not at top)
 - Status notes where applicable: `[Status note: "80% complete"]`
 
-**Thinking Documentation:**
-- Always note depth in AI System footer
-- Standard: "10 rounds (ultrathink)"
-- Quick: "X rounds (auto-scaled)"
+**Footer Documentation:**
+- Always note mode, complexity, and template
+- Single line format for minimal footprint
 - Never mention user choice (doesn't exist)
 
 ---
@@ -310,7 +278,7 @@
 2. About (⌘) - Integrated problems (FIRST)
 3. Success Criteria (✦) - Measurable (AFTER About)
 4. Designs & References (⌥) - Table
-5. Requirements (❖) - Scaled
+5. Requirements (■) - Scaled
 6. Resolution Checklist (✓) - Scaled items
 7. Optional: Risks (∅) for Complex
 
@@ -324,7 +292,7 @@
 - Quick mode: 1-5 rounds auto-scaled
 
 **Key Rules:**
-- Use H1: ⌘/❖, H2: ◻︎/✦/⌥/✓, H3: clean, H4: clean
+- Use H1: ⌘/■, H2: ◻️/✦/⌥/✓, H3: clean, H4: clean
 - Checkboxes: `[]` format
 - NO TABLE OF CONTENTS
 - Dividers between all sections
@@ -338,9 +306,9 @@
 2. About (⌘) - Strategic context (FIRST)
 3. Success Metrics (✦) - Metrics (AFTER About)
 4. Designs & References (⌥) - Table
-5. Scope & Features (❖) - Complete inventory
-6. Technical Requirements (❖)
-7. Implementation Plan (❖)
+5. Scope & Features (■) - Complete inventory
+6. Technical Requirements (■)
+7. Implementation Plan (■)
 8. Optional: Risks (∅)
 
 **Scaling:**
@@ -353,7 +321,7 @@
 - Quick mode: 1-5 rounds auto-scaled
 
 **Key Rules:**
-- Use H1: ⌘/❖, H2: ✦/◻︎/⌥/∅, H3: clean, H4: clean
+- Use H1: ⌘/■, H2: ✦/◻️/⌥/∅, H3: clean, H4: clean
 - Focus on implementation details
 - Status notes where applicable
 - NO TABLE OF CONTENTS
@@ -366,7 +334,7 @@
 1. Title with metadata
 2. About (⌘) - Purpose (FIRST)
 3. References & Resources (⌥) - Table
-4. Main sections (❖) - Scaled
+4. Main sections (■) - Scaled
 5. Additional sections as needed
 
 **Scaling:**
@@ -379,7 +347,7 @@
 - Quick mode: 1-5 rounds auto-scaled
 
 **Key Rules:**
-- Use H1: ⌘/❖, H2: ◻︎/⌥, H3: clean, H4: clean
+- Use H1: ⌘/■, H2: ◻️/⌥, H3: clean, H4: clean
 - Use `---` for major separators
 - Clear section hierarchy
 - NO TABLE OF CONTENTS
@@ -408,16 +376,14 @@
 - [] Success criteria/metrics AFTER About?
 - [] Problems integrated in About narrative?
 - [] Correct artifact type (`text/markdown`)?
-- [] AI System header at bottom?
-- [] Thinking depth documented? (automatic)
-- [] ATLAS phases noted?
+- [] Minimal footer at bottom?
 - [] Scaling documented?
 - [] NO TABLE OF CONTENTS?
 
 **Symbol Hierarchy Validation:**
 - [] H1: ⌘ for About sections?
-- [] H1: ❖ for main sections?
-- [] H2: ◻︎ for subsections?
+- [] H1: ■ for main sections?
+- [] H2: ◻️ for subsections?
 - [] H2: ✦ for success criteria/metrics?
 - [] H2: ⌥ for designs & references?
 - [] H2: ✓ for resolution checklist (tickets)?
@@ -431,12 +397,6 @@
 - [] Success comes after About?
 - [] Designs after Success?
 - [] Requirements follow logical flow?
-
-**Thinking Depth Validation:**
-- [] Standard modes: 10 rounds documented?
-- [] Quick mode: 1-5 rounds noted?
-- [] No user choice mentioned?
-- [] Automatic application confirmed?
 
 ### Format Validation
 
@@ -485,7 +445,6 @@
 - [] Template compliance noted?
 - [] Process transparent?
 - [] NO TABLE OF CONTENTS?
-- [] Ultrathink depth documented?
 - [] Success positioned correctly (after About)?
 
 ---
@@ -500,8 +459,8 @@
 **Detection:** H3 or H4 has symbols, or wrong H1/H2 symbols
 **Recovery:**
 1. Update hierarchy
-2. H1: ⌘/❖ only
-3. H2: ◻︎/✦/⌥/✓/∅
+2. H1: ⌘/■ only
+3. H2: ◻️/✦/⌥/✓/∅
 4. H3: Clean text only
 5. H4: Clean text only
 5. Verify all headers updated
@@ -555,14 +514,6 @@
 3. Restart with proper flow
 4. Document violation
 
-#### Error: Thinking Depth Variance
-**Detection:** Different depths for same mode type
-**Recovery:**
-1. Ensure 10 rounds for standard modes
-2. Verify 1-5 auto-scale for quick mode
-3. Document correct depth in footer
-4. Never mention user choice
-
 #### Error: Wrong Artifact Type
 **Detection:** Used `text/plain` instead of `text/markdown`
 **Recovery:**
@@ -570,14 +521,12 @@
 2. Preserve content
 3. Verify formatting
 
-#### Error: Missing AI System Footer
-**Detection:** No process documentation
+#### Error: Missing Footer
+**Detection:** No mode/template documentation
 **Recovery:**
-1. Add footer to existing artifact
-2. Document all process steps
-3. Include scaling applied
-4. Note template version
-5. **Add thinking depth (automatic)**
+1. Add minimal footer to existing artifact
+2. Document mode, complexity, template
+3. Single line format
 
 ### Prevention Strategies
 1. **Apply ultrathink automatically** (10 rounds standard, 1-5 quick)
@@ -590,4 +539,4 @@
 8. **Position Success after About** always
 9. **Integrate problems** in narrative
 10. **Exclude ToC** - external tools handle
-11. **Document thinking depth** in footer always
+11. **Include minimal footer** for tracking

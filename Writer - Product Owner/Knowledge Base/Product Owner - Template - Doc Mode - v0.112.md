@@ -1,4 +1,4 @@
-# Product Owner - Template - Doc Mode - v0.111
+# Product Owner - Template - Doc Mode - v0.112
 
 ## 📋 TABLE OF CONTENTS
 
@@ -64,10 +64,10 @@ its value to users - integrated naturally into the description.]
 | Metrics | Dashboard | Live | [Analytics - to be added] |
 ---
 
-# ❖ Key Features
+# ■ Key Features
 ---
 
-## ◻︎ Overview
+## ◻️ Overview
 ---
 High-level description of the main capabilities and value proposition.
 ---
@@ -93,10 +93,10 @@ High-level description of the main capabilities and value proposition.
    - Value proposition
 ---
 
-# ❖ Success Metrics
+# ■ Success Metrics
 ---
 
-## ◻︎ Performance Indicators
+## ◻️ Performance Indicators
 ---
 
 ### Key Metrics
@@ -113,6 +113,7 @@ High-level description of the main capabilities and value proposition.
 - Escalation procedures
 - Improvement strategies
 ---
+Mode: $doc | Complexity: Simple | Template: v0.111
 ````
 
 ---
@@ -145,10 +146,10 @@ exists, who benefits from it, and how it fits into the larger ecosystem.]
 | Research | User Studies | Latest | [Reports - to be added] |
 ---
 
-# ❖ Product Overview
+# ■ Product Overview
 ---
 
-## ◻︎ Architecture & Flow
+## ◻️ Architecture & Flow
 ---
 System components and their relationships, showing how value flows through the product.
 ---
@@ -168,7 +169,7 @@ System components and their relationships, showing how value flows through the p
 - Dependencies
 ---
 
-## ◻︎ Key Terminology
+## ◻️ Key Terminology
 ---
 
 | Term | Definition | Context |
@@ -178,10 +179,10 @@ System components and their relationships, showing how value flows through the p
 | **[Term 3]** | [Clear definition] | [When/where used] |
 ---
 
-# ❖ Feature Specifications
+# ■ Feature Specifications
 ---
 
-## ◻︎ Core Features
+## ◻️ Core Features
 ---
 
 ### Primary Feature
@@ -208,7 +209,7 @@ System components and their relationships, showing how value flows through the p
    - Expected impact
 ---
 
-## ◻︎ User Scenarios
+## ◻️ User Scenarios
 ---
 
 ### Happy Path
@@ -225,10 +226,10 @@ System components and their relationships, showing how value flows through the p
 **Recovery:** [Path back to success]
 ---
 
-# ❖ Performance Framework
+# ■ Performance Framework
 ---
 
-## ◻︎ Success Metrics
+## ◻️ Success Metrics
 ---
 
 ### Key Performance Indicators
@@ -248,7 +249,7 @@ System components and their relationships, showing how value flows through the p
 - Review cycles
 ---
 
-## ◻︎ Business Impact
+## ◻️ Business Impact
 ---
 
 ### Revenue Impact
@@ -265,6 +266,7 @@ System components and their relationships, showing how value flows through the p
 - User retention impact
 - Platform stickiness
 ---
+Mode: $doc | Complexity: Standard | Template: v0.111
 ````
 
 ---
@@ -301,10 +303,10 @@ does, but why it exists and how it creates value.]
 | Roadmap | Product Planning | Active | [Tool - to be added] |
 ---
 
-# ❖ Platform Strategy
+# ■ Platform Strategy
 ---
 
-## ◻︎ Vision & Mission
+## ◻️ Vision & Mission
 ---
 The north star that guides all platform decisions and investments.
 ---
@@ -327,7 +329,7 @@ The north star that guides all platform decisions and investments.
    - Defensibility
 ---
 
-## ◻︎ Market Positioning
+## ◻️ Market Positioning
 ---
 
 ### Target Segments
@@ -347,10 +349,10 @@ The north star that guides all platform decisions and investments.
 - Partnership ecosystem
 ---
 
-# ❖ Product Architecture
+# ■ Product Architecture
 ---
 
-## ◻︎ Core Capabilities
+## ◻️ Core Capabilities
 ---
 
 ### Discovery Engine
@@ -385,7 +387,7 @@ The north star that guides all platform decisions and investments.
 - Return frequency
 ---
 
-## ◻︎ Feature Ecosystem
+## ◻️ Feature Ecosystem
 ---
 
 ### Feature Map
@@ -399,10 +401,10 @@ The north star that guides all platform decisions and investments.
 | **Administration** | Controls, Permissions, Billing | Enterprise | Revenue |
 ---
 
-# ❖ Performance Metrics
+# ■ Performance Metrics
 ---
 
-## ◻︎ North Star Framework
+## ◻️ North Star Framework
 ---
 
 ### Primary Metrics
@@ -422,7 +424,7 @@ The north star that guides all platform decisions and investments.
 - Support ticket volume
 ---
 
-## ◻︎ Operational Excellence
+## ◻️ Operational Excellence
 ---
 
 ### Performance Tracking
@@ -450,10 +452,10 @@ The north star that guides all platform decisions and investments.
 | Crisis | -50% target | War Room | All Hands | C-Suite |
 ---
 
-# ❖ User Segments
+# ■ User Segments
 ---
 
-## ◻︎ Segmentation Strategy
+## ◻️ Segmentation Strategy
 ---
 
 ### Power Users (Top 10%)
@@ -486,7 +488,7 @@ The north star that guides all platform decisions and investments.
 - Community building
 ---
 
-## ◻︎ Persona Development
+## ◻️ Persona Development
 ---
 
 ### Detailed Personas
@@ -499,10 +501,10 @@ The north star that guides all platform decisions and investments.
 | **Team Lead** | Efficiency | Collaboration | Productivity | Seats |
 ---
 
-# ❖ Monetization Strategy
+# ■ Monetization Strategy
 ---
 
-## ◻︎ Revenue Model
+## ◻️ Revenue Model
 ---
 
 ### Revenue Streams
@@ -526,7 +528,7 @@ The north star that guides all platform decisions and investments.
    - Brand partnerships
 ---
 
-## ◻︎ Pricing Evolution
+## ◻️ Pricing Evolution
 ---
 
 ### Pricing Roadmap
@@ -546,10 +548,10 @@ The north star that guides all platform decisions and investments.
 - International pricing
 ---
 
-# ❖ Growth & Scaling
+# ■ Growth & Scaling
 ---
 
-## ◻︎ Growth Framework
+## ◻️ Growth Framework
 ---
 
 ### Acquisition Strategy
@@ -583,7 +585,7 @@ The north star that guides all platform decisions and investments.
 - Community events
 ---
 
-## ◻︎ Scaling Operations
+## ◻️ Scaling Operations
 ---
 
 ### Infrastructure Scaling
@@ -609,6 +611,7 @@ The north star that guides all platform decisions and investments.
 - Local partnerships
 - Compliance adherence
 ---
+Mode: $doc | Complexity: Complex | Template: v0.111
 ````
 
 ---
@@ -621,11 +624,11 @@ The north star that guides all platform decisions and investments.
 
 1. **H1 Headers** - Use `#` with symbols
    - `# ⌘ About` - For About section
-   - `# ❖ [Section Name]` - For main sections
+   - `# ■ [Section Name]` - For main sections
 
 2. **H2 Headers** - Use `##` with symbols
    - `## ⌥ References & Resources` - For references
-   - `## ◻︎ [Subsection Name]` - For subsections
+   - `## ◻️ [Subsection Name]` - For subsections
 
 3. **H3 Headers** - Clean format, no symbols
    - `### [Header Name]` - Standard formatting
@@ -639,20 +642,21 @@ The north star that guides all platform decisions and investments.
 - Header with Parent, Version, Reading Time
 - `# ⌘ About` section with context (FIRST)
 - `## ⌥ References & Resources` as table
-- Main sections using `# ❖`
-- Subsections using `## ◻︎`
+- Main sections using `# ■`
+- Subsections using `## ◻️`
 - Dividers `---` between all major sections
+- Minimal footer: `Mode: $doc | Complexity: [level] | Template: v0.111`
 
 **Note:** Documentation doesn't typically have Success Criteria like tickets/PRDs, but focuses on explaining features and metrics.
 
 ### Symbol Reference
 
 - **⌘** - About section (H1)
-- **❖** - Main sections (H1)
-- **◻︎** - Subsections (H2)
+- **■** - Main sections (H1)
+- **◻️** - Subsections (H2)
 - **⌥** - References & Resources (H2)
-- **###** - H3 headers
-- **####** - H4 headers
+- **###** - H3 headers (clean)
+- **####** - H4 headers (clean)
 
 ### Formatting Standards
 
@@ -661,6 +665,7 @@ The north star that guides all platform decisions and investments.
 - Always include "to be added" for placeholder links
 - Use `-` (hyphen + space) for all regular list items
 - Use `---` as section dividers
+- Minimal footer at bottom
 
 ### Table Guidelines
 
@@ -749,7 +754,7 @@ System: Creating your comprehensive strategy document with:
 - Growth and scaling strategies
 - 10-round ultrathink applied automatically
 
-[Creates documentation]
+[Creates documentation with minimal footer]
 ```
 
 ### Documentation Type Differentiation
