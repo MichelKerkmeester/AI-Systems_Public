@@ -18,13 +18,12 @@ Some of my non-client AI systems that I made available to the public. They were 
 ### ✏️ Writer Systems
 
 4. [Product Owner Writer](#4-product-owner-writer)
-5. [Branded Content Writer](#5-branded-content-writer)
-6. [Prompt Engineering Assistant](#6-prompt-engineering-assistant)
-7. [AI System Improver (GPT & Claude)](#7-ai-system-improver-gpt--claude)
+5. [Prompt Engineering Assistant](#5-prompt-engineering-assistant)
+6. [AI System Improver (GPT & Claude)](#6-ai-system-improver-gpt--claude)
 
 ### ⚡ Automation Agents
 
-8. [GPT - Scheduled Tasks](#8-gpt---scheduled-tasks)
+7. [GPT - Scheduled Tasks](#7-gpt---scheduled-tasks)
 
 ### 🔧 Additional Sections
 
@@ -108,7 +107,7 @@ Seamlessly coordinate task management (ClickUp) and knowledge management (Notion
 
 ## ✏️ Writer Systems
 
-→ Automate prompt, content, documentation, and ticket writing 
+→ Automate prompt, documentation, and ticket writing 
 
 <a id="4-product-owner-writer"></a>
 #### 4. 📋 Product Owner Writer
@@ -126,28 +125,8 @@ Create professional dev tickets and enhanced documentation.
 
 .
 
-<a id="5-branded-content-writer"></a>
-#### 5. ✏️ Branded Content Writer
-
-Content writing system, fully reconfigurable for any domain: marketing, engineering, education
-
-- **Interactive Modes & Tone Variations**:  
-  - **7 Operating Modes**: $interactive (DEFAULT), $write, $share, $teach, $reflect, $improve, $quick  
-  - **6 Tone Variations**: $natural, $technical, $collaborative, $educational, $reflective, $minimal
-
-- **ATLAS Thinking Framework**:  
-  - 5-phase adaptive methodology (replaces DEPTH)  
-  - User-controlled depth (1-10 rounds) — always asked  
-  - Challenge Mode at exactly 6+ rounds (not 3+)  
-
-- **Web Verification & Variation Scaling**:  
-  - Mandatory web verification for all market intelligence claims  
-  - Scaled variations: 9/6/3 based on word count (1-30/31-150/151+)
-
-.
-
-<a id="6-prompt-engineering-assistant"></a>
-#### 6. 🎯 Prompt Engineering Assistant
+<a id="5-prompt-engineering-assistant"></a>
+#### 5. 🎯 Prompt Engineering Assistant
 
 Transform vague requests into clear, measurable, high-scoring AI prompts with three format options.
 
@@ -171,8 +150,8 @@ Transform vague requests into clear, measurable, high-scoring AI prompts with th
   
 .
 
-<a id="7-ai-system-improver-gpt--claude"></a>
-#### 7. 🔧 AI System Improver (GPT & Claude)
+<a id="6-ai-system-improver-gpt--claude"></a>
+#### 6. 🔧 AI System Improver (GPT & Claude)
 
 Transform and improve AI system prompts across both GPT and Claude platforms with preservation-first editing.
 
@@ -197,8 +176,8 @@ Transform and improve AI system prompts across both GPT and Claude platforms wit
 
 → Create automated workflows with ease 
 
-<a id="8-gpt---scheduled-tasks"></a>
-#### 8. ⏰ GPT - Scheduled Tasks
+<a id="7-gpt---scheduled-tasks"></a>
+#### 7. ⏰ GPT - Scheduled Tasks
 
 Create scheduled tasks with intelligent optimization.
 
