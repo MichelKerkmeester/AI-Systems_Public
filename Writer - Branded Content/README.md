@@ -1,20 +1,20 @@
-# Product Design Writer - User Guide v0.600
+# Product Designer System - User Guide v0.700
 
-A specialized content creation system for product designers that combines ATLAS thinking methodology, web-verified intelligence, and pattern learning to deliver content optimized for design teams, developers, and stakeholders.
+A specialized content creation system for product designers that combines automatic ATLAS ultrathink methodology, mandatory web-verified intelligence, and seamless content delivery optimized for design teams, developers, and stakeholders.
 
 ## 📋 Table of Contents
 
-- [🆕 What's New in v0.600](#whats-new-in-v0.600---atlas--verification-update)
+- [🆕 What's New in v0.700](#whats-new-in-v0700---automatic-ultrathink-update)
 - [✨ Key Features](#key-features)
 - [🚀 Quick Setup](#quick-setup)
 - [🛠️ Adapting the System](#adapting-the-system)
 - [🎛️ System Architecture](#system-architecture)
 - [🗂 Content Frameworks](#content-frameworks)
 - [🎨 Voice & Tone System](#voice--tone-system)
-- [🧠 ATLAS Thinking Framework](#atlas-thinking-framework)
-- [🔄 Challenge Mode](#challenge-mode)
-- [🗃️ Past Chats Integration](#past-chats-integration)
-- [⚡ Emergency Commands](#emergency-commands)
+- [🧠 ATLAS Ultrathink Framework](#atlas-ultrathink-framework)
+- [💶 EUR Standardization](#eur-standardization)
+- [📊 Mandatory Web Verification](#mandatory-web-verification)
+- [⚡ Operating Modes](#operating-modes)
 - [🚨 Error Recovery - REPAIR Protocol](#error-recovery---repair-protocol)
 - [📦 Standard Artifact Structure](#standard-artifact-structure)
 - [🔧 Troubleshooting](#troubleshooting)
@@ -22,16 +22,21 @@ A specialized content creation system for product designers that combines ATLAS 
 
 .
 
-<a id="whats-new-in-v0.600---atlas--verification-update"></a>
-## 🆕 What's New in v0.600 - ATLAS & Verification Update
+<a id="whats-new-in-v0700---automatic-ultrathink-update"></a>
+## 🆕 What's New in v0.700 - Automatic Ultrathink Update
 
-### Major Structural Rework for Superior Content Output
-- **Comprehensive System Overhaul**: Major restructuring of content generation logic for clarity, flexibility, and higher-quality outputs.
+### Revolutionary Simplification for Superior Output
+- **Automatic Professional Depth**: 10 rounds of ATLAS thinking applied automatically to EVERY request - no user decisions needed
+- **Zero Thinking Questions**: System NEVER asks about thinking rounds - excellence is automatic
+- **Streamlined User Experience**: Focus on content goals, not technical parameters
 
 ### New & Enhanced Features
-- **ATLAS Framework Integration**: DEPTH replaced by a robust, 5-phase adaptive thinking methodology for deeper, more user-driven ideation.
-- **Mandatory Web Verification**: Every market intelligence claim must be web-verified—no exceptions.
-- **Refined Variation Scaling**: Output variations now scale exactly—3/2/1—based on precise word count bands for consistency and control.
+- **Automatic ATLAS Ultrathink**: Professional depth (10 rounds) applied silently and consistently
+- **Simple Edit Detection**: Grammar/spelling fixes bypass frameworks automatically  
+- **EUR Standardization**: ALL monetary values in EUR - no exceptions
+- **Mandatory Intelligence Verification**: Web search required for EVERY data point before use
+- **Enhanced Formatting Rules**: Bold labels mandatory, version headers WITHOUT em dashes
+- **Interactive Mode Default**: Always starts conversationally unless mode specified
 
 .
 
@@ -39,11 +44,11 @@ A specialized content creation system for product designers that combines ATLAS 
 ## ✨ Key Features
 
 ### Five Core Innovations
-1. **ATLAS Thinking Framework**: 5-phase methodology with user control (1-10 rounds)
-2. **7 Operating Modes**: Interactive (DEFAULT), Write, Share, Teach, Reflect, Improve, Quick
-3. **Web-Verified Intelligence**: Comprehensive design data with MANDATORY verification
+1. **Automatic ATLAS Ultrathink**: 10 rounds applied automatically - no user burden
+2. **Interactive Mode (DEFAULT)**: Conversational content creation with optimization questions
+3. **Mandatory Web Verification**: EVERY statistic verified through web search
 4. **Scaled Variations**: 9/6/3 variations based on exact word count (1-30/31-150/151+)
-5. **Historical Context System**: Displays patterns without restricting options
+5. **Professional Formatting**: Bold labels, em dashes, proper line breaks (no dash on versions)
 
 .
 
@@ -58,25 +63,25 @@ A specialized content creation system for product designers that combines ATLAS 
 ### Step 2: Add System Instructions
 1. Click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: Writer - Branded Content.md
+3. Copy and paste: Writer - Branded Content - v0.700.md
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
 Add these documents to your project:
-- Content - Quick Reference.md
-- Content - ATLAS Thinking Framework.md
-- Content - Interactive Mode.md
-- Content - Artifact Standards & Templates.md
-- Content - Copywriter Framework.md
-- Content - Voice & Tone Guide.md
-- Content - Design & Product Intelligence.md 
+- Content - ATLAS Thinking Framework - v0.153.md
+- Content - Interactive Mode - v0.364.md
+- Content - Artifact Standards & Templates - v0.356.md
+- Content - Copywriter Frameworks & Voice Guide - v0.202.md
+- Content - Design & Product Intelligence - v0.302.md
 
 ### Step 4: Start Creating
 
-- Need help with design content (**Interactive mode**)
-- **$write $natural $technical** LinkedIn post about systems (Direct writing mode)
-- **$quick** Rewrite this headline (Fast processing,no questions)
-
+- Need help with design content (**Interactive mode** - DEFAULT)
+- **$write** LinkedIn post about systems (Direct writing mode)
+- **$share** Create shareable insight (Share mode)
+- **$teach** Explain design systems (Educational mode)
+- **$reflect** Analyze our process (Reflection mode)
+- **$improve** Make this better (Improvement mode)
 
 .
 
@@ -84,12 +89,12 @@ Add these documents to your project:
 ## 🛠️ Adapting the System
 
 ### Current Setup
-Pre-configured for Product Designers with design process documentation, UX/UI principles, team collaboration focus, and verified market intelligence.
+Pre-configured for Product Designers with automatic professional depth, design process documentation, UX/UI principles, team collaboration focus, and verified market intelligence (EUR).
 
 ### Adapt for Your Needs
 - **Your Design Team**: Update voice guidelines for your brand
 - **Development Teams**: Technical documentation focus
-- **Stakeholders**: ROI and business impact emphasis
+- **Stakeholders**: ROI and business impact emphasis (€ values)
 - **Agencies**: Client work and case studies
 - **Freelancers**: Portfolio and thought leadership
 
@@ -102,14 +107,12 @@ Pre-configured for Product Designers with design process documentation, UX/UI pr
 
 | Document | Purpose | Key Features |
 |----------|---------|--------------|
-| **Writer - Branded Content.md** | Master orchestration | Core rules, mode activation |
-| **Content - Quick Reference.md** | Compact reference | All rules & verification |
-| **Content - ATLAS Thinking Framework.md** | Thinking methodology | 5-phase system |
-| **Content - Interactive Mode.md** | Default mode | Clean questions |
-| **Content - Artifact Standards & Templates.md** | Output templates | 3/2/1 variations |
-| **Content - Copywriter Framework.md** | Writing frameworks | 9+ frameworks |
-| **Content - Voice & Tone Guide.md** | Voice system | 6 tones |
-| **Content - Design & Product Intelligence.md** | Market data | MANDATORY verification |
+| **Writer - Branded Content - v0.700.md** | Master orchestration | Automatic ultrathink, EUR standards |
+| **Content - ATLAS Thinking Framework - v0.153.md** | Thinking methodology | 10 rounds automatic |
+| **Content - Interactive Mode - v0.364.md** | Default mode | Clean questions, no depth questions |
+| **Content - Artifact Standards & Templates - v0.356.md** | Output templates | Bold labels, no dash on versions |
+| **Content - Copywriter Frameworks & Voice Guide - v0.202.md** | Writing frameworks | 9+ frameworks, proper formatting |
+| **Content - Design & Product Intelligence - v0.302.md** | Market data | MANDATORY verification, EUR values |
 
 .
 
@@ -127,7 +130,13 @@ Pre-configured for Product Designers with design process documentation, UX/UI pr
 
 ### Complex Frameworks (5+ Part)
 - **Design Process**: Discover • Define • Develop • Deliver • Document
-- **Iteration Story**: Try • Fail • Learn • Ship
+- **GRAB**: Goal • Roadblock • Answer • Benefit
+- **PPPP**: Problem • Promise • Proof • Proposal
+
+### Framework Selection
+- **Simple edits**: Bypass frameworks entirely
+- **Complex requests**: Automatic selection with ultrathink
+- **All frameworks**: Receive 10 rounds of thinking automatically
 
 .
 
@@ -135,79 +144,109 @@ Pre-configured for Product Designers with design process documentation, UX/UI pr
 ## 🎨 Voice & Tone System
 
 ### The Voice Trinity
-1. **Process-Transparent** - Show iterations, not just outcomes
-2. **Team-Empowering** - Credit everyone, enable collaboration
-3. **Genuinely-Uncertain** - Natural imperfections welcome
+1. **Process-Transparent** - "Took 3 iterations to nail it (yeah, really)"
+2. **Team-Empowering** - "Sarah spotted the bug, Marcus fixed it"
+3. **Genuinely-Uncertain** - "Still figuring out dark mode, but getting there"
 
 ### Available Tones
-| Tone | Command | Key Markers |
-|------|---------|-------------|
-| **Natural** | `$natural` | Varied rhythm (DEFAULT) |
-| **Collaborative** | `$collaborative` | Team focus, inclusive |
-| **Technical** | `$technical` | Precise terms, data |
-| **Educational** | `$educational` | Step-by-step |
-| **Reflective** | `$reflective` | Thoughtful analysis |
-| **Minimal** | `$minimal` | Essential words only |
+| Tone | Command | Key Markers | Automatic Depth |
+|------|---------|-------------|-----------------|
+| **Natural** | `$natural` | Varied rhythm (DEFAULT) | 10 rounds |
+| **Process** | `$process` | Iteration focus | 10 rounds |
+| **Technical** | `$technical` | Precise terms, data | 10 rounds |
+| **Educational** | `$educational` | Step-by-step | 10 rounds |
+| **Professional** | `$professional` | Stakeholder-ready | 10 rounds |
+| **Collaborative** | `$collaborative` | Team focus | 10 rounds |
+| **Minimal** | `$minimal` | Essential words only | 10 rounds |
 
 .
 
-<a id="atlas-thinking-framework"></a>
-## 🧠 ATLAS Thinking Framework
+<a id="atlas-ultrathink-framework"></a>
+## 🧠 ATLAS Ultrathink Framework
 
-### User-Controlled Depth
-```
-How many thinking rounds should I use? (1-10)
+### Automatic Professional Depth
+**NO USER DECISIONS NEEDED** - System automatically applies 10 rounds of ATLAS thinking to EVERY request
 
-Based on your request, I recommend: [X rounds]
-• Complexity: [Low/Medium/High] - [reason]
-• Audience: [Designer/Developer/Stakeholder]
-• Stakes: [Low/Medium/High] - [impact]
-• Verification: [Will verify market data if needed]
-
-[Historical note: You typically choose X rounds]
-
-Your choice?
-```
-
-### The Five ATLAS Phases
-- **A** - Assess & Challenge: Map needs and check history
+### The Five ATLAS Phases (All Automatic)
+- **A** - Assess & Analyze: Map needs and context
 - **T** - Transform & Expand: Apply frameworks
-- **L** - Layer & Analyze: Add intelligence [VERIFY ALL STATS]
-- **A2** - Assess Impact: MEQT scoring
+- **L** - Layer & Analyze: Add intelligence [AUTO-VERIFY ALL STATS]
+- **A2** - Assess Impact: MEQT scoring (23 points)
 - **S** - Synthesize & Ship: Deliver artifact
 
-### ATLAS Phases by Rounds
-| Rounds | Phases | Use Case | Challenge | Verification |
-|--------|--------|----------|-----------|--------------|
-| **1-2** | A→S | Quick edits | None | None needed |
-| **3-5** | A→T→S | Standard content | None | If stats used |
-| **6-7** | A→T→L→S | Complex content | **AUTOMATIC** | Full verification |
-| **8-10** | Full ATLAS | Strategic work | **AUTOMATIC** | Comprehensive |
+### What Users Experience
+| Old System | Ultrathink System |
+|------------|-------------------|
+| "How many thinking rounds?" | [Automatic processing begins] |
+| User confusion about depth | Professional quality guaranteed |
+| Variable quality | Consistent excellence |
+| Decision paralysis | Seamless experience |
+
+### Simple Edit Detection
+- Spelling/grammar fixes: Direct execution
+- Minor word changes: No framework needed
+- Format adjustments: Quick processing
+- Everything else: Full ATLAS ultrathink
 
 .
 
-<a id="challenge-mode"></a>
-## 🔄 Challenge Mode
+<a id="eur-standardization"></a>
+## 💶 EUR Standardization
 
-### Triggers at EXACTLY 6+ Thinking Rounds
-NOT at 3+ as older versions - EXACTLY at 6+
+### All Monetary Values in EUR
+- **Salaries**: €70-110K (junior), €120-180K (mid), €180-250K (senior)
+- **Tool costs**: €15-20/month (Figma), €10-15/month (others)
+- **ROI examples**: €50K, €200K saved
+- **Project values**: €150K budget, €50K quarterly
+- **Never use**: Dollars, pounds, or mixed currencies
 
-### Challenge Template
+.
+
+<a id="mandatory-web-verification"></a>
+## 📊 Mandatory Web Verification
+
+### Verification Protocol
+**EVERY statistic MUST be web verified before use - NO EXCEPTIONS**
+
+### What Gets Verified
+| Data Type | Search Query Example | Fallback if Failed |
+|-----------|---------------------|-------------------|
+| Tool stats | "figma market share 2024 2025" | "leading tool" |
+| Salary data | "product designer salary europe 2024" | "competitive range" |
+| Team ratios | "designer developer ratio" | "typical ratio" |
+| ROI metrics | "design roi measurement statistics" | "significant savings" |
+| Process stats | "design iteration average" | "multiple iterations" |
+
+### Verification Documentation
+```markdown
+Mode: $write | Framework: CASE | Stats: 3 verified | Template: v0.700
 ```
-**🔄 Challenge Mode Activated** (6+ thinking rounds detected)
 
-Could we achieve your goal more simply?
+.
 
-1. **Ultra-simple:** Single principle or stat [will verify]
-2. **Balanced:** Your original approach [2-3 verified points]
-3. **Enhanced:** With additional elements [full verification]
+<a id="operating-modes"></a>
+## ⚡ Operating Modes
 
-Which approach would you prefer? (1/2/3)
+### Interactive Mode (DEFAULT)
+- **Activation**: Automatic when no mode specified
+- **Experience**: Conversational, optimization questions only
+- **Depth**: 10 rounds automatic
+- **Questions**: About approach, never about thinking
 
-[Historical: Challenge acceptance rate if available]
+### Direct Modes
+| Mode | Command | Purpose | Automatic Depth |
+|------|---------|---------|-----------------|
+| **Write** | `$write` | Direct creation | 10 rounds |
+| **Share** | `$share` | Shareable insights | 10 rounds |
+| **Teach** | `$teach` | Educational content | 10 rounds |
+| **Reflect** | `$reflect` | Analysis & insights | 10 rounds |
+| **Improve** | `$improve` | Enhancement mode | 10 rounds |
+
+### Mode Experience
+```markdown
+Interactive: "What aspect of design should we focus on?"
+NOT: "How many thinking rounds should I use?"
 ```
-
-**SYSTEM MUST WAIT FOR USER CHOICE** (except $quick mode)
 
 .
 
@@ -215,61 +254,28 @@ Which approach would you prefer? (1/2/3)
 ## 🚨 Error Recovery - REPAIR Protocol
 
 ### The REPAIR Framework
-**R** - Recognize issue with historical context  
-**E** - Explain impact on clarity  
+**R** - Recognize issue  
+**E** - Explain impact  
 **P** - Propose 3 fixes  
 **A** - Adapt approach  
 **I** - Iterate/test  
-**R** - Record pattern for future  
+**R** - Record pattern  
 
 ### Common Recovery Scenarios
-| Issue | Fix | Pattern Note |
-|-------|-----|--------------|
-| Wrong variations | Apply 3/2/1 by word count | Check exact count |
-| Poor format | Add line breaks/dividers | Strict requirement |
-| Outdated stats | Web verify and update | MANDATORY |
-| Unverified claims | Search immediately | MANDATORY |
-
-.
-
-<a id="past-chats-integration"></a>
-## 🗃️ Past Chats Integration
-
-### Context Enhancement Journey
-| Stage | Interactions | Context Level | User Control |
-|-------|-------------|---------------|--------------|
-| Learning | 1-3 | Building | 100% |
-| Adapting | 4-6 | Light notes | 100% |
-| Enriched | 7-9 | Detailed | 100% |
-| Comprehensive | 10+ | Maximum | 100% |
-
-### Tool Selection
-- **conversation_search**: Topic/keyword-based search
-- **recent_chats**: Time-based retrieval (1-20 chats)
-
-**Critical:** Historical context enriches but NEVER restricts
-
-.
-
-<a id="emergency-commands"></a>
-## ⚡ Emergency Commands
-
-| Command | Action | Result | Best Used When |
-|---------|--------|--------|----------------|
-| **`$reset`** | Clear all context | Start fresh | Switching topics |
-| **`$quick`** | Skip to creation | 2 rounds auto, no questions | Know what you want |
-| **`$status`** | Show current context | Display patterns & verification | Understanding tracking |
-| **`$verify`** | Force verification | Re-verify all statistics | Stats seem outdated |
-
-### Command Combinations
-- `$reset` + `$quick`: Fresh start with fast creation
-- `$status` + `$verify`: Check patterns then verify all stats
+| Issue | Fix | Prevention |
+|-------|-----|------------|
+| Wrong variations | Apply 3/2/1 by exact word count | Check word count |
+| Missing bold labels | Add **Label —** format | Template check |
+| Version headers with dash | Remove dash from headers | Format validation |
+| Unverified stats | Web search immediately | Always verify first |
+| Mixed currencies | Convert to EUR | EUR only rule |
 
 .
 
 <a id="standard-artifact-structure"></a>
 ## 📦 Standard Artifact Structure
 
+### Mandatory Format with Ultrathink
 ```markdown
 [Main content]
 
@@ -277,52 +283,54 @@ Which approach would you prefer? (1/2/3)
 
 ## Variations
 
+---
+
 ### Most concise:
-[3/2/1 versions based on word count]
+
+**Version 1**
+
+---
+
+**Headline —**
+[Content on new line]
+
+**Body —**
+[Content on new line]
+
+**CTA —**
+[Content on new line]
+
+---
+
+**Version 2**
+
+---
+
+[Same format - bold labels, em dash, line breaks]
 
 ---
 
 ### Most valuable:
-[3/2/1 versions based on word count]
+
+[2-3 versions based on word count]
 
 ---
 
 ### Most authentic:
-[3/2/1 versions based on word count]
+
+[1-3 versions based on word count]
 
 ---
 
-## AI System:
-
-- **Framework:** [Name or "None"]
-- **Mode:** $[mode used]
-- **Tone:** $[tone selected]
-
----
-
-- **Thinking:** [X rounds - user selected]
-- **ATLAS:** [Phases used]
-
----
-
-- **Challenge:** [Applied at 6+/Not applied]
-- **Platform:** [Platform/Not specified]
-
----
-
-- **Web Verification:** [MANDATORY SECTION]
-  - Stats verified: [Yes/No - count]
-  - Topics searched: [List queries]
-  - Verification status: [Complete/Partial/Failed]
-  - Fallback used: [Yes/No]
-
----
-
-**Historical Context:**
-- Patterns from [X] sessions
-- All options always shown
-- User autonomy: 100%
+Mode: $[mode] | Framework: [Name] | Template: v0.700
 ```
+
+### Critical Format Rules
+- **Bold labels**: **Headline —**, **Body —**, etc.
+- **Line breaks**: Content MUST be on line AFTER em dash
+- **Version headers**: **Version 1** (NO EM DASH)
+- **Dividers**: --- between ALL versions
+- **Verification**: Document all verified stats
 
 .
 
@@ -331,24 +339,56 @@ Which approach would you prefer? (1/2/3)
 
 ### Common Issues
 ```
-Stats seem outdated:
-$verify → Force re-verification
-$status → Check verification status
+System asks about thinking rounds:
+ERROR - Should never happen in v0.700
+Ultrathink is automatic (10 rounds)
 
-Too many questions:
-$quick → Skip all interaction
-Use 1-2 thinking rounds
+Stats seem outdated:
+Web verification is mandatory
+Check footer for verification status
 
 Wrong variation count:
 Check exact word count
-Apply 3/2/1 rule
-Verify formatting
+Apply 3/2/1 rule strictly
 
-Need different approach:
-$reset → Clear patterns
-Interactive Mode → Full exploration
+Format issues:
+Bold labels required
+Version headers NO dash
+Line breaks after em dashes
+
+Simple edit gets complex treatment:
+System should auto-detect
+Grammar/spelling bypass frameworks
 ```
+
+### Quick Fixes
+- **Format errors**: Check bold labels and line breaks
+- **Verification missing**: All stats need web search
+- **Currency issues**: Convert everything to EUR
+- **Too many questions**: Only optimization questions allowed
 
 ---
 
-*Product Design content excellence through ATLAS thinking. Interactive Mode is DEFAULT. Web verification is MANDATORY. Challenge at exactly 6+ rounds. User control is absolute.*
+## 📦 Version History
+
+### v0.700 (Current)
+- Automatic ATLAS ultrathink (10 rounds)
+- No thinking questions ever
+- Mandatory web verification
+- EUR standardization
+- Enhanced formatting rules
+
+### v0.600
+- ATLAS framework introduction
+- User-controlled depth (1-10)
+- Challenge mode at 6+ rounds
+- Web verification recommended
+
+### v0.500
+- Initial framework system
+- Basic voice guidelines
+- Limited verification
+
+---
+
+*Product Design content excellence through automatic ATLAS ultrathink. Professional depth guaranteed. Interactive Mode is DEFAULT. Web verification is MANDATORY. EUR standardization required. User experience is seamless.*
