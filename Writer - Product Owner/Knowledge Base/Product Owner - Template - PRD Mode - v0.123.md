@@ -1,4 +1,4 @@
-# Product Owner - Template - PRD Mode - v0.122
+# Product Owner - Template - PRD Mode - v0.123
 
 ## 📋 TABLE OF CONTENTS
 
@@ -20,7 +20,7 @@
 - **Purpose:** Create Product Requirements Documents with clear scope and implementation details
 - **Output:** Always as artifact
 - **Thinking:** 10 rounds automatic (ultrathink), 1-5 auto-scaled for $quick
-- **Interactive Mode:** Asks PRD type, Figma connection, platform scope
+- **Interactive Mode:** Single comprehensive question gathering all requirements
 - **Key Focus:** Implementation clarity, success metrics, feature specifications
 
 ---
@@ -87,8 +87,8 @@ to exist now.]
 | Type | Document | Status | Link |
 |------|----------|--------|------|
 | PRD | Product Requirements | Current | [Private - to be added] |
-| Design | Figma - Feature Set 1 | Complete | [Figma - to be added] |
-| Design | Figma - Feature Set 2 | In Progress | [Figma - to be added] |
+| Design | Feature Set 1 | Complete | [Link - to be added] |
+| Design | Feature Set 2 | In Progress | [Link - to be added] |
 | Technical | API Specification | Review | [Private - to be added] |
 | Technical | Data Model | Approved | [Private - to be added] |
 
@@ -313,7 +313,7 @@ manual exploratory testing discovers edge cases.
 | **Resource Availability** | Low | High | Cross-training and comprehensive documentation |
 
 ---
-Mode: $prd | Complexity: Initiative | Template: v0.121
+Mode: $prd | Complexity: Initiative | Template: v0.123
 ```
 
 ---
@@ -349,8 +349,8 @@ case for the feature's existence.]
 
 | Type | Resource | Status | Link |
 |------|----------|--------|------|
-| Design | Mockups | Complete | [Figma - to be added] |
-| Design | Prototype | In Review | [Figma - to be added] |
+| Design | Mockups | Complete | [Link - to be added] |
+| Design | Prototype | In Review | [Link - to be added] |
 | Docs | Spec Document | Approved | [Private - to be added] |
 | Technical | API Schema | Draft | [Private - to be added] |
 
@@ -481,7 +481,7 @@ Monitoring dashboards track key metrics in real-time, with alerts for
 anomalies. Support teams are briefed and prepared for each phase.
 
 ---
-Mode: $prd | Complexity: Feature | Template: v0.121
+Mode: $prd | Complexity: Feature | Template: v0.123
 ```
 
 ---
@@ -578,49 +578,55 @@ Mode: $prd | Complexity: Feature | Template: v0.121
 
 ## 6. 🗣️ INTERACTIVE QUESTIONS
 
-### PRD Interactive Flow
+### PRD Interactive Flow - Single Comprehensive Question
 
 ```markdown
 User: $prd customer dashboard
 
-System: Let's create your customer dashboard PRD! 📝
+System: Let's create your customer dashboard PRD! 📋
 
 **Applying comprehensive ATLAS analysis (10 rounds automatic)...**
 
-**Question 1: What type of PRD do you need?**
-- Feature PRD (single feature specification)
-- Initiative PRD (5-10 features, single team)
-- Program PRD (10-20 features, multi-team)
-- Strategic PRD (20+ features, platform-wide)
+Please provide the following information:
 
-[WAIT FOR USER RESPONSE]
+1️⃣ **PRD scale:**
+   • Feature PRD - single feature specification
+   • Initiative PRD - 5-10 features, single team, quarterly
+   • Program PRD - 10-20 features, multi-team, half-year
+   • Strategic PRD - 20+ features, platform-wide, annual
 
-User: Initiative PRD
+2️⃣ **Primary platform:**
+   • Web only
+   • Mobile only (iOS/Android)
+   • Web + Mobile
+   • All platforms (Web, iOS, Android, API)
 
-System: **Question 2: Can I connect to Figma MCP to review designs?**
-- Yes = I'll pull design details directly
-- No = I'll add placeholders for your links
+3️⃣ **Key requirements & context:**
+   • Core features needed
+   • Target audience
+   • Business objectives
+   • Timeline constraints
 
-[WAIT FOR USER RESPONSE]
+Please respond with all details (e.g., "1. Initiative PRD, 2. Web + Mobile, 3. Real-time analytics for enterprise customers")
 
-User: no
+[WAIT FOR USER RESPONSE - DO NOT PROCEED]
+```
 
-System: **Question 3: What's the primary platform?**
-- Web only
-- Mobile only (iOS/Android)
-- Web + Mobile
-- All platforms (Web, iOS, Android, API)
+**After user responds:**
 
-[WAIT FOR USER RESPONSE]
-
-User: Web + Mobile
+```markdown
+User: 1. Initiative PRD, 2. Web + Mobile, 3. Customer self-service portal with analytics
 
 System: Creating your Initiative-level customer dashboard PRD with:
-- 5-10 integrated features
-- Web and mobile specifications
-- Success metrics positioned after About
-- Implementation roadmap
-- 10-round ultrathink applied
+• 5-10 integrated features
+• Web and mobile specifications
+• Self-service portal focus
+• Analytics capabilities
+• Success metrics positioned after About
+• Implementation roadmap
+• 10-round ultrathink applied
+
+Processing now...
 
 [Creates comprehensive PRD document with minimal footer]
 ```

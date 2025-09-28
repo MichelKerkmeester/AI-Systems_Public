@@ -1,4 +1,4 @@
-# Product Owner - Template - Ticket Mode - v0.122
+# Product Owner - Template - Ticket Mode - v0.123
 
 ## 📋 TABLE OF CONTENTS
 
@@ -21,7 +21,7 @@
 - **Purpose:** Create development tickets or user stories that auto-scale complexity
 - **Output:** Always as artifact
 - **Thinking:** 10 rounds automatic (ultrathink), 1-5 auto-scaled for $quick
-- **Interactive Mode:** Asks ticket vs story, Figma MCP connection
+- **Interactive Mode:** Single comprehensive question gathering all requirements
 - **Key Difference:** Stories omit Resolution Checklist
 
 ---
@@ -93,7 +93,7 @@ for users - integrated naturally into the description rather than as separate se
 [] Document fix in PR description
 
 ---
-Mode: $ticket | Complexity: Simple | Template: v0.121
+Mode: $ticket | Complexity: Simple | Template: v0.123
 ```
 
 ---
@@ -127,7 +127,7 @@ why it matters for users, the business value and ROI expectations, and competiti
 
 | Type | Resource | Status | Link |
 |------|----------|--------|------|
-| Design | Figma Mockups | Complete | [Figma - to be added] |
+| Design | Mockups | Complete | [Link - to be added] |
 | PRD | Product Requirements | Approved | [Doc - to be added] |
 | API | Endpoint Spec | Draft | [Swagger - to be added] |
 | Tech Spec | Architecture | In Review | [Wiki - to be added] |
@@ -186,7 +186,7 @@ why it matters for users, the business value and ROI expectations, and competiti
 [] Complete code review with team
 
 ---
-Mode: $ticket | Complexity: Standard | Template: v0.121
+Mode: $ticket | Complexity: Standard | Template: v0.123
 ```
 
 ---
@@ -322,7 +322,7 @@ all integrated into a cohesive overview rather than listed as separate problems 
 [] Update all documentation
 
 ---
-Mode: $ticket | Complexity: Complex | Template: v0.121
+Mode: $ticket | Complexity: Complex | Template: v0.123
 ```
 
 ---
@@ -380,13 +380,13 @@ Mode: $ticket | Complexity: Complex | Template: v0.121
 ```markdown
 | Type | Resource | Status | Link |
 |------|----------|--------|------|
-| Design | UI Flow | Ready | [Figma] |
-| API | Endpoints | Draft | [Swagger] |
+| Design | UI Flow | Ready | [Link - to be added] |
+| API | Endpoints | Draft | [Swagger - to be added] |
 ```
 
 **Correct Footer:**
 ```markdown
-Mode: $ticket | Complexity: Standard | Template: v0.121
+Mode: $ticket | Complexity: Standard | Template: v0.123
 ```
 
 ---
@@ -395,40 +395,54 @@ Mode: $ticket | Complexity: Standard | Template: v0.121
 
 ## 7. 🗣️ INTERACTIVE QUESTIONS
 
-### Initial Interactive Flow
+### Initial Interactive Flow - Single Comprehensive Question
 
 ```markdown
 User: $ticket payment integration
 
-System: Let me help you create the right format for your needs.
+System: Let me help you create your payment integration ticket. 🎯
 
 **Applying deep ATLAS analysis (10 rounds automatic)...**
 
-**Question 1: Is this a ticket or a story?**
-- Ticket = Development task with resolution checklist for QA
-- Story = User story format without checklist
+Please provide the following details:
 
-[WAIT FOR USER RESPONSE]
+1️⃣ **Format type:**
+   • Ticket - Development task with resolution checklist for QA
+   • Story - User story format without checklist
 
-User: ticket
+2️⃣ **Scope:**
+   • BE - Backend/API
+   • FE - Frontend/UI
+   • Mobile - iOS/Android
+   • FS - Full-stack
+   • DevOps - Infrastructure
+   • QA - Testing
 
-System: **Question 2: Can I connect to Figma MCP to inspect your designs?**
-- Yes = I'll pull design details directly
-- No = I'll add placeholders for you to fill
+3️⃣ **Requirements & context:**
+   • What needs to be built/fixed?
+   • Key features or integration points
+   • Timeline or dependencies
 
-[WAIT FOR USER RESPONSE]
+Please respond with all information (e.g., "1. Ticket, 2. BE, 3. Stripe API integration for subscriptions")
 
-User: no
+[WAIT FOR USER RESPONSE - DO NOT PROCEED]
+```
 
-System: **Question 3: What's the scope?** (BE/FE/Mobile/FS/DevOps/QA)
+**After user responds:**
 
-[WAIT FOR USER RESPONSE]
+```markdown
+User: 1. Ticket, 2. BE, 3. PayPal checkout integration with webhook handling
 
-User: BE
+System: Creating your backend payment integration ticket with:
+• Standard complexity (4-5 sections, 8-12 resolution items)
+• PayPal checkout focus
+• Webhook handling included
+• Resolution checklist for QA
+• Success criteria after About
+• 10-round ultrathink applied
 
-System: Creating your backend payment integration ticket...
-- 10-round ultrathink applied automatically
-- Success criteria positioned after About section
+Processing now...
+
 [Creates ticket based on complexity detected with minimal footer]
 ```
 
@@ -457,5 +471,5 @@ When user selects "Story", the template omits the Resolution Checklist:
 [NOTE: No Resolution Checklist for stories]
 
 ---
-Mode: $story | Complexity: [level] | Template: v0.121
+Mode: $story | Complexity: [level] | Template: v0.123
 ```

@@ -1,4 +1,4 @@
-# Product Owner - Template - Doc Mode - v0.112
+# Product Owner - Template - Doc Mode - v0.113
 
 ## 📋 TABLE OF CONTENTS
 
@@ -21,7 +21,7 @@
 - **Purpose:** Create product documentation that auto-scales complexity
 - **Output:** Always as artifact
 - **Thinking:** 10 rounds automatic (ultrathink), 1-5 auto-scaled for $quick
-- **Interactive Mode:** Asks doc type, connection options
+- **Interactive Mode:** Single comprehensive question gathering all requirements
 - **Key Focus:** Product features, performance metrics, strategy docs
 
 ---
@@ -59,7 +59,7 @@ its value to users - integrated naturally into the description.]
 ---
 | Type | Resource | Status | Link |
 |------|----------|--------|------|
-| Design | UI Mockups | Current | [Figma - to be added] |
+| Design | UI Mockups | Current | [Link - to be added] |
 | PRD | Requirements Doc | Latest | [Link - to be added] |
 | Metrics | Dashboard | Live | [Analytics - to be added] |
 ---
@@ -113,7 +113,7 @@ High-level description of the main capabilities and value proposition.
 - Escalation procedures
 - Improvement strategies
 ---
-Mode: $doc | Complexity: Simple | Template: v0.111
+Mode: $doc | Complexity: Simple | Template: v0.113
 ````
 
 ---
@@ -140,7 +140,7 @@ exists, who benefits from it, and how it fits into the larger ecosystem.]
 ---
 | Type | Resource | Status | Link |
 |------|----------|--------|------|
-| Design | Component Library | v2.1 | [Figma - to be added] |
+| Design | Component Library | v2.1 | [Link - to be added] |
 | PRD | Product Requirements | Current | [Docs - to be added] |
 | Analytics | Performance Dashboard | Live | [Dashboard - to be added] |
 | Research | User Studies | Latest | [Reports - to be added] |
@@ -266,7 +266,7 @@ System components and their relationships, showing how value flows through the p
 - User retention impact
 - Platform stickiness
 ---
-Mode: $doc | Complexity: Standard | Template: v0.111
+Mode: $doc | Complexity: Standard | Template: v0.113
 ````
 
 ---
@@ -296,7 +296,7 @@ does, but why it exists and how it creates value.]
 | Type | Resource | Status | Link |
 |------|----------|--------|------|
 | Strategy | Product Vision | Current | [Docs - to be added] |
-| Design | Design System | v3.0 | [Figma - to be added] |
+| Design | Design System | v3.0 | [Link - to be added] |
 | PRD | Feature Specifications | Latest | [Wiki - to be added] |
 | Analytics | Platform Metrics | Live | [Dashboard - to be added] |
 | Research | Market Analysis | Q4 2024 | [Reports - to be added] |
@@ -611,7 +611,7 @@ The north star that guides all platform decisions and investments.
 - Local partnerships
 - Compliance adherence
 ---
-Mode: $doc | Complexity: Complex | Template: v0.111
+Mode: $doc | Complexity: Complex | Template: v0.113
 ````
 
 ---
@@ -645,7 +645,7 @@ Mode: $doc | Complexity: Complex | Template: v0.111
 - Main sections using `# ■`
 - Subsections using `## ◻️`
 - Dividers `---` between all major sections
-- Minimal footer: `Mode: $doc | Complexity: [level] | Template: v0.111`
+- Minimal footer: `Mode: $doc | Complexity: [level] | Template: v0.113`
 
 **Note:** Documentation doesn't typically have Success Criteria like tickets/PRDs, but focuses on explaining features and metrics.
 
@@ -673,7 +673,7 @@ Mode: $doc | Complexity: Complex | Template: v0.111
 ```markdown
 | Type | Resource | Status | Link |
 |------|----------|--------|------|
-| Design | UI Guide | Ready | [Figma - to be added] |
+| Design | UI Guide | Ready | [Link - to be added] |
 | Metrics | Dashboard | Live | [Analytics - to be added] |
 ```
 
@@ -711,7 +711,7 @@ Mode: $doc | Complexity: Complex | Template: v0.111
 
 ## 7. 🗣️ INTERACTIVE QUESTIONS
 
-### Doc Mode Interactive Flow
+### Doc Mode Interactive Flow - Single Comprehensive Question
 
 ```markdown
 User: $doc platform strategy guide
@@ -720,39 +720,45 @@ System: Let's create your platform documentation! 📚
 
 **Applying structured ATLAS analysis (10 rounds automatic)...**
 
-**Question 1: What type of documentation do you need?**
-- Product brief (quick overview)
-- Feature specification (detailed design)
-- Performance tracking (metrics & KPIs)  
-- Strategy document (comprehensive platform guide)
+Please provide the following details:
 
-[WAIT FOR USER RESPONSE]
+1️⃣ **Documentation type:**
+   • Product brief (quick overview)
+   • Feature specification (detailed design)
+   • Performance tracking (metrics & KPIs)
+   • Strategy document (comprehensive platform guide)
 
-User: Strategy document
+2️⃣ **Complexity level:**
+   • Simple (quick reference, 2-3 main sections)
+   • Standard (detailed guide, 4-6 main sections)
+   • Complex (comprehensive docs, 7+ main sections)
 
-System: **Question 2: Can I connect to data sources for metrics?**
-- Yes = I'll integrate live metrics
-- No = I'll add placeholders for data
+3️⃣ **Focus areas & requirements:**
+   • Target audience
+   • Key topics to cover
+   • Specific sections needed
+   • Any existing data or metrics to include
 
-[WAIT FOR USER RESPONSE]
+Please respond with all information (e.g., "1. Strategy document, 2. Complex, 3. Executive audience, market expansion focus")
 
-User: No
+[WAIT FOR USER RESPONSE - DO NOT PROCEED]
+```
 
-System: **Question 3: What's the complexity level?**
-- Simple (Quick reference, 2-3 main sections)
-- Standard (Detailed guide, 4-6 main sections)
-- Complex (Comprehensive docs, 7+ main sections)
+**After user responds:**
 
-[WAIT FOR USER RESPONSE]
-
-User: Complex
+```markdown
+User: 1. Strategy document, 2. Complex, 3. Platform economics and growth strategy for investors
 
 System: Creating your comprehensive strategy document with:
-- Multiple detailed sections
-- Market analysis and positioning
-- Performance frameworks
-- Growth and scaling strategies
-- 10-round ultrathink applied automatically
+• Multiple detailed sections (7+)
+• Platform economics focus
+• Market analysis and positioning
+• Performance frameworks
+• Growth and scaling strategies
+• Investor-focused metrics
+• 10-round ultrathink applied automatically
+
+Processing now...
 
 [Creates documentation with minimal footer]
 ```

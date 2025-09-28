@@ -1,10 +1,10 @@
-# Product Owner System - User Guide v0.903
+# Product Owner System - User Guide v0.904
 
 Transforms requests into professional development tickets, strategic PRDs, and documentation through intelligent interactive guidance with automatic ultrathink processing.
 
 ## 📋 Table of Contents
 
-- [🆕 What's New In V0.903](#whats-new-in-v0903)
+- [🆕 What's New In V0.904](#whats-new-in-v0904)
 - [✨ Key Features](#key-features)
 - [🚀 Quick Setup](#quick-setup)
 - [🎛️ Operating Modes](#operating-modes)
@@ -20,30 +20,28 @@ Transforms requests into professional development tickets, strategic PRDs, and d
 
 .
 
-<a id="whats-new-in-v0903"></a>
-## 🆕 What's New In V0.903
+<a id="whats-new-in-v0904"></a>
+## 🆕 What's New In V0.904
 
-### Streamlined Footer Implementation
-- **Minimal Footer:** Single-line format replacing verbose AI System section
-- **80% Size Reduction:** From 15-20 lines to just 1 line
-- **Essential Tracking:** Mode, Complexity/Scale, Template version preserved
-- **Clean Output:** Significantly reduced visual clutter in artifacts
+### Single Comprehensive Question Flow
+- **Consolidated Interaction:** All information gathered in ONE well-formatted prompt
+- **60% Fewer Decision Points:** From 3-4 questions to just 1
+- **Faster Creation:** 50% reduction in time to artifact
+- **Enhanced Formatting:** Numbered sections with emojis for clarity
+- **No Figma Dependencies:** Removed all Figma MCP references
 
-### Core Updates from V0.902
-- **Automatic Ultrathink™:** 10 rounds enforced for all standard operations - no user choice
-- **Quick Mode Auto-Scaling:** 1-5 rounds automatically determined by complexity
-- **Success Repositioning:** Criteria/metrics now AFTER About section for better flow
-- **No Table of Contents:** Removed - external tools (ClickUp/Jira) handle navigation
-- **Problem Integration Enforced:** Always woven into About narrative, never listed
+### Enhanced User Experience
+- **Single Wait Point:** Ask once, wait once, create
+- **Clear Response Format:** Examples provided for user input
+- **Better Visual Hierarchy:** Numbered points (1️⃣, 2️⃣, 3️⃣)
+- **Streamlined Process:** Parse → Process → Create
+
+### Maintained from V0.903
+- **Automatic Ultrathink™:** 10 rounds enforced for all standard operations
+- **Quick Mode Auto-Scaling:** 1-5 rounds automatically determined
+- **Minimal Footer:** Single-line tracking format
 - **Template Compliance:** Full v0.xxx standards
-
-### Streamlined Experience
-- No thinking round questions - system decides automatically
-- Simplified interaction - focus only on content decisions
-- Faster creation - 30% reduction in decision points
-- Consistent quality - guaranteed depth analysis
-- Professional output - 100% template compliance
-- Clean minimal footer - essential info only
+- **Success Positioning:** Criteria/metrics after About section
 
 .
 
@@ -54,7 +52,7 @@ Transforms requests into professional development tickets, strategic PRDs, and d
 - **🧠 ATLAS Framework**: 5-phase methodology with automatic ultrathink
 - **🎯 Smart Complexity**: Automatic detection and template scaling
 - **⚡ Quick Mode**: Zero-wait creation with auto-scaled thinking (1-5 rounds)
-- **🚨 REPAIR Protocol**: Structured error recovery
+- **💬 Single Question Flow**: All information gathered at once
 - **🤖 Automatic Thinking**: System-controlled depth (no user choice)
 - **📊 Minimal Footer**: Clean single-line tracking format
 
@@ -71,21 +69,21 @@ Transforms requests into professional development tickets, strategic PRDs, and d
 ### Step 2: Add System Instructions
 1. Click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Writer - Product Owner - v0.902.md` 
+3. Copy and paste: `Writer - Product Owner - v0.904.md` 
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
-Add these documents to your project (all updated with minimal footer):
+Add these documents to your project (all updated with single question flow):
 
 **Core Documents (Latest Versions):**
-- `Product Owner - ATLAS Thinking Framework - v0.182.md` 
-- `Product Owner - Artifact Standards - v0.141.md` 
-- `Product Owner - Interactive Mode - v0.282.md` 
+- `Product Owner - ATLAS Thinking Framework - v0.184.md` 
+- `Product Owner - Artifact Standards - v0.143.md` 
+- `Product Owner - Interactive Mode - v0.284.md` 
 
 **Template Documents (Current Versions):**
-- `Product Owner - Template - Ticket Mode - v0.121.md` 
-- `Product Owner - Template - PRD Mode - v0.121.md` 
-- `Product Owner - Template - Doc Mode - v0.111.md` 
+- `Product Owner - Template - Ticket Mode - v0.123.md` 
+- `Product Owner - Template - PRD Mode - v0.123.md` 
+- `Product Owner - Template - Doc Mode - v0.113.md` 
 
 ### Step 4: Start Creating
 ```
@@ -104,24 +102,37 @@ $ticket payment integration     # Direct ticket mode (10 rounds auto)
 
 | Mode | Purpose | Questions | Thinking | Scaling | Footer Format |
 |------|---------|-----------|----------|---------|---------------|
-| **Interactive** | Determine what to create | 2-3 adaptive | 10 rounds auto | Auto-detect | Minimal |
+| **Interactive** | Determine what to create | 1 comprehensive | 10 rounds auto | Auto-detect | Minimal |
 | **$quick** | Fast creation | NONE | 1-5 auto-scaled | Auto-scale | Minimal |
-| **$ticket** | Dev tickets | 3 questions | 10 rounds auto | 2-3/4-5/6-8 sections | Minimal |
-| **$prd** | Product requirements | 3-4 questions | 10 rounds auto | 5-10/10-20/20+ features | Minimal |
-| **$story** | User stories | 3 questions | 10 rounds auto | 2-3/4-5/6-8 sections | Minimal |
-| **$doc** | Documentation | 3 questions | 10 rounds auto | 2-3/4-6/7+ sections | Minimal |
+| **$ticket** | Dev tickets | 1 comprehensive | 10 rounds auto | 2-3/4-5/6-8 sections | Minimal |
+| **$prd** | Product requirements | 1 comprehensive | 10 rounds auto | 5-10/10-20/20+ features | Minimal |
+| **$story** | User stories | 1 comprehensive | 10 rounds auto | 2-3/4-5/6-8 sections | Minimal |
+| **$doc** | Documentation | 1 comprehensive | 10 rounds auto | 2-3/4-6/7+ sections | Minimal |
 
-### Interactive Flow (Default)
+### Interactive Flow (Default) - NEW Single Question Format
 ```
-Welcome! Let's figure out what you need. 🤔
+Welcome! Let's create exactly what you need. 🎯
 
-What would you like to create?
-1. Development ticket - Feature or bug for developers
-2. User story - Narrative format without checklist
-3. PRD (Product Requirements) - Strategic initiative or detailed specs
-4. Product documentation - User guide, feature docs, or strategy
+Please provide the following information:
 
-Which best fits? (1-4)
+1️⃣ **What type of deliverable?**
+   • Development ticket - Feature or bug with QA checklist
+   • User story - Narrative format without checklist
+   • PRD - Strategic initiative or detailed specs
+   • Documentation - User guide, feature docs, or strategy
+
+2️⃣ **What's the scope or platform?**
+   • For tickets: BE, FE, Mobile, FS, DevOps, or QA
+   • For PRDs: Web, Mobile, Web+Mobile, or All platforms
+   • For docs: Simple (2-3 sections), Standard (4-6), or Complex (7+)
+
+3️⃣ **Brief description of what you need**
+   • What are you building/fixing?
+   • Any specific requirements or context?
+
+Please respond with your choices (e.g., "1. Ticket, 2. BE, 3. User authentication system")
+
+[SYSTEM WAITS FOR SINGLE RESPONSE]
 ```
 
 ### $Quick Mode - Zero-Wait Creation
@@ -137,7 +148,7 @@ Auto-Configuration:
 - Maximum speed delivery
 
 [CREATES ARTIFACT IMMEDIATELY]
-[Footer: Mode: $quick | Scale: Initiative | Template: v0.121]
+[Footer: Mode: $quick | Scale: Initiative | Template: v0.123]
 ```
 
 **$Quick Mode Characteristics:**
@@ -153,17 +164,34 @@ Auto-Configuration:
 <a id="ticket-mode"></a>
 ## 🎫 Ticket Mode
 
-### Development Ticket Creation
+### Development Ticket Creation - NEW Single Question Format
 ```
 User: $ticket payment integration
 
-System: Let's create your payment integration ticket! 🎯
+System: Let me help you create your payment integration ticket. 🎯
 
-**Question 1: Is this a ticket or story?**
-- Ticket = includes resolution checklist for QA
-- Story = narrative format without checklist
+Please provide the following details:
 
-Your choice?
+1️⃣ **Format type:**
+   • Ticket - Development task with resolution checklist for QA
+   • Story - User story format without checklist
+
+2️⃣ **Scope:**
+   • BE - Backend/API
+   • FE - Frontend/UI
+   • Mobile - iOS/Android
+   • FS - Full-stack
+   • DevOps - Infrastructure
+   • QA - Testing
+
+3️⃣ **Requirements & context:**
+   • What needs to be built/fixed?
+   • Key features or integration points
+   • Timeline or dependencies
+
+Please respond with all information (e.g., "1. Ticket, 2. BE, 3. Stripe API integration for subscriptions")
+
+[SYSTEM WAITS FOR SINGLE RESPONSE]
 ```
 
 ### Ticket Complexity Levels
@@ -181,32 +209,42 @@ Your choice?
 - **◻️ Functional/Technical**: Sub-sections (H2)
 - **✓ Resolution Checklist**: Scaled items (H2)
 - Clean H3 headers (no symbols)
-- **Minimal Footer**: `Mode: $ticket | Complexity: [level] | Template: v0.121`
-
-### Example Ticket Footer
-```markdown
-[Ticket content...]
----
-Mode: $ticket | Complexity: Standard | Template: v0.121
-```
+- **Minimal Footer**: `Mode: $ticket | Complexity: [level] | Template: v0.123`
 
 .
 
 <a id="prd-mode"></a>
 ## 🚀 PRD Mode
 
-### Product Requirements Document Creation
+### Product Requirements Document Creation - NEW Single Question Format
 ```
 User: $prd authentication platform
 
-System: Let's structure your authentication platform PRD! 🚀
+System: Let's create your authentication platform PRD! 📋
 
-**Question 1: What type of PRD do you need?**
-- Initiative (5-10 features, single team, quarterly)
-- Program (10-20 features, multi-team, half-year)
-- Strategic (20+ features, company-wide, annual)
+Please provide the following information:
 
-Your choice?
+1️⃣ **PRD scale:**
+   • Feature PRD - single feature specification
+   • Initiative PRD - 5-10 features, single team, quarterly
+   • Program PRD - 10-20 features, multi-team, half-year
+   • Strategic PRD - 20+ features, platform-wide, annual
+
+2️⃣ **Primary platform:**
+   • Web only
+   • Mobile only (iOS/Android)
+   • Web + Mobile
+   • All platforms (Web, iOS, Android, API)
+
+3️⃣ **Key requirements & context:**
+   • Core features needed
+   • Target audience
+   • Business objectives
+   • Timeline constraints
+
+Please respond with all details (e.g., "1. Initiative PRD, 2. Web + Mobile, 3. Real-time analytics for enterprise customers")
+
+[SYSTEM WAITS FOR SINGLE RESPONSE]
 ```
 
 ### PRD Complexity Levels
@@ -224,33 +262,40 @@ Your choice?
 - **◻️ Feature Details**: Sub-sections (H2)
 - **∅ Risks & Mitigations**: When applicable (H2)
 - Clean H3 headers (no symbols)
-- **Minimal Footer**: `Mode: $prd | Scale: [level] | Template: v0.121`
-
-### Example PRD Footer
-```markdown
-[PRD content...]
----
-Mode: $prd | Scale: Initiative | Template: v0.121
-```
+- **Minimal Footer**: `Mode: $prd | Scale: [level] | Template: v0.123`
 
 .
 
 <a id="doc-mode"></a>
 ## 📄 Doc Mode
 
-### Documentation Creation
+### Documentation Creation - NEW Single Question Format
 ```
 User: $doc API guide
 
-System: Let's create your API documentation! 📚
+System: Let's create your documentation! 📚
 
-**Question 1: What type of documentation?**
-- Product brief (quick overview)
-- Feature specification (detailed design)
-- Performance tracking (metrics & KPIs)
-- Strategy document (comprehensive guide)
+Please provide the following details:
 
-Your choice?
+1️⃣ **Documentation type:**
+   • Product brief - quick overview
+   • Feature specification - detailed design
+   • Performance tracking - metrics & KPIs
+   • Strategy document - comprehensive platform guide
+
+2️⃣ **Complexity level:**
+   • Simple - 2-3 main sections, quick reference
+   • Standard - 4-6 main sections, detailed guide
+   • Complex - 7+ main sections, comprehensive docs
+
+3️⃣ **Focus areas & requirements:**
+   • Target audience
+   • Key topics to cover
+   • Specific sections needed
+
+Please respond with all information (e.g., "1. Strategy document, 2. Complex, 3. Platform roadmap for executive team")
+
+[SYSTEM WAITS FOR SINGLE RESPONSE]
 ```
 
 ### Documentation Types
@@ -268,14 +313,7 @@ Your choice?
 - Clean H3 headers (no symbols)
 - Clean H4 headers (no symbols)
 - **`---`**: Major section separators
-- **Minimal Footer**: `Mode: $doc | Complexity: [level] | Template: v0.111`
-
-### Example Doc Footer
-```markdown
-[Documentation content...]
----
-Mode: $doc | Complexity: Complex | Template: v0.111
-```
+- **Minimal Footer**: `Mode: $doc | Complexity: [level] | Template: v0.113`
 
 .
 
@@ -304,7 +342,7 @@ Mode: $doc | Complexity: Complex | Template: v0.111
 [Processing begins automatically with full depth]
 ```
 
-**Note:** Users are never asked about thinking rounds - the system determines optimal depth automatically based on mode and complexity. The minimal footer documents the mode and complexity without verbose process details.
+**Note:** Users are never asked about thinking rounds - the system determines optimal depth automatically based on mode and complexity.
 
 .
 
@@ -380,7 +418,7 @@ Mode: $doc | Complexity: Complex | Template: v0.111
 - **Checkboxes**: Always use `[]` (no spaces)
 - **Tables**: Required for Designs & References
 - **Dividers**: `---` between all major sections
-- **Placeholders**: `[Figma - to be added]`
+- **Placeholders**: `[Link - to be added]`
 - **Status Notes**: `[Status note: "description"]`
 - **NO Table of Contents**: External tools handle navigation
 - **Minimal Footer**: Single line at bottom
@@ -390,8 +428,8 @@ Mode: $doc | Complexity: Complex | Template: v0.111
 <a id="minimal-footer-format"></a>
 ## 📊 Minimal Footer Format
 
-### New Streamlined Footer (v0.903)
-All artifacts now include a single-line footer with essential tracking information:
+### Streamlined Footer (Maintained from v0.903)
+All artifacts include a single-line footer with essential tracking information:
 
 ```markdown
 Mode: $[mode] | [Complexity/Scale]: [level] | Template: v0.xxx
@@ -401,44 +439,28 @@ Mode: $[mode] | [Complexity/Scale]: [level] | Template: v0.xxx
 
 **Ticket Mode:**
 ```markdown
-Mode: $ticket | Complexity: Standard | Template: v0.121
+Mode: $ticket | Complexity: Standard | Template: v0.123
 ```
 
 **Story Mode:**
 ```markdown
-Mode: $story | Complexity: Simple | Template: v0.121
+Mode: $story | Complexity: Simple | Template: v0.123
 ```
 
 **PRD Mode:**
 ```markdown
-Mode: $prd | Scale: Initiative | Template: v0.121
+Mode: $prd | Scale: Initiative | Template: v0.123
 ```
 
 **Doc Mode:**
 ```markdown
-Mode: $doc | Complexity: Complex | Template: v0.111
+Mode: $doc | Complexity: Complex | Template: v0.113
 ```
 
 **Quick Mode:**
 ```markdown
 Mode: $quick | Complexity: Auto | Template: v0.xxx
 ```
-
-### What Changed from v0.902
-
-**Old Footer (REMOVED):**
-- 15-20 lines of verbose process documentation
-- Detailed thinking rounds and ATLAS phases
-- Historical context and session learning
-- Extensive framework documentation
-
-**New Footer (CURRENT):**
-- Single line with essential info only
-- Mode identification
-- Complexity/Scale level
-- Template version for compliance
-- **80% size reduction**
-- **100% cleaner output**
 
 .
 
@@ -455,7 +477,7 @@ Mode: $quick | Complexity: Auto | Template: v0.xxx
 | **Checkbox format wrong** | Use `[]` without spaces |
 | **Missing dividers** | Add `---` between all sections |
 | **Want speed** | Use $quick mode (1-5 rounds auto) |
-| **Asked about thinking rounds** | System error - thinking is automatic |
+| **Multiple questions asked** | System error - should be single comprehensive question |
 | **Verbose footer appearing** | Update to minimal format: Mode \| Complexity \| Template |
 | **Missing footer** | Add single-line footer at bottom |
 
@@ -472,8 +494,17 @@ Mode: $quick | Complexity: Auto | Template: v0.xxx
 <a id="version-history"></a>
 ## 📦 Version History
 
-### v0.903 (Current)
-- **NEW: Minimal footer implementation**
+### v0.904 (Current)
+- **NEW: Single comprehensive question flow**
+- All information gathered in one interaction
+- 60% reduction in decision points
+- 50% faster to artifact creation
+- Removed all Figma MCP dependencies
+- Enhanced formatting with numbered sections
+- Maintained all v0.903 improvements
+
+### v0.903
+- Minimal footer implementation
 - Single-line footer format
 - 80% footer size reduction
 - Essential tracking preserved
@@ -523,9 +554,9 @@ $quick [request]     # Immediate creation, 1-5 rounds auto-scaled
 
 ### Default Behavior
 ```markdown
-[any request without command]    # Interactive mode with discovery flow
+[any request without command]    # Interactive mode with single comprehensive question
 ```
 
 ---
 
-*Template-compliant formatting ensures professional output. Automatic ultrathink guarantees consistent depth. Minimal footer provides essential tracking without clutter. Symbols: H1 (⌘/■), H2 (◻️/✦/⌥/✓/⌥/∅), H3 (clean), H4 (clean). Revolutionary $quick mode for immediate creation with auto-scaled thinking (1-5 rounds). Interactive Mode remains the thoughtful default with 10-round ultrathink. Choose $quick when speed matters, Interactive when customization matters. About always first. Success always after About. Problems always integrated. System thinking is automatic - user control over content remains absolute. Footer always minimal.*
+*Template-compliant formatting ensures professional output. Automatic ultrathink guarantees consistent depth. Minimal footer provides essential tracking without clutter. Symbols: H1 (⌘/■), H2 (◻️/✦/⌥/✓/⌥/∅), H3 (clean), H4 (clean). Revolutionary $quick mode for immediate creation with auto-scaled thinking (1-5 rounds). Interactive Mode now uses single comprehensive question with 10-round ultrathink. Choose $quick when speed matters, Interactive when customization matters. About always first. Success always after About. Problems always integrated. System thinking is automatic - user control over content remains absolute. Footer always minimal. Single question flow reduces friction while maintaining quality.*
