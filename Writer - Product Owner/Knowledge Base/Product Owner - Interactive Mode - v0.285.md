@@ -1,9 +1,8 @@
-# Product Owner - Interactive Mode - v0.284
+# Product Owner - Interactive Mode - v0.285
 
 Consolidated interactive guidance for all creation modes with **automatic ultrathink** and single comprehensive questioning.
 
 ## 📋 TABLE OF CONTENTS
-
 1. [🎯 MODE OVERVIEW](#1-🎯-mode-overview)
 2. [📄 INTERACTIVE MODE](#2-📄-interactive-mode)
 3. [⚡ $QUICK MODE](#3-⚡-quick-mode)
@@ -31,9 +30,9 @@ Unless user explicitly specifies $ticket, $prd, $doc, or $quick, Interactive Mod
 |------|---------|--------|-----------|----------|---------------|----------------|
 | Interactive | (default) or $interactive | Varies | 1 comprehensive | 10 rounds auto | Mode-specific | YES |
 | **$quick** | Direct | Any type | NONE | 1-5 auto-scaled | Mode-appropriate | NO |
-| $ticket | Direct | Scaled ticket/story | 1 comprehensive | 10 rounds auto | ⌘, ■, ◻️, ✦, ⌥, ✓ | YES |
-| $prd | Direct | Strategic requirements | 1 comprehensive | 10 rounds auto | ✦, ⌘, ■, ◻️, ⌥ | YES |
-| $doc | Direct | Documentation | 1 comprehensive | 10 rounds auto | ⌘, ■, ◻️, ⌥ | YES |
+| $ticket | Direct | Scaled ticket/story | 1 comprehensive | 10 rounds auto | ⌘, ❖, ◻︎, ✦, ⌥, ✓ | YES |
+| $prd | Direct | Strategic requirements | 1 comprehensive | 10 rounds auto | ✦, ⌘, ❖, ◻︎, ⌥ | YES |
+| $doc | Direct | Documentation | 1 comprehensive | 10 rounds auto | ⌘, ❖, ◻︎, ⌥ | YES |
 
 **Template Scaling:**
 - **Tickets:** Simple (2-3 sections), Standard (4-5), Complex (6-8)
@@ -134,7 +133,7 @@ Creating immediately...
 - Success criteria after About
 - About with integrated problems
 - Designs & References as table
-- Symbol hierarchy: H1 (⌘/■), H2 (◻️), H3 (clean)
+- Symbol hierarchy: H1 (⌘/❖), H2 (◻︎), H3 (clean)
 - Dividers between sections]
 
 [NO WAITING FOR USER INPUT - THIS IS THE ONLY EXCEPTION]
@@ -166,7 +165,7 @@ def quick_mode_flow(request):
         mode='quick',
         scale=scale,
         thinking_rounds=thinking_rounds,  # Auto-scaled 1-5
-        symbol_hierarchy='H1: ⌘/■, H2: ◻️/✦/⌥, H3: clean',
+        symbol_hierarchy='H1: ⌘/❖, H2: ◻︎/✦/⌥, H3: clean',
         success_position='after_about',
         about_format='integrated_narrative',
         designs_format='table',
@@ -272,8 +271,8 @@ Processing with 10-round ultrathink...
 ```
 
 ### TICKET MODE FORMATTING RULES
-- **H1 Symbols:** ⌘ (About), ■ (Main sections)
-- **H2 Symbols:** ◻️ (Subsections), ✦ (Success Criteria), ⌥ (Designs), ✓ (Resolution)
+- **H1 Symbols:** ⌘ (About), ❖ (Main sections)
+- **H2 Symbols:** ◻︎ (Subsections), ✦ (Success Criteria), ⌥ (Designs), ✓ (Resolution)
 - **H3:** Clean headers (no symbols)
 - **Thinking:** Always 10 rounds automatic
 - **Dividers:** `---` between sections
@@ -420,8 +419,8 @@ Processing with 10-round ultrathink...
 
 | Header Level | Symbols | Usage |
 |-------------|---------|-------|
-| **H1** | ⌘, ■ | About section (⌘), Main sections (■) | 
-| **H2** | ◻️, ✦, ⌥, ✓, ⌥, ∅ | Subsections and special elements | 
+| **H1** | ⌘, ❖ | About section (⌘), Main sections (❖) | 
+| **H2** | ◻︎, ✦, ⌥, ✓, ⌥, ∅ | Subsections and special elements | 
 | **H3** | Clean | No symbols - plain text headers |
 | **H4** | Clean | No symbols - plain text headers |
 
@@ -522,7 +521,7 @@ Creating immediately...
 • Maximum speed delivery
 
 [PROCEEDS IMMEDIATELY TO CREATION - NO WAITING]
-[Uses proper template with H1: ⌘/■, H2: ◻️/✦/⌥, H3: clean, H4: clean]
+[Uses proper template with H1: ⌘/❖, H2: ◻︎/✦/⌥, H3: clean, H4: clean]
 ```
 
 **$status - Show Context:**
@@ -534,7 +533,7 @@ System: **Current Session Context**
 Mode: Interactive (default)
 Thinking: 10-round ultrathink (automatic)
 Template Compliance: v0.xxx
-Symbol Hierarchy: H1 (⌘/■), H2 (◻️/✦/⌥), H3 (clean), H4 (clean)
+Symbol Hierarchy: H1 (⌘/❖), H2 (◻︎/✦/⌥), H3 (clean), H4 (clean)
 Last Used: Ticket format (Standard complexity)
 Single Question: Enabled
 Waiting Behavior: Always wait for user (except $quick)
@@ -623,8 +622,8 @@ Mode: $[mode] | Complexity: [level] | Template: v0.xxx
 
 - ✦ for Success Metrics/Criteria (H2, after About)
 - ⌘ for About sections (H1)
-- ■ for main sections (H1)
-- ◻️ for subsections (H2)
+- ❖ for main sections (H1)
+- ◻︎ for subsections (H2)
 - ⌥ for Designs & References or References & Resources (H2)
 - ✓ for Resolution Checklist (H2, tickets only)
 - ∅ for Risks (H2, when applicable)
