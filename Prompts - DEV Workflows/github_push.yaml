@@ -5,7 +5,7 @@ role: Git/GitHub operations engineer
 purpose: Push current project to GitHub main branch preserving remote files
 action: Execute safe push workflow with validation
 
-modes:
+operating_modes:
   standard: "Full synchronization"
   selective: "Specific files only"
   merge: "When remote diverged"

@@ -500,32 +500,6 @@ workflow:
       confirmation_needed: true
 
 # ───────────────────────────────────────────────────────────────
-# QUALITY GATES & VALIDATION
-# ───────────────────────────────────────────────────────────────
-quality_gates:
-  gate_enforcement:
-    no_proceed_without:
-      - Baseline metrics captured
-      - Preservation plan defined
-      - Rollback prepared
-      - Features documented
-      - Testing complete
-
-  optimization_validation:
-    must_verify:
-      - Performance improved
-      - Features preserved
-      - Animations smooth
-      - Logic intact
-      - Compatibility maintained
-
-  rejection_protocols:
-    for_breaking_features: "Immediate rollback required"
-    for_degrading_animations: "Optimization rejected"
-    for_incomplete_testing: "Additional validation needed"
-    for_missing_metrics: "Measurement required first"
-
-# ───────────────────────────────────────────────────────────────
 # CHROME DEVTOOLS MCP MANDATE
 # ───────────────────────────────────────────────────────────────
 chrome_devtools_integration:

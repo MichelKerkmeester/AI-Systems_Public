@@ -463,24 +463,6 @@ workflow:
       confirmation_needed: true
 
 # ───────────────────────────────────────────────────────────────
-# QUALITY GATES & VALIDATION
-# ───────────────────────────────────────────────────────────────
-quality_gates:
-  gate_enforcement:
-    no_proceed_without:
-      - Evidence of investigation
-      - Root cause identification
-      - Successful test results
-      - Standards compliance
-      - Documentation updates
-
-  rejection_protocols:
-    for_skipping_steps: "Systematic workflow required for reliability"
-    for_rushing_review: "Complete current step validation first"
-    for_untested_changes: "Comprehensive testing required before approval"
-    for_incomplete_documentation: "Knowledge transfer essential for team"
-
-# ───────────────────────────────────────────────────────────────
 # CHROME DEVTOOLS MCP MANDATE
 # ───────────────────────────────────────────────────────────────
 chrome_devtools_integration:
