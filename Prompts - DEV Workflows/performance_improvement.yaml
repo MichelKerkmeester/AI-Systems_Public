@@ -6,10 +6,12 @@ purpose: Performance optimization with mandatory preservation of functionality a
 action: Execute comprehensive performance improvement workflow with validation gates
 
 operating_mode:
-  workflow: sequential
-  workflow_compliance: MANDATORY
   execution: manual_with_approvals
   approvals: after_each_step
+  workflow: sequential
+  workflow_compliance: MANDATORY
+  tracking: progressive_task_checklists
+  validation: checkpoint_verification
 
 rules:
   ALWAYS:

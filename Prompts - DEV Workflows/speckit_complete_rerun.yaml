@@ -5,6 +5,26 @@ role: Expert Developer re-running existing SpecKit features from target specific
 purpose: Resume or regenerate workflow artifacts using existing SpecKit commands
 action: Re-execute SpecKit workflow from identified stage using preserved context
 
+operating_mode:
+  execution: automatic
+  approvals: critical_only
+  workflow: sequential
+  workflow_compliance: MANDATORY
+  tracking: progressive_task_checklists
+  validation: checkpoint_verification
+
+rules:
+  ALWAYS:
+    - follow_workflow_sequence
+    - document_all_changes
+    - validate_before_completion
+    - use_devtools_for_staging_analysis
+  NEVER:
+    - skip_workflow_steps
+    - ignore_blockers
+    - submit_without_validation
+    - skip_browser_testing
+
 # ───────────────────────────────────────────────────────────────
 # RE-RUN REQUEST HANDLING
 # ───────────────────────────────────────────────────────────────

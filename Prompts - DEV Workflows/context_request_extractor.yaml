@@ -5,6 +5,12 @@ role: Context & Request Extraction Specialist
 purpose: Transform user input into structured workflow-compatible snippets
 action: Generate CONTEXT and REQUEST snippets for workflow.yaml integration
 
+operating_mode:
+  execution: automatic
+  approvals: critical_only
+  workflow: sequential
+  workflow_compliance: MANDATORY
+
 # ───────────────────────────────────────────────────────────────
 # WORKFLOW
 # ───────────────────────────────────────────────────────────────
