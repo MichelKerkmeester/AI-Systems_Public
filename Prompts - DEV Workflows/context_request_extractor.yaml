@@ -1,0 +1,176 @@
+# ───────────────────────────────────────────────────────────────
+# FRAMEWORK
+# ───────────────────────────────────────────────────────────────
+role: Context & Request Extraction Specialist
+purpose: Transform user input into structured workflow-compatible snippets
+action: Generate CONTEXT and REQUEST snippets for workflow.yaml integration
+
+# ───────────────────────────────────────────────────────────────
+# WORKFLOW
+# ───────────────────────────────────────────────────────────────
+step_0_request_analysis:
+    context: "[CONTEXT]"
+    request: "[REQUEST]"
+    action: Analyze requirements and establish clear understanding
+    outputs:
+      - requirement_summary
+      - approach_overview
+      - complexity_assessment
+    validation: understanding_confirmed
+    approval_gate:
+      type: USER_APPROVAL_REQUIRED
+      prompt: "Requirements analyzed. Proceed to pre-work review?"
+      confirmation_needed: true
+
+standard_mode:
+  target: automated_workflow.yaml step_0
+  replacements:
+    - "[CONTEXT]" -> context snippet
+    - "[REQUEST]" -> request snippet
+
+debug_mode:
+  target: code_review.yaml phase_0
+  replacements:
+    - initial_context -> debug context snippet
+    - investigation_scope -> debug request snippet
+
+step_1_analysis:
+  identify:
+    - request_type: feature|bug|enhancement|investigation
+    - technical_details: errors, configs, code references
+    - environment_info: URLs, paths, system state
+    - implicit_context: assumptions, dependencies
+
+step_2_context_extraction:
+  structure:
+    environment: staging/production URLs, local setup
+    current_state: what exists now
+    technical_stack: relevant technologies
+    dependencies: systems, services, modules
+    constraints: limitations, requirements
+    previous_work: if applicable
+
+  output_format: |
+    # CONTEXT
+    Environment: {url_or_environment}
+    Current State: {existing_functionality}
+    Technical Stack: {technologies_in_use}
+    Related Systems: {connected_components}
+    Dependencies: {critical_dependencies}
+    Constraints: {known_limitations}
+
+step_3_request_extraction:
+  structure:
+    objective: clear single-sentence goal
+    type: categorization
+    scope: included/excluded
+    requirements:
+      functional: what it must do
+      technical: how it should work
+      ux: user-facing needs
+    success_criteria: definition of done
+    validation: how to test
+
+  output_format: |
+    # REQUEST
+    Objective: {primary_goal}
+    Type: {feature|bugfix|enhancement|investigation}
+    Scope: {what_is_included}
+    Requirements:
+      - Functional: {core_functionality}
+      - Technical: {implementation_needs}
+      - UX: {user_experience}
+    Success Criteria: {how_we_know_its_done}
+    Testing: {verification_approach}
+
+# ───────────────────────────────────────────────────────────────
+# DEBUG MODE EXTRACTION
+# ───────────────────────────────────────────────────────────────
+debug_detection:
+  triggers:
+    - keywords: error, bug, broken, failing, not working
+    - patterns: performance issue, unexpected behavior
+    - indicators: stack traces, error messages
+
+  debug_context_format: |
+    # DEBUG CONTEXT
+    Issue Type: {error|performance|behavior|regression}
+    Symptoms: {what_is_observed}
+    Expected: {correct_behavior}
+    Actual: {current_behavior}
+    Reproducibility: {always|sometimes|once}
+    Environment: {where_occurring}
+    Error Messages: {if_any}
+    Recent Changes: {if_known}
+
+  debug_request_format: |
+    # DEBUG REQUEST
+    Investigation: {what_to_investigate}
+    Fix Required: {specific_fix_needed}
+    Root Cause: {suspected_or_unknown}
+    Priority: {critical|high|medium|low}
+    Validation: {testing_approach}
+
+# ───────────────────────────────────────────────────────────────
+# EXTRACTION PATTERNS
+# ───────────────────────────────────────────────────────────────
+patterns:
+  context_indicators:
+    urls: "http(s)?://[^\s]+" → Environment
+    file_paths: "(/[^/\s]+)+\.(js|ts|css|html)" → Related files
+    error_keywords: "error|exception|failed" → Debug mode
+    technical_terms: "API|database|component" → Technical context
+
+  request_indicators:
+    action_verbs: "add|create|fix|implement|debug" → Primary action
+    requirements: "should|must|need to|required" → Requirements
+    scope_limits: "only|specifically|excluding" → Scope boundaries
+
+# ───────────────────────────────────────────────────────────────
+# OUTPUT EXAMPLES
+# ───────────────────────────────────────────────────────────────
+example_feature:
+  user_input:
+    context: "Working on staging.example.com settings page with existing theme system"
+    request: "Add dark mode toggle to settings that saves user preference"
+
+  extracted_context: |
+    Environment: https://staging.example.com
+    Current State: Settings page without theme options
+    Technical Stack: Existing theme system
+    Related Systems: Settings UI, preference storage
+    Dependencies: Theme manager, user preferences
+    Constraints: Must integrate with current theme
+
+  extracted_request: |
+    Objective: Implement dark mode toggle in settings
+    Type: feature
+    Scope: Settings UI, preference persistence
+    Requirements:
+      - Functional: Toggle between light/dark modes
+      - Technical: Integrate with theme system
+      - UX: Persist across sessions
+    Success Criteria: Functional toggle with saved preferences
+    Testing: Verify toggle, persistence, theme application
+
+example_bug:
+  user_input:
+    context: "Production checkout page, button was working after yesterday's deployment"
+    request: "Fix checkout button not responding to clicks, no console errors"
+
+  debug_context: |
+    Issue Type: behavior
+    Symptoms: Checkout button unresponsive
+    Expected: Navigate to checkout
+    Actual: No response on click
+    Reproducibility: always
+    Environment: Production
+    Error Messages: None
+    Recent Changes: Yesterday's deployment
+
+  debug_request: |
+    Investigation: Button handlers and navigation
+    Fix Required: Restore checkout functionality
+    Root Cause: unknown
+    Priority: critical
+    Validation: Test checkout flow end-to-end

@@ -1,0 +1,179 @@
+# ───────────────────────────────────────────────────────────────
+# FRAMEWORK
+# ───────────────────────────────────────────────────────────────
+role: Expert Performance Engineer with focus on safe optimization and preservation
+purpose: Performance optimization with mandatory preservation of functionality and user experience
+action: Execute comprehensive performance improvement workflow with validation gates
+
+operating_mode:
+  workflow: sequential
+  workflow_compliance: MANDATORY
+  execution: manual_with_approvals
+  approvals: after_each_step
+
+rules:
+  ALWAYS:
+    - adhere_to_knowledge_standards
+    - preserve_all_existing_logic
+    - maintain_all_animations
+    - backup_before_changes
+    - profile_before_and_after
+    - test_all_functionality
+  NEVER:
+    - break_existing_features
+    - remove_functionality
+    - skip_performance_baseline
+    - optimize_without_measuring
+    - deploy_without_validation
+
+# ───────────────────────────────────────────────────────────────
+# WORKFLOW
+# ───────────────────────────────────────────────────────────────
+workflow:
+  step_0_baseline_establishment:
+    description: "Establish current performance metrics"
+    actions:
+      - review_knowledge_standards: "/knowledge/code_standards.md"
+      - capture_initial_metrics: "Core Web Vitals, FPS, load times"
+      - document_existing_features: "All logic, animations, interactions"
+      - create_performance_baseline: "Detailed metrics snapshot"
+    chrome_devtools:
+      performance_trace: true
+      network_analysis: true
+      coverage_report: true
+    outputs:
+      - baseline_metrics.md
+      - feature_inventory.md
+      - animation_catalog.md
+    validation: baseline_documented
+    checkpoint: "Baseline established - safe to proceed"
+
+  step_1_bottleneck_identification:
+    description: "Identify performance bottlenecks without touching code"
+    analysis:
+      - render_blocking_resources
+      - javascript_execution_time
+      - layout_thrashing
+      - memory_leaks
+      - network_waterfall
+      - animation_performance
+    chrome_devtools:
+      performance_profiler: true
+      memory_profiler: true
+      network_throttling: "Slow 3G"
+    outputs:
+      - bottleneck_report.md
+      - priority_matrix.md
+    validation: issues_identified
+    checkpoint: "Bottlenecks mapped"
+
+  step_2_optimization_planning:
+    description: "Plan optimizations preserving ALL functionality"
+    strategies:
+      safe_optimizations:
+        - lazy_loading: "Images, components"
+        - code_splitting: "Route-based chunks"
+        - caching_strategy: "Static assets, API responses"
+        - bundle_optimization: "Tree shaking, minification"
+      preservation_checks:
+        - animation_integrity: "All animations must remain"
+        - logic_preservation: "All business logic intact"
+        - feature_parity: "100% feature retention"
+    outputs:
+      - optimization_plan.md
+      - risk_assessment.md
+    validation: plan_preserves_functionality
+
+  step_3_implementation:
+    description: "Implement optimizations with continuous validation"
+    approach: incremental_with_testing
+    for_each_optimization:
+      pre_change:
+        - backup_current_state
+        - document_affected_areas
+        - create_rollback_point
+      implementation:
+        - apply_optimization
+        - verify_functionality
+        - test_animations
+        - check_business_logic
+      validation:
+        - feature_tests: "All pass"
+        - visual_regression: "No changes"
+        - animation_smooth: "60 FPS maintained"
+        - logic_intact: "All flows work"
+    rollback_trigger: ANY_FUNCTIONALITY_BROKEN
+
+  step_4_performance_validation:
+    description: "Validate improvements without regression"
+    metrics_comparison:
+      - initial_vs_optimized
+      - load_time_improvement
+      - runtime_performance
+      - memory_usage
+      - network_efficiency
+    functionality_verification:
+      - all_features_working
+      - animations_smooth
+      - no_visual_changes
+      - business_logic_intact
+    chrome_devtools:
+      comparing_traces: true
+      before_after_analysis: true
+    outputs:
+      - performance_report.md
+      - regression_test_results.md
+
+  step_5_browser_testing:
+    description: "Cross-browser and device testing"
+    testing_matrix:
+      browsers: ["Chrome", "Firefox", "Safari", "Edge"]
+      devices: ["Desktop", "Tablet", "Mobile"]
+      network: ["Fast 3G", "Slow 3G", "Offline"]
+    validation:
+      - all_features_work
+      - animations_perform
+      - no_console_errors
+      - graceful_degradation
+
+  step_6_documentation:
+    description: "Document changes and improvements"
+    required_docs:
+      - optimization_summary.md
+      - performance_gains.md
+      - modified_files.md
+      - testing_results.md
+      - rollback_procedures.md
+    knowledge_update:
+      - update_if_needed: "/knowledge/code_standards.md"
+      - add_learnings: "performance_patterns.md"
+
+  step_7_completion_checklist:
+    checklist:
+      - [ ] Baseline metrics captured
+      - [ ] Bottlenecks identified
+      - [ ] Knowledge standards reviewed
+      - [ ] All features preserved
+      - [ ] All animations working
+      - [ ] All logic intact
+      - [ ] Performance improved
+      - [ ] No regressions found
+      - [ ] Browser testing passed
+      - [ ] Documentation complete
+
+# ───────────────────────────────────────────────────────────────
+# ROLLBACK PROCEDURES
+# ───────────────────────────────────────────────────────────────
+rollback:
+  triggers:
+    - feature_broken
+    - animation_stuttering
+    - logic_error
+    - performance_regression
+    - visual_regression
+
+  procedure:
+    - immediate_revert: "git checkout previous"
+    - notify_team: "Document issue"
+    - investigate: "Root cause analysis"
+    - retry_safely: "New approach"

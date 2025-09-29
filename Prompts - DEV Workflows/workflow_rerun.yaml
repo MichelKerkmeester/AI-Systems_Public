@@ -1,0 +1,280 @@
+# ───────────────────────────────────────────────────────────────
+# FRAMEWORK
+# ───────────────────────────────────────────────────────────────
+role: Expert Developer re-running existing SpecKit features from target specification folder
+purpose: Resume or regenerate workflow artifacts using existing SpecKit commands
+action: Re-execute SpecKit workflow from identified stage using preserved context
+
+# ───────────────────────────────────────────────────────────────
+# RE-RUN REQUEST HANDLING
+# ───────────────────────────────────────────────────────────────
+request_format: "Re-run the workflow for specs/[NNN-feature]/"
+ai_approach:
+  identify_target: specs/[NNN-feature]/
+  determine_stage: auto_detect_from_artifacts
+  use_commands: [/specify, /clarify, /plan, /tasks, /analyze, /implement]
+
+# ───────────────────────────────────────────────────────────────
+# PRE-RUN ANALYSIS
+# ───────────────────────────────────────────────────────────────
+analysis:
+  validate:
+    folder_exists: specs/[target]/
+    identify_artifacts:
+      - spec.md → determine_version
+      - plan.md → check_completeness
+      - tasks/checklist.md → track_progress
+    git_branch:
+      - exists → checkout
+      - missing → create_from_spec
+
+  restore_context:
+    from_spec: [feature_name, original_request, clarifications]
+    from_plan: [technical_decisions, dependencies, architecture]
+    from_tasks: [completed_items, blocked_items, progress_percentage]
+    from_memory: [constitution.md, knowledge/*.md]
+
+  determine_entry:
+    missing_spec: error_or_start_fresh
+    missing_plan: resume_from_planning
+    missing_tasks: resume_from_tasks
+    all_present: resume_implementation
+
+# ───────────────────────────────────────────────────────────────
+# WORKFLOW
+# ───────────────────────────────────────────────────────────────
+workflow:
+  step_0_request_analysis:
+    context: "Re-run request for specs/[NNN-feature]/"
+    request: "Resume or regenerate workflow artifacts"
+    action: Analyze existing artifacts and determine entry point
+    initialization:
+      - validate_prerequisites
+      - load_existing_artifacts
+      - create_rerun_log
+      - backup_current_state
+    outputs:
+      - rerun_plan: generated
+      - context: restored
+      - entry_point: identified
+    validation: context_established
+
+  step_1_pre_work_review:
+    required_documents:
+      - existing spec.md
+      - existing plan.md if present
+      - existing tasks/checklist.md if present
+      - AGENTS.md
+      - .specify/memory/constitution.md
+      - knowledge/*.md
+    validation: principles_established
+
+  step_2_specification:
+    when: spec_needs_update
+    command: /specify [updated-description]
+    preserve:
+      - original_request
+      - user_clarifications
+      - approved_acceptance_criteria
+    regenerate:
+      - updated_requirements
+      - new_edge_cases
+      - revised_success_metrics
+    strategy:
+      - maintain_header_with_version
+      - append_revision_history
+      - merge_new_sections
+    output: spec.md_v[N]
+    validation: spec_complete
+
+  step_3_clarification:
+    when: gaps_identified
+    command: /clarify
+    actions:
+      - review_existing_clarifications
+      - identify_new_ambiguities
+      - generate_targeted_questions
+      - update_spec_with_answers
+    output: spec.md (clarifications_section)
+    validation: requirements_clear
+
+  step_4_planning:
+    when: plan_update_needed
+    command: /plan [context-from-spec]
+    analyze:
+      - spec_changes_since_last_plan
+      - technical_constraint_updates
+      - new_dependencies
+    preserve:
+      - validated_architecture
+      - approved_tech_choices
+      - existing_risk_assessments
+    update:
+      - implementation_approach
+      - task_breakdown_hints
+      - timeline_estimates
+    output: plan.md_v[N]
+    validation: approach_defined
+
+  step_5_task_breakdown:
+    when: checklist_refresh_needed
+    command: /tasks
+    load_existing:
+      - completed_tasks (preserve_status)
+      - in_progress_tasks (re-evaluate)
+      - blocked_tasks (check_resolution)
+    regenerate:
+      - add_new_from_plan
+      - update_incomplete_descriptions
+      - reorder_by_dependencies
+      - adjust_time_estimates
+    output: tasks/checklist.md
+    validation: tasks_actionable
+
+  step_6_analysis:
+    command: /analyze
+    scope: [spec, plan, tasks, consistency]
+    checks:
+      - spec_to_plan_alignment
+      - plan_to_tasks_coverage
+      - missing_requirements
+      - implementation_gaps
+    output:
+      - analysis_report.md
+      - gaps_to_address.md
+    validation: consistency_verified
+
+  step_7_implementation_check:
+    command: /implement [task-id]
+    checks:
+      - prerequisites: verified
+      - blockers: none
+      - environment: ready
+    restore_state:
+      - last_completed_task_id
+      - partial_implementations
+      - test_results
+    validation: ready_to_implement
+
+  step_8_development:
+    continue_from:
+      - first_incomplete_task
+      - or_specific_task_requested
+    tracking:
+      - real_time_checklist_updates
+      - incremental_commits
+      - progress_notifications
+    requirements:
+      - follow: knowledge/code_standards.md
+      - update: task_checklist_progressively
+      - test: before_commit
+
+  step_9_completion:
+    summary_document:
+      location: specs/[NNN-feature]/implementation-summary.md
+      required_sections:
+        - feature_branch_name
+        - files_modified_created
+        - verification_steps_taken
+        - deviations_from_plan
+        - knowledge_base_updates
+        - recommended_next_steps
+        - browser_testing_results
+    final_checklist:
+      - update_task_status: completed
+      - validation_passed: confirmed
+      - summary_created: true
+      - staging_verified: true
+
+# ───────────────────────────────────────────────────────────────
+# STRATEGIES & VERSIONING
+# ───────────────────────────────────────────────────────────────
+strategies:
+  incremental:
+    when: minor_updates
+    approach: preserve_max_update_minimal
+    benefit: fast_low_risk
+
+  full:
+    when: major_changes
+    approach: backup_regenerate_compare
+    benefit: fresh_comprehensive
+
+  selective:
+    when: specific_outdated
+    approach: target_artifacts_only
+    benefit: efficient_focused
+
+versioning:
+  artifacts:
+    current: [filename].md
+    versions: [filename]_v[N].md
+    backup: [filename]_backup_[YYYYMMDD_HHMMSS].md
+
+  history:
+    log_file: specs/[NNN]/rerun_history.log
+    format: "[timestamp] /rerun [params] → [outcome]"
+    track: [artifacts_changed, reason, duration]
+
+# ───────────────────────────────────────────────────────────────
+# ERROR HANDLING
+# ───────────────────────────────────────────────────────────────
+errors:
+  missing_spec_folder:
+    message: "Spec folder not found: {path}"
+    recovery: [list_available_specs, suggest_similar, offer_new]
+
+  corrupted_artifacts:
+    message: "Invalid format in: {file}"
+    recovery: [attempt_repair, use_backup, regenerate]
+
+  conflicting_versions:
+    message: "Multiple versions found"
+    recovery: [show_diff, prompt_selection, merge_interactive]
+
+  incomplete_prereqs:
+    message: "Missing: {prerequisites}"
+    recovery: [identify_gaps, complete_missing, override_option]
+
+# ───────────────────────────────────────────────────────────────
+# USAGE EXAMPLES
+# ───────────────────────────────────────────────────────────────
+examples:
+  resume_work:
+    user: "Re-run the workflow for specs/001-cookie-banner/"
+    ai_action: Check artifacts, find incomplete tasks, continue implementation
+
+  refresh_tasks:
+    user: "Regenerate tasks for specs/002-forms/"
+    ai_action: Keep spec/plan, run /tasks to regenerate checklist
+
+  full_rebuild:
+    user: "Start fresh with specs/003-api/"
+    ai_action: Run /specify with existing requirements, then full workflow
+
+  update_planning:
+    user: "Update the plan for specs/004-auth/"
+    ai_action: Run /plan with current spec, regenerate downstream artifacts
+
+  fix_consistency:
+    user: "Fix alignment issues in specs/005-dashboard/"
+    ai_action: Run /analyze to identify gaps, then address inconsistencies
+
+# ───────────────────────────────────────────────────────────────
+# SUCCESS CRITERIA
+# ───────────────────────────────────────────────────────────────
+validation:
+  requirements:
+    - target_folder_validated
+    - context_fully_restored
+    - entry_point_correct
+    - artifacts_preserved_appropriately
+    - versioning_maintained
+    - history_logged
+
+  quality_gates:
+    - no_data_loss
+    - backward_compatible
+    - audit_trail_complete
+    - user_approvals_respected
+    - workflow_integrity_maintained

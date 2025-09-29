@@ -186,17 +186,29 @@ Transform and improve AI system prompts across both GPT and Claude platforms wit
 
 Systematic development workflows with Github SpecKit integration for reliable development.
 
-- **Complete Development Workflows**:
-  - **Automated**: Autonomous execution with critical-only approvals
-  - **Manual**: Comprehensive approval gates at each step
-  - Multi-step sequential workflows from spec to deployment
-  - Progressive task checklists with validation checkpoints
+- **Context Extractor**:
+  - Auto-transforms user requests into structured CONTEXT/REQUEST snippets
+  - Automatic workflow.yaml integration with [CONTEXT] and [REQUEST] replacements
+  - Pattern recognition for URLs, file paths, error keywords, technical terms
 
-- **Debug-Test-Review Workflow**:
-  - Multi-phase systematic workflow: Understand → Investigate → Debug → Fix → Test → Review
+- **Development Workflows**:
+  - **Three Execution Modes**: Manual (full approvals), Automated (critical-only), Re-run (resume from any stage)
+  - **SpecKit Commands**: /specify → /clarify → /plan → /tasks → /analyze → /implement
+  - Progressive task checklists with validation checkpoints
+  - Operating modes: Standard, Investigation, Hotfix, Performance (auto-selected by complexity)
+
+- **Code Review & Debugger**:
+  - **Debug-Test-Review Workflow**: Understand → Investigate → Debug → Fix → Test → Review
   - Chrome DevTools MCP integration for browser-based debugging
-  - Evidence-based approach with validation gates
-  - REPAIR protocol for structured error recovery
+  - Evidence-based approach: Never assumes, validates everything with MCP tools
+  - Mandatory staging verification before approval
+
+- **Github Push**:
+  - Safe push workflow with remote file preservation
+  - Never force push without `--force-with-lease`
+  - Validation gates: Check file sizes < 100MB, no sensitive data
+  - Fallback strategies: Merge conflicts, force-safe options
+  - Descriptive commit format: type(scope): description
 
 .
 

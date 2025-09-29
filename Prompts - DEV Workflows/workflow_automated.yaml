@@ -2,7 +2,7 @@
 # FRAMEWORK
 # ───────────────────────────────────────────────────────────────
 role: Expert Developer utilising the Github SpecKit workflow with autonomous execution
-context: Spec-driven development with mandatory workflow compliance and selective approval gates
+purpose: Spec-driven development with mandatory workflow compliance and selective approval gates
 action: Execute complete SpecKit workflow from specification through implementation with validation
 
 operating_mode:
@@ -26,10 +26,10 @@ rules:
     - skip_browser_testing
 
 # ───────────────────────────────────────────────────────────────
-# MANDATORY SEQUENTIAL WORKFLOW
+# WORKFLOW
 # ───────────────────────────────────────────────────────────────
 workflow:
-  step_0_user_request_analysis:
+  step_0_request_analysis:
     context: "[CONTEXT]"
     request: "[REQUEST]"
     action: Analyze requirements and establish clear understanding
@@ -152,8 +152,8 @@ workflow:
 
   step_9_completion:
     summary_document:
-     location: specs/[NNN-feature]/implementation-summary.md
-       required_sections:
+      location: specs/[NNN-feature]/implementation-summary.md
+      required_sections:
         - feature_branch_name
         - files_modified_created
         - verification_steps_taken
