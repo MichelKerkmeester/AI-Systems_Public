@@ -9,22 +9,22 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 ## 📋 Table of Contents
 
+### 📝 Prompts
+
+1. [DEV Workflows](#1-dev-workflows)
+2. [Effective GPT](#2-effective-gpt)
+
 ### 💬 MCP Agents
 
-1. [Media Editor Agent](#1-media-editor-agent)
-2. [Webflow Agent](#2-webflow-agent)
-3. [ClickUp & Notion Agent](#3-clickup--notion-agent)
+3. [Media Editor Agent](#3-media-editor-agent)
+4. [Webflow Agent](#4-webflow-agent)
+5. [ClickUp & Notion Agent](#5-clickup--notion-agent)
 
 ### ✏️ Writer Systems
 
-4. [Product Owner Writer](#4-product-owner-writer)
-5. [Prompt Engineering Assistant](#5-prompt-engineering-assistant)
-6. [AI System Improver (GPT & Claude)](#6-ai-system-improver-gpt--claude)
-
-### 📝 Prompts
-
-7. [DEV Workflows](#7-dev-workflows)
-8. [Effective GPT](#8-effective-gpt)
+6. [Product Owner Writer](#6-product-owner-writer)
+7. [Prompt Engineering Assistant](#7-prompt-engineering-assistant)
+8. [AI System Improver (GPT & Claude)](#8-ai-system-improver-gpt--claude)
 
 ### ⚡ Automation Agents
 
@@ -37,152 +37,12 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 -----
 
-## 💬 MCP Agents
-
-→ MCPs made easy with conversational systems
-
-<a id="1-media-editor-agent"></a>
-#### 1. 🎬 Media Editor Agent
-
-Edit image, video, and audio files via natural language.
-
-- **Universal Media Operations & Intelligence**:
-  - Image: Resize, convert, compress, crop, batch
-  - Video: Transcode, trim, overlay, subtitles
-  - Audio: Extract, convert, normalize
-
-- **MEDIA Framework & Challenge Mode**:
-  - 5-phase: Measure/Evaluate/Decide/Implement/Analyze
-  - Challenge at 3+ rounds ("85% quality, 50% smaller")
-  - Commands: $reset, $standard, $quick, $status
-
-- **Dual MCP Integration & Visual Feedback**:
-  - Imagician MCP (Sharp), Video-Audio MCP (FFmpeg)
-  - Progress bars, API indicators (🟢🟡🟠🔴)
-  - Educational optimization insights
-
-.
-
-<a id="2-webflow-agent"></a>
-#### 2. 🌐 Webflow Agent
-
-Full-stack Webflow development through natural language with Designer and Data APIs.
-
-- **Complete Development Capabilities**:
-  - Create collections, fields, and relationships
-  - Build components and design systems
-  - User-controlled thinking depth (1-10 rounds)
-  - ATLAS Framework with emergency commands ($reset, $status, $quick)
-
-- **Designer + Data API Coordination**:
-  - Visual elements with companion app
-  - Structure creation without leaving Claude
-  - Responsive designs and SEO optimization
-  - REPAIR protocol for structured error recovery
-
-- **Intelligent Pattern Learning**:
-  - Adapts to your workflow preferences
-  - Patterns inform but never restrict options
-  - All capabilities always available
-  - User autonomy is absolute
-
-.
-
-<a id="3-clickup--notion-agent"></a>
-#### 3. 📊 ClickUp & Notion Agent
-
-Seamlessly coordinate task management (ClickUp) and knowledge management (Notion) through natural language.
-
-- **Dual-Platform Intelligence & MCP Verification**:
-  - Notion: Databases, pages, rich content, wikis
-  - ClickUp: Tasks, time tracking, sprints, projects
-  - Always verifies MCP connections before operations
-
-- **Platform Selection & SYNC Framework**:
-  - Interactive mode asks which platform fits best
-  - User-controlled thinking (1-10 rounds)
-  - Challenge Mode at 3+ rounds for simplicity
-
-- **Pattern Learning & Emergency Commands**:
-  - Learns preferences but never restricts options
-  - Commands: $reset, $quick, $status
-  - Past chats integration for context
-
------
-
-## ✏️ Writer Systems
-
-→ Automate prompt, documentation, and ticket writing 
-
-<a id="4-product-owner-writer"></a>
-#### 4. 📋 Product Owner Writer
-
-Create professional dev tickets and enhanced documentation.
-
-- **4 Intelligent Modes & Auto-Scaling**:
-  - Modes: $ticket & $prd (dev work), $doc (guides/formatting), $interactive (discovery), $quick (instant)
-  - Auto-complexity for tickets: Simple (2-3), Standard (4-5), Complex (6-8 sections)
-
-- **ATLAS Framework & Challenge Mode**:
-  - 5-phase thinking with 6-10 rounds (user-controlled)
-  - Auto-challenges at 6+ rounds: Constructive or Strong based on history
-  - $quick mode: Zero waiting, 6 rounds auto, no challenges
-
-.
-
-<a id="5-prompt-engineering-assistant"></a>
-#### 5. 🎯 Prompt Engineering Assistant
-
-Transform vague requests into clear, measurable, high-scoring AI prompts with three format options.
-
-- **RCAF Framework & CLEAR Evaluation**:
-  - **RCAF**: Simple 4-element structure (Role, Context, Action, Format) - 70% usage
-  - **CLEAR Scoring**: 5 dimensions (Correctness, Logic, Expression, Arrangement, Reuse)
-  - Every prompt gets a score (0-50) and grade (F to A+)
-  - Typical improvement: +20-25 points (100-200% gains)
-
-- **7 Specialized Modes + Three Formats**:
-  - Core: $interactive (DEFAULT), $short, $improve, $refine
-  - Builder: $prototype, $website, $app (phased approach)
-  - **Format Options**: Standard (baseline), YAML (templates, +3-7%), JSON (APIs, +5-10%)
-  - Past chats integration for context-aware suggestions
-
-- **ATLAS Framework with Challenge Mode**:
-  - User-controlled thinking (1-10 rounds, always asked)
-  - Challenge at 3+ rounds: "Could RCAF be simpler?"
-  - Real example: "Summarize meeting" → 45/50 RCAF prompt (+30 points)
-  - Commands: $rcaf (force simple), $craft (comprehensive), $yaml (templates), $json (APIs)
-  
-.
-
-<a id="6-ai-system-improver-gpt--claude"></a>
-#### 6. 🔧 AI System Improver (GPT & Claude)
-
-Transform and improve AI system prompts across both GPT and Claude platforms with preservation-first editing.
-
-- **Dual Platform Support**:
-  - **GPT Version**: Uses GPT-5 High Deep Reasoning mode with ChatGPT custom instructions
-  - **Claude Version**: Uses Ultrathink mode with Claude Projects knowledge base
-  - Both versions share core ATLAS Framework and principles
-
-- **Intelligent Analysis & Interactive Discovery**:
-  - Auto-activates discovery for unclear requests (2-4 questions)
-  - Complexity scoring determines ATLAS phases (A→S to Full ATLAS)
-  - Challenge Mode at 6+ complexity score
-
-- **Professional Delivery & Preservation**:
-  - Complete files only (never excerpts)
-  - Structural changes require explicit consent
-  - Session tracking enriches but never restricts
-
------
-
 ## 📝 Prompts
 
 → Professional development workflows and system instructions
 
-<a id="7-dev-workflows"></a>
-#### 7. 🔍 DEV Workflows
+<a id="1-dev-workflows"></a>
+#### 1. 📜 DEV Workflows
 
 Systematic development workflows with Github SpecKit integration for reliable development.
 
@@ -212,8 +72,8 @@ Systematic development workflows with Github SpecKit integration for reliable de
 
 .
 
-<a id="8-effective-gpt"></a>
-#### 8. 💬 Effective GPT
+<a id="2-effective-gpt"></a>
+#### 2. 💬 Effective GPT
 
 System instructions for direct, efficient AI communication without filler.
 
@@ -231,6 +91,146 @@ System instructions for direct, efficient AI communication without filler.
 - **Language & Cultural Adaptations**:
   - Dutch exception: Softened rules with je/u formality
   - Responds in user's language automatically
+
+-----
+
+## 💬 MCP Agents
+
+→ MCPs made easy with conversational systems
+
+<a id="3-media-editor-agent"></a>
+#### 3. 🎬 Media Editor Agent
+
+Edit image, video, and audio files via natural language.
+
+- **Universal Media Operations & Intelligence**:
+  - Image: Resize, convert, compress, crop, batch
+  - Video: Transcode, trim, overlay, subtitles
+  - Audio: Extract, convert, normalize
+
+- **MEDIA Framework & Challenge Mode**:
+  - 5-phase: Measure/Evaluate/Decide/Implement/Analyze
+  - Challenge at 3+ rounds ("85% quality, 50% smaller")
+  - Commands: $reset, $standard, $quick, $status
+
+- **Dual MCP Integration & Visual Feedback**:
+  - Imagician MCP (Sharp), Video-Audio MCP (FFmpeg)
+  - Progress bars, API indicators (🟢🟡🟠🔴)
+  - Educational optimization insights
+
+.
+
+<a id="4-webflow-agent"></a>
+#### 4. 🌐 Webflow Agent
+
+Full-stack Webflow development through natural language with Designer and Data APIs.
+
+- **Complete Development Capabilities**:
+  - Create collections, fields, and relationships
+  - Build components and design systems
+  - User-controlled thinking depth (1-10 rounds)
+  - ATLAS Framework with emergency commands ($reset, $status, $quick)
+
+- **Designer + Data API Coordination**:
+  - Visual elements with companion app
+  - Structure creation without leaving Claude
+  - Responsive designs and SEO optimization
+  - REPAIR protocol for structured error recovery
+
+- **Intelligent Pattern Learning**:
+  - Adapts to your workflow preferences
+  - Patterns inform but never restrict options
+  - All capabilities always available
+  - User autonomy is absolute
+
+.
+
+<a id="5-clickup--notion-agent"></a>
+#### 5. 📊 ClickUp & Notion Agent
+
+Seamlessly coordinate task management (ClickUp) and knowledge management (Notion) through natural language.
+
+- **Dual-Platform Intelligence & MCP Verification**:
+  - Notion: Databases, pages, rich content, wikis
+  - ClickUp: Tasks, time tracking, sprints, projects
+  - Always verifies MCP connections before operations
+
+- **Platform Selection & SYNC Framework**:
+  - Interactive mode asks which platform fits best
+  - User-controlled thinking (1-10 rounds)
+  - Challenge Mode at 3+ rounds for simplicity
+
+- **Pattern Learning & Emergency Commands**:
+  - Learns preferences but never restricts options
+  - Commands: $reset, $quick, $status
+  - Past chats integration for context
+
+-----
+
+## ✏️ Writer Systems
+
+→ Automate prompt, documentation, and ticket writing 
+
+<a id="6-product-owner-writer"></a>
+#### 6. 📋 Product Owner Writer
+
+Create professional dev tickets and enhanced documentation.
+
+- **4 Intelligent Modes & Auto-Scaling**:
+  - Modes: $ticket & $prd (dev work), $doc (guides/formatting), $interactive (discovery), $quick (instant)
+  - Auto-complexity for tickets: Simple (2-3), Standard (4-5), Complex (6-8 sections)
+
+- **ATLAS Framework & Challenge Mode**:
+  - 5-phase thinking with 6-10 rounds (user-controlled)
+  - Auto-challenges at 6+ rounds: Constructive or Strong based on history
+  - $quick mode: Zero waiting, 6 rounds auto, no challenges
+
+.
+
+<a id="7-prompt-engineering-assistant"></a>
+#### 7. 🎯 Prompt Engineering Assistant
+
+Transform vague requests into clear, measurable, high-scoring AI prompts with three format options.
+
+- **RCAF Framework & CLEAR Evaluation**:
+  - **RCAF**: Simple 4-element structure (Role, Context, Action, Format) - 70% usage
+  - **CLEAR Scoring**: 5 dimensions (Correctness, Logic, Expression, Arrangement, Reuse)
+  - Every prompt gets a score (0-50) and grade (F to A+)
+  - Typical improvement: +20-25 points (100-200% gains)
+
+- **7 Specialized Modes + Three Formats**:
+  - Core: $interactive (DEFAULT), $short, $improve, $refine
+  - Builder: $prototype, $website, $app (phased approach)
+  - **Format Options**: Standard (baseline), YAML (templates, +3-7%), JSON (APIs, +5-10%)
+  - Past chats integration for context-aware suggestions
+
+- **ATLAS Framework with Challenge Mode**:
+  - User-controlled thinking (1-10 rounds, always asked)
+  - Challenge at 3+ rounds: "Could RCAF be simpler?"
+  - Real example: "Summarize meeting" → 45/50 RCAF prompt (+30 points)
+  - Commands: $rcaf (force simple), $craft (comprehensive), $yaml (templates), $json (APIs)
+  
+.
+
+<a id="8-ai-system-improver-gpt--claude"></a>
+#### 8. 🔧 AI System Improver (GPT & Claude)
+
+Transform and improve AI system prompts across both GPT and Claude platforms with preservation-first editing.
+
+- **Dual Platform Support**:
+  - **GPT Version**: Uses GPT-5 High Deep Reasoning mode with ChatGPT custom instructions
+  - **Claude Version**: Uses Ultrathink mode with Claude Projects knowledge base
+  - Both versions share core ATLAS Framework and principles
+
+- **Intelligent Analysis & Interactive Discovery**:
+  - Auto-activates discovery for unclear requests (2-4 questions)
+  - Complexity scoring determines ATLAS phases (A→S to Full ATLAS)
+  - Challenge Mode at 6+ complexity score
+
+- **Professional Delivery & Preservation**:
+  - Complete files only (never excerpts)
+  - Structural changes require explicit consent
+  - Session tracking enriches but never restricts
 
 -----
 
