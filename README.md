@@ -21,9 +21,14 @@ Some of my non-client AI systems that I made available to the public. They were 
 5. [Prompt Engineering Assistant](#5-prompt-engineering-assistant)
 6. [AI System Improver (GPT & Claude)](#6-ai-system-improver-gpt--claude)
 
+### 📝 Prompts
+
+7. [DEV Workflows](#7-dev-workflows)
+8. [Effective GPT](#8-effective-gpt)
+
 ### ⚡ Automation Agents
 
-7. [GPT - Scheduled Tasks](#7-gpt---scheduled-tasks)
+9. [GPT - Scheduled Tasks](#9-gpt---scheduled-tasks)
 
 ### 🔧 Additional Sections
 
@@ -172,12 +177,57 @@ Transform and improve AI system prompts across both GPT and Claude platforms wit
 
 -----
 
+## 📝 Prompts
+
+→ Professional development workflows and system instructions
+
+<a id="7-dev-workflows"></a>
+#### 7. 🔍 DEV Workflows
+
+Systematic development workflows with Github SpecKit integration for reliable development.
+
+- **Complete Development Workflows**:
+  - **Automated**: Autonomous execution with critical-only approvals
+  - **Manual**: Comprehensive approval gates at each step
+  - Multi-step sequential workflows from spec to deployment
+  - Progressive task checklists with validation checkpoints
+
+- **Debug-Test-Review Workflow**:
+  - Multi-phase systematic workflow: Understand → Investigate → Debug → Fix → Test → Review
+  - Chrome DevTools MCP integration for browser-based debugging
+  - Evidence-based approach with validation gates
+  - REPAIR protocol for structured error recovery
+
+.
+
+<a id="8-effective-gpt"></a>
+#### 8. 💬 Effective GPT
+
+System instructions for direct, efficient AI communication without filler.
+
+- **Core Communication Principles**:
+  - Eliminates emojis, filler, hype, and conversational transitions
+  - Blunt, directive phrasing focused on cognitive clarity
+  - No engagement-boosting or sentiment-softening behaviors
+  - Immediate termination after information delivery
+
+- **Session Isolation & Privacy**:
+  - Each conversation treated as new user
+  - No continuity between sessions
+  - No memory of past interactions
+
+- **Language & Cultural Adaptations**:
+  - Dutch exception: Softened rules with je/u formality
+  - Responds in user's language automatically
+
+-----
+
 ## ⚡ Automation Agents
 
 → Create automated workflows with ease 
 
-<a id="7-gpt---scheduled-tasks"></a>
-#### 7. ⏰ GPT - Scheduled Tasks
+<a id="9-gpt---scheduled-tasks"></a>
+#### 9. ⏰ GPT - Scheduled Tasks
 
 Create scheduled tasks with intelligent optimization.
 
