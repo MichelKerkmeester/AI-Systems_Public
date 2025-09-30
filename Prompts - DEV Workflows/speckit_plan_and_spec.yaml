@@ -31,11 +31,36 @@ rules:
 # USER INPUTS
 # ───────────────────────────────────────────────────────────────
 user_inputs:
-  context: "[CONTEXT]"  # Background information about the feature
-  request: "[REQUEST]"  # Specific feature request or requirement
+  context:
+    environment: /Users/michelkerkmeester/MEGA/AI & Dev/Websites/anobel.nl/
+    current_state: Existing welcome modal animation system (welcome_modal.js), multiple hero animations per page
+    technical_stack: JavaScript animations, consentpro.com cookie consent service
+    dependencies:
+      - src/modal/welcome_modal.js (reference pattern)
+      - src/hero/* (hero animations)
+    related_systems:
+      - Modal animation controller
+      - Hero animation system
+    constraints:
+      - Must work across pages with different hero animations
+      - Single cookie consent implementation for entire site
+
+  request:
+    objective: Create cookie consent animation controller that waits for hero animations to complete
+    type: feature
+    scope:
+      - Cookie banner animation control script
+      - Hero animation completion triggers
+      - consentpro.com integration
+    requirements:
+      functional: Cookie banner animates in only after page-specific hero animation completes
+      technical: Implement 'Finished' trigger pattern for all hero animations, create controller script similar to welcome_modal.js architecture
+      ux: Smooth sequential animation timing without overlap between hero and cookie banner
+    success_criteria: Cookie consent banner consistently appears after hero animations finish on all pages
+    testing: Verify animation sequence on multiple pages with different hero animations, confirm no premature banner display
 
 # ───────────────────────────────────────────────────────────────
-# WORKFLOW
+# WORKFLOW - PLANNING PHASE ONLY
 # ───────────────────────────────────────────────────────────────
 workflow:
   step_0_request_analysis:

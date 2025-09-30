@@ -60,6 +60,51 @@ step_3_request:
     Requirements: Functional[{core}] Technical[{implementation}] UX[{user_facing}]
     Success: {criteria} | Testing: {verification}
 
+step_4_generate_yaml:
+  action: AUTOMATICALLY create YAML file with extracted context and request
+  output_location: /Users/michelkerkmeester/MEGA/AI & Dev/Websites/anobel.nl/y_prompts/context_requests/snippets/
+  naming_convention: context_request_{descriptive_slug}.yaml
+  slug_rules:
+    - Use lowercase with underscores
+    - Max 50 characters
+    - Descriptive of the feature/bug/task
+    - Example: cookie_consent_animation, checkout_button_fix, dark_mode_toggle
+
+  yaml_structure: |
+    # ───────────────────────────────────────────────────────────────
+    # CONTEXT & REQUEST: {Title}
+    # ───────────────────────────────────────────────────────────────
+
+    user_inputs:
+      context:
+        environment: {environment_path_or_url}
+        current_state: {existing_functionality_description}
+        technical_stack: {technologies_list}
+        dependencies:
+          - {dependency_1}
+          - {dependency_2}
+        related_systems:
+          - {system_1}
+          - {system_2}
+        constraints:
+          - {constraint_1}
+          - {constraint_2}
+
+      request:
+        objective: {single_sentence_goal}
+        type: {feature|bug|enhancement|investigation}
+        scope:
+          - {scope_item_1}
+          - {scope_item_2}
+        requirements:
+          functional: {functional_requirements}
+          technical: {technical_requirements}
+          ux: {ux_requirements}
+        success_criteria: {definition_of_done}
+        testing: {verification_approach}
+
+  completion_message: "✓ Generated: {filename} in snippets/"
+
 # ───────────────────────────────────────────────────────────────
 # OUTPUT EXAMPLES
 # ───────────────────────────────────────────────────────────────
