@@ -1,10 +1,10 @@
-# Prompt Engineering Assistant - User Guide v0.846
+# Prompt Engineering Assistant - User Guide v0.847
 
 A revolutionary prompt enhancement system using RCAF framework for clarity, CLEAR evaluation for quality assurance, and ATLAS thinking for intelligent optimization. Transforms vague requests into clear, measurable, high-scoring prompts with support for Standard, JSON, and YAML formats. **Ultra-minimal artifact delivery: single-line header + content only.**
 
 ## 📋 Table of Contents
 
-- [🆕 What's New in v0.846](#whats-new-in-v0846)
+- [🆕 What's New in v0.847](#whats-new-in-v0847)
 - [✨ Key Features](#key-features)
 - [🚀 Quick Setup](#quick-setup)
 - [🎛️ Operating Modes](#operating-modes)
@@ -16,15 +16,14 @@ A revolutionary prompt enhancement system using RCAF framework for clarity, CLEA
 - [📦 Artifact Delivery Format](#artifact-delivery-format)
 - [🚨 REPAIR Error Protocol](#repair-error-protocol)
 - [📊 Performance Metrics](#performance-metrics)
-- [🗃️ Past Chats Integration](#past-chats-integration)
 
 ---
 
-<a id="whats-new-in-v0846"></a>
-## 🆕 What's New in v0.846
+<a id="whats-new-in-v0847"></a>
+## 🆕 What's New in v0.847
 
-### CRITICAL UPDATE: Streamlined User Experience 🎯
-**System now processes automatically without exposing technical implementation details.**
+### CRITICAL UPDATE: Streamlined Architecture 🎯
+**System now operates on current conversation context only for maximum simplicity and transparency.**
 
 ### Enhanced User Experience
 ```
@@ -34,31 +33,33 @@ Mode: $improve | Complexity: Medium | Framework: RCAF | CLEAR: 43/50
 ```
 
 **What's improved:**
-- ✅ Automatic processing (no technical jargon)
+- ✅ Session-based learning (current conversation only)
 - ✅ Clean, professional interactions
-- ✅ Focus on results, not methods
-- ✅ Streamlined decision points
+- ✅ Transparent pattern suggestions
+- ✅ Simplified decision points
+- ✅ No cross-conversation dependencies
 
 **What's removed:**
-- ❌ Technical processing terminology
-- ❌ Implementation details in chat
-- ❌ Unnecessary complexity
-- ❌ Method-focused language
+- ❌ Past conversation search functionality
+- ❌ Historical pattern tracking
+- ❌ Cross-conversation context
+- ❌ Conversation history dependencies
 
 ### System Improvements from v0.845
-- **Cleaner Conversations**: Focus on outcomes, not processes
+- **Cleaner Architecture**: Session-only operation
 - **Professional Tone**: No technical implementation details
-- **Better Readability**: Simplified user interactions
-- **Faster Understanding**: Clear decision points only
+- **Better Transparency**: Clear about what's tracked
+- **Faster Understanding**: Current conversation focus only
+- **Simplified Context**: No historical baggage
 
 ---
 
 <a id="key-features"></a>
 ## ✨ Key Features
 
-### NEW: Professional User Experience
-- **Automatic Processing**: System handles optimization internally
-- **Clean Interactions**: No technical jargon
+### NEW: Session-Based Operation
+- **Current Conversation Focus**: Learns from current session only
+- **Clean Interactions**: No historical dependencies
 - **Clear Decisions**: Simple choices when needed
 - **Results Focus**: What you get, not how it works
 
@@ -68,7 +69,7 @@ Mode: $improve | Complexity: Medium | Framework: RCAF | CLEAR: 43/50
 - **RCAF Framework**: Simple 4-element structure for 70% of prompts
 - **CLEAR Scoring**: Every prompt evaluated on 5 dimensions (shown in header)
 - **Automatic Processing**: Comprehensive analysis applied to all enhancements
-- **Past Chats Integration**: Searches conversation history for context (suggestions only)
+- **Session Pattern Learning**: Adapts to your choices within current conversation
 - **Token Transparency**: Shows format overhead for informed decisions
 - **Challenge Mode**: Simplifies to RCAF when possible
 - **Universal Platform Support**: Works on ALL AI platforms
@@ -86,7 +87,7 @@ Mode: $improve | Complexity: Medium | Framework: RCAF | CLEAR: 43/50
 ### Step 2: Add System Instructions
 1. Click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Writer - Prompt Improver - v0.846.md`
+3. Copy and paste: `Writer - Prompt Improver - v0.847.md`
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
@@ -457,7 +458,7 @@ Enhanced error recovery:
 - **P**ropose alternatives
 - **A**dapt approach
 - **I**terate and test
-- **R**ecord pattern
+- **R**ecord session pattern
 
 ### Common Fixes
 
@@ -501,34 +502,18 @@ Enhanced error recovery:
 | 20-29/50 (D) | 38-43/50 (B+/A) | +15-20 points | Minimal |
 | 30-39/50 (C/B) | 40-45/50 (A) | +8-12 points | Minimal |
 
----
+### Session Pattern Learning
 
-<a id="past-chats-integration"></a>
-## 🗃️ Past Chats Integration
+The system learns from your choices within the current conversation:
 
-### Context Enhancement - SUGGESTIONS ONLY
+| Session Interactions | Learning Stage | Behavior |
+|---------------------|----------------|----------|
+| 1-3 | Recognition | Observes your choices |
+| 4-6 | Adaptation | Suggests based on patterns |
+| 7+ | Optimization | Streamlines based on preferences |
 
-The system uses two tools to search conversation history:
-- **conversation_search**: Topic/keyword-based search
-- **recent_chats**: Time-based retrieval
-
-| Stage | Interactions | Context Level | Pattern Override |
-|-------|-------------|---------------|------------------|
-| Learning | 1-3 | Basic notes | Always available |
-| Adapting | 4-6 | Light suggestions | Always available |
-| Enriched | 7-9 | Detailed patterns | Always available |
-| Comprehensive | 10+ | Maximum context | Always available |
-
-### What Gets Tracked (Suggestions Only)
-- Framework preferences (RCAF vs CRAFT) - never forces
-- Format preferences (Standard/YAML/JSON) - never defaults
-- Average CLEAR scores by dimension - for reference
-- Typical complexity levels - as context
-- Challenge acceptance rates - for calibration
-- Weak dimension patterns - to help improve
-
-**CRITICAL**: Patterns are ALWAYS presented as suggestions. User maintains full control over all choices.
+**Note:** All patterns are session-only and reset with each new conversation.
 
 ---
 
-*Transform vague requests into clear, high-scoring prompts with ultra-minimal artifacts! Single-line header + enhanced content only. RCAF for simplicity. CLEAR for quality. Three formats for flexibility. Interactive Mode is DEFAULT. Automatic processing ensures excellence. Every prompt measured. Every improvement quantified. **Artifacts are clean, focused, and professional.***
+*Transform vague requests into clear, high-scoring prompts with ultra-minimal artifacts! Single-line header + enhanced content only. RCAF for simplicity. CLEAR for quality. Three formats for flexibility. Interactive Mode is DEFAULT. Automatic processing ensures excellence. Session-based learning adapts to you. Every prompt measured. Every improvement quantified. **Artifacts are clean, focused, and professional.***

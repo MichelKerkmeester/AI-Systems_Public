@@ -1,21 +1,20 @@
-# Prompt - Builder Mode - v0.414
+# Prompt - Builder Mode - v0.415
 
 Universal AI development prompt optimization with RCAF framework, CLEAR scoring, intelligent session-based pattern learning, and multi-format support including Standard, JSON, and YAML. Creates goal-oriented creative briefs, not prescriptive implementations.
 
 ## 📋 Table of Contents
 
 1. [🎯 OVERVIEW](#-overview)
-2. [🔍 RCAF FOR BUILDERS](#-rcaf-for-builders)
+2. [📝 RCAF FOR BUILDERS](#-rcaf-for-builders)
 3. [✅ CLEAR SCORING FOR BUILDERS](#-clear-scoring-for-builders)
-4. [🌐 PLATFORM COMPATIBILITY](#-platform-compatibility)
+4. [🌍 PLATFORM COMPATIBILITY](#-platform-compatibility)
 5. [💰 RESOURCE STRATEGY](#-resource-strategy)
 6. [🧠 ATLAS INTEGRATION FOR BUILDERS](#-atlas-integration-for-builders)
-7. [📄 PATTERN LEARNING](#-pattern-learning)
-8. [🚀 CHALLENGE MODE FOR BUILDERS](#-challenge-mode-for-builders)
-9. [🔍 UNIVERSAL PATTERNS](#-universal-patterns)
-10. [✅ BEST PRACTICES](#-best-practices)
-11. [📊 PERFORMANCE METRICS](#-performance-metrics)
-12. [🎓 KEY PRINCIPLES](#-key-principles)
+7. [🚀 CHALLENGE MODE FOR BUILDERS](#-challenge-mode-for-builders)
+8. [📝 UNIVERSAL PATTERNS](#-universal-patterns)
+9. [✅ BEST PRACTICES](#-best-practices)
+10. [📊 PERFORMANCE METRICS](#-performance-metrics)
+11. [🎓 KEY PRINCIPLES](#-key-principles)
 
 ---
 
@@ -60,7 +59,7 @@ Universal AI development prompt optimization with RCAF framework, CLEAR scoring,
 
 <a id="-rcaf-for-builders"></a>
 
-## 2. 🔍 RCAF FOR BUILDERS
+## 2. 📝 RCAF FOR BUILDERS
 
 ### Builder-Specific RCAF Structure
 
@@ -190,7 +189,7 @@ format:
 
 <a id="-platform-compatibility"></a>
 
-## 4. 🌐 PLATFORM COMPATIBILITY
+## 4. 🌍 PLATFORM COMPATIBILITY
 
 ### Universal Platform Support with RCAF
 
@@ -267,7 +266,7 @@ format:
 ### Phase Recommendation with RCAF and Format
 
 ```python
-def recommend_phase_with_rcaf(rcaf_elements, patterns=None):
+def recommend_phase_with_rcaf(rcaf_elements, session_context=None):
     """Recommend phase and format based on RCAF completeness"""
     
     # Score RCAF elements
@@ -277,21 +276,28 @@ def recommend_phase_with_rcaf(rcaf_elements, patterns=None):
     if rcaf_elements.action_measurable: rcaf_score += 25
     if rcaf_elements.format_defined: rcaf_score += 25
     
+    # Check session patterns if available
+    session_note = ""
+    if session_context and session_context.phase_history:
+        typical_phase = max(set(session_context.phase_history), 
+                          key=session_context.phase_history.count)
+        session_note = f" (You typically start with Phase {typical_phase})"
+    
     if rcaf_score < 50:
-        return 'phase1', 'standard', "Start with MVP (incomplete RCAF)"
+        return 'phase1', 'standard', f"Start with MVP (incomplete RCAF){session_note}"
     elif rcaf_score < 75:
-        return 'phase2', 'yaml', "Enhanced experience (good RCAF)"
+        return 'phase2', 'yaml', f"Enhanced experience (good RCAF){session_note}"
     else:
-        return 'phase3', 'yaml', "Full features (complete RCAF)"
+        return 'phase3', 'yaml', f"Full features (complete RCAF){session_note}"
 ```
 
 ### Resource Guidelines with CLEAR and Format
 
-| Resource Level | RCAF Elements | CLEAR Score | Components | Format | Pattern Note |
+| Resource Level | RCAF Elements | CLEAR Score | Components | Format | Session Note |
 |----------------|---------------|-------------|------------|--------|--------------|
-| **Low** | Role + Action | 35-39/50 | Basic | Standard | User typically: [track] |
-| **Moderate** | Full RCAF | 40-42/50 | Custom | YAML | Previous choice: [note] |
-| **High** | RCAF + Details | 43+/50 | Advanced | YAML/JSON | Pattern suggests: [apply] |
+| **Low** | Role + Action | 35-39/50 | Basic | Standard | Session-aware |
+| **Moderate** | Full RCAF | 40-42/50 | Custom | YAML | Suggested |
+| **High** | RCAF + Details | 43+/50 | Advanced | YAML/JSON | Applied if clear |
 
 ---
 
@@ -305,7 +311,7 @@ def recommend_phase_with_rcaf(rcaf_elements, patterns=None):
 - Evaluate RCAF completeness
 - Score initial CLEAR
 - Determine builder complexity
-- Find pattern matches
+- Check session patterns
 - Recommend format (Standard/YAML/JSON)
 - Auto-challenge if complexity > 3
 
@@ -313,7 +319,7 @@ def recommend_phase_with_rcaf(rcaf_elements, patterns=None):
 - Create minimal RCAF prompt (Standard)
 - Create balanced RCAF prompt (YAML)
 - Create comprehensive prompt (YAML/JSON if needed)
-- Add pattern-based option if confidence > 0.6
+- Add session-based option if pattern clear
 
 **L - Layer Requirements in RCAF**
 - **Role:** Platform expertise
@@ -361,61 +367,9 @@ def calibrate_builder_thinking(rcaf_elements):
 
 ---
 
-<a id="-pattern-learning"></a>
-
-## 7. 📄 PATTERN LEARNING
-
-### Builder Session Context with CLEAR and Format
-
-**Tracked Patterns:**
-- Phase preference (1/2/3)
-- Platform preference
-- Format preference (Standard/YAML/JSON)
-- RCAF completeness average
-- CLEAR score trends
-- Resource consciousness (0.0-1.0)
-- MVP frequency (0.0-1.0)
-- Typical feature count
-- Framework success rates
-
-### Learning Evolution with CLEAR and Format
-
-| Stage | Interactions | Behavior | CLEAR Learning | Format Learning | Application |
-|-------|-------------|----------|----------------|-----------------|-------------|
-| **Recognition** | 1-2 | Observe | Track scores | Note format choices | Standard |
-| **Establishment** | 3-4 | Suggest | Note improvements | Identify preference | Patterns |
-| **Confidence** | 5+ | Apply | Predict scores | Default to preferred | Automatic |
-
-### Pattern Application with RCAF and Format
-
-**Recognition Stage:**
-```
-Building RCAF prompt for your [type] project...
-[Considering format options: Standard, YAML, JSON]
-```
-
-**Establishment Stage:**
-```
-I notice you typically:
-- Start with Phase [X] (CLEAR: [Y]/50)
-- Use [platform] for [type]
-- Prefer [format] for builders (X% of time)
-- Focus on [dimension] clarity
-
-Apply same approach?
-```
-
-**Confidence Stage:**
-- Auto-apply RCAF structure
-- Default to successful patterns
-- Use preferred format automatically
-- Skip redundant questions
-
----
-
 <a id="-challenge-mode-for-builders"></a>
 
-## 8. 🚀 CHALLENGE MODE FOR BUILDERS
+## 7. 🚀 CHALLENGE MODE FOR BUILDERS
 
 ### Builder-Specific Challenges with CLEAR and Format
 
@@ -464,7 +418,7 @@ Prioritize clarity with simpler format?
 
 <a id="-universal-patterns"></a>
 
-## 9. 🔍 UNIVERSAL PATTERNS
+## 8. 📝 UNIVERSAL PATTERNS
 
 ### Prototype Pattern with RCAF - Standard
 
@@ -558,7 +512,7 @@ phases:
     integrations: Complex systems
 
 platform:
-  recommendation: based on patterns
+  recommendation: based on session patterns
   alternatives: other options
 ```
 
@@ -566,7 +520,7 @@ platform:
 
 <a id="-best-practices"></a>
 
-## 10. ✅ BEST PRACTICES
+## 9. ✅ BEST PRACTICES
 
 ### Do's with RCAF/CLEAR and Format
 ✅ **Use RCAF structure** for all builder prompts
@@ -577,7 +531,7 @@ platform:
 ✅ **Challenge every feature** against RCAF simplicity
 ✅ **Track platform success** by CLEAR scores
 ✅ **Note phase selections** with scores and formats
-✅ **Apply successful patterns** with CLEAR validation
+✅ **Apply session patterns** with CLEAR validation
 ✅ **Consider format trade-offs** for each project
 ✅ **Deliver with minimal header** only
 
@@ -613,7 +567,7 @@ platform:
 
 <a id="-performance-metrics"></a>
 
-## 11. 📊 PERFORMANCE METRICS
+## 10. 📊 PERFORMANCE METRICS
 
 ### Builder KPIs with CLEAR and Format
 
@@ -632,9 +586,9 @@ platform:
 - CLEAR improvement: Target +5 points
 - Format satisfaction: Target 0.90
 
-**Pattern Metrics:**
+**Session Pattern Metrics:**
 - RCAF adoption: Target 0.9
-- Pattern success: Target 0.7
+- Session pattern success: Target 0.7
 - Score prediction accuracy: Target ±2
 - Framework effectiveness: RCAF > CRAFT
 - Format preference stability: Target 0.8
@@ -646,7 +600,7 @@ platform:
 | 5 | RCAF completeness | 40+/50 | Track choices |
 | 10 | Phase optimization | 41+/50 | Note preferences |
 | 15 | Platform effectiveness | 42+/50 | Optimize selection |
-| 20 | Pattern accuracy | 43+/50 | Apply patterns |
+| 20 | Session pattern accuracy | 43+/50 | Apply patterns |
 
 **At each checkpoint:**
 1. Analyze RCAF usage
@@ -654,13 +608,13 @@ platform:
 3. Evaluate phase progression
 4. Measure platform success
 5. Monitor format effectiveness
-6. Document insights
+6. Document session insights
 
 ---
 
 <a id="-key-principles"></a>
 
-## 12. 🎓 KEY PRINCIPLES
+## 11. 🎓 KEY PRINCIPLES
 
 ### Universal Compatibility with RCAF and Format
 Every RCAF prompt works on:
@@ -711,8 +665,8 @@ Builder Mode operates within the larger ecosystem:
 - Supports all formats (Standard/YAML/JSON)
 - Maintains artifact standards (minimal header)
 - References core frameworks
-- Tracks patterns continuously
-- Adapts to preferences
+- Tracks session patterns continuously
+- Adapts to session preferences
 
 ### Success Patterns for Builders
 
@@ -746,4 +700,4 @@ Builder Mode operates within the larger ecosystem:
 
 ---
 
-*Builder Mode with RCAF structure, CLEAR scoring, and multi-format support: Universal creative briefs that enable ANY AI platform to excel. RCAF provides clarity, CLEAR ensures quality, formats provide flexibility, minimal header eliminates distraction. Every builder prompt scored, every phase justified, every pattern learned, every format considered. Start minimal with Phase 1 and Standard format, expand to YAML for templates based on CLEAR scores and real validation. Deliver with single-line header for maximum focus.*
+*Builder Mode with RCAF structure, CLEAR scoring, and multi-format support: Universal creative briefs that enable ANY AI platform to excel. RCAF provides clarity, CLEAR ensures quality, formats provide flexibility, minimal header eliminates distraction. Every builder prompt scored, every phase justified, every session pattern learned, every format considered. Start minimal with Phase 1 and Standard format, expand to YAML for templates based on CLEAR scores and real validation. Deliver with single-line header for maximum focus.*

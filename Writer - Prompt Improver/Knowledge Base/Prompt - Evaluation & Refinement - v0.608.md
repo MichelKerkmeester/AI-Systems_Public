@@ -1,4 +1,4 @@
-# Prompt - Evaluation & Refinement - v0.607
+# Prompt - Evaluation & Refinement - v0.608
 
 Systematic quality assessment and improvement for optimizing prompts through CLEAR evaluation, automatic ultrathink processing, RCAF framework preference, and multi-format support including Standard, JSON, and YAML.
 
@@ -10,12 +10,11 @@ Systematic quality assessment and improvement for optimizing prompts through CLE
 4. [🎯 RCAF VS CRAFT EVALUATION](#-rcaf-vs-craft-evaluation)
 5. [📄 FORMAT EVALUATION](#-format-evaluation)
 6. [🧠 AUTOMATIC REFINEMENT](#-automatic-refinement)
-7. [📄 PATTERN-BASED REFINEMENT](#-pattern-based-refinement)
-8. [🚀 CHALLENGE-BASED REFINEMENT](#-challenge-based-refinement)
-9. [🔍 REFINEMENT PATTERNS](#-refinement-patterns)
-10. [💡 EXAMPLES](#-examples)
-11. [📈 PERFORMANCE METRICS](#-performance-metrics)
-12. [🎓 KEY PRINCIPLES](#-key-principles)
+7. [🚀 CHALLENGE-BASED REFINEMENT](#-challenge-based-refinement)
+8. [📝 REFINEMENT PATTERNS](#-refinement-patterns)
+9. [💡 EXAMPLES](#-examples)
+10. [📈 PERFORMANCE METRICS](#-performance-metrics)
+11. [🎓 KEY PRINCIPLES](#-key-principles)
 
 ---
 
@@ -492,7 +491,7 @@ def select_optimal_format(clear_scores, use_case):
 - Select optimal format
 - Document score improvements
 - Present as artifact with minimal header
-- Record pattern for learning
+- Record session pattern for learning
 
 ### CLEAR-Driven Refinement Process
 
@@ -537,65 +536,9 @@ def refine_with_clear_focus(prompt, clear_scores, current_format):
 
 ---
 
-<a id="-pattern-based-refinement"></a>
-
-## 7. 📄 PATTERN-BASED REFINEMENT
-
-### Pattern Recognition with Automatic Processing
-
-| Pattern Type | Recognition Signal | Typical CLEAR | Format Tendency | Action | Processing |
-|--------------|-------------------|---------------|-----------------|--------|------------|
-| **Always Low Expression** | E < 7 consistently | Focus on clarity | Standard preferred | Default to RCAF | Ultrathink |
-| **Coverage Issues** | L < 7 repeatedly | Completeness gaps | YAML helps | Consider CRAFT | Ultrathink |
-| **Structure Problems** | A < 7 pattern | Organization issues | YAML recommended | Apply RCAF + YAML | Ultrathink |
-| **Template Needs** | R < 7 frequently | Reusability issues | YAML optimal | Convert to YAML | Ultrathink |
-| **High Performers** | Consistent 40+ | Working approach | Current format | Minimal changes | Ultrathink |
-
-### CLEAR Pattern Learning
-
-```python
-def learn_clear_patterns(history):
-    """Track CLEAR patterns with automatic processing"""
-    
-    patterns = {
-        'weak_dimensions': find_consistent_lows(history),
-        'strong_dimensions': find_consistent_highs(history),
-        'improvement_rates': calculate_gains(history),
-        'framework_success': {
-            'rcaf_avg_clear': avg_clear_with_rcaf(history),
-            'craft_avg_clear': avg_clear_with_craft(history)
-        },
-        'format_success': {
-            'standard_avg': avg_clear_standard(history),
-            'json_avg': avg_clear_json(history),
-            'yaml_avg': avg_clear_yaml(history)
-        },
-        'processing': {
-            'mode': 'automatic_ultrathink',
-            'consistency': 100,
-            'avg_improvement': '+5 points'
-        }
-    }
-    
-    return patterns
-```
-
-### Pattern-Based Enhancement Strategy
-
-| User Pattern | Strategy | Framework | Format | Target CLEAR | Processing |
-|--------------|----------|-----------|--------|--------------|------------|
-| Expression struggles | Simplify aggressively | RCAF | Standard | E: 9+/10 | 10 rounds |
-| Coverage perfectionist | Comprehensive approach | CRAFT | Standard | L: 9+/10 | 10 rounds |
-| Structure lover | Clear organization | RCAF | YAML | A: 9+/10 | 10 rounds |
-| Template builder | Reusable patterns | RCAF | YAML | R: 9+/10 | 10 rounds |
-| API developer | Precise structure | RCAF | JSON | C: 9+/10 | 10 rounds |
-| Efficiency focused | Balanced approach | RCAF | Standard | 43+/50 | 10 rounds |
-
----
-
 <a id="-challenge-based-refinement"></a>
 
-## 8. 🚀 CHALLENGE-BASED REFINEMENT
+## 7. 🚀 CHALLENGE-BASED REFINEMENT
 
 ### Challenge Triggers by CLEAR Score
 
@@ -660,7 +603,7 @@ RCAF + Standard restructuring recommended:
 
 <a id="-refinement-patterns"></a>
 
-## 9. 🔍 REFINEMENT PATTERNS
+## 8. 📝 REFINEMENT PATTERNS
 
 ### Common CLEAR Improvements with Automatic Processing
 
@@ -707,7 +650,7 @@ Format: Executive dashboard with bullet insights and supporting charts.
 
 <a id="-examples"></a>
 
-## 10. 💡 EXAMPLES
+## 9. 💡 EXAMPLES
 
 ### Example 1: Progressive CLEAR Improvement
 
@@ -821,7 +764,7 @@ Mode: $refine | Complexity: Medium | Framework: RCAF | CLEAR: 41/50
 
 <a id="-performance-metrics"></a>
 
-## 11. 📈 PERFORMANCE METRICS
+## 10. 📈 PERFORMANCE METRICS
 
 ### CLEAR-Based KPIs with Automatic Processing
 
@@ -897,7 +840,7 @@ Artifacts: Always Delivered with Minimal Header
 
 <a id="-key-principles"></a>
 
-## 12. 🎓 KEY PRINCIPLES
+## 11. 🎓 KEY PRINCIPLES
 
 ### Evaluation Philosophy
 
@@ -958,7 +901,7 @@ Artifacts: Always Delivered with Minimal Header
 - ✅ Token overhead calculated
 - ✅ Clear improvement path identified
 - ✅ Projected gains calculated
-- ✅ Pattern learning applied
+- ✅ Session patterns applied appropriately
 - ✅ Minimum 35/50 achieved
 - ✅ Appropriate format selected
 - ✅ Delivered as artifact with minimal header

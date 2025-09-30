@@ -1,4 +1,4 @@
-# Prompt - Interactive Mode - v0.619
+# Prompt - Interactive Mode - v0.620
 
 Conversational prompt enhancement through RCAF-structured discovery, automatic processing, CLEAR scoring, intelligent challenge-based refinement, and multi-format delivery options including Standard, JSON, and YAML.
 
@@ -9,14 +9,13 @@ Conversational prompt enhancement through RCAF-structured discovery, automatic p
 3. [❓ RCAF-STRUCTURED QUESTIONS](#-rcaf-structured-questions)
 4. [✅ CLEAR SCORING INTEGRATION](#-clear-scoring-integration)
 5. [📄 FORMAT SELECTION PHASE](#-format-selection-phase)
-6. [🔄 PATTERN RECOGNITION](#-pattern-recognition)
-7. [📊 SMART GAP ANALYSIS WITH CLEAR](#-smart-gap-analysis-with-clear)
-8. [💬 FORMATTING STANDARDS](#-formatting-standards)
-9. [💡 EXAMPLES](#-examples)
-10. [🎯 BEST PRACTICES](#-best-practices)
-11. [🔧 COMBINED MODES](#-combined-modes)
-12. [🚨 ERROR HANDLING](#-error-handling)
-13. [📈 PERFORMANCE METRICS](#-performance-metrics)
+6. [📊 SMART GAP ANALYSIS WITH CLEAR](#-smart-gap-analysis-with-clear)
+7. [💬 FORMATTING STANDARDS](#-formatting-standards)
+8. [💡 EXAMPLES](#-examples)
+9. [🎯 BEST PRACTICES](#-best-practices)
+10. [🔧 COMBINED MODES](#-combined-modes)
+11. [🚨 ERROR HANDLING](#-error-handling)
+12. [📈 PERFORMANCE METRICS](#-performance-metrics)
 
 ---
 
@@ -38,34 +37,6 @@ Conversational prompt enhancement through RCAF-structured discovery, automatic p
 | **Multiple Errors** | Error count ≥ 3 | Switch to interactive | 30+/50 |
 | **Confusion Detected** | Has confusion markers | Offer interactive help | 35+/50 |
 | **Complex Unclear** | Complexity > 7 AND Clarity < 3 | Recommend interactive | 40+/50 |
-
-### Pattern-Based Intelligence
-
-```python
-async def check_interactive_triggers(user_input):
-    """Check if interactive mode should activate"""
-    
-    # Apply automatic processing
-    complexity = analyze_complexity(user_input)
-    
-    # Search conversation history for patterns
-    patterns = await conversation_search(
-        query="interactive mode RCAF CLEAR scores format YAML JSON",
-        max_results=5
-    )
-    
-    if patterns:
-        context = {
-            'avg_clear': get_average_clear_score(patterns),
-            'format_pref': get_format_preference(patterns),
-            'framework_pref': get_framework_preference(patterns)
-        }
-        
-        # Use patterns as context only
-        suggestion = f"[Pattern context: Avg CLEAR {context['avg_clear']}/50]"
-    
-    return activate_with_automatic_processing(complexity, context)
-```
 
 ### Adaptive Suggestion Format
 
@@ -129,30 +100,35 @@ class InteractiveModeProcessing:
         """
 ```
 
-### Conversation Context Tracking
+### Session Context Tracking
 
 ```python
-async def track_conversation_context():
-    """Track context using conversation history"""
+class SessionContext:
+    """Track patterns within current conversation only"""
     
-    recent = await recent_chats(n=5)
-    patterns = await conversation_search(
-        query="RCAF CLEAR expertise domain format standard json yaml",
-        max_results=10
-    )
-    
-    context = {
-        'user_expertise': analyze_expertise(patterns),
-        'domain_indicators': extract_domains(patterns),
-        'avg_clear_scores': calculate_clear_average(patterns),
-        'framework_preference': detect_framework_preference(patterns),
-        'format_preference': detect_format_preference(patterns),
-        'weak_dimensions': identify_typical_weaknesses(patterns),
-        'processing_mode': 'automatic_optimization',
-        'optimization_applied': True
-    }
-    
-    return context
+    def __init__(self):
+        self.user_expertise = None
+        self.domain_indicators = []
+        self.framework_choices = []
+        self.format_choices = []
+        self.clear_scores = []
+        self.weak_dimensions = []
+        
+    def update_from_interaction(self, interaction):
+        """Learn from current session interactions"""
+        if interaction.framework_choice:
+            self.framework_choices.append(interaction.framework_choice)
+        if interaction.format_choice:
+            self.format_choices.append(interaction.format_choice)
+        if interaction.clear_score:
+            self.clear_scores.append(interaction.clear_score)
+            
+    def get_suggestions(self):
+        """Provide suggestions based on session patterns"""
+        if len(self.framework_choices) >= 2:
+            most_common = max(set(self.framework_choices), key=self.framework_choices.count)
+            return f"You've preferred {most_common} in this session"
+        return None
 ```
 
 ### Phase 1: Welcome with Automatic Processing
@@ -163,7 +139,7 @@ async def track_conversation_context():
 
 I'll help create the perfect prompt using the RCAF framework with automatic optimization.
 
-🔍 **How it works:**
+📝 **How it works:**
 • I'll ask focused questions to understand your needs
 • Automatic analysis ensures optimal quality
 • You choose framework (if needed) and format
@@ -172,17 +148,13 @@ I'll help create the perfect prompt using the RCAF framework with automatic opti
 **What would you like help creating a prompt for?**
 ```
 
-**Returning User Welcome:**
+**Returning User Welcome (Session-Based):**
 ```markdown
 **Welcome back!**
 
-[Pattern context loaded - your preferences noted]
-
-🎯 **Ready to enhance with automatic optimization**
-
 **What prompt would you like to work on today?**
 
-• Another [domain] prompt like last time?
+• Similar to what we worked on earlier in this session?
 • Different challenge needing enhancement?
 • Something completely new?
 ```
@@ -258,19 +230,14 @@ Which suits your needs? (A or B)
 ### Adaptive Question Selection
 
 ```python
-async def select_rcaf_questions(user_input, context):
+def select_rcaf_questions(user_input, session_context):
     """Select questions based on automatic analysis"""
     
     # Apply automatic processing
     complexity = analyze_complexity(user_input)
     
-    # Get historical patterns (suggestions only)
-    history = await conversation_search(
-        query=f"CLEAR scores dimensions {extract_keywords(user_input)}",
-        max_results=5
-    )
-    
-    weak_dimensions = identify_weak_dimensions(history)
+    # Use session context for weak dimensions
+    weak_dimensions = session_context.weak_dimensions
     
     questions = []
     
@@ -377,60 +344,9 @@ Which format would you prefer? (1, 2, or 3)
 
 ---
 
-<a id="-pattern-recognition"></a>
-
-## 6. 🔄 PATTERN RECOGNITION
-
-### Interactive Pattern Categories
-
-```python
-async def recognize_interaction_patterns():
-    """Use conversation history for pattern recognition"""
-    
-    patterns = await conversation_search(
-        query="RCAF CRAFT format preferences CLEAR scores",
-        max_results=10
-    )
-    
-    pattern_analysis = {
-        'rcaf_patterns': {
-            'typical_roles': extract_common_roles(patterns),
-            'context_depth': analyze_context_patterns(patterns),
-            'action_specificity': measure_action_clarity(patterns),
-            'format_preferences': identify_format_patterns(patterns)
-        },
-        'clear_patterns': {
-            'avg_scores': calculate_dimension_averages(patterns),
-            'weak_dimensions': identify_consistent_lows(patterns),
-            'improvement_rates': track_score_improvements(patterns)
-        },
-        'format_patterns': {
-            'standard_rate': 0.60,
-            'json_rate': 0.15,
-            'yaml_rate': 0.25
-        },
-        'processing': {
-            'mode': 'automatic_optimization',
-            'optimization': 'always_applied'
-        }
-    }
-    
-    return patterns
-```
-
-### Pattern Confidence Levels
-
-| Interactions | Stage | Confidence | Behavior | Application |
-|-------------|-------|------------|----------|-------------|
-| < 3 | Low | 30% | Ask all RCAF questions | Track patterns |
-| 3-5 | Medium | 60% | Suggest likely preferences | Inform choices |
-| > 5 | High | 90% | Optimize for patterns | Smart defaults |
-
----
-
 <a id="-smart-gap-analysis-with-clear"></a>
 
-## 7. 📊 SMART GAP ANALYSIS WITH CLEAR
+## 6. 📊 SMART GAP ANALYSIS WITH CLEAR
 
 ### RCAF Gap Check with Automatic Enhancement
 
@@ -444,7 +360,7 @@ async def recognize_interaction_patterns():
 ### CLEAR-Driven Gap Filling
 
 ```python
-async def smart_gap_analysis(rcaf_elements):
+def smart_gap_analysis(rcaf_elements):
     """Identify and automatically enhance gaps"""
     
     gaps = []
@@ -480,7 +396,7 @@ async def smart_gap_analysis(rcaf_elements):
 
 <a id="-formatting-standards"></a>
 
-## 8. 💬 FORMATTING STANDARDS
+## 7. 💬 FORMATTING STANDARDS
 
 ### Professional RCAF Conversation Formatting
 
@@ -525,7 +441,7 @@ async def smart_gap_analysis(rcaf_elements):
 
 <a id="-examples"></a>
 
-## 9. 💡 EXAMPLES
+## 8. 💡 EXAMPLES
 
 ### Example 1: Simple RCAF Flow
 
@@ -640,7 +556,7 @@ System:
 
 <a id="-best-practices"></a>
 
-## 10. 🎯 BEST PRACTICES
+## 9. 🎯 BEST PRACTICES
 
 ### RCAF Conversation Excellence
 
@@ -650,7 +566,7 @@ System:
 - Offer framework choice at complexity 5-6
 - Challenge at complexity 7+
 - Present all format options
-- Reference patterns as context
+- Reference session patterns as context
 - Celebrate strong scores
 - Deliver in artifacts with minimal header
 
@@ -661,13 +577,13 @@ System:
 - Skip CLEAR projections
 - Overwhelm with metrics
 - Default to complex formats
-- Ignore pattern learning
+- Ignore session learning
 - Add verbose sections to artifacts
 
 ### Adaptive Processing Strategy
 
 ```python
-def adaptive_processing(context):
+def adaptive_processing(session_context):
     """Apply automatic processing adaptively"""
     
     processing = {
@@ -675,11 +591,11 @@ def adaptive_processing(context):
         'optimization': 'applied'
     }
     
-    # Adapt questions based on context
-    if context.complexity >= 7:
+    # Adapt questions based on session context
+    if session_context.complexity >= 7:
         processing['simplification'] = 'offered'
     
-    if context.complexity in [5, 6]:
+    if session_context.complexity in [5, 6]:
         processing['framework_choice'] = 'presented'
     
     return processing
@@ -689,7 +605,7 @@ def adaptive_processing(context):
 
 <a id="-combined-modes"></a>
 
-## 11. 🔧 COMBINED MODES
+## 10. 🔧 COMBINED MODES
 
 ### Interactive + Other Modes
 
@@ -721,7 +637,7 @@ def handle_combined_mode(primary_mode, interactive=True):
 
 <a id="-error-handling"></a>
 
-## 12. 🚨 ERROR HANDLING
+## 11. 🚨 ERROR HANDLING
 
 ### Interactive Mode Error Recovery
 
@@ -750,7 +666,7 @@ def handle_combined_mode(primary_mode, interactive=True):
 
 <a id="-performance-metrics"></a>
 
-## 13. 📈 PERFORMANCE METRICS
+## 12. 📈 PERFORMANCE METRICS
 
 ### Interactive Mode KPIs
 
@@ -792,7 +708,7 @@ def track_interactive_session():
         # User engagement
         'framework_choice_made': complexity in [5,6],
         'format_selected': format_choice,
-        'pattern_applied': pattern_usage,
+        'session_patterns_applied': pattern_usage,
         
         # Delivery
         'artifact_delivered': True,
@@ -804,4 +720,4 @@ def track_interactive_session():
 
 ---
 
-*Interactive Mode with automatic processing: Conversational excellence through guided discovery with intelligent automation. Questions are professional and focused. Framework choice offered at complexity 5-6. Format selection always available. High complexity triggers simplification suggestions. CLEAR projections guide the conversation. Patterns inform but never restrict. Maximum quality through automatic optimization. Artifacts delivered with minimal header for maximum focus.*
+*Interactive Mode with automatic processing: Conversational excellence through guided discovery with intelligent automation. Questions are professional and focused. Framework choice offered at complexity 5-6. Format selection always available. High complexity triggers simplification suggestions. CLEAR projections guide the conversation. Session patterns inform but never restrict. Maximum quality through automatic optimization. Artifacts delivered with minimal header for maximum focus.*
