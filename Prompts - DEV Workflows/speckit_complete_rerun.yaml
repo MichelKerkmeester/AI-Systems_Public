@@ -26,9 +26,17 @@ rules:
     - skip_browser_testing
 
 # ───────────────────────────────────────────────────────────────
+# USER INPUTS
+# ───────────────────────────────────────────────────────────────
+user_inputs:
+  spec_folder: "[SPEC_FOLDER]"  # e.g., specs/001-feature-name
+  context: "[CONTEXT]"          # Additional context for re-run
+  request: "[REQUEST]"          # Specific re-run request (e.g., "regenerate tasks")
+
+# ───────────────────────────────────────────────────────────────
 # RE-RUN REQUEST HANDLING
 # ───────────────────────────────────────────────────────────────
-request_format: "Re-run the workflow for specs/[NNN-feature]/"
+request_format: "Re-run the workflow for [SPEC_FOLDER]"
 ai_approach:
   identify_target: specs/[NNN-feature]/
   determine_stage: auto_detect_from_artifacts
@@ -65,9 +73,11 @@ analysis:
 # ───────────────────────────────────────────────────────────────
 workflow:
   step_0_request_analysis:
-    context: "Re-run request for specs/[NNN-feature]/"
-    request: "Resume or regenerate workflow artifacts"
-    action: Analyze existing artifacts and determine entry point
+    input_source: USER_INPUTS_SECTION_ABOVE
+    spec_folder: "Use [SPEC_FOLDER] value from user_inputs"
+    context: "Use [CONTEXT] value from user_inputs"
+    request: "Use [REQUEST] value from user_inputs"
+    action: Analyze existing artifacts from filled user inputs and determine entry point
     initialization:
       - validate_prerequisites
       - load_existing_artifacts

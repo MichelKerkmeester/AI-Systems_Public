@@ -66,13 +66,21 @@ rules:
     - skip_rollback_preparation
 
 # ───────────────────────────────────────────────────────────────
+# USER INPUTS
+# ───────────────────────────────────────────────────────────────
+user_inputs:
+  context: "[CONTEXT]"  # Background information about performance issues
+  request: "[REQUEST]"  # Specific performance improvement request
+
+# ───────────────────────────────────────────────────────────────
 # WORKFLOW
 # ───────────────────────────────────────────────────────────────
 workflow:
   step_0_request_analysis:
-    context: "[CONTEXT]"
-    request: "[REQUEST]"
-    action: Analyze performance requirements and establish baseline
+    input_source: USER_INPUTS_SECTION_ABOVE
+    context: "Use [CONTEXT] value from user_inputs"
+    request: "Use [REQUEST] value from user_inputs"
+    action: Analyze performance requirements from filled user inputs and establish baseline
 
     performance_assessment:
       current_state:

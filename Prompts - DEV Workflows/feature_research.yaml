@@ -27,13 +27,21 @@ rules:
     - proceed_to_implementation
 
 # ───────────────────────────────────────────────────────────────
+# USER INPUTS
+# ───────────────────────────────────────────────────────────────
+user_inputs:
+  context: "[CONTEXT]"  # Background information about the feature to research
+  request: "[REQUEST]"  # Specific research request or feature to investigate
+
+# ───────────────────────────────────────────────────────────────
 # RESEARCH WORKFLOW
 # ───────────────────────────────────────────────────────────────
 workflow:
   step_0_request_analysis:
-    context: "[CONTEXT]"
-    request: "[REQUEST]"
-    action: Analyze feature requirements and establish research scope
+    input_source: USER_INPUTS_SECTION_ABOVE
+    context: "Use [CONTEXT] value from user_inputs"
+    request: "Use [REQUEST] value from user_inputs"
+    action: Analyze feature requirements from filled user inputs and establish research scope
     outputs:
       - feature_summary
       - research_objectives

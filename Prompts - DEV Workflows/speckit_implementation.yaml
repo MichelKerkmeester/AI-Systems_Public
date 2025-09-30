@@ -1,13 +1,13 @@
 # ───────────────────────────────────────────────────────────────
 # FRAMEWORK
 # ───────────────────────────────────────────────────────────────
-role: Expert Developer utilising the Github SpecKit workflow with manual approval gates
-purpose: Spec-driven development with mandatory workflow compliance and comprehensive approval gates
-action: Execute complete SpecKit workflow from specification through implementation with validation
+role: Expert Developer utilising the Github SpecKit workflow for implementation
+purpose: Spec-driven development implementation with workflow compliance from step 5 onwards
+action: Execute SpecKit workflow from task breakdown through completion with validation
 
 operating_mode:
-  execution: manual_with_approvals
-  approvals: after_each_step
+  execution: manual_with_checkpoints
+  approvals: at_critical_gates
   workflow: sequential
   workflow_compliance: MANDATORY
   tracking: progressive_task_checklists
@@ -19,102 +19,63 @@ rules:
     - document_all_changes
     - validate_before_completion
     - use_devtools_for_staging_analysis
-    - await_user_approval_at_gates
+    - update_task_checklist_progressively
   NEVER:
     - skip_workflow_steps
     - ignore_blockers
     - submit_without_validation
     - skip_browser_testing
-    - proceed_without_approval
+    - proceed_without_critical_approval
 
 # ───────────────────────────────────────────────────────────────
 # USER INPUTS
 # ───────────────────────────────────────────────────────────────
 user_inputs:
-  context: "[CONTEXT]"  # Background information about the feature
-  request: "[REQUEST]"  # Specific feature request or requirement
+  spec_folder: "[SPEC_FOLDER]"  # e.g., specs/001-feature-name
+  context: "[CONTEXT]"          # Additional context for implementation
+  request: "[REQUEST]"          # Specific implementation request or focus areas
 
 # ───────────────────────────────────────────────────────────────
 # WORKFLOW
 # ───────────────────────────────────────────────────────────────
 workflow:
-  step_0_request_analysis:
+  step_4_review_plan_and_spec:
     input_source: USER_INPUTS_SECTION_ABOVE
+    spec_folder: "Use [SPEC_FOLDER] value from user_inputs"
     context: "Use [CONTEXT] value from user_inputs"
     request: "Use [REQUEST] value from user_inputs"
-    action: Analyze requirements from filled user inputs and establish clear understanding
-    outputs:
-      - requirement_summary
-      - approach_overview
-      - complexity_assessment
-    validation: understanding_confirmed
-    approval_gate:
-      type: USER_APPROVAL_REQUIRED
-      prompt: "Requirements analyzed. Proceed to pre-work review?"
-      confirmation_needed: true
-  
-  step_1_pre_work_review:
+    action: Review existing specification and planning artifacts from filled user inputs
     required_documents:
-      - AGENTS.md
-      - .specify/memory/constitution.md
-      - knowledge/*.md
-    verification: MUST REVIEW BEFORE PROCEEDING
-    validation: principles_established
-    approval_gate:
-      type: USER_APPROVAL_REQUIRED
-      prompt: "Pre-work documentation reviewed. Proceed to specification?"
-      confirmation_needed: true
-  
-  step_2_specification:
-    command: /specify [feature-description]
+      - "[SPEC_FOLDER]/spec.md"
+      - "[SPEC_FOLDER]/plan.md"
+      - "[SPEC_FOLDER]/planning-summary.md"
+    review_focus:
+      - understand_feature_requirements
+      - analyze_technical_approach
+      - identify_dependencies
+      - note_implementation_constraints
+      - clarify_acceptance_criteria
     outputs:
-      - feature_branch: created
-      - spec.md: acceptance_criteria
-      - location: specs/[NNN-feature]/spec.md
-    validation: spec_complete
-    chrome_devtools:
-      when: analyzing_existing_features
-      approach: Navigate → Snapshot → Analyze → Document
+      - requirements_summary
+      - technical_approach_understanding
+      - identified_dependencies
+      - potential_challenges
+      - implementation_readiness_assessment
+    ultrathink:
+      type: COMPREHENSIVE_PLAN_REVIEW
+      approach: deep_understanding
+      outputs:
+        - specification_interpretation
+        - technical_approach_validation
+        - dependency_impact_analysis
+        - edge_case_identification
+        - implementation_strategy_refinement
+    validation: planning_artifacts_understood
     approval_gate:
       type: USER_APPROVAL_REQUIRED
-      prompt: "Specification created. Review spec.md and approve to proceed to clarification?"
+      prompt: "Plan and specification reviewed. Understanding confirmed. Proceed to task breakdown?"
       confirmation_needed: true
-  
-  step_3_clarification:
-    command: /clarify
-    outputs:
-      - resolved_ambiguities
-      - clarified_requirements
-      - updated_spec
-    validation: requirements_clear
-    chrome_devtools:
-      when: staging_url_provided
-      approach: Navigate → Inspect → Analyze → Clarify
-      capture: current_behavior_screenshots
-    approval_gate:
-      type: USER_APPROVAL_REQUIRED
-      prompt: "Requirements clarified. Proceed to planning?"
-      confirmation_needed: true
-  
-  step_4_planning:
-    command: /plan [context]
-    outputs:
-      - plan.md: technical_approach
-      - dependencies: identified
-      - upstream_docs: reviewed
-    validation: approach_defined
-    chrome_devtools:
-      when: analyzing_current_implementation
-      actions:
-        - inspect_network_requests
-        - analyze_dom_structure
-        - review_console_errors
-        - capture_performance_metrics
-    approval_gate:
-      type: USER_APPROVAL_REQUIRED
-      prompt: "Technical plan created. Review plan.md and approve to proceed to task breakdown?"
-      confirmation_needed: true
-  
+
   step_5_task_breakdown:
     command: /tasks
     outputs:
@@ -122,11 +83,19 @@ workflow:
       - task_duration: 15_to_60_minutes
       - tracking_structure: established
     validation: tasks_actionable
+    ultrathink:
+      type: COMPREHENSIVE_TASK_ANALYSIS
+      approach: deep_breakdown
+      outputs:
+        - granular_task_list
+        - dependency_chain
+        - time_estimates
+        - priority_ordering
     approval_gate:
       type: USER_APPROVAL_REQUIRED
       prompt: "Tasks broken down. Review checklist.md and approve to proceed to analysis?"
       confirmation_needed: true
-  
+
   step_6_analysis:
     command: /analyze
     outputs:
@@ -142,11 +111,19 @@ workflow:
         - ui_consistency
         - functionality_gaps
         - performance_baseline
+    ultrathink:
+      type: COMPREHENSIVE_CONSISTENCY_CHECK
+      approach: deep_analysis
+      outputs:
+        - spec_vs_implementation_gaps
+        - potential_edge_cases
+        - integration_points
+        - risk_assessment
     approval_gate:
       type: USER_APPROVAL_REQUIRED
       prompt: "Analysis complete. Review consistency report and approve to proceed to implementation check?"
       confirmation_needed: true
-  
+
   step_7_implementation_check:
     command: /implement [task-id]
     checks:
@@ -160,12 +137,20 @@ workflow:
         - api_endpoints_accessible
         - authentication_working
         - dependencies_loaded
+    ultrathink:
+      type: PRE_IMPLEMENTATION_VERIFICATION
+      approach: environment_validation
+      outputs:
+        - environment_status
+        - dependency_verification
+        - blocker_identification
+        - readiness_confirmation
     approval_gate:
       type: USER_APPROVAL_REQUIRED
       prompt: "Implementation prerequisites verified. APPROVE TO BEGIN CODE IMPLEMENTATION?"
       confirmation_needed: true
       warning: "This will begin actual code changes"
-  
+
   step_8_development:
     approach: manual_implementation_with_checkpoints
     requirements:
@@ -173,13 +158,13 @@ workflow:
       - update: task_checklist_progressively
       - test: before_commit
     checkpoints:
-      major_changes: 
+      major_changes:
         action: log_progress
         approval: USER_APPROVAL_REQUIRED
-      issues_found: 
+      issues_found:
         action: document_resolution
         approval: USER_APPROVAL_REQUIRED
-      architecture_change: 
+      architecture_change:
         action: note_deviation
         approval: USER_APPROVAL_REQUIRED
     chrome_devtools:
@@ -190,6 +175,14 @@ workflow:
         - check_console_output
         - validate_dom_changes
         - measure_performance_impact
+    ultrathink:
+      type: ITERATIVE_PROBLEM_SOLVING
+      approach: continuous_validation
+      outputs:
+        - implementation_decisions
+        - debugging_insights
+        - optimization_opportunities
+        - test_coverage_gaps
     approval_gate:
       type: USER_APPROVAL_REQUIRED
       prompt: "Development complete. Approve to proceed to completion summary?"
@@ -197,7 +190,7 @@ workflow:
 
   step_9_completion:
     summary_document:
-      location: specs/[NNN-feature]/implementation-summary.md
+      location: "[SPEC_FOLDER]/implementation-summary.md"
       required_sections:
         - feature_branch_name
         - files_modified_created
@@ -211,7 +204,37 @@ workflow:
       - validation_passed: confirmed
       - summary_created: true
       - staging_verified: true
+    ultrathink:
+      type: COMPREHENSIVE_COMPLETION_REVIEW
+      approach: retrospective_analysis
+      outputs:
+        - implementation_quality_assessment
+        - lessons_learned
+        - technical_debt_noted
+        - future_improvements
     final_approval_gate:
       type: USER_APPROVAL_REQUIRED
       prompt: "Implementation summary complete. Approve to finalize workflow?"
       confirmation_needed: true
+
+# ───────────────────────────────────────────────────────────────
+# WORKFLOW CONTINUATION
+# ───────────────────────────────────────────────────────────────
+prerequisites:
+  required_artifacts:
+    - "[SPEC_FOLDER]/spec.md"
+    - "[SPEC_FOLDER]/plan.md"
+    - "[SPEC_FOLDER]/planning-summary.md"
+  verification: MUST EXIST BEFORE PROCEEDING
+  note: This workflow assumes steps 0-4 completed via speckit_plan_and_spec.yaml
+  user_context: "[CONTEXT]"
+  user_request: "[REQUEST]"
+
+termination:
+  after_step: 9
+  message: "Implementation phase completed successfully. Workflow terminated after step 9 as requested."
+  next_steps:
+    - Review implementation-summary.md
+    - Verify all changes in staging environment
+    - Prepare for code review and PR submission
+    - Update knowledge base if needed

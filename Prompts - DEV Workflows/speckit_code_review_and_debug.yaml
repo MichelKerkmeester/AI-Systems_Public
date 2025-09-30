@@ -65,15 +65,25 @@ rules:
     - assume_without_testing
 
 # ───────────────────────────────────────────────────────────────
+# USER INPUTS
+# ───────────────────────────────────────────────────────────────
+user_inputs:
+  context: "[CONTEXT]"      # Background information about the bug or review
+  request: "[REQUEST]"      # Specific debug or review request
+  environment: "[LINK]"     # Staging URL or environment link
+  scope: "[FILES]"          # Specific files or components to investigate
+
+# ───────────────────────────────────────────────────────────────
 # WORKFLOW
 # ───────────────────────────────────────────────────────────────
 workflow:
   step_0_request_analysis:
-    context: "[CONTEXT]"
-    request: "[REQUEST]"
-    environment: "[LINK]"
-    scope: "[FILES]"
-    action: Analyze debug requirements and establish understanding
+    input_source: USER_INPUTS_SECTION_ABOVE
+    context: "Use [CONTEXT] value from user_inputs"
+    request: "Use [REQUEST] value from user_inputs"
+    environment: "Use [LINK] value from user_inputs"
+    scope: "Use [FILES] value from user_inputs"
+    action: Analyze debug requirements from filled user inputs and establish understanding
 
     debug_analysis:
       surface_understanding:

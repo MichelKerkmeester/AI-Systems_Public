@@ -28,13 +28,21 @@ rules:
     - proceed_beyond_planning
 
 # ───────────────────────────────────────────────────────────────
-# WORKFLOW - PLANNING PHASE ONLY
+# USER INPUTS
+# ───────────────────────────────────────────────────────────────
+user_inputs:
+  context: "[CONTEXT]"  # Background information about the feature
+  request: "[REQUEST]"  # Specific feature request or requirement
+
+# ───────────────────────────────────────────────────────────────
+# WORKFLOW
 # ───────────────────────────────────────────────────────────────
 workflow:
   step_0_request_analysis:
-    context: "[CONTEXT]"
-    request: "[REQUEST]"
-    action: Analyze requirements and establish clear understanding
+    input_source: USER_INPUTS_SECTION_ABOVE
+    context: "Use [CONTEXT] value from user_inputs"
+    request: "Use [REQUEST] value from user_inputs"
+    action: Analyze requirements from filled user inputs and establish clear understanding
     outputs:
       - requirement_summary
       - approach_overview
