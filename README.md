@@ -18,17 +18,16 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 3. [Product Owner Writer](#3-product-owner-writer)
 4. [Prompt Engineering Assistant](#4-prompt-engineering-assistant)
-5. [AI System Improver (GPT & Claude)](#5-ai-system-improver-gpt--claude)
 
 ### 💬 MCP Agents
 
-6. [Media Editor Agent](#6-media-editor-agent)
-7. [Webflow Agent](#7-webflow-agent)
-8. [ClickUp & Notion Agent](#8-clickup--notion-agent)
+5. [Media Editor Agent](#6-media-editor-agent)
+6. [Webflow Agent](#7-webflow-agent)
+7. [ClickUp & Notion Agent](#8-clickup--notion-agent)
 
 ### ⚡ Automation Agents
 
-9. [GPT - Scheduled Tasks](#9-gpt---scheduled-tasks)
+8. [GPT - Scheduled Tasks](#9-gpt---scheduled-tasks)
 
 ### 🔧 Additional Sections
 
@@ -129,28 +128,6 @@ Transform vague requests into clear, measurable, high-scoring AI prompts with th
   - Challenge at 3+ rounds: "Could RCAF be simpler?"
   - Real example: "Summarize meeting" → 45/50 RCAF prompt (+30 points)
   - Commands: $rcaf (force simple), $craft (comprehensive), $yaml (templates), $json (APIs)
-  
-.
-
-<a id="5-ai-system-improver-gpt--claude"></a>
-#### 5. 🔧 AI System Improver (GPT & Claude)
-
-Transform and improve AI system prompts across both GPT and Claude platforms with preservation-first editing.
-
-- **Dual Platform Support**:
-  - **GPT Version**: Uses GPT-5 High Deep Reasoning mode with ChatGPT custom instructions
-  - **Claude Version**: Uses Ultrathink mode with Claude Projects knowledge base
-  - Both versions share core ATLAS Framework and principles
-
-- **Intelligent Analysis & Interactive Discovery**:
-  - Auto-activates discovery for unclear requests (2-4 questions)
-  - Complexity scoring determines ATLAS phases (A→S to Full ATLAS)
-  - Challenge Mode at 6+ complexity score
-
-- **Professional Delivery & Preservation**:
-  - Complete files only (never excerpts)
-  - Structural changes require explicit consent
-  - Session tracking enriches but never restricts
 
 -----
 
@@ -159,8 +136,8 @@ Transform and improve AI system prompts across both GPT and Claude platforms wit
 
 → MCPs made easy with conversational systems
 
-<a id="6-media-editor-agent"></a>
-#### 6. 🎬 Media Editor Agent
+<a id="5-media-editor-agent"></a>
+#### 5. 🎬 Media Editor Agent
 
 Edit image, video, and audio files via natural language.
 
@@ -181,8 +158,8 @@ Edit image, video, and audio files via natural language.
 
 .
 
-<a id="7-webflow-agent"></a>
-#### 7. 🌐 Webflow Agent
+<a id="6-webflow-agent"></a>
+#### 6. 🌐 Webflow Agent
 
 Full-stack Webflow development through natural language with Designer and Data APIs.
 
@@ -206,8 +183,8 @@ Full-stack Webflow development through natural language with Designer and Data A
 
 .
 
-<a id="8-clickup--notion-agent"></a>
-#### 8. 📊 ClickUp & Notion Agent
+<a id="7-clickup--notion-agent"></a>
+#### 7. 📊 ClickUp & Notion Agent
 
 Seamlessly coordinate task management (ClickUp) and knowledge management (Notion) through natural language.
 
@@ -232,8 +209,8 @@ Seamlessly coordinate task management (ClickUp) and knowledge management (Notion
 
 → Create automated workflows with ease 
 
-<a id="9-gpt---scheduled-tasks"></a>
-#### 9. ⏰ GPT - Scheduled Tasks
+<a id="8-gpt---scheduled-tasks"></a>
+#### 8. ⏰ GPT - Scheduled Tasks
 
 Create scheduled tasks with intelligent optimization.
 
