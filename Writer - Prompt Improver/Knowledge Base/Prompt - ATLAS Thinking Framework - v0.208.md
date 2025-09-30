@@ -1,4 +1,4 @@
-# Prompt - ATLAS Thinking Framework - v0.207
+# Prompt - ATLAS Thinking Framework - v0.208
 
 Universal thinking methodology for prompt engineering excellence with automatic depth optimization, integrated RCAF/CRAFT framework selection, CLEAR evaluation scoring, and support for Standard, JSON, and YAML outputs.
 
@@ -35,12 +35,12 @@ Universal thinking methodology for prompt engineering excellence with automatic 
 - Built-in bias toward clarity and simplicity
 - CLEAR scoring for quality assurance
 - Continuous learning from user preferences
-- Multi-format output support (Standard/JSON/YAML)
+- Multi-format output support (Standard/YAML/JSON)
 - Zero-friction enhancement process
 - Graceful error recovery
 - Intelligent adaptation to needs
 
-**DELIVERY:** All enhanced prompts as markdown artifacts with optimization reports and CLEAR scores in multiple formats.
+**DELIVERY:** All enhanced prompts as markdown artifacts with minimal header format.
 
 **FORMAT REFERENCES:** For complete specifications:
 - → **Prompt - JSON Format Guide.md**
@@ -155,15 +155,12 @@ Format: [Output structure]
 - **R**euse: Future adaptability (1-10)
 
 #### S - Synthesize & Ship
-**Purpose:** Deliver optimized result with documentation
+**Purpose:** Deliver optimized result with minimal header
 
 **Delivery Package:**
 - Enhanced prompt (artifact MANDATORY)
-- Framework used (RCAF/CRAFT)
-- Optimization report
-- Key improvements list
-- CLEAR scores breakdown
-- Format options presented
+- Minimal header: `Mode: $[mode] | Complexity: [level] | Framework: [RCAF/CRAFT] | CLEAR: [X]/50`
+- Enhanced content only
 - Pattern recording for future use
 
 ---
@@ -253,7 +250,7 @@ Which framework do you prefer? (A or B)
 | **Transform** | Project improvements | Expected gains | Automatic |
 | **Layer** | Structure scoring | Organization boost | Automatic |
 | **Assess Impact** | Full evaluation | Final measurement | Automatic |
-| **Synthesize** | Report scores | Transparency | Automatic |
+| **Synthesize** | Include in header | Transparency | Automatic |
 
 ### CLEAR Scoring Rubric
 
@@ -677,7 +674,7 @@ def adapt_processing(request_type, complexity):
 - **Challenge complexity** - At level 7+
 - **Offer format choices** - Always
 - **Learn from patterns** - As suggestions
-- **Deliver in artifacts** - Always
+- **Deliver in artifacts** - Always with minimal header
 - **Track performance** - Continuously
 
 ### Don'ts ❌
@@ -702,6 +699,7 @@ def adapt_processing(request_type, complexity):
 6. **Format as Tool:** "Format serves clarity, not complexity"
 7. **Learn Continuously:** "Every enhancement teaches the system"
 8. **Process Invisibly:** "Automatic depth, visible quality"
+9. **Minimal Header:** "Single line at top, content only"
 
 ### Framework Selection Philosophy
 
@@ -710,6 +708,10 @@ def adapt_processing(request_type, complexity):
 ### Processing Philosophy
 
 > "Standard mode: Always 10 rounds for consistent quality. Quick mode: Smart scaling for speed. No user burden, maximum benefit."
+
+### Artifact Philosophy
+
+> "Minimal header at top. Enhanced content follows. Nothing else. Maximum clarity, zero distraction."
 
 ### CLEAR Score Interpretation
 

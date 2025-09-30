@@ -1,18 +1,18 @@
-# Prompt - Builder Mode - v0.413
+# Prompt - Builder Mode - v0.414
 
 Universal AI development prompt optimization with RCAF framework, CLEAR scoring, intelligent session-based pattern learning, and multi-format support including Standard, JSON, and YAML. Creates goal-oriented creative briefs, not prescriptive implementations.
 
 ## 📋 Table of Contents
 
 1. [🎯 OVERVIEW](#-overview)
-2. [📝 RCAF FOR BUILDERS](#-rcaf-for-builders)
+2. [🔍 RCAF FOR BUILDERS](#-rcaf-for-builders)
 3. [✅ CLEAR SCORING FOR BUILDERS](#-clear-scoring-for-builders)
 4. [🌐 PLATFORM COMPATIBILITY](#-platform-compatibility)
 5. [💰 RESOURCE STRATEGY](#-resource-strategy)
 6. [🧠 ATLAS INTEGRATION FOR BUILDERS](#-atlas-integration-for-builders)
-7. [🔄 PATTERN LEARNING](#-pattern-learning)
+7. [📄 PATTERN LEARNING](#-pattern-learning)
 8. [🚀 CHALLENGE MODE FOR BUILDERS](#-challenge-mode-for-builders)
-9. [📝 UNIVERSAL PATTERNS](#-universal-patterns)
+9. [🔍 UNIVERSAL PATTERNS](#-universal-patterns)
 10. [✅ BEST PRACTICES](#-best-practices)
 11. [📊 PERFORMANCE METRICS](#-performance-metrics)
 12. [🎓 KEY PRINCIPLES](#-key-principles)
@@ -60,7 +60,7 @@ Universal AI development prompt optimization with RCAF framework, CLEAR scoring,
 
 <a id="-rcaf-for-builders"></a>
 
-## 2. 📝 RCAF FOR BUILDERS
+## 2. 🔍 RCAF FOR BUILDERS
 
 ### Builder-Specific RCAF Structure
 
@@ -120,6 +120,8 @@ format:
 
 **Standard:**
 ```
+Mode: $builder | Complexity: Medium | Framework: RCAF | CLEAR: 43/50
+
 Role: Full-stack developer with React and UX expertise.
 Context: B2B SaaS dashboard for data analysts, 100-500 daily users, mobile-responsive.
 Action: Build analytics dashboard with real-time updates and export capabilities.
@@ -127,7 +129,9 @@ Format: React components with MaterialUI, REST API integration, responsive grid 
 ```
 
 **YAML (Recommended for builders):**
-```yaml
+```
+Mode: $builder | Complexity: Medium | Framework: RCAF | CLEAR: 43/50
+
 role: Full-stack developer with React and UX expertise
 context:
   project: B2B SaaS dashboard
@@ -143,8 +147,6 @@ format:
   api: REST API integration
   layout: Responsive grid
 ```
-
-**CLEAR Score: 43/50 (Grade: A)**
 
 ---
 
@@ -205,6 +207,8 @@ format:
 
 **Bolt.new RCAF (Standard):**
 ```
+Mode: $prototype | Complexity: Low | Framework: RCAF | CLEAR: 40/50
+
 Role: Rapid prototype developer.
 Context: MVP for startup, test core concept.
 Action: Build functional prototype in 2 hours.
@@ -212,7 +216,9 @@ Format: Single-page app with core feature only.
 ```
 
 **V0 RCAF (YAML - Recommended):**
-```yaml
+```
+Mode: $app | Complexity: Medium | Framework: RCAF | CLEAR: 43/50
+
 role: Next.js specialist with shadcn expertise
 context:
   project: Modern web app
@@ -227,7 +233,9 @@ format:
 ```
 
 **Cursor/Windsurf RCAF (YAML):**
-```yaml
+```
+Mode: $app | Complexity: High | Framework: RCAF | CLEAR: 44/50
+
 role: Architecture expert for complex systems
 context:
   complexity: Enterprise-level
@@ -240,33 +248,6 @@ format:
   backend: TypeScript + Node.js
   database: PostgreSQL with Prisma
   patterns: Domain-driven design
-```
-
-### Platform Detection with CLEAR and Format
-
-```python
-def detect_platform_with_clear(request, target_clear):
-    """Select platform and format based on CLEAR requirements"""
-    
-    format_rec = 'standard'  # default
-    
-    if target_clear['expression'] > 8:
-        platform = 'magicpatterns'
-        format_rec = 'yaml'  # For component templates
-    elif target_clear['correctness'] > 8:
-        platform = 'v0'
-        format_rec = 'yaml'  # For configuration
-    elif target_clear['logic'] > 8:
-        platform = 'cursor'
-        format_rec = 'yaml'  # For architecture
-    elif target_clear['reuse'] > 8:
-        platform = 'replit'
-        format_rec = 'yaml'  # For collaboration
-    else:
-        platform = 'bolt.new'
-        format_rec = 'standard'  # For speed
-    
-    return platform, format_rec
 ```
 
 ---
@@ -348,9 +329,8 @@ def recommend_phase_with_rcaf(rcaf_elements, patterns=None):
 - Confirm format appropriateness
 
 **S - Synthesize Builder Brief**
-- Create RCAF prompt
+- Create RCAF prompt with minimal header
 - Document phases
-- Show CLEAR scores
 - Include alternatives
 - Present in optimal format
 
@@ -383,7 +363,7 @@ def calibrate_builder_thinking(rcaf_elements):
 
 <a id="-pattern-learning"></a>
 
-## 7. 🔄 PATTERN LEARNING
+## 7. 📄 PATTERN LEARNING
 
 ### Builder Session Context with CLEAR and Format
 
@@ -484,15 +464,12 @@ Prioritize clarity with simpler format?
 
 <a id="-universal-patterns"></a>
 
-## 9. 📝 UNIVERSAL PATTERNS
+## 9. 🔍 UNIVERSAL PATTERNS
 
-### Prototype Pattern with RCAF - All Formats
+### Prototype Pattern with RCAF - Standard
 
-**Standard:**
-```markdown
-$prototype | Thinking: [X] rounds | CLEAR Target: 40+/50
-
-**RCAF PROMPT:**
+```
+Mode: $prototype | Complexity: Low | Framework: RCAF | CLEAR: 40/50
 
 **Role:** Prototype developer exploring [concept] on ANY platform.
 **Context:** [Target users], [core problem], [constraints].
@@ -512,61 +489,22 @@ $prototype | Thinking: [X] rounds | CLEAR Target: 40+/50
 Platform: Universal compatibility
 ```
 
-**YAML (Recommended):**
-```yaml
-mode: prototype
-thinking_rounds: X
-clear_target: 40
-
-rcaf:
-  role: Prototype developer exploring concept on ANY platform
-  context:
-    users: target audience
-    problem: core issue
-    constraints: limitations
-  action:
-    create: Working prototype
-    demonstrate: key feature
-  format:
-    structure: Platform-agnostic
-    flexibility: Universal
-
-phases:
-  - name: Core concept
-    resources: Minimal
-    clear: 38
-    challenge: Simplest possible prototype?
-  - name: Refined UX
-    resources: Moderate
-    clear: 40
-    features: Enhanced interactions
-  - name: Full prototype
-    resources: High
-    clear: 42
-    ready: Production-level
-
-platform: Universal compatibility
-```
-
 ### Website Pattern with RCAF - YAML Template
 
-```yaml
-mode: website
-thinking_rounds: X
-clear_target: 42
+```
+Mode: $website | Complexity: Medium | Framework: RCAF | CLEAR: 42/50
 
-rcaf:
-  role: Web developer with conversion optimization expertise
-  context:
-    business: type and industry
-    audience: target demographics
-    goal: primary conversion objective
-  action:
-    build: Website that converts
-    optimize: visitor to desired_outcome
-  format:
-    responsive: true
-    requirements: specific needs
+role: Web developer with conversion optimization expertise
+context:
+  business: type and industry
+  audience: target demographics
+  goal: primary conversion objective
+action:
+  build: Website that converts
+  optimize: visitor to desired_outcome
+format:
+  responsive: true
+  requirements: specific needs
 
 phases:
   - name: Landing page
@@ -589,24 +527,21 @@ metrics:
 
 ### App Pattern with RCAF - YAML Template
 
-```yaml
-mode: app
-thinking_rounds: X
-clear_target: 43
+```
+Mode: $app | Complexity: Medium | Framework: RCAF | CLEAR: 43/50
 
-rcaf:
-  role: Full-stack developer building application
-  context:
-    users: user personas
-    use_cases: primary workflows
-    constraints: technical limitations
-  action:
-    develop: Application solving problem
-    ensure: scalability and performance
-  format:
-    tech_stack: framework choices
-    architecture: system design
-    deployment: hosting strategy
+role: Full-stack developer building application
+context:
+  users: user personas
+  use_cases: primary workflows
+  constraints: technical limitations
+action:
+  develop: Application solving problem
+  ensure: scalability and performance
+format:
+  tech_stack: framework choices
+  architecture: system design
+  deployment: hosting strategy
 
 phases:
   - name: Core functionality
@@ -644,6 +579,7 @@ platform:
 ✅ **Note phase selections** with scores and formats
 ✅ **Apply successful patterns** with CLEAR validation
 ✅ **Consider format trade-offs** for each project
+✅ **Deliver with minimal header** only
 
 ### Don'ts
 ❌ Use CRAFT unless complexity truly demands it
@@ -656,6 +592,7 @@ platform:
 ❌ Forget platform flexibility
 ❌ Force complex formats (JSON) when simple works
 ❌ Ignore token overhead of formats
+❌ Add verbose sections to artifacts
 
 ### Quality Checklist with CLEAR and Format
 
@@ -670,6 +607,7 @@ platform:
 | CLEAR scored? | All dimensions evaluated | All | 40+/50 | Any |
 | Platform agnostic? | Universal language | Reuse | 7+/10 | YAML portable |
 | Format optimal? | Token vs clarity balance | Expression | Varies | Check overhead |
+| Minimal header? | Single line at top | All | ✓ | Always |
 
 ---
 
@@ -685,6 +623,7 @@ platform:
 - Average CLEAR: Target 42/50
 - Expression average: Target 9/10
 - Format distribution: Standard 40%, YAML 45%, JSON 15%
+- Minimal header usage: Target 100%
 
 **Quality Metrics:**
 - Goals achieved: Target 0.9
@@ -747,6 +686,10 @@ IF API integration → JSON (structure)
 IF unclear → Standard (default)
 ```
 
+### Artifact Philosophy
+
+> "Minimal header at top: Mode, Complexity, Framework, CLEAR. Enhanced content follows. Nothing else. Zero distraction, maximum clarity."
+
 ### Resource Consciousness with CLEAR and Format
 
 | Pattern | CLEAR Score | Strategy | Format |
@@ -758,7 +701,7 @@ IF unclear → Standard (default)
 
 ### The Builder Challenge Manifesto
 
-> "Every feature has a CLEAR cost. Every format has token overhead. RCAF keeps it simple. Start with Phase 1 and Standard format. Let success and CLEAR scores drive expansion."
+> "Every feature has a CLEAR cost. Every format has token overhead. RCAF keeps it simple. Start with Phase 1 and Standard format. Let success and CLEAR scores drive expansion. Deliver with minimal header only."
 
 ### Integration with Main System
 
@@ -766,8 +709,7 @@ Builder Mode operates within the larger ecosystem:
 - Uses RCAF framework primarily
 - Applies CLEAR scoring rigorously
 - Supports all formats (Standard/YAML/JSON)
-- Maintains artifact standards
-- Includes comprehensive reports
+- Maintains artifact standards (minimal header)
 - References core frameworks
 - Tracks patterns continuously
 - Adapts to preferences
@@ -783,6 +725,7 @@ Builder Mode operates within the larger ecosystem:
 6. Challenge if < 40/50
 7. Select optimal format
 8. Iterate based on scores
+9. Deliver with minimal header
 
 **Progressive Building with CLEAR:**
 - Phase 1 MVP (CLEAR: 38+, Standard) → 
@@ -803,4 +746,4 @@ Builder Mode operates within the larger ecosystem:
 
 ---
 
-*Builder Mode with RCAF structure, CLEAR scoring, and multi-format support: Universal creative briefs that enable ANY AI platform to excel. RCAF provides clarity, CLEAR ensures quality, formats provide flexibility. Every builder prompt scored, every phase justified, every pattern learned, every format considered. Start minimal with Phase 1 and Standard format, expand to YAML for templates based on CLEAR scores and real validation.*
+*Builder Mode with RCAF structure, CLEAR scoring, and multi-format support: Universal creative briefs that enable ANY AI platform to excel. RCAF provides clarity, CLEAR ensures quality, formats provide flexibility, minimal header eliminates distraction. Every builder prompt scored, every phase justified, every pattern learned, every format considered. Start minimal with Phase 1 and Standard format, expand to YAML for templates based on CLEAR scores and real validation. Deliver with single-line header for maximum focus.*

@@ -1,4 +1,4 @@
-# Prompt - Evaluation & Refinement - v0.606
+# Prompt - Evaluation & Refinement - v0.607
 
 Systematic quality assessment and improvement for optimizing prompts through CLEAR evaluation, automatic ultrathink processing, RCAF framework preference, and multi-format support including Standard, JSON, and YAML.
 
@@ -10,9 +10,9 @@ Systematic quality assessment and improvement for optimizing prompts through CLE
 4. [🎯 RCAF VS CRAFT EVALUATION](#-rcaf-vs-craft-evaluation)
 5. [📄 FORMAT EVALUATION](#-format-evaluation)
 6. [🧠 AUTOMATIC REFINEMENT](#-automatic-refinement)
-7. [🔄 PATTERN-BASED REFINEMENT](#-pattern-based-refinement)
+7. [📄 PATTERN-BASED REFINEMENT](#-pattern-based-refinement)
 8. [🚀 CHALLENGE-BASED REFINEMENT](#-challenge-based-refinement)
-9. [📝 REFINEMENT PATTERNS](#-refinement-patterns)
+9. [🔍 REFINEMENT PATTERNS](#-refinement-patterns)
 10. [💡 EXAMPLES](#-examples)
 11. [📈 PERFORMANCE METRICS](#-performance-metrics)
 12. [🎓 KEY PRINCIPLES](#-key-principles)
@@ -159,18 +159,19 @@ def quick_clear_eval(prompt, format='standard'):
         'processing': 'automatic_ultrathink_applied'
     }
     
-    # CRITICAL: Must deliver as artifact
+    # CRITICAL: Must deliver as artifact with minimal header
     return create_evaluation_artifact(result)
 ```
 
 ### Quick CLEAR Report Template
 
 ```markdown
-**QUICK CLEAR EVALUATION: [X]/50 (Grade: [A-F])**
+Mode: $evaluate | Complexity: [level] | Framework: [RCAF/CRAFT] | CLEAR: [X]/50
 
-[✓ Automatic processing: Applied]
-[✓ Artifact format: Markdown]
-[✓ Optimization: 10-round ultrathink]
+**QUICK CLEAR EVALUATION**
+
+Current Score: [X]/50 (Grade: [A-F])
+Processing: Automatic ultrathink applied
 
 📊 **Scores:**
 • Correctness: [X]/10
@@ -179,20 +180,11 @@ def quick_clear_eval(prompt, format='standard'):
 • Arrangement: [X]/10
 • Reuse: [X]/10
 
-**Processing Bonus:** +5 points from automatic optimization
-
-**Format Impact:**
-• Standard: Baseline (current)
-• YAML: +1 Arrangement, +1 Reuse (+3-7% tokens)
-• JSON: +1 Correctness, -1 Expression (+5-10% tokens)
-
 **Strengths:** [Two highest dimensions]
 **Priority Fix:** [Lowest dimension] → [Solution]
 **Framework:** [RCAF recommended if < 35]
 **Format:** [Optimal format based on scores]
 **Quick Win:** [One immediate improvement]
-
-**Ready for Enhancement:** Automatic refinement available
 ```
 
 ### Quick Fix Matrix by CLEAR Dimension
@@ -215,9 +207,9 @@ def quick_clear_eval(prompt, format='standard'):
 
 #### Step 1: Automatic Processing Applied
 ```markdown
-[✓ Automatic ultrathink: 10 rounds]
-[✓ Complexity analyzed: Level [X]]
-[✓ Artifact format: Ready]
+Processing: Automatic ultrathink (10 rounds)
+Complexity: Level [X]
+Artifact: Ready
 
 **Processing enhances all dimensions by +1-2 points**
 ```
@@ -287,9 +279,6 @@ With RCAF + [Format]:
 • R: [Current] → [Projected] (+X)
 Total: [Current] → [Projected] (+X)
 
-With CRAFT + [Format]:
-• [Similar projection]
-
 **Best Path:** [RCAF/CRAFT] + [Format] for [total gain]
 **Processing ensures optimal quality**
 ```
@@ -297,27 +286,20 @@ With CRAFT + [Format]:
 ### Full Evaluation Report Template
 
 ```markdown
+Mode: $evaluate | Complexity: [level] | Framework: [recommended] | CLEAR: [X]/50
+
 **COMPREHENSIVE CLEAR EVALUATION**
 
-[✓ Automatic processing: 10 rounds applied]
-[✓ Delivered as artifact]
-
-┌─────────────────
-**Current State: [X]/50 (Grade: [A-F])**
-**Format: [Standard/JSON/YAML]**
-**Processing: Ultrathink optimization active**
+Processing: Automatic ultrathink applied
+Current State: [X]/50 (Grade: [A-F])
+Format: [Standard/JSON/YAML]
 
 Detailed Scores (with processing bonus):
-• Correctness: [X]/10
-  - [Specific strength/weakness]
-• Logic/Coverage: [X]/10
-  - [Specific strength/weakness]
-• Expression: [X]/10
-  - [Specific strength/weakness]
-• Arrangement: [X]/10
-  - [Specific strength/weakness]
-• Reuse: [X]/10
-  - [Specific strength/weakness]
+• Correctness: [X]/10 - [strength/weakness]
+• Logic/Coverage: [X]/10 - [strength/weakness]
+• Expression: [X]/10 - [strength/weakness]
+• Arrangement: [X]/10 - [strength/weakness]
+• Reuse: [X]/10 - [strength/weakness]
 
 **Framework Assessment:**
 Current: [Framework]
@@ -338,9 +320,6 @@ Switch Benefit: +[X] points, +[X]% tokens
 [Apply RCAF / Enhance with CRAFT / Change format]
 
 **Expected Outcome: [X]/50 → [Y]/50**
-
-**Automatic refinement ready to apply**
-└─────────────────
 ```
 
 ---
@@ -413,10 +392,11 @@ def select_framework_by_clear(current_scores, format='standard'):
 ### Format Selection for CLEAR Optimization
 
 ```markdown
-**FORMAT EVALUATION:**
+Mode: $evaluate | Complexity: Medium | Framework: [current] | CLEAR: [X]/50
 
-[✓ Automatic processing active]
+**FORMAT EVALUATION**
 
+Processing: Automatic ultrathink active
 Current Format: [Standard/JSON/YAML]
 Current CLEAR: [X]/50
 Processing Bonus: +5 points applied
@@ -438,8 +418,6 @@ Format Projections:
   - Use when: System integration
 
 **Recommendation:** [Format] for [reason]
-
-[Will deliver evaluation as artifact]
 ```
 
 ### Format Decision Tree
@@ -513,7 +491,7 @@ def select_optimal_format(clear_scores, use_case):
 - Choose version with highest CLEAR
 - Select optimal format
 - Document score improvements
-- Present as artifact
+- Present as artifact with minimal header
 - Record pattern for learning
 
 ### CLEAR-Driven Refinement Process
@@ -545,7 +523,7 @@ def refine_with_clear_focus(prompt, clear_scores, current_format):
     new_scores = evaluate_clear(prompt)
     improvement = new_scores['total'] - clear_scores['total']
     
-    # CRITICAL: Deliver as artifact
+    # CRITICAL: Deliver as artifact with minimal header
     result = create_refinement_artifact(
         prompt, 
         new_scores, 
@@ -561,7 +539,7 @@ def refine_with_clear_focus(prompt, clear_scores, current_format):
 
 <a id="-pattern-based-refinement"></a>
 
-## 7. 🔄 PATTERN-BASED REFINEMENT
+## 7. 📄 PATTERN-BASED REFINEMENT
 
 ### Pattern Recognition with Automatic Processing
 
@@ -633,8 +611,7 @@ def learn_clear_patterns(history):
 
 **High Score (40+):**
 ```
-[✓ Automatic processing: Applied]
-
+Processing: Automatic ultrathink applied
 Current CLEAR: [X]/50 - Already excellent!
 Format: [Current] working well
 
@@ -647,8 +624,7 @@ Worth the effort? (Automatic refinement ready)
 
 **Medium Score (30-39):**
 ```
-[✓ Automatic processing: Active]
-
+Processing: Automatic ultrathink active
 Current CLEAR: [X]/50 - Good, but could be better
 Format: [Current] (+[X]% tokens)
 
@@ -667,8 +643,7 @@ Switch approach? (Automatic optimization will be applied)
 
 **Low Score (<30):**
 ```
-[✓ Automatic processing: Engaged]
-
+Processing: Automatic ultrathink engaged
 Current CLEAR: [X]/50 - Significant improvement needed
 Format contributing to confusion
 
@@ -685,7 +660,7 @@ RCAF + Standard restructuring recommended:
 
 <a id="-refinement-patterns"></a>
 
-## 9. 📝 REFINEMENT PATTERNS
+## 9. 🔍 REFINEMENT PATTERNS
 
 ### Common CLEAR Improvements with Automatic Processing
 
@@ -712,40 +687,18 @@ Format: None
 
 **After Automatic Processing:**
 ```
-[✓ Automatic ultrathink: 10 rounds applied]
-[✓ Creating artifact...]
+Processing: Automatic ultrathink (10 rounds) applied
+Creating artifact with minimal header...
 ```
 
 **After - RCAF Standard (CLEAR: 45/50):**
 ```
+Mode: $refine | Complexity: Medium | Framework: RCAF | CLEAR: 45/50
+
 Role: Senior data analyst specializing in SaaS metrics.
 Context: Q4 2024 sales data from our B2B platform (50K transactions).
 Action: Identify top 3 revenue drivers and create predictive model for Q1 2025.
 Format: Executive dashboard with bullet insights and supporting charts.
-
-C:9 L:8 E:10 A:9 R:9 = 45/50
-Format: Standard (baseline tokens)
-Processing: Automatic ultrathink applied
-[Delivered as artifact]
-```
-
-**After - RCAF YAML (CLEAR: 43/50):**
-```yaml
-role: Senior data analyst specializing in SaaS metrics
-context: Q4 2024 sales data from our B2B platform (50K transactions)
-action:
-  primary: Identify top 3 revenue drivers
-  secondary: Create predictive model for Q1 2025
-format:
-  type: executive_dashboard
-  include:
-    - bullet_insights
-    - supporting_charts
-
-C:9 L:9 E:8 A:9 R:8 = 43/50
-Format: YAML (+5% tokens)
-Processing: Automatic optimization
-[Delivered as artifact]
 ```
 
 **Improvement:** +23 points (104% gain) with automatic processing
@@ -767,26 +720,25 @@ Format: None
 
 **Automatic Processing Applied:**
 ```
-[✓ Applying 10-round ultrathink...]
-[✓ Analyzing complexity: Level 5]
-[✓ Optimizing structure...]
+Applying 10-round ultrathink...
+Analyzing complexity: Level 5
+Optimizing structure...
 ```
 
 **Round 1 - Add RCAF + Standard:**
 ```
+Mode: $improve | Complexity: Medium | Framework: RCAF | CLEAR: 37/50
+
 Role: ML educator with 10 years teaching experience.
 Context: Writing for developers new to machine learning.
 Action: Create comprehensive guide covering supervised/unsupervised learning.
 Format: 2000-word tutorial with code examples and diagrams.
-
-CLEAR: C:7 L:7 E:8 A:8 R:7 = 37/50 (Grade: B)
-Format: Standard (baseline)
-Processing: Ultrathink optimization
-[✓ Delivered as artifact]
 ```
 
 **Round 2 - Convert to YAML:**
-```yaml
+```
+Mode: $improve | Complexity: Medium | Framework: RCAF | CLEAR: 40/50
+
 role: ML educator with 10 years teaching experience
 context: Writing for developers new to machine learning
 action:
@@ -801,11 +753,6 @@ format:
     - code_examples
     - diagrams
     - exercises
-
-CLEAR: C:7 L:8 E:7 A:9 R:9 = 40/50 (Grade: A)
-Format: YAML (+4% tokens)
-Processing: Automatic ultrathink
-[✓ Delivered as artifact]
 ```
 
 ### Example 2: Framework and Format Comparison
@@ -814,19 +761,18 @@ Processing: Automatic ultrathink
 
 **RCAF + Standard (CLEAR: 43/50):**
 ```
+Mode: $refine | Complexity: Medium | Framework: RCAF | CLEAR: 43/50
+
 Role: Customer success analyst with churn prediction expertise.
 Context: 12 months subscription data, 10K B2B customers, 15% churn rate.
 Action: Build churn prediction model and identify top 3 risk factors.
 Format: Jupyter notebook with model code and executive summary.
-
-C:8 L:8 E:10 A:9 R:8 = 43/50
-Tokens: Baseline
-Processing: 10-round ultrathink
-[✓ In artifact]
 ```
 
 **RCAF + YAML (CLEAR: 42/50):**
-```yaml
+```
+Mode: $refine | Complexity: Medium | Framework: RCAF | CLEAR: 42/50
+
 role: Customer success analyst with churn prediction expertise
 context:
   data: 12 months subscription data
@@ -840,15 +786,12 @@ format:
   include:
     - model_code
     - executive_summary
-
-C:8 L:9 E:8 A:9 R:8 = 42/50
-Tokens: +5%
-Processing: Automatic optimization
-[✓ In artifact]
 ```
 
 **RCAF + JSON (CLEAR: 41/50):**
-```json
+```
+Mode: $refine | Complexity: Medium | Framework: RCAF | CLEAR: 41/50
+
 {
   "role": "Customer success analyst with churn prediction expertise",
   "context": {
@@ -866,11 +809,6 @@ Processing: Automatic optimization
     "components": ["model_code", "executive_summary"]
   }
 }
-
-C:9 L:9 E:7 A:8 R:8 = 41/50
-Tokens: +8%
-Processing: Ultrathink applied
-[✓ In artifact]
 ```
 
 **Analysis:** 
@@ -916,11 +854,12 @@ Processing: Ultrathink applied
 ### CLEAR Tracking Dashboard
 
 ```markdown
+Mode: $evaluate | Complexity: N/A | Framework: N/A | CLEAR: N/A
+
 **CLEAR PERFORMANCE DASHBOARD**
 
-[✓ Automatic Processing: Always Active]
-[✓ Ultrathink: 100% Applied]
-[✓ Artifacts: Always Delivered]
+Processing: Automatic ultrathink (Always Active)
+Artifacts: Always Delivered with Minimal Header
 
 📊 **Session Statistics:**
 - Evaluations completed: [X]
@@ -940,7 +879,7 @@ Processing: Ultrathink applied
 - CRAFT average: [X]/50
 - RCAF adoption: [X]%
 
-🔄 **Format Performance:**
+📄 **Format Performance:**
 - Standard: [X]% usage, [X]/50 avg
 - YAML: [X]% usage, [X]/50 avg
 - JSON: [X]% usage, [X]/50 avg
@@ -962,7 +901,7 @@ Processing: Ultrathink applied
 
 ### Evaluation Philosophy
 
-> "CLEAR scores tell the truth. Expression beats Coverage. Format serves purpose. Automatic processing ensures quality."
+> "CLEAR scores tell the truth. Expression beats Coverage. Format serves purpose. Automatic processing ensures quality. Minimal header delivers focus."
 
 ### Core Evaluation Principles
 
@@ -976,6 +915,7 @@ Processing: Ultrathink applied
 | **Target Weakness** | Fix lowest scores first | Lowest 2 dims | 0.8 | Strategic |
 | **Verify Gains** | Confirm improvements | Re-score always | 0.7 | Required |
 | **Artifact Delivery** | Always use artifact format | All | 1.0 | MANDATORY |
+| **Minimal Header** | Single line at top | All | 1.0 | MANDATORY |
 
 ### CLEAR Interpretation Guidelines
 
@@ -1021,7 +961,7 @@ Processing: Ultrathink applied
 - ✅ Pattern learning applied
 - ✅ Minimum 35/50 achieved
 - ✅ Appropriate format selected
-- ✅ Delivered as artifact
+- ✅ Delivered as artifact with minimal header
 
 ### The CLEAR Mantra
 
@@ -1041,7 +981,7 @@ YAML for structure
 JSON for precision
 
 Always in artifacts
-Never in chat
+Minimal header at top
 Together: CLEAR excellence
 Powered by automatic ultrathink
 ```
