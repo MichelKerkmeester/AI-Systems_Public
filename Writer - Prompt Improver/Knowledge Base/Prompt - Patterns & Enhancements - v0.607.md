@@ -1,13 +1,13 @@
-# Prompt - Patterns & Enhancements - v0.606
+# Prompt - Patterns & Enhancements - v0.607
 
 Comprehensive prompt engineering framework with RCAF/CRAFT patterns, CLEAR evaluation, advanced reasoning techniques, and performance-driven optimization strategies with automatic ultrathink processing and support for Standard, JSON, and YAML formats.
 
-**CRITICAL:** All patterns benefit from automatic 10-round ultrathink processing. All enhancements must be delivered as artifacts.
+**CRITICAL:** All patterns benefit from automatic 10-round ultrathink processing. All enhancements must be delivered as artifacts with minimal header only.
 
 ## 📋 Table of Contents
 
 1. [🚀 QUICK TEMPLATES](#-quick-templates)
-2. [📝 CORE PATTERNS - RCAF & CRAFT](#-core-patterns---rcaf--craft)
+2. [🔍 CORE PATTERNS - RCAF & CRAFT](#-core-patterns---rcaf--craft)
 3. [✅ CLEAR EVALUATION SYSTEM](#-clear-evaluation-system)
 4. [🧠 ADVANCED REASONING TECHNIQUES](#-advanced-reasoning-techniques)
 5. [📊 FORMAT EFFICIENCY](#-format-efficiency)
@@ -55,14 +55,20 @@ def apply_template_with_optimization():
 
 ### RCAF Quick Template
 ```
-[🎯 Automatic optimization active]
+Role: [One sentence expertise]
+Context: [Essential background only]
+Action: [Specific, measurable task]
+Format: [Clear output requirements]
+```
+
+**Delivered as artifact:**
+```
+Mode: $improve | Complexity: Medium | Framework: RCAF | CLEAR: 43/50
 
 Role: [One sentence expertise]
 Context: [Essential background only]
 Action: [Specific, measurable task]
 Format: [Clear output requirements]
-
-[Delivered as enhanced artifact]
 ```
 
 ### Token Efficiency Reference
@@ -88,7 +94,7 @@ Format: [Clear output requirements]
 
 <a id="-core-patterns---rcaf--craft"></a>
 
-## 2. 📝 CORE PATTERNS - RCAF & CRAFT
+## 2. 🔍 CORE PATTERNS - RCAF & CRAFT
 
 ### Pattern Application with Automatic Enhancement
 
@@ -120,34 +126,37 @@ class PatternApplication:
 
 **Standard RCAF Template:**
 ```
-[🎯 Automatic enhancement active]
+Role: [Specific expertise in one sentence]
+Context: [Essential information only - 1-2 sentences max]
+Action: [Clear, specific, measurable task]
+Format: [Output structure and requirements]
+```
+
+**Artifact Format:**
+```
+Mode: $improve | Complexity: Medium | Framework: RCAF | CLEAR: 43/50
 
 Role: [Specific expertise in one sentence]
 Context: [Essential information only - 1-2 sentences max]
 Action: [Clear, specific, measurable task]
 Format: [Output structure and requirements]
-
-[Optimized and delivered as artifact]
 ```
 
-**YAML RCAF Template:**
-```yaml
-# Automatic processing applied
-processing:
-  mode: automatic_ultrathink
-  depth: 10_rounds
-  
-rcaf:
-  role: Specific expertise in one sentence
-  context: Essential information only - 1-2 sentences max
-  action: Clear, specific, measurable task
-  format: Output structure and requirements
+**YAML RCAF Artifact:**
+```
+Mode: $yaml | Complexity: Medium | Framework: RCAF | CLEAR: 42/50
+
+role: Specific expertise in one sentence
+context: Essential information only - 1-2 sentences max
+action: Clear, specific, measurable task
+format: Output structure and requirements
 ```
 
-**JSON RCAF Template:**
-```json
+**JSON RCAF Artifact:**
+```
+Mode: $json | Complexity: Medium | Framework: RCAF | CLEAR: 41/50
+
 {
-  "_processing": "automatic_ultrathink_applied",
   "role": "Specific expertise in one sentence",
   "context": "Essential information only - 1-2 sentences max",
   "action": "Clear, specific, measurable task",
@@ -155,18 +164,15 @@ rcaf:
 }
 ```
 
-**Real Example - Meeting Summary:**
+**Real Example - Meeting Summary Artifact:**
 
-```markdown
-[🎯 Ultrathink processing: Applied]
+```
+Mode: $improve | Complexity: Medium | Framework: RCAF | CLEAR: 44/50
 
-**Standard:**
 Role: You are the Chief of Staff with executive communication expertise.
 Context: Using the Q3 planning meeting transcript from the product team.
 Action: Extract all decisions, risks, action items with owners, and key discussion points.
 Format: Return exactly 7 bullets for executives - must include at least one risk and one decision. Use neutral, concise tone with no jargon.
-
-[Creating optimized artifact...]
 ```
 
 ### CRAFT Pattern (Alternative - When Comprehensive Needed)
@@ -176,22 +182,29 @@ Format: Return exactly 7 bullets for executives - must include at least one risk
 **Automatic Complexity Check:**
 ```python
 if complexity < 7:
-    print("📍 RCAF might be clearer. Use simplified approach? (recommended)")
+    print("🔍 RCAF might be clearer. Use simplified approach? (recommended)")
     if user_agrees:
         return use_rcaf_with_optimization()
 ```
 
 **Standard CRAFT Template:**
 ```
-[🎯 Complexity 7+ detected - comprehensive processing]
+Context: [Full background, assumptions, constraints]
+Role: [Detailed expertise and perspective]
+Action: [Comprehensive task breakdown]
+Format: [Detailed output structure]
+Target: [Success metrics and outcomes]
+```
+
+**Artifact Format:**
+```
+Mode: $refine | Complexity: High | Framework: CRAFT | CLEAR: 41/50
 
 Context: [Full background, assumptions, constraints]
 Role: [Detailed expertise and perspective]
 Action: [Comprehensive task breakdown]
 Format: [Detailed output structure]
 Target: [Success metrics and outcomes]
-
-[Enhanced with ultrathink, delivered as artifact]
 ```
 
 ### Pattern Comparison with CLEAR Scores
@@ -203,9 +216,9 @@ Target: [Success metrics and outcomes]
 
 ### Chain-of-Thought Enhanced RCAF
 
-**Standard RCAF + CoT:**
+**Standard RCAF + CoT Artifact:**
 ```
-[🎯 Reasoning enhancement active]
+Mode: $improve | Complexity: Medium | Framework: RCAF | CLEAR: 44/50
 
 Role: As [expert], approach this step-by-step.
 Context: [Situation requiring reasoning]
@@ -216,8 +229,6 @@ Action:
 4. Finally, synthesize [conclusions]
 Show reasoning at each step.
 Format: [Structured reasoning output]
-
-[Deep reasoning applied automatically]
 ```
 
 ---
@@ -232,7 +243,7 @@ Format: [Structured reasoning output]
 
 Each dimension scored 1-10, total 50 points possible.
 
-**Automatic scoring before and after enhancement, delivered in artifact.**
+**Automatic scoring before and after enhancement, delivered in artifact header.**
 
 ### Format Impact on CLEAR Scores
 
@@ -242,20 +253,17 @@ Each dimension scored 1-10, total 50 points possible.
 | **JSON** | +1 | +1 | -1 | +1 | +1 | 41/50 | Structured |
 | **YAML** | 0 | +1 | 0 | +1 | +1 | 42/50 | Template-ready |
 
-### CLEAR Application Examples
+### CLEAR Application Example
 
-**High-Scoring RCAF Prompt (45/50):**
+**High-Scoring RCAF Artifact (45/50):**
 
-```markdown
-[🎯 Automatic optimization applied]
+```
+Mode: $improve | Complexity: Medium | Framework: RCAF | CLEAR: 45/50
 
-**Standard:**
 Role: Senior data analyst specializing in customer behavior.
 Context: Q4 2024 sales data from e-commerce platform, 100K transactions.
 Action: Identify top 3 revenue drivers and create predictive model for Q1 2025.
 Format: Executive dashboard with bullet insights and visual charts.
-
-[Enhanced with ultrathink - CLEAR scores included in artifact]
 ```
 
 ---
@@ -286,9 +294,9 @@ def apply_reasoning_pattern(pattern_type, content):
 
 ### Chain-of-Thought (CoT) with RCAF
 
-**Standard RCAF-CoT Integration:**
+**Standard RCAF-CoT Artifact:**
 ```
-[🎯 Deep reasoning processing]
+Mode: $improve | Complexity: High | Framework: RCAF | CLEAR: 44/50
 
 Role: Expert problem solver using systematic reasoning.
 Context: [Complex problem requiring step-by-step thinking]
@@ -298,15 +306,13 @@ Action: Solve by thinking through each step explicitly:
 - Step 3: [Build solution]
 - Step 4: [Verify result]
 Format: Show all reasoning with final answer highlighted.
-
-[Reasoning enhanced automatically]
 ```
 
 ### Few-Shot Learning with RCAF
 
-**Standard RCAF Few-Shot:**
+**Standard RCAF Few-Shot Artifact:**
 ```
-[🎯 Pattern learning active]
+Mode: $improve | Complexity: Medium | Framework: RCAF | CLEAR: 42/50
 
 Role: Pattern recognition expert.
 Context: Learn from these examples to handle new case.
@@ -315,8 +321,6 @@ Format:
 Example 1: Input: [x] → Output: [y]
 Example 2: Input: [x] → Output: [y]
 Now apply to: Input: [new] → Output: [generate]
-
-[Pattern application optimized]
 ```
 
 ---
@@ -400,18 +404,6 @@ def assess_enhancement_need(prompt):
     return enhance_with_atlas(factors, framework, processing)
 ```
 
-**Transform Phase with RCAF Priority:**
-```
-[🎯 Automatic optimization active]
-
-Create three enhancement levels:
-1. Minimal: RCAF only (4 elements) - Auto-enhanced
-2. Standard: RCAF with depth - Fully optimized
-3. Comprehensive: CRAFT if needed - Deep processing
-
-[All delivered as optimized artifacts]
-```
-
 ---
 
 <a id="-react-pattern---reasoning--action"></a>
@@ -420,9 +412,9 @@ Create three enhancement levels:
 
 ### ReAct with RCAF Structure
 
-**Standard RCAF-ReAct Format:**
+**Standard RCAF-ReAct Artifact:**
 ```
-[🎯 Iterative processing with ultrathink]
+Mode: $improve | Complexity: High | Framework: RCAF | CLEAR: 42/50
 
 Role: Problem-solving agent using reasoning and action cycles.
 Context: [Complex task requiring iterative approach]
@@ -439,17 +431,12 @@ Observation 2: [result]
 Continue until solution achieved.
 
 Format: Document all thoughts, actions, and observations. Conclude with final answer.
-
-[Complete ReAct cycle enhanced automatically]
 ```
 
-**YAML RCAF-ReAct:**
-```yaml
-# Automatic processing applied
-processing:
-  mode: automatic_ultrathink
-  depth: 10_rounds
-  
+**YAML RCAF-ReAct Artifact:**
+```
+Mode: $yaml | Complexity: High | Framework: RCAF | CLEAR: 42/50
+
 role: Problem-solving agent using reasoning and action cycles
 context: Complex task requiring iterative approach
 action:
@@ -469,8 +456,6 @@ format:
   conclusion: final answer
 ```
 
-**CLEAR Score: 42/50** - Good structure and logic
-
 ---
 
 <a id="-tree-of-thoughts-tot-pattern"></a>
@@ -479,9 +464,9 @@ format:
 
 ### ToT with RCAF Framework
 
-**Standard RCAF-ToT Structure:**
+**Standard RCAF-ToT Artifact:**
 ```
-[🎯 Branching analysis with deep processing]
+Mode: $improve | Complexity: High | Framework: RCAF | CLEAR: 43/50
 
 Role: Strategic decision analyst exploring solution paths.
 Context: [Complex decision with multiple approaches]
@@ -506,8 +491,6 @@ Branch 3: [Approach C]
 - Score: [1-10]
 
 Format: Recommendation with rationale based on highest score.
-
-[Tree analysis optimized automatically]
 ```
 
 ---
@@ -622,7 +605,7 @@ def optimize_prompt_performance(prompt, clear_scores, format_pref=None):
     if format_pref == 'yaml' and clear_scores['reuse'] < 8:
         prompt = convert_to_yaml_template(prompt)
     
-    # Deliver as enhanced artifact
+    # Deliver as enhanced artifact with minimal header
     return create_optimized_artifact(prompt, processing)
 ```
 
@@ -679,9 +662,9 @@ def select_recovery_pattern(error_type, current_clear_scores):
 
 ### Meta-Prompt Generator with RCAF/CLEAR
 
-**Standard Meta-Prompt:**
+**Standard Meta-Prompt Artifact:**
 ```
-[🎯 Meta-generation with ultrathink]
+Mode: $refine | Complexity: High | Framework: RCAF | CLEAR: 44/50
 
 Role: Expert prompt engineer optimizing for clarity and effectiveness.
 Context: Creating optimal prompt for: [task description]
@@ -693,8 +676,6 @@ Action: Generate RCAF-structured prompt considering:
 - Automatic optimization applied
 - Mandatory artifact delivery
 Format: RCAF prompt with explanation of design choices and CLEAR score projection.
-
-[Meta-prompt enhanced automatically]
 ```
 
 ---
@@ -705,9 +686,9 @@ Format: RCAF prompt with explanation of design choices and CLEAR score projectio
 
 ### Safety Integration with RCAF
 
-**Standard Safety Pattern:**
+**Standard Safety Pattern Artifact:**
 ```
-[🎯 Safety-enhanced processing]
+Mode: $improve | Complexity: Medium | Framework: RCAF | CLEAR: 42/50
 
 Role: Responsible AI assistant with safety priorities.
 Context: Request: [user request] | Safety considerations: [list]
@@ -718,8 +699,6 @@ Action: Process request while:
 - Preventing bias
 - Providing safe alternatives if needed
 Format: Safe response with explanation if request modified.
-
-[Safety checks applied automatically]
 ```
 
 ---
@@ -731,37 +710,37 @@ Format: Safe response with explanation if request modified.
 ### Framework Selection Hierarchy
 
 ```
-        ┌─────────────────
+        ┌─────────────────┐
         │      RCAF       │ (Default: 1-4 complexity, 70% of cases)
         │  [Ultrathink]   │ [Automatic optimization]
-        ├─────────────────
+        ├─────────────────┤
         │   RCAF + CoT    │ (Reasoning: 4-6 complexity)
         │  [Deep reason]  │ [Step-by-step enhancement]
-        ├─────────────────
+        ├─────────────────┤
         │  RCAF + ReAct   │ (Iterative: 5-7 complexity)
         │   [Iterative]   │ [Cycle optimization]
-        ├─────────────────
+        ├─────────────────┤
         │   RCAF + ToT    │ (Decisions: 6-8 complexity)
         │   [Branching]   │ [Path analysis]
-        ├─────────────────
+        ├─────────────────┤
         │     CRAFT       │ (Comprehensive: 7+ complexity, 15% of cases)
         │     [Full]      │ [Complete coverage]
-        └─────────────────
+        └─────────────────┘
 ```
 
 ### Format Selection Philosophy
 
 ```
-        ┌─────────────────
+        ┌─────────────────┐
         │    Standard     │ (Default: 60% of cases, maximum clarity)
         │   [Optimized]   │
-        ├─────────────────
+        ├─────────────────┤
         │      YAML       │ (Config/Templates: 20%, human-editable)
         │   [Structured]  │
-        ├─────────────────
+        ├─────────────────┤
         │      JSON       │ (APIs: 20%, machine-parseable)
         │   [Formatted]   │
-        └─────────────────
+        └─────────────────┘
 ```
 
 ### Core Guidelines with CLEAR
@@ -770,6 +749,7 @@ Format: Safe response with explanation if request modified.
 |-----------|-------------|----------|-------------|------------|
 | **Automatic Excellence** | Ultrathink handles optimization | 1.0 | All | Always |
 | **Artifact Always** | Never deliver in chat | 1.0 | All | Mandatory |
+| **Minimal Header Only** | Single line + content | 1.0 | All | Standard |
 | **Clarity First** | RCAF's 4 elements beat CRAFT's 5 | 0.9 | Expression | Enhanced |
 | **Complete Coverage** | Include all requirements | 0.9 | Logic/Coverage | Deep |
 | **Correct Information** | Accuracy matters most | 0.9 | Correctness | Verified |
@@ -807,6 +787,7 @@ def should_use_pattern(task, pattern, format):
 **Excellent Prompt Engineering Achieves:**
 - ✅ 100% automatic processing application
 - ✅ 100% artifact delivery compliance
+- ✅ 100% minimal header format (no extra sections)
 - ✅ RCAF used 70%+ of the time
 - ✅ Average CLEAR score > 43/50
 - ✅ Expression score > 9/10
@@ -823,29 +804,16 @@ def should_use_pattern(task, pattern, format):
 ```
 "Analyze customer data and tell me what's important"
 CLEAR: 20/50
-[No optimization]
 ```
 
-**After - Process:**
+**After - Artifact:**
 ```
-[🎯 Applying automatic ultrathink processing...]
-[Complexity detected: Medium]
-[Framework: RCAF selected]
-[Optimization: Applied]
-```
-
-**After - Standard (RCAF):**
-```
-[✅ Enhanced with 10-round ultrathink]
+Mode: $improve | Complexity: Medium | Framework: RCAF | CLEAR: 45/50
 
 Role: Customer analytics specialist with churn prediction expertise.
 Context: 12 months of subscription data for 50K SaaS customers.
 Action: Identify top 3 churn indicators and segment at-risk customers.
 Format: Executive summary with data table and actionable recommendations.
-
-CLEAR: 45/50
-
-[Delivered as optimized artifact]
 ```
 
 **Improvement:** +25 points (125% improvement) with automatic enhancement
@@ -853,3 +821,7 @@ CLEAR: 45/50
 **Format Guides:** For complete format specifications:
 - → **Prompt - JSON Format Guide.md**
 - → **Prompt - YAML Format Guide.md**
+
+---
+
+*Patterns & Enhancements: Comprehensive framework with RCAF priority, CLEAR evaluation, automatic ultrathink, and ultra-minimal artifact delivery. Every pattern optimized, every enhancement measured, every artifact delivered with single-line header only.*
