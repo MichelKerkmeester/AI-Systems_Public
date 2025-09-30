@@ -1,95 +1,79 @@
-# Prompt Engineering Assistant - User Guide v0.884
+# Prompt Engineering Assistant - User Guide v0.846
 
-A revolutionary prompt enhancement system using RCAF framework for clarity, CLEAR evaluation for quality assurance, and ATLAS thinking for intelligent optimization. Transforms vague requests into clear, measurable, high-scoring prompts with support for Standard, JSON, and YAML formats. **Now with 100% user autonomy through mandatory wait states at all decision points.**
+A revolutionary prompt enhancement system using RCAF framework for clarity, CLEAR evaluation for quality assurance, and ATLAS thinking for intelligent optimization. Transforms vague requests into clear, measurable, high-scoring prompts with support for Standard, JSON, and YAML formats. **Ultra-minimal artifact delivery: single-line header + content only.**
 
 ## 📋 Table of Contents
 
-- [🆕 What's New in v0.884](#whats-new-in-v0884)
+- [🆕 What's New in v0.846](#whats-new-in-v0846)
 - [✨ Key Features](#key-features)
 - [🚀 Quick Setup](#quick-setup)
 - [🎛️ Operating Modes](#operating-modes)
-- [🔄 Format Options](#format-options)
+- [📄 Format Options](#format-options)
 - [🧠 ATLAS Thinking Framework](#atlas-thinking-framework)
 - [🚀 Challenge Mode Philosophy](#challenge-mode-philosophy)
 - [⭐ RCAF Framework](#rcaf-framework)
 - [✅ CLEAR Evaluation System](#clear-evaluation-system)
+- [📦 Artifact Delivery Format](#artifact-delivery-format)
 - [🚨 REPAIR Error Protocol](#repair-error-protocol)
 - [📊 Performance Metrics](#performance-metrics)
 - [🗃️ Past Chats Integration](#past-chats-integration)
 
-.
+---
 
-<a id="whats-new-in-v0884"></a>
-## 🆕 What's New in v0.884
+<a id="whats-new-in-v0846"></a>
+## 🆕 What's New in v0.846
 
-### CRITICAL UPDATE: 100% User Autonomy 🎯
-**The system now WAITS for explicit user input at EVERY decision point. No automatic selections. No pattern-based assumptions. Complete user control.**
+### CRITICAL UPDATE: Streamlined User Experience 🎯
+**System now processes automatically without exposing technical implementation details.**
 
-### Mandatory Wait States Implemented
-- **Thinking Rounds**: ALWAYS waits for user input (1-10)
-- **Challenge Response**: ALWAYS waits when presenting options (3+ rounds)
-- **Framework Selection**: ALWAYS waits for user choice (5-6 rounds)
-- **Format Preference**: ALWAYS waits for user selection
-
-### User Control Enhancements
-- **Patterns as Suggestions Only**: Historical patterns NEVER force choices
-- **Override Always Available**: User can ignore all suggestions
-- **Explicit Wait Messages**: Clear "[WAITING FOR YOUR INPUT]" indicators
-- **No Auto-Progression**: System blocks until user responds
-
-### Framework Selection at Complexity 5-6
+### Enhanced User Experience
 ```
-**Framework Selection Required:**
+Mode: $improve | Complexity: Medium | Framework: RCAF | CLEAR: 43/50
 
-Option A: RCAF (4 elements, clearer)
-Option B: CRAFT (5 elements, comprehensive)
-
-Which framework? (A or B)
-[WAITING FOR YOUR FRAMEWORK CHOICE]
+[Enhanced prompt content]
 ```
 
-### Challenge Mode Always Waits
-```
-**Enhancement Options:**
+**What's improved:**
+- ✅ Automatic processing (no technical jargon)
+- ✅ Clean, professional interactions
+- ✅ Focus on results, not methods
+- ✅ Streamlined decision points
 
-Option A: Minimal (1-2 rounds)
-Option B: Standard (3-4 rounds)  
-Option C: Comprehensive (5+ rounds)
+**What's removed:**
+- ❌ Technical processing terminology
+- ❌ Implementation details in chat
+- ❌ Unnecessary complexity
+- ❌ Method-focused language
 
-Please select: (A, B, or C)
-[WAITING FOR YOUR SELECTION]
-```
+### System Improvements from v0.845
+- **Cleaner Conversations**: Focus on outcomes, not processes
+- **Professional Tone**: No technical implementation details
+- **Better Readability**: Simplified user interactions
+- **Faster Understanding**: Clear decision points only
 
-### System Improvements from v0.840
-- **Enforced Checkpoints**: Cannot proceed without user input
-- **Pattern Override Safeguards**: Suggestions never restrict options
-- **Enhanced Error Recovery**: Detects missing wait states
-- **Compliance Tracking**: 100% wait state enforcement
-
-.
+---
 
 <a id="key-features"></a>
 ## ✨ Key Features
 
-### NEW: Mandatory Wait States
-- **100% User Control**: System WAITS at every decision point
-- **No Auto-Selection**: Patterns suggest but NEVER choose
-- **Explicit Confirmations**: Clear wait messages at each step
-- **Override Always Available**: Ignore any suggestion freely
+### NEW: Professional User Experience
+- **Automatic Processing**: System handles optimization internally
+- **Clean Interactions**: No technical jargon
+- **Clear Decisions**: Simple choices when needed
+- **Results Focus**: What you get, not how it works
 
 ### Core Features
 - **Interactive Mode DEFAULT**: System always starts with guided discovery
 - **Three Format Options**: Standard (clarity), YAML (templates), JSON (APIs)
 - **RCAF Framework**: Simple 4-element structure for 70% of prompts
-- **CLEAR Scoring**: Every prompt evaluated on 5 dimensions
+- **CLEAR Scoring**: Every prompt evaluated on 5 dimensions (shown in header)
+- **Automatic Processing**: Comprehensive analysis applied to all enhancements
 - **Past Chats Integration**: Searches conversation history for context (suggestions only)
-- **MANDATORY Thinking Rounds**: 1-10 - always asked, always waits
 - **Token Transparency**: Shows format overhead for informed decisions
-- **Challenge Mode**: Simplifies to RCAF when possible (waits for acceptance)
-- **User Control Absolute**: Patterns inform but never restrict
+- **Challenge Mode**: Simplifies to RCAF when possible
 - **Universal Platform Support**: Works on ALL AI platforms
 
-.
+---
 
 <a id="quick-setup"></a>
 ## 🚀 Quick Setup
@@ -102,15 +86,15 @@ Please select: (A, B, or C)
 ### Step 2: Add System Instructions
 1. Click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Writer - Prompt Improver - v0.884.md`
+3. Copy and paste: `Writer - Prompt Improver - v0.846.md`
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
 Add these documents to your project's knowledge base:
 
 **Core System Documents:**
-- `Prompt - ATLAS Thinking Framework - v0.206.md`
-- `Prompt - Interactive Mode - v0.616.md`
+- `Prompt - ATLAS Thinking Framework - v0.209.md`
+- `Prompt - Interactive Mode - v0.619.md`
 - `Prompt - Artifact Standards & Templates.md`
 - `Prompt - Patterns & Enhancements.md`
 - `Prompt - Evaluation & Refinement.md`
@@ -122,156 +106,172 @@ Add these documents to your project's knowledge base:
 **Mode Documents:**
 - `Prompt - Builder Mode.md`
 
-### Step 4: Experience User Control
+### Step 4: Start Enhancing
 ```
-write about dogs              # Interactive Mode - ALL waits enforced
-$improve analyze data         # Will wait for rounds, challenge, format
-$yaml create config          # Will wait for rounds and confirmation
-$json api endpoint           # Will wait for all inputs
-$clear                       # Show current CLEAR scores
+write about dogs              # Interactive Mode with minimal artifacts
+$improve analyze data         # Enhanced with single-line header
+$yaml create config          # YAML format, minimal artifact
+$json api endpoint           # JSON format, minimal artifact
 ```
 
-.
+---
 
 <a id="operating-modes"></a>
 ## 🎛️ Operating Modes
 
-### Core Modes with Wait States
+### Core Modes with Minimal Artifacts
 
-| Mode | Activation | Best For | Framework | CLEAR Target | Wait States Required |
-|------|------------|----------|-----------|--------------|---------------------|
-| **Interactive** | DEFAULT | Discovery | RCAF focus | 40+/50 | ALL: rounds, challenge, framework, format |
-| **$short** | `$short`/`$s` | Simple clarity | RCAF | 35+/50 | Rounds + Format |
-| **$improve** | `$improve`/`$i` | Most improvements | RCAF | 40+/50 | Rounds + Challenge + Format |
-| **$refine** | `$refine`/`$r` | Maximum quality | RCAF/CRAFT | 43+/50 | Rounds + Challenge + Format |
-| **$builder** | `$builder`/`$b` | Platform prompts | RCAF | 40+/50 | Rounds + Challenge + Format |
-| **$json** | `$json`/`$j` | API format | RCAF | 38+/50 | Rounds + Challenge (3+) |
-| **$yaml** | `$yaml`/`$y` | Config/templates | RCAF | 40+/50 | Rounds + Challenge (3+) |
+| Mode | Activation | Best For | Framework | CLEAR Target | Artifact Format |
+|------|------------|----------|-----------|--------------|-----------------|
+| **Interactive** | DEFAULT | Discovery | RCAF focus | 40+/50 | Minimal |
+| **$short** | `$short`/`$s` | Simple clarity | RCAF | 35+/50 | Minimal |
+| **$improve** | `$improve`/`$i` | Most improvements | RCAF | 40+/50 | Minimal |
+| **$refine** | `$refine`/`$r` | Maximum quality | RCAF/CRAFT | 43+/50 | Minimal |
+| **$builder** | `$builder`/`$b` | Platform prompts | RCAF | 40+/50 | Minimal |
+| **$quick** | `$quick`/`$q` | Fast processing | RCAF | 38+/50 | Minimal |
+| **$json** | `$json`/`$j` | API format | RCAF | 38+/50 | Minimal |
+| **$yaml** | `$yaml`/`$y` | Config/templates | RCAF | 40+/50 | Minimal |
 
-### User Input Flow Example
+### Example Flow
 ```
 User: $improve my prompt
-System: How many thinking rounds? (1-10)
-        [WAITING FOR YOUR INPUT]
-User: 4
-System: Since you chose 4 rounds, enhancement options:
-        A: Minimal  B: Standard  C: Comprehensive
-        [WAITING FOR YOUR SELECTION]
-User: B
-System: Which format would you prefer?
+
+System: Analyzing your request...
+        
+        Which format would you prefer?
         1: Standard  2: YAML  3: JSON
-        [WAITING FOR YOUR FORMAT PREFERENCE]
+
 User: 1
-System: [Creates enhancement with all user choices]
+
+System: [Creates artifact]
 ```
 
-.
+**Artifact Delivered:**
+```
+Mode: $improve | Complexity: Medium | Framework: RCAF | CLEAR: 43/50
+
+Role: [Specific expertise]
+Context: [Essential background]
+Action: [Clear measurable task]
+Format: [Output requirements]
+```
+
+---
 
 <a id="format-options"></a>
-## 🔄 Format Options
+## 📄 Format Options
 
-### Three Format System - User Selects
+### Three Format System
 
-| Format | Token Impact | Best For | CLEAR Average | User Wait |
-|--------|--------------|----------|---------------|-----------|
-| **Standard** | Baseline | Natural language, clarity | 43/50 | Always |
-| **YAML** | +3-7% | Templates, config, human-editable | 42/50 | Always |
-| **JSON** | +5-10% | APIs, structured data | 41/50 | Always |
+| Format | Token Impact | Best For | CLEAR Average | Artifact Format |
+|--------|--------------|----------|---------------|-----------------|
+| **Standard** | Baseline | Natural language, clarity | 43/50 | Minimal |
+| **YAML** | +3-7% | Templates, config, human-editable | 42/50 | Minimal |
+| **JSON** | +5-10% | APIs, structured data | 41/50 | Minimal |
 
-### Format Selection Process
+### Format Examples
+
+**Standard Artifact:**
 ```
-System presents all three options
-↓
-Shows token impact and use cases
-↓
-[WAITING FOR YOUR FORMAT PREFERENCE]
-↓
-User selects 1, 2, or 3
-↓
-System applies chosen format
+Mode: $improve | Complexity: Medium | Framework: RCAF | CLEAR: 43/50
+
+Role: Data analyst with SaaS metrics expertise.
+Context: Q4 2024 revenue data from B2B platform.
+Action: Calculate MRR growth and identify top 3 trends.
+Format: Executive summary with metrics and charts.
 ```
 
-### YAML Advantages
-- Human-readable with minimal syntax
-- Supports comments for documentation
-- Multi-line string handling
-- Perfect for templates and configurations
-- Lower token overhead than JSON
+**YAML Artifact:**
+```
+Mode: $yaml | Complexity: Medium | Framework: RCAF | CLEAR: 42/50
 
-.
+role: Data analyst with SaaS metrics expertise
+context: Q4 2024 revenue data from B2B platform
+action: Calculate MRR growth and identify top 3 trends
+format:
+  structure: executive_summary
+  include:
+    - metrics
+    - charts
+```
+
+**JSON Artifact:**
+```
+Mode: $json | Complexity: Medium | Framework: RCAF | CLEAR: 41/50
+
+{
+  "role": "Data analyst with SaaS metrics expertise",
+  "context": "Q4 2024 revenue data from B2B platform",
+  "action": "Calculate MRR growth and identify top 3 trends",
+  "format": "Executive summary with metrics and charts"
+}
+```
+
+---
 
 <a id="atlas-thinking-framework"></a>
 ## 🧠 ATLAS Thinking Framework
 
-### User-Controlled Process (v0.206)
+### Automatic Processing (v0.209)
+
+**Standard Mode:** Comprehensive analysis (automatic)  
+**Quick Mode:** Streamlined processing (automatic)
+
 ```
-How many thinking rounds would you like? (1-10)
-[WAITING FOR YOUR INPUT - Cannot proceed]
-
-Based on your request, I recommend: 5 rounds
-• Clarity: Medium - needs structure
-• Complexity: Moderate - borderline
-• Enhancement: Standard improvement
-
-Your choice: 5
-
-At 5 rounds, you must choose framework:
-A: RCAF (4 elements, clearer)
-B: CRAFT (5 elements, comprehensive)
-[WAITING FOR YOUR FRAMEWORK CHOICE]
-
-Your choice: A
-
-Format options:
-1. Standard (baseline) - maximum clarity
-2. YAML (+3-7%) - template-ready
-3. JSON (+5-10%) - API-ready
-[WAITING FOR YOUR FORMAT PREFERENCE]
-
-Your choice: 1
-
-Projected CLEAR: 42/50 (Grade: A)
+System applies automatic processing
+↓
+Analyzes complexity: Medium (Level 5)
+↓
+Framework decision:
+- Complexity 1-4: RCAF automatic
+- Complexity 5-6: Offers user choice
+- Complexity 7+: Suggests simplification
+↓
+Creates enhancement with selected framework
+↓
+Delivers as minimal artifact
 ```
 
 ### Framework Phases with CLEAR
 - **A** - Assess & score baseline CLEAR
-- **T** - Transform with RCAF/CRAFT choice (WAITS at 5-6)
+- **T** - Transform with RCAF/CRAFT
 - **L** - Layer targeting weak CLEAR dimensions
 - **A** - Assess CLEAR improvements
-- **S** - Synthesize with final CLEAR scores
+- **S** - Synthesize and deliver (minimal artifact)
 
-.
+---
 
 <a id="challenge-mode-philosophy"></a>
 ## 🚀 Challenge Mode Philosophy
 
-> "RCAF's 4 elements beat CRAFT's 5. Expression beats Coverage. Start simple. **User decides.**"
+> "RCAF's 4 elements beat CRAFT's 5. Expression beats Coverage. Start simple."
 
-### CLEAR-Based Challenges with Wait States
+### CLEAR-Based Challenges
 
-| CLEAR Score | Challenge Level | Action | Wait Required |
-|-------------|----------------|--------|---------------|
-| 45-50 | None | Ship it | No |
-| 40-44 | Gentle | "Could RCAF improve Expression?" | Yes |
-| 35-39 | Moderate | "RCAF would gain +3 clarity" | Yes |
-| 30-34 | Strong | "Switch to RCAF for +5 points" | Yes |
-| <30 | Aggressive | "Must use RCAF" | Yes |
+| CLEAR Score | Challenge Level | Action | Artifact Result |
+|-------------|----------------|--------|-----------------|
+| 45-50 | None | Ship it | Minimal format |
+| 40-44 | Gentle | "Could RCAF improve?" | Minimal format |
+| 35-39 | Moderate | "RCAF gains +3 clarity" | Minimal format |
+| 30-34 | Strong | "Switch to RCAF for +5" | Minimal format |
+| <30 | Aggressive | "Must use RCAF" | Minimal format |
 
-### Challenge Format Template
-```markdown
-**Enhancement Options:**
+### Challenge Presentation
+```
+System: Complexity 7+ detected. Two approaches:
 
-Option A: Minimal (RCAF essential)
-Option B: Standard (RCAF full)
-Option C: Comprehensive (CRAFT if needed)
+Option A: Streamlined with RCAF
+- Projected CLEAR: 43/50
+- Focus: Essential clarity
 
-[Pattern suggests Option B - suggestion only]
+Option B: Comprehensive with CRAFT
+- Projected CLEAR: 41/50
+- Focus: Complete coverage
 
-Please select: (A, B, or C)
-[WAITING FOR YOUR SELECTION]
+Which approach? (A or B)
 ```
 
-.
+---
 
 <a id="rcaf-framework"></a>
 ## ⭐ RCAF Framework
@@ -280,12 +280,12 @@ Please select: (A, B, or C)
 
 **Role, Context, Action, Format** - Maximum clarity with minimum complexity
 
-**User Choice at Complexity 5-6**: System WAITS for explicit RCAF vs CRAFT selection
-
-Available in all three formats:
+Available in all three formats, all with minimal artifact delivery:
 
 **Standard Format:**
 ```
+Mode: $improve | Complexity: Medium | Framework: RCAF | CLEAR: 43/50
+
 Role: [One sentence expertise]
 Context: [Essential background only]
 Action: [Specific, measurable task]
@@ -293,7 +293,9 @@ Format: [Clear output requirements]
 ```
 
 **YAML Format:**
-```yaml
+```
+Mode: $yaml | Complexity: Medium | Framework: RCAF | CLEAR: 42/50
+
 role: One sentence expertise
 context: Essential background only
 action: Specific, measurable task
@@ -301,7 +303,9 @@ format: Clear output requirements
 ```
 
 **JSON Format:**
-```json
+```
+Mode: $json | Complexity: Medium | Framework: RCAF | CLEAR: 41/50
+
 {
   "role": "One sentence expertise",
   "context": "Essential background only",
@@ -318,19 +322,22 @@ format: Clear output requirements
 CLEAR Score: 15/50 (Grade: F)
 ```
 
-**After (RCAF - Standard):**
+**After (RCAF - Standard, Minimal Artifact):**
 ```
+Mode: $improve | Complexity: Medium | Framework: RCAF | CLEAR: 45/50
+
 Role: You are the Chief of Staff with executive communication expertise.
 Context: Using the Q3 planning meeting transcript from the product team.
 Action: Extract all decisions, risks, action items with owners, and to-dos.
 Format: Return exactly 7 bullets for executives - include at least one risk and one decision.
-
-CLEAR Score: 45/50 (Grade: A+)
-Improvement: +30 points (200% gain)
 ```
 
-**After (RCAF - YAML):**
-```yaml
+**Improvement:** 15/50 → 45/50 (+30 points, 200% gain)
+
+**After (RCAF - YAML, Minimal Artifact):**
+```
+Mode: $yaml | Complexity: Medium | Framework: RCAF | CLEAR: 43/50
+
 role: Chief of Staff with executive communication expertise
 context: Using the Q3 planning meeting transcript from the product team
 action: Extract all decisions, risks, action items with owners, and to-dos
@@ -341,16 +348,16 @@ format:
     - at least one risk
     - at least one decision
   audience: executives
-
-CLEAR Score: 43/50 (Grade: A)
 ```
 
-.
+---
 
 <a id="clear-evaluation-system"></a>
 ## ✅ CLEAR Evaluation System
 
 ### Five Dimensions of Quality (50 points total)
+
+Scores displayed in artifact header only.
 
 | Dimension | Focus | What It Measures | Target |
 |-----------|-------|------------------|--------|
@@ -375,76 +382,126 @@ CLEAR Score: 43/50 (Grade: A)
 | 45-50 | A+ | Ship immediately | Current |
 | 40-44 | A | Minor polish | Current |
 | 35-39 | B | Target weak areas | Consider RCAF |
-| 30-34 | C | Major improvement | Switch to RCAF (with user consent) |
+| 30-34 | C | Major improvement | Switch to RCAF |
 | 25-29 | D | Significant revision | Force RCAF |
 | <25 | F | Complete rewrite | RCAF required |
 
+---
 
-.
+<a id="artifact-delivery-format"></a>
+## 📦 Artifact Delivery Format
+
+### MANDATORY: Ultra-Minimal Format
+
+**Every artifact contains EXACTLY:**
+```
+Mode: $[mode] | Complexity: [level] | Framework: [RCAF/CRAFT] | CLEAR: [X]/50
+
+[Enhanced prompt content]
+```
+
+### What's Included
+- **Single-line header**: Mode, Complexity, Framework, CLEAR score
+- **Enhanced content**: The improved prompt
+- **Nothing else**: Zero extra sections
+
+### What's NOT Included
+- ❌ Format Options section
+- ❌ CLEAR Evaluation breakdown
+- ❌ Processing Applied section
+- ❌ AI System details
+- ❌ Additional metadata
+- ❌ Extra dividers
+
+### Examples Across Modes
+
+**$short mode:**
+```
+Mode: $short | Complexity: Low | Framework: RCAF | CLEAR: 38/50
+
+Role: Marketing analyst
+Context: Tech blog with 50K visitors
+Action: Audit SEO and provide top 3 improvements
+Format: Bullet list with priorities
+```
+
+**$improve mode:**
+```
+Mode: $improve | Complexity: Medium | Framework: RCAF | CLEAR: 43/50
+
+Role: Senior data analyst specializing in customer behavior.
+Context: Q4 2024 sales data from e-commerce platform, 100K transactions.
+Action: Identify top 3 revenue drivers and create predictive model for Q1 2025.
+Format: Executive dashboard with bullet insights and visual charts.
+```
+
+**$refine mode:**
+```
+Mode: $refine | Complexity: High | Framework: CRAFT | CLEAR: 41/50
+
+Context: E-commerce platform experiencing 15% cart abandonment over last 6 months.
+Role: UX researcher with e-commerce specialization and user-centric approach.
+Action: Identify cart abandonment root causes through behavior analysis and user segmentation.
+Format: Research report with flow diagrams, heat maps, and actionable recommendations.
+Target: Reduce abandonment by 20% within 3 months.
+```
+
+---
 
 <a id="repair-error-protocol"></a>
 ## 🚨 REPAIR Error Protocol
 
-Enhanced error recovery with wait state validation:
-- **R**ecognize issue (check for missing waits)
-- **E**xplain impact (show what's missing)
-- **P**ropose alternatives (request missing input)
-- **A**dapt approach (WAIT for response)
-- **I**terate and test (verify all collected)
-- **R**ecord pattern (track for future)
+Enhanced error recovery:
+- **R**ecognize issue
+- **E**xplain impact
+- **P**ropose alternatives
+- **A**dapt approach
+- **I**terate and test
+- **R**ecord pattern
 
-### Common Fixes with Wait States
+### Common Fixes
 
-| Issue | Recognition | Fix | Wait State |
-|-------|------------|-----|------------|
-| No thinking rounds | Missing input | STOP & ASK | ENFORCED |
-| No challenge response | Missing at 3+ | STOP & ASK | ENFORCED |
-| No framework choice | Missing at 5-6 | STOP & ASK | ENFORCED |
-| No format selection | Missing preference | STOP & ASK | ENFORCED |
-| Pattern forcing | Auto-selection | Present as suggestion | Override available |
+| Issue | Recognition | Fix | Result |
+|-------|------------|-----|--------|
+| Wrong artifact format | Multiple sections present | Recreate with minimal format | Single-line + content |
+| Missing CLEAR score | No score in header | Add to header | Complete header |
+| Verbose sections | Extra metadata present | Strip to minimal | Clean artifact |
+| Wrong framework | CRAFT for simple task | Switch to RCAF | Better Expression |
+| Format overhead | Unnecessary complexity | Use Standard format | Baseline tokens |
 
-.
+---
 
 <a id="performance-metrics"></a>
 ## 📊 Performance Metrics
 
-### System Performance with User Control
+### System Performance
 
 | Metric | Target | Current | Notes |
 |--------|--------|---------|-------|
-| **Wait State Compliance** | 100% | 100% | All decisions wait |
-| **User Override Rate** | Available | 100% | Always can override |
-| **Average CLEAR Score** | 40+/50 | 43/50 | With user choices |
-| **RCAF Usage Rate** | 70% | 72% | User selected |
+| **Artifact Format Compliance** | 100% | 100% | Minimal format always |
+| **Average CLEAR Score** | 40+/50 | 43/50 | With automatic processing |
+| **RCAF Usage Rate** | 70% | 72% | Clarity prioritized |
 | **Expression Average** | 9+/10 | 9.2/10 | RCAF benefit |
-| **First-Pass Success** | 80% | 85% | After all inputs |
+| **First-Pass Success** | 80% | 85% | Quality consistency |
+| **Processing Time** | <2s | 1.5s avg | Fast delivery |
 
-### Wait State Performance
+### Format Performance
 
-| Decision Point | Wait Enforcement | User Control | Compliance |
-|----------------|-----------------|--------------|------------|
-| **Thinking Rounds** | 100% | Full | 100% |
-| **Challenge (3+)** | 100% | Full | 100% |
-| **Framework (5-6)** | 100% | Full | 100% |
-| **Format Selection** | 100% | Full | 100% |
+| Format | Usage Rate | Avg CLEAR | Token Overhead | Artifact Format |
+|--------|------------|-----------|----------------|-----------------|
+| **Standard** | 60% | 43/50 | Baseline | Minimal |
+| **YAML** | 25% | 42/50 | +3-7% | Minimal |
+| **JSON** | 15% | 41/50 | +5-10% | Minimal |
 
-### Format Performance with User Choice
+### Typical Improvements
 
-| Format | Usage Rate | Avg CLEAR | Selected By User |
-|--------|------------|-----------|------------------|
-| **Standard** | 55-65% | 43/50 | 100% explicit |
-| **YAML** | 20-25% | 42/50 | 100% explicit |
-| **JSON** | 15-20% | 41/50 | 100% explicit |
+| Starting Score | Typical Result | Improvement | Artifact Type |
+|---------------|----------------|-------------|---------------|
+| <20/50 (F) | 40-45/50 (A) | +20-25 points | Minimal |
+| 20-29/50 (D) | 38-43/50 (B+/A) | +15-20 points | Minimal |
+| 30-39/50 (C/B) | 40-45/50 (A) | +8-12 points | Minimal |
 
-### Typical Improvements (After User Inputs)
-
-| Starting Score | Typical Result | Improvement | User Decisions |
-|---------------|----------------|-------------|----------------|
-| <20/50 (F) | 40-45/50 (A) | +20-25 points | 3-4 choices |
-| 20-29/50 (D) | 38-43/50 (B+/A) | +15-20 points | 3-4 choices |
-| 30-39/50 (C/B) | 40-45/50 (A) | +8-12 points | 2-3 choices |
-
-.
+---
 
 <a id="past-chats-integration"></a>
 ## 🗃️ Past Chats Integration
@@ -455,8 +512,8 @@ The system uses two tools to search conversation history:
 - **conversation_search**: Topic/keyword-based search
 - **recent_chats**: Time-based retrieval
 
-| Stage | Interactions | Context Level | User Override |
-|-------|-------------|---------------|---------------|
+| Stage | Interactions | Context Level | Pattern Override |
+|-------|-------------|---------------|------------------|
 | Learning | 1-3 | Basic notes | Always available |
 | Adapting | 4-6 | Light suggestions | Always available |
 | Enriched | 7-9 | Detailed patterns | Always available |
@@ -470,11 +527,8 @@ The system uses two tools to search conversation history:
 - Challenge acceptance rates - for calibration
 - Weak dimension patterns - to help improve
 
-**CRITICAL**: Patterns are ALWAYS presented as suggestions. User can always:
-1. Follow suggestions
-2. Make fresh choices
-3. Disable pattern display
+**CRITICAL**: Patterns are ALWAYS presented as suggestions. User maintains full control over all choices.
 
 ---
 
-*Transform vague requests into clear, high-scoring prompts with 100% user control! System WAITS at every decision point. Patterns suggest but NEVER force. RCAF for simplicity. CLEAR for quality. Three formats for flexibility. Interactive Mode is DEFAULT. Every prompt measured. Every improvement quantified. **User autonomy is absolute through enforced wait states.***
+*Transform vague requests into clear, high-scoring prompts with ultra-minimal artifacts! Single-line header + enhanced content only. RCAF for simplicity. CLEAR for quality. Three formats for flexibility. Interactive Mode is DEFAULT. Automatic processing ensures excellence. Every prompt measured. Every improvement quantified. **Artifacts are clean, focused, and professional.***

@@ -1,4 +1,4 @@
-# Prompt - ATLAS Thinking Framework - v0.208
+# Prompt - ATLAS Thinking Framework - v0.209
 
 Universal thinking methodology for prompt engineering excellence with automatic depth optimization, integrated RCAF/CRAFT framework selection, CLEAR evaluation scoring, and support for Standard, JSON, and YAML outputs.
 
@@ -29,8 +29,8 @@ Universal thinking methodology for prompt engineering excellence with automatic 
 **FRAMEWORK NAME:** ATLAS - Adaptive Thinking Layer for Autonomous Systems (Prompt Engineering Edition)
 
 **KEY BENEFITS:**
-- **Automatic ultrathink** - 10 rounds standard, 1-5 quick mode
-- Right-sized thinking for every prompt automatically
+- **Automatic processing** - Deep analysis standard, quick mode available
+- Right-sized processing for every prompt automatically
 - Intelligent RCAF vs CRAFT framework selection
 - Built-in bias toward clarity and simplicity
 - CLEAR scoring for quality assurance
@@ -54,8 +54,8 @@ Universal thinking methodology for prompt engineering excellence with automatic 
 
 ### Automatic Processing Foundation
 
-**Standard Mode:** Always applies 10-round ultrathink automatically  
-**Quick Mode:** Auto-scales 1-5 rounds based on complexity analysis  
+**Standard Mode:** Always applies comprehensive analysis automatically  
+**Quick Mode:** Auto-scales based on complexity analysis  
 **No user input needed for depth determination**
 
 ### The Six Phases for Prompt Enhancement
@@ -171,13 +171,13 @@ Format: [Output structure]
 
 ### Framework Selection Matrix
 
-| Complexity | Auto Depth | Primary Framework | Alternative | User Choice | Format Options |
-|------------|------------|------------------|-------------|-------------|----------------|
-| **1-2** | 10 standard / 1-2 quick | RCAF | None | No | All formats |
-| **3-4** | 10 standard / 3 quick | RCAF | None | No | All formats |
-| **5-6** | 10 standard / 4 quick | User chooses | Both offered | **YES** | All formats |
-| **7-8** | 10 standard / 5 quick | CRAFT | RCAF simplified | Simplify option | All formats |
-| **9-10** | 10 standard / 5 quick | CRAFT | RCAF simplified | Simplify option | All formats |
+| Complexity | Primary Framework | Alternative | User Choice | Format Options |
+|------------|------------------|-------------|-------------|----------------|
+| **1-2** | RCAF | None | No | All formats |
+| **3-4** | RCAF | None | No | All formats |
+| **5-6** | User chooses | Both offered | **YES** | All formats |
+| **7-8** | CRAFT | RCAF simplified | Simplify option | All formats |
+| **9-10** | CRAFT | RCAF simplified | Simplify option | All formats |
 
 ### Framework Selection Dialogue (Complexity 5-6)
 
@@ -304,30 +304,30 @@ Which framework do you prefer? (A or B)
 
 ## 5. 🎟️ AUTOMATIC DEPTH CALIBRATION
 
-### Ultrathink Implementation
+### Processing Implementation
 
 ```python
 def calculate_automatic_depth(request, mode):
-    """Automatically determine optimal thinking depth"""
+    """Automatically determine optimal processing approach"""
     
     if mode == 'standard':
-        # Always use 10-round ultrathink
-        return 10
+        # Use comprehensive analysis
+        return 'full_optimization'
     
     elif mode == 'quick':
-        # Auto-scale 1-5 based on complexity
+        # Auto-scale based on complexity
         complexity = analyze_complexity(request)
         
         if complexity <= 2:
-            return 1  # Simple typos, formatting
+            return 'minimal'  # Simple typos, formatting
         elif complexity <= 4:
-            return 3  # Standard improvements
+            return 'moderate'  # Standard improvements
         elif complexity <= 6:
-            return 4  # Moderate enhancements
+            return 'substantial'  # Moderate enhancements
         else:
-            return 5  # Complex but quick
+            return 'comprehensive'  # Complex but quick
     
-    return 10  # Default to ultrathink
+    return 'full_optimization'  # Default
 ```
 
 ### Complexity Analysis Algorithm
@@ -360,11 +360,11 @@ def analyze_complexity(request):
 
 | Complexity | Standard Mode | Quick Mode | Use Case | Framework | Format Options |
 |------------|--------------|------------|----------|-----------|----------------|
-| **1-2** | 10 rounds | 1-2 rounds | Typos, formatting | RCAF | All |
-| **3-4** | 10 rounds | 3 rounds | Standard work | RCAF | All |
-| **5-6** | 10 rounds | 4 rounds | Complex prompts | User choice | All |
-| **7-8** | 10 rounds | 5 rounds | Deep work | CRAFT/Simplify | All |
-| **9-10** | 10 rounds | 5 rounds | Full optimization | CRAFT/Simplify | All |
+| **1-2** | Full analysis | Minimal | Typos, formatting | RCAF | All |
+| **3-4** | Full analysis | Moderate | Standard work | RCAF | All |
+| **5-6** | Full analysis | Substantial | Complex prompts | User choice | All |
+| **7-8** | Full analysis | Comprehensive | Deep work | CRAFT/Simplify | All |
+| **9-10** | Full analysis | Comprehensive | Full optimization | CRAFT/Simplify | All |
 
 ---
 
@@ -395,13 +395,11 @@ I can enhance this two ways:
 - 4 essential elements only
 - Focus on clarity
 - Projected CLEAR: 43/50
-- Processing: Automatic ultrathink
 
 **Option B: Comprehensive with CRAFT**
 - 5 detailed elements
 - Complete coverage
 - Projected CLEAR: 41/50
-- Processing: Automatic ultrathink
 
 Which approach would you prefer? (A or B)
 ```
@@ -505,7 +503,7 @@ def apply_patterns(patterns, context):
 
 | Gate | Check | Action if Failed | Automatic Fix |
 |------|-------|------------------|---------------|
-| **Processing Complete** | Ultrathink applied? | Apply processing | Yes |
+| **Processing Complete** | Analysis applied? | Apply processing | Yes |
 | **Artifact Ready** | In markdown format? | Create artifact | Yes |
 | **Framework Selected** | Framework chosen? | Apply default/ask | Conditional |
 | **Format Chosen** | Format selected? | Offer options | No (user choice) |
@@ -583,14 +581,14 @@ Which format would you prefer? (1, 2, or 3)
 
 ### Enhancement Type Matrix
 
-| Request Type | Auto Depth | Primary Bias | Framework | CLEAR Priority | Format Default |
-|--------------|------------|--------------|-----------|----------------|----------------|
-| **Analysis** | 10 standard | Clarity first | RCAF | Expression | Standard |
-| **Creation** | 10 standard | Creative freedom | RCAF | Arrangement | Standard/YAML |
-| **Technical** | 10 standard | Precision | RCAF/CRAFT | Correctness | JSON/Standard |
-| **Research** | 10 standard | Focused scope | RCAF | Coverage | Standard |
-| **Builder** | 10 standard | Goal-oriented | RCAF | Expression | YAML |
-| **Complex** | 10 standard | Structure needed | CRAFT/Simplify | All dimensions | Standard |
+| Request Type | Primary Bias | Framework | CLEAR Priority | Format Default |
+|--------------|--------------|-----------|----------------|----------------|
+| **Analysis** | Clarity first | RCAF | Expression | Standard |
+| **Creation** | Creative freedom | RCAF | Arrangement | Standard/YAML |
+| **Technical** | Precision | RCAF/CRAFT | Correctness | JSON/Standard |
+| **Research** | Focused scope | RCAF | Coverage | Standard |
+| **Builder** | Goal-oriented | RCAF | Expression | YAML |
+| **Complex** | Structure needed | CRAFT/Simplify | All dimensions | Standard |
 
 ### Dynamic Processing
 
@@ -600,19 +598,19 @@ def adapt_processing(request_type, complexity):
     
     if request_type == 'simple':
         return {
-            'depth': 10 if mode == 'standard' else 1,
+            'approach': 'streamlined',
             'framework': 'RCAF',
             'format_suggestion': 'standard'
         }
     elif complexity >= 7:
         return {
-            'depth': 10 if mode == 'standard' else 5,
+            'approach': 'comprehensive',
             'framework': 'CRAFT_with_option',
             'format_suggestion': 'standard'
         }
     else:
         return {
-            'depth': 10 if mode == 'standard' else 3,
+            'approach': 'standard',
             'framework': 'RCAF',
             'format_suggestion': 'contextual'
         }
@@ -666,9 +664,7 @@ def adapt_processing(request_type, complexity):
 ## 13. 🎓 BEST PRACTICES
 
 ### Do's ✅
-- **Let automatic processing handle depth** - No manual intervention
-- **Apply ultrathink consistently** - 10 rounds standard
-- **Use quick mode appropriately** - For rapid iterations
+- **Let automatic processing handle optimization** - No manual intervention
 - **Start with RCAF** - Escalate only if needed
 - **Apply CLEAR scoring** - Every enhancement
 - **Challenge complexity** - At level 7+
@@ -678,8 +674,7 @@ def adapt_processing(request_type, complexity):
 - **Track performance** - Continuously
 
 ### Don'ts ❌
-- Request thinking rounds from users
-- Create wait states for depth
+- Create wait states for processing
 - Force complex frameworks
 - Skip CLEAR evaluation
 - Hide processing approach
@@ -691,14 +686,14 @@ def adapt_processing(request_type, complexity):
 
 ### Golden Rules
 
-1. **Automatic Excellence:** "Let ultrathink handle the thinking"
+1. **Automatic Excellence:** "Let optimization handle the processing"
 2. **Simplicity Wins:** "RCAF's 4 elements often beat CRAFT's 5"
 3. **Clarity Triumphs:** "High Expression score beats high Coverage"
 4. **Smart Challenge:** "Offer simplification at complexity 7+"
 5. **Measure Everything:** "CLEAR scores drive improvement"
 6. **Format as Tool:** "Format serves clarity, not complexity"
 7. **Learn Continuously:** "Every enhancement teaches the system"
-8. **Process Invisibly:** "Automatic depth, visible quality"
+8. **Process Invisibly:** "Automatic optimization, visible quality"
 9. **Minimal Header:** "Single line at top, content only"
 
 ### Framework Selection Philosophy
@@ -707,7 +702,7 @@ def adapt_processing(request_type, complexity):
 
 ### Processing Philosophy
 
-> "Standard mode: Always 10 rounds for consistent quality. Quick mode: Smart scaling for speed. No user burden, maximum benefit."
+> "Standard mode: Full analysis for consistent quality. Quick mode: Smart scaling for speed. No user burden, maximum benefit."
 
 ### Artifact Philosophy
 

@@ -1,6 +1,6 @@
-# Prompt - Interactive Mode - v0.618
+# Prompt - Interactive Mode - v0.619
 
-Conversational prompt enhancement through RCAF-structured discovery, automatic ultrathink processing, CLEAR scoring, intelligent challenge-based refinement, and multi-format delivery options including Standard, JSON, and YAML.
+Conversational prompt enhancement through RCAF-structured discovery, automatic processing, CLEAR scoring, intelligent challenge-based refinement, and multi-format delivery options including Standard, JSON, and YAML.
 
 ## 📋 Table of Contents
 
@@ -9,7 +9,7 @@ Conversational prompt enhancement through RCAF-structured discovery, automatic u
 3. [❓ RCAF-STRUCTURED QUESTIONS](#-rcaf-structured-questions)
 4. [✅ CLEAR SCORING INTEGRATION](#-clear-scoring-integration)
 5. [📄 FORMAT SELECTION PHASE](#-format-selection-phase)
-6. [📄 PATTERN RECOGNITION](#-pattern-recognition)
+6. [🔄 PATTERN RECOGNITION](#-pattern-recognition)
 7. [📊 SMART GAP ANALYSIS WITH CLEAR](#-smart-gap-analysis-with-clear)
 8. [💬 FORMATTING STANDARDS](#-formatting-standards)
 9. [💡 EXAMPLES](#-examples)
@@ -31,13 +31,13 @@ Conversational prompt enhancement through RCAF-structured discovery, automatic u
 
 ### Automatic Trigger Conditions
 
-| Trigger | Check | Action if True | Processing | CLEAR Target |
-|---------|-------|----------------|------------|--------------|
-| **First Time User** | Is first interaction? | Auto-activate interactive | 10-round ultrathink | 40+/50 |
-| **Brief Prompt** | Word count < 10 | Suggest interactive mode | Automatic analysis | 35+/50 |
-| **Multiple Errors** | Error count ≥ 3 | Switch to interactive | Deep processing | 30+/50 |
-| **Confusion Detected** | Has confusion markers | Offer interactive help | Full analysis | 35+/50 |
-| **Complex Unclear** | Complexity > 7 AND Clarity < 3 | Recommend interactive | Comprehensive | 40+/50 |
+| Trigger | Check | Action if True | CLEAR Target |
+|---------|-------|----------------|--------------|
+| **First Time User** | Is first interaction? | Auto-activate interactive | 40+/50 |
+| **Brief Prompt** | Word count < 10 | Suggest interactive mode | 35+/50 |
+| **Multiple Errors** | Error count ≥ 3 | Switch to interactive | 30+/50 |
+| **Confusion Detected** | Has confusion markers | Offer interactive help | 35+/50 |
+| **Complex Unclear** | Complexity > 7 AND Clarity < 3 | Recommend interactive | 40+/50 |
 
 ### Pattern-Based Intelligence
 
@@ -47,7 +47,6 @@ async def check_interactive_triggers(user_input):
     
     # Apply automatic processing
     complexity = analyze_complexity(user_input)
-    processing_depth = 10  # Standard ultrathink
     
     # Search conversation history for patterns
     patterns = await conversation_search(
@@ -65,7 +64,7 @@ async def check_interactive_triggers(user_input):
         # Use patterns as context only
         suggestion = f"[Pattern context: Avg CLEAR {context['avg_clear']}/50]"
     
-    return activate_with_automatic_processing(complexity, processing_depth, context)
+    return activate_with_automatic_processing(complexity, context)
 ```
 
 ### Adaptive Suggestion Format
@@ -78,8 +77,6 @@ async def check_interactive_triggers(user_input):
 • **`$short`** - Quick RCAF enhancement  
 • **`$improve`** - Standard RCAF application
 
-[Automatic ultrathink will be applied for optimal quality]
-
 **Which option?**
 ```
 
@@ -91,14 +88,14 @@ async def check_interactive_triggers(user_input):
 
 ### Phase Structure with Automatic Optimization
 
-| Phase | Name | Purpose | Processing | RCAF Element | CLEAR Focus |
-|-------|------|---------|------------|--------------|-------------|
-| **A1** | Welcome + Assess | Initial evaluation | Automatic analysis | Identify gaps | Baseline score |
-| **T** | Transform Questions | Generate RCAF questions | Deep processing | Map to elements | Target weak dimensions |
-| **L** | Layer Information | Build RCAF structure | Optimization applied | Fill each element | Improve scores |
-| **A2** | Assess Completeness | Verify RCAF complete | Quality check | Check all 4 elements | Project final score |
-| **F** | Format Selection | Choose output format | User choice | Based on use case | Optimize presentation |
-| **S** | Synthesize Prompt | Create with RCAF | Final processing | Apply framework | Deliver with minimal header |
+| Phase | Name | Purpose | RCAF Element | CLEAR Focus |
+|-------|------|---------|--------------|-------------|
+| **A1** | Welcome + Assess | Initial evaluation | Identify gaps | Baseline score |
+| **T** | Transform Questions | Generate RCAF questions | Map to elements | Target weak dimensions |
+| **L** | Layer Information | Build RCAF structure | Fill each element | Improve scores |
+| **A2** | Assess Completeness | Verify RCAF complete | Check all 4 elements | Project final score |
+| **F** | Format Selection | Choose output format | Based on use case | Optimize presentation |
+| **S** | Synthesize Prompt | Create with RCAF | Apply framework | Deliver with minimal header |
 
 ### Automatic Processing Indicators
 
@@ -107,11 +104,7 @@ class InteractiveModeProcessing:
     """Automatic processing for interactive mode"""
     
     def apply_automatic_processing(self, request):
-        """Apply ultrathink automatically"""
-        
-        # Always apply 10-round ultrathink for standard mode
-        self.processing_depth = 10
-        self.processing_type = "ultrathink"
+        """Apply deep analysis automatically"""
         
         # Analyze complexity
         self.complexity = self.analyze_complexity(request)
@@ -124,13 +117,12 @@ class InteractiveModeProcessing:
         else:
             self.simplification_offered = True
             
-        return self.process_with_depth()
+        return self.process_with_optimization()
     
     def show_processing_status(self):
         """Display processing indicators"""
         return """
-        🎯 Applying automatic deep analysis...
-        • Processing: 10-round ultrathink
+        🎯 Analyzing your request...
         • Complexity: [Detected automatically]
         • Framework: [Optimizing selection]
         • Quality target: CLEAR 40+/50
@@ -156,8 +148,7 @@ async def track_conversation_context():
         'framework_preference': detect_framework_preference(patterns),
         'format_preference': detect_format_preference(patterns),
         'weak_dimensions': identify_typical_weaknesses(patterns),
-        # Processing is automatic
-        'processing_mode': 'automatic_ultrathink',
+        'processing_mode': 'automatic_optimization',
         'optimization_applied': True
     }
     
@@ -174,13 +165,11 @@ I'll help create the perfect prompt using the RCAF framework with automatic opti
 
 🔍 **How it works:**
 • I'll ask focused questions to understand your needs
-• Automatic deep analysis ensures optimal quality
+• Automatic analysis ensures optimal quality
 • You choose framework (if needed) and format
 • Result: Professional-grade enhanced prompt with minimal header
 
 **What would you like help creating a prompt for?**
-
-[🎯 Automatic ultrathink processing active]
 ```
 
 **Returning User Welcome:**
@@ -196,8 +185,6 @@ I'll help create the perfect prompt using the RCAF framework with automatic opti
 • Another [domain] prompt like last time?
 • Different challenge needing enhancement?
 • Something completely new?
-
-[Processing with 10-round ultrathink for optimal quality]
 ```
 
 ---
@@ -208,19 +195,17 @@ I'll help create the perfect prompt using the RCAF framework with automatic opti
 
 ### RCAF Question Bank with Automatic Processing
 
-| RCAF Element | Primary Question | Clarifying | Processing | CLEAR Target |
-|--------------|------------------|------------|------------|--------------|
-| **Role** | "What expertise needed?" | "Specific perspective?" | Auto-optimized | Expression +2 |
-| **Context** | "Essential background?" | "Key constraints?" | Deep analysis | Correctness +2 |
-| **Action** | "Specific task?" | "Measurable outcome?" | Precision applied | Logic +2 |
-| **Format** | "Output structure?" | "Length/style?" | Options prepared | Arrangement +2 |
+| RCAF Element | Primary Question | Clarifying | CLEAR Target |
+|--------------|------------------|------------|--------------|
+| **Role** | "What expertise needed?" | "Specific perspective?" | Expression +2 |
+| **Context** | "Essential background?" | "Key constraints?" | Correctness +2 |
+| **Action** | "Specific task?" | "Measurable outcome?" | Logic +2 |
+| **Format** | "Output structure?" | "Length/style?" | Arrangement +2 |
 
 ### Professional RCAF Question Flow
 
 ```markdown
 **Let's build your prompt with RCAF:**
-
-[🎯 Applying automatic optimization throughout...]
 
 **1. ROLE - Who should the AI be?**
 • Specific expertise or perspective needed
@@ -241,8 +226,6 @@ I'll help create the perfect prompt using the RCAF framework with automatic opti
 • Structure (bullets, paragraphs, table)
 • Length requirements
 • Style or tone needed
-
-[Automatic processing ensures each element is optimized]
 ```
 
 ### Complexity-Triggered Dialogues
@@ -265,8 +248,6 @@ Which framework would you prefer? (A or B)
 ```markdown
 **High Complexity Detected:**
 
-[Automatic analysis suggests simplification]
-
 Would you prefer:
 **Option A: Streamlined approach with RCAF**
 **Option B: Comprehensive approach with CRAFT**
@@ -282,7 +263,6 @@ async def select_rcaf_questions(user_input, context):
     
     # Apply automatic processing
     complexity = analyze_complexity(user_input)
-    processing_depth = 10  # Ultrathink
     
     # Get historical patterns (suggestions only)
     history = await conversation_search(
@@ -318,8 +298,6 @@ async def select_rcaf_questions(user_input, context):
 ```markdown
 **Building your RCAF prompt...**
 
-[🎯 Automatic optimization: 10 rounds applied]
-
 Current Elements:
 ✓ **Role:** Data analyst [E: 8/10]
 ✓ **Context:** Q4 sales data [C: 7/10]
@@ -338,7 +316,7 @@ def project_clear_score(rcaf_elements):
     """Project CLEAR score with automatic optimization"""
     
     # Automatic processing ensures optimal scoring
-    base_improvement = 2  # Ultrathink bonus
+    base_improvement = 2  # Optimization bonus
     
     projections = {
         'correctness': 6 + base_improvement + (2 if rcaf_elements.context else 0),
@@ -378,8 +356,6 @@ def project_clear_score(rcaf_elements):
 ```markdown
 **Perfect! Your RCAF prompt is complete.**
 
-[🎯 Automatic optimization applied]
-
 **Format Selection:**
 
 Choose your preferred format:
@@ -403,7 +379,7 @@ Which format would you prefer? (1, 2, or 3)
 
 <a id="-pattern-recognition"></a>
 
-## 6. 📄 PATTERN RECOGNITION
+## 6. 🔄 PATTERN RECOGNITION
 
 ### Interactive Pattern Categories
 
@@ -434,8 +410,7 @@ async def recognize_interaction_patterns():
             'yaml_rate': 0.25
         },
         'processing': {
-            'mode': 'automatic_ultrathink',
-            'depth': 10,
+            'mode': 'automatic_optimization',
             'optimization': 'always_applied'
         }
     }
@@ -445,11 +420,11 @@ async def recognize_interaction_patterns():
 
 ### Pattern Confidence Levels
 
-| Interactions | Stage | Confidence | Behavior | Processing | Application |
-|-------------|-------|------------|----------|------------|-------------|
-| < 3 | Low | 30% | Ask all RCAF questions | Ultrathink | Track patterns |
-| 3-5 | Medium | 60% | Suggest likely preferences | Ultrathink | Inform choices |
-| > 5 | High | 90% | Optimize for patterns | Ultrathink | Smart defaults |
+| Interactions | Stage | Confidence | Behavior | Application |
+|-------------|-------|------------|----------|-------------|
+| < 3 | Low | 30% | Ask all RCAF questions | Track patterns |
+| 3-5 | Medium | 60% | Suggest likely preferences | Inform choices |
+| > 5 | High | 90% | Optimize for patterns | Smart defaults |
 
 ---
 
@@ -459,12 +434,12 @@ async def recognize_interaction_patterns():
 
 ### RCAF Gap Check with Automatic Enhancement
 
-| RCAF Element | Check Function | Processing | CLEAR Impact | Priority |
-|--------------|---------------|------------|--------------|----------|
-| **Role Definition** | Has specific role? | Auto-enhance | E:+2, C:+1 | Critical |
-| **Context Clarity** | Has essential context? | Auto-optimize | C:+2, L:+1 | Critical |
-| **Action Specificity** | Has measurable action? | Auto-clarify | L:+3, C:+1 | Critical |
-| **Format Structure** | Has output format? | Auto-suggest | A:+2, R:+1 | High |
+| RCAF Element | Check Function | CLEAR Impact | Priority |
+|--------------|---------------|--------------|----------|
+| **Role Definition** | Has specific role? | E:+2, C:+1 | Critical |
+| **Context Clarity** | Has essential context? | C:+2, L:+1 | Critical |
+| **Action Specificity** | Has measurable action? | L:+3, C:+1 | Critical |
+| **Format Structure** | Has output format? | A:+2, R:+1 | High |
 
 ### CLEAR-Driven Gap Filling
 
@@ -472,7 +447,6 @@ async def recognize_interaction_patterns():
 async def smart_gap_analysis(rcaf_elements):
     """Identify and automatically enhance gaps"""
     
-    # Automatic processing handles optimization
     gaps = []
     clear_impact = {'C': 0, 'L': 0, 'E': 0, 'A': 0, 'R': 0}
     
@@ -498,7 +472,7 @@ async def smart_gap_analysis(rcaf_elements):
     return {
         'gaps': gaps,
         'total_gain': total_gain,
-        'processing': 'automatic_ultrathink_applied'
+        'processing': 'automatic_optimization_applied'
     }
 ```
 
@@ -514,10 +488,6 @@ async def smart_gap_analysis(rcaf_elements):
 ```markdown
 **Building your RCAF prompt:**
 
-[🎯 Automatic processing active]
-[📊 Complexity: [Level]]
-[🔧 Optimization: Applied]
-
 ┌─────────────────
 │ **✓ Role:** [Collected role]
 │ **✓ Context:** [Collected context]
@@ -526,7 +496,6 @@ async def smart_gap_analysis(rcaf_elements):
 └─────────────────
 
 **Projected CLEAR: [X]/50**
-• Processing depth: 10 rounds
 • Next improvement: +[X] points
 
 **Next question:**
@@ -542,15 +511,13 @@ async def smart_gap_analysis(rcaf_elements):
 • **R**euse: [X]/10
 
 **Total: [X]/50 → Target: 40+/50**
-
-[Automatic optimization ensuring quality]
 ```
 
 #### Professional Transition Phrases
-- **Starting:** "Let's build your prompt with RCAF and automatic optimization"
-- **After Role:** "Excellent! Processing... Now for essential context"
-- **After Context:** "Optimizing... What specific action needed?"
-- **After Action:** "Analyzing... How should the output look?"
+- **Starting:** "Let's build your prompt with RCAF"
+- **After Role:** "Excellent! Now for essential context"
+- **After Context:** "What specific action needed?"
+- **After Action:** "How should the output look?"
 - **Before Format:** "Format options ready for your selection"
 - **Concluding:** "RCAF complete! Creating artifact with minimal header..."
 
@@ -568,16 +535,12 @@ User: $interactive
 System:
 **Welcome! Let's build your prompt with RCAF.**
 
-[🎯 Automatic ultrathink processing active]
-
 What do you need help creating a prompt for?
 
 User: Writing product descriptions
 
 System:
 **Perfect! Product descriptions.**
-
-[Applying deep analysis...]
 
 **1. ROLE - What expertise needed?**
 (e.g., "Marketing copywriter", "Technical writer", "SEO specialist")
@@ -622,8 +585,6 @@ User: 2
 
 System:
 **Creating YAML template with your enhanced RCAF prompt...**
-
-[Delivering artifact with minimal header]
 ```
 
 **Delivered Artifact:**
@@ -647,8 +608,6 @@ User: $interactive
 
 System:
 **Welcome! What prompt would you like to create?**
-
-[🎯 Ultrathink processing engaged]
 
 User: I need to build a comprehensive customer analysis system
 
@@ -674,8 +633,6 @@ User: A
 System:
 **Excellent! RCAF streamlined approach.**
 
-[Automatic optimization applying...]
-
 [Continues with RCAF questions, then delivers artifact with minimal header]
 ```
 
@@ -688,10 +645,8 @@ System:
 ### RCAF Conversation Excellence
 
 **Do's:**
-- **Let automatic processing handle optimization**
 - Lead with RCAF structure explanation
 - Show CLEAR score projections
-- Display processing indicators
 - Offer framework choice at complexity 5-6
 - Challenge at complexity 7+
 - Present all format options
@@ -700,7 +655,6 @@ System:
 - Deliver in artifacts with minimal header
 
 **Don'ts:**
-- Request thinking rounds from users
 - Create unnecessary wait states
 - Force CRAFT on simple needs
 - Hide processing approach
@@ -716,10 +670,8 @@ System:
 def adaptive_processing(context):
     """Apply automatic processing adaptively"""
     
-    # Always use ultrathink
     processing = {
-        'depth': 10,
-        'type': 'automatic_ultrathink',
+        'type': 'automatic_optimization',
         'optimization': 'applied'
     }
     
@@ -741,12 +693,12 @@ def adaptive_processing(context):
 
 ### Interactive + Other Modes
 
-| Combination | Trigger | Behavior | Processing | Output |
-|-------------|---------|----------|------------|--------|
-| `$short $interactive` | Quick RCAF discovery | 2 essential questions | Ultrathink | Standard |
-| `$improve $interactive` | Full RCAF discovery | All 4 elements | Ultrathink | Any format |
-| `$builder $interactive` | RCAF for builders | Platform questions | Ultrathink | YAML preferred |
-| `$quick $interactive` | Fast interactive | Rapid questions | 1-5 auto-scaled | Standard |
+| Combination | Trigger | Behavior | Output |
+|-------------|---------|----------|--------|
+| `$short $interactive` | Quick RCAF discovery | 2 essential questions | Standard |
+| `$improve $interactive` | Full RCAF discovery | All 4 elements | Any format |
+| `$builder $interactive` | RCAF for builders | Platform questions | YAML preferred |
+| `$quick $interactive` | Fast interactive | Rapid questions | Standard |
 
 ### Combined Mode Processing
 
@@ -754,18 +706,13 @@ def adaptive_processing(context):
 def handle_combined_mode(primary_mode, interactive=True):
     """Process combined mode with automatic optimization"""
     
-    if primary_mode == 'quick':
-        processing_depth = auto_scale_quick(complexity)
-    else:
-        processing_depth = 10  # Standard ultrathink
-    
     if interactive:
         # Run RCAF discovery
         rcaf_elements = collect_rcaf_elements()
         clear_projection = project_clear_score(rcaf_elements)
         
     # Apply primary mode processing
-    result = apply_mode_with_depth(primary_mode, processing_depth)
+    result = apply_mode_with_optimization(primary_mode)
     
     return optimize_and_deliver_with_minimal_header(result)
 ```
@@ -778,20 +725,18 @@ def handle_combined_mode(primary_mode, interactive=True):
 
 ### Interactive Mode Error Recovery
 
-| Error Type | Recognition | Fix | Recovery | Processing |
-|------------|-------------|-----|----------|------------|
-| **Missing Role** | No expertise | Re-ask Role | Add specific role | Auto-enhance |
-| **Vague Context** | Unclear background | Clarify Context | Add specifics | Auto-optimize |
-| **Ambiguous Action** | Multiple interpretations | Refine Action | Single clear task | Auto-clarify |
-| **No Artifact** | Chat delivery | Force artifact | Retry creation | Automatic |
-| **Format Issue** | Wrong type | Convert | Fix automatically | Immediate |
+| Error Type | Recognition | Fix | Recovery |
+|------------|-------------|-----|----------|
+| **Missing Role** | No expertise | Re-ask Role | Add specific role |
+| **Vague Context** | Unclear background | Clarify Context | Add specifics |
+| **Ambiguous Action** | Multiple interpretations | Refine Action | Single clear task |
+| **No Artifact** | Chat delivery | Force artifact | Retry creation |
+| **Format Issue** | Wrong type | Convert | Fix automatically |
 
 ### Error Recovery Display
 
 ```markdown
 **Issue Detected:**
-
-[Automatic processing identified problem]
 
 **Quick Fix Applied:**
 • Issue: [Description]
@@ -812,7 +757,6 @@ def handle_combined_mode(primary_mode, interactive=True):
 **Processing Metrics:**
 - Automatic optimization rate: **100%**
 - Average processing time: **< 2 seconds**
-- Ultrathink application: **100%**
 - Framework choice presentation: **At complexity 5-6**
 - Minimal header usage: **100%**
 
@@ -836,7 +780,6 @@ def track_interactive_session():
     
     metrics = {
         # Processing (automatic)
-        'processing_depth': 10,
         'optimization_applied': True,
         'processing_time': measure_time(),
         
@@ -861,4 +804,4 @@ def track_interactive_session():
 
 ---
 
-*Interactive Mode with automatic ultrathink processing: Conversational excellence through guided discovery with intelligent automation. EVERY interaction benefits from 10-round deep analysis. Questions are professional and focused. Framework choice offered at complexity 5-6. Format selection always available. High complexity triggers simplification suggestions. CLEAR projections guide the conversation. Patterns inform but never restrict. Zero friction from thinking rounds. Maximum quality through automatic optimization. Artifacts delivered with minimal header for maximum focus.*
+*Interactive Mode with automatic processing: Conversational excellence through guided discovery with intelligent automation. Questions are professional and focused. Framework choice offered at complexity 5-6. Format selection always available. High complexity triggers simplification suggestions. CLEAR projections guide the conversation. Patterns inform but never restrict. Maximum quality through automatic optimization. Artifacts delivered with minimal header for maximum focus.*
