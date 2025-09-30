@@ -1,4 +1,4 @@
-# Prompt - YAML Format Guide - v0.100
+# Prompt - YAML Format Guide - v0.101
 
 Comprehensive guide for YAML format prompt engineering with RCAF/CRAFT frameworks, CLEAR scoring, conversion methods, and optimization strategies.
 
@@ -513,6 +513,40 @@ def compare_format_tokens(standard, json_version, yaml_version):
 
 ## 8. 💡 EXAMPLES & TEMPLATES
 
+### Artifact Delivery Format
+
+**CRITICAL:** All YAML prompts delivered as artifacts with minimal header:
+
+```
+Mode: $yaml | Complexity: Medium | Framework: RCAF | CLEAR: 43/50
+
+[YAML prompt content]
+```
+
+**Example Artifact:**
+
+```
+Mode: $yaml | Complexity: Medium | Framework: RCAF | CLEAR: 43/50
+
+role: Marketing data scientist
+context: E-commerce platform with 100K customers, 2 years transaction history
+action:
+  primary: Perform customer segmentation using RFM analysis
+  steps:
+    - Calculate recency scores
+    - Calculate frequency scores
+    - Calculate monetary scores
+    - Create segment profiles
+format:
+  structure: analysis_report
+  visualizations:
+    - segment_distribution
+    - value_matrix
+  export:
+    - csv_data
+    - pdf_report
+```
+
 ### Template Library
 
 #### Research Template
@@ -585,8 +619,11 @@ format:
 
 ### Real-World Examples
 
-#### Customer Segmentation
-```yaml
+#### Customer Segmentation Artifact
+
+```
+Mode: $yaml | Complexity: Medium | Framework: RCAF | CLEAR: 43/50
+
 role: Marketing data scientist
 context: E-commerce platform with 100K customers, 2 years transaction history
 
@@ -617,14 +654,20 @@ format:
     - interactive_dashboard
 ```
 
-#### API Documentation
-```yaml
-role: Technical documentation specialist
+#### API Documentation Artifact
+
+```
+Mode: $yaml | Complexity: High | Framework: CRAFT | CLEAR: 42/50
+
 context:
   api_type: REST
   endpoints: 25
   authentication: OAuth 2.0
   versioning: semantic
+
+role:
+  expertise: Technical documentation specialist
+  focus: Developer experience
 
 action:
   document:
@@ -646,6 +689,12 @@ format:
     - postman_collection
     - openapi_spec
     - interactive_playground
+
+target:
+  metrics:
+    - time_to_first_api_call
+    - developer_satisfaction
+  success_criteria: Complete documentation enabling integration in under 2 hours
 ```
 
 ---
@@ -721,6 +770,7 @@ def optimize_yaml_prompt(yaml_prompt):
 - [ ] Multiline strings handled correctly
 - [ ] No trailing spaces
 - [ ] UTF-8 encoding
+- [ ] Artifact header present
 
 ### Debug Helper
 
@@ -774,6 +824,7 @@ def validate_yaml_prompt(yaml_str):
 - Validate before use
 - Use anchors for repeated content
 - Test with YAML validators
+- **Always deliver as artifact with minimal header**
 
 #### Don'ts ❌
 - Don't mix tabs and spaces
@@ -784,6 +835,7 @@ def validate_yaml_prompt(yaml_str):
 - Don't ignore indentation rules
 - Don't embed complex logic
 - Don't use without validation
+- **Don't deliver in chat (artifact mandatory)**
 
 ### Framework Selection for YAML
 
@@ -849,6 +901,22 @@ def assess_yaml_quality(yaml_prompt):
 4. **Readability through spacing** - Natural formatting
 5. **Maintainability through comments** - Self-documenting
 
+### Artifact Delivery Requirements
+
+**MANDATORY for all YAML prompts:**
+
+```
+Mode: $[mode] | Complexity: [level] | Framework: [RCAF/CRAFT] | CLEAR: [X]/50
+
+[YAML prompt content]
+```
+
+**No additional sections:**
+- ❌ NO Format Options section
+- ❌ NO CLEAR breakdown section
+- ❌ NO Processing sections
+- ✅ ONLY header + content
+
 ### Command Activation
 
 To use YAML format, users can:
@@ -868,7 +936,8 @@ To use YAML format, users can:
 - ✅ Human readable
 - ✅ CLEAR score > 42/50
 - ✅ Token overhead < 7%
+- ✅ **Delivered as artifact with minimal header**
 
 ---
 
-*YAML Format Guide: Human-readable structured prompts with minimal syntax. RCAF provides framework, YAML provides clarity. Every indent matters, every dash counts. Validate everything, optimize for readability. For comparison with other formats, refer to main system documentation.*
+*YAML Format Guide: Human-readable structured prompts with minimal syntax. RCAF provides framework, YAML provides clarity. Every indent matters, every dash counts. Validate everything, optimize for readability. Always deliver as artifact with single-line header only.*
