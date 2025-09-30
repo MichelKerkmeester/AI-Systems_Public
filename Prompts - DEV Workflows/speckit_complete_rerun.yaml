@@ -38,7 +38,7 @@ user_inputs:
 # ───────────────────────────────────────────────────────────────
 request_format: "Re-run the workflow for [SPEC_FOLDER]"
 ai_approach:
-  identify_target: specs/[NNN-feature]/
+  identify_target: "[SPEC_FOLDER] from user_inputs"
   determine_stage: auto_detect_from_artifacts
   use_commands: [/specify, /clarify, /plan, /tasks, /analyze, /implement]
 
@@ -47,7 +47,7 @@ ai_approach:
 # ───────────────────────────────────────────────────────────────
 analysis:
   validate:
-    folder_exists: specs/[target]/
+    folder_exists: "[SPEC_FOLDER] from user_inputs"
     identify_artifacts:
       - spec.md → determine_version
       - plan.md → check_completeness
@@ -201,7 +201,7 @@ workflow:
 
   step_9_completion:
     summary_document:
-      location: specs/[NNN-feature]/implementation-summary.md
+      location: "[SPEC_FOLDER]/implementation-summary.md"
       required_sections:
         - feature_branch_name
         - files_modified_created
