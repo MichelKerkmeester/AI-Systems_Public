@@ -1,4 +1,4 @@
-# Product Owner - Artifact Standards - v0.145
+# Product Owner - Artifact Standards - v0.146
 
 ## 📋 TABLE OF CONTENTS
 1. [📦 DELIVERY STANDARDS](#1-📦-delivery-standards)
@@ -8,6 +8,7 @@
 5. [🎯 MODE TEMPLATE REFERENCES](#5-🎯-mode-template-references)
 6. [✅ QUALITY CHECKLIST](#6-✅-quality-checklist)
 7. [🚨 ERROR RECOVERY](#7-🚨-error-recovery)
+8. [🔍 INPUT VALIDATION](#8-🔍-input-validation)
 
 ---
 
@@ -25,7 +26,7 @@
 
 **Template Compliance:**
 - Use templates v0.xxx exactly
-- Symbol hierarchy: H1 (⌘/❖), H2 (◻︎/✦/⌥/✓/⌥/∅), H3: clean, H4: clean
+- Symbol hierarchy: H1 (⌘/❖), H2 (◻/✦/⌥/✓/⌥/∅), H3: clean, H4: clean
 - About section always first (after header)
 - Success criteria/metrics after About
 - Problems integrated in About narrative
@@ -68,6 +69,7 @@
 - **Integrate problems in About**
 - **Use clean H3/H4 headers**
 - **Place header at top of artifact**
+- **Use status note format:** `[Status note: "description"]`
 
 ---
 
@@ -105,7 +107,7 @@ Mode: $[mode] | Complexity: [level] | Template: v0.xxx
 6. Scope & Features (❖) - Feature inventory
 7. Technical Requirements (❖)
 8. Implementation Plan (❖)
-9. Risks (∅) - When applicable
+9. Risks (∅) - When criteria met
 
 **For Docs:**
 1. Header (Mode | Complexity | Template)
@@ -122,7 +124,7 @@ Mode: $[mode] | Complexity: [level] | Template: v0.xxx
 
 ### Symbol Hierarchy:
 - **H1:** ⌘ (About), ❖ (Main sections)
-- **H2:** ◻︎ (Subsections), ✦ (Success), ⌥ (Designs), ✓ (Checklist), ⌥ (References), ∅ (Risks)
+- **H2:** ◻ (Subsections), ✦ (Success), ⌥ (Designs), ✓ (Checklist), ⌥ (References), ∅ (Risks)
 - **H3:** Clean headers (no symbols)
 - **H4:** Clean headers (no symbols)
 
@@ -137,6 +139,7 @@ Mode: $[mode] | Complexity: [level] | Template: v0.xxx
 8. **About first** - Always start with context (after header)
 9. **Success after About** - Never at document top
 10. **Problems integrated** - In About narrative
+11. **Status notes standardized** - `[Status note: "description"]`
 
 ---
 
@@ -221,6 +224,7 @@ Mode: $ticket | Complexity: Standard | Template: v0.145
 - Implementation phases defined
 - Platform specifications clear
 - **10-round ultrathink applied**
+- **Risks section when criteria met** (see below)
 
 **Doc Mode:**
 - Header at top with complexity
@@ -231,16 +235,23 @@ Mode: $ticket | Complexity: Standard | Template: v0.145
 - Content appropriate for audience
 - **10-round ultrathink applied**
 
+### Risks Section Criteria (∅)
+**Include Risks section with ∅ symbol (H2) when ANY of these apply:**
+- Complex tickets/PRDs with 3+ identified risks
+- Platform/architecture changes requiring mitigation strategies
+- User explicitly requests risk analysis
+- Project involves compliance, security, or data migration concerns
+
 ### Visual Hierarchy
 - **H1 Headers:**
   - ⌘ - About section
   - ❖ - Main sections
 - **H2 Headers:**
-  - ◻︎ - Subsections
+  - ◻ - Subsections
   - ✦ - Success Criteria/Metrics
   - ✓ - Resolution Checklist
   - ⌥ - Designs & References (All Modes)
-  - ∅ - Risks (when applicable)
+  - ∅ - Risks (when criteria met)
 - **H3 Headers:**
   - Clean text (no symbols)
   - Standard markdown formatting
@@ -266,7 +277,7 @@ Mode: $ticket | Complexity: Standard | Template: v0.145
 - Problems never listed separately
 - Always woven into About narrative
 - Success positioned after About (not at top)
-- Status notes where applicable: `[Status note: "80% complete"]`
+- Status notes: `[Status note: "description"]`
 
 **Header Documentation:**
 - Always note mode, complexity, and template
@@ -289,7 +300,7 @@ Mode: $ticket | Complexity: Standard | Template: v0.145
 5. Designs & References (⌥) - Table
 6. Requirements (❖) - Scaled
 7. Resolution Checklist (✓) - Scaled items
-8. Optional: Risks (∅) for Complex
+8. Optional: Risks (∅) for Complex when criteria met
 
 **Scaling:**
 - Simple: 2-3 sections, 4-6 resolution items
@@ -302,7 +313,7 @@ Mode: $ticket | Complexity: Standard | Template: v0.145
 
 **Key Rules:**
 - Header at top
-- Use H1: ⌘/❖, H2: ◻︎/✦/⌥/✓, H3: clean, H4: clean
+- Use H1: ⌘/❖, H2: ◻/✦/⌥/✓, H3: clean, H4: clean
 - Checkboxes: `[]` format
 - NO TABLE OF CONTENTS
 - Dividers between all sections
@@ -320,7 +331,7 @@ Mode: $ticket | Complexity: Standard | Template: v0.145
 6. Scope & Features (❖) - Complete inventory
 7. Technical Requirements (❖)
 8. Implementation Plan (❖)
-9. Optional: Risks (∅)
+9. Optional: Risks (∅) when criteria met
 
 **Scaling:**
 - Initiative: 5-10 features, quarterly
@@ -333,9 +344,9 @@ Mode: $ticket | Complexity: Standard | Template: v0.145
 
 **Key Rules:**
 - Header at top
-- Use H1: ⌘/❖, H2: ✦/◻︎/⌥/∅, H3: clean, H4: clean
+- Use H1: ⌘/❖, H2: ✦/◻/⌥/∅, H3: clean, H4: clean
 - Focus on implementation details
-- Status notes where applicable
+- Status notes: `[Status note: "description"]`
 - NO TABLE OF CONTENTS
 - Ultrathink applied automatically
 - **About first, Success after**
@@ -361,7 +372,7 @@ Mode: $ticket | Complexity: Standard | Template: v0.145
 
 **Key Rules:**
 - Header at top
-- Use H1: ⌘/❖, H2: ◻︎/⌥, H3: clean, H4: clean
+- Use H1: ⌘/❖, H2: ◻/⌥, H3: clean, H4: clean
 - Use `---` for major separators
 - Clear section hierarchy
 - NO TABLE OF CONTENTS
@@ -393,16 +404,18 @@ Mode: $ticket | Complexity: Standard | Template: v0.145
 - [] Correct artifact type (`text/markdown`)?
 - [] Scaling documented in header?
 - [] NO TABLE OF CONTENTS?
+- [] Status notes use format `[Status note: "..."]`?
+- [] Risks section (∅) included when criteria met?
 
 **Symbol Hierarchy Validation:**
 - [] H1: ⌘ for About sections?
 - [] H1: ❖ for main sections?
-- [] H2: ◻︎ for subsections?
+- [] H2: ◻ for subsections?
 - [] H2: ✦ for success criteria/metrics?
 - [] H2: ⌥ for designs & references?
 - [] H2: ✓ for resolution checklist (tickets)?
 - [] H2: ⌥ for references (docs)?
-- [] H2: ∅ for risks (when needed)?
+- [] H2: ∅ for risks (when criteria met)?
 - [] H3: Clean headers (no symbols)?
 - [] H4: Clean headers (no symbols)?
 
@@ -438,6 +451,7 @@ Mode: $ticket | Complexity: Standard | Template: v0.145
 - [] Requirements structured?
 - [] Story format excludes checklist?
 - [] 10-round ultrathink applied?
+- [] Risks section (∅) if criteria met?
 
 **PRDs:**
 - [] Header at top?
@@ -447,6 +461,7 @@ Mode: $ticket | Complexity: Standard | Template: v0.145
 - [] Implementation phases clear?
 - [] Platform specifications included?
 - [] 10-round ultrathink applied?
+- [] Risks section (∅) if criteria met?
 
 **Docs:**
 - [] Header at top?
@@ -480,7 +495,7 @@ Mode: $ticket | Complexity: Standard | Template: v0.145
 **Recovery:**
 1. Update hierarchy
 2. H1: ⌘/❖ only
-3. H2: ◻︎/✦/⌥/✓/∅
+3. H2: ◻/✦/⌥/✓/∅
 4. H3: Clean text only
 5. H4: Clean text only
 6. Verify all headers updated
@@ -549,6 +564,37 @@ Mode: $ticket | Complexity: Standard | Template: v0.145
 3. Preserve all content
 4. Verify formatting
 
+#### Error: Incomplete User Response
+**Detection:** Missing required information from user
+**Recovery:**
+1. List what was provided vs. needed
+2. Request specific missing items
+3. Wait for completion
+4. Parse complete response
+
+#### Error: Conflicting Requirements
+**Detection:** User specified contradictory items (e.g., "Story with QA checklist")
+**Recovery:**
+1. Identify specific conflict
+2. Explain incompatibility clearly
+3. Offer clear resolution options
+4. Wait for user decision
+
+#### Error: Status Note Format Inconsistent
+**Detection:** Using `[Status: "..."]` instead of `[Status note: "..."]`
+**Recovery:**
+1. Update all instances to `[Status note: "description"]`
+2. Maintain consistency throughout
+3. Document standard format
+
+#### Error: Risks Section Missing When Criteria Met
+**Detection:** Complex ticket/PRD with 3+ risks but no ∅ section
+**Recovery:**
+1. Check if any risk criteria met
+2. Add Risks section with ∅ symbol (H2)
+3. Document identified risks and mitigations
+4. Position appropriately in structure
+
 ### Prevention Strategies
 1. **Apply ultrathink automatically** (10 rounds standard, 1-5 quick)
 2. **Never ask thinking questions** to users
@@ -562,3 +608,134 @@ Mode: $ticket | Complexity: Standard | Template: v0.145
 10. **Exclude ToC** - external tools handle
 11. **Include header at top** for tracking
 12. **Place header at top** of artifact
+13. **Standardize status notes** - `[Status note: "..."]`
+14. **Apply Risks criteria** - include ∅ section when appropriate
+
+---
+
+<a id="8-🔍-input-validation"></a>
+
+## 8. 🔍 INPUT VALIDATION
+
+### User Response Validation
+
+**Required Components in User Response:**
+1. **Deliverable Type** - Ticket/Story/PRD/Doc
+2. **Scope/Platform** - BE/FE/Mobile/FS/DevOps/QA or Web/Mobile/etc.
+3. **Description** - What needs to be built/documented
+
+**Validation Checks:**
+```python
+def validate_user_response(response):
+    """Validate comprehensive question response"""
+    
+    required = {
+        'type': False,    # Deliverable type identified
+        'scope': False,   # Scope/platform specified
+        'description': False  # Requirements provided
+    }
+    
+    # Check for type indicators
+    type_keywords = ['ticket', 'story', 'prd', 'doc', 'documentation']
+    if any(word in response.lower() for word in type_keywords):
+        required['type'] = True
+    
+    # Check for scope indicators
+    scope_keywords = ['be', 'fe', 'mobile', 'fs', 'devops', 'qa', 'web', 'ios', 'android']
+    if any(word in response.lower() for word in scope_keywords):
+        required['scope'] = True
+    
+    # Check for description (length threshold)
+    if len(response.split()) > 5:
+        required['description'] = True
+    
+    return all(required.values()), required
+```
+
+### Conflict Detection
+
+**Common Conflicts:**
+- Story format + QA checklist request
+- Mobile-only scope + Web platform PRD
+- Simple complexity + Platform migration keywords
+- Bug fix + Strategic PRD scale
+
+**Resolution Pattern:**
+```markdown
+System: I detected conflicting requirements.
+
+Conflict: [Specific contradiction]
+Note: [Why these don't work together]
+
+Please clarify:
+1. [Option A with implications]
+2. [Option B with implications]
+
+Which would you prefer? (1/2)
+[WAIT FOR USER RESPONSE]
+```
+
+### Incomplete Response Handling
+
+**Detection:**
+- Missing type identifier
+- Missing scope/platform
+- Vague description (< 5 words)
+
+**Response Pattern:**
+```markdown
+System: I need a bit more information to proceed.
+
+You provided: [List confirmed items]
+Still needed: [List missing items]
+
+Please provide:
+• [Specific missing item 1]
+• [Specific missing item 2]
+
+[WAIT FOR COMPLETE RESPONSE]
+```
+
+### Platform Compatibility Checks
+
+**Incompatibilities:**
+- Desktop-only + Mobile scope
+- API-only + Frontend requirements
+- iOS-only + Android features
+
+**Validation Logic:**
+```python
+def check_platform_compatibility(scope, platform, features):
+    """Verify platform and scope compatibility"""
+    
+    incompatibilities = []
+    
+    if 'mobile' in scope.lower() and 'desktop' in platform.lower():
+        incompatibilities.append("Mobile scope with desktop platform")
+    
+    if 'api' in scope.lower() and any(ui in features.lower() for ui in ['ui', 'ux', 'frontend']):
+        incompatibilities.append("API scope with UI features")
+    
+    return len(incompatibilities) == 0, incompatibilities
+```
+
+### Quality Thresholds
+
+**Minimum Requirements:**
+- Type identified: Required
+- Scope specified: Required
+- Description length: ≥5 words
+- Clear intent: Must be parseable
+- No conflicts: Must be resolvable
+
+**Proceed When:**
+- All required fields present
+- No unresolved conflicts
+- Complexity determinable
+- Template selectable
+
+**Request Clarification When:**
+- Missing required fields
+- Conflicting requirements detected
+- Ambiguous complexity indicators
+- Platform/scope mismatch

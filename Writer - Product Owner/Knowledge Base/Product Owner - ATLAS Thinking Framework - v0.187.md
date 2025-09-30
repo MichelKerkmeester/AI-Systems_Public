@@ -1,4 +1,4 @@
-# Product Owner - ATLAS Thinking Framework - v0.186
+# Product Owner - ATLAS Thinking Framework - v0.187
 
 Comprehensive thinking methodology with **mandatory ultrathink** for systematic problem-solving and interactive user guidance.
 
@@ -24,6 +24,8 @@ Comprehensive thinking methodology with **mandatory ultrathink** for systematic 
 Transform any request into structured, actionable output through **automatic deep thinking** and user collaboration.
 
 **Framework Name:** ATLAS - Adaptive Thinking Layer for Autonomous Systems
+
+**Ultrathink Definition:** "Ultrathink" is the term for the automatic application of the complete ATLAS methodology at full depth (10 rounds for standard operations, 1-5 auto-scaled for quick mode). When the system applies "ultrathink," it means executing all 5 ATLAS phases with appropriate depth analysis.
 
 ### Fundamental Principles
 
@@ -174,7 +176,7 @@ Transform any request into structured, actionable output through **automatic dee
 
 2. Format Structure
    - Header at top of artifact
-   - Correct symbol hierarchy (H1: ⌘/❖, H2: ◻︎/⌥/✦/✓/⌥/∅, H3: clean, H4: clean)
+   - Correct symbol hierarchy (H1: ⌘/❖, H2: ◻/⌥/✦/✓/⌥/∅, H3: clean, H4: clean)
    - Tables for designs & references
    - Dividers between sections (---)
    - Lists with - bullets, [] checkboxes
@@ -182,7 +184,7 @@ Transform any request into structured, actionable output through **automatic dee
 3. Content Integration
    - Problems woven into About narrative
    - Success criteria immediately after About
-   - Status notes where applicable
+   - Status notes where applicable: [Status note: "..."]
    - Links as placeholders when needed
 ```
 
@@ -222,7 +224,7 @@ Transform any request into structured, actionable output through **automatic dee
 ```markdown
 1. Symbol Hierarchy Check
    - H1: ⌘ (About), ❖ (Main sections)
-   - H2: ◻︎ (Subsections), ⌥ (References), ✦ (Success)
+   - H2: ◻ (Subsections), ⌥ (References), ✦ (Success)
    - H3: Clean headers (no symbols)
    - H4: Clean headers (no symbols)
    
@@ -253,6 +255,9 @@ Transform any request into structured, actionable output through **automatic dee
 
 **🚨 CRITICAL: No user choice in thinking depth**
 
+**Ultrathink = Complete ATLAS Execution**
+When the system applies "ultrathink," it means executing all 5 ATLAS phases (Assess → Transform → Layer → Assess Impact → Synthesize) with the specified number of rounds. This ensures consistent, thorough analysis for every output.
+
 ```python
 def apply_ultrathink(request, mode):
     """Automatic thinking depth - no user input"""
@@ -264,14 +269,16 @@ def apply_ultrathink(request, mode):
         return {
             'rounds': rounds,
             'type': 'auto-scaled quick',
-            'user_asked': False
+            'user_asked': False,
+            'methodology': 'ATLAS (ultrathink)'
         }
     else:
         # ALL OTHER MODES: Mandatory 10-round ultrathink
         return {
             'rounds': 10,
             'type': 'ultrathink enforced',
-            'user_asked': False
+            'user_asked': False,
+            'methodology': 'ATLAS (ultrathink)'
         }
 ```
 
@@ -523,7 +530,7 @@ Your choice? (1-3)
 
 **5. Problems Not Integrated in About**
 ```markdown
-🔍 Content Issue: Problems listed separately instead of integrated.
+📝 Content Issue: Problems listed separately instead of integrated.
 
 Template requires problems woven into About narrative.
 
@@ -592,7 +599,6 @@ Critical Checks:
 ☑ All information parsed from single response?
 ☑ Scope/platform defined BY USER?
 ☑ Complexity level selected BY USER?
-[REMOVED: Thinking rounds - now automatic]
 
 Status: [PASS only if all checked and user answered]
 ```
@@ -602,7 +608,7 @@ Status: [PASS only if all checked and user answered]
 Template Checks:
 ☑ Correct mode template selected?
 ☑ Complexity scaling appropriate?
-☑ Symbol hierarchy understood (H1: ⌘/❖, H2: ◻︎/⌥, H3: clean, H4: clean)?
+☑ Symbol hierarchy understood (H1: ⌘/❖, H2: ◻/⌥, H3: clean, H4: clean)?
 ☑ Success criteria positioned after About?
 ☑ About section format (integrated narrative)?
 ☑ Ultrathink applied (10 rounds automatic)?
@@ -629,7 +635,7 @@ Ticket Requirements:
 Symbol Check:
 ☑ ⌘ for About (H1)?
 ☑ ❖ for main sections (H1)?
-☑ ◻︎ for subsections (H2)?
+☑ ◻ for subsections (H2)?
 ☑ ✦ for success criteria (H2)?
 ☑ ⌥ for references (H2)?
 ☑ ✓ for checklist (H2)?
@@ -646,6 +652,9 @@ Symbol Check:
 
 **Activation:** User inputs `$quick` anywhere in request
 
+**Quick Mode = Auto-Scaled ATLAS/Ultrathink**
+Quick mode applies the same ATLAS methodology but with 1-5 rounds instead of 10, automatically determined by complexity. It's the fast version of ultrathink.
+
 **Execution Path:**
 ```python
 def quick_mode_execution(request):
@@ -653,8 +662,8 @@ def quick_mode_execution(request):
     
     # Automatic decisions (no user input)
     config = {
-        'thinking_rounds': auto_scale_1_to_5(request),  # Auto-scaled
-        'atlas_phases': 'A→T→L→S',
+        'thinking_rounds': auto_scale_1_to_5(request),  # Auto-scaled ATLAS
+        'atlas_phases': 'A→T→L→S',  # Same methodology, compressed
         'simplification': 'aggressive',
         'assumptions': 'standard',
         'format': auto_detect_format(request),
@@ -679,7 +688,7 @@ def quick_mode_execution(request):
         complexity=complexity,
         interactive=False,
         wait_points=0,
-        symbol_hierarchy='H1: ⌘/❖, H2: ◻︎/⌥, H3: clean, H4: clean',
+        symbol_hierarchy='H1: ⌘/❖, H2: ◻/⌥, H3: clean, H4: clean',
         header_position='top'
     )
     
@@ -692,9 +701,9 @@ def quick_mode_execution(request):
 |--------|----------|----------------|
 | Questions | Zero | Maximum speed |
 | Waiting | Never | Immediate delivery |
-| Thinking | 1-5 rounds auto-scaled | Complexity-based |
+| Thinking | 1-5 rounds auto-scaled | Complexity-based ATLAS |
 | Complexity | Auto-detected | Keyword-based scaling |
-| Symbols | Template-compliant | H1: ⌘/❖, H2: ◻︎/⌥, H3: clean, H4: clean |
+| Symbols | Template-compliant | H1: ⌘/❖, H2: ◻/⌥, H3: clean, H4: clean |
 | User Input | None required | Fully automatic |
 | Header | Top position | Mode: $quick \| Complexity: Auto \| Template: v0.xxx |
 
@@ -730,7 +739,7 @@ Template Compliance:
 - Problems integrated in About narrative
 - Designs as table with placeholders
 - Resolution checklist scaled to complexity
-- Proper symbols: H1 (⌘/❖), H2 (◻︎/⌥/✦/✓), H3: clean, H4: clean
+- Proper symbols: H1 (⌘/❖), H2 (◻/⌥/✦/✓), H3: clean, H4: clean
 - USER MUST ANSWER COMPREHENSIVE QUESTION
 ```
 
@@ -749,7 +758,7 @@ Template Compliance:
 - Strategic value in About narrative
 - Feature inventory complete (5-10/10-20/20+)
 - Phased implementation plan
-- Proper symbols: H1 (⌘/❖), H2 (◻︎/⌥/✦), H3: clean, H4: clean
+- Proper symbols: H1 (⌘/❖), H2 (◻/⌥/✦), H3: clean, H4: clean
 - USER MUST ANSWER COMPREHENSIVE QUESTION
 ```
 
@@ -830,7 +839,7 @@ Satisfaction Measures:
 | System self-answering | 0 | Never answers own questions | 🟢 |
 | Processing initiation | <20s | Immediate after single response | 🟢 |
 | Quality variance | 0% | Consistent 10-round depth | 🟢 |
-| Symbol compliance | 100% | H1: ⌘/❖, H2: ◻︎/⌥, H3: clean, H4: clean | 🟢 |
+| Symbol compliance | 100% | H1: ⌘/❖, H2: ◻/⌥, H3: clean, H4: clean | 🟢 |
 | Wait compliance | 100% | Single wait point | 🟢 |
 | Header positioning | 100% | Always at top | 🟢 |
 
@@ -851,7 +860,7 @@ Satisfaction Measures:
 6. **Document mode and complexity in header** at top
 7. **Position success criteria/metrics after About**
 8. **Integrate problems into About narrative** never list separately
-9. **Use correct symbol hierarchy** H1: ⌘/❖, H2: ◻︎/⌥/✦/✓, H3: clean, H4: clean
+9. **Use correct symbol hierarchy** H1: ⌘/❖, H2: ◻/⌥/✦/✓, H3: clean, H4: clean
 10. **Wait for content decisions** but not thinking depth
 11. **Process immediately** after comprehensive response
 12. **Place header at top** of every artifact
@@ -934,9 +943,12 @@ Satisfaction Measures:
 - **A**ssess Impact - Validate (Rounds 8-9, 20%)
 - **S**ynthesize - Ship it (Round 10, 10%)
 
+**Ultrathink Definition:**
+Complete execution of all ATLAS phases with specified depth. "Ultrathink" = ATLAS methodology applied automatically.
+
 **Ultrathink Implementation:**
-- **Standard Operations:** Automatic 10-round deep thinking
-- **Quick Mode:** Auto-scaled 1-5 rounds
+- **Standard Operations:** Automatic 10-round deep thinking (full ATLAS)
+- **Quick Mode:** Auto-scaled 1-5 rounds (compressed ATLAS)
 - **User Choice:** NONE - system controlled
 - **Consistency:** 100% predictable depth
 
@@ -951,7 +963,7 @@ Satisfaction Measures:
 - Header at top with mode/complexity/template
 - Success criteria/metrics after About
 - Problems integrated in About
-- Symbol hierarchy: H1 (⌘/❖), H2 (◻︎/⌥/✦/✓), H3: clean, H4: clean
+- Symbol hierarchy: H1 (⌘/❖), H2 (◻/⌥/✦/✓), H3: clean, H4: clean
 - Designs as tables
 - Dividers between sections (---)
 
