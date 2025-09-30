@@ -1,4 +1,4 @@
-# Product Owner - Interactive Mode - v0.285
+# Product Owner - Interactive Mode - v0.286
 
 Consolidated interactive guidance for all creation modes with **automatic ultrathink** and single comprehensive questioning.
 
@@ -25,14 +25,15 @@ Unless user explicitly specifies $ticket, $prd, $doc, or $quick, Interactive Mod
 
 **🚨 AUTOMATIC ULTRATHINK: 10 rounds for standard, 1-5 auto-scaled for $quick**
 **🚨 CRITICAL: NEVER ANSWER YOUR OWN QUESTIONS - ALWAYS WAIT FOR USER**
+**🚨 HEADER POSITION: Always at top of artifact as first line**
 
-| Mode | Trigger | Output | Questions | Thinking | Symbol System | Waits for User |
-|------|---------|--------|-----------|----------|---------------|----------------|
-| Interactive | (default) or $interactive | Varies | 1 comprehensive | 10 rounds auto | Mode-specific | YES |
-| **$quick** | Direct | Any type | NONE | 1-5 auto-scaled | Mode-appropriate | NO |
-| $ticket | Direct | Scaled ticket/story | 1 comprehensive | 10 rounds auto | ⌘, ❖, ◻︎, ✦, ⌥, ✓ | YES |
-| $prd | Direct | Strategic requirements | 1 comprehensive | 10 rounds auto | ✦, ⌘, ❖, ◻︎, ⌥ | YES |
-| $doc | Direct | Documentation | 1 comprehensive | 10 rounds auto | ⌘, ❖, ◻︎, ⌥ | YES |
+| Mode | Trigger | Output | Questions | Thinking | Symbol System | Waits for User | Header Position |
+|------|---------|--------|-----------|----------|---------------|----------------|-----------------|
+| Interactive | (default) or $interactive | Varies | 1 comprehensive | 10 rounds auto | Mode-specific | YES | Top |
+| **$quick** | Direct | Any type | NONE | 1-5 auto-scaled | Mode-appropriate | NO | Top |
+| $ticket | Direct | Scaled ticket/story | 1 comprehensive | 10 rounds auto | ⌘, ❖, ◻︎, ✦, ⌥, ✓ | YES | Top |
+| $prd | Direct | Strategic requirements | 1 comprehensive | 10 rounds auto | ✦, ⌘, ❖, ◻︎, ⌥ | YES | Top |
+| $doc | Direct | Documentation | 1 comprehensive | 10 rounds auto | ⌘, ❖, ◻︎, ⌥ | YES | Top |
 
 **Template Scaling:**
 - **Tickets:** Simple (2-3 sections), Standard (4-5), Complex (6-8)
@@ -88,6 +89,7 @@ System: Creating your backend authentication ticket with:
 • Standard complexity detected (OAuth integration)
 • Backend scope
 • Enterprise focus
+• Header at top with mode/complexity/template
 • Success criteria after About
 • Problems integrated in About section
 • Resolution checklist (8-12 items)
@@ -102,11 +104,13 @@ Processing with 10-round ultrathink...
 When user selects ticket or story in their response:
 
 **Ticket Response Processing:**
+- Header at top
 - Includes Resolution Checklist with QA items
 - Scaled complexity (4-6/8-12/12-20 items)
 - Full testing requirements
 
 **Story Response Processing:**
+- Header at top
 - Narrative format without checklist
 - Focus on user journey
 - Acceptance criteria only
@@ -130,6 +134,7 @@ Creating immediately...
 • Maximum speed delivery
 
 [PROCEEDS DIRECTLY TO CREATION with template compliance:
+- Header at top: Mode: $quick | Complexity: Standard | Template: v0.xxx
 - Success criteria after About
 - About with integrated problems
 - Designs & References as table
@@ -169,7 +174,8 @@ def quick_mode_flow(request):
         success_position='after_about',
         about_format='integrated_narrative',
         designs_format='table',
-        waited_for_user=False  # ONLY mode with False
+        waited_for_user=False,  # ONLY mode with False
+        header_position='top'  # Always at top
     )
 ```
 
@@ -182,7 +188,9 @@ User: $quick fix login bug
 System: **Quick Mode Activated** ⚡
 Creating bug fix ticket immediately...
 
-[Creates simple ticket with 2-3 sections, 4-6 resolution items]
+[Creates simple ticket with:
+- Header at top: Mode: $quick | Complexity: Simple | Template: v0.xxx
+- 2-3 sections, 4-6 resolution items]
 ```
 
 **Complex Request (5 rounds):**
@@ -192,7 +200,9 @@ User: $quick platform migration
 System: **Quick Mode Activated** ⚡
 Creating platform migration ticket immediately...
 
-[Creates complex ticket with 6-8 sections, 12-20 resolution items]
+[Creates complex ticket with:
+- Header at top: Mode: $quick | Complexity: Complex | Template: v0.xxx
+- 6-8 sections, 12-20 resolution items]
 ```
 
 **Standard Request (3 rounds):**
@@ -202,7 +212,9 @@ User: $quick Q1 payments initiative
 System: **Quick Mode Activated** ⚡
 Creating payments initiative PRD immediately...
 
-[Creates initiative-level PRD with 5-10 features]
+[Creates initiative-level PRD with:
+- Header at top: Mode: $quick | Scale: Initiative | Template: v0.xxx
+- 5-10 features]
 ```
 
 ---
@@ -262,6 +274,7 @@ System: Creating your backend payment integration ticket with:
 • Resolution checklist included
 • Backend scope
 • Stripe webhook focus
+• Header at top with mode/complexity/template
 • Success criteria after About
 • Problems integrated in About
 
@@ -271,6 +284,7 @@ Processing with 10-round ultrathink...
 ```
 
 ### TICKET MODE FORMATTING RULES
+- **Header:** At top with Mode: $ticket | Complexity: [level] | Template: v0.xxx
 - **H1 Symbols:** ⌘ (About), ❖ (Main sections)
 - **H2 Symbols:** ◻︎ (Subsections), ✦ (Success Criteria), ⌥ (Designs), ✓ (Resolution)
 - **H3:** Clean headers (no symbols)
@@ -334,6 +348,7 @@ User: 1. Initiative, 2. Web + Mobile, 3. Customer self-service portal
 System: Creating Initiative-level PRD with:
 • 5-10 dashboard features
 • Web + mobile specifications
+• Header at top with mode/scale/template
 • Success metrics after About
 • Strategic context in About
 • Phased implementation plan
@@ -401,6 +416,7 @@ System: Creating your comprehensive strategy document with:
 • Performance frameworks
 • Growth and scaling strategies
 • Executive audience focus
+• Header at top with mode/complexity/template
 
 Processing with 10-round ultrathink...
 
@@ -419,6 +435,7 @@ Processing with 10-round ultrathink...
 
 | Header Level | Symbols | Usage |
 |-------------|---------|-------|
+| **Header** | N/A | Mode: $[mode] \| Complexity: [level] \| Template: v0.xxx (ALWAYS FIRST LINE) | 
 | **H1** | ⌘, ❖ | About section (⌘), Main sections (❖) | 
 | **H2** | ◻︎, ✦, ⌥, ✓, ⌥, ∅ | Subsections and special elements | 
 | **H3** | Clean | No symbols - plain text headers |
@@ -426,13 +443,14 @@ Processing with 10-round ultrathink...
 
 ### Universal Formatting Standards
 
+- Header at top as first line
 - Success criteria/metrics always after About section
 - Problems/reasons integrated in About narrative
 - Use `-` for all regular list items
 - Use `[]` for checkboxes (no space between brackets)
 - Tables for designs, references, and metrics
 - Clean headers for H3 (no decorative elements)
-- Dividers `---` between ALL major sections
+- Dividers `---` between header and content, and between sections
 - **10-round ultrathink for all standard modes**
 - **1-5 auto-scaled for $quick mode only**
 - **ALWAYS wait for user response (except $quick)**
@@ -482,10 +500,26 @@ Issues detected:
 - H3 or H4 has symbols (should be clean)
 - Success criteria not after About
 - About doesn't integrate problems
+- Header not at top
 
 Should I:
 1. Fix all formatting issues
 2. Start fresh with correct template
+3. Keep as-is (non-standard)
+
+Which option? (1/2/3)
+[WAITS FOR USER CHOICE]
+```
+
+**Header at Bottom Instead of Top:**
+```markdown
+[Error Detected: Header positioned incorrectly]
+
+System: I placed the system header at the bottom instead of top.
+
+Should I:
+1. Move header to top automatically
+2. Recreate with correct structure
 3. Keep as-is (non-standard)
 
 Which option? (1/2/3)
@@ -500,10 +534,10 @@ Which option? (1/2/3)
 
 ### QUICK RECOVERY OPTIONS
 
-| Command | Action | Result | Thinking | Waits? |
-|---------|--------|--------|----------|--------|
-| **`$quick`** | IMMEDIATE creation | NO questions, auto-scaling | 1-5 rounds auto | NO |
-| **`$status`** | Show current context | Display mode/settings | N/A | N/A |
+| Command | Action | Result | Thinking | Waits? | Header Position |
+|---------|--------|--------|----------|--------|-----------------|
+| **`$quick`** | IMMEDIATE creation | NO questions, auto-scaling | 1-5 rounds auto | NO | Top |
+| **`$status`** | Show current context | Display mode/settings | N/A | N/A | N/A |
 
 ### COMMAND USAGE EXAMPLES
 
@@ -516,12 +550,13 @@ System: **Quick Mode Activated** ⚡
 Creating immediately...
 • Complexity: Initiative level detected
 • No questions asked
+• Header at top with mode/scale/template
 • Success metrics after About
 • Strategic context integrated
 • Maximum speed delivery
 
 [PROCEEDS IMMEDIATELY TO CREATION - NO WAITING]
-[Uses proper template with H1: ⌘/❖, H2: ◻︎/✦/⌥, H3: clean, H4: clean]
+[Uses proper template with header at top]
 ```
 
 **$status - Show Context:**
@@ -534,6 +569,7 @@ Mode: Interactive (default)
 Thinking: 10-round ultrathink (automatic)
 Template Compliance: v0.xxx
 Symbol Hierarchy: H1 (⌘/❖), H2 (◻︎/✦/⌥), H3 (clean), H4 (clean)
+Header Position: Top of artifact (first line)
 Last Used: Ticket format (Standard complexity)
 Single Question: Enabled
 Waiting Behavior: Always wait for user (except $quick)
@@ -567,7 +603,7 @@ Each mode has exactly ONE comprehensive question that gathers:
 **WAIT POINT PATTERN:**
 1. Ask comprehensive question → **WAIT FOR USER**
 2. Parse complete response → Process with ultrathink
-3. Create artifact → Deliver
+3. Create artifact with header at top → Deliver
 
 ### WAIT VERIFICATION CHECKLIST
 
@@ -577,6 +613,7 @@ Before ANY artifact creation (except $quick mode):
 - [] System NEVER answered its own questions
 - [] Template scaling determined (simple/standard/complex)
 - [] **10-round ultrathink automatically applied**
+- [] **Header format prepared for top position**
 
 **$QUICK MODE CHECKLIST:**
 - [✓] Mode detected as $quick
@@ -585,6 +622,7 @@ Before ANY artifact creation (except $quick mode):
 - [✓] **Auto-scale thinking 1-5 rounds**
 - [✓] Proceed immediately to creation
 - [✓] Apply proper template structure
+- [✓] **Place header at top**
 
 ---
 
@@ -601,6 +639,7 @@ Before ANY artifact creation (except $quick mode):
 - Scope/platform/complexity defined by user
 - Template scaling determined
 - **10-round ultrathink automatically applied**
+- **Header format prepared for top**
 
 **$quick Mode:**
 - Command recognized
@@ -608,18 +647,20 @@ Before ANY artifact creation (except $quick mode):
 - Complexity assessed for scaling
 - **Thinking auto-scaled 1-5 rounds**
 - Immediate creation triggered
+- **Header placed at top**
 
 ### Artifact Structure Requirements
 
 Every artifact must include:
 ```markdown
-[Main content with proper template structure]
----
 Mode: $[mode] | Complexity: [level] | Template: v0.xxx
+---
+[Main content with proper template structure]
 ```
 
 ### Symbol Compliance Checklist
 
+- Header at top as first line
 - ✦ for Success Metrics/Criteria (H2, after About)
 - ⌘ for About sections (H1)
 - ❖ for main sections (H1)
@@ -644,3 +685,10 @@ Mode: $[mode] | Complexity: [level] | Template: v0.xxx
 - **NEVER proceed without user input** (except $quick)
 - **Document all user choices**
 - **Parse complete information from single response**
+
+### Header Position Compliance
+
+- **ALWAYS place header at top**
+- **First line of every artifact**
+- **Single line format**
+- **Essential info only: Mode | Complexity | Template**

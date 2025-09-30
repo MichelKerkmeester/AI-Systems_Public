@@ -1,8 +1,8 @@
-# Product Owner - Template - Ticket Mode - v0.124
+# Product Owner - Template - Ticket Mode - v0.125
 
 ## 📋 TABLE OF CONTENTS
 1. [🎫 TICKET MODE OVERVIEW](#1-🎫-ticket-mode-overview)
-2. [📝 COMPLEXITY AUTO-SCALING](#2-📝-complexity-auto-scaling)
+2. [🔍 COMPLEXITY AUTO-SCALING](#2-🔍-complexity-auto-scaling)
 3. [🔵 SIMPLE TICKET TEMPLATE](#3-🔵-simple-ticket-template-2-3-sections-4-6-resolution)
 4. [🟠 STANDARD TICKET TEMPLATE](#4-🟠-standard-ticket-template-4-5-sections-8-12-resolution)
 5. [🔴 COMPLEX TICKET TEMPLATE](#5-🔴-complex-ticket-template-6-8-sections-12-20-resolution)
@@ -22,12 +22,13 @@
 - **Thinking:** 10 rounds automatic (ultrathink), 1-5 auto-scaled for $quick
 - **Interactive Mode:** Single comprehensive question gathering all requirements
 - **Key Difference:** Stories omit Resolution Checklist
+- **Header Position:** Always at top as first line
 
 ---
 
-<a id="2-📝-complexity-auto-scaling"></a>
+<a id="2-🔍-complexity-auto-scaling"></a>
 
-## 2. 📝 COMPLEXITY AUTO-SCALING
+## 2. 🔍 COMPLEXITY AUTO-SCALING
 
 | Keywords | Complexity | Sections | Resolution Items |
 |----------|------------|----------|------------------|
@@ -42,6 +43,8 @@
 ## 3. 🔵 SIMPLE TICKET TEMPLATE (2-3 SECTIONS, 4-6 RESOLUTION)
 
 ```markdown
+Mode: $ticket | Complexity: Simple | Template: v0.125
+---
 [SCOPE] Bug Fix: [Feature Name]
 
 # ⌘ About
@@ -90,9 +93,6 @@ for users - integrated naturally into the description rather than as separate se
 [] Update unit tests if needed
 [] Verify no regressions occur
 [] Document fix in PR description
-
----
-Mode: $ticket | Complexity: Simple | Template: v0.123
 ```
 
 ---
@@ -102,6 +102,8 @@ Mode: $ticket | Complexity: Simple | Template: v0.123
 ## 4. 🟠 STANDARD TICKET TEMPLATE (4-5 SECTIONS, 8-12 RESOLUTION)
 
 ```markdown
+Mode: $ticket | Complexity: Standard | Template: v0.125
+---
 [SCOPE] Feature: [Feature Name]
 
 # ⌘ About
@@ -183,9 +185,6 @@ why it matters for users, the business value and ROI expectations, and competiti
 [] Verify mobile responsiveness
 [] Get design approval on implementation
 [] Complete code review with team
-
----
-Mode: $ticket | Complexity: Standard | Template: v0.123
 ```
 
 ---
@@ -195,6 +194,8 @@ Mode: $ticket | Complexity: Standard | Template: v0.123
 ## 5. 🔴 COMPLEX TICKET TEMPLATE (6-8 SECTIONS, 12-20 RESOLUTION)
 
 ```markdown
+Mode: $ticket | Complexity: Complex | Template: v0.125
+---
 [SCOPE] Platform: [Platform/Architecture Name]
 
 # ⌘ About
@@ -319,9 +320,6 @@ all integrated into a cohesive overview rather than listed as separate problems 
 [] Monitor system metrics
 [] Complete performance optimization
 [] Update all documentation
-
----
-Mode: $ticket | Complexity: Complex | Template: v0.123
 ```
 
 ---
@@ -332,17 +330,18 @@ Mode: $ticket | Complexity: Complex | Template: v0.123
 
 ### Mandatory Elements
 
-1. **[SCOPE]** prefix before title
-2. **About section FIRST** with integrated problems/reasons
-3. **Success Criteria AFTER About** (not at top)
-4. **QA Warning** - Above resolution checklist
-5. **Symbol usage** - As per hierarchy
-6. **Dividers** - Use `---` between ALL major sections
-7. **Designs as Table** - Not bullet lists
-8. **Minimal Footer** - Single line with mode, complexity, template
+1. **Header at top** as first line
+2. **[SCOPE]** prefix before title
+3. **About section FIRST** with integrated problems/reasons
+4. **Success Criteria AFTER About** (not at top)
+5. **QA Warning** - Above resolution checklist
+6. **Symbol usage** - As per hierarchy
+7. **Dividers** - Use `---` between ALL major sections
+8. **Designs as Table** - Not bullet lists
 
 ### Symbol Reference
 
+- **Header** - Mode | Complexity | Template (first line)
 - **⌘** - About section (H1)
 - **❖** - Main sections (H1) 
 - **◻︎** - Sub-sections (H2)
@@ -353,27 +352,34 @@ Mode: $ticket | Complexity: Complex | Template: v0.123
 
 ### Structure Order
 
-1. Title with [SCOPE]
-2. About (⌘) - Context and integrated problems
-3. Success Criteria (✦) - Measurable outcomes
-4. Designs & References (⌥) - Table format
-5. Requirements (❖) - Detailed specifications
-6. User Stories (❖) - If applicable
-7. Risks (∅) - Complex tickets only
-8. Resolution Checklist (✓) - QA items
-9. Footer - Minimal single line
+1. Header (Mode | Complexity | Template)
+2. Title with [SCOPE]
+3. About (⌘) - Context and integrated problems
+4. Success Criteria (✦) - Measurable outcomes
+5. Designs & References (⌥) - Table format
+6. Requirements (❖) - Detailed specifications
+7. User Stories (❖) - If applicable
+8. Risks (∅) - Complex tickets only
+9. Resolution Checklist (✓) - QA items
 
 ### Formatting Standards
 
+- Header at top as first line
+- Divider after header before title
 - Use consistent spacing between sections
 - Tables for complex comparisons and designs
 - Always include "to be added" for placeholder links
 - Use `-` (hyphen + space) for all regular list items
 - Use `[]` for checkboxes in Resolution Checklist (no spaces)
 - Each checkbox item on its own line
-- Minimal footer at bottom
 
 ### Correct Formatting Examples
+
+**Correct Header:**
+```markdown
+Mode: $ticket | Complexity: Standard | Template: v0.125
+---
+```
 
 **Correct Table for Designs:**
 ```markdown
@@ -381,11 +387,6 @@ Mode: $ticket | Complexity: Complex | Template: v0.123
 |------|----------|--------|------|
 | Design | UI Flow | Ready | [Link - to be added] |
 | API | Endpoints | Draft | [Swagger - to be added] |
-```
-
-**Correct Footer:**
-```markdown
-Mode: $ticket | Complexity: Standard | Template: v0.123
 ```
 
 ---
@@ -437,12 +438,13 @@ System: Creating your backend payment integration ticket with:
 • PayPal checkout focus
 • Webhook handling included
 • Resolution checklist for QA
+• Header at top with mode/complexity/template
 • Success criteria after About
 • 10-round ultrathink applied
 
 Processing now...
 
-[Creates ticket based on complexity detected with minimal footer]
+[Creates ticket based on complexity detected with header at top]
 ```
 
 ### Story Format (When Selected)
@@ -450,6 +452,8 @@ Processing now...
 When user selects "Story", the template omits the Resolution Checklist:
 
 ```markdown
+Mode: $story | Complexity: [level] | Template: v0.125
+---
 [SCOPE] Story: [Name]
 
 # ⌘ About
@@ -468,7 +472,4 @@ When user selects "Story", the template omits the Resolution Checklist:
 [Same format]
 
 [NOTE: No Resolution Checklist for stories]
-
----
-Mode: $story | Complexity: [level] | Template: v0.123
 ```

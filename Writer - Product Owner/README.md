@@ -1,10 +1,10 @@
-# Product Owner System - User Guide v0.905
+# Product Owner System - User Guide v0.906
 
 Transforms requests into professional development tickets, strategic PRDs, and documentation through intelligent interactive guidance with automatic ultrathink processing.
 
 ## 📋 Table of Contents
 
-- [🆕 What's New In V0.905](#whats-new-in-v0905)
+- [🆕 What's New In V0.906](#whats-new-in-v0906)
 - [✨ Key Features](#key-features)
 - [🚀 Quick Setup](#quick-setup)
 - [🎛️ Operating Modes](#operating-modes)
@@ -13,33 +13,42 @@ Transforms requests into professional development tickets, strategic PRDs, and d
 - [📄 Doc Mode](#doc-mode)
 - [🧠 Atlas Thinking Framework](#atlas-thinking-framework)
 - [🎯 Automatic Complexity Detection](#automatic-complexity-detection)
-- [📝 Symbol & Formatting Reference](#symbol--formatting-reference)
-- [📊 Minimal Footer Format](#minimal-footer-format)
+- [🔍 Symbol & Formatting Reference](#symbol--formatting-reference)
+- [📊 Header Format](#header-format)
 - [🆘 Troubleshooting](#troubleshooting)
 - [📦 Version History](#version-history)
 
 .
 
-<a id="whats-new-in-v0905"></a>
-## 🆕 What's New In V0.905
+<a id="whats-new-in-v0906"></a>
+## 🆕 What's New In V0.906
 
-### Single Comprehensive Question Flow
-- **Consolidated Interaction:** All information gathered in ONE well-formatted prompt
+### Header Positioning Change
+- **Header at Top:** System metadata now appears as first line of every artifact
+- **Format:** `Mode: $[mode] | Complexity: [level] | Template: v0.xxx`
+- **Consistent Positioning:** Always first line, followed by divider
+- **Enhanced Clarity:** Immediate visibility of artifact type and complexity
+- **Better Organization:** Clear separation between metadata and content
+
+### Updated Template Versions
+- **Artifact Standards:** v0.145
+- **ATLAS Framework:** v0.186
+- **Interactive Mode:** v0.286
+- **Ticket Template:** v0.125
+- **PRD Template:** v0.125
+- **Doc Template:** v0.115
+- **Writer:** v0.906
+
+### Maintained from V0.905
+- **Single Comprehensive Question Flow:** All information in ONE prompt
 - **60% Fewer Decision Points:** From 3-4 questions to just 1
 - **Faster Creation:** 50% reduction in time to artifact
 - **Enhanced Formatting:** Numbered sections with emojis for clarity
-- **No Figma Dependencies:** Removed all Figma MCP references
-
-### Enhanced User Experience
-- **Single Wait Point:** Ask once, wait once, create
-- **Clear Response Format:** Examples provided for user input
-- **Better Visual Hierarchy:** Numbered points (1️⃣, 2️⃣, 3️⃣)
-- **Streamlined Process:** Parse → Process → Create
 
 ### Maintained from V0.903
 - **Automatic Ultrathink™:** 10 rounds enforced for all standard operations
 - **Quick Mode Auto-Scaling:** 1-5 rounds automatically determined
-- **Minimal Footer:** Single-line tracking format
+- **Minimal Metadata:** Single-line tracking format
 - **Template Compliance:** Full v0.xxx standards
 - **Success Positioning:** Criteria/metrics after About section
 
@@ -54,7 +63,7 @@ Transforms requests into professional development tickets, strategic PRDs, and d
 - **⚡ Quick Mode**: Zero-wait creation with auto-scaled thinking (1-5 rounds)
 - **💬 Single Question Flow**: All information gathered at once
 - **🤖 Automatic Thinking**: System-controlled depth (no user choice)
-- **📊 Minimal Footer**: Clean single-line tracking format
+- **📊 Header at Top**: Clean first-line metadata format
 
 .
 
@@ -69,21 +78,21 @@ Transforms requests into professional development tickets, strategic PRDs, and d
 ### Step 2: Add System Instructions
 1. Click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Writer - Product Owner - v0.905.md` 
+3. Copy and paste: `Writer - Product Owner - v0.906.md` 
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
-Add these documents to your project (all updated with single question flow):
+Add these documents to your project (all updated with header-at-top format):
 
 **Core Documents (Latest Versions):**
-- `Product Owner - ATLAS Thinking Framework - v0.184.md` 
-- `Product Owner - Artifact Standards - v0.143.md` 
-- `Product Owner - Interactive Mode - v0.284.md` 
+- `Product Owner - ATLAS Thinking Framework - v0.186.md` 
+- `Product Owner - Artifact Standards - v0.145.md` 
+- `Product Owner - Interactive Mode - v0.286.md` 
 
 **Template Documents (Current Versions):**
-- `Product Owner - Template - Ticket Mode - v0.123.md` 
-- `Product Owner - Template - PRD Mode - v0.123.md` 
-- `Product Owner - Template - Doc Mode - v0.113.md` 
+- `Product Owner - Template - Ticket Mode - v0.125.md` 
+- `Product Owner - Template - PRD Mode - v0.125.md` 
+- `Product Owner - Template - Doc Mode - v0.115.md` 
 
 ### Step 4: Start Creating
 ```
@@ -100,16 +109,16 @@ $ticket payment integration     # Direct ticket mode (10 rounds auto)
 
 **Default Mode:** The system defaults to `$interactive` with automatic 10-round ultrathink unless specified.
 
-| Mode | Purpose | Questions | Thinking | Scaling | Footer Format |
-|------|---------|-----------|----------|---------|---------------|
-| **Interactive** | Determine what to create | 1 comprehensive | 10 rounds auto | Auto-detect | Minimal |
-| **$quick** | Fast creation | NONE | 1-5 auto-scaled | Auto-scale | Minimal |
-| **$ticket** | Dev tickets | 1 comprehensive | 10 rounds auto | 2-3/4-5/6-8 sections | Minimal |
-| **$prd** | Product requirements | 1 comprehensive | 10 rounds auto | 5-10/10-20/20+ features | Minimal |
-| **$story** | User stories | 1 comprehensive | 10 rounds auto | 2-3/4-5/6-8 sections | Minimal |
-| **$doc** | Documentation | 1 comprehensive | 10 rounds auto | 2-3/4-6/7+ sections | Minimal |
+| Mode | Purpose | Questions | Thinking | Scaling | Header Position |
+|------|---------|-----------|----------|---------|-----------------|
+| **Interactive** | Determine what to create | 1 comprehensive | 10 rounds auto | Auto-detect | Top (first line) |
+| **$quick** | Fast creation | NONE | 1-5 auto-scaled | Auto-scale | Top (first line) |
+| **$ticket** | Dev tickets | 1 comprehensive | 10 rounds auto | 2-3/4-5/6-8 sections | Top (first line) |
+| **$prd** | Product requirements | 1 comprehensive | 10 rounds auto | 5-10/10-20/20+ features | Top (first line) |
+| **$story** | User stories | 1 comprehensive | 10 rounds auto | 2-3/4-5/6-8 sections | Top (first line) |
+| **$doc** | Documentation | 1 comprehensive | 10 rounds auto | 2-3/4-6/7+ sections | Top (first line) |
 
-### Interactive Flow (Default) - NEW Single Question Format
+### Interactive Flow (Default) - Single Question Format
 ```
 Welcome! Let's create exactly what you need. 🎯
 
@@ -147,8 +156,17 @@ Auto-Configuration:
 - No questions asked
 - Maximum speed delivery
 
-[CREATES ARTIFACT IMMEDIATELY]
-[Footer: Mode: $quick | Scale: Initiative | Template: v0.123]
+[CREATES ARTIFACT IMMEDIATELY WITH HEADER AT TOP]
+```
+
+**Example Artifact Output:**
+```markdown
+Mode: $quick | Scale: Initiative | Template: v0.125
+---
+# Q1 Payments Initiative PRD
+
+# ⌘ About
+[Strategic context with integrated problems...]
 ```
 
 **$Quick Mode Characteristics:**
@@ -157,14 +175,14 @@ Auto-Configuration:
 - Auto-detect type and scale - Smart complexity detection
 - Works with all modes - Tickets, PRDs, and docs
 - Template compliant - Proper formatting guaranteed
-- Minimal footer - Single-line tracking
+- Header at top - First line of artifact
 
 .
 
 <a id="ticket-mode"></a>
 ## 🎫 Ticket Mode
 
-### Development Ticket Creation - NEW Single Question Format
+### Development Ticket Creation - Single Question Format
 ```
 User: $ticket payment integration
 
@@ -202,21 +220,51 @@ Please respond with all information (e.g., "1. Ticket, 2. BE, 3. Stripe API inte
 | **Complex** | 6-8 with phases | 12-20 items | platform, architecture, migration |
 
 ### Ticket Structure & Symbols
-- **⌘ About**: Context with integrated problems (H1, FIRST)
+```markdown
+Mode: $ticket | Complexity: Standard | Template: v0.125
+---
+[SCOPE] Feature: [Name]
+
+# ⌘ About
+[Context with integrated problems - FIRST]
+
+---
+
+## ✦ Success Criteria
+[Measurable outcomes - AFTER About]
+
+---
+
+## ⌥ Designs & References
+[Table format]
+
+---
+
+## ■ Requirements
+### ◻︎ Functional Requirements
+[Content]
+
+---
+
+## ✓ Resolution Checklist
+[Scaled items]
+```
+
+**Symbol Reference:**
+- **⌘ About**: Context (H1, FIRST after header)
 - **✦ Success Criteria**: Measurable outcomes (H2, AFTER About)
 - **⌥ Designs & References**: Table format (H2)
 - **■ Requirements**: Main sections (H1)
-- **◻️ Functional/Technical**: Sub-sections (H2)
+- **◻︎ Functional/Technical**: Sub-sections (H2)
 - **✓ Resolution Checklist**: Scaled items (H2)
 - Clean H3 headers (no symbols)
-- **Minimal Footer**: `Mode: $ticket | Complexity: [level] | Template: v0.123`
 
 .
 
 <a id="prd-mode"></a>
 ## 🚀 PRD Mode
 
-### Product Requirements Document Creation - NEW Single Question Format
+### Product Requirements Document Creation - Single Question Format
 ```
 User: $prd authentication platform
 
@@ -255,21 +303,51 @@ Please respond with all details (e.g., "1. Initiative PRD, 2. Web + Mobile, 3. R
 | **Strategic** | 20+ | 10+ | Annual | Company-wide platform |
 
 ### PRD Structure & Symbols
-- **⌘ About**: Strategic context (H1, FIRST)
+```markdown
+Mode: $prd | Scale: Initiative | Template: v0.125
+---
+# [PRD Name]
+
+# ⌘ About
+[Strategic context - FIRST]
+
+---
+
+## ✦ Success Metrics
+[Business/product metrics - AFTER About]
+
+---
+
+## ⌥ Designs & References
+[Table format]
+
+---
+
+## ■ Scope & Features
+### ◻︎ Feature Details
+[Content]
+
+---
+
+## ∅ Risks & Mitigations
+[When applicable]
+```
+
+**Symbol Reference:**
+- **⌘ About**: Strategic context (H1, FIRST after header)
 - **✦ Success Metrics**: Business/product metrics (H2, AFTER About)
 - **⌥ Designs & References**: Table format (H2)
 - **■ Scope & Features**: Main sections (H1)
-- **◻️ Feature Details**: Sub-sections (H2)
+- **◻︎ Feature Details**: Sub-sections (H2)
 - **∅ Risks & Mitigations**: When applicable (H2)
 - Clean H3 headers (no symbols)
-- **Minimal Footer**: `Mode: $prd | Scale: [level] | Template: v0.123`
 
 .
 
 <a id="doc-mode"></a>
 ## 📄 Doc Mode
 
-### Documentation Creation - NEW Single Question Format
+### Documentation Creation - Single Question Format
 ```
 User: $doc API guide
 
@@ -306,14 +384,36 @@ Please respond with all information (e.g., "1. Strategy document, 2. Complex, 3.
 | **Complex** | 7+ | Comprehensive | Strategic depth |
 
 ### Doc Structure & Symbols
-- **⌘ About**: Purpose and context (H1, FIRST)
+```markdown
+Mode: $doc | Complexity: Standard | Template: v0.115
+---
+# [Document Title]
+
+# ⌘ About
+[Purpose and context - FIRST]
+
+---
+
+## ⌥ References & Resources
+[Table format]
+
+---
+
+## ■ Main Section
+### ◻︎ Subsection
+[Content]
+
+---
+```
+
+**Symbol Reference:**
+- **⌘ About**: Purpose (H1, FIRST after header)
 - **■ Main Sections**: Primary content (H1)
-- **◻️ Subsections**: Secondary content (H2)
+- **◻︎ Subsections**: Secondary content (H2)
 - **⌥ References & Resources**: Table format (H2)
 - Clean H3 headers (no symbols)
 - Clean H4 headers (no symbols)
 - **`---`**: Major section separators
-- **Minimal Footer**: `Mode: $doc | Complexity: [level] | Template: v0.113`
 
 .
 
@@ -331,7 +431,7 @@ Please respond with all information (e.g., "1. Strategy document, 2. Complex, 3.
 |-------|---------|-------------|--------|
 | **A** | Assess Reality | Problem integration | 1-2 (20%) |
 | **T** | Transform Solutions | Mode-specific approaches | 3-5 (25%) |
-| **L** | Layer Framework | Template compliance | 6-7 (25%) |
+| **L** | Layer Framework | Template compliance, header at top | 6-7 (25%) |
 | **A** | Assess Impact | Validation | 8-9 (20%) |
 | **S** | Synthesize & Ship | Format verification | 10 (10%) |
 
@@ -375,92 +475,114 @@ Please respond with all information (e.g., "1. Strategy document, 2. Complex, 3.
 .
 
 <a id="symbol--formatting-reference"></a>
-## 📝 Symbol & Formatting Reference
+## 🔍 Symbol & Formatting Reference
 
 ### Universal Symbol Hierarchy
 | Level | Symbols | Purpose | Usage |
 |-------|---------|---------|-------|
+| **Header** | N/A | Mode metadata | First line always |
 | **H1** | ⌘, ■ | About, Main sections | Primary structure |
-| **H2** | ◻️, ✦, ⌥, ✓, ⌥, ∅ | Subsections, special elements | Secondary structure |
+| **H2** | ◻︎, ✦, ⌥, ✓, ⌥, ∅ | Subsections, special elements | Secondary structure |
 | **H3** | Clean | Detail headers | No symbols |
 | **H4** | Clean | Detail headers | No symbols |
 
 ### Mode-Specific Symbols
 
 **Ticket Mode:**
-- ⌘ About (H1) - FIRST
+- Header at top (Mode | Complexity | Template)
+- ⌘ About (H1) - FIRST after header
 - ✦ Success Criteria (H2) - AFTER About
 - ⌥ Designs & References (H2)
 - ■ Requirements/Main sections (H1)
-- ◻️ Subsections (H2)
+- ◻︎ Subsections (H2)
 - ✓ Resolution Checklist (H2)
 
 **PRD Mode:**
-- ⌘ About (H1) - FIRST
+- Header at top (Mode | Scale | Template)
+- ⌘ About (H1) - FIRST after header
 - ✦ Success Metrics (H2) - AFTER About
 - ⌥ Designs & References (H2)
 - ■ Main sections (H1)
-- ◻️ Subsections (H2)
+- ◻︎ Subsections (H2)
 - ∅ Risks & Mitigations (H2)
 
 **Doc Mode:**
-- ⌘ About (H1) - FIRST
+- Header at top (Mode | Complexity | Template)
+- ⌘ About (H1) - FIRST after header
 - ■ Main sections (H1)
-- ◻️ Subsections (H2)
+- ◻︎ Subsections (H2)
 - ⌥ References & Resources (H2)
 - `---` Section separators
 
 ### Universal Formatting Rules
-- **About Position**: Always FIRST major section
+- **Header Position**: Always first line of artifact
+- **About Position**: Always FIRST major section (after header)
 - **Success Position**: Always AFTER About section
 - **Problems**: Integrated in About narrative
 - **Lists**: Always use `-` for regular lists
 - **Checkboxes**: Always use `[]` (no spaces)
 - **Tables**: Required for Designs & References
-- **Dividers**: `---` between all major sections
+- **Dividers**: `---` after header and between all major sections
 - **Placeholders**: `[Link - to be added]`
 - **Status Notes**: `[Status note: "description"]`
 - **NO Table of Contents**: External tools handle navigation
-- **Minimal Footer**: Single line at bottom
 
 .
 
-<a id="minimal-footer-format"></a>
-## 📊 Minimal Footer Format
+<a id="header-format"></a>
+## 📊 Header Format
 
-### Streamlined Footer (Maintained from v0.903)
-All artifacts include a single-line footer with essential tracking information:
+### Streamlined Header (NEW in v0.906)
+All artifacts begin with a single-line header as the first line:
 
 ```markdown
 Mode: $[mode] | [Complexity/Scale]: [level] | Template: v0.xxx
+---
+[Main content begins here]
 ```
 
-### Footer Examples by Mode
+### Header Examples by Mode
 
 **Ticket Mode:**
 ```markdown
-Mode: $ticket | Complexity: Standard | Template: v0.123
+Mode: $ticket | Complexity: Standard | Template: v0.125
+---
+[SCOPE] Feature: Payment Integration
 ```
 
 **Story Mode:**
 ```markdown
-Mode: $story | Complexity: Simple | Template: v0.123
+Mode: $story | Complexity: Simple | Template: v0.125
+---
+[SCOPE] Story: User Authentication
 ```
 
 **PRD Mode:**
 ```markdown
-Mode: $prd | Scale: Initiative | Template: v0.123
+Mode: $prd | Scale: Initiative | Template: v0.125
+---
+# Customer Dashboard PRD
 ```
 
 **Doc Mode:**
 ```markdown
-Mode: $doc | Complexity: Complex | Template: v0.113
+Mode: $doc | Complexity: Complex | Template: v0.115
+---
+# Platform Strategy Guide
 ```
 
 **Quick Mode:**
 ```markdown
-Mode: $quick | Complexity: Auto | Template: v0.xxx
+Mode: $quick | Complexity: Auto | Template: v0.125
+---
+# [Content Title]
 ```
+
+### Header Benefits
+- **Immediate Clarity**: Know artifact type at a glance
+- **Consistent Positioning**: Always first line
+- **Essential Info**: Mode, complexity, template version
+- **Clean Separation**: Divider separates metadata from content
 
 .
 
@@ -470,16 +592,17 @@ Mode: $quick | Complexity: Auto | Template: v0.xxx
 ### Common Issues
 | Issue | Solution |
 |-------|----------|
+| **Header at bottom** | Move to top as first line |
 | **Wrong symbols appearing** | Check mode - H1: ⌘/■, H2: various, H3: clean, H4: clean |
 | **Success criteria at top** | Move to AFTER About section |
 | **Problems listed separately** | Integrate into About narrative |
 | **Wrong complexity** | Check keywords for auto-scaling triggers |
 | **Checkbox format wrong** | Use `[]` without spaces |
-| **Missing dividers** | Add `---` between all sections |
+| **Missing dividers** | Add `---` after header and between sections |
 | **Want speed** | Use $quick mode (1-5 rounds auto) |
 | **Multiple questions asked** | System error - should be single comprehensive question |
-| **Verbose footer appearing** | Update to minimal format: Mode \| Complexity \| Template |
-| **Missing footer** | Add single-line footer at bottom |
+| **Missing header** | Add single-line header at top |
+| **About not first** | Move About to first position after header |
 
 ### REPAIR Framework for Errors
 - **R**ecognize - Identify issue
@@ -494,8 +617,16 @@ Mode: $quick | Complexity: Auto | Template: v0.xxx
 <a id="version-history"></a>
 ## 📦 Version History
 
-### v0.905 (Current)
-- **NEW: Single comprehensive question flow**
+### v0.906 (Current)
+- **NEW: Header at top positioning**
+- System metadata now first line of artifact
+- Format: Mode | Complexity | Template
+- Enhanced artifact organization
+- All templates updated (v0.125, v0.115, v0.145, v0.186, v0.286)
+- Maintained all v0.905 improvements
+
+### v0.905
+- Single comprehensive question flow
 - All information gathered in one interaction
 - 60% reduction in decision points
 - 50% faster to artifact creation
@@ -522,7 +653,7 @@ Mode: $quick | Complexity: Auto | Template: v0.xxx
 ### v0.900
 - Full template alignment
 - Symbol hierarchy enforcement
-- Success position at top (now changed)
+- Success position at top (now changed to after About)
 - Removed chat history integration
 
 ### v0.892
@@ -559,4 +690,4 @@ $quick [request]     # Immediate creation, 1-5 rounds auto-scaled
 
 ---
 
-*Template-compliant formatting ensures professional output. Automatic ultrathink guarantees consistent depth. Minimal footer provides essential tracking without clutter. Symbols: H1 (⌘/■), H2 (◻️/✦/⌥/✓/⌥/∅), H3 (clean), H4 (clean). Revolutionary $quick mode for immediate creation with auto-scaled thinking (1-5 rounds). Interactive Mode now uses single comprehensive question with 10-round ultrathink. Choose $quick when speed matters, Interactive when customization matters. About always first. Success always after About. Problems always integrated. System thinking is automatic - user control over content remains absolute. Footer always minimal. Single question flow reduces friction while maintaining quality.*
+*Template-compliant formatting ensures professional output. Automatic ultrathink guarantees consistent depth. Header at top provides immediate artifact identification. Symbols: H1 (⌘/■), H2 (◻︎/✦/⌥/✓/⌥/∅), H3 (clean), H4 (clean). Revolutionary $quick mode for immediate creation with auto-scaled thinking (1-5 rounds). Interactive Mode uses single comprehensive question with 10-round ultrathink. Choose $quick when speed matters, Interactive when customization matters. Header always at top. About always first. Success always after About. Problems always integrated. System thinking is automatic - user control over content remains absolute. Single question flow reduces friction while maintaining quality.*

@@ -1,4 +1,4 @@
-# Product Owner - Artifact Standards - v0.144
+# Product Owner - Artifact Standards - v0.145
 
 ## 📋 TABLE OF CONTENTS
 1. [📦 DELIVERY STANDARDS](#1-📦-delivery-standards)
@@ -21,11 +21,12 @@
 - **AUTOMATIC ULTRATHINK:** Apply 10 rounds for standard, 1-5 auto-scaled for $quick
 - **NEVER create artifact until user responds to comprehensive question**
 - **NO TABLE OF CONTENTS** - ClickUp/Jira provide native TOC functionality
+- **HEADER AT TOP:** System metadata appears as first line of artifact
 
 **Template Compliance:**
 - Use templates v0.xxx exactly
-- Symbol hierarchy: H1 (⌘/❖), H2 (◻︎/✦/⌥/✓/∅), H3: clean, H4: clean
-- About section always first
+- Symbol hierarchy: H1 (⌘/❖), H2 (◻︎/✦/⌥/✓/⌥/∅), H3: clean, H4: clean
+- About section always first (after header)
 - Success criteria/metrics after About
 - Problems integrated in About narrative
 - Designs & References as tables
@@ -39,13 +40,13 @@
 - **Standard modes:** 10-round ultrathink automatic
 - **Quick mode:** 1-5 rounds auto-scaled
 - **No user choice:** System determines depth
-- **Document in footer:** Note mode and template applied
+- **Document in header:** Note mode and template applied
 
 ### Never:
 - Use `text/plain` → Causes raw markdown display
 - Mix artifact and response text
 - Ask about thinking rounds (automatic now)
-- Place artifact details at top or middle
+- Place artifact details at bottom or middle
 - Use horizontal formatting for details
 - Skip ATLAS phase documentation
 - Hide process transparency
@@ -53,6 +54,7 @@
 - **Include Table of Contents**
 - **Use H3/H4 symbols**
 - **Put Success Criteria at top**
+- **Place header at bottom**
 
 ### Always:
 - Use proper `text/markdown` type
@@ -61,10 +63,11 @@
 - Note template version compliance
 - Apply ultrathink consistently
 - **Wait for user input on content (not thinking)**
-- **Position About first**
+- **Position About first (after header)**
 - **Position Success Criteria after About**
 - **Integrate problems in About**
 - **Use clean H3/H4 headers**
+- **Place header at top of artifact**
 
 ---
 
@@ -77,36 +80,39 @@
 **🚨 ONLY CREATE AFTER USER HAS RESPONDED TO COMPREHENSIVE QUESTION**
 
 ```markdown
-[Main content - ticket/PRD/doc with template v0.xxx structure]
----
 Mode: $[mode] | Complexity: [level] | Template: v0.xxx
+---
+[Main content - ticket/PRD/doc with template v0.xxx structure]
 ```
 
 ### Structure Order Requirements:
 
 **For Tickets/Stories:**
-1. Title with [SCOPE]
-2. About (⌘) - Context and integrated problems
-3. Success Criteria (✦) - Measurable outcomes
-4. Designs & References (⌥) - Table format
-5. Requirements (❖) - Specifications
-6. Resolution Checklist (✓) - If ticket
+1. Header (Mode | Complexity | Template)
+2. Title with [SCOPE]
+3. About (⌘) - Context and integrated problems
+4. Success Criteria (✦) - Measurable outcomes
+5. Designs & References (⌥) - Table format
+6. Requirements (❖) - Specifications
+7. Resolution Checklist (✓) - If ticket
 
 **For PRDs:**
-1. Title
-2. About (⌘) - Strategic context
-3. Success Metrics (✦) - Business/product metrics
-4. Designs & References (⌥) - Table format
-5. Scope & Features (❖) - Feature inventory
-6. Technical Requirements (❖)
-7. Implementation Plan (❖)
-8. Risks (∅) - When applicable
+1. Header (Mode | Complexity | Template)
+2. Title
+3. About (⌘) - Strategic context
+4. Success Metrics (✦) - Business/product metrics
+5. Designs & References (⌥) - Table format
+6. Scope & Features (❖) - Feature inventory
+7. Technical Requirements (❖)
+8. Implementation Plan (❖)
+9. Risks (∅) - When applicable
 
 **For Docs:**
-1. Title with metadata
-2. About (⌘) - Purpose and context
-3. References & Resources (⌥) - Table format
-4. Main sections (❖) - Content areas
+1. Header (Mode | Complexity | Template)
+2. Title with metadata
+3. About (⌘) - Purpose and context
+4. References & Resources (⌥) - Table format
+5. Main sections (❖) - Content areas
 
 ### Mode-Specific Complexity Labels:
 - **Ticket Mode:** Simple/Standard/Complex (2-3/4-5/6-8 sections)
@@ -121,14 +127,14 @@ Mode: $[mode] | Complexity: [level] | Template: v0.xxx
 - **H4:** Clean headers (no symbols)
 
 ### Formatting Rules:
-1. **Minimal footer** - Single line with essential info
+1. **Header at top** - Single line with essential info
 2. **Dash bullets** - Use `-` not `*` or `•`
 3. **Vertical layout** - Never horizontal lists
-4. **Bottom placement** - Footer always at artifact bottom
-5. **Dividers** - Use `---` between each section
+4. **Top placement** - Header always at artifact top
+5. **Dividers** - Use `---` between header and content, and between sections
 6. **User confirmation** - Note user approved content
 7. **No Table of Contents** - External tools handle this
-8. **About first** - Always start with context
+8. **About first** - Always start with context (after header)
 9. **Success after About** - Never at document top
 10. **Problems integrated** - In About narrative
 
@@ -140,11 +146,11 @@ Mode: $[mode] | Complexity: [level] | Template: v0.xxx
 
 ### Horizontal Dividers (`---`)
 **Use Between:**
+- Header and title
 - Title and About section
 - About and Success Criteria/Metrics
 - Success Criteria and Designs & References
 - All major content sections
-- Content and minimal footer
 
 ### Doc Mode Separators (`---`)
 **Use For:**
@@ -160,6 +166,8 @@ Mode: $[mode] | Complexity: [level] | Template: v0.xxx
 
 ### Example Structure (Correct Order):
 ```markdown
+Mode: $ticket | Complexity: Standard | Template: v0.145
+---
 [SCOPE] Feature: [Name]
 
 # ⌘ About
@@ -179,9 +187,6 @@ Mode: $[mode] | Complexity: [level] | Template: v0.xxx
 
 ## ❖ Requirements
 [Content]
-
----
-Mode: $ticket | Complexity: Standard | Template: v0.121
 ```
 
 ---
@@ -200,6 +205,7 @@ Mode: $ticket | Complexity: Standard | Template: v0.121
 ### Content Quality by Mode
 
 **Ticket Mode:**
+- Header at top with mode info
 - About section first with integrated problems
 - Success criteria measurable (after About)
 - Scope clearly labeled
@@ -208,6 +214,7 @@ Mode: $ticket | Complexity: Standard | Template: v0.121
 - **10-round ultrathink applied**
 
 **PRD Mode:**
+- Header at top with scale info
 - About section first with strategic context
 - Success metrics quantified (after About)
 - Feature inventory complete (5-10/10-20/20+)
@@ -216,6 +223,7 @@ Mode: $ticket | Complexity: Standard | Template: v0.121
 - **10-round ultrathink applied**
 
 **Doc Mode:**
+- Header at top with complexity
 - About section first with purpose
 - Structure scaled to complexity
 - References in table format
@@ -260,9 +268,9 @@ Mode: $ticket | Complexity: Standard | Template: v0.121
 - Success positioned after About (not at top)
 - Status notes where applicable: `[Status note: "80% complete"]`
 
-**Footer Documentation:**
+**Header Documentation:**
 - Always note mode, complexity, and template
-- Single line format for minimal footprint
+- Single line format at top
 - Never mention user choice (doesn't exist)
 
 ---
@@ -274,13 +282,14 @@ Mode: $ticket | Complexity: Standard | Template: v0.121
 ### Ticket Mode
 **Template:** `Product Owner - Template - Ticket Mode.md`
 **Structure:**
-1. [SCOPE] + Title
-2. About (⌘) - Integrated problems (FIRST)
-3. Success Criteria (✦) - Measurable (AFTER About)
-4. Designs & References (⌥) - Table
-5. Requirements (❖) - Scaled
-6. Resolution Checklist (✓) - Scaled items
-7. Optional: Risks (∅) for Complex
+1. Header (Mode | Complexity | Template)
+2. [SCOPE] + Title
+3. About (⌘) - Integrated problems (FIRST)
+4. Success Criteria (✦) - Measurable (AFTER About)
+5. Designs & References (⌥) - Table
+6. Requirements (❖) - Scaled
+7. Resolution Checklist (✓) - Scaled items
+8. Optional: Risks (∅) for Complex
 
 **Scaling:**
 - Simple: 2-3 sections, 4-6 resolution items
@@ -292,6 +301,7 @@ Mode: $ticket | Complexity: Standard | Template: v0.121
 - Quick mode: 1-5 rounds auto-scaled
 
 **Key Rules:**
+- Header at top
 - Use H1: ⌘/❖, H2: ◻︎/✦/⌥/✓, H3: clean, H4: clean
 - Checkboxes: `[]` format
 - NO TABLE OF CONTENTS
@@ -302,14 +312,15 @@ Mode: $ticket | Complexity: Standard | Template: v0.121
 ### PRD Mode
 **Template:** `Product Owner - Template - PRD Mode.md`
 **Structure:**
-1. Title
-2. About (⌘) - Strategic context (FIRST)
-3. Success Metrics (✦) - Metrics (AFTER About)
-4. Designs & References (⌥) - Table
-5. Scope & Features (❖) - Complete inventory
-6. Technical Requirements (❖)
-7. Implementation Plan (❖)
-8. Optional: Risks (∅)
+1. Header (Mode | Scale | Template)
+2. Title
+3. About (⌘) - Strategic context (FIRST)
+4. Success Metrics (✦) - Metrics (AFTER About)
+5. Designs & References (⌥) - Table
+6. Scope & Features (❖) - Complete inventory
+7. Technical Requirements (❖)
+8. Implementation Plan (❖)
+9. Optional: Risks (∅)
 
 **Scaling:**
 - Initiative: 5-10 features, quarterly
@@ -321,6 +332,7 @@ Mode: $ticket | Complexity: Standard | Template: v0.121
 - Quick mode: 1-5 rounds auto-scaled
 
 **Key Rules:**
+- Header at top
 - Use H1: ⌘/❖, H2: ✦/◻︎/⌥/∅, H3: clean, H4: clean
 - Focus on implementation details
 - Status notes where applicable
@@ -331,11 +343,12 @@ Mode: $ticket | Complexity: Standard | Template: v0.121
 ### Doc Mode
 **Template:** `Product Owner - Template - Doc Mode.md`
 **Structure:**
-1. Title with metadata
-2. About (⌘) - Purpose (FIRST)
-3. References & Resources (⌥) - Table
-4. Main sections (❖) - Scaled
-5. Additional sections as needed
+1. Header (Mode | Complexity | Template)
+2. Title with metadata
+3. About (⌘) - Purpose (FIRST)
+4. References & Resources (⌥) - Table
+5. Main sections (❖) - Scaled
+6. Additional sections as needed
 
 **Scaling:**
 - Simple: 2-3 main sections
@@ -347,6 +360,7 @@ Mode: $ticket | Complexity: Standard | Template: v0.121
 - Quick mode: 1-5 rounds auto-scaled
 
 **Key Rules:**
+- Header at top
 - Use H1: ⌘/❖, H2: ◻︎/⌥, H3: clean, H4: clean
 - Use `---` for major separators
 - Clear section hierarchy
@@ -372,12 +386,12 @@ Mode: $ticket | Complexity: Standard | Template: v0.121
 ### Content Validation
 
 **Structure Check:**
-- [] About section positioned FIRST?
+- [] Header at top with mode/complexity/template?
+- [] About section positioned FIRST (after header)?
 - [] Success criteria/metrics AFTER About?
 - [] Problems integrated in About narrative?
 - [] Correct artifact type (`text/markdown`)?
-- [] Minimal footer at bottom?
-- [] Scaling documented?
+- [] Scaling documented in header?
 - [] NO TABLE OF CONTENTS?
 
 **Symbol Hierarchy Validation:**
@@ -393,7 +407,8 @@ Mode: $ticket | Complexity: Standard | Template: v0.121
 - [] H4: Clean headers (no symbols)?
 
 **Position Validation:**
-- [] About is first major section?
+- [] Header is first line?
+- [] About is first major section (after header)?
 - [] Success comes after About?
 - [] Designs after Success?
 - [] Requirements follow logical flow?
@@ -407,6 +422,7 @@ Mode: $ticket | Complexity: Standard | Template: v0.121
 - [] Placeholders added where needed?
 
 **Dividers & Spacing:**
+- [] `---` between header and content?
 - [] `---` between all major sections?
 - [] Proper spacing around dividers?
 - [] No extra dividers?
@@ -414,6 +430,7 @@ Mode: $ticket | Complexity: Standard | Template: v0.121
 ### Mode-Specific Validation
 
 **Tickets:**
+- [] Header at top?
 - [] [SCOPE] label present?
 - [] About first with integrated problems?
 - [] Success Criteria after About?
@@ -423,6 +440,7 @@ Mode: $ticket | Complexity: Standard | Template: v0.121
 - [] 10-round ultrathink applied?
 
 **PRDs:**
+- [] Header at top?
 - [] About first with strategic context?
 - [] Success Metrics after About?
 - [] Feature inventory complete (5-10/10-20/20+)?
@@ -431,6 +449,7 @@ Mode: $ticket | Complexity: Standard | Template: v0.121
 - [] 10-round ultrathink applied?
 
 **Docs:**
+- [] Header at top?
 - [] About first with purpose?
 - [] Complexity appropriate (2-3/4-6/7+)?
 - [] Structure logical?
@@ -446,6 +465,7 @@ Mode: $ticket | Complexity: Standard | Template: v0.121
 - [] Process transparent?
 - [] NO TABLE OF CONTENTS?
 - [] Success positioned correctly (after About)?
+- [] Header at top?
 
 ---
 
@@ -468,16 +488,16 @@ Mode: $ticket | Complexity: Standard | Template: v0.121
 #### Error: Success Criteria at Top (Wrong Position)
 **Detection:** Success positioned before About section
 **Recovery:**
-1. Move About section to first position
+1. Move About section to first position (after header)
 2. Position Success Criteria immediately after About
 3. Add divider between About and Success
 4. Update all subsequent sections
 5. Verify correct flow
 
 #### Error: About Section Not First
-**Detection:** Other sections appear before About
+**Detection:** Other sections appear before About (after header)
 **Recovery:**
-1. Move About to first position after title
+1. Move About to first position after header
 2. Reorder all sections appropriately
 3. Ensure Success follows About
 4. Update dividers
@@ -521,12 +541,13 @@ Mode: $ticket | Complexity: Standard | Template: v0.121
 2. Preserve content
 3. Verify formatting
 
-#### Error: Missing Footer
-**Detection:** No mode/template documentation
+#### Error: Header at Bottom
+**Detection:** System metadata at bottom instead of top
 **Recovery:**
-1. Add minimal footer to existing artifact
-2. Document mode, complexity, template
-3. Single line format
+1. Move header to top of artifact
+2. Add divider after header
+3. Preserve all content
+4. Verify formatting
 
 ### Prevention Strategies
 1. **Apply ultrathink automatically** (10 rounds standard, 1-5 quick)
@@ -535,8 +556,9 @@ Mode: $ticket | Complexity: Standard | Template: v0.121
 4. **Check template version** for latest standards
 5. **Verify symbol hierarchy** before creation
 6. **Apply correct scaling** based on keywords
-7. **Position About first** always
+7. **Position About first** (after header) always
 8. **Position Success after About** always
 9. **Integrate problems** in narrative
 10. **Exclude ToC** - external tools handle
-11. **Include minimal footer** for tracking
+11. **Include header at top** for tracking
+12. **Place header at top** of artifact

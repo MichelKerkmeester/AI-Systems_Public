@@ -1,4 +1,4 @@
-# Product Owner - Template - PRD Mode - v0.124
+# Product Owner - Template - PRD Mode - v0.125
 
 ## 📋 TABLE OF CONTENTS
 1. [📝 PRD MODE OVERVIEW](#1-📝-prd-mode-overview)
@@ -21,6 +21,7 @@
 - **Thinking:** 10 rounds automatic (ultrathink), 1-5 auto-scaled for $quick
 - **Interactive Mode:** Single comprehensive question gathering all requirements
 - **Key Focus:** Implementation clarity, success metrics, feature specifications
+- **Header Position:** Always at top as first line
 
 ---
 
@@ -41,6 +42,8 @@
 ## 3. 📊 DETAILED PRD TEMPLATE
 
 ```markdown
+Mode: $prd | Scale: Initiative | Template: v0.125
+---
 # [PRD Name]
 
 # ⌘ About
@@ -93,7 +96,7 @@ to exist now.]
 
 ---
 
-# ❖ Scope & Features
+# ■ Scope & Features
 
 ## ◻︎ Complete Feature List
 
@@ -170,7 +173,7 @@ it supports multi-tenant architectures and white-label customization options.
 
 ---
 
-# ❖ Technical Requirements
+# ■ Technical Requirements
 
 ## ◻︎ Architecture
 
@@ -211,7 +214,7 @@ optimization for frequently accessed data.
 
 ---
 
-# ❖ User Research & Validation
+# ■ User Research & Validation
 
 ## ◻︎ Research Summary
 
@@ -233,7 +236,7 @@ simplify [specific workflow] to reduce cognitive load.
 
 ---
 
-# ❖ Implementation Plan
+# ■ Implementation Plan
 
 ## ◻︎ Development Phases
 
@@ -279,7 +282,7 @@ manual exploratory testing discovers edge cases.
 
 ---
 
-# ❖ Stakeholders & Timeline
+# ■ Stakeholders & Timeline
 
 ## ◻︎ RACI Matrix
 
@@ -310,9 +313,6 @@ manual exploratory testing discovers edge cases.
 | **Scope Creep** | High | High | Weekly scope reviews with change control process |
 | **Technical Debt** | Medium | Medium | Dedicated refactoring sprints and code review standards |
 | **Resource Availability** | Low | High | Cross-training and comprehensive documentation |
-
----
-Mode: $prd | Complexity: Initiative | Template: v0.123
 ```
 
 ---
@@ -322,6 +322,8 @@ Mode: $prd | Complexity: Initiative | Template: v0.123
 ## 4. 🎯 FEATURE SPECIFICATION TEMPLATE
 
 ```markdown
+Mode: $prd | Scale: Feature | Template: v0.125
+---
 # [Feature Name] PRD
 
 # ⌘ About
@@ -355,7 +357,7 @@ case for the feature's existence.]
 
 ---
 
-# ❖ Feature Specification
+# ■ Feature Specification
 
 ## ◻︎ Functional Requirements
 
@@ -402,7 +404,7 @@ error messages guiding users toward successful completion.
 
 ---
 
-# ❖ Technical Implementation
+# ■ Technical Implementation
 
 ## ◻︎ API Specification
 
@@ -429,7 +431,7 @@ Description: Soft deletes resource maintaining audit trail
 
 ---
 
-# ❖ Testing & Acceptance
+# ■ Testing & Acceptance
 
 ## ◻︎ Acceptance Criteria
 
@@ -464,7 +466,7 @@ Security measures prevent unauthorized access while maintaining usability.
 
 ---
 
-# ❖ Rollout Plan
+# ■ Rollout Plan
 
 ## ◻︎ Phased Deployment Strategy
 
@@ -478,9 +480,6 @@ Week 4: Full launch to 100% with celebration and communication plan
 Each phase includes specific success criteria and rollback procedures. 
 Monitoring dashboards track key metrics in real-time, with alerts for 
 anomalies. Support teams are briefed and prepared for each phase.
-
----
-Mode: $prd | Complexity: Feature | Template: v0.123
 ```
 
 ---
@@ -491,19 +490,20 @@ Mode: $prd | Complexity: Feature | Template: v0.123
 
 ### Mandatory Elements
 
-1. **About Section FIRST** with integrated narrative context
-2. **Success Metrics AFTER About** (not at top)
-3. **Executive Summary** within About section
-4. **Designs & References** as table format
-5. **Feature-First Structure** with clear specifications
-6. **Implementation Details** with technical depth
-7. **Status Callouts** where applicable
-8. **Minimal Footer** with mode, complexity, template
+1. **Header at top** as first line
+2. **About Section FIRST** with integrated narrative context
+3. **Success Metrics AFTER About** (not at top)
+4. **Executive Summary** within About section
+5. **Designs & References** as table format
+6. **Feature-First Structure** with clear specifications
+7. **Implementation Details** with technical depth
+8. **Status Callouts** where applicable
 
 ### Symbol Reference
 
+- **Header** - Mode | Scale | Template (first line)
 - **⌘** - About section (H1)
-- **❖** - Main sections (H1)
+- **■** - Main sections (H1)
 - **◻︎** - Sub-sections (H2)
 - **⌥** - Designs & References (H2)
 - **✦** - Success Metrics (H2)
@@ -511,34 +511,37 @@ Mode: $prd | Complexity: Feature | Template: v0.123
 
 ### Header Hierarchy
 
-1. **H1 Headers** - Use `#` with symbols
-   - `# ⌘ About` - For About section
-   - `# ❖ [Section Name]` - For main sections
+1. **Header** - First line
+   - `Mode: $prd | Scale: [level] | Template: v0.125`
 
-2. **H2 Headers** - Use `##` with symbols
+2. **H1 Headers** - Use `#` with symbols
+   - `# ⌘ About` - For About section
+   - `# ■ [Section Name]` - For main sections
+
+3. **H2 Headers** - Use `##` with symbols
    - `## ⌥ Designs & References` - For references
    - `## ◻︎ [Subsection Name]` - For subsections
    - `## ✦ Success Metrics` - For metrics
 
-3. **H3 Headers** - Clean format, no symbols
+4. **H3 Headers** - Clean format, no symbols
    - `### [Header Name]` - Standard formatting
 
-4. **H4 Headers** - Clean format, no symbols
+5. **H4 Headers** - Clean format, no symbols
    - `#### [Header Name]` - Standard formatting
 
 ### Structure Order
 
-1. Title
-2. About (⌘) - Context with integrated problems
-3. Success Metrics (✦) - Measurable outcomes  
-4. Designs & References (⌥) - Table format
-5. Scope & Features (❖) - Complete inventory
-6. Technical Requirements (❖) - Architecture
-7. User Research (❖) - If applicable
-8. Implementation Plan (❖) - Phases
-9. Stakeholders & Timeline (❖) - RACI
-10. Risks (∅) - When applicable
-11. Footer - Minimal single line
+1. Header (Mode | Scale | Template)
+2. Title
+3. About (⌘) - Context with integrated problems
+4. Success Metrics (✦) - Measurable outcomes  
+5. Designs & References (⌥) - Table format
+6. Scope & Features (■) - Complete inventory
+7. Technical Requirements (■) - Architecture
+8. User Research (■) - If applicable
+9. Implementation Plan (■) - Phases
+10. Stakeholders & Timeline (■) - RACI
+11. Risks (∅) - When applicable
 
 ### Content Guidelines
 
@@ -562,6 +565,8 @@ Mode: $prd | Complexity: Feature | Template: v0.123
 
 ### Formatting Standards
 
+- Header at top as first line
+- Divider after header before content
 - Use consistent spacing between sections
 - Tables for metrics, references, and structured data
 - Code blocks for API specifications
@@ -569,7 +574,6 @@ Mode: $prd | Complexity: Feature | Template: v0.123
 - Use `---` dividers between major sections
 - Narrative paragraphs for context and description
 - Avoid excessive bullet points in favor of prose
-- Single-line minimal footer at bottom
 
 ---
 
@@ -621,13 +625,14 @@ System: Creating your Initiative-level customer dashboard PRD with:
 • Web and mobile specifications
 • Self-service portal focus
 • Analytics capabilities
+• Header at top with mode/scale/template
 • Success metrics positioned after About
 • Implementation roadmap
 • 10-round ultrathink applied
 
 Processing now...
 
-[Creates comprehensive PRD document with minimal footer]
+[Creates comprehensive PRD document with header at top]
 ```
 
 ### PRD Type Differentiation

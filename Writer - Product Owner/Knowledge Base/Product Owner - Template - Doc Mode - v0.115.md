@@ -1,11 +1,11 @@
-# Product Owner - Template - Doc Mode - v0.114
+# Product Owner - Template - Doc Mode - v0.115
 
 ## 📋 TABLE OF CONTENTS
 1. [📚 DOC MODE OVERVIEW](#1-📚-doc-mode-overview)
 2. [📄 COMPLEXITY AUTO-SCALING](#2-📄-complexity-auto-scaling)
 3. [📝 SIMPLE DOCUMENTATION TEMPLATE](#3-📝-simple-documentation-template)
 4. [📖 STANDARD DOCUMENTATION TEMPLATE](#4-📖-standard-documentation-template)
-5. [🏗 COMPLEX DOCUMENTATION TEMPLATE](#5-🏗-complex-documentation-template)
+5. [📗 COMPLEX DOCUMENTATION TEMPLATE](#5-📗-complex-documentation-template)
 6. [✨ DOC FORMATTING RULES](#6-✨-doc-formatting-rules)
 7. [🗣️ INTERACTIVE QUESTIONS](#7-🗣️-interactive-questions)
 
@@ -22,6 +22,7 @@
 - **Thinking:** 10 rounds automatic (ultrathink), 1-5 auto-scaled for $quick
 - **Interactive Mode:** Single comprehensive question gathering all requirements
 - **Key Focus:** Product features, performance metrics, strategy docs
+- **Header Position:** Always at top as first line
 
 ---
 
@@ -42,6 +43,8 @@
 ## 3. 📝 SIMPLE DOCUMENTATION TEMPLATE
 
 ````markdown
+Mode: $doc | Complexity: Simple | Template: v0.115
+---
 # [Document Title]
 
 **Parent:** [Parent Doc] | **Version:** 1.0 | **Reading Time:** 5 minutes
@@ -111,8 +114,6 @@ High-level description of the main capabilities and value proposition.
 - When metrics fall below threshold
 - Escalation procedures
 - Improvement strategies
----
-Mode: $doc | Complexity: Simple | Template: v0.113
 ````
 
 ---
@@ -122,6 +123,8 @@ Mode: $doc | Complexity: Simple | Template: v0.113
 ## 4. 📖 STANDARD DOCUMENTATION TEMPLATE
 
 ````markdown
+Mode: $doc | Complexity: Standard | Template: v0.115
+---
 # [Document Title]
 
 **Parent:** [Parent Doc] | **Version:** 1.0 | **Reading Time:** 10 minutes
@@ -264,17 +267,17 @@ System components and their relationships, showing how value flows through the p
 - Competitive advantage
 - User retention impact
 - Platform stickiness
----
-Mode: $doc | Complexity: Standard | Template: v0.113
 ````
 
 ---
 
-<a id="5-🏗-complex-documentation-template"></a>
+<a id="5-📗-complex-documentation-template"></a>
 
-## 5. 🏗 COMPLEX DOCUMENTATION TEMPLATE
+## 5. 📗 COMPLEX DOCUMENTATION TEMPLATE
 
 ````markdown
+Mode: $doc | Complexity: Complex | Template: v0.115
+---
 # [Platform/Ecosystem Documentation]
 
 **Parent:** [Strategy Docs] | **Version:** 1.0 | **Reading Time:** 20 minutes
@@ -609,8 +612,6 @@ The north star that guides all platform decisions and investments.
 - Regional teams
 - Local partnerships
 - Compliance adherence
----
-Mode: $doc | Complexity: Complex | Template: v0.113
 ````
 
 ---
@@ -621,35 +622,39 @@ Mode: $doc | Complexity: Complex | Template: v0.113
 
 ### Hierarchy & Symbols
 
-1. **H1 Headers** - Use `#` with symbols
+1. **Header** - First line of artifact
+   - `Mode: $doc | Complexity: [level] | Template: v0.115`
+
+2. **H1 Headers** - Use `#` with symbols
    - `# ⌘ About` - For About section
    - `# ❖ [Section Name]` - For main sections
 
-2. **H2 Headers** - Use `##` with symbols
+3. **H2 Headers** - Use `##` with symbols
    - `## ⌥ References & Resources` - For references
    - `## ◻︎ [Subsection Name]` - For subsections
 
-3. **H3 Headers** - Clean format, no symbols
+4. **H3 Headers** - Clean format, no symbols
    - `### [Header Name]` - Standard formatting
 
-4. **H4 Headers** - Clean format, no symbols
+5. **H4 Headers** - Clean format, no symbols
    - `#### [Header Name]` - Standard formatting
 
 ### Document Structure
 
 **Required Elements:**
-- Header with Parent, Version, Reading Time
-- `# ⌘ About` section with context (FIRST)
+- Header at top as first line
+- Document metadata (Parent, Version, Reading Time)
+- `# ⌘ About` section with context (FIRST after metadata)
 - `## ⌥ References & Resources` as table
 - Main sections using `# ❖`
 - Subsections using `## ◻︎`
 - Dividers `---` between all major sections
-- Minimal footer: `Mode: $doc | Complexity: [level] | Template: v0.113`
 
 **Note:** Documentation doesn't typically have Success Criteria like tickets/PRDs, but focuses on explaining features and metrics.
 
 ### Symbol Reference
 
+- **Header** - Mode | Complexity | Template (first line)
 - **⌘** - About section (H1)
 - **❖** - Main sections (H1)
 - **◻︎** - Subsections (H2)
@@ -659,12 +664,13 @@ Mode: $doc | Complexity: Complex | Template: v0.113
 
 ### Formatting Standards
 
+- Header at top as first line
 - Use consistent spacing between sections
 - Tables for structured data and comparisons
 - Always include "to be added" for placeholder links
 - Use `-` (hyphen + space) for all regular list items
 - Use `---` as section dividers
-- Minimal footer at bottom
+- Divider after header before content
 
 ### Table Guidelines
 
@@ -755,11 +761,12 @@ System: Creating your comprehensive strategy document with:
 • Performance frameworks
 • Growth and scaling strategies
 • Investor-focused metrics
+• Header at top with mode/complexity/template
 • 10-round ultrathink applied automatically
 
 Processing now...
 
-[Creates documentation with minimal footer]
+[Creates documentation with header at top]
 ```
 
 ### Documentation Type Differentiation
