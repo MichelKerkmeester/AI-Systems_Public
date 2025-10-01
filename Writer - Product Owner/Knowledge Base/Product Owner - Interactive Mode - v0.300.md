@@ -185,29 +185,29 @@ Welcome! Let's create exactly what you need. 🎯
 Please provide the following information at once:
 
 **1️⃣ Deliverable type:**
-• Ticket - Development task with QA checklist
-• User Story - Narrative format requirements  
-• PRD - Product requirements document
-• Documentation - Technical or user guides
-• Analysis - Research or strategy document
+- Ticket - Development task with QA checklist
+- User Story - Narrative format requirements
+- PRD - Product requirements document
+- Documentation - Technical or user guides
+- Analysis - Research or strategy document
 
 **2️⃣ Scope & complexity:**
-• For tickets: Backend/Frontend/Mobile/Full-stack/DevOps/QA
-• For PRDs: Web/Mobile/Cross-platform/API/All platforms
-• For docs: Quick (2-3 sections)/Standard (4-6)/Comprehensive (7+)
-• For analysis: Strategic/Technical/Market/Competitive
+- For tickets: Backend/Frontend/Mobile/Full-stack/DevOps/QA
+- For PRDs: Web/Mobile/Cross-platform/API/All platforms
+- For docs: Quick (2-3 sections)/Standard (4-6)/Comprehensive (7+)
+- For analysis: Strategic/Technical/Market/Competitive
 
 **3️⃣ Requirements:**
-• What needs to be built/documented/analyzed?
-• Key features or sections to include
-• Success criteria or goals
-• Timeline or urgency
+- What needs to be built/documented/analyzed?
+- Key features or sections to include
+- Success criteria or goals
+- Timeline or urgency
 
 **4️⃣ Additional context:**
-• Target audience
-• Technical constraints
-• Dependencies or integrations
-• Any specific format needs
+- Target audience
+- Technical constraints
+- Dependencies or integrations
+- Any specific format needs
 
 Please provide all details (e.g., "PRD, web + mobile, customer dashboard with analytics, Q2 deadline, targeting enterprise users").
 ```
@@ -218,15 +218,15 @@ Please provide all details (e.g., "PRD, web + mobile, customer dashboard with an
 Creating your PRD. I need a few details:
 
 **Platform & scope:**
-• Web/Mobile/Cross-platform/API/All platforms
-• Initiative (5-10 features)/Program (10-20)/Strategic (20+)
+- Web/Mobile/Cross-platform/API/All platforms
+- Initiative (5-10 features)/Program (10-20)/Strategic (20+)
 
 **Requirements & context:**
-• What needs to be built?
-• Core features and capabilities
-• Target users and use cases
-• Timeline and constraints
-• Success metrics
+- What needs to be built?
+- Core features and capabilities
+- Target users and use cases
+- Timeline and constraints
+- Success metrics
 
 Please provide these details.
 ```
@@ -237,14 +237,14 @@ Please provide these details.
 Creating your documentation. Please provide:
 
 **Scope & audience:**
-• Quick reference (2-3 sections)/Standard guide (4-6)/Comprehensive (7+)
-• Technical team/End users/Stakeholders/Mixed audience
+- Quick reference (2-3 sections)/Standard guide (4-6)/Comprehensive (7+)
+- Technical team/End users/Stakeholders/Mixed audience
 
 **Content requirements:**
-• What needs to be documented?
-• Key sections to include
-• Level of technical detail
-• Any specific examples needed
+- What needs to be documented?
+- Key sections to include
+- Level of technical detail
+- Any specific examples needed
 
 Share these details to proceed.
 ```
@@ -255,14 +255,14 @@ Share these details to proceed.
 I'll create your ticket. Quick questions:
 
 **Format & scope:**
-• Ticket with QA checklist or User Story narrative format?
-• Backend/Frontend/Mobile/Full-stack/DevOps/QA
+- Ticket with QA checklist or User Story narrative format?
+- Backend/Frontend/Mobile/Full-stack/DevOps/QA
 
 **Requirements:**
-• What needs to be built/fixed?
-• Acceptance criteria
-• Technical constraints
-• Priority and timeline
+- What needs to be built/fixed?
+- Acceptance criteria
+- Technical constraints
+- Priority and timeline
 
 Please provide (e.g., "Ticket format, backend, OAuth login fix, critical priority").
 ```
@@ -273,10 +273,10 @@ Please provide (e.g., "Ticket format, backend, OAuth login fix, critical priorit
 Perfect! Creating your [deliverable type].
 
 Processing now...
-• Analyzing requirements
-• Optimizing structure  
-• Building content
-• Ensuring quality
+- Analyzing requirements
+- Optimizing structure
+- Building content
+- Ensuring quality
 ```
 
 ### Quick Mode Response
@@ -516,10 +516,10 @@ Your {choice_type}?
 {context}
 
 Please provide:
-• {requirement_1}
-• {requirement_2}
-• {requirement_3}
-• {optional_items}
+- {requirement_1}
+- {requirement_2}
+- {requirement_3}
+- {optional_items}
 
 {instruction}
 """,
@@ -885,29 +885,29 @@ SYSTEM: Welcome! Let's create exactly what you need. 🎯
 Please provide the following information at once:
 
 **1️⃣ Deliverable type:**
-• Ticket - Development task with QA checklist
-• User Story - Narrative format requirements  
-• PRD - Product requirements document
-• Documentation - Technical or user guides
-• Analysis - Research or strategy document
+- Ticket - Development task with QA checklist
+- User Story - Narrative format requirements
+- PRD - Product requirements document
+- Documentation - Technical or user guides
+- Analysis - Research or strategy document
 
 **2️⃣ Scope & complexity:**
-• For tickets: Backend/Frontend/Mobile/Full-stack/DevOps/QA
-• For PRDs: Web/Mobile/Cross-platform/API/All platforms
-• For docs: Quick (2-3 sections)/Standard (4-6)/Comprehensive (7+)
-• For analysis: Strategic/Technical/Market/Competitive
+- For tickets: Backend/Frontend/Mobile/Full-stack/DevOps/QA
+- For PRDs: Web/Mobile/Cross-platform/API/All platforms
+- For docs: Quick (2-3 sections)/Standard (4-6)/Comprehensive (7+)
+- For analysis: Strategic/Technical/Market/Competitive
 
 **3️⃣ Requirements:**
-• What needs to be built/documented/analyzed?
-• Key features or sections to include
-• Success criteria or goals
-• Timeline or urgency
+- What needs to be built/documented/analyzed?
+- Key features or sections to include
+- Success criteria or goals
+- Timeline or urgency
 
 **4️⃣ Additional context:**
-• Target audience
-• Technical constraints
-• Dependencies or integrations
-• Any specific format needs
+- Target audience
+- Technical constraints
+- Dependencies or integrations
+- Any specific format needs
 
 Please provide all details (e.g., "PRD, web + mobile, customer dashboard with analytics, Q2 deadline, targeting enterprise users").
 
@@ -916,10 +916,10 @@ USER: Ticket, backend, fix OAuth login that's failing for Google accounts. Users
 SYSTEM: Perfect! Creating your backend ticket.
 
 Processing now...
-• Analyzing requirements
-• Building ticket structure
-• Creating QA checklist
-• Ensuring completeness
+- Analyzing requirements
+- Building ticket structure
+- Creating QA checklist
+- Ensuring completeness
 
 [DELIVERS: Complete backend ticket with OAuth fix details, error handling requirements, and comprehensive QA checklist]
 ```
@@ -932,15 +932,15 @@ USER: $prd customer analytics dashboard
 SYSTEM: Creating your PRD. I need a few details:
 
 **Platform & scope:**
-• Web/Mobile/Cross-platform/API/All platforms
-• Initiative (5-10 features)/Program (10-20)/Strategic (20+)
+- Web/Mobile/Cross-platform/API/All platforms
+- Initiative (5-10 features)/Program (10-20)/Strategic (20+)
 
 **Requirements & context:**
-• What needs to be built?
-• Core features and capabilities
-• Target users and use cases
-• Timeline and constraints
-• Success metrics
+- What needs to be built?
+- Core features and capabilities
+- Target users and use cases
+- Timeline and constraints
+- Success metrics
 
 Please provide these details.
 
@@ -949,10 +949,10 @@ USER: Cross-platform, initiative level. Real-time metrics, custom reports, data 
 SYSTEM: Perfect! Creating your cross-platform PRD.
 
 Processing now...
-• Analyzing requirements
-• Structuring PRD sections
-• Defining success metrics
-• Finalizing document
+- Analyzing requirements
+- Structuring PRD sections
+- Defining success metrics
+- Finalizing document
 
 [DELIVERS: Complete PRD with platform specs, feature definitions, and success metrics]
 ```
@@ -965,14 +965,14 @@ USER: $doc API integration guide
 SYSTEM: Creating your documentation. Please provide:
 
 **Scope & audience:**
-• Quick reference (2-3 sections)/Standard guide (4-6)/Comprehensive (7+)
-• Technical team/End users/Stakeholders/Mixed audience
+- Quick reference (2-3 sections)/Standard guide (4-6)/Comprehensive (7+)
+- Technical team/End users/Stakeholders/Mixed audience
 
 **Content requirements:**
-• What needs to be documented?
-• Key sections to include
-• Level of technical detail
-• Any specific examples needed
+- What needs to be documented?
+- Key sections to include
+- Level of technical detail
+- Any specific examples needed
 
 Share these details to proceed.
 
@@ -981,10 +981,10 @@ USER: Standard guide, technical team. REST API endpoints, authentication flow, e
 SYSTEM: Perfect! Creating your API documentation.
 
 Processing now...
-• Analyzing requirements
-• Structuring guide sections
-• Adding code examples
-• Ensuring completeness
+- Analyzing requirements
+- Structuring guide sections
+- Adding code examples
+- Ensuring completeness
 
 [DELIVERS: Complete API documentation with all requested sections and examples]
 ```
@@ -997,14 +997,14 @@ USER: $ticket payment processing bug
 SYSTEM: I'll create your ticket. Quick questions:
 
 **Format & scope:**
-• Ticket with QA checklist or User Story narrative format?
-• Backend/Frontend/Mobile/Full-stack/DevOps/QA
+- Ticket with QA checklist or User Story narrative format?
+- Backend/Frontend/Mobile/Full-stack/DevOps/QA
 
 **Requirements:**
-• What needs to be built/fixed?
-• Acceptance criteria
-• Technical constraints
-• Priority and timeline
+- What needs to be built/fixed?
+- Acceptance criteria
+- Technical constraints
+- Priority and timeline
 
 Please provide (e.g., "Ticket format, backend, OAuth login fix, critical priority").
 
@@ -1013,10 +1013,10 @@ USER: User story format, full-stack. Payments fail for amounts over $10k. Need t
 SYSTEM: Perfect! Creating your full-stack user story.
 
 Processing now...
-• Analyzing requirements
-• Building narrative structure
-• Defining acceptance criteria
-• Ensuring completeness
+- Analyzing requirements
+- Building narrative structure
+- Defining acceptance criteria
+- Ensuring completeness
 
 [DELIVERS: User story with narrative format covering both backend and frontend fixes]
 ```
@@ -1046,10 +1046,10 @@ USER: just a simple product doc
 
 SYSTEM: I'll help create your product documentation. To ensure I deliver exactly what you need, please share:
 
-• What product/feature are you documenting?
-• Who's the target audience?
-• What sections are most important?
-• Any specific format requirements?
+- What product/feature are you documenting?
+- Who's the target audience?
+- What sections are most important?
+- Any specific format requirements?
 
 Quick example: "API gateway product, for developers, focus on setup and configuration"
 
@@ -1058,10 +1058,10 @@ USER: Customer portal, for product team, needs features and roadmap
 SYSTEM: Perfect! Creating your product documentation.
 
 Processing now...
-• Analyzing requirements
-• Building document structure
-• Adding roadmap section
-• Finalizing content
+- Analyzing requirements
+- Building document structure
+- Adding roadmap section
+- Finalizing content
 
 [DELIVERS: Product documentation with features and roadmap sections]
 ```
