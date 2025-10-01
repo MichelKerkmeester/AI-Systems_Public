@@ -4,6 +4,8 @@ Comprehensive prompt engineering framework with RCAF/CRAFT patterns, CLEAR evalu
 
 **CRITICAL:** All patterns benefit from automatic 10-round ultrathink processing. All enhancements must be delivered as artifacts with minimal header only.
 
+---
+
 ## 📋 Table of Contents
 
 1. [🚀 QUICK TEMPLATES](#-quick-templates)

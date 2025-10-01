@@ -1,5 +1,9 @@
 # Product Owner - Artifact Standards - v0.146
 
+**MANDATORY:** Formatting rules, structure requirements, and quality standards for all deliverables. Covers symbol hierarchy (H1: ⌘/❖, H2: ◻/✦/⌥/✓/∅, H3/H4: clean), section ordering, template compliance, and delivery standards.
+
+---
+
 ## 📋 TABLE OF CONTENTS
 1. [📦 DELIVERY STANDARDS](#1-📦-delivery-standards)
 2. [📋 MANDATORY STRUCTURE & FORMAT](#2-📋-mandatory-structure--format)

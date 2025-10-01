@@ -2,6 +2,8 @@
 
 Systematic quality assessment and improvement for optimizing prompts through CLEAR evaluation, automatic ultrathink processing, RCAF framework preference, and multi-format support including Standard, JSON, and YAML.
 
+---
+
 ## 📋 Table of Contents
 
 1. [✅ CLEAR EVALUATION SYSTEM (PRIMARY)](#-clear-evaluation-system-primary)

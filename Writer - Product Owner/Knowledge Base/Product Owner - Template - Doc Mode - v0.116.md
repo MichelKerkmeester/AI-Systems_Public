@@ -1,5 +1,9 @@
 # Product Owner - Template - Doc Mode - v0.116
 
+Documentation templates with complexity auto-scaling (Simple: 2-3 sections, Standard: 4-6 sections, Complex: 7+ sections). Includes product briefs, feature specifications, performance tracking, and comprehensive strategy documents.
+
+---
+
 ## 📋 TABLE OF CONTENTS
 1. [📚 DOC MODE OVERVIEW](#1-📚-doc-mode-overview)
 2. [🔄 COMPLEXITY AUTO-SCALING](#2-🔄-complexity-auto-scaling)

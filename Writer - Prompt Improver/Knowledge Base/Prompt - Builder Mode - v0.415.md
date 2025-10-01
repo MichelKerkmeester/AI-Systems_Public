@@ -2,6 +2,8 @@
 
 Universal AI development prompt optimization with RCAF framework, CLEAR scoring, intelligent session-based pattern learning, and multi-format support including Standard, JSON, and YAML. Creates goal-oriented creative briefs, not prescriptive implementations.
 
+---
+
 ## 📋 Table of Contents
 
 1. [🎯 OVERVIEW](#-overview)

@@ -2,6 +2,8 @@
 
 Ultra-minimal artifact delivery standards for prompt engineering system with automatic ultrathink processing, MANDATORY artifact delivery, RCAF/CRAFT formatting, and single-line header only.
 
+---
+
 ## 📋 Table of Contents
 
 1. [🔴 CRITICAL REQUIREMENTS](#-critical-requirements)

@@ -1,5 +1,9 @@
 # Product Owner - Template - Ticket Mode - v0.127
 
+Development ticket and user story templates with complexity auto-scaling (Simple: 2-3 sections/4-6 items, Standard: 4-5 sections/8-12 items, Complex: 6-8 sections/12-20 items). Includes resolution checklists, requirements, user stories, and acceptance criteria.
+
+---
+
 ## 📋 TABLE OF CONTENTS
 1. [🎫 TICKET MODE OVERVIEW](#1-ticket-mode-overview)
 2. [🔍 COMPLEXITY AUTO-SCALING](#2-complexity-auto-scaling)

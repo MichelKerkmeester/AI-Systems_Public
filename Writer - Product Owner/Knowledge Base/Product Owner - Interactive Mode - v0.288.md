@@ -1,6 +1,8 @@
 # Product Owner - Interactive Mode - v0.288
 
-Consolidated interactive guidance with automatic ultrathink and single comprehensive questioning.
+Mandatory formatting rules, structure requirements, and quality standards for all deliverables. Covers symbol hierarchy (H1: ⌘/❖, H2: ◻/✦/⌥/✓/∅, H3/H4: clean), section ordering, template compliance, and delivery standards.
+
+---
 
 ## 📋 TABLE OF CONTENTS
 1. [🎯 MODE OVERVIEW](#mode-overview)

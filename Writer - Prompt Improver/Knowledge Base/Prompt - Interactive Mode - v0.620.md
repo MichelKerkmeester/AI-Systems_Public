@@ -2,6 +2,8 @@
 
 Conversational prompt enhancement through RCAF-structured discovery, automatic processing, CLEAR scoring, intelligent challenge-based refinement, and multi-format delivery options including Standard, JSON, and YAML.
 
+---
+
 ## 📋 Table of Contents
 
 1. [🚀 ACTIVATION](#-activation)

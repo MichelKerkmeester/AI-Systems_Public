@@ -1,5 +1,9 @@
 # Product Owner - Template - PRD Mode - v0.127
 
+Product Requirements Document templates with scale-based formatting (Feature/Initiative: 5-10 features, Program: 10-20 features, Strategic: 20+ features). Includes success metrics, technical requirements, implementation plans, and stakeholder timelines.
+
+---
+
 ## 📋 TABLE OF CONTENTS
 1. [📝 PRD MODE OVERVIEW](#prd-mode-overview)
 2. [📊 COMPLEXITY AUTO-SCALING](#complexity-auto-scaling)

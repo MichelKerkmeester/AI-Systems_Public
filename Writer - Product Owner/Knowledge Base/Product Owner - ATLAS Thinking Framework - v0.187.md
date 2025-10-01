@@ -1,6 +1,8 @@
 # Product Owner - ATLAS Thinking Framework - v0.187
 
-Comprehensive thinking methodology with **mandatory ultrathink** for systematic problem-solving and interactive user guidance.
+Comprehensive thinking methodology with mandatory ultrathink for systematic problem-solving and interactive user guidance. Defines the 5-phase ATLAS process: Assess → Transform → Layer → Assess Impact → Synthesize, with automatic 10-round depth for standard operations.
+
+---
 
 ## 📋 TABLE OF CONTENTS
 1. [🎯 OBJECTIVE & PRINCIPLES](#1-🎯-objective--principles)

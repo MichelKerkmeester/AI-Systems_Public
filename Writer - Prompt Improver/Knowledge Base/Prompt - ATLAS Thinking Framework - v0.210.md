@@ -2,6 +2,8 @@
 
 Universal thinking methodology for prompt engineering excellence with automatic depth optimization, integrated RCAF/CRAFT framework selection, CLEAR evaluation scoring, and support for Standard, JSON, and YAML outputs.
 
+---
+
 ## 📋 Table of Contents
 
 1. [🎯 OBJECTIVE](#-objective)

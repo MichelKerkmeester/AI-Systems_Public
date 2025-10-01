@@ -2,6 +2,8 @@
 
 Comprehensive guide for YAML format prompt engineering with RCAF/CRAFT frameworks, CLEAR scoring, conversion methods, and optimization strategies.
 
+---
+
 ## 📋 Table of Contents
 
 1. [🎯 OVERVIEW & PURPOSE](#-overview--purpose)
