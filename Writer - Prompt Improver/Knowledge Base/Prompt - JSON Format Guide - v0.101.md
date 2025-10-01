@@ -770,7 +770,3 @@ Mode: $json | Complexity: [level] | Framework: RCAF | CLEAR: [X]/50
 ```
 
 **No additional sections. No verbose headers. Maximum clarity.**
-
----
-
-*JSON Format Guide: Structured prompt engineering for programmatic excellence. RCAF provides clarity, JSON provides structure. Every field matters, every type counts. Validate everything, optimize constantly. Deliver with minimal header for maximum focus. For comparison with Standard format, refer to main system documentation.*

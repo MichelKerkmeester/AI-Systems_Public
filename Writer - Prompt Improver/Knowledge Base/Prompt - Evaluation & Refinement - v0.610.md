@@ -1,6 +1,6 @@
-# Prompt - Evaluation & Refinement - v0.608
+# Prompt - Evaluation & Refinement - v0.610
 
-Systematic quality assessment and improvement for optimizing prompts through CLEAR evaluation, automatic ultrathink processing, RCAF framework preference, and multi-format support including Standard, JSON, and YAML.
+Systematic quality assessment and improvement for optimizing prompts through CLEAR evaluation, automatic DEPTH processing, RCAF framework preference, and multi-format support including Standard, JSON, and YAML.
 
 ---
 
@@ -11,9 +11,9 @@ Systematic quality assessment and improvement for optimizing prompts through CLE
 3. [📊 FULL EVALUATION PROCESS](#-full-evaluation-process)
 4. [🎯 RCAF VS CRAFT EVALUATION](#-rcaf-vs-craft-evaluation)
 5. [📄 FORMAT EVALUATION](#-format-evaluation)
-6. [🧠 AUTOMATIC REFINEMENT](#-automatic-refinement)
+6. [🧠 AUTOMATIC DEPTH REFINEMENT](#-automatic-depth-refinement)
 7. [🚀 CHALLENGE-BASED REFINEMENT](#-challenge-based-refinement)
-8. [📝 REFINEMENT PATTERNS](#-refinement-patterns)
+8. [🔍 REFINEMENT PATTERNS](#-refinement-patterns)
 9. [💡 EXAMPLES](#-examples)
 10. [📈 PERFORMANCE METRICS](#-performance-metrics)
 11. [🎓 KEY PRINCIPLES](#-key-principles)
@@ -24,20 +24,22 @@ Systematic quality assessment and improvement for optimizing prompts through CLE
 
 ## 1. ✅ CLEAR EVALUATION SYSTEM (PRIMARY)
 
-### The CLEAR Framework with Automatic Processing
+### The CLEAR Framework with Automatic DEPTH Processing
 
 **Correctness, Logic/Coverage, Expression, Arrangement, Reuse**
 
 CLEAR is the primary evaluation method for all prompt assessments. Each dimension is scored 1-10, with a total possible score of 50.
 
-**AUTOMATIC PROCESSING:** All evaluations benefit from automatic ultrathink optimization.
+**AUTOMATIC PROCESSING:** All evaluations benefit from automatic DEPTH optimization.
 
 ```python
 def validate_evaluation_prerequisites():
-    """Automatic validation for evaluation"""
+    """Automatic validation for evaluation with DEPTH"""
     
     prerequisites = {
-        'processing_applied': True,  # Always automatic
+        'depth_processing': True,  # Always automatic
+        'methodology': 'DEPTH',
+        'rounds': 10,
         'artifact_ready': self.artifact_format == 'text/markdown',
         'framework_identified': self.framework is not None
     }
@@ -45,7 +47,7 @@ def validate_evaluation_prerequisites():
     if not all(prerequisites.values()):
         failed = [k for k, v in prerequisites.items() if not v]
         print(f"Preparing evaluation. Setting up: {failed}")
-        apply_automatic_processing()
+        apply_depth_processing()
     
     return True
 ```
@@ -97,9 +99,9 @@ def validate_evaluation_prerequisites():
 | 3-4 | Limited reuse | Major rework needed |
 | 1-2 | Single-use only | Not adaptable |
 
-### Automatic Processing Bonus
+### Automatic DEPTH Processing Bonus
 
-**Ultrathink Enhancement:** +1-2 points per dimension through automatic optimization
+**DEPTH Enhancement:** +1-2 points per dimension through automatic optimization
 
 ### CLEAR Grade Scale
 
@@ -118,17 +120,17 @@ def validate_evaluation_prerequisites():
 
 ## 2. ⚡ QUICK EVAL WITH CLEAR
 
-### Rapid CLEAR Assessment with Automatic Optimization
+### Rapid CLEAR Assessment with Automatic DEPTH Optimization
 
 ```python
 def quick_clear_eval(prompt, format='standard'):
-    """Quick CLEAR scoring with automatic processing"""
+    """Quick CLEAR scoring with automatic DEPTH processing"""
     
-    # Apply automatic ultrathink
-    apply_automatic_processing()
+    # Apply automatic DEPTH methodology
+    apply_depth_processing()
     
     scores = {
-        'correctness': score_requirements_captured(prompt) + 1,  # +1 from ultrathink
+        'correctness': score_requirements_captured(prompt) + 1,  # +1 from DEPTH
         'logic': score_completeness(prompt) + 1,
         'expression': score_clarity(prompt) + 1,
         'arrangement': score_structure(prompt) + 1,
@@ -157,7 +159,7 @@ def quick_clear_eval(prompt, format='standard'):
         'priority_fix': weakest,
         'framework_rec': 'RCAF' if total < 35 else 'Current',
         'format_rec': recommend_format(scores),
-        'processing': 'automatic_ultrathink_applied'
+        'processing': 'automatic_depth_applied'
     }
     
     # CRITICAL: Must deliver as artifact with minimal header
@@ -172,7 +174,7 @@ Mode: $evaluate | Complexity: [level] | Framework: [RCAF/CRAFT] | CLEAR: [X]/50
 **QUICK CLEAR EVALUATION**
 
 Current Score: [X]/50 (Grade: [A-F])
-Processing: Automatic ultrathink applied
+Processing: Automatic DEPTH applied
 
 📊 **Scores:**
 • Correctness: [X]/10
@@ -192,11 +194,11 @@ Processing: Automatic ultrathink applied
 
 | Weak Dimension | Quick Fix | Framework Switch | Format Recommendation | Expected Gain | Processing |
 |----------------|-----------|------------------|----------------------|---------------|------------|
-| Correctness | Add verification steps | Consider CRAFT | JSON for precision | +2-3 points | Auto-applied |
-| Logic/Coverage | Fill requirement gaps | Consider CRAFT | YAML for structure | +2-3 points | Auto-applied |
-| Expression | Simplify with RCAF | Switch to RCAF | Standard for clarity | +3-4 points | Auto-applied |
-| Arrangement | Apply RCAF structure | Switch to RCAF | YAML for hierarchy | +2-3 points | Auto-applied |
-| Reuse | Parameterize elements | Either framework | YAML for templates | +2-3 points | Auto-applied |
+| Correctness | Add verification steps | Consider CRAFT | JSON for precision | +2-3 points | DEPTH-applied |
+| Logic/Coverage | Fill requirement gaps | Consider CRAFT | YAML for structure | +2-3 points | DEPTH-applied |
+| Expression | Simplify with RCAF | Switch to RCAF | Standard for clarity | +3-4 points | DEPTH-applied |
+| Arrangement | Apply RCAF structure | Switch to RCAF | YAML for hierarchy | +2-3 points | DEPTH-applied |
+| Reuse | Parameterize elements | Either framework | YAML for templates | +2-3 points | DEPTH-applied |
 
 ---
 
@@ -204,20 +206,21 @@ Processing: Automatic ultrathink applied
 
 ## 3. 📊 FULL EVALUATION PROCESS
 
-### Comprehensive CLEAR Evaluation with Automatic Processing
+### Comprehensive CLEAR Evaluation with Automatic DEPTH Processing
 
-#### Step 1: Automatic Processing Applied
+#### Step 1: Automatic DEPTH Processing Applied
 ```markdown
-Processing: Automatic ultrathink (10 rounds)
+Processing: Automatic DEPTH (10 rounds)
+Methodology: Discover → Engineer → Prototype → Test → Harmonize
 Complexity: Level [X]
 Artifact: Ready
 
-**Processing enhances all dimensions by +1-2 points**
+**DEPTH processing enhances all dimensions by +1-2 points**
 ```
 
 #### Step 2: Baseline CLEAR Scoring
 ```markdown
-**BASELINE CLEAR SCORES (with processing bonus):**
+**BASELINE CLEAR SCORES (with DEPTH bonus):**
 • C (Correctness): [X]/10 - [specific improvements]
 • L (Logic/Coverage): [X]/10 - [gaps addressed]
 • E (Expression): [X]/10 - [clarity enhanced]
@@ -243,7 +246,7 @@ CRAFT Necessity: [X]/10
 - Coverage gain potential: [+X points]
 
 **Recommendation:** [RCAF/CRAFT] for [+X CLEAR points]
-**Automatic optimization supports this choice**
+**DEPTH optimization supports this choice**
 ```
 
 #### Step 4: Format Analysis
@@ -270,7 +273,7 @@ Alternative Formats:
 ```markdown
 **PROJECTED IMPROVEMENTS:**
 
-[With automatic processing applied]
+[With DEPTH processing applied]
 
 With RCAF + [Format]:
 • C: [Current] → [Projected] (+X)
@@ -281,7 +284,7 @@ With RCAF + [Format]:
 Total: [Current] → [Projected] (+X)
 
 **Best Path:** [RCAF/CRAFT] + [Format] for [total gain]
-**Processing ensures optimal quality**
+**DEPTH processing ensures optimal quality**
 ```
 
 ### Full Evaluation Report Template
@@ -291,11 +294,11 @@ Mode: $evaluate | Complexity: [level] | Framework: [recommended] | CLEAR: [X]/50
 
 **COMPREHENSIVE CLEAR EVALUATION**
 
-Processing: Automatic ultrathink applied
+Processing: Automatic DEPTH applied (10 rounds)
 Current State: [X]/50 (Grade: [A-F])
 Format: [Standard/JSON/YAML]
 
-Detailed Scores (with processing bonus):
+Detailed Scores (with DEPTH bonus):
 • Correctness: [X]/10 - [strength/weakness]
 • Logic/Coverage: [X]/10 - [strength/weakness]
 • Expression: [X]/10 - [strength/weakness]
@@ -329,24 +332,24 @@ Switch Benefit: +[X] points, +[X]% tokens
 
 ## 4. 🎯 RCAF VS CRAFT EVALUATION
 
-### Framework Comparison Scoring with Automatic Processing
+### Framework Comparison Scoring with Automatic DEPTH Processing
 
-| Aspect | RCAF Impact | CRAFT Impact | Decision Factor | Processing Boost |
-|--------|-------------|--------------|-----------------|------------------|
-| **Correctness** | +0 to +1 | +1 to +2 | Detail needs | +1 from ultrathink |
-| **Logic/Coverage** | -1 to 0 | +1 to +2 | Completeness needs | +1 from ultrathink |
-| **Expression** | +2 to +3 | -1 to 0 | Clarity priority | +1 from ultrathink |
-| **Arrangement** | +1 to +2 | 0 to +1 | Simplicity helps | +1 from ultrathink |
-| **Reuse** | +1 to +2 | 0 to +1 | Cleaner templates | +1 from ultrathink |
+| Aspect | RCAF Impact | CRAFT Impact | Decision Factor | DEPTH Boost |
+|--------|-------------|--------------|-----------------|-------------|
+| **Correctness** | +0 to +1 | +1 to +2 | Detail needs | +1 from DEPTH |
+| **Logic/Coverage** | -1 to 0 | +1 to +2 | Completeness needs | +1 from DEPTH |
+| **Expression** | +2 to +3 | -1 to 0 | Clarity priority | +1 from DEPTH |
+| **Arrangement** | +1 to +2 | 0 to +1 | Simplicity helps | +1 from DEPTH |
+| **Reuse** | +1 to +2 | 0 to +1 | Cleaner templates | +1 from DEPTH |
 
 ### Framework Selection Based on CLEAR
 
 ```python
 def select_framework_by_clear(current_scores, format='standard'):
-    """Choose framework based on CLEAR with automatic optimization"""
+    """Choose framework based on CLEAR with automatic DEPTH optimization"""
     
-    # Automatic processing enhances all scores
-    apply_automatic_processing()
+    # DEPTH processing enhances all scores
+    apply_depth_processing()
     
     if current_scores['expression'] < 7:
         return 'RCAF', 'Low expression score needs simplicity'
@@ -370,11 +373,11 @@ def select_framework_by_clear(current_scores, format='standard'):
 
 | Current CLEAR | Best Framework | Best Format | Rationale | Expected Gain | Processing |
 |---------------|---------------|-------------|-----------|---------------|------------|
-| < 30/50 | RCAF | Standard | Need clarity foundation | +8-12 points | Ultrathink |
-| 30-35/50 | RCAF | Standard/YAML | Simplification priority | +5-8 points | Ultrathink |
-| 35-40/50 | User choice | All viable | Both frameworks work | +3-5 points | Ultrathink |
-| 40-45/50 | Current | Current | Working well | +2-3 points | Ultrathink |
-| > 45/50 | Current | Current | Excellent already | +0-2 points | Ultrathink |
+| < 30/50 | RCAF | Standard | Need clarity foundation | +8-12 points | DEPTH |
+| 30-35/50 | RCAF | Standard/YAML | Simplification priority | +5-8 points | DEPTH |
+| 35-40/50 | User choice | All viable | Both frameworks work | +3-5 points | DEPTH |
+| 40-45/50 | Current | Current | Working well | +2-3 points | DEPTH |
+| > 45/50 | Current | Current | Excellent already | +0-2 points | DEPTH |
 
 ---
 
@@ -382,10 +385,10 @@ def select_framework_by_clear(current_scores, format='standard'):
 
 ## 5. 📄 FORMAT EVALUATION
 
-### Format Impact on CLEAR Scores with Processing
+### Format Impact on CLEAR Scores with DEPTH Processing
 
-| Format | Correctness | Logic | Expression | Arrangement | Reuse | Processing Boost | Token Overhead |
-|--------|-------------|-------|------------|-------------|-------|------------------|----------------|
+| Format | Correctness | Logic | Expression | Arrangement | Reuse | DEPTH Boost | Token Overhead |
+|--------|-------------|-------|------------|-------------|-------|-------------|----------------|
 | **Standard** | 0 | 0 | +1 | 0 | 0 | +5 total | 0% |
 | **YAML** | 0 | +1 | 0 | +1 | +1 | +5 total | +3-7% |
 | **JSON** | +1 | +1 | -1 | +1 | +1 | +5 total | +5-10% |
@@ -397,10 +400,10 @@ Mode: $evaluate | Complexity: Medium | Framework: [current] | CLEAR: [X]/50
 
 **FORMAT EVALUATION**
 
-Processing: Automatic ultrathink active
+Processing: Automatic DEPTH active
 Current Format: [Standard/JSON/YAML]
 Current CLEAR: [X]/50
-Processing Bonus: +5 points applied
+DEPTH Bonus: +5 points applied
 
 Format Projections:
 • Standard: [Best for Expression]
@@ -427,8 +430,8 @@ Format Projections:
 def select_optimal_format(clear_scores, use_case):
     """Select format based on CLEAR scores and use case"""
     
-    # Apply automatic optimization
-    apply_automatic_processing()
+    # Apply DEPTH optimization
+    apply_depth_processing()
     
     if use_case == 'api':
         return 'json', 'API integration priority'
@@ -454,41 +457,41 @@ def select_optimal_format(clear_scores, use_case):
 
 ---
 
-<a id="-automatic-refinement"></a>
+<a id="-automatic-depth-refinement"></a>
 
-## 6. 🧠 AUTOMATIC REFINEMENT
+## 6. 🧠 AUTOMATIC DEPTH REFINEMENT
 
-### Ultrathink-Powered Refinement Process
+### DEPTH-Powered Refinement Process
 
-#### Phase 1 - Automatic Assessment
-- Apply 10-round ultrathink automatically
+#### Phase 1 - Discover (25% of processing)
+- Apply 10-round DEPTH automatically
 - Complete CLEAR scoring (all 5 dimensions)
 - Evaluate current format effectiveness
 - Identify lowest 2 dimensions
 - Measure complexity (1-10 scale)
 
-#### Phase 2 - Transform for CLEAR Improvement
+#### Phase 2 - Engineer (25% of processing)
 - Create minimal version (RCAF + Standard)
 - Create balanced version (RCAF + YAML)
 - Create comprehensive version (CRAFT + Standard)
 - Project CLEAR scores for each
-- Apply automatic optimization to all
+- Apply DEPTH optimization to all
 
-#### Phase 3 - Layer for Weak Dimensions
+#### Phase 3 - Prototype (20% of processing)
 - Add elements targeting lowest CLEAR scores
 - Apply RCAF for Expression issues
 - Apply CRAFT for Coverage issues
 - Apply YAML for Arrangement issues
 - Filter to only score-improving layers
 
-#### Phase 4 - Assess CLEAR Changes
-- Re-score all dimensions with processing
+#### Phase 4 - Test (20% of processing)
+- Re-score all dimensions with DEPTH processing
 - Verify improvements in weak areas
 - Check for unintended score drops
 - Evaluate format overhead
 - Calculate net CLEAR gain
 
-#### Phase 5 - Synthesize with Scores
+#### Phase 5 - Harmonize (10% of processing)
 - Choose version with highest CLEAR
 - Select optimal format
 - Document score improvements
@@ -499,10 +502,16 @@ def select_optimal_format(clear_scores, use_case):
 
 ```python
 def refine_with_clear_focus(prompt, clear_scores, current_format):
-    """Refinement with automatic processing"""
+    """Refinement with automatic DEPTH processing"""
     
-    # Apply automatic ultrathink
-    apply_automatic_processing()
+    # Apply automatic DEPTH methodology
+    depth_phases = {
+        'discover': analyze_weaknesses,
+        'engineer': generate_improvements,
+        'prototype': build_enhancements,
+        'test': validate_gains,
+        'harmonize': finalize_prompt
+    }
     
     weak_dimensions = get_lowest_two(clear_scores)
     
@@ -530,7 +539,7 @@ def refine_with_clear_focus(prompt, clear_scores, current_format):
         new_scores, 
         improvement, 
         suggested_format,
-        processing='automatic_ultrathink'
+        processing='automatic_depth'
     )
     
     return result
@@ -547,16 +556,16 @@ def refine_with_clear_focus(prompt, clear_scores, current_format):
 | CLEAR Score | Challenge Level | Action | Framework Push | Format Suggestion | Processing |
 |-------------|----------------|--------|----------------|-------------------|------------|
 | **45-50** | None | Polish only | Maintain | Keep current | Maintain |
-| **40-44** | Gentle | Suggest refinements | Consider RCAF | Optimize format | Ultrathink |
-| **35-39** | Moderate | Recommend changes | Suggest RCAF | Suggest Standard/YAML | Ultrathink |
-| **30-34** | Strong | Push for overhaul | Switch to RCAF | Force Standard | Ultrathink |
-| **<30** | Aggressive | Complete rewrite | Force RCAF | Standard only | Ultrathink |
+| **40-44** | Gentle | Suggest refinements | Consider RCAF | Optimize format | DEPTH |
+| **35-39** | Moderate | Recommend changes | Suggest RCAF | Suggest Standard/YAML | DEPTH |
+| **30-34** | Strong | Push for overhaul | Switch to RCAF | Force Standard | DEPTH |
+| **<30** | Aggressive | Complete rewrite | Force RCAF | Standard only | DEPTH |
 
 ### CLEAR-Based Challenge Templates
 
 **High Score (40+):**
 ```
-Processing: Automatic ultrathink applied
+Processing: Automatic DEPTH applied
 Current CLEAR: [X]/50 - Already excellent!
 Format: [Current] working well
 
@@ -564,12 +573,12 @@ Minor enhancement possible:
 - [Lowest dimension]: Could improve from [X] to [Y]
 - Format switch to [alternative] might add +[X]
 
-Worth the effort? (Automatic refinement ready)
+Worth the effort? (Automatic DEPTH refinement ready)
 ```
 
 **Medium Score (30-39):**
 ```
-Processing: Automatic ultrathink active
+Processing: Automatic DEPTH active
 Current CLEAR: [X]/50 - Good, but could be better
 Format: [Current] (+[X]% tokens)
 
@@ -583,12 +592,12 @@ Or RCAF + YAML for templates:
 - Reuse: [Current] → [+2]
 - Token cost: +3-7%
 
-Switch approach? (Automatic optimization will be applied)
+Switch approach? (DEPTH optimization will be applied)
 ```
 
 **Low Score (<30):**
 ```
-Processing: Automatic ultrathink engaged
+Processing: Automatic DEPTH engaged
 Current CLEAR: [X]/50 - Significant improvement needed
 Format contributing to confusion
 
@@ -598,26 +607,26 @@ RCAF + Standard restructuring recommended:
 - Reduce token overhead to baseline
 - Target: 40+/50
 
-**Automatic refinement will apply 10-round ultrathink**
+**Automatic refinement will apply 10-round DEPTH processing**
 ```
 
 ---
 
 <a id="-refinement-patterns"></a>
 
-## 8. 📝 REFINEMENT PATTERNS
+## 8. 🔍 REFINEMENT PATTERNS
 
-### Common CLEAR Improvements with Automatic Processing
+### Common CLEAR Improvements with Automatic DEPTH Processing
 
 | Issue | CLEAR Impact | RCAF Fix | Format Solution | Score Gain | Processing |
 |-------|--------------|----------|-----------------|------------|------------|
 | **No artifact** | All:-5 | N/A | Force artifact | +5 | Auto-fix |
-| **Vague requirements** | C:4, L:5 | Add specific Context/Action | Standard clarity | +4-5 points | Ultrathink |
-| **No role defined** | C:6, E:6 | Add clear Role | Any format | +2-3 points | Ultrathink |
-| **Poor structure** | A:4, E:5 | Apply RCAF format | YAML hierarchy | +4-5 points | Ultrathink |
-| **Over-complex** | E:4, A:5 | Simplify to RCAF | Standard only | +5-6 points | Ultrathink |
-| **Not reusable** | R:3 | Extract parameters | YAML template | +3-4 points | Ultrathink |
-| **API needs** | C:6 | Add precision | JSON structure | +2-3 points | Ultrathink |
+| **Vague requirements** | C:4, L:5 | Add specific Context/Action | Standard clarity | +4-5 points | DEPTH |
+| **No role defined** | C:6, E:6 | Add clear Role | Any format | +2-3 points | DEPTH |
+| **Poor structure** | A:4, E:5 | Apply RCAF format | YAML hierarchy | +4-5 points | DEPTH |
+| **Over-complex** | E:4, A:5 | Simplify to RCAF | Standard only | +5-6 points | DEPTH |
+| **Not reusable** | R:3 | Extract parameters | YAML template | +3-4 points | DEPTH |
+| **API needs** | C:6 | Add precision | JSON structure | +2-3 points | DEPTH |
 
 ### RCAF Transformation Examples
 
@@ -627,12 +636,12 @@ RCAF + Standard restructuring recommended:
 
 C:4 L:3 E:5 A:5 R:5 = 22/50
 Format: None
-[No processing applied]
+[No DEPTH applied]
 ```
 
-**After Automatic Processing:**
+**After DEPTH Processing:**
 ```
-Processing: Automatic ultrathink (10 rounds) applied
+Processing: Automatic DEPTH (10 rounds) applied
 Creating artifact with minimal header...
 ```
 
@@ -646,7 +655,7 @@ Action: Identify top 3 revenue drivers and create predictive model for Q1 2025.
 Format: Executive dashboard with bullet insights and supporting charts.
 ```
 
-**Improvement:** +23 points (104% gain) with automatic processing
+**Improvement:** +23 points (104% gain) with automatic DEPTH processing
 
 ---
 
@@ -663,9 +672,10 @@ CLEAR: C:3 L:4 E:5 A:4 R:4 = 20/50 (Grade: F)
 Format: None
 ```
 
-**Automatic Processing Applied:**
+**Automatic DEPTH Processing Applied:**
 ```
-Applying 10-round ultrathink...
+Applying 10-round DEPTH methodology...
+Phases: Discover → Engineer → Prototype → Test → Harmonize
 Analyzing complexity: Level 5
 Optimizing structure...
 ```
@@ -760,7 +770,7 @@ Mode: $refine | Complexity: Medium | Framework: RCAF | CLEAR: 41/50
 - Standard scores highest in Expression
 - YAML balances structure and readability
 - JSON best for precision but loses Expression
-- All benefit from automatic processing (+5 points)
+- All benefit from automatic DEPTH processing (+5 points)
 
 ---
 
@@ -768,11 +778,11 @@ Mode: $refine | Complexity: Medium | Framework: RCAF | CLEAR: 41/50
 
 ## 10. 📈 PERFORMANCE METRICS
 
-### CLEAR-Based KPIs with Automatic Processing
+### CLEAR-Based KPIs with Automatic DEPTH Processing
 
 **Processing Metrics:**
-- Automatic application: 100%
-- Processing depth: 10 rounds (standard) / 1-5 (quick)
+- Automatic DEPTH application: 100%
+- Processing methodology: DEPTH (10 rounds)
 - Optimization consistency: 100%
 - Processing time: < 2 seconds
 
@@ -794,7 +804,7 @@ Mode: $refine | Complexity: Medium | Framework: RCAF | CLEAR: 41/50
 - Framework switch success: +5 points minimum
 - Format optimization gain: +2 points average
 - Weak dimension improvement: +2 minimum
-- Processing bonus: +5 points consistent
+- DEPTH processing bonus: +5 points consistent
 
 ### CLEAR Tracking Dashboard
 
@@ -803,16 +813,17 @@ Mode: $evaluate | Complexity: N/A | Framework: N/A | CLEAR: N/A
 
 **CLEAR PERFORMANCE DASHBOARD**
 
-Processing: Automatic ultrathink (Always Active)
+Processing: Automatic DEPTH (Always Active)
+Methodology: 10-round optimization
 Artifacts: Always Delivered with Minimal Header
 
 📊 **Session Statistics:**
 - Evaluations completed: [X]
 - Average CLEAR: [X]/50
 - Average improvement: +[X] points
-- Processing consistency: 100%
+- DEPTH consistency: 100%
 
-📈 **Dimension Averages (with processing bonus):**
+📈 **Dimension Averages (with DEPTH bonus):**
 - Correctness: [X]/10
 - Logic/Coverage: [X]/10
 - Expression: [X]/10 ⭐ [if highest]
@@ -835,7 +846,7 @@ Artifacts: Always Delivered with Minimal Header
 - Improvement rate: [X]%
 - Format optimization: [X]%
 
-**Processing Status:** AUTOMATIC OPTIMIZATION ACTIVE
+**Processing Status:** AUTOMATIC DEPTH OPTIMIZATION ACTIVE
 ```
 
 ---
@@ -846,13 +857,13 @@ Artifacts: Always Delivered with Minimal Header
 
 ### Evaluation Philosophy
 
-> "CLEAR scores tell the truth. Expression beats Coverage. Format serves purpose. Automatic processing ensures quality. Minimal header delivers focus."
+> "CLEAR scores tell the truth. Expression beats Coverage. Format serves purpose. Automatic DEPTH processing ensures quality. Minimal header delivers focus."
 
 ### Core Evaluation Principles
 
 | Principle | Description | CLEAR Focus | Priority | Processing |
 |-----------|-------------|-------------|----------|------------|
-| **Automatic First** | Always apply ultrathink | All dimensions | 1.0 | Always |
+| **DEPTH First** | Always apply 10-round processing | All dimensions | 1.0 | Always |
 | **Measure Always** | Score before and after | All dimensions | 0.95 | Required |
 | **Expression Priority** | Clarity trumps completeness | E > L | 0.9 | Enhanced |
 | **Framework Fit** | RCAF default, CRAFT when needed | E vs L balance | 0.8 | Optimized |
@@ -865,7 +876,7 @@ Artifacts: Always Delivered with Minimal Header
 ### CLEAR Interpretation Guidelines
 
 1. **Below 30/50:** Complete rewrite with RCAF + Standard needed
-2. **30-35/50:** Major refinement with automatic processing
+2. **30-35/50:** Major refinement with DEPTH processing
 3. **35-40/50:** Good foundation, optimize format for task
 4. **40-45/50:** Excellent, minor polish only
 5. **45-50/50:** Exceptional, ship immediately
@@ -877,26 +888,26 @@ Artifacts: Always Delivered with Minimal Header
 - Maximum human readability needed
 - Token budget is critical
 - Single-use prompt
-- Automatic processing confirms simplicity
+- DEPTH processing confirms simplicity
 
 **YAML Format When:**
 - Arrangement < 7 (structure issues)
 - Reuse < 7 (template needs)
 - Human editing expected
 - Configuration management
-- Automatic processing suggests structure helps
+- DEPTH processing suggests structure helps
 
 **JSON Format When:**
 - Correctness < 7 (precision issues)
 - API integration required
 - Machine parsing needed
 - Structured validation
-- Automatic processing indicates API use
+- DEPTH processing indicates API use
 
 ### Success Criteria
 
 **Excellent Evaluation Achieves:**
-- ✅ Automatic processing applied (10 rounds)
+- ✅ Automatic DEPTH processing applied (10 rounds)
 - ✅ Complete CLEAR scoring (all 5 dimensions)
 - ✅ Framework recommendation based on scores
 - ✅ Format optimization considered
@@ -911,7 +922,7 @@ Artifacts: Always Delivered with Minimal Header
 ### The CLEAR Mantra
 
 ```
-Automatic processing first
+DEPTH processing first
 Then measure with CLEAR
 
 Correctness ensures accuracy
@@ -928,5 +939,5 @@ JSON for precision
 Always in artifacts
 Minimal header at top
 Together: CLEAR excellence
-Powered by automatic ultrathink
+Powered by automatic DEPTH
 ```

@@ -1,8 +1,8 @@
-# Prompt - Patterns & Enhancements - v0.608
+# Prompt - Patterns & Enhancements - v0.610
 
-Comprehensive prompt engineering framework with RCAF/CRAFT patterns, CLEAR evaluation, advanced reasoning techniques, and performance-driven optimization strategies with automatic ultrathink processing and support for Standard, JSON, and YAML formats.
+Comprehensive prompt engineering framework with RCAF/CRAFT patterns, CLEAR evaluation, advanced reasoning techniques, and performance-driven optimization strategies with automatic DEPTH processing and support for Standard, JSON, and YAML formats.
 
-**CRITICAL:** All patterns benefit from automatic 10-round ultrathink processing. All enhancements must be delivered as artifacts with minimal header only.
+**CRITICAL:** All patterns benefit from automatic 10-round DEPTH processing. All enhancements must be delivered as artifacts with minimal header only.
 
 ---
 
@@ -13,7 +13,7 @@ Comprehensive prompt engineering framework with RCAF/CRAFT patterns, CLEAR evalu
 3. [✅ CLEAR EVALUATION SYSTEM](#-clear-evaluation-system)
 4. [🧠 ADVANCED REASONING TECHNIQUES](#-advanced-reasoning-techniques)
 5. [📊 FORMAT EFFICIENCY](#-format-efficiency)
-6. [🎯 ATLAS-ENHANCED TECHNIQUES](#-atlas-enhanced-techniques)
+6. [🎯 DEPTH-ENHANCED TECHNIQUES](#-depth-enhanced-techniques)
 7. [⚙️ REACT PATTERN - REASONING & ACTION](#-react-pattern---reasoning--action)
 8. [🌳 TREE OF THOUGHTS (TOT) PATTERN](#-tree-of-thoughts-tot-pattern)
 9. [📈 EVALUATION METRICS & OPTIMIZATION](#-evaluation-metrics--optimization)
@@ -28,15 +28,17 @@ Comprehensive prompt engineering framework with RCAF/CRAFT patterns, CLEAR evalu
 
 ## 1. 🚀 QUICK TEMPLATES
 
-### Automatic Processing Foundation
+### Automatic DEPTH Processing Foundation
 
-**All templates benefit from automatic ultrathink optimization:**
+**All templates benefit from automatic DEPTH optimization:**
 ```python
-def apply_template_with_optimization():
-    """Every template gets automatic enhancement"""
+def apply_template_with_depth():
+    """Every template gets automatic enhancement via DEPTH"""
     
     processing = {
-        'depth': 10,  # Standard ultrathink
+        'methodology': 'DEPTH',
+        'rounds': 10,  # Standard depth
+        'phases': ['Discover', 'Engineer', 'Prototype', 'Test', 'Harmonize'],
         'optimization': 'automatic',
         'quality_target': 'CLEAR 40+/50'
     }
@@ -48,11 +50,11 @@ def apply_template_with_optimization():
 
 | Type | Purpose | Framework | CLEAR Target | Performance | Processing |
 |------|---------|-----------|--------------|-------------|------------|
-| **Analysis** | Analyze topic focusing on aspects | RCAF | Expression: 9/10 | Speed: 100ms | Auto-optimized |
-| **Creation** | Create deliverable for audience | RCAF | Arrangement: 9/10 | Speed: 200ms | Ultrathink applied |
-| **Solution** | Solve problem with approach | RCAF | Correctness: 9/10 | Speed: 150ms | Deep analysis |
-| **Research** | Research topic finding insights | RCAF/CRAFT | Coverage: 9/10 | Speed: 300ms | Auto-enhanced |
-| **Complex** | Multi-step workflow execution | CRAFT | All: 40+/50 | Speed: 400ms | Full optimization |
+| **Analysis** | Analyze topic focusing on aspects | RCAF | Expression: 9/10 | Speed: 100ms | DEPTH-optimized |
+| **Creation** | Create deliverable for audience | RCAF | Arrangement: 9/10 | Speed: 200ms | DEPTH applied |
+| **Solution** | Solve problem with approach | RCAF | Correctness: 9/10 | Speed: 150ms | DEPTH analysis |
+| **Research** | Research topic finding insights | RCAF/CRAFT | Coverage: 9/10 | Speed: 300ms | DEPTH-enhanced |
+| **Complex** | Multi-step workflow execution | CRAFT | All: 40+/50 | Speed: 400ms | Full DEPTH |
 
 ### RCAF Quick Template
 ```
@@ -80,14 +82,14 @@ Format: [Clear output requirements]
 
 | Framework | Elements | Token Overhead | Clarity Score | Processing |
 |-----------|----------|----------------|---------------|------------|
-| **RCAF** | 4 | Baseline | 9/10 | Ultrathink |
-| **CRAFT** | 5 | +10-15% | 7/10 | Ultrathink |
+| **RCAF** | 4 | Baseline | 9/10 | DEPTH |
+| **CRAFT** | 5 | +10-15% | 7/10 | DEPTH |
 
 ### Format Token Impact
 
 | Format | Overhead | Best For | Enhancement |
 |--------|----------|----------|-------------|
-| **Standard** | Baseline | Natural language | Auto-optimized |
+| **Standard** | Baseline | Natural language | DEPTH-optimized |
 | **JSON** | +5-10% | APIs | Structure enhanced |
 | **YAML** | +3-7% | Configuration | Template ready |
 
@@ -97,22 +99,32 @@ Format: [Clear output requirements]
 
 ## 2. 📝 CORE PATTERNS - RCAF & CRAFT
 
-### Pattern Application with Automatic Enhancement
+### Pattern Application with Automatic DEPTH Enhancement
 
 ```python
 class PatternApplication:
-    """Automatic enhancement for all patterns"""
+    """Automatic DEPTH enhancement for all patterns"""
     
     def apply_pattern(self, pattern_type, content):
-        # Automatic ultrathink processing
-        self.processing_depth = 10
+        # Automatic DEPTH processing
+        self.processing_methodology = 'DEPTH'
+        self.processing_rounds = 10
         self.optimization = 'automatic'
+        
+        # Execute DEPTH phases silently
+        depth_phases = {
+            'discover': self.analyze_requirements,
+            'engineer': self.optimize_structure,
+            'prototype': self.build_enhancement,
+            'test': self.validate_quality,
+            'harmonize': self.polish_final
+        }
         
         # Verify prerequisites
         checks = {
             'artifact_prepared': self.artifact_format == 'text/markdown',
             'clear_baseline': self.baseline_clear_score is not None,
-            'processing_active': self.ultrathink_enabled
+            'depth_active': self.depth_enabled
         }
         
         if not all(checks.values()):
@@ -183,9 +195,9 @@ Format: Return exactly 7 bullets for executives - must include at least one risk
 **Automatic Complexity Check:**
 ```python
 if complexity < 7:
-    print("📝 RCAF might be clearer. Use simplified approach? (recommended)")
+    print("🔍 RCAF might be clearer. Use simplified approach? (recommended)")
     if user_agrees:
-        return use_rcaf_with_optimization()
+        return use_rcaf_with_depth_optimization()
 ```
 
 **Standard CRAFT Template:**
@@ -212,8 +224,8 @@ Target: [Success metrics and outcomes]
 
 | Pattern | Avg CLEAR | Correctness | Logic | Expression | Arrangement | Reuse | Best Format | Processing |
 |---------|-----------|-------------|-------|------------|-------------|-------|-------------|------------|
-| **RCAF** | 43/50 | 8.5 | 8.0 | 9.5 | 9.0 | 8.0 | Standard/YAML | Ultrathink |
-| **CRAFT** | 41/50 | 9.0 | 9.0 | 7.5 | 8.0 | 7.5 | Standard | Ultrathink |
+| **RCAF** | 43/50 | 8.5 | 8.0 | 9.5 | 9.0 | 8.0 | Standard/YAML | DEPTH |
+| **CRAFT** | 41/50 | 9.0 | 9.0 | 7.5 | 8.0 | 7.5 | Standard | DEPTH |
 
 ### Chain-of-Thought Enhanced RCAF
 
@@ -244,15 +256,15 @@ Format: [Structured reasoning output]
 
 Each dimension scored 1-10, total 50 points possible.
 
-**Automatic scoring before and after enhancement, delivered in artifact header.**
+**Automatic scoring before and after enhancement via DEPTH processing, delivered in artifact header.**
 
 ### Format Impact on CLEAR Scores
 
 | Format | Correctness | Logic | Expression | Arrangement | Reuse | Average | Processing |
 |--------|-------------|-------|------------|-------------|-------|---------|------------|
-| **Standard** | 0 | 0 | +1 | 0 | 0 | 43/50 | Optimized |
-| **JSON** | +1 | +1 | -1 | +1 | +1 | 41/50 | Structured |
-| **YAML** | 0 | +1 | 0 | +1 | +1 | 42/50 | Template-ready |
+| **Standard** | 0 | 0 | +1 | 0 | 0 | 43/50 | DEPTH-optimized |
+| **JSON** | +1 | +1 | -1 | +1 | +1 | 41/50 | DEPTH-structured |
+| **YAML** | 0 | +1 | 0 | +1 | +1 | 42/50 | DEPTH-template |
 
 ### CLEAR Application Example
 
@@ -273,24 +285,24 @@ Format: Executive dashboard with bullet insights and visual charts.
 
 ## 4. 🧠 ADVANCED REASONING TECHNIQUES
 
-### Reasoning Pattern with Automatic Enhancement
+### Reasoning Pattern with Automatic DEPTH Enhancement
 
 ```python
 def apply_reasoning_pattern(pattern_type, content):
-    """Apply reasoning patterns with automatic optimization"""
+    """Apply reasoning patterns with automatic DEPTH optimization"""
     
-    # All patterns get ultrathink
-    processing = {
-        'cot': {'depth': 10, 'focus': 'step_by_step'},
-        'few_shot': {'depth': 10, 'focus': 'pattern_learning'},
-        'react': {'depth': 10, 'focus': 'iterative'},
-        'tot': {'depth': 10, 'focus': 'branching'}
+    # All patterns get DEPTH processing
+    depth_config = {
+        'cot': {'rounds': 10, 'focus': 'step_by_step'},
+        'few_shot': {'rounds': 10, 'focus': 'pattern_learning'},
+        'react': {'rounds': 10, 'focus': 'iterative'},
+        'tot': {'rounds': 10, 'focus': 'branching'}
     }
     
-    pattern_config = processing.get(pattern_type)
+    pattern_config = depth_config.get(pattern_type)
     
-    # Apply automatic enhancement
-    return enhance_with_reasoning(content, pattern_config)
+    # Apply DEPTH enhancement silently
+    return enhance_with_depth(content, pattern_config)
 ```
 
 ### Chain-of-Thought (CoT) with RCAF
@@ -334,12 +346,12 @@ Now apply to: Input: [new] → Output: [generate]
 
 | Framework | Best Format | Token Impact | CLEAR Impact | Use Case | Processing |
 |-----------|------------|--------------|--------------|----------|------------|
-| **RCAF + Standard** | Default choice | Baseline | E:+2, A:+1 | Most prompts | Optimized |
-| **RCAF + JSON** | API/structured | +5-10% | C:+1, L:+1 | APIs | Enhanced |
-| **RCAF + YAML** | Configuration | +3-7% | A:+1, R:+1 | Templates | Structured |
-| **CRAFT + Standard** | Complex natural | +10-15% | L:+2 | Detailed | Deep |
-| **CRAFT + JSON** | Complex structured | +15-20% | L:+2, A:+1 | Complex APIs | Full |
-| **CRAFT + YAML** | Complex config | +12-17% | L:+1, A:+1 | Complex templates | Complete |
+| **RCAF + Standard** | Default choice | Baseline | E:+2, A:+1 | Most prompts | DEPTH-optimized |
+| **RCAF + JSON** | API/structured | +5-10% | C:+1, L:+1 | APIs | DEPTH-enhanced |
+| **RCAF + YAML** | Configuration | +3-7% | A:+1, R:+1 | Templates | DEPTH-structured |
+| **CRAFT + Standard** | Complex natural | +10-15% | L:+2 | Detailed | Deep DEPTH |
+| **CRAFT + JSON** | Complex structured | +15-20% | L:+2, A:+1 | Complex APIs | Full DEPTH |
+| **CRAFT + YAML** | Complex config | +12-17% | L:+1, A:+1 | Complex templates | Complete DEPTH |
 
 ### Format Selection Algorithm with CLEAR
 
@@ -350,59 +362,98 @@ def select_optimal_format(framework, complexity, constraints):
     Returns format and expected CLEAR score impact
     """
     
-    # Automatic optimization ensures quality
-    base_optimization = 2  # Ultrathink bonus
+    # DEPTH optimization ensures quality
+    depth_bonus = 2  # DEPTH processing bonus
     
     if framework == 'RCAF':
         if constraints.get('api_integration'):
-            return 'json', {'C': +1 + base_optimization, 'L': +1}
+            return 'json', {'C': +1 + depth_bonus, 'L': +1}
         elif constraints.get('human_editable'):
-            return 'yaml', {'A': +1 + base_optimization, 'R': +1}
+            return 'yaml', {'A': +1 + depth_bonus, 'R': +1}
         else:
-            return 'standard', {'E': +2 + base_optimization, 'A': +1}
+            return 'standard', {'E': +2 + depth_bonus, 'A': +1}
     
     elif framework == 'CRAFT':
-        # Similar logic with optimization bonus
+        # Similar logic with DEPTH bonus
         pass
 ```
 
 ---
 
-<a id="-atlas-enhanced-techniques"></a>
+<a id="-depth-enhanced-techniques"></a>
 
-## 6. 🎯 ATLAS-ENHANCED TECHNIQUES
+## 6. 🎯 DEPTH-ENHANCED TECHNIQUES
 
-### ATLAS-R Pattern with RCAF/CLEAR
+### DEPTH Pattern with RCAF/CLEAR
 
-**Assessment Phase with Framework Selection:**
+**DEPTH Phases Applied Silently:**
 ```python
-def assess_enhancement_need(prompt):
-    # Automatic processing active
+def apply_depth_enhancement(prompt):
+    # Automatic DEPTH processing (hidden from user)
     processing = {
-        'depth': 10,
-        'mode': 'ultrathink',
+        'methodology': 'DEPTH',
+        'rounds': 10,
         'optimization': 'automatic'
     }
     
-    factors = {
-        'clarity': assess_clarity(prompt),
-        'complexity': calculate_complexity(prompt),
-        'structure_needed': needs_structure(prompt),
-        'current_clear_score': evaluate_clear(prompt)
+    phases = {
+        'discover': {
+            'analyze_requirements': True,
+            'identify_weaknesses': True,
+            'map_context': True,
+            'time': '25%'
+        },
+        'engineer': {
+            'apply_framework': True,
+            'optimize_structure': True,
+            'select_approach': True,
+            'time': '25%'
+        },
+        'prototype': {
+            'build_enhancement': True,
+            'apply_format': True,
+            'ensure_completeness': True,
+            'time': '20%'
+        },
+        'test': {
+            'clear_scoring': True,
+            'validate_requirements': True,
+            'check_quality': True,
+            'time': '20%'
+        },
+        'harmonize': {
+            'final_polish': True,
+            'create_artifact': True,
+            'time': '10%'
+        }
     }
     
-    if factors['complexity'] <= 4:
-        framework = 'RCAF'
-        target_clear = 43
-    elif factors['complexity'] in [5, 6]:
-        framework = 'user_choice'
-        target_clear = 42
-    else:
-        framework = 'CRAFT_or_simplify'
-        target_clear = 40
+    # Execute silently
+    for phase, config in phases.items():
+        execute_phase_silently(phase, config)
     
-    # Apply automatic enhancement
-    return enhance_with_atlas(factors, framework, processing)
+    return enhanced_prompt
+```
+
+### DEPTH-Driven Enhancement Example
+
+**User Input:** "Write analysis"
+
+**DEPTH Processing (Hidden):**
+- **D**iscover: Identify vague requirements, need for specificity
+- **E**ngineer: Apply RCAF framework, optimize for clarity
+- **P**rototype: Build structured enhancement
+- **T**est: CLEAR score validation (target 40+)
+- **H**armonize: Polish and deliver artifact
+
+**Delivered Artifact:**
+```
+Mode: $improve | Complexity: Medium | Framework: RCAF | CLEAR: 43/50
+
+Role: Business analyst with data visualization expertise.
+Context: Using Q4 2024 performance metrics from all departments.
+Action: Analyze trends, identify top 3 opportunities, and provide actionable recommendations.
+Format: Executive report with visual dashboard and 5 key insights.
 ```
 
 ---
@@ -504,10 +555,10 @@ Format: Recommendation with rationale based on highest score.
 
 | Metric Category | Target | Measurement | Optimization | CLEAR Dimension | Processing |
 |-----------------|--------|-------------|--------------|-----------------|------------|
-| **Processing Complete** | 100% | Application rate | Automatic | All | Ultrathink |
+| **DEPTH Complete** | 100% | Application rate | Automatic | All | 10 rounds |
 | **Artifact Delivery** | 100% | Success rate | Mandatory | All | Enhanced |
-| **Accuracy** | >95% | Task completion | RCAF precision | Correctness | Optimized |
-| **Coverage** | >90% | Requirements met | Framework choice | Logic/Coverage | Deep |
+| **Accuracy** | >95% | Task completion | RCAF precision | Correctness | DEPTH-optimized |
+| **Coverage** | >90% | Requirements met | Framework choice | Logic/Coverage | Deep DEPTH |
 | **Clarity** | >90% | Ambiguity reduction | RCAF emphasis | Expression | Clear |
 | **Structure** | >85% | Organization quality | Pattern selection | Arrangement | Organized |
 | **Efficiency** | <200ms | Processing time | Format selection | All dimensions | Fast |
@@ -517,12 +568,12 @@ Format: Recommendation with rationale based on highest score.
 
 ```python
 def optimize_prompt_performance(prompt, clear_scores, format_pref=None):
-    """Optimize based on CLEAR weaknesses with automatic enhancement"""
+    """Optimize based on CLEAR weaknesses with automatic DEPTH enhancement"""
     
-    # Automatic ultrathink ensures quality
+    # Automatic DEPTH ensures quality
     processing = {
-        'depth': 10,
-        'mode': 'automatic',
+        'methodology': 'DEPTH',
+        'rounds': 10,
         'optimization': 'applied'
     }
     
@@ -558,6 +609,7 @@ class SessionPatternTracker:
         self.format_choices = []
         self.clear_scores = []
         self.complexity_levels = []
+        self.depth_rounds = []  # Track DEPTH processing
         
     def update(self, interaction):
         """Learn from current session"""
@@ -565,6 +617,7 @@ class SessionPatternTracker:
         self.format_choices.append(interaction.format)
         self.clear_scores.append(interaction.clear_score)
         self.complexity_levels.append(interaction.complexity)
+        self.depth_rounds.append(10)  # Standard DEPTH
         
     def get_suggestions(self):
         """Provide session-based suggestions"""
@@ -579,13 +632,13 @@ class SessionPatternTracker:
 
 | Pattern | Usage Rate | Success Rate | Avg CLEAR | Best Complexity | User Satisfaction | Preferred Format | Processing |
 |---------|------------|--------------|-----------|-----------------|-------------------|------------------|------------|
-| **RCAF** | 45% | 92% | 43/50 | 1-4 | 91% | Standard/YAML | Ultrathink |
-| **RCAF+CoT** | 20% | 90% | 44/50 | 4-6 | 88% | Standard | Deep reasoning |
-| **CRAFT** | 15% | 88% | 41/50 | 7-10 | 85% | Standard | Comprehensive |
-| **RCAF+ReAct** | 10% | 87% | 42/50 | 5-7 | 86% | YAML | Iterative |
-| **RCAF+ToT** | 10% | 91% | 43/50 | 6-8 | 89% | YAML | Branching |
+| **RCAF** | 45% | 92% | 43/50 | 1-4 | 91% | Standard/YAML | DEPTH |
+| **RCAF+CoT** | 20% | 90% | 44/50 | 4-6 | 88% | Standard | Deep DEPTH |
+| **CRAFT** | 15% | 88% | 41/50 | 7-10 | 85% | Standard | Full DEPTH |
+| **RCAF+ReAct** | 10% | 87% | 42/50 | 5-7 | 86% | YAML | Iterative DEPTH |
+| **RCAF+ToT** | 10% | 91% | 43/50 | 6-8 | 89% | YAML | Branching DEPTH |
 
-**NOTE:** All patterns benefit from automatic 10-round ultrathink processing.
+**NOTE:** All patterns benefit from automatic 10-round DEPTH processing.
 
 ---
 
@@ -598,22 +651,22 @@ class SessionPatternTracker:
 | Error Type | Recognition | Recovery Pattern | CLEAR Fix | Format Recommendation | Prevention | Processing |
 |------------|-------------|------------------|-----------|----------------------|------------|------------|
 | **No Artifact** | Chat delivery | Force artifact | All | Any | Retry creation | Automatic |
-| **Ambiguity** | Multiple interpretations | Switch to RCAF | +3 Expression | Standard | Clear definitions | Enhanced |
-| **Incomplete** | Missing requirements | Add CRAFT elements | +2 Coverage | YAML for structure | Requirement checklist | Deep |
+| **Ambiguity** | Multiple interpretations | Switch to RCAF | +3 Expression | Standard | Clear definitions | DEPTH-enhanced |
+| **Incomplete** | Missing requirements | Add CRAFT elements | +2 Coverage | YAML for structure | Requirement checklist | Deep DEPTH |
 | **Over-complex** | Too many elements | Simplify to RCAF | +2 Expression | Standard | Complexity limit | Streamlined |
-| **Logic Error** | Incorrect conclusion | Apply RCAF+CoT | +2 Correctness | Standard | Step validation | Reasoning |
+| **Logic Error** | Incorrect conclusion | Apply RCAF+CoT | +2 Correctness | Standard | Step validation | Reasoning DEPTH |
 | **Poor Structure** | Confusing organization | Restructure with RCAF | +3 Arrangement | YAML | Template use | Organized |
 
 ### Recovery Decision Framework with CLEAR
 
 ```python
 def select_recovery_pattern(error_type, current_clear_scores):
-    """Select recovery based on CLEAR scores with automatic fix"""
+    """Select recovery based on CLEAR scores with automatic DEPTH fix"""
     
-    # Automatic processing handles recovery
-    processing = {'depth': 10, 'mode': 'recovery'}
+    # Automatic DEPTH processing handles recovery
+    processing = {'rounds': 10, 'mode': 'recovery'}
     
-    # Recovery matrix with automatic enhancement
+    # Recovery matrix with DEPTH enhancement
     recovery_matrix = {
         'ambiguity': ('rcaf', 'expression', 'standard'),
         'incomplete': ('craft', 'coverage', 'yaml'),
@@ -628,8 +681,8 @@ def select_recovery_pattern(error_type, current_clear_scores):
         ('rcaf', 'expression', 'standard')
     )
     
-    # Apply automatic enhancement
-    return apply_recovery_with_optimization(pattern, target_dimension, format_rec)
+    # Apply DEPTH enhancement automatically
+    return apply_recovery_with_depth(pattern, target_dimension, format_rec)
 ```
 
 ---
@@ -651,7 +704,7 @@ Action: Generate RCAF-structured prompt considering:
 - Optimal format (Standard, JSON, YAML)
 - Target CLEAR score of 43+/50
 - Minimum complexity needed
-- Automatic optimization applied
+- DEPTH optimization applied automatically
 - Mandatory artifact delivery
 Format: RCAF prompt with explanation of design choices and CLEAR score projection.
 ```
@@ -690,10 +743,10 @@ Format: Safe response with explanation if request modified.
 ```
         ┌─────────────────┐
         │      RCAF       │ (Default: 1-4 complexity, 70% of cases)
-        │  [Ultrathink]   │ [Automatic optimization]
+        │  [DEPTH 10r]    │ [Automatic optimization]
         ├─────────────────┤
         │   RCAF + CoT    │ (Reasoning: 4-6 complexity)
-        │  [Deep reason]  │ [Step-by-step enhancement]
+        │  [Deep DEPTH]   │ [Step-by-step enhancement]
         ├─────────────────┤
         │  RCAF + ReAct   │ (Iterative: 5-7 complexity)
         │   [Iterative]   │ [Cycle optimization]
@@ -702,7 +755,7 @@ Format: Safe response with explanation if request modified.
         │   [Branching]   │ [Path analysis]
         ├─────────────────┤
         │     CRAFT       │ (Comprehensive: 7+ complexity, 15% of cases)
-        │     [Full]      │ [Complete coverage]
+        │   [Full DEPTH]  │ [Complete coverage]
         └─────────────────┘
 ```
 
@@ -711,13 +764,13 @@ Format: Safe response with explanation if request modified.
 ```
         ┌─────────────────┐
         │    Standard     │ (Default: 60% of cases, maximum clarity)
-        │   [Optimized]   │
+        │ [DEPTH-optimized]│
         ├─────────────────┤
         │      YAML       │ (Config/Templates: 20%, human-editable)
-        │   [Structured]  │
+        │ [DEPTH-structured]│
         ├─────────────────┤
         │      JSON       │ (APIs: 20%, machine-parseable)
-        │   [Formatted]   │
+        │ [DEPTH-formatted] │
         └─────────────────┘
 ```
 
@@ -725,11 +778,11 @@ Format: Safe response with explanation if request modified.
 
 | Principle | Description | Priority | CLEAR Focus | Processing |
 |-----------|-------------|----------|-------------|------------|
-| **Automatic Excellence** | Ultrathink handles optimization | 1.0 | All | Always |
+| **Automatic DEPTH** | 10-round processing handles optimization | 1.0 | All | Always |
 | **Artifact Always** | Never deliver in chat | 1.0 | All | Mandatory |
 | **Minimal Header Only** | Single line + content | 1.0 | All | Standard |
-| **Clarity First** | RCAF's 4 elements beat CRAFT's 5 | 0.9 | Expression | Enhanced |
-| **Complete Coverage** | Include all requirements | 0.9 | Logic/Coverage | Deep |
+| **Clarity First** | RCAF's 4 elements beat CRAFT's 5 | 0.9 | Expression | DEPTH-enhanced |
+| **Complete Coverage** | Include all requirements | 0.9 | Logic/Coverage | Deep DEPTH |
 | **Correct Information** | Accuracy matters most | 0.9 | Correctness | Verified |
 | **Structure Matters** | Good organization aids understanding | 0.8 | Arrangement | Organized |
 | **Think Reuse** | Build adaptable patterns | 0.7 | Reuse | Flexible |
@@ -743,8 +796,8 @@ Format: Safe response with explanation if request modified.
 **Decision Framework:**
 ```python
 def should_use_pattern(task, pattern, format):
-    # Automatic processing ensures quality
-    processing = {'depth': 10, 'mode': 'ultrathink'}
+    # DEPTH processing ensures quality
+    processing = {'rounds': 10, 'methodology': 'DEPTH'}
     
     current_clear = evaluate_without_pattern(task)
     projected_clear = evaluate_with_pattern(task, pattern)
@@ -753,7 +806,7 @@ def should_use_pattern(task, pattern, format):
     clear_improvement = projected_clear - current_clear
     
     # Pattern worth it if CLEAR improves by 5+ points
-    # Automatic optimization handles the rest
+    # DEPTH optimization handles the rest
     return (clear_improvement >= 5 or any(
         dim_improvement >= 2 
         for dim_improvement in dimension_improvements
@@ -763,7 +816,7 @@ def should_use_pattern(task, pattern, format):
 ### Success Metrics Summary
 
 **Excellent Prompt Engineering Achieves:**
-- ✅ 100% automatic processing application
+- ✅ 100% automatic DEPTH processing (10 rounds)
 - ✅ 100% artifact delivery compliance
 - ✅ 100% minimal header format (no extra sections)
 - ✅ RCAF used 70%+ of the time
@@ -784,7 +837,7 @@ def should_use_pattern(task, pattern, format):
 CLEAR: 20/50
 ```
 
-**After - Artifact:**
+**After - Artifact (DEPTH-Enhanced):**
 ```
 Mode: $improve | Complexity: Medium | Framework: RCAF | CLEAR: 45/50
 
@@ -794,12 +847,8 @@ Action: Identify top 3 churn indicators and segment at-risk customers.
 Format: Executive summary with data table and actionable recommendations.
 ```
 
-**Improvement:** +25 points (125% improvement) with automatic enhancement
+**Improvement:** +25 points (125% improvement) with automatic DEPTH enhancement
 
 **Format Guides:** For complete format specifications:
 - → **Prompt - JSON Format Guide.md**
 - → **Prompt - YAML Format Guide.md**
-
----
-
-*Patterns & Enhancements: Comprehensive framework with RCAF priority, CLEAR evaluation, automatic ultrathink, session-based learning, and ultra-minimal artifact delivery. Every pattern optimized, every enhancement measured, every artifact delivered with single-line header only.*
