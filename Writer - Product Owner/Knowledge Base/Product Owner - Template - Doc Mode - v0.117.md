@@ -1,4 +1,4 @@
-# Product Owner - Template - Doc Mode - v0.116
+# Product Owner - Template - Doc Mode - v0.117
 
 Documentation templates with complexity auto-scaling (Simple: 2-3 sections, Standard: 4-6 sections, Complex: 7+ sections). Includes product briefs, feature specifications, performance tracking, and comprehensive strategy documents.
 
@@ -6,7 +6,7 @@ Documentation templates with complexity auto-scaling (Simple: 2-3 sections, Stan
 
 ## 📋 TABLE OF CONTENTS
 1. [📚 DOC MODE OVERVIEW](#1-📚-doc-mode-overview)
-2. [🔄 COMPLEXITY AUTO-SCALING](#2-🔄-complexity-auto-scaling)
+2. [📄 COMPLEXITY AUTO-SCALING](#2-📄-complexity-auto-scaling)
 3. [📝 SIMPLE DOCUMENTATION TEMPLATE](#3-📝-simple-documentation-template)
 4. [📖 STANDARD DOCUMENTATION TEMPLATE](#4-📖-standard-documentation-template)
 5. [📗 COMPLEX DOCUMENTATION TEMPLATE](#5-📗-complex-documentation-template)
@@ -23,22 +23,28 @@ Documentation templates with complexity auto-scaling (Simple: 2-3 sections, Stan
 
 - **Purpose:** Create product documentation that auto-scales complexity
 - **Output:** Always as artifact
-- **Thinking:** 10 rounds automatic (ultrathink), 1-5 auto-scaled for $quick
-- **Interactive Mode:** Single comprehensive question gathering all requirements
-- **Key Focus:** Product features, performance metrics, strategy docs
+- **Thinking:** 10 rounds automatic (DEPTH methodology), 1-5 auto-scaled for $quick
+- **Interactive Mode:** Single comprehensive question gathering ALL requirements
+- **Key Focus:** Product features, performance metrics, strategy docs - ONLY what user requests
 - **Header Position:** Always at top as first line
+- **Silent Processing:** User sees simple messages, not methodology details
+- **Output Constraints:** Documentation covers ONLY requested topic/system
 
 ---
 
-<a id="2-🔄-complexity-auto-scaling"></a>
+<a id="2-📄-complexity-auto-scaling"></a>
 
-## 2. 🔄 COMPLEXITY AUTO-SCALING
+## 2. 📄 COMPLEXITY AUTO-SCALING
 
-| Keywords | Complexity | Content Depth | Document Type |
-|----------|------------|---------------|---------------|
-| overview, summary, brief | Simple | Quick reference | Product brief |
-| feature, metrics, strategy | Standard | Detailed guide | Feature spec |
-| platform, ecosystem, system | Complex | Comprehensive docs | Strategy doc |
+| Keywords | Complexity | Content Depth | Document Type | DEPTH Processing |
+|----------|------------|---------------|---------------|-----------------|
+| overview, summary, brief | Simple | Quick reference | Product brief | 10 rounds (2 if $quick) |
+| feature, metrics, strategy | Standard | Detailed guide | Feature spec | 10 rounds (3 if $quick) |
+| platform, ecosystem, system | Complex | Comprehensive docs | Strategy doc | 10 rounds (5 if $quick) |
+
+**Important:** Complexity determines TEMPLATE SIZE, not content scope
+- User requests "platform overview" → Complex template for THAT platform only
+- NOT: Complex template with multiple platforms or expanded features
 
 ---
 
@@ -47,7 +53,7 @@ Documentation templates with complexity auto-scaling (Simple: 2-3 sections, Stan
 ## 3. 📝 SIMPLE DOCUMENTATION TEMPLATE
 
 ````markdown
-Mode: $doc | Complexity: Simple | Template: v0.115
+Mode: $doc | Complexity: Simple | Template: v0.117
 ---
 # [Document Title]
 
@@ -58,7 +64,8 @@ Mode: $doc | Complexity: Simple | Template: v0.115
 ---
 [Brief description of what this document covers and why it's important. 
 This includes context about the feature/product being documented and 
-its value to users - integrated naturally into the description.]
+its value to users - integrated naturally into the description.
+Covers ONLY what user requested.]
 ---
 
 ## ⌥ References & Resources
@@ -75,7 +82,8 @@ its value to users - integrated naturally into the description.]
 
 ## ◻︎ Overview
 ---
-High-level description of the main capabilities and value proposition.
+High-level description of the main capabilities and value proposition
+[ONLY for the requested feature/product].
 ---
 
 ### Prerequisites
@@ -87,15 +95,15 @@ High-level description of the main capabilities and value proposition.
 ### Core Capabilities
 
 1. **Feature One**
-   - What it does
+   - What it does [within requested scope]
    - Value proposition
    
 2. **Feature Two**
-   - What it does
+   - What it does [within requested scope]
    - Value proposition
 
 3. **Feature Three**
-   - What it does
+   - What it does [within requested scope]
    - Value proposition
 ---
 
@@ -127,7 +135,7 @@ High-level description of the main capabilities and value proposition.
 ## 4. 📖 STANDARD DOCUMENTATION TEMPLATE
 
 ````markdown
-Mode: $doc | Complexity: Standard | Template: v0.115
+Mode: $doc | Complexity: Standard | Template: v0.117
 ---
 # [Document Title]
 
@@ -139,7 +147,8 @@ Mode: $doc | Complexity: Standard | Template: v0.115
 [Detailed description of the documented feature or product, incorporating
 the business context, user needs, market positioning, and value 
 proposition. This narrative naturally includes why this documentation 
-exists, who benefits from it, and how it fits into the larger ecosystem.]
+exists, who benefits from it, and how it fits into the larger ecosystem.
+Covers ONLY the specific feature/product requested by user.]
 ---
 
 ## ⌥ References & Resources
@@ -157,7 +166,8 @@ exists, who benefits from it, and how it fits into the larger ecosystem.]
 
 ## ◻︎ Architecture & Flow
 ---
-System components and their relationships, showing how value flows through the product.
+System components and their relationships, showing how value flows through 
+the product [limited to requested system only].
 ---
 
 ### User Journey
@@ -169,7 +179,7 @@ System components and their relationships, showing how value flows through the p
 
 ### Integration Points
 
-- External systems
+- External systems [relevant to requested feature]
 - API connections
 - Data flows
 - Dependencies
@@ -194,6 +204,7 @@ System components and their relationships, showing how value flows through the p
 ### Primary Feature
 
 **Description:** What the feature does and why it matters
+[Within scope of user's request only]
 
 **User Value:** Direct benefits to the end user
 
@@ -205,12 +216,12 @@ System components and their relationships, showing how value flows through the p
 ### Secondary Features
 
 1. **Feature Name**
-   - Purpose and functionality
+   - Purpose and functionality [as requested]
    - Target users
    - Expected impact
 
 2. **Feature Name**
-   - Purpose and functionality
+   - Purpose and functionality [as requested]
    - Target users
    - Expected impact
 ---
@@ -280,7 +291,7 @@ System components and their relationships, showing how value flows through the p
 ## 5. 📗 COMPLEX DOCUMENTATION TEMPLATE
 
 ````markdown
-Mode: $doc | Complexity: Complex | Template: v0.115
+Mode: $doc | Complexity: Complex | Template: v0.117
 ---
 # [Platform/Ecosystem Documentation]
 
@@ -294,7 +305,8 @@ evolution, current state, strategic importance, and future roadmap.
 This narrative weaves together the product vision, business 
 drivers, market requirements, user needs, and stakeholder 
 impacts into a cohesive story that explains not just what the platform 
-does, but why it exists and how it creates value.]
+does, but why it exists and how it creates value.
+Documentation covers ONLY the specific platform/ecosystem requested by user.]
 ---
 
 ## ⌥ References & Resources
@@ -314,13 +326,14 @@ does, but why it exists and how it creates value.]
 
 ## ◻︎ Vision & Mission
 ---
-The north star that guides all platform decisions and investments.
+The north star that guides all platform decisions and investments
+[for the requested platform only].
 ---
 
 ### Core Value Propositions
 
 1. **Primary Value Driver**
-   - What it solves
+   - What it solves [within platform scope]
    - Why it matters
    - Market impact
 
@@ -627,7 +640,7 @@ The north star that guides all platform decisions and investments.
 ### Hierarchy & Symbols
 
 1. **Header** - First line of artifact
-   - `Mode: $doc | Complexity: [level] | Template: v0.115`
+   - `Mode: $doc | Complexity: [level] | Template: v0.117`
 
 2. **H1 Headers** - Use `#` with symbols
    - `# ⌘ About` - For About section
@@ -653,8 +666,18 @@ The north star that guides all platform decisions and investments.
 - Main sections using `# ❖`
 - Subsections using `## ◻︎`
 - Dividers `---` between all major sections
+- **Content limited to requested topic/system only**
 
-**Note:** Documentation doesn't typically have Success Criteria like tickets/PRDs, but focuses on explaining features and metrics.
+**Note:** Documentation doesn't typically have Success Criteria like tickets/PRDs, but focuses on explaining features and metrics within the requested scope.
+
+### DEPTH Processing Standards
+
+- **Automatic Application:** 10 rounds for standard, 1-5 for $quick
+- **No User Choice:** System determines depth automatically
+- **Silent Processing:** User never sees methodology details
+- **Multiple Perspectives:** All analyze the SAME documentation need
+- **Single Output:** One document covering exact request
+- **No Scope Expansion:** Complex template doesn't mean extra content
 
 ### Symbol Reference
 
@@ -675,6 +698,7 @@ The north star that guides all platform decisions and investments.
 - Use `-` (hyphen + space) for all regular list items
 - Use `---` as section dividers
 - Divider after header before content
+- **Output constraints:** Document ONLY what user requests
 
 ### Table Guidelines
 
@@ -697,10 +721,10 @@ The north star that guides all platform decisions and investments.
 ### Content Focus Areas
 
 **Product Documentation:**
-- Feature specifications
-- User journey mapping
-- Success metrics
-- Business impact
+- Feature specifications [only requested features]
+- User journey mapping [for requested product]
+- Success metrics [relevant to request]
+- Business impact [of requested system]
 
 **Performance Tracking:**
 - KPI definitions
@@ -709,10 +733,10 @@ The north star that guides all platform decisions and investments.
 - Growth metrics
 
 **Strategy Documentation:**
-- Market positioning
-- Competitive analysis
-- Monetization models
-- Platform economics
+- Market positioning [for requested platform]
+- Competitive analysis [within scope]
+- Monetization models [for requested product]
+- Platform economics [as requested]
 
 ---
 
@@ -727,7 +751,7 @@ User: $doc platform strategy guide
 
 System: Let's create your platform documentation! 📚
 
-Please provide the following details:
+Please provide ALL of the following details:
 
 1️⃣ **Documentation type:**
    • Product brief (quick overview)
@@ -746,9 +770,9 @@ Please provide the following details:
    • Specific sections needed
    • Any existing data or metrics to include
 
-Please respond with all information (e.g., "1. Strategy document, 2. Complex, 3. Executive audience, market expansion focus")
+Please respond with complete information (e.g., "1. Strategy document, 2. Complex, 3. Executive audience, market expansion focus for our payment platform")
 
-[WAIT FOR USER RESPONSE - DO NOT PROCEED]
+[SYSTEM MUST STOP HERE AND WAIT FOR USER INPUT - DO NOT PROCEED]
 ```
 
 **After user responds:**
@@ -756,42 +780,63 @@ Please respond with all information (e.g., "1. Strategy document, 2. Complex, 3.
 ```markdown
 User: 1. Strategy document, 2. Complex, 3. Platform economics and growth strategy for investors
 
-System: Creating your comprehensive strategy document with:
-• Multiple detailed sections (7+)
-• Platform economics focus
-• Market analysis and positioning
-• Performance frameworks
-• Growth and scaling strategies
-• Investor-focused metrics
-• Header at top with mode/complexity/template
+System: Perfect! Creating your comprehensive strategy document.
 
 Processing now...
+• Applying 10-round DEPTH methodology
+• Analyzing platform requirements
+• Building strategic framework
+• Optimizing content structure
 
-[Creates documentation with header at top]
+[Creates documentation with header at top, covering ONLY the requested platform]
 ```
 
 ### Documentation Type Differentiation
 
 **Product Brief:**
 - Executive summary
-- Key features
+- Key features [of requested product]
 - Target audience
 - Success metrics
 
 **Feature Specification:**
-- User stories
+- User stories [for requested feature]
 - Acceptance criteria
 - Design mockups
 - Implementation timeline
 
 **Performance Tracking:**
-- KPI definitions
+- KPI definitions [for requested system]
 - Dashboard design
 - Alert thresholds
 - Response protocols
 
 **Strategy Document:**
-- Vision and mission
+- Vision and mission [of requested platform]
 - Market analysis
 - Competitive positioning
-- Growth roadmap
+- Growth roadmap [for specific platform]
+
+### Important Processing Notes
+
+**DEPTH Application:**
+- Multiple perspectives analyze the SAME documentation need
+- Various approaches considered for the SAME deliverable
+- Output contains ONLY the requested documentation
+- Template complexity affects structure, not content scope
+
+**Output Guarantee:**
+```
+User Request: "Document our auth system"
+↓
+Internal DEPTH Analysis:
+- 5 perspectives analyze the SAME auth system
+- 8 documentation approaches for the SAME auth system
+- Quality optimized for the SAME auth system
+↓
+Output: ONE auth system documentation
+- Exactly what user requested
+- No additional systems documented
+- No scope expansion
+- Perfect template format
+```

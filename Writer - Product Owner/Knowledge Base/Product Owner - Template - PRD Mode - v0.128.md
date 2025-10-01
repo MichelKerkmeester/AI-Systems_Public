@@ -1,4 +1,4 @@
-# Product Owner - Template - PRD Mode - v0.127
+# Product Owner - Template - PRD Mode - v0.128
 
 Product Requirements Document templates with scale-based formatting (Feature/Initiative: 5-10 features, Program: 10-20 features, Strategic: 20+ features). Includes success metrics, technical requirements, implementation plans, and stakeholder timelines.
 
@@ -20,38 +20,44 @@ Product Requirements Document templates with scale-based formatting (Feature/Ini
 
 - **Purpose:** Create Product Requirements Documents with clear scope and implementation details
 - **Output:** Always as artifact
-- **Thinking:** 10 rounds automatic (ultrathink), 1-5 auto-scaled for $quick
-- **Interactive Mode:** Single comprehensive question gathering all requirements
-- **Key Focus:** Implementation clarity, success metrics, feature specifications
+- **Thinking:** 10 rounds automatic (DEPTH methodology), 1-5 auto-scaled for $quick
+- **Interactive Mode:** Single comprehensive question gathering ALL requirements at once
+- **Key Focus:** Implementation clarity, success metrics, feature specifications - ONLY what user requests
 - **Header Position:** Always at top as first line
+- **Silent Processing:** User sees simple messages, not methodology details
+- **Output Constraints:** Features limited to user's exact request, no scope expansion
 
 ---
 
 ## COMPLEXITY AUTO-SCALING
 
-| Keywords | Scale | Team/Timeline | Features |
-|----------|-------|---------------|----------|
-| feature, component | Initiative | Single team/quarter | 5-10 |
-| platform, system | Program | Multi-team/half-year | 10-20 |
-| strategic, ecosystem | Strategic | Company-wide/annual | 20+ |
+| Keywords | Scale | Team/Timeline | Features | DEPTH Processing |
+|----------|-------|---------------|----------|-----------------|
+| feature, component | Initiative | Single team/quarter | 5-10 | 10 rounds (2 if $quick) |
+| platform, system | Program | Multi-team/half-year | 10-20 | 10 rounds (3 if $quick) |
+| strategic, ecosystem | Strategic | Company-wide/annual | 20+ | 10 rounds (5 if $quick) |
+
+**Important:** Scale determines TEMPLATE STRUCTURE, not content scope
+- User requests "platform PRD" → Program template for THAT platform only
+- NOT: Program template with multiple platforms or extra features
 
 ---
 
 ## DETAILED PRD TEMPLATE
 
 ```markdown
-Mode: $prd | Scale: Initiative | Template: v0.127
+Mode: $prd | Scale: Initiative | Template: v0.128
 ---
 # [PRD Name]
 
 # ⌘ About
 
-[2-5 sentences describing what we're building, why it matters, and the value it delivers to users and the business]
+[2-5 sentences describing what we're building, why it matters, and the value it delivers to users and the business. Covers ONLY the specific initiative/product requested by user.]
 
 **Executive Summary**
 
-**Product:** [One-sentence definition]
-**Target Users:** [Primary segments]
+**Product:** [One-sentence definition of requested product]
+**Target Users:** [Primary segments for this product]
 **Core Value:** [Key benefits and differentiation]
 **Timeline:** [Duration with major milestones]
 
@@ -93,8 +99,9 @@ Mode: $prd | Scale: Initiative | Template: v0.127
 ## ◻︎ Complete Feature List
 
 **Core Features (Must Have)**
+[Only features explicitly requested by user]
 
-1. **[Feature Name 1]**
+1. **[Feature Name 1 - from user's request]**
    
    - Description: [What this feature does and how it works]
    - User Value: [Why users need this and problems it solves]
@@ -105,7 +112,7 @@ Mode: $prd | Scale: Initiative | Template: v0.127
    - [Clear pass/fail condition]
    - [Feature completeness check]
 
-2. **[Feature Name 2]**
+2. **[Feature Name 2 - from user's request]**
    
    - Description: [Functionality breakdown with components]
    - Components: [UI/UX elements and interactions]
@@ -113,8 +120,9 @@ Mode: $prd | Scale: Initiative | Template: v0.127
    - Edge Cases: [Special scenarios and handling]
 
 **Enhanced Features (Should Have)**
+[Only if user mentioned optional features]
 
-3. **[Feature Name 3]**
+3. **[Feature Name 3 - if requested]**
    
    - Description: [Enhancement building on core features]
    - Dependencies: [Prerequisites for implementation]
@@ -122,25 +130,16 @@ Mode: $prd | Scale: Initiative | Template: v0.127
 
 ## ◻︎ Platform-Specific Implementation
 
-**Creator Application**
+**[Platform specified by user]**
 
 [Status note: "Design 80% complete, awaiting final review"]
 
-[2-4 sentences on creator-focused interface and workflows]
+[2-4 sentences on platform-focused interface and workflows for user's specified platform only]
 
-1. **Content Management Dashboard**
-   - Layout: Card-based with drag-and-drop, responsive grid
-   - Interactions: Bulk operations, inline editing, keyboard shortcuts
-   - State: Session persistence, undo/redo functionality
-
-**Partner Application**
-
-[2-4 sentences on admin capabilities and architecture]
-
-1. **Administrative Interface**
-   - Permissions: Granular control, role inheritance
-   - Operations: Full CRUD with audit trails, batch processing
-   - Scheduling: Automated tasks with notifications
+1. **[Component relevant to user's request]**
+   - Layout: [Specific to requested feature]
+   - Interactions: [Within requested scope]
+   - State: [As needed for requested functionality]
 
 ---
 
@@ -150,20 +149,20 @@ Mode: $prd | Scale: Initiative | Template: v0.127
 
 **System Overview**
 
-[2-4 sentences on architecture approach, scaling, and compatibility]
+[2-4 sentences on architecture approach for the requested system only]
 
-- Services Affected: [Existing microservices requiring updates]
-- New Services: [Services to create with responsibilities]
-- Database Changes: [Schema modifications and migrations]
-- API Changes: [Endpoints added/modified with versioning]
+- Services Affected: [Existing services requiring updates for this feature]
+- New Services: [Services to create for requested functionality]
+- Database Changes: [Schema modifications for requested features]
+- API Changes: [Endpoints for requested capabilities]
 
 ## ◻︎ Integration Points
 
 | System | Integration Type | Data Flow | Criticality |
 |--------|-----------------|-----------|-------------|
-| External API | REST/GraphQL | Bidirectional | High |
-| Internal Service | Event-driven | Publish | Medium |
-| Third-party | Webhook | Subscribe | Low |
+| [Relevant to request] | REST/GraphQL | Bidirectional | High |
+| [Relevant to request] | Event-driven | Publish | Medium |
+| [If applicable] | Webhook | Subscribe | Low |
 
 ## ◻︎ Performance Requirements
 
@@ -175,7 +174,7 @@ Mode: $prd | Scale: Initiative | Template: v0.127
 | API Response | <200ms | 500ms | Server response time |
 | Search | <100ms | 200ms | Results display |
 
-[2-3 sentences on caching strategy and graceful degradation]
+[2-3 sentences on caching strategy and graceful degradation for requested features]
 
 ---
 
@@ -183,13 +182,13 @@ Mode: $prd | Scale: Initiative | Template: v0.127
 
 ## ◻︎ Research Summary
 
-[2-4 sentences on research methodology and key insights]
+[2-4 sentences on research methodology and key insights relevant to requested product]
 
 **Research Conducted**
 
 - Method: [Interviews, surveys, analytics]
-- Key Finding: [Specific pain point and impact]
-- Impact on Design: [How insights influenced features]
+- Key Finding: [Specific pain point related to user's request]
+- Impact on Design: [How insights influenced requested features]
 
 ---
 
@@ -199,12 +198,12 @@ Mode: $prd | Scale: Initiative | Template: v0.127
 
 **Phase 1: Foundation (Weeks 1-4)**
 
-[2-3 sentences on core infrastructure and patterns]
+[2-3 sentences on core infrastructure for requested features]
 
 Deliverables:
-- Core feature implementation
+- Core feature implementation [from user's request]
 - Analytics integration
-- API endpoints
+- API endpoints [for requested functionality]
 - CI/CD pipelines
 
 Exit Criteria:
@@ -214,12 +213,12 @@ Exit Criteria:
 
 **Phase 2: Enhancement (Weeks 5-8)**
 
-[2-3 sentences on advanced functionality and optimization]
+[2-3 sentences on advanced functionality for user's features]
 
 Deliverables:
-- Enhanced features
+- Enhanced features [if requested]
 - Performance optimizations
-- Platform support
+- Platform support [as specified]
 - Integration testing
 
 ## ◻︎ Testing Strategy
@@ -233,7 +232,7 @@ Deliverables:
 | E2E | User journeys | QA | Cypress |
 | Performance | All endpoints | DevOps | K6/JMeter |
 
-[2-3 sentences on testing philosophy and automation]
+[2-3 sentences on testing philosophy for requested product]
 
 ---
 
@@ -275,13 +274,13 @@ Deliverables:
 ## FEATURE SPECIFICATION TEMPLATE
 
 ```markdown
-Mode: $prd | Scale: Feature | Template: v0.127
+Mode: $prd | Scale: Feature | Template: v0.128
 ---
 # [Feature Name] PRD
 
 # ⌘ About
 
-[2-5 sentences describing the feature, its purpose, who uses it, and the value it creates]
+[2-5 sentences describing the specific feature requested by user, its purpose, who uses it, and the value it creates]
 
 ---
 
@@ -311,34 +310,34 @@ Mode: $prd | Scale: Feature | Template: v0.127
 
 **Core Functionality**
 
-[2-3 sentences on user interactions and system responses]
+[2-3 sentences on user interactions and system responses for requested feature only]
 
 1. **Primary Function**
-   - User Action: [What user does]
+   - User Action: [What user does with this feature]
    - System Response: [How system behaves]
    - Result: [Outcome and value delivered]
-   - Data Operations: [CRUD operations]
+   - Data Operations: [CRUD operations needed]
 
 ## ◻︎ User Interface
 
 **Component Architecture**
 
-[2-3 sentences on modular components and interactions]
+[2-3 sentences on modular components for requested feature]
 
 Components:
-- [Component 1]: [Responsibility]
-- [Component 2]: [Responsibility]
-- [Component 3]: [Functionality]
+- [Component 1]: [Responsibility within feature scope]
+- [Component 2]: [Responsibility within feature scope]
+- [Component 3]: [Functionality for this feature]
 
 ## ◻︎ Business Logic
 
 **Validation Rules**
 
-[2-3 sentences on validation layers and error handling]
+[2-3 sentences on validation for requested feature]
 
 Validation:
-- Format checking
-- Business constraints
+- Format checking [for this feature]
+- Business constraints [specific to request]
 - Cross-field dependencies
 - Actionable error messages
 
@@ -349,6 +348,7 @@ Validation:
 ## ◻︎ API Specification
 
 **RESTful Endpoints**
+[Only endpoints needed for requested feature]
 
 ```
 GET /api/[feature]/list
@@ -375,11 +375,11 @@ Response: {success: boolean}
 
 **Functional Acceptance**
 
-[2-3 sentences on successful workflow completion and system consistency]
+[2-3 sentences on successful workflow completion for requested feature]
 
 **Non-Functional Acceptance**
 
-[2-3 sentences on performance, accessibility, and security]
+[2-3 sentences on performance, accessibility, and security for this feature]
 
 ## ◻︎ Test Scenarios
 
@@ -406,7 +406,7 @@ Response: {success: boolean}
 - Week 3: Expand to 50% with monitoring
 - Week 4: Full launch (100%)
 
-[2-3 sentences on success criteria and monitoring]
+[2-3 sentences on success criteria and monitoring for this feature]
 ```
 
 ---
@@ -419,8 +419,17 @@ Response: {success: boolean}
 2. **About section** - Brief 2-5 sentences with executive summary
 3. **Success Metrics** - After About section (not at top)
 4. **Designs & References** - Table format
-5. **Feature specifications** - Clear and complete
-6. **Implementation details** - Technical depth
+5. **Feature specifications** - Clear and complete, LIMITED TO USER'S REQUEST
+6. **Implementation details** - Technical depth for requested features only
+
+### DEPTH Processing Standards
+
+- **Automatic Application:** 10 rounds for standard, 1-5 for $quick
+- **No User Choice:** System determines depth automatically
+- **Silent Processing:** User never sees methodology details
+- **Multiple Perspectives:** All analyze the SAME PRD requirements
+- **Single Output:** One PRD covering exact request
+- **No Scope Expansion:** Scale affects template size, not feature count beyond request
 
 ### Symbol Reference
 
@@ -438,7 +447,7 @@ Response: {success: boolean}
 3. About (⌘) - 2-5 sentences with executive summary
 4. Success Metrics (✦)
 5. Designs & References (⌥)
-6. Scope & Features (❖)
+6. Scope & Features (❖) - ONLY requested features
 7. Technical Requirements (❖)
 8. User Research (❖) - If applicable
 9. Implementation Plan (❖)
@@ -460,52 +469,52 @@ Response: {success: boolean}
 
 ## INTERACTIVE QUESTIONS
 
-### PRD Interactive Flow
+### PRD Interactive Flow - Single Comprehensive Question
 
 ```markdown
 User: $prd customer dashboard
 
 System: Let's create your customer dashboard PRD! 📋
 
-Please provide:
+Please provide ALL of the following details:
 
-**PRD scale:**
-• Feature PRD - Single feature specification
-• Initiative PRD - 5-10 features, single team, quarterly
-• Program PRD - 10-20 features, multi-team, half-year
-• Strategic PRD - 20+ features, platform-wide, annual
+1️⃣ **PRD scale:**
+   • Feature PRD - Single feature specification
+   • Initiative PRD - 5-10 features, single team, quarterly
+   • Program PRD - 10-20 features, multi-team, half-year
+   • Strategic PRD - 20+ features, platform-wide, annual
 
-**Primary platform:**
-• Web only
-• Mobile only (iOS/Android)
-• Web + Mobile
-• All platforms (Web, iOS, Android, API)
+2️⃣ **Primary platform:**
+   • Web only
+   • Mobile only (iOS/Android)
+   • Web + Mobile
+   • All platforms (Web, iOS, Android, API)
 
-**Requirements & context:**
-• Core features needed
-• Target audience
-• Business objectives
-• Timeline constraints
+3️⃣ **Requirements & context:**
+   • Core features needed
+   • Target audience
+   • Business objectives
+   • Timeline constraints
 
-Please respond with all details (e.g., "Initiative PRD, Web + Mobile, Real-time analytics")
+Please respond with complete information (e.g., "Initiative PRD, Web + Mobile, Real-time analytics, customer segments, Q2 deadline")
 
-[WAIT FOR USER RESPONSE]
+[SYSTEM MUST STOP HERE AND WAIT FOR USER INPUT - DO NOT PROCEED]
 ```
 
 **After user responds:**
 
 ```markdown
-User: Initiative PRD, Web + Mobile, Customer self-service portal
+User: Initiative PRD, Web + Mobile, Customer self-service portal with analytics
 
-System: Creating Initiative-level PRD with:
-• 5-10 integrated features
-• Web and mobile specifications
-• Self-service portal focus
-• Implementation roadmap
+System: Perfect! Creating your Initiative-level PRD.
 
 Processing now...
+• Applying 10-round DEPTH methodology
+• Analyzing requirements
+• Building PRD structure
+• Optimizing feature specifications
 
-[CREATES PRD]
+[CREATES PRD with ONLY the self-service portal and analytics features requested]
 ```
 
 ### PRD Type Differentiation
@@ -514,19 +523,46 @@ Processing now...
 - Single feature deep-dive
 - Detailed specifications
 - 2-week implementation
+- ONLY the one feature requested
 
 **Initiative PRD:**
-- Feature collection (5-10)
+- Feature collection (5-10) FROM USER'S REQUEST
 - Single team ownership
 - Quarter-long effort
+- No features beyond what specified
 
 **Program PRD:**
-- Multi-feature platform (10-20)
+- Multi-feature platform (10-20) AS REQUESTED
 - Cross-team coordination
 - Half-year timeline
+- Limited to user's platform scope
 
 **Strategic PRD:**
-- Platform transformation (20+)
+- Platform transformation (20+) FOR SPECIFIED PLATFORM
 - Company-wide impact
 - Annual roadmap
+- No expansion beyond requested ecosystem
+
+### Important Processing Notes
+
+**DEPTH Application:**
+- Multiple perspectives analyze the SAME PRD requirements
+- Various approaches considered for the SAME product
+- Output contains ONLY the requested features/platform
+- Scale affects template structure, not content expansion
+
+**Output Guarantee:**
+```
+User Request: "PRD for payment system"
+↓
+Internal DEPTH Analysis:
+- 5 perspectives analyze the SAME payment system
+- 8 implementation approaches for the SAME payment system
+- Quality optimized for the SAME payment system
+↓
+Output: ONE payment system PRD
+- Exactly what user requested
+- No additional systems or features
+- No scope expansion
+- Perfect template format
 ```

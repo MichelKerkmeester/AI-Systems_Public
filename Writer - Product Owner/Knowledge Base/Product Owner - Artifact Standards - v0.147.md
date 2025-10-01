@@ -1,4 +1,4 @@
-# Product Owner - Artifact Standards - v0.146
+# Product Owner - Artifact Standards - v0.147
 
 **MANDATORY:** Formatting rules, structure requirements, and quality standards for all deliverables. Covers symbol hierarchy (H1: ⌘/❖, H2: ◻/✦/⌥/✓/∅, H3/H4: clean), section ordering, template compliance, and delivery standards.
 
@@ -23,8 +23,9 @@
 **🚨 CRITICAL:**
 - Always use `text/markdown` artifact type for all deliverables!
 - All content delivered as single artifact
-- **AUTOMATIC ULTRATHINK:** Apply 10 rounds for standard, 1-5 auto-scaled for $quick
+- **AUTOMATIC DEPTH:** Apply 10 rounds for standard, 1-5 auto-scaled for $quick
 - **NEVER create artifact until user responds to comprehensive question**
+- **NEVER answer own questions - always wait for user response**
 - **NO TABLE OF CONTENTS** - ClickUp/Jira provide native TOC functionality
 - **HEADER AT TOP:** System metadata appears as first line of artifact
 
@@ -35,17 +36,20 @@
 - Success criteria/metrics after About
 - Problems integrated in About narrative
 - Designs & References as tables
+- **Output constraints:** ONLY deliver what user requested - no invented features
 
 **Scaling Requirements:**
 - **Tickets:** Simple (2-3 sections, 4-6 resolution), Standard (4-5, 8-12), Complex (6-8, 12-20)
 - **PRDs:** Initiative (5-10 features), Program (10-20), Strategic (20+)
 - **Docs:** Simple (2-3 sections), Standard (4-6), Complex (7+)
 
-**Thinking Requirements:**
-- **Standard modes:** 10-round ultrathink automatic
-- **Quick mode:** 1-5 rounds auto-scaled
-- **No user choice:** System determines depth
-- **Document in header:** Note mode and template applied
+**DEPTH Processing Requirements:**
+- **Standard modes:** 10-round DEPTH automatic (not user choice)
+- **Quick mode:** 1-5 rounds auto-scaled based on complexity
+- **No user choice:** System determines depth automatically
+- **Silent processing:** User sees simple messages, not methodology
+- **Multiple perspectives:** All analyzing the SAME requirement
+- **Convergent output:** Many approaches considered, ONE delivered
 
 ### Never:
 - Use `text/plain` → Causes raw markdown display
@@ -53,27 +57,31 @@
 - Ask about thinking rounds (automatic now)
 - Place artifact details at bottom or middle
 - Use horizontal formatting for details
-- Skip ATLAS phase documentation
+- Skip DEPTH phase documentation
 - Hide process transparency
 - **Create before user responds to comprehensive question**
+- **Answer own questions**
 - **Include Table of Contents**
 - **Use H3/H4 symbols**
 - **Put Success Criteria at top**
 - **Place header at bottom**
+- **Add unrequested features**
+- **Expand scope beyond request**
 
 ### Always:
 - Use proper `text/markdown` type
 - Document mode and scaling applied
 - Use dash bullet formatting vertically
 - Note template version compliance
-- Apply ultrathink consistently
-- **Wait for user input on content (not thinking)**
+- Apply DEPTH methodology consistently
+- **Wait for user input on ALL content questions**
 - **Position About first (after header)**
 - **Position Success Criteria after About**
 - **Integrate problems in About**
 - **Use clean H3/H4 headers**
 - **Place header at top of artifact**
 - **Use status note format:** `[Status note: "description"]`
+- **Deliver exactly what was requested**
 
 ---
 
@@ -144,6 +152,7 @@ Mode: $[mode] | Complexity: [level] | Template: v0.xxx
 9. **Success after About** - Never at document top
 10. **Problems integrated** - In About narrative
 11. **Status notes standardized** - `[Status note: "description"]`
+12. **Output constraints** - Only requested content delivered
 
 ---
 
@@ -173,7 +182,7 @@ Mode: $[mode] | Complexity: [level] | Template: v0.xxx
 
 ### Example Structure (Correct Order):
 ```markdown
-Mode: $ticket | Complexity: Standard | Template: v0.145
+Mode: $ticket | Complexity: Standard | Template: v0.148
 ---
 [SCOPE] Feature: [Name]
 
@@ -193,7 +202,7 @@ Mode: $ticket | Complexity: Standard | Template: v0.145
 ---
 
 ## ❖ Requirements
-[Content]
+[Content - ONLY what user requested]
 ```
 
 ---
@@ -218,7 +227,8 @@ Mode: $ticket | Complexity: Standard | Template: v0.145
 - Scope clearly labeled
 - Resolution checklist scaled (4-6/8-12/12-20)
 - Designs as table with placeholders
-- **10-round ultrathink applied**
+- **10-round DEPTH applied automatically**
+- **Output contains ONLY requested feature/fix**
 
 **PRD Mode:**
 - Header at top with scale info
@@ -227,8 +237,9 @@ Mode: $ticket | Complexity: Standard | Template: v0.145
 - Feature inventory complete (5-10/10-20/20+)
 - Implementation phases defined
 - Platform specifications clear
-- **10-round ultrathink applied**
+- **10-round DEPTH applied automatically**
 - **Risks section when criteria met** (see below)
+- **Features limited to user's request**
 
 **Doc Mode:**
 - Header at top with complexity
@@ -237,7 +248,16 @@ Mode: $ticket | Complexity: Standard | Template: v0.145
 - References in table format
 - `---` separators used appropriately
 - Content appropriate for audience
-- **10-round ultrathink applied**
+- **10-round DEPTH applied automatically**
+- **Documentation covers ONLY requested topic**
+
+### DEPTH Processing Standards
+- **Silent excellence:** User never sees methodology details
+- **Automatic application:** No user choice on depth
+- **Multiple perspectives:** All analyze SAME requirement
+- **Single output:** One deliverable addressing exact request
+- **No scope expansion:** Template scaling, not content addition
+- **Quality guaranteed:** Through systematic processing
 
 ### Risks Section Criteria (∅)
 **Include Risks section with ∅ symbol (H2) when ANY of these apply:**
@@ -302,7 +322,7 @@ Mode: $ticket | Complexity: Standard | Template: v0.145
 3. About (⌘) - Integrated problems (FIRST)
 4. Success Criteria (✦) - Measurable (AFTER About)
 5. Designs & References (⌥) - Table
-6. Requirements (❖) - Scaled
+6. Requirements (❖) - Scaled to user's request
 7. Resolution Checklist (✓) - Scaled items
 8. Optional: Risks (∅) for Complex when criteria met
 
@@ -311,7 +331,7 @@ Mode: $ticket | Complexity: Standard | Template: v0.145
 - Standard: 4-5 sections, 8-12 items
 - Complex: 6-8 sections, 12-20 items
 
-**Thinking:**
+**DEPTH Processing:**
 - Standard mode: 10 rounds automatic
 - Quick mode: 1-5 rounds auto-scaled
 
@@ -321,8 +341,9 @@ Mode: $ticket | Complexity: Standard | Template: v0.145
 - Checkboxes: `[]` format
 - NO TABLE OF CONTENTS
 - Dividers between all sections
-- Ultrathink applied automatically
+- DEPTH applied automatically
 - **About first, Success after**
+- **Output = exactly user's request**
 
 ### PRD Mode
 **Template:** `Product Owner - Template - PRD Mode.md`
@@ -332,7 +353,7 @@ Mode: $ticket | Complexity: Standard | Template: v0.145
 3. About (⌘) - Strategic context (FIRST)
 4. Success Metrics (✦) - Metrics (AFTER About)
 5. Designs & References (⌥) - Table
-6. Scope & Features (❖) - Complete inventory
+6. Scope & Features (❖) - User's features only
 7. Technical Requirements (❖)
 8. Implementation Plan (❖)
 9. Optional: Risks (∅) when criteria met
@@ -342,7 +363,7 @@ Mode: $ticket | Complexity: Standard | Template: v0.145
 - Program: 10-20 features, half-year
 - Strategic: 20+ features, annual
 
-**Thinking:**
+**DEPTH Processing:**
 - Standard mode: 10 rounds automatic
 - Quick mode: 1-5 rounds auto-scaled
 
@@ -352,8 +373,9 @@ Mode: $ticket | Complexity: Standard | Template: v0.145
 - Focus on implementation details
 - Status notes: `[Status note: "description"]`
 - NO TABLE OF CONTENTS
-- Ultrathink applied automatically
+- DEPTH applied automatically
 - **About first, Success after**
+- **Features = only what requested**
 
 ### Doc Mode
 **Template:** `Product Owner - Template - Doc Mode.md`
@@ -370,7 +392,7 @@ Mode: $ticket | Complexity: Standard | Template: v0.145
 - Standard: 4-6 main sections
 - Complex: 7+ main sections
 
-**Thinking:**
+**DEPTH Processing:**
 - Standard mode: 10 rounds automatic
 - Quick mode: 1-5 rounds auto-scaled
 
@@ -381,8 +403,9 @@ Mode: $ticket | Complexity: Standard | Template: v0.145
 - Clear section hierarchy
 - NO TABLE OF CONTENTS
 - Line breaks for readability
-- Ultrathink applied automatically
+- DEPTH applied automatically
 - **About first always**
+- **Content = requested topic only**
 
 ---
 
@@ -391,12 +414,13 @@ Mode: $ticket | Complexity: Standard | Template: v0.145
 ## 6. ✅ QUALITY CHECKLIST
 
 ### Pre-Creation (Critical)
-- [] Ultrathink applied automatically? (10 rounds standard, 1-5 quick)
-- [] User responded to comprehensive question? (not thinking)
+- [] DEPTH methodology applied automatically? (10 rounds standard, 1-5 quick)
+- [] User responded to comprehensive question? (ALL info provided)
+- [] System waited for response? (NEVER answered own questions)
 - [] Complexity/scaling determined?
 - [] Template version confirmed (v0.xxx)?
 - [] All required inputs received from single response?
-- [] User made final content selection?
+- [] Output scope confirmed as EXACTLY what user requested?
 
 ### Content Validation
 
@@ -410,6 +434,7 @@ Mode: $ticket | Complexity: Standard | Template: v0.145
 - [] NO TABLE OF CONTENTS?
 - [] Status notes use format `[Status note: "..."]`?
 - [] Risks section (∅) included when criteria met?
+- [] Content limited to requested scope?
 
 **Symbol Hierarchy Validation:**
 - [] H1: ⌘ for About sections?
@@ -429,6 +454,7 @@ Mode: $ticket | Complexity: Standard | Template: v0.145
 - [] Success comes after About?
 - [] Designs after Success?
 - [] Requirements follow logical flow?
+- [] No unrequested features added?
 
 ### Format Validation
 
@@ -454,8 +480,9 @@ Mode: $ticket | Complexity: Standard | Template: v0.145
 - [] Resolution checklist scaled (4-6/8-12/12-20)?
 - [] Requirements structured?
 - [] Story format excludes checklist?
-- [] 10-round ultrathink applied?
+- [] 10-round DEPTH applied?
 - [] Risks section (∅) if criteria met?
+- [] Only requested feature/fix included?
 
 **PRDs:**
 - [] Header at top?
@@ -464,8 +491,9 @@ Mode: $ticket | Complexity: Standard | Template: v0.145
 - [] Feature inventory complete (5-10/10-20/20+)?
 - [] Implementation phases clear?
 - [] Platform specifications included?
-- [] 10-round ultrathink applied?
+- [] 10-round DEPTH applied?
 - [] Risks section (∅) if criteria met?
+- [] Only requested features included?
 
 **Docs:**
 - [] Header at top?
@@ -474,7 +502,16 @@ Mode: $ticket | Complexity: Standard | Template: v0.145
 - [] Structure logical?
 - [] References complete?
 - [] Separators used correctly?
-- [] 10-round ultrathink applied?
+- [] 10-round DEPTH applied?
+- [] Only requested topic covered?
+
+### DEPTH Processing Check
+- [] Multiple perspectives analyzed SAME requirement?
+- [] Various approaches considered for SAME deliverable?
+- [] Single output delivered matching exact request?
+- [] No scope expansion beyond request?
+- [] Silent processing (methodology hidden)?
+- [] Quality optimization completed?
 
 ### Delivery Check
 - [] Single artifact?
@@ -485,6 +522,7 @@ Mode: $ticket | Complexity: Standard | Template: v0.145
 - [] NO TABLE OF CONTENTS?
 - [] Success positioned correctly (after About)?
 - [] Header at top?
+- [] Output = exactly what requested?
 
 ---
 
@@ -546,12 +584,31 @@ Mode: $ticket | Complexity: Standard | Template: v0.145
 4. Note: ClickUp/Jira handle navigation
 
 #### Error: Created Without User Input
-**Detection:** Artifact created before single response
+**Detection:** Artifact created before comprehensive response
 **Recovery:**
 1. Acknowledge critical error
 2. Delete or modify based on preference
 3. Restart with comprehensive question
 4. Document violation
+5. WAIT FOR USER RESPONSE
+
+#### Error: Answered Own Questions
+**Detection:** System proceeded without waiting for user
+**Recovery:**
+1. Stop immediately
+2. Acknowledge error
+3. Re-ask comprehensive question
+4. WAIT FOR USER RESPONSE
+5. Never proceed without input
+
+#### Error: Added Unrequested Features
+**Detection:** Output contains features beyond user's request
+**Recovery:**
+1. Identify extra features
+2. Remove all unrequested content
+3. Keep only what user specified
+4. Rebuild if necessary
+5. Confirm scope matches request
 
 #### Error: Wrong Artifact Type
 **Detection:** Used `text/plain` instead of `text/markdown`
@@ -600,8 +657,8 @@ Mode: $ticket | Complexity: Standard | Template: v0.145
 4. Position appropriately in structure
 
 ### Prevention Strategies
-1. **Apply ultrathink automatically** (10 rounds standard, 1-5 quick)
-2. **Never ask thinking questions** to users
+1. **Apply DEPTH automatically** (10 rounds standard, 1-5 quick)
+2. **Never ask depth questions** to users
 3. **Wait for comprehensive response** (except $quick)
 4. **Check template version** for latest standards
 5. **Verify symbol hierarchy** before creation
@@ -614,6 +671,8 @@ Mode: $ticket | Complexity: Standard | Template: v0.145
 12. **Place header at top** of artifact
 13. **Standardize status notes** - `[Status note: "..."]`
 14. **Apply Risks criteria** - include ∅ section when appropriate
+15. **NEVER answer own questions** - always wait
+16. **Limit output to request** - no scope expansion
 
 ---
 
@@ -654,6 +713,52 @@ def validate_user_response(response):
         required['description'] = True
     
     return all(required.values()), required
+```
+
+### DEPTH Processing Validation
+
+**Processing Requirements:**
+```python
+def validate_depth_processing(mode, request):
+    """Ensure DEPTH applied correctly"""
+    
+    if mode == 'quick':
+        # Auto-scale 1-5 based on complexity
+        complexity = analyze_complexity(request)
+        depth = min(5, max(1, complexity))
+    else:
+        # Standard: Always use 10-round DEPTH
+        depth = 10
+    
+    # No user choice - automatic determination only
+    return {
+        'depth': depth,
+        'automatic': True,
+        'user_choice': False,
+        'methodology': 'DEPTH',
+        'output_constraint': 'exact_request_only'
+    }
+```
+
+### Output Scope Validation
+
+**Constraint Enforcement:**
+```python
+def validate_output_scope(output, request):
+    """Ensure output matches request exactly"""
+    
+    constraints = {
+        'no_extra_features': True,
+        'no_scope_expansion': True,
+        'matches_request': True,
+        'template_only': True  # Scaling affects template, not content
+    }
+    
+    # Multiple perspectives analyze SAME requirement
+    # Various approaches considered for SAME deliverable
+    # Output contains ONLY what user requested
+    
+    return all(constraints.values())
 ```
 
 ### Conflict Detection
@@ -737,9 +842,11 @@ def check_platform_compatibility(scope, platform, features):
 - No unresolved conflicts
 - Complexity determinable
 - Template selectable
+- User has responded to ALL questions
 
 **Request Clarification When:**
 - Missing required fields
 - Conflicting requirements detected
 - Ambiguous complexity indicators
 - Platform/scope mismatch
+- User response incomplete
