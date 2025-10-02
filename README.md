@@ -93,44 +93,43 @@ System instructions for direct, efficient AI communication without filler.
 <a id="3-product-owner-writer"></a>
 #### 3. 📋 Product Owner Writer
 
-Create professional dev tickets and enhanced documentation.
+Create professional dev tickets, PRDs, and enhanced documentation with automatic complexity scaling.
 
 - **4 Intelligent Modes & Auto-Scaling**:
   - Modes: $ticket & $prd (dev work), $doc (guides/formatting), $interactive (discovery), $quick (instant)
   - Auto-complexity for tickets: Simple (2-3), Standard (4-5), Complex (6-8 sections)
 
-- **ATLAS Framework & Challenge Mode**:
-  - 5-phase thinking with 6-10 rounds (user-controlled)
-  - Auto-challenges at 6+ rounds: Constructive or Strong based on history
-  - $quick mode: Zero waiting, 6 rounds auto, no challenges
+- **DEPTH Framework & Silent Processing**:
+  - 5-phase thinking with 10 rounds automatic (user doesn't control)
+  - All processing happens silently behind simple messages
+  - $quick mode: Zero waiting, 1-5 rounds auto-scaled
 
 .
 
 <a id="4-prompt-engineering-assistant"></a>
 #### 4. 🎯 Prompt Engineering Assistant
 
-Transform vague requests into clear, measurable, high-scoring AI prompts with three format options.
+Transform vague requests into clear, effective AI prompts with framework optimization and quality evaluation.
 
-- **RCAF Framework & CLEAR Evaluation**:
-  - **RCAF**: Simple 4-element structure (Role, Context, Action, Format) - 70% usage
-  - **CLEAR Scoring**: 5 dimensions (Correctness, Logic, Expression, Arrangement, Reuse)
-  - Every prompt gets a score (0-50) and grade (F to A+)
-  - Typical improvement: +20-25 points (100-200% gains)
+- **RCAF Framework & CLEAR Scoring**:
+  - **RCAF**: Simple 4-element structure (Role, Context, Action, Format) - used 70% of time
+  - **CRAFT**: 5-element comprehensive framework for complex needs
+  - **CLEAR Evaluation**: 5 dimensions scored 1-10 each (Correctness, Logic, Expression, Arrangement, Reuse)
+  - Every prompt gets total score (0-50) with target 40+/50
+  - Typical improvement: +20-25 points (100%+ gains)
 
-- **7 Specialized Modes + Three Formats**:
-  - Core: $interactive (DEFAULT), $short, $improve, $refine
-  - Builder: $prototype, $website, $app (phased approach)
-  - **Format Options**: Standard (baseline), YAML (templates, +3-7%), JSON (APIs, +5-10%)
-  - Past chats integration for context-aware suggestions
+- **7 Specialized Modes & Three Formats**:
+  - Core Modes: $interactive (DEFAULT), $short, $improve, $refine, $quick
+  - Format Modes: $json (APIs), $yaml (templates)
+  - **Output Options**: Standard (baseline clarity), YAML (+3-7% tokens), JSON (+5-10% tokens)
+  - $quick mode: Auto-scales 1-5 rounds based on complexity
 
-- **ATLAS Framework with Challenge Mode**:
-  - User-controlled thinking (1-10 rounds, always asked)
-  - Challenge at 3+ rounds: "Could RCAF be simpler?"
-  - Real example: "Summarize meeting" → 45/50 RCAF prompt (+30 points)
-  - Commands: $rcaf (force simple), $craft (comprehensive), $yaml (templates), $json (APIs)
+- **Intelligent Complexity Management**:
+  - **Simple (1-4)**: RCAF automatic, format choice only
+  - **Moderate (5-6)**: Framework choice offered (RCAF vs CRAFT)
+  - **High (7+)**: Challenge mode suggests streamlined vs comprehensive
 
 -----
-
 
 ## 💬 MCP Agents
 

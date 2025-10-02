@@ -1,74 +1,101 @@
-# Prompt Engineering Assistant - User Guide v0.850
+# Prompt Engineering Assistant - User Guide v0.860
 
-A revolutionary prompt enhancement system using RCAF framework for clarity, CLEAR evaluation for quality assurance, and automatic intelligent optimization. Transforms vague requests into clear, measurable, high-scoring prompts with support for Standard, JSON, and YAML formats. **Ultra-minimal artifact delivery: single-line header + content only.**
+Transforms vague requests into clear, effective AI prompts through intelligent framework selection, quality evaluation, and automatic optimization with DEPTH processing.
 
 ## 📋 Table of Contents
 
-- [🆕 What's New in v0.850](#whats-new-in-v0850)
+- [🆕 What's New In V0.860](#whats-new-in-v0860)
+- [🔧 What's Improved](#whats-improved)
 - [✨ Key Features](#key-features)
 - [🚀 Quick Setup](#quick-setup)
 - [🎛️ Operating Modes](#operating-modes)
-- [📄 Format Options](#format-options)
-- [🧠 Intelligent Processing](#intelligent-processing)
-- [🚀 Challenge Mode Philosophy](#challenge-mode-philosophy)
+- [🔄 Output Formats](#output-formats)
+- [🧠 DEPTH Thinking Framework](#depth-thinking-framework)
+- [🎯 Automatic Complexity Detection](#automatic-complexity-detection)
 - [⭐ RCAF Framework](#rcaf-framework)
 - [✅ CLEAR Evaluation System](#clear-evaluation-system)
-- [📦 Artifact Delivery Format](#artifact-delivery-format)
-- [🚨 REPAIR Error Protocol](#repair-error-protocol)
-- [📊 Performance Metrics](#performance-metrics)
+- [📊 Header Format](#header-format)
+- [🆘 Troubleshooting](#troubleshooting)
+- [📦 Version History](#version-history)
 
 ---
 
-<a id="whats-new-in-v0850"></a>
-## 🆕 What's New in v0.850
+<a id="whats-new-in-v0860"></a>
+## 🆕 What's New In V0.860
 
-- ✅ **Automatic Optimization**: 10-round enhancement applied to every request
-- ✅ **Smart Complexity Handling**: System manages all complexity invisibly
-- ✅ **Framework Selection**: Offers choice only when beneficial (complexity 5-6)
-- ✅ **Challenge at High Complexity**: Automatic simplification suggestions (7+)
+### Major System Updates
+- **Interactive Mode Enhanced:** Improved conversational flow with clearer decision points
+- **Bug Fixes Applied:** Resolved various logic issues for more reliable performance
+- **UX Improvements:** Cleaner interface with simpler messages and smoother interactions
+- **Smart Quick Mode:** Auto-scales processing rounds (1-5) based on complexity
 
-**What users experience:**
-- Simple processing messages: "🎯 Analyzing your request..."
-- Clean choices when needed: Framework A/B at moderate complexity
-- Polished results: Always delivered as minimal artifacts
-- Consistent quality: Every enhancement optimized automatically
+### Enhanced Processing
+- **Automatic DEPTH:** 10-round comprehensive analysis for standard modes
+- **Quick Mode Scaling:** Intelligent 1-5 round processing based on complexity
+- **Silent Excellence:** All optimization happens invisibly behind simple messages
+- **Better Defaults:** Smarter automatic framework and format selections
 
-### System Improvements from v0.847
-- **Invisible Processing**: All optimization happens silently
-- **Simpler Messages**: Users see only "Analyzing..." not technical details
-- **Automatic Quality**: 10-round processing ensures excellence
-- **Smart Defaults**: Quick mode auto-scales complexity (1-5 rounds)
+### Updated Files
+- **Writer:** v0.860 - Core system with improved logic
+- **DEPTH Framework:** v0.102 - Silent processing methodology
+- **Interactive Mode:** v0.632 - Enhanced conversation patterns
+- **Artifact Standards:** v0.119 - Minimal header format
+- **Patterns & Enhancements:** v0.612 - Framework templates
+- **Evaluation & Refinement:** v0.612 - CLEAR scoring system
+
+---
+
+<a id="whats-improved"></a>
+## 🔧 What's Improved
+
+### Interactive Mode Enhancements ✅
+**Better Flow:**
+- Single comprehensive question when complexity requires choice
+- Clearer framework selection at complexity 5-6
+- Automatic simplification offer at complexity 7+
+- Reduced unnecessary questions
+
+**Smarter Decisions:**
+- Framework choice only when beneficial (complexity 5-6)
+- Output structure always offered (Standard/JSON/YAML)
+- Challenge mode activates automatically at high complexity
+- Session pattern learning within conversation
+
+### Quick Mode Intelligence ✅
+**Auto-Scaled Processing:**
+- Complexity 1-2: 1-2 rounds (minimal)
+- Complexity 3-4: 3 rounds (moderate)
+- Complexity 5-6: 4 rounds (substantial)
+- Complexity 7+: 5 rounds (comprehensive)
+
+### System Simplification ✅
+**Cleaner Operation:**
+- Removed deprecated features
+- Consolidated processing logic
+- Unified error handling
+- Better separation of concerns
 
 ---
 
 <a id="key-features"></a>
 ## ✨ Key Features
 
-### Core Capabilities
-- **Interactive Mode DEFAULT**: System always starts with guided discovery
-- **Automatic Excellence**: Every request gets comprehensive optimization
-- **Three Format Options**: Standard (clarity), YAML (templates), JSON (APIs)
-- **RCAF Framework**: Simple 4-element structure for 70% of prompts
-- **CLEAR Scoring**: Every prompt evaluated on 5 dimensions (shown in header)
-- **Smart Complexity Management**: System handles all complexity invisibly
-- **Session Pattern Learning**: Adapts to your choices within current conversation
-- **Token Transparency**: Shows format overhead for informed decisions
-- **Challenge Mode**: Simplifies to RCAF when complexity detected (7+)
-- **Universal Platform Support**: Works on ALL AI platforms
-
-### User Experience Features
-- **Simple Processing Messages**: "Analyzing...", "Optimizing...", "Building..."
-- **Clean Decision Points**: Framework choice only at complexity 5-6
-- **Automatic Mode Selection**: System chooses optimal approach
-- **Minimal Artifacts Always**: Single-line header + content only
-- **No Technical Jargon**: Results without methodology
+- **🚀 Seven Modes**: Interactive (default), Short, Improve, Refine, Quick, JSON, YAML
+- **🧠 DEPTH Framework**: 5-phase methodology with automatic processing
+- **🎯 Smart Complexity**: Automatic detection and framework scaling
+- **⚡ Quick Mode**: Fast processing with auto-scaled depth (1-5 rounds)
+- **💬 Interactive Default**: Guided enhancement with smart questions
+- **🤖 Automatic Processing**: System-controlled optimization (no user choice)
+- **📊 Header at Top**: Single-line metadata with $ prefix
+- **📝 Output Constraints**: Enhanced prompt matches exact request
+- **📦 Minimal Artifacts**: Header + content only, no extra sections
 
 ---
 
 <a id="quick-setup"></a>
 ## 🚀 Quick Setup
 
-### Step 1: Create a Claude Project
+### Step 1: Create A Claude Project
 1. Go to claude.ai
 2. Click "Projects" in sidebar
 3. Create new project named "Prompt Engineering Assistant"
@@ -76,33 +103,31 @@ A revolutionary prompt enhancement system using RCAF framework for clarity, CLEA
 ### Step 2: Add System Instructions
 1. Click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Writer - Prompt Improver - v0.850.md`
+3. Copy and paste: `Writer - Prompt Improver - v0.860.md`
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
-Add these documents to your project's knowledge base:
+Add these documents to your project:
 
-**Core System Documents:**
-- `Prompt - DEPTH Thinking Framework - v0.100.md`
-- `Prompt - Interactive Mode - v0.630.md`
-- `Prompt - Artifact Standards & Templates - v0.117.md`
-- `Prompt - Patterns & Enhancements - v0.610.md`
-- `Prompt - Evaluation & Refinement - v0.610.md`
+**Core Documents (Current Versions):**
+- `Prompt - DEPTH Thinking Framework - v0.102.md`
+- `Prompt - Interactive Mode - v0.632.md`
+- `Prompt - Artifact Standards & Templates - v0.119.md`
 
-**Format Documents:**
-- `Prompt - JSON Format Guide - v0.101.md`
-- `Prompt - YAML Format Guide - v0.101.md`
+**Enhancement Documents:**
+- `Prompt - Patterns & Enhancements - v0.612.md`
+- `Prompt - Evaluation & Refinement - v0.612.md`
 
-**Mode Documents:**
-- `Prompt - Builder Mode - v0.416.md`
+**Format Guides:**
+- `Prompt - JSON Format Guide.md`
+- `Prompt - YAML Format Guide.md`
 
 ### Step 4: Start Enhancing
 ```
-write about dogs              # Interactive Mode with automatic processing
-$improve analyze data         # Enhanced with intelligent optimization
-$quick fix this              # Fast mode with auto-scaled processing
-$yaml create config          # YAML format with full enhancement
-$json api endpoint           # JSON format with optimization
+analyze customer data            # Interactive discovery flow
+$quick fix grammar              # Immediate enhancement (1-5 rounds auto)
+$improve generate insights      # Standard enhancement (10 rounds auto)
+$json api endpoint              # JSON format with full processing
 ```
 
 ---
@@ -110,201 +135,136 @@ $json api endpoint           # JSON format with optimization
 <a id="operating-modes"></a>
 ## 🎛️ Operating Modes
 
-### Core Modes with Automatic Processing
+**Default Mode:** The system defaults to `interactive` unless a command is specified.
 
-| Mode | Activation | Best For | Processing | CLEAR Target | Speed |
-|------|------------|----------|------------|--------------|-------|
-| **Interactive** | DEFAULT | Discovery | Full (automatic) | 40+/50 | Standard |
-| **$short** | `$short`/`$s` | Simple clarity | Moderate | 35+/50 | Fast |
-| **$improve** | `$improve`/`$i` | Most improvements | Full | 40+/50 | Standard |
-| **$refine** | `$refine`/`$r` | Maximum quality | Full | 43+/50 | Thorough |
-| **$builder** | `$builder`/`$b` | Platform prompts | Full | 40+/50 | Standard |
-| **$quick** | `$quick`/`$q` | Fast processing | Auto-scaled | 38+/50 | Very Fast |
-| **$json** | `$json`/`$j` | API format | Full | 38+/50 | Standard |
-| **$yaml** | `$yaml`/`$y` | Config/templates | Full | 40+/50 | Standard |
+| Mode | Command | Purpose | DEPTH Processing | Output Format | Speed |
+|------|---------|---------|------------------|---------------|-------|
+| **Interactive** | (default) | Guided enhancement | 10 rounds auto | User choice | Standard |
+| **$short** | `$short`/`$s` | Minimal refinement | 3 rounds quick | User choice | Fast |
+| **$improve** | `$improve`/`$i` | Standard enhancement | 10 rounds auto | User choice | Standard |
+| **$refine** | `$refine`/`$r` | Maximum optimization | 10 rounds auto | User choice | Thorough |
+| **$quick** | `$quick`/`$q` | Fast processing | 1-5 auto-scaled | Auto-selected | Very Fast |
+| **$json** | `$json`/`$j` | API format | 10 rounds auto | JSON preset | Standard |
+| **$yaml** | `$yaml`/`$y` | Config format | 10 rounds auto | YAML preset | Standard |
 
-### Example Flows
-
-**Standard Enhancement:**
+### Interactive Flow (Default) - Smart Questions
 ```
-User: $improve my prompt
+Welcome! I'll help enhance your prompt for maximum effectiveness. 🎯
 
-System: 🎯 Analyzing your request...
-        
-        Format Selection:
-        1. Standard    2. YAML    3. JSON
-        
-        Your choice? (1, 2, or 3)
+Please share:
+- Your current prompt, or
+- What you need the AI to do
 
-User: 1
+[SYSTEM ANALYZES COMPLEXITY]
 
-System: • Optimizing structure
-        • Enhancing clarity
-        • Building framework
-        
-        [Creates artifact]
-```
+[IF COMPLEXITY 5-6:]
+Framework Selection Available:
 
-**Quick Mode (No Questions):**
-```
-User: $quick fix the grammar checking prompt
+Option A: RCAF (Recommended)
+✓ 4 essential elements
+✓ Better clarity score
 
-System: Enhancing immediately...
-        
-        [Instant artifact with smart defaults]
-```
+Option B: CRAFT
+✓ 5 comprehensive elements
+✓ More complete coverage
 
-**Moderate Complexity (5-6):**
-```
-User: Create a comprehensive analysis system
+Which framework? (A or B)
 
-System: 🎯 Analyzing your request...
+[THEN ALWAYS:]
+Output Structure Selection:
+1. Standard - Natural language
+2. JSON - Structured data
+3. YAML - Configuration structure
 
-        Framework Selection Available:
-        
-        Option A: RCAF (Recommended)
-        ✓ 4 essential elements
-        ✓ Better clarity score
-        
-        Option B: CRAFT
-        ✓ 5 comprehensive elements
-        ✓ More complete coverage
-        
-        Which framework? (A or B)
+Your choice? (1, 2, or 3)
 ```
 
 ---
 
-<a id="format-options"></a>
-## 📄 Format Options
+<a id="output-formats"></a>
+## 🔄 Output Formats
 
 ### Three Format System
+| Format | Best For | Token Impact | CLEAR Average | Symbol |
+|--------|----------|--------------|---------------|---------|
+| **Standard** | Natural language, clarity | Baseline | 43/50 | 📝 |
+| **JSON** | API integration, structured | +5-10% | 41/50 | 🔧 |
+| **YAML** | Templates, configuration | +3-7% | 42/50 | ⚙️ |
 
-| Format | Token Impact | Best For | CLEAR Average | Processing |
-|--------|--------------|----------|---------------|------------|
-| **Standard** | Baseline | Natural language, clarity | 43/50 | Optimized |
-| **YAML** | +3-7% | Templates, config, human-editable | 42/50 | Structured |
-| **JSON** | +5-10% | APIs, structured data | 41/50 | Precise |
+### Format Selection Matrix
+| Use Case | Recommended Format | Reasoning |
+|----------|-------------------|-----------|
+| Human interaction | Standard | Maximum clarity |
+| API endpoints | JSON | Machine-parseable |
+| Config files | YAML | Human-editable |
+| Templates | YAML | Easy customization |
+| Documentation | Standard | Readability |
 
-### Format Examples (All with Automatic Processing)
+---
 
-**Standard Artifact:**
-```
-Mode: $improve | Complexity: Medium | Framework: RCAF | CLEAR: 43/50
+<a id="depth-thinking-framework"></a>
+## 🧠 DEPTH Thinking Framework
 
-Role: Data analyst with SaaS metrics expertise.
-Context: Q4 2024 revenue data from B2B platform.
-Action: Calculate MRR growth and identify top 3 trends.
-Format: Executive summary with metrics and charts.
-```
+### Automatic DEPTH Processing System
+| Mode | Processing Depth | User Choice | Application | Output |
+|------|-----------------|-------------|-------------|---------|
+| **Standard Modes** | 10 rounds enforced | None | Automatic | Enhanced prompt |
+| **$quick Mode** | 1-5 auto-scaled | None | Complexity-based | Enhanced prompt |
 
-**YAML Artifact:**
-```
-Mode: $yaml | Complexity: Medium | Framework: RCAF | CLEAR: 42/50
+**DEPTH Definition:**
+DEPTH methodology (Discover, Engineer, Prototype, Test, Harmonize) automatically optimizes every prompt while maintaining exact scope.
 
-role: Data analyst with SaaS metrics expertise
-context: Q4 2024 revenue data from B2B platform
-action: Calculate MRR growth and identify top 3 trends
-format:
-  structure: executive_summary
-  include:
-    - metrics
-    - charts
-    - recommendations
-```
+### DEPTH Phases (Applied Silently)
+| Phase | Purpose | Internal Process | User Sees |
+|-------|---------|------------------|-----------|
+| **D**iscover | Requirements analysis | Multiple perspectives on SAME prompt | "🎯 Analyzing your request..." |
+| **E**ngineer | Framework application | Optimal structure for SAME prompt | "• Optimizing structure" |
+| **P**rototype | Build enhancement | Create exact enhancement | "• Enhancing clarity" |
+| **T**est | Quality validation | CLEAR scoring (target 40+/50) | "• Building framework" |
+| **H**armonize | Final polish | Excellence for output | Polished artifact |
 
-**JSON Artifact:**
-```
-Mode: $json | Complexity: Medium | Framework: RCAF | CLEAR: 41/50
-
-{
-  "role": "Data analyst with SaaS metrics expertise",
-  "context": "Q4 2024 revenue data from B2B platform",
-  "action": "Calculate MRR growth and identify top 3 trends",
-  "format": "Executive summary with metrics and charts"
-}
+### Quick Mode Scaling
+```markdown
+Complexity Detection → Auto-Scale Rounds:
+- Simple (1-2): 1-2 rounds → 38/50 CLEAR
+- Low (3-4): 3 rounds → 40/50 CLEAR
+- Medium (5-6): 4 rounds → 41/50 CLEAR
+- High (7+): 5 rounds → 40/50 CLEAR
 ```
 
 ---
 
-<a id="intelligent-processing"></a>
-## 🧠 Intelligent Processing
+<a id="automatic-complexity-detection"></a>
+## 🎯 Automatic Complexity Detection
 
-### Automatic Optimization System
+### For Prompt Enhancement
+| Indicators | Complexity | Framework | User Choice | DEPTH | Output |
+|------------|------------|-----------|-------------|-------|---------|
+| fix, improve, clarify | **Simple (1-4)** | RCAF auto | Format only | 10 rounds (1-2 if $quick) | Enhanced prompt |
+| analyze, create, generate | **Moderate (5-6)** | User choice | Framework + Format | 10 rounds (4 if $quick) | Enhanced prompt |
+| comprehensive, system, platform | **High (7+)** | Challenge offered | Simplify option + Format | 10 rounds (5 if $quick) | Enhanced prompt |
 
-**What Users See:**
+### Framework Selection Logic
+System automatically determines optimal approach:
+- Simple requests → RCAF framework automatic
+- Moderate complexity → Offers RCAF vs CRAFT choice
+- High complexity → Suggests streamlined vs comprehensive
+- Defaults to RCAF when unclear (70% of cases)
+
+### Output Guarantee Examples
 ```
-🎯 Analyzing your request...
-• Optimizing structure
-• Enhancing clarity
-• Building framework
+User: "write about dogs"
+→ RCAF framework for THAT dog content only
+NOT: Multiple prompts about animals
 
-Creating your enhanced prompt...
+User: "analyze customer data"
+→ Enhanced prompt for THAT analysis only
+NOT: Extra analysis features
+
+User: "comprehensive platform system"
+→ Challenge mode for THAT system only
+NOT: Multiple system prompts
 ```
-
-**What Happens Behind the Scenes:**
-- **Standard Mode**: Full 10-round comprehensive analysis
-- **Quick Mode**: Auto-scaled 1-5 rounds based on complexity
-- **All Processing**: Completely automatic and invisible
-- **Quality Assured**: Every output optimized for CLEAR 40+/50
-
-### Complexity Management
-
-| Complexity | User Experience | Framework | Processing |
-|------------|----------------|-----------|------------|
-| **1-4** | Format choice only | RCAF automatic | Full optimization |
-| **5-6** | Framework choice offered | User selects A/B | Full optimization |
-| **7+** | Simplification suggested | Challenge mode | Deep analysis |
-
-### Processing Indicators
-
-Users only see simple, friendly messages:
-- "🎯 Analyzing your request..."
-- "• Optimizing approach"
-- "• Enhancing clarity"
-- "• Building framework"
-- "Creating your enhanced prompt..."
-
-No technical terminology, no methodology details, just results.
-
----
-
-<a id="challenge-mode-philosophy"></a>
-## 🚀 Challenge Mode Philosophy
-
-> "The best prompt is not the most complete, it is the clearest."
-
-### Automatic Simplification (Complexity 7+)
-
-When high complexity is detected, the system offers:
-
-```
-High Complexity Detected (Level 8)
-
-I can enhance this two ways:
-
-Option A: Streamlined Enhancement
-- Focus on essential elements only
-- RCAF framework (4 elements)
-- Projected CLEAR: 43/50
-
-Option B: Comprehensive Enhancement
-- Full complexity maintained
-- CRAFT framework (5 elements)
-- Projected CLEAR: 41/50
-
-Your preference? (A or B)
-```
-
-### CLEAR-Based Challenge Triggers
-
-| CLEAR Score | Action | Invisible Processing |
-|-------------|--------|---------------------|
-| 45-50 | Polish only | Minimal enhancement |
-| 40-44 | Minor improvements | Standard optimization |
-| 35-39 | Suggest RCAF | Full analysis |
-| 30-34 | Push for RCAF | Deep optimization |
-| <30 | Force RCAF rewrite | Complete transformation |
 
 ---
 
@@ -312,55 +272,38 @@ Your preference? (A or B)
 ## ⭐ RCAF Framework
 
 ### The Essential Four Elements
+**Primary framework for 70% of prompts - maximum clarity with minimum complexity**
 
-**Role, Context, Action, Format** - Maximum clarity with minimum complexity
+| Element | Symbol | Purpose | Example |
+|---------|--------|---------|---------|
+| **Role** | 👤 | Specific expertise | "Data analyst with visualization expertise" |
+| **Context** | 🌍 | Essential background | "Q4 2024 sales data, 100K transactions" |
+| **Action** | 🎯 | Clear, measurable task | "Identify top 3 revenue drivers" |
+| **Format** | 📋 | Output requirements | "Executive dashboard with insights" |
 
-All formats receive automatic intelligent optimization:
+### RCAF vs CRAFT Decision
+| Complexity | Framework | Elements | When to Use |
+|------------|-----------|----------|-------------|
+| **1-4** | RCAF | 4 | Automatic selection |
+| **5-6** | User choice | 4 or 5 | Based on preference |
+| **7+** | Challenge mode | 4 (streamlined) or 5 (comprehensive) | Simplification offered |
 
-**Standard Format (Most Clear):**
-```
+### Example Transformation
+```markdown
+Before (Vague):
+"analyze the data"
+CLEAR Score: 20/50
+
+After (RCAF Enhanced):
 Mode: $improve | Complexity: Medium | Framework: RCAF | CLEAR: 43/50
 
-Role: Senior data analyst specializing in customer behavior.
-Context: Q4 2024 sales data from e-commerce platform, 100K transactions.
-Action: Identify top 3 revenue drivers and create predictive model for Q1 2025.
-Format: Executive dashboard with bullet insights and visual charts.
-```
+Role: Business analyst with predictive modeling expertise.
+Context: Q4 2024 performance data across all departments.
+Action: Identify top 3 growth opportunities and predict Q1 2025 trends.
+Format: Executive presentation with 5 key insights and actionable recommendations.
 
-**YAML Format (Best for Templates):**
+Improvement: +23 points (115% gain)
 ```
-Mode: $yaml | Complexity: Medium | Framework: RCAF | CLEAR: 42/50
-
-role: Senior data analyst specializing in customer behavior
-context: Q4 2024 sales data from e-commerce platform, 100K transactions
-action: Identify top 3 revenue drivers and create predictive model
-format:
-  type: executive_dashboard
-  include:
-    - bullet_insights
-    - visual_charts
-    - predictive_model
-```
-
-### Real Transformation Example
-
-**Before (Vague):**
-```
-"analyze the data and give insights"
-CLEAR Score: 22/50 (Grade: F)
-```
-
-**After (Automatic Processing Applied):**
-```
-Mode: $improve | Complexity: Medium | Framework: RCAF | CLEAR: 45/50
-
-Role: Business intelligence analyst with predictive modeling expertise.
-Context: Using Q4 2024 performance data across all departments and regions.
-Action: Identify top 3 growth opportunities and predict Q1 2025 trends with confidence intervals.
-Format: Executive presentation with 5 key insights, supporting charts, and actionable recommendations.
-```
-
-**Improvement:** 22/50 → 45/50 (+23 points, 104% gain)
 
 ---
 
@@ -368,130 +311,143 @@ Format: Executive presentation with 5 key insights, supporting charts, and actio
 ## ✅ CLEAR Evaluation System
 
 ### Five Dimensions of Quality
+Every prompt automatically scored on these dimensions (1-10 points each):
 
-Every enhancement automatically scored on these dimensions:
+| Dimension | Focus | Target | Measures |
+|-----------|-------|--------|----------|
+| **C**orrectness | Accuracy | 8+/10 | Requirements captured correctly |
+| **L**ogic/Coverage | Completeness | 8+/10 | All aspects addressed |
+| **E**xpression | Clarity | 9+/10 | How clearly expressed |
+| **A**rrangement | Structure | 8+/10 | Organization quality |
+| **R**euse | Adaptability | 7+/10 | Template potential |
 
-| Dimension | Focus | What It Measures | Target | Auto-Enhancement |
-|-----------|-------|------------------|--------|------------------|
-| **Correctness** | Accuracy | Requirements captured | 8+/10 | ✓ |
-| **Logic/Coverage** | Completeness | All aspects covered | 8+/10 | ✓ |
-| **Expression** | Clarity | How clearly expressed | 9+/10 | ✓ |
-| **Arrangement** | Structure | Organization quality | 8+/10 | ✓ |
-| **Reuse** | Adaptability | Template potential | 7+/10 | ✓ |
-
-### Grade Scale with Automatic Actions
-
-| Score | Grade | System Action |
-|-------|-------|---------------|
-| 45-50 | A+ | Deliver immediately |
-| 40-44 | A | Minor polish and deliver |
-| 35-39 | B | Auto-enhance weak areas |
-| 30-34 | C | Switch to RCAF automatically |
-| 25-29 | D | Force RCAF restructure |
-| <25 | F | Complete rewrite with RCAF |
+### CLEAR Grade Scale
+| Score | Grade | Action | Processing |
+|-------|-------|--------|------------|
+| **45-50** | A+ | Ship immediately | Minimal polish |
+| **40-44** | A | Minor improvements | Standard target |
+| **35-39** | B | Enhance weak areas | Focus on low scores |
+| **30-34** | C | Switch to RCAF | Framework change |
+| **<30** | D/F | Complete rewrite | Full restructure |
 
 ---
 
-<a id="artifact-delivery-format"></a>
-## 📦 Artifact Delivery Format
+<a id="header-format"></a>
+## 📊 Header Format
 
-### MANDATORY: Ultra-Minimal Format
-
-**Every artifact contains EXACTLY:**
+### Artifact Delivery Standard
+**Every artifact has exactly:**
 ```
 Mode: $[mode] | Complexity: [level] | Framework: [RCAF/CRAFT] | CLEAR: [X]/50
 
 [Enhanced prompt content]
 ```
 
-### What's Included
-- **Single-line header**: Mode, Complexity, Framework, CLEAR score
-- **Enhanced content**: The optimized prompt
-- **Nothing else**: Maximum focus
+### Header Components
+| Component | Format | Example | Required |
+|-----------|--------|---------|----------|
+| **Mode** | `$[command]` | `$improve` | Yes |
+| **Complexity** | Low/Medium/High | `Medium` | Yes |
+| **Framework** | RCAF or CRAFT | `RCAF` | Yes |
+| **CLEAR** | Score/50 | `43/50` | Yes |
 
 ### What's NOT Included
 - ❌ Format Options section
-- ❌ CLEAR Evaluation breakdown
-- ❌ Processing Applied section
-- ❌ Technical methodology details
-- ❌ Internal processing information
-- ❌ Extra dividers or sections
+- ❌ CLEAR breakdown details
+- ❌ Processing methodology
+- ❌ Extra dividers
+- ❌ Additional metadata
 
 ---
 
-<a id="repair-error-protocol"></a>
-## 🚨 REPAIR Error Protocol
+<a id="troubleshooting"></a>
+## 🆘 Troubleshooting
 
-System automatically recovers from issues:
+### Common Issues & Solutions
+| Issue | Solution | Prevention |
+|-------|----------|------------|
+| Unclear request | System asks for clarification | Provide complete context |
+| High complexity | Challenge mode offers simplification | Accept streamlined option |
+| Wrong format | Specify format command ($json, $yaml) | Use format modes directly |
+| Too verbose | Switch to RCAF framework | Choose Option A when offered |
 
-| Issue | Auto-Fix Applied | User Experience |
-|-------|-----------------|-----------------|
-| Ambiguous request | Clarification requested | "Could you provide more details about..." |
-| Missing elements | RCAF structure added | Automatic completion |
-| Over-complexity | Simplification offered | "I can streamline this..." |
-| Format issues | Correct format applied | Seamless delivery |
-| Poor structure | Reorganization applied | Better flow created |
-| Low clarity | RCAF restructure | Expression improved |
-
-### REPAIR Process
+### Error Recovery (REPAIR)
 - **R**ecognize - Detect issue automatically
-- **E**xplain - Simple user message if needed
-- **P**ropose - Offer solution (often invisible)
-- **A**dapt - Apply fix automatically
-- **I**terate - Test and verify quality
-- **R**ecord - Learn for session patterns
+- **E**xplain - Simple message to user
+- **P**ropose - Offer solution
+- **A**dapt - Apply fix silently
+- **I**terate - Verify quality
+- **R**ecord - Learn for session
 
 ---
 
-<a id="performance-metrics"></a>
-## 📊 Performance Metrics
+<a id="version-history"></a>
+## 📦 Version History
 
-### System Performance
+### v0.860 (Current)
+- Enhanced interactive mode flow
+- Smart quick mode scaling (1-5 rounds)
+- Bug fixes and logic improvements
+- Better UX with cleaner messages
 
-| Metric | Target | Current | Notes |
-|--------|--------|---------|-------|
-| **Automatic Processing** | 100% | 100% | Every request optimized |
-| **Artifact Format Compliance** | 100% | 100% | Minimal format always |
-| **Average CLEAR Score** | 40+/50 | 43/50 | With automatic processing |
-| **RCAF Usage Rate** | 70% | 72% | Clarity prioritized |
-| **Expression Average** | 9+/10 | 9.2/10 | RCAF benefit |
-| **First-Pass Success** | 80% | 85% | Quality consistency |
-| **Processing Time** | <2s | 1.5s avg | Fast delivery |
+### v0.850
+- Automatic DEPTH processing
+- Silent excellence implementation
+- Framework selection at complexity 5-6
+- Challenge mode at complexity 7+
 
-### Format Performance
+### Future Roadmap
+- Additional format options
+- Enhanced pattern library
+- Improved session learning
+- Extended framework support
 
-| Format | Usage Rate | Avg CLEAR | Token Overhead | User Satisfaction |
-|--------|------------|-----------|----------------|-------------------|
-| **Standard** | 60% | 43/50 | Baseline | 92% |
-| **YAML** | 25% | 42/50 | +3-7% | 89% |
-| **JSON** | 15% | 41/50 | +5-10% | 87% |
+---
 
-### Typical Improvements
+## 🎯 Quick Command Reference
 
-| Starting Score | Typical Result | Improvement | Processing Applied |
-|---------------|----------------|-------------|-------------------|
-| <20/50 (F) | 40-45/50 (A) | +20-25 points | Full 10 rounds |
-| 20-29/50 (D) | 38-43/50 (B+/A) | +15-20 points | Full 10 rounds |
-| 30-39/50 (C/B) | 40-45/50 (A) | +8-12 points | Full 10 rounds |
-| 40+/50 (A) | 43-48/50 (A+) | +3-5 points | Polish only |
+### Standard Commands
+```markdown
+[request]            # Interactive mode with guided questions
+$improve [request]   # Standard enhancement with RCAF
+$refine [request]    # Maximum optimization
+$short [request]     # Minimal quick enhancement
+```
 
-### Quick Mode Performance
+### Speed Command
+```markdown
+$quick [request]     # Immediate enhancement, 1-5 rounds auto-scaled
+```
 
-| Complexity | Processing Rounds | Avg CLEAR | Time | Quality |
-|------------|------------------|-----------|------|---------|
-| **Simple (1-2)** | 1-2 rounds | 38/50 | <0.5s | Good |
-| **Low (3-4)** | 3-4 rounds | 40/50 | <0.8s | Very Good |
-| **Medium (5-6)** | 4-5 rounds | 41/50 | <1s | Excellent |
-| **High (7+)** | 5 rounds max | 40/50 | <1.2s | Optimized |
+### Format Commands
+```markdown
+$json [request]      # JSON structure output
+$yaml [request]      # YAML configuration output
+```
 
-### Session Pattern Learning
+---
 
-The system learns from your choices within the current conversation:
+## 📚 Core Principles Summary
 
-| Session Interactions | Learning Stage | Behavior |
-|---------------------|----------------|----------|
-| 1-3 | Recognition | Observes your choices |
-| 4-6 | Adaptation | Suggests based on patterns |
-| 7+ | Optimization | Streamlines based on preferences |
+### DEPTH Processing Guarantee
+```
+User Request: "analyze customer data"
+↓
+Internal DEPTH Analysis:
+- 5 perspectives analyze SAME data task
+- Framework optimized for SAME analysis
+- Quality enhanced for SAME requirement
+↓
+Output: ONE enhanced prompt
+- Exactly what user requested
+- No additional features
+- Perfect RCAF format
+- CLEAR score 40+/50
+```
 
-**Note:** All patterns are session-only and reset with each new conversation.
+### Best Practices
+- Use interactive mode for guidance
+- Trust automatic complexity detection
+- Accept framework recommendations
+- Let system handle DEPTH silently
+- Expect exact enhancement of request
