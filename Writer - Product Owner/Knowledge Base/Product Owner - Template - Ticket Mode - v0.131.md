@@ -1,4 +1,4 @@
-# Product Owner - Template - Ticket Mode - v0.130
+# Product Owner - Template - Ticket Mode - v0.131
 
 Streamlined ticket templates with integrated formatting rules and quality standards. All delivery logic consolidated for self-contained operation.
 
@@ -8,15 +8,15 @@ Streamlined ticket templates with integrated formatting rules and quality standa
 1. [🎫 TICKET MODE OVERVIEW](#1-ticket-mode-overview)
 2. [📦 DELIVERY STANDARDS](#2-delivery-standards)
 3. [📏 COMPLEXITY AUTO-SCALING](#3-complexity-auto-scaling)
-4. [🔵 SIMPLE TICKET TEMPLATE](#4-simple-ticket-template)
-5. [🟠 STANDARD TICKET TEMPLATE](#5-standard-ticket-template)
-6. [🔴 COMPLEX TICKET TEMPLATE](#6-complex-ticket-template)
-7. [📖 STORY TEMPLATES](#7-story-templates)
-8. [⚡ QUICK MODE TEMPLATES](#8-quick-mode-templates)
-9. [✨ FORMATTING RULES & STANDARDS](#9-formatting-rules--standards)
-10. [🗣️ INTERACTIVE QUESTIONS](#10-interactive-questions)
-11. [✅ QUALITY CHECKLIST](#11-quality-checklist)
-12. [🚨 ERROR RECOVERY](#12-error-recovery)
+4. [✨ FORMATTING RULES & STANDARDS](#4-formatting-rules--standards)
+5. [🗣️ INTERACTIVE QUESTIONS](#5-interactive-questions)
+6. [✅ QUALITY CHECKLIST](#6-quality-checklist)
+7. [🚨 ERROR RECOVERY](#7-error-recovery)
+8. [🔵 SIMPLE TICKET TEMPLATE](#8-simple-ticket-template)
+9. [🟠 STANDARD TICKET TEMPLATE](#9-standard-ticket-template)
+10. [🔴 COMPLEX TICKET TEMPLATE](#10-complex-ticket-template)
+11. [📖 STORY TEMPLATES](#11-story-templates)
+12. [⚡ QUICK MODE TEMPLATES](#12-quick-mode-templates)
 
 ---
 
@@ -62,6 +62,36 @@ Streamlined ticket templates with integrated formatting rules and quality standa
 - **Multiple Perspectives:** All analyze the SAME requirement
 - **Convergent Output:** Many approaches considered, ONE delivered
 
+### Never:
+- Use `text/plain` → Causes raw markdown display
+- Mix artifact and response text
+- Ask about thinking rounds (automatic now)
+- Place artifact details at bottom or middle
+- Use horizontal formatting for details
+- Skip DEPTH phase documentation
+- Hide process transparency
+- Create before user responds to comprehensive question
+- Answer own questions
+- Include Table of Contents
+- Use H3/H4 symbols
+- Place header at bottom
+- Add unrequested features
+- Expand scope beyond request
+
+### Always:
+- Use proper `text/markdown` type
+- Document mode and scaling applied
+- Use dash bullet formatting vertically
+- Note template version compliance
+- Apply DEPTH methodology consistently
+- Wait for user input on ALL content questions
+- Position About first (after header)
+- Integrate context in About narrative
+- Use clean H3/H4 headers
+- Place header at top of artifact
+- Deliver exactly what was requested
+- Use `---` separators appropriately
+
 ---
 
 ## 3. 📏 COMPLEXITY AUTO-SCALING
@@ -76,341 +106,16 @@ Streamlined ticket templates with integrated formatting rules and quality standa
 - User requests "bug fix" → Simple template for THAT bug only
 - NOT: Simple template with multiple bugs or extra fixes
 
----
-
-## 4. 🔵 SIMPLE TICKET TEMPLATE
-
-```markdown
-Mode: $ticket | Complexity: Simple | Template: v0.130
----
-[BUG] Feature: {name}
-
-# ⌘ About
-
-**Impact:** {user-facing issue in 1 line}  
-**Scope:** {affected area}  
-**Priority:** P{0-3}
+### DEPTH Processing Standards
+- **Silent excellence:** User never sees methodology details
+- **Automatic application:** No user choice on depth
+- **Multiple perspectives:** All analyze SAME requirement
+- **Single output:** One ticket covering exact request
+- **No scope expansion:** Complexity affects template size, not feature count
 
 ---
 
-## ✦ Success Criteria
-
-- Bug is fixed and verified
-- No regressions introduced
-- Tests updated and passing
-
----
-
-## ⌥ Designs & References
-
-| Type | Resource | Link |
-|------|----------|------|
-| Bug Report | JIRA-{id} | [Link - to be added] |
-| Screenshot | Error state | [Link - to be added] |
-
----
-
-## ❖ Requirements
-
-### ◻︎ Functional
-- Fix: {specific user issue}
-- Validate: {user scenario}
-- Test: {acceptance test}
-
----
-
-## ✓ Resolution Checklist
-
-⚠️ Complete all items before moving to QA
-
-[] Root cause identified
-[] Fix implemented  
-[] Tests updated
-[] No regressions
-[] PR documented
-[] QA verified
-```
-
----
-
-## 5. 🟠 STANDARD TICKET TEMPLATE
-
-```markdown
-Mode: $ticket | Complexity: Standard | Template: v0.130
----
-[FEATURE] Service: {name}
-
-# ⌘ About
-
-**Purpose:** {what users can do - 1 line}  
-**Value:** {business impact - 1 line}  
-**Users:** {primary audience}
-
-[Problems integrated in narrative: Currently, users experience {issue}, 
-which impacts {metric}. This feature addresses these pain points by {solution}.]
-
----
-
-## ✦ Success Criteria
-
-- Users complete {key action} successfully
-- Page loads within {X}ms threshold
-- Feature adoption reaches {X}% target
-- Support tickets remain below {X}/week
-
----
-
-## ⌥ Designs & References
-
-| Type | Status | Link |
-|------|--------|------|
-| Design | Complete | [Figma - to be added] |
-| User Flow | Draft | [Miro - to be added] |
-| PRD | Approved | [Doc - to be added] |
-
----
-
-## ❖ Requirements
-
-### ◻︎ Functional
-- Core: {what users can do}
-- Data: {information displayed}
-- UX: {how users interact}
-- [Status note: "API design 80% complete"]
-
-### ◻︎ Non-Functional
-- Performance: {specific metrics}
-- Security: {requirements}
-- Scale: {capacity needs}
-- Accessibility: WCAG 2.1 AA
-
-### ◻︎ Acceptance Criteria
-- Given: {initial state}
-- When: {user action}
-- Then: {expected result}
-
----
-
-## ✓ Resolution Checklist
-
-⚠️ Complete all items before moving to QA
-
-[] Core functionality built
-[] Input validation complete
-[] Error handling implemented
-[] Unit tests >80%
-[] Integration tests passing
-[] Documentation updated
-[] Analytics tracked
-[] Security reviewed
-[] Browser testing done
-[] Mobile responsive
-[] Design approved
-[] Code reviewed
-```
-
----
-
-## 6. 🔴 COMPLEX TICKET TEMPLATE
-
-```markdown
-Mode: $ticket | Complexity: Complex | Template: v0.130
----
-[PLATFORM] Migration: {name}
-
-# ⌘ About
-
-**Objective:** {strategic goal - 1 line}  
-**Impact:** {affected users/systems}  
-**Timeline:** Q1-Q2 2025  
-**Investment:** ${amount}
-
-[Integrated narrative: This migration addresses current platform limitations 
-including {problem1}, {problem2}, and {problem3}. By migrating, we achieve 
-{benefit1} while mitigating risks through {approach}.]
-
----
-
-## ✦ Success Criteria
-
-- Uptime maintained at 99.9% during migration
-- Zero customer data loss
-- Performance improved by 40%
-- Cost reduced by 30%
-- Compliance requirements met
-- All users successfully migrated
-
----
-
-## ⌥ Designs & References
-
-| Component | Status | Owner | Link |
-|-----------|--------|-------|------|
-| Architecture | Complete | Platform | [Miro - to be added] |
-| Migration Plan | Draft | Product | [Confluence - to be added] |
-| Performance | Baseline | Analytics | [DataDog - to be added] |
-| Security | In Review | Security | [Report - to be added] |
-
----
-
-## ❖ Requirements
-
-### ◻︎ Phase 1: Foundation (Week 1-2)
-- Infrastructure setup complete
-- Core services migrated
-- Authentication system ready
-- Monitoring configured
-- [Status note: "Environment provisioning in progress"]
-
-### ◻︎ Phase 2: Migration (Week 3-4)
-- Data migration executed
-- Service cutover completed
-- Traffic routing updated
-- Legacy system decommissioned
-
-### ◻︎ Phase 3: Optimization (Week 5-6)
-- Performance tuning complete
-- Cost optimization applied
-- Documentation finalized
-- Team training delivered
-
-### ◻︎ Integration Requirements
-- Payment system: Maintained throughout
-- Email service: Zero downtime
-- Analytics: Continuous tracking
-- Partners: Uninterrupted access
-
----
-
-## ∅ Risks & Mitigations
-
-| Risk | Probability | Impact | Mitigation |
-|------|-------------|--------|------------|
-| Data loss | Low | High | Incremental backups, validation scripts |
-| Downtime | Medium | High | Blue-green deployment, rollback plan |
-| Performance degradation | Low | Medium | Load testing, gradual rollout |
-| Integration failures | Medium | Medium | Contract testing, monitoring |
-
----
-
-## ✓ Resolution Checklist
-
-⚠️ Complete all items before moving to QA
-
-### ◻︎ Planning
-[] Business case approved
-[] Stakeholder signoff
-[] Migration strategy final
-[] Rollback plan documented
-
-### ◻︎ Development
-[] Environment ready
-[] Phase 1 complete
-[] Test suite built
-[] Security audited
-[] Load tested
-[] Documentation ready
-
-### ◻︎ Validation
-[] Integration tested
-[] Data migration verified
-[] UAT complete
-[] Performance validated
-
-### ◻︎ Deployment
-[] Runbooks created
-[] Team trained
-[] Staged rollout done
-[] Metrics monitored
-[] Performance optimized
-[] Documentation published
-```
-
----
-
-## 7. 📖 STORY TEMPLATES
-
-### Story Format Differences
-- **No Resolution Checklist** - Stories use narrative format
-- **Same structure** otherwise - About, Success, Designs, Requirements
-- **Focus on user journey** - Emphasize user perspective
-- **Acceptance criteria** - More prominent than in tickets
-
-### Simple Story Example
-```markdown
-Mode: $story | Complexity: Simple | Template: v0.130
----
-[STORY] As a user, I want to {action} so that {benefit}
-
-# ⌘ About
-
-**User Need:** {what problem this solves}  
-**Business Value:** {why this matters}  
-**Scope:** {BE/FE/Mobile/FS}
-
-[Integration of context: Users currently struggle with {issue}, 
-causing {impact}. This story delivers {solution}.]
-
----
-
-## ✦ Success Criteria
-
-- I can {primary action}
-- The system {response}
-- My data is {state}
-
----
-
-## ⌥ Designs & References
-
-| Type | Resource | Link |
-|------|----------|------|
-| Mockup | User flow | [Link - to be added] |
-| Spec | Requirements | [Link - to be added] |
-
----
-
-## ❖ Requirements
-
-### ◻︎ Acceptance Criteria
-Given I am {initial state}
-When I {action}
-Then I see {result}
-
-[NOTE: No Resolution Checklist for stories]
-```
-
----
-
-## 8. ⚡ QUICK MODE TEMPLATES
-
-### Quick Mode Rules
-- **NO questions asked** - System proceeds immediately
-- **Auto-detection** - Complexity determined from keywords
-- **1-5 round scaling** - Based on detected complexity
-- **Minimal format** - Essential sections only
-- **Same scope discipline** - Only requested content
-
-### $quick ticket
-```markdown
-Mode: $quick | Complexity: Auto-scaled | Template: v0.130
----
-[FIX] {feature}: {issue}
-
-# ⌘ About
-**Problem:** {what users experience}  
-**Solution:** {how to fix}  
-
-## ✓ Quick Checklist
-[] Implement fix
-[] Test locally
-[] Deploy staging
-[] Verify prod
-```
-
----
-
-## 9. ✨ FORMATTING RULES & STANDARDS
+## 4. ✨ FORMATTING RULES & STANDARDS
 
 ### Mandatory Structure Elements
 
@@ -444,10 +149,37 @@ Mode: $quick | Complexity: Auto-scaled | Template: v0.130
 - Exception: No blank line after final divider
 - Consistent spacing throughout
 - Clean H3/H4 headers without symbols
+- Use `---` as major section separators
+
+### Content Integration
+- Context and purpose integrated in About
+- No separate problem lists
+- Clear narrative flow throughout
+- Documentation covers ONLY requested feature
+
+### Ticket Focus Areas
+
+**Bug Fixes:**
+- Root cause analysis
+- Impact assessment
+- Fix implementation
+- Testing requirements
+
+**Feature Development:**
+- User requirements [only requested features]
+- Technical specifications [for requested system]
+- Acceptance criteria [relevant to request]
+- Success metrics [of requested functionality]
+
+**Platform Changes:**
+- Migration strategy [for requested platform]
+- Risk assessment [within scope]
+- Rollback plans [for requested changes]
+- Performance targets [as requested]
 
 ---
 
-## 10. 🗣️ INTERACTIVE QUESTIONS
+## 5. 🗣️ INTERACTIVE QUESTIONS
 
 ### Ticket Mode Interactive Flow
 
@@ -500,7 +232,7 @@ Processing now...
 
 ---
 
-## 11. ✅ QUALITY CHECKLIST
+## 6. ✅ QUALITY CHECKLIST
 
 ### Pre-Creation Validation
 - [] DEPTH methodology applied (10 rounds standard, 1-5 quick)?
@@ -530,10 +262,21 @@ Processing now...
 - [] Placeholder links included?
 - [] No Table of Contents?
 - [] No unrequested features?
+- [] Content limited to requested feature?
+
+### Mode-Specific Validation
+- [] Header at top?
+- [] About integrated with context?
+- [] Success criteria quantified?
+- [] Resolution checklist scaled (4-6/8-12/12-20)?
+- [] Structure logical?
+- [] Separators used correctly?
+- [] 10-round DEPTH applied?
+- [] Only requested feature covered?
 
 ---
 
-## 12. 🚨 ERROR RECOVERY
+## 7. 🚨 ERROR RECOVERY
 
 ### Common Errors & Fixes
 
@@ -558,8 +301,14 @@ Processing now...
 #### Missing Status Notes
 **Fix:** Add `[Status note: "description"]` format
 
+#### Missing Separators
+**Fix:** Add `---` between major sections
+
+#### Table of Contents Included
+**Fix:** Remove ToC, rely on external tools
+
 ### Prevention Strategies
-1. Apply DEPTH automatically (no user choice)
+1. Apply DEPTH automatically (10 rounds standard, 1-5 quick)
 2. Wait for comprehensive response
 3. Check template version
 4. Verify symbol hierarchy
@@ -568,3 +317,336 @@ Processing now...
 7. Limit output to request
 8. Use correct artifact type
 9. Include all required elements
+10. NEVER answer own questions
+
+---
+
+## 8. 🔵 SIMPLE TICKET TEMPLATE
+
+```markdown
+Mode: $ticket | Complexity: Simple | Template: v0.130
+---
+[BUG] Feature: {name}
+
+# ⌘ About
+
+**Impact:** {user-facing issue in 1 line}  
+**Scope:** {affected area}  
+**Priority:** P{0-3}
+
+---
+
+## ✦ Success Criteria
+
+- Bug is fixed and verified
+- No regressions introduced
+- Tests updated and passing
+
+---
+
+## ⌥ Designs & References
+
+| Type | Resource | Link |
+|------|----------|------|
+| Bug Report | JIRA-{id} | [Link - to be added] |
+| Screenshot | Error state | [Link - to be added] |
+
+---
+
+## ❖ Requirements
+
+### ◻️ Functional
+- Fix: {specific user issue}
+- Validate: {user scenario}
+- Test: {acceptance test}
+
+---
+
+## ✓ Resolution Checklist
+
+⚠️ Complete all items before moving to QA
+
+[] Root cause identified
+[] Fix implemented  
+[] Tests updated
+[] No regressions
+[] PR documented
+[] QA verified
+```
+
+---
+
+## 9. 🟠 STANDARD TICKET TEMPLATE
+
+```markdown
+Mode: $ticket | Complexity: Standard | Template: v0.130
+---
+[FEATURE] Service: {name}
+
+# ⌘ About
+
+**Purpose:** {what users can do - 1 line}  
+**Value:** {business impact - 1 line}  
+**Users:** {primary audience}
+
+[Problems integrated in narrative: Currently, users experience {issue}, 
+which impacts {metric}. This feature addresses these pain points by {solution}.]
+
+---
+
+## ✦ Success Criteria
+
+- Users complete {key action} successfully
+- Page loads within {X}ms threshold
+- Feature adoption reaches {X}% target
+- Support tickets remain below {X}/week
+
+---
+
+## ⌥ Designs & References
+
+| Type | Status | Link |
+|------|--------|------|
+| Design | Complete | [Figma - to be added] |
+| User Flow | Draft | [Miro - to be added] |
+| PRD | Approved | [Doc - to be added] |
+
+---
+
+## ❖ Requirements
+
+### ◻️ Functional
+- Core: {what users can do}
+- Data: {information displayed}
+- UX: {how users interact}
+- [Status note: "API design 80% complete"]
+
+### ◻️ Non-Functional
+- Performance: {specific metrics}
+- Security: {requirements}
+- Scale: {capacity needs}
+- Accessibility: WCAG 2.1 AA
+
+### ◻️ Acceptance Criteria
+- Given: {initial state}
+- When: {user action}
+- Then: {expected result}
+
+---
+
+## ✓ Resolution Checklist
+
+⚠️ Complete all items before moving to QA
+
+[] Core functionality built
+[] Input validation complete
+[] Error handling implemented
+[] Unit tests >80%
+[] Integration tests passing
+[] Documentation updated
+[] Analytics tracked
+[] Security reviewed
+[] Browser testing done
+[] Mobile responsive
+[] Design approved
+[] Code reviewed
+```
+
+---
+
+## 10. 🔴 COMPLEX TICKET TEMPLATE
+
+```markdown
+Mode: $ticket | Complexity: Complex | Template: v0.130
+---
+[PLATFORM] Migration: {name}
+
+# ⌘ About
+
+**Objective:** {strategic goal - 1 line}  
+**Impact:** {affected users/systems}  
+**Timeline:** Q1-Q2 2025  
+**Investment:** ${amount}
+
+[Integrated narrative: This migration addresses current platform limitations 
+including {problem1}, {problem2}, and {problem3}. By migrating, we achieve 
+{benefit1} while mitigating risks through {approach}.]
+
+---
+
+## ✦ Success Criteria
+
+- Uptime maintained at 99.9% during migration
+- Zero customer data loss
+- Performance improved by 40%
+- Cost reduced by 30%
+- Compliance requirements met
+- All users successfully migrated
+
+---
+
+## ⌥ Designs & References
+
+| Component | Status | Owner | Link |
+|-----------|--------|-------|------|
+| Architecture | Complete | Platform | [Miro - to be added] |
+| Migration Plan | Draft | Product | [Confluence - to be added] |
+| Performance | Baseline | Analytics | [DataDog - to be added] |
+| Security | In Review | Security | [Report - to be added] |
+
+---
+
+## ❖ Requirements
+
+### ◻️ Phase 1: Foundation (Week 1-2)
+- Infrastructure setup complete
+- Core services migrated
+- Authentication system ready
+- Monitoring configured
+- [Status note: "Environment provisioning in progress"]
+
+### ◻️ Phase 2: Migration (Week 3-4)
+- Data migration executed
+- Service cutover completed
+- Traffic routing updated
+- Legacy system decommissioned
+
+### ◻️ Phase 3: Optimization (Week 5-6)
+- Performance tuning complete
+- Cost optimization applied
+- Documentation finalized
+- Team training delivered
+
+### ◻️ Integration Requirements
+- Payment system: Maintained throughout
+- Email service: Zero downtime
+- Analytics: Continuous tracking
+- Partners: Uninterrupted access
+
+---
+
+## ∅ Risks & Mitigations
+
+| Risk | Probability | Impact | Mitigation |
+|------|-------------|--------|------------|
+| Data loss | Low | High | Incremental backups, validation scripts |
+| Downtime | Medium | High | Blue-green deployment, rollback plan |
+| Performance degradation | Low | Medium | Load testing, gradual rollout |
+| Integration failures | Medium | Medium | Contract testing, monitoring |
+
+---
+
+## ✓ Resolution Checklist
+
+⚠️ Complete all items before moving to QA
+
+### ◻️ Planning
+[] Business case approved
+[] Stakeholder signoff
+[] Migration strategy final
+[] Rollback plan documented
+
+### ◻️ Development
+[] Environment ready
+[] Phase 1 complete
+[] Test suite built
+[] Security audited
+[] Load tested
+[] Documentation ready
+
+### ◻️ Validation
+[] Integration tested
+[] Data migration verified
+[] UAT complete
+[] Performance validated
+
+### ◻️ Deployment
+[] Runbooks created
+[] Team trained
+[] Staged rollout done
+[] Metrics monitored
+[] Performance optimized
+[] Documentation published
+```
+
+---
+
+## 11. 📖 STORY TEMPLATES
+
+### Story Format Differences
+- **No Resolution Checklist** - Stories use narrative format
+- **Same structure** otherwise - About, Success, Designs, Requirements
+- **Focus on user journey** - Emphasize user perspective
+- **Acceptance criteria** - More prominent than in tickets
+
+### Simple Story Example
+```markdown
+Mode: $story | Complexity: Simple | Template: v0.130
+---
+[STORY] As a user, I want to {action} so that {benefit}
+
+# ⌘ About
+
+**User Need:** {what problem this solves}  
+**Business Value:** {why this matters}  
+**Scope:** {BE/FE/Mobile/FS}
+
+[Integration of context: Users currently struggle with {issue}, 
+causing {impact}. This story delivers {solution}.]
+
+---
+
+## ✦ Success Criteria
+
+- I can {primary action}
+- The system {response}
+- My data is {state}
+
+---
+
+## ⌥ Designs & References
+
+| Type | Resource | Link |
+|------|----------|------|
+| Mockup | User flow | [Link - to be added] |
+| Spec | Requirements | [Link - to be added] |
+
+---
+
+## ❖ Requirements
+
+### ◻️ Acceptance Criteria
+Given I am {initial state}
+When I {action}
+Then I see {result}
+
+[NOTE: No Resolution Checklist for stories]
+```
+
+---
+
+## 12. ⚡ QUICK MODE TEMPLATES
+
+### Quick Mode Rules
+- **NO questions asked** - System proceeds immediately
+- **Auto-detection** - Complexity determined from keywords
+- **1-5 round scaling** - Based on detected complexity
+- **Minimal format** - Essential sections only
+- **Same scope discipline** - Only requested content
+
+### $quick ticket
+```markdown
+Mode: $quick | Complexity: Auto-scaled | Template: v0.130
+---
+[FIX] {feature}: {issue}
+
+# ⌘ About
+**Problem:** {what users experience}  
+**Solution:** {how to fix}  
+
+## ✓ Quick Checklist
+[] Implement fix
+[] Test locally
+[] Deploy staging
+[] Verify prod
+```
