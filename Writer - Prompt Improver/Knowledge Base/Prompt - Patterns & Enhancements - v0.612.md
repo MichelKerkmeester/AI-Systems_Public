@@ -1,18 +1,18 @@
-# Prompt - Patterns & Enhancements - v0.610
+# Prompt - Patterns & Enhancements - v0.612
 
 Comprehensive prompt engineering framework with RCAF/CRAFT patterns, CLEAR evaluation, advanced reasoning techniques, and performance-driven optimization strategies with automatic DEPTH processing and support for Standard, JSON, and YAML formats.
 
-**CRITICAL:** All patterns benefit from automatic 10-round DEPTH processing. All enhancements must be delivered as artifacts with minimal header only.
+**CRITICAL:** All patterns benefit from automatic 10-round DEPTH processing (1-5 rounds in quick mode). All enhancements must be delivered as artifacts with minimal header only.
 
 ---
 
 ## 📋 Table of Contents
 
 1. [🚀 QUICK TEMPLATES](#-quick-templates)
-2. [📝 CORE PATTERNS - RCAF & CRAFT](#-core-patterns---rcaf--craft)
+2. [🔍 CORE PATTERNS - RCAF & CRAFT](#-core-patterns---rcaf--craft)
 3. [✅ CLEAR EVALUATION SYSTEM](#-clear-evaluation-system)
 4. [🧠 ADVANCED REASONING TECHNIQUES](#-advanced-reasoning-techniques)
-5. [📊 FORMAT EFFICIENCY](#-format-efficiency)
+5. [📊 OUTPUT STRUCTURE EFFICIENCY](#-output-structure-efficiency)
 6. [🎯 DEPTH-ENHANCED TECHNIQUES](#-depth-enhanced-techniques)
 7. [⚙️ REACT PATTERN - REASONING & ACTION](#-react-pattern---reasoning--action)
 8. [🌳 TREE OF THOUGHTS (TOT) PATTERN](#-tree-of-thoughts-tot-pattern)
@@ -37,10 +37,11 @@ def apply_template_with_depth():
     
     processing = {
         'methodology': 'DEPTH',
-        'rounds': 10,  # Standard depth
+        'rounds': 10,  # Standard depth (1-5 for quick mode)
         'phases': ['Discover', 'Engineer', 'Prototype', 'Test', 'Harmonize'],
         'optimization': 'automatic',
-        'quality_target': 'CLEAR 40+/50'
+        'quality_target': 'CLEAR 40+/50',
+        'depth_bonus': '+5 total (+1 per dimension)'
     }
     
     return enhanced_template
@@ -48,13 +49,13 @@ def apply_template_with_depth():
 
 ### Enhanced Template Matrix - RCAF Optimized
 
-| Type | Purpose | Framework | CLEAR Target | Performance | Processing |
-|------|---------|-----------|--------------|-------------|------------|
-| **Analysis** | Analyze topic focusing on aspects | RCAF | Expression: 9/10 | Speed: 100ms | DEPTH-optimized |
-| **Creation** | Create deliverable for audience | RCAF | Arrangement: 9/10 | Speed: 200ms | DEPTH applied |
-| **Solution** | Solve problem with approach | RCAF | Correctness: 9/10 | Speed: 150ms | DEPTH analysis |
-| **Research** | Research topic finding insights | RCAF/CRAFT | Coverage: 9/10 | Speed: 300ms | DEPTH-enhanced |
-| **Complex** | Multi-step workflow execution | CRAFT | All: 40+/50 | Speed: 400ms | Full DEPTH |
+| Type | Purpose | Framework | CLEAR Target (Base) | CLEAR with DEPTH | Processing |
+|------|---------|-----------|-------------------|------------------|------------|
+| **Analysis** | Analyze topic focusing on aspects | RCAF | 38+/50 | 43+/50 | DEPTH-optimized |
+| **Creation** | Create deliverable for audience | RCAF | 37+/50 | 42+/50 | DEPTH applied |
+| **Solution** | Solve problem with approach | RCAF | 38+/50 | 43+/50 | DEPTH analysis |
+| **Research** | Research topic finding insights | RCAF/CRAFT | 37+/50 | 42+/50 | DEPTH-enhanced |
+| **Complex** | Multi-step workflow execution | CRAFT | 35+/50 | 40+/50 | Full DEPTH |
 
 ### RCAF Quick Template
 ```
@@ -85,10 +86,10 @@ Format: [Clear output requirements]
 | **RCAF** | 4 | Baseline | 9/10 | DEPTH |
 | **CRAFT** | 5 | +10-15% | 7/10 | DEPTH |
 
-### Format Token Impact
+### Output Structure Token Impact
 
-| Format | Overhead | Best For | Enhancement |
-|--------|----------|----------|-------------|
+| Structure | Overhead | Best For | Enhancement |
+|-----------|----------|----------|-------------|
 | **Standard** | Baseline | Natural language | DEPTH-optimized |
 | **JSON** | +5-10% | APIs | Structure enhanced |
 | **YAML** | +3-7% | Configuration | Template ready |
@@ -97,7 +98,7 @@ Format: [Clear output requirements]
 
 <a id="-core-patterns---rcaf--craft"></a>
 
-## 2. 📝 CORE PATTERNS - RCAF & CRAFT
+## 2. 🔍 CORE PATTERNS - RCAF & CRAFT
 
 ### Pattern Application with Automatic DEPTH Enhancement
 
@@ -108,8 +109,9 @@ class PatternApplication:
     def apply_pattern(self, pattern_type, content):
         # Automatic DEPTH processing
         self.processing_methodology = 'DEPTH'
-        self.processing_rounds = 10
+        self.processing_rounds = 10  # Standard (1-5 for quick)
         self.optimization = 'automatic'
+        self.depth_bonus = 5  # +1 per dimension
         
         # Execute DEPTH phases silently
         depth_phases = {
@@ -185,7 +187,7 @@ Mode: $improve | Complexity: Medium | Framework: RCAF | CLEAR: 44/50
 Role: You are the Chief of Staff with executive communication expertise.
 Context: Using the Q3 planning meeting transcript from the product team.
 Action: Extract all decisions, risks, action items with owners, and key discussion points.
-Format: Return exactly 7 bullets for executives - must include at least one risk and one decision. Use neutral, concise tone with no jargon.
+Format: Return exactly 7 bullets for executives. Must include at least one risk and one decision. Use neutral, concise tone with no jargon.
 ```
 
 ### CRAFT Pattern (Alternative - When Comprehensive Needed)
@@ -195,7 +197,7 @@ Format: Return exactly 7 bullets for executives - must include at least one risk
 **Automatic Complexity Check:**
 ```python
 if complexity < 7:
-    print("🔍 RCAF might be clearer. Use simplified approach? (recommended)")
+    print("RCAF might be clearer. Use simplified approach? (recommended)")
     if user_agrees:
         return use_rcaf_with_depth_optimization()
 ```
@@ -222,10 +224,15 @@ Target: [Success metrics and outcomes]
 
 ### Pattern Comparison with CLEAR Scores
 
-| Pattern | Avg CLEAR | Correctness | Logic | Expression | Arrangement | Reuse | Best Format | Processing |
-|---------|-----------|-------------|-------|------------|-------------|-------|-------------|------------|
-| **RCAF** | 43/50 | 8.5 | 8.0 | 9.5 | 9.0 | 8.0 | Standard/YAML | DEPTH |
-| **CRAFT** | 41/50 | 9.0 | 9.0 | 7.5 | 8.0 | 7.5 | Standard | DEPTH |
+**CLEAR Scoring System:**
+- Each dimension: 1-10 points
+- 5 dimensions × 10 = 50 total possible
+- DEPTH processing adds +1 per dimension = +5 total
+
+| Pattern | Avg CLEAR (Base) | With DEPTH | Correctness | Logic | Expression | Arrangement | Reuse | Best Format | Processing |
+|---------|-----------------|------------|-------------|-------|------------|-------------|-------|-------------|------------|
+| **RCAF** | 38/50 | 43/50 | 7.5 | 7.0 | 8.5 | 8.0 | 7.0 | Standard/YAML | DEPTH |
+| **CRAFT** | 36/50 | 41/50 | 8.0 | 8.0 | 6.5 | 7.0 | 6.5 | Standard | DEPTH |
 
 ### Chain-of-Thought Enhanced RCAF
 
@@ -254,21 +261,95 @@ Format: [Structured reasoning output]
 
 **Correctness, Logic/Coverage, Expression, Arrangement, Reuse**
 
-Each dimension scored 1-10, total 50 points possible.
+**Scoring System:**
+- Each dimension scored 1-10 points
+- Total possible: 50 points (5 dimensions × 10)
+- DEPTH processing adds +1 per dimension = +5 total
+- Automatic scoring before and after enhancement
+- Delivered in artifact header
 
-**Automatic scoring before and after enhancement via DEPTH processing, delivered in artifact header.**
+**Score Targets:**
+| Range | Status | Interpretation | Action Required |
+|-------|--------|----------------|-----------------|
+| **45-50** | Excellent | 90%+ quality | Ship immediately |
+| **40-44** | Standard Target | 80-88% quality | Minor polish only |
+| **35-39** | Minimum Viable | 70-78% quality | Target weak areas |
+| **30-34** | Below Target | 60-68% quality | Consider framework switch |
+| **<30** | Failing | <60% quality | Complete rewrite with RCAF |
 
-### Format Impact on CLEAR Scores
+### Detailed Scoring Rubric
 
-| Format | Correctness | Logic | Expression | Arrangement | Reuse | Average | Processing |
-|--------|-------------|-------|------------|-------------|-------|---------|------------|
-| **Standard** | 0 | 0 | +1 | 0 | 0 | 43/50 | DEPTH-optimized |
-| **JSON** | +1 | +1 | -1 | +1 | +1 | 41/50 | DEPTH-structured |
-| **YAML** | 0 | +1 | 0 | +1 | +1 | 42/50 | DEPTH-template |
+#### Correctness (C) - Accuracy & Requirements
+| Score | Description | Indicators |
+|-------|-------------|------------|
+| 9-10 | Perfect accuracy | All facts correct, requirements captured, no ambiguity |
+| 7-8 | Mostly accurate | Minor clarifications needed, 90% correct |
+| 5-6 | Adequate accuracy | Some errors, needs verification |
+| 3-4 | Poor accuracy | Multiple errors, missing requirements |
+| 1-2 | Incorrect | Fundamental misunderstandings |
+
+#### Logic/Coverage (L) - Completeness & Flow
+| Score | Description | Indicators |
+|-------|-------------|------------|
+| 9-10 | Complete coverage | All requirements addressed, perfect flow |
+| 7-8 | Good coverage | Minor gaps, logical progression |
+| 5-6 | Adequate coverage | Some gaps, logic mostly clear |
+| 3-4 | Poor coverage | Major gaps, logic issues |
+| 1-2 | Incomplete | Critical omissions |
+
+#### Expression (E) - Clarity & Conciseness
+| Score | Description | Indicators |
+|-------|-------------|------------|
+| 9-10 | Crystal clear | Perfect clarity, optimally concise |
+| 7-8 | Clear | Minor ambiguities, well-expressed |
+| 5-6 | Understandable | Some confusion, wordy |
+| 3-4 | Unclear | Ambiguous, verbose |
+| 1-2 | Confusing | Cannot understand intent |
+
+#### Arrangement (A) - Structure & Organization
+| Score | Description | Indicators |
+|-------|-------------|------------|
+| 9-10 | Perfect structure | Optimal organization, clear hierarchy |
+| 7-8 | Good structure | Well-organized, minor improvements |
+| 5-6 | Adequate structure | Basic organization present |
+| 3-4 | Poor structure | Disorganized, hard to follow |
+| 1-2 | No structure | Random, chaotic |
+
+#### Reuse (R) - Adaptability & Templates
+| Score | Description | Indicators |
+|-------|-------------|------------|
+| 9-10 | Highly reusable | Perfect template, easily adapted |
+| 7-8 | Good reusability | Minor modifications needed |
+| 5-6 | Some reusability | Moderate changes required |
+| 3-4 | Limited reuse | Major rework needed |
+| 1-2 | Single-use only | Not adaptable |
+
+### Automatic DEPTH Processing Bonus
+
+**DEPTH Enhancement:** +1 point per dimension through automatic optimization = +5 total
+
+**Example:**
+```
+Base Scores:
+- Correctness: 7/10
+- Logic: 7/10
+- Expression: 8/10
+- Arrangement: 8/10
+- Reuse: 6/10
+Base Total: 36/50
+
+With DEPTH Bonus (+1 each):
+- Correctness: 8/10
+- Logic: 8/10
+- Expression: 9/10
+- Arrangement: 9/10
+- Reuse: 7/10
+Final Total: 41/50 ✔
+```
 
 ### CLEAR Application Example
 
-**High-Scoring RCAF Artifact (45/50):**
+**High-Scoring RCAF Artifact (45/50 with DEPTH):**
 
 ```
 Mode: $improve | Complexity: Medium | Framework: RCAF | CLEAR: 45/50
@@ -278,6 +359,10 @@ Context: Q4 2024 sales data from e-commerce platform, 100K transactions.
 Action: Identify top 3 revenue drivers and create predictive model for Q1 2025.
 Format: Executive dashboard with bullet insights and visual charts.
 ```
+
+**Score Breakdown:**
+- Base: 40/50 (C:8, L:8, E:9, A:8, R:7)
+- With DEPTH: 45/50 (C:9, L:9, E:10, A:9, R:8)
 
 ---
 
@@ -293,10 +378,10 @@ def apply_reasoning_pattern(pattern_type, content):
     
     # All patterns get DEPTH processing
     depth_config = {
-        'cot': {'rounds': 10, 'focus': 'step_by_step'},
-        'few_shot': {'rounds': 10, 'focus': 'pattern_learning'},
-        'react': {'rounds': 10, 'focus': 'iterative'},
-        'tot': {'rounds': 10, 'focus': 'branching'}
+        'cot': {'rounds': 10, 'focus': 'step_by_step', 'bonus': 5},
+        'few_shot': {'rounds': 10, 'focus': 'pattern_learning', 'bonus': 5},
+        'react': {'rounds': 10, 'focus': 'iterative', 'bonus': 5},
+        'tot': {'rounds': 10, 'focus': 'branching', 'bonus': 5}
     }
     
     pattern_config = depth_config.get(pattern_type)
@@ -338,40 +423,44 @@ Now apply to: Input: [new] → Output: [generate]
 
 ---
 
-<a id="-format-efficiency"></a>
+<a id="-output-structure-efficiency"></a>
 
-## 5. 📊 FORMAT EFFICIENCY
+## 5. 📊 OUTPUT STRUCTURE EFFICIENCY
 
-### Format Selection with Framework Pairing
+### Output Structure Selection with Framework Pairing
 
-| Framework | Best Format | Token Impact | CLEAR Impact | Use Case | Processing |
-|-----------|------------|--------------|--------------|----------|------------|
-| **RCAF + Standard** | Default choice | Baseline | E:+2, A:+1 | Most prompts | DEPTH-optimized |
-| **RCAF + JSON** | API/structured | +5-10% | C:+1, L:+1 | APIs | DEPTH-enhanced |
-| **RCAF + YAML** | Configuration | +3-7% | A:+1, R:+1 | Templates | DEPTH-structured |
-| **CRAFT + Standard** | Complex natural | +10-15% | L:+2 | Detailed | Deep DEPTH |
-| **CRAFT + JSON** | Complex structured | +15-20% | L:+2, A:+1 | Complex APIs | Full DEPTH |
-| **CRAFT + YAML** | Complex config | +12-17% | L:+1, A:+1 | Complex templates | Complete DEPTH |
+**Terminology:**
+- **Framework** = Prompt organization (RCAF vs CRAFT)
+- **Output Structure** = Data format (Standard vs JSON vs YAML)
 
-### Format Selection Algorithm with CLEAR
+| Framework | Best Structure | Token Impact | CLEAR Impact (Base) | CLEAR with DEPTH | Use Case | Processing |
+|-----------|---------------|--------------|---------------------|------------------|----------|------------|
+| **RCAF + Standard** | Default choice | Baseline | E:+2, A:+1 (38) | 43/50 | Most prompts | DEPTH-optimized |
+| **RCAF + JSON** | API/structured | +5-10% | C:+1, L:+1 (36) | 41/50 | APIs | DEPTH-enhanced |
+| **RCAF + YAML** | Configuration | +3-7% | A:+1, R:+1 (37) | 42/50 | Templates | DEPTH-structured |
+| **CRAFT + Standard** | Complex natural | +10-15% | L:+2 (37) | 42/50 | Detailed | Deep DEPTH |
+| **CRAFT + JSON** | Complex structured | +15-20% | L:+2, A:+1 (35) | 40/50 | Complex APIs | Full DEPTH |
+| **CRAFT + YAML** | Complex config | +12-17% | L:+1, A:+1 (36) | 41/50 | Complex templates | Complete DEPTH |
+
+### Output Structure Selection Algorithm with CLEAR
 
 ```python
-def select_optimal_format(framework, complexity, constraints):
+def select_optimal_structure(framework, complexity, constraints):
     """
-    Select format based on framework and requirements
-    Returns format and expected CLEAR score impact
+    Select structure based on framework and requirements
+    Returns structure and expected CLEAR score impact
     """
     
-    # DEPTH optimization ensures quality
-    depth_bonus = 2  # DEPTH processing bonus
+    # DEPTH optimization ensures quality (+5 bonus)
+    depth_bonus = 5  # +1 per dimension
     
     if framework == 'RCAF':
         if constraints.get('api_integration'):
-            return 'json', {'C': +1 + depth_bonus, 'L': +1}
+            return 'json', {'C': +1 + 1, 'L': +1 + 1}  # +1 structure, +1 DEPTH each
         elif constraints.get('human_editable'):
-            return 'yaml', {'A': +1 + depth_bonus, 'R': +1}
+            return 'yaml', {'A': +1 + 1, 'R': +1 + 1}
         else:
-            return 'standard', {'E': +2 + depth_bonus, 'A': +1}
+            return 'standard', {'E': +2 + 1, 'A': +1 + 1}
     
     elif framework == 'CRAFT':
         # Similar logic with DEPTH bonus
@@ -392,8 +481,9 @@ def apply_depth_enhancement(prompt):
     # Automatic DEPTH processing (hidden from user)
     processing = {
         'methodology': 'DEPTH',
-        'rounds': 10,
-        'optimization': 'automatic'
+        'rounds': 10,  # Standard (1-5 for quick)
+        'optimization': 'automatic',
+        'bonus': '+5 total (+1 per dimension)'
     }
     
     phases = {
@@ -419,6 +509,7 @@ def apply_depth_enhancement(prompt):
             'clear_scoring': True,
             'validate_requirements': True,
             'check_quality': True,
+            'apply_depth_bonus': '+5',
             'time': '20%'
         },
         'harmonize': {
@@ -443,7 +534,7 @@ def apply_depth_enhancement(prompt):
 - **D**iscover: Identify vague requirements, need for specificity
 - **E**ngineer: Apply RCAF framework, optimize for clarity
 - **P**rototype: Build structured enhancement
-- **T**est: CLEAR score validation (target 40+)
+- **T**est: CLEAR score validation (base 38+, target 40+ with DEPTH)
 - **H**armonize: Polish and deliver artifact
 
 **Delivered Artifact:**
@@ -455,6 +546,10 @@ Context: Using Q4 2024 performance metrics from all departments.
 Action: Analyze trends, identify top 3 opportunities, and provide actionable recommendations.
 Format: Executive report with visual dashboard and 5 key insights.
 ```
+
+**Score Details:**
+- Base scores: C:7, L:7, E:8, A:8, R:8 = 38/50
+- With DEPTH (+5): C:8, L:8, E:9, A:9, R:9 = 43/50
 
 ---
 
@@ -555,13 +650,13 @@ Format: Recommendation with rationale based on highest score.
 
 | Metric Category | Target | Measurement | Optimization | CLEAR Dimension | Processing |
 |-----------------|--------|-------------|--------------|-----------------|------------|
-| **DEPTH Complete** | 100% | Application rate | Automatic | All | 10 rounds |
+| **DEPTH Complete** | 100% | Application rate | Automatic | All | 10 rounds (1-5 quick) |
 | **Artifact Delivery** | 100% | Success rate | Mandatory | All | Enhanced |
 | **Accuracy** | >95% | Task completion | RCAF precision | Correctness | DEPTH-optimized |
 | **Coverage** | >90% | Requirements met | Framework choice | Logic/Coverage | Deep DEPTH |
 | **Clarity** | >90% | Ambiguity reduction | RCAF emphasis | Expression | Clear |
 | **Structure** | >85% | Organization quality | Pattern selection | Arrangement | Organized |
-| **Efficiency** | <200ms | Processing time | Format selection | All dimensions | Fast |
+| **Efficiency** | Optimal | Token management | Format selection | All dimensions | Optimized |
 | **Reusability** | >80% | Template adaptation | YAML templates | Reuse | Flexible |
 
 ### Performance Optimization Strategy with CLEAR
@@ -574,12 +669,13 @@ def optimize_prompt_performance(prompt, clear_scores, format_pref=None):
     processing = {
         'methodology': 'DEPTH',
         'rounds': 10,
-        'optimization': 'applied'
+        'optimization': 'applied',
+        'bonus': 5  # +1 per dimension
     }
     
     optimizations = {
         'correctness': add_verification_steps,
-        'coverage': expand_requirements,
+        'logic': expand_requirements,
         'expression': simplify_to_rcaf,
         'arrangement': restructure_sections,
         'reuse': parameterize_template
@@ -607,7 +703,8 @@ class SessionPatternTracker:
     def __init__(self):
         self.framework_choices = []
         self.format_choices = []
-        self.clear_scores = []
+        self.clear_scores_base = []
+        self.clear_scores_with_depth = []
         self.complexity_levels = []
         self.depth_rounds = []  # Track DEPTH processing
         
@@ -615,7 +712,8 @@ class SessionPatternTracker:
         """Learn from current session"""
         self.framework_choices.append(interaction.framework)
         self.format_choices.append(interaction.format)
-        self.clear_scores.append(interaction.clear_score)
+        self.clear_scores_base.append(interaction.clear_base)
+        self.clear_scores_with_depth.append(interaction.clear_base + 5)
         self.complexity_levels.append(interaction.complexity)
         self.depth_rounds.append(10)  # Standard DEPTH
         
@@ -630,15 +728,15 @@ class SessionPatternTracker:
 
 ### Pattern Usage Tracking with CLEAR
 
-| Pattern | Usage Rate | Success Rate | Avg CLEAR | Best Complexity | User Satisfaction | Preferred Format | Processing |
-|---------|------------|--------------|-----------|-----------------|-------------------|------------------|------------|
-| **RCAF** | 45% | 92% | 43/50 | 1-4 | 91% | Standard/YAML | DEPTH |
-| **RCAF+CoT** | 20% | 90% | 44/50 | 4-6 | 88% | Standard | Deep DEPTH |
-| **CRAFT** | 15% | 88% | 41/50 | 7-10 | 85% | Standard | Full DEPTH |
-| **RCAF+ReAct** | 10% | 87% | 42/50 | 5-7 | 86% | YAML | Iterative DEPTH |
-| **RCAF+ToT** | 10% | 91% | 43/50 | 6-8 | 89% | YAML | Branching DEPTH |
+| Pattern | Usage Rate | Success Rate | Avg CLEAR (Base) | Avg CLEAR (DEPTH) | Best Complexity | User Satisfaction | Preferred Format | Processing |
+|---------|------------|--------------|------------------|-------------------|-----------------|-------------------|------------------|------------|
+| **RCAF** | 45% | 92% | 38/50 | 43/50 | 1-4 | 91% | Standard/YAML | DEPTH |
+| **RCAF+CoT** | 20% | 90% | 39/50 | 44/50 | 4-6 | 88% | Standard | Deep DEPTH |
+| **CRAFT** | 15% | 88% | 36/50 | 41/50 | 7-10 | 85% | Standard | Full DEPTH |
+| **RCAF+ReAct** | 10% | 87% | 37/50 | 42/50 | 5-7 | 86% | YAML | Iterative DEPTH |
+| **RCAF+ToT** | 10% | 91% | 38/50 | 43/50 | 6-8 | 89% | YAML | Branching DEPTH |
 
-**NOTE:** All patterns benefit from automatic 10-round DEPTH processing.
+**NOTE:** All patterns benefit from automatic 10-round DEPTH processing (+5 CLEAR bonus).
 
 ---
 
@@ -663,13 +761,13 @@ class SessionPatternTracker:
 def select_recovery_pattern(error_type, current_clear_scores):
     """Select recovery based on CLEAR scores with automatic DEPTH fix"""
     
-    # Automatic DEPTH processing handles recovery
-    processing = {'rounds': 10, 'mode': 'recovery'}
+    # Automatic DEPTH processing handles recovery (+5 bonus)
+    processing = {'rounds': 10, 'mode': 'recovery', 'bonus': 5}
     
     # Recovery matrix with DEPTH enhancement
     recovery_matrix = {
         'ambiguity': ('rcaf', 'expression', 'standard'),
-        'incomplete': ('craft', 'coverage', 'yaml'),
+        'incomplete': ('craft', 'logic', 'yaml'),
         'over_complex': ('rcaf', 'expression', 'standard'),
         'logic_error': ('rcaf_cot', 'correctness', 'standard'),
         'poor_structure': ('rcaf', 'arrangement', 'yaml'),
@@ -702,7 +800,7 @@ Context: Creating optimal prompt for: [task description]
 Action: Generate RCAF-structured prompt considering:
 - Appropriate reasoning pattern (CoT, ReAct, ToT)
 - Optimal format (Standard, JSON, YAML)
-- Target CLEAR score of 43+/50
+- Target CLEAR score of 40+ base (45+ with DEPTH)
 - Minimum complexity needed
 - DEPTH optimization applied automatically
 - Mandatory artifact delivery
@@ -743,44 +841,49 @@ Format: Safe response with explanation if request modified.
 ```
         ┌─────────────────┐
         │      RCAF       │ (Default: 1-4 complexity, 70% of cases)
-        │  [DEPTH 10r]    │ [Automatic optimization]
+        │  [DEPTH 10r]    │ [Automatic optimization, +5 bonus]
         ├─────────────────┤
         │   RCAF + CoT    │ (Reasoning: 4-6 complexity)
-        │  [Deep DEPTH]   │ [Step-by-step enhancement]
+        │  [Deep DEPTH]   │ [Step-by-step enhancement, +5 bonus]
         ├─────────────────┤
         │  RCAF + ReAct   │ (Iterative: 5-7 complexity)
-        │   [Iterative]   │ [Cycle optimization]
+        │   [Iterative]   │ [Cycle optimization, +5 bonus]
         ├─────────────────┤
         │   RCAF + ToT    │ (Decisions: 6-8 complexity)
-        │   [Branching]   │ [Path analysis]
+        │   [Branching]   │ [Path analysis, +5 bonus]
         ├─────────────────┤
         │     CRAFT       │ (Comprehensive: 7+ complexity, 15% of cases)
-        │   [Full DEPTH]  │ [Complete coverage]
+        │   [Full DEPTH]  │ [Complete coverage, +5 bonus]
         └─────────────────┘
 ```
 
-### Format Selection Philosophy
+### Output Structure Selection Philosophy
 
 ```
         ┌─────────────────┐
         │    Standard     │ (Default: 60% of cases, maximum clarity)
-        │ [DEPTH-optimized]│
+        │ [DEPTH-optimized]│ [+5 bonus, E:+2, A:+1]
         ├─────────────────┤
         │      YAML       │ (Config/Templates: 20%, human-editable)
-        │ [DEPTH-structured]│
+        │ [DEPTH-structured]│ [+5 bonus, A:+1, R:+1]
         ├─────────────────┤
         │      JSON       │ (APIs: 20%, machine-parseable)
-        │ [DEPTH-formatted] │
+        │ [DEPTH-formatted] │ [+5 bonus, C:+1, L:+1]
         └─────────────────┘
 ```
 
 ### Core Guidelines with CLEAR
 
+**CLEAR Scoring Reminder:**
+- Each dimension: 1-10 points
+- 5 dimensions × 10 = 50 total
+- DEPTH bonus: +1 per dimension = +5 total
+
 | Principle | Description | Priority | CLEAR Focus | Processing |
 |-----------|-------------|----------|-------------|------------|
 | **Automatic DEPTH** | 10-round processing handles optimization | 1.0 | All | Always |
 | **Artifact Always** | Never deliver in chat | 1.0 | All | Mandatory |
-| **Minimal Header Only** | Single line + content | 1.0 | All | Standard |
+| **Minimal Header Only** | Single line with $ prefix + content | 1.0 | All | Standard |
 | **Clarity First** | RCAF's 4 elements beat CRAFT's 5 | 0.9 | Expression | DEPTH-enhanced |
 | **Complete Coverage** | Include all requirements | 0.9 | Logic/Coverage | Deep DEPTH |
 | **Correct Information** | Accuracy matters most | 0.9 | Correctness | Verified |
@@ -796,14 +899,15 @@ Format: Safe response with explanation if request modified.
 **Decision Framework:**
 ```python
 def should_use_pattern(task, pattern, format):
-    # DEPTH processing ensures quality
-    processing = {'rounds': 10, 'methodology': 'DEPTH'}
+    # DEPTH processing ensures quality (+5 bonus)
+    processing = {'rounds': 10, 'methodology': 'DEPTH', 'bonus': 5}
     
     current_clear = evaluate_without_pattern(task)
-    projected_clear = evaluate_with_pattern(task, pattern)
+    projected_clear_base = evaluate_with_pattern(task, pattern)
+    projected_clear_with_depth = projected_clear_base + 5
     format_overhead = calculate_format_tokens(format)
     
-    clear_improvement = projected_clear - current_clear
+    clear_improvement = projected_clear_with_depth - current_clear
     
     # Pattern worth it if CLEAR improves by 5+ points
     # DEPTH optimization handles the rest
@@ -816,13 +920,14 @@ def should_use_pattern(task, pattern, format):
 ### Success Metrics Summary
 
 **Excellent Prompt Engineering Achieves:**
-- ✅ 100% automatic DEPTH processing (10 rounds)
+- ✅ 100% automatic DEPTH processing (10 rounds standard, 1-5 quick)
 - ✅ 100% artifact delivery compliance
-- ✅ 100% minimal header format (no extra sections)
+- ✅ 100% minimal header format with $ prefix (no extra sections)
 - ✅ RCAF used 70%+ of the time
-- ✅ Average CLEAR score > 43/50
+- ✅ Average CLEAR base score > 38/50
+- ✅ Average CLEAR with DEPTH > 43/50
 - ✅ Expression score > 9/10
-- ✅ Correctness > 9/10
+- ✅ Correctness > 9/10 (with DEPTH)
 - ✅ Right pattern for the task
 - ✅ Optimal format selection
 - ✅ Minimal complexity overhead
@@ -834,7 +939,7 @@ def should_use_pattern(task, pattern, format):
 **Before (Vague):**
 ```
 "Analyze customer data and tell me what's important"
-CLEAR: 20/50
+CLEAR Base: 20/50
 ```
 
 **After - Artifact (DEPTH-Enhanced):**
@@ -847,8 +952,10 @@ Action: Identify top 3 churn indicators and segment at-risk customers.
 Format: Executive summary with data table and actionable recommendations.
 ```
 
-**Improvement:** +25 points (125% improvement) with automatic DEPTH enhancement
+**Improvement:** 
+- Base score: 40/50 (100% improvement)
+- With DEPTH: 45/50 (125% improvement from original)
 
-**Format Guides:** For complete format specifications:
+**Output Structure Guides:** For complete format specifications:
 - → **Prompt - JSON Format Guide.md**
 - → **Prompt - YAML Format Guide.md**

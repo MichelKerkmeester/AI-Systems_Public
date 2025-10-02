@@ -1,6 +1,6 @@
-# Prompt - YAML Format Guide - v0.101
+# Prompt - YAML Format Guide - v0.103
 
-Comprehensive guide for YAML format prompt engineering with RCAF/CRAFT frameworks, CLEAR scoring, conversion methods, and optimization strategies.
+Comprehensive guide for YAML output structure in prompt engineering with RCAF/CRAFT frameworks, CLEAR scoring, conversion methods, and optimization strategies.
 
 ---
 
@@ -10,7 +10,7 @@ Comprehensive guide for YAML format prompt engineering with RCAF/CRAFT framework
 2. [📊 YAML FORMAT FUNDAMENTALS](#-yaml-format-fundamentals)
 3. [🔧 RCAF YAML STRUCTURE](#-rcaf-yaml-structure)
 4. [🎨 CRAFT YAML STRUCTURE](#-craft-yaml-structure)
-5. [🔄 ADVANCED YAML PATTERNS](#-advanced-yaml-patterns)
+5. [📄 ADVANCED YAML PATTERNS](#-advanced-yaml-patterns)
 6. [🔄 FORMAT CONVERSIONS](#-format-conversions)
 7. [⚖️ YAML VS OTHER FORMATS](#-yaml-vs-other-formats)
 8. [💡 EXAMPLES & TEMPLATES](#-examples--templates)
@@ -28,6 +28,11 @@ Comprehensive guide for YAML format prompt engineering with RCAF/CRAFT framework
 
 YAML (YAML Ain't Markup Language) provides human-readable structured data with minimal syntax overhead, making it ideal for configuration-style prompts and multi-level hierarchies.
 
+**Terminology Clarification:**
+- **Framework** = Prompt organization (RCAF vs CRAFT)
+- **Output Structure** = Data format (Standard vs JSON vs YAML)
+- This guide covers YAML as an **output structure** option
+
 **YAML Format Benefits:**
 - **Human Readable:** Cleaner than JSON, more structured than Standard
 - **Minimal Syntax:** No brackets or quotes for simple values
@@ -41,7 +46,8 @@ YAML (YAML Ain't Markup Language) provides human-readable structured data with m
 |--------|----------|------|------|
 | **Readability** | Natural language | Structured data | Human-friendly structure |
 | **Token Usage** | Baseline | +5-10% | +3-7% |
-| **CLEAR Score** | 43/50 avg | 41/50 avg | 42/50 avg |
+| **CLEAR Score (Base)** | 43/50 avg | 41/50 avg | 42/50 avg |
+| **CLEAR with DEPTH** | 48/50 avg | 46/50 avg | 47/50 avg |
 | **Best For** | Human interaction | API integration | Configuration, templates |
 | **Framework Fit** | RCAF/CRAFT | RCAF preferred | RCAF optimal |
 
@@ -115,7 +121,11 @@ format:
 ### RCAF YAML Examples
 
 #### Simple Analysis Task
-```yaml
+
+**Delivered as artifact:**
+```
+Mode: $yaml | Complexity: Medium | Framework: RCAF | CLEAR: 42/50
+
 role: Financial analyst specializing in SaaS metrics
 context: Q4 2024 revenue data from B2B platform
 action: Calculate MRR growth and identify top 3 trends
@@ -128,15 +138,19 @@ format:
     - recommendations
 ```
 
-**CLEAR Score: 43/50**
-- Correctness: 9/10
-- Logic: 8/10
-- Expression: 8/10 (YAML clarity)
-- Arrangement: 9/10
-- Reuse: 9/10
+**CLEAR Score: 42/50 (Base: 37/50 + DEPTH: +5)**
+- Correctness: 8/10 (7 base + 1 DEPTH)
+- Logic: 8/10 (7 base + 1 DEPTH)
+- Expression: 8/10 (7 base + 1 DEPTH)
+- Arrangement: 9/10 (8 base + 1 DEPTH)
+- Reuse: 9/10 (8 base + 1 DEPTH)
 
 #### Content Creation Task
-```yaml
+
+**Delivered as artifact:**
+```
+Mode: $yaml | Complexity: Medium | Framework: RCAF | CLEAR: 43/50
+
 role: Technical writer with API documentation expertise
 context: REST API with 15 endpoints for payment processing
 action: Create comprehensive API documentation
@@ -211,7 +225,11 @@ target:
 ### CRAFT YAML Examples
 
 #### Complex Analysis Task
-```yaml
+
+**Delivered as artifact:**
+```
+Mode: $yaml | Complexity: High | Framework: CRAFT | CLEAR: 42/50
+
 context:
   background: E-commerce platform experiencing 15% cart abandonment
   timeframe: Last 6 months
@@ -257,22 +275,25 @@ target:
   success_criteria: Actionable insights reducing abandonment by 20%
 ```
 
-**CLEAR Score: 42/50**
-- Correctness: 9/10
-- Logic: 9/10
-- Expression: 7/10 (some complexity)
-- Arrangement: 9/10
-- Reuse: 8/10
+**CLEAR Score: 42/50 (Base: 37/50 + DEPTH: +5)**
+- Correctness: 9/10 (8 base + 1 DEPTH)
+- Logic: 9/10 (8 base + 1 DEPTH)
+- Expression: 7/10 (6 base + 1 DEPTH)
+- Arrangement: 9/10 (8 base + 1 DEPTH)
+- Reuse: 8/10 (7 base + 1 DEPTH)
 
 ---
 
 <a id="-advanced-yaml-patterns"></a>
 
-## 5. 🔄 ADVANCED YAML PATTERNS
+## 5. 📄 ADVANCED YAML PATTERNS
 
 ### Multi-Phase Process YAML
 
-```yaml
+**Delivered as artifact:**
+```
+Mode: $yaml | Complexity: High | Framework: RCAF | CLEAR: 42/50
+
 role: Project coordinator
 context: Software deployment for enterprise client
 phases:
@@ -444,8 +465,10 @@ Action: Audit content and identify improvements.
 Format: Actionable report with priorities.
 ```
 
-**YAML Equivalent:**
-```yaml
+**YAML Equivalent (delivered as artifact):**
+```
+Mode: $yaml | Complexity: Low | Framework: RCAF | CLEAR: 41/50
+
 role: Marketing analyst with SEO expertise
 context: Tech blog with 50K monthly visitors
 action: Audit content and identify improvements
@@ -480,11 +503,16 @@ format: Actionable report with priorities
 
 ### CLEAR Score Comparison
 
-| Format | Avg CLEAR | Strengths | Weaknesses |
-|--------|-----------|-----------|------------|
-| **Standard** | 43/50 | Expression (9/10) | Structure consistency |
-| **JSON** | 41/50 | Arrangement (9/10) | Expression (7/10) |
-| **YAML** | 42/50 | Balance (8/10 avg) | Learning curve |
+**CLEAR Scoring System:**
+- Each dimension: 1-10 points
+- 5 dimensions × 10 = 50 total possible
+- DEPTH processing: +1 per dimension = +5 total
+
+| Format | Base CLEAR | With DEPTH | Strengths | Weaknesses |
+|--------|-----------|------------|-----------|------------|
+| **Standard** | 43/50 avg | 48/50 avg | Expression (9/10) | Structure consistency |
+| **JSON** | 41/50 avg | 46/50 avg | Arrangement (9/10) | Expression (7/10) |
+| **YAML** | 42/50 avg | 47/50 avg | Balance (8/10 avg) | Learning curve |
 
 ### Token Efficiency Analysis
 
@@ -517,10 +545,11 @@ def compare_format_tokens(standard, json_version, yaml_version):
 
 ### Artifact Delivery Format
 
-**CRITICAL:** All YAML prompts delivered as artifacts with minimal header:
+**CRITICAL: All YAML prompts delivered as artifacts with minimal header:**
 
+**Standard header format with $ prefix:**
 ```
-Mode: $yaml | Complexity: Medium | Framework: RCAF | CLEAR: 43/50
+Mode: $yaml | Complexity: [level] | Framework: [RCAF/CRAFT] | CLEAR: [X]/50
 
 [YAML prompt content]
 ```
@@ -552,7 +581,11 @@ format:
 ### Template Library
 
 #### Research Template
-```yaml
+
+**Delivered as artifact:**
+```
+Mode: $yaml | Complexity: Medium | Framework: RCAF | CLEAR: 40/50
+
 # Research Prompt Template
 role: Research analyst
 context: ${RESEARCH_DOMAIN}
@@ -592,31 +625,6 @@ format:
     - pdf
     - csv
     - interactive_dashboard
-```
-
-#### Builder Template
-```yaml
-# Application Builder Template
-role: ${DEVELOPER_TYPE}
-context:
-  platform: ${TARGET_PLATFORM}
-  users: ${USER_DESCRIPTION}
-  constraints: ${TECHNICAL_CONSTRAINTS}
-  
-action:
-  build: ${APPLICATION_TYPE}
-  features:
-    - ${FEATURE_1}
-    - ${FEATURE_2}
-    - ${FEATURE_3}
-    
-format:
-  architecture: ${ARCHITECTURE_TYPE}
-  tech_stack:
-    frontend: ${FRONTEND_TECH}
-    backend: ${BACKEND_TECH}
-    database: ${DATABASE_TYPE}
-  deployment: ${DEPLOYMENT_METHOD}
 ```
 
 ### Real-World Examples
@@ -711,7 +719,8 @@ target:
 |--------|--------|-----------------|
 | **Parse Success Rate** | >99% | 99.5% |
 | **Token Overhead** | <7% | 5.2% |
-| **CLEAR Score** | >40/50 | 42/50 |
+| **Base CLEAR Score** | >40/50 | 42/50 |
+| **CLEAR with DEPTH** | >45/50 | 47/50 |
 | **Human Readability** | High | 9/10 |
 | **Edit Efficiency** | >JSON | 1.4x faster |
 
@@ -772,7 +781,8 @@ def optimize_yaml_prompt(yaml_prompt):
 - [ ] Multiline strings handled correctly
 - [ ] No trailing spaces
 - [ ] UTF-8 encoding
-- [ ] Artifact header present
+- [ ] Artifact header present with $ prefix
+- [ ] CLEAR score ≥ 40/50 target
 
 ### Debug Helper
 
@@ -826,7 +836,7 @@ def validate_yaml_prompt(yaml_str):
 - Validate before use
 - Use anchors for repeated content
 - Test with YAML validators
-- **Always deliver as artifact with minimal header**
+- **Always deliver as artifact with minimal header ($ prefix)**
 
 #### Don'ts ❌
 - Don't mix tabs and spaces
@@ -913,6 +923,18 @@ Mode: $[mode] | Complexity: [level] | Framework: [RCAF/CRAFT] | CLEAR: [X]/50
 [YAML prompt content]
 ```
 
+**Header Requirements:**
+- Mode with $ prefix (e.g., $yaml, $app)
+- Complexity level (Low, Medium, High)
+- Framework used (RCAF or CRAFT)
+- CLEAR score (target ≥40/50)
+
+**CLEAR Score Targets:**
+- Minimum viable: 35/50 (70%)
+- Standard target: 40/50 (80%)
+- Excellent: 45+/50 (90%+)
+- With DEPTH bonus: +5 points automatic
+
 **No additional sections:**
 - ❌ NO Format Options section
 - ❌ NO CLEAR breakdown section
@@ -924,7 +946,7 @@ Mode: $[mode] | Complexity: [level] | Framework: [RCAF/CRAFT] | CLEAR: [X]/50
 To use YAML format, users can:
 - Use `$yaml` command for automatic YAML formatting
 - Use `$y` as shorthand
-- Combine with modes: `$improve $yaml` or `$builder $yaml`
+- Combine with modes: `$improve $yaml` or `$refine $yaml`
 - Request in Interactive Mode when format selection appears
 
 ### Success Criteria
@@ -936,10 +958,7 @@ To use YAML format, users can:
 - ✅ Clear hierarchy
 - ✅ Minimal nesting
 - ✅ Human readable
-- ✅ CLEAR score > 42/50
+- ✅ Base CLEAR score > 42/50
+- ✅ With DEPTH: > 47/50
 - ✅ Token overhead < 7%
-- ✅ **Delivered as artifact with minimal header**
-
----
-
-*YAML Format Guide: Human-readable structured prompts with minimal syntax. RCAF provides framework, YAML provides clarity. Every indent matters, every dash counts. Validate everything, optimize for readability. Always deliver as artifact with single-line header only.*
+- ✅ **Delivered as artifact with minimal header ($ prefix)**

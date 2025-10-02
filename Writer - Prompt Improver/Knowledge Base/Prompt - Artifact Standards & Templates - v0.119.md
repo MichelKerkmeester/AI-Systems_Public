@@ -1,6 +1,6 @@
-# Prompt - Artifact Standards & Templates - v0.117
+# Prompt - Artifact Standards & Templates - v0.119
 
-Ultra-minimal artifact delivery standards for prompt engineering system with automatic ultrathink processing, MANDATORY artifact delivery, RCAF/CRAFT formatting, and single-line header only.
+Ultra-minimal artifact delivery standards for prompt engineering system with automatic DEPTH processing, MANDATORY artifact delivery, RCAF/CRAFT framework formatting, and single-line header only.
 
 ---
 
@@ -37,9 +37,13 @@ Ultra-minimal artifact delivery standards for prompt engineering system with aut
 
 ### MANDATORY Processing
 
-**AUTOMATIC ULTRATHINK:**
+**AUTOMATIC DEPTH:**
 - **Standard mode: 10 rounds automatically applied**
-- **Quick mode: 1-5 rounds auto-scaled**
+- **Quick mode: 1-5 rounds auto-scaled by complexity**
+  - Complexity 1-2: 1-2 rounds
+  - Complexity 3-4: 3 rounds
+  - Complexity 5-6: 4 rounds
+  - Complexity 7+: 5 rounds
 - **No user input required for processing depth**
 - **Processing status shown in single-line header**
 
@@ -62,9 +66,11 @@ def validate_artifact_mandatory():
         'processing_applied': self.processing_depth > 0,
         'artifact_type': self.type == 'text/markdown',
         'artifact_created': self.artifact is not None,
-        'clear_scores': self.clear_scores_complete,
+        'clear_scored': self.clear_score >= 35,  # Minimum viable
+        'clear_target': self.clear_score >= 40,  # Standard target
         'framework_identified': self.framework is not None,
-        'only_header_and_content': self.has_no_extra_sections
+        'only_header_and_content': self.has_no_extra_sections,
+        'header_format': self.header_has_dollar_prefix
     }
     
     if not all(checks.values()):
@@ -93,11 +99,12 @@ def validate_artifact_mandatory():
 - Add any sections beyond header + content
 - Use multi-line headers
 - Place header at bottom
+- Omit $ prefix from mode in header
 
 ### Always:
 - **VERIFY artifact creation** → Retry if failed
 - **Use proper `text/markdown` type** → No exceptions
-- **Single-line header at TOP** → Only metadata
+- **Single-line header at TOP** → Only metadata with $ prefix
 - **Content immediately follows** → No extra sections
 - **NOTHING ELSE** → Ultra-minimal format
 
@@ -116,7 +123,7 @@ Mode: $[mode] | Complexity: [level] | Framework: [RCAF/CRAFT] | CLEAR: [X]/50
 ```
 
 ### Structure Components (ONLY TWO)
-1. **Single-line header** - Mode, Complexity, Framework, CLEAR score
+1. **Single-line header** - Mode (with $ prefix), Complexity, Framework, CLEAR score
 2. **Enhanced content** - The prompt itself
 
 ### CRITICAL: Nothing Else Allowed
@@ -137,7 +144,7 @@ Mode: $[mode] | Complexity: [level] | Framework: [RCAF/CRAFT] | CLEAR: [X]/50
 ### Complete Template
 
 ```markdown
-Mode: $improve | Complexity: Medium | Framework: RCAF | CLEAR: 44/50
+Mode: $[mode] | Complexity: [level] | Framework: [RCAF/CRAFT] | CLEAR: [X]/50
 
 [Enhanced prompt using RCAF or CRAFT framework]
 
@@ -155,13 +162,30 @@ Format: [Output requirements]
 | **Mode** | `$[mode]` | `$improve` | Yes |
 | **Complexity** | `Low/Medium/High` | `Medium` | Yes |
 | **Framework** | `RCAF/CRAFT` | `RCAF` | Yes |
-| **CLEAR** | `[X]/50` | `44/50` | Yes |
+| **CLEAR** | `[X]/50` | `43/50` | Yes |
 
 ### Header Format Rules
 - **Single line only**
 - **Pipe separators** between components
+- **$ prefix** for mode (e.g., $improve, $refine, $json)
 - **No line breaks** in header
 - **Exact format**: `Mode: $X | Complexity: Y | Framework: Z | CLEAR: A/50`
+
+### CLEAR Score Guidelines
+
+**CLEAR Scoring System:**
+- Each dimension: 1-10 points
+- 5 dimensions × 10 = 50 total possible
+- DEPTH processing adds +1 per dimension = +5 total
+
+**Score Hierarchy:**
+| Range | Status | Interpretation | Action |
+|-------|--------|----------------|--------|
+| **45-50** | Excellent | 90%+ quality | Ship immediately |
+| **40-44** | Standard Target | 80-88% quality | Minor polish only |
+| **35-39** | Minimum Viable | 70-78% quality | Target weak areas |
+| **30-34** | Below Target | 60-68% quality | Framework switch recommended |
+| **<30** | Failing | <60% quality | Complete rewrite needed |
 
 ---
 
@@ -177,9 +201,10 @@ Format: [Output requirements]
 - [✓] **MANDATORY: Single-line header at TOP**
 - [✓] **MANDATORY: NO extra sections**
 - [✓] **Header Format:** `Mode: $X | Complexity: Y | Framework: Z | CLEAR: A/50`
+- [✓] **Mode has $ prefix:** $improve, $refine, $json, etc.
 - [✓] **Content Only:** Enhanced prompt follows header
 - [✓] **Framework Clear:** RCAF or CRAFT in header
-- [✓] **CLEAR Score:** Shown in header
+- [✓] **CLEAR Score:** Shown in header, ≥40/50 target
 - [✓] **NO Format Options section**
 - [✓] **NO CLEAR breakdown section**
 - [✓] **NO Processing section**
@@ -188,12 +213,13 @@ Format: [Output requirements]
 
 ### Quality Gates
 
-- [✓] **Processing applied:** Automatic depth used
+- [✓] **Processing applied:** Automatic depth used (10 standard, 1-5 quick)
 - [✓] **Artifact created:** Not in chat
 - [✓] **Type correct:** text/markdown
-- [✓] **Header minimal:** Single line at top
+- [✓] **Header minimal:** Single line at top with $ prefix
 - [✓] **No extra sections:** Content only
-- [✓] **CLEAR ≥ 35/50:** Minimum quality met
+- [✓] **CLEAR ≥ 40/50:** Standard target met (80%+)
+- [✓] **CLEAR ≥ 35/50:** Minimum viable met (70%+)
 - [✓] **Expression ≥ 7/10:** Clear enough
 - [✓] **Framework Fit:** Appropriate choice
 
@@ -208,12 +234,13 @@ Format: [Output requirements]
 | Issue | Recognition | Fix | Impact |
 |-------|------------|-----|--------|
 | **Not artifact** | Chat delivery | Force artifact | CRITICAL |
-| **Wrong type** | text/plain | Change to markdown | Display |
+| **Wrong type** | text/plain | Change to text/markdown | Display |
 | **Extra sections** | Format Options, CLEAR breakdown, etc. | Remove all extras | Format |
 | **Multi-line header** | Header spans multiple lines | Collapse to single line | Structure |
 | **Missing header** | No metadata line | Add single-line header | Critical |
 | **Header at bottom** | Misplaced | Move to top | Standards |
-| **No processing** | Missing status | Apply ultrathink | Quality |
+| **No $ prefix** | Mode without $ | Add $ prefix | Consistency |
+| **No processing** | Missing status | Apply DEPTH | Quality |
 
 ### REPAIR Protocol for Artifacts
 
@@ -307,8 +334,8 @@ Mode: $refine | Complexity: High | Framework: CRAFT | CLEAR: 46/50
 ```
 
 ### CRITICAL: What These Examples Contain
-1. ✓ Single-line header
-2. ✓ Enhanced prompt content
+1. ✔ Single-line header with $ prefix
+2. ✔ Enhanced prompt content
 3. ❌ NO Format Options section
 4. ❌ NO CLEAR Evaluation breakdown
 5. ❌ NO Processing Applied section
@@ -324,5 +351,16 @@ Mode: $[mode] | Complexity: [level] | Framework: [RCAF/CRAFT] | CLEAR: [X]/50
 
 [Enhanced prompt content]
 ```
+
+**Header Requirements:**
+- Mode with $ prefix (e.g., $improve, $json)
+- Complexity level (Low, Medium, High)
+- Framework used (RCAF or CRAFT)
+- CLEAR score out of 50 (target ≥40)
+
+**CLEAR Score Targets:**
+- Minimum viable: 35/50 (70%)
+- Standard target: 40/50 (80%)
+- Excellent: 45+/50 (90%+)
 
 **Nothing more. Nothing less.**

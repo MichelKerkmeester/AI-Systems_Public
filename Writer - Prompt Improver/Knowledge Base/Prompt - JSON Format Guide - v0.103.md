@@ -1,6 +1,6 @@
-# Prompt - JSON Format Guide - v0.101
+# Prompt - JSON Format Guide - v0.103
 
-Comprehensive guide for JSON format prompt engineering with RCAF/CRAFT frameworks, CLEAR scoring, conversion methods, and optimization strategies.
+Comprehensive guide for JSON output structure in prompt engineering with RCAF/CRAFT frameworks, CLEAR scoring, conversion methods, and optimization strategies.
 
 ---
 
@@ -10,7 +10,7 @@ Comprehensive guide for JSON format prompt engineering with RCAF/CRAFT framework
 2. [📊 JSON FORMAT FUNDAMENTALS](#-json-format-fundamentals)
 3. [🔧 RCAF JSON STRUCTURE](#-rcaf-json-structure)
 4. [🎨 CRAFT JSON STRUCTURE](#-craft-json-structure)
-5. [📄 ADVANCED JSON PATTERNS](#-advanced-json-patterns)
+5. [🔄 ADVANCED JSON PATTERNS](#-advanced-json-patterns)
 6. [📄 FORMAT CONVERSIONS](#-format-conversions)
 7. [⚖️ JSON VS STANDARD COMPARISON](#-json-vs-standard-comparison)
 8. [💡 EXAMPLES & TEMPLATES](#-examples--templates)
@@ -44,7 +44,7 @@ JSON format provides structured, machine-parseable prompt engineering with consi
 | **CLEAR Score** | 43/50 avg | 41/50 avg |
 | **Best For** | Human interaction | API/System integration |
 | **Framework Fit** | RCAF/CRAFT | RCAF preferred |
-| **Artifact Header** | Minimal single-line | Minimal single-line |
+| **Artifact Header** | Minimal single-line with $ | Minimal single-line with $ |
 
 ### Delivery Format
 
@@ -54,6 +54,10 @@ Mode: $json | Complexity: [level] | Framework: RCAF | CLEAR: [X]/50
 
 {JSON content here}
 ```
+
+**Terminology:**
+- **Framework** = Prompt organization (RCAF vs CRAFT)
+- **Output Structure** = Data format (Standard vs JSON vs YAML)
 
 ---
 
@@ -137,12 +141,12 @@ Mode: $json | Complexity: Medium | Framework: RCAF | CLEAR: 42/50
 }
 ```
 
-**CLEAR Score: 42/50**
-- Correctness: 9/10
-- Logic: 8/10
-- Expression: 7/10 (JSON overhead)
-- Arrangement: 9/10
-- Reuse: 9/10
+**CLEAR Score: 42/50 (37 base + 5 DEPTH bonus)**
+- Correctness: 8/10 (9/10 with DEPTH)
+- Logic: 7/10 (8/10 with DEPTH)
+- Expression: 6/10 (7/10 with DEPTH, JSON overhead)
+- Arrangement: 8/10 (9/10 with DEPTH)
+- Reuse: 8/10 (9/10 with DEPTH)
 
 #### Content Creation Task
 
@@ -252,18 +256,18 @@ Mode: $json | Complexity: High | Framework: CRAFT | CLEAR: 41/50
 }
 ```
 
-**CLEAR Score: 41/50**
-- Correctness: 9/10
-- Logic: 9/10
-- Expression: 6/10 (complexity overhead)
-- Arrangement: 9/10
-- Reuse: 8/10
+**CLEAR Score: 41/50 (36 base + 5 DEPTH bonus)**
+- Correctness: 8/10 (9/10 with DEPTH)
+- Logic: 8/10 (9/10 with DEPTH)
+- Expression: 5/10 (6/10 with DEPTH, complexity overhead)
+- Arrangement: 8/10 (9/10 with DEPTH)
+- Reuse: 7/10 (8/10 with DEPTH)
 
 ---
 
 <a id="-advanced-json-patterns"></a>
 
-## 5. 📄 ADVANCED JSON PATTERNS
+## 5. 🔄 ADVANCED JSON PATTERNS
 
 ### Multi-Step Process JSON
 
@@ -430,6 +434,11 @@ Mode: $json | Complexity: Low | Framework: RCAF | CLEAR: 41/50
 
 ### CLEAR Score Impact
 
+**CLEAR Scoring System:**
+- Each dimension: 1-10 points
+- 5 dimensions × 10 = 50 total possible
+- DEPTH processing adds +1 per dimension = +5 total
+
 | Format | Avg CLEAR | Strengths | Weaknesses |
 |--------|-----------|-----------|------------|
 | **Standard** | 43/50 | Expression (9/10), Natural flow | Structure consistency |
@@ -576,7 +585,8 @@ Mode: $json | Complexity: Medium | Framework: RCAF | CLEAR: 41/50
 |--------|--------|-----------------|
 | **Parse Success Rate** | >99% | 99.2% |
 | **Token Overhead** | <10% | 7.3% |
-| **CLEAR Score** | >40/50 | 41/50 |
+| **CLEAR Score (base)** | >35/50 | 36/50 |
+| **CLEAR Score (with DEPTH)** | >40/50 | 41/50 |
 | **API Integration Success** | >95% | 96.5% |
 | **Schema Validation Pass** | >98% | 98.7% |
 | **Artifact Delivery** | 100% | 100% |
@@ -635,6 +645,7 @@ def optimize_json_prompt(json_prompt):
 - [ ] No trailing commas
 - [ ] Escaped special characters
 - [ ] Delivered as artifact with minimal header
+- [ ] Header has $ prefix for mode
 
 ### Debug Helper
 
@@ -681,7 +692,7 @@ def validate_json_prompt(json_str):
 - Version your templates
 - Test with JSON validators
 - Deliver as artifact with minimal header
-- Use single-line header format
+- Use single-line header with $ prefix
 
 #### Don'ts ❌
 - Don't over-nest structures
@@ -746,7 +757,7 @@ For systems previously using other formats:
 4. **Validate Schema**: Ensure consistency
 5. **Test Integration**: Verify API compatibility
 6. **Monitor Performance**: Track CLEAR scores
-7. **Ensure Artifact Delivery**: Always use minimal header
+7. **Ensure Artifact Delivery**: Always use minimal header with $
 
 ### The JSON Philosophy
 
@@ -768,5 +779,10 @@ Mode: $json | Complexity: [level] | Framework: RCAF | CLEAR: [X]/50
 
 {JSON content}
 ```
+
+**CLEAR Score Expectations:**
+- Minimum viable: 35/50 base (40/50 with DEPTH)
+- Standard target: 40/50 base (45/50 with DEPTH)
+- Excellent: 45/50 base (50/50 with DEPTH)
 
 **No additional sections. No verbose headers. Maximum clarity.**

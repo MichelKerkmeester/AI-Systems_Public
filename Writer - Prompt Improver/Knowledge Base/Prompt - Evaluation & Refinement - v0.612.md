@@ -1,4 +1,4 @@
-# Prompt - Evaluation & Refinement - v0.610
+# Prompt - Evaluation & Refinement - v0.612
 
 Systematic quality assessment and improvement for optimizing prompts through CLEAR evaluation, automatic DEPTH processing, RCAF framework preference, and multi-format support including Standard, JSON, and YAML.
 
@@ -32,6 +32,10 @@ CLEAR is the primary evaluation method for all prompt assessments. Each dimensio
 
 **AUTOMATIC PROCESSING:** All evaluations benefit from automatic DEPTH optimization.
 
+**Processing Modes:**
+- **Standard:** Always 10 rounds for thorough analysis
+- **Quick:** 1-5 rounds scaled by complexity
+
 ```python
 def validate_evaluation_prerequisites():
     """Automatic validation for evaluation with DEPTH"""
@@ -39,9 +43,10 @@ def validate_evaluation_prerequisites():
     prerequisites = {
         'depth_processing': True,  # Always automatic
         'methodology': 'DEPTH',
-        'rounds': 10,
+        'rounds': 10,  # Standard mode
         'artifact_ready': self.artifact_format == 'text/markdown',
-        'framework_identified': self.framework is not None
+        'framework_identified': self.framework is not None,
+        'header_has_dollar_prefix': self.header_format_valid
     }
     
     if not all(prerequisites.values()):
@@ -53,6 +58,11 @@ def validate_evaluation_prerequisites():
 ```
 
 ### Detailed Scoring Rubric
+
+**CLEAR Scoring System:**
+- Each dimension: 1-10 points (base score)
+- 5 dimensions × 10 = 50 total possible
+- DEPTH processing adds +1 per dimension = +5 total
 
 #### Correctness (C) - Accuracy & Requirements
 | Score | Description | Indicators |
@@ -101,18 +111,20 @@ def validate_evaluation_prerequisites():
 
 ### Automatic DEPTH Processing Bonus
 
-**DEPTH Enhancement:** +1-2 points per dimension through automatic optimization
+**DEPTH Enhancement:** +1 point per dimension through automatic optimization = +5 total
 
 ### CLEAR Grade Scale
 
-| Total Score | Grade | Interpretation | Action Required |
-|-------------|-------|----------------|-----------------|
-| 45-50 | A+ | Exceptional | Ship immediately |
-| 40-44 | A | Excellent | Minor polish only |
-| 35-39 | B | Good | Target weak areas |
-| 30-34 | C | Adequate | Consider framework switch |
-| 25-29 | D | Poor | Major refinement needed |
-| <25 | F | Failing | Complete rewrite with RCAF |
+| Total Score | Base Range | With DEPTH (+5) | Grade | Interpretation | Action Required |
+|-------------|------------|-----------------|-------|----------------|-----------------|
+| 45-50 | 40-45 | 45-50 | A+ | Exceptional | Ship immediately |
+| 40-44 | 35-39 | 40-44 | A | Excellent | Minor polish only |
+| 35-39 | 30-34 | 35-39 | B | Good | Target weak areas |
+| 30-34 | 25-29 | 30-34 | C | Adequate | Framework switch recommended |
+| 25-29 | 20-24 | 25-29 | D | Poor | Major refinement needed |
+| <25 | <20 | <25 | F | Failing | Complete rewrite with RCAF |
+
+**Note:** Most prompts achieve 35-39 base (B), which becomes 40-44 (A) with DEPTH bonus.
 
 ---
 
@@ -126,39 +138,48 @@ def validate_evaluation_prerequisites():
 def quick_clear_eval(prompt, format='standard'):
     """Quick CLEAR scoring with automatic DEPTH processing"""
     
-    # Apply automatic DEPTH methodology
+    # Apply automatic DEPTH methodology (10 rounds standard)
     apply_depth_processing()
     
-    scores = {
-        'correctness': score_requirements_captured(prompt) + 1,  # +1 from DEPTH
-        'logic': score_completeness(prompt) + 1,
-        'expression': score_clarity(prompt) + 1,
-        'arrangement': score_structure(prompt) + 1,
-        'reuse': score_adaptability(prompt) + 1
+    base_scores = {
+        'correctness': score_requirements_captured(prompt),
+        'logic': score_completeness(prompt),
+        'expression': score_clarity(prompt),
+        'arrangement': score_structure(prompt),
+        'reuse': score_adaptability(prompt)
+    }
+    
+    # Apply DEPTH bonus: +1 per dimension
+    final_scores = {
+        dim: score + 1 for dim, score in base_scores.items()
     }
     
     # Format adjustments
     if format == 'json':
-        scores['correctness'] += 1
-        scores['logic'] += 1
-        scores['expression'] -= 1
-        scores['arrangement'] += 1
-        scores['reuse'] += 1
+        final_scores['correctness'] += 1
+        final_scores['logic'] += 1
+        final_scores['expression'] -= 1
+        final_scores['arrangement'] += 1
+        final_scores['reuse'] += 1
     elif format == 'yaml':
-        scores['logic'] += 1
-        scores['arrangement'] += 1
-        scores['reuse'] += 1
+        final_scores['logic'] += 1
+        final_scores['arrangement'] += 1
+        final_scores['reuse'] += 1
     
-    total = sum(scores.values())
-    weakest = min(scores, key=scores.get)
+    base_total = sum(base_scores.values())
+    final_total = sum(final_scores.values())
+    weakest = min(base_scores, key=base_scores.get)
     
     result = {
-        'total': total,
-        'grade': get_grade(total),
-        'scores': scores,
+        'base_total': base_total,
+        'final_total': final_total,
+        'depth_bonus': final_total - base_total,
+        'grade': get_grade(final_total),
+        'base_scores': base_scores,
+        'final_scores': final_scores,
         'priority_fix': weakest,
-        'framework_rec': 'RCAF' if total < 35 else 'Current',
-        'format_rec': recommend_format(scores),
+        'framework_rec': 'RCAF' if final_total < 35 else 'Current',
+        'format_rec': recommend_format(final_scores),
         'processing': 'automatic_depth_applied'
     }
     
@@ -173,32 +194,32 @@ Mode: $evaluate | Complexity: [level] | Framework: [RCAF/CRAFT] | CLEAR: [X]/50
 
 **QUICK CLEAR EVALUATION**
 
-Current Score: [X]/50 (Grade: [A-F])
-Processing: Automatic DEPTH applied
+Base Score: [X]/50 | With DEPTH: [X+5]/50 (Grade: [A-F])
+Processing: Automatic DEPTH applied (10 rounds)
 
 📊 **Scores:**
-• Correctness: [X]/10
-• Logic/Coverage: [X]/10  
-• Expression: [X]/10
-• Arrangement: [X]/10
-• Reuse: [X]/10
+• Correctness: [X]/10 (base) → [X+1]/10 (with DEPTH)
+• Logic/Coverage: [X]/10 (base) → [X+1]/10 (with DEPTH)
+• Expression: [X]/10 (base) → [X+1]/10 (with DEPTH)
+• Arrangement: [X]/10 (base) → [X+1]/10 (with DEPTH)
+• Reuse: [X]/10 (base) → [X+1]/10 (with DEPTH)
 
 **Strengths:** [Two highest dimensions]
 **Priority Fix:** [Lowest dimension] → [Solution]
-**Framework:** [RCAF recommended if < 35]
+**Framework:** [RCAF recommended if < 35 with DEPTH]
 **Format:** [Optimal format based on scores]
 **Quick Win:** [One immediate improvement]
 ```
 
 ### Quick Fix Matrix by CLEAR Dimension
 
-| Weak Dimension | Quick Fix | Framework Switch | Format Recommendation | Expected Gain | Processing |
-|----------------|-----------|------------------|----------------------|---------------|------------|
-| Correctness | Add verification steps | Consider CRAFT | JSON for precision | +2-3 points | DEPTH-applied |
-| Logic/Coverage | Fill requirement gaps | Consider CRAFT | YAML for structure | +2-3 points | DEPTH-applied |
-| Expression | Simplify with RCAF | Switch to RCAF | Standard for clarity | +3-4 points | DEPTH-applied |
-| Arrangement | Apply RCAF structure | Switch to RCAF | YAML for hierarchy | +2-3 points | DEPTH-applied |
-| Reuse | Parameterize elements | Either framework | YAML for templates | +2-3 points | DEPTH-applied |
+| Weak Dimension | Quick Fix | Framework Switch | Format Recommendation | Expected Base Gain | With DEPTH Total |
+|----------------|-----------|------------------|----------------------|-------------------|-----------------|
+| Correctness | Add verification steps | Consider CRAFT | JSON for precision | +2-3 points | +3-4 with DEPTH |
+| Logic/Coverage | Fill requirement gaps | Consider CRAFT | YAML for structure | +2-3 points | +3-4 with DEPTH |
+| Expression | Simplify with RCAF | Switch to RCAF | Standard for clarity | +3-4 points | +4-5 with DEPTH |
+| Arrangement | Apply RCAF structure | Switch to RCAF | YAML for hierarchy | +2-3 points | +3-4 with DEPTH |
+| Reuse | Parameterize elements | Either framework | YAML for templates | +2-3 points | +3-4 with DEPTH |
 
 ---
 
@@ -210,24 +231,33 @@ Processing: Automatic DEPTH applied
 
 #### Step 1: Automatic DEPTH Processing Applied
 ```markdown
-Processing: Automatic DEPTH (10 rounds)
+Processing: Automatic DEPTH (10 rounds standard, 1-5 quick)
 Methodology: Discover → Engineer → Prototype → Test → Harmonize
 Complexity: Level [X]
 Artifact: Ready
 
-**DEPTH processing enhances all dimensions by +1-2 points**
+**DEPTH processing enhances all dimensions by +1 point each (+5 total)**
 ```
 
 #### Step 2: Baseline CLEAR Scoring
 ```markdown
-**BASELINE CLEAR SCORES (with DEPTH bonus):**
-• C (Correctness): [X]/10 - [specific improvements]
-• L (Logic/Coverage): [X]/10 - [gaps addressed]
-• E (Expression): [X]/10 - [clarity enhanced]
-• A (Arrangement): [X]/10 - [structure optimized]
-• R (Reuse): [X]/10 - [adaptability improved]
+**BASELINE CLEAR SCORES (before DEPTH bonus):**
+• C (Correctness): [X]/10 - [specific assessment]
+• L (Logic/Coverage): [X]/10 - [gaps identified]
+• E (Expression): [X]/10 - [clarity notes]
+• A (Arrangement): [X]/10 - [structure notes]
+• R (Reuse): [X]/10 - [adaptability notes]
 
-**Total: [X]/50 - Grade: [A-F]**
+**Base Total: [X]/50**
+
+**WITH DEPTH BONUS (+1 each):**
+• C: [X+1]/10
+• L: [X+1]/10
+• E: [X+1]/10
+• A: [X+1]/10
+• R: [X+1]/10
+
+**Final Total: [X+5]/50 - Grade: [A-F]**
 **Current Format: [Standard/JSON/YAML]**
 ```
 
@@ -276,15 +306,16 @@ Alternative Formats:
 [With DEPTH processing applied]
 
 With RCAF + [Format]:
-• C: [Current] → [Projected] (+X)
-• L: [Current] → [Projected] (+X)
-• E: [Current] → [Projected] (+X)
-• A: [Current] → [Projected] (+X)
-• R: [Current] → [Projected] (+X)
-Total: [Current] → [Projected] (+X)
+• C: [Current] → [Projected] (+X base, +1 DEPTH)
+• L: [Current] → [Projected] (+X base, +1 DEPTH)
+• E: [Current] → [Projected] (+X base, +1 DEPTH)
+• A: [Current] → [Projected] (+X base, +1 DEPTH)
+• R: [Current] → [Projected] (+X base, +1 DEPTH)
+Base Total: [Current] → [Projected] (+X)
+Final Total: [Current+5] → [Projected+5] (+X)
 
 **Best Path:** [RCAF/CRAFT] + [Format] for [total gain]
-**DEPTH processing ensures optimal quality**
+**DEPTH processing ensures +5 bonus**
 ```
 
 ### Full Evaluation Report Template
@@ -295,20 +326,20 @@ Mode: $evaluate | Complexity: [level] | Framework: [recommended] | CLEAR: [X]/50
 **COMPREHENSIVE CLEAR EVALUATION**
 
 Processing: Automatic DEPTH applied (10 rounds)
-Current State: [X]/50 (Grade: [A-F])
+Base Score: [X]/50 | With DEPTH: [X+5]/50 (Grade: [A-F])
 Format: [Standard/JSON/YAML]
 
-Detailed Scores (with DEPTH bonus):
-• Correctness: [X]/10 - [strength/weakness]
-• Logic/Coverage: [X]/10 - [strength/weakness]
-• Expression: [X]/10 - [strength/weakness]
-• Arrangement: [X]/10 - [strength/weakness]
-• Reuse: [X]/10 - [strength/weakness]
+Detailed Scores (base → with DEPTH):
+• Correctness: [X]/10 → [X+1]/10 - [strength/weakness]
+• Logic/Coverage: [X]/10 → [X+1]/10 - [strength/weakness]
+• Expression: [X]/10 → [X+1]/10 - [strength/weakness]
+• Arrangement: [X]/10 → [X+1]/10 - [strength/weakness]
+• Reuse: [X]/10 → [X+1]/10 - [strength/weakness]
 
 **Framework Assessment:**
 Current: [Framework]
 Optimal: [RCAF/CRAFT]
-Switch Benefit: +[X] points
+Switch Benefit: +[X] base points, +[X+5] with DEPTH
 
 **Format Assessment:**
 Current: [Format]
@@ -316,14 +347,16 @@ Optimal: [Standard/JSON/YAML]
 Switch Benefit: +[X] points, +[X]% tokens
 
 **Priority Improvements:**
-1. [Lowest dimension]: [Specific fix] (+X points)
-2. [Second lowest]: [Specific fix] (+X points)
-3. [Third area]: [Specific fix] (+X points)
+1. [Lowest dimension]: [Specific fix] (+X base, +X+1 with DEPTH)
+2. [Second lowest]: [Specific fix] (+X base, +X+1 with DEPTH)
+3. [Third area]: [Specific fix] (+X base, +X+1 with DEPTH)
 
 **Recommended Action:**
 [Apply RCAF / Enhance with CRAFT / Change format]
 
-**Expected Outcome: [X]/50 → [Y]/50**
+**Expected Outcome:**
+Base: [X]/50 → [Y]/50
+With DEPTH: [X+5]/50 → [Y+5]/50
 ```
 
 ---
@@ -336,34 +369,35 @@ Switch Benefit: +[X] points, +[X]% tokens
 
 | Aspect | RCAF Impact | CRAFT Impact | Decision Factor | DEPTH Boost |
 |--------|-------------|--------------|-----------------|-------------|
-| **Correctness** | +0 to +1 | +1 to +2 | Detail needs | +1 from DEPTH |
-| **Logic/Coverage** | -1 to 0 | +1 to +2 | Completeness needs | +1 from DEPTH |
-| **Expression** | +2 to +3 | -1 to 0 | Clarity priority | +1 from DEPTH |
-| **Arrangement** | +1 to +2 | 0 to +1 | Simplicity helps | +1 from DEPTH |
-| **Reuse** | +1 to +2 | 0 to +1 | Cleaner templates | +1 from DEPTH |
+| **Correctness** | +0 to +1 | +1 to +2 | Detail needs | +1 per framework |
+| **Logic/Coverage** | -1 to 0 | +1 to +2 | Completeness needs | +1 per framework |
+| **Expression** | +2 to +3 | -1 to 0 | Clarity priority | +1 per framework |
+| **Arrangement** | +1 to +2 | 0 to +1 | Simplicity helps | +1 per framework |
+| **Reuse** | +1 to +2 | 0 to +1 | Cleaner templates | +1 per framework |
 
 ### Framework Selection Based on CLEAR
 
 ```python
-def select_framework_by_clear(current_scores, format='standard'):
+def select_framework_by_clear(base_scores, format='standard'):
     """Choose framework based on CLEAR with automatic DEPTH optimization"""
     
-    # DEPTH processing enhances all scores
+    # DEPTH processing enhances all scores (+1 each)
     apply_depth_processing()
+    final_scores = {dim: score + 1 for dim, score in base_scores.items()}
     
-    if current_scores['expression'] < 7:
+    if base_scores['expression'] < 7:
         return 'RCAF', 'Low expression score needs simplicity'
     
-    elif current_scores['logic'] < 7:
+    elif base_scores['logic'] < 7:
         if format == 'yaml':
             return 'Either', 'YAML helps organize complexity'
         return 'CRAFT', 'Low coverage needs comprehensiveness'
     
-    elif current_scores['total'] < 35:
-        return 'RCAF', 'Low overall score needs clarity focus'
+    elif sum(base_scores.values()) < 30:
+        return 'RCAF', 'Low overall base score needs clarity focus'
     
-    elif current_scores['total'] > 42:
-        return 'Current', 'High score, maintain approach'
+    elif sum(final_scores.values()) > 42:
+        return 'Current', 'High score with DEPTH, maintain approach'
     
     else:
         return 'User choice', 'Both frameworks viable'
@@ -371,13 +405,13 @@ def select_framework_by_clear(current_scores, format='standard'):
 
 ### RCAF vs CRAFT Decision Matrix
 
-| Current CLEAR | Best Framework | Best Format | Rationale | Expected Gain | Processing |
-|---------------|---------------|-------------|-----------|---------------|------------|
-| < 30/50 | RCAF | Standard | Need clarity foundation | +8-12 points | DEPTH |
-| 30-35/50 | RCAF | Standard/YAML | Simplification priority | +5-8 points | DEPTH |
-| 35-40/50 | User choice | All viable | Both frameworks work | +3-5 points | DEPTH |
-| 40-45/50 | Current | Current | Working well | +2-3 points | DEPTH |
-| > 45/50 | Current | Current | Excellent already | +0-2 points | DEPTH |
+| Base CLEAR | With DEPTH (+5) | Best Framework | Best Format | Rationale | Expected Gain |
+|------------|----------------|---------------|-------------|-----------|---------------|
+| < 25/50 | < 30/50 | RCAF | Standard | Need clarity foundation | +8-12 base |
+| 25-30/50 | 30-35/50 | RCAF | Standard/YAML | Simplification priority | +5-8 base |
+| 30-35/50 | 35-40/50 | User choice | All viable | Both frameworks work | +3-5 base |
+| 35-40/50 | 40-45/50 | Current | Current | Working well | +2-3 base |
+| > 40/50 | > 45/50 | Current | Current | Excellent already | +0-2 base |
 
 ---
 
@@ -400,28 +434,32 @@ Mode: $evaluate | Complexity: Medium | Framework: [current] | CLEAR: [X]/50
 
 **FORMAT EVALUATION**
 
-Processing: Automatic DEPTH active
+Processing: Automatic DEPTH active (10 rounds)
 Current Format: [Standard/JSON/YAML]
-Current CLEAR: [X]/50
-DEPTH Bonus: +5 points applied
+Base CLEAR: [X]/50
+With DEPTH: [X+5]/50
 
-Format Projections:
+Format Projections (all include +5 DEPTH bonus):
 • Standard: [Best for Expression]
-  - Projected CLEAR: [X]/50
+  - Base Projected: [X]/50
+  - With DEPTH: [X+5]/50
   - Token impact: Baseline
   - Use when: Maximum clarity needed
   
 • YAML: [Best for Structure & Templates]
-  - Projected CLEAR: [X]/50
+  - Base Projected: [X]/50
+  - With DEPTH: [X+5]/50
   - Token impact: +3-7%
   - Use when: Human editing, configuration
   
 • JSON: [Best for APIs]
-  - Projected CLEAR: [X]/50
+  - Base Projected: [X]/50
+  - With DEPTH: [X+5]/50
   - Token impact: +5-10%
   - Use when: System integration
 
 **Recommendation:** [Format] for [reason]
+**All formats receive +5 DEPTH bonus**
 ```
 
 ### Format Decision Tree
@@ -430,7 +468,7 @@ Format Projections:
 def select_optimal_format(clear_scores, use_case):
     """Select format based on CLEAR scores and use case"""
     
-    # Apply DEPTH optimization
+    # Apply DEPTH optimization (+1 per dimension)
     apply_depth_processing()
     
     if use_case == 'api':
@@ -463,8 +501,18 @@ def select_optimal_format(clear_scores, use_case):
 
 ### DEPTH-Powered Refinement Process
 
+#### Phase Distribution
+**Standard Mode (10 rounds):**
+- Phase 1 - Discover (Rounds 1-2, 25%): Complete CLEAR scoring, format evaluation
+- Phase 2 - Engineer (Rounds 3-5, 25%): Create alternative versions
+- Phase 3 - Prototype (Rounds 6-7, 20%): Add targeted improvements
+- Phase 4 - Test (Rounds 8-9, 20%): Re-score, verify improvements
+- Phase 5 - Harmonize (Round 10, 10%): Choose best version, deliver
+
+**Quick Mode (1-5 rounds, scaled by complexity)**
+
 #### Phase 1 - Discover (25% of processing)
-- Apply 10-round DEPTH automatically
+- Apply DEPTH automatically based on mode
 - Complete CLEAR scoring (all 5 dimensions)
 - Evaluate current format effectiveness
 - Identify lowest 2 dimensions
@@ -474,7 +522,7 @@ def select_optimal_format(clear_scores, use_case):
 - Create minimal version (RCAF + Standard)
 - Create balanced version (RCAF + YAML)
 - Create comprehensive version (CRAFT + Standard)
-- Project CLEAR scores for each
+- Project CLEAR scores for each (base + DEPTH)
 - Apply DEPTH optimization to all
 
 #### Phase 3 - Prototype (20% of processing)
@@ -486,25 +534,26 @@ def select_optimal_format(clear_scores, use_case):
 
 #### Phase 4 - Test (20% of processing)
 - Re-score all dimensions with DEPTH processing
+- Apply +1 per dimension (DEPTH bonus)
 - Verify improvements in weak areas
 - Check for unintended score drops
 - Evaluate format overhead
 - Calculate net CLEAR gain
 
 #### Phase 5 - Harmonize (10% of processing)
-- Choose version with highest CLEAR
+- Choose version with highest CLEAR (with DEPTH)
 - Select optimal format
 - Document score improvements
 - Present as artifact with minimal header
-- Record session pattern for learning
+- Note DEPTH bonus applied
 
 ### CLEAR-Driven Refinement Process
 
 ```python
-def refine_with_clear_focus(prompt, clear_scores, current_format):
+def refine_with_clear_focus(prompt, base_scores, current_format):
     """Refinement with automatic DEPTH processing"""
     
-    # Apply automatic DEPTH methodology
+    # Apply automatic DEPTH methodology (10 rounds standard)
     depth_phases = {
         'discover': analyze_weaknesses,
         'engineer': generate_improvements,
@@ -513,7 +562,7 @@ def refine_with_clear_focus(prompt, clear_scores, current_format):
         'harmonize': finalize_prompt
     }
     
-    weak_dimensions = get_lowest_two(clear_scores)
+    weak_dimensions = get_lowest_two(base_scores)
     
     refinements = {
         'correctness': (add_requirements_verification, 'json'),
@@ -530,16 +579,22 @@ def refine_with_clear_focus(prompt, clear_scores, current_format):
         if current_format != suggested_format:
             consider_format_switch = True
         
-    new_scores = evaluate_clear(prompt)
-    improvement = new_scores['total'] - clear_scores['total']
+    # Score with DEPTH bonus
+    new_base_scores = evaluate_clear(prompt)
+    new_final_scores = {dim: score + 1 for dim, score in new_base_scores.items()}
+    
+    base_improvement = sum(new_base_scores.values()) - sum(base_scores.values())
+    final_improvement = sum(new_final_scores.values()) - sum(base_scores.values()) - 5
     
     # CRITICAL: Deliver as artifact with minimal header
     result = create_refinement_artifact(
         prompt, 
-        new_scores, 
-        improvement, 
+        new_base_scores,
+        new_final_scores,
+        base_improvement,
         suggested_format,
-        processing='automatic_depth'
+        processing='automatic_depth',
+        depth_bonus=5
     )
     
     return result
@@ -553,20 +608,21 @@ def refine_with_clear_focus(prompt, clear_scores, current_format):
 
 ### Challenge Triggers by CLEAR Score
 
-| CLEAR Score | Challenge Level | Action | Framework Push | Format Suggestion | Processing |
-|-------------|----------------|--------|----------------|-------------------|------------|
-| **45-50** | None | Polish only | Maintain | Keep current | Maintain |
-| **40-44** | Gentle | Suggest refinements | Consider RCAF | Optimize format | DEPTH |
-| **35-39** | Moderate | Recommend changes | Suggest RCAF | Suggest Standard/YAML | DEPTH |
-| **30-34** | Strong | Push for overhaul | Switch to RCAF | Force Standard | DEPTH |
-| **<30** | Aggressive | Complete rewrite | Force RCAF | Standard only | DEPTH |
+| Base CLEAR | With DEPTH | Challenge Level | Action | Framework Push | Format Suggestion |
+|------------|-----------|----------------|--------|----------------|-------------------|
+| **40-45** | **45-50** | None | Polish only | Maintain | Keep current |
+| **35-39** | **40-44** | Gentle | Suggest refinements | Consider RCAF | Optimize format |
+| **30-34** | **35-39** | Moderate | Recommend changes | Suggest RCAF | Standard/YAML |
+| **25-29** | **30-34** | Strong | Push for overhaul | Switch to RCAF | Force Standard |
+| **<25** | **<30** | Aggressive | Complete rewrite | Force RCAF | Standard only |
 
 ### CLEAR-Based Challenge Templates
 
-**High Score (40+):**
+**High Score (Base 40+, Final 45+):**
 ```
-Processing: Automatic DEPTH applied
-Current CLEAR: [X]/50 - Already excellent!
+Processing: Automatic DEPTH applied (+5 bonus)
+Base CLEAR: [X]/50 - Excellent foundation!
+With DEPTH: [X+5]/50 - Outstanding!
 Format: [Current] working well
 
 Minor enhancement possible:
@@ -576,36 +632,40 @@ Minor enhancement possible:
 Worth the effort? (Automatic DEPTH refinement ready)
 ```
 
-**Medium Score (30-39):**
+**Medium Score (Base 30-39, Final 35-44):**
 ```
-Processing: Automatic DEPTH active
-Current CLEAR: [X]/50 - Good, but could be better
+Processing: Automatic DEPTH active (+5 bonus)
+Base CLEAR: [X]/50 - Good foundation
+With DEPTH: [X+5]/50 - Solid performance
 Format: [Current] (+[X]% tokens)
 
 Simplifying with RCAF + Standard could achieve:
-- Expression: [Current] → [+3]
-- Arrangement: [Current] → [+2]
-- Total: [Current] → [Projected]
+- Expression: [Current] → [+3 base, +4 with DEPTH]
+- Arrangement: [Current] → [+2 base, +3 with DEPTH]
+- Base Total: [Current] → [Projected]
+- With DEPTH: [Current+5] → [Projected+5]
 
 Or RCAF + YAML for templates:
-- Arrangement: [Current] → [+2]
-- Reuse: [Current] → [+2]
+- Arrangement: [Current] → [+2 base, +3 with DEPTH]
+- Reuse: [Current] → [+2 base, +3 with DEPTH]
 - Token cost: +3-7%
 
 Switch approach? (DEPTH optimization will be applied)
 ```
 
-**Low Score (<30):**
+**Low Score (Base <30, Final <35):**
 ```
-Processing: Automatic DEPTH engaged
-Current CLEAR: [X]/50 - Significant improvement needed
+Processing: Automatic DEPTH engaged (+5 bonus)
+Base CLEAR: [X]/50 - Needs improvement
+With DEPTH: [X+5]/50 - Still below target
 Format contributing to confusion
 
 RCAF + Standard restructuring recommended:
-- Will improve Expression by +[X]
-- Will improve Arrangement by +[X]
+- Will improve Expression by +[X] base (+[X+1] with DEPTH)
+- Will improve Arrangement by +[X] base (+[X+1] with DEPTH)
 - Reduce token overhead to baseline
-- Target: 40+/50
+- Base Target: 40+/50
+- With DEPTH Target: 45+/50
 
 **Automatic refinement will apply 10-round DEPTH processing**
 ```
@@ -618,25 +678,30 @@ RCAF + Standard restructuring recommended:
 
 ### Common CLEAR Improvements with Automatic DEPTH Processing
 
-| Issue | CLEAR Impact | RCAF Fix | Format Solution | Score Gain | Processing |
-|-------|--------------|----------|-----------------|------------|------------|
-| **No artifact** | All:-5 | N/A | Force artifact | +5 | Auto-fix |
-| **Vague requirements** | C:4, L:5 | Add specific Context/Action | Standard clarity | +4-5 points | DEPTH |
-| **No role defined** | C:6, E:6 | Add clear Role | Any format | +2-3 points | DEPTH |
-| **Poor structure** | A:4, E:5 | Apply RCAF format | YAML hierarchy | +4-5 points | DEPTH |
-| **Over-complex** | E:4, A:5 | Simplify to RCAF | Standard only | +5-6 points | DEPTH |
-| **Not reusable** | R:3 | Extract parameters | YAML template | +3-4 points | DEPTH |
-| **API needs** | C:6 | Add precision | JSON structure | +2-3 points | DEPTH |
+| Issue | Base CLEAR Impact | RCAF Fix | Format Solution | Base Gain | With DEPTH |
+|-------|------------------|----------|-----------------|-----------|------------|
+| **No artifact** | All:-5 | N/A | Force artifact | +5 | +10 with DEPTH |
+| **Vague requirements** | C:4, L:5 | Add specific Context/Action | Standard clarity | +4-5 | +9-10 with DEPTH |
+| **No role defined** | C:6, E:6 | Add clear Role | Any format | +2-3 | +7-8 with DEPTH |
+| **Poor structure** | A:4, E:5 | Apply RCAF format | YAML hierarchy | +4-5 | +9-10 with DEPTH |
+| **Over-complex** | E:4, A:5 | Simplify to RCAF | Standard only | +5-6 | +10-11 with DEPTH |
+| **Not reusable** | R:3 | Extract parameters | YAML template | +3-4 | +8-9 with DEPTH |
+| **API needs** | C:6 | Add precision | JSON structure | +2-3 | +7-8 with DEPTH |
 
 ### RCAF Transformation Examples
 
-**Before - Vague (CLEAR: 22/50):**
+**Before - Vague (Base: 22/50, With DEPTH: 27/50):**
 ```
 "Analyze our sales data and provide insights"
 
+Base Scores:
 C:4 L:3 E:5 A:5 R:5 = 22/50
+
+With DEPTH:
+C:5 L:4 E:6 A:6 R:6 = 27/50
+
 Format: None
-[No DEPTH applied]
+[DEPTH applied but insufficient base quality]
 ```
 
 **After DEPTH Processing:**
@@ -645,7 +710,7 @@ Processing: Automatic DEPTH (10 rounds) applied
 Creating artifact with minimal header...
 ```
 
-**After - RCAF Standard (CLEAR: 45/50):**
+**After - RCAF Standard (Base: 40/50, With DEPTH: 45/50):**
 ```
 Mode: $refine | Complexity: Medium | Framework: RCAF | CLEAR: 45/50
 
@@ -655,7 +720,10 @@ Action: Identify top 3 revenue drivers and create predictive model for Q1 2025.
 Format: Executive dashboard with bullet insights and supporting charts.
 ```
 
-**Improvement:** +23 points (104% gain) with automatic DEPTH processing
+**Base Scores:** C:9 L:8 E:9 A:9 R:5 = 40/50
+**With DEPTH (+1 each):** C:10 L:9 E:10 A:10 R:6 = 45/50
+
+**Improvement:** +18 base points (82% gain), +18 final points with DEPTH
 
 ---
 
@@ -668,7 +736,9 @@ Format: Executive dashboard with bullet insights and supporting charts.
 **Initial Assessment:**
 ```
 "Write a technical guide about machine learning"
-CLEAR: C:3 L:4 E:5 A:4 R:4 = 20/50 (Grade: F)
+
+Base: C:3 L:4 E:5 A:4 R:4 = 20/50 (Grade: F)
+With DEPTH: C:4 L:5 E:6 A:5 R:5 = 25/50 (Grade: D)
 Format: None
 ```
 
@@ -682,7 +752,7 @@ Optimizing structure...
 
 **Round 1 - Add RCAF + Standard:**
 ```
-Mode: $improve | Complexity: Medium | Framework: RCAF | CLEAR: 37/50
+Mode: $improve | Complexity: Medium | Framework: RCAF | CLEAR: 42/50
 
 Role: ML educator with 10 years teaching experience.
 Context: Writing for developers new to machine learning.
@@ -690,9 +760,12 @@ Action: Create comprehensive guide covering supervised/unsupervised learning.
 Format: 2000-word tutorial with code examples and diagrams.
 ```
 
+**Base Scores:** C:8 L:8 E:9 A:8 R:4 = 37/50
+**With DEPTH:** C:9 L:9 E:10 A:9 R:5 = 42/50
+
 **Round 2 - Convert to YAML:**
 ```
-Mode: $improve | Complexity: Medium | Framework: RCAF | CLEAR: 40/50
+Mode: $improve | Complexity: Medium | Framework: RCAF | CLEAR: 45/50
 
 role: ML educator with 10 years teaching experience
 context: Writing for developers new to machine learning
@@ -710,11 +783,14 @@ format:
     - exercises
 ```
 
+**Base Scores:** C:9 L:9 E:9 A:9 R:4 = 40/50
+**With DEPTH:** C:10 L:10 E:10 A:10 R:5 = 45/50
+
 ### Example 2: Framework and Format Comparison
 
 **Same Task - Three Approaches:**
 
-**RCAF + Standard (CLEAR: 43/50):**
+**RCAF + Standard (Base: 38/50, With DEPTH: 43/50):**
 ```
 Mode: $refine | Complexity: Medium | Framework: RCAF | CLEAR: 43/50
 
@@ -724,7 +800,7 @@ Action: Build churn prediction model and identify top 3 risk factors.
 Format: Jupyter notebook with model code and executive summary.
 ```
 
-**RCAF + YAML (CLEAR: 42/50):**
+**RCAF + YAML (Base: 37/50, With DEPTH: 42/50):**
 ```
 Mode: $refine | Complexity: Medium | Framework: RCAF | CLEAR: 42/50
 
@@ -743,7 +819,7 @@ format:
     - executive_summary
 ```
 
-**RCAF + JSON (CLEAR: 41/50):**
+**RCAF + JSON (Base: 36/50, With DEPTH: 41/50):**
 ```
 Mode: $refine | Complexity: Medium | Framework: RCAF | CLEAR: 41/50
 
@@ -782,16 +858,18 @@ Mode: $refine | Complexity: Medium | Framework: RCAF | CLEAR: 41/50
 
 **Processing Metrics:**
 - Automatic DEPTH application: 100%
-- Processing methodology: DEPTH (10 rounds)
+- Processing methodology: DEPTH (10 rounds standard, 1-5 quick)
 - Optimization consistency: 100%
-- Processing time: < 2 seconds
+- DEPTH bonus application: +5 points every time
 
 **Quality Targets:**
-- Average CLEAR score: > 42/50
+- Average base CLEAR: > 37/50
+- Average with DEPTH: > 42/50
 - Grade distribution: 60% A, 30% B, 10% C
-- Expression average: > 8.5/10
-- Correctness average: > 8.5/10
-- No scores below 25/50
+- Expression average: > 8.5/10 base, > 9.5/10 with DEPTH
+- Correctness average: > 8.5/10 base, > 9.5/10 with DEPTH
+- No base scores below 20/50
+- No final scores (with DEPTH) below 25/50
 
 **Format Distribution Targets:**
 - Standard: 55-65%
@@ -799,11 +877,13 @@ Mode: $refine | Complexity: Medium | Framework: RCAF | CLEAR: 41/50
 - JSON: 15-20%
 
 **Improvement Metrics:**
-- Average gain per refinement: +8 points
-- First-pass success (35+): > 70%
-- Framework switch success: +5 points minimum
-- Format optimization gain: +2 points average
-- Weak dimension improvement: +2 minimum
+- Average base gain per refinement: +8 points
+- Average final gain with DEPTH: +13 points
+- First-pass success (base 35+): > 70%
+- First-pass success (final 40+): > 85%
+- Framework switch success: +5 base points minimum
+- Format optimization gain: +2 base points average
+- Weak dimension improvement: +2 minimum base
 - DEPTH processing bonus: +5 points consistent
 
 ### CLEAR Tracking Dashboard
@@ -813,40 +893,43 @@ Mode: $evaluate | Complexity: N/A | Framework: N/A | CLEAR: N/A
 
 **CLEAR PERFORMANCE DASHBOARD**
 
-Processing: Automatic DEPTH (Always Active)
-Methodology: 10-round optimization
-Artifacts: Always Delivered with Minimal Header
+Processing: Automatic DEPTH (Always Active, 10 rounds standard)
+Methodology: 10-round optimization standard
+Artifacts: Always Delivered with Minimal Header ($ prefix)
 
 📊 **Session Statistics:**
 - Evaluations completed: [X]
-- Average CLEAR: [X]/50
-- Average improvement: +[X] points
-- DEPTH consistency: 100%
+- Average base CLEAR: [X]/50
+- Average with DEPTH: [X+5]/50
+- Average improvement: +[X] base points
+- DEPTH consistency: 100% (+5 every time)
 
-📈 **Dimension Averages (with DEPTH bonus):**
-- Correctness: [X]/10
-- Logic/Coverage: [X]/10
-- Expression: [X]/10 ⭐ [if highest]
-- Arrangement: [X]/10
-- Reuse: [X]/10
+📈 **Dimension Averages (base → with DEPTH):**
+- Correctness: [X]/10 → [X+1]/10
+- Logic/Coverage: [X]/10 → [X+1]/10
+- Expression: [X]/10 → [X+1]/10 ⭐ [if highest]
+- Arrangement: [X]/10 → [X+1]/10
+- Reuse: [X]/10 → [X+1]/10
 
 🎯 **Framework Performance:**
-- RCAF average: [X]/50
-- CRAFT average: [X]/50
+- RCAF base average: [X]/50
+- RCAF with DEPTH: [X+5]/50
+- CRAFT base average: [X]/50
+- CRAFT with DEPTH: [X+5]/50
 - RCAF adoption: [X]%
 
 📄 **Format Performance:**
-- Standard: [X]% usage, [X]/50 avg
-- YAML: [X]% usage, [X]/50 avg
-- JSON: [X]% usage, [X]/50 avg
+- Standard: [X]% usage, base [X]/50, final [X+5]/50
+- YAML: [X]% usage, base [X]/50, final [X+5]/50
+- JSON: [X]% usage, base [X]/50, final [X+5]/50
 
 ✅ **Success Metrics:**
-- A grades: [X]%
-- B grades: [X]%
+- A grades (40-50 with DEPTH): [X]%
+- B grades (35-39 with DEPTH): [X]%
 - Improvement rate: [X]%
 - Format optimization: [X]%
 
-**Processing Status:** AUTOMATIC DEPTH OPTIMIZATION ACTIVE
+**Processing Status:** AUTOMATIC DEPTH OPTIMIZATION ACTIVE (+5 BONUS)
 ```
 
 ---
@@ -857,29 +940,30 @@ Artifacts: Always Delivered with Minimal Header
 
 ### Evaluation Philosophy
 
-> "CLEAR scores tell the truth. Expression beats Coverage. Format serves purpose. Automatic DEPTH processing ensures quality. Minimal header delivers focus."
+> "CLEAR scores tell the truth. Expression beats Coverage. Format serves purpose. Automatic DEPTH processing ensures quality (+5 bonus). Minimal header delivers focus."
 
 ### Core Evaluation Principles
 
-| Principle | Description | CLEAR Focus | Priority | Processing |
-|-----------|-------------|-------------|----------|------------|
-| **DEPTH First** | Always apply 10-round processing | All dimensions | 1.0 | Always |
-| **Measure Always** | Score before and after | All dimensions | 0.95 | Required |
-| **Expression Priority** | Clarity trumps completeness | E > L | 0.9 | Enhanced |
+| Principle | Description | CLEAR Focus | Priority | DEPTH Impact |
+|-----------|-------------|-------------|----------|--------------|
+| **DEPTH First** | Always apply processing | All dimensions | 1.0 | +5 total |
+| **Measure Always** | Score before and after | All dimensions | 0.95 | Enhanced |
+| **Expression Priority** | Clarity trumps completeness | E > L | 0.9 | +1 per dim |
 | **Framework Fit** | RCAF default, CRAFT when needed | E vs L balance | 0.8 | Optimized |
 | **Format Purpose** | Match format to use case | Task-specific | 0.8 | Flexible |
 | **Target Weakness** | Fix lowest scores first | Lowest 2 dims | 0.8 | Strategic |
 | **Verify Gains** | Confirm improvements | Re-score always | 0.7 | Required |
 | **Artifact Delivery** | Always use artifact format | All | 1.0 | MANDATORY |
-| **Minimal Header** | Single line at top | All | 1.0 | MANDATORY |
+| **Minimal Header** | Single line at top with $ | All | 1.0 | MANDATORY |
 
 ### CLEAR Interpretation Guidelines
 
-1. **Below 30/50:** Complete rewrite with RCAF + Standard needed
-2. **30-35/50:** Major refinement with DEPTH processing
-3. **35-40/50:** Good foundation, optimize format for task
-4. **40-45/50:** Excellent, minor polish only
-5. **45-50/50:** Exceptional, ship immediately
+**Score Ranges (Base → With DEPTH):**
+1. **Below 25 → Below 30:** Complete rewrite with RCAF + Standard needed
+2. **25-30 → 30-35:** Major refinement with DEPTH processing
+3. **30-35 → 35-40:** Good foundation, optimize format for task
+4. **35-40 → 40-45:** Excellent foundation, minor polish only
+5. **40-45 → 45-50:** Exceptional, ship immediately
 
 ### Format Selection Guidelines
 
@@ -907,22 +991,23 @@ Artifacts: Always Delivered with Minimal Header
 ### Success Criteria
 
 **Excellent Evaluation Achieves:**
-- ✅ Automatic DEPTH processing applied (10 rounds)
-- ✅ Complete CLEAR scoring (all 5 dimensions)
+- ✅ Automatic DEPTH processing applied (10 rounds standard, 1-5 quick)
+- ✅ Complete CLEAR scoring (all 5 dimensions, base + DEPTH)
+- ✅ DEPTH bonus applied (+1 per dimension = +5 total)
 - ✅ Framework recommendation based on scores
 - ✅ Format optimization considered
 - ✅ Token overhead calculated
 - ✅ Clear improvement path identified
-- ✅ Projected gains calculated
-- ✅ Session patterns applied appropriately
-- ✅ Minimum 35/50 achieved
+- ✅ Projected gains calculated (base + with DEPTH)
+- ✅ Session patterns applied appropriately (current conversation only)
+- ✅ Minimum base 35/50, target 40/50 with DEPTH
 - ✅ Appropriate format selected
-- ✅ Delivered as artifact with minimal header
+- ✅ Delivered as artifact with minimal header ($ prefix)
 
 ### The CLEAR Mantra
 
 ```
-DEPTH processing first
+DEPTH processing first (+5 automatic)
 Then measure with CLEAR
 
 Correctness ensures accuracy
@@ -937,7 +1022,8 @@ YAML for structure
 JSON for precision
 
 Always in artifacts
-Minimal header at top
+Minimal header at top with $
 Together: CLEAR excellence
 Powered by automatic DEPTH
+Every dimension +1 = Total +5
 ```
