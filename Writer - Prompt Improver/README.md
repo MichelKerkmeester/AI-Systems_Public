@@ -22,23 +22,10 @@ A revolutionary prompt enhancement system using RCAF framework for clarity, CLEA
 <a id="whats-new-in-v0850"></a>
 ## 🆕 What's New in v0.850
 
-### CRITICAL UPDATE: Silent Excellence 🎯
-**System now features completely automatic intelligent processing - all complexity handled invisibly for maximum user simplicity.**
-
-### Enhanced User Experience
-```
-Mode: $improve | Complexity: Medium | Framework: RCAF | CLEAR: 43/50
-
-[Enhanced prompt content]
-```
-
-**What's improved:**
-- ✅ **Silent Excellence**: All processing happens automatically behind the scenes
 - ✅ **Automatic Optimization**: 10-round enhancement applied to every request
 - ✅ **Smart Complexity Handling**: System manages all complexity invisibly
 - ✅ **Framework Selection**: Offers choice only when beneficial (complexity 5-6)
 - ✅ **Challenge at High Complexity**: Automatic simplification suggestions (7+)
-- ✅ **Zero Technical Exposure**: Users never see methodology details
 
 **What users experience:**
 - Simple processing messages: "🎯 Analyzing your request..."
@@ -51,7 +38,6 @@ Mode: $improve | Complexity: Medium | Framework: RCAF | CLEAR: 43/50
 - **Simpler Messages**: Users see only "Analyzing..." not technical details
 - **Automatic Quality**: 10-round processing ensures excellence
 - **Smart Defaults**: Quick mode auto-scales complexity (1-5 rounds)
-- **Cleaner Interface**: No methodology terminology exposed
 
 ---
 
