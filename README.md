@@ -109,25 +109,29 @@ Create professional dev tickets, PRDs, and enhanced documentation with automatic
 <a id="4-prompt-engineering-assistant"></a>
 #### 4. 🎯 Prompt Engineering Assistant
 
-Transform vague requests into clear, effective AI prompts with framework optimization and quality evaluation.
+Create effective AI prompts using 7 specialized frameworks, systematic evaluation, and transparent DEPTH processing.
 
-- **RCAF Framework & CLEAR Scoring**:
-  - **RCAF**: Simple 4-element structure (Role, Context, Action, Format) - used 70% of time
-  - **CRAFT**: 5-element comprehensive framework for complex needs
-  - **CLEAR Evaluation**: 5 dimensions scored 1-10 each (Correctness, Logic, Expression, Arrangement, Reuse)
-  - Every prompt gets total score (0-50) with target 40+/50
-  - Typical improvement: +20-25 points (100%+ gains)
+- **DEPTH Processing & Transparency**:
+  - **DEPTH Framework**: Discover → Engineer → Prototype → Test → Harmonize
+  - **Transparent Reporting**: Shows improvements, CLEAR before/after, framework reasoning
 
-- **7 Specialized Modes & Three Formats**:
-  - Core Modes: $interactive (DEFAULT), $short, $improve, $refine, $quick
-  - Format Modes: $json (APIs), $yaml (templates)
-  - **Output Options**: Standard (baseline clarity), YAML (+3-7% tokens), JSON (+5-10% tokens)
-  - $quick mode: Auto-scales 1-5 rounds based on complexity
+- **7-Framework Library & CLEAR Scoring**:
+  - **RCAF** (92% success): Default for 80% of prompts - Role, Context, Action, Format
+  - **COSTAR** (94%): Content creation - Context, Objective, Style, Tone, Audience, Response
+  - **RACE** (88%): Urgent tasks - Role, Action, Context, Execute
+  - **CRAFT** (91%): Complex projects - Context, Role, Action, Format, Target
+  - **TIDD-EC** (93%): Precision-critical - Task, Instructions, Do's, Don'ts, Examples, Context
+  - **CIDI** (90%): Process documentation - Context, Instructions, Details, Input
+  - **CRISPE** (87%): Strategy/exploration - Capacity, Insight, Statement, Personality, Experiment
+  - **CLEAR Evaluation**: 5 dimensions (Correctness, Logic, Expression, Arrangement, Reuse)
+  - Target scores: 40+/50 standard, 45+/50 excellence
 
-- **Intelligent Complexity Management**:
-  - **Simple (1-4)**: RCAF automatic, format choice only
-  - **Moderate (5-6)**: Framework choice offered (RCAF vs CRAFT)
-  - **High (7+)**: Challenge mode suggests streamlined vs comprehensive
+- **Modes & Output Formats**:
+  - **Core Modes**: $interactive (DEFAULT), $improve, $refine, $quick, $short
+  - **Format Options**: Standard/Markdown (baseline), JSON (+5-10% tokens), YAML (+3-7% tokens)
+  - **Artifact Delivery**: All enhancements as reusable artifacts with minimal headers
+  - **Complexity Management**: Auto framework selection (1-4 RCAF), choice offered (5-6), simplification challenge (7+)
+  - **Pattern Library**: 20+ enhancement patterns (vague→specific, assumption elimination, etc.)  
 
 -----
 
