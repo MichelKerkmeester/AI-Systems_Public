@@ -1,38 +1,30 @@
-# Webflow Agent - User Guide v0.414
+# Webflow Agent - User Guide v0.415
 
-A full-stack development assistant that creates and manages Webflow sites through natural language. With Designer and Data API integration, it builds complete structures, design components, and manages content - transforming ideas into functioning Webflow sites with automatic UltraThink processing.
+A full-stack development assistant that creates and manages Webflow sites through natural language. With Designer and Data API integration, it builds complete structures, design components, and manages content - transforming ideas into functioning Webflow sites.
 
 ## 📋 Table of Contents
 
-- [✨ What's New in v0.414](#whats-new-in-v0414)
+- [✨ What's New in v0.415](#whats-new-in-v0415)
 - [🚀 Key Features](#key-features)
 - [⚡ Quick Setup](#quick-setup)
 - [🔧 Installing Webflow MCP](#installing-webflow-mcp)
 - [🎨 Designer API Setup](#designer-api-setup)
-- [📌 Connection Verification](#connection-verification)
+- [🔌 Connection Verification](#connection-verification)
 - [🧠 How It Works](#how-it-works)
 - [💬 Example Interactions](#example-interactions)
 - [📊 What Gets Created](#what-gets-created)
-- [🆘 Troubleshooting](#troubleshooting)
-- [⚠️ Important Notes](#important-notes)
 - [📦 Version History](#version-history)
 - [📚 Resources](#resources)
 
 .
 
-<a id="whats-new-in-v0414"></a>
-## ✨ What's New in v0.414
+<a id="whats-new-in-v0415"></a>
+## ✨ What's New in v0.415
 
-### Major Update: Automatic UltraThink Processing
-- **UltraThink Automatic**: System now uses 10 rounds of thinking automatically - no user prompts
-- **No More Questions**: Removed all "How many thinking rounds?" prompts
-- **$quick Mode Enhanced**: Adaptive 1-5 rounds based on automatic complexity analysis
-- **Silent Processing**: Maximum depth analysis without interrupting workflow
-
-### Core Updates
+### Major Update: Simplified Architecture
+- **Simplified Logic**: Removed pattern learning for more predictable behavior
 - **Connection Verification**: System checks MCP connection before operations
-- **Native API Only**: NEVER writes custom code, uses only Webflow APIs
-- **Consistent Formatting**: Standardized divider style throughout
+- **Clear Feedback**: Visual progress for every operation
 
 ### Core Capabilities Remain
 - Full Designer API integration for visual development
@@ -66,13 +58,11 @@ A full-stack development assistant that creates and manages Webflow sites throug
 
 **Important**: The system NEVER writes custom JavaScript, CSS, or HTML code. All operations use native Webflow APIs exclusively.
 
-### Automatic Processing Features
-- **UltraThink by Default**: Automatic 10-round deep analysis for all operations
-- **No User Prompting**: Never asks about thinking depth
-- **$quick Mode**: Fast execution with adaptive 1-5 rounds
+### System Features
+- **Connection First**: Always verifies MCP connection
 - **Emergency Commands**: Quick recovery with $reset, $status, $quick
-- **Pattern Learning**: System adapts but never restricts options
 - **Clear Feedback**: Visual progress for every operation
+- **REPAIR Protocol**: Structured error recovery
 
 .
 
@@ -87,15 +77,15 @@ A full-stack development assistant that creates and manages Webflow sites throug
 ### Step 2: Add System Instructions
 1. Click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Agent - MCP - Webflow.md` (v0.413)
+3. Copy and paste: `Agent - MCP - Webflow.md` (v0.414)
 4. Save the project
 
 ### Step 3: Upload Reference Documents
 Add these documents to your project:
-- `Webflow - MCP Knowledge.md` (v0.313)
-- `Webflow - Interactive Intelligence.md` (v0.313)
-- `Webflow - Patterns & Workflows.md` (v0.313)
-- `Webflow - ATLAS Thinking Framework.md` (v0.213)
+- `Webflow - MCP Knowledge.md` (v0.314)
+- `Webflow - Interactive Intelligence.md` (v0.314)
+- `Webflow - Patterns & Workflows.md` (v0.314)
+- `Webflow - ATLAS Framework.md` (v0.214)
 
 ### Step 4: Continue to MCP Installation
 Follow the installation guide in the next section
@@ -107,8 +97,7 @@ Build hero component with animations
 Design responsive navigation
 Setup e-commerce catalog
 
-Note: All operations now use automatic UltraThink processing!
-Use $quick prefix for faster execution when needed.
+Note: Use $quick prefix for faster execution when needed.
 ```
 
 .
@@ -196,7 +185,7 @@ Get your token from [Webflow API Settings](https://webflow.com/dashboard/account
 .
 
 <a id="connection-verification"></a>
-## 📌 Connection Verification
+## 🔌 Connection Verification
 
 ### Automatic Connection Check
 
@@ -239,38 +228,39 @@ The system automatically verifies MCP connection before operations:
 • Build code outside Webflow
 ```
 
-### Automatic UltraThink Processing
+### Execution Modes
 
-The system now automatically applies maximum depth analysis:
+The system provides two execution modes:
 
 ```markdown
-🧠 UltraThink Processing:
+📊 Standard Mode:
 
-• Standard Operations: Automatic 10 rounds
-• Never asks user about depth
-• Silent processing for best results
-• Shows: "Processing with UltraThink..."
+• Default for all operations
+• Full processing and verification
+• Best for complex tasks
+• Shows: "Processing..."
 
 ⚡ $quick Mode:
 • Type "$quick" before any command
-• Adaptive 1-5 rounds based on complexity
-• Optimized for speed when needed
+• Minimal processing steps
+• Optimized for speed
+• Best for simple tasks
 ```
 
 ### Emergency Commands
 
-| Command | Purpose | When to Use | Processing |
-|---------|---------|-------------|------------|
-| **$reset** | Clear all context | Start fresh | Returns to UltraThink |
-| **$status** | Show current state | Check what's happening | Immediate |
-| **$quick** | Fast execution | Need speed | Adaptive 1-5 rounds |
+| Command | Purpose | When to Use |
+|---------|---------|-------------|
+| **$reset** | Clear all context | Start fresh |
+| **$status** | Show current state | Check what's happening |
+| **$quick** | Fast execution | Need speed |
 
 .
 
 <a id="example-interactions"></a>
 ## 💬 Example Interactions
 
-### Creating with UltraThink (Automatic)
+### Creating a Blog System
 ```
 User: Create a blog system
 
@@ -282,11 +272,10 @@ System:
 
 I'll create a complete blog system for you!
 
-## Processing with UltraThink...
+## Processing...
 
 🔧 Webflow Operation
 
-Processing: UltraThink (10 rounds)
 Operation: Blog structure creation
 
 📂 Processing:
@@ -316,9 +305,6 @@ System:
 
 ✔ Connection verified
 
-Processing with adaptive thinking...
-Complexity: Basic structure (2 rounds)
-
 Creating Products collection via Data API...
 
 ✅ Collection created
@@ -335,7 +321,7 @@ Done! Need additional fields?
 ### Full Stack Example - Blog System
 
 ```javascript
-// Data Structure (Created via Data API with UltraThink)
+// Data Structure (Created via Data API)
 Collections: {
   BlogPosts: {
     fields: ['title', 'content', 'excerpt', 'featured_image',
@@ -349,7 +335,7 @@ Collections: {
   }
 }
 
-// Components (Created via Designer API with UltraThink)
+// Components (Created via Designer API)
 Components: {
   BlogCard: 'Native Webflow component',
   AuthorBio: 'Native author block',
@@ -357,77 +343,33 @@ Components: {
 }
 ```
 
-### Processing Modes
+### Execution Modes
 
-| Mode | Processing | Speed | Quality | When to Use |
-|------|------------|-------|---------|-------------|
-| **UltraThink** | 10 rounds (automatic) | Slower | Maximum | Default for all operations |
-| **$quick** | 1-5 rounds (adaptive) | Faster | Good | When speed matters |
-
-### $quick Mode Complexity Analysis
-
-| Request Type | Adaptive Rounds | Example |
-|--------------|-----------------|---------|
-| Simple update | 1 round | $quick update title |
-| Basic creation | 2 rounds | $quick add field |
-| Standard structure | 3 rounds | $quick create collection |
-| Complex operation | 4 rounds | $quick build component |
-| Multi-step task | 5 rounds | $quick setup page |
+| Mode | Speed | Best For |
+|------|-------|----------|
+| **Standard** | Normal | Complex operations, full structures |
+| **$quick** | Faster | Simple updates, basic operations |
 
 .
 
-<a id="troubleshooting"></a>
-## 🆘 Troubleshooting
+<a id="version-history"></a>
+## 📦 Version History
 
-### REPAIR Protocol
+### v0.415 (Current)
+- Simplified architecture removing complex thinking mechanisms
+- Streamlined execution flow
+- Cleaner codebase with direct operations
+- Maintained all core Webflow capabilities
 
-When errors occur, the system uses REPAIR:
+### v0.414
+- Introduced automatic processing systems
+- Enhanced connection verification
+- Improved error handling
 
-**R**ecognize - Identify the issue  
-**E**xplain - Clear explanation  
-**P**ropose - Multiple solutions  
-**A**dapt - Based on your choice  
-**I**terate - Try the solution  
-**R**ecord - Learn from it
-
-### Common Issues & Solutions
-
-| Issue | Solution | Command |
-|-------|----------|---------|
-| **MCP not connected** | Restart Claude | Cmd/Ctrl+R |
-| **Confused context** | Clear everything | `$reset` |
-| **Want current state** | Check status | `$status` |
-| **Need faster execution** | Use quick mode | `$quick [command]` |
-| **App disconnected** | Open MCP Bridge App | - |
-
-.
-
-<a id="important-notes"></a>
-## ⚠️ Important Notes
-
-### System Principles
-- **Connection First**: Always verifies MCP connection
-- **Native APIs Only**: Never generates custom code
-- **UltraThink Automatic**: Always applies 10 rounds unless $quick
-- **No User Prompting**: Never asks about thinking depth
-- **Pattern Learning**: System adapts but never restricts
-- **Clear Recovery**: Only 3 emergency commands needed
-- **Visual Feedback**: Every operation shows progress
-
-### Requirements
-- **MCP Connection**: Must be verified before operations
-- **MCP Bridge App**: Must be open for Designer operations
-- **Authorization**: Owner/admin access required
-- **External Images**: URLs required (no direct upload)
-- **Rate Limits**: 60 requests per minute
-- **Node.js**: Version 22.3.0+ for MCP server
-
-### Limitations
-- Cannot upload images directly (use Cloudinary/S3)
-- Cannot write custom code (native APIs only)
-- Designer API requires companion app
-- Rate limited to 60 API calls/minute
-- Must have owner/admin permissions
+### v0.413
+- Initial MCP integration
+- Designer and Data API support
+- Basic command structure
 
 .
 
@@ -445,7 +387,3 @@ When errors occur, the system uses REPAIR:
 - [Webflow Designer](https://webflow.com/designer)
 - [Claude Desktop](https://claude.ai/download)
 - [Cloudinary](https://cloudinary.com/) - Image hosting
-
----
-
-*Full-stack Webflow development through natural language. Native APIs only - no custom code. Connection verified before operations. **UltraThink processing automatic - maximum depth, no questions asked.** Patterns guide but never restrict.*
