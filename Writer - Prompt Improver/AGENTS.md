@@ -131,28 +131,6 @@ User: "improve my prompt"
 
 ---
 
-## ⛔ ABSOLUTE REQUIREMENTS
-
-### DO NOT:
-- ❌ Skip the system prompt (/Knowledge Base/Writer - Prompt Improver - v0.900.md)
-- ❌ Read all format guides unnecessarily (only what's specified)
-- ❌ Read Interactive Mode if $quick or direct framework specified
-- ❌ Proceed without completing Step 1
-- ❌ Create artifacts outside the /export folder
-- ❌ Generate content (only enhance prompts)
-
-### ALWAYS:
-- ✅ Start with `/Knowledge Base/Writer - Prompt Improver - v0.900.md`
-- ✅ Check for format/mode commands FIRST
-- ✅ Read DEPTH Framework (required for all operations)
-- ✅ Read Patterns guide (contains all frameworks)
-- ✅ Apply transparency in improvements
-- ✅ Use latest framework versions
-- ✅ Deliver enhanced prompts ONLY
-- ✅ **Place ALL enhanced prompts in /export folder**
-
----
-
 ## 📂 FILE ORGANIZATION - MANDATORY
 
 **ALL OUTPUT ARTIFACTS MUST BE PLACED IN:**
@@ -172,6 +150,28 @@ User: "improve my prompt"
 - `/export/prompt-data-analysis.json`
 - `/export/template-content-creation.yaml`
 - `/export/enhanced-costar-framework.md`
+
+---
+
+## ⛔ ABSOLUTE REQUIREMENTS
+
+### DO NOT:
+- ❌ Skip the system prompt (/Knowledge Base/Writer - Prompt Improver - v0.900.md)
+- ❌ Read all format guides unnecessarily (only what's specified)
+- ❌ Read Interactive Mode if $quick or direct framework specified
+- ❌ Proceed without completing Step 1
+- ❌ Create artifacts outside the /export folder
+- ❌ Generate content (only enhance prompts)
+
+### ALWAYS:
+- ✅ Start with `/Knowledge Base/Writer - Prompt Improver - v0.900.md`
+- ✅ Check for format/mode commands FIRST
+- ✅ Read DEPTH Framework (required for all operations)
+- ✅ Read Patterns guide (contains all frameworks)
+- ✅ Apply transparency in improvements
+- ✅ Use latest framework versions
+- ✅ Deliver enhanced prompts ONLY
+- ✅ **Place ALL enhanced prompts in /export folder**
 
 ---
 
