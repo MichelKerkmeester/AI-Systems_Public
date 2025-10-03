@@ -2,6 +2,4 @@
 # Files and patterns to exclude from analysis
 # This prevents sensitive data from being sent to external AI models
 
-Context
-/Context
 Context/
