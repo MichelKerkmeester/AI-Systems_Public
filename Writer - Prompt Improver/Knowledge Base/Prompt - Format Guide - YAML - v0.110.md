@@ -1,6 +1,6 @@
-# Prompt - YAML Format Guide - v0.103
+# Prompt - YAML Format Guide - v0.110
 
-Comprehensive guide for YAML output structure in prompt engineering with RCAF/CRAFT frameworks, CLEAR scoring, conversion methods, and optimization strategies.
+Comprehensive guide for YAML output structure in prompt engineering with RCAF/CRAFT frameworks, CLEAR scoring, artifact delivery standards, conversion methods, and optimization strategies.
 
 ---
 
@@ -8,15 +8,17 @@ Comprehensive guide for YAML output structure in prompt engineering with RCAF/CR
 
 1. [🎯 OVERVIEW & PURPOSE](#-overview--purpose)
 2. [📊 YAML FORMAT FUNDAMENTALS](#-yaml-format-fundamentals)
-3. [🔧 RCAF YAML STRUCTURE](#-rcaf-yaml-structure)
-4. [🎨 CRAFT YAML STRUCTURE](#-craft-yaml-structure)
-5. [📄 ADVANCED YAML PATTERNS](#-advanced-yaml-patterns)
-6. [🔄 FORMAT CONVERSIONS](#-format-conversions)
-7. [⚖️ YAML VS OTHER FORMATS](#-yaml-vs-other-formats)
-8. [💡 EXAMPLES & TEMPLATES](#-examples--templates)
-9. [📈 PERFORMANCE METRICS](#-performance-metrics)
-10. [🔧 TROUBLESHOOTING](#-troubleshooting)
-11. [🎓 BEST PRACTICES](#-best-practices)
+3. [📦 ARTIFACT DELIVERY STANDARDS](#-artifact-delivery-standards)
+4. [🔧 RCAF YAML STRUCTURE](#-rcaf-yaml-structure)
+5. [🎨 CRAFT YAML STRUCTURE](#-craft-yaml-structure)
+6. [📄 ADVANCED YAML PATTERNS](#-advanced-yaml-patterns)
+7. [🔄 FORMAT CONVERSIONS](#-format-conversions)
+8. [⚖️ YAML VS OTHER FORMATS](#-yaml-vs-other-formats)
+9. [💡 EXAMPLES & TEMPLATES](#-examples--templates)
+10. [📊 TRANSPARENCY REPORTING](#-transparency-reporting)
+11. [📈 PERFORMANCE METRICS](#-performance-metrics)
+12. [🔧 TROUBLESHOOTING](#-troubleshooting)
+13. [🎓 BEST PRACTICES](#-best-practices)
 
 ---
 
@@ -30,7 +32,7 @@ YAML (YAML Ain't Markup Language) provides human-readable structured data with m
 
 **Terminology Clarification:**
 - **Framework** = Prompt organization (RCAF vs CRAFT)
-- **Output Structure** = Data format (Standard vs JSON vs YAML)
+- **Output Structure** = Data format (Standard/Markdown vs JSON vs YAML)
 - This guide covers YAML as an **output structure** option
 
 **YAML Format Benefits:**
@@ -42,8 +44,8 @@ YAML (YAML Ain't Markup Language) provides human-readable structured data with m
 
 ### YAML vs Other Formats Summary
 
-| Aspect | Standard | JSON | YAML |
-|--------|----------|------|------|
+| Aspect | Markdown (Standard) | JSON | YAML |
+|--------|-------------------|------|------|
 | **Readability** | Natural language | Structured data | Human-friendly structure |
 | **Token Usage** | Baseline | +5-10% | +3-7% |
 | **CLEAR Score (Base)** | 43/50 avg | 41/50 avg | 42/50 avg |
@@ -98,9 +100,184 @@ output:
 
 ---
 
+<a id="-artifact-delivery-standards"></a>
+
+## 3. 📦 ARTIFACT DELIVERY STANDARDS
+
+### 🔴 CRITICAL REQUIREMENTS
+
+#### Mandatory Artifact Delivery
+- **EVERY YAML enhancement MUST be in artifact format**
+- **NEVER deliver YAML prompts in chat**
+- **If artifact creation fails, STOP and retry**
+- **Always use `text/markdown` type for artifact**
+- **NEVER use `text/plain` (causes display issues)**
+
+#### Mandatory Minimal Header Format
+
+**Single-line header at TOP of every YAML artifact:**
+```
+Mode: $yaml | Complexity: [level] | Framework: [RCAF/CRAFT] | CLEAR: [X]/50
+```
+
+**Header Requirements:**
+- **Mode:** Always `$yaml` (with $ prefix)
+- **Complexity level:** Low/Medium/High or 1-10
+- **Framework used:** RCAF or CRAFT
+- **CLEAR score:** Target ≥40/50
+
+#### YAML Artifact Content Structure
+
+**ONLY these two components in artifact:**
+1. **Single-line header** (with $ prefix)
+2. **YAML prompt content**
+
+**FORBIDDEN in YAML artifacts:**
+- ❌ Format Options section
+- ❌ CLEAR Evaluation breakdown
+- ❌ Processing Applied section
+- ❌ Additional metadata sections
+- ❌ Explanations or commentary
+- ✅ All explanations go in CHAT after delivery
+
+### Pre-Delivery Validation
+
+```python
+def validate_yaml_artifact():
+    """MANDATORY validation before YAML delivery"""
+    
+    checks = {
+        'valid_yaml': self.is_valid_yaml(),
+        'artifact_type': self.type == 'text/markdown',
+        'artifact_created': self.artifact is not None,
+        'header_present': self.has_single_line_header,
+        'header_format': self.mode == '$yaml',
+        'no_extra_sections': self.has_only_header_and_content,
+        'rcaf_complete': self.has_all_rcaf_fields(),
+        'indentation_correct': self.check_yaml_indentation(),
+        'clear_scored': self.clear_score >= 35,
+        'clear_target': self.clear_score >= 40
+    }
+    
+    if not all(checks.values()):
+        failed = [k for k, v in checks.items() if not v]
+        raise ArtifactError(f"CANNOT DELIVER YAML. Failed: {failed}")
+        
+    return True
+```
+
+### 🔴 FORMAT COMPLIANCE ENFORCEMENT
+
+#### ABSOLUTE RULES
+When `$yaml` command is specified:
+1. **Output MUST be valid YAML syntax ONLY**
+2. **NO markdown formatting** (no **, no ###, no ```)
+3. **NO explanatory text within the artifact**
+4. **If cannot produce valid YAML, STOP and report error**
+5. **Validate format before delivery - if invalid, RETRY**
+
+#### FORMAT LOCK PROTOCOL
+```
+DETECTION: $yaml command identified
+↓
+LOCK: YAML-only output mode engaged
+↓
+GENERATE: Pure YAML structure
+↓
+VALIDATE: Is it valid YAML? Can yaml.safe_load() parse it?
+↓
+If NO → STOP → REGENERATE
+If YES → DELIVER
+```
+
+#### FORBIDDEN ELEMENTS IN YAML ARTIFACTS
+When $yaml is active, these are STRICTLY FORBIDDEN:
+- ❌ Markdown bold: `**text**`
+- ❌ Markdown headers: `### Header`
+- ❌ Code blocks: ` ```yaml `
+- ❌ Explanatory text before/after YAML
+- ❌ Mixed format output
+- ❌ Tabs (use spaces only)
+- ❌ Inconsistent indentation
+
+#### CORRECT vs INCORRECT
+
+**✅ CORRECT $yaml artifact:**
+```
+Mode: $yaml | Complexity: Medium | Framework: RCAF | CLEAR: 42/50
+
+role: Data analyst
+context: Sales database analysis
+action: Generate quarterly report
+format:
+  type: dashboard
+  sections:
+    - metrics
+    - trends
+```
+
+**❌ INCORRECT - DO NOT DO THIS:**
+```
+Mode: $yaml | Complexity: Medium | Framework: RCAF | CLEAR: 42/50
+
+**Role:** Data analyst
+**Context:** Sales database analysis
+```
+This is MARKDOWN, not YAML! IMMEDIATE FAILURE.
+
+**❌ ALSO INCORRECT:**
+```
+Mode: $yaml | Complexity: Medium | Framework: RCAF | CLEAR: 42/50
+
+Here's the YAML prompt:
+```yaml
+role: Data analyst
+```
+```
+NO explanatory text! NO code blocks! Just pure YAML.
+
+#### ERROR RECOVERY PROTOCOL
+If wrong format is generated:
+```
+1. RECOGNIZE: "Output is markdown but should be YAML"
+2. STOP: Do not deliver wrong format
+3. ANNOUNCE: "Format error detected. Regenerating as YAML..."
+4. RETRY: Generate proper YAML
+5. VALIDATE: yaml.safe_load() must succeed
+6. DELIVER: Only if valid YAML
+```
+
+#### VALIDATION GATE
+Before delivering ANY $yaml artifact:
+```python
+def enforce_yaml_format(content):
+    """Strict YAML format enforcement"""
+    
+    # Check for markdown indicators
+    markdown_patterns = ['**', '###', '```', '##', '__']
+    for pattern in markdown_patterns:
+        if pattern in content:
+            return False, f"Markdown detected: {pattern}"
+    
+    # Check for tabs (YAML requires spaces)
+    if '\t' in content:
+        return False, "Tabs detected (use spaces)"
+    
+    # Validate YAML syntax
+    try:
+        yaml.safe_load(content)
+        return True, "Valid YAML"
+    except:
+        return False, "Invalid YAML syntax"
+    
+    # If validation fails, MUST regenerate
+```
+
+---
+
 <a id="-rcaf-yaml-structure"></a>
 
-## 3. 🔧 RCAF YAML STRUCTURE
+## 4. 🔧 RCAF YAML STRUCTURE
 
 ### Standard RCAF YAML Template
 
@@ -138,13 +315,6 @@ format:
     - recommendations
 ```
 
-**CLEAR Score: 42/50 (Base: 37/50 + DEPTH: +5)**
-- Correctness: 8/10 (7 base + 1 DEPTH)
-- Logic: 8/10 (7 base + 1 DEPTH)
-- Expression: 8/10 (7 base + 1 DEPTH)
-- Arrangement: 9/10 (8 base + 1 DEPTH)
-- Reuse: 9/10 (8 base + 1 DEPTH)
-
 #### Content Creation Task
 
 **Delivered as artifact:**
@@ -165,20 +335,20 @@ format:
   examples_per_endpoint: 2
 ```
 
-### RCAF YAML Field Guidelines
+### RCAF Field Guidelines
 
-| Field | Required | Description | CLEAR Impact |
-|-------|----------|-------------|--------------|
-| **role** | Yes | Expertise needed | Expression +2 |
-| **context** | Yes | Essential info | Correctness +2 |
-| **action** | Yes | Specific task | Logic +3 |
-| **format** | Yes | Output structure | Arrangement +2 |
+| Field | Required | Description | Best Practices |
+|-------|----------|-------------|----------------|
+| **role** | Yes | Expertise needed | Be specific about domain |
+| **context** | Yes | Essential info | Include constraints |
+| **action** | Yes | Specific task | Make measurable |
+| **format** | Yes | Output structure | Define sections |
 
 ---
 
 <a id="-craft-yaml-structure"></a>
 
-## 4. 🎨 CRAFT YAML STRUCTURE
+## 5. 🎨 CRAFT YAML STRUCTURE
 
 ### Standard CRAFT YAML Template
 
@@ -221,8 +391,6 @@ target:
     - metric two
   success_criteria: Definition of successful outcome
 ```
-
-### CRAFT YAML Examples
 
 #### Complex Analysis Task
 
@@ -275,18 +443,11 @@ target:
   success_criteria: Actionable insights reducing abandonment by 20%
 ```
 
-**CLEAR Score: 42/50 (Base: 37/50 + DEPTH: +5)**
-- Correctness: 9/10 (8 base + 1 DEPTH)
-- Logic: 9/10 (8 base + 1 DEPTH)
-- Expression: 7/10 (6 base + 1 DEPTH)
-- Arrangement: 9/10 (8 base + 1 DEPTH)
-- Reuse: 8/10 (7 base + 1 DEPTH)
-
 ---
 
 <a id="-advanced-yaml-patterns"></a>
 
-## 5. 📄 ADVANCED YAML PATTERNS
+## 6. 📄 ADVANCED YAML PATTERNS
 
 ### Multi-Phase Process YAML
 
@@ -323,7 +484,10 @@ format:
 
 ### Conditional Logic YAML
 
-```yaml
+**Delivered as artifact:**
+```
+Mode: $yaml | Complexity: Medium | Framework: RCAF | CLEAR: 41/50
+
 role: Customer service AI
 context: Support ticket classification system
 action: Route tickets based on criteria
@@ -360,7 +524,10 @@ format:
 
 ### Template with Anchors YAML
 
-```yaml
+**Delivered as artifact:**
+```
+Mode: $yaml | Complexity: Medium | Framework: RCAF | CLEAR: 40/50
+
 # Define reusable components
 defaults: &default_format
   style: professional
@@ -393,7 +560,7 @@ format:
 
 <a id="-format-conversions"></a>
 
-## 6. 🔄 FORMAT CONVERSIONS
+## 7. 🔄 FORMAT CONVERSIONS
 
 ### Standard to YAML Conversion
 
@@ -402,23 +569,20 @@ def standard_to_yaml(standard_prompt):
     """Convert RCAF standard format to YAML"""
     
     import yaml
+    import re
     
-    # Parse RCAF elements
-    lines = standard_prompt.split('\n')
+    # Parse RCAF elements using bold markers
+    pattern = r'\*\*(\w+):\*\*\s*([^\*]+?)(?=\*\*\w+:|\Z)'
+    matches = re.findall(pattern, standard_prompt, re.DOTALL)
+    
     rcaf_dict = {}
-    
-    for line in lines:
-        if line.startswith('Role:'):
-            rcaf_dict['role'] = line.replace('Role:', '').strip()
-        elif line.startswith('Context:'):
-            rcaf_dict['context'] = line.replace('Context:', '').strip()
-        elif line.startswith('Action:'):
-            rcaf_dict['action'] = line.replace('Action:', '').strip()
-        elif line.startswith('Format:'):
-            # Parse format as nested structure
-            format_text = line.replace('Format:', '').strip()
+    for key, value in matches:
+        rcaf_dict[key.lower()] = value.strip()
+        
+        # Parse format if it contains lists
+        if key.lower() == 'format' and ',' in value:
             rcaf_dict['format'] = {
-                'structure': format_text.split(',')[0] if ',' in format_text else format_text
+                'structure': value.split(',')[0].strip()
             }
     
     return yaml.dump(rcaf_dict, default_flow_style=False, sort_keys=False)
@@ -447,49 +611,19 @@ def yaml_to_standard(yaml_prompt):
     
     data = yaml.safe_load(yaml_prompt)
     
-    standard = f"""Role: {data.get('role', 'Not specified')}
-Context: {data.get('context', 'Not specified')}
-Action: {data.get('action', 'Not specified')}
-Format: {data.get('format', 'Not specified')}"""
+    standard = f"""**Role:** {data.get('role', 'Not specified')}
+**Context:** {data.get('context', 'Not specified')}
+**Action:** {data.get('action', 'Not specified')}
+**Format:** {data.get('format', 'Not specified')}"""
     
     return standard
-```
-
-### Conversion Examples
-
-**Standard RCAF:**
-```
-Role: Marketing analyst with SEO expertise.
-Context: Tech blog with 50K monthly visitors.
-Action: Audit content and identify improvements.
-Format: Actionable report with priorities.
-```
-
-**YAML Equivalent (delivered as artifact):**
-```
-Mode: $yaml | Complexity: Low | Framework: RCAF | CLEAR: 41/50
-
-role: Marketing analyst with SEO expertise
-context: Tech blog with 50K monthly visitors
-action: Audit content and identify improvements
-format: Actionable report with priorities
-```
-
-**JSON Equivalent:**
-```json
-{
-  "role": "Marketing analyst with SEO expertise",
-  "context": "Tech blog with 50K monthly visitors",
-  "action": "Audit content and identify improvements",
-  "format": "Actionable report with priorities"
-}
 ```
 
 ---
 
 <a id="-yaml-vs-other-formats"></a>
 
-## 7. ⚖️ YAML VS OTHER FORMATS
+## 8. ⚖️ YAML VS OTHER FORMATS
 
 ### When to Use Each Format
 
@@ -503,80 +637,17 @@ format: Actionable report with priorities
 
 ### CLEAR Score Comparison
 
-**CLEAR Scoring System:**
-- Each dimension: 1-10 points
-- 5 dimensions × 10 = 50 total possible
-- DEPTH processing: +1 per dimension = +5 total
-
 | Format | Base CLEAR | With DEPTH | Strengths | Weaknesses |
 |--------|-----------|------------|-----------|------------|
 | **Standard** | 43/50 avg | 48/50 avg | Expression (9/10) | Structure consistency |
 | **JSON** | 41/50 avg | 46/50 avg | Arrangement (9/10) | Expression (7/10) |
 | **YAML** | 42/50 avg | 47/50 avg | Balance (8/10 avg) | Learning curve |
 
-### Token Efficiency Analysis
-
-```python
-def compare_format_tokens(standard, json_version, yaml_version):
-    """Compare token usage across formats"""
-    
-    standard_tokens = count_tokens(standard)
-    json_tokens = count_tokens(json_version)
-    yaml_tokens = count_tokens(yaml_version)
-    
-    return {
-        'standard': standard_tokens,
-        'json': {
-            'tokens': json_tokens,
-            'overhead': f"{((json_tokens - standard_tokens) / standard_tokens * 100):.1f}%"
-        },
-        'yaml': {
-            'tokens': yaml_tokens,
-            'overhead': f"{((yaml_tokens - standard_tokens) / standard_tokens * 100):.1f}%"
-        }
-    }
-```
-
 ---
 
 <a id="-examples--templates"></a>
 
-## 8. 💡 EXAMPLES & TEMPLATES
-
-### Artifact Delivery Format
-
-**CRITICAL: All YAML prompts delivered as artifacts with minimal header:**
-
-**Standard header format with $ prefix:**
-```
-Mode: $yaml | Complexity: [level] | Framework: [RCAF/CRAFT] | CLEAR: [X]/50
-
-[YAML prompt content]
-```
-
-**Example Artifact:**
-
-```
-Mode: $yaml | Complexity: Medium | Framework: RCAF | CLEAR: 43/50
-
-role: Marketing data scientist
-context: E-commerce platform with 100K customers, 2 years transaction history
-action:
-  primary: Perform customer segmentation using RFM analysis
-  steps:
-    - Calculate recency scores
-    - Calculate frequency scores
-    - Calculate monetary scores
-    - Create segment profiles
-format:
-  structure: analysis_report
-  visualizations:
-    - segment_distribution
-    - value_matrix
-  export:
-    - csv_data
-    - pdf_report
-```
+## 9. 💡 EXAMPLES & TEMPLATES
 
 ### Template Library
 
@@ -607,7 +678,11 @@ format:
 ```
 
 #### Analysis Template
-```yaml
+
+**Delivered as artifact:**
+```
+Mode: $yaml | Complexity: Medium | Framework: RCAF | CLEAR: 41/50
+
 # Data Analysis Template
 role: Data analyst
 context:
@@ -629,8 +704,9 @@ format:
 
 ### Real-World Examples
 
-#### Customer Segmentation Artifact
+#### Customer Segmentation
 
+**Delivered as artifact:**
 ```
 Mode: $yaml | Complexity: Medium | Framework: RCAF | CLEAR: 43/50
 
@@ -664,8 +740,9 @@ format:
     - interactive_dashboard
 ```
 
-#### API Documentation Artifact
+#### API Documentation
 
+**Delivered as artifact:**
 ```
 Mode: $yaml | Complexity: High | Framework: CRAFT | CLEAR: 42/50
 
@@ -709,9 +786,70 @@ target:
 
 ---
 
+<a id="-transparency-reporting"></a>
+
+## 10. 📊 TRANSPARENCY REPORTING
+
+### After Every YAML Enhancement
+
+**Required in CHAT after artifact delivery:**
+
+```markdown
+📊 **Enhancement Report:**
+
+**Complexity Assessment:** Level [X]/10
+- [Reasoning for complexity level]
+
+**DEPTH Processing Applied:**
+✅ DISCOVER (Rounds 1-2): [What was analyzed]
+✅ ENGINEER (Rounds 3-5): [Framework decisions]
+✅ PROTOTYPE (Rounds 6-7): [Structure built]
+✅ TEST (Rounds 8-9): [Validation performed]
+✅ HARMONIZE (Round 10): [Final polish applied]
+
+**Key Improvements:**
+1. [Specific improvement #1]: [Impact/reasoning]
+2. [Specific improvement #2]: [Impact/reasoning]
+3. [Specific improvement #3]: [Impact/reasoning]
+
+**CLEAR Scoring:**
+- Correctness: [X]/10 - [what this means]
+- Logic/Coverage: [X]/10 - [assessment]
+- Expression: [X]/10 - [clarity level]
+- Arrangement: [X]/10 - [structure quality]
+- Reuse: [X]/10 - [adaptability]
+**Total: [X]/50 (Grade: [A-F])**
+
+**Framework Selection:** [RCAF/CRAFT]
+- Reasoning: [Why this framework was optimal]
+
+**Structure Choice:** YAML
+- Reasoning: [Why YAML format serves this use case]
+- Token Impact: +[X]% over standard format
+```
+
+### Quick Mode Transparency Template
+
+```markdown
+📊 **Quick Enhancement Summary:**
+
+**Processing:** [X] rounds (Quick mode, Complexity: [Y]/10)
+
+**What Changed:**
+✅ Structured into YAML format
+✅ Applied indentation hierarchy
+✅ Created nested specifications
+
+**CLEAR Score:** [X]/50 (Grade: [A-F])
+**Framework:** [RCAF/CRAFT] - [brief reason]
+**Structure:** YAML - [configuration benefit]
+```
+
+---
+
 <a id="-performance-metrics"></a>
 
-## 9. 📈 PERFORMANCE METRICS
+## 11. 📈 PERFORMANCE METRICS
 
 ### YAML Format Performance
 
@@ -723,6 +861,8 @@ target:
 | **CLEAR with DEPTH** | >45/50 | 47/50 |
 | **Human Readability** | High | 9/10 |
 | **Edit Efficiency** | >JSON | 1.4x faster |
+| **Artifact Delivery** | 100% | 100% |
+| **Header Compliance** | 100% | 100% |
 
 ### Optimization Strategies
 
@@ -749,7 +889,6 @@ def optimize_yaml_prompt(yaml_prompt):
     # Use flow style for short lists
     for key, value in data.items():
         if isinstance(value, list) and len(value) <= 3:
-            # Would use flow style in actual YAML dump
             optimizations.append(f"Compacted {key} list")
     
     return yaml.dump(data, default_flow_style=False), optimizations
@@ -759,17 +898,19 @@ def optimize_yaml_prompt(yaml_prompt):
 
 <a id="-troubleshooting"></a>
 
-## 10. 🔧 TROUBLESHOOTING
+## 12. 🔧 TROUBLESHOOTING
 
-### Common YAML Issues
+### Common YAML Issues & Fixes
 
-| Issue | Symptom | Solution |
-|-------|---------|----------|
-| **Indentation errors** | Parse fails | Use exactly 2 spaces |
-| **Quote confusion** | String parsing issues | Use quotes for special chars only |
-| **List syntax** | Structure errors | Ensure dash-space prefix |
-| **Multiline strings** | Text truncation | Use pipe (|) or > correctly |
-| **Type ambiguity** | Wrong data type | Use explicit typing when needed |
+| Issue | Recognition | Solution | Report in Chat |
+|-------|------------|----------|----------------|
+| **Not artifact** | Chat delivery | Force artifact | "Retrying artifact creation..." |
+| **Wrong type** | text/plain | Change to text/markdown | "Fixing artifact type..." |
+| **Indentation errors** | Parse fails | Use exactly 2 spaces | "Correcting indentation..." |
+| **Quote confusion** | String parsing issues | Remove unnecessary quotes | "Simplifying syntax..." |
+| **List syntax** | Structure errors | Ensure dash-space prefix | "Fixing list format..." |
+| **Extra sections** | Explanations in artifact | Move to chat | "Cleaning artifact..." |
+| **No transparency** | Missing report | Add after delivery | "Adding enhancement details..." |
 
 ### Validation Checklist
 
@@ -781,49 +922,26 @@ def optimize_yaml_prompt(yaml_prompt):
 - [ ] Multiline strings handled correctly
 - [ ] No trailing spaces
 - [ ] UTF-8 encoding
-- [ ] Artifact header present with $ prefix
+- [ ] Artifact header present with $yaml
 - [ ] CLEAR score ≥ 40/50 target
+- [ ] Transparency report ready
 
-### Debug Helper
+### REPAIR Protocol with Transparency
 
-```python
-def validate_yaml_prompt(yaml_str):
-    """Validate YAML prompt structure"""
-    
-    import yaml
-    
-    try:
-        data = yaml.safe_load(yaml_str)
-        
-        # Check RCAF fields
-        required = ['role', 'context', 'action', 'format']
-        missing = [f for f in required if f not in data]
-        
-        if missing:
-            return False, f"Missing fields: {missing}"
-        
-        # Check for empty values
-        empty = [f for f in required if not data[f]]
-        if empty:
-            return False, f"Empty fields: {empty}"
-        
-        # Check indentation (basic)
-        lines = yaml_str.split('\n')
-        for i, line in enumerate(lines):
-            if '\t' in line:
-                return False, f"Tab character on line {i+1}"
-        
-        return True, "Valid YAML prompt"
-        
-    except yaml.YAMLError as e:
-        return False, f"YAML parse error: {e}"
+```markdown
+**R** - Recognize: YAML issue identified
+**E** - Explain: Impact on structure
+**P** - Propose: Correction approach
+**A** - Apply: Fix implemented
+**I** - Iterate: Verify YAML validity
+**R** - Record: Note in transparency report
 ```
 
 ---
 
 <a id="-best-practices"></a>
 
-## 11. 🎓 BEST PRACTICES
+## 13. 🎓 BEST PRACTICES
 
 ### YAML Prompt Excellence
 
@@ -836,7 +954,9 @@ def validate_yaml_prompt(yaml_str):
 - Validate before use
 - Use anchors for repeated content
 - Test with YAML validators
-- **Always deliver as artifact with minimal header ($ prefix)**
+- **Always deliver as artifact with header**
+- **Use $yaml mode in header**
+- **Provide transparency report in chat**
 
 #### Don'ts ❌
 - Don't mix tabs and spaces
@@ -848,6 +968,8 @@ def validate_yaml_prompt(yaml_str):
 - Don't embed complex logic
 - Don't use without validation
 - **Don't deliver in chat (artifact mandatory)**
+- **Don't skip validation**
+- **Don't add extra artifact sections**
 
 ### Framework Selection for YAML
 
@@ -912,34 +1034,8 @@ def assess_yaml_quality(yaml_prompt):
 3. **Flexibility through structure** - Nested when needed
 4. **Readability through spacing** - Natural formatting
 5. **Maintainability through comments** - Self-documenting
-
-### Artifact Delivery Requirements
-
-**MANDATORY for all YAML prompts:**
-
-```
-Mode: $[mode] | Complexity: [level] | Framework: [RCAF/CRAFT] | CLEAR: [X]/50
-
-[YAML prompt content]
-```
-
-**Header Requirements:**
-- Mode with $ prefix (e.g., $yaml, $app)
-- Complexity level (Low, Medium, High)
-- Framework used (RCAF or CRAFT)
-- CLEAR score (target ≥40/50)
-
-**CLEAR Score Targets:**
-- Minimum viable: 35/50 (70%)
-- Standard target: 40/50 (80%)
-- Excellent: 45+/50 (90%+)
-- With DEPTH bonus: +5 points automatic
-
-**No additional sections:**
-- ❌ NO Format Options section
-- ❌ NO CLEAR breakdown section
-- ❌ NO Processing sections
-- ✅ ONLY header + content
+6. **Focus through minimalism** - Single header only
+7. **Transparency through reporting** - Process visible in chat
 
 ### Command Activation
 
@@ -961,4 +1057,5 @@ To use YAML format, users can:
 - ✅ Base CLEAR score > 42/50
 - ✅ With DEPTH: > 47/50
 - ✅ Token overhead < 7%
-- ✅ **Delivered as artifact with minimal header ($ prefix)**
+- ✅ **Delivered as artifact with $yaml header**
+- ✅ **Full transparency report in chat**

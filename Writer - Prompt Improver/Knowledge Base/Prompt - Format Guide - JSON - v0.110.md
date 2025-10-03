@@ -1,6 +1,6 @@
-# Prompt - JSON Format Guide - v0.103
+# Prompt - JSON Format Guide - v0.110
 
-Comprehensive guide for JSON output structure in prompt engineering with RCAF/CRAFT frameworks, CLEAR scoring, conversion methods, and optimization strategies.
+Comprehensive guide for JSON output structure in prompt engineering with RCAF/CRAFT frameworks, CLEAR scoring, artifact delivery standards, conversion methods, and optimization strategies.
 
 ---
 
@@ -8,15 +8,17 @@ Comprehensive guide for JSON output structure in prompt engineering with RCAF/CR
 
 1. [🎯 OVERVIEW & PURPOSE](#-overview--purpose)
 2. [📊 JSON FORMAT FUNDAMENTALS](#-json-format-fundamentals)
-3. [🔧 RCAF JSON STRUCTURE](#-rcaf-json-structure)
-4. [🎨 CRAFT JSON STRUCTURE](#-craft-json-structure)
-5. [🔄 ADVANCED JSON PATTERNS](#-advanced-json-patterns)
-6. [📄 FORMAT CONVERSIONS](#-format-conversions)
-7. [⚖️ JSON VS STANDARD COMPARISON](#-json-vs-standard-comparison)
-8. [💡 EXAMPLES & TEMPLATES](#-examples--templates)
-9. [📈 PERFORMANCE METRICS](#-performance-metrics)
-10. [🔧 TROUBLESHOOTING](#-troubleshooting)
-11. [🎓 BEST PRACTICES](#-best-practices)
+3. [📦 ARTIFACT DELIVERY STANDARDS](#-artifact-delivery-standards)
+4. [🔧 RCAF JSON STRUCTURE](#-rcaf-json-structure)
+5. [🎨 CRAFT JSON STRUCTURE](#-craft-json-structure)
+6. [📄 ADVANCED JSON PATTERNS](#-advanced-json-patterns)
+7. [🔄 FORMAT CONVERSIONS](#-format-conversions)
+8. [⚖️ JSON VS OTHER FORMATS](#-json-vs-other-formats)
+9. [💡 EXAMPLES & TEMPLATES](#-examples--templates)
+10. [📊 TRANSPARENCY REPORTING](#-transparency-reporting)
+11. [📈 PERFORMANCE METRICS](#-performance-metrics)
+12. [🔧 TROUBLESHOOTING](#-troubleshooting)
+13. [🎓 BEST PRACTICES](#-best-practices)
 
 ---
 
@@ -35,29 +37,15 @@ JSON format provides structured, machine-parseable prompt engineering with consi
 - **Type Safety:** Explicit data types
 - **Validation:** Schema-based verification
 
-### JSON vs Standard Format Summary
+### JSON vs Other Formats Summary
 
-| Aspect | Standard | JSON |
-|--------|----------|------|
-| **Readability** | Natural language | Structured data |
-| **Token Usage** | Baseline | +5-10% |
-| **CLEAR Score** | 43/50 avg | 41/50 avg |
-| **Best For** | Human interaction | API/System integration |
-| **Framework Fit** | RCAF/CRAFT | RCAF preferred |
-| **Artifact Header** | Minimal single-line with $ | Minimal single-line with $ |
-
-### Delivery Format
-
-**All JSON prompts delivered as artifacts with minimal header:**
-```
-Mode: $json | Complexity: [level] | Framework: RCAF | CLEAR: [X]/50
-
-{JSON content here}
-```
-
-**Terminology:**
-- **Framework** = Prompt organization (RCAF vs CRAFT)
-- **Output Structure** = Data format (Standard vs JSON vs YAML)
+| Aspect | Markdown (Standard) | JSON | YAML |
+|--------|-------------------|------|------|
+| **Readability** | Natural language | Structured data | Human-friendly structure |
+| **Token Usage** | Baseline | +5-10% | +3-7% |
+| **CLEAR Score** | 43/50 avg | 41/50 avg | 42/50 avg |
+| **Best For** | Human interaction | API/System integration | Configuration |
+| **Framework Fit** | RCAF/CRAFT | RCAF preferred | RCAF optimal |
 
 ---
 
@@ -102,9 +90,181 @@ Mode: $json | Complexity: [level] | Framework: RCAF | CLEAR: [X]/50
 
 ---
 
+<a id="-artifact-delivery-standards"></a>
+
+## 3. 📦 ARTIFACT DELIVERY STANDARDS
+
+### 🔴 CRITICAL REQUIREMENTS
+
+#### Mandatory Artifact Delivery
+- **EVERY JSON enhancement MUST be in artifact format**
+- **NEVER deliver JSON prompts in chat**
+- **If artifact creation fails, STOP and retry**
+- **Always use `text/markdown` type for artifact**
+- **NEVER use `text/plain` (causes display issues)**
+
+#### Mandatory Minimal Header Format
+
+**Single-line header at TOP of every JSON artifact:**
+```
+Mode: $json | Complexity: [level] | Framework: [RCAF/CRAFT] | CLEAR: [X]/50
+```
+
+**Header Requirements:**
+- **Mode:** Always `$json` (with $ prefix)
+- **Complexity level:** Low/Medium/High or 1-10
+- **Framework used:** RCAF or CRAFT
+- **CLEAR score:** Target ≥40/50
+
+#### JSON Artifact Content Structure
+
+**ONLY these two components in artifact:**
+1. **Single-line header** (with $ prefix)
+2. **JSON prompt content**
+
+**FORBIDDEN in JSON artifacts:**
+- ❌ Format Options section
+- ❌ CLEAR Evaluation breakdown
+- ❌ Processing Applied section
+- ❌ Additional metadata sections
+- ❌ Explanations or commentary
+- ✅ All explanations go in CHAT after delivery
+
+### Pre-Delivery Validation
+
+```python
+def validate_json_artifact():
+    """MANDATORY validation before JSON delivery"""
+    
+    checks = {
+        'valid_json': self.is_valid_json(),
+        'artifact_type': self.type == 'text/markdown',
+        'artifact_created': self.artifact is not None,
+        'header_present': self.has_single_line_header,
+        'header_format': self.mode == '$json',
+        'no_extra_sections': self.has_only_header_and_content,
+        'rcaf_complete': self.has_all_rcaf_fields(),
+        'clear_scored': self.clear_score >= 35,
+        'clear_target': self.clear_score >= 40
+    }
+    
+    if not all(checks.values()):
+        failed = [k for k, v in checks.items() if not v]
+        raise ArtifactError(f"CANNOT DELIVER JSON. Failed: {failed}")
+        
+    return True
+```
+
+### 🔴 FORMAT COMPLIANCE ENFORCEMENT
+
+#### ABSOLUTE RULES
+When `$json` command is specified:
+1. **Output MUST be valid JSON syntax ONLY**
+2. **NO markdown formatting** (no **, no ###, no ```)
+3. **NO explanatory text within the artifact**
+4. **If cannot produce valid JSON, STOP and report error**
+5. **Validate format before delivery - if invalid, RETRY**
+
+#### FORMAT LOCK PROTOCOL
+```
+DETECTION: $json command identified
+↓
+LOCK: JSON-only output mode engaged
+↓
+GENERATE: Pure JSON structure
+↓
+VALIDATE: Is it valid JSON? Can json.loads() parse it?
+↓
+If NO → STOP → REGENERATE
+If YES → DELIVER
+```
+
+#### FORBIDDEN ELEMENTS IN JSON ARTIFACTS
+When $json is active, these are STRICTLY FORBIDDEN:
+- ❌ Markdown bold: `**text**`
+- ❌ Markdown headers: `### Header`
+- ❌ Code blocks: ` ```json `
+- ❌ Explanatory text before/after JSON
+- ❌ Comments within JSON (JSON doesn't support comments)
+- ❌ Mixed format output
+
+#### CORRECT vs INCORRECT
+
+**✅ CORRECT $json artifact:**
+```
+Mode: $json | Complexity: Medium | Framework: RCAF | CLEAR: 42/50
+
+{
+  "role": "Data analyst",
+  "context": "Sales database analysis",
+  "action": "Generate quarterly report",
+  "format": {
+    "type": "dashboard",
+    "sections": ["metrics", "trends"]
+  }
+}
+```
+
+**❌ INCORRECT - DO NOT DO THIS:**
+```
+Mode: $json | Complexity: Medium | Framework: RCAF | CLEAR: 42/50
+
+**Role:** Data analyst
+**Context:** Sales database analysis
+```
+This is MARKDOWN, not JSON! IMMEDIATE FAILURE.
+
+**❌ ALSO INCORRECT:**
+```
+Mode: $json | Complexity: Medium | Framework: RCAF | CLEAR: 42/50
+
+Here's the JSON prompt:
+```json
+{
+  "role": "Data analyst"
+}
+```
+```
+NO explanatory text! NO code blocks! Just pure JSON.
+
+#### ERROR RECOVERY PROTOCOL
+If wrong format is generated:
+```
+1. RECOGNIZE: "Output is markdown but should be JSON"
+2. STOP: Do not deliver wrong format
+3. ANNOUNCE: "Format error detected. Regenerating as JSON..."
+4. RETRY: Generate proper JSON
+5. VALIDATE: json.loads() must succeed
+6. DELIVER: Only if valid JSON
+```
+
+#### VALIDATION GATE
+Before delivering ANY $json artifact:
+```python
+def enforce_json_format(content):
+    """Strict JSON format enforcement"""
+    
+    # Check for markdown indicators
+    markdown_patterns = ['**', '###', '```', '##', '__']
+    for pattern in markdown_patterns:
+        if pattern in content:
+            return False, f"Markdown detected: {pattern}"
+    
+    # Validate JSON syntax
+    try:
+        json.loads(content)
+        return True, "Valid JSON"
+    except:
+        return False, "Invalid JSON syntax"
+    
+    # If validation fails, MUST regenerate
+```
+
+---
+
 <a id="-rcaf-json-structure"></a>
 
-## 3. 🔧 RCAF JSON STRUCTURE
+## 4. 🔧 RCAF JSON STRUCTURE
 
 ### Standard RCAF JSON Template
 
@@ -125,13 +285,13 @@ Mode: $json | Complexity: [level] | Framework: RCAF | CLEAR: [X]/50
 
 #### Simple Analysis Task
 
-**Delivered as:**
+**Delivered as artifact:**
 ```
 Mode: $json | Complexity: Medium | Framework: RCAF | CLEAR: 42/50
 
 {
   "role": "Financial analyst specializing in SaaS metrics",
-  "context": "Q4 2024 revenue data from B2B platform",
+  "context": "Q4 2024 revenue data from B2B platform with 10K customers",
   "action": "Calculate MRR growth and identify top 3 trends",
   "format": {
     "structure": "executive_summary",
@@ -141,16 +301,9 @@ Mode: $json | Complexity: Medium | Framework: RCAF | CLEAR: 42/50
 }
 ```
 
-**CLEAR Score: 42/50 (37 base + 5 DEPTH bonus)**
-- Correctness: 8/10 (9/10 with DEPTH)
-- Logic: 7/10 (8/10 with DEPTH)
-- Expression: 6/10 (7/10 with DEPTH, JSON overhead)
-- Arrangement: 8/10 (9/10 with DEPTH)
-- Reuse: 8/10 (9/10 with DEPTH)
-
 #### Content Creation Task
 
-**Delivered as:**
+**Delivered as artifact:**
 ```
 Mode: $json | Complexity: Medium | Framework: RCAF | CLEAR: 41/50
 
@@ -179,7 +332,7 @@ Mode: $json | Complexity: Medium | Framework: RCAF | CLEAR: 41/50
 
 <a id="-craft-json-structure"></a>
 
-## 4. 🎨 CRAFT JSON STRUCTURE
+## 5. 🎨 CRAFT JSON STRUCTURE
 
 ### Standard CRAFT JSON Template
 
@@ -214,11 +367,9 @@ Mode: $json | Complexity: Medium | Framework: RCAF | CLEAR: 41/50
 }
 ```
 
-### CRAFT JSON Examples
-
 #### Complex Analysis Task
 
-**Delivered as:**
+**Delivered as artifact:**
 ```
 Mode: $json | Complexity: High | Framework: CRAFT | CLEAR: 41/50
 
@@ -256,22 +407,15 @@ Mode: $json | Complexity: High | Framework: CRAFT | CLEAR: 41/50
 }
 ```
 
-**CLEAR Score: 41/50 (36 base + 5 DEPTH bonus)**
-- Correctness: 8/10 (9/10 with DEPTH)
-- Logic: 8/10 (9/10 with DEPTH)
-- Expression: 5/10 (6/10 with DEPTH, complexity overhead)
-- Arrangement: 8/10 (9/10 with DEPTH)
-- Reuse: 7/10 (8/10 with DEPTH)
-
 ---
 
 <a id="-advanced-json-patterns"></a>
 
-## 5. 🔄 ADVANCED JSON PATTERNS
+## 6. 📄 ADVANCED JSON PATTERNS
 
 ### Multi-Step Process JSON
 
-**Delivered as:**
+**Delivered as artifact:**
 ```
 Mode: $json | Complexity: High | Framework: RCAF | CLEAR: 42/50
 
@@ -301,7 +445,10 @@ Mode: $json | Complexity: High | Framework: RCAF | CLEAR: 42/50
 
 ### Conditional Logic JSON
 
-```json
+**Delivered as artifact:**
+```
+Mode: $json | Complexity: Medium | Framework: RCAF | CLEAR: 41/50
+
 {
   "role": "Customer service AI",
   "context": "Support ticket classification system",
@@ -329,7 +476,10 @@ Mode: $json | Complexity: High | Framework: RCAF | CLEAR: 42/50
 
 ### Parameterized Template JSON
 
-```json
+**Delivered as artifact:**
+```
+Mode: $json | Complexity: Medium | Framework: RCAF | CLEAR: 40/50
+
 {
   "template": "data_analysis",
   "parameters": {
@@ -353,7 +503,7 @@ Mode: $json | Complexity: High | Framework: RCAF | CLEAR: 42/50
 
 <a id="-format-conversions"></a>
 
-## 6. 📄 FORMAT CONVERSIONS
+## 7. 🔄 FORMAT CONVERSIONS
 
 ### Standard to JSON Conversion
 
@@ -366,14 +516,14 @@ def standard_to_json(standard_prompt):
     rcaf_json = {}
     
     for line in lines:
-        if line.startswith('Role:'):
-            rcaf_json['role'] = line.replace('Role:', '').strip()
-        elif line.startswith('Context:'):
-            rcaf_json['context'] = line.replace('Context:', '').strip()
-        elif line.startswith('Action:'):
-            rcaf_json['action'] = line.replace('Action:', '').strip()
-        elif line.startswith('Format:'):
-            rcaf_json['format'] = line.replace('Format:', '').strip()
+        if line.startswith('**Role:**'):
+            rcaf_json['role'] = line.replace('**Role:**', '').strip()
+        elif line.startswith('**Context:**'):
+            rcaf_json['context'] = line.replace('**Context:**', '').strip()
+        elif line.startswith('**Action:**'):
+            rcaf_json['action'] = line.replace('**Action:**', '').strip()
+        elif line.startswith('**Format:**'):
+            rcaf_json['format'] = line.replace('**Format:**', '').strip()
     
     return json.dumps(rcaf_json, indent=2)
 ```
@@ -386,94 +536,49 @@ def json_to_standard(json_prompt):
     
     data = json.loads(json_prompt)
     
-    standard = f"""Role: {data.get('role', 'Not specified')}
-Context: {data.get('context', 'Not specified')}
-Action: {data.get('action', 'Not specified')}
-Format: {data.get('format', 'Not specified')}"""
+    standard = f"""**Role:** {data.get('role', 'Not specified')}
+**Context:** {data.get('context', 'Not specified')}
+**Action:** {data.get('action', 'Not specified')}
+**Format:** {data.get('format', 'Not specified')}"""
     
     return standard
 ```
 
-### Conversion Examples
-
-**Standard RCAF:**
-```
-Role: Marketing analyst with SEO expertise.
-Context: Tech blog with 50K monthly visitors.
-Action: Audit content and identify improvements.
-Format: Actionable report with priorities.
-```
-
-**JSON Equivalent (delivered as artifact):**
-```
-Mode: $json | Complexity: Low | Framework: RCAF | CLEAR: 41/50
-
-{
-  "role": "Marketing analyst with SEO expertise",
-  "context": "Tech blog with 50K monthly visitors",
-  "action": "Audit content and identify improvements",
-  "format": "Actionable report with priorities"
-}
-```
-
 ---
 
-<a id="-json-vs-standard-comparison"></a>
+<a id="-json-vs-other-formats"></a>
 
-## 7. ⚖️ JSON VS STANDARD COMPARISON
+## 8. ⚖️ JSON VS OTHER FORMATS
 
 ### When to Use JSON Format
 
-| Use JSON When | Use Standard When |
-|---------------|-------------------|
-| API integration needed | Human readability priority |
-| Structured data processing | Natural conversation flow |
-| Programmatic generation | Creative or open-ended tasks |
-| Schema validation required | Flexibility needed |
-| Batch processing | Single prompt usage |
+| Use JSON When | Use Standard When | Use YAML When |
+|---------------|-------------------|---------------|
+| API integration needed | Human readability priority | Configuration templates |
+| Structured data processing | Natural conversation flow | Human editing needed |
+| Programmatic generation | Creative or open-ended tasks | Complex hierarchies |
+| Schema validation required | Flexibility needed | Comments helpful |
+| Batch processing | Single prompt usage | Multi-line text common |
 
 ### CLEAR Score Impact
-
-**CLEAR Scoring System:**
-- Each dimension: 1-10 points
-- 5 dimensions × 10 = 50 total possible
-- DEPTH processing adds +1 per dimension = +5 total
 
 | Format | Avg CLEAR | Strengths | Weaknesses |
 |--------|-----------|-----------|------------|
 | **Standard** | 43/50 | Expression (9/10), Natural flow | Structure consistency |
 | **JSON** | 41/50 | Arrangement (9/10), Precision | Expression (7/10) |
-
-### Token Efficiency Analysis
-
-```python
-def calculate_token_overhead(standard, json_version):
-    """Calculate JSON overhead"""
-    
-    standard_tokens = count_tokens(standard)
-    json_tokens = count_tokens(json_version)
-    
-    overhead_percent = ((json_tokens - standard_tokens) / standard_tokens) * 100
-    
-    return {
-        'standard_tokens': standard_tokens,
-        'json_tokens': json_tokens,
-        'overhead_percent': round(overhead_percent, 1),
-        'typical_range': '5-10%'
-    }
-```
+| **YAML** | 42/50 | Balance (8/10 avg) | Learning curve |
 
 ---
 
 <a id="-examples--templates"></a>
 
-## 8. 💡 EXAMPLES & TEMPLATES
+## 9. 💡 EXAMPLES & TEMPLATES
 
 ### Template Library
 
 #### Research Template
 
-**Delivered as:**
+**Delivered as artifact:**
 ```
 Mode: $json | Complexity: Medium | Framework: RCAF | CLEAR: 40/50
 
@@ -495,7 +600,10 @@ Mode: $json | Complexity: Medium | Framework: RCAF | CLEAR: 40/50
 
 #### Analysis Template
 
-```json
+**Delivered as artifact:**
+```
+Mode: $json | Complexity: Medium | Framework: RCAF | CLEAR: 41/50
+
 {
   "role": "Data analyst",
   "context": {
@@ -512,30 +620,11 @@ Mode: $json | Complexity: Medium | Framework: RCAF | CLEAR: 40/50
 }
 ```
 
-#### Creation Template
-
-```json
-{
-  "role": "${CREATOR_TYPE}",
-  "context": {
-    "audience": "${TARGET_AUDIENCE}",
-    "purpose": "${PURPOSE}",
-    "constraints": "${CONSTRAINTS}"
-  },
-  "action": "Create ${DELIVERABLE_TYPE}",
-  "format": {
-    "style": "${STYLE}",
-    "length": "${LENGTH}",
-    "tone": "${TONE}"
-  }
-}
-```
-
 ### Real-World Examples
 
 #### Customer Segmentation
 
-**Delivered as:**
+**Delivered as artifact:**
 ```
 Mode: $json | Complexity: High | Framework: RCAF | CLEAR: 42/50
 
@@ -552,32 +641,72 @@ Mode: $json | Complexity: High | Framework: RCAF | CLEAR: 42/50
 }
 ```
 
-#### Code Review
+---
 
-**Delivered as:**
+<a id="-transparency-reporting"></a>
+
+## 10. 📊 TRANSPARENCY REPORTING
+
+### After Every JSON Enhancement
+
+**Required in CHAT after artifact delivery:**
+
+```markdown
+📊 **Enhancement Report:**
+
+**Complexity Assessment:** Level [X]/10
+- [Reasoning for complexity level]
+
+**DEPTH Processing Applied:**
+✅ DISCOVER (Rounds 1-2): [What was analyzed]
+✅ ENGINEER (Rounds 3-5): [Framework decisions]
+✅ PROTOTYPE (Rounds 6-7): [Structure built]
+✅ TEST (Rounds 8-9): [Validation performed]
+✅ HARMONIZE (Round 10): [Final polish applied]
+
+**Key Improvements:**
+1. [Specific improvement #1]: [Impact/reasoning]
+2. [Specific improvement #2]: [Impact/reasoning]
+3. [Specific improvement #3]: [Impact/reasoning]
+
+**CLEAR Scoring:**
+- Correctness: [X]/10 - [what this means]
+- Logic/Coverage: [X]/10 - [assessment]
+- Expression: [X]/10 - [clarity level]
+- Arrangement: [X]/10 - [structure quality]
+- Reuse: [X]/10 - [adaptability]
+**Total: [X]/50 (Grade: [A-F])**
+
+**Framework Selection:** [RCAF/CRAFT]
+- Reasoning: [Why this framework was optimal]
+
+**Structure Choice:** JSON
+- Reasoning: [Why JSON format serves this use case]
+- Token Impact: +[X]% over standard format
 ```
-Mode: $json | Complexity: Medium | Framework: RCAF | CLEAR: 41/50
 
-{
-  "role": "Senior software engineer",
-  "context": "Python microservice with 5000 lines of code",
-  "action": {
-    "review": ["code_quality", "security", "performance", "maintainability"],
-    "identify": ["bugs", "vulnerabilities", "optimization_opportunities"]
-  },
-  "format": {
-    "structure": "review_report",
-    "severity_levels": ["critical", "high", "medium", "low"],
-    "include_fixes": true
-  }
-}
+### Quick Mode Transparency Template
+
+```markdown
+📊 **Quick Enhancement Summary:**
+
+**Processing:** [X] rounds (Quick mode, Complexity: [Y]/10)
+
+**What Changed:**
+✅ Structured into JSON format
+✅ Added required RCAF fields
+✅ Defined nested format specifications
+
+**CLEAR Score:** [X]/50 (Grade: [A-F])
+**Framework:** [RCAF/CRAFT] - [brief reason]
+**Structure:** JSON - [API integration/automation benefit]
 ```
 
 ---
 
 <a id="-performance-metrics"></a>
 
-## 9. 📈 PERFORMANCE METRICS
+## 11. 📈 PERFORMANCE METRICS
 
 ### JSON Format Performance
 
@@ -622,17 +751,35 @@ def optimize_json_prompt(json_prompt):
 
 <a id="-troubleshooting"></a>
 
-## 10. 🔧 TROUBLESHOOTING
+## 12. 🔧 TROUBLESHOOTING
 
-### Common JSON Issues
+### Common JSON Issues & Fixes
 
-| Issue | Symptom | Solution |
-|-------|---------|----------|
-| **Invalid JSON** | Parse errors | Validate with JSON linter |
-| **Missing fields** | Incomplete prompt | Check required RCAF elements |
-| **Over-nesting** | Complex structure | Flatten where possible |
-| **Type mismatch** | Processing errors | Ensure consistent types |
-| **Encoding issues** | Special character errors | Use UTF-8 encoding |
+| Issue | Recognition | Solution | Report in Chat |
+|-------|------------|----------|----------------|
+| **Not artifact** | Chat delivery | Force artifact | "Retrying artifact creation..." |
+| **Wrong type** | text/plain | Change to text/markdown | "Fixing artifact type..." |
+| **Invalid JSON** | Parse errors | Validate with JSON linter | "Correcting JSON syntax..." |
+| **Missing fields** | Incomplete prompt | Check required RCAF elements | "Adding missing fields..." |
+| **Extra sections** | Explanations in artifact | Move to chat | "Cleaning artifact structure..." |
+| **No transparency** | Missing report | Add after delivery | "Adding enhancement details..." |
+| **Format violation** | Markdown instead of JSON | STOP and regenerate | "FORMAT ERROR: Regenerating as JSON..." |
+| **Mixed format** | JSON with markdown | Strip markdown, pure JSON | "Removing markdown elements..." |
+
+### FORMAT ENFORCEMENT CHECKLIST
+
+Before delivering $json artifact:
+- [ ] Command is `$json`?
+- [ ] Content is PURE JSON?
+- [ ] NO markdown bold (`**`)?
+- [ ] NO markdown headers (`###`)?
+- [ ] NO code blocks (` ``` `)?
+- [ ] NO explanatory text?
+- [ ] Valid JSON syntax (parseable)?
+- [ ] All RCAF fields present?
+- [ ] Header has `$json` mode?
+
+**If ANY check fails → MUST REGENERATE**
 
 ### Validation Checklist
 
@@ -645,40 +792,24 @@ def optimize_json_prompt(json_prompt):
 - [ ] No trailing commas
 - [ ] Escaped special characters
 - [ ] Delivered as artifact with minimal header
-- [ ] Header has $ prefix for mode
+- [ ] Header has $json mode
 
-### Debug Helper
+### REPAIR Protocol with Transparency
 
-```python
-def validate_json_prompt(json_str):
-    """Validate JSON prompt structure"""
-    
-    try:
-        data = json.loads(json_str)
-        
-        # Check RCAF fields
-        required = ['role', 'context', 'action', 'format']
-        missing = [f for f in required if f not in data]
-        
-        if missing:
-            return False, f"Missing fields: {missing}"
-        
-        # Check for empty values
-        empty = [f for f in required if not data[f]]
-        if empty:
-            return False, f"Empty fields: {empty}"
-        
-        return True, "Valid JSON prompt"
-        
-    except json.JSONDecodeError as e:
-        return False, f"JSON parse error: {e}"
+```markdown
+**R** - Recognize: JSON issue identified
+**E** - Explain: Impact on delivery
+**P** - Propose: Solution approach
+**A** - Apply: Fix implemented
+**I** - Iterate: Verify correction
+**R** - Record: Note in transparency report
 ```
 
 ---
 
 <a id="-best-practices"></a>
 
-## 11. 🎓 BEST PRACTICES
+## 13. 🎓 BEST PRACTICES
 
 ### JSON Prompt Excellence
 
@@ -692,7 +823,8 @@ def validate_json_prompt(json_str):
 - Version your templates
 - Test with JSON validators
 - Deliver as artifact with minimal header
-- Use single-line header with $ prefix
+- Use $json mode in header
+- Provide transparency report in chat
 
 #### Don'ts ❌
 - Don't over-nest structures
@@ -703,6 +835,8 @@ def validate_json_prompt(json_str):
 - Don't use trailing commas
 - Don't embed complex logic
 - Don't add verbose artifact sections
+- Don't skip validation
+- Don't deliver in chat
 
 ### Framework Selection for JSON
 
@@ -747,21 +881,9 @@ def assess_json_quality(json_prompt):
     }
 ```
 
-### Migration Strategy
-
-For systems previously using other formats:
-
-1. **Assess Current Format**: Document existing structure
-2. **Map to RCAF/CRAFT**: Identify field mappings
-3. **Create Templates**: Build reusable JSON templates
-4. **Validate Schema**: Ensure consistency
-5. **Test Integration**: Verify API compatibility
-6. **Monitor Performance**: Track CLEAR scores
-7. **Ensure Artifact Delivery**: Always use minimal header with $
-
 ### The JSON Philosophy
 
-> "Structure enables consistency. Consistency enables automation. Automation enables scale. Minimal header enables focus."
+> "Structure enables consistency. Consistency enables automation. Automation enables scale."
 
 **JSON Format Principles:**
 1. **Clarity through structure** - Clear field separation
@@ -770,19 +892,18 @@ For systems previously using other formats:
 4. **Integration through standards** - API compatibility
 5. **Quality through validation** - Schema enforcement
 6. **Focus through minimalism** - Minimal header only
+7. **Transparency through reporting** - Process visible in chat
 
-### Artifact Delivery Standard
+### Success Criteria
 
-**Every JSON prompt delivered as:**
-```
-Mode: $json | Complexity: [level] | Framework: RCAF | CLEAR: [X]/50
-
-{JSON content}
-```
-
-**CLEAR Score Expectations:**
-- Minimum viable: 35/50 base (40/50 with DEPTH)
-- Standard target: 40/50 base (45/50 with DEPTH)
-- Excellent: 45/50 base (50/50 with DEPTH)
-
-**No additional sections. No verbose headers. Maximum clarity.**
+**Excellent JSON Prompt:**
+- ✅ Valid JSON syntax
+- ✅ All RCAF/CRAFT fields present
+- ✅ Consistent data types
+- ✅ Shallow nesting (<4 levels)
+- ✅ CLEAR score >41/50
+- ✅ Delivered as artifact
+- ✅ Single-line header with $json
+- ✅ Full transparency report
+- ✅ Schema validated
+- ✅ API-ready structure
