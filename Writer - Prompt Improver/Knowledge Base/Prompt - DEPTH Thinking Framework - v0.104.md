@@ -1,8 +1,9 @@
-# Prompt Improver - DEPTH Thinking Framework - v0.103
+# Prompt - DEPTH Thinking Framework - v0.104
 
 A comprehensive methodology combining systematic analysis with **transparent professional excellence** for superior prompt engineering deliverables.
 
-**Core Purpose:** Define the multi-perspective analysis, quality optimization, and transparent reporting systems that operate behind Prompt Improver's interactions.
+- **Core Purpose:** Define the multi-perspective analysis, quality optimization, and transparent reporting systems that operate behind Prompt Improver's interactions.
+- **Critical Updates:** Aligned with new format guides (JSON/YAML/Markdown v0.110/v0.100) and comprehensive Patterns & Evaluation framework v0.100.
 
 ---
 
@@ -15,6 +16,7 @@ A comprehensive methodology combining systematic analysis with **transparent pro
 6. [✅ QUALITY ASSURANCE](#6-✅-quality-assurance)
 7. [📈 PERFORMANCE METRICS](#7-📈-performance-metrics)
 8. [🎨 PRACTICAL EXAMPLES](#8-🎨-practical-examples)
+9. [🏎️ QUICK REFERENCE](#9-🏎️-quick-reference)
 
 ---
 
@@ -42,6 +44,20 @@ A structured framework ensuring comprehensive prompt enhancement through **trans
 - Complexity 7+: 5 rounds
 - Brief transparency summary after delivery
 
+### Framework Integration
+DEPTH works with all frameworks from the comprehensive library:
+- **Primary:** RCAF (80% of cases)
+- **Alternatives:** COSTAR, RACE, CIDI, TIDD-EC, CRISPE, CRAFT
+- **See:** Patterns, Enhancements & Evaluation v0.100 for selection algorithm
+
+### Artifact Delivery Standards
+**CRITICAL - Per Format Guides v0.110/v0.100:**
+- EVERY enhancement MUST be in artifact format
+- Type: `text/markdown` (NEVER `text/plain`)
+- Single-line header ONLY: `Mode: $[mode] | Complexity: [level] | Framework: [name] | CLEAR: [X]/50`
+- NO extra sections in artifact (no format options, no CLEAR breakdown, no processing notes)
+- ALL explanations go in CHAT after delivery
+
 ### Fundamental Principles
 
 **1. Transparent Professional Excellence**
@@ -57,8 +73,8 @@ A structured framework ensuring comprehensive prompt enhancement through **trans
 - User controls content, system ensures quality
 
 **3. Intelligent Processing**
-- Automatic framework selection (RCAF vs CRAFT)
-- Smart output structure optimization (Standard/JSON/YAML)
+- Automatic framework selection using Patterns v0.100 algorithm
+- Smart output structure optimization (Standard/JSON/YAML per format guides)
 - Error recovery with transparent reporting
 - Consistent excellence across all deliverables
 
@@ -116,8 +132,8 @@ USER SEES AFTER:
 INTERNAL Success Criteria:
 - CLEAR score: Target 40+/50 (80%+)
 - Each dimension: Target 8+/10
-- Framework fit: RCAF/CRAFT optimal
-- Token efficiency: <10% overhead
+- Framework fit: Per Patterns v0.100 algorithm
+- Token efficiency: <10% overhead per format guides
 
 USER SEES DURING: "• Optimizing approach..."
 
@@ -141,8 +157,8 @@ USER SEES AFTER:
 ```markdown
 INTERNAL:
 - Use Case Context: [task type, platform, audience]
-- Framework Context: [RCAF vs CRAFT suitability]
-- Output Structure Context: [Standard/JSON/YAML benefits]
+- Framework Context: [Per Patterns v0.100 selection]
+- Output Structure Context: [Per Format Guides specifications]
 - Complexity Context: [1-10 scale, simplification needs]
 
 USER SEES DURING: "• Enhancing your prompt..."
@@ -165,9 +181,9 @@ USER SEES AFTER:
 ```markdown
 INTERNAL Task Execution:
 Step 1: Complexity analysis
-Step 2: Framework selection
-Step 3: Element mapping
-Step 4: Output structure optimization
+Step 2: Framework selection (Patterns v0.100 algorithm)
+Step 3: Element mapping per framework
+Step 4: Output structure optimization (Format Guides)
 Step 5: CLEAR validation
 Step 6: Polish and optimize
 
@@ -230,14 +246,14 @@ const systemState = {
     perspectives: array,
     clearScores: object,
     
-    // Transparency tracking (NEW)
+    // Transparency tracking
     improvementLog: [],
     decisionsLog: [],
     alternativesConsidered: [],
     
-    // Framework state
+    // Framework state (per Patterns v0.100)
     complexity: number,
-    frameworkSelected: 'RCAF' | 'CRAFT' | 'user_choice',
+    frameworkSelected: 'RCAF' | 'COSTAR' | 'RACE' | 'CIDI' | 'TIDD-EC' | 'CRISPE' | 'CRAFT',
     structureSelected: 'standard' | 'json' | 'yaml',
     
     // Quality control
@@ -258,6 +274,27 @@ const systemState = {
 | **P**rototype | 6-7 | Building | "Building..." | "Structured with [details]" |
 | **T**est | 8-9 | Validation | "Ensuring quality..." | "CLEAR score: [X]/50" |
 | **H**armonize | 10 | Polish | "Creating..." | "Final optimizations: [list]" |
+
+### Framework Selection Integration
+
+```python
+def select_framework(state):
+    """Use Patterns v0.100 intelligent selection"""
+    from patterns_v0100 import select_optimal_framework
+    
+    result = select_optimal_framework(state.task_analysis)
+    
+    state.frameworkSelected = result['primary']
+    state.alternativesConsidered = [result['alternative']]
+    state.decisionsLog.append({
+        'decision': 'framework',
+        'selected': result['primary'],
+        'confidence': result['confidence'],
+        'reasoning': result['reasoning']
+    })
+    
+    return result
+```
 
 ### Transparency Report Generation
 
@@ -301,7 +338,7 @@ def generate_transparency_report(state, improvements):
             'framework': {
                 'selected': state.frameworkSelected,
                 'reasoning': explain_framework_choice(),
-                'alternatives': list_framework_alternatives()
+                'alternatives': state.alternativesConsidered
             },
             'structure': {
                 'selected': state.structureSelected,
@@ -328,6 +365,7 @@ def generate_transparency_report(state, improvements):
 def apply_transparent_excellence(request, mode='standard'):
     """
     Apply professional DEPTH analysis with full transparency
+    Integrates with Patterns v0.100 and Format Guides
     """
     
     # Track everything for reporting
@@ -357,7 +395,7 @@ def apply_transparent_excellence(request, mode='standard'):
         tracking['process'].append(f'{phase}: {results.summary}')
         update_user_message_simply()
     
-    # Deliver enhanced prompt
+    # Deliver enhanced prompt (per format guides)
     artifact = create_artifact(results)
     deliver(artifact)
     
@@ -381,8 +419,8 @@ def apply_transparent_excellence(request, mode='standard'):
 
 **DEPTH Processing Applied:**
 ✅ DISCOVER (Rounds 1-2): [Key findings]
-✅ ENGINEER (Rounds 3-5): [Framework decision]
-✅ PROTOTYPE (Rounds 6-7): [Structure built]
+✅ ENGINEER (Rounds 3-5): [Framework decision per Patterns v0.100]
+✅ PROTOTYPE (Rounds 6-7): [Structure built per format guides]
 ✅ TEST (Rounds 8-9): [Validation results]
 ✅ HARMONIZE (Round 10): [Final polish]
 
@@ -394,11 +432,11 @@ def apply_transparent_excellence(request, mode='standard'):
 **CLEAR Scoring:**
 [Show breakdown with explanations]
 
-**Framework Decision:** [RCAF/CRAFT]
-- Why: [Reasoning]
+**Framework Decision:** [Selected from 7 options]
+- Why: [Reasoning from Patterns v0.100 algorithm]
 
 **Structure Decision:** [Standard/JSON/YAML]
-- Why: [Reasoning]
+- Why: [Reasoning per format guides]
 ```
 
 **Quick Mode Report Template:**
@@ -414,8 +452,8 @@ def apply_transparent_excellence(request, mode='standard'):
 ✅ [Change 3]
 
 **CLEAR Score:** [X]/50 (Grade: [A-F])
-**Framework:** [RCAF/CRAFT]
-**Structure:** [Standard/JSON/YAML]
+**Framework:** [Selected]
+**Structure:** [Selected]
 ```
 
 ### Multi-Perspective Analysis Transparency
@@ -426,14 +464,15 @@ def report_perspectives_applied(request):
     
     perspectives_used = []
     
+    # Apply based on task characteristics
     if 'technical' in request:
-        perspectives_used.append('Technical architecture perspective for system design')
+        perspectives_used.append('Technical architecture perspective')
     
     if 'creative' in request:
-        perspectives_used.append('Creative perspective for innovative approaches')
+        perspectives_used.append('Creative perspective')
     
     if 'analysis' in request:
-        perspectives_used.append('Analytical perspective for data-driven insights')
+        perspectives_used.append('Analytical perspective')
     
     # Always include these
     perspectives_used.extend([
@@ -468,7 +507,7 @@ Please provide your prompt or describe what you need:
 ```markdown
 [Processing messages during enhancement]
 
-[Artifact delivered]
+[Artifact delivered per format guide requirements]
 
 📊 **Enhancement Report:**
 
@@ -488,9 +527,9 @@ Please provide your prompt or describe what you need:
 [After processing]
 
 📊 **Enhancement Summary:**
-- Applied RCAF framework for clarity
-- Made 3 key improvements
-- CLEAR Score: 42/50 (84% - Grade A)
+- Applied [Framework] for clarity
+- Made [X] key improvements
+- CLEAR Score: [X]/50 ([%] - Grade [A-F])
 ```
 
 **Moderate Complexity (5-6):**
@@ -498,7 +537,7 @@ Please provide your prompt or describe what you need:
 [After framework choice and processing]
 
 📊 **Enhancement Report:**
-- Complexity: Level 5/10 (moderate)
+- Complexity: Level [X]/10 ([reason])
 - Framework: [User's choice] selected for [reason]
 - Key improvements: [list]
 - CLEAR Score: [X]/50 with breakdown
@@ -509,10 +548,10 @@ Please provide your prompt or describe what you need:
 [After simplification choice and processing]
 
 📊 **Comprehensive Enhancement Analysis:**
-- Complexity: Level [8-10]/10 (high)
+- Complexity: Level [X]/10 (high)
 - Approach: [Streamlined/Comprehensive] as requested
 - Simplifications applied: [if streamlined]
-- Framework: [RCAF/CRAFT] for [reason]
+- Framework: [Selected] for [reason]
 - Major improvements: [detailed list]
 - CLEAR Score: [X]/50 with full breakdown
 - Alternative approaches: [what wasn't done and why]
@@ -537,11 +576,11 @@ quality_gates = {
     },
     'engineer_gate': {
         'framework_applied': check(),
-        'report': f'{framework} selected for {reason}'
+        'report': f'{framework} selected per Patterns v0.100'
     },
     'prototype_gate': {
         'prompt_complete': check(),
-        'report': 'Structure built with X elements'
+        'report': 'Structure built per format guides'
     },
     'test_gate': {
         'clear_scored': check(),
@@ -555,6 +594,26 @@ quality_gates = {
 
 # Generate transparency report from gates
 transparency_report = compile_gate_reports(quality_gates)
+```
+
+### Format Guide Compliance
+
+```python
+def validate_artifact_compliance():
+    """Ensure artifact meets format guide requirements"""
+    
+    checks = {
+        'artifact_type': self.type == 'text/markdown',
+        'header_format': self.has_minimal_header(),
+        'no_extra_sections': self.no_forbidden_sections(),
+        'mode_prefix': self.mode.startswith('$'),
+        'clear_score_present': self.header_has_clear_score()
+    }
+    
+    if not all(checks.values()):
+        raise ArtifactError(f"Format guide violation: {failed_checks}")
+    
+    return True
 ```
 
 ### Error Recovery with Transparency
@@ -610,6 +669,7 @@ def handle_quality_failure_transparently(gate, issue):
 | **User Understanding** | High | Learning insights provided | Educational notes |
 | **CLEAR Achievement** | 40+/50 | All dimensions scored | Full breakdown shown |
 | **Decision Clarity** | 100% | All choices explained | Reasoning provided |
+| **Format Compliance** | 100% | Per guides v0.110/v0.100 | Structure justified |
 
 ### Transparency Metrics
 
@@ -639,7 +699,7 @@ SYSTEM: 🎯 Analyzing your request...
 • Enhancing clarity
 • Building framework
 
-[Delivers artifact]
+[Delivers artifact per format guide]
 ```
 
 **User Sees After (Transparency Report):**
@@ -684,7 +744,7 @@ SYSTEM: 🎯 Analyzing your request...
 ```markdown
 Enhancing immediately...
 
-[Delivers artifact]
+[Delivers artifact per format guide]
 ```
 
 **Brief Transparency Report:**
@@ -705,7 +765,17 @@ Enhancing immediately...
 
 ---
 
-## 📋 QUICK REFERENCE
+<a id="9-🏎️-quick-reference"></a>
+
+## 9. 🏎️ QUICK REFERENCE
+
+### Integration Points
+
+**Referenced Documents:**
+- **Patterns, Enhancements & Evaluation** - Framework library & selection
+- **Format Guide - JSON** - JSON structure specifications
+- **Format Guide - YAML** - YAML structure specifications  
+- **Format Guide - Markdown** - Standard structure specifications
 
 ### Transparency Components
 

@@ -1,154 +1,85 @@
-# Prompt Engineering Assistant - User Guide v0.861
+# Prompt Engineering Assistant - User Guide v0.900
 
-Transforms vague requests into clear, effective AI prompts with **full transparency** about improvements, scoring, and decision-making through intelligent framework selection and automatic DEPTH optimization.
+Professional prompt transformation system with **intelligent framework selection**, comprehensive enhancement patterns, and full transparency reporting through advanced DEPTH methodology.
 
-## 📋 Table of Contents
+## 🔋 Table of Contents
 
-- [🆕 What's New In V0.861 - TRANSPARENCY UPDATE](#whats-new-in-v0861)
-- [📊 Transparency System](#transparency-system)
-- [🔧 What's Improved](#whats-improved)
+- [🆕 What's New in v0.900](#whats-new-in-v0900)
 - [✨ Key Features](#key-features)
 - [🚀 Quick Setup](#quick-setup)
 - [🎛️ Operating Modes](#operating-modes)
-- [📄 Output Formats](#output-formats)
-- [🧠 DEPTH Thinking Framework](#depth-thinking-framework)
-- [🎯 Automatic Complexity Detection](#automatic-complexity-detection)
-- [⭐ RCAF Framework](#rcaf-framework)
-- [✅ CLEAR Evaluation System](#clear-evaluation-system)
-- [📊 Header Format](#header-format)
-- [🆘 Troubleshooting](#troubleshooting)
+- [🧠 Framework Intelligence](#framework-intelligence)
+- [📊 Enhancement System](#enhancement-system)
+- [📈 CLEAR Evaluation](#clear-evaluation)
+- [🔄 Output Formats](#output-formats)
+- [🛠️ REPAIR+ Protocol](#repair-protocol)
+- [📚 Documentation Structure](#documentation-structure)
+- [🎯 Quick Command Reference](#quick-command-reference)
 - [📦 Version History](#version-history)
 
 ---
 
-<a id="whats-new-in-v0861"></a>
-## 🆕 What's New In V0.861 - TRANSPARENCY UPDATE
+<a id="whats-new-in-v0900"></a>
+## 🆕 What's New in v0.900
 
-### 🎉 Major Feature: Full Process Transparency
-The system now **explains every enhancement** after delivering your improved prompt:
-- **What was improved** and why each change matters
-- **CLEAR scoring breakdown** with all 5 dimensions explained
-- **DEPTH processing details** showing which phases were applied
-- **Framework reasoning** explaining why RCAF or CRAFT was chosen
-- **Structure justification** for Standard/JSON/YAML selection
-- **Learning insights** to help you understand prompt engineering
+### 🎉 Major Enhancements
 
-### Enhanced User Experience
-- **Clean artifacts:** Prompts remain minimal (header + content only)
-- **Comprehensive explanations:** Full details provided in chat after delivery
-- **Educational value:** Learn from every enhancement
-- **Decision visibility:** Understand the "why" behind every choice
+**Intelligent Framework Selection**
+- 7 professional frameworks with automatic selection
+- Success rate tracking (87-94% per framework)
+- Context-aware framework matching
+- Power combinations for complex scenarios
 
-### Example of New Transparency
-```markdown
-[Artifact delivered with enhanced prompt]
+**Consolidated Pattern Library**
+- Comprehensive enhancement patterns
+- Framework optimization strategies
+- Excellence patterns for 45+ CLEAR scores
+- Systematic weakness detection
 
-📊 **Enhancement Report:**
+**Enhanced REPAIR+ Protocol**
+- Pattern-based issue detection
+- Prioritized solution proposals
+- Strategy-based fixes
+- Iterative improvement to target scores
 
-**Complexity Assessment:** Level 4/10
-- Clear task domain
-- Standard requirements
-- Straightforward enhancement needed
+**Advanced Scoring System**
+- Context-aware CLEAR weighting
+- Multi-pass evaluation methodology
+- Dimension interdependencies
+- Comparative scoring capabilities
 
-**Key Improvements:**
-1. Added data analyst role for expertise context
-2. Specified "Q4 2024" timeframe for concrete scope
-3. Defined "top 3 insights" instead of vague "analysis"
-
-**CLEAR Score: 43/50 (86% - Grade A)**
-- Correctness: 9/10 - All requirements captured
-- Logic: 8/10 - Complete coverage
-- Expression: 9/10 - Crystal clear
-- Arrangement: 9/10 - Well-structured
-- Reuse: 8/10 - Easily adaptable
-
-**Why RCAF:** Perfect clarity for straightforward task
-**Why Standard Format:** Natural language best for this use case
-```
-
----
-
-<a id="transparency-system"></a>
-## 📊 Transparency System
-
-### Two-Part Delivery System
-
-**Part 1: Enhanced Prompt (Artifact)**
-- Minimal header with $ prefix
-- Your enhanced prompt
-- Clean, ready to use
-
-**Part 2: Enhancement Report (Chat)**
-- Detailed explanation of improvements
-- CLEAR scoring with breakdown
-- Process phases explained
-- Decision reasoning
-- Learning insights
-
-### What You'll See After Every Enhancement
-
-| Component | Details Shown | Purpose |
-|-----------|--------------|----------|
-| **Complexity Assessment** | Level 1-10 with reasoning | Understand task complexity |
-| **DEPTH Processing** | Which phases applied and what they did | See the methodology |
-| **Key Improvements** | Specific changes with impact | Learn what was enhanced |
-| **CLEAR Scoring** | All 5 dimensions scored and explained | Quality validation |
-| **Framework Decision** | Why RCAF or CRAFT was chosen | Understand structure |
-| **Structure Choice** | Why Standard/JSON/YAML selected | Format reasoning |
-
-### Transparency Levels by Mode
-
-| Mode | Report Detail | Focus |
-|------|--------------|-------|
-| **Interactive** | Full comprehensive report | Complete analysis |
-| **$improve** | Full report with improvements | Detailed enhancements |
-| **$refine** | Extensive analysis | Deep optimization insights |
-| **$quick** | Brief summary | Key changes only |
-| **$short** | Minimal report | Essential improvements |
-| **$json/$yaml** | Structure-focused | Format benefits explained |
-
----
-
-<a id="whats-improved"></a>
-## 🔧 What's Improved from v0.860
-
-### Transparency Features ✅
-**Full Visibility:**
-- Every enhancement explained
-- Scoring always shown
-- Process phases detailed
-- Decisions justified
-- Learning insights provided
-
-### Maintained Excellence ✅
-**From v0.860:**
-- Interactive mode flow
-- Smart Quick mode scaling
-- Automatic DEPTH processing
-- Framework selection at complexity 5-6
-- Challenge mode at complexity 7+
-
-### Enhanced Understanding ✅
-**Educational Value:**
-- Learn prompt engineering principles
-- Understand quality metrics
-- See alternative approaches
-- Gain insights from every interaction
+### Maintained Excellence
+- Full transparency reporting after every enhancement
+- Interactive mode as default
+- DEPTH processing with 10-round standard
+- Quick mode with auto-scaled rounds (1-5)
+- Clean artifacts with minimal headers
 
 ---
 
 <a id="key-features"></a>
 ## ✨ Key Features
 
-- **🚀 Seven Modes**: Interactive (default), Short, Improve, Refine, Quick, JSON, YAML
-- **🧠 DEPTH Framework**: 5-phase methodology with transparent reporting
-- **📊 Full Transparency**: Complete explanation of improvements and decisions
-- **🎯 Smart Complexity**: Automatic detection with reasoning shown
-- **⚡ Quick Mode**: Fast processing with brief summaries
-- **💬 Interactive Default**: Guided enhancement with full explanations
-- **🤖 Automatic Processing**: System optimization with visibility
-- **📈 CLEAR Scoring**: Always shown with dimension breakdown
-- **📦 Clean Artifacts**: Minimal prompts, comprehensive explanations
+### Core Capabilities
+- **🚀 Seven Operating Modes**: Interactive (default), Quick, Short, Improve, Refine, JSON, YAML
+- **🧠 Seven Frameworks**: RCAF, COSTAR, RACE, CIDI, TIDD-EC, CRISPE, CRAFT
+- **📊 DEPTH Processing**: 10-round comprehensive analysis (auto-scaled in Quick mode)
+- **🎯 Smart Selection**: Automatic framework matching based on task analysis
+- **⚡ Quick Mode Scaling**: 1-5 rounds based on complexity (1-10 scale)
+- **💬 Interactive Default**: Guided enhancement with framework choices
+- **📈 CLEAR Scoring**: Context-aware evaluation with dimension weighting
+- **🔄 Pattern Library**: 20+ enhancement patterns for systematic improvement
+- **🛠️ REPAIR+ Recovery**: Advanced error detection and correction
+- **📦 Clean Artifacts**: Minimal headers, comprehensive explanations
+
+### Framework Success Rates
+- **COSTAR**: 94% - Content creation champion
+- **TIDD-EC**: 93% - Precision and compliance leader
+- **RCAF**: 92% - General purpose excellence
+- **CRAFT**: 91% - Complex project master
+- **CIDI**: 90% - Process documentation specialist
+- **RACE**: 88% - Speed optimization expert
+- **CRISPE**: 87% - Strategic exploration
 
 ---
 
@@ -163,31 +94,31 @@ The system now **explains every enhancement** after delivering your improved pro
 ### Step 2: Add System Instructions
 1. Click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Writer - Prompt Improver - v0.861.md`
+3. Copy and paste: `Writer - Prompt Improver - v0.900.md`
 4. Save the project
 
-### Step 3: Upload Supporting Documents
-Add these documents to your project:
+### Step 3: Add Knowledge Base Documents
 
-**Core Documents (Updated for Transparency):**
-- `Prompt - DEPTH Thinking Framework - v0.110.md`
-- `Prompt - Interactive Mode - v0.700.md`
-- `Prompt - Artifact Standards & Templates - v0.120.md`
+**Core System (Required):**
+- `README.md` (this file)
+- `Writer - Prompt Improver - v0.900.md` - Main system prompt
 
-**Enhancement Documents:**
-- `Prompt - Patterns & Enhancements - v0.612.md`
-- `Prompt - Evaluation & Refinement - v0.612.md`
+**Enhancement Framework:**
+- `Prompt - DEPTH Thinking Framework - v0.110.md` - Core methodology
+- `Prompt - Patterns, Enhancements & Evaluation - v0.100.md` - Complete pattern library
+- `Prompt - Interactive Mode - v0.700.md` - Conversation flows
 
-**Format Guides:**
-- `Prompt - JSON Format Guide.md`
-- `Prompt - YAML Format Guide.md`
+**Format Specifications:**
+- `Prompt - Format Guide - Markdown - v0.100.md` - Standard format
+- `Prompt - Format Guide - JSON - v0.110.md` - API integration format
+- `Prompt - Format Guide - YAML - v0.110.md` - Configuration format
 
 ### Step 4: Start Enhancing
 ```
-analyze customer data            # Get enhancement + full report
-$quick fix grammar              # Fast enhancement + brief summary
-$improve generate insights      # Standard enhancement + detailed analysis
-$json api endpoint              # JSON format + structure explanation
+analyze customer data            # Interactive mode with full transparency
+$quick fix grammar              # Fast 1-5 round enhancement
+$improve generate report        # Standard 10-round DEPTH processing
+$json api endpoint              # JSON format with structure optimization
 ```
 
 ---
@@ -195,269 +126,254 @@ $json api endpoint              # JSON format + structure explanation
 <a id="operating-modes"></a>
 ## 🎛️ Operating Modes
 
-**Default Mode:** The system defaults to `interactive` with full transparency reporting.
+**Default:** System always starts in Interactive Mode unless command specified
 
-| Mode | Command | Purpose | Processing | Transparency | Speed |
-|------|---------|---------|------------|--------------|-------|
-| **Interactive** | (default) | Guided enhancement | 10 rounds | Full report | Standard |
-| **$short** | `$short`/`$s` | Minimal refinement | 3 rounds | Brief summary | Fast |
-| **$improve** | `$improve`/`$i` | Standard enhancement | 10 rounds | Full report | Standard |
-| **$refine** | `$refine`/`$r` | Maximum optimization | 10 rounds | Detailed analysis | Thorough |
-| **$quick** | `$quick`/`$q` | Fast processing | 1-5 scaled | Quick summary | Very Fast |
-| **$json** | `$json`/`$j` | API format | 10 rounds | Structure focus | Standard |
-| **$yaml** | `$yaml`/`$y` | Config format | 10 rounds | Template focus | Standard |
+| Mode | Command | Purpose | DEPTH Rounds | Transparency | Speed |
+|------|---------|---------|--------------|--------------|-------|
+| **Interactive** | (default) | Guided enhancement | 10 | Full report | Standard |
+| **$quick** | `$quick`/`$q` | Fast processing | 1-5 scaled | Brief summary | Very Fast |
+| **$short** | `$short`/`$s` | Minimal refinement | 3 | Key changes | Fast |
+| **$improve** | `$improve`/`$i` | Standard enhancement | 10 | Full report | Standard |
+| **$refine** | `$refine`/`$r` | Maximum optimization | 10 | Deep analysis | Thorough |
+| **$json** | `$json`/`$j` | API format | 10 | Structure focus | Standard |
+| **$yaml** | `$yaml`/`$y` | Config format | 10 | Template focus | Standard |
 
-### Interactive Flow with Transparency
+### Quick Mode Complexity Scaling
+- **Complexity 1-2**: 1-2 DEPTH rounds
+- **Complexity 3-4**: 3 DEPTH rounds  
+- **Complexity 5-6**: 4 DEPTH rounds
+- **Complexity 7+**: 5 DEPTH rounds
+
+---
+
+<a id="framework-intelligence"></a>
+## 🧠 Framework Intelligence
+
+### Automatic Framework Selection
+
+The system analyzes your request across 8 dimensions to select the optimal framework:
+
 ```
-Welcome → Questions (if needed) → Processing → Artifact → Enhancement Report
-
-Example Report After Delivery:
-📊 **Enhancement Report:**
-- Complexity: Level 4/10
-- Improvements: [specific changes]
-- CLEAR Score: 43/50 (breakdown shown)
-- Framework: RCAF (reasoning explained)
-- Structure: Standard (justification given)
+Task Analysis → Framework Selection → Success Rate Prediction
+     ↓                ↓                      ↓
+[complexity]    [best match]          [87-94% typical]
 ```
+
+### Framework Selection Matrix
+
+| Complexity | Primary Need | Framework | Success Rate | Use Cases |
+|------------|--------------|-----------|--------------|-----------|
+| **1-3** | Speed | RACE | 88% | Urgent tasks, quick iterations |
+| **1-4** | Clarity | RCAF | 92% | General prompts, balanced needs |
+| **3-6** | Audience | COSTAR | 94% | Content creation, communication |
+| **4-6** | Instructions | CIDI | 90% | Documentation, tutorials |
+| **5-7** | Creativity | CRISPE | 87% | Strategy, exploration |
+| **6-8** | Precision | TIDD-EC | 93% | Compliance, quality-critical |
+| **7-10** | Comprehensive | CRAFT | 91% | Complex projects, planning |
+
+### Power Combinations
+
+**For Complex Scenarios:**
+- **RCAF + CoT**: Systematic thinking structure
+- **COSTAR + ReAct**: Iterative content refinement
+- **TIDD-EC + Few-Shot**: Learning from examples
+- **RACE + ToT**: Rapid decision trees
+- **Master-Detail Pattern**: Nested framework hierarchies
+
+---
+
+<a id="enhancement-system"></a>
+## 📊 Enhancement System
+
+### Systematic Enhancement Pipeline
+
+```python
+1. Structural Enhancement    → Framework application
+2. Clarity Enhancement       → Simplification & disambiguation  
+3. Precision Enhancement     → Measurability & constraints
+4. Efficiency Enhancement    → Token optimization
+5. Reusability Enhancement   → Parameterization & templates
+```
+
+### Common Pattern Transformations
+
+| Pattern | Impact | CLEAR Gain |
+|---------|--------|------------|
+| **Vague→Specific** | Add role, context, metrics | +20 points |
+| **Assumption Elimination** | Make implicit explicit | +3-5 Correctness |
+| **Scope Boundaries** | Define included/excluded | +4-6 Logic |
+| **Example Injection** | Clarify format expectations | +3-5 Expression |
+| **Success Layering** | Min/target/excellence levels | +4-5 Arrangement |
+
+### Excellence Patterns (45+ CLEAR)
+- Complete context layering
+- Multi-level success criteria
+- Adaptive response formats
+- Self-documenting structure
+
+---
+
+<a id="clear-evaluation"></a>
+## 📈 CLEAR Evaluation
+
+### Context-Aware Scoring System
+
+The system adjusts dimension weights based on use case:
+
+| Use Case | Correctness | Logic | Expression | Arrangement | Reuse |
+|----------|-------------|-------|------------|-------------|-------|
+| **API Integration** | 30% | 20% | 20% | 20% | 10% |
+| **Creative Writing** | 15% | 20% | 35% | 20% | 10% |
+| **Template Creation** | 20% | 15% | 20% | 20% | 25% |
+| **General (Default)** | 20% | 20% | 30% | 20% | 10% |
+
+### Score Interpretation
+
+| Score | Grade | Quality Level | Action |
+|-------|-------|--------------|--------|
+| **45-50** | A+ | Excellence | Ship immediately |
+| **40-44** | A | Professional | Ready to use |
+| **35-39** | B | Good | Minor refinements optional |
+| **30-34** | C | Adequate | Consider improvements |
+| **<30** | D/F | Needs work | Significant enhancement required |
+
+### Multi-Pass Evaluation
+1. **Surface**: Framework presence, basic completeness
+2. **Deep**: Ambiguity detection, assumption analysis
+3. **Interaction**: AI interpretation testing
 
 ---
 
 <a id="output-formats"></a>
-## 📄 Output Formats
+## 🔄 Output Formats
 
-### Three Format System with Transparency
-| Format | Best For | Token Impact | Explanation Provided |
-|--------|----------|--------------|---------------------|
-| **Standard** | Natural language | Baseline | Why best for clarity |
-| **JSON** | API integration | +5-10% | Structure benefits explained |
-| **YAML** | Templates/config | +3-7% | Template advantages shown |
+### Three Format Options
 
----
+| Format | Token Impact | Best For | CLEAR Average |
+|--------|--------------|----------|---------------|
+| **Standard** | Baseline | Human interaction | 43/50 |
+| **JSON** | +5-10% | API/System integration | 41/50 |
+| **YAML** | +3-7% | Configuration/Templates | 42/50 |
 
-<a id="depth-thinking-framework"></a>
-## 🧠 DEPTH Thinking Framework
+### Format Selection During Interactive Mode
+```
+Output Format Selection:
 
-### Now with Transparent Reporting
+1. Standard (Markdown) - Natural language flow
+2. JSON - Structured data for APIs  
+3. YAML - Human-friendly configuration
 
-**What Happens Behind the Scenes (Now Explained):**
-
-| Phase | Internal Process | What You See After |
-|-------|-----------------|-------------------|
-| **D**iscover | Analyze requirements | "Identified missing elements..." |
-| **E**ngineer | Apply framework | "Selected RCAF for clarity..." |
-| **P**rototype | Build structure | "Structured with 4 elements..." |
-| **T**est | Validate quality | "CLEAR score: 43/50..." |
-| **H**armonize | Final polish | "Optimized for immediate use..." |
-
-### Example Transparency Report
-```markdown
-**DEPTH Processing Applied:**
-✅ DISCOVER (Rounds 1-2): Identified vague requirements, missing context
-✅ ENGINEER (Rounds 3-5): Applied RCAF framework for maximum clarity
-✅ PROTOTYPE (Rounds 6-7): Built structured enhancement
-✅ TEST (Rounds 8-9): Validated completeness (CLEAR: 43/50)
-✅ HARMONIZE (Round 10): Polished for professional use
+Your choice? (1, 2, or 3)
 ```
 
 ---
 
-<a id="automatic-complexity-detection"></a>
-## 🎯 Automatic Complexity Detection
+<a id="repair-protocol"></a>
+## 🛠️ REPAIR+ Protocol
 
-### With Transparent Reasoning
+### Enhanced Recovery System
 
-The system now explains its complexity assessment:
+**Pattern-Based Issue Detection:**
+- **Critical**: Must fix for functionality
+- **Major**: Should fix for quality
+- **Minor**: Nice to fix for polish
+- **Style**: Optional improvements
 
-```markdown
-**Complexity Assessment:** Level 5/10
-- Multiple requirements detected
-- Technical domain identified
-- Moderate scope defined
-→ Offering framework choice (RCAF vs CRAFT)
+**Recovery Strategies:**
+```
+Recognize → Explain → Propose → Apply → Iterate → Record
+    ↓          ↓         ↓        ↓        ↓         ↓
+[patterns] [impact] [solutions] [fixes] [target] [learning]
 ```
 
-| Complexity | What You'll See | Framework Decision |
-|------------|----------------|-------------------|
-| **1-4** | "Simple task detected" | RCAF automatic (explained) |
-| **5-6** | "Moderate complexity" | Choice offered (with reasoning) |
-| **7+** | "High complexity identified" | Simplification suggested (justified) |
+### Common Fixes by Score Range
+- **Score <25**: Complete rewrite with RCAF
+- **Score 25-30**: Framework switch
+- **Score 30-35**: Fix 2 weakest dimensions
+- **Score 35-40**: Polish weakest dimension
+- **Score 40-45**: Optional refinements
+- **Score 45+**: Excellence achieved
 
 ---
 
-<a id="rcaf-framework"></a>
-## ⭐ RCAF Framework
+<a id="documentation-structure"></a>
+## 📚 Documentation Structure
 
-### Framework Selection Transparency
+### Core System Files
 
-The system now explains why it chose RCAF or CRAFT:
+| Document | Version | Purpose |
+|----------|---------|---------|
+| **Writer - Prompt Improver** | v0.900 | Main system prompt with all rules |
+| **README** | v0.900 | This user guide |
 
-```markdown
-**Framework Selection:** RCAF
-- Why: Task has clear requirements that fit 4-element structure
-- Benefits: Maximum clarity, minimal complexity
-- Alternative: CRAFT would add unnecessary detail
-```
+### Enhancement Framework
 
-### Example Enhancement with Transparency
+| Document | Version | Purpose |
+|----------|---------|---------|
+| **DEPTH Thinking Framework** | v0.110 | Core 10-round methodology |
+| **Patterns, Enhancements & Evaluation** | v0.100 | Complete pattern library |
+| **Interactive Mode** | v0.700 | Conversation flow management |
 
-**Before:** "analyze the data"
+### Format Specifications
 
-**After - Artifact:**
-```markdown
-Mode: $improve | Complexity: Medium | Framework: RCAF | CLEAR: 43/50
-
-Role: Business analyst with predictive modeling expertise.
-Context: Q4 2024 performance data across all departments.
-Action: Identify top 3 growth opportunities and predict Q1 2025 trends.
-Format: Executive presentation with 5 key insights and recommendations.
-```
-
-**After - Explanation:**
-```markdown
-📊 **What I Enhanced:**
-1. Added expert role for context (was missing)
-2. Specified timeframe and scope (was vague)
-3. Made deliverables measurable (was unclear)
-4. Defined output format (was undefined)
-
-**Impact:** Clarity +115%, now immediately actionable
-```
+| Document | Version | Purpose |
+|----------|---------|---------|
+| **Format Guide - Markdown** | v0.100 | Standard/natural language |
+| **Format Guide - JSON** | v0.110 | API integration structure |
+| **Format Guide - YAML** | v0.110 | Configuration templates |
 
 ---
 
-<a id="clear-evaluation-system"></a>
-## ✅ CLEAR Evaluation System
+<a id="quick-command-reference"></a>
+## 🎯 Quick Command Reference
 
-### Always Visible Scoring
-
-Every enhancement now shows complete CLEAR breakdown:
-
+### Standard Commands
 ```markdown
-**CLEAR Scoring Breakdown:**
-- Correctness: 9/10 - All requirements accurately captured
-- Logic/Coverage: 8/10 - Comprehensive scope defined
-- Expression: 9/10 - Crystal clear language
-- Arrangement: 9/10 - Well-structured with RCAF
-- Reuse: 8/10 - Easily adaptable template
-**Total: 43/50 (86% - Grade A)**
+[request]            # Interactive mode with framework choices
+$improve [request]   # Standard 10-round enhancement
+$refine [request]    # Maximum optimization with deep analysis
+$short [request]     # Minimal 3-round enhancement
 ```
 
-| Score | Grade | What You'll Learn |
-|-------|-------|-------------------|
-| **45-50** | A+ | Why it's excellent |
-| **40-44** | A | What's working well |
-| **35-39** | B | Areas for improvement |
-| **30-34** | C | Why changes needed |
-| **<30** | D/F | Complete restructure reasoning |
-
----
-
-<a id="header-format"></a>
-## 📊 Header Format
-
-### Clean Artifact, Full Explanation
-
-**In Artifact (Minimal):**
-```
-Mode: $[mode] | Complexity: [level] | Framework: [RCAF/CRAFT] | CLEAR: [X]/50
-
-[Enhanced prompt content]
+### Speed Command
+```markdown
+$quick [request]     # Auto-scaled 1-5 rounds based on complexity
 ```
 
-**In Chat (Comprehensive):**
-- Complete enhancement report
-- All improvements explained
-- Scoring breakdown
-- Decision reasoning
-- Learning insights
+### Format Commands
+```markdown
+$json [request]      # JSON structure for APIs
+$yaml [request]      # YAML for configurations
+```
 
----
-
-<a id="troubleshooting"></a>
-## 🆘 Troubleshooting
-
-### Issues Now Include Explanations
-
-| Issue | Solution | What You'll See |
-|-------|----------|-----------------|
-| Unclear request | Clarification requested | "Need more details because..." |
-| High complexity | Simplification offered | "Complexity level 8/10, suggesting..." |
-| Wrong format | Format explanation | "JSON better for APIs because..." |
-| Low score | Improvements shown | "Enhanced these areas..." |
+### Combined Commands
+```markdown
+$quick $json api endpoint    # Fast JSON enhancement
+$improve $yaml config file   # Standard YAML optimization
+```
 
 ---
 
 <a id="version-history"></a>
 ## 📦 Version History
 
-### v0.861 (Current) - TRANSPARENCY UPDATE
-- **NEW:** Full transparency reporting after every enhancement
-- **NEW:** CLEAR scoring always shown with breakdown
-- **NEW:** DEPTH processing phases explained
-- **NEW:** Decision reasoning for frameworks and structures
-- **NEW:** Learning insights in every interaction
-- Educational value in all responses
-- Clean artifacts maintained
+### v0.900 (Current) - INTELLIGENCE UPDATE
+- **NEW:** 7-framework intelligent selection system
+- **NEW:** Consolidated pattern library with 20+ patterns
+- **NEW:** REPAIR+ advanced recovery protocol
+- **NEW:** Context-aware CLEAR scoring
+- **NEW:** Framework success rate tracking
+- **NEW:** Power combinations for complex scenarios
+- Maintained transparency and clean artifacts
+- Enhanced weakness detection algorithms
+
+### v0.861 - TRANSPARENCY UPDATE
+- Full transparency reporting
+- CLEAR scoring always shown
+- DEPTH processing explained
+- Decision reasoning provided
 
 ### v0.860
-- Enhanced interactive mode flow
-- Smart quick mode scaling (1-5 rounds)
-- Bug fixes and logic improvements
-- Better UX with cleaner messages
-
-### Future Roadmap
-- Visual scoring displays
-- Comparative analysis features
-- Advanced learning modules
-- Pattern recognition improvements
-
----
-
-## 🎯 Quick Command Reference
-
-### Standard Commands with Transparency
-```markdown
-[request]            # Interactive mode → Full report
-$improve [request]   # Standard enhancement → Detailed analysis
-$refine [request]    # Maximum optimization → Comprehensive insights
-$short [request]     # Minimal enhancement → Brief summary
-```
-
-### Speed Command
-```markdown
-$quick [request]     # Fast enhancement → Quick summary
-```
-
-### Format Commands
-```markdown
-$json [request]      # JSON structure → Format reasoning
-$yaml [request]      # YAML configuration → Template benefits
-```
-
----
-
-## 📚 Core Principles Summary
-
-### The Transparency Promise
-
-Every enhancement now includes:
-1. **Clean, minimal artifact** with your enhanced prompt
-2. **Comprehensive explanation** of all improvements
-3. **CLEAR scoring breakdown** with interpretations
-4. **Process visibility** showing methodology
-5. **Educational insights** for learning
-
-### What This Means For You
-
-- **Understand** why changes were made
-- **Learn** prompt engineering principles
-- **See** quality metrics and scoring
-- **Know** alternative approaches
-- **Improve** your own prompt writing
-
-### Best Practices with Transparency
-- Review the enhancement reports to learn
-- Note which improvements have biggest impact
-- Understand CLEAR scoring for quality
-- Learn from framework selection reasoning
-- Apply insights to future prompts
+- Enhanced interactive mode
+- Smart quick mode scaling
+- Improved UX flow
