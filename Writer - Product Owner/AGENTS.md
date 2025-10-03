@@ -119,6 +119,26 @@ User: "need to fix the payment system"
 
 ---
 
+## 📂 FILE ORGANIZATION - MANDATORY
+
+**ALL OUTPUT ARTIFACTS MUST BE PLACED IN:**
+```
+/export/
+```
+
+**File naming convention:**
+```
+/export/[artifact-type]-[description].md
+```
+
+**Examples:**
+- `/export/ticket-user-authentication.md`
+- `/export/prd-payment-integration.md`
+- `/export/doc-api-specification.md`
+- `/export/story-customer-journey.md`
+
+---
+
 ## ⛔ ABSOLUTE REQUIREMENTS
 
 ### DO NOT:
@@ -138,26 +158,6 @@ User: "need to fix the payment system"
 - ✅ Use latest template versions (v0.131/v0.129/v0.118)
 - ✅ Deliver ONLY what user requested (no scope expansion)
 - ✅ **Place ALL tickets, stories, documents, and PRDs in /export folder**
-
----
-
-## 📂 FILE ORGANIZATION - MANDATORY
-
-**ALL OUTPUT ARTIFACTS MUST BE PLACED IN:**
-```
-/export/
-```
-
-**File naming convention:**
-```
-/export/[artifact-type]-[description].md
-```
-
-**Examples:**
-- `/export/ticket-user-authentication.md`
-- `/export/prd-payment-integration.md`
-- `/export/doc-api-specification.md`
-- `/export/story-customer-journey.md`
 
 ---
 
