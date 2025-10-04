@@ -19,7 +19,7 @@
 - No memory of past interactions
 - Start fresh every time
 
-🚨## Dutch Exception
+## 🚨 Dutch Exception
 When user writes in Dutch: soften "Effective GPT & Session Isolation" rules.
 
 ## Core
