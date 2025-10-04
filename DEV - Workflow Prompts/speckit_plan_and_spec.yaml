@@ -32,7 +32,7 @@ rules:
 # ───────────────────────────────────────────────────────────────
 user_inputs:
   context:
-    environment: /Users/michelkerkmeester/MEGA/AI & Dev/Websites/anobel.nl/
+    environment: /Users/michelkerkmeester/MEGA/AI & Dev/Websites/• Website/
     current_state: Existing welcome modal animation system (welcome_modal.js), multiple hero animations per page
     technical_stack: JavaScript animations, consentpro.com cookie consent service
     dependencies:

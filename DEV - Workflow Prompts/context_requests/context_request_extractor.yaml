@@ -62,7 +62,7 @@ step_3_request:
 
 step_4_generate_yaml:
   action: AUTOMATICALLY create YAML file with extracted context and request
-  output_location: /Users/Name/Folder/anobel.nl/y_prompts/context_requests/snippets/
+  output_location: /Users/michelkerkmeester/MEGA/AI & Dev/Websites/• Website/y_prompts/context_requests/snippets/
   naming_convention: context_request_{descriptive_slug}.yaml
   slug_rules:
     - Use lowercase with underscores
