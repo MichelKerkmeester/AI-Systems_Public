@@ -1,0 +1,98 @@
+# ───────────────────────────────────────────────────────────────
+# CONTEXT & REQUEST: Finsweet Consent Pro Validation
+# ───────────────────────────────────────────────────────────────
+
+user_inputs:
+  context:
+    environment: https://a-nobel-en-zn.webflow.io
+    current_state: |
+      Finsweet Consent Pro (V3) installed via Webflow app with custom sequencing script (cookie_consent.js V3).
+      Cookie consent banner element exists with class .modal--dialog-w.is--cookie.
+      Implementation includes:
+        - fs-consent-element="internal-component" wrapper (required by Consent Pro)
+        - fs-consent-element="banner" for the banner
+        - fs-consent-element="allow", "deny", "open-preferences" buttons
+        - fs-consent-element="internal-buttons-wrapper" for button group
+        - Custom CSS for spacing and animations (modal_cookie.css)
+        - Sequencing logic that hides/shows via [fs-consent_component] selector
+    technical_stack:
+      - Finsweet Consent Pro (paid Webflow app)
+      - Custom JavaScript sequencer (cookie_consent.js V3)
+      - Webflow Designer with CMS-embedded code
+      - Motion.dev for animations
+      - js-cookie library for cookie management
+    dependencies:
+      - Welcome modal system (welcome_modal_v3.js)
+      - Hero animation complete event
+      - Consent Pro JavaScript API (window.FinsweetConsentPro)
+      - Cookies: welcome_modal_seen, fs-cc, fs-cc-preferences
+    related_systems:
+      - Modal sequencing system (coordinates welcome → consent flow)
+      - Hero section animation
+      - Global script loading (global.html)
+    constraints:
+      - Must maintain fs-consent-element attributes (Consent Pro requirement)
+      - All elements must remain inside fs-consent_component wrapper
+      - Cannot break existing sequencing logic (welcome modal priority)
+      - Must remain GDPR compliant
+      - Per AGENTS.md: Investigation = READ-ONLY, no code changes
+
+  request:
+    objective: |
+      Validate that the .modal--dialog-w.is--cookie element and all embedded children, attributes, and structure
+      100% align with Finsweet Consent Pro requirements for a functioning consent banner and modal.
+      Identify any misalignments, missing attributes, or structural issues.
+      Update cookie_consent.md documentation with findings and any required changes.
+    type: investigation
+    scope:
+      - Analyze HTML structure of .modal--dialog-w.is--cookie and all children
+      - Cross-reference against Finsweet Consent Pro documentation (https://consentpro.com/docs)
+      - Verify all required fs-consent-element attributes are present and correctly applied
+      - Check that wrapper structure maintains fs-consent_component parent
+      - Validate button attributes (allow, deny, open-preferences)
+      - Ensure no prohibited modifications (removed attributes, moved elements outside wrapper)
+      - Verify alignment with sequencing script expectations (cookie_consent.js)
+      - Check for legacy FsCC remnants that could conflict
+      - Validate Consent Pro JavaScript API integration
+      - Inventory actual cookies written by Consent Pro
+    requirements:
+      functional:
+        - All Consent Pro required attributes present
+        - Element hierarchy matches Consent Pro expectations
+        - Buttons trigger correct Consent Pro actions
+        - Sequencing integration remains intact
+      technical:
+        - fs-consent-element attributes on all interactive elements
+        - fs-consent_component wrapper intact and unique
+        - No structural violations per Consent Pro docs
+        - Compatible with V3 sequencer logic
+        - No legacy FsCC conflicts
+      ux:
+        - Accessible controls with proper ARIA attributes
+        - Clear action buttons (accept, deny, preferences)
+        - Proper focus management attributes
+    success_criteria: |
+      - Complete validation report showing alignment/misalignment with Consent Pro requirements
+      - Documented list of any required changes (if issues found)
+      - Updated cookie_consent.md that serves as accurate user guide/readme
+      - Clear action items if fixes needed
+      - Pass/Fail checklist for each structural requirement
+    testing: |
+      - DOM structure inspection on live site with debug mode (?debug=true)
+      - Attribute presence verification via DevTools
+      - Cross-reference with official Consent Pro docs
+      - Compare against V3 sequencer selectors and logic
+      - Console log analysis for API integration
+      - Cookie inventory verification
+      - ARIA and accessibility attribute spot-check
+
+  documentation_target:
+    file: src/modal/cookie_consent.md
+    updates_needed:
+      - Add Consent Pro V3 specific section with required attributes
+      - Document actual cookie names used by Consent Pro
+      - Update debugging section for V3 (including API inspection)
+      - Add troubleshooting for common V3 issues
+      - Clarify V2 FsCC content as legacy
+      - Include HTML structure examples for .modal--dialog-w.is--cookie
+      - Document sequencer integration details
