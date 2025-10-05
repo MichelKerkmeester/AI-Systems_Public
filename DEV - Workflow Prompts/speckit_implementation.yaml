@@ -60,16 +60,16 @@ workflow:
       focus: comprehensive_plan_review
       approach: deep_understanding
       outputs:
-        - requirements_summary
-        - technical_approach_understanding
-        - identified_dependencies
-        - potential_challenges
-        - implementation_readiness_assessment
-        - specification_interpretation
-        - technical_approach_validation
-        - dependency_impact_analysis
-        - edge_case_identification
-        - implementation_strategy_refinement
+      - requirements_summary
+      - technical_approach_understanding
+      - identified_dependencies
+      - potential_challenges
+      - implementation_readiness_assessment
+      - specification_interpretation
+      - technical_approach_validation
+      - dependency_impact_analysis
+      - edge_case_identification
+      - implementation_strategy_refinement
     validation: planning_artifacts_understood
 
   step_5_task_breakdown:
@@ -82,10 +82,10 @@ workflow:
       focus: comprehensive_task_analysis
       approach: deep_breakdown
       outputs:
-        - granular_task_list
-        - dependency_chain
-        - time_estimates
-        - priority_ordering
+      - granular_task_list
+      - dependency_chain
+      - time_estimates
+      - priority_ordering
     validation: tasks_actionable
 
   step_6_analysis:
@@ -107,10 +107,10 @@ workflow:
       focus: comprehensive_consistency_check
       approach: deep_analysis
       outputs:
-        - spec_vs_implementation_gaps
-        - potential_edge_cases
-        - integration_points
-        - risk_assessment
+      - spec_vs_implementation_gaps
+      - potential_edge_cases
+      - integration_points
+      - risk_assessment
 
   step_7_implementation_check:
     command: /implement [task-id]
@@ -128,10 +128,10 @@ workflow:
       focus: pre_implementation_verification
       approach: environment_validation
       outputs:
-        - environment_status
-        - dependency_verification
-        - blocker_identification
-        - readiness_confirmation
+      - environment_status
+      - dependency_verification
+      - blocker_identification
+      - readiness_confirmation
 
   step_8_development:
     approach: autonomous_implementation_with_checkpoints
@@ -158,10 +158,10 @@ workflow:
       focus: iterative_problem_solving
       approach: continuous_validation
       outputs:
-        - implementation_decisions
-        - debugging_insights
-        - optimization_opportunities
-        - test_coverage_gaps
+      - implementation_decisions
+      - debugging_insights
+      - optimization_opportunities
+      - test_coverage_gaps
 
   step_9_completion:
     summary_document:
@@ -183,10 +183,10 @@ workflow:
       focus: comprehensive_completion_review
       approach: retrospective_analysis
       outputs:
-        - implementation_quality_assessment
-        - lessons_learned
-        - technical_debt_noted
-        - future_improvements
+      - implementation_quality_assessment
+      - lessons_learned
+      - technical_debt_noted
+      - future_improvements
 
 # ───────────────────────────────────────────────────────────────
 # WORKFLOW CONTINUATION
