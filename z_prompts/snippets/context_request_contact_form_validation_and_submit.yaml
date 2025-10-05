@@ -1,0 +1,70 @@
+# ───────────────────────────────────────────────────────────────
+# CONTEXT & REQUEST: Contact Form Validation & Submit UX
+# ───────────────────────────────────────────────────────────────
+
+user_inputs:
+  context:
+    environment: https://a-nobel-en-zn.webflow.io/contact
+    current_state: >-
+      Contact form validation behaves incorrectly: fields show green success state
+      prematurely (e.g., after 1 character when minchar=2). Fields with only a
+      min length requirement should turn red only on blur; email/phone fields
+      should go red immediately on invalid format. Phone helper text appears in
+      English and seems detached from data-attribute logic. Textarea ignores
+      validation. Checkbox validation causes the checkbox to disappear and the
+      container to turn green/red. On submit, the form box flashes empty/square
+      for a couple seconds; success modal animation is off and should match
+      welcome_modal including the close button focus trap.
+    technical_stack: [Webflow, JavaScript]
+    dependencies:
+      - Form validation rules (min char, email, phone)
+      - Success modal (animation, focus trap)
+      - Data-attribute-driven helper text for phone
+      - Submit lifecycle (pre-submit, async submit, success state)
+    related_systems:
+      - Welcome modal (animation + focus behavior)
+      - Global accessibility and focus management
+      - Form styles and responsive layout
+    constraints:
+      - Validation logic must align with specified behaviors per field type
+      - Success modal must animate exactly like welcome_modal
+      - Maintain accessibility: keyboard navigation, focus trap, ARIA
+      - Avoid visual regressions and ensure responsive behavior
+
+  request:
+    objective: >-
+      Correct form validation behaviors and submission UX on the contact page, and
+      standardize success modal animation and accessibility to match welcome_modal.
+    type: bug
+    scope:
+      - Validation timing and conditions: min length on blur; email/phone format immediate feedback
+      - Phone helper text localization and proper linkage to data attribute
+      - Ensure textarea validation is enforced
+      - Checkbox validation behavior corrected without visual disappearance
+      - Submit UX: prevent empty/square flash; trigger success modal earlier as needed
+      - Success modal: match welcome_modal animations and implement focus trap on close
+    requirements:
+      functional:
+        - Validate per field intent: min-length on blur; email/phone provide immediate, accurate format feedback.
+        - Enforce textarea and checkbox rules without visual glitches or disappearing elements.
+        - Smooth submit flow (no empty/square flash); success modal appears at an appropriate moment.
+        - Success modal aligns with welcome_modal for animation and close/focus behavior.
+      technical:
+        - Use data attributes and per-field events as needed; exact implementation approach is flexible.
+        - Ensure accessibility: modal focus management, ARIA states, and keyboard support.
+        - Keep the implementation maintainable and free of console errors.
+      ux:
+        - Clear, timely feedback; defer min-length errors until blur.
+        - Consistent visual states across all inputs.
+        - Success modal animation feels smooth and matches welcome_modal.
+    success_criteria:
+      - Validation behaves per-field as specified across Chrome/Safari/Firefox and mobile.
+      - No premature green states; min-length-only fields turn red only on blur when invalid.
+      - Email/phone fields show immediate formatting errors; phone helper text localized and properly linked.
+      - Textarea validation enforced; checkbox remains visible and correctly styled for errors/success.
+      - Submit UX smooth with no empty/square flash; success modal appears with matching animation and focus trap.
+      - Accessibility checks pass; no console errors.
+    testing:
+      - Manual E2E covering all field types (min length, email, phone, textarea, checkbox) with valid/invalid edge cases.
+      - Accessibility testing: keyboard navigation, focus trap, screen reader labels/states.
+      - Optional unit tests for validation utility functions.
