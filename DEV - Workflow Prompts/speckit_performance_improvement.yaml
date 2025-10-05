@@ -6,8 +6,8 @@ purpose: SpecKit-driven performance improvement with mandatory preservation of f
 action: Execute complete SpecKit workflow adapted for performance optimization with validation gates
 
 operating_mode:
-  execution: automatic
-  approvals: critical_only
+  execution: autonomous
+  approvals: none
   workflow: sequential
   workflow_compliance: MANDATORY
   tracking: progressive_task_checklists
@@ -56,6 +56,8 @@ rules:
     - profile_before_and_after
     - test_all_functionality
     - use_devtools_for_profiling
+    - self_validate_and_proceed
+    - do_not_prompt_for_user_approval
   NEVER:
     - break_existing_features
     - remove_functionality
@@ -116,10 +118,6 @@ workflow:
       - optimization_goals
 
     validation: baseline_documented
-    approval_gate:
-      type: USER_APPROVAL_REQUIRED
-      prompt: "Performance baseline captured. Proceed to optimization analysis?"
-      confirmation_needed: true
 
   step_1_pre_work_review:
     required_documents:
@@ -229,11 +227,6 @@ workflow:
         - mcp__chrome-devtools__fill_form: Verify forms
         - mcp__chrome-devtools__hover: Check hover states
         - mcp__chrome-devtools__take_screenshot: Document features
-
-    approval_gate:
-      type: USER_APPROVAL_REQUIRED
-      prompt: "Optimization constraints clarified. Proceed to planning?"
-      confirmation_needed: true
 
   step_4_planning:
     command: /plan [optimization-approach]
@@ -369,7 +362,6 @@ workflow:
         - Testing suite prepared
         - Monitoring active
 
-    critical_gate: CONFIRM_BEFORE_OPTIMIZATION
     chrome_devtools:
       when: validating_readiness
       verify:
@@ -501,11 +493,6 @@ workflow:
       - performance_improved: measured
       - documentation_complete: true
       - staging_verified: true
-
-    final_approval_gate:
-      type: USER_APPROVAL_REQUIRED
-      prompt: "Performance optimization complete. All features preserved. Approve to finalize?"
-      confirmation_needed: true
 
 # ───────────────────────────────────────────────────────────────
 # CHROME DEVTOOLS MCP MANDATE

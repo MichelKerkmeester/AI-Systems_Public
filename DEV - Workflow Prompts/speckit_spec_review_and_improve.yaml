@@ -6,8 +6,8 @@ purpose: Deep review and enhancement of existing specifications with systematic 
 action: Execute systematic spec review workflow to identify gaps, clarify requirements, and improve specification quality
 
 operating_mode:
-  execution: automatic_with_deep_analysis
-  approvals: critical_only
+  execution: autonomous
+  approvals: none
   workflow: sequential_with_iterations
   workflow_compliance: MANDATORY
   tracking: progressive_improvement_log
@@ -40,6 +40,8 @@ rules:
   - validate_technical_feasibility
   - consider_edge_cases
   - maintain_original_intent
+  - self_validate_and_proceed
+  - do_not_prompt_for_user_approval
   NEVER:
   - skip_sections
   - assume_understanding
@@ -428,10 +430,6 @@ workflow:
     - recommendation
 
     validation: review_complete
-    approval_gate:
-      type: USER_APPROVAL_REQUIRED
-      prompt: "Spec review complete. Approve improvements?"
-      confirmation_needed: true
 
   step_9_completion:
     summary_document:

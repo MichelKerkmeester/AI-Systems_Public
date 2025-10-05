@@ -6,8 +6,8 @@ purpose: SpecKit-driven debugging with evidence-based root cause analysis and co
 action: Execute complete SpecKit workflow adapted for debug-test-review with Chrome DevTools MCP integration
 
 operating_mode:
-  execution: automatic
-  approvals: critical_only
+  execution: autonomous
+  approvals: none
   workflow: sequential
   workflow_compliance: MANDATORY
   tracking: progressive_task_checklists
@@ -57,6 +57,8 @@ rules:
     - validate_before_proceeding
     - use_devtools_for_evidence_collection
     - maintain_debug_log
+    - self_validate_and_proceed
+    - do_not_prompt_for_user_approval
   NEVER:
     - skip_workflow_steps
     - ignore_evidence
@@ -116,10 +118,6 @@ workflow:
       - success_criteria_definition
 
     validation: understanding_confirmed
-    approval_gate:
-      type: USER_APPROVAL_REQUIRED
-      prompt: "Debug requirements analyzed. Proceed to investigation?"
-      confirmation_needed: true
 
   step_1_pre_work_review:
     required_documents:
@@ -218,11 +216,6 @@ workflow:
         - mcp__chrome-devtools__hover: Check hover states
         - mcp__chrome-devtools__emulate_network: Test slow connections
         - mcp__chrome-devtools__emulate_cpu: Test performance constraints
-
-    approval_gate:
-      type: USER_APPROVAL_REQUIRED
-      prompt: "Issue reproduced and clarified. Proceed to debug planning?"
-      confirmation_needed: true
 
   step_4_planning:
     command: /plan [debug-approach]
@@ -350,7 +343,6 @@ workflow:
         - Graceful degradation
         - Future-proofing
 
-    critical_gate: CONFIRM_BEFORE_FIX
     chrome_devtools:
       when: validating_fix_approach
       verify:
@@ -466,11 +458,6 @@ workflow:
       - code_reviewed: critically
       - documentation_complete: true
       - staging_verified: true
-
-    final_approval_gate:
-      type: USER_APPROVAL_REQUIRED
-      prompt: "Debug complete. All validations passed. Approve to finalize?"
-      confirmation_needed: true
 
 # ───────────────────────────────────────────────────────────────
 # CHROME DEVTOOLS MCP MANDATE

@@ -1,13 +1,13 @@
 # ───────────────────────────────────────────────────────────────
 # FRAMEWORK
 # ───────────────────────────────────────────────────────────────
-role: Expert Developer conducting comprehensive feature research and documentation
-purpose: Deep technical investigation and documentation generation for feature implementation planning
-action: Execute research workflow to produce comprehensive technical documentation with ultrathink analysis
+role: Expert Developer conducting comprehensive feature research for SpecKit spec folders
+purpose: Deep technical investigation and documentation generation for spec folder-based feature planning
+action: Execute research workflow to produce comprehensive research.md documentation within a spec folder structure
 
 operating_mode:
-  execution: automatic
-  approvals: critical_only
+  execution: autonomous
+  approvals: none
   workflow: sequential
   workflow_compliance: MANDATORY
   tracking: progressive_research_stages
@@ -20,6 +20,8 @@ rules:
     - validate_technical_feasibility
     - use_devtools_for_live_analysis
     - generate_comprehensive_documentation
+    - self_validate_and_proceed
+    - do_not_prompt_for_user_approval
   NEVER:
     - skip_investigation_steps
     - ignore_platform_constraints
@@ -30,6 +32,7 @@ rules:
 # USER INPUTS
 # ───────────────────────────────────────────────────────────────
 user_inputs:
+  spec_folder: "[SPEC_FOLDER]"  # e.g., specs/001-feature-name (existing or new spec folder)
   context: "[CONTEXT]"  # Background information about the feature to research
   request: "[REQUEST]"  # Specific research request or feature to investigate
 
@@ -39,14 +42,26 @@ user_inputs:
 workflow:
   step_0_request_analysis:
     input_source: USER_INPUTS_SECTION_ABOVE
+    spec_folder: "Use [SPEC_FOLDER] value from user_inputs"
     context: "Use [CONTEXT] value from user_inputs"
     request: "Use [REQUEST] value from user_inputs"
-    action: Analyze feature requirements from filled user inputs and establish research scope
-    outputs:
-      - feature_summary
-      - research_objectives
-      - complexity_assessment
-      - key_questions_to_answer
+    action: Analyze feature requirements from filled user inputs and establish research scope for spec folder
+    spec_folder_setup:
+      - verify_or_create_spec_folder
+      - check_for_existing_artifacts
+      - establish_research_scope
+    deep_analysis:
+      focus: comprehensive_scoping
+      approach: thorough_investigation
+      outputs:
+        - feature_summary
+        - research_objectives
+        - complexity_assessment
+        - key_questions_to_answer
+        - research_questions_identified
+        - investigation_priorities
+        - technical_depth_required
+        - output_structure_planning
     validation: scope_defined
 
   step_1_codebase_investigation:
@@ -61,10 +76,17 @@ workflow:
       - grep_patterns
       - file_exploration
       - dependency_analysis
-    outputs:
-      - current_state_analysis
-      - existing_patterns
-      - technical_constraints
+    deep_analysis:
+      focus: codebase_pattern_analysis
+      approach: systematic_code_investigation
+      outputs:
+        - current_state_analysis
+        - existing_patterns
+        - technical_constraints
+        - pattern_identification
+        - architectural_constraints
+        - reusable_components
+        - integration_opportunities
     validation: codebase_understood
 
   step_2_external_research:
@@ -82,11 +104,18 @@ workflow:
         - analyze_network_patterns
         - review_dom_structures
         - capture_performance_metrics
-    outputs:
-      - best_practices_summary
-      - external_solutions_analysis
-      - api_specifications
-      - integration_options
+    deep_analysis:
+      focus: external_solutions_analysis
+      approach: comprehensive_research
+      outputs:
+        - best_practices_summary
+        - external_solutions_analysis
+        - api_specifications
+        - integration_options
+        - best_practice_synthesis
+        - api_evaluation
+        - integration_strategy
+        - vendor_comparison
     validation: external_research_complete
 
   step_3_technical_analysis:
@@ -98,11 +127,19 @@ workflow:
       - accessibility_standards
       - browser_compatibility
       - mobile_responsiveness
-    outputs:
-      - technical_specifications
-      - constraints_and_limitations
-      - risk_assessment
-      - compatibility_matrix
+    deep_analysis:
+      focus: technical_feasibility_analysis
+      approach: rigorous_evaluation
+      outputs:
+        - technical_specifications
+        - constraints_and_limitations
+        - risk_assessment
+        - compatibility_matrix
+        - architecture_assessment
+        - performance_projections
+        - security_analysis
+        - compatibility_verification
+        - risk_mitigation_strategies
     validation: technical_analysis_complete
 
   step_4_solution_design:
@@ -120,19 +157,26 @@ workflow:
         - validate_approaches
         - measure_performance_impact
         - verify_compatibility
-    outputs:
-      - solution_architecture
-      - implementation_patterns
-      - code_examples
-      - configuration_requirements
+    deep_analysis:
+      focus: solution_architecture_design
+      approach: comprehensive_design
+      outputs:
+        - solution_architecture
+        - implementation_patterns
+        - code_examples
+        - configuration_requirements
+        - architectural_patterns
+        - integration_blueprint
+        - implementation_roadmap
+        - edge_case_handling
     validation: solution_designed
 
   step_5_research_compilation:
-    action: Compile comprehensive research documentation
-    ultrathink:
-      type: COMPREHENSIVE_RESEARCH_DOCUMENT
+    action: Compile comprehensive research documentation for spec folder
+    deep_analysis:
+      focus: comprehensive_research_document
       approach: exhaustive_documentation
-      sections:
+      required_sections:
         - changelog_and_updates
         - investigation_report
         - executive_overview
@@ -149,9 +193,14 @@ workflow:
         - api_reference
         - troubleshooting_guide
         - acknowledgements
+      outputs:
+        - structured_research_synthesis
+        - implementation_roadmap
+        - technical_decision_log
+        - reference_documentation
     document_structure:
       format: markdown
-      location: src/[feature]/[FEATURE]_RESEARCH.md
+      location: "[SPEC_FOLDER]/research.md"
       table_of_contents: required
       code_blocks: syntax_highlighted
       diagrams: ascii_art
@@ -230,15 +279,20 @@ workflow:
         - workarounds
     validation: documentation_complete
     final_output:
+      location: "[SPEC_FOLDER]/research.md"
       summary_message: |
         Research documentation complete.
-        Comprehensive technical investigation has been documented in [FEATURE]_RESEARCH.md
+        Comprehensive technical investigation has been documented in [SPEC_FOLDER]/research.md
         This document serves as the authoritative reference for feature implementation.
+
+        Spec folder structure:
+        - [SPEC_FOLDER]/research.md - Complete research documentation
+
         Next steps:
-        - Review research findings
+        - Review research findings in the spec folder
         - Validate technical approach
-        - Proceed to specification (/specify) if approved
-        - Use research as reference during implementation
+        - Proceed to specification (/specify) if needed
+        - Use research as reference during implementation planning
 
 # ───────────────────────────────────────────────────────────────
 # RESEARCH QUALITY STANDARDS
@@ -269,12 +323,33 @@ documents:
   primary_deliverable:
     type: research_document
     format: markdown
-    location: src/[feature]/[FEATURE]_RESEARCH.md
+    location: "[SPEC_FOLDER]/research.md"
     versioning: semantic
     review_required: true
   supplementary_materials:
-    - api_specification
-    - test_cases
-    - performance_benchmarks
-    - compatibility_matrix
-    - decision_flowcharts
+    location: "[SPEC_FOLDER]/"
+    optional_files:
+      - api_specification.md
+      - test_cases.md
+      - performance_benchmarks.md
+      - compatibility_matrix.md
+      - decision_flowcharts.md
+
+# ───────────────────────────────────────────────────────────────
+# SPEC FOLDER INTEGRATION
+# ───────────────────────────────────────────────────────────────
+spec_folder_structure:
+  note: |
+    This workflow generates research.md within a spec folder structure.
+    It does NOT follow the full GitHub SpecKit workflow (no /specify, /plan, etc).
+    It creates comprehensive research documentation to support feature planning.
+
+  workflow_relationship:
+    - This is a standalone research workflow
+    - Outputs to spec folders for consistency
+    - Can be used before or during SpecKit workflows
+    - Provides research foundation for specifications
+
+  expected_output:
+    - "[SPEC_FOLDER]/research.md" - Primary research documentation
+    - Optional supplementary files in spec folder as needed

@@ -6,8 +6,8 @@ purpose: Spec-driven development planning with workflow compliance through step 
 action: Execute SpecKit workflow from specification through planning phase with validation
 
 operating_mode:
-  execution: automatic
-  approvals: critical_only
+  execution: manual_with_approvals
+  approvals: after_each_step
   workflow: sequential
   workflow_compliance: MANDATORY
   tracking: progressive_task_checklists
@@ -15,24 +15,25 @@ operating_mode:
 
 rules:
   ALWAYS:
-    - follow_workflow_sequence
-    - document_all_changes
-    - validate_before_completion
-    - use_devtools_for_staging_analysis
-    - stop_after_planning_phase
+  - follow_workflow_sequence
+  - document_all_changes
+  - validate_before_completion
+  - use_devtools_for_staging_analysis
+  - await_user_approval_at_gates
   NEVER:
-    - skip_workflow_steps
-    - ignore_blockers
-    - submit_without_validation
-    - skip_browser_analysis
-    - proceed_beyond_planning
+  - skip_workflow_steps
+  - ignore_blockers
+  - submit_without_validation
+  - skip_browser_testing
+  - proceed_without_approval
+  - proceed_beyond_planning
 
 # ───────────────────────────────────────────────────────────────
 # USER INPUTS
 # ───────────────────────────────────────────────────────────────
 user_inputs:
-  context: "[CONTEXT]"  # Background information about performance issues
-  request: "[REQUEST]"  # Specific performance improvement request
+  context: "[CONTEXT]" # Background information about performance issues
+  request: "[REQUEST]" # Specific performance improvement request
 
 # ───────────────────────────────────────────────────────────────
 # WORKFLOW - PLANNING PHASE ONLY
@@ -44,9 +45,9 @@ workflow:
     request: "Use [REQUEST] value from user_inputs"
     action: Analyze requirements from filled user inputs and establish clear understanding
     outputs:
-      - requirement_summary
-      - approach_overview
-      - complexity_assessment
+    - requirement_summary
+    - approach_overview
+    - complexity_assessment
     validation: understanding_confirmed
     approval_gate:
       type: USER_APPROVAL_REQUIRED
@@ -55,18 +56,18 @@ workflow:
 
   step_1_pre_work_review:
     required_documents:
-      - AGENTS.md
-      - .specify/memory/constitution.md
-      - knowledge/*.md
+    - AGENTS.md
+    - .specify/memory/constitution.md
+    - knowledge/*.md
     verification: MUST REVIEW BEFORE PROCEEDING
     validation: principles_established
 
   step_2_specification:
     command: /specify [feature-description]
     outputs:
-      - feature_branch: created
-      - spec.md: acceptance_criteria
-      - location: specs/[NNN-feature]/spec.md
+    - feature_branch: created
+    - spec.md: acceptance_criteria
+    - location: specs/[NNN-feature]/spec.md
     validation: spec_complete
     chrome_devtools:
       when: analyzing_existing_features
@@ -75,9 +76,9 @@ workflow:
   step_3_clarification:
     command: /clarify
     outputs:
-      - resolved_ambiguities
-      - clarified_requirements
-      - updated_spec
+    - resolved_ambiguities
+    - clarified_requirements
+    - updated_spec
     validation: requirements_clear
     chrome_devtools:
       when: staging_url_provided
@@ -91,38 +92,35 @@ workflow:
   step_4_planning:
     command: /plan [context]
     outputs:
-      - plan.md: technical_approach
-      - dependencies: identified
-      - upstream_docs: reviewed
+    - plan.md: technical_approach
+    - dependencies: identified
+    - upstream_docs: reviewed
     validation: approach_defined
     chrome_devtools:
       when: analyzing_current_implementation
       actions:
-        - inspect_network_requests
-        - analyze_dom_structure
-        - review_console_errors
-        - capture_performance_metrics
-    ultrathink:
-      type: COMPREHENSIVE_PLANNING
+      - inspect_network_requests
+      - analyze_dom_structure
+      - review_console_errors
+      - capture_performance_metrics
+    deep_analysis:
+      focus: comprehensive_planning
       approach: deep_analysis
       outputs:
-        - detailed_technical_approach
-        - implementation_strategy
-        - risk_assessment
-        - dependency_mapping
+      - detailed_technical_approach
+      - implementation_strategy
+      - risk_assessment
+      - dependency_mapping
     final_output:
       summary_document:
         location: specs/[NNN-feature]/planning-summary.md
         required_sections:
-          - feature_overview
-          - technical_approach
-          - dependencies_identified
-          - risks_and_mitigation
-          - recommended_next_steps
-      completion_message:
-        Planning phase complete. The workflow has been executed through step 4.
-        Technical plan and approach have been documented.
-        To proceed with implementation, use the full workflow_automated.yaml.
+        - feature_overview
+        - technical_approach
+        - dependencies_identified
+        - risks_and_mitigation
+        - recommended_next_steps
+      completion_message: Planning phase complete. The workflow has been executed through step 4. Technical plan and approach have been documented. To proceed with implementation, use the full workflow_automated.yaml.
 
 # ───────────────────────────────────────────────────────────────
 # WORKFLOW TERMINATION
@@ -131,7 +129,7 @@ termination:
   after_step: 4
   message: "Planning phase completed successfully. Workflow terminated after step 4 as requested."
   next_steps:
-    - Review planning documentation
-    - Approve technical approach
-    - Use workflow_automated.yaml for full implementation
-    - Or use workflow.yaml for manual implementation with gates
+  - Review planning documentation
+  - Approve technical approach
+  - Use workflow_automated.yaml for full implementation
+  - Or use workflow.yaml for manual implementation with gates
