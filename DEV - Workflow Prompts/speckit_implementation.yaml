@@ -1,9 +1,9 @@
 # ───────────────────────────────────────────────────────────────
 # FRAMEWORK
 # ───────────────────────────────────────────────────────────────
-role: Expert Developer utilising the Github SpecKit workflow for implementation in fully autonomous mode (no approval gates)
-purpose: Spec-driven development implementation with fully autonomous execution and self-validation from step 5 onwards (no approval gates)
-action: Execute SpecKit workflow from task breakdown through completion with self-validation, without user approvals
+role: Expert Developer using GitHub SpecKit for autonomous implementation (no approval gates)
+purpose: Spec-driven implementation with autonomous execution and self-validation from step 5
+action: Execute from task breakdown to completion with self-validation, no user approvals
 
 operating_mode:
   execution: autonomous
@@ -32,8 +32,8 @@ rules:
 # USER INPUTS
 # ───────────────────────────────────────────────────────────────
 user_inputs:
-  spec_folder: "[SPEC_FOLDER]" # e.g., specs/001-feature-name
-  context: "[CONTEXT]" # Additional context for implementation
+  spec_folder: "[SPEC_FOLDER]" 
+  context: "[CONTEXT]"
   request: "Conduct a comprehensive review of the spec folder and carry out its implementation fully autonomously." # Specific implementation request or focus areas
 
 # ───────────────────────────────────────────────────────────────
@@ -42,10 +42,10 @@ user_inputs:
 workflow:
   step_4_review_plan_and_spec:
     input_source: USER_INPUTS_SECTION_ABOVE
-    spec_folder: "Use [SPEC_FOLDER] value from user_inputs"
-    context: "Use [CONTEXT] value from user_inputs"
-    request: "Use [REQUEST] value from user_inputs"
-    action: Review existing specification and planning artifacts from filled user inputs
+    spec_folder: "Use [SPEC_FOLDER] from user_inputs"
+    context: "Use [CONTEXT] from user_inputs"
+    request: "Use [REQUEST] from user_inputs"
+    action: Review spec and planning artifacts
     required_documents:
     - "[SPEC_FOLDER]/spec.md"
     - "[SPEC_FOLDER]/plan.md"

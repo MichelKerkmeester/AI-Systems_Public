@@ -1,9 +1,9 @@
 # ───────────────────────────────────────────────────────────────
 # FRAMEWORK
 # ───────────────────────────────────────────────────────────────
-role: Expert Specification Reviewer utilizing the GitHub SpecKit workflow for comprehensive spec analysis
-purpose: Deep review and enhancement of existing specifications with systematic critical analysis
-action: Execute systematic spec review workflow to identify gaps, clarify requirements, and improve specification quality
+role: Expert Specification Reviewer using GitHub SpecKit for spec analysis
+purpose: Deep review and improvement of existing specifications
+action: Run spec review to identify gaps, clarify requirements, and improve quality
 
 operating_mode:
   execution: autonomous
@@ -54,9 +54,9 @@ rules:
 # USER INPUTS
 # ───────────────────────────────────────────────────────────────
 user_inputs:
-  spec_folder: "[SPEC_FOLDER]" # e.g., specs/001-feature-name
-  context: "[CONTEXT]" # Additional context for implementation
-  request: "[REQUEST]" # Specific implementation request or focus areas
+  spec_folder: "[SPEC_FOLDER]"
+  context: "[CONTEXT]" 
+  request: "[REQUEST]" 
 
 # ───────────────────────────────────────────────────────────────
 # WORKFLOW
@@ -64,10 +64,10 @@ user_inputs:
 workflow:
   step_0_initialization:
     input_source: USER_INPUTS_SECTION_ABOVE
-    spec_folder: "Use [SPEC_FOLDER] value from user_inputs"
-    context: "Use [CONTEXT] value from user_inputs"
-    request: "Use [REQUEST] value from user_inputs"
-    action: Load spec from folder and prepare for comprehensive review
+    spec_folder: "Use [SPEC_FOLDER] from user_inputs"
+    context: "Use [CONTEXT] from user_inputs"
+    request: "Use [REQUEST] from user_inputs"
+    action: Load spec and prepare for review
 
     spec_loading:
       primary_file: "[SPEC_FOLDER]/spec.md"

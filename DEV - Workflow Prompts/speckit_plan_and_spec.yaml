@@ -1,9 +1,9 @@
 # ───────────────────────────────────────────────────────────────
 # FRAMEWORK
 # ───────────────────────────────────────────────────────────────
-role: Expert Developer utilising the Github SpecKit workflow for planning and specification
-purpose: Spec-driven development planning with workflow compliance through step 4
-action: Execute SpecKit workflow from specification through planning phase with validation
+role: Expert Developer using GitHub SpecKit for planning and spec
+purpose: Spec-driven planning with compliance through step 4
+action: Run SpecKit from spec to planning with validation
 
 operating_mode:
   execution: manual_with_approvals
@@ -32,8 +32,8 @@ rules:
 # USER INPUTS
 # ───────────────────────────────────────────────────────────────
 user_inputs:
-  context: "[CONTEXT]" # Background information about performance issues
-  request: "[REQUEST]" # Specific performance improvement request
+  context: "[CONTEXT]" 
+  request: "[REQUEST]" 
 
 # ───────────────────────────────────────────────────────────────
 # WORKFLOW - PLANNING PHASE ONLY
@@ -41,9 +41,9 @@ user_inputs:
 workflow:
   step_0_request_analysis:
     input_source: USER_INPUTS_SECTION_ABOVE
-    context: "Use [CONTEXT] value from user_inputs"
-    request: "Use [REQUEST] value from user_inputs"
-    action: Analyze requirements from filled user inputs and establish clear understanding
+    context: "Use [CONTEXT] from user_inputs"
+    request: "Use [REQUEST] from user_inputs"
+    action: Analyze user inputs and confirm understanding
     outputs:
     - requirement_summary
     - approach_overview
@@ -59,7 +59,7 @@ workflow:
     - AGENTS.md
     - .specify/memory/constitution.md
     - knowledge/*.md
-    verification: MUST REVIEW BEFORE PROCEEDING
+    verification: MUST REVIEW
     validation: principles_established
 
   step_2_specification:
@@ -121,6 +121,31 @@ workflow:
         - risks_and_mitigation
         - recommended_next_steps
       completion_message: Planning phase complete. The workflow has been executed through step 4. Technical plan and approach have been documented. To proceed with implementation, use the full workflow_automated.yaml.
+
+post_completion:
+  branch_integration_offer:
+    note: "This merges documentation changes only and does not begin implementation."
+    approval_gate:
+      type: USER_APPROVAL_REQUIRED
+      prompt: "All checks passed. Would you like me to push this branch to main now to keep main up to date and minimize conflicts?"
+      confirmation_needed: true
+    integration_policy:
+      merge_strategy: rebase_then_fast_forward
+      safety_checks:
+        - clean working tree
+        - validations/tests/pass checks are green (as applicable for the workflow)
+        - no unresolved blockers
+      conflict_policy:
+        on_rebase_conflict: pause and ask for guidance
+        fallback_to_pr: offer to open a PR if user prefers manual resolution
+      steps:
+        - fetch origin
+        - update main (pull --ff-only)
+        - rebase feature branch onto main
+        - fast-forward merge into main
+        - push origin main
+        - after successful integration, offer to delete the feature branch locally and on origin (explicit confirmation required)
+      tagging: optional; only on user request
 
 # ───────────────────────────────────────────────────────────────
 # WORKFLOW TERMINATION

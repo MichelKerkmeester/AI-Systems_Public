@@ -5,13 +5,12 @@
 **Required Reading** - These documents define our non-negotiable standards:
 
 ### Core Development Standards
-1. **[memory/constitution.md](.specify/memory/constitution.md)**
-2. **[knowledge/code_standards.md](./knowledge/code_standards.md)**
-3. **[knowledge/initialization_pattern.md](./knowledge/initialization_pattern.md)**
-4. **[knowledge/platform_constraints.md](./knowledge/platform_constraints.md)**
-5. **[knowledge/collection_lists.md](./knowledge/collection_lists.md)**
-6. **[knowledge/debugging.md](./knowledge/debugging.md)**
-7. **[knowledge/animation_libraries.md](./knowledge/animation_libraries.md)**
+1. **[knowledge/code_standards.md](./knowledge/code_standards.md)**
+2. **[knowledge/initialization_pattern.md](./knowledge/initialization_pattern.md)**
+3. **[knowledge/platform_constraints.md](./knowledge/platform_constraints.md)**
+4. **[knowledge/collection_lists.md](./knowledge/collection_lists.md)**
+5. **[knowledge/debugging.md](./knowledge/debugging.md)**
+6. **[knowledge/animation_libraries.md](./knowledge/animation_libraries.md)**
 
 .
 
@@ -164,3 +163,16 @@ chrome_network() // Review API calls
 - **Event Handlers**: Use console logs to trace execution
 - **Async Issues**: Monitor network tab for timing problems
 - **Style Problems**: Evaluate computed styles directly
+
+.
+
+## 🌳 Post-Completion Branch Integration
+
+After any workflow that creates a branch completes and checks are green, ask for permission to integrate to main to keep main current and minimize conflicts.
+
+Final permission prompt:
+"All checks passed. Would you like me to push this branch to main now to keep main up to date and minimize conflicts?"
+
+Applicability:
+- This final permission prompt applies to all branch-creating workflows
+- For otherwise autonomous prompts, a single final integration approval prompt is permitted; all other steps remain non-interactive

@@ -1,9 +1,9 @@
 # ───────────────────────────────────────────────────────────────
 # FRAMEWORK
 # ───────────────────────────────────────────────────────────────
-role: Expert Developer conducting comprehensive feature research for SpecKit spec folders
-purpose: Deep technical investigation and documentation generation for spec folder-based feature planning
-action: Execute research workflow to produce comprehensive research.md documentation within a spec folder structure
+role: Expert Developer conducting feature research for SpecKit specs
+purpose: Technical investigation and documentation for spec planning
+action: Produce research.md via the research workflow
 
 operating_mode:
   execution: autonomous
@@ -32,9 +32,9 @@ rules:
 # USER INPUTS
 # ───────────────────────────────────────────────────────────────
 user_inputs:
-  spec_folder: "[SPEC_FOLDER]"  # e.g., specs/001-feature-name (existing or new spec folder)
-  context: "[CONTEXT]"  # Background information about the feature to research
-  request: "[REQUEST]"  # Specific research request or feature to investigate
+  spec_folder: "[SPEC_FOLDER]" 
+  context: "[CONTEXT]" 
+  request: "[REQUEST]"  
 
 # ───────────────────────────────────────────────────────────────
 # RESEARCH WORKFLOW
@@ -42,10 +42,10 @@ user_inputs:
 workflow:
   step_0_request_analysis:
     input_source: USER_INPUTS_SECTION_ABOVE
-    spec_folder: "Use [SPEC_FOLDER] value from user_inputs"
-    context: "Use [CONTEXT] value from user_inputs"
-    request: "Use [REQUEST] value from user_inputs"
-    action: Analyze feature requirements from filled user inputs and establish research scope for spec folder
+    spec_folder: "Use [SPEC_FOLDER] from user_inputs"
+    context: "Use [CONTEXT] from user_inputs"
+    request: "Use [REQUEST] from user_inputs"
+    action: Analyze inputs; define research scope for the spec folder
     spec_folder_setup:
       - verify_or_create_spec_folder
       - check_for_existing_artifacts
