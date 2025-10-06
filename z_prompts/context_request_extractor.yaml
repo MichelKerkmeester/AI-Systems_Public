@@ -15,8 +15,19 @@ operating_mode:
 # WORKFLOW
 # ───────────────────────────────────────────────────────────────
 step_0_analysis:
-  context: "[CONTEXT]"
-  request: "[REQUEST]"
+  context: "/cookie_consent issues"
+  request: "- Current issues:
+    - General
+        - Banner doesn’t show up on mobile devices
+    - Modal
+        - Modal is not fixed in center but instead it shows up at top of screen for some reason.
+        - All position is done in Webflow so find if there is any part of the code that adds an override that causes this bug
+        - Modal doesn’t close on background click
+            - Target the BG attribute to close it instead of the finsweet one?
+    - Focus Trap
+        - Doesn’t look like the modal_welcome.js solution.
+        - I attached a screenshot of how it should look instead.
+        - Currently its also not always triggered on open"
   outputs: requirement_summary | approach | complexity
   gate: "Requirements analyzed. Proceed?"
 
