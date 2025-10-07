@@ -1,0 +1,241 @@
+# ───────────────────────────────────────────────────────────────
+# FRAMEWORK
+# ───────────────────────────────────────────────────────────────
+role: Expert Developer using GitHub SpecKit with manual gates
+purpose: Spec-driven development with mandatory compliance and approvals
+action: Run full SpecKit from spec to implementation with validation
+
+operating_mode:
+  execution: manual_with_approvals
+  approvals: after_each_step
+  workflow: sequential
+  workflow_compliance: MANDATORY
+  tracking: progressive_task_checklists
+  validation: checkpoint_verification
+
+rules:
+  ALWAYS:
+    - follow_workflow_sequence
+    - document_all_changes
+    - validate_before_completion
+    - use_devtools_for_staging_analysis
+    - await_user_approval_at_gates
+  NEVER:
+    - skip_workflow_steps
+    - ignore_blockers
+    - submit_without_validation
+    - skip_browser_testing
+    - proceed_without_approval
+
+# ───────────────────────────────────────────────────────────────
+# USER INPUTS
+# ───────────────────────────────────────────────────────────────
+user_inputs:
+  context: "[CONTEXT]"  
+  request: "[REQUEST]" 
+
+# ───────────────────────────────────────────────────────────────
+# WORKFLOW
+# ───────────────────────────────────────────────────────────────
+workflow:
+  step_0_request_analysis:
+    input_source: USER_INPUTS_SECTION_ABOVE
+    context: "Use [CONTEXT] from user_inputs"
+    request: "Use [REQUEST] from user_inputs"
+    action: Analyze user inputs and confirm understanding
+    outputs:
+      - requirement_summary
+      - approach_overview
+      - complexity_assessment
+    validation: understanding_confirmed
+    approval_gate:
+      type: USER_APPROVAL_REQUIRED
+      prompt: "Requirements analyzed. Proceed to pre-work review?"
+      confirmation_needed: true
+  
+  step_1_pre_work_review:
+    required_documents:
+      - AGENTS.md
+      - .specify/memory/constitution.md
+      - knowledge/*.md
+    verification: MUST REVIEW
+    validation: principles_established
+    approval_gate:
+      type: USER_APPROVAL_REQUIRED
+      prompt: "Pre-work documentation reviewed. Proceed to specification?"
+      confirmation_needed: true
+  
+  step_2_specification:
+    command: /specify [feature-description]
+    outputs:
+      - feature_branch: created
+      - spec.md: acceptance_criteria
+      - location: specs/[NNN-feature]/spec.md
+    validation: spec_complete
+    chrome_devtools:
+      when: analyzing_existing_features
+      approach: Navigate → Snapshot → Analyze → Document
+    approval_gate:
+      type: USER_APPROVAL_REQUIRED
+      prompt: "Specification created. Review spec.md and approve to proceed to clarification?"
+      confirmation_needed: true
+  
+  step_3_clarification:
+    command: /clarify
+    outputs:
+      - resolved_ambiguities
+      - clarified_requirements
+      - updated_spec
+    validation: requirements_clear
+    chrome_devtools:
+      when: staging_url_provided
+      approach: Navigate → Inspect → Analyze → Clarify
+      capture: current_behavior_screenshots
+    approval_gate:
+      type: USER_APPROVAL_REQUIRED
+      prompt: "Requirements clarified. Proceed to planning?"
+      confirmation_needed: true
+  
+  step_4_planning:
+    command: /plan [context]
+    outputs:
+      - plan.md: technical_approach
+      - dependencies: identified
+      - upstream_docs: reviewed
+    validation: approach_defined
+    chrome_devtools:
+      when: analyzing_current_implementation
+      actions:
+        - inspect_network_requests
+        - analyze_dom_structure
+        - review_console_errors
+        - capture_performance_metrics
+    approval_gate:
+      type: USER_APPROVAL_REQUIRED
+      prompt: "Technical plan created. Review plan.md and approve to proceed to task breakdown?"
+      confirmation_needed: true
+  
+  step_5_task_breakdown:
+    command: /tasks
+    outputs:
+      - tasks/checklist.md
+      - task_duration: 15_to_60_minutes
+      - tracking_structure: established
+    validation: tasks_actionable
+    approval_gate:
+      type: USER_APPROVAL_REQUIRED
+      prompt: "Tasks broken down. Review checklist.md and approve to proceed to analysis?"
+      confirmation_needed: true
+  
+  step_6_analysis:
+    command: /analyze
+    outputs:
+      - consistency_report
+      - coverage_verification
+      - alignment_check
+      - gap_analysis
+    validation: consistency_verified
+    chrome_devtools:
+      when: comparing_staging_vs_spec
+      approach: Navigate → Snapshot → Compare → Report
+      focus:
+        - ui_consistency
+        - functionality_gaps
+        - performance_baseline
+    approval_gate:
+      type: USER_APPROVAL_REQUIRED
+      prompt: "Analysis complete. Review consistency report and approve to proceed to implementation check?"
+      confirmation_needed: true
+  
+  step_7_implementation_check:
+    command: /implement [task-id]
+    checks:
+      prerequisites: verified
+      blockers: none
+      environment: ready
+    critical_gate: CONFIRM_BEFORE_CODE
+    chrome_devtools:
+      when: validating_environment
+      verify:
+        - api_endpoints_accessible
+        - authentication_working
+        - dependencies_loaded
+    approval_gate:
+      type: USER_APPROVAL_REQUIRED
+      prompt: "Implementation prerequisites verified. APPROVE TO BEGIN CODE IMPLEMENTATION?"
+      confirmation_needed: true
+      warning: "This will begin actual code changes"
+  
+  step_8_development:
+    approach: manual_implementation_with_checkpoints
+    requirements:
+      - follow: knowledge/code_standards.md
+      - update: task_checklist_progressively
+      - test: before_commit
+    checkpoints:
+      major_changes: 
+        action: log_progress
+        approval: USER_APPROVAL_REQUIRED
+      issues_found: 
+        action: document_resolution
+        approval: USER_APPROVAL_REQUIRED
+      architecture_change: 
+        action: note_deviation
+        approval: USER_APPROVAL_REQUIRED
+    chrome_devtools:
+      when: debugging_implementation
+      actions:
+        - test_in_browser
+        - verify_network_calls
+        - check_console_output
+        - validate_dom_changes
+        - measure_performance_impact
+    approval_gate:
+      type: USER_APPROVAL_REQUIRED
+      prompt: "Development complete. Approve to proceed to completion summary?"
+      confirmation_needed: true
+
+  step_9_completion:
+    summary_document:
+      location: specs/[NNN-feature]/implementation-summary.md
+      required_sections:
+        - feature_branch_name
+        - files_modified_created
+        - verification_steps_taken
+        - deviations_from_plan
+        - knowledge_base_updates
+        - recommended_next_steps
+        - browser_testing_results
+    final_checklist:
+      - update_task_status: completed
+      - validation_passed: confirmed
+      - summary_created: true
+      - staging_verified: true
+    final_approval_gate:
+      type: USER_APPROVAL_REQUIRED
+      prompt: "Implementation summary complete. Approve to finalize workflow?"
+      confirmation_needed: true
+
+  step_10_branch_integration:
+    name: Branch Integration Approval
+    approval_gate:
+      type: USER_APPROVAL_REQUIRED
+      prompt: "All checks passed. Would you like me to push this branch to main now to keep main up to date and minimize conflicts?"
+      confirmation_needed: true
+    integration_policy:
+      merge_strategy: rebase_then_fast_forward
+      safety_checks:
+        - clean working tree
+        - validations/tests/pass checks are green (as applicable for the workflow)
+        - no unresolved blockers
+      conflict_policy:
+        on_rebase_conflict: pause and ask for guidance
+        fallback_to_pr: offer to open a PR if user prefers manual resolution
+      steps:
+        - fetch origin
+        - update main (pull --ff-only)
+        - rebase feature branch onto main
+        - fast-forward merge into main
+        - push origin main
+        - after successful integration, offer to delete the feature branch locally and on origin (explicit confirmation required)
+      tagging: optional; only on user request
