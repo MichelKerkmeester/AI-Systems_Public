@@ -34,7 +34,7 @@ rules:
 user_inputs:
   spec_folder: "[SPEC_FOLDER]" 
   context: "[CONTEXT]"
-  request: "Conduct a comprehensive review of the spec folder and carry out its implementation fully autonomously." # Specific implementation request or focus areas
+  request: "Conduct a comprehensive review of the spec folder and carry out its implementation fully autonomously." 
 
 # ───────────────────────────────────────────────────────────────
 # WORKFLOW
