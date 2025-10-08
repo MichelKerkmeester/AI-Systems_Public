@@ -12,6 +12,10 @@ operating_mode:
   workflow_compliance: MANDATORY
   tracking: progressive_research_stages
   validation: comprehensive_coverage
+  # Prevent context overload by constraining default scope
+  scope_policy:
+    default: "specs/**"            # Use this when [FILES] is not provided
+    rule: "Never load files outside the active scope. Expand only with explicit entries."
 
 rules:
   ALWAYS:
@@ -22,6 +26,7 @@ rules:
     - generate_comprehensive_documentation
     - self_validate_and_proceed
     - do_not_prompt_for_user_approval
+    - limit_context_to_active_scope
   NEVER:
     - skip_investigation_steps
     - ignore_platform_constraints
@@ -35,6 +40,11 @@ user_inputs:
   spec_folder: "[SPEC_FOLDER]" 
   context: "[CONTEXT]" 
   request: "[REQUEST]"  
+  environment: "[LINK]"
+  # If [FILES] is empty, use scope_policy.default (specs/**).
+  # To include modules under active research, explicitly add them:
+  #   specs/**, src/hero/**, src/modal/**
+  scope: "[FILES]"
 
 # ───────────────────────────────────────────────────────────────
 # RESEARCH WORKFLOW
@@ -45,6 +55,8 @@ workflow:
     spec_folder: "Use [SPEC_FOLDER] from user_inputs"
     context: "Use [CONTEXT] from user_inputs"
     request: "Use [REQUEST] from user_inputs"
+    environment: "Use [LINK] from user_inputs"
+    scope: "Use [FILES] from user_inputs; if empty, use scope_policy.default (specs/**)"
     action: Analyze inputs; define research scope for the spec folder
     spec_folder_setup:
       - verify_or_create_spec_folder
@@ -64,7 +76,16 @@ workflow:
         - output_structure_planning
     validation: scope_defined
 
-  step_1_codebase_investigation:
+  step_1_pre_work_review:
+    required_documents:
+      - AGENTS.md
+      - knowledge/code_standards.md
+      - knowledge/debugging.md
+
+    verification: MUST REVIEW
+    validation: principles_established
+
+  step_2_codebase_investigation:
     action: Investigate existing codebase and patterns
     research_areas:
       - existing_implementations
@@ -89,7 +110,7 @@ workflow:
         - integration_opportunities
     validation: codebase_understood
 
-  step_2_external_research:
+  step_3_external_research:
     action: Research external documentation and best practices
     sources:
       - official_documentation
@@ -118,7 +139,7 @@ workflow:
         - vendor_comparison
     validation: external_research_complete
 
-  step_3_technical_analysis:
+  step_4_technical_analysis:
     action: Perform deep technical analysis and feasibility assessment
     analysis_areas:
       - architecture_implications
@@ -142,7 +163,7 @@ workflow:
         - risk_mitigation_strategies
     validation: technical_analysis_complete
 
-  step_4_solution_design:
+  step_5_solution_design:
     action: Design solution architecture and integration patterns
     deliverables:
       - proposed_architecture
@@ -171,7 +192,7 @@ workflow:
         - edge_case_handling
     validation: solution_designed
 
-  step_5_research_compilation:
+  step_6_research_compilation:
     action: Compile comprehensive research documentation for spec folder
     deep_analysis:
       focus: comprehensive_research_document
