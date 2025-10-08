@@ -19,33 +19,33 @@
 ### Common Failure Patterns & Root Causes
 
 #### 1. The Rush to Code
-**Pattern**: Jumping directly to implementation without proper analysis
-**Root Cause**: Overconfidence in understanding the problem
-**Prevention**: Analyze request thoroughly → Verify understanding → Choose simplest approach
-**Example**: Asked to investigate, but starts changing code immediately
+- **Pattern**: Jumping directly to implementation without proper analysis
+- **Root Cause**: Overconfidence in understanding the problem
+- **Prevention**: Analyze request thoroughly → Verify understanding → Choose simplest approach
+- **Example**: Asked to investigate, but starts changing code immediately
 
 #### 2. Assumption-Based Changes
-**Pattern**: Modifying code based on assumptions rather than evidence
-**Root Cause**: Not reading existing implementation thoroughly
-**Prevention**: Require full code trace before any modifications
-**Example**: "Fixing" S3 upload that wasn't actually broken
+- **Pattern**: Modifying code based on assumptions rather than evidence
+- **Root Cause**: Not reading existing implementation thoroughly
+- **Prevention**: Require full code trace before any modifications
+- **Example**: "Fixing" S3 upload that wasn't actually broken
 
 #### 3. Task Misinterpretation
-**Pattern**: Implementing features when asked to investigate/document
-**Root Cause**: Not carefully parsing the actual request
-**Prevention**: Explicit request type classification and scope analysis
-**Example**: Creating code when asked for a task document
+- **Pattern**: Implementing features when asked to investigate/document
+- **Root Cause**: Not carefully parsing the actual request
+- **Prevention**: Explicit request type classification and scope analysis
+- **Example**: Creating code when asked for a task document
 
 #### 4. Cascading Breaks
-**Pattern**: "Fixing" non-existent problems and breaking working code
-**Root Cause**: Not testing assumptions before making changes
-**Prevention**: Verify problem exists through reproduction first
+- **Pattern**: "Fixing" non-existent problems and breaking working code
+- **Root Cause**: Not testing assumptions before making changes
+- **Prevention**: Verify problem exists through reproduction first
 
 #### 5. Over-Engineering
-**Pattern**: Adding unnecessary complexity, abstractions, or "future-proofing"
-**Root Cause**: Anticipating needs that don't exist; gold-plating solutions
-**Prevention**: Solve ONLY the stated problem; reject premature optimization
-**Example**: Creating a complex state management system when a simple variable suffices
+- **Pattern**: Adding unnecessary complexity, abstractions, or "future-proofing"
+- **Root Cause**: Anticipating needs that don't exist; gold-plating solutions
+- **Prevention**: Solve ONLY the stated problem; reject premature optimization
+- **Example**: Creating a complex state management system when a simple variable suffices
 
 .
 
