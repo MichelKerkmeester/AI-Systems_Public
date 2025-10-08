@@ -11,12 +11,31 @@ operating_mode:
   workflow: sequential
   workflow_compliance: MANDATORY
   validation: checkpoint_verification
+  # Prevent context window overload by constraining default scope
+  scope_policy:
+    default: "specs/**"            # Use this when [FILES] is not provided
+    rule: "Never load files outside the active scope. Expand only with explicit entries."
 
 optimization_modes:
-  standard: { workflow_compliance: all_steps_required, focus: comprehensive_optimization, use_when: Regular improvements }
-  critical_path: { workflow_compliance: focus_on_bottlenecks, focus: highest_impact_only, use_when: Urgent issues }
-  preservation: { workflow_compliance: extended_validation, focus: zero_regression_tolerance, use_when: High-risk optimizations }
-  incremental: { workflow_compliance: gradual_improvements, focus: safe_step_by_step, use_when: Complex systems }
+  standard:
+    workflow_compliance: all_steps_required
+    focus: comprehensive_optimization
+    use_when: Regular improvements
+
+  critical_path:
+    workflow_compliance: focus_on_bottlenecks
+    focus: highest_impact_only
+    use_when: Urgent issues
+
+  preservation:
+    workflow_compliance: extended_validation
+    focus: zero_regression_tolerance
+    use_when: High-risk optimizations
+
+  incremental:
+    workflow_compliance: gradual_improvements
+    focus: safe_step_by_step
+    use_when: Complex systems
 
 preservation_principles:
   mandatory_requirements:
@@ -41,6 +60,7 @@ rules:
     - use_devtools_for_profiling
     - self_validate_and_proceed
     - do_not_prompt_for_user_approval
+    - limit_context_to_active_scope
   NEVER:
     - break_existing_features
     - remove_functionality
@@ -56,7 +76,12 @@ rules:
 # ───────────────────────────────────────────────────────────────
 user_inputs:
   context: "[CONTEXT]"  
-  request: "[REQUEST]" 
+  request: "Thoroughly examine the linked spec folder and autonomously carry out a performance review and performance improvement session following the relevant optimization mode workflow" 
+  environment: "[LINK]"
+  # If [FILES] is empty, use scope_policy.default (specs/**).
+  # To include modules under active optimization, explicitly add them:
+  #   specs/**, src/hero/**, src/modal/**
+  scope: "[FILES]"
 
 # ───────────────────────────────────────────────────────────────
 # WORKFLOW
@@ -66,6 +91,8 @@ workflow:
     input_source: USER_INPUTS_SECTION_ABOVE
     context: "Use [CONTEXT] from user_inputs"
     request: "Use [REQUEST] from user_inputs"
+    environment: "Use [LINK] from user_inputs"
+    scope: "Use [FILES] from user_inputs; if empty, use scope_policy.default (specs/**)"
     action: Analyze inputs and establish baseline
 
     performance_assessment:
@@ -104,9 +131,8 @@ workflow:
   step_1_pre_work_review:
     required_documents:
       - AGENTS.md
-      - .specify/memory/constitution.md
-      - knowledge/*.md
       - knowledge/code_standards.md
+      - knowledge/debugging.md
 
     performance_context:
       review_standards:
