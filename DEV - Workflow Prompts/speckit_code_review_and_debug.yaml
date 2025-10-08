@@ -11,6 +11,10 @@ operating_mode:
   workflow: sequential
   workflow_compliance: MANDATORY
   validation: checkpoint_verification
+  # Prevent context window overload by constraining default scope
+  scope_policy:
+    default: "specs/**"            # Use this when [FILES] is not provided
+    rule: "Never load files outside the active scope. Expand only with explicit entries."
 
 debug_modes:
   standard:
@@ -57,6 +61,7 @@ rules:
     - use_devtools_for_evidence_collection
     - self_validate_and_proceed
     - do_not_prompt_for_user_approval
+    - limit_context_to_active_scope
   NEVER:
     - skip_workflow_steps
     - ignore_evidence
@@ -71,8 +76,11 @@ rules:
 # ───────────────────────────────────────────────────────────────
 user_inputs:
   context: "[CONTEXT]"     
-  request: "Review the spec folder thoroughly and perform a code review/debug session following the appropriate debug mode workflow autonomously."     
+  request: "Review the linked spec folder thoroughly and perform a code review/debug session following the appropriate debug mode workflow autonomously."     
   environment: "[LINK]"     
+  # If [FILES] is empty, use scope_policy.default (specs/**).
+  # To include modules under active debug, explicitly add them:
+  #   specs/**, src/hero/**, src/modal/**
   scope: "[FILES]"         
 
 # ───────────────────────────────────────────────────────────────
@@ -84,7 +92,7 @@ workflow:
     context: "Use [CONTEXT] from user_inputs"
     request: "Use [REQUEST] from user_inputs"
     environment: "Use [LINK] from user_inputs"
-    scope: "Use [FILES] from user_inputs"
+    scope: "Use [FILES] from user_inputs; if empty, use scope_policy.default (specs/**)"
     action: Analyze inputs and confirm understanding
 
     debug_analysis:
@@ -122,8 +130,8 @@ workflow:
   step_1_pre_work_review:
     required_documents:
       - AGENTS.md
-      - .specify/memory/constitution.md
-      - knowledge/*.md
+      - knowledge/code_standards.md
+      - knowledge/debugging.md
 
     debug_context_gathering:
       documentation_review:
@@ -450,25 +458,6 @@ workflow:
         - ff-merge into main, push
         - optionally delete feature branch (confirm)
       tagging: optional; only on user request
-
-# ───────────────────────────────────────────────────────────────
-# CHROME DEVTOOLS MCP MANDATE
-# ───────────────────────────────────────────────────────────────
-chrome_devtools_integration:
-  mandatory_usage: |
-    Always use Chrome DevTools MCP for browser debugging:
-    - Validate, don't assume
-    - Test hypotheses with evaluate_script
-    - Capture state changes via snapshots
-    - Validate fixes in staging with MCP
-    - Include screenshots/evidence
-
-  tool_mapping:
-    investigation: [take_snapshot, list_console_messages, list_network_requests]
-    reproduction: [click, fill_form, hover, evaluate_script]
-    testing: [navigate_page, resize_page, emulate_network, emulate_cpu]
-    validation: [take_screenshot, performance_start_trace, performance_analyze_insight]
-    documentation: [take_screenshot, evaluate_script, take_snapshot]
 
 # ───────────────────────────────────────────────────────────────
 # CRITICAL REMINDERS
