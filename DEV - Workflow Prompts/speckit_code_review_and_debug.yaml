@@ -75,8 +75,9 @@ rules:
 # USER INPUTS
 # ───────────────────────────────────────────────────────────────
 user_inputs:
+  spec_folder: "[SPEC_FOLDER]"
   context: "[CONTEXT]"     
-  request: "Review the linked spec folder thoroughly and perform a code review/debug session following the appropriate debug mode workflow autonomously."     
+  request: "Thoroughly examine the linked spec folder and autonomously carry out a code review and debugging session following the relevant debug mode workflow"     
   environment: "[LINK]"     
   # If [FILES] is empty, use scope_policy.default (specs/**).
   # To include modules under active debug, explicitly add them:
@@ -89,10 +90,11 @@ user_inputs:
 workflow:
   step_0_request_analysis:
     input_source: USER_INPUTS_SECTION_ABOVE
+    spec_folder: "Use [SPEC_FOLDER] from user_inputs"
     context: "Use [CONTEXT] from user_inputs"
     request: "Use [REQUEST] from user_inputs"
     environment: "Use [LINK] from user_inputs"
-    scope: "Use [FILES] from user_inputs; if empty, use scope_policy.default (specs/**)"
+    scope: "Use [FILES] from user_inputs; if empty, use scope_policy.default (specs/**); ALWAYS include [SPEC_FOLDER]/** when provided"
     action: Analyze inputs and confirm understanding
 
     debug_analysis:
