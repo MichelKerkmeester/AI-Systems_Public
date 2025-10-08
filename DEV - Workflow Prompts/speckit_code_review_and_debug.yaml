@@ -71,7 +71,7 @@ rules:
 # ───────────────────────────────────────────────────────────────
 user_inputs:
   context: "[CONTEXT]"     
-  request: "[REQUEST]"     
+  request: "Review the spec folder thoroughly and perform a code review/debug session following the appropriate debug mode workflow autonomously."     
   environment: "[LINK]"     
   scope: "[FILES]"         
 
