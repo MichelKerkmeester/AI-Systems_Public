@@ -55,8 +55,8 @@ rules:
 # ───────────────────────────────────────────────────────────────
 user_inputs:
   spec_folder: "[SPEC_FOLDER]"
-  context: "[CONTEXT]" 
-  request: "[REQUEST]" 
+  context: "[CONTEXT]"  
+  request: "Thoroughly examine the linked spec folder and autonomously carry out a spec review and improvement session following the relevant review mode workflow" 
 
 # ───────────────────────────────────────────────────────────────
 # WORKFLOW

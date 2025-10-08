@@ -33,7 +33,7 @@ rules:
 # ───────────────────────────────────────────────────────────────
 user_inputs:
   context: "[CONTEXT]" 
-  request: "[REQUEST]" 
+  request: "[REQUEST]"  
 
 # ───────────────────────────────────────────────────────────────
 # WORKFLOW - PLANNING PHASE ONLY
