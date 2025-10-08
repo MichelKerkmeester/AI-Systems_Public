@@ -1,4 +1,4 @@
-## ⚠️ DO NOT MODIFY THIS FILE UNLESS SPECIFICALLY INSTRUCTED.
+## 🚨 DO NOT MODIFY THIS FILE UNLESS SPECIFICALLY INSTRUCTED.
 
 ## 📚 Required Documentation
 
@@ -14,7 +14,7 @@
 
 .
 
-## 🚨 CRITICAL: AI Behavior Guardrails & Anti-Patterns
+## ⚠️ CRITICAL: AI Behavior Guardrails & Anti-Patterns
 
 ### Common Failure Patterns & Root Causes
 
