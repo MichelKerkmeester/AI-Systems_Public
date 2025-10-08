@@ -1,50 +1,34 @@
 # ───────────────────────────────────────────────────────────────
 # FRAMEWORK
 # ───────────────────────────────────────────────────────────────
-role: Expert Developer using GitHub SpecKit for performance optimization
-purpose: Performance improvement with mandatory feature/UX preservation
-action: Run SpecKit adapted for performance optimization with validation gates
+role: Expert Developer using SpecKit for performance optimization
+purpose: Improve performance while preserving features/UX
+action: Run SpecKit for performance optimization with validation gates
 
 operating_mode:
   execution: autonomous
   approvals: none
   workflow: sequential
   workflow_compliance: MANDATORY
-  tracking: progressive_task_checklists
   validation: checkpoint_verification
 
 optimization_modes:
-  standard:
-    workflow_compliance: all_steps_required
-    focus: comprehensive_optimization
-    use_when: "Regular performance improvements"
-
-  critical_path:
-    workflow_compliance: focus_on_bottlenecks
-    focus: highest_impact_only
-    use_when: "Urgent performance issues"
-
-  preservation:
-    workflow_compliance: extended_validation
-    focus: zero_regression_tolerance
-    use_when: "High-risk optimizations"
-
-  incremental:
-    workflow_compliance: gradual_improvements
-    focus: safe_step_by_step
-    use_when: "Complex systems optimization"
+  standard: { workflow_compliance: all_steps_required, focus: comprehensive_optimization, use_when: Regular improvements }
+  critical_path: { workflow_compliance: focus_on_bottlenecks, focus: highest_impact_only, use_when: Urgent issues }
+  preservation: { workflow_compliance: extended_validation, focus: zero_regression_tolerance, use_when: High-risk optimizations }
+  incremental: { workflow_compliance: gradual_improvements, focus: safe_step_by_step, use_when: Complex systems }
 
 preservation_principles:
   mandatory_requirements:
-    functionality: "100% feature parity required"
-    animations: "All animations must remain smooth"
-    logic: "All business logic must be preserved"
-    experience: "No user experience degradation"
+    functionality: 100% feature parity
+    animations: Animations remain smooth
+    logic: Preserve business logic
+    experience: No UX degradation
 
   validation_gates:
-    before_optimization: "Capture complete baseline"
-    during_optimization: "Test after each change"
-    after_optimization: "Verify all features work"
+    before_optimization: Capture baseline
+    during_optimization: Test after each change
+    after_optimization: Verify all features
 
 rules:
   ALWAYS:
@@ -52,7 +36,6 @@ rules:
     - adhere_to_knowledge_standards
     - preserve_all_existing_logic
     - maintain_all_animations
-    - backup_before_changes
     - profile_before_and_after
     - test_all_functionality
     - use_devtools_for_profiling
@@ -65,9 +48,8 @@ rules:
     - optimize_without_measuring
     - deploy_without_validation
     - ignore_browser_compatibility
-    - skip_rollback_preparation
   EXCEPTIONS:
-    - Exception to do_not_prompt_for_user_approval: a single final prompt is permitted solely to request approval to integrate the branch into main.
+    - Exception to do_not_prompt_for_user_approval: one final prompt may request approval to integrate the branch into main.
 
 # ───────────────────────────────────────────────────────────────
 # USER INPUTS
@@ -115,8 +97,6 @@ workflow:
 
     outputs:
       - performance_baseline.md
-      - feature_inventory.md
-      - animation_catalog.md
       - optimization_goals
 
     validation: baseline_documented
@@ -126,7 +106,7 @@ workflow:
       - AGENTS.md
       - .specify/memory/constitution.md
       - knowledge/*.md
-      - knowledge/code_standards.md  # Critical for performance
+      - knowledge/code_standards.md
 
     performance_context:
       review_standards:
@@ -134,13 +114,7 @@ workflow:
         - Caching strategies
         - Bundle optimization rules
         - Animation requirements
-
-      existing_optimizations:
-        - Previous performance work
-        - Current optimization techniques
-        - Known performance patterns
-        - Platform limitations
-
+      existing_optimizations: skip_if_not_relevant
       preservation_checklist:
         - Document all current features
         - List all animations
@@ -184,7 +158,7 @@ workflow:
     validation: bottlenecks_identified
     chrome_devtools:
       when: profiling_performance
-      approach: Navigate → Profile → Analyze → Document
+      approach: Nav → Profile → Analyze → Document
 
       profiling_workflow:
         - mcp__chrome-devtools__performance_start_trace: Start profiling
@@ -222,7 +196,7 @@ workflow:
     validation: constraints_clear
     chrome_devtools:
       when: validating_current_behavior
-      approach: Navigate → Interact → Measure → Document
+      approach: Nav → Interact → Measure → Document
 
       feature_verification:
         - mcp__chrome-devtools__click: Test interactions
@@ -270,13 +244,7 @@ workflow:
         - Compatibility check
 
     validation: approach_defined
-    chrome_devtools:
-      when: planning_optimizations
-      actions:
-        - analyze_network_patterns
-        - identify_render_blocking
-        - measure_script_impact
-        - profile_memory_usage
+    # Use DevTools to analyze network, render blocking, script impact, memory
 
   step_5_task_breakdown:
     command: /tasks
@@ -364,12 +332,7 @@ workflow:
         - Testing suite prepared
         - Monitoring active
 
-    chrome_devtools:
-      when: validating_readiness
-      verify:
-        - current_performance_stable
-        - all_features_working
-        - test_environment_ready
+    # Verify readiness: current performance stable, all features working, env ready
 
   step_8_development:
     approach: incremental_optimization_with_validation
@@ -424,7 +387,7 @@ workflow:
       network_conditions:
         - Fast 3G
         - Slow 3G
-        - Offline support
+        - Offline
 
     checkpoints:
       optimization_applied: log_change
@@ -432,14 +395,6 @@ workflow:
       performance_improved: measure_impact
 
     chrome_devtools:
-      when: testing_optimizations
-      actions:
-        - test_in_browser
-        - measure_performance
-        - verify_functionality
-        - validate_animations
-        - check_compatibility
-
       validation_workflow:
         - mcp__chrome-devtools__navigate_page: Load optimized page
         - mcp__chrome-devtools__performance_start_trace: Measure impact
@@ -482,10 +437,8 @@ workflow:
 
     chrome_devtools:
       final_validation:
-        - mcp__chrome-devtools__navigate_page: Production check
-        - mcp__chrome-devtools__performance_start_trace: Final metrics
+        - mcp__chrome-devtools__navigate_page: Production check + final metrics
         - mcp__chrome-devtools__take_screenshot: Document final state
-        - mcp__chrome-devtools__performance_analyze_insight: Generate report
 
     final_checklist:
       - baseline_captured: confirmed
@@ -500,24 +453,22 @@ workflow:
     name: Branch Integration Approval
     approval_gate:
       type: USER_APPROVAL_REQUIRED
-      prompt: "All checks passed. Would you like me to push this branch to main now to keep main up to date and minimize conflicts?"
+      prompt: "All checks passed. Push this branch to main now to keep main up to date and minimize conflicts?"
       confirmation_needed: true
     integration_policy:
       merge_strategy: rebase_then_fast_forward
       safety_checks:
         - clean working tree
-        - validations/tests/pass checks are green (as applicable for the workflow)
+        - checks green
         - no unresolved blockers
       conflict_policy:
         on_rebase_conflict: pause and ask for guidance
         fallback_to_pr: offer to open a PR if user prefers manual resolution
       steps:
-        - fetch origin
-        - update main (pull --ff-only)
-        - rebase feature branch onto main
-        - fast-forward merge into main
-        - push origin main
-        - after successful integration, offer to delete the feature branch locally and on origin (explicit confirmation required)
+        - fetch, pull --ff-only main
+        - rebase feature onto main
+        - ff-merge into main, push
+        - optionally delete feature branch (confirm)
       tagging: optional; only on user request
 
 # ───────────────────────────────────────────────────────────────
@@ -525,19 +476,17 @@ workflow:
 # ───────────────────────────────────────────────────────────────
 chrome_devtools_integration:
   mandatory_usage: |
-    CRITICAL: Always use Chrome DevTools MCP for performance profiling
-    - Never optimize without measuring first
-    - Every change must be profiled
-    - All improvements must be validated
-    - Animation performance must be verified
-    - Documentation requires performance traces
+    Always use Chrome DevTools MCP for performance work:
+    - Measure before optimizing
+    - Profile every change
+    - Validate all improvements
+    - Verify animation performance
+    - Document with traces
 
   tool_mapping:
     profiling: [performance_start_trace, performance_stop_trace, performance_analyze_insight]
     testing: [emulate_cpu, emulate_network, navigate_page]
     validation: [take_screenshot, take_snapshot, evaluate_script]
-    interaction: [click, fill_form, hover, drag]
-    measurement: [list_network_requests, list_console_messages]
 
   performance_specific:
     trace_requirements:
@@ -551,18 +500,17 @@ chrome_devtools_integration:
 # ───────────────────────────────────────────────────────────────
 workflow_discipline:
   preservation_mandate: |
-    ABSOLUTE RULE: No feature may be broken for performance
-    - Every optimization must preserve functionality
-    - All animations must remain smooth
-    - Business logic must be intact
-    - User experience must not degrade
+    No feature may be broken for performance:
+    - Preserve functionality and logic
+    - Keep animations smooth
+    - Do not degrade UX
 
   measurement_discipline: |
-    1. Measure First: Never optimize without baseline
-    2. Test Continuously: Validate after each change
-    3. Profile Everything: Use Chrome DevTools for all measurements
-    4. Document Impact: Record all metrics and improvements
-    5. Preserve Always: Features > Performance
+    1. Measure first (baseline)
+    2. Validate after each change
+    3. Profile with DevTools
+    4. Record metrics and gains
+    5. Preserve features over speed
 
   common_failure_points:
     optimization: "Breaking features for marginal gains"
