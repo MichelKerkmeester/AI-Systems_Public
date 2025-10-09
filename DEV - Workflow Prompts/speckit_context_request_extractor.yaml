@@ -17,6 +17,7 @@ rules:
     - identify_objective_and_scope
     - generate_yaml_automatically
     - follow_naming_conventions
+    - state_assumptions_explicitly
   NEVER:
     - skip_critical_context
     - omit_success_criteria
@@ -36,6 +37,8 @@ workflow:
       - implicit: assumptions|dependencies
 
     validation: requirements_analyzed
+    outputs:
+      - unknowns_list
 
   step_1_extract:
     context_elements:
@@ -67,7 +70,6 @@ workflow:
           technical_stack: {technologies}
           dependencies: [{items}]
           constraints: [{limitations}]
-        issues: [{symptom, expected, actual, reproducibility}]  # For bugs
         request:
           objective: {goal}
           type: {feature|bug|enhancement|investigation}
@@ -132,14 +134,6 @@ examples:
           constraints:
             - No console errors visible
             - Issue appeared after yesterday's deployment
-          issues:
-            - symptom: Checkout button does not respond to clicks
-            - expected: Button navigates to checkout page on click
-            - actual: No response, no visual feedback, no navigation
-            - reproducibility: 100% on production, all browsers
-            - error_messages: None in console
-            - recent_changes: Deployment yesterday included navigation refactor
-
         request:
           objective: Restore checkout button click functionality
           type: bug

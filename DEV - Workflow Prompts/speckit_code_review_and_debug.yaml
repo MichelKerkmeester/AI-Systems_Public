@@ -62,6 +62,9 @@ rules:
     - self_validate_and_proceed
     - do_not_prompt_for_user_approval
     - limit_context_to_active_scope
+    - prefer_simple_over_clever
+    - enforce_scope_discipline
+    - confirm_pre_code_checklist_from_AGENTS
   NEVER:
     - skip_workflow_steps
     - ignore_evidence

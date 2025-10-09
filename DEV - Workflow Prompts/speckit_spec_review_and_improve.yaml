@@ -30,6 +30,7 @@ operating_principles:
   mindset: "Question every assumption, validate every requirement"
   approach: "Constructive criticism with improvement focus"
   standard: "Would I confidently implement from this spec?"
+  principle: "Simple > Clever; Direct > Abstracted"
 
 rules:
   ALWAYS:
@@ -548,6 +549,7 @@ success_criteria:
   - Technical feasibility confirmed
   - Edge cases documented
   - Implementation path clear
+  - No speculative requirements
 
   quality_targets:
   - Completeness > 95%

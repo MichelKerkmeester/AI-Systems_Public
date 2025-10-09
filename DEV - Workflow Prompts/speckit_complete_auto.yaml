@@ -22,6 +22,7 @@ rules:
     - update_task_checklist_progressively
     - self_validate_and_proceed
     - do_not_prompt_for_user_approval
+    - apply_minimum_needed_change
   NEVER:
     - skip_workflow_steps
     - ignore_blockers

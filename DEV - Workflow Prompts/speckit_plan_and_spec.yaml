@@ -20,6 +20,7 @@ rules:
   - validate_before_completion
   - use_devtools_for_staging_analysis
   - await_user_approval_at_gates
+  - evidence_before_decisions
   NEVER:
   - skip_workflow_steps
   - ignore_blockers
@@ -68,7 +69,7 @@ workflow:
     - feature_branch: created
     - spec.md: acceptance_criteria
     - location: specs/[NNN-feature]/spec.md
-    validation: spec_complete
+    validation: spec_complete_and_testable
     chrome_devtools:
       when: analyzing_existing_features
       approach: Navigate → Snapshot → Analyze → Document

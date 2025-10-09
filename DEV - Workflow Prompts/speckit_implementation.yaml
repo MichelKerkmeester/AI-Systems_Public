@@ -27,6 +27,7 @@ rules:
   - ignore_blockers
   - submit_without_validation
   - skip_browser_testing
+  - expand_scope_beyond_spec
 
 # ───────────────────────────────────────────────────────────────
 # USER INPUTS
@@ -139,6 +140,7 @@ workflow:
     - follow: knowledge/code_standards.md
     - update: task_checklist_progressively
     - test: before_commit
+    - no_premature_optimization
     checkpoints:
       major_changes:
         action: log_progress

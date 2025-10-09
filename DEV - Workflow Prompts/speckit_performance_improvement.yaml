@@ -61,6 +61,7 @@ rules:
     - self_validate_and_proceed
     - do_not_prompt_for_user_approval
     - limit_context_to_active_scope
+    - document_tradeoffs_transparently
   NEVER:
     - break_existing_features
     - remove_functionality

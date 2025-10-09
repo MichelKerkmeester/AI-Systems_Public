@@ -32,6 +32,7 @@ rules:
     - ignore_platform_constraints
     - submit_without_thorough_analysis
     - proceed_to_implementation
+    - invent_new_patterns_when_existing_work
 
 # ───────────────────────────────────────────────────────────────
 # USER INPUTS

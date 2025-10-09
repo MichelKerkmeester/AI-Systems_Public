@@ -26,6 +26,7 @@ rules:
     - submit_without_validation
     - skip_browser_testing
     - proceed_without_approval
+    - over_engineer_or_expand_scope
 
 # ───────────────────────────────────────────────────────────────
 # USER INPUTS
