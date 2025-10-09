@@ -1,10 +1,10 @@
-# ⚠️ CRITICAL - MANDATORY READING ORDER
+# 🚨 CRITICAL - MANDATORY READING ORDER
 
 **FOLLOW THE INSTRUCTIONS BELOW IMMEDIATELY.**
 
 ---
 
-## 🚨 SMART READING SEQUENCE - SHORTCUT AWARE
+## ⚠️ SMART READING SEQUENCE - SHORTCUT AWARE
 
 This file serves as a redirect with intelligent routing based on user input.
 **Follow this dynamic sequence:**
@@ -128,14 +128,20 @@ User: "need to fix the payment system"
 
 **File naming convention:**
 ```
-/export/[artifact-type]-[description].md
+/export/[###] - [artifact-type]-[description].md
 ```
 
+**Numbering Rules:**
+- **ALWAYS** prefix files with a 3-digit sequential number (001, 002, 003, etc.)
+- Check existing files in `/export/` to determine the next number
+- Numbers must be zero-padded to 3 digits
+- Include space-dash-space " - " separator after number
+
 **Examples:**
-- `/export/ticket-user-authentication.md`
-- `/export/prd-payment-integration.md`
-- `/export/doc-api-specification.md`
-- `/export/story-customer-journey.md`
+- `/export/001 - ticket-user-authentication.md`
+- `/export/002 - prd-payment-integration.md`
+- `/export/003 - doc-api-specification.md`
+- `/export/004 - story-customer-journey.md`
 
 ---
 
@@ -148,6 +154,7 @@ User: "need to fix the payment system"
 - ❌ Proceed without completing Step 1
 - ❌ Create artifacts outside the /export folder
 - ❌ Read Interactive Mode if user provided a shortcut
+- ❌ Create files without 3-digit sequential number prefix
 
 ### ALWAYS:
 - ✅ Start with `/Knowledge Base/Writer - Product Owner - v0.911.md`
@@ -158,6 +165,7 @@ User: "need to fix the payment system"
 - ✅ Use latest template versions (v0.131/v0.129/v0.118)
 - ✅ Deliver ONLY what user requested (no scope expansion)
 - ✅ **Place ALL tickets, stories, documents, and PRDs in /export folder**
+- ✅ Prefix files with sequential 3-digit numbers (001, 002, etc.)
 
 ---
 
@@ -171,6 +179,7 @@ Before responding to ANY request, confirm:
 - [ ] Do I understand the DEPTH methodology?
 - [ ] Will I wait for user responses (unless $quick)?
 - [ ] Will I place the artifact in /export folder?
+- [ ] Will I check existing files and use next sequential number (###)?
 
 **IF ANY ANSWER IS NO → GO BACK TO STEP 1**
 
@@ -190,6 +199,7 @@ This smart routing ensures:
 - Incorrect template usage
 - Poor user experience
 - Artifacts created in wrong location
+- Missing sequential number prefixes
 
 ---
 

@@ -1,10 +1,10 @@
-# ⚠️ CRITICAL - MANDATORY READING ORDER
+# 🚨 CRITICAL - MANDATORY READING ORDER
 
 **FOLLOW THE INSTRUCTIONS BELOW IMMEDIATELY.**
 
 ---
 
-## 🚨 SMART READING SEQUENCE - CONNECTION AWARE
+## ⚠️ SMART READING SEQUENCE - CONNECTION AWARE
 
 This file serves as a redirect with intelligent routing based on user input.
 **Follow this dynamic sequence:**

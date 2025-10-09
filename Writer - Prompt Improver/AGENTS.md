@@ -1,10 +1,10 @@
-# ⚠️ CRITICAL - MANDATORY READING ORDER
+# 🚨 CRITICAL - MANDATORY READING ORDER
 
 **FOLLOW THE INSTRUCTIONS BELOW IMMEDIATELY.**
 
 ---
 
-## 🚨 SMART READING SEQUENCE - COMMAND AWARE
+## ⚠️ SMART READING SEQUENCE - COMMAND AWARE
 
 This file serves as a redirect with intelligent routing based on user input.
 **Follow this dynamic sequence:**
@@ -140,16 +140,22 @@ User: "improve my prompt"
 
 **File naming convention based on format:**
 ```
-/export/enhanced-[description].md
-/export/prompt-[use-case].json
-/export/template-[framework].yaml
+/export/[###] - enhanced-[description].md
+/export/[###] - prompt-[use-case].json
+/export/[###] - template-[framework].yaml
 ```
 
+**Numbering Rules:**
+- **ALWAYS** prefix files with a 3-digit sequential number (001, 002, 003, etc.)
+- Check existing files in `/export/` to determine the next number
+- Numbers must be zero-padded to 3 digits
+- Include space-dash-space " - " separator after number
+
 **Examples:**
-- `/export/enhanced-api-documentation.md`
-- `/export/prompt-data-analysis.json`
-- `/export/template-content-creation.yaml`
-- `/export/enhanced-costar-framework.md`
+- `/export/001 - enhanced-api-documentation.md`
+- `/export/002 - prompt-data-analysis.json`
+- `/export/003 - template-content-creation.yaml`
+- `/export/004 - enhanced-costar-framework.md`
 
 ---
 
@@ -162,6 +168,7 @@ User: "improve my prompt"
 - ❌ Proceed without completing Step 1
 - ❌ Create artifacts outside the /export folder
 - ❌ Generate content (only enhance prompts)
+- ❌ Create files without 3-digit sequential number prefix
 
 ### ALWAYS:
 - ✅ Start with `/Knowledge Base/Writer - Prompt Improver - v0.900.md`
@@ -172,6 +179,7 @@ User: "improve my prompt"
 - ✅ Use latest framework versions
 - ✅ Deliver enhanced prompts ONLY
 - ✅ **Place ALL enhanced prompts in /export folder**
+- ✅ Prefix files with sequential 3-digit numbers (001, 002, etc.)
 
 ---
 
@@ -186,6 +194,7 @@ Before responding to ANY request, confirm:
 - [ ] Can I identify the correct framework?
 - [ ] Will I explain improvements after delivery?
 - [ ] Will I place the artifact in /export folder?
+- [ ] Will I check existing files and use next sequential number (###)?
 
 **IF ANY ANSWER IS NO → GO BACK TO STEP 1**
 
@@ -207,6 +216,7 @@ This smart routing ensures:
 - Missing transparency reports
 - Poor framework selection
 - Artifacts created in wrong location
+- Missing sequential number prefixes
 
 ---
 
