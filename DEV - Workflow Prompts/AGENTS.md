@@ -18,33 +18,35 @@
 
 ### Common Failure Patterns & Root Causes
 
+> Clarification rule: When requirements or scope are ambiguous — or your confidence is below 80% — pause and ask a clarifying question before proceeding. See “🧠 Confidence & Clarification Framework — Front-End (Code-Centric)” for thresholds and the standard reply format.
+
 #### 1. The Rush to Code
 - **Pattern**: Jumping directly to implementation without proper analysis
 - **Root Cause**: Overconfidence in understanding the problem
-- **Prevention**: Analyze request thoroughly → Verify understanding → Choose simplest approach
+- **Prevention**: Analyze request thoroughly → Verify understanding (ask for clarification if needed) → Choose simplest approach
 - **Example**: Asked to investigate, but starts changing code immediately
 
 #### 2. Assumption-Based Changes
 - **Pattern**: Modifying code based on assumptions rather than evidence
 - **Root Cause**: Not reading existing implementation thoroughly
-- **Prevention**: Require full code trace before any modifications
+- **Prevention**: Require full code trace before any modifications; ask clarifying questions to resolve ambiguity
 - **Example**: "Fixing" S3 upload that wasn't actually broken
 
 #### 3. Task Misinterpretation
 - **Pattern**: Implementing features when asked to investigate/document
 - **Root Cause**: Not carefully parsing the actual request
-- **Prevention**: Explicit request type classification and scope analysis
+- **Prevention**: Explicit request type classification and scope analysis; confirm by asking a clarifying question when needed
 - **Example**: Creating code when asked for a task document
 
 #### 4. Cascading Breaks
 - **Pattern**: "Fixing" non-existent problems and breaking working code
 - **Root Cause**: Not testing assumptions before making changes
-- **Prevention**: Verify problem exists through reproduction first
+- **Prevention**: Verify problem exists through reproduction first; if reproduction is blocked by ambiguity, ask for clarification
 
 #### 5. Over-Engineering
 - **Pattern**: Adding unnecessary complexity, abstractions, or "future-proofing"
 - **Root Cause**: Anticipating needs that don't exist; gold-plating solutions
-- **Prevention**: Solve ONLY the stated problem; reject premature optimization
+- **Prevention**: Solve ONLY the stated problem; reject premature optimization; confirm scope via a clarifying question when in doubt
 - **Example**: Creating a complex state management system when a simple variable suffices
 
 .
@@ -111,10 +113,8 @@ SOLUTION REQUIREMENTS:
 □ I have parsed the request correctly (not assuming or extrapolating)
 □ I understand which files need changes (read them first)
 □ I know what success looks like (clear acceptance criteria)
-□ I have identified the simplest effective solution
-□ My approach follows code_standards.md patterns
-□ I am NOT adding unnecessary complexity
-□ I am NOT solving problems that don't exist
+□ I pass the Solution Effectiveness Matrix checks (simplicity, performance, maintainability, scope)
+□ If confidence < 80% or requirements are ambiguous: ask a clarifying question (see 🧠 Confidence & Clarification Framework)
 □ I can explain why this approach is optimal
 ```
 
@@ -184,7 +184,7 @@ Ask yourself:
 - ❓ Will this solution integrate cleanly?
 - ❓ Have I considered edge cases relevant to this scope?
 
-**If multiple ❓ remain → Read more code first**
+**If multiple ❓ remain → Read more code first; if ambiguity remains or confidence < 80%, ask a clarifying question (see 🧠 Confidence & Clarification Framework)**
 
 ### Critical Questions Before Coding
 
@@ -218,10 +218,43 @@ Request Received → [Parse carefully: What is ACTUALLY requested?]
                     ↓
     Validate Choice → [Does this follow patterns? Is it performant?]
                     ↓
+     Clarify If Needed → [If ambiguous or <80% confidence: ask a clarifying question (see 🧠 Confidence & Clarification Framework)]
+                    ↓
       Scope Check → [Am I solving ONLY what was asked?]
                     ↓
            Execute → [Implement with minimal complexity]
 ```
+
+.
+
+## 🧠 Confidence & Clarification Framework
+
+- If not sure or confidence < 80%, pause and ask for clarification. Present a multiple-choice path forward.
+
+### Confidence scoring (0–100%)
+Weighted for front-end code:
+- Requirements & acceptance criteria clarity — 25
+- Component API & interactions defined (props/events, keyboard) — 15
+- State/data flow & lifecycle known (source of truth, effects) — 15
+- Type safety & data contracts (TS types, example data) — 10
+- Performance constraints (bundle size, re-render strategy) — 10
+- Accessibility targets (focus order, ARIA, keyboard) — 10
+- Tooling/build readiness (dev server, lint/test config) — 10
+- Risk/impact to existing UI (regressions, feature flags) — 5
+
+Compute confidence as the weighted sum of factor scores (0–1). Round to a whole percent.
+
+### Thresholds & actions
+- 80–100: Proceed.
+- 60–79: Proceed with caution. List assumptions/guardrails; ship behind a flag or to staging and request a quick check.
+- 0–59: Ask for clarification with a multiple-choice question.
+- Safety override: If there’s a blocker or conflicting instruction, ask regardless of score.
+
+### Standard reply format
+- Confidence: NN%
+- Top factors: 2–3 bullets
+- Next action: proceed | proceed with caution | ask for clarification
+- If asking: include one multiple-choice question
 
 .
 
@@ -271,29 +304,16 @@ Request Received → [Parse carefully: What is ACTUALLY requested?]
 ### Professional Responsibility Declaration
 
 **I should NOT:**
-- Over-engineer solutions with unnecessary abstraction
-- Add features or improvements not explicitly requested
-- Implement "future-proofing" beyond stated needs
-- Create complex patterns when simple code suffices
-- Optimize prematurely without evidence of need
-- Modify code without understanding current implementation
 - Assume user's diagnosis without verification
-- Invent new patterns when existing ones work
 
 **I MUST:**
-- Choose the simplest effective solution
-- Follow code_standards.md rigorously
-- Write performant, maintainable code
-- Stay within the requested scope
-- Verify my understanding of the request
 - Read existing code before modifying
 - Provide solutions I can reason about with evidence
-- Prioritize clarity and directness
-- Delete unnecessary code when possible
 - Be honest about tradeoffs and limitations
 
 
 .
+
 
 ## 🌳 Post-Completion Branch Integration
 
