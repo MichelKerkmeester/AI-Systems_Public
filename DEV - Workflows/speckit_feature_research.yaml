@@ -38,14 +38,29 @@ rules:
 # USER INPUTS
 # ───────────────────────────────────────────────────────────────
 user_inputs:
-  spec_folder: "[SPEC_FOLDER]" 
-  context: "[CONTEXT]" 
-  request: "[REQUEST]"  
+  git_branch: "[GIT_BRANCH]"
+  spec_folder: "[SPEC_FOLDER]"
+  context: "[CONTEXT]"
+  issues: "[ISSUES]"
+  request: "[REQUEST]"
   environment: "[LINK]"
-  # If [FILES] is empty, use scope_policy.default (specs/**).
-  # To include modules under active research, explicitly add them:
-  #   specs/**, src/hero/**, src/modal/**
   scope: "[FILES]"
+
+# ───────────────────────────────────────────────────────────────
+# FIELD HANDLING
+# ───────────────────────────────────────────────────────────────
+field_handling:
+  defaults:
+    git_branch_empty: "Auto-create feature-{NNN} from highest +001"
+    spec_folder_empty: "Auto-create specs/{NNN} from highest +001"
+    context_empty: "Infer from [REQUEST] and [LINK]"
+    issues_empty: "Investigate during workflow"
+    environment_empty: "Skip browser testing steps"
+    scope_empty: "Use scope_policy.default"
+
+  scope_policy:
+    default: "specs/**"
+    rule: "Limit file operations to scope when provided"
 
 # ───────────────────────────────────────────────────────────────
 # RESEARCH WORKFLOW
@@ -53,11 +68,13 @@ user_inputs:
 workflow:
   step_0_request_analysis:
     input_source: USER_INPUTS_SECTION_ABOVE
-    spec_folder: "Use [SPEC_FOLDER] from user_inputs"
-    context: "Use [CONTEXT] from user_inputs"
-    request: "Use [REQUEST] from user_inputs"
-    environment: "Use [LINK] from user_inputs"
-    scope: "Use [FILES] from user_inputs; if empty, use scope_policy.default (specs/**)"
+    git_branch: "[GIT_BRANCH] → auto-create if empty"
+    spec_folder: "[SPEC_FOLDER] → auto-create if empty"
+    context: "[CONTEXT] → infer if empty"
+    issues: "[ISSUES] → discover if empty"
+    request: "[REQUEST] → REQUIRED"
+    environment: "[LINK] → skip DevTools if empty"
+    scope: "[FILES] → default scope if empty"
     action: Analyze inputs; define research scope for the spec folder
     spec_folder_setup:
       - verify_or_create_spec_folder

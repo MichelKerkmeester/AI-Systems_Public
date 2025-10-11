@@ -33,9 +33,36 @@ rules:
 # USER INPUTS
 # ───────────────────────────────────────────────────────────────
 user_inputs:
-  spec_folder: "[SPEC_FOLDER]" 
+  git_branch: "[GIT_BRANCH]"
+  spec_folder: "[SPEC_FOLDER]"
   context: "[CONTEXT]"
-  request: "Conduct a comprehensive review of the spec folder and carry out its implementation fully autonomously." 
+  issues: "[ISSUES]"
+  request: "[REQUEST]"
+  environment: "[LINK]"
+  scope: "[FILES]"
+
+# ───────────────────────────────────────────────────────────────
+# REQUEST HANDLING
+# ───────────────────────────────────────────────────────────────
+request_handling:
+  default: "Conduct a comprehensive review of the spec folder and carry out its implementation fully autonomously."
+  override: "Use [REQUEST] if provided (replaces default), else use default above"
+
+# ───────────────────────────────────────────────────────────────
+# FIELD HANDLING
+# ───────────────────────────────────────────────────────────────
+field_handling:
+  defaults:
+    git_branch_empty: "Auto-create feature-{NNN} from highest +001"
+    spec_folder_empty: "Auto-create specs/{NNN} from highest +001"
+    context_empty: "Infer from [REQUEST] and [LINK]"
+    issues_empty: "Investigate during workflow"
+    environment_empty: "Skip browser testing steps"
+    scope_empty: "Use scope_policy.default"
+
+  scope_policy:
+    default: "specs/**"
+    rule: "Limit file operations to scope when provided"
 
 # ───────────────────────────────────────────────────────────────
 # WORKFLOW
@@ -43,9 +70,13 @@ user_inputs:
 workflow:
   step_4_review_plan_and_spec:
     input_source: USER_INPUTS_SECTION_ABOVE
-    spec_folder: "Use [SPEC_FOLDER] from user_inputs"
-    context: "Use [CONTEXT] from user_inputs"
-    request: "Use [REQUEST] from user_inputs"
+    git_branch: "[GIT_BRANCH] → auto-create if empty"
+    spec_folder: "[SPEC_FOLDER] → auto-create if empty"
+    context: "[CONTEXT] → infer if empty"
+    issues: "[ISSUES] → discover if empty"
+    request: "Use [REQUEST] if provided, else use default from request_handling"
+    environment: "[LINK] → skip DevTools if empty"
+    scope: "[FILES] → default scope if empty"
     action: Review spec and planning artifacts
     required_documents:
     - "[SPEC_FOLDER]/spec.md"

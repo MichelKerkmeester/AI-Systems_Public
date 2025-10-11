@@ -1,0 +1,118 @@
+# CONTEXT & REQUEST: Form Validation System - Fixes & Enhancements
+user_inputs:
+  git_branch: ""
+  spec_folder: ""
+
+  context: 
+    Current state: Live validation system with attribute-driven styling, Dutch phone formatting, group validation for checkboxes/radios
+    Technical stack: Vanilla JS, HTML5 validation API, Webflow, data-attribute driven CSS
+
+    Constraints:
+    - Follow /knowledge/code_standards.md
+    - Maintain accessibility (ARIA, screen reader support)
+    - Preserve Webflow localization support (w-dyn-bind)
+    - Keep IE11 compatibility
+    - Follow existing form validation patterns in form_validation.js
+  
+  issues: |
+    1. Attributes Redundancy (HIGH - Architecture)
+       - Reduce redundant validation attributes (data-validation-group vs data-form-group)
+       - Both data-validation-group and data-form-group are used
+       - Multiple selector attributes needed for proper targeting
+       - Expected: Streamline attribute usage to minimum needed
+       - Affected: src/form/form_validation.js (lines 226-228, 349, 706, 718, 728), form_validation.css (lines 24-28), README.md
+
+    2. Helper Text Styling (HIGH - Styling)
+       - Helper text styling should rely on Webflow defaults with minimal custom CSS overrides
+       - Current: Custom helper text and styling imported, Webflow helper text and icons are ignored
+       - Expected: Use Webflow's native helper text and icons, custom CSS ONLY for state colors (error, success, warning)
+       - Text size, margin, and container layout handled by Webflow
+       - Input elements should not receive size/layout styling through custom CSS
+       - Affected: src/form/form_validation.css (helper wrapper styles), form_validation.js (lines 224-314)
+
+    3. Minlength Validation (CRITICAL - Validation Logic)
+       - Min/max length validation not working correctly
+       - Current: Form goes to green success state after 1 character typed
+       - Fields with "required|minlength:2" ignore minlength requirement
+       - First name, Last name, and Textarea ignore minlength validation
+       - Expected: Success state only after ALL requirements met (including minlength)
+       - Inputs with only min char count should only show red AFTER user leaves the field (on blur)
+       - Real-time validation during typing should respect minlength
+       - Test cases: "First name with minlength:2 should not show green until 2+ chars", "Textarea with minlength:10 should not show green until 10+ chars"
+       - Affected: src/form/form_validation.js (validate_native lines 552-628, should_validate_on_input lines 392-398, handle_event lines 901-926)
+
+    4. Phone International (MEDIUM - Enhancement)
+       - Phone formatting should support international phone numbers with locale-specific configuration
+       - Current: Only supports Dutch mobile format (nl-mobile), data-phone-format="nl-mobile" hardcoded
+       - Expected: Support international phone numbers with separate data-attribute values for different locales
+       - Allow Dutch formatting on NL locale, international formatting on EN locale
+       - Proposed attributes: "data-phone-format='nl-mobile'" (Dutch mobile), "data-phone-format='international'" (International), "data-phone-format='nl-mobile,international'" (Both formats accepted)
+       - Affected: src/form/form_validation.js (phone formatting lines 20-223, validate_custom lines 743-750)
+
+    5. Checkbox Validation Styling (HIGH - Styling)
+       - Checkbox validation has incorrect styling behavior
+       - Current: Checkbox disappears when validation state changes, entire container becomes green or red
+       - Expected: Only style .input--checkbox and .input--checkbox-icon elements
+       - Apply error/success state colors to these specific elements only
+       - Checkbox should remain visible at all times, container background should not change
+       - Affected: src/form/form_validation.css (checkbox state styles), src/input/input_toggle.css
+
+  request: |
+    Fix validation issues and enhance form validation system for better UX and maintainability
+
+    Phase 1 - Attribute Cleanup (attributes_redundancy):
+    - Audit all uses of data-validation-group and data-form-group
+    - Determine minimum required attributes for validation targeting
+    - Update form_validation.js to use streamlined attributes
+    - Update documentation with required vs optional attributes
+    - Test validation targeting works with reduced attributes
+
+    Phase 2 - Helper Text Refactor (helper_text_styling):
+    - Audit current helper text implementation
+    - Remove custom size/layout styling from helper containers
+    - Ensure Webflow helper text and icons are respected
+    - Limit custom CSS to state colors only (error, success, warning)
+    - Remove size/layout styling from input elements in CSS
+    - Test helper text displays correctly with Webflow defaults
+
+    Phase 3 - Length Validation Fixes (minlength_validation):
+    - Fix validate_native to properly check minlength before success state
+    - Update should_validate_on_input to handle minlength fields correctly
+    - Ensure error state only shows on blur for min-length-only fields
+    - Fix First name, Last name, Textarea minlength validation
+    - Test success state only appears after all requirements met
+    - Test error state timing (blur vs input) works correctly
+
+    Phase 4 - Phone International Support (phone_international):
+    - Design international phone format support
+    - Add data-phone-format attribute variations
+    - Implement international format validation
+    - Support multiple formats per locale
+    - Update documentation with format options
+    - Test Dutch and international formats work correctly
+
+    Phase 5 - Checkbox Styling Fixes (checkbox_validation_styling):
+    - Audit checkbox validation styling in form_validation.css
+    - Limit styling to .input--checkbox and .input--checkbox-icon only
+    - Remove container background color changes
+    - Ensure checkbox remains visible in all states
+    - Test checkbox validation styling in error and success states
+
+    Success Criteria:
+    - Phase 1: Minimum required attributes identified and documented, validation targeting works
+    - Phase 2: Helper text uses Webflow defaults, custom CSS only for colors
+    - Phase 3: Minlength validation works correctly, success state only after all requirements met
+    - Phase 4: International phone format supported with locale-specific options
+    - Phase 5: Checkbox validation styling only affects checkbox elements, container unchanged
+
+  environment: "https://a-nobel-en-zn.webflow.io/contact"
+  scope: "src/form/**"
+
+extraction_confidence:
+  git_branch: 0
+  spec_folder: 0
+  context: 95
+  issues: 100
+  request: 100
+  environment: 100
+  scope: 85
