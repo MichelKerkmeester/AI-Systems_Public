@@ -128,8 +128,8 @@ Project for GPT 5 Pro that simulates a complete dev environment with AGENTS.md, 
   - Attachments (⬇️) primary; Canvas (📝) optional (recommended >200 lines)
 
 **Workflow & Numbered Deliverables**:
+  - Receive more complete answers thanks to enforced Github Spec Kit imitation
   - Spec → Plan → Tasks → Analysis → Implementation → Summary
-  - Sequential numbering: 001, 002a, 003…
 
 .
 
