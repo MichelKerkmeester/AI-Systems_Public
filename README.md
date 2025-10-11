@@ -122,7 +122,7 @@ Create effective AI prompts using 7 specialized frameworks, systematic evaluatio
 <a id="4-gpt-5-pro"></a>
 #### 4. 🧠 GPT 5 Pro
 
-Transforms development requests into complete, numbered deliverables using GitHub Spec Kit under strict guardrails.
+A ChatGPT Projects system for the GPT 5 Pro Model that simulates a complete development environment with enforced guardrails (AGENTS.md), Knowledge Base, and structured workflows (GitHub Spec Kit).
 
 - **Guardrails & Compliance**:
   - STOP - READ AGENTS.md FIRST; code_standards.md is law

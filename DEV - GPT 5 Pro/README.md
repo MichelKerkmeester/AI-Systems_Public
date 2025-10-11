@@ -1,6 +1,6 @@
 # DEV - GPT 5 Pro - User Guide v0.100
 
-A ChatGPT Projects system that simulates a complete development environment with enforced guardrails (AGENTS.md), comprehensive standards (Knowledge Base), and structured workflows (GitHub Spec Kit). Transforms requests into production-ready, properly numbered deliverables through a gated phase system.
+A ChatGPT Projects system for the GPT 5 Pro Model that simulates a complete development environment with enforced guardrails (AGENTS.md), Knowledge Base, and structured workflows (GitHub Spec Kit).
 
 ## 📋 Table of Contents
 
