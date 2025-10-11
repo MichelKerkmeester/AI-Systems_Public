@@ -78,7 +78,6 @@ Create professional dev tickets, PRDs, and enhanced documentation with automatic
 
 **DEPTH Framework & Silent Processing**:
   - 5-phase thinking with 10 rounds automatic (user doesn't control)
-  - All processing happens silently behind simple messages
   - $quick mode: Zero waiting, 1-5 rounds auto-scaled
 
 .
