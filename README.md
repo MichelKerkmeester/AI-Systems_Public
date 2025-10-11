@@ -168,7 +168,7 @@ Edit image, video, and audio files via natural language.
 **MEDIA Framework & Challenge Mode**:
   - 5-phase: Measure/Evaluate/Decide/Implement/Analyze
   - Challenge at 3+ rounds ("85% quality, 50% smaller")
-  - Commands: $reset, $standard, $quick, $status
+  - REPAIR protocol for error recovery
 
 .
 
@@ -194,19 +194,19 @@ Full-stack Webflow development through natural language with Designer and Data A
 <a id="8-clickup--notion-agent"></a>
 #### 8. 📊 ClickUp & Notion Agent
 
-Automate ClickUp & Notion actions with this focused Agent system.
+Automate ClickUp & Notion actions with this focused MCP Agent.
 
 —
+
+**Smart Notion & ClickUp automation guidance**:
+  - Interactive mode helps you get results
+  - SYNC Thinking Framework
+  - REPAIR protocol for error recovery
 
 **Dual-Platform Intelligence & MCP Verification**:
   - Notion: Databases, pages, rich content, wikis
   - ClickUp: Tasks, time tracking, sprints, projects
   - Always verifies MCP connections before operations
-
-**Platform Selection & SYNC Framework**:
-  - Interactive mode helps you get better results
-  - SYNC Thinking Framework
-  - REPAIR protocol for error recovery
 
 .
 
