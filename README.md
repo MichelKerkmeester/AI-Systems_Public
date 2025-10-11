@@ -5,7 +5,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 > - 99.999% of people won't try these systems. Beat the odds?
 > - Don't reward me with unwanted coffee: https://buymeacoffee.com/michelkerkmeester
 
------
+.
 
 ## 📋 Table of Contents
 
@@ -38,7 +38,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 - [Common Features](#common-features)
 - [Resources](#resources)
 
------
+.
 
 ## 📝 Prompts
 
@@ -46,6 +46,8 @@ Some of my non-client AI systems that I made available to the public. They were 
 #### 1. 💬 Effective GPT
 
 System instructions for direct, efficient AI communication without filler.
+
+---
 
 **Core Communication Principles**:
   - Eliminates emojis, filler, hype, and conversational transitions
@@ -62,7 +64,7 @@ System instructions for direct, efficient AI communication without filler.
   - Dutch exception: Softened rules with je/u formality
   - Responds in user's language automatically
 
------
+.
 
 ## ✏️ Writer Systems
 
@@ -70,6 +72,8 @@ System instructions for direct, efficient AI communication without filler.
 #### 2. 📋 Product Owner Writer
 
 Create professional dev tickets, PRDs, and enhanced documentation with automatic complexity scaling.
+
+---
 
 **4 Intelligent Modes & Auto-Scaling**:
   - Modes: $ticket & $prd (dev work), $doc (guides/formatting), $interactive (discovery), $quick (instant)
@@ -86,6 +90,8 @@ Create professional dev tickets, PRDs, and enhanced documentation with automatic
 #### 3. 🎯 Prompt Engineering Assistant
 
 Create effective AI prompts using 7 specialized frameworks, systematic evaluation, and transparent DEPTH processing.
+
+---
 
 **DEPTH Processing & Transparency**:
   - **DEPTH Framework**: Discover → Engineer → Prototype → Test → Harmonize
@@ -118,6 +124,8 @@ Create effective AI prompts using 7 specialized frameworks, systematic evaluatio
 
 Project for GPT 5 Pro that simulates a complete dev environment with AGENTS.md, Knowledge Base, and Spec Kit workflows.
 
+---
+
 **Guardrails & Compliance**:
   - STOP - READ AGENTS.md FIRST; code_standards.md is law
   - Confidence gating (<80% → clarify), scope discipline, evidence > assumptions
@@ -136,6 +144,8 @@ Project for GPT 5 Pro that simulates a complete dev environment with AGENTS.md, 
 #### 5. 📜 DEV Workflows
 
 Systematic development workflows with Github SpecKit integration for reliable development.
+
+---
 
 **Context Extractor**:
   - Auto-transforms user requests into structured CONTEXT/REQUEST snippets
@@ -163,6 +173,8 @@ Systematic development workflows with Github SpecKit integration for reliable de
 
 Edit image, video, and audio files via natural language.
 
+---
+
 **Universal Media Operations & Intelligence**:
   - Image: Resize, convert, compress, crop, batch
   - Video: Transcode, trim, overlay, subtitles
@@ -184,6 +196,8 @@ Edit image, video, and audio files via natural language.
 #### 7. 🌐 Webflow Agent
 
 Full-stack Webflow development through natural language with Designer and Data APIs.
+
+---
 
 **Complete Development Capabilities**:
   - Create collections, fields, and relationships
@@ -208,6 +222,10 @@ Full-stack Webflow development through natural language with Designer and Data A
 <a id="8-clickup--notion-agent"></a>
 #### 8. 📊 ClickUp & Notion Agent
 
+Automate ClickUp & Notion actions with this focused Agent system.
+
+---
+
 **Dual-Platform Intelligence & MCP Verification**:
   - Notion: Databases, pages, rich content, wikis
   - ClickUp: Tasks, time tracking, sprints, projects
@@ -223,7 +241,7 @@ Full-stack Webflow development through natural language with Designer and Data A
   - Commands: $reset, $quick, $status
   - Past chats integration for context
 
------
+.
 
 ## ⚡ Automation Agents
 
@@ -231,6 +249,8 @@ Full-stack Webflow development through natural language with Designer and Data A
 #### 9. ⏰ GPT - Scheduled Tasks
 
 Create scheduled tasks with intelligent optimization.
+
+---
 
 **20+ Template Library & Natural Language**:
   - Morning Command (5 functions/1 slot), Weekly Intelligence (4/1)
@@ -247,7 +267,7 @@ Create scheduled tasks with intelligent optimization.
   - Pattern detection after 3 similar requests
   - REPAIR error recovery
 
------
+.
 
 <a id="common-features"></a>
 ## 🔧 Common Features
@@ -278,4 +298,3 @@ All systems support Model Context Protocol tools:
 - [MCP Protocol Documentation](https://modelcontextprotocol.io)
 - [Docker Desktop](https://docker.com/products/docker-desktop)
 - [Claude Desktop](https://claude.ai/desktop)
-- Individual system READMEs for detailed setup
