@@ -9,38 +9,38 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 ## 📋 Table of Contents
 
-### 📝 Prompts
+#### 📝 Prompts
 
 1. [Effective GPT](#1-effective-gpt)
 
-### ✏️ Writer Systems
+#### ✏️ Writer Systems
 
 2. [Product Owner Writer](#2-product-owner-writer)
 3. [Prompt Engineering Assistant](#3-prompt-engineering-assistant)
 
-### 🧪 Dev Systems
+#### 🧪 Dev Systems
 
 4. [GPT 5 Pro](#4-gpt-5-pro)
 5. [DEV Workflows](#5-dev-workflows)
 
-### 💬 MCP Agents
+#### 💬 MCP Agents
 
 6. [Media Editor Agent](#6-media-editor-agent)
 7. [Webflow Agent](#7-webflow-agent)
 8. [ClickUp & Notion Agent](#8-clickup--notion-agent)
 
-### ⚡ Automation Agents
+#### ⚡ Automation Agents
 
 9. [GPT - Scheduled Tasks](#9-gpt---scheduled-tasks)
 
-### 🔧 Additional Sections
+#### 🔧 Additional Sections
 
 - [Common Features](#common-features)
 - [Resources](#resources)
 
 .
 
-## 📝 Prompts
+### 📝 Prompts
 
 <a id="1-effective-gpt"></a>
 #### 1. 💬 Effective GPT
@@ -63,7 +63,7 @@ System instructions for direct, efficient AI communication without filler.
 
 .
 
-## ✏️ Writer Systems
+### ✏️ Writer Systems
 
 <a id="2-product-owner-writer"></a>
 #### 2. 📋 Product Owner Writer
@@ -113,7 +113,7 @@ Create effective AI prompts using 7 specialized frameworks, systematic evaluatio
     
 .
 
-## 🧪 Dev Systems
+### 🧪 Dev Systems
 
 <a id="4-gpt-5-pro"></a>
 #### 4. 🧠 GPT 5 Pro
@@ -155,7 +155,7 @@ Systematic development workflows with Github SpecKit integration for reliable de
 
 .
 
-## 💬 MCP Agents
+### 💬 MCP Agents
 
 <a id="6-media-editor-agent"></a>
 #### 6. 🎬 Media Editor Agent
@@ -216,7 +216,7 @@ Automate ClickUp & Notion actions with this focused Agent system.
 
 .
 
-## ⚡ Automation Agents
+### ⚡ Automation Agents
 
 <a id="9-gpt---scheduled-tasks"></a>
 #### 9. ⏰ GPT - Scheduled Tasks
@@ -237,21 +237,21 @@ Create scheduled tasks with intelligent optimization.
 .
 
 <a id="common-features"></a>
-## 🔧 Common Features
+### 🔧 Common Features
 
-### MCP Integration
+#### MCP Integration
 
 All systems support Model Context Protocol tools:
 
 - **Domain-Specific**: Webflow, ClickUp, Notion, Media processing tools
 
-### Intelligent Modes
+#### Intelligent Modes
 
 - **Interactive Default**: Conversational guidance
 - **Specialized Modes**: Task-specific approaches
 - **Adaptive Complexity**: Scales to expertise
 
-### Professional Output
+#### Professional Output
 
 - **Artifact Delivery**: Reusable, structured outputs
 - **Visual Dashboards**: Progress and quality metrics
@@ -260,7 +260,7 @@ All systems support Model Context Protocol tools:
 .
 
 <a id="resources"></a>
-## 📚 Resources
+### 📚 Resources
 
 - [MCP Protocol Documentation](https://modelcontextprotocol.io)
 - [Docker Desktop](https://docker.com/products/docker-desktop)
