@@ -42,25 +42,23 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 ## 📝 Prompts
 
-→ Professional prompt and system instructions
-
 <a id="1-effective-gpt"></a>
 #### 1. 💬 Effective GPT
 
 System instructions for direct, efficient AI communication without filler.
 
-- **Core Communication Principles**:
+**Core Communication Principles**:
   - Eliminates emojis, filler, hype, and conversational transitions
   - Blunt, directive phrasing focused on cognitive clarity
   - No engagement-boosting or sentiment-softening behaviors
   - Immediate termination after information delivery
 
-- **Session Isolation & Privacy**:
+**Session Isolation & Privacy**:
   - Each conversation treated as new user
   - No continuity between sessions
   - No memory of past interactions
 
-- **Language & Cultural Adaptations**:
+**Language & Cultural Adaptations**:
   - Dutch exception: Softened rules with je/u formality
   - Responds in user's language automatically
 
@@ -68,18 +66,16 @@ System instructions for direct, efficient AI communication without filler.
 
 ## ✏️ Writer Systems
 
-→ Automate prompt, documentation, and ticket writing 
-
 <a id="2-product-owner-writer"></a>
 #### 2. 📋 Product Owner Writer
 
 Create professional dev tickets, PRDs, and enhanced documentation with automatic complexity scaling.
 
-- **4 Intelligent Modes & Auto-Scaling**:
+**4 Intelligent Modes & Auto-Scaling**:
   - Modes: $ticket & $prd (dev work), $doc (guides/formatting), $interactive (discovery), $quick (instant)
   - Auto-complexity for tickets: Simple (2-3), Standard (4-5), Complex (6-8 sections)
 
-- **DEPTH Framework & Silent Processing**:
+**DEPTH Framework & Silent Processing**:
   - 5-phase thinking with 10 rounds automatic (user doesn't control)
   - All processing happens silently behind simple messages
   - $quick mode: Zero waiting, 1-5 rounds auto-scaled
@@ -91,11 +87,11 @@ Create professional dev tickets, PRDs, and enhanced documentation with automatic
 
 Create effective AI prompts using 7 specialized frameworks, systematic evaluation, and transparent DEPTH processing.
 
-- **DEPTH Processing & Transparency**:
+**DEPTH Processing & Transparency**:
   - **DEPTH Framework**: Discover → Engineer → Prototype → Test → Harmonize
   - **Transparent Reporting**: Shows improvements, CLEAR before/after, framework reasoning
 
-- **7-Framework Library & CLEAR Scoring**:
+**7-Framework Library & CLEAR Scoring**:
   - **RCAF** (92% success): Default for 80% of prompts - Role, Context, Action, Format
   - **COSTAR** (94%): Content creation - Context, Objective, Style, Tone, Audience, Response
   - **RACE** (88%): Urgent tasks - Role, Action, Context, Execute
@@ -106,7 +102,7 @@ Create effective AI prompts using 7 specialized frameworks, systematic evaluatio
   - **CLEAR Evaluation**: 5 dimensions (Correctness, Logic, Expression, Arrangement, Reuse)
   - Target scores: 40+/50 standard, 45+/50 excellence
 
-- **Modes & Output Formats**:
+**Modes & Output Formats**:
   - **Core Modes**: $interactive (DEFAULT), $improve, $refine, $quick, $short
   - **Format Options**: Standard/Markdown (baseline), JSON (+5-10% tokens), YAML (+3-7% tokens)
   - **Artifact Delivery**: All enhancements as reusable artifacts with minimal headers
@@ -117,22 +113,20 @@ Create effective AI prompts using 7 specialized frameworks, systematic evaluatio
 
 ## 🧪 Dev Systems
 
-→ Developer-focused systems and orchestration
-
 <a id="4-gpt-5-pro"></a>
 #### 4. 🧠 GPT 5 Pro
 
 A ChatGPT Projects system for the GPT 5 Pro Model that simulates a complete development environment with enforced guardrails (AGENTS.md), Knowledge Base, and structured workflows (GitHub Spec Kit).
 
-- **Guardrails & Compliance**:
+**Guardrails & Compliance**:
   - STOP - READ AGENTS.md FIRST; code_standards.md is law
   - Confidence gating (<80% → clarify), scope discipline, evidence > assumptions
 
-- **Workflow & Numbered Deliverables**:
+**Workflow & Numbered Deliverables**:
   - Spec → Plan → Tasks → Analysis → Implementation → Summary
   - Sequential numbering: 001, 002a, 003…
 
-- **Delivery & Formats**:
+**Delivery & Formats**:
   - Full files only (line 1 → EOF) with path header; no snippets/diffs
   - Attachments (⬇️) primary; Canvas (📝) optional (recommended >200 lines)
 
@@ -143,18 +137,18 @@ A ChatGPT Projects system for the GPT 5 Pro Model that simulates a complete deve
 
 Systematic development workflows with Github SpecKit integration for reliable development.
 
-- **Context Extractor**:
+**Context Extractor**:
   - Auto-transforms user requests into structured CONTEXT/REQUEST snippets
   - Automatic workflow.yaml integration with [CONTEXT] and [REQUEST] replacements
   - Pattern recognition for URLs, file paths, error keywords, technical terms
 
-- **Development Workflows**:
+**Development Workflows**:
   - **Multiple Execution Modes**: Manual (full approvals), Automated (critical-only), Re-run (resume from any stage)
   - **SpecKit Commands**: /specify → /clarify → /plan → /tasks → /analyze → /implement
   - Progressive task checklists with validation checkpoints
   - Operating modes: Standard, Investigation, Hotfix, Performance (auto-selected by complexity)
 
-- **Code Review & Debugger**:
+**Code Review & Debugger**:
   - **Debug-Test-Review Workflow**: Understand → Investigate → Debug → Fix → Test → Review
   - Chrome DevTools MCP integration for browser-based debugging
   - Evidence-based approach: Never assumes, validates everything with MCP tools
@@ -164,24 +158,22 @@ Systematic development workflows with Github SpecKit integration for reliable de
 
 ## 💬 MCP Agents
 
-→ MCPs made easy with conversational systems
-
 <a id="6-media-editor-agent"></a>
 #### 6. 🎬 Media Editor Agent
 
 Edit image, video, and audio files via natural language.
 
-- **Universal Media Operations & Intelligence**:
+**Universal Media Operations & Intelligence**:
   - Image: Resize, convert, compress, crop, batch
   - Video: Transcode, trim, overlay, subtitles
   - Audio: Extract, convert, normalize
 
-- **MEDIA Framework & Challenge Mode**:
+**MEDIA Framework & Challenge Mode**:
   - 5-phase: Measure/Evaluate/Decide/Implement/Analyze
   - Challenge at 3+ rounds ("85% quality, 50% smaller")
   - Commands: $reset, $standard, $quick, $status
 
-- **Dual MCP Integration & Visual Feedback**:
+**Dual MCP Integration & Visual Feedback**:
   - Imagician MCP (Sharp), Video-Audio MCP (FFmpeg)
   - Progress bars, API indicators (🟢🟡🟠🔴)
   - Educational optimization insights
@@ -193,19 +185,19 @@ Edit image, video, and audio files via natural language.
 
 Full-stack Webflow development through natural language with Designer and Data APIs.
 
-- **Complete Development Capabilities**:
+**Complete Development Capabilities**:
   - Create collections, fields, and relationships
   - Build components and design systems
   - User-controlled thinking depth (1-10 rounds)
   - ATLAS Framework with emergency commands ($reset, $status, $quick)
 
-- **Designer + Data API Coordination**:
+**Designer + Data API Coordination**:
   - Visual elements with companion app
   - Structure creation without leaving Claude
   - Responsive designs and SEO optimization
   - REPAIR protocol for structured error recovery
 
-- **Intelligent Pattern Learning**:
+**Intelligent Pattern Learning**:
   - Adapts to your workflow preferences
   - Patterns inform but never restrict options
   - All capabilities always available
@@ -216,19 +208,17 @@ Full-stack Webflow development through natural language with Designer and Data A
 <a id="8-clickup--notion-agent"></a>
 #### 8. 📊 ClickUp & Notion Agent
 
-Seamlessly coordinate task management (ClickUp) and knowledge management (Notion) through natural language.
-
-- **Dual-Platform Intelligence & MCP Verification**:
+**Dual-Platform Intelligence & MCP Verification**:
   - Notion: Databases, pages, rich content, wikis
   - ClickUp: Tasks, time tracking, sprints, projects
   - Always verifies MCP connections before operations
 
-- **Platform Selection & SYNC Framework**:
+**Platform Selection & SYNC Framework**:
   - Interactive mode asks which platform fits best
   - User-controlled thinking (1-10 rounds)
   - Challenge Mode at 3+ rounds for simplicity
 
-- **Pattern Learning & Emergency Commands**:
+**Pattern Learning & Emergency Commands**:
   - Learns preferences but never restricts options
   - Commands: $reset, $quick, $status
   - Past chats integration for context
@@ -237,24 +227,22 @@ Seamlessly coordinate task management (ClickUp) and knowledge management (Notion
 
 ## ⚡ Automation Agents
 
-→ Create automated workflows with ease 
-
 <a id="9-gpt---scheduled-tasks"></a>
 #### 9. ⏰ GPT - Scheduled Tasks
 
 Create scheduled tasks with intelligent optimization.
 
-- **20+ Template Library & Natural Language**:
+**20+ Template Library & Natural Language**:
   - Morning Command (5 functions/1 slot), Weekly Intelligence (4/1)
   - Thinking: Quick (2-3), Standard (4-6), Deep (10-15), Maximum (15-20+)
   - Natural language input, test before commit
 
-- **Smart Optimization & Canvas Documentation**:
+**Smart Optimization & Canvas Documentation**:
   - Mandatory canvas README after first task
   - Visual tracking: ▓▓▓▓▓▓░░░░ (6/10 slots)
   - 2.0+ outcomes/slot target
 
-- **ATLAS Framework & Pattern Learning**:
+**ATLAS Framework & Pattern Learning**:
   - 5-phase thinking with 1-20+ rounds
   - Pattern detection after 3 similar requests
   - REPAIR error recovery
