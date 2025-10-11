@@ -92,7 +92,6 @@ Create effective AI prompts using 7 specialized frameworks, systematic evaluatio
 **Modes & Output Formats**:
   - **Core Modes**: $interactive (DEFAULT), $improve, $refine, $quick, $short
   - **Format Options**: Standard/Markdown (baseline), JSON (+5-10% tokens), YAML (+3-7% tokens)
-  - **Artifact Delivery**: All enhancements as reusable artifacts with minimal headers
   - **Complexity Management**: Auto framework selection (1-4 RCAF), choice offered (5-6), simplification challenge (7+)
   - **Pattern Library**: 20+ enhancement patterns (vague→specific, assumption elimination, etc.)  
 
@@ -125,7 +124,7 @@ Project for GPT 5 Pro that simulates a complete dev environment with AGENTS.md, 
   - STOP - READ AGENTS.md FIRST; code_standards.md is law
   - Confidence gating (<80% → clarify), scope discipline, evidence > assumptions
   - Full files only (line 1 → EOF) with path header; no snippets/diffs
-  - Attachments (⬇️) primary; Canvas (📝) optional (recommended >200 lines)
+  - Code & Document attachments as downloads (⬇️) primary; Canvas (📝) optional 
 
 **Workflow & Numbered Deliverables**:
   - Receive more complete answers thanks to enforced Github Spec Kit imitation
