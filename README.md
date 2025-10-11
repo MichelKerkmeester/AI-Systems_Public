@@ -124,7 +124,7 @@ Project for GPT 5 Pro that simulates a complete dev environment with AGENTS.md, 
   - STOP - READ AGENTS.md FIRST; code_standards.md is law
   - Confidence gating (<80% → clarify), scope discipline, evidence > assumptions
   - Full files only (line 1 → EOF) with path header; no snippets/diffs
-  - Code & Document attachments as downloads (⬇️) primary; Canvas (📝) optional 
+  - Receive files as downloads (⬇️) primary; Canvas (📝) secondary 
 
 **Workflow & Numbered Deliverables**:
   - Receive more complete answers thanks to enforced Github Spec Kit imitation
@@ -142,14 +142,12 @@ Systematic development workflows with Github SpecKit integration for reliable de
 **Development Workflows**:
   - **Multiple Execution Modes**: Manual (full approvals), Automated (critical-only), etc.
   - Operating modes: Standard, Investigation, Hotfix, Performance (Varies per Prompt)
-  - Progressive task checklists with validation checkpoints
   - Specialized prompt for extracting context to apply in various workflows.
 
 **Code Review & Debugger**:
   - **Debug-Test-Review Workflow**: Understand → Investigate → Debug → Fix → Test → Review
   - Chrome DevTools MCP integration for browser-based debugging
   - Evidence-based approach: Never assumes, validates everything with MCP tools
-  - Mandatory staging verification before approval
 
 .
 
@@ -181,17 +179,15 @@ Full-stack Webflow development through natural language with Designer and Data A
 
 —
 
+**Smart MCP agent focused on Webflow = better results**:
+  - Up to date with all current MCP and CMS capabilities 
+  - ATLAS Thinking Framework 
+  - REPAIR protocol for error recovery
+
 **Complete Development Capabilities**:
   - Create collections, fields, and relationships
-  - Build components and design systems
-  - User-controlled thinking depth (1-10 rounds)
-  - ATLAS Framework with emergency commands ($reset, $status, $quick)
-
-**Designer + Data API Coordination**:
-  - Visual elements with companion app
-  - Structure creation without leaving Claude
-  - Responsive designs and SEO optimization
-  - REPAIR protocol for structured error recovery
+  - Build components and layours with Designer integratiom
+  - SEO optimization and analysis
 
 .
 
@@ -208,9 +204,9 @@ Automate ClickUp & Notion actions with this focused Agent system.
   - Always verifies MCP connections before operations
 
 **Platform Selection & SYNC Framework**:
-  - Interactive mode asks which platform fits best
-  - User-controlled thinking (1-10 rounds)
-  - Challenge Mode at 3+ rounds for simplicity
+  - Interactive mode helps you get better results
+  - SYNC Thinking Framework
+  - REPAIR protocol for error recovery
 
 .
 
