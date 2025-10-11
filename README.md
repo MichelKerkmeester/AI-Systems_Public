@@ -59,10 +59,7 @@ System instructions for direct, efficient AI communication without filler.
   - Each conversation treated as new user
   - No continuity between sessions
   - No memory of past interactions
-
-**Language & Cultural Adaptations**:
   - Dutch exception: Softened rules with je/u formality
-  - Responds in user's language automatically
 
 .
 
@@ -75,7 +72,7 @@ Create professional dev tickets, PRDs, and enhanced documentation with automatic
 
 ---
 
-**4 Intelligent Modes & Auto-Scaling**:
+**Intelligent Modes & Auto-Scaling**:
   - Modes: $ticket & $prd (dev work), $doc (guides/formatting), $interactive (discovery), $quick (instant)
   - Auto-complexity for tickets: Simple (2-3), Standard (4-5), Complex (6-8 sections)
 
@@ -93,11 +90,16 @@ Create effective AI prompts using 7 specialized frameworks, systematic evaluatio
 
 ---
 
-**DEPTH Processing & Transparency**:
+**Modes & Output Formats**:
+  - **Core Modes**: $interactive (DEFAULT), $improve, $refine, $quick, $short
+  - **Format Options**: Standard/Markdown (baseline), JSON (+5-10% tokens), YAML (+3-7% tokens)
+  - **Artifact Delivery**: All enhancements as reusable artifacts with minimal headers
+  - **Complexity Management**: Auto framework selection (1-4 RCAF), choice offered (5-6), simplification challenge (7+)
+  - **Pattern Library**: 20+ enhancement patterns (vague→specific, assumption elimination, etc.)  
+
+**DEPTH Thinking & Prompt frameworks**:
   - **DEPTH Framework**: Discover → Engineer → Prototype → Test → Harmonize
   - **Transparent Reporting**: Shows improvements, CLEAR before/after, framework reasoning
-
-**7-Framework Library & CLEAR Scoring**:
   - **RCAF** (92% success): Default for 80% of prompts - Role, Context, Action, Format
   - **COSTAR** (94%): Content creation - Context, Objective, Style, Tone, Audience, Response
   - **RACE** (88%): Urgent tasks - Role, Action, Context, Execute
@@ -108,14 +110,8 @@ Create effective AI prompts using 7 specialized frameworks, systematic evaluatio
   - **CLEAR Evaluation**: 5 dimensions (Correctness, Logic, Expression, Arrangement, Reuse)
   - Target scores: 40+/50 standard, 45+/50 excellence
 
-**Modes & Output Formats**:
-  - **Core Modes**: $interactive (DEFAULT), $improve, $refine, $quick, $short
-  - **Format Options**: Standard/Markdown (baseline), JSON (+5-10% tokens), YAML (+3-7% tokens)
-  - **Artifact Delivery**: All enhancements as reusable artifacts with minimal headers
-  - **Complexity Management**: Auto framework selection (1-4 RCAF), choice offered (5-6), simplification challenge (7+)
-  - **Pattern Library**: 20+ enhancement patterns (vague→specific, assumption elimination, etc.)  
-
------
+    
+.
 
 ## 🧪 Dev Systems
 
@@ -129,14 +125,12 @@ Project for GPT 5 Pro that simulates a complete dev environment with AGENTS.md, 
 **Guardrails & Compliance**:
   - STOP - READ AGENTS.md FIRST; code_standards.md is law
   - Confidence gating (<80% → clarify), scope discipline, evidence > assumptions
+  - Full files only (line 1 → EOF) with path header; no snippets/diffs
+  - Attachments (⬇️) primary; Canvas (📝) optional (recommended >200 lines)
 
 **Workflow & Numbered Deliverables**:
   - Spec → Plan → Tasks → Analysis → Implementation → Summary
   - Sequential numbering: 001, 002a, 003…
-
-**Delivery & Formats**:
-  - Full files only (line 1 → EOF) with path header; no snippets/diffs
-  - Attachments (⬇️) primary; Canvas (📝) optional (recommended >200 lines)
 
 .
 
@@ -147,16 +141,11 @@ Systematic development workflows with Github SpecKit integration for reliable de
 
 ---
 
-**Context Extractor**:
-  - Auto-transforms user requests into structured CONTEXT/REQUEST snippets
-  - Automatic workflow.yaml integration with [CONTEXT] and [REQUEST] replacements
-  - Pattern recognition for URLs, file paths, error keywords, technical terms
-
 **Development Workflows**:
-  - **Multiple Execution Modes**: Manual (full approvals), Automated (critical-only), Re-run (resume from any stage)
-  - **SpecKit Commands**: /specify → /clarify → /plan → /tasks → /analyze → /implement
+  - **Multiple Execution Modes**: Manual (full approvals), Automated (critical-only), etc.
+  - Operating modes: Standard, Investigation, Hotfix, Performance (Varies per Prompt)
   - Progressive task checklists with validation checkpoints
-  - Operating modes: Standard, Investigation, Hotfix, Performance (auto-selected by complexity)
+  - Specialized prompt for extracting context to apply in various workflows.
 
 **Code Review & Debugger**:
   - **Debug-Test-Review Workflow**: Understand → Investigate → Debug → Fix → Test → Review
@@ -185,11 +174,6 @@ Edit image, video, and audio files via natural language.
   - Challenge at 3+ rounds ("85% quality, 50% smaller")
   - Commands: $reset, $standard, $quick, $status
 
-**Dual MCP Integration & Visual Feedback**:
-  - Imagician MCP (Sharp), Video-Audio MCP (FFmpeg)
-  - Progress bars, API indicators (🟢🟡🟠🔴)
-  - Educational optimization insights
-
 .
 
 <a id="7-webflow-agent"></a>
@@ -211,12 +195,6 @@ Full-stack Webflow development through natural language with Designer and Data A
   - Responsive designs and SEO optimization
   - REPAIR protocol for structured error recovery
 
-**Intelligent Pattern Learning**:
-  - Adapts to your workflow preferences
-  - Patterns inform but never restrict options
-  - All capabilities always available
-  - User autonomy is absolute
-
 .
 
 <a id="8-clickup--notion-agent"></a>
@@ -236,11 +214,6 @@ Automate ClickUp & Notion actions with this focused Agent system.
   - User-controlled thinking (1-10 rounds)
   - Challenge Mode at 3+ rounds for simplicity
 
-**Pattern Learning & Emergency Commands**:
-  - Learns preferences but never restricts options
-  - Commands: $reset, $quick, $status
-  - Past chats integration for context
-
 .
 
 ## ⚡ Automation Agents
@@ -252,15 +225,9 @@ Create scheduled tasks with intelligent optimization.
 
 ---
 
-**20+ Template Library & Natural Language**:
-  - Morning Command (5 functions/1 slot), Weekly Intelligence (4/1)
-  - Thinking: Quick (2-3), Standard (4-6), Deep (10-15), Maximum (15-20+)
-  - Natural language input, test before commit
-
 **Smart Optimization & Canvas Documentation**:
   - Mandatory canvas README after first task
   - Visual tracking: ▓▓▓▓▓▓░░░░ (6/10 slots)
-  - 2.0+ outcomes/slot target
 
 **ATLAS Framework & Pattern Learning**:
   - 5-phase thinking with 1-20+ rounds
