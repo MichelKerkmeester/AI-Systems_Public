@@ -136,9 +136,6 @@ A ChatGPT Projects system for the GPT 5 Pro Model that simulates a complete deve
   - Full files only (line 1 → EOF) with path header; no snippets/diffs
   - Attachments (⬇️) primary; Canvas (📝) optional (recommended >200 lines)
 
-- **Spec Kit Templates**:
-  - spec-template.md, plan-template.md, tasks-template.md, analyze.md, clarify.md, agent-file-template.md, checklist-template.md
-
 .
 
 <a id="5-dev-workflows"></a>
