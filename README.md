@@ -29,10 +29,6 @@ Some of my non-client AI systems that I made available to the public. They were 
 7. [Webflow Agent](#7-webflow-agent)
 8. [ClickUp & Notion Agent](#8-clickup--notion-agent)
 
-#### ⚡ Automation Agents
-
-9. [GPT - Scheduled Tasks](#9-gpt---scheduled-tasks)
-
 #### 🔧 Additional Sections
 
 - [Common Features](#common-features)
@@ -68,12 +64,12 @@ System instructions for direct, efficient AI communication without filler.
 <a id="2-product-owner-writer"></a>
 #### 2. 📋 Product Owner Writer
 
-Create professional dev tickets, PRDs, and enhanced documentation with automatic complexity scaling.
+Create professional tickets, stories, PRDs, and documentation with automatic complexity scaling.
 
 —
 
 **Intelligent Modes & Auto-Scaling**:
-  - Modes: $ticket & $prd (dev work), $doc (guides/formatting), $interactive (discovery), $quick (instant)
+  - Modes: $ticket, $prd, $doc, $interactive (discovery), $quick (instant)
   - Auto-complexity for tickets: Simple (2-3), Standard (4-5), Complex (6-8 sections)
 
 **DEPTH Framework & Silent Processing**:
@@ -140,7 +136,7 @@ Systematic development workflows with Github SpecKit integration for reliable de
 —
 
 **Development Workflows**:
-  - **Multiple Execution Modes**: Manual (full approvals), Automated (critical-only), etc.
+  - **Multiple Execution Modes**: Complete Spec Kit, Plan, Research or Implementation only, etc.
   - Operating modes: Standard, Investigation, Hotfix, Performance (Varies per Prompt)
   - Specialized prompt for extracting context to apply in various workflows.
 
@@ -207,26 +203,6 @@ Automate ClickUp & Notion actions with this focused MCP Agent.
   - Notion: Databases, pages, rich content, wikis
   - ClickUp: Tasks, time tracking, sprints, projects
   - Always verifies MCP connections before operations
-
-.
-
-### ⚡ Automation Agents
-
-<a id="9-gpt---scheduled-tasks"></a>
-#### 9. ⏰ GPT - Scheduled Tasks
-
-Create scheduled tasks with intelligent optimization.
-
-—
-
-**Smart Optimization & Canvas Documentation**:
-  - Mandatory canvas README after first task
-  - Visual tracking: ▓▓▓▓▓▓░░░░ (6/10 slots)
-
-**ATLAS Framework & Pattern Learning**:
-  - 5-phase thinking with 1-20+ rounds
-  - Pattern detection after 3 similar requests
-  - REPAIR error recovery
 
 .
 
