@@ -11,23 +11,27 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 ### 📝 Prompts
 
-1. [DEV Workflows](#1-dev-workflows)
-2. [Effective GPT](#2-effective-gpt)
+1. [Effective GPT](#1-effective-gpt)
 
 ### ✏️ Writer Systems
 
-3. [Product Owner Writer](#3-product-owner-writer)
-4. [Prompt Engineering Assistant](#4-prompt-engineering-assistant)
+2. [Product Owner Writer](#2-product-owner-writer)
+3. [Prompt Engineering Assistant](#3-prompt-engineering-assistant)
+
+### 🧪 Dev Systems
+
+4. [GPT 5 Pro](#4-gpt-5-pro)
+5. [DEV Workflows](#5-dev-workflows)
 
 ### 💬 MCP Agents
 
-5. [Media Editor Agent](#6-media-editor-agent)
-6. [Webflow Agent](#7-webflow-agent)
-7. [ClickUp & Notion Agent](#8-clickup--notion-agent)
+6. [Media Editor Agent](#6-media-editor-agent)
+7. [Webflow Agent](#7-webflow-agent)
+8. [ClickUp & Notion Agent](#8-clickup--notion-agent)
 
 ### ⚡ Automation Agents
 
-8. [GPT - Scheduled Tasks](#9-gpt---scheduled-tasks)
+9. [GPT - Scheduled Tasks](#9-gpt---scheduled-tasks)
 
 ### 🔧 Additional Sections
 
@@ -38,34 +42,10 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 ## 📝 Prompts
 
-→ Professional development workflows and system instructions
+→ Professional prompt and system instructions
 
-<a id="1-dev-workflows"></a>
-#### 1. 📜 DEV Workflows
-
-Systematic development workflows with Github SpecKit integration for reliable development.
-
-- **Context Extractor**:
-  - Auto-transforms user requests into structured CONTEXT/REQUEST snippets
-  - Automatic workflow.yaml integration with [CONTEXT] and [REQUEST] replacements
-  - Pattern recognition for URLs, file paths, error keywords, technical terms
-
-- **Development Workflows**:
-  - **Multiple Execution Modes**: Manual (full approvals), Automated (critical-only), Re-run (resume from any stage)
-  - **SpecKit Commands**: /specify → /clarify → /plan → /tasks → /analyze → /implement
-  - Progressive task checklists with validation checkpoints
-  - Operating modes: Standard, Investigation, Hotfix, Performance (auto-selected by complexity)
-
-- **Code Review & Debugger**:
-  - **Debug-Test-Review Workflow**: Understand → Investigate → Debug → Fix → Test → Review
-  - Chrome DevTools MCP integration for browser-based debugging
-  - Evidence-based approach: Never assumes, validates everything with MCP tools
-  - Mandatory staging verification before approval
-
-.
-
-<a id="2-effective-gpt"></a>
-#### 2. 💬 Effective GPT
+<a id="1-effective-gpt"></a>
+#### 1. 💬 Effective GPT
 
 System instructions for direct, efficient AI communication without filler.
 
@@ -90,8 +70,8 @@ System instructions for direct, efficient AI communication without filler.
 
 → Automate prompt, documentation, and ticket writing 
 
-<a id="3-product-owner-writer"></a>
-#### 3. 📋 Product Owner Writer
+<a id="2-product-owner-writer"></a>
+#### 2. 📋 Product Owner Writer
 
 Create professional dev tickets, PRDs, and enhanced documentation with automatic complexity scaling.
 
@@ -106,8 +86,8 @@ Create professional dev tickets, PRDs, and enhanced documentation with automatic
 
 .
 
-<a id="4-prompt-engineering-assistant"></a>
-#### 4. 🎯 Prompt Engineering Assistant
+<a id="3-prompt-engineering-assistant"></a>
+#### 3. 🎯 Prompt Engineering Assistant
 
 Create effective AI prompts using 7 specialized frameworks, systematic evaluation, and transparent DEPTH processing.
 
@@ -135,12 +115,62 @@ Create effective AI prompts using 7 specialized frameworks, systematic evaluatio
 
 -----
 
+## 🧪 Dev Systems
+
+→ Developer-focused systems and orchestration
+
+<a id="4-gpt-5-pro"></a>
+#### 4. 🧠 GPT 5 Pro
+
+Transforms development requests into complete, numbered deliverables using GitHub Spec Kit under strict guardrails.
+
+- **Guardrails & Compliance**:
+  - STOP - READ AGENTS.md FIRST; code_standards.md is law
+  - Confidence gating (<80% → clarify), scope discipline, evidence > assumptions
+
+- **Workflow & Numbered Deliverables**:
+  - Spec → Plan → Tasks → Analysis → Implementation → Summary
+  - Sequential numbering: 001, 002a, 003…
+
+- **Delivery & Formats**:
+  - Full files only (line 1 → EOF) with path header; no snippets/diffs
+  - Attachments (⬇️) primary; Canvas (📝) optional (recommended >200 lines)
+
+- **Spec Kit Templates**:
+  - spec-template.md, plan-template.md, tasks-template.md, analyze.md, clarify.md, agent-file-template.md, checklist-template.md
+
+.
+
+<a id="5-dev-workflows"></a>
+#### 5. 📜 DEV Workflows
+
+Systematic development workflows with Github SpecKit integration for reliable development.
+
+- **Context Extractor**:
+  - Auto-transforms user requests into structured CONTEXT/REQUEST snippets
+  - Automatic workflow.yaml integration with [CONTEXT] and [REQUEST] replacements
+  - Pattern recognition for URLs, file paths, error keywords, technical terms
+
+- **Development Workflows**:
+  - **Multiple Execution Modes**: Manual (full approvals), Automated (critical-only), Re-run (resume from any stage)
+  - **SpecKit Commands**: /specify → /clarify → /plan → /tasks → /analyze → /implement
+  - Progressive task checklists with validation checkpoints
+  - Operating modes: Standard, Investigation, Hotfix, Performance (auto-selected by complexity)
+
+- **Code Review & Debugger**:
+  - **Debug-Test-Review Workflow**: Understand → Investigate → Debug → Fix → Test → Review
+  - Chrome DevTools MCP integration for browser-based debugging
+  - Evidence-based approach: Never assumes, validates everything with MCP tools
+  - Mandatory staging verification before approval
+
+.
+
 ## 💬 MCP Agents
 
 → MCPs made easy with conversational systems
 
-<a id="5-media-editor-agent"></a>
-#### 5. 🎬 Media Editor Agent
+<a id="6-media-editor-agent"></a>
+#### 6. 🎬 Media Editor Agent
 
 Edit image, video, and audio files via natural language.
 
@@ -161,8 +191,8 @@ Edit image, video, and audio files via natural language.
 
 .
 
-<a id="6-webflow-agent"></a>
-#### 6. 🌐 Webflow Agent
+<a id="7-webflow-agent"></a>
+#### 7. 🌐 Webflow Agent
 
 Full-stack Webflow development through natural language with Designer and Data APIs.
 
@@ -186,8 +216,8 @@ Full-stack Webflow development through natural language with Designer and Data A
 
 .
 
-<a id="7-clickup--notion-agent"></a>
-#### 7. 📊 ClickUp & Notion Agent
+<a id="8-clickup--notion-agent"></a>
+#### 8. 📊 ClickUp & Notion Agent
 
 Seamlessly coordinate task management (ClickUp) and knowledge management (Notion) through natural language.
 
@@ -212,8 +242,8 @@ Seamlessly coordinate task management (ClickUp) and knowledge management (Notion
 
 → Create automated workflows with ease 
 
-<a id="8-gpt---scheduled-tasks"></a>
-#### 8. ⏰ GPT - Scheduled Tasks
+<a id="9-gpt---scheduled-tasks"></a>
+#### 9. ⏰ GPT - Scheduled Tasks
 
 Create scheduled tasks with intelligent optimization.
 

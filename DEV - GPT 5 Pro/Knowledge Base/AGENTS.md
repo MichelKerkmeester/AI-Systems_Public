@@ -1,19 +1,3 @@
-## 🚨 DO NOT MODIFY THIS FILE UNLESS SPECIFICALLY INSTRUCTED.
-
-## 📚 Required Documentation
-
-**Required Reading** - These documents define our non-negotiable standards:
-
-### Core Development Standards
-1. **[knowledge/code_standards.md](./knowledge/code_standards.md)** - PRIMARY reference for all code quality decisions
-2. **[knowledge/initialization_pattern.md](./knowledge/initialization_pattern.md)**
-3. **[knowledge/platform_constraints.md](./knowledge/platform_constraints.md)**
-4. **[knowledge/collection_lists.md](./knowledge/collection_lists.md)**
-5. **[knowledge/debugging.md](./knowledge/debugging.md)**
-6. **[knowledge/animation_libraries.md](./knowledge/animation_libraries.md)**
-
-.
-
 ## ⚠️ CRITICAL: AI Behavior Guardrails & Anti-Patterns
 
 ### Common Failure Patterns & Root Causes
@@ -48,6 +32,20 @@
 - **Root Cause**: Anticipating needs that don't exist; gold-plating solutions
 - **Prevention**: Solve ONLY the stated problem; reject premature optimization; confirm scope via a clarifying question when in doubt
 - **Example**: Creating a complex state management system when a simple variable suffices
+
+.
+
+## 📚 Required Documentation
+
+**Required Reading** - These documents define our non-negotiable standards:
+
+### Core Development Standards
+1. **[knowledge/code_standards.md](./knowledge/code_standards.md)** - PRIMARY reference for all code quality decisions
+2. **[knowledge/initialization_pattern.md](./knowledge/initialization_pattern.md)**
+3. **[knowledge/platform_constraints.md](./knowledge/platform_constraints.md)**
+4. **[knowledge/collection_lists.md](./knowledge/collection_lists.md)**
+5. **[knowledge/debugging.md](./knowledge/debugging.md)**
+6. **[knowledge/animation_libraries.md](./knowledge/animation_libraries.md)**
 
 .
 
@@ -325,3 +323,4 @@ Final permission prompt:
 Applicability:
 - This final permission prompt applies to all branch-creating workflows
 - For otherwise autonomous prompts, a single final integration approval prompt is permitted; all other steps remain non-interactive
+

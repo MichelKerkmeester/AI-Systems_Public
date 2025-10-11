@@ -58,7 +58,7 @@ workflow:
 
   step_2_generate_yaml:
     action: AUTOMATICALLY create YAML file
-    output_location: /Users/michelkerkmeester/MEGA/AI & Dev/AI Systems/z_prompts/snippets
+    output_location: /AI Systems/DEV - Speckit Workflows/Context
     naming: context_request_{slug}.yaml (lowercase_underscores, max 50 chars)
 
     yaml_structure: |
