@@ -5,7 +5,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 > - 99.999% of people won't try these systems. Beat the odds?
 > - Don't reward me with unwanted coffee: https://buymeacoffee.com/michelkerkmeester
 
----
+.
 
 ## 📋 Table of Contents
 
@@ -47,7 +47,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 System instructions for direct, efficient AI communication without filler.
 
----
+-
 
 **Core Communication Principles**:
   - Eliminates emojis, filler, hype, and conversational transitions
@@ -70,7 +70,7 @@ System instructions for direct, efficient AI communication without filler.
 
 Create professional dev tickets, PRDs, and enhanced documentation with automatic complexity scaling.
 
----
+-
 
 **Intelligent Modes & Auto-Scaling**:
   - Modes: $ticket & $prd (dev work), $doc (guides/formatting), $interactive (discovery), $quick (instant)
@@ -88,7 +88,7 @@ Create professional dev tickets, PRDs, and enhanced documentation with automatic
 
 Create effective AI prompts using 7 specialized frameworks, systematic evaluation, and transparent DEPTH processing.
 
----
+-
 
 **Modes & Output Formats**:
   - **Core Modes**: $interactive (DEFAULT), $improve, $refine, $quick, $short
@@ -139,7 +139,7 @@ Project for GPT 5 Pro that simulates a complete dev environment with AGENTS.md, 
 
 Systematic development workflows with Github SpecKit integration for reliable development.
 
----
+-
 
 **Development Workflows**:
   - **Multiple Execution Modes**: Manual (full approvals), Automated (critical-only), etc.
@@ -162,7 +162,7 @@ Systematic development workflows with Github SpecKit integration for reliable de
 
 Edit image, video, and audio files via natural language.
 
----
+-
 
 **Universal Media Operations & Intelligence**:
   - Image: Resize, convert, compress, crop, batch
@@ -181,7 +181,7 @@ Edit image, video, and audio files via natural language.
 
 Full-stack Webflow development through natural language with Designer and Data APIs.
 
----
+-
 
 **Complete Development Capabilities**:
   - Create collections, fields, and relationships
@@ -202,7 +202,7 @@ Full-stack Webflow development through natural language with Designer and Data A
 
 Automate ClickUp & Notion actions with this focused Agent system.
 
----
+-
 
 **Dual-Platform Intelligence & MCP Verification**:
   - Notion: Databases, pages, rich content, wikis
@@ -223,7 +223,7 @@ Automate ClickUp & Notion actions with this focused Agent system.
 
 Create scheduled tasks with intelligent optimization.
 
----
+-
 
 **Smart Optimization & Canvas Documentation**:
   - Mandatory canvas README after first task
