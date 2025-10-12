@@ -1,5 +1,22 @@
 # [CHECKLIST TYPE] Checklist: [FEATURE NAME]
 
+.
+
+## 📋 Table of Contents
+- [1. 🎯 Objective](#1--objective)
+- [2. 🔗 Links](#2--links)
+- [3. 📚 Categories](#3--categories)
+- [4. ℹ️ Notes](#4--notes)
+
+.
+
+## 1. 🎯 Objective
+
+Metadata
+- Category: Checklist
+- Tags: [FEATURE], [AREA]
+- Priority: [PRIORITY]
+
 **Purpose**: [Brief description of what this checklist covers]
 **Created**: [DATE]
 **Feature**: [Link to spec.md or relevant documentation]
@@ -20,21 +37,36 @@
   ============================================================================
 -->
 
-## [Category 1]
+.
 
+## 2. 🔗 Links
+- Spec: [link]
+- Plan: [link]
+- Tasks: [link]
+
+.
+
+## 3. 📚 Categories
+
+### [Category 1]
 - [ ] CHK001 First checklist item with clear action
 - [ ] CHK002 Second checklist item
 - [ ] CHK003 Third checklist item
 
-## [Category 2]
-
+### [Category 2]
 - [ ] CHK004 Another category item
 - [ ] CHK005 Item with specific criteria
 - [ ] CHK006 Final item in this category
 
-## Notes
+Numbering guidance
+- Use hierarchical numbering such as 3.1, 3.2 for traceability when exporting
 
+.
+
+## 4. ℹ️ Notes
 - Check items off as completed: `[x]`
 - Add comments or findings inline
 - Link to relevant resources or documentation
 - Items are numbered sequentially for easy reference
+- Optional tags: [P0/P1], Owner: [OWNER], Evidence: [link]
+- Keep categories concise; split large lists by theme
