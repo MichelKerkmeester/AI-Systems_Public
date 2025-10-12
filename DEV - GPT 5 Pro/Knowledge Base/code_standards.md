@@ -1,23 +1,10 @@
-# Code Standards - UltraThink Guidelines
+# Code Standards & Naming Conventions
 
-Canonical naming, header, and comment rules for UltraThink source code. Apply these standards to keep the project readable, accessible, and consistent across teams.
-
-.
-
-## 1. 🎯 Objective
-
-Define the mandatory code conventions for UltraThink JavaScript, CSS, and documentation:
-- Keep naming predictable across languages and layers.
-- Limit comments to intent and platform constraints.
-- Enforce minimal headers without metadata or ticket references.
-
-**Category**: critical  
-**Tags**: naming, comments, formatting, standards, snake_case  
-**Priority**: critical
+Defines the mandatory code conventions for JavaScript, CSS, and inline documentation. Keep naming predictable across languages and layers, keep comments focused on intent and platform constraints, and enforce minimal headers without metadata or ticket references.
 
 .
 
-## 2. 🧾 Naming Reference
+## 1. 🧾 Naming Reference
 
 | Type | Rule | Example |
 |------|------|---------|
@@ -37,30 +24,30 @@ Define the mandatory code conventions for UltraThink JavaScript, CSS, and docume
 
 .
 
-## 3. 🗂️ File & Section Headers
+## 2. 🗂️ File & Section Headers
 
-### 3.1 JavaScript File Header
+### 2.1 JavaScript File Header
 ```javascript
 // ───────────────────────────────────────────────────────────────
 // COMPONENT: NAME
 // ───────────────────────────────────────────────────────────────
 ```
 
-### 3.2 CSS File Header
+### 2.2 CSS File Header
 ```css
 /* ───────────────────────────────────────────────────────────────
    COMPONENT - NAME
 ─────────────────────────────────────────────────────────────── */
 ```
 
-### 3.3 Never Include
+### 2.3 Never Include
 - Task IDs or ticket numbers
 - Author names or dates
 - Version numbers or release info
 - Project management metadata
 - Descriptive paragraphs (headers stay minimal)
 
-### 3.4 Section Headers (Numbered)
+### 2.4 Section Headers (Numbered)
 ```javascript
 /* ─────────────────────────────────────────────────────────────
    1. INITIALIZATION
@@ -73,7 +60,7 @@ Define the mandatory code conventions for UltraThink JavaScript, CSS, and docume
 ─────────────────────────────────────────────────────────────── */
 ```
 
-### 3.5 Initialization Pattern (Webflow)
+### 2.5 Initialization Pattern (Webflow)
 ```javascript
 /* ─────────────────────────────────────────────────────────────
    INITIALIZATION
@@ -90,14 +77,14 @@ if (window.Webflow && window.Webflow.push) {
 
 .
 
-## 4. 💬 Commenting Rules
+## 3. 💬 Commenting Rules
 
-### 4.1 Quantity & Focus
+### 3.1 Quantity & Focus
 - Maximum five comments per ten lines of code.
 - Explain **why** logic exists or reference Webflow constraints.
 - Avoid narrating implementation details.
 
-### 4.2 Configuration Comments
+### 3.2 Configuration Comments
 Comments above constants explain their purpose and constraints:
 
 ```javascript
@@ -115,7 +102,7 @@ const FORMSPARK_SELECTOR = 'form[action*="submit-form.com"]';
 return { enable, offset: isNaN(offset) ? 100 : offset };
 ```
 
-### 4.3 Function Purpose Comments
+### 3.3 Function Purpose Comments
 Single-line comment above function describes intent and return behavior:
 
 ```javascript
@@ -135,7 +122,7 @@ async function show_modal() {}
 function extract_nl_mobile_digits(raw) {}
 ```
 
-### 4.4 Inline Logic Comments
+### 3.4 Inline Logic Comments
 Explain **why** decisions are made, not what the code does:
 
 ```javascript
@@ -158,7 +145,7 @@ const timeout = new Promise((_, reject) =>
 return Array.from ? Array.from(node_list) : Array.prototype.slice.call(node_list);
 ```
 
-### 4.5 Platform/Library-Specific Comments
+### 3.5 Platform/Library-Specific Comments
 Reference external constraints or integration details:
 
 ```javascript
@@ -183,7 +170,7 @@ function log(...args) {
 }
 ```
 
-### 4.6 Error Handling & Fallback Comments
+### 3.6 Error Handling & Fallback Comments
 Explain recovery strategies and graceful degradation:
 
 ```javascript
@@ -206,7 +193,7 @@ if (response.status === 429 && attempt <= MAX_RETRIES) {
 }
 ```
 
-### 4.7 Data Transformation Comments
+### 3.7 Data Transformation Comments
 Explain complex data processing steps:
 
 ```javascript
@@ -223,7 +210,7 @@ const parts = attr
   .filter(Boolean);
 ```
 
-### 4.8 Guard Clause & Early Return Comments
+### 3.8 Guard Clause & Early Return Comments
 Explain validation checks when not obvious:
 
 ```javascript
@@ -234,7 +221,7 @@ if (scope.matches && scope.matches('form')) return scope;
 if (dialog.dataset.welcomeInitialized === 'true') return;
 ```
 
-### 4.9 Performance & Optimization Comments
+### 3.9 Performance & Optimization Comments
 Explain caching, debouncing, or optimization choices:
 
 ```javascript
@@ -257,7 +244,7 @@ function get_elements() {
 }
 ```
 
-### 4.10 State Management Comments
+### 3.10 State Management Comments
 Explain state structure and purpose:
 
 ```javascript
@@ -279,7 +266,7 @@ const state = {
 };
 ```
 
-### 4.11 CSS Inline Comments
+### 3.11 CSS Inline Comments
 ```css
 .component { /* compact inline CSS comment */ }
 
@@ -287,7 +274,7 @@ const state = {
 el.style.setProperty('display', 'none', 'important');
 ```
 
-### 4.12 JSDoc Usage (Minimal)
+### 3.12 JSDoc Usage (Minimal)
 ```javascript
 /**
  * Process user data and return formatted result
@@ -298,7 +285,7 @@ function process_user_data(data) {}
 ```
 Use JSDoc only for public APIs or complex shared utilities.
 
-### 4.13 Bad Examples (Anti-Patterns)
+### 3.13 Bad Examples (Anti-Patterns)
 ```javascript
 // ❌ Narrating what code does
 // Set price to price times 100
@@ -329,9 +316,9 @@ const cached_result = compute_heavy_operation();
 
 .
 
-## 5. 🔖 Special Markers
+## 4. 🔖 Special Markers
 
-### 5.1 Priority Flags
+### 4.1 Priority Flags
 Use uppercase markers for critical information:
 
 ```javascript
@@ -342,7 +329,7 @@ Use uppercase markers for critical information:
 // BREAKING: this change requires migration
 ```
 
-### 5.2 Platform/Integration Markers
+### 4.2 Platform/Integration Markers
 Reference external systems and constraints:
 
 ```javascript
@@ -355,7 +342,7 @@ Reference external systems and constraints:
 // LENIS: Smooth scroll integration point
 ```
 
-### 5.3 Temporary Markers (Use Sparingly)
+### 4.3 Temporary Markers (Use Sparingly)
 ```javascript
 // FIXME: memory leak in event listener - track down source
 // HACK: workaround for Safari bug - remove when iOS 18 ships
@@ -366,15 +353,15 @@ Avoid generic TODO comments without context or ownership.
 
 .
 
-## 6. ✅ Enforcement & Tooling
+## 5. ✅ Enforcement & Tooling
 
-### 6.1 Validation Rules
+### 5.1 Validation Rules
 - File headers are exactly three lines.
 - No metadata in comments.
 - Follow naming table for all identifiers.
 - Keep comments intentional and concise.
 
-### 6.2 Common Violations
+### 5.2 Common Violations
 ```javascript
 // ❌ WRONG
 // Task: PROJ-123
@@ -387,8 +374,10 @@ Avoid generic TODO comments without context or ownership.
 // ───────────────────────────────────────────────────────────────
 ```
 
-### 6.3 Tool Support
+### 5.3 Tool Support
 - **ESLint** enforces snake_case and header constraints.
 - **Stylelint** validates CSS naming patterns.
 
-Maintain these standards in every pull request review.
+---
+
+**Rembember**:  Keep naming predictable across languages and layers, keep comments focused on intent and platform constraints

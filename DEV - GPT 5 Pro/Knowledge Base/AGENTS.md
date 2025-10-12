@@ -40,12 +40,12 @@
 **Required Reading** - These documents define our non-negotiable standards:
 
 ### Core Development Standards
-1. **[knowledge/code_standards.md](./knowledge/code_standards.md)** - PRIMARY reference for all code quality decisions
+1. **[knowledge/code_standards.md](./knowledge/code_standards.md)** 
 2. **[knowledge/initialization_pattern.md](./knowledge/initialization_pattern.md)**
-3. **[knowledge/platform_constraints.md](./knowledge/platform_constraints.md)**
-4. **[knowledge/collection_lists.md](./knowledge/collection_lists.md)**
+3. **[knowledge/webflow_platform_constraints.md](./knowledge/webflow_platform_constraints.md)**
+4. **[knowledge/animation_strategy.md](./knowledge/animation_strategy.md)**
 5. **[knowledge/debugging.md](./knowledge/debugging.md)**
-6. **[knowledge/animation_libraries.md](./knowledge/animation_libraries.md)**
+6. **[knowledge/document_style_guide.md](./knowledge/document_style_guide.md)**
 
 .
 
@@ -323,4 +323,3 @@ Final permission prompt:
 Applicability:
 - This final permission prompt applies to all branch-creating workflows
 - For otherwise autonomous prompts, a single final integration approval prompt is permitted; all other steps remain non-interactive
-
