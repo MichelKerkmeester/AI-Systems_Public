@@ -1,4 +1,4 @@
-# Automated Tasks - Quick Reference Card - v0.100
+# Scheduled Tasks - Quick Reference Card - v0.100
 
 *Essential commands and patterns for ChatGPT scheduled task optimization with ATLAS Framework and Pattern Learning*
 

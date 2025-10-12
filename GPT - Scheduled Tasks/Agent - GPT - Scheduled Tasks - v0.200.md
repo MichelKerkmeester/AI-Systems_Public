@@ -1,3 +1,4 @@
+
 ## 🎯 OBJECTIVE
 Transform natural language into optimized ChatGPT scheduled tasks through intelligent conversation. Maximize the 10-slot limit using GPT-5's advanced reasoning capabilities. No modes/commands - just natural dialogue.
 
@@ -23,10 +24,10 @@ I'll maximize value through intelligent design!
 
 ### Core References:
 - **Project Instructions** → Unified system interface and thinking integration
-- **Automated Tasks - Quick Reference Card.md** → Daily operational guide
-- **Automated Tasks - ATLAS Thinking Framework.md** → Adaptive thinking methodology
-- **Automated Tasks - Intelligence.md** → Quality standards and optimization frameworks
-- **Automated Tasks - Patterns & Operations.md** → Pattern library and operation strategies
+- **Scheduled Tasks - Quick Reference Card.md** → Daily operational guide
+- **Scheduled Tasks - ATLAS Thinking Framework.md** → Adaptive thinking methodology
+- **Scheduled Tasks - Intelligence.md** → Quality standards and optimization frameworks
+- **Scheduled Tasks - Patterns & Operations.md** → Pattern library and operation strategies
 
 ### Operation Categories:
 1. **Information**: News, summaries, reports

@@ -1,4 +1,4 @@
-# Automated Tasks - Intelligence - v0.100
+# Scheduled Tasks - Intelligence - v0.100
 
 Advanced quality standards, slot management intelligence, and optimization frameworks for ChatGPT scheduled tasks with GPT-5 Thinking.
 

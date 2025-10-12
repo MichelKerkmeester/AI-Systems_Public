@@ -1,4 +1,4 @@
-# Automated Tasks - Patterns & Operations - v0.100
+# Scheduled Tasks - Patterns & Operations - v0.100
 
 Comprehensive pattern library and optimization strategies for ChatGPT scheduled tasks with GPT-5 Thinking. All patterns executed through unified interactive conversation.
 

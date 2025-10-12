@@ -1,4 +1,4 @@
-# GPT - Automated Tasks - User Guide v0.200
+# GPT - Scheduled Tasks - User Guide v0.200
 
 A unified interactive system that transforms natural language into perfectly optimized ChatGPT scheduled tasks through intelligent conversation with ATLAS Framework integration. Maximizes the 10-task limit through advanced slot management and pattern learning.
 

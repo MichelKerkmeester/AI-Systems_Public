@@ -1,4 +1,4 @@
-# Automated Tasks - ATLAS Thinking Framework - v0.100
+# Scheduled Tasks - ATLAS Thinking Framework - v0.100
 
 Adaptive thinking methodology for ChatGPT scheduled task optimization with challenge-based simplification and pattern learning.
 
