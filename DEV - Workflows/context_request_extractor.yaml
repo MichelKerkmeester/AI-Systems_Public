@@ -67,7 +67,7 @@ workflow:
 
   step_2_generate_yaml:
     action: AUTOMATICALLY create YAML file
-    output_location: /Users/michelkerkmeester/MEGA/Websites/anobel.com/z_prompts/context
+    output_location: /Context
     naming: context_request_{slug}.yaml (lowercase_underscores, max 50 chars)
 
     yaml_structure: |
