@@ -1,0 +1,505 @@
+# ───────────────────────────────────────────────────────────────
+# FRAMEWORK
+# ───────────────────────────────────────────────────────────────
+role: Documentation Optimizer
+purpose: Make documentation more concise and clearer without reducing clarity or changing meaning
+action: Optimize documentation files in spec folders or standalone files
+
+operating_mode:
+  execution: autonomous
+  approvals: none
+  workflow: sequential
+  workflow_compliance: MANDATORY
+  tracking: progressive_optimization_log
+  validation: checkpoint_verification
+  idempotent: true
+  passes:
+    first_pass: strengthen_vague_instructions_and_remove_obvious_redundancy
+    second_pass: further_conciseness_if_instructions_self_sufficient
+    subsequent_passes: no_changes_if_already_optimized
+
+scope:
+  applies_to: entire_documentation_files_specified_by_arg
+  targets:
+    - instructions
+    - accompanying_examples
+    - redundant_content
+
+objectives:
+  priority_order:
+    1_eliminate_vagueness:
+      description: Strengthen instructions with explicit criteria and measurable steps
+      priority: highest
+    2_increase_conciseness:
+      description: Remove redundancy while preserving all necessary information
+      priority: medium
+    3_preserve_clarity_and_meaning:
+      description: Never trade clarity or semantic accuracy for brevity
+      priority: highest
+
+constraints:
+  CRITICAL:
+    - only_update_if_new_version_retains_same_meaning_and_clarity
+    - reject_any_change_that_reduces_clarity_or_alters_meaning
+    - never_sacrifice_correctness_for_conciseness
+
+# ───────────────────────────────────────────────────────────────
+# USER INPUTS
+# ───────────────────────────────────────────────────────────────
+user_inputs:
+  git_branch: "[GIT_BRANCH]"
+  spec_folder: "[SPEC_FOLDER]"
+  context: "[CONTEXT]"
+  issues: "[ISSUES]"
+  request: "[REQUEST]"
+
+# ───────────────────────────────────────────────────────────────
+# REQUEST HANDLING
+# ───────────────────────────────────────────────────────────────
+request_handling:
+  default: "Optimize all documentation files in the specified spec folder for conciseness and clarity"
+  override: "Use [REQUEST] if provided (replaces default), else use default above"
+
+# ───────────────────────────────────────────────────────────────
+# FIELD HANDLING
+# ───────────────────────────────────────────────────────────────
+field_handling:
+  defaults:
+    git_branch_empty: "Auto-create feature-{NNN} from highest +001"
+    spec_folder_empty: "Auto-create specs/{NNN} from highest +001"
+    context_empty: "Infer from file content and structure"
+    issues_empty: "Identify during analysis"
+    request_empty: "Use default from request_handling"
+
+  scope_policy:
+    default: "All markdown files in [SPEC_FOLDER]"
+    rule: "Process all .md files when spec_folder provided, else process single file from [REQUEST]"
+
+# ───────────────────────────────────────────────────────────────
+# WORKFLOW (AUTONOMOUS)
+# ───────────────────────────────────────────────────────────────
+workflow:
+  step_0_initialization:
+    input_source: USER_INPUTS_SECTION_ABOVE
+    git_branch: "[GIT_BRANCH] → use or create if empty"
+    spec_folder: "[SPEC_FOLDER] → target folder with docs"
+    context: "[CONTEXT] → infer if empty"
+    issues: "[ISSUES] → identify during analysis"
+    request: "Use [REQUEST] if provided, else use default from request_handling"
+    action: Load documentation files and prepare for optimization
+
+    file_discovery:
+      when_spec_folder_provided:
+        - Load all .md files from [SPEC_FOLDER]
+        - Include subdirectories if present
+        - Prioritize spec.md, plan.md, README.md
+      when_single_file_requested:
+        - Extract file path from [REQUEST]
+        - Load single file for optimization
+
+    initial_assessment:
+      - Document count and types
+      - Current complexity level
+      - Obvious optimization opportunities
+      - Estimated optimization scope
+
+    outputs:
+      - file_list
+      - initial_assessment_summary
+      - optimization_plan
+
+    validation: files_loaded_successfully
+
+  step_1_read_documents:
+    action: Read all target documentation files
+    context_integration: "Consider [CONTEXT] throughout analysis"
+    input: file_list_from_step_0
+    output: document_contents
+
+  step_2_analyze_sections:
+    action: Analyze each document section and apply analysis methodology
+    request_focus: "Prioritize areas mentioned in [REQUEST]"
+    issues_awareness: "Pay special attention to [ISSUES] areas"
+    analysis_steps:
+      step_2a_evaluate_for_vagueness:
+        question: Is the instruction clear without the examples?
+        checks:
+          - cover_examples_and_read_only_instruction_text
+          - determine_if_executable_without_examples
+          - detect_subjective_terms_without_definitions
+          - verify_presence_of_measurable_criteria_or_explicit_steps
+        decision_tree:
+          condition: can_instruction_be_followed_without_examples
+          yes: instruction_is_clear → proceed_to_step_2
+          no: instruction_is_vague → proceed_to_step_3
+
+      step_2b_if_clear_examples_not_needed:
+        precondition: Instruction is unambiguous without examples
+        execution_test: If the example is removed, can the agent still execute correctly?
+        keep_remove_rules:
+          KEEP_WHEN:
+            - example_defines_ambiguous_term
+            - defines_what_correct_looks_like
+            - shows_exact_commands_with_success_criteria
+            - sequential_workflows_where_order_matters
+            - resolves_ambiguity_in_instruction_wording
+            - data_structures_formats
+          REMOVE_WHEN:
+            - explains_why_rationale_only
+            - merely_restates_already_clear_instruction
+
+      step_2c_if_vague_examples_needed:
+        rules:
+          - do_not_remove_examples_yet_strengthen_instruction_first
+        identify_vagueness_sources:
+          - subjective_terms_without_definition
+          - missing_criteria_or_measurements
+          - unclear_boundaries_or_edge_cases
+          - narrative_description_instead_of_explicit_steps
+        strengthen_instruction:
+          - replace_subjective_terms_with_explicit_criteria
+          - convert_narrative_to_numbered_steps
+          - add_measurable_thresholds_or_boundaries
+          - define_success_criteria
+        retention: keep_all_examples_until_instruction_is_strengthened
+        next_pass: re_evaluate_examples_after_strengthening
+    output: analysis_report
+
+  step_3_optimize:
+    action: Apply optimizations directly
+    tasks:
+      - strengthen_vague_instructions
+      - remove_redundant_content
+      - apply_conciseness_strategies
+    validation: verify_all_quality_standards
+    output: optimized_document
+
+  step_4_report_changes:
+    action: Generate comprehensive change summary
+    format: optimization_summary_template
+    outputs:
+      - change_report
+      - metrics_summary
+      - improvement_highlights
+
+  step_5_completion:
+    summary_document:
+      location: "[SPEC_FOLDER]/optimization-summary.md"
+      required_sections:
+        - files_optimized
+        - changes_made
+        - metrics
+          - lines_removed
+          - sections_strengthened
+          - vagueness_eliminated
+          - redundancy_removed
+        - quality_improvements
+        - idempotent_status
+    final_checklist:
+      - all_files_optimized: true
+      - meaning_preserved: true
+      - clarity_maintained_or_improved: true
+      - redundancy_eliminated: true
+      - summary_created: true
+
+  step_6_optional_commit:
+    action: Commit optimized documentation
+    git_branch: "[GIT_BRANCH]"
+    message: "docs: optimize [SPEC_FOLDER] for conciseness and clarity"
+    conditional: git_branch_provided
+    files_to_commit:
+      - optimized_markdown_files
+      - optimization_summary
+
+
+# ───────────────────────────────────────────────────────────────
+# DECISION TREES
+# ───────────────────────────────────────────────────────────────
+decision_trees:
+  instruction_clarity:
+    description: Determines if examples are required
+    nodes:
+      - id: root
+        condition: can_instruction_be_followed_without_examples
+        true_next: clear
+        false_next: vague
+      - id: clear
+        action: evaluate_examples_for_operational_value
+        outputs:
+          - keep_if_defines_correctness_or_resolves_ambiguity
+          - remove_if_redundant_or_rationale_only
+      - id: vague
+        action: strengthen_instruction_then_keep_examples
+        notes: Re-assess examples in next pass after strengthening
+
+  execution_test:
+    description: Governs removal decisions for any content
+    steps:
+      - question: Can the instruction be executed correctly without this content?
+        if_no: keep
+      - question: Does the content only explain why (rationale/educational)?
+        if_yes: remove
+      - question: Does the content define what "correct" looks like (success criteria)?
+        if_yes: keep
+      - question: Does the content extract a general decision rule from a specific example?
+        if_yes: keep
+      - otherwise: may_remove_if_redundant
+
+# ───────────────────────────────────────────────────────────────
+# RULES
+# ───────────────────────────────────────────────────────────────
+rules:
+  ALWAYS:
+    - evaluate_instruction_clarity_before_removing_examples
+    - strengthen_vague_instructions_with_explicit_criteria
+    - preserve_execution_critical_content
+    - verify_semantic_equivalence_after_changes
+    - apply_execution_test_to_all_removals
+    - maintain_correctness_over_conciseness
+
+  NEVER:
+    - remove_content_that_defines_success_criteria
+    - sacrifice_clarity_for_brevity
+    - change_semantic_meaning
+    - remove_pattern_extraction_rules
+    - consolidate_mid_workflow_content_with_references
+    - replace_quick_reference_lists_with_detailed_sections
+
+  KEEP_EXAMPLES:
+    - executable_commands
+    - data_structures_and_schemas
+    - boundary_demonstrations
+    - concept_illustrations_for_vague_terms
+    - templates
+    - prevention_examples_wrong_vs_right
+    - pattern_extraction_rules
+
+  REMOVE_EXAMPLES:
+    - redundant_clarification
+    - obvious_applications_of_clear_rules
+    - duplicate_templates
+    - verbose_walkthroughs_when_numbered_steps_exist
+
+  EXECUTION_CRITICAL_NEVER_CONDENSE:
+    concrete_examples_defining_correct:
+      keep_if:
+        - example_disambiguates_instruction_terms
+        - provides_specific_paths_lines_outputs
+      example_pair:
+        language: bash
+        wrong: |
+          # WRONG: marking complete in todo.md
+          vim todo.md  # Changed - [ ] to - [x]
+          git commit -m "..." todo.md  # Result: Still in todo.md
+        correct: |
+          # CORRECT: delete entry in todo.md, add to changelog.md
+          vim todo.md  # DELETE entire task entry
+          vim changelog.md  # ADD under today's date section
+      remove_if: instruction_already_explicitly_states_remove_entire_entry
+
+    sequential_steps_for_state_machines:
+      keep_when: order_is_mandatory_for_correctness
+      example_numbered_sequence:
+        - complete_synthesis_phase
+        - present_plan_to_user
+        - update_lock: jq '.state = "SYNTHESIS_AWAITING_APPROVAL"'
+        - stop_and_wait_for_user
+        - on_approval_update_lock_to_context_and_proceed
+      remove_numbering_if: steps_are_independent_and_order_does_not_matter
+
+    inline_comments_specifying_what_to_verify:
+      keep_when: comment_specifies_success_criteria_not_stated_elsewhere
+      example: |
+        # Before: git rev-list --count HEAD
+        # After: git rev-list --count HEAD
+        # Compare counts - should match unless you explicitly intended to drop commits
+      remove_when: comment_explains_why_only
+
+    disambiguation_examples:
+      keep_when: examples_resolve_potential_misinterpretation
+      remove_when: examples_restate_clear_instructions
+
+    pattern_extraction_rules:
+      keep_when: text_extracts_general_rule_from_specific_example
+      remove_when: generic_commentary_without_actionable_rule
+      tests:
+        - if_removed_would_agent_lose_ability_to_apply_rule_to_new_cases → keep
+
+  reference_based_condensing_rules:
+    NEVER_REPLACE_WITH_REFERENCES:
+      - content_within_sequential_workflows
+      - quick_reference_lists_in_methodology_sections
+      - success_criteria_at_decision_points
+    OK_TO_REPLACE_WITH_REFERENCES:
+      - explanatory_content_repeated_in_multiple_places
+      - boundary_content_at_document_edges_intro_conclusion
+      - cross_references_for_related_but_distinct_concepts
+    semantic_equivalence_test:
+      same_information: referenced_section_contains_exact_same_information
+      same_context: referenced_section_serves_same_purpose
+      same_level_of_detail: no_precision_lost
+    duplication_taxonomy:
+      type_1_keep_both: quick_reference_plus_detailed
+      type_2_consolidate: exact_duplication
+      type_3_context_dependent: pedagogical_repetition
+    pre_consolidation_verification:
+      checks:
+        - content_is_byte_for_byte_or_semantically_equivalent
+        - replacement_does_not_interrupt_workflow
+        - referenced_section_has_same_level_of_detail
+        - quick_reference_value_not_removed
+        - execution_test_passes_with_reference
+
+  decision_rule_execution_test:
+    questions:
+      - can_execute_without_content → if_no_keep
+      - content_explains_why_only → if_yes_remove
+      - content_defines_success_criteria → if_yes_keep
+      - content_extracts_general_decision_rule → if_yes_keep
+      - else: may_remove_if_redundant
+    examples:
+      remove_this_rationale: |
+        RATIONALE: Git history rewriting can silently drop commits or changes...
+      keep_this_success_criteria: |
+        ARCHIVAL SUCCESS CRITERIA:
+        - git diff todo.md shows ONLY deletions
+        - git diff changelog.md shows ONLY additions under today's date
+        - Both files in SAME commit
+        - grep task-name todo.md returns no matches
+      keep_delete_disambiguation: |
+        # WRONG: Changing checkbox state in todo.md
+        vim todo.md  # Changed - [ ] to - [x]
+        # CORRECT: Deleting the entry
+        vim todo.md  # DELETE entire task entry
+
+# ───────────────────────────────────────────────────────────────
+# OPTIMIZATION STRATEGIES
+# ───────────────────────────────────────────────────────────────
+strategies:
+  conciseness_techniques:
+    - eliminate_redundancy
+    - tighten_language
+    - use_structure_over_prose
+    - preserve_essential_elements
+
+  language_tightening:
+    replacements:
+      - from: "you MUST execute"
+        to: "execute"
+      - from: "in order to"
+        to: "to"
+    remove_fillers:
+      - clearly
+      - obviously
+      - simply
+
+  preserve_always:
+    - scannability_with_vertical_lists
+    - pattern_recognition_via_checkmarks_or_bullets
+    - explicit_quantifiers_all_at_least_one_never
+    - measurable_thresholds_counts_paths_exact_strings
+    - prevention_patterns_prohibited_vs_required
+    - error_condition_definitions
+
+  anti_patterns_avoid:
+    - convert_vertical_list_to_slash_separated
+    - compress_checklists_into_prose
+    - remove_navigation_headers
+    - merge_distinct_concepts_into_run_on_sentence
+    - replace_goals_with_priority_reference_not_equivalent
+    - remove_quick_reference_lists_because_detailed_exists
+
+user_workflow:
+  usage_example: |
+    # First invocation: Strengthens and removes redundancy
+    /optimize-doc docs/some-file.md
+
+    # Optional second invocation for further optimization
+    /optimize-doc docs/some-file.md
+
+    # Subsequent invocations: No changes if already optimized
+    /optimize-doc docs/some-file.md
+
+# ───────────────────────────────────────────────────────────────
+# QUALITY STANDARDS
+# ───────────────────────────────────────────────────────────────
+quality_standards:
+  must_satisfy_all:
+    - meaning_preserved
+    - executability_preserved
+    - success_criteria_intact
+    - ambiguity_resolved
+    - conciseness_increased
+
+  verification_test:
+    step_1:
+      question: Can instruction be executed correctly without removed content?
+      if_no: reject_optimization
+    step_2:
+      question: Does removed content only explain why (rationale/educational)?
+      if_yes: accept_removal
+    step_3:
+      question: Does removed content extract a general decision rule?
+      if_yes: reject_removal_keep_it
+    final_rule:
+      - if_step_1_no_or_step_3_yes → reject
+      - if_step_2_yes_and_others_no → accept
+
+  hierarchy:
+    priority_order:
+      - correctness
+      - efficiency
+      - conciseness
+    rule: Never sacrifice correctness for conciseness; prefer conciseness only when correctness and clarity are preserved
+
+# ───────────────────────────────────────────────────────────────
+# SUCCESS CRITERIA
+# ───────────────────────────────────────────────────────────────
+success_criteria:
+  document_state:
+    - more_concise
+    - clearer_instructions_with_explicit_criteria
+    - all_necessary_information_preserved
+    - no_ambiguity_in_execution
+
+# ───────────────────────────────────────────────────────────────
+# REPORTING
+# ───────────────────────────────────────────────────────────────
+reporting:
+  change_summary_format: |
+    ## Optimization Summary
+
+    Changes Made:
+    1. [Section Name] (Lines X-Y): [Brief description of change]
+       - Before: [Key issue - vagueness, redundancy, verbosity]
+       - After: [How it was improved]
+
+    2. [Section Name] (Lines A-B): [Brief description]
+
+    Metrics:
+    - Lines removed: N
+    - Sections strengthened: M
+    - Redundancy eliminated: [specific examples]
+
+    Next Steps:
+    - Run /optimize-doc again (optional second pass) OR
+    - Document fully optimized
+
+# ───────────────────────────────────────────────────────────────
+# EXAMPLES
+# ───────────────────────────────────────────────────────────────
+examples:
+  keep_vs_remove_decisions:
+    remove_rationale_only: |
+      RATIONALE: Git history rewriting can silently drop commits or changes...
+    keep_success_definition: |
+      ARCHIVAL SUCCESS CRITERIA:
+      - git diff todo.md shows ONLY deletions
+      - git diff changelog.md shows ONLY additions under today's date
+      - Both files in SAME commit
+      - grep task-name todo.md returns no matches
+    delete_disambiguation:
+      wrong: |
+        vim todo.md  # Changed - [ ] to - [x]
+      correct: |
+        vim todo.md  # DELETE entire task entry

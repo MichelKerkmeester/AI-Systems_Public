@@ -40,7 +40,7 @@ user_inputs:
   context: "[CONTEXT]"
   issues: "[ISSUES]"
   request: "[REQUEST]"
-  environment: "[LINK]"
+  environment: "[STAGING LINK]"
   scope: "[FILES]"
 
 # ───────────────────────────────────────────────────────────────
@@ -50,7 +50,7 @@ field_handling:
   defaults:
     git_branch_empty: "Auto-create feature-{NNN} from highest +001"
     spec_folder_empty: "Auto-create specs/{NNN} from highest +001"
-    context_empty: "Infer from [REQUEST] and [LINK]"
+    context_empty: "Infer from [REQUEST] and [STAGING LINK]"
     issues_empty: "Investigate during workflow"
     environment_empty: "Skip browser testing steps"
     scope_empty: "Use scope_policy.default"
@@ -70,7 +70,7 @@ workflow:
     context: "[CONTEXT] → infer if empty"
     issues: "[ISSUES] → discover if empty"
     request: "[REQUEST] → REQUIRED"
-    environment: "[LINK] → skip DevTools if empty"
+    environment: "[STAGING LINK] → skip DevTools if empty"
     scope: "[FILES] → default scope if empty"
     action: Analyze user inputs and confirm understanding
     outputs:
