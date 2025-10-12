@@ -100,3 +100,7 @@ We load Motion.dev once, as an ES module, and expose it globally for components:
 2. Confirm no layout jumps (measure before animate; `height: auto` after)
 3. Run with `prefers-reduced-motion: reduce` to ensure graceful behavior
 4. Use DevTools Performance to look for long main‑thread tasks and forced reflows
+
+---
+
+**Remember**: Keeps payloads small, performance high, and behavior predictable.
