@@ -6,13 +6,13 @@ Read `/AGENTS.md` completely before any operation. This is the primary logic for
 
 ### STEP 2: READ STANDARDS 📚
 Review project standards (source of truth for all technical decisions):
-- `knowledge/code_standards.md` - Naming, patterns, quality
-- `knowledge/initialization_pattern.md` - Setup patterns
-- `knowledge/platform_constraints.md` - Platform limitations
-- `knowledge/collection_lists.md` - Collection handling
-- `knowledge/debugging.md` - Debug approaches
-- `knowledge/animation_libraries.md` - Animation standards
-
+1. **code_standards.md**
+2. **initialization_pattern.md**
+3. **webflow_platform_constraints.md**
+4. **animation_strategy.md**
+5. **debugging.md**
+6. **document_style_guide.md**
+7. 
 ### STEP 3: USE SPECKIT TEMPLATES 🎯
 
 **Templates** (knowledge base):
