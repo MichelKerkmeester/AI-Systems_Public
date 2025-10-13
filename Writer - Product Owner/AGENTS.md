@@ -10,7 +10,7 @@ This file serves as a redirect with intelligent routing based on user input.
 **Follow this dynamic sequence:**
 
 ### **STEP 1: READ SYSTEM PROMPT FIRST** ✅
-**MANDATORY:** Read `/Knowledge Base/Writer - Product Owner - v0.911.md` **COMPLETELY** before proceeding.
+**MANDATORY:** Read `/Knowledge Base/Writer - Product Owner - v0.912.md` **COMPLETELY** before proceeding.
 
 This is your PRIMARY instruction set. Everything else supports this core system.
 
@@ -26,7 +26,7 @@ This is your PRIMARY instruction set. Everything else supports this core system.
 - **`$doc`** → Read `/Knowledge Base/Product Owner - Template - Doc Mode - v0.118.md`
 
 #### IF NO SHORTCUT DETECTED:
-1. **FIRST** → Read `/Knowledge Base/Product Owner - Interactive Mode - v0.301.md`
+1. **FIRST** → Read `/Knowledge Base/Product Owner - Interactive Mode - v0.302.md`
 2. **WAIT** for user response about what they want
 3. **THEN** read the appropriate template based on their answer:
    - User wants ticket/story → Read Ticket Mode template
@@ -38,9 +38,8 @@ This is your PRIMARY instruction set. Everything else supports this core system.
 ### **STEP 3: READ SUPPORTING FRAMEWORK** 📚
 **ONLY AFTER** completing Steps 1-2, read:
 
-**DEPTH Thinking Framework** - `/Knowledge Base/Product Owner - DEPTH Thinking Framework - v0.101.md`
-- Silent excellence methodology
-- 10-round automatic processing
+**DEPTH Thinking Framework** - `/Knowledge Base/Product Owner - DEPTH Thinking Framework - v0.102.md`
+- 10-round automatic processing (standard) or auto-scaled for $quick
 - Quality assurance systems
 
 ---
@@ -50,11 +49,11 @@ This is your PRIMARY instruction set. Everything else supports this core system.
 ```
 START
   ↓
-[Read System Prompt v0.911]
+[Read System Prompt v0.912]
   ↓
 [Check User Input]
   ↓
-Has Shortcut? ─── NO ──→ [Read Interactive Mode v0.301]
+Has Shortcut? ─── NO ──→ [Read Interactive Mode v0.302]
   │                         ↓
   │                    [Ask User & Wait]
   │                         ↓
@@ -64,7 +63,7 @@ Has Shortcut? ─── NO ──→ [Read Interactive Mode v0.301]
   ↓
 [Read Specific Template]
   ↓
-[Read DEPTH Framework v0.101]
+[Read DEPTH Framework v0.102]
   ↓
 READY TO PROCESS
 ```
@@ -148,7 +147,7 @@ User: "need to fix the payment system"
 ## ⛔ ABSOLUTE REQUIREMENTS
 
 ### DO NOT:
-- ❌ Skip the system prompt (/Knowledge Base/Writer - Product Owner - v0.911.md)
+- ❌ Skip the system prompt (/Knowledge Base/Writer - Product Owner - v0.912.md)
 - ❌ Read templates before checking for shortcuts
 - ❌ Read all templates unnecessarily (only read what's needed)
 - ❌ Proceed without completing Step 1
@@ -157,7 +156,7 @@ User: "need to fix the payment system"
 - ❌ Create files without 3-digit sequential number prefix
 
 ### ALWAYS:
-- ✅ Start with `/Knowledge Base/Writer - Product Owner - v0.911.md`
+- ✅ Start with `/Knowledge Base/Writer - Product Owner - v0.912.md`
 - ✅ Check for shortcuts BEFORE deciding what to read next
 - ✅ Read Interactive Mode ONLY if no shortcut detected
 - ✅ Apply 10-round DEPTH methodology automatically
@@ -212,4 +211,4 @@ This smart routing ensures:
 5. **DEPTH Framework last** - After template selection **BUT BEFORE CREATION**
 6. **Output to /export** - Every artifact goes here
 
-**→ GO TO:** `/Knowledge Base/Writer - Product Owner - v0.911.md` **NOW**
+**→ GO TO:** `/Knowledge Base/Writer - Product Owner - v0.912.md` **NOW**

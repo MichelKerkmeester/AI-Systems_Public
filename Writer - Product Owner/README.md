@@ -1,10 +1,10 @@
-# Product Owner System - User Guide v0.911
+# Product Owner System - User Guide v0.912
 
 Transforms requests into professional development tickets, strategic PRDs, and documentation through intelligent interactive guidance with automatic DEPTH processing.
 
 ## 📋 Table of Contents
 
-- [🆕 What's New In V0.911](#whats-new-in-v0911)
+- [🆕 What's New In V0.912](#whats-new-in-v0912)
 - [🔧 What's Improved](#whats-improved)
 - [✨ Key Features](#key-features)
 - [🚀 Quick Setup](#quick-setup)
@@ -14,101 +14,61 @@ Transforms requests into professional development tickets, strategic PRDs, and d
 - [📄 Doc Mode](#doc-mode)
 - [🧠 DEPTH Thinking Framework](#depth-thinking-framework)
 - [🎯 Automatic Complexity Detection](#automatic-complexity-detection)
-- [📝 Symbol & Formatting Reference](#symbol--formatting-reference)
-- [📊 Header Format](#header-format)
-- [🆘 Troubleshooting](#troubleshooting)
-- [📦 Version History](#version-history)
 
 ---
 
-<a id="whats-new-in-v0911"></a>
-## 🆕 What's New In V0.911
+<a id="whats-new-in-v0912"></a>
+## 🆕 What's New In V0.912
 
-### Major Architecture Improvement: Self-Contained Templates
-- **Consolidated Logic:** All formatting rules now embedded directly in templates
-- **Eliminated Redundancy:** Removed duplicate rule definitions across files
-- **Cleaner Structure:** Logic at top, templates at bottom for better maintainability
-- **Improved Efficiency:** Faster processing with streamlined architecture
+### DEPTH Framework Enhancements (v0.102)
+- **Structured Phase Distribution:** Standardized 10-round flow (D→H) with explicit internal state tracking
+- **Formal Quality Gates:** Detection signals, severity scoring, and action matrices across all phases
+- **Robust Error Recovery:** Retry policies, rollback strategies, and escalation paths with minimal user disruption
+- **Output Discipline:** Strict constraints prevent scope expansion; multiple perspectives converge to single deliverable
+- **Configurable Visibility:** Internals hidden by default with optional brief summaries when explicitly enabled
 
-### Enhanced Ticket Templates - More Concise & Scannable
-- **Streamlined Content:** Reduced verbosity while maintaining clarity
-- **Improved Readability:** Better visual hierarchy and spacing
-- **Concise Sections:** Tighter, more focused requirements and criteria
-- **Cleaner Checklists:** Optimized resolution items for better usability
-- **Symbol Refinement:** Updated symbols for better visual distinction (⌘, ✦, ⌥, ❖, ◻, ✓)
+### Interactive Mode Improvements (v0.302)
+- **Critical Formatting Enforcement:** Validation rules prevent emoji bullets and single-line compression
+- **Pre-Response Checklist:** 6-point quality gate ensures markdown compliance before every response
+- **Multi-Line Preservation:** Strict enforcement of proper bullet structure and spacing
+- **Format Validation Gates:** CRITICAL severity checks for markdown compliance and line break preservation
 
-### Updated Files
-- **Writer:** v0.911 - Streamlined without redundant rules
-- **DEPTH Framework:** v0.101 - Updated for new architecture
-- **Interactive Mode:** v0.301 - Improved formatting
-- **Ticket Template:** v0.130 - More concise with embedded rules
-- **PRD Template:** v0.129 - Self-contained with formatting logic
-- **Doc Template:** v0.118 - Standalone with integrated standards
-
-### Architectural Changes
-- **Self-Contained Templates:** Each template now includes its own delivery standards, formatting rules, quality checklists, and error recovery
-- **No More Artifact Standards File:** Formatting rules consolidated into templates (v0.147 deprecated)
-- **Modular Design:** Each component operates independently
-- **Template-First Approach:** Templates are the source of truth for their own rules
+### Updated Files in v0.912
+- **Writer:** v0.912 - Visibility configurable DEPTH alignment; streamlined without redundant rules
+- **DEPTH Framework:** v0.102 - Improved clarity; reduced redundancy; YAML/Markdown specs; visibility configurable
+- **Interactive Mode:** v0.302 - Enhanced formatting enforcement with validation rules and pre-response checklist
 
 ---
 
 <a id="whats-improved"></a>
 ## 🔧 What's Improved
 
-### Ticket Template Enhancements ✅
-**More Concise Format:**
-- Shortened About sections to 1-2 lines with key-value pairs
-- Compressed requirements into bullet format with inline descriptions
-- Streamlined success criteria to essential metrics only
-- Reduced checklist verbosity while maintaining completeness
+### DEPTH Framework Enhancements ✅
+**Clarity & Discipline:**
+- Standardized 10-round phase distribution (D→H) with explicit internal state and context layers
+- Strict output constraints and template compliance; no scope expansion
 
-**Better Scannability:**
-- Bold labels for quick identification
-- Consistent table formats for designs/references
-- Clear visual separation between sections
-- Improved symbol hierarchy for navigation
+**Quality & Recovery:**
+- Formal quality gates with detection signals and severity scoring
+- Structured recovery protocol (action matrix, retry, rollback, escalation)
 
-### Template Self-Sufficiency ✅
-**Each template now contains:**
-- Complete delivery standards
-- All formatting rules
-- Quality checklists
-- Error recovery procedures
-- Symbol definitions
-- Structure requirements
-
-**Benefits:**
-- No cross-file dependencies
-- Easier maintenance
-- Consistent behavior
-- Reduced complexity
-
-### System Simplification ✅
-**Removed Redundancies:**
-- Eliminated duplicate formatting rules
-- Consolidated quality checks
-- Unified error handling
-- Single source of truth per template
-
-**Cleaner Main System:**
-- References templates without duplication
-- Focuses on orchestration only
-- Reduced from ~1000 to ~500 lines
-- Better separation of concerns
+### Interactive Mode Enhancements ✅
+**Formatting Enforcement:**
+- Enhanced validation rules for markdown formatting
+- Pre-response checklist to prevent formatting errors
+- Strict multi-line bullet preservation
+- Prohibited emoji bullet detection
 
 ---
 
 <a id="key-features"></a>
 ## ✨ Key Features
 
-- **🚀 Three Modes**: PRDs, Stories, Tickets & Documentation
+- **🚀 Three Modes**: Documentation, PRDs, Tickets & Stories
 - **🧠 DEPTH Framework**: 5-phase methodology with automatic processing
 - **🎯 Smart Complexity**: Automatic detection and template scaling
 - **⚡ Quick Mode**: Zero-wait creation with auto-scaled thinking (1-5 rounds)
 - **💬 Single Question Flow**: ALL information gathered at once
-- **🤖 Automatic Processing**: System-controlled depth (no user choice)
-- **📊 Header at Top**: Clean first-line metadata format
 - **🔒 Output Constraints**: Exact request = exact output
 - **📦 Self-Contained Templates**: Each template includes all its own rules
 
@@ -125,18 +85,18 @@ Transforms requests into professional development tickets, strategic PRDs, and d
 ### Step 2: Add System Instructions
 1. Click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Writer - Product Owner - v0.911.md` 
+3. Copy and paste: `Writer - Product Owner - v0.912.md` 
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
 Add these documents to your project:
 
 **Core Documents (Latest Versions):**
-- `Product Owner - DEPTH Thinking Framework - v0.101.md`
-- `Product Owner - Interactive Mode - v0.301.md` 
+- `Product Owner - DEPTH Thinking Framework - v0.102.md`
+- `Product Owner - Interactive Mode - v0.302.md` 
 
 **Self-Contained Templates (Current Versions):**
-- `Product Owner - Template - Ticket Mode - v0.130.md` 
+- `Product Owner - Template - Ticket Mode - v0.131.md` 
 - `Product Owner - Template - PRD Mode - v0.129.md` 
 - `Product Owner - Template - Doc Mode - v0.118.md` 
 
@@ -144,7 +104,7 @@ Add these documents to your project:
 
 ### Step 4: Start Creating
 ```
-need user authentication         # Interactive discovery flow
+need user authentication        # Interactive discovery flow
 $quick auth PRD                 # Immediate PRD creation (1-5 rounds auto)
 $prd payment platform           # Direct PRD mode (10 rounds auto)
 $ticket payment integration     # Direct ticket mode (10 rounds auto)
@@ -161,10 +121,10 @@ $ticket payment integration     # Direct ticket mode (10 rounds auto)
 |------|---------|-----------|-----------------|------------------|---------|
 | **Interactive** | Determine what to create | 1 comprehensive | 10 rounds auto | Auto-selected | Exact request |
 | **$quick** | Fast creation | NONE | 1-5 auto-scaled | Auto-selected | Exact request |
-| **$ticket** | Dev tickets | 1 comprehensive | 10 rounds auto | v0.130 | Requested ticket only |
-| **$prd** | Product requirements | 1 comprehensive | 10 rounds auto | v0.129 | Requested PRD only |
-| **$story** | User stories | 1 comprehensive | 10 rounds auto | v0.130 | Requested story only |
 | **$doc** | Documentation | 1 comprehensive | 10 rounds auto | v0.118 | Requested doc only |
+| **$prd** | Product requirements | 1 comprehensive | 10 rounds auto | v0.129 | Requested PRD only |
+| **$story** | User stories | 1 comprehensive | 10 rounds auto | v0.131 | Requested story only |
+| **$ticket** | Dev tickets | 1 comprehensive | 10 rounds auto | v0.131 | Requested ticket only |
 
 ### Interactive Flow (Default) - Single Question Format
 ```
@@ -195,10 +155,10 @@ Please respond with complete information (e.g., "1. Ticket, 2. BE, 3. User authe
 ---
 
 <a id="ticket-mode"></a>
-## 🎫 Ticket Mode (v0.130 - More Concise)
+## 🎫 Ticket Mode (v0.131 - More Concise)
 
 ### Improved Concise Format
-The new v0.130 templates feature:
+The new v0.131 templates feature:
 - **Compressed About sections** - 1-2 lines with bold key-value pairs
 - **Streamlined requirements** - Bullet format with inline descriptions
 - **Tighter success criteria** - Essential metrics only
@@ -206,7 +166,7 @@ The new v0.130 templates feature:
 
 ### Example of New Concise Format
 ```markdown
-Mode: $ticket | Complexity: Standard | Template: v0.130
+Mode: $ticket | Complexity: Standard | Template: v0.131
 ---
 [FEATURE] Service: Authentication
 
@@ -306,7 +266,7 @@ The v0.118 template features:
 | **$Quick Mode** | 1-5 auto-scaled | None | Complexity-based | Exact request |
 
 **DEPTH Definition:**
-DEPTH methodology (Discover, Engineer, Prototype, Test, Harmonize) is automatically applied to ensure quality while maintaining output constraints. The system executes all 5 phases silently.
+DEPTH methodology (Discover, Engineer, Prototype, Test, Harmonize) is automatically applied to ensure quality while maintaining output constraints. Internals are hidden by default; visibility is configurable when explicitly enabled.
 
 ### DEPTH Phases (Applied Automatically)
 | Phase | Purpose | Internal Process | User Sees |
@@ -321,12 +281,18 @@ DEPTH methodology (Discover, Engineer, Prototype, Test, Harmonize) is automatica
 ```markdown
 🎯 Processing your request...
 
-[DEPTH processing happens invisibly]
+[DEPTH processing runs internally (hidden by default)]
 [Multiple perspectives analyze the SAME requirement]
 [Output contains ONLY what was requested]
 ```
 
-**Note:** Users never see methodology details or choose processing depth - the system handles everything automatically.
+**Note:** Users don't choose processing depth. Internals remain hidden by default; optional brief summaries can be enabled without exposing step-by-step analysis.
+
+### DEPTH v0.102 Improvements (Summary)
+- Clearer phase distribution and state: standardized 10-round flow (D→H) with explicit internal state, perspectives, metrics, and context layers; templates referenced (Ticket v0.131, PRD v0.129, Doc v0.118).
+- Stronger output discipline: strict output constraints prevent scope expansion; templates are followed exactly; multiple approaches considered internally but converge to one deliverable.
+- Robust QA and recovery: formal quality gates across phases, detailed detection signals, severity-based action matrix, retry and rollback strategies, and escalation with minimal user-facing messaging.
+- Configurable visibility: internals hidden by default with optional brief summaries; performance metrics tracked (template compliance, wait compliance, verification success) to ensure consistent excellence.
 
 ---
 
@@ -362,52 +328,3 @@ User: "Platform migration"
 → Complex template for THAT migration only
 NOT: Complex template with multiple platforms
 ```
-
----
-
-## 🎯 Quick Command Reference
-
-### Standard Commands
-```markdown
-$ticket [request]    # Create ticket with 10-round DEPTH
-$prd [request]       # Create PRD with 10-round DEPTH
-$doc [request]       # Create documentation with 10-round DEPTH
-$story [request]     # Create user story (no checklist)
-```
-
-### Speed Command
-```markdown
-$quick [request]     # Immediate creation, 1-5 rounds auto-scaled
-```
-
-### Default Behavior
-```markdown
-[any request without command]    # Interactive mode with single comprehensive question
-```
-
----
-
-## 📚 Core Principles Summary
-
-### DEPTH Processing Guarantee
-```
-User Request: "Build auth system"
-↓
-Internal DEPTH Analysis:
-- 5 perspectives analyze the SAME auth system
-- 8 approaches considered for the SAME auth system
-- Quality optimized for the SAME auth system
-↓
-Output: ONE auth system deliverable
-- Exactly what user requested
-- No additional features
-- No scope expansion
-- Perfect template format
-```
-
-### Best Practices
-- Use $quick for speed, Interactive for customization
-- Provide complete response to single comprehensive question
-- Trust automatic complexity detection
-- Let system handle DEPTH processing silently
-- Expect output to match request exactly

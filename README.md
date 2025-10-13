@@ -73,7 +73,7 @@ Create professional tickets, stories, PRDs, and documentation with automatic com
   - Auto-complexity for tickets: Simple (2-3), Standard (4-5), Complex (6-8 sections)
 
 **DEPTH Framework & Silent Processing**:
-  - 5-phase thinking with 10 rounds automatic (user doesn't control)
+  - 5-phase thinking with 10 rounds automatic (internals hidden by default; visibility configurable; user doesn't control)
   - $quick mode: Zero waiting, 1-5 rounds auto-scaled
 
 .
