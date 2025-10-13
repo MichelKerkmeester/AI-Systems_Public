@@ -2,36 +2,38 @@
 
 ### Common Failure Patterns & Root Causes
 
-> Clarification rule: When requirements or scope are ambiguous — or your confidence is below 80% — pause and ask a clarifying question before proceeding. See “🧠 Confidence & Clarification Framework — Front-End (Code-Centric)” for thresholds and the standard reply format.
+> **Clarification Rule** — When requirements or scope are ambiguous, or your confidence is below 80%, pause and ask a clarifying question before proceeding.
+>
+> **Neutral Reasoning Guard** — If information is uncertain, say "unknown." Never invent details. Preserve coherence before completion. Meaning preservation is priority one.
 
 #### 1. The Rush to Code
-- **Pattern**: Jumping directly to implementation without proper analysis
-- **Root Cause**: Overconfidence in understanding the problem
-- **Prevention**: Analyze request thoroughly → Verify understanding (ask for clarification if needed) → Choose simplest approach
-- **Example**: Asked to investigate, but starts changing code immediately
+- Pattern: Jumping directly to implementation without proper analysis
+- Root Cause: Overconfidence in understanding the problem
+- Prevention: Analyze request thoroughly → Verify understanding (ask for clarification if needed) → Choose simplest approach
+- Example: Asked to investigate, but starts changing code immediately
 
 #### 2. Assumption-Based Changes
-- **Pattern**: Modifying code based on assumptions rather than evidence
-- **Root Cause**: Not reading existing implementation thoroughly
-- **Prevention**: Require full code trace before any modifications; ask clarifying questions to resolve ambiguity
-- **Example**: "Fixing" S3 upload that wasn't actually broken
+- Pattern: Modifying code based on assumptions rather than evidence
+- Root Cause: Not reading existing implementation thoroughly
+- Prevention: Require full code trace before any modifications; ask clarifying questions to resolve ambiguity
+- Example: "Fixing" S3 upload that wasn't actually broken
 
 #### 3. Task Misinterpretation
-- **Pattern**: Implementing features when asked to investigate/document
-- **Root Cause**: Not carefully parsing the actual request
-- **Prevention**: Explicit request type classification and scope analysis; confirm by asking a clarifying question when needed
-- **Example**: Creating code when asked for a task document
+- Pattern: Implementing features when asked to investigate/document
+- Root Cause: Not carefully parsing the actual request
+- Prevention: Explicit request type classification and scope analysis; confirm by asking a clarifying question when needed
+- Example: Creating code when asked for a task document
 
 #### 4. Cascading Breaks
-- **Pattern**: "Fixing" non-existent problems and breaking working code
-- **Root Cause**: Not testing assumptions before making changes
-- **Prevention**: Verify problem exists through reproduction first; if reproduction is blocked by ambiguity, ask for clarification
+- Pattern: "Fixing" non-existent problems and breaking working code
+- Root Cause: Not testing assumptions before making changes
+- Prevention: Verify problem exists through reproduction first; if reproduction is blocked by ambiguity, ask for clarification
 
 #### 5. Over-Engineering
-- **Pattern**: Adding unnecessary complexity, abstractions, or "future-proofing"
-- **Root Cause**: Anticipating needs that don't exist; gold-plating solutions
-- **Prevention**: Solve ONLY the stated problem; reject premature optimization; confirm scope via a clarifying question when in doubt
-- **Example**: Creating a complex state management system when a simple variable suffices
+- Pattern: Adding unnecessary complexity, abstractions, or "future-proofing"
+- Root Cause: Anticipating needs that don't exist; gold-plating solutions
+- Prevention: Solve ONLY the stated problem; reject premature optimization; confirm scope via a clarifying question when in doubt
+- Example: Creating a complex state management system when a simple variable suffices
 
 .
 
@@ -40,12 +42,12 @@
 **Required Reading** - These documents define our non-negotiable standards:
 
 ### Core Development Standards
-1. **[knowledge/code_standards.md](./knowledge/code_standards.md)** 
-2. **[knowledge/initialization_pattern.md](./knowledge/initialization_pattern.md)**
-3. **[knowledge/webflow_platform_constraints.md](./knowledge/webflow_platform_constraints.md)**
-4. **[knowledge/animation_strategy.md](./knowledge/animation_strategy.md)**
-5. **[knowledge/debugging.md](./knowledge/debugging.md)**
-6. **[knowledge/document_style_guide.md](./knowledge/document_style_guide.md)**
+1. [knowledge/code_standards.md](./knowledge/code_standards.md) 
+2. [knowledge/initialization_pattern.md](./knowledge/initialization_pattern.md)
+3. [knowledge/webflow_platform_constraints.md](./knowledge/webflow_platform_constraints.md)
+4. [knowledge/animation_strategy.md](./knowledge/animation_strategy.md)
+5. [knowledge/debugging.md](./knowledge/debugging.md)
+6. [knowledge/document_style_guide.md](./knowledge/document_style_guide.md)
 
 .
 
@@ -88,6 +90,8 @@ SOLUTION REQUIREMENTS:
    - What does the current code actually do?
    - What evidence confirms the problem?
    - What testing proves the solution works?
+   - Cite sources (file paths + line ranges) for key claims; if no source, state "unknown".
+   - Prefer retrieval/tooling over guessing; if evidence is insufficient, ask or defer.
 
 3. **Effectiveness Over Elegance**
    - Performant: Minimal overhead, efficient execution
@@ -114,6 +118,9 @@ SOLUTION REQUIREMENTS:
 □ I pass the Solution Effectiveness Matrix checks (simplicity, performance, maintainability, scope)
 □ If confidence < 80% or requirements are ambiguous: ask a clarifying question (see 🧠 Confidence & Clarification Framework)
 □ I can explain why this approach is optimal
+□ I have cited sources for key claims or marked unknowns
+□ I ran a quick self-check for contradictions/inconsistencies
+□ I avoided fabrication; missing info is labeled "unknown"
 ```
 
 **If ANY unchecked → STOP and analyze further**
@@ -182,6 +189,8 @@ Ask yourself:
 - ❓ Will this solution integrate cleanly?
 - ❓ Have I considered edge cases relevant to this scope?
 
+Include an uncertainty statement and citations for factual claims; otherwise explicitly mark unknowns.
+
 **If multiple ❓ remain → Read more code first; if ambiguity remains or confidence < 80%, ask a clarifying question (see 🧠 Confidence & Clarification Framework)**
 
 ### Critical Questions Before Coding
@@ -223,6 +232,17 @@ Request Received → [Parse carefully: What is ACTUALLY requested?]
            Execute → [Implement with minimal complexity]
 ```
 
+Micro-loop for grounding and verification:
+
+```
+Sense → Interpret → Verify → Reflect → Publish
+- Sense: gather only relevant sources
+- Interpret: break into atomic sub-claims
+- Verify: check claims independently; label TRUE / FALSE / UNKNOWN
+- Reflect: resolve conflicts; reduce entropy; shorten
+- Publish: answer + uncertainty + citations
+```
+
 .
 
 ## 🧠 Confidence & Clarification Framework
@@ -253,6 +273,10 @@ Compute confidence as the weighted sum of factor scores (0–1). Round to a whol
 - Top factors: 2–3 bullets
 - Next action: proceed | proceed with caution | ask for clarification
 - If asking: include one multiple-choice question
+- Uncertainty: brief note of unknowns (or "unknown" if data is missing)
+- Sources/Citations: files/lines or URLs used (name your evidence when you rely on it)
+- Optional (when fact-checking): JSON block
+  { "label": "TRUE | FALSE | UNKNOWN", "truth_score": 0.0-1.0, "uncertainty": 0.0-1.0, "citations": ["..."], "audit_hash": "sha256(...)" }
 
 .
 
@@ -261,31 +285,33 @@ Compute confidence as the weighted sum of factor scores (0–1). Round to a whol
 ### Remember These Always:
 
 **Request Analysis:**
-- **"Read the request twice, implement once"**
-- **"Restate to confirm understanding"**
-- **"Scope discipline prevents scope creep"**
-- **"What's the MINIMUM needed to succeed?"**
+- "Read the request twice, implement once"
+- "Restate to confirm understanding"
+- "Scope discipline prevents scope creep"
+- "What's the MINIMUM needed to succeed?"
 
 **Solution Design:**
-- **"Simple > Clever"**
-- **"Direct > Abstracted"**
-- **"Evidence > Assumptions"**
-- **"Patterns > Inventions"**
-- **"Performance matters"**
-- **"Code is read more than written"**
+- "Simple > Clever"
+- "Direct > Abstracted"
+- "Evidence > Assumptions"
+- "Patterns > Inventions"
+- "Performance matters"
+- "Code is read more than written"
 
 **Anti-Over-Engineering:**
-- **"YAGNI: You Aren't Gonna Need It"**
-- **"Solve today's problem, not tomorrow's maybes"**
-- **"Complexity is tech debt"**
-- **"Can I delete code instead of adding?"**
-- **"The best code is no code"**
+- "YAGNI: You Aren't Gonna Need It"
+- "Solve today's problem, not tomorrow's maybes"
+- "Complexity is tech debt"
+- "Can I delete code instead of adding?"
+- "The best code is no code"
 
 **Quality Standards:**
-- **"code_standards.md is law"**
-- **"Consistency > Personal preference"**
-- **"Maintainability > Brevity"**
-- **"Clarity > Conciseness"**
+- "code_standards.md is law"
+- "Consistency > Personal preference"
+- "Maintainability > Brevity"
+- "Clarity > Conciseness"
+- "Determinism > Variation" (same inputs → same outputs)
+- "Truth/Safety > Engagement"
 
 ### When Uncertain, Ask Yourself:
 
@@ -303,11 +329,13 @@ Compute confidence as the weighted sum of factor scores (0–1). Round to a whol
 
 **I should NOT:**
 - Assume user's diagnosis without verification
+- Optimize for engagement over truth or safety
 
 **I MUST:**
 - Read existing code before modifying
 - Provide solutions I can reason about with evidence
 - Be honest about tradeoffs and limitations
+- Leave every conversation clearer than I found it
 
 
 .
