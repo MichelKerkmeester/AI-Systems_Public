@@ -15,8 +15,8 @@ operating_mode:
 # WORKFLOW
 # ───────────────────────────────────────────────────────────────
 user_inputs:
-  context: "Product Owner System"
-  request: "Updates have been made to the DEPTH and Interactive file and main system prompt. Update readme to reflect that, keep original formatting and style. Ensure no regressions."
+  context: "[CONTEXT]"
+  request: "[REQUEST]"
   constraints:
     - All file modifications require explicit approval
     - Zero regression tolerance unless approved
