@@ -130,7 +130,7 @@ Streamlined ticket templates with integrated formatting rules and quality standa
 2. Title with [SCOPE]
 3. About (⌘) - Context with integrated problems
 4. Success Criteria (✦) - After About
-5. Designs & References (⌥) - Table format
+5. Designs & References (⌥) - Numbered list format
 6. Requirements (❖) - Specifications
 7. Risks (∅) - Complex tickets when criteria met
 8. Resolution Checklist (✓) - Tickets only
@@ -138,7 +138,7 @@ Streamlined ticket templates with integrated formatting rules and quality standa
 #### Formatting Standards
 - **Dividers:** Use `---` between header and content, between all sections
 - **Lists:** Always use `-` for bullets, `[]` for checkboxes
-- **Tables:** Always for Designs & References
+- **Designs & References:** Numbered list with bulleted items (no tables)
 - **Links:** Use `[Link - to be added]` for placeholders
 - **Status Notes:** Format as `[Status note: "description"]`
 - **Problems:** Integrated in About narrative, never listed separately
@@ -248,7 +248,7 @@ Processing now...
 - [] Success criteria after About?
 - [] Problems integrated in About narrative?
 - [] Correct symbol hierarchy applied?
-- [] Designs in table format?
+- [] Designs in numbered list format?
 - [] Resolution checklist scaled properly?
 - [] Status notes use standard format?
 - [] Risks section included when criteria met?
@@ -307,6 +307,9 @@ Processing now...
 #### Table of Contents Included
 **Fix:** Remove ToC, rely on external tools
 
+#### Designs & References as Table
+**Fix:** Convert to numbered list with bulleted items
+
 ### Prevention Strategies
 1. Apply DEPTH automatically (10 rounds standard, 1-5 quick)
 2. Wait for comprehensive response
@@ -318,6 +321,7 @@ Processing now...
 8. Use correct artifact type
 9. Include all required elements
 10. NEVER answer own questions
+11. Use numbered list format for Designs & References
 
 ---
 
@@ -346,16 +350,17 @@ Mode: $ticket | Complexity: Simple | Template: v0.130
 
 ## ⌥ Designs & References
 
-| Type | Resource | Link |
-|------|----------|------|
-| Bug Report | JIRA-{id} | [Link - to be added] |
-| Screenshot | Error state | [Link - to be added] |
+1. Bug Report
+   • JIRA-{id} - [Link - to be added]
+
+2. Screenshot
+   • Error state - [Link - to be added]
 
 ---
 
 ## ❖ Requirements
 
-### ◻️ Functional
+### ◻︎ Functional
 - Fix: {specific user issue}
 - Validate: {user scenario}
 - Test: {acceptance test}
@@ -405,29 +410,32 @@ which impacts {metric}. This feature addresses these pain points by {solution}.]
 
 ## ⌥ Designs & References
 
-| Type | Status | Link |
-|------|--------|------|
-| Design | Complete | [Figma - to be added] |
-| User Flow | Draft | [Miro - to be added] |
-| PRD | Approved | [Doc - to be added] |
+1. Design
+   • Complete - [Figma - to be added]
+
+2. User Flow
+   • Draft - [Miro - to be added]
+
+3. PRD
+   • Approved - [Doc - to be added]
 
 ---
 
 ## ❖ Requirements
 
-### ◻️ Functional
+### ◻︎ Functional
 - Core: {what users can do}
 - Data: {information displayed}
 - UX: {how users interact}
 - [Status note: "API design 80% complete"]
 
-### ◻️ Non-Functional
+### ◻︎ Non-Functional
 - Performance: {specific metrics}
 - Security: {requirements}
 - Scale: {capacity needs}
 - Accessibility: WCAG 2.1 AA
 
-### ◻️ Acceptance Criteria
+### ◻︎ Acceptance Criteria
 - Given: {initial state}
 - When: {user action}
 - Then: {expected result}
@@ -487,37 +495,42 @@ including {problem1}, {problem2}, and {problem3}. By migrating, we achieve
 
 ## ⌥ Designs & References
 
-| Component | Status | Owner | Link |
-|-----------|--------|-------|------|
-| Architecture | Complete | Platform | [Miro - to be added] |
-| Migration Plan | Draft | Product | [Confluence - to be added] |
-| Performance | Baseline | Analytics | [DataDog - to be added] |
-| Security | In Review | Security | [Report - to be added] |
+1. Architecture
+   • Complete - Platform - [Miro - to be added]
+
+2. Migration Plan
+   • Draft - Product - [Confluence - to be added]
+
+3. Performance
+   • Baseline - Analytics - [DataDog - to be added]
+
+4. Security
+   • In Review - Security - [Report - to be added]
 
 ---
 
 ## ❖ Requirements
 
-### ◻️ Phase 1: Foundation (Week 1-2)
+### ◻︎ Phase 1: Foundation (Week 1-2)
 - Infrastructure setup complete
 - Core services migrated
 - Authentication system ready
 - Monitoring configured
 - [Status note: "Environment provisioning in progress"]
 
-### ◻️ Phase 2: Migration (Week 3-4)
+### ◻︎ Phase 2: Migration (Week 3-4)
 - Data migration executed
 - Service cutover completed
 - Traffic routing updated
 - Legacy system decommissioned
 
-### ◻️ Phase 3: Optimization (Week 5-6)
+### ◻︎ Phase 3: Optimization (Week 5-6)
 - Performance tuning complete
 - Cost optimization applied
 - Documentation finalized
 - Team training delivered
 
-### ◻️ Integration Requirements
+### ◻︎ Integration Requirements
 - Payment system: Maintained throughout
 - Email service: Zero downtime
 - Analytics: Continuous tracking
@@ -540,13 +553,13 @@ including {problem1}, {problem2}, and {problem3}. By migrating, we achieve
 
 ⚠️ Complete all items before moving to QA
 
-### ◻️ Planning
+### ◻︎ Planning
 [] Business case approved
 [] Stakeholder signoff
 [] Migration strategy final
 [] Rollback plan documented
 
-### ◻️ Development
+### ◻︎ Development
 [] Environment ready
 [] Phase 1 complete
 [] Test suite built
@@ -554,13 +567,13 @@ including {problem1}, {problem2}, and {problem3}. By migrating, we achieve
 [] Load tested
 [] Documentation ready
 
-### ◻️ Validation
+### ◻︎ Validation
 [] Integration tested
 [] Data migration verified
 [] UAT complete
 [] Performance validated
 
-### ◻️ Deployment
+### ◻︎ Deployment
 [] Runbooks created
 [] Team trained
 [] Staged rollout done
@@ -606,16 +619,17 @@ causing {impact}. This story delivers {solution}.]
 
 ## ⌥ Designs & References
 
-| Type | Resource | Link |
-|------|----------|------|
-| Mockup | User flow | [Link - to be added] |
-| Spec | Requirements | [Link - to be added] |
+1. Mockup
+   • User flow - [Link - to be added]
+
+2. Spec
+   • Requirements - [Link - to be added]
 
 ---
 
 ## ❖ Requirements
 
-### ◻️ Acceptance Criteria
+### ◻︎ Acceptance Criteria
 Given I am {initial state}
 When I {action}
 Then I see {result}

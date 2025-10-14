@@ -129,7 +129,7 @@ Product Requirements Document templates with integrated formatting rules and qua
 2. Title
 3. About (⌘) - Strategic context (2-5 sentences)
 4. Success Metrics (✦) - Business/product metrics
-5. Designs & References (⌥) - Table format
+5. Designs & References (⌥) - Numbered list format
 6. Scope & Features (❖) - ONLY requested features
 7. Technical Requirements (❖)
 8. User Research (❖) - If applicable
@@ -140,7 +140,7 @@ Product Requirements Document templates with integrated formatting rules and qua
 #### Formatting Standards
 - **Dividers:** Use `---` between header and content, between sections
 - **Lists:** Always use `-` for bullets
-- **Tables:** Always for metrics, references, RACI matrix
+- **Designs & References:** Numbered list with bulleted items (no tables)
 - **Links:** Use `[Link - to be added]` for placeholders
 - **Brief About:** Keep to 2-5 sentences with executive summary
 - **Status Notes:** Format as `[Status note: "description"]`
@@ -182,7 +182,7 @@ Product Requirements Document templates with integrated formatting rules and qua
 - [] Header at top as first line?
 - [] About section positioned first (after header)?
 - [] Success Metrics after About?
-- [] Designs & References in table format?
+- [] Designs & References in numbered list format?
 - [] Feature inventory complete but limited to request?
 - [] Correct symbol hierarchy applied?
 - [] Implementation phases defined?
@@ -192,7 +192,7 @@ Product Requirements Document templates with integrated formatting rules and qua
 ### Format Validation
 - [] Using `text/markdown` artifact type?
 - [] Lists use `-` bullets?
-- [] Tables properly formatted?
+- [] Designs & References as numbered list (not table)?
 - [] Dividers between sections?
 - [] Placeholder links included?
 - [] No Table of Contents?
@@ -240,6 +240,9 @@ Product Requirements Document templates with integrated formatting rules and qua
 #### Feature Inventory Expanded Beyond Request
 **Fix:** Limit to only what user specified
 
+#### Designs & References as Table
+**Fix:** Convert to numbered list with bulleted items
+
 ### Prevention Strategies
 1. Apply DEPTH automatically (10 rounds standard, 1-5 quick)
 2. Wait for comprehensive response
@@ -253,6 +256,7 @@ Product Requirements Document templates with integrated formatting rules and qua
 10. Apply Risks criteria
 11. NEVER answer own questions
 12. Use correct artifact type
+13. Use numbered list format for Designs & References
 
 ---
 
@@ -298,12 +302,15 @@ Mode: $prd | Scale: Initiative | Template: v0.129
 
 ## ⌥ Designs & References
 
-| Type | Document | Status | Link |
-|------|----------|--------|------|
-| PRD | Product Requirements | Current | [Private - to be added] |
-| Design | Feature Set 1 | Complete | [Link - to be added] |
-| Design | Feature Set 2 | In Progress | [Link - to be added] |
-| Technical | API Specification | Review | [Private - to be added] |
+1. PRD
+   • Product Requirements - Current - [Private - to be added]
+
+2. Design
+   • Feature Set 1 - Complete - [Link - to be added]
+   • Feature Set 2 - In Progress - [Link - to be added]
+
+3. Technical
+   • API Specification - Review - [Private - to be added]
 
 ---
 
@@ -524,13 +531,20 @@ Mode: $prd | Scale: Program | Template: v0.129
 
 ## ⌥ Designs & References
 
-| Component | Document | Status | Owner | Link |
-|-----------|----------|--------|-------|------|
-| Architecture | System Design | Complete | Platform | [Link - to be added] |
-| Frontend | UI Components | In Progress | Design | [Figma - to be added] |
-| Backend | API Specs | Review | Engineering | [Swagger - to be added] |
-| Mobile | App Designs | Complete | Mobile | [Link - to be added] |
-| Data | Schema Design | Draft | Data Team | [Doc - to be added] |
+1. Architecture
+   • System Design - Complete - Platform - [Link - to be added]
+
+2. Frontend
+   • UI Components - In Progress - Design - [Figma - to be added]
+
+3. Backend
+   • API Specs - Review - Engineering - [Swagger - to be added]
+
+4. Mobile
+   • App Designs - Complete - Mobile - [Link - to be added]
+
+5. Data
+   • Schema Design - Draft - Data Team - [Doc - to be added]
 
 ---
 
@@ -753,13 +767,20 @@ Mode: $prd | Scale: Strategic | Template: v0.129
 
 ## ⌥ Designs & References
 
-| Category | Resource | Status | Strategic Importance | Link |
-|----------|----------|--------|---------------------|------|
-| Vision | Strategy Document | Approved | Critical | [Exec - to be added] |
-| Architecture | Platform Design | Complete | Critical | [Tech - to be added] |
-| Roadmap | Feature Timeline | Active | High | [Product - to be added] |
-| Business Case | ROI Analysis | Validated | Critical | [Finance - to be added] |
-| Market Research | Competitive Analysis | Current | High | [Strategy - to be added] |
+1. Vision
+   • Strategy Document - Approved - Critical - [Exec - to be added]
+
+2. Architecture
+   • Platform Design - Complete - Critical - [Tech - to be added]
+
+3. Roadmap
+   • Feature Timeline - Active - High - [Product - to be added]
+
+4. Business Case
+   • ROI Analysis - Validated - Critical - [Finance - to be added]
+
+5. Market Research
+   • Competitive Analysis - Current - High - [Strategy - to be added]
 
 ---
 
@@ -954,12 +975,15 @@ Mode: $prd | Scale: Feature | Template: v0.129
 
 ## ⌥ Designs & References
 
-| Type | Resource | Status | Link |
-|------|----------|--------|------|
-| Design | Mockups | Complete | [Figma - to be added] |
-| Design | Prototype | In Review | [Link - to be added] |
-| Docs | Spec Document | Approved | [Private - to be added] |
-| API | Endpoint Spec | Draft | [Swagger - to be added] |
+1. Design
+   • Mockups - Complete - [Figma - to be added]
+   • Prototype - In Review - [Link - to be added]
+
+2. Docs
+   • Spec Document - Approved - [Private - to be added]
+
+3. API
+   • Endpoint Spec - Draft - [Swagger - to be added]
 
 ---
 
