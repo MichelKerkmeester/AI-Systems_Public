@@ -1,4 +1,4 @@
-# Product Owner - Template - Ticket Mode - v0.131
+# Product Owner - Template - Ticket Mode - v0.132
 
 Streamlined ticket templates with integrated formatting rules and quality standards. All delivery logic consolidated for self-contained operation.
 
@@ -8,15 +8,14 @@ Streamlined ticket templates with integrated formatting rules and quality standa
 1. [🎫 TICKET MODE OVERVIEW](#1-ticket-mode-overview)
 2. [📦 DELIVERY STANDARDS](#2-delivery-standards)
 3. [📏 COMPLEXITY AUTO-SCALING](#3-complexity-auto-scaling)
-4. [✨ FORMATTING RULES & STANDARDS](#4-formatting-rules--standards)
-5. [🗣️ INTERACTIVE QUESTIONS](#5-interactive-questions)
-6. [✅ QUALITY CHECKLIST](#6-quality-checklist)
-7. [🚨 ERROR RECOVERY](#7-error-recovery)
-8. [🔵 SIMPLE TICKET TEMPLATE](#8-simple-ticket-template)
-9. [🟠 STANDARD TICKET TEMPLATE](#9-standard-ticket-template)
-10. [🔴 COMPLEX TICKET TEMPLATE](#10-complex-ticket-template)
-11. [📖 STORY TEMPLATES](#11-story-templates)
-12. [⚡ QUICK MODE TEMPLATES](#12-quick-mode-templates)
+4. [🗣️ INTERACTIVE QUESTIONS](#4-interactive-questions)
+5. [✅ QUALITY CHECKLIST](#5-quality-checklist)
+6. [🚨 ERROR RECOVERY](#6-error-recovery)
+7. [🔵 SIMPLE TICKET TEMPLATE](#7-simple-ticket-template)
+8. [🟠 STANDARD TICKET TEMPLATE](#8-standard-ticket-template)
+9.  [🔴 COMPLEX TICKET TEMPLATE](#9-complex-ticket-template)
+10. [📖 STORY TEMPLATES](#10-story-templates)
+11. [⚡ QUICK MODE TEMPLATES](#11-quick-mode-templates)
 
 ---
 
@@ -30,7 +29,6 @@ Streamlined ticket templates with integrated formatting rules and quality standa
 - **Interactive Mode:** Single comprehensive question gathering ALL requirements
 - **Key Difference:** Stories omit Resolution Checklist
 - **Header Position:** Always at top as first line
-- **Silent Processing:** User sees simple messages, not methodology details
 - **Output Constraints:** Ticket contains ONLY the requested feature/fix/change
 
 ### Critical Rules
@@ -50,7 +48,7 @@ Streamlined ticket templates with integrated formatting rules and quality standa
   - Standard modes: 10 rounds automatic (not user choice)
   - Quick mode: 1-5 rounds auto-scaled based on complexity
 - **Wait for Input:** NEVER proceed without user response to questions
-- **Template Compliance:** Use v0.130 structure exactly
+- **Template Compliance:** Use v0.140 structure exactly
 
 ### Ticket-Specific Standards
 - **Scaling:** 
@@ -61,61 +59,6 @@ Streamlined ticket templates with integrated formatting rules and quality standa
 - **No Scope Expansion:** Template scaling affects structure, not content scope
 - **Multiple Perspectives:** All analyze the SAME requirement
 - **Convergent Output:** Many approaches considered, ONE delivered
-
-### Never:
-- Use `text/plain` → Causes raw markdown display
-- Mix artifact and response text
-- Ask about thinking rounds (automatic now)
-- Place artifact details at bottom or middle
-- Use horizontal formatting for details
-- Skip DEPTH phase documentation
-- Hide process transparency
-- Create before user responds to comprehensive question
-- Answer own questions
-- Include Table of Contents
-- Use H3/H4 symbols
-- Place header at bottom
-- Add unrequested features
-- Expand scope beyond request
-
-### Always:
-- Use proper `text/markdown` type
-- Document mode and scaling applied
-- Use dash bullet formatting vertically
-- Note template version compliance
-- Apply DEPTH methodology consistently
-- Wait for user input on ALL content questions
-- Position About first (after header)
-- Integrate context in About narrative
-- Use clean H3/H4 headers
-- Place header at top of artifact
-- Deliver exactly what was requested
-- Use `---` separators appropriately
-
----
-
-## 3. 📏 COMPLEXITY AUTO-SCALING
-
-| Keywords | Complexity | Sections | Resolution Items | DEPTH Processing |
-|----------|------------|----------|------------------|-----------------|
-| bug, fix, typo, update | Simple | 2-3 | 4-6 | 10 rounds (1-2 if $quick) |
-| feature, dashboard, interface | Standard | 4-5 | 8-12 | 10 rounds (3 if $quick) |
-| platform, migration, system | Complex | 6-8 | 12-20 | 10 rounds (5 if $quick) |
-
-**Important:** Complexity determines TEMPLATE SIZE, not content scope
-- User requests "bug fix" → Simple template for THAT bug only
-- NOT: Simple template with multiple bugs or extra fixes
-
-### DEPTH Processing Standards
-- **Silent excellence:** User never sees methodology details
-- **Automatic application:** No user choice on depth
-- **Multiple perspectives:** All analyze SAME requirement
-- **Single output:** One ticket covering exact request
-- **No scope expansion:** Complexity affects template size, not feature count
-
----
-
-## 4. ✨ FORMATTING RULES & STANDARDS
 
 ### Mandatory Structure Elements
 
@@ -179,7 +122,26 @@ Streamlined ticket templates with integrated formatting rules and quality standa
 
 ---
 
-## 5. 🗣️ INTERACTIVE QUESTIONS
+## 3. 📏 COMPLEXITY AUTO-SCALING
+
+|| Keywords | Complexity | Sections | Resolution Items | DEPTH Processing |
+||----------|------------|----------|------------------|-----------------|
+|| bug, fix, typo, update | Simple | 2-3 | 4-6 | 10 rounds (1-2 if $quick) |
+|| feature, dashboard, interface | Standard | 4-5 | 8-12 | 10 rounds (3 if $quick) |
+|| platform, migration, system | Complex | 6-8 | 12-20 | 10 rounds (5 if $quick) |
+
+**Important:** Complexity determines TEMPLATE SIZE, not content scope
+- User requests "bug fix" → Simple template for THAT bug only
+- NOT: Simple template with multiple bugs or extra fixes
+
+### DEPTH Processing Standards
+- **Multiple perspectives:** All analyze SAME requirement
+- **Single output:** One ticket covering exact request
+- **No scope expansion:** Complexity affects template size, not feature count
+
+---
+
+## 4. 🗣️ INTERACTIVE QUESTIONS
 
 ### Ticket Mode Interactive Flow
 
@@ -232,14 +194,14 @@ Processing now...
 
 ---
 
-## 6. ✅ QUALITY CHECKLIST
+## 5. ✅ QUALITY CHECKLIST
 
 ### Pre-Creation Validation
 - [] DEPTH methodology applied (10 rounds standard, 1-5 quick)?
 - [] User responded to comprehensive question?
 - [] System waited for response (never answered own questions)?
 - [] Complexity determined correctly?
-- [] Template version confirmed (v0.130)?
+- [] Template version confirmed (v0.140)?
 - [] Output scope limited to user request?
 
 ### Structure Validation
@@ -276,7 +238,7 @@ Processing now...
 
 ---
 
-## 7. 🚨 ERROR RECOVERY
+## 6. 🚨 ERROR RECOVERY
 
 ### Common Errors & Fixes
 
@@ -325,18 +287,19 @@ Processing now...
 
 ---
 
-## 8. 🔵 SIMPLE TICKET TEMPLATE
+## 7. 🔵 SIMPLE TICKET TEMPLATE
 
 ```markdown
-Mode: $ticket | Complexity: Simple | Template: v0.130
+Mode: $ticket | Complexity: Simple | Template: v0.140
 ---
 [BUG] Feature: {name}
 
 # ⌘ About
 
-**Impact:** {user-facing issue in 1 line}  
-**Scope:** {affected area}  
-**Priority:** P{0-3}
+**→ Priority:** P{0-3} 
+
+[Problems integrated in narrative: Currently, users experience {issue}, 
+which impacts {metric}. This feature addresses these pain points by {solution}.]
 
 ---
 
@@ -360,7 +323,7 @@ Mode: $ticket | Complexity: Simple | Template: v0.130
 
 ## ❖ Requirements
 
-### ◻︎ Functional
+### 1. Functional
 - Fix: {specific user issue}
 - Validate: {user scenario}
 - Test: {acceptance test}
@@ -381,18 +344,16 @@ Mode: $ticket | Complexity: Simple | Template: v0.130
 
 ---
 
-## 9. 🟠 STANDARD TICKET TEMPLATE
+## 8. 🟠 STANDARD TICKET TEMPLATE
 
 ```markdown
-Mode: $ticket | Complexity: Standard | Template: v0.130
+Mode: $ticket | Complexity: Standard | Template: v0.140
 ---
 [FEATURE] Service: {name}
 
 # ⌘ About
 
-**Purpose:** {what users can do - 1 line}  
-**Value:** {business impact - 1 line}  
-**Users:** {primary audience}
+**→ Priority:** P{0-3}
 
 [Problems integrated in narrative: Currently, users experience {issue}, 
 which impacts {metric}. This feature addresses these pain points by {solution}.]
@@ -410,71 +371,76 @@ which impacts {metric}. This feature addresses these pain points by {solution}.]
 
 ## ⌥ Designs & References
 
-1. Design
-   • Complete - [Figma - to be added]
+1. Flows
+   • [Flow - to be added]
 
-2. User Flow
-   • Draft - [Miro - to be added]
+2. Components
+   • [Component - to be added]
 
 3. PRD
-   • Approved - [Doc - to be added]
+   • [Doc - to be added]
 
 ---
 
 ## ❖ Requirements
 
-### ◻︎ Functional
+### 1. Functional
 - Core: {what users can do}
 - Data: {information displayed}
 - UX: {how users interact}
 - [Status note: "API design 80% complete"]
 
-### ◻︎ Non-Functional
+### 2. Non-Functional
 - Performance: {specific metrics}
 - Security: {requirements}
 - Scale: {capacity needs}
 - Accessibility: WCAG 2.1 AA
 
-### ◻︎ Acceptance Criteria
+### 3. Acceptance Criteria
 - Given: {initial state}
 - When: {user action}
 - Then: {expected result}
 
----
+### 4. States (if applicable)
+- Live: {visibility}
+- Draft: {visibility}
+- Archive: {behavior}
+- Trash: {retention}
+- Duplicate: {constraints}
 
-## ✓ Resolution Checklist
+### 5. State transition logic (if applicable)
+- Take Offline: Live → Draft with impact warning if {condition}
+- Go Live: Draft → Live with validation checks
+- Archive: Remove from workspace, preserve data
+- Trash: Soft delete with 30-day recovery
+- Duplicate: Create copy of draft only
 
-⚠️ Complete all items before moving to QA
+### 6. Component changes (if applicable)
+1. Header
+   • {change details}
 
-[] Core functionality built
-[] Input validation complete
-[] Error handling implemented
-[] Unit tests >80%
-[] Integration tests passing
-[] Documentation updated
-[] Analytics tracked
-[] Security reviewed
-[] Browser testing done
-[] Mobile responsive
-[] Design approved
-[] Code reviewed
+2. List
+   • {change details}
+
+3. Upload
+   • {change details}
+
+4. Dropdown
+   • {change details}
 ```
 
 ---
 
-## 10. 🔴 COMPLEX TICKET TEMPLATE
+## 9. 🔴 COMPLEX TICKET TEMPLATE
 
 ```markdown
-Mode: $ticket | Complexity: Complex | Template: v0.130
+Mode: $ticket | Complexity: Complex | Template: v0.140
 ---
 [PLATFORM] Migration: {name}
 
 # ⌘ About
 
-**Objective:** {strategic goal - 1 line}  
-**Impact:** {affected users/systems}  
-**Timeline:** Q1-Q2 2025  
-**Investment:** ${amount}
+**→ Priority:** P{0-3}
 
 [Integrated narrative: This migration addresses current platform limitations 
 including {problem1}, {problem2}, and {problem3}. By migrating, we achieve 
@@ -511,26 +477,26 @@ including {problem1}, {problem2}, and {problem3}. By migrating, we achieve
 
 ## ❖ Requirements
 
-### ◻︎ Phase 1: Foundation (Week 1-2)
+### 1. Phase 1: Foundation (Week 1-2)
 - Infrastructure setup complete
 - Core services migrated
 - Authentication system ready
 - Monitoring configured
 - [Status note: "Environment provisioning in progress"]
 
-### ◻︎ Phase 2: Migration (Week 3-4)
+### 2. Phase 2: Migration (Week 3-4)
 - Data migration executed
 - Service cutover completed
 - Traffic routing updated
 - Legacy system decommissioned
 
-### ◻︎ Phase 3: Optimization (Week 5-6)
+### 3. Phase 3: Optimization (Week 5-6)
 - Performance tuning complete
 - Cost optimization applied
 - Documentation finalized
 - Team training delivered
 
-### ◻︎ Integration Requirements
+### 4. Integration Requirements
 - Payment system: Maintained throughout
 - Email service: Zero downtime
 - Analytics: Continuous tracking
@@ -540,12 +506,12 @@ including {problem1}, {problem2}, and {problem3}. By migrating, we achieve
 
 ## ∅ Risks & Mitigations
 
-| Risk | Probability | Impact | Mitigation |
-|------|-------------|--------|------------|
-| Data loss | Low | High | Incremental backups, validation scripts |
-| Downtime | Medium | High | Blue-green deployment, rollback plan |
-| Performance degradation | Low | Medium | Load testing, gradual rollout |
-| Integration failures | Medium | Medium | Contract testing, monitoring |
+|| Risk | Probability | Impact | Mitigation |
+||------|-------------|--------|------------|
+|| Data loss | Low | High | Incremental backups, validation scripts |
+|| Downtime | Medium | High | Blue-green deployment, rollback plan |
+|| Performance degradation | Low | Medium | Load testing, gradual rollout |
+|| Integration failures | Medium | Medium | Contract testing, monitoring |
 
 ---
 
@@ -553,13 +519,13 @@ including {problem1}, {problem2}, and {problem3}. By migrating, we achieve
 
 ⚠️ Complete all items before moving to QA
 
-### ◻︎ Planning
+### 1. Planning
 [] Business case approved
 [] Stakeholder signoff
 [] Migration strategy final
 [] Rollback plan documented
 
-### ◻︎ Development
+### 2. Development
 [] Environment ready
 [] Phase 1 complete
 [] Test suite built
@@ -567,13 +533,13 @@ including {problem1}, {problem2}, and {problem3}. By migrating, we achieve
 [] Load tested
 [] Documentation ready
 
-### ◻︎ Validation
+### 3. Validation
 [] Integration tested
 [] Data migration verified
 [] UAT complete
 [] Performance validated
 
-### ◻︎ Deployment
+### 4. Deployment
 [] Runbooks created
 [] Team trained
 [] Staged rollout done
@@ -584,7 +550,7 @@ including {problem1}, {problem2}, and {problem3}. By migrating, we achieve
 
 ---
 
-## 11. 📖 STORY TEMPLATES
+## 10. 📖 STORY TEMPLATES
 
 ### Story Format Differences
 - **No Resolution Checklist** - Stories use narrative format
@@ -594,7 +560,7 @@ including {problem1}, {problem2}, and {problem3}. By migrating, we achieve
 
 ### Simple Story Example
 ```markdown
-Mode: $story | Complexity: Simple | Template: v0.130
+Mode: $story | Complexity: Simple | Template: v0.140
 ---
 [STORY] As a user, I want to {action} so that {benefit}
 
@@ -629,7 +595,7 @@ causing {impact}. This story delivers {solution}.]
 
 ## ❖ Requirements
 
-### ◻︎ Acceptance Criteria
+### 1. Acceptance Criteria
 Given I am {initial state}
 When I {action}
 Then I see {result}
@@ -639,7 +605,7 @@ Then I see {result}
 
 ---
 
-## 12. ⚡ QUICK MODE TEMPLATES
+## 11. ⚡ QUICK MODE TEMPLATES
 
 ### Quick Mode Rules
 - **NO questions asked** - System proceeds immediately
@@ -650,7 +616,7 @@ Then I see {result}
 
 ### $quick ticket
 ```markdown
-Mode: $quick | Complexity: Auto-scaled | Template: v0.130
+Mode: $quick | Complexity: Auto-scaled | Template: v0.140
 ---
 [FIX] {feature}: {issue}
 

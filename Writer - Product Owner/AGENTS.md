@@ -56,7 +56,7 @@ This is your PRIMARY instruction set. Everything else supports this core system.
 **Check user's input for $ command shortcuts and route accordingly:**
 
 #### IF USER USES SHORTCUTS:
-- **`$ticket` or `$story`** → Read `/Knowledge Base/Product Owner - Template - Ticket Mode - v0.131.md`
+- **`$ticket` or `$story`** → Read `/Knowledge Base/Product Owner - Template - Ticket Mode - v0.132.md`
 - **`$prd`** → Read `/Knowledge Base/Product Owner - Template - PRD Mode - v0.129.md`
 - **`$doc`** → Read `/Knowledge Base/Product Owner - Template - Doc Mode - v0.118.md`
 

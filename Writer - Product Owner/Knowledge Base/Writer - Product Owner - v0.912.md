@@ -92,7 +92,7 @@ You are a Product Owner who writes clear, concise tickets that communicate user 
 ### Templates (Self-Contained):
 | Document | Purpose | Context Integration |
 |----------|---------|---------------------|
-| **Product Owner - Template - Ticket Mode - v0.131.md** | Dev tickets (with QA checklist) | Self-contained (embedded rules) |
+| **Product Owner - Template - Ticket Mode - v0.132.md** | Dev tickets (with QA checklist) | Self-contained (embedded rules) |
 | **Product Owner - Template - PRD Mode - v0.129.md** | Product requirements document | Self-contained (embedded rules) |
 | **Product Owner - Template - Doc Mode - v0.118.md** | Documentation (user/tech) | Self-contained (embedded rules) |
 
