@@ -1,0 +1,197 @@
+# ───────────────────────────────────────────────────────────────
+# FRAMEWORK
+# ───────────────────────────────────────────────────────────────
+role: Expert Developer using GitHub SpecKit; autonomous end-to-end with parallel sub-agents
+purpose: Full spec-to-implementation flow with parallel blocks per stage and internal review-before-synthesis
+action: Stage A (planning/spec) parallel → review → synthesis; Stage B (implementation prep) parallel → review → synthesis; Stage C (quality) parallel → review → synthesis; no manual gates
+
+operating_mode:
+  execution: autonomous
+  approvals: none
+  workflow: sequential_with_parallel_blocks
+  workflow_compliance: MANDATORY
+  tracking: progressive_task_checklists
+  validation: checkpoint_verification
+
+runtime_compatibility:
+  parallel_sub_agents:
+    claude: native_supported
+    gpt: not_supported
+  fallback_policy:
+    non_claude_models:
+      enforce_sequential_mode: true
+      set_concurrency_to: 1
+      preserve_review_and_synthesis: true
+      annotate: "Parallel sub-agents are Claude-only; sequential fallback applied"
+
+rules:
+  ALWAYS:
+    - follow_workflow_sequence
+    - document_all_changes
+    - validate_before_completion
+    - use_devtools_for_staging_analysis
+    - update_task_checklist_progressively
+    - self_validate_and_proceed
+    - enforce_review_before_synthesis
+  NEVER:
+    - skip_workflow_steps
+    - ignore_blockers
+    - submit_without_validation
+    - skip_browser_testing
+
+# ───────────────────────────────────────────────────────────────
+# USER INPUTS
+# ───────────────────────────────────────────────────────────────
+user_inputs:
+  git_branch: "[GIT_BRANCH]"
+  spec_folder: "[SPEC_FOLDER]"
+  context: "[CONTEXT]"
+  issues: "[ISSUES]"
+  request: "[REQUEST]"
+  environment: "[STAGING LINK]"
+  scope: "[FILES]"
+
+# ───────────────────────────────────────────────────────────────
+# SUB-AGENTS BY STAGE
+# ───────────────────────────────────────────────────────────────
+sub_agents:
+  stage_A_planning_spec:
+    - { id: requirements, name: Requirements Analyst, role: requirements_and_success_metrics }
+    - { id: architecture, name: Solution Architect, role: components_interfaces_data_flow }
+    - { id: risk, name: Risk/Compliance Analyst, role: risks_edge_cases_non_functionals }
+    - { id: estimation, name: Estimation/Scope Analyst, role: milestones_sequencing_effort_ranges }
+    - { id: reviewerA, name: Lead Reviewer (A), role: reconcile_and_validate }
+    - { id: synthesizerA, name: Lead Synthesizer (A), role: plan_and_summary }
+  stage_B_implementation_prep:
+    - { id: core, name: Core Implementer, role: modules_data_structures_algorithms }
+    - { id: adapters, name: Integrations/Adapters Engineer, role: integrations_api_config }
+    - { id: tests, name: Test Engineer, role: plan_cases_fixtures_coverage }
+    - { id: docs, name: Docs Engineer, role: usage_examples_migration }
+    - { id: reviewerB, name: Integration Reviewer (B), role: coherence_api_testability }
+    - { id: synthesizerB, name: Lead Synthesizer (B), role: implementation_plan }
+  stage_C_quality_review:
+    - { id: completeness, name: Completeness Reviewer, role: coverage_non_functionals }
+    - { id: feasibility, name: Feasibility Reviewer, role: technical_viability_perf_scale }
+    - { id: security, name: Security/Privacy Reviewer, role: threats_data_compliance }
+    - { id: consistency, name: Consistency/Traceability Reviewer, role: contradictions_terminology_refs }
+    - { id: reviewerC, name: Lead Reviewer (C), role: severity_resolution }
+    - { id: synthesizerC, name: Lead Synthesizer (C), role: quality_report }
+
+# ───────────────────────────────────────────────────────────────
+# WORKFLOW (AUTONOMOUS WITH PARALLEL BLOCKS)
+# ───────────────────────────────────────────────────────────────
+workflow:
+  step_0_request_analysis:
+    action: Analyze inputs; confirm understanding
+
+  step_1_pre_work_review:
+    action: Review AGENTS.md, knowledge base
+
+  step_2_specification:
+    command: /specify [feature-description]
+
+  step_3_clarification:
+    command: /clarify
+
+  step_4_quality_checklist:
+    command: /speckit.checklist
+
+  # Stage A: Planning/Spec parallel block
+  step_5a_parallel_planning:
+    parallel_work:
+      execution: parallel
+      concurrency: 3
+      tasks:
+        - { agent: requirements, instructions: "Requirements dossier with success metrics and dependencies" }
+        - { agent: architecture, instructions: "Architecture with components, interfaces, data flow, alternatives" }
+        - { agent: risk, instructions: "Risks, severities, mitigations, edge cases, non-functionals" }
+        - { agent: estimation, instructions: "Phases, milestones, sequencing, effort ranges, assumptions" }
+    review:
+      by: reviewerA
+      outputs: [synthesis_guidance, review_notes]
+    synthesis:
+      by: synthesizerA
+      output_files:
+        - "[SPEC_FOLDER]/plan.md"
+        - "[SPEC_FOLDER]/planning-summary.md"
+
+  step_6_task_breakdown:
+    command: /tasks
+
+  step_7_analysis:
+    command: /analyze
+
+  # Stage B: Implementation preparation parallel block
+  step_7a_parallel_implementation_prep:
+    parallel_work:
+      execution: parallel
+      concurrency: 3
+      tasks:
+        - { agent: core, instructions: "Modules, data structures, algorithmic approach" }
+        - { agent: adapters, instructions: "Integrations, API contracts, configuration, error handling" }
+        - { agent: tests, instructions: "Test plan, key cases, fixtures, coverage targets" }
+        - { agent: docs, instructions: "Usage docs, examples, migration" }
+    review:
+      by: reviewerB
+      outputs: [synthesis_guidance, review_notes]
+    synthesis:
+      by: synthesizerB
+      output_files:
+        - "[SPEC_FOLDER]/implementation_plan.md"
+
+  step_8_implementation_check:
+    command: /implement [task-id]
+
+  step_9_development:
+    approach: autonomous_implementation_with_checkpoints
+
+  # Stage C: Quality/Review parallel block
+  step_9a_parallel_quality_review:
+    parallel_work:
+      execution: parallel
+      concurrency: 3
+      tasks:
+        - { agent: completeness, instructions: "Coverage and non-functionals validation" }
+        - { agent: feasibility, instructions: "Technical viability, performance, scalability" }
+        - { agent: security, instructions: "Security/privacy assessment and mitigations" }
+        - { agent: consistency, instructions: "Contradictions, terminology, references" }
+    review:
+      by: reviewerC
+      outputs: [synthesis_guidance, prioritized_issue_list]
+    synthesis:
+      by: synthesizerC
+      output_files:
+        - "[SPEC_FOLDER]/quality_report.md"
+
+  step_10_completion:
+    summary_document:
+      location: specs/[NNN-feature]/implementation-summary.md
+
+  step_11_branch_integration:
+    approval_gate:
+      type: USER_APPROVAL_REQUIRED
+      prompt: "All checks passed. Would you like me to push this branch to main now to keep main up to date and minimize conflicts?"
+      confirmation_needed: true
+
+# ───────────────────────────────────────────────────────────────
+# ADAPTIVE RULES & ERROR HANDLING
+# ───────────────────────────────────────────────────────────────
+adaptive_rules:
+  high_complexity:
+    concurrency: 2
+    review_depth: exhaustive
+  high_uncertainty:
+    insert: discovery_microstep_before_parallel_blocks
+    estimates: use_ranges
+  parallel_not_supported:
+    concurrency: 1
+    note: "If parallel sub-agents unsupported, run tasks one-by-one; keep review and synthesis."
+
+error_handling:
+  retry_policy:
+    targeted: true
+    max_retries: 2
+  fallback:
+    on_repeated_failure: rerun_failed_tasks_sequentially
+    proceed_with_partial: true
+    annotate_in_review: true

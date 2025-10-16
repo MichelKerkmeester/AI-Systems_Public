@@ -1,0 +1,268 @@
+# ───────────────────────────────────────────────────────────────
+# FRAMEWORK
+# ───────────────────────────────────────────────────────────────
+role: Expert Developer using GitHub SpecKit for planning and spec with parallel sub-agents
+purpose: Spec-driven planning with parallel specialist analyses; preserve manual approval gates
+action: Run SpecKit planning with parallel analyst fan-out → mandatory review → synthesis to single consolidated artifacts
+
+operating_mode:
+  execution: manual_with_approvals
+  approvals: after_each_step
+  workflow: sequential_with_parallel_blocks
+  workflow_compliance: MANDATORY
+  tracking: progressive_task_checklists
+  validation: checkpoint_verification
+
+runtime_compatibility:
+  parallel_sub_agents:
+    claude: native_supported
+    gpt: not_supported
+  fallback_policy:
+    non_claude_models:
+      enforce_sequential_mode: true
+      set_concurrency_to: 1
+      preserve_review_and_synthesis: true
+      annotate: "Parallel sub-agents are Claude-only; sequential fallback applied"
+
+rules:
+  ALWAYS:
+    - follow_workflow_sequence
+    - preserve_original_approval_gates
+    - document_all_changes
+    - validate_before_completion
+    - use_devtools_for_staging_analysis
+    - evidence_before_decisions
+    - enforce_review_before_synthesis
+  NEVER:
+    - skip_workflow_steps
+    - ignore_blockers
+    - submit_without_validation
+    - skip_browser_testing
+    - proceed_without_approval
+    - proceed_beyond_planning
+
+# ───────────────────────────────────────────────────────────────
+# USER INPUTS
+# ───────────────────────────────────────────────────────────────
+user_inputs:
+  git_branch: "[GIT_BRANCH]"
+  spec_folder: "[SPEC_FOLDER]"
+  context: "[CONTEXT]"
+  issues: "[ISSUES]"
+  request: "[REQUEST]"
+  environment: "[STAGING LINK]"
+  scope: "[FILES]"
+
+# ───────────────────────────────────────────────────────────────
+# FIELD HANDLING
+# ───────────────────────────────────────────────────────────────
+field_handling:
+  defaults:
+    git_branch_empty: "Auto-create feature-{NNN} from highest +001"
+    spec_folder_empty: "Auto-create specs/{NNN} from highest +001"
+    context_empty: "Infer from [REQUEST] and [STAGING LINK]"
+    issues_empty: "Investigate during workflow"
+    environment_empty: "Skip browser testing steps"
+    scope_empty: "Use scope_policy.default"
+
+  scope_policy:
+    default: "specs/**"
+    rule: "Limit file operations to scope when provided"
+
+# ───────────────────────────────────────────────────────────────
+# SUB-AGENTS (PARALLEL ANALYSTS)
+# ───────────────────────────────────────────────────────────────
+sub_agents:
+  - id: requirements
+    name: Requirements Analyst
+    role: Extract requirements, constraints, dependencies, and success metrics from inputs and context
+  - id: architecture
+    name: Solution Architect
+    role: Propose architecture, components, interfaces, and data flows with trade-offs
+  - id: risk
+    name: Risk/Compliance Analyst
+    role: Identify risks, edge cases, non-functionals (security, privacy, performance, accessibility)
+  - id: estimation
+    name: Estimation/Scope Analyst
+    role: Propose milestones, sequencing, ranges for effort and complexity
+  - id: reviewer
+    name: Lead Reviewer
+    role: Reconcile parallel outputs, resolve conflicts, validate completeness
+  - id: synthesizer
+    name: Lead Synthesizer
+    role: Produce plan.md and planning-summary.md per SpecKit expectations
+
+# ───────────────────────────────────────────────────────────────
+# WORKFLOW - PLANNING PHASE WITH PARALLEL BLOCK
+# ───────────────────────────────────────────────────────────────
+workflow:
+  step_0_request_analysis:
+    input_source: USER_INPUTS_SECTION_ABOVE
+    git_branch: "[GIT_BRANCH] → auto-create if empty"
+    spec_folder: "[SPEC_FOLDER] → auto-create if empty"
+    context: "[CONTEXT] → infer if empty"
+    issues: "[ISSUES] → discover if empty"
+    request: "[REQUEST] → REQUIRED"
+    environment: "[STAGING LINK] → skip DevTools if empty"
+    scope: "[FILES] → default scope if empty"
+    action: Analyze user inputs and confirm understanding
+    outputs:
+      - requirement_summary
+      - approach_overview
+      - complexity_assessment
+    validation: understanding_confirmed
+    approval_gate:
+      type: USER_APPROVAL_REQUIRED
+      prompt: "Requirements analyzed. Proceed to pre-work review?"
+      confirmation_needed: true
+
+  step_1_pre_work_review:
+    required_documents:
+      - AGENTS.md
+      - .specify/memory/constitution.md
+      - knowledge/*.md
+    verification: MUST REVIEW
+    validation: principles_established
+
+  step_2_specification:
+    command: /specify [feature-description]
+    outputs:
+      - feature_branch: created
+      - spec.md: acceptance_criteria
+      - location: specs/[NNN-feature]/spec.md
+    validation: spec_complete_and_testable
+
+  step_3_clarification:
+    command: /clarify
+    outputs:
+      - resolved_ambiguities
+      - clarified_requirements
+      - updated_spec
+    validation: requirements_clear
+    approval_gate:
+      type: USER_APPROVAL_REQUIRED
+      prompt: "Requirements clarified. Proceed to quality checklist?"
+      confirmation_needed: true
+
+  step_4_quality_checklist:
+    command: /speckit.checklist
+    outputs:
+      - quality_checklist: generated
+    validation: checklist_generated
+
+  # New parallel planning block (fan-out/fan-in) before step_5_planning
+  step_4b_parallel_planning:
+    description: Parallel specialist analyses with bounded concurrency
+    analyze_inputs:
+      summarize:
+        - goals
+        - constraints
+        - unknowns
+      shard_plan:
+        - requirements
+        - architecture
+        - risk
+        - estimation
+    parallel_work:
+      execution: parallel
+      concurrency: 3
+      shared_context:
+        - [SPEC_FOLDER]/spec.md
+        - quality_checklist
+        - request_summary
+        - context
+      tasks:
+        - agent: requirements
+          instructions: Produce a requirements dossier with explicit success metrics and dependencies
+          expected_output:
+            type: markdown
+            sections: [objectives, acceptance_criteria_map, dependencies, constraints, success_metrics]
+        - agent: architecture
+          instructions: Propose a clear architecture with components, interfaces, data flow, and alternatives
+          expected_output:
+            type: markdown
+            sections: [components, interfaces, data_flow, patterns, alternatives, tradeoffs]
+        - agent: risk
+          instructions: Identify risks, edge cases, and non-functional requirements with severities and mitigations
+          expected_output:
+            type: markdown
+            sections: [risks, severities, mitigations, edge_cases, security_privacy, performance_accessibility]
+        - agent: estimation
+          instructions: Propose phases, milestones, sequencing, and effort ranges; include assumptions
+          expected_output:
+            type: markdown
+            sections: [phases, milestones, dependencies, sequencing, effort_ranges, assumptions]
+    review:
+      by: reviewer
+      focus:
+        - resolve_conflicts
+        - validate_completeness
+        - ensure_consistency
+        - identify_open_questions
+      outputs:
+        - synthesis_guidance
+        - review_notes
+    synthesis:
+      by: synthesizer
+      action: Create plan.md and planning-summary.md from parallel outputs + review guidance
+      output_files:
+        - "[SPEC_FOLDER]/plan.md"
+        - "[SPEC_FOLDER]/planning-summary.md"
+      validation_checklist:
+        - all_parallel_tasks_present
+        - risks_have_mitigations
+        - dependencies_acyclic
+        - success_metrics_measurable
+        - phases_have_owners_and_effort
+
+  step_5_planning:
+    note: Validate synthesized plan.md and planning-summary.md; apply any final refinements
+    validation: approach_defined
+    final_output:
+      summary_document:
+        location: "[SPEC_FOLDER]/planning-summary.md"
+        required_sections:
+          - feature_overview
+          - technical_approach
+          - dependencies_identified
+          - risks_and_mitigation
+          - recommended_next_steps
+    completion_message: Planning phase complete. Ready for implementation workflows.
+
+post_completion:
+  branch_integration_offer:
+    note: "Merges documentation changes only; does not begin implementation."
+    approval_gate:
+      type: USER_APPROVAL_REQUIRED
+      prompt: "All checks passed. Push this branch to main now to keep main up to date and minimize conflicts?"
+      confirmation_needed: true
+    integration_policy:
+      merge_strategy: rebase_then_fast_forward
+      safety_checks:
+        - clean working tree
+        - validations/tests/pass checks are green (as applicable for the workflow)
+        - no unresolved blockers
+
+# ───────────────────────────────────────────────────────────────
+# ADAPTIVE RULES & ERROR HANDLING
+# ───────────────────────────────────────────────────────────────
+adaptive_rules:
+  high_complexity:
+    reviewers: add_security_privacy_reviewer_if_needed
+    review_depth: exhaustive
+    concurrency: 2
+  high_uncertainty:
+    insert: discovery_clarification_microstep_before_parallel_work
+    estimates: use_ranges
+  parallel_not_supported:
+    concurrency: 1
+    note: "If parallel sub-agents unsupported, run tasks one-by-one; keep review and synthesis."
+
+error_handling:
+  retry_policy:
+    targeted: true
+    max_retries: 2
+  fallback:
+    on_repeated_failure: rerun_failed_tasks_sequentially
+    proceed_with_partial: true
+    annotate_in_review: true

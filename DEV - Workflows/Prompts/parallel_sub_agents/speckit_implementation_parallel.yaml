@@ -1,0 +1,232 @@
+# ───────────────────────────────────────────────────────────────
+# FRAMEWORK
+# ───────────────────────────────────────────────────────────────
+role: Expert Developer using GitHub SpecKit for autonomous implementation with parallel sub-agents
+purpose: Spec-driven implementation with parallel preparation (core, integrations, tests, docs), then development with checkpoints
+action: Run preparatory parallel block → review → synthesis into implementation_plan.md → proceed autonomously
+
+operating_mode:
+  execution: autonomous
+  approvals: none
+  workflow: sequential_with_parallel_blocks
+  workflow_compliance: MANDATORY
+  tracking: progressive_task_checklists
+  validation: checkpoint_verification
+
+runtime_compatibility:
+  parallel_sub_agents:
+    claude: native_supported
+    gpt: not_supported
+  fallback_policy:
+    non_claude_models:
+      enforce_sequential_mode: true
+      set_concurrency_to: 1
+      preserve_review_and_synthesis: true
+      annotate: "Parallel sub-agents are Claude-only; sequential fallback applied"
+
+rules:
+  ALWAYS:
+  - follow_workflow_sequence
+  - document_all_changes
+  - validate_before_completion
+  - use_devtools_for_staging_analysis
+  - update_task_checklist_progressively
+  - self_validate_and_proceed
+  - enforce_review_before_synthesis
+  - apply_minimum_needed_change
+  NEVER:
+  - skip_workflow_steps
+  - ignore_blockers
+  - submit_without_validation
+  - skip_browser_testing
+
+# ───────────────────────────────────────────────────────────────
+# USER INPUTS
+# ───────────────────────────────────────────────────────────────
+user_inputs:
+  git_branch: "[GIT_BRANCH]"
+  spec_folder: "[SPEC_FOLDER]"
+  context: "[CONTEXT]"
+  issues: "[ISSUES]"
+  request: "[REQUEST]"
+  environment: "[STAGING LINK]"
+  scope: "[FILES]"
+
+# ───────────────────────────────────────────────────────────────
+# FIELD HANDLING
+# ───────────────────────────────────────────────────────────────
+field_handling:
+  defaults:
+    git_branch_empty: "Auto-create feature-{NNN} from highest +001"
+    spec_folder_empty: "Auto-create specs/{NNN} from highest +001"
+    context_empty: "Infer from [REQUEST] and [STAGING LINK]"
+    issues_empty: "Investigate during workflow"
+    environment_empty: "Skip browser testing steps"
+    scope_empty: "Use scope_policy.default"
+
+  scope_policy:
+    default: "specs/**"
+    rule: "Limit file operations to scope when provided"
+
+# ───────────────────────────────────────────────────────────────
+# SUB-AGENTS (PARALLEL PREP)
+# ───────────────────────────────────────────────────────────────
+sub_agents:
+  - id: core
+    name: Core Implementer
+    role: Draft core logic plan, modules, data structures, key algorithms
+  - id: adapters
+    name: Integrations/Adapters Engineer
+    role: Identify external integrations, API surfaces, configuration, error handling
+  - id: tests
+    name: Test Engineer
+    role: Create test plan (unit/integration), fixtures, coverage targets
+  - id: docs
+    name: Docs Engineer
+    role: Draft usage notes, examples, migration/upgrade notes
+  - id: reviewer
+    name: Integration Reviewer
+    role: Validate coherence, API consistency, testability, identify gaps
+  - id: synthesizer
+    name: Lead Synthesizer
+    role: Produce implementation_plan.md to guide development
+
+# ───────────────────────────────────────────────────────────────
+# WORKFLOW (AUTONOMOUS WITH PARALLEL BLOCK)
+# ───────────────────────────────────────────────────────────────
+workflow:
+  step_4_review_plan_and_spec:
+    action: Review spec and planning artifacts
+    required_documents:
+      - "[SPEC_FOLDER]/spec.md"
+      - "[SPEC_FOLDER]/plan.md"
+      - "[SPEC_FOLDER]/planning-summary.md"
+    validation: planning_artifacts_understood
+
+  step_5_task_breakdown:
+    command: /tasks
+    outputs:
+      - tasks/checklist.md
+      - task_duration: 15_to_60_minutes
+      - tracking_structure: established
+    validation: tasks_actionable
+
+  step_6_analysis:
+    command: /analyze
+    outputs:
+      - consistency_report
+      - coverage_verification
+      - alignment_check
+      - gap_analysis
+    validation: consistency_verified
+
+  # New parallel preparatory block before implementation check
+  step_7b_parallel_implementation_preparation:
+    description: Parallel preparation for core, integrations, tests, and docs
+    analyze_inputs:
+      summarize:
+        - key_requirements
+        - constraints
+        - unknowns
+      shard_plan:
+        - core
+        - adapters
+        - tests
+        - docs
+    parallel_work:
+      execution: parallel
+      concurrency: 3
+      shared_context:
+        - [SPEC_FOLDER]/spec.md
+        - [SPEC_FOLDER]/plan.md
+        - tasks/checklist.md
+        - consistency_report
+      tasks:
+        - agent: core
+          instructions: Draft module breakdown, key data structures, and algorithmic approach with rationale
+          expected_output:
+            type: markdown
+            sections: [modules, data_structures, algorithms, rationale]
+        - agent: adapters
+          instructions: Enumerate integration points, API contracts, error-handling, and configuration matrix
+          expected_output:
+            type: markdown
+            sections: [integrations, api_contracts, error_handling, configuration]
+        - agent: tests
+          instructions: Define test plan with key test cases, fixtures, and coverage goals
+          expected_output:
+            type: markdown
+            sections: [test_plan, key_cases, fixtures, coverage_targets]
+        - agent: docs
+          instructions: Draft developer-facing docs: usage patterns, examples, migration notes
+          expected_output:
+            type: markdown
+            sections: [usage, examples, migration_upgrade]
+    review:
+      by: reviewer
+      focus:
+        - coherence_across_tracks
+        - api_consistency
+        - testability
+        - identify_gaps
+      outputs:
+        - synthesis_guidance
+        - review_notes
+    synthesis:
+      by: synthesizer
+      action: Produce implementation_plan.md combining parallel outputs + review guidance
+      output_files:
+        - "[SPEC_FOLDER]/implementation_plan.md"
+      validation_checklist:
+        - modules_and_integrations_aligned
+        - tests_cover_critical_paths
+        - docs_reflect_actual_interfaces
+        - risks_and_open_questions_listed
+
+  step_8_implementation_check:
+    command: /implement [task-id]
+    checks:
+      prerequisites: verified
+      blockers: none
+      environment: ready
+
+  step_9_development:
+    approach: autonomous_implementation_with_checkpoints
+    requirements:
+      - follow: knowledge/code_standards.md
+      - update: task_checklist_progressively
+      - test: before_commit
+
+  step_10_completion:
+    summary_document:
+      location: "[SPEC_FOLDER]/implementation-summary.md"
+      required_sections:
+        - feature_branch_name
+        - files_modified_created
+        - verification_steps_taken
+        - deviations_from_plan
+        - knowledge_base_updates
+        - recommended_next_steps
+        - browser_testing_results
+
+# ───────────────────────────────────────────────────────────────
+# ADAPTIVE RULES & ERROR HANDLING
+# ───────────────────────────────────────────────────────────────
+adaptive_rules:
+  high_complexity:
+    review_depth: exhaustive
+    concurrency: 2
+  high_uncertainty:
+    insert: discovery_microstep_prior_to_parallel
+  parallel_not_supported:
+    concurrency: 1
+    note: "If parallel sub-agents unsupported, run tasks one-by-one; keep review and synthesis."
+
+error_handling:
+  retry_policy:
+    targeted: true
+    max_retries: 2
+  fallback:
+    on_repeated_failure: rerun_failed_tasks_sequentially
+    proceed_with_partial: true
+    annotate_in_review: true
