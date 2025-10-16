@@ -1,16 +1,17 @@
 # ───────────────────────────────────────────────────────────────
 # FRAMEWORK
 # ───────────────────────────────────────────────────────────────
-role: Expert Developer using SpecKit for performance optimization
-purpose: Improve performance while preserving features/UX
-action: Run SpecKit for performance optimization with validation gates
+role: Expert Developer using SpecKit for performance optimization with parallel analysis sub-agents
+purpose: Improve performance while preserving features/UX through parallel evidence tracks
+action: Run parallel performance analysis (profiling, code review, baseline comparison, optimization strategies) → correlate → synthesize optimization_plan.md → implement fixes
 
 operating_mode:
   execution: autonomous
   approvals: none
-  workflow: sequential
+  workflow: sequential_with_parallel_blocks
   workflow_compliance: MANDATORY
   validation: checkpoint_verification
+
   # Prevent context window overload by constraining default scope
   scope_policy:
     default: "specs/**"            # Use this when [FILES] is not provided
@@ -108,7 +109,33 @@ field_handling:
     rule: "Limit file operations to scope when provided; ALWAYS include [SPEC_FOLDER]/** when provided"
 
 # ───────────────────────────────────────────────────────────────
-# WORKFLOW
+# SUB-AGENTS (PARALLEL PERFORMANCE TRACKS)
+# ───────────────────────────────────────────────────────────────
+sub_agents:
+  - id: profiler
+    name: Performance Profiler
+    role: Analyze runtime performance metrics, identify bottlenecks, measure Core Web Vitals
+  - id: analyzer
+    name: Static Code Analyzer
+    role: Identify performance anti-patterns, unused code, inefficient algorithms, heavy dependencies
+  - id: baseline
+    name: Baseline Tracker
+    role: Establish performance baselines, track metrics before/after, validate improvements
+  - id: optimizer
+    name: Optimization Strategist
+    role: Propose optimization strategies ranked by impact, minimal-change approaches
+  - id: validator
+    name: Feature Preservation Validator
+    role: Verify all features work, animations remain smooth, no UX degradation, regression testing
+  - id: reviewer
+    name: Lead Performance Reviewer
+    role: Correlate findings; prioritize optimizations; define validation checks
+  - id: synthesizer
+    name: Optimization Plan Synthesizer
+    role: Produce optimization plan combining parallel outputs with preservation strategy
+
+# ───────────────────────────────────────────────────────────────
+# WORKFLOW (PARALLEL PERFORMANCE ANALYSIS BY MAIN AGENT)
 # ───────────────────────────────────────────────────────────────
 workflow:
   step_1_request_analysis:
@@ -257,7 +284,86 @@ workflow:
         - mcp__chrome-devtools__hover: Check hover states
         - mcp__chrome-devtools__take_screenshot: Document features
 
-  step_5_planning:
+  step_5_quality_checklist:
+    command: /speckit.checklist
+    outputs:
+      - quality_checklist: generated
+    validation: checklist_generated
+
+  step_6_parallel_performance_analysis:
+    description: Parallel performance analysis across profiling, code review, and optimization strategy
+    analyze_inputs:
+      summarize:
+        - performance_complaints
+        - baseline_metrics
+        - optimization_constraints
+        - preservation_requirements
+      shard_plan:
+        - profiling
+        - code_analysis
+        - optimization_strategy
+        - validation_plan
+    parallel_work:
+      execution: parallel
+      concurrency: 3
+      shared_context:
+        - performance_baseline.md
+        - [SPEC_FOLDER]/spec.md
+        - optimization_constraints
+      tasks:
+        - agent: profiler
+          instructions: Analyze runtime performance, identify bottlenecks, measure Core Web Vitals, profile animations and rendering
+          expected_output:
+            type: markdown
+            sections: [bottlenecks, core_web_vitals, animation_performance, memory_analysis]
+        - agent: analyzer
+          instructions: Review code for performance anti-patterns, unused dependencies, inefficient algorithms, bundle bloat
+          expected_output:
+            type: markdown
+            sections: [anti_patterns, unused_code, heavy_dependencies, optimization_opportunities]
+        - agent: optimizer
+          instructions: Propose optimization strategies ranked by impact/effort, minimal-change approaches, safe incremental paths
+          expected_output:
+            type: markdown
+            sections: [strategies, impact_ranking, incremental_plan, risk_assessment]
+        - agent: validator
+          instructions: Define preservation tests, animation validation, feature regression checks, browser compatibility matrix
+          expected_output:
+            type: markdown
+            sections: [preservation_tests, animation_checks, regression_suite, compatibility_requirements]
+    review:
+      by: reviewer
+      focus:
+        - correlate_bottlenecks_with_code
+        - prioritize_high_impact_low_risk
+        - ensure_preservation_strategy
+        - identify_quick_wins
+      outputs:
+        - synthesis_guidance
+        - prioritized_optimization_list
+    synthesis:
+      by: synthesizer
+      action: Produce optimization_plan.md combining parallel analysis + preservation strategy
+      output_files:
+        - "[SPEC_FOLDER]/optimization_plan.md"
+      validation_checklist:
+        - bottlenecks_identified_and_prioritized
+        - safe_optimization_paths_defined
+        - preservation_strategy_complete
+        - rollback_plan_included
+    main_agent_finalization:
+      by: MAIN_AGENT
+      action: QA review and finalization of optimization_plan.md
+      checks:
+        - confirm_alignment_with_performance_goals
+        - validate_preservation_requirements
+        - ensure_incremental_safe_approach
+        - resolve_remaining_questions
+      outputs:
+        - main_agent_review_notes
+        - final_signoff: true
+
+  step_7_planning:
     command: /plan [optimization-approach]
     outputs:
       - optimization_plan.md: technical_approach
@@ -299,7 +405,7 @@ workflow:
     validation: approach_defined
     # Use DevTools to analyze network, render blocking, script impact, memory
 
-  step_6_task_breakdown:
+  step_8_task_breakdown:
     command: /tasks
     outputs:
       - tasks/checklist.md  # Standard SpecKit path
@@ -333,7 +439,7 @@ workflow:
 
     validation: tasks_actionable
 
-  step_7_analysis:
+  step_9_analysis:
     command: /analyze
     outputs:
       - performance_impact_report
@@ -366,13 +472,7 @@ workflow:
         - mcp__chrome-devtools__performance_analyze_insight: Compare metrics
         - mcp__chrome-devtools__take_screenshot: Document improvements
 
-  step_8_quality_checklist:
-    command: /speckit.checklist
-    outputs:
-      - quality_checklist: generated
-    validation: checklist_generated
-
-  step_9_implementation_check:
+  step_10_implementation_check:
     command: /implement [optimization-task]
     checks:
       prerequisites: verified
@@ -393,7 +493,7 @@ workflow:
 
     # Verify readiness: current performance stable, all features working, env ready
 
-  step_10_development:
+  step_11_development:
     approach: incremental_optimization_with_validation
     requirements:
       - follow: knowledge/code_standards.md
@@ -461,7 +561,7 @@ workflow:
         - mcp__chrome-devtools__take_screenshot: Document state
         - mcp__chrome-devtools__performance_analyze_insight: Verify improvements
 
-  step_11_completion:
+  step_12_completion:
     summary_document:
       location: specs/[NNN-performance]/optimization-summary.md
       required_sections:
@@ -508,7 +608,7 @@ workflow:
       - documentation_complete: true
       - staging_verified: true
 
-  step_12_branch_integration:
+  step_13_branch_integration:
     name: Branch Integration Approval
     approval_gate:
       type: USER_APPROVAL_REQUIRED
@@ -529,6 +629,30 @@ workflow:
         - ff-merge into main, push
         - optionally delete feature branch (confirm)
       tagging: optional; only on user request
+
+# ───────────────────────────────────────────────────────────────
+# ADAPTIVE RULES & ERROR HANDLING
+# ───────────────────────────────────────────────────────────────
+adaptive_rules:
+  high_complexity:
+    analysis_depth: exhaustive
+    concurrency: 2
+  high_risk_optimization:
+    validation_gates: extended
+    rollback_readiness: required
+  parallel_not_supported:
+    concurrency: 1
+    note: "If parallel sub-agents unsupported, run tasks one-by-one; keep review and synthesis."
+
+error_handling:
+  retry_policy:
+    targeted: true
+    max_retries: 2
+  fallback:
+    on_performance_regression: immediate_rollback
+    on_feature_breakage: halt_and_restore
+    proceed_with_partial: false
+    annotate_in_review: true
 
 # ───────────────────────────────────────────────────────────────
 # CHROME DEVTOOLS MCP MANDATE

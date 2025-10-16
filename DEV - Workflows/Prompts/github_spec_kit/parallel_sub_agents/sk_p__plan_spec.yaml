@@ -13,17 +13,6 @@ operating_mode:
   tracking: progressive_task_checklists
   validation: checkpoint_verification
 
-runtime_compatibility:
-  parallel_sub_agents:
-    claude: native_supported
-    gpt: not_supported
-  fallback_policy:
-    non_claude_models:
-      enforce_sequential_mode: true
-      set_concurrency_to: 1
-      preserve_review_and_synthesis: true
-      annotate: "Parallel sub-agents are Claude-only; sequential fallback applied"
-
 rules:
   ALWAYS:
     - follow_workflow_sequence
@@ -228,18 +217,37 @@ workflow:
         - final_signoff: true
 
   step_7_planning:
-    note: Validate synthesized plan.md and planning-summary.md; apply any final refinements
+    command: /plan [context]
+    outputs:
+      - plan.md: technical_approach
+      - dependencies: identified
+      - upstream_docs: reviewed
     validation: approach_defined
+    chrome_devtools:
+      when: analyzing_current_implementation
+      actions:
+        - inspect_network_requests
+        - analyze_dom_structure
+        - review_console_errors
+        - capture_performance_metrics
+    deep_analysis:
+      focus: comprehensive_planning
+      approach: deep_analysis
+      outputs:
+        - detailed_technical_approach
+        - implementation_strategy
+        - risk_assessment
+        - dependency_mapping
     final_output:
       summary_document:
-        location: "[SPEC_FOLDER]/planning-summary.md"
+        location: specs/[NNN-feature]/planning-summary.md
         required_sections:
           - feature_overview
           - technical_approach
           - dependencies_identified
           - risks_and_mitigation
           - recommended_next_steps
-    completion_message: Planning phase complete. Ready for implementation workflows.
+      completion_message: Planning phase complete. The workflow has been executed through step 4. Technical plan and approach have been documented. To proceed with implementation, use the full workflow_automated.yaml.
 
 post_completion:
   branch_integration_offer:
@@ -254,6 +262,29 @@ post_completion:
         - clean working tree
         - validations/tests/pass checks are green (as applicable for the workflow)
         - no unresolved blockers
+      conflict_policy:
+        on_rebase_conflict: pause and ask for guidance
+        fallback_to_pr: offer to open a PR if user prefers manual resolution
+      steps:
+        - fetch origin
+        - update main (pull --ff-only)
+        - rebase feature branch onto main
+        - fast-forward merge into main
+        - push origin main
+        - after successful integration, offer to delete the feature branch locally and on origin (explicit confirmation required)
+      tagging: optional; only on user request
+
+# ───────────────────────────────────────────────────────────────
+# WORKFLOW TERMINATION
+# ───────────────────────────────────────────────────────────────
+termination:
+  after_step: 7
+  message: "Planning phase completed successfully. Workflow terminated after step 7 as requested."
+  next_steps:
+    - Review planning documentation
+    - Approve technical approach
+    - Use workflow_automated.yaml for full implementation
+    - Or use workflow.yaml for manual implementation with gates
 
 # ───────────────────────────────────────────────────────────────
 # ADAPTIVE RULES & ERROR HANDLING

@@ -51,6 +51,8 @@ user_inputs:
   context: "[CONTEXT]"
   issues: "[ISSUES]"
   request: "[REQUEST]"
+  environment: "[STAGING LINK]"
+  scope: "[FILES]"
 
 # ───────────────────────────────────────────────────────────────
 # REQUEST HANDLING
@@ -69,10 +71,12 @@ field_handling:
     context_empty: "Infer from file content and structure"
     issues_empty: "Identify during analysis"
     request_empty: "Use default from request_handling"
+    environment_empty: "Skip browser testing steps"
+    scope_empty: "Use scope_policy.default"
 
   scope_policy:
-    default: "All markdown files in [SPEC_FOLDER]"
-    rule: "Process all .md files when spec_folder provided, else process single file from [REQUEST]"
+    default: "specs/**"
+    rule: "Process all .md files in scope when spec_folder provided, else process single file from [REQUEST]"
 
 # ───────────────────────────────────────────────────────────────
 # WORKFLOW (AUTONOMOUS)
@@ -207,14 +211,29 @@ workflow:
       - redundancy_eliminated: true
       - summary_created: true
 
-  step_8_optional_commit:
-    action: Commit optimized documentation
-    git_branch: "[GIT_BRANCH]"
-    message: "docs: optimize [SPEC_FOLDER] for conciseness and clarity"
-    conditional: git_branch_provided
-    files_to_commit:
-      - optimized_markdown_files
-      - optimization_summary
+  step_8_branch_integration:
+    name: Branch Integration Approval
+    approval_gate:
+      type: USER_APPROVAL_REQUIRED
+      prompt: "All checks passed. Would you like me to push this branch to main now to keep main up to date and minimize conflicts?"
+      confirmation_needed: true
+    integration_policy:
+      merge_strategy: rebase_then_fast_forward
+      safety_checks:
+        - clean working tree
+        - validations/tests/pass checks are green (as applicable for the workflow)
+        - no unresolved blockers
+      conflict_policy:
+        on_rebase_conflict: pause and ask for guidance
+        fallback_to_pr: offer to open a PR if user prefers manual resolution
+      steps:
+        - fetch origin
+        - update main (pull --ff-only)
+        - rebase feature branch onto main
+        - fast-forward merge into main
+        - push origin main
+        - after successful integration, offer to delete the feature branch locally and on origin (explicit confirmation required)
+      tagging: optional; only on user request
 
 
 # ───────────────────────────────────────────────────────────────

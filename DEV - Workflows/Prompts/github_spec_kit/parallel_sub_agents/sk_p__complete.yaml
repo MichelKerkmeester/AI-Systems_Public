@@ -1,43 +1,34 @@
 # ───────────────────────────────────────────────────────────────
 # FRAMEWORK
 # ───────────────────────────────────────────────────────────────
-role: Expert Developer using GitHub SpecKit; autonomous end-to-end with parallel sub-agents
-purpose: Full spec-to-implementation flow with parallel blocks per stage and internal review-before-synthesis
-action: Stage A (planning/spec) parallel → review → synthesis; Stage B (implementation prep) parallel → review → synthesis; Stage C (quality) parallel → review → synthesis; no manual gates
+role: Expert Developer using GitHub SpecKit with manual gates and parallel sub-agents
+purpose: Full spec-to-implementation flow with parallel blocks per stage and preserved approval gates
+action: Stage A (planning/spec) parallel → review → synthesis → approval; Stage B (implementation prep) parallel → review → synthesis → approval; Stage C (quality) parallel → review → synthesis → final approval
 
 operating_mode:
-  execution: autonomous
-  approvals: none
+  execution: manual_with_approvals
+  approvals: after_each_step
   workflow: sequential_with_parallel_blocks
   workflow_compliance: MANDATORY
   tracking: progressive_task_checklists
   validation: checkpoint_verification
 
-runtime_compatibility:
-  parallel_sub_agents:
-    claude: native_supported
-    gpt: not_supported
-  fallback_policy:
-    non_claude_models:
-      enforce_sequential_mode: true
-      set_concurrency_to: 1
-      preserve_review_and_synthesis: true
-      annotate: "Parallel sub-agents are Claude-only; sequential fallback applied"
-
 rules:
   ALWAYS:
     - follow_workflow_sequence
+    - preserve_original_approval_gates
     - document_all_changes
     - validate_before_completion
     - use_devtools_for_staging_analysis
-    - update_task_checklist_progressively
-    - self_validate_and_proceed
+    - evidence_before_decisions
     - enforce_review_before_synthesis
   NEVER:
     - skip_workflow_steps
     - ignore_blockers
     - submit_without_validation
     - skip_browser_testing
+    - proceed_without_approval
+    - over_engineer_or_expand_scope
 
 # ───────────────────────────────────────────────────────────────
 # USER INPUTS
@@ -50,6 +41,22 @@ user_inputs:
   request: "[REQUEST]"
   environment: "[STAGING LINK]"
   scope: "[FILES]"
+
+# ───────────────────────────────────────────────────────────────
+# FIELD HANDLING
+# ───────────────────────────────────────────────────────────────
+field_handling:
+  defaults:
+    git_branch_empty: "Auto-create feature-{NNN} from highest +001"
+    spec_folder_empty: "Auto-create specs/{NNN} from highest +001"
+    context_empty: "Infer from [REQUEST] and [STAGING LINK]"
+    issues_empty: "Investigate during workflow"
+    environment_empty: "Skip browser testing steps"
+    scope_empty: "Use scope_policy.default"
+
+  scope_policy:
+    default: "specs/**"
+    rule: "Limit file operations to scope when provided"
 
 # ───────────────────────────────────────────────────────────────
 # SUB-AGENTS BY STAGE
@@ -82,22 +89,81 @@ sub_agents:
 # ───────────────────────────────────────────────────────────────
 workflow:
   step_1_request_analysis:
-    action: Analyze inputs; confirm understanding
+    input_source: USER_INPUTS_SECTION_ABOVE
+    git_branch: "[GIT_BRANCH] → auto-create if empty"
+    spec_folder: "[SPEC_FOLDER] → auto-create if empty"
+    context: "[CONTEXT] → infer if empty"
+    issues: "[ISSUES] → discover if empty"
+    request: "[REQUEST] → REQUIRED"
+    environment: "[STAGING LINK] → skip DevTools if empty"
+    scope: "[FILES] → default scope if empty"
+    action: Analyze user inputs and confirm understanding
+    outputs:
+      - requirement_summary
+      - approach_overview
+      - complexity_assessment
+    validation: understanding_confirmed
+    approval_gate:
+      type: USER_APPROVAL_REQUIRED
+      prompt: "Requirements analyzed. Proceed to pre-work review?"
+      confirmation_needed: true
 
   step_2_pre_work_review:
-    action: Review AGENTS.md, knowledge base
+    required_documents:
+      - AGENTS.md
+      - .specify/memory/constitution.md
+      - knowledge/*.md
+    verification: MUST REVIEW
+    validation: principles_established
+    approval_gate:
+      type: USER_APPROVAL_REQUIRED
+      prompt: "Pre-work documentation reviewed. Proceed to specification?"
+      confirmation_needed: true
 
   step_3_specification:
     command: /specify [feature-description]
+    outputs:
+      - feature_branch: created
+      - spec.md: acceptance_criteria
+      - location: specs/[NNN-feature]/spec.md
+    validation: spec_complete
+    chrome_devtools:
+      when: analyzing_existing_features
+      approach: Navigate → Snapshot → Analyze → Document
+    approval_gate:
+      type: USER_APPROVAL_REQUIRED
+      prompt: "Specification created. Review spec.md and approve to proceed to clarification?"
+      confirmation_needed: true
 
   step_4_clarification:
     command: /clarify
+    outputs:
+      - resolved_ambiguities
+      - clarified_requirements
+      - updated_spec
+    validation: requirements_clear
+    chrome_devtools:
+      when: staging_url_provided
+      approach: Navigate → Inspect → Analyze → Clarify
+      capture: current_behavior_screenshots
+    approval_gate:
+      type: USER_APPROVAL_REQUIRED
+      prompt: "Requirements clarified. Proceed to quality checklist?"
+      confirmation_needed: true
 
   step_5_quality_checklist:
     command: /speckit.checklist
+    outputs:
+      - quality_checklist: generated
+    validation: checklist_generated
+    approval_gate:
+      type: USER_APPROVAL_REQUIRED
+      prompt: "Quality checklist complete. Proceed to planning parallel block?"
+      confirmation_needed: true
 
   # Stage A: Planning/Spec parallel block
   step_6_parallel_planning:
+    description: Parallel specialist analyses for planning/spec
     parallel_work:
       execution: parallel
       concurrency: 3
@@ -125,15 +191,46 @@ workflow:
       outputs:
         - main_agent_review_notes
         - final_signoff: true
+    approval_gate:
+      type: USER_APPROVAL_REQUIRED
+      prompt: "Planning artifacts synthesized. Approve to proceed to task breakdown?"
+      confirmation_needed: true
 
   step_7_task_breakdown:
     command: /tasks
+    outputs:
+      - tasks/checklist.md
+      - task_duration: 15_to_60_minutes
+      - tracking_structure: established
+    validation: tasks_actionable
+    approval_gate:
+      type: USER_APPROVAL_REQUIRED
+      prompt: "Tasks broken down. Review checklist.md and approve to proceed to analysis?"
+      confirmation_needed: true
 
   step_8_analysis:
     command: /analyze
+    outputs:
+      - consistency_report
+      - coverage_verification
+      - alignment_check
+      - gap_analysis
+    validation: consistency_verified
+    chrome_devtools:
+      when: comparing_staging_vs_spec
+      approach: Navigate → Snapshot → Compare → Report
+      focus:
+        - ui_consistency
+        - functionality_gaps
+        - performance_baseline
+    approval_gate:
+      type: USER_APPROVAL_REQUIRED
+      prompt: "Analysis complete. Review consistency report and approve to proceed to implementation parallel prep?"
+      confirmation_needed: true
 
   # Stage B: Implementation preparation parallel block
   step_9_parallel_implementation_prep:
+    description: Parallel prep for core, integrations, tests, docs
     parallel_work:
       execution: parallel
       concurrency: 3
@@ -160,15 +257,62 @@ workflow:
       outputs:
         - main_agent_review_notes
         - final_signoff: true
+    approval_gate:
+      type: USER_APPROVAL_REQUIRED
+      prompt: "Implementation plan synthesized. Approve to proceed to implementation check?"
+      confirmation_needed: true
 
   step_10_implementation_check:
     command: /implement [task-id]
+    checks:
+      prerequisites: verified
+      blockers: none
+      environment: ready
+    critical_gate: CONFIRM_BEFORE_CODE
+    chrome_devtools:
+      when: validating_environment
+      verify:
+        - api_endpoints_accessible
+        - authentication_working
+        - dependencies_loaded
+    approval_gate:
+      type: USER_APPROVAL_REQUIRED
+      prompt: "Implementation prerequisites verified. APPROVE TO BEGIN CODE IMPLEMENTATION?"
+      confirmation_needed: true
+      warning: "This will begin actual code changes"
 
   step_11_development:
-    approach: autonomous_implementation_with_checkpoints
+    approach: manual_implementation_with_checkpoints
+    requirements:
+      - follow: knowledge/code_standards.md
+      - update: task_checklist_progressively
+      - test: before_commit
+    checkpoints:
+      major_changes:
+        action: log_progress
+        approval: USER_APPROVAL_REQUIRED
+      issues_found:
+        action: document_resolution
+        approval: USER_APPROVAL_REQUIRED
+      architecture_change:
+        action: note_deviation
+        approval: USER_APPROVAL_REQUIRED
+    chrome_devtools:
+      when: debugging_implementation
+      actions:
+        - test_in_browser
+        - verify_network_calls
+        - check_console_output
+        - validate_dom_changes
+        - measure_performance_impact
+    approval_gate:
+      type: USER_APPROVAL_REQUIRED
+      prompt: "Development complete. Proceed to quality parallel review before completion?"
+      confirmation_needed: true
 
   # Stage C: Quality/Review parallel block
   step_12_parallel_quality_review:
+    description: Parallel reviewers for final quality validation
     parallel_work:
       execution: parallel
       concurrency: 3
@@ -195,16 +339,55 @@ workflow:
       outputs:
         - main_agent_review_notes
         - final_signoff: true
+    approval_gate:
+      type: USER_APPROVAL_REQUIRED
+      prompt: "Quality review complete. Approve to proceed to completion summary?"
+      confirmation_needed: true
 
   step_13_completion:
     summary_document:
       location: specs/[NNN-feature]/implementation-summary.md
+      required_sections:
+        - feature_branch_name
+        - files_modified_created
+        - verification_steps_taken
+        - deviations_from_plan
+        - knowledge_base_updates
+        - recommended_next_steps
+        - browser_testing_results
+    final_checklist:
+      - update_task_status: completed
+      - validation_passed: confirmed
+      - summary_created: true
+      - staging_verified: true
+    final_approval_gate:
+      type: USER_APPROVAL_REQUIRED
+      prompt: "Implementation summary complete. Approve to finalize workflow?"
+      confirmation_needed: true
 
   step_14_branch_integration:
+    name: Branch Integration Approval
     approval_gate:
       type: USER_APPROVAL_REQUIRED
       prompt: "All checks passed. Would you like me to push this branch to main now to keep main up to date and minimize conflicts?"
       confirmation_needed: true
+    integration_policy:
+      merge_strategy: rebase_then_fast_forward
+      safety_checks:
+        - clean working tree
+        - validations/tests/pass checks are green (as applicable for the workflow)
+        - no unresolved blockers
+      conflict_policy:
+        on_rebase_conflict: pause and ask for guidance
+        fallback_to_pr: offer to open a PR if user prefers manual resolution
+      steps:
+        - fetch origin
+        - update main (pull --ff-only)
+        - rebase feature branch onto main
+        - fast-forward merge into main
+        - push origin main
+        - after successful integration, offer to delete the feature branch locally and on origin (explicit confirmation required)
+      tagging: optional; only on user request
 
 # ───────────────────────────────────────────────────────────────
 # ADAPTIVE RULES & ERROR HANDLING

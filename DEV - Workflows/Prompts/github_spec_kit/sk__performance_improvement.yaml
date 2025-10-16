@@ -1,0 +1,585 @@
+# ───────────────────────────────────────────────────────────────
+# FRAMEWORK
+# ───────────────────────────────────────────────────────────────
+role: Expert Developer using SpecKit for performance optimization
+purpose: Improve performance while preserving features/UX
+action: Run SpecKit for performance optimization with validation gates
+
+operating_mode:
+  execution: autonomous
+  approvals: none
+  workflow: sequential
+  workflow_compliance: MANDATORY
+  validation: checkpoint_verification
+  # Prevent context window overload by constraining default scope
+  scope_policy:
+    default: "specs/**"            # Use this when [FILES] is not provided
+    rule: "Never load files outside the active scope. Expand only with explicit entries."
+
+optimization_modes:
+  standard:
+    workflow_compliance: all_steps_required
+    focus: comprehensive_optimization
+    use_when: Regular improvements
+
+  critical_path:
+    workflow_compliance: focus_on_bottlenecks
+    focus: highest_impact_only
+    use_when: Urgent issues
+
+  preservation:
+    workflow_compliance: extended_validation
+    focus: zero_regression_tolerance
+    use_when: High-risk optimizations
+
+  incremental:
+    workflow_compliance: gradual_improvements
+    focus: safe_step_by_step
+    use_when: Complex systems
+
+preservation_principles:
+  mandatory_requirements:
+    functionality: 100% feature parity
+    animations: Animations remain smooth
+    logic: Preserve business logic
+    experience: No UX degradation
+
+  validation_gates:
+    before_optimization: Capture baseline
+    during_optimization: Test after each change
+    after_optimization: Verify all features
+
+rules:
+  ALWAYS:
+    - follow_workflow_sequence
+    - adhere_to_knowledge_standards
+    - preserve_all_existing_logic
+    - maintain_all_animations
+    - profile_before_and_after
+    - test_all_functionality
+    - use_devtools_for_profiling
+    - self_validate_and_proceed
+    - do_not_prompt_for_user_approval
+    - limit_context_to_active_scope
+    - document_tradeoffs_transparently
+  NEVER:
+    - break_existing_features
+    - remove_functionality
+    - skip_performance_baseline
+    - optimize_without_measuring
+    - deploy_without_validation
+    - ignore_browser_compatibility
+  EXCEPTIONS:
+    - Exception to do_not_prompt_for_user_approval: one final prompt may request approval to integrate the branch into main.
+
+# ───────────────────────────────────────────────────────────────
+# USER INPUTS
+# ───────────────────────────────────────────────────────────────
+user_inputs:
+  git_branch: "[GIT_BRANCH]"
+  spec_folder: "[SPEC_FOLDER]"
+  context: "[CONTEXT]"
+  issues: "[ISSUES]"
+  request: "[REQUEST]"
+  environment: "[STAGING LINK]"
+  scope: "[FILES]"
+
+# ───────────────────────────────────────────────────────────────
+# REQUEST HANDLING
+# ───────────────────────────────────────────────────────────────
+request_handling:
+  default: "Thoroughly examine the linked spec folder and autonomously carry out a performance review and performance improvement session following the relevant optimization mode workflow"
+  override: "Use [REQUEST] if provided (replaces default), else use default above"
+
+# ───────────────────────────────────────────────────────────────
+# FIELD HANDLING
+# ───────────────────────────────────────────────────────────────
+field_handling:
+  defaults:
+    git_branch_empty: "Auto-create feature-{NNN} from highest +001"
+    spec_folder_empty: "Auto-create specs/{NNN} from highest +001"
+    context_empty: "Infer from [REQUEST] and [STAGING LINK]"
+    issues_empty: "Investigate during workflow"
+    environment_empty: "Skip browser testing steps"
+    scope_empty: "Use scope_policy.default"
+
+  scope_policy:
+    default: "specs/**"
+    rule: "Limit file operations to scope when provided; ALWAYS include [SPEC_FOLDER]/** when provided"
+
+# ───────────────────────────────────────────────────────────────
+# WORKFLOW
+# ───────────────────────────────────────────────────────────────
+workflow:
+  step_1_request_analysis:
+    input_source: USER_INPUTS_SECTION_ABOVE
+    git_branch: "[GIT_BRANCH] → auto-create if empty"
+    spec_folder: "[SPEC_FOLDER] → auto-create if empty"
+    context: "[CONTEXT] → infer if empty"
+    issues: "[ISSUES] → discover if empty"
+    request: "Use [REQUEST] if provided, else use default from request_handling"
+    environment: "[STAGING LINK] → skip DevTools if empty"
+    scope: "[FILES] → default scope if empty; ALWAYS include [SPEC_FOLDER]/**"
+    action: Analyze inputs and establish baseline
+
+    performance_assessment:
+      current_state:
+        - Identify performance complaints
+        - Document user-reported issues
+        - Review performance metrics
+
+      initial_measurement:
+        - Core Web Vitals baseline
+        - FPS during animations
+        - Load time metrics
+        - Memory usage patterns
+        - Network waterfall
+
+      scope_definition:
+        - Components to optimize
+        - Metrics to improve
+        - Success criteria
+        - Preservation requirements
+
+    chrome_devtools:
+      baseline_capture:
+        - mcp__chrome-devtools__navigate_page: Load target page
+        - mcp__chrome-devtools__performance_start_trace: Begin baseline trace
+        - mcp__chrome-devtools__take_screenshot: Document initial state
+        - mcp__chrome-devtools__performance_stop_trace: Complete baseline
+        - mcp__chrome-devtools__performance_analyze_insight: Get insights
+
+    outputs:
+      - performance_baseline.md
+      - optimization_goals
+
+    validation: baseline_documented
+
+  step_2_pre_work_review:
+    required_documents:
+      - AGENTS.md
+      - knowledge/code_standards.md
+      - knowledge/debugging.md
+
+    performance_context:
+      review_standards:
+        - Performance best practices
+        - Caching strategies
+        - Bundle optimization rules
+        - Animation requirements
+      existing_optimizations: skip_if_not_relevant
+      preservation_checklist:
+        - Document all current features
+        - List all animations
+        - Map business logic flows
+        - Capture interaction patterns
+
+    verification: MUST REVIEW
+    validation: principles_established
+
+  step_3_specification:
+    command: /specify [performance-optimization-plan]
+    outputs:
+      - feature_branch: created  # Uses perf-[NNN]-[description] naming
+      - optimization_spec.md: performance_criteria
+      - location: specs/[NNN-performance]/spec.md
+
+    bottleneck_identification:
+      analysis_areas:
+        - Render blocking resources
+        - JavaScript execution time
+        - Layout thrashing
+        - Memory leaks
+        - Network waterfall
+        - Animation jank
+        - Bundle sizes
+        - Image optimization
+
+      priority_matrix:
+        high_impact:
+          - Critical rendering path
+          - Main thread blocking
+          - Memory leaks
+        medium_impact:
+          - Asset optimization
+          - Code splitting
+          - Caching improvements
+        low_impact:
+          - Minor optimizations
+          - Micro-optimizations
+
+    validation: bottlenecks_identified
+    chrome_devtools:
+      when: profiling_performance
+      approach: Nav → Profile → Analyze → Document
+
+      profiling_workflow:
+        - mcp__chrome-devtools__performance_start_trace: Start profiling
+        - mcp__chrome-devtools__emulate_cpu: Test with throttling
+        - mcp__chrome-devtools__emulate_network: Test slow connections
+        - mcp__chrome-devtools__take_snapshot: Capture DOM states
+        - mcp__chrome-devtools__performance_stop_trace: End profiling
+
+  step_4_clarification:
+    command: /clarify
+    outputs:
+      - optimization_constraints: documented
+      - preservation_requirements: confirmed
+      - risk_assessment: completed
+
+    optimization_boundaries:
+      must_preserve:
+        - All user-facing features
+        - Animation smoothness (60 FPS)
+        - Business logic integrity
+        - Browser compatibility
+
+      can_optimize:
+        - Bundle strategies
+        - Loading sequences
+        - Caching approaches
+        - Resource priorities
+
+      cannot_change:
+        - Core functionality
+        - User workflows
+        - Visual appearance
+        - Interaction patterns
+
+    validation: constraints_clear
+    chrome_devtools:
+      when: validating_current_behavior
+      approach: Nav → Interact → Measure → Document
+
+      feature_verification:
+        - mcp__chrome-devtools__click: Test interactions
+        - mcp__chrome-devtools__fill_form: Verify forms
+        - mcp__chrome-devtools__hover: Check hover states
+        - mcp__chrome-devtools__take_screenshot: Document features
+
+  step_5_quality_checklist:
+    command: /speckit.checklist
+    outputs:
+      - quality_checklist: generated
+    validation: checklist_generated
+
+  step_6_planning:
+    command: /plan [optimization-approach]
+    outputs:
+      - optimization_plan.md: technical_approach
+      - preservation_strategy: defined
+      - rollback_plan: prepared
+
+    safe_optimization_strategies:
+      code_optimization:
+        - Lazy loading components
+        - Code splitting routes
+        - Tree shaking unused code
+        - Minification improvements
+
+      asset_optimization:
+        - Image lazy loading
+        - WebP/AVIF formats
+        - Critical CSS inlining
+        - Font optimization
+
+      runtime_optimization:
+        - Debouncing/throttling
+        - Virtual scrolling
+        - Web workers
+        - Request batching
+
+      caching_strategy:
+        - Static asset caching
+        - API response caching
+        - Service worker strategy
+        - CDN optimization
+
+    preservation_checks:
+      for_each_optimization:
+        - Impact on features
+        - Animation performance
+        - Logic preservation
+        - Compatibility check
+
+    validation: approach_defined
+    # Use DevTools to analyze network, render blocking, script impact, memory
+
+  step_7_task_breakdown:
+    command: /tasks
+    outputs:
+      - tasks/checklist.md  # Standard SpecKit path
+      - task_duration: 15_to_60_minutes
+      - tracking_structure: established
+
+    optimization_task_categories:
+      measurement_tasks:
+        - Capture baseline metrics
+        - Profile current performance
+        - Document bottlenecks
+        - Set target metrics
+
+      optimization_tasks:
+        - Implement lazy loading
+        - Optimize bundles
+        - Improve caching
+        - Reduce render blocking
+
+      validation_tasks:
+        - Test feature parity
+        - Verify animations
+        - Check browser compatibility
+        - Measure improvements
+
+      documentation_tasks:
+        - Update performance docs
+        - Document optimizations
+        - Create rollback guide
+        - Record metrics
+
+    validation: tasks_actionable
+
+  step_8_analysis:
+    command: /analyze
+    outputs:
+      - performance_impact_report
+      - risk_analysis
+      - preservation_verification
+      - optimization_recommendations
+
+    metrics_comparison:
+      baseline_vs_current:
+        - Load time changes
+        - Runtime performance
+        - Memory usage
+        - Network efficiency
+        - Core Web Vitals
+
+      feature_verification:
+        - All features working
+        - Animations at 60 FPS
+        - No visual regressions
+        - Business logic intact
+
+    validation: analysis_complete
+    chrome_devtools:
+      when: comparing_performance
+      approach: Navigate → Measure → Compare → Report
+
+      comparison_workflow:
+        - mcp__chrome-devtools__performance_start_trace: New trace
+        - mcp__chrome-devtools__navigate_page: Test scenarios
+        - mcp__chrome-devtools__performance_analyze_insight: Compare metrics
+        - mcp__chrome-devtools__take_screenshot: Document improvements
+
+  step_9_implementation_check:
+    command: /implement [optimization-task]
+    checks:
+      prerequisites: verified
+      baselines: captured
+      rollback: prepared
+      environment: ready
+
+    pre_optimization_validation:
+      backup_current:
+        - Create restore point
+        - Document current state
+        - Prepare rollback script
+
+      verify_tools:
+        - Performance profiler ready
+        - Testing suite prepared
+        - Monitoring active
+
+    # Verify readiness: current performance stable, all features working, env ready
+
+  step_10_development:
+    approach: incremental_optimization_with_validation
+    requirements:
+      - follow: knowledge/code_standards.md
+      - update: optimization_checklist_progressively
+      - test: after_each_optimization
+
+    for_each_optimization:
+      pre_change:
+        - Backup current state
+        - Document affected areas
+        - Create rollback point
+
+      implementation:
+        - Apply optimization
+        - Verify functionality
+        - Test animations
+        - Check business logic
+
+      validation:
+        - Feature tests pass
+        - No visual regression
+        - Animation smooth (60 FPS)
+        - Logic intact
+
+      measurement:
+        - Performance improved
+        - No new bottlenecks
+        - Memory stable
+        - Network optimized
+
+    rollback_trigger: ANY_FUNCTIONALITY_BROKEN
+
+    comprehensive_testing:
+      functional_validation:
+        - All features operational
+        - Animations performing
+        - Interactions responsive
+        - Forms submitting
+
+      performance_validation:
+        - Metrics improved
+        - No regressions
+        - Stable memory
+        - Faster loading
+
+      browser_matrix:
+        desktop: [Chrome, Safari, Firefox, Edge]
+        mobile: [iOS Safari, Chrome Android]
+
+      network_conditions:
+        - Fast 3G
+        - Slow 3G
+        - Offline
+
+    checkpoints:
+      optimization_applied: log_change
+      tests_passing: document_validation
+      performance_improved: measure_impact
+
+    chrome_devtools:
+      validation_workflow:
+        - mcp__chrome-devtools__navigate_page: Load optimized page
+        - mcp__chrome-devtools__performance_start_trace: Measure impact
+        - mcp__chrome-devtools__click: Test interactions
+        - mcp__chrome-devtools__take_screenshot: Document state
+        - mcp__chrome-devtools__performance_analyze_insight: Verify improvements
+
+  step_11_completion:
+    summary_document:
+      location: specs/[NNN-performance]/optimization-summary.md
+      required_sections:
+        - feature_branch_name  # Branch uses perf-[NNN] prefix
+        - baseline_metrics
+        - optimizations_applied
+        - performance_gains
+        - files_modified
+        - testing_results
+        - rollback_procedures
+        - lessons_learned
+        - browser_testing_results
+
+    performance_report:
+      metrics_improved:
+        - Load time: before vs after
+        - FPS: baseline vs optimized
+        - Memory: initial vs final
+        - Network: original vs improved
+
+      preservation_confirmation:
+        - [ ] All features working
+        - [ ] Animations smooth
+        - [ ] Logic preserved
+        - [ ] No regressions
+
+      optimization_summary:
+        - Techniques applied
+        - Impact measured
+        - Trade-offs documented
+        - Future recommendations
+
+    chrome_devtools:
+      final_validation:
+        - mcp__chrome-devtools__navigate_page: Production check + final metrics
+        - mcp__chrome-devtools__take_screenshot: Document final state
+
+    final_checklist:
+      - baseline_captured: confirmed
+      - bottlenecks_addressed: validated
+      - features_preserved: 100%
+      - animations_smooth: verified
+      - performance_improved: measured
+      - documentation_complete: true
+      - staging_verified: true
+
+  step_12_branch_integration:
+    name: Branch Integration Approval
+    approval_gate:
+      type: USER_APPROVAL_REQUIRED
+      prompt: "All checks passed. Push this branch to main now to keep main up to date and minimize conflicts?"
+      confirmation_needed: true
+    integration_policy:
+      merge_strategy: rebase_then_fast_forward
+      safety_checks:
+        - clean working tree
+        - checks green
+        - no unresolved blockers
+      conflict_policy:
+        on_rebase_conflict: pause and ask for guidance
+        fallback_to_pr: offer to open a PR if user prefers manual resolution
+      steps:
+        - fetch, pull --ff-only main
+        - rebase feature onto main
+        - ff-merge into main, push
+        - optionally delete feature branch (confirm)
+      tagging: optional; only on user request
+
+# ───────────────────────────────────────────────────────────────
+# CHROME DEVTOOLS MCP MANDATE
+# ───────────────────────────────────────────────────────────────
+chrome_devtools_integration:
+  mandatory_usage: |
+    Always use Chrome DevTools MCP for performance work:
+    - Measure before optimizing
+    - Profile every change
+    - Validate all improvements
+    - Verify animation performance
+    - Document with traces
+
+  tool_mapping:
+    profiling: [performance_start_trace, performance_stop_trace, performance_analyze_insight]
+    testing: [emulate_cpu, emulate_network, navigate_page]
+    validation: [take_screenshot, take_snapshot, evaluate_script]
+
+  performance_specific:
+    trace_requirements:
+      - Baseline trace before changes
+      - Trace after each optimization
+      - Final validation trace
+      - Cross-browser traces
+
+# ───────────────────────────────────────────────────────────────
+# CRITICAL REMINDERS
+# ───────────────────────────────────────────────────────────────
+workflow_discipline:
+  preservation_mandate: |
+    No feature may be broken for performance:
+    - Preserve functionality and logic
+    - Keep animations smooth
+    - Do not degrade UX
+
+  measurement_discipline: |
+    1. Measure first (baseline)
+    2. Validate after each change
+    3. Profile with DevTools
+    4. Record metrics and gains
+    5. Preserve features over speed
+
+  common_failure_points:
+    optimization: "Breaking features for marginal gains"
+    testing: "Not validating all user paths"
+    measurement: "Optimizing without profiling"
+    preservation: "Removing functionality"
+    documentation: "Missing rollback procedures"
+
+  self_discipline:
+    when_tempted_to_break: "Features are more important than speed"
+    when_seems_faster: "Measure, don't assume"
+    when_deadline_pressure: "Broken features are worse than slow"
+    when_small_optimization: "Every change needs validation"

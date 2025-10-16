@@ -1,13 +1,13 @@
 # ───────────────────────────────────────────────────────────────
 # FRAMEWORK
 # ───────────────────────────────────────────────────────────────
-role: Expert Developer using GitHub SpecKit; autonomous full workflow
-purpose: End-to-end spec-driven development with autonomous execution and self-validation
-action: Run full SpecKit autonomously from specification to implementation with validations
+role: Expert Developer using GitHub SpecKit for planning and spec
+purpose: Spec-driven planning with compliance through step 4
+action: Run SpecKit from spec to planning with validation
 
 operating_mode:
-  execution: autonomous
-  approvals: none
+  execution: manual_with_approvals
+  approvals: after_each_step
   workflow: sequential
   workflow_compliance: MANDATORY
   tracking: progressive_task_checklists
@@ -15,21 +15,19 @@ operating_mode:
 
 rules:
   ALWAYS:
-    - follow_workflow_sequence
-    - document_all_changes
-    - validate_before_completion
-    - use_devtools_for_staging_analysis
-    - update_task_checklist_progressively
-    - self_validate_and_proceed
-    - do_not_prompt_for_user_approval
-    - apply_minimum_needed_change
+  - follow_workflow_sequence
+  - document_all_changes
+  - validate_before_completion
+  - use_devtools_for_staging_analysis
+  - await_user_approval_at_gates
+  - evidence_before_decisions
   NEVER:
-    - skip_workflow_steps
-    - ignore_blockers
-    - submit_without_validation
-    - skip_browser_testing
-  EXCEPTIONS:
-    - Exception to do_not_prompt_for_user_approval: a single final prompt is permitted solely to request approval to integrate the branch into main.
+  - skip_workflow_steps
+  - ignore_blockers
+  - submit_without_validation
+  - skip_browser_testing
+  - proceed_without_approval
+  - proceed_beyond_planning
 
 # ───────────────────────────────────────────────────────────────
 # USER INPUTS
@@ -60,7 +58,7 @@ field_handling:
     rule: "Limit file operations to scope when provided"
 
 # ───────────────────────────────────────────────────────────────
-# WORKFLOW (AUTONOMOUS)
+# WORKFLOW - PLANNING PHASE ONLY
 # ───────────────────────────────────────────────────────────────
 workflow:
   step_1_request_analysis:
@@ -74,142 +72,92 @@ workflow:
     scope: "[FILES] → default scope if empty"
     action: Analyze user inputs and confirm understanding
     outputs:
-      - requirement_summary
-      - approach_overview
-      - complexity_assessment
+    - requirement_summary
+    - approach_overview
+    - complexity_assessment
     validation: understanding_confirmed
-  
+    approval_gate:
+      type: USER_APPROVAL_REQUIRED
+      prompt: "Requirements analyzed. Proceed to pre-work review?"
+      confirmation_needed: true
+
   step_2_pre_work_review:
     required_documents:
-      - AGENTS.md
-      - .specify/memory/constitution.md
-      - knowledge/*.md
+    - AGENTS.md
+    - .specify/memory/constitution.md
+    - knowledge/*.md
     verification: MUST REVIEW
     validation: principles_established
-  
+
   step_3_specification:
     command: /specify [feature-description]
     outputs:
-      - feature_branch: created
-      - spec.md: acceptance_criteria
-      - location: specs/[NNN-feature]/spec.md
-    validation: spec_complete
+    - feature_branch: created
+    - spec.md: acceptance_criteria
+    - location: specs/[NNN-feature]/spec.md
+    validation: spec_complete_and_testable
     chrome_devtools:
       when: analyzing_existing_features
       approach: Navigate → Snapshot → Analyze → Document
-  
+
   step_4_clarification:
     command: /clarify
     outputs:
-      - resolved_ambiguities
-      - clarified_requirements
-      - updated_spec
+    - resolved_ambiguities
+    - clarified_requirements
+    - updated_spec
     validation: requirements_clear
     chrome_devtools:
-      when: staging_url_provided
+      when: "[STAGING LINK] provided"
       approach: Navigate → Inspect → Analyze → Clarify
       capture: current_behavior_screenshots
-  
+    approval_gate:
+      type: USER_APPROVAL_REQUIRED
+      prompt: "Requirements clarified. Proceed to quality checklist?"
+      confirmation_needed: true
+
   step_5_quality_checklist:
     command: /speckit.checklist
     outputs:
-      - quality_checklist: generated
+    - quality_checklist: generated
     validation: checklist_generated
-  
+
   step_6_planning:
     command: /plan [context]
     outputs:
-      - plan.md: technical_approach
-      - dependencies: identified
-      - upstream_docs: reviewed
+    - plan.md: technical_approach
+    - dependencies: identified
+    - upstream_docs: reviewed
     validation: approach_defined
     chrome_devtools:
       when: analyzing_current_implementation
       actions:
-        - inspect_network_requests
-        - analyze_dom_structure
-        - review_console_errors
-        - capture_performance_metrics
-  
-  step_7_task_breakdown:
-    command: /tasks
-    outputs:
-      - tasks/checklist.md
-      - task_duration: 15_to_60_minutes
-      - tracking_structure: established
-    validation: tasks_actionable
-  
-  step_8_analysis:
-    command: /analyze
-    outputs:
-      - consistency_report
-      - coverage_verification
-      - alignment_check
-      - gap_analysis
-    validation: consistency_verified
-    chrome_devtools:
-      when: comparing_staging_vs_spec
-      approach: Navigate → Snapshot → Compare → Report
-      focus:
-        - ui_consistency
-        - functionality_gaps
-        - performance_baseline
-  
-  step_9_implementation_check:
-    command: /implement [task-id]
-    checks:
-      prerequisites: verified
-      blockers: none
-      environment: ready
-    critical_gate: SELF_VALIDATION_BEFORE_CODE
-    chrome_devtools:
-      when: validating_environment
-      verify:
-        - api_endpoints_accessible
-        - authentication_working
-        - dependencies_loaded
-  
-  step_10_development:
-    approach: autonomous_implementation_with_checkpoints
-    requirements:
-      - follow: knowledge/code_standards.md
-      - update: task_checklist_progressively
-      - test: before_commit
-    checkpoints:
-      major_changes:
-        action: log_progress
-      issues_found:
-        action: document_resolution
-      architecture_change:
-        action: note_deviation
-    chrome_devtools:
-      when: debugging_implementation
-      actions:
-        - test_in_browser
-        - verify_network_calls
-        - check_console_output
-        - validate_dom_changes
-        - measure_performance_impact
-  
-  step_11_completion:
-    summary_document:
-      location: specs/[NNN-feature]/implementation-summary.md
-      required_sections:
-        - feature_branch_name
-        - files_modified_created
-        - verification_steps_taken
-        - deviations_from_plan
-        - knowledge_base_updates
+      - inspect_network_requests
+      - analyze_dom_structure
+      - review_console_errors
+      - capture_performance_metrics
+    deep_analysis:
+      focus: comprehensive_planning
+      approach: deep_analysis
+      outputs:
+      - detailed_technical_approach
+      - implementation_strategy
+      - risk_assessment
+      - dependency_mapping
+    final_output:
+      summary_document:
+        location: specs/[NNN-feature]/planning-summary.md
+        required_sections:
+        - feature_overview
+        - technical_approach
+        - dependencies_identified
+        - risks_and_mitigation
         - recommended_next_steps
-        - browser_testing_results
-    final_checklist:
-      - update_task_status: completed
-      - validation_passed: confirmed
-      - summary_created: true
-      - staging_verified: true
+      completion_message: Planning phase complete. The workflow has been executed through step 4. Technical plan and approach have been documented. To proceed with implementation, use the full workflow_automated.yaml.
 
-  step_12_branch_integration:
-    name: Branch Integration Approval
+post_completion:
+  branch_integration_offer:
+    note: "This merges documentation changes only and does not begin implementation."
     approval_gate:
       type: USER_APPROVAL_REQUIRED
       prompt: "All checks passed. Would you like me to push this branch to main now to keep main up to date and minimize conflicts?"
@@ -231,3 +179,15 @@ workflow:
         - push origin main
         - after successful integration, offer to delete the feature branch locally and on origin (explicit confirmation required)
       tagging: optional; only on user request
+
+# ───────────────────────────────────────────────────────────────
+# WORKFLOW TERMINATION
+# ───────────────────────────────────────────────────────────────
+termination:
+  after_step: 6
+  message: "Planning phase completed successfully. Workflow terminated after step 6 as requested."
+  next_steps:
+  - Review planning documentation
+  - Approve technical approach
+  - Use workflow_automated.yaml for full implementation
+  - Or use workflow.yaml for manual implementation with gates

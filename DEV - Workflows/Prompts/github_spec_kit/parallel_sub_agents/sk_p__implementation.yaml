@@ -13,17 +13,6 @@ operating_mode:
   tracking: progressive_task_checklists
   validation: checkpoint_verification
 
-runtime_compatibility:
-  parallel_sub_agents:
-    claude: native_supported
-    gpt: not_supported
-  fallback_policy:
-    non_claude_models:
-      enforce_sequential_mode: true
-      set_concurrency_to: 1
-      preserve_review_and_synthesis: true
-      annotate: "Parallel sub-agents are Claude-only; sequential fallback applied"
-
 rules:
   ALWAYS:
   - follow_workflow_sequence
@@ -51,6 +40,13 @@ user_inputs:
   request: "[REQUEST]"
   environment: "[STAGING LINK]"
   scope: "[FILES]"
+
+# ───────────────────────────────────────────────────────────────
+# REQUEST HANDLING
+# ───────────────────────────────────────────────────────────────
+request_handling:
+  default: "Conduct a comprehensive review of the spec folder and carry out its implementation fully autonomously."
+  override: "Use [REQUEST] if provided (replaces default), else use default above"
 
 # ───────────────────────────────────────────────────────────────
 # FIELD HANDLING
@@ -120,7 +116,13 @@ workflow:
       - gap_analysis
     validation: consistency_verified
 
-  step_4_parallel_implementation_preparation:
+  step_4_quality_checklist:
+    command: /speckit.checklist
+    outputs:
+      - quality_checklist: generated
+    validation: checklist_generated
+
+  step_5_parallel_implementation_preparation:
     description: Parallel preparation for core, integrations, tests, and docs
     analyze_inputs:
       summarize:
@@ -193,21 +195,59 @@ workflow:
         - main_agent_review_notes
         - final_signoff: true
 
-  step_5_implementation_check:
+  step_6_implementation_check:
     command: /implement [task-id]
     checks:
       prerequisites: verified
       blockers: none
       environment: ready
+    chrome_devtools:
+      when: validating_environment
+      verify:
+        - api_endpoints_accessible
+        - authentication_working
+        - dependencies_loaded
+    deep_analysis:
+      focus: pre_implementation_verification
+      approach: environment_validation
+      outputs:
+        - environment_status
+        - dependency_verification
+        - blocker_identification
+        - readiness_confirmation
 
-  step_6_development:
+  step_7_development:
     approach: autonomous_implementation_with_checkpoints
     requirements:
       - follow: knowledge/code_standards.md
       - update: task_checklist_progressively
       - test: before_commit
+      - no_premature_optimization
+    checkpoints:
+      major_changes:
+        action: log_progress
+      issues_found:
+        action: document_resolution
+      architecture_change:
+        action: note_deviation
+    chrome_devtools:
+      when: debugging_implementation
+      actions:
+        - test_in_browser
+        - verify_network_calls
+        - check_console_output
+        - validate_dom_changes
+        - measure_performance_impact
+    deep_analysis:
+      focus: iterative_problem_solving
+      approach: continuous_validation
+      outputs:
+        - implementation_decisions
+        - debugging_insights
+        - optimization_opportunities
+        - test_coverage_gaps
 
-  step_7_completion:
+  step_8_completion:
     summary_document:
       location: "[SPEC_FOLDER]/implementation-summary.md"
       required_sections:
@@ -218,6 +258,41 @@ workflow:
         - knowledge_base_updates
         - recommended_next_steps
         - browser_testing_results
+    final_checklist:
+      - update_task_status: completed
+      - validation_passed: confirmed
+      - summary_created: true
+      - staging_verified: true
+    deep_analysis:
+      focus: comprehensive_completion_review
+      approach: retrospective_analysis
+      outputs:
+        - implementation_quality_assessment
+        - lessons_learned
+        - technical_debt_noted
+        - future_improvements
+
+# ───────────────────────────────────────────────────────────────
+# WORKFLOW CONTINUATION
+# ───────────────────────────────────────────────────────────────
+prerequisites:
+  required_artifacts:
+    - "[SPEC_FOLDER]/spec.md"
+    - "[SPEC_FOLDER]/plan.md"
+    - "[SPEC_FOLDER]/planning-summary.md"
+  verification: MUST EXIST BEFORE PROCEEDING
+  note: This workflow assumes steps 0-4 completed via speckit_plan_and_spec.yaml
+  user_context: "[CONTEXT]"
+  user_request: "[REQUEST]"
+
+termination:
+  after_step: 9
+  message: "Implementation phase completed successfully. Workflow terminated after step 9 as requested."
+  next_steps:
+    - Review implementation-summary.md
+    - Verify all changes in staging environment
+    - Prepare for code review and PR submission
+    - Update knowledge base if needed
 
 # ───────────────────────────────────────────────────────────────
 # ADAPTIVE RULES & ERROR HANDLING

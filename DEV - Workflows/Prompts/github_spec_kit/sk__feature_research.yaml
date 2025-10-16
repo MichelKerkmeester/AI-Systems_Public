@@ -181,6 +181,12 @@ workflow:
         - risk_mitigation_strategies
     validation: technical_analysis_complete
 
+  step_5_quality_checklist:
+    command: /speckit.checklist
+    outputs:
+      - quality_checklist: generated
+    validation: checklist_generated
+
   step_6_solution_design:
     action: Design solution architecture and integration patterns
     deliverables:
@@ -333,11 +339,29 @@ workflow:
         - Proceed to specification (/specify) if needed
         - Use research as reference during implementation planning
 
-  step_8_quality_checklist:
-    command: /speckit.checklist
-    outputs:
-      - quality_checklist: generated
-    validation: checklist_generated
+  step_8_branch_integration:
+    name: Branch Integration Approval
+    approval_gate:
+      type: USER_APPROVAL_REQUIRED
+      prompt: "All checks passed. Would you like me to push this branch to main now to keep main up to date and minimize conflicts?"
+      confirmation_needed: true
+    integration_policy:
+      merge_strategy: rebase_then_fast_forward
+      safety_checks:
+        - clean working tree
+        - validations/tests/pass checks are green (as applicable for the workflow)
+        - no unresolved blockers
+      conflict_policy:
+        on_rebase_conflict: pause and ask for guidance
+        fallback_to_pr: offer to open a PR if user prefers manual resolution
+      steps:
+        - fetch origin
+        - update main (pull --ff-only)
+        - rebase feature branch onto main
+        - fast-forward merge into main
+        - push origin main
+        - after successful integration, offer to delete the feature branch locally and on origin (explicit confirmation required)
+      tagging: optional; only on user request
 
 # ───────────────────────────────────────────────────────────────
 # RESEARCH QUALITY STANDARDS
