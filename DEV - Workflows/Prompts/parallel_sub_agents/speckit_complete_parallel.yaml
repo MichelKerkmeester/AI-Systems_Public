@@ -96,7 +96,7 @@ sub_agents:
     - { id: synthesizerC, name: Lead Synthesizer (C), role: quality_report }
 
 # ───────────────────────────────────────────────────────────────
-# WORKFLOW WITH PARALLEL BLOCKS AND PRESERVED GATES
+# WORKFLOW (PARALLEL OUTPUT QA BY MAIN AGENT)
 # ───────────────────────────────────────────────────────────────
 workflow:
   # Original gates preserved around these steps
@@ -136,7 +136,7 @@ workflow:
       confirmation_needed: true
 
   # Stage A: Planning/Spec parallel block
-  step_5a_parallel_planning:
+  step_5_parallel_planning:
     description: Parallel specialist analyses for planning/spec
     parallel_work:
       execution: parallel
@@ -154,6 +154,17 @@ workflow:
       output_files:
         - "[SPEC_FOLDER]/plan.md"
         - "[SPEC_FOLDER]/planning-summary.md"
+    main_agent_finalization:
+      by: MAIN_AGENT
+      action: QA review and finalization of planning artifacts
+      checks:
+        - confirm_alignment_with_request_and_context
+        - validate_completeness_and_consistency
+        - ensure_output_format_and_sections_present
+        - resolve_remaining_open_questions_or_note_them
+      outputs:
+        - main_agent_review_notes
+        - final_signoff: true
     approval_gate:
       type: USER_APPROVAL_REQUIRED
       prompt: "Planning artifacts synthesized. Approve to proceed to task breakdown?"
@@ -174,7 +185,7 @@ workflow:
       confirmation_needed: true
 
   # Stage B: Implementation preparation parallel block
-  step_7a_parallel_implementation_prep:
+  step_8_parallel_implementation_prep:
     description: Parallel prep for core, integrations, tests, docs
     parallel_work:
       execution: parallel
@@ -191,12 +202,23 @@ workflow:
       by: synthesizerB
       output_files:
         - "[SPEC_FOLDER]/implementation_plan.md"
+    main_agent_finalization:
+      by: MAIN_AGENT
+      action: QA review and finalization of implementation plan
+      checks:
+        - confirm_alignment_with_request_and_context
+        - validate_completeness_and_consistency
+        - ensure_output_format_and_sections_present
+        - resolve_remaining_open_questions_or_note_them
+      outputs:
+        - main_agent_review_notes
+        - final_signoff: true
     approval_gate:
       type: USER_APPROVAL_REQUIRED
       prompt: "Implementation plan synthesized. Approve to proceed to implementation check?"
       confirmation_needed: true
 
-  step_8_implementation_check:
+  step_9_implementation_check:
     command: /implement [task-id]
     approval_gate:
       type: USER_APPROVAL_REQUIRED
@@ -204,7 +226,7 @@ workflow:
       confirmation_needed: true
       warning: "This will begin actual code changes"
 
-  step_9_development:
+  step_10_development:
     approach: manual_implementation_with_checkpoints
     approval_gate:
       type: USER_APPROVAL_REQUIRED
@@ -212,7 +234,7 @@ workflow:
       confirmation_needed: true
 
   # Stage C: Quality/Review parallel block
-  step_9a_parallel_quality_review:
+  step_11_parallel_quality_review:
     description: Parallel reviewers for final quality validation
     parallel_work:
       execution: parallel
@@ -229,12 +251,23 @@ workflow:
       by: synthesizerC
       output_files:
         - "[SPEC_FOLDER]/quality_report.md"
+    main_agent_finalization:
+      by: MAIN_AGENT
+      action: QA review and finalization of quality report
+      checks:
+        - confirm_alignment_with_request_and_context
+        - validate_completeness_and_consistency
+        - ensure_output_format_and_sections_present
+        - resolve_remaining_open_questions_or_note_them
+      outputs:
+        - main_agent_review_notes
+        - final_signoff: true
     approval_gate:
       type: USER_APPROVAL_REQUIRED
       prompt: "Quality review complete. Approve to proceed to completion summary?"
       confirmation_needed: true
 
-  step_10_completion:
+  step_12_completion:
     summary_document:
       location: specs/[NNN-feature]/implementation-summary.md
     final_approval_gate:
@@ -242,7 +275,7 @@ workflow:
       prompt: "Implementation summary complete. Approve to finalize workflow?"
       confirmation_needed: true
 
-  step_11_branch_integration:
+  step_13_branch_integration:
     approval_gate:
       type: USER_APPROVAL_REQUIRED
       prompt: "All checks passed. Push this branch to main now to keep main up to date and minimize conflicts?"

@@ -68,7 +68,7 @@ field_handling:
 # WORKFLOW
 # ───────────────────────────────────────────────────────────────
 workflow:
-  step_4_review_plan_and_spec:
+  step_1_review_plan_and_spec:
     input_source: USER_INPUTS_SECTION_ABOVE
     git_branch: "[GIT_BRANCH] → auto-create if empty"
     spec_folder: "[SPEC_FOLDER] → auto-create if empty"
@@ -104,7 +104,7 @@ workflow:
       - implementation_strategy_refinement
     validation: planning_artifacts_understood
 
-  step_5_task_breakdown:
+  step_2_task_breakdown:
     command: /tasks
     outputs:
     - tasks/checklist.md
@@ -120,7 +120,7 @@ workflow:
       - priority_ordering
     validation: tasks_actionable
 
-  step_6_analysis:
+  step_3_analysis:
     command: /analyze
     outputs:
     - consistency_report
@@ -144,13 +144,13 @@ workflow:
       - integration_points
       - risk_assessment
 
-  step_7_quality_checklist:
+  step_4_quality_checklist:
     command: /speckit.checklist
     outputs:
     - quality_checklist: generated
     validation: checklist_generated
 
-  step_8_implementation_check:
+  step_5_implementation_check:
     command: /implement [task-id]
     checks:
       prerequisites: verified
@@ -171,7 +171,7 @@ workflow:
       - blocker_identification
       - readiness_confirmation
 
-  step_9_development:
+  step_6_development:
     approach: autonomous_implementation_with_checkpoints
     requirements:
     - follow: knowledge/code_standards.md
@@ -202,7 +202,7 @@ workflow:
       - optimization_opportunities
       - test_coverage_gaps
 
-  step_10_completion:
+  step_7_completion:
     summary_document:
       location: "[SPEC_FOLDER]/implementation-summary.md"
       required_sections:

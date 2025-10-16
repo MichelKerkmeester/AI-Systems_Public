@@ -92,10 +92,10 @@ sub_agents:
     role: Produce implementation_plan.md to guide development
 
 # ───────────────────────────────────────────────────────────────
-# WORKFLOW (AUTONOMOUS WITH PARALLEL BLOCK)
+# WORKFLOW (PARALLEL OUTPUT QA BY MAIN AGENT)
 # ───────────────────────────────────────────────────────────────
 workflow:
-  step_4_review_plan_and_spec:
+  step_1_review_plan_and_spec:
     action: Review spec and planning artifacts
     required_documents:
       - "[SPEC_FOLDER]/spec.md"
@@ -103,7 +103,7 @@ workflow:
       - "[SPEC_FOLDER]/planning-summary.md"
     validation: planning_artifacts_understood
 
-  step_5_task_breakdown:
+  step_2_task_breakdown:
     command: /tasks
     outputs:
       - tasks/checklist.md
@@ -111,7 +111,7 @@ workflow:
       - tracking_structure: established
     validation: tasks_actionable
 
-  step_6_analysis:
+  step_3_analysis:
     command: /analyze
     outputs:
       - consistency_report
@@ -120,8 +120,7 @@ workflow:
       - gap_analysis
     validation: consistency_verified
 
-  # New parallel preparatory block before implementation check
-  step_7b_parallel_implementation_preparation:
+  step_4_parallel_implementation_preparation:
     description: Parallel preparation for core, integrations, tests, and docs
     analyze_inputs:
       summarize:
@@ -182,22 +181,33 @@ workflow:
         - tests_cover_critical_paths
         - docs_reflect_actual_interfaces
         - risks_and_open_questions_listed
+    main_agent_finalization:
+      by: MAIN_AGENT
+      action: QA review and finalization of "[SPEC_FOLDER]/implementation_plan.md"
+      checks:
+        - confirm_alignment_with_request_and_context
+        - validate_completeness_and_consistency
+        - ensure_output_format_and_sections_present
+        - resolve_remaining_open_questions_or_note_them
+      outputs:
+        - main_agent_review_notes
+        - final_signoff: true
 
-  step_8_implementation_check:
+  step_5_implementation_check:
     command: /implement [task-id]
     checks:
       prerequisites: verified
       blockers: none
       environment: ready
 
-  step_9_development:
+  step_6_development:
     approach: autonomous_implementation_with_checkpoints
     requirements:
       - follow: knowledge/code_standards.md
       - update: task_checklist_progressively
       - test: before_commit
 
-  step_10_completion:
+  step_7_completion:
     summary_document:
       location: "[SPEC_FOLDER]/implementation-summary.md"
       required_sections:

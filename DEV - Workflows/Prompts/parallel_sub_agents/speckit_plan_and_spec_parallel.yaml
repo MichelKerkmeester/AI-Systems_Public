@@ -93,7 +93,7 @@ sub_agents:
     role: Produce plan.md and planning-summary.md per SpecKit expectations
 
 # ───────────────────────────────────────────────────────────────
-# WORKFLOW - PLANNING PHASE WITH PARALLEL BLOCK
+# WORKFLOW (PARALLEL OUTPUT QA BY MAIN AGENT)
 # ───────────────────────────────────────────────────────────────
 workflow:
   step_0_request_analysis:
@@ -150,8 +150,8 @@ workflow:
       - quality_checklist: generated
     validation: checklist_generated
 
-  # New parallel planning block (fan-out/fan-in) before step_5_planning
-  step_4b_parallel_planning:
+  # New parallel planning block (fan-out/fan-in) before step_6_planning
+  step_5_parallel_planning:
     description: Parallel specialist analyses with bounded concurrency
     analyze_inputs:
       summarize:
@@ -214,8 +214,20 @@ workflow:
         - dependencies_acyclic
         - success_metrics_measurable
         - phases_have_owners_and_effort
+    main_agent_finalization:
+      by: MAIN_AGENT
+      action: QA review and finalization of planning artifacts will occur next
+      defer_to_step: step_6_planning
+      checks:
+        - confirm_alignment_with_request_and_context
+        - validate_completeness_and_consistency
+        - ensure_output_format_and_sections_present
+        - resolve_remaining_open_questions_or_note_them
+      outputs:
+        - main_agent_review_notes
+        - final_signoff: true
 
-  step_5_planning:
+  step_6_planning:
     note: Validate synthesized plan.md and planning-summary.md; apply any final refinements
     validation: approach_defined
     final_output:

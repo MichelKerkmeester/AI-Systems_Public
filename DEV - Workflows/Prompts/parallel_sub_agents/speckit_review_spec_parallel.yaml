@@ -95,7 +95,7 @@ sub_agents:
     role: Produce improved spec draft and review summary
 
 # ───────────────────────────────────────────────────────────────
-# WORKFLOW (AUTONOMOUS WITH PARALLEL BLOCK)
+# WORKFLOW (PARALLEL OUTPUT QA BY MAIN AGENT)
 # ───────────────────────────────────────────────────────────────
 workflow:
   step_0_initialization:
@@ -115,7 +115,7 @@ workflow:
     validation: deep_analysis_complete
 
   # New parallel review block after deep analysis
-  step_1b_parallel_review:
+  step_2_parallel_review:
     description: Run parallel review axes with bounded concurrency
     analyze_inputs:
       summarize:
@@ -176,15 +176,26 @@ workflow:
         - requirements_testable
         - feasibility_confirmed
         - edge_cases_documented
+    main_agent_finalization:
+      by: MAIN_AGENT
+      action: QA review and finalization of spec-improved.md and spec-review-summary.md
+      checks:
+        - confirm_alignment_with_request_and_context
+        - validate_completeness_and_consistency
+        - ensure_output_format_and_sections_present
+        - resolve_remaining_open_questions_or_note_them
+      outputs:
+        - main_agent_review_notes
+        - final_signoff: true
 
   # Continue with existing improvement and validation steps using synthesized outputs
-  step_7_improvement_implementation:
+  step_3_improvement_implementation:
     note: Use synthesized findings to apply improvements
-  step_8_quality_validation:
+  step_4_quality_validation:
     note: Validate improved spec against quality metrics
-  step_9_final_review:
+  step_5_final_review:
     note: Final critical review; confirm implementation readiness
-  step_10_completion:
+  step_6_completion:
     summary_document:
       location: "[SPEC_FOLDER]/spec-review-summary.md"
 

@@ -9,8 +9,8 @@ action: Locate → Read → Apply AGENTS.md, then process [CONTEXT] and [REQUEST
 # USER INPUTS
 # ───────────────────────────────────────────────────────────────
 user_inputs:
-  context: "Toast messages accross the partner app have a lot of spacing to the right of the text. More than is defined in the Design system. Reduce that to
-  request: "Create a $ticket for [FE], it has Priority: High"
+  context: "[CONTEXT]"
+  request: "[REQUEST]"
 
 # ───────────────────────────────────────────────────────────────
 # RESOURCES

@@ -94,7 +94,7 @@ field_handling:
     auto_folder: "./plans/[YYYY-MM]/[project-slug]/"
 
 # ───────────────────────────────────────────────────────────────
-# WORKFLOW
+# WORKFLOW (PARALLEL OUTPUT QA BY MAIN AGENT)
 # ───────────────────────────────────────────────────────────────
 workflow:
   step_1_initialization:

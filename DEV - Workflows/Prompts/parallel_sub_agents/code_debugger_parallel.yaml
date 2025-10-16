@@ -94,7 +94,7 @@ sub_agents:
     role: Propose minimal-change fix with regression tests and rollout plan
 
 # ───────────────────────────────────────────────────────────────
-# WORKFLOW WITH PARALLEL EVIDENCE BLOCK
+# WORKFLOW (PARALLEL OUTPUT QA BY MAIN AGENT)
 # ───────────────────────────────────────────────────────────────
 workflow:
   step_0_request_analysis:
@@ -113,7 +113,7 @@ workflow:
     validation: investigation_spec_complete
 
   # Parallel evidence gathering between spec and clarification
-  step_2b_parallel_evidence:
+  step_3_parallel_evidence:
     analyze_inputs:
       unify_problem_statement: true
       define_invariants: true
@@ -164,17 +164,28 @@ workflow:
         - minimal_change_fix_defined
         - regression_tests_listed
         - rollout_plan_defined
+    main_agent_finalization:
+      by: MAIN_AGENT
+      action: QA review and finalization of "[SPEC_FOLDER]/debug_plan.md"
+      checks:
+        - confirm_alignment_with_request_and_context
+        - validate_completeness_and_consistency
+        - ensure_output_format_and_sections_present
+        - resolve_remaining_open_questions_or_note_them
+      outputs:
+        - main_agent_review_notes
+        - final_signoff: true
 
-  step_3_clarification:
+  step_4_clarification:
     command: /clarify
 
-  step_4_planning:
+  step_5_planning:
     command: /plan [debug-approach]
 
-  step_5_task_breakdown:
+  step_6_task_breakdown:
     command: /tasks
 
-  step_6_analysis:
+  step_7_analysis:
     command: /analyze
 
   step_8_implementation_check:

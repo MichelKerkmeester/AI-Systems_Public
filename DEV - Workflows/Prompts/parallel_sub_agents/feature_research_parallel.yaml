@@ -93,7 +93,7 @@ sub_agents:
     role: Produce research.md per required sections
 
 # ───────────────────────────────────────────────────────────────
-# RESEARCH WORKFLOW WITH PARALLEL BLOCK
+# WORKFLOW (PARALLEL OUTPUT QA BY MAIN AGENT)
 # ───────────────────────────────────────────────────────────────
 workflow:
   step_0_request_analysis:
@@ -108,7 +108,7 @@ workflow:
     validation: principles_established
 
   # Parallel research block spanning codebase and external research
-  step_2b_parallel_research:
+  step_2_parallel_research:
     analyze_inputs:
       define_queries:
         - domains
@@ -152,11 +152,22 @@ workflow:
         - contradictory_sources_flagged
         - options_matrix_complete
         - recommendation_justified
+    main_agent_finalization:
+      by: MAIN_AGENT
+      action: QA review and finalization of "[SPEC_FOLDER]/research.md"
+      checks:
+        - confirm_alignment_with_request_and_context
+        - validate_completeness_and_consistency
+        - ensure_output_format_and_sections_present
+        - resolve_remaining_open_questions_or_note_them
+      outputs:
+        - main_agent_review_notes
+        - final_signoff: true
 
-  step_6_research_compilation:
+  step_3_research_compilation:
     note: Research document already synthesized; ensure section coverage and polish
 
-  step_7_quality_checklist:
+  step_4_quality_checklist:
     command: /speckit.checklist
 
 # ───────────────────────────────────────────────────────────────
