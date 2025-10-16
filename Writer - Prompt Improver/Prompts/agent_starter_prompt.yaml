@@ -17,7 +17,7 @@ user_inputs:
 # ───────────────────────────────────────────────────────────────
 agents_md_locations:
   search::
-    - ./AGENTS.md
+    - /AGENTS.md
 
   redirect_signals:
     - "WARP.md: STOP - READ AGENTS.md INSTEAD"

@@ -9,15 +9,15 @@ action: Locate → Read → Apply AGENTS.md, then process [CONTEXT] and [REQUEST
 # USER INPUTS
 # ───────────────────────────────────────────────────────────────
 user_inputs:
-  context: "[CONTEXT]"
-  request: "[REQUEST]"
+  context: "Toast messages accross the partner app have a lot of spacing to the right of the text. More than is defined in the Design system. Reduce that to
+  request: "Create a $ticket for [FE], it has Priority: High"
 
 # ───────────────────────────────────────────────────────────────
 # RESOURCES
 # ───────────────────────────────────────────────────────────────
 agents_md_locations:
   search::
-    - ./AGENTS.md
+    - /AGENTS.md
 
   redirect_signals:
     - "WARP.md: STOP - READ AGENTS.md INSTEAD"
