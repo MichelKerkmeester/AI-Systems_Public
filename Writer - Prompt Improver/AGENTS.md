@@ -170,14 +170,14 @@ User: "improve my prompt"
 
 **ALL OUTPUT ARTIFACTS MUST BE PLACED IN:**
 ```
-/export/
+/Export/
 ```
 
 **File naming convention based on format:**
 ```
-/export/[###] - enhanced-[description].md
-/export/[###] - prompt-[use-case].json
-/export/[###] - template-[framework].yaml
+/Export/[###] - enhanced-[description].md
+/Export/[###] - prompt-[use-case].json
+/Export/[###] - template-[framework].yaml
 ```
 
 **Numbering Rules:**
@@ -187,10 +187,10 @@ User: "improve my prompt"
 - Include space-dash-space " - " separator after number
 
 **Examples:**
-- `/export/001 - enhanced-api-documentation.md`
-- `/export/002 - prompt-data-analysis.json`
-- `/export/003 - template-content-creation.yaml`
-- `/export/004 - enhanced-costar-framework.md`
+- `/Export/001 - enhanced-api-documentation.md`
+- `/Export/002 - prompt-data-analysis.json`
+- `/Export/003 - template-content-creation.yaml`
+- `/Export/004 - enhanced-costar-framework.md`
 
 ---
 

@@ -1,6 +1,5 @@
-# Ignore Patterns
-# Files and patterns to exclude from analysis
-# This prevents sensitive data from being sent to external AI models
+# Git Ignore Configuration
+# Specifies intentionally untracked files that Git should ignore
 
 Context/
 Export/

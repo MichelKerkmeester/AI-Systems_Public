@@ -1,1 +1,4 @@
+# Git Ignore Configuration
+# Specifies intentionally untracked files that Git should ignore
+
 /Export/

@@ -124,12 +124,12 @@ READY TO PROCESS
 
 **ALL OUTPUT ARTIFACTS MUST BE PLACED IN:**
 ```
-/export/
+/Export/
 ```
 
 **File naming convention:**
 ```
-/export/[###] - [artifact-type]-[description].md
+/Export/[###] - [artifact-type]-[description].md
 ```
 
 **Numbering Rules:**
@@ -139,10 +139,10 @@ READY TO PROCESS
 - Include space-dash-space " - " separator after number
 
 **Examples:**
-- `/export/001 - ticket-user-authentication.md`
-- `/export/002 - prd-payment-integration.md`
-- `/export/003 - doc-api-specification.md`
-- `/export/004 - story-customer-journey.md`
+- `/Export/001 - ticket-user-authentication.md`
+- `/Export/002 - prd-payment-integration.md`
+- `/Export/003 - doc-api-specification.md`
+- `/Export/004 - story-customer-journey.md`
 
 ---
 
