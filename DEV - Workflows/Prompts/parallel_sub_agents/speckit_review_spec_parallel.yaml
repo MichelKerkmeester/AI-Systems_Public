@@ -98,7 +98,7 @@ sub_agents:
 # WORKFLOW (PARALLEL OUTPUT QA BY MAIN AGENT)
 # ───────────────────────────────────────────────────────────────
 workflow:
-  step_0_initialization:
+  step_1_initialization:
     action: Load spec and prepare for review
     spec_loading:
       primary_file: "[SPEC_FOLDER]/spec.md"
@@ -107,7 +107,7 @@ workflow:
         - "[SPEC_FOLDER]/tasks/checklist.md"
     validation: spec_loaded_successfully
 
-  step_1_deep_spec_analysis:
+  step_2_deep_spec_analysis:
     deep_analysis:
       mode: COMPREHENSIVE_ANALYSIS
       context_integration: "Consider [CONTEXT] throughout analysis"
@@ -115,7 +115,7 @@ workflow:
     validation: deep_analysis_complete
 
   # New parallel review block after deep analysis
-  step_2_parallel_review:
+  step_3_parallel_review:
     description: Run parallel review axes with bounded concurrency
     analyze_inputs:
       summarize:
@@ -189,13 +189,13 @@ workflow:
         - final_signoff: true
 
   # Continue with existing improvement and validation steps using synthesized outputs
-  step_3_improvement_implementation:
+  step_4_improvement_implementation:
     note: Use synthesized findings to apply improvements
-  step_4_quality_validation:
+  step_5_quality_validation:
     note: Validate improved spec against quality metrics
-  step_5_final_review:
+  step_6_final_review:
     note: Final critical review; confirm implementation readiness
-  step_6_completion:
+  step_7_completion:
     summary_document:
       location: "[SPEC_FOLDER]/spec-review-summary.md"
 

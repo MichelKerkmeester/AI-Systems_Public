@@ -60,7 +60,7 @@ field_handling:
 # WORKFLOW
 # ───────────────────────────────────────────────────────────────
 workflow:
-  step_0_request_analysis:
+  step_1_request_analysis:
     input_source: USER_INPUTS_SECTION_ABOVE
     git_branch: "[GIT_BRANCH] → auto-create if empty"
     spec_folder: "[SPEC_FOLDER] → auto-create if empty"
@@ -80,7 +80,7 @@ workflow:
       prompt: "Requirements analyzed. Proceed to pre-work review?"
       confirmation_needed: true
   
-  step_1_pre_work_review:
+  step_2_pre_work_review:
     required_documents:
       - AGENTS.md
       - .specify/memory/constitution.md
@@ -92,7 +92,7 @@ workflow:
       prompt: "Pre-work documentation reviewed. Proceed to specification?"
       confirmation_needed: true
   
-  step_2_specification:
+  step_3_specification:
     command: /specify [feature-description]
     outputs:
       - feature_branch: created
@@ -107,7 +107,7 @@ workflow:
       prompt: "Specification created. Review spec.md and approve to proceed to clarification?"
       confirmation_needed: true
   
-  step_3_clarification:
+  step_4_clarification:
     command: /clarify
     outputs:
       - resolved_ambiguities
@@ -123,7 +123,7 @@ workflow:
       prompt: "Requirements clarified. Proceed to quality checklist?"
       confirmation_needed: true
   
-  step_4_quality_checklist:
+  step_5_quality_checklist:
     command: /speckit.checklist
     outputs:
       - quality_checklist: generated
@@ -133,7 +133,7 @@ workflow:
       prompt: "Quality checklist complete. Proceed to planning?"
       confirmation_needed: true
   
-  step_5_planning:
+  step_6_planning:
     command: /plan [context]
     outputs:
       - plan.md: technical_approach
@@ -152,7 +152,7 @@ workflow:
       prompt: "Technical plan created. Review plan.md and approve to proceed to task breakdown?"
       confirmation_needed: true
   
-  step_6_task_breakdown:
+  step_7_task_breakdown:
     command: /tasks
     outputs:
       - tasks/checklist.md
@@ -164,7 +164,7 @@ workflow:
       prompt: "Tasks broken down. Review checklist.md and approve to proceed to analysis?"
       confirmation_needed: true
   
-  step_7_analysis:
+  step_8_analysis:
     command: /analyze
     outputs:
       - consistency_report
@@ -184,7 +184,7 @@ workflow:
       prompt: "Analysis complete. Review consistency report and approve to proceed to implementation check?"
       confirmation_needed: true
   
-  step_8_implementation_check:
+  step_9_implementation_check:
     command: /implement [task-id]
     checks:
       prerequisites: verified
@@ -203,7 +203,7 @@ workflow:
       confirmation_needed: true
       warning: "This will begin actual code changes"
   
-  step_9_development:
+  step_10_development:
     approach: manual_implementation_with_checkpoints
     requirements:
       - follow: knowledge/code_standards.md
@@ -232,7 +232,7 @@ workflow:
       prompt: "Development complete. Approve to proceed to completion summary?"
       confirmation_needed: true
 
-  step_10_completion:
+  step_11_completion:
     summary_document:
       location: specs/[NNN-feature]/implementation-summary.md
       required_sections:
@@ -253,7 +253,7 @@ workflow:
       prompt: "Implementation summary complete. Approve to finalize workflow?"
       confirmation_needed: true
 
-  step_11_branch_integration:
+  step_12_branch_integration:
     name: Branch Integration Approval
     approval_gate:
       type: USER_APPROVAL_REQUIRED

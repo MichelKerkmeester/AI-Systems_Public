@@ -63,7 +63,7 @@ field_handling:
 # WORKFLOW (AUTONOMOUS)
 # ───────────────────────────────────────────────────────────────
 workflow:
-  step_0_request_analysis:
+  step_1_request_analysis:
     input_source: USER_INPUTS_SECTION_ABOVE
     git_branch: "[GIT_BRANCH] → auto-create if empty"
     spec_folder: "[SPEC_FOLDER] → auto-create if empty"
@@ -79,7 +79,7 @@ workflow:
       - complexity_assessment
     validation: understanding_confirmed
   
-  step_1_pre_work_review:
+  step_2_pre_work_review:
     required_documents:
       - AGENTS.md
       - .specify/memory/constitution.md
@@ -87,7 +87,7 @@ workflow:
     verification: MUST REVIEW
     validation: principles_established
   
-  step_2_specification:
+  step_3_specification:
     command: /specify [feature-description]
     outputs:
       - feature_branch: created
@@ -98,7 +98,7 @@ workflow:
       when: analyzing_existing_features
       approach: Navigate → Snapshot → Analyze → Document
   
-  step_3_clarification:
+  step_4_clarification:
     command: /clarify
     outputs:
       - resolved_ambiguities
@@ -110,13 +110,13 @@ workflow:
       approach: Navigate → Inspect → Analyze → Clarify
       capture: current_behavior_screenshots
   
-  step_4_quality_checklist:
+  step_5_quality_checklist:
     command: /speckit.checklist
     outputs:
       - quality_checklist: generated
     validation: checklist_generated
   
-  step_5_planning:
+  step_6_planning:
     command: /plan [context]
     outputs:
       - plan.md: technical_approach
@@ -131,7 +131,7 @@ workflow:
         - review_console_errors
         - capture_performance_metrics
   
-  step_6_task_breakdown:
+  step_7_task_breakdown:
     command: /tasks
     outputs:
       - tasks/checklist.md
@@ -139,7 +139,7 @@ workflow:
       - tracking_structure: established
     validation: tasks_actionable
   
-  step_7_analysis:
+  step_8_analysis:
     command: /analyze
     outputs:
       - consistency_report
@@ -155,7 +155,7 @@ workflow:
         - functionality_gaps
         - performance_baseline
   
-  step_8_implementation_check:
+  step_9_implementation_check:
     command: /implement [task-id]
     checks:
       prerequisites: verified
@@ -169,7 +169,7 @@ workflow:
         - authentication_working
         - dependencies_loaded
   
-  step_9_development:
+  step_10_development:
     approach: autonomous_implementation_with_checkpoints
     requirements:
       - follow: knowledge/code_standards.md
@@ -191,7 +191,7 @@ workflow:
         - validate_dom_changes
         - measure_performance_impact
   
-  step_10_completion:
+  step_11_completion:
     summary_document:
       location: specs/[NNN-feature]/implementation-summary.md
       required_sections:
@@ -208,7 +208,7 @@ workflow:
       - summary_created: true
       - staging_verified: true
 
-  step_11_branch_integration:
+  step_12_branch_integration:
     name: Branch Integration Approval
     approval_gate:
       type: USER_APPROVAL_REQUIRED

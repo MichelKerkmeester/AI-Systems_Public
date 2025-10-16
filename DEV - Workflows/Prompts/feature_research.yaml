@@ -66,7 +66,7 @@ field_handling:
 # RESEARCH WORKFLOW
 # ───────────────────────────────────────────────────────────────
 workflow:
-  step_0_request_analysis:
+  step_1_request_analysis:
     input_source: USER_INPUTS_SECTION_ABOVE
     git_branch: "[GIT_BRANCH] → auto-create if empty"
     spec_folder: "[SPEC_FOLDER] → auto-create if empty"
@@ -94,7 +94,7 @@ workflow:
         - output_structure_planning
     validation: scope_defined
 
-  step_1_pre_work_review:
+  step_2_pre_work_review:
     required_documents:
       - AGENTS.md
       - knowledge/code_standards.md
@@ -103,7 +103,7 @@ workflow:
     verification: MUST REVIEW
     validation: principles_established
 
-  step_2_codebase_investigation:
+  step_3_codebase_investigation:
     action: Investigate existing codebase and patterns
     research_areas:
       - existing_implementations
@@ -128,7 +128,7 @@ workflow:
         - integration_opportunities
     validation: codebase_understood
 
-  step_3_external_research:
+  step_4_external_research:
     action: Research external documentation and best practices
     sources:
       - official_documentation
@@ -157,7 +157,7 @@ workflow:
         - vendor_comparison
     validation: external_research_complete
 
-  step_4_technical_analysis:
+  step_5_technical_analysis:
     action: Perform deep technical analysis and feasibility assessment
     analysis_areas:
       - architecture_implications
@@ -181,7 +181,7 @@ workflow:
         - risk_mitigation_strategies
     validation: technical_analysis_complete
 
-  step_5_solution_design:
+  step_6_solution_design:
     action: Design solution architecture and integration patterns
     deliverables:
       - proposed_architecture
@@ -210,7 +210,7 @@ workflow:
         - edge_case_handling
     validation: solution_designed
 
-  step_6_research_compilation:
+  step_7_research_compilation:
     action: Compile comprehensive research documentation for spec folder
     deep_analysis:
       focus: comprehensive_research_document
@@ -333,7 +333,7 @@ workflow:
         - Proceed to specification (/specify) if needed
         - Use research as reference during implementation planning
 
-  step_7_quality_checklist:
+  step_8_quality_checklist:
     command: /speckit.checklist
     outputs:
       - quality_checklist: generated

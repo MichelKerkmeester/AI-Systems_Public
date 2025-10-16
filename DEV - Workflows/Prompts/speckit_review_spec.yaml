@@ -90,7 +90,7 @@ field_handling:
 # WORKFLOW
 # ───────────────────────────────────────────────────────────────
 workflow:
-  step_0_initialization:
+  step_1_initialization:
     input_source: USER_INPUTS_SECTION_ABOVE
     git_branch: "[GIT_BRANCH] → auto-create if empty"
     spec_folder: "[SPEC_FOLDER] → auto-create if empty"
@@ -120,7 +120,7 @@ workflow:
 
     validation: spec_loaded_successfully
 
-  step_1_deep_spec_analysis:
+  step_2_deep_spec_analysis:
     deep_analysis:
       mode: COMPREHENSIVE_ANALYSIS
       context_integration: "Consider [CONTEXT] throughout analysis"
@@ -171,7 +171,7 @@ workflow:
 
     validation: deep_analysis_complete
 
-  step_2_gap_identification:
+  step_3_gap_identification:
     systematic_gap_analysis:
       requirement_gaps:
       - Missing functional requirements
@@ -214,13 +214,13 @@ workflow:
 
     validation: gaps_documented
 
-  step_3_quality_checklist:
+  step_4_quality_checklist:
     command: /speckit.checklist
     outputs:
     - quality_checklist: generated
     validation: checklist_generated
 
-  step_4_ambiguity_resolution:
+  step_5_ambiguity_resolution:
     ambiguity_detection:
       linguistic_analysis:
       - Vague terms identification
@@ -250,7 +250,7 @@ workflow:
 
     validation: ambiguities_resolved
 
-  step_5_edge_case_discovery:
+  step_6_edge_case_discovery:
     edge_case_analysis:
       mode: EDGE_CASE_EXPLORATION
       context_awareness: "Apply [CONTEXT] knowledge to edge case generation"
@@ -307,7 +307,7 @@ workflow:
 
     validation: edge_cases_comprehensive
 
-  step_6_technical_feasibility:
+  step_7_technical_feasibility:
     feasibility_assessment:
       implementation_review:
       - Technical approach viability
@@ -344,7 +344,7 @@ workflow:
 
     validation: feasibility_confirmed
 
-  step_7_improvement_implementation:
+  step_8_improvement_implementation:
     improvement_categories:
       structural_improvements:
       - Reorganize sections logically
@@ -388,7 +388,7 @@ workflow:
 
     validation: improvements_applied
 
-  step_8_quality_validation:
+  step_9_quality_validation:
     validation_criteria:
       completeness_check:
       - All requirements addressed
@@ -432,7 +432,7 @@ workflow:
 
     validation: quality_standards_met
 
-  step_9_final_review:
+  step_10_final_review:
     critical_review:
       mode: FINAL_CRITICAL_REVIEW
       question: "Would I confidently implement this spec?"
@@ -469,7 +469,7 @@ workflow:
 
     validation: review_complete
 
-  step_10_completion:
+  step_11_completion:
     summary_document:
       location: "[SPEC_FOLDER]/spec-review-summary.md"
       required_sections:

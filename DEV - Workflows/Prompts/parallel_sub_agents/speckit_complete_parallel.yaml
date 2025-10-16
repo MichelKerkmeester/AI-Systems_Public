@@ -100,35 +100,35 @@ sub_agents:
 # ───────────────────────────────────────────────────────────────
 workflow:
   # Original gates preserved around these steps
-  step_0_request_analysis:
+  step_1_request_analysis:
     action: Analyze user inputs and confirm understanding
     approval_gate:
       type: USER_APPROVAL_REQUIRED
       prompt: "Requirements analyzed. Proceed to pre-work review?"
       confirmation_needed: true
 
-  step_1_pre_work_review:
+  step_2_pre_work_review:
     action: Review AGENTS.md and knowledge base
     approval_gate:
       type: USER_APPROVAL_REQUIRED
       prompt: "Pre-work documentation reviewed. Proceed to specification?"
       confirmation_needed: true
 
-  step_2_specification:
+  step_3_specification:
     command: /specify [feature-description]
     approval_gate:
       type: USER_APPROVAL_REQUIRED
       prompt: "Specification created. Approve to proceed to clarification?"
       confirmation_needed: true
 
-  step_3_clarification:
+  step_4_clarification:
     command: /clarify
     approval_gate:
       type: USER_APPROVAL_REQUIRED
       prompt: "Requirements clarified. Proceed to quality checklist?"
       confirmation_needed: true
 
-  step_4_quality_checklist:
+  step_5_quality_checklist:
     command: /speckit.checklist
     approval_gate:
       type: USER_APPROVAL_REQUIRED
@@ -136,7 +136,7 @@ workflow:
       confirmation_needed: true
 
   # Stage A: Planning/Spec parallel block
-  step_5_parallel_planning:
+  step_6_parallel_planning:
     description: Parallel specialist analyses for planning/spec
     parallel_work:
       execution: parallel
@@ -170,14 +170,14 @@ workflow:
       prompt: "Planning artifacts synthesized. Approve to proceed to task breakdown?"
       confirmation_needed: true
 
-  step_6_task_breakdown:
+  step_7_task_breakdown:
     command: /tasks
     approval_gate:
       type: USER_APPROVAL_REQUIRED
       prompt: "Tasks broken down. Approve to proceed to analysis?"
       confirmation_needed: true
 
-  step_7_analysis:
+  step_8_analysis:
     command: /analyze
     approval_gate:
       type: USER_APPROVAL_REQUIRED
@@ -185,7 +185,7 @@ workflow:
       confirmation_needed: true
 
   # Stage B: Implementation preparation parallel block
-  step_8_parallel_implementation_prep:
+  step_9_parallel_implementation_prep:
     description: Parallel prep for core, integrations, tests, docs
     parallel_work:
       execution: parallel
@@ -218,7 +218,7 @@ workflow:
       prompt: "Implementation plan synthesized. Approve to proceed to implementation check?"
       confirmation_needed: true
 
-  step_9_implementation_check:
+  step_10_implementation_check:
     command: /implement [task-id]
     approval_gate:
       type: USER_APPROVAL_REQUIRED
@@ -226,7 +226,7 @@ workflow:
       confirmation_needed: true
       warning: "This will begin actual code changes"
 
-  step_10_development:
+  step_11_development:
     approach: manual_implementation_with_checkpoints
     approval_gate:
       type: USER_APPROVAL_REQUIRED
@@ -234,7 +234,7 @@ workflow:
       confirmation_needed: true
 
   # Stage C: Quality/Review parallel block
-  step_11_parallel_quality_review:
+  step_12_parallel_quality_review:
     description: Parallel reviewers for final quality validation
     parallel_work:
       execution: parallel
@@ -267,7 +267,7 @@ workflow:
       prompt: "Quality review complete. Approve to proceed to completion summary?"
       confirmation_needed: true
 
-  step_12_completion:
+  step_13_completion:
     summary_document:
       location: specs/[NNN-feature]/implementation-summary.md
     final_approval_gate:
@@ -275,7 +275,7 @@ workflow:
       prompt: "Implementation summary complete. Approve to finalize workflow?"
       confirmation_needed: true
 
-  step_13_branch_integration:
+  step_14_branch_integration:
     approval_gate:
       type: USER_APPROVAL_REQUIRED
       prompt: "All checks passed. Push this branch to main now to keep main up to date and minimize conflicts?"

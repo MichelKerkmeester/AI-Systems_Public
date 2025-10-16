@@ -96,11 +96,11 @@ sub_agents:
 # WORKFLOW (PARALLEL OUTPUT QA BY MAIN AGENT)
 # ───────────────────────────────────────────────────────────────
 workflow:
-  step_0_request_analysis:
+  step_1_request_analysis:
     action: Analyze inputs; define research scope and goals
     validation: scope_defined
 
-  step_1_pre_work_review:
+  step_2_pre_work_review:
     required_documents:
       - AGENTS.md
       - knowledge/code_standards.md
@@ -108,7 +108,7 @@ workflow:
     validation: principles_established
 
   # Parallel research block spanning codebase and external research
-  step_2_parallel_research:
+  step_3_parallel_research:
     analyze_inputs:
       define_queries:
         - domains
@@ -164,10 +164,10 @@ workflow:
         - main_agent_review_notes
         - final_signoff: true
 
-  step_3_research_compilation:
+  step_4_research_compilation:
     note: Research document already synthesized; ensure section coverage and polish
 
-  step_4_quality_checklist:
+  step_5_quality_checklist:
     command: /speckit.checklist
 
 # ───────────────────────────────────────────────────────────────

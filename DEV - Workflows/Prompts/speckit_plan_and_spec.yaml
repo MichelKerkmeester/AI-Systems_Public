@@ -61,7 +61,7 @@ field_handling:
 # WORKFLOW - PLANNING PHASE ONLY
 # ───────────────────────────────────────────────────────────────
 workflow:
-  step_0_request_analysis:
+  step_1_request_analysis:
     input_source: USER_INPUTS_SECTION_ABOVE
     git_branch: "[GIT_BRANCH] → auto-create if empty"
     spec_folder: "[SPEC_FOLDER] → auto-create if empty"
@@ -81,7 +81,7 @@ workflow:
       prompt: "Requirements analyzed. Proceed to pre-work review?"
       confirmation_needed: true
 
-  step_1_pre_work_review:
+  step_2_pre_work_review:
     required_documents:
     - AGENTS.md
     - .specify/memory/constitution.md
@@ -89,7 +89,7 @@ workflow:
     verification: MUST REVIEW
     validation: principles_established
 
-  step_2_specification:
+  step_3_specification:
     command: /specify [feature-description]
     outputs:
     - feature_branch: created
@@ -100,7 +100,7 @@ workflow:
       when: analyzing_existing_features
       approach: Navigate → Snapshot → Analyze → Document
 
-  step_3_clarification:
+  step_4_clarification:
     command: /clarify
     outputs:
     - resolved_ambiguities
@@ -116,13 +116,13 @@ workflow:
       prompt: "Requirements clarified. Proceed to quality checklist?"
       confirmation_needed: true
 
-  step_4_quality_checklist:
+  step_5_quality_checklist:
     command: /speckit.checklist
     outputs:
     - quality_checklist: generated
     validation: checklist_generated
 
-  step_5_planning:
+  step_6_planning:
     command: /plan [context]
     outputs:
     - plan.md: technical_approach
@@ -184,8 +184,8 @@ post_completion:
 # WORKFLOW TERMINATION
 # ───────────────────────────────────────────────────────────────
 termination:
-  after_step: 5
-  message: "Planning phase completed successfully. Workflow terminated after step 5 as requested."
+  after_step: 6
+  message: "Planning phase completed successfully. Workflow terminated after step 6 as requested."
   next_steps:
   - Review planning documentation
   - Approve technical approach

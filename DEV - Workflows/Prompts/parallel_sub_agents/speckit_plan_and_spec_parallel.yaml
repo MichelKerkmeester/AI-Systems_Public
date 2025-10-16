@@ -96,7 +96,7 @@ sub_agents:
 # WORKFLOW (PARALLEL OUTPUT QA BY MAIN AGENT)
 # ───────────────────────────────────────────────────────────────
 workflow:
-  step_0_request_analysis:
+  step_1_request_analysis:
     input_source: USER_INPUTS_SECTION_ABOVE
     git_branch: "[GIT_BRANCH] → auto-create if empty"
     spec_folder: "[SPEC_FOLDER] → auto-create if empty"
@@ -116,7 +116,7 @@ workflow:
       prompt: "Requirements analyzed. Proceed to pre-work review?"
       confirmation_needed: true
 
-  step_1_pre_work_review:
+  step_2_pre_work_review:
     required_documents:
       - AGENTS.md
       - .specify/memory/constitution.md
@@ -124,7 +124,7 @@ workflow:
     verification: MUST REVIEW
     validation: principles_established
 
-  step_2_specification:
+  step_3_specification:
     command: /specify [feature-description]
     outputs:
       - feature_branch: created
@@ -132,7 +132,7 @@ workflow:
       - location: specs/[NNN-feature]/spec.md
     validation: spec_complete_and_testable
 
-  step_3_clarification:
+  step_4_clarification:
     command: /clarify
     outputs:
       - resolved_ambiguities
@@ -144,14 +144,14 @@ workflow:
       prompt: "Requirements clarified. Proceed to quality checklist?"
       confirmation_needed: true
 
-  step_4_quality_checklist:
+  step_5_quality_checklist:
     command: /speckit.checklist
     outputs:
       - quality_checklist: generated
     validation: checklist_generated
 
-  # New parallel planning block (fan-out/fan-in) before step_6_planning
-  step_5_parallel_planning:
+# New parallel planning block (fan-out/fan-in) before step_7_planning
+  step_6_parallel_planning:
     description: Parallel specialist analyses with bounded concurrency
     analyze_inputs:
       summarize:
@@ -217,7 +217,7 @@ workflow:
     main_agent_finalization:
       by: MAIN_AGENT
       action: QA review and finalization of planning artifacts will occur next
-      defer_to_step: step_6_planning
+      defer_to_step: step_7_planning
       checks:
         - confirm_alignment_with_request_and_context
         - validate_completeness_and_consistency
@@ -227,7 +227,7 @@ workflow:
         - main_agent_review_notes
         - final_signoff: true
 
-  step_6_planning:
+  step_7_planning:
     note: Validate synthesized plan.md and planning-summary.md; apply any final refinements
     validation: approach_defined
     final_output:

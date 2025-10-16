@@ -97,23 +97,23 @@ sub_agents:
 # WORKFLOW (PARALLEL OUTPUT QA BY MAIN AGENT)
 # ───────────────────────────────────────────────────────────────
 workflow:
-  step_0_request_analysis:
+  step_1_request_analysis:
     action: Analyze inputs and confirm understanding; define success criteria
     validation: understanding_confirmed
 
-  step_1_pre_work_review:
+  step_2_pre_work_review:
     required_documents:
       - AGENTS.md
       - knowledge/code_standards.md
       - knowledge/debugging.md
     validation: principles_established
 
-  step_2_specification:
+  step_3_specification:
     command: /specify [debug-investigation-plan]
     validation: investigation_spec_complete
 
   # Parallel evidence gathering between spec and clarification
-  step_3_parallel_evidence:
+  step_4_parallel_evidence:
     analyze_inputs:
       unify_problem_statement: true
       define_invariants: true
@@ -176,29 +176,29 @@ workflow:
         - main_agent_review_notes
         - final_signoff: true
 
-  step_4_clarification:
+  step_5_clarification:
     command: /clarify
 
-  step_5_planning:
+  step_6_planning:
     command: /plan [debug-approach]
 
-  step_6_task_breakdown:
+  step_7_task_breakdown:
     command: /tasks
 
-  step_7_analysis:
+  step_8_analysis:
     command: /analyze
 
-  step_8_implementation_check:
+  step_9_implementation_check:
     command: /implement [debug-fix]
 
-  step_9_development:
+  step_10_development:
     approach: autonomous_fix_implementation
 
-  step_10_completion:
+  step_11_completion:
     summary_document:
       location: specs/[NNN-debug]/debug-summary.md
 
-  step_11_branch_integration:
+  step_12_branch_integration:
     approval_gate:
       type: USER_APPROVAL_REQUIRED
       prompt: "All checks passed. Push this branch to main now to keep main up to date and minimize conflicts?"

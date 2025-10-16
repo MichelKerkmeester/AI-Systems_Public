@@ -111,7 +111,7 @@ field_handling:
 # WORKFLOW
 # ───────────────────────────────────────────────────────────────
 workflow:
-  step_0_request_analysis:
+  step_1_request_analysis:
     input_source: USER_INPUTS_SECTION_ABOVE
     git_branch: "[GIT_BRANCH] → auto-create if empty"
     spec_folder: "[SPEC_FOLDER] → auto-create if empty"
@@ -155,7 +155,7 @@ workflow:
 
     validation: baseline_documented
 
-  step_1_pre_work_review:
+  step_2_pre_work_review:
     required_documents:
       - AGENTS.md
       - knowledge/code_standards.md
@@ -177,7 +177,7 @@ workflow:
     verification: MUST REVIEW
     validation: principles_established
 
-  step_2_specification:
+  step_3_specification:
     command: /specify [performance-optimization-plan]
     outputs:
       - feature_branch: created  # Uses perf-[NNN]-[description] naming
@@ -220,7 +220,7 @@ workflow:
         - mcp__chrome-devtools__take_snapshot: Capture DOM states
         - mcp__chrome-devtools__performance_stop_trace: End profiling
 
-  step_3_clarification:
+  step_4_clarification:
     command: /clarify
     outputs:
       - optimization_constraints: documented
@@ -257,7 +257,7 @@ workflow:
         - mcp__chrome-devtools__hover: Check hover states
         - mcp__chrome-devtools__take_screenshot: Document features
 
-  step_4_planning:
+  step_5_planning:
     command: /plan [optimization-approach]
     outputs:
       - optimization_plan.md: technical_approach
@@ -299,7 +299,7 @@ workflow:
     validation: approach_defined
     # Use DevTools to analyze network, render blocking, script impact, memory
 
-  step_5_task_breakdown:
+  step_6_task_breakdown:
     command: /tasks
     outputs:
       - tasks/checklist.md  # Standard SpecKit path
@@ -333,7 +333,7 @@ workflow:
 
     validation: tasks_actionable
 
-  step_6_analysis:
+  step_7_analysis:
     command: /analyze
     outputs:
       - performance_impact_report
@@ -366,13 +366,13 @@ workflow:
         - mcp__chrome-devtools__performance_analyze_insight: Compare metrics
         - mcp__chrome-devtools__take_screenshot: Document improvements
 
-  step_7_quality_checklist:
+  step_8_quality_checklist:
     command: /speckit.checklist
     outputs:
       - quality_checklist: generated
     validation: checklist_generated
 
-  step_8_implementation_check:
+  step_9_implementation_check:
     command: /implement [optimization-task]
     checks:
       prerequisites: verified
@@ -393,7 +393,7 @@ workflow:
 
     # Verify readiness: current performance stable, all features working, env ready
 
-  step_9_development:
+  step_10_development:
     approach: incremental_optimization_with_validation
     requirements:
       - follow: knowledge/code_standards.md
@@ -461,7 +461,7 @@ workflow:
         - mcp__chrome-devtools__take_screenshot: Document state
         - mcp__chrome-devtools__performance_analyze_insight: Verify improvements
 
-  step_10_completion:
+  step_11_completion:
     summary_document:
       location: specs/[NNN-performance]/optimization-summary.md
       required_sections:
@@ -508,7 +508,7 @@ workflow:
       - documentation_complete: true
       - staging_verified: true
 
-  step_11_branch_integration:
+  step_12_branch_integration:
     name: Branch Integration Approval
     approval_gate:
       type: USER_APPROVAL_REQUIRED
