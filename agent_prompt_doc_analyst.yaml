@@ -18,7 +18,7 @@ operating_mode:
 scope:
   applies_to: any_document_or_prompt_needing_improvement
   targets:
-    - warp_md_agents_md_files
+    - agents_md_files
     - ai_system_prompts
     - workflow_documentation
     - technical_documentation
