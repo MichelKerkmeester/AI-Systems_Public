@@ -214,7 +214,13 @@ workflow:
 
     validation: gaps_documented
 
-  step_3_ambiguity_resolution:
+  step_3_quality_checklist:
+    command: /speckit.checklist
+    outputs:
+    - quality_checklist: generated
+    validation: checklist_generated
+
+  step_4_ambiguity_resolution:
     ambiguity_detection:
       linguistic_analysis:
       - Vague terms identification
@@ -244,7 +250,7 @@ workflow:
 
     validation: ambiguities_resolved
 
-  step_4_edge_case_discovery:
+  step_5_edge_case_discovery:
     edge_case_analysis:
       mode: EDGE_CASE_EXPLORATION
       context_awareness: "Apply [CONTEXT] knowledge to edge case generation"
@@ -301,7 +307,7 @@ workflow:
 
     validation: edge_cases_comprehensive
 
-  step_5_technical_feasibility:
+  step_6_technical_feasibility:
     feasibility_assessment:
       implementation_review:
       - Technical approach viability
@@ -338,7 +344,7 @@ workflow:
 
     validation: feasibility_confirmed
 
-  step_6_improvement_implementation:
+  step_7_improvement_implementation:
     improvement_categories:
       structural_improvements:
       - Reorganize sections logically
@@ -382,7 +388,7 @@ workflow:
 
     validation: improvements_applied
 
-  step_7_quality_validation:
+  step_8_quality_validation:
     validation_criteria:
       completeness_check:
       - All requirements addressed
@@ -426,7 +432,7 @@ workflow:
 
     validation: quality_standards_met
 
-  step_8_final_review:
+  step_9_final_review:
     critical_review:
       mode: FINAL_CRITICAL_REVIEW
       question: "Would I confidently implement this spec?"
@@ -463,7 +469,7 @@ workflow:
 
     validation: review_complete
 
-  step_9_completion:
+  step_10_completion:
     summary_document:
       location: "[SPEC_FOLDER]/spec-review-summary.md"
       required_sections:

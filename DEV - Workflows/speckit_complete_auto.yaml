@@ -110,7 +110,13 @@ workflow:
       approach: Navigate → Inspect → Analyze → Clarify
       capture: current_behavior_screenshots
   
-  step_4_planning:
+  step_4_quality_checklist:
+    command: /speckit.checklist
+    outputs:
+      - quality_checklist: generated
+    validation: checklist_generated
+  
+  step_5_planning:
     command: /plan [context]
     outputs:
       - plan.md: technical_approach
@@ -125,7 +131,7 @@ workflow:
         - review_console_errors
         - capture_performance_metrics
   
-  step_5_task_breakdown:
+  step_6_task_breakdown:
     command: /tasks
     outputs:
       - tasks/checklist.md
@@ -133,7 +139,7 @@ workflow:
       - tracking_structure: established
     validation: tasks_actionable
   
-  step_6_analysis:
+  step_7_analysis:
     command: /analyze
     outputs:
       - consistency_report
@@ -149,7 +155,7 @@ workflow:
         - functionality_gaps
         - performance_baseline
   
-  step_7_implementation_check:
+  step_8_implementation_check:
     command: /implement [task-id]
     checks:
       prerequisites: verified
@@ -163,7 +169,7 @@ workflow:
         - authentication_working
         - dependencies_loaded
   
-  step_8_development:
+  step_9_development:
     approach: autonomous_implementation_with_checkpoints
     requirements:
       - follow: knowledge/code_standards.md
@@ -185,7 +191,7 @@ workflow:
         - validate_dom_changes
         - measure_performance_impact
   
-  step_9_completion:
+  step_10_completion:
     summary_document:
       location: specs/[NNN-feature]/implementation-summary.md
       required_sections:
@@ -202,7 +208,7 @@ workflow:
       - summary_created: true
       - staging_verified: true
 
-  step_10_branch_integration:
+  step_11_branch_integration:
     name: Branch Integration Approval
     approval_gate:
       type: USER_APPROVAL_REQUIRED

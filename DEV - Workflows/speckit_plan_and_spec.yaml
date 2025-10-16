@@ -113,10 +113,16 @@ workflow:
       capture: current_behavior_screenshots
     approval_gate:
       type: USER_APPROVAL_REQUIRED
-      prompt: "Requirements clarified. Proceed to planning?"
+      prompt: "Requirements clarified. Proceed to quality checklist?"
       confirmation_needed: true
 
-  step_4_planning:
+  step_4_quality_checklist:
+    command: /speckit.checklist
+    outputs:
+    - quality_checklist: generated
+    validation: checklist_generated
+
+  step_5_planning:
     command: /plan [context]
     outputs:
     - plan.md: technical_approach
@@ -178,8 +184,8 @@ post_completion:
 # WORKFLOW TERMINATION
 # ───────────────────────────────────────────────────────────────
 termination:
-  after_step: 4
-  message: "Planning phase completed successfully. Workflow terminated after step 4 as requested."
+  after_step: 5
+  message: "Planning phase completed successfully. Workflow terminated after step 5 as requested."
   next_steps:
   - Review planning documentation
   - Approve technical approach

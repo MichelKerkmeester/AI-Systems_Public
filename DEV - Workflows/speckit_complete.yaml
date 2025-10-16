@@ -120,10 +120,20 @@ workflow:
       capture: current_behavior_screenshots
     approval_gate:
       type: USER_APPROVAL_REQUIRED
-      prompt: "Requirements clarified. Proceed to planning?"
+      prompt: "Requirements clarified. Proceed to quality checklist?"
       confirmation_needed: true
   
-  step_4_planning:
+  step_4_quality_checklist:
+    command: /speckit.checklist
+    outputs:
+      - quality_checklist: generated
+    validation: checklist_generated
+    approval_gate:
+      type: USER_APPROVAL_REQUIRED
+      prompt: "Quality checklist complete. Proceed to planning?"
+      confirmation_needed: true
+  
+  step_5_planning:
     command: /plan [context]
     outputs:
       - plan.md: technical_approach
@@ -142,7 +152,7 @@ workflow:
       prompt: "Technical plan created. Review plan.md and approve to proceed to task breakdown?"
       confirmation_needed: true
   
-  step_5_task_breakdown:
+  step_6_task_breakdown:
     command: /tasks
     outputs:
       - tasks/checklist.md
@@ -154,7 +164,7 @@ workflow:
       prompt: "Tasks broken down. Review checklist.md and approve to proceed to analysis?"
       confirmation_needed: true
   
-  step_6_analysis:
+  step_7_analysis:
     command: /analyze
     outputs:
       - consistency_report
@@ -174,7 +184,7 @@ workflow:
       prompt: "Analysis complete. Review consistency report and approve to proceed to implementation check?"
       confirmation_needed: true
   
-  step_7_implementation_check:
+  step_8_implementation_check:
     command: /implement [task-id]
     checks:
       prerequisites: verified
@@ -193,7 +203,7 @@ workflow:
       confirmation_needed: true
       warning: "This will begin actual code changes"
   
-  step_8_development:
+  step_9_development:
     approach: manual_implementation_with_checkpoints
     requirements:
       - follow: knowledge/code_standards.md
@@ -222,7 +232,7 @@ workflow:
       prompt: "Development complete. Approve to proceed to completion summary?"
       confirmation_needed: true
 
-  step_9_completion:
+  step_10_completion:
     summary_document:
       location: specs/[NNN-feature]/implementation-summary.md
       required_sections:
@@ -243,7 +253,7 @@ workflow:
       prompt: "Implementation summary complete. Approve to finalize workflow?"
       confirmation_needed: true
 
-  step_10_branch_integration:
+  step_11_branch_integration:
     name: Branch Integration Approval
     approval_gate:
       type: USER_APPROVAL_REQUIRED

@@ -339,7 +339,13 @@ workflow:
             marks: performance.getEntriesByType('mark').length
           })
 
-  step_7_implementation_check:
+  step_7_quality_checklist:
+    command: /speckit.checklist
+    outputs:
+      - quality_checklist: generated
+    validation: checklist_generated
+
+  step_8_implementation_check:
     command: /implement [debug-fix]
     checks:
       prerequisites: verified
@@ -367,7 +373,7 @@ workflow:
         - dependencies_loaded
         - no_breaking_changes
 
-  step_8_development:
+  step_9_development:
     approach: autonomous_fix_implementation
     requirements:
       - follow: knowledge/code_standards.md
@@ -420,7 +426,7 @@ workflow:
         - mcp__chrome-devtools__list_console_messages: Verify no new errors
         - mcp__chrome-devtools__list_network_requests: Check API impacts
 
-  step_9_completion:
+  step_10_completion:
     summary_document:
       location: specs/[NNN-debug]/debug-summary.md  # Debug artifacts in debug-numbered folders
       required_sections:
@@ -466,7 +472,7 @@ workflow:
       - documentation_complete: true
       - staging_verified: true
 
-  step_10_branch_integration:
+  step_11_branch_integration:
     name: Branch Integration Approval
     approval_gate:
       type: USER_APPROVAL_REQUIRED

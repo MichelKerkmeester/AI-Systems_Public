@@ -67,7 +67,7 @@ workflow:
 
   step_2_generate_yaml:
     action: AUTOMATICALLY create YAML file
-    output_location: /Context
+    output_location: /Users/michelkerkmeester/MEGA/Websites/anobel.com/z_prompts/context
     naming: context_request_{slug}.yaml (lowercase_underscores, max 50 chars)
 
     yaml_structure: |
@@ -93,6 +93,12 @@ workflow:
 
     completion_message: "✓ Generated: {filename}"
     validation: yaml_created
+
+  step_3_quality_checklist:
+    command: /speckit.checklist
+    outputs:
+      - quality_checklist: generated
+    validation: checklist_generated
 
 # ───────────────────────────────────────────────────────────────
 # EXAMPLES

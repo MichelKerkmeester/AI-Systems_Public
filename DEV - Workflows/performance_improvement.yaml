@@ -366,7 +366,13 @@ workflow:
         - mcp__chrome-devtools__performance_analyze_insight: Compare metrics
         - mcp__chrome-devtools__take_screenshot: Document improvements
 
-  step_7_implementation_check:
+  step_7_quality_checklist:
+    command: /speckit.checklist
+    outputs:
+      - quality_checklist: generated
+    validation: checklist_generated
+
+  step_8_implementation_check:
     command: /implement [optimization-task]
     checks:
       prerequisites: verified
@@ -387,7 +393,7 @@ workflow:
 
     # Verify readiness: current performance stable, all features working, env ready
 
-  step_8_development:
+  step_9_development:
     approach: incremental_optimization_with_validation
     requirements:
       - follow: knowledge/code_standards.md
@@ -455,7 +461,7 @@ workflow:
         - mcp__chrome-devtools__take_screenshot: Document state
         - mcp__chrome-devtools__performance_analyze_insight: Verify improvements
 
-  step_9_completion:
+  step_10_completion:
     summary_document:
       location: specs/[NNN-performance]/optimization-summary.md
       required_sections:
@@ -502,7 +508,7 @@ workflow:
       - documentation_complete: true
       - staging_verified: true
 
-  step_10_branch_integration:
+  step_11_branch_integration:
     name: Branch Integration Approval
     approval_gate:
       type: USER_APPROVAL_REQUIRED

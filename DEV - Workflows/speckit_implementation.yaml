@@ -33,8 +33,8 @@ rules:
 # USER INPUTS
 # ───────────────────────────────────────────────────────────────
 user_inputs:
-  git_branch: "[GIT_BRANCH]"
-  spec_folder: "[SPEC_FOLDER]"
+  git_branch: "main"
+  spec_folder: "/Users/michelkerkmeester/MEGA/Websites/anobel.com/specs/003_welcome_modal"
   context: "[CONTEXT]"
   issues: "[ISSUES]"
   request: "[REQUEST]"
@@ -144,7 +144,13 @@ workflow:
       - integration_points
       - risk_assessment
 
-  step_7_implementation_check:
+  step_7_quality_checklist:
+    command: /speckit.checklist
+    outputs:
+    - quality_checklist: generated
+    validation: checklist_generated
+
+  step_8_implementation_check:
     command: /implement [task-id]
     checks:
       prerequisites: verified
@@ -165,7 +171,7 @@ workflow:
       - blocker_identification
       - readiness_confirmation
 
-  step_8_development:
+  step_9_development:
     approach: autonomous_implementation_with_checkpoints
     requirements:
     - follow: knowledge/code_standards.md
@@ -196,7 +202,7 @@ workflow:
       - optimization_opportunities
       - test_coverage_gaps
 
-  step_9_completion:
+  step_10_completion:
     summary_document:
       location: "[SPEC_FOLDER]/implementation-summary.md"
       required_sections:

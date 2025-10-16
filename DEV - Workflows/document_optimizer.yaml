@@ -6,7 +6,6 @@ purpose: Make documentation more concise and clearer without reducing clarity or
 action: Optimize documentation files in spec folders or standalone files
 
 operating_mode:
-  execution: autonomous
   approvals: none
   workflow: sequential
   workflow_compliance: MANDATORY
@@ -174,7 +173,13 @@ workflow:
     validation: verify_all_quality_standards
     output: optimized_document
 
-  step_4_report_changes:
+  step_4_quality_checklist:
+    command: /speckit.checklist
+    outputs:
+      - quality_checklist: generated
+    validation: checklist_generated
+
+  step_5_report_changes:
     action: Generate comprehensive change summary
     format: optimization_summary_template
     outputs:
@@ -182,7 +187,7 @@ workflow:
       - metrics_summary
       - improvement_highlights
 
-  step_5_completion:
+  step_6_completion:
     summary_document:
       location: "[SPEC_FOLDER]/optimization-summary.md"
       required_sections:
@@ -202,7 +207,7 @@ workflow:
       - redundancy_eliminated: true
       - summary_created: true
 
-  step_6_optional_commit:
+  step_7_optional_commit:
     action: Commit optimized documentation
     git_branch: "[GIT_BRANCH]"
     message: "docs: optimize [SPEC_FOLDER] for conciseness and clarity"

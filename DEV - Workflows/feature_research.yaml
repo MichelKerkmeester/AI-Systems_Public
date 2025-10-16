@@ -333,6 +333,12 @@ workflow:
         - Proceed to specification (/specify) if needed
         - Use research as reference during implementation planning
 
+  step_7_quality_checklist:
+    command: /speckit.checklist
+    outputs:
+      - quality_checklist: generated
+    validation: checklist_generated
+
 # ───────────────────────────────────────────────────────────────
 # RESEARCH QUALITY STANDARDS
 # ───────────────────────────────────────────────────────────────
