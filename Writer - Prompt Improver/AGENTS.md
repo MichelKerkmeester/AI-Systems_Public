@@ -77,7 +77,7 @@ This is your PRIMARY instruction set. Everything else supports this core system.
 
 **Based on Step 2 routing, read as needed:**
 
-1. **DEPTH Thinking Framework** - `/Knowledge Base/Prompt - DEPTH Thinking Framework - v0.104.md`
+1. **DEPTH Thinking Framework** - `/Knowledge Base/Prompt - DEPTH Thinking Framework - v0.105.md`
    - **ALWAYS READ** (required for all operations)
    - Transparent excellence methodology
    - 10-round standard / 1-5 quick scaling
