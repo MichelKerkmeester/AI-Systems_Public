@@ -14,30 +14,47 @@
 - Pattern: Jumping directly to implementation without proper analysis
 - Root Cause: Overconfidence in understanding the problem
 - Prevention: Analyze request thoroughly → Verify understanding (ask for clarification if needed) → Choose simplest approach
-- Example: Asked to investigate, but starts changing code immediately
+- Example [PLAUSIBLE]: Asked to investigate, but starts changing code immediately
+
+**Concrete Example [PLAUSIBLE]:**
+User: "The modal animation feels sluggish. Can you investigate?"
+
+❌ **Rushed approach:** Immediately modifies animation timings without:
+- Reading animation_strategy.md for current standards
+- Checking webflow_platform_constraints.md for limits
+- Measuring actual duration vs. expected
+
+✅ **Correct approach:**
+1. Read animation_strategy.md:1-50 → Get timing standards (300ms for modals)
+2. Check webflow_platform_constraints.md:30-45 → Verify platform limits
+3. Measure actual animation duration → Identify discrepancy with evidence
+4. Propose targeted fix with rationale
+
+**This pattern applies to all failure modes below: Analyze → Verify → Then act.**
 
 #### 2. Assumption-Based Changes
 - Pattern: Modifying code based on assumptions rather than evidence
 - Root Cause: Not reading existing implementation thoroughly
 - Prevention: Require full code trace before any modifications; ask clarifying questions to resolve ambiguity
-- Example: "Fixing" S3 upload that wasn't actually broken
+- Example [PLAUSIBLE]: "Fixing" S3 upload that wasn't actually broken
 
 #### 3. Task Misinterpretation
 - Pattern: Implementing features when asked to investigate/document
 - Root Cause: Not carefully parsing the actual request
 - Prevention: Explicit request type classification and scope analysis; confirm by asking a clarifying question when needed
-- Example: Creating code when asked for a task document
+- Example [PLAUSIBLE]: Creating code when asked for a task document
 
 #### 4. Cascading Breaks
 - Pattern: "Fixing" non-existent problems and breaking working code
 - Root Cause: Not testing assumptions before making changes
 - Prevention: Verify problem exists through reproduction first; if reproduction is blocked by ambiguity, ask for clarification
+- Example [PLAUSIBLE]: Breaking working code by "fixing" non-existent problems
 
 #### 5. Over-Engineering
 - Pattern: Adding unnecessary complexity, abstractions, or "future-proofing"
 - Root Cause: Anticipating needs that don't exist; gold-plating solutions
 - Prevention: Solve ONLY the stated problem; reject premature optimization; confirm scope via a clarifying question when in doubt
-- Example: Creating a complex state management system when a simple variable suffices
+- Example [PLAUSIBLE]: Creating a complex state management system when a simple variable suffices
 
 **Example Authenticity:** Tag every example as [REAL], [PLAUSIBLE], or [HYPOTHETICAL]. If [REAL], cite source (file path, line number). If uncertain, use [PLAUSIBLE] and state "I'M UNCERTAIN" per Explicit Uncertainty Rule.
 
@@ -48,7 +65,7 @@
 **Required Reading** - These documents define our non-negotiable standards:
 
 ### Core Development Standards
-1. [knowledge/code_standards.md](./knowledge/code_standards.md) 
+1. [knowledge/code_standards.md](./knowledge/code_standards.md)
 2. [knowledge/initialization_pattern.md](./knowledge/initialization_pattern.md)
 3. [knowledge/webflow_platform_constraints.md](./knowledge/webflow_platform_constraints.md)
 4. [knowledge/animation_strategy.md](./knowledge/animation_strategy.md)
@@ -75,6 +92,7 @@ CONTEXT GATHERING:
 □ What existing patterns should be followed?
 □ What documentation is relevant? (Check code_standards.md)
 □ What dependencies or side effects exist?
+□ Which tools verify this? (Read for files, Grep for patterns, Task for exploration)
 
 SOLUTION REQUIREMENTS:
 □ What is the MINIMUM needed to satisfy this request?
@@ -97,6 +115,7 @@ SOLUTION REQUIREMENTS:
    - What evidence confirms the problem?
    - What testing proves the solution works?
    - Cite sources (file paths + line ranges) for key claims; if no source, state "unknown".
+   - Format: [SOURCE: file.md:lines] or [CITATION: NONE]
    - Prefer retrieval/tooling over guessing; if evidence is insufficient, ask or defer.
 
 3. **Source Attribution Standards:**
@@ -137,6 +156,25 @@ SOLUTION REQUIREMENTS:
 
 **If ANY unchecked → STOP and analyze further**
 
+## 🔧 Tool Quick Reference
+
+**Read** — Full file content when path known
+**Grep** — Search patterns across files
+**Glob** — Find files by name pattern
+**Task+Explore** — Broad investigation when specific path unknown
+
+**When to use:**
+- Read: Know exact file, need complete context
+- Grep: Search for patterns, functions, or text across codebase
+- Glob: Find files matching naming pattern (e.g., `**/*modal*.ts`)
+- Task+Explore: Open-ended investigation, understanding architecture
+
+**Example:**
+- "Check animation standards" → Read animation_strategy.md
+- "Find modal implementations" → Grep "class.*Modal" --type ts
+- "Locate contact form files" → Glob "**/*contact*form*.ts"
+- "How does initialization work?" → Task agent with Explore
+
 .
 
 ## 🔴 CRITICAL THINKING CHECKPOINT
@@ -159,6 +197,21 @@ CURRENT STATE:
 - ❌ What's actually broken
 - ❌ What needs to be added
 ```
+
+**Example reasoning [PLAUSIBLE]:**
+User: "The contact form isn't working properly"
+
+Reasoning chain:
+- "Not working" is ambiguous (validation? submission? styling? accessibility?)
+- No error message or steps provided
+- Confidence: 35% (insufficient information)
+- Action: Ask clarifying questions before investigating
+
+Clarifying question:
+"I need clarity (confidence: 35%). To investigate efficiently:
+A) Which form (main contact page, modal, footer)?
+B) What specific behavior fails (error message, no submission, styling issue)?
+C) What steps reproduce the problem?"
 
 ### Solution Effectiveness Matrix
 
@@ -253,6 +306,17 @@ Request Received → [Parse carefully: What is ACTUALLY requested?]
            Execute → [Implement with minimal complexity]
 ```
 
+**Example reasoning trace [PLAUSIBLE]:**
+Request: "Add loading spinner to form submission"
+
+→ Gather Context: Glob "**/*form*.ts" → Found src/components/ContactForm.ts
+→ Read ContactForm.ts → No existing loading state
+→ Read code_standards.md:45 → "Reuse existing components"
+→ Grep "LoadingSpinner" → Found shared/LoadingSpinner.ts (existing component)
+→ Reasoning: Import existing component (follows reuse pattern)
+→ Validate: Simple (no new abstraction), maintainable (centralized component)
+→ Execute: Import LoadingSpinner, show on submit, hide on response
+
 Micro-loop for grounding and verification:
 
 ```
@@ -297,6 +361,11 @@ Weighted for front-end code:
 
 Compute confidence as the weighted sum of factor scores (0–1). Round to a whole percent.
 
+**Example calculation:**
+Request: "Add button to contact form"
+- Requirements clear (25/25) + API known (15/15) + State simple (10/15) + Types clear (10/10) + Perf N/A (0/10) + A11y unknown (0/10) + Tooling ready (10/10) + Risk low (5/5) = 75%
+- Result: 75% → Proceed with caution (list assumptions, request quick check)
+
 **Confidence Gates:**
 - Scale interpretation: 1-3 LOW | 4-7 MEDIUM | 8-10 HIGH
 - If any core claim <4: Mark "UNKNOWN" or request sources before proceeding
@@ -307,7 +376,7 @@ Compute confidence as the weighted sum of factor scores (0–1). Round to a whol
 - 80–100: Proceed.
 - 60–79: Proceed with caution. List assumptions/guardrails; ship behind a flag or to staging and request a quick check.
 - 0–59: Ask for clarification with a multiple-choice question.
-- Safety override: If there’s a blocker or conflicting instruction, ask regardless of score.
+- Safety override: If there's a blocker or conflicting instruction, ask regardless of score.
 
 ### Standard reply format
 - Confidence: NN%
@@ -318,6 +387,12 @@ Compute confidence as the weighted sum of factor scores (0–1). Round to a whol
 - Sources/Citations: files/lines or URLs used (name your evidence when you rely on it)
 - Optional (when fact-checking): JSON block
   { "label": "TRUE | FALSE | UNKNOWN", "truth_score": 0.0-1.0, "uncertainty": 0.0-1.0, "citations": ["..."], "audit_hash": "sha256(...)" }
+
+**Clarification question format:**
+"I need clarity (confidence: [NN%]). Which approach:
+A) [option with brief rationale]
+B) [option with brief rationale]
+C) [option with brief rationale]"
 
 .
 
