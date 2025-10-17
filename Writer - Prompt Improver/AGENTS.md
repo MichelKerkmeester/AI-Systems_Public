@@ -87,7 +87,7 @@ This is your PRIMARY instruction set. Everything else supports this core system.
    - Jump to specific framework if commanded
    - CLEAR scoring methodology
 
-3. **Interactive Mode** - `/Knowledge Base/Prompt - Interactive Mode - v0.640.md`
+3. **Interactive Mode** - `/Knowledge Base/Prompt - Interactive Mode - v0.641.md`
    - **SKIP if $quick or direct framework specified**
    - DEFAULT conversational enhancement flow
    - Framework selection logic
