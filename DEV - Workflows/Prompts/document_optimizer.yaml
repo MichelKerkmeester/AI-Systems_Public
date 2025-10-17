@@ -3,7 +3,7 @@
 # ───────────────────────────────────────────────────────────────
 role: Documentation Optimizer
 purpose: Make documentation more concise and clearer without reducing clarity or changing meaning
-action: Optimize documentation files in spec folders or standalone files
+action: Optimize documentation files in target folders or standalone files
 
 operating_mode:
   approvals: none
@@ -47,18 +47,18 @@ constraints:
 # ───────────────────────────────────────────────────────────────
 user_inputs:
   git_branch: "[GIT_BRANCH]"
-  spec_folder: "[SPEC_FOLDER]"
+  environment: "[STAGING LINK]"
+  target_folder: "[TARGET_FOLDER]"  # Document or folder to optimize
   context: "[CONTEXT]"
   issues: "[ISSUES]"
-  request: "[REQUEST]"
-  environment: "[STAGING LINK]"
   scope: "[FILES]"
+  request: "[REQUEST]"
 
 # ───────────────────────────────────────────────────────────────
 # REQUEST HANDLING
 # ───────────────────────────────────────────────────────────────
 request_handling:
-  default: "Optimize all documentation files in the specified spec folder for conciseness and clarity"
+  default: "Optimize documentation files in the target folder for conciseness and clarity"
   override: "Use [REQUEST] if provided (replaces default), else use default above"
 
 # ───────────────────────────────────────────────────────────────
@@ -67,16 +67,16 @@ request_handling:
 field_handling:
   defaults:
     git_branch_empty: "Auto-create feature-{NNN} from highest +001"
-    spec_folder_empty: "Auto-create specs/{NNN} from highest +001"
+    environment_empty: "Skip browser testing steps"
+    target_folder_empty: "Use current directory or infer from [REQUEST]"
     context_empty: "Infer from file content and structure"
     issues_empty: "Identify during analysis"
-    request_empty: "Use default from request_handling"
-    environment_empty: "Skip browser testing steps"
     scope_empty: "Use scope_policy.default"
+    request_empty: "Use default from request_handling"
 
   scope_policy:
-    default: "specs/**"
-    rule: "Process all .md files in scope when spec_folder provided, else process single file from [REQUEST]"
+    default: "**/*.md"
+    rule: "Process all .md files in target folder when folder provided, else process single file from [TARGET_FOLDER]"
 
 # ───────────────────────────────────────────────────────────────
 # WORKFLOW (AUTONOMOUS)
@@ -85,20 +85,20 @@ workflow:
   step_1_initialization:
     input_source: USER_INPUTS_SECTION_ABOVE
     git_branch: "[GIT_BRANCH] → use or create if empty"
-    spec_folder: "[SPEC_FOLDER] → target folder with docs"
+    target_folder: "[TARGET_FOLDER] → document or folder to optimize"
     context: "[CONTEXT] → infer if empty"
     issues: "[ISSUES] → identify during analysis"
     request: "Use [REQUEST] if provided, else use default from request_handling"
     action: Load documentation files and prepare for optimization
 
     file_discovery:
-      when_spec_folder_provided:
-        - Load all .md files from [SPEC_FOLDER]
+      when_target_folder_provided:
+        - Load all .md files from [TARGET_FOLDER]
         - Include subdirectories if present
         - Prioritize spec.md, plan.md, README.md
-      when_single_file_requested:
-        - Extract file path from [REQUEST]
-        - Load single file for optimization
+      when_target_is_file:
+        - Load single file from [TARGET_FOLDER]
+        - Process for optimization
 
     initial_assessment:
       - Document count and types
@@ -193,7 +193,7 @@ workflow:
 
   step_7_completion:
     summary_document:
-      location: "[SPEC_FOLDER]/optimization-summary.md"
+      location: "[TARGET_FOLDER]/optimization-summary.md"
       required_sections:
         - files_optimized
         - changes_made

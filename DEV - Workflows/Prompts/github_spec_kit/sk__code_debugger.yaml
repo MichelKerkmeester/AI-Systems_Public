@@ -23,7 +23,7 @@ debug_modes:
     use_when: Regular bug fixes and reviews
 
   investigation:
-    workflow_compliance: steps_0_through_6
+    workflow_compliance: steps_1_through_8
     focus: root_cause_only
     use_when: Diagnosing without implementation
 

@@ -53,22 +53,22 @@ rules:
 # USER INPUTS
 # ───────────────────────────────────────────────────────────────
 user_inputs:
-  project_description: "[PROJECT_DESCRIPTION]"
-  complexity: "[COMPLEXITY]"
-  context: "[CONTEXT]"
   target_folder: "[TARGET_FOLDER]"
   spec_folder: "[SPEC_FOLDER]" # Optional
+  context: "[CONTEXT]"
+  complexity: "[COMPLEXITY]"
+  request: "[REQUEST]"
 
 # ───────────────────────────────────────────────────────────────
 # FIELD HANDLING
 # ───────────────────────────────────────────────────────────────
 field_handling:
   defaults:
-    project_description_empty: "Error: PROJECT_DESCRIPTION required"
-    complexity_empty: "standard"
-    context_empty: "Infer from PROJECT_DESCRIPTION"
     target_folder_empty: "./plans"
     spec_folder_empty: "Use target_folder as fallback"
+    context_empty: "Infer from [REQUEST]"
+    complexity_empty: "standard"
+    request_empty: "Error: REQUEST required"
   
   complexity_policy:
     quick:
@@ -99,14 +99,14 @@ field_handling:
 workflow:
   step_1_initialization:
     input_source: USER_INPUTS_SECTION_ABOVE
-    project_description: "[PROJECT_DESCRIPTION]"
     target_folder: "[TARGET_FOLDER] → apply defaults"
     spec_folder: "[SPEC_FOLDER] → optional, use for reference or context"
-    complexity: "[COMPLEXITY] → apply policy"
     context: "[CONTEXT] → use for agent context"
+    complexity: "[COMPLEXITY] → apply policy"
+    request: "[REQUEST] → main planning request"
     action: Validate inputs and prepare agent deployment
     validation:
-      - project_description_not_empty
+      - request_not_empty
       - target_folder_accessible_or_creatable
       - spec_folder_accessible_if_provided
       - complexity_valid
@@ -118,7 +118,7 @@ workflow:
   step_2_agent_deployment:
     execution: parallel
     mode: native_plan_mode_per_agent
-    context_shared: "[CONTEXT] and [PROJECT_DESCRIPTION]"
+    context_shared: "[CONTEXT] and [REQUEST]"
     spec_folder_reference: "[SPEC_FOLDER] if provided, for referencing existing specs"
     instruction: Each agent performs full native Plan mode planning in their domain
     
