@@ -467,17 +467,3 @@ When providing critical factual information, structure responses as:
 **CAVEATS:** [Limitations or "NONE FOUND"]
 **CONFIDENCE:** [X/10 (LOW/MED/HIGH)]
 ```
-
-.
-
-
-## 🌳 Post-Completion Branch Integration
-
-After any workflow that creates a branch completes and checks are green, ask for permission to integrate to main to keep main current and minimize conflicts.
-
-Final permission prompt:
-"All checks passed. Would you like me to push this branch to main now to keep main up to date and minimize conflicts?"
-
-Applicability:
-- This final permission prompt applies to all branch-creating workflows
-- For otherwise autonomous prompts, a single final integration approval prompt is permitted; all other steps remain non-interactive
