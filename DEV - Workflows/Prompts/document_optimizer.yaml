@@ -48,10 +48,10 @@ constraints:
 user_inputs:
   git_branch: "[GIT_BRANCH]"
   environment: "[STAGING LINK]"
+  scope: "[FILES]"
   target_folder: "[TARGET_FOLDER]"  # Document or folder to optimize
   context: "[CONTEXT]"
   issues: "[ISSUES]"
-  scope: "[FILES]"
   request: "[REQUEST]"
 
 # ───────────────────────────────────────────────────────────────
@@ -68,10 +68,10 @@ field_handling:
   defaults:
     git_branch_empty: "Auto-create feature-{NNN} from highest +001"
     environment_empty: "Skip browser testing steps"
+    scope_empty: "Use scope_policy.default"
     target_folder_empty: "Use current directory or infer from [REQUEST]"
     context_empty: "Infer from file content and structure"
     issues_empty: "Identify during analysis"
-    scope_empty: "Use scope_policy.default"
     request_empty: "Use default from request_handling"
 
   scope_policy:

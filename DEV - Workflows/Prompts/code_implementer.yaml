@@ -21,9 +21,9 @@ implementation_philosophy:
 # ───────────────────────────────────────────────────────────────
 user_inputs:
   environment: "[STAGING LINK]"
+  scope: "[FILES]"
   target_folder: "[TARGET_FOLDER]"  # Often points to plan document or feature specification folder
   context: "[CONTEXT]"
-  scope: "[FILES]"
   request: "[FEATURE REQUEST]"
 
 # ───────────────────────────────────────────────────────────────
@@ -32,9 +32,9 @@ user_inputs:
 field_handling:
   defaults:
     environment_empty: "Skip browser testing steps"
+    scope_empty: "Use all relevant project files"
     target_folder_empty: "Use current directory or infer from [REQUEST]"
     context_empty: "Infer from target plan/specification"
-    scope_empty: "Use all relevant project files"
     request_empty: "Build features as specified in target folder"
 
 # ───────────────────────────────────────────────────────────────

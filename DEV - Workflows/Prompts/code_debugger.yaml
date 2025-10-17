@@ -21,10 +21,10 @@ debug_philosophy:
 # ───────────────────────────────────────────────────────────────
 user_inputs:
   environment: "[STAGING LINK]"
+  scope: "[FILES]"
   target_folder: "[TARGET_FOLDER]"  # Often points to issue document or bug report folder
   context: "[CONTEXT]"
   issues: "[ISSUES]"
-  scope: "[FILES]"
   request: "[REQUEST]"
 
 # ───────────────────────────────────────────────────────────────
@@ -33,10 +33,10 @@ user_inputs:
 field_handling:
   defaults:
     environment_empty: "Skip browser testing steps"
+    scope_empty: "Use all relevant files"
     target_folder_empty: "Infer from [ISSUES] or [REQUEST]"
     context_empty: "Infer from issue description and environment"
     issues_empty: "Parse from [REQUEST] if available"
-    scope_empty: "Use all relevant files"
     request_empty: "Use [ISSUES] as primary source"
 
 # ───────────────────────────────────────────────────────────────

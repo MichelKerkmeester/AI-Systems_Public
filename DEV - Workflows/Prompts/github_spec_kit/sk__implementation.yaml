@@ -33,7 +33,7 @@ rules:
 # USER INPUTS
 # ───────────────────────────────────────────────────────────────
 user_inputs:
-  git_branch: "main"
+  git_branch: "[GIT_BRANCH]"
   spec_folder: "/Users/michelkerkmeester/MEGA/Websites/anobel.com/specs/003_welcome_modal"
   context: "[CONTEXT]"
   issues: "[ISSUES]"

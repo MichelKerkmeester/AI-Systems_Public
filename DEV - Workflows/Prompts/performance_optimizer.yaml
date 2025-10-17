@@ -21,10 +21,10 @@ optimization_philosophy:
 # ───────────────────────────────────────────────────────────────
 user_inputs:
   environment: "[STAGING LINK]"
+  scope: "[FILES]"
   target_folder: "[TARGET_FOLDER]"  # Often points to performance plan or optimization spec folder
   context: "[CONTEXT]"
   issues: "[ISSUES]"
-  scope: "[FILES]"
   request: "[REQUEST]"
 
 # ───────────────────────────────────────────────────────────────
@@ -33,10 +33,10 @@ user_inputs:
 field_handling:
   defaults:
     environment_empty: "Skip browser-based profiling"
+    scope_empty: "All performance-critical files"
     target_folder_empty: "Optimize current application or infer from [REQUEST]"
     context_empty: "Infer from performance issues and metrics"
     issues_empty: "Identify during baseline measurement"
-    scope_empty: "All performance-critical files"
     request_empty: "General performance optimization"
 
 # ───────────────────────────────────────────────────────────────
