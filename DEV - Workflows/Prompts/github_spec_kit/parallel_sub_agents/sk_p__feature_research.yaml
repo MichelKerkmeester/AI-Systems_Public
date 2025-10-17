@@ -13,23 +13,6 @@ operating_mode:
   tracking: progressive_research_stages
   validation: comprehensive_coverage
 
-rules:
-  ALWAYS:
-    - follow_research_methodology
-    - document_all_findings
-    - validate_technical_feasibility
-    - use_devtools_for_live_analysis
-    - generate_comprehensive_documentation
-    - self_validate_and_proceed
-    - limit_context_to_active_scope
-    - enforce_review_before_synthesis
-  NEVER:
-    - skip_investigation_steps
-    - ignore_platform_constraints
-    - submit_without_thorough_analysis
-    - proceed_to_implementation
-    - invent_new_patterns_when_existing_work
-
 # ─────────────────────────────────────────────────────────────────
 # USER INPUTS
 # ─────────────────────────────────────────────────────────────────
@@ -397,6 +380,26 @@ spec_folder_structure:
   expected_output:
     - "[SPEC_FOLDER]/research.md - Primary research documentation"
     - "Optional supplementary files in spec folder as needed"
+
+# ─────────────────────────────────────────────────────────────────
+# RULES
+# ─────────────────────────────────────────────────────────────────
+rules:
+  ALWAYS:
+    - follow_research_methodology
+    - document_all_findings
+    - validate_technical_feasibility
+    - use_devtools_for_live_analysis
+    - generate_comprehensive_documentation
+    - self_validate_and_proceed
+    - limit_context_to_active_scope
+    - enforce_review_before_synthesis
+  NEVER:
+    - skip_investigation_steps
+    - ignore_platform_constraints
+    - submit_without_thorough_analysis
+    - proceed_to_implementation
+    - invent_new_patterns_when_existing_work
 
 # ─────────────────────────────────────────────────────────────────
 # ADAPTIVE RULES & ERROR HANDLING

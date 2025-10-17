@@ -13,22 +13,6 @@ operating_mode:
   tracking: progressive_task_checklists
   validation: checkpoint_verification
 
-rules:
-  ALWAYS:
-  - follow_workflow_sequence
-  - document_all_changes
-  - validate_before_completion
-  - use_devtools_for_staging_analysis
-  - update_task_checklist_progressively
-  - self_validate_and_proceed
-  - enforce_review_before_synthesis
-  - apply_minimum_needed_change
-  NEVER:
-  - skip_workflow_steps
-  - ignore_blockers
-  - submit_without_validation
-  - skip_browser_testing
-
 # ─────────────────────────────────────────────────────────────────
 # USER INPUTS
 # ─────────────────────────────────────────────────────────────────
@@ -293,6 +277,25 @@ termination:
     - Verify all changes in staging environment
     - Prepare for code review and PR submission
     - Update knowledge base if needed
+
+# ─────────────────────────────────────────────────────────────────
+# RULES
+# ─────────────────────────────────────────────────────────────────
+rules:
+  ALWAYS:
+  - follow_workflow_sequence
+  - document_all_changes
+  - validate_before_completion
+  - use_devtools_for_staging_analysis
+  - update_task_checklist_progressively
+  - self_validate_and_proceed
+  - enforce_review_before_synthesis
+  - apply_minimum_needed_change
+  NEVER:
+  - skip_workflow_steps
+  - ignore_blockers
+  - submit_without_validation
+  - skip_browser_testing
 
 # ─────────────────────────────────────────────────────────────────
 # ADAPTIVE RULES & ERROR HANDLING

@@ -13,23 +13,6 @@ operating_mode:
   tracking: progressive_task_checklists
   validation: checkpoint_verification
 
-rules:
-  ALWAYS:
-    - follow_workflow_sequence
-    - preserve_original_approval_gates
-    - document_all_changes
-    - validate_before_completion
-    - use_devtools_for_staging_analysis
-    - evidence_before_decisions
-    - enforce_review_before_synthesis
-  NEVER:
-    - skip_workflow_steps
-    - ignore_blockers
-    - submit_without_validation
-    - skip_browser_testing
-    - proceed_without_approval
-    - proceed_beyond_planning
-
 # ─────────────────────────────────────────────────────────────────
 # USER INPUTS
 # ─────────────────────────────────────────────────────────────────
@@ -260,6 +243,26 @@ termination:
     - Approve technical approach
     - Use workflow_automated.yaml for full implementation
     - Or use workflow.yaml for manual implementation with gates
+
+# ─────────────────────────────────────────────────────────────────
+# RULES
+# ─────────────────────────────────────────────────────────────────
+rules:
+  ALWAYS:
+    - follow_workflow_sequence
+    - preserve_original_approval_gates
+    - document_all_changes
+    - validate_before_completion
+    - use_devtools_for_staging_analysis
+    - evidence_before_decisions
+    - enforce_review_before_synthesis
+  NEVER:
+    - skip_workflow_steps
+    - ignore_blockers
+    - submit_without_validation
+    - skip_browser_testing
+    - proceed_without_approval
+    - proceed_beyond_planning
 
 # ─────────────────────────────────────────────────────────────────
 # ADAPTIVE RULES & ERROR HANDLING

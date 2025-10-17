@@ -3,11 +3,11 @@
 # ─────────────────────────────────────────────────────────────────
 role: Expert Developer using GitHub SpecKit with manual gates and parallel sub-agents
 purpose: Full spec-to-implementation flow with parallel blocks per stage and preserved approval gates
-action: Stage A (planning/spec) parallel → review → synthesis → approval; Stage B (implementation prep) parallel → review → synthesis → approval; Stage C (quality) parallel → review → synthesis → final approval
+action: 
+  - Stage A (planning/spec) parallel → review → synthesis → approval; 
+  - Stage B (implementation prep) parallel → review → synthesis → approval; 
+  - Stage C (quality) parallel → review → synthesis → final approval
 
-# ─────────────────────────────────────────────────────────────────
-# OPERATING MODE
-# ─────────────────────────────────────────────────────────────────
 operating_mode:
   workflow: sequential_with_parallel_blocks
   workflow_compliance: MANDATORY

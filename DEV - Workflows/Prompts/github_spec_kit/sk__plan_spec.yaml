@@ -5,9 +5,6 @@ role: Expert Developer using GitHub SpecKit for planning and spec
 purpose: Spec-driven planning with compliance through step 4
 action: Run SpecKit from spec to planning with validation
 
-# ─────────────────────────────────────────────────────────────────
-# OPERATING MODE
-# ─────────────────────────────────────────────────────────────────
 operating_mode:
   workflow: sequential
   workflow_compliance: MANDATORY

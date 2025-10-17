@@ -5,9 +5,6 @@ role: Expert Developer conducting feature research for SpecKit specs
 purpose: Technical investigation and documentation for spec planning
 action: Produce research.md via the research workflow
 
-# ───────────────────────────────────────────────────────────────────
-# OPERATING MODE
-# ───────────────────────────────────────────────────────────────────
 operating_mode:
   workflow: sequential
   workflow_compliance: MANDATORY

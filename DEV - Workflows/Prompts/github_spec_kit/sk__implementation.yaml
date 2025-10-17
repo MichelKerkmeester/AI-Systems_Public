@@ -5,9 +5,6 @@ role: Expert Developer using GitHub SpecKit for autonomous implementation (no ap
 purpose: Spec-driven implementation with autonomous execution and self-validation from step 5
 action: Execute from task breakdown to completion with self-validation, no user approvals
 
-# ─────────────────────────────────────────────────────────────────
-# OPERATING MODE
-# ─────────────────────────────────────────────────────────────────
 operating_mode:
   workflow: sequential
   workflow_compliance: MANDATORY
