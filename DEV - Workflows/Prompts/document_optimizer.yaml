@@ -177,13 +177,7 @@ workflow:
     validation: verify_all_quality_standards
     output: optimized_document
 
-  step_5_quality_checklist:
-    command: /speckit.checklist
-    outputs:
-      - quality_checklist: generated
-    validation: checklist_generated
-
-  step_6_report_changes:
+  step_5_report_changes:
     action: Generate comprehensive change summary
     format: optimization_summary_template
     outputs:
@@ -191,7 +185,7 @@ workflow:
       - metrics_summary
       - improvement_highlights
 
-  step_7_completion:
+  step_6_completion:
     summary_document:
       location: "[TARGET_FOLDER]/optimization-summary.md"
       required_sections:
@@ -211,7 +205,7 @@ workflow:
       - redundancy_eliminated: true
       - summary_created: true
 
-  step_8_branch_integration:
+  step_7_branch_integration:
     name: Branch Integration Approval
     approval_gate:
       type: USER_APPROVAL_REQUIRED
@@ -475,55 +469,3 @@ quality_standards:
       - efficiency
       - conciseness
     rule: Never sacrifice correctness for conciseness; prefer conciseness only when correctness and clarity are preserved
-
-# ───────────────────────────────────────────────────────────────
-# SUCCESS CRITERIA
-# ───────────────────────────────────────────────────────────────
-success_criteria:
-  document_state:
-    - more_concise
-    - clearer_instructions_with_explicit_criteria
-    - all_necessary_information_preserved
-    - no_ambiguity_in_execution
-
-# ───────────────────────────────────────────────────────────────
-# REPORTING
-# ───────────────────────────────────────────────────────────────
-reporting:
-  change_summary_format: |
-    ## Optimization Summary
-
-    Changes Made:
-    1. [Section Name] (Lines X-Y): [Brief description of change]
-       - Before: [Key issue - vagueness, redundancy, verbosity]
-       - After: [How it was improved]
-
-    2. [Section Name] (Lines A-B): [Brief description]
-
-    Metrics:
-    - Lines removed: N
-    - Sections strengthened: M
-    - Redundancy eliminated: [specific examples]
-
-    Next Steps:
-    - Run /optimize-doc again (optional second pass) OR
-    - Document fully optimized
-
-# ───────────────────────────────────────────────────────────────
-# EXAMPLES
-# ───────────────────────────────────────────────────────────────
-examples:
-  keep_vs_remove_decisions:
-    remove_rationale_only: |
-      RATIONALE: Git history rewriting can silently drop commits or changes...
-    keep_success_definition: |
-      ARCHIVAL SUCCESS CRITERIA:
-      - git diff todo.md shows ONLY deletions
-      - git diff changelog.md shows ONLY additions under today's date
-      - Both files in SAME commit
-      - grep task-name todo.md returns no matches
-    delete_disambiguation:
-      wrong: |
-        vim todo.md  # Changed - [ ] to - [x]
-      correct: |
-        vim todo.md  # DELETE entire task entry
