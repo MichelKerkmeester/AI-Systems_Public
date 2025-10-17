@@ -9,10 +9,10 @@ action: Stage A (planning/spec) parallel → review → synthesis → approval; 
 # OPERATING MODE
 # ─────────────────────────────────────────────────────────────────
 operating_mode:
-  execution: manual_with_approvals
-  approvals: after_each_step
   workflow: sequential_with_parallel_blocks
   workflow_compliance: MANDATORY
+  workflow_execution: manual_with_approvals
+  approvals: after_each_step
   tracking: progressive_task_checklists
   validation: checkpoint_verification
 

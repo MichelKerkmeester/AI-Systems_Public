@@ -6,9 +6,11 @@ purpose: Quickly identify and fix bugs with minimal ceremony
 action: Reproduce, diagnose, fix, and verify issues efficiently
 
 operating_mode:
-  execution: direct_and_focused
-  methodology: evidence_based
-  documentation: inline_findings
+  workflow: sequential
+  workflow_compliance: MANDATORY
+  workflow_execution: autonomous
+  approvals: none
+  tracking: progressive_task_checklists
   validation: continuous
 
 debug_philosophy:

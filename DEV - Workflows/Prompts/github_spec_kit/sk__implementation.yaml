@@ -9,10 +9,10 @@ action: Execute from task breakdown to completion with self-validation, no user 
 # OPERATING MODE
 # ─────────────────────────────────────────────────────────────────
 operating_mode:
-  execution: autonomous
-  approvals: none
   workflow: sequential
   workflow_compliance: MANDATORY
+  workflow_execution: autonomous
+  approvals: none
   tracking: progressive_task_checklists
   validation: checkpoint_verification
 

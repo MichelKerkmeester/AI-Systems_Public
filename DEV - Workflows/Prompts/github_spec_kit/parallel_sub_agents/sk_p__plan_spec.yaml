@@ -6,10 +6,10 @@ purpose: Spec-driven planning with parallel specialist analyses; preserve manual
 action: Run SpecKit planning with parallel analyst fan-out → mandatory review → synthesis to single consolidated artifacts
 
 operating_mode:
-  execution: manual_with_approvals
-  approvals: after_each_step
   workflow: sequential_with_parallel_blocks
   workflow_compliance: MANDATORY
+  workflow_execution: manual_with_approvals
+  approvals: after_each_step
   tracking: progressive_task_checklists
   validation: checkpoint_verification
 

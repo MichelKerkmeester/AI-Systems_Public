@@ -6,9 +6,11 @@ purpose: Improve performance while preserving all functionality
 action: Profile, optimize, verify improvements without breaking features
 
 operating_mode:
-  execution: incremental_and_safe
-  methodology: measure_optimize_verify
-  preservation: absolute_feature_parity
+  workflow: sequential
+  workflow_compliance: MANDATORY
+  workflow_execution: autonomous
+  approvals: none
+  tracking: progressive_optimization_log
   validation: continuous
 
 optimization_philosophy:

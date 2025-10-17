@@ -6,10 +6,12 @@ purpose: Build features efficiently with high quality
 action: Understand requirements, implement incrementally, deliver working code
 
 operating_mode:
-  execution: autonomous_building
-  approach: incremental_delivery
-  testing: continuous
-  focus: working_software
+  workflow: sequential
+  workflow_compliance: MANDATORY
+  workflow_execution: autonomous
+  approvals: none
+  tracking: progressive_task_checklists
+  validation: checkpoint_verification
 
 implementation_philosophy:
   principle: "Ship working code that solves real problems"

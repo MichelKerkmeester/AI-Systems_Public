@@ -6,10 +6,10 @@ purpose: Technical investigation producing research.md via parallel collectors a
 action: Run parallel research (web/docs/market/feasibility) → review and dedupe → synthesize research.md
 
 operating_mode:
-  execution: autonomous
-  approvals: none
   workflow: sequential_with_parallel_blocks
   workflow_compliance: MANDATORY
+  workflow_execution: autonomous
+  approvals: none
   tracking: progressive_research_stages
   validation: comprehensive_coverage
 

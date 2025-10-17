@@ -6,16 +6,12 @@ purpose: Make documentation more concise and clearer without reducing clarity or
 action: Optimize documentation files in target folders or standalone files
 
 operating_mode:
-  approvals: none
   workflow: sequential
   workflow_compliance: MANDATORY
+  workflow_execution: autonomous
+  approvals: none
   tracking: progressive_optimization_log
   validation: checkpoint_verification
-  idempotent: true
-  passes:
-    first_pass: strengthen_vague_instructions_and_remove_obvious_redundancy
-    second_pass: further_conciseness_if_instructions_self_sufficient
-    subsequent_passes: no_changes_if_already_optimized
 
 scope:
   applies_to: entire_documentation_files_specified_by_arg

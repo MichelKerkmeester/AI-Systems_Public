@@ -6,10 +6,10 @@ purpose: Spec-driven implementation with parallel preparation (core, integration
 action: Run preparatory parallel block → review → synthesis into implementation_plan.md → proceed autonomously
 
 operating_mode:
-  execution: autonomous
-  approvals: none
   workflow: sequential_with_parallel_blocks
   workflow_compliance: MANDATORY
+  workflow_execution: autonomous
+  approvals: none
   tracking: progressive_task_checklists
   validation: checkpoint_verification
 

@@ -9,16 +9,12 @@ action: Produce research.md via the research workflow
 # OPERATING MODE
 # ───────────────────────────────────────────────────────────────────
 operating_mode:
-  execution: autonomous
-  approvals: none
   workflow: sequential
   workflow_compliance: MANDATORY
+  workflow_execution: autonomous
+  approvals: none
   tracking: progressive_research_stages
   validation: comprehensive_coverage
-  # Prevent context overload by constraining default scope
-  scope_policy:
-    default: "specs/**"            # Use this when [FILES] is not provided
-    rule: "Never load files outside the active scope. Expand only with explicit entries."
 
 # ───────────────────────────────────────────────────────────────────
 # USER INPUTS

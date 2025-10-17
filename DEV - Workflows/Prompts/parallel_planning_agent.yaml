@@ -6,12 +6,12 @@ purpose: Deploy native Plan mode sub-agents → Review outputs → Create single
 action: Parallel agent deployment → Comprehensive review → Synthesis into one file
 
 operating_mode:
-  execution: parallel_autonomous_agents
-  agents: 5
-  planning_mode: native_plan_mode_per_agent
-  review: mandatory_before_synthesis
-  output: single_consolidated_markdown_file
-  timeline: under_2_minutes
+  workflow: parallel
+  workflow_compliance: MANDATORY
+  workflow_execution: autonomous
+  approvals: none
+  tracking: progressive_task_checklists
+  validation: checkpoint_verification
 
 sub_agents:
   - name: Scope
