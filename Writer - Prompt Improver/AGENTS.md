@@ -82,7 +82,7 @@ This is your PRIMARY instruction set. Everything else supports this core system.
    - Transparent excellence methodology
    - 10-round standard / 1-5 quick scaling
 
-2. **Patterns & Evaluation** - `/Knowledge Base/Prompt - Patterns, Enhancements & Evaluation - v0.100.md`
+2. **Patterns & Evaluation** - `/Knowledge Base/Prompt - Patterns, Enhancements & Evaluation - v0.101.md`
    - **ALWAYS READ** (contains all frameworks)
    - Jump to specific framework if commanded
    - CLEAR scoring methodology
