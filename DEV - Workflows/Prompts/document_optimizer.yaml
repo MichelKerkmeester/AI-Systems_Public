@@ -1,6 +1,6 @@
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # FRAMEWORK
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 role: Documentation Optimizer
 purpose: Make documentation more concise and clearer without reducing clarity or changing meaning
 action: Optimize documentation files in target folders or standalone files
@@ -42,9 +42,9 @@ constraints:
     - reject_any_change_that_reduces_clarity_or_alters_meaning
     - never_sacrifice_correctness_for_conciseness
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # USER INPUTS
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 user_inputs:
   git_branch: "[GIT_BRANCH]"
   environment: "[STAGING LINK]"
@@ -54,16 +54,16 @@ user_inputs:
   issues: "[ISSUES]"
   request: "[REQUEST]"
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # REQUEST HANDLING
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 request_handling:
   default: "Optimize documentation files in the target folder for conciseness and clarity"
   override: "Use [REQUEST] if provided (replaces default), else use default above"
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # FIELD HANDLING
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 field_handling:
   defaults:
     git_branch_empty: "Auto-create feature-{NNN} from highest +001"
@@ -78,9 +78,9 @@ field_handling:
     default: "**/*.md"
     rule: "Process all .md files in target folder when folder provided, else process single file from [TARGET_FOLDER]"
 
-# ───────────────────────────────────────────────────────────────
-# WORKFLOW (AUTONOMOUS)
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
+# WORKFLOW
+# ─────────────────────────────────────────────────────────────────
 workflow:
   step_1_initialization:
     input_source: USER_INPUTS_SECTION_ABOVE
@@ -230,9 +230,9 @@ workflow:
       tagging: optional; only on user request
 
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # DECISION TREES
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 decision_trees:
   instruction_clarity:
     description: Determines if examples are required
@@ -263,9 +263,9 @@ decision_trees:
         if_yes: keep
       - otherwise: may_remove_if_redundant
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # RULES
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 rules:
   ALWAYS:
     - evaluate_instruction_clarity_before_removing_examples
@@ -390,9 +390,9 @@ rules:
         # CORRECT: Deleting the entry
         vim todo.md  # DELETE entire task entry
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # OPTIMIZATION STRATEGIES
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 strategies:
   conciseness_techniques:
     - eliminate_redundancy
@@ -438,9 +438,9 @@ user_workflow:
     # Subsequent invocations: No changes if already optimized
     /optimize-doc docs/some-file.md
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # QUALITY STANDARDS
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 quality_standards:
   must_satisfy_all:
     - meaning_preserved

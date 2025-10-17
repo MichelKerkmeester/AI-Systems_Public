@@ -1,10 +1,13 @@
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # FRAMEWORK
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 role: Expert Developer using GitHub SpecKit for autonomous implementation (no approval gates)
 purpose: Spec-driven implementation with autonomous execution and self-validation from step 5
 action: Execute from task breakdown to completion with self-validation, no user approvals
 
+# ─────────────────────────────────────────────────────────────────
+# OPERATING MODE
+# ─────────────────────────────────────────────────────────────────
 operating_mode:
   execution: autonomous
   approvals: none
@@ -13,25 +16,9 @@ operating_mode:
   tracking: progressive_task_checklists
   validation: checkpoint_verification
 
-rules:
-  ALWAYS:
-  - follow_workflow_sequence
-  - document_all_changes
-  - validate_before_completion
-  - use_devtools_for_staging_analysis
-  - update_task_checklist_progressively
-  - self_validate_and_proceed
-  - do_not_prompt_for_user_approval
-  NEVER:
-  - skip_workflow_steps
-  - ignore_blockers
-  - submit_without_validation
-  - skip_browser_testing
-  - expand_scope_beyond_spec
-
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # USER INPUTS
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 user_inputs:
   git_branch: "[GIT_BRANCH]"
   spec_folder: "/Users/michelkerkmeester/MEGA/Websites/anobel.com/specs/003_welcome_modal"
@@ -41,16 +28,16 @@ user_inputs:
   environment: "[STAGING LINK]"
   scope: "[FILES]"
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # REQUEST HANDLING
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 request_handling:
   default: "Conduct a comprehensive review of the spec folder and carry out its implementation fully autonomously."
   override: "Use [REQUEST] if provided (replaces default), else use default above"
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # FIELD HANDLING
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 field_handling:
   defaults:
     git_branch_empty: "Auto-create feature-{NNN} from highest +001"
@@ -64,11 +51,11 @@ field_handling:
     default: "specs/**"
     rule: "Limit file operations to scope when provided"
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # WORKFLOW
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 workflow:
-  step_1_review_plan_and_spec:
+  step_7_review_plan_and_spec:
     input_source: USER_INPUTS_SECTION_ABOVE
     git_branch: "[GIT_BRANCH] → auto-create if empty"
     spec_folder: "[SPEC_FOLDER] → auto-create if empty"
@@ -104,7 +91,7 @@ workflow:
       - implementation_strategy_refinement
     validation: planning_artifacts_understood
 
-  step_2_task_breakdown:
+  step_8_task_breakdown:
     command: /tasks
     outputs:
     - tasks/checklist.md
@@ -120,7 +107,7 @@ workflow:
       - priority_ordering
     validation: tasks_actionable
 
-  step_3_analysis:
+  step_9_analysis:
     command: /analyze
     outputs:
     - consistency_report
@@ -144,7 +131,7 @@ workflow:
       - integration_points
       - risk_assessment
 
-  step_4_quality_checklist:
+  step_10_quality_checklist:
     command: /speckit.checklist
     outputs:
     - quality_checklist: generated
@@ -171,7 +158,7 @@ workflow:
       - blocker_identification
       - readiness_confirmation
 
-  step_6_development:
+  step_11_development:
     approach: autonomous_implementation_with_checkpoints
     requirements:
     - follow: knowledge/code_standards.md
@@ -202,7 +189,7 @@ workflow:
       - optimization_opportunities
       - test_coverage_gaps
 
-  step_7_completion:
+  step_12_completion:
     summary_document:
       location: "[SPEC_FOLDER]/implementation-summary.md"
       required_sections:
@@ -227,16 +214,16 @@ workflow:
       - technical_debt_noted
       - future_improvements
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # WORKFLOW CONTINUATION
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 prerequisites:
   required_artifacts:
   - "[SPEC_FOLDER]/spec.md"
   - "[SPEC_FOLDER]/plan.md"
   - "[SPEC_FOLDER]/planning-summary.md"
   verification: MUST EXIST BEFORE PROCEEDING
-  note: This workflow assumes steps 0-4 completed via speckit_plan_and_spec.yaml
+  note: This workflow assumes steps 1-6 completed via speckit_plan_and_spec.yaml
   user_context: "[CONTEXT]"
   user_request: "[REQUEST]"
 
@@ -248,3 +235,22 @@ termination:
   - Verify all changes in staging environment
   - Prepare for code review and PR submission
   - Update knowledge base if needed
+
+# ─────────────────────────────────────────────────────────────────
+# RULES
+# ─────────────────────────────────────────────────────────────────
+rules:
+  ALWAYS:
+    - follow_workflow_sequence
+    - document_all_changes
+    - validate_before_completion
+    - use_devtools_for_staging_analysis
+    - update_task_checklist_progressively
+    - self_validate_and_proceed
+    - do_not_prompt_for_user_approval
+  NEVER:
+    - skip_workflow_steps
+    - ignore_blockers
+    - submit_without_validation
+    - skip_browser_testing
+    - expand_scope_beyond_spec

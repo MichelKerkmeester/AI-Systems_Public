@@ -1,6 +1,6 @@
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # FRAMEWORK
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 role: Expert Developer using GitHub SpecKit for autonomous implementation with parallel sub-agents
 purpose: Spec-driven implementation with parallel preparation (core, integrations, tests, docs), then development with checkpoints
 action: Run preparatory parallel block → review → synthesis into implementation_plan.md → proceed autonomously
@@ -29,9 +29,9 @@ rules:
   - submit_without_validation
   - skip_browser_testing
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # USER INPUTS
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 user_inputs:
   git_branch: "[GIT_BRANCH]"
   spec_folder: "[SPEC_FOLDER]"
@@ -41,16 +41,16 @@ user_inputs:
   environment: "[STAGING LINK]"
   scope: "[FILES]"
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # REQUEST HANDLING
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 request_handling:
   default: "Conduct a comprehensive review of the spec folder and carry out its implementation fully autonomously."
   override: "Use [REQUEST] if provided (replaces default), else use default above"
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # FIELD HANDLING
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 field_handling:
   defaults:
     git_branch_empty: "Auto-create feature-{NNN} from highest +001"
@@ -64,9 +64,9 @@ field_handling:
     default: "specs/**"
     rule: "Limit file operations to scope when provided"
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # SUB-AGENTS (PARALLEL PREP)
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 sub_agents:
   - id: core
     name: Core Implementer
@@ -87,11 +87,11 @@ sub_agents:
     name: Lead Synthesizer
     role: Produce implementation_plan.md to guide development
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # WORKFLOW (PARALLEL OUTPUT QA BY MAIN AGENT)
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 workflow:
-  step_1_review_plan_and_spec:
+  step_8_review_plan_and_spec:
     action: Review spec and planning artifacts
     required_documents:
       - "[SPEC_FOLDER]/spec.md"
@@ -99,7 +99,7 @@ workflow:
       - "[SPEC_FOLDER]/planning-summary.md"
     validation: planning_artifacts_understood
 
-  step_2_task_breakdown:
+  step_9_task_breakdown:
     command: /tasks
     outputs:
       - tasks/checklist.md
@@ -107,7 +107,7 @@ workflow:
       - tracking_structure: established
     validation: tasks_actionable
 
-  step_3_analysis:
+  step_10_analysis:
     command: /analyze
     outputs:
       - consistency_report
@@ -116,13 +116,13 @@ workflow:
       - gap_analysis
     validation: consistency_verified
 
-  step_4_quality_checklist:
+  step_11_quality_checklist:
     command: /speckit.checklist
     outputs:
       - quality_checklist: generated
     validation: checklist_generated
 
-  step_5_parallel_implementation_preparation:
+  step_12_parallel_implementation_preparation:
     description: Parallel preparation for core, integrations, tests, and docs
     analyze_inputs:
       summarize:
@@ -138,10 +138,10 @@ workflow:
       execution: parallel
       concurrency: 3
       shared_context:
-        - [SPEC_FOLDER]/spec.md
-        - [SPEC_FOLDER]/plan.md
-        - tasks/checklist.md
-        - consistency_report
+        - "[SPEC_FOLDER]/spec.md"
+        - "[SPEC_FOLDER]/plan.md"
+        - "tasks/checklist.md"
+        - "consistency_report"
       tasks:
         - agent: core
           instructions: Draft module breakdown, key data structures, and algorithmic approach with rationale
@@ -159,7 +159,7 @@ workflow:
             type: markdown
             sections: [test_plan, key_cases, fixtures, coverage_targets]
         - agent: docs
-          instructions: Draft developer-facing docs: usage patterns, examples, migration notes
+          instructions: "Draft developer-facing docs: usage patterns, examples, migration notes"
           expected_output:
             type: markdown
             sections: [usage, examples, migration_upgrade]
@@ -195,7 +195,7 @@ workflow:
         - main_agent_review_notes
         - final_signoff: true
 
-  step_6_implementation_check:
+  step_13_implementation_check:
     command: /implement [task-id]
     checks:
       prerequisites: verified
@@ -216,7 +216,7 @@ workflow:
         - blocker_identification
         - readiness_confirmation
 
-  step_7_development:
+  step_14_development:
     approach: autonomous_implementation_with_checkpoints
     requirements:
       - follow: knowledge/code_standards.md
@@ -247,7 +247,7 @@ workflow:
         - optimization_opportunities
         - test_coverage_gaps
 
-  step_8_completion:
+  step_15_completion:
     summary_document:
       location: "[SPEC_FOLDER]/implementation-summary.md"
       required_sections:
@@ -272,16 +272,16 @@ workflow:
         - technical_debt_noted
         - future_improvements
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # WORKFLOW CONTINUATION
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 prerequisites:
   required_artifacts:
     - "[SPEC_FOLDER]/spec.md"
     - "[SPEC_FOLDER]/plan.md"
     - "[SPEC_FOLDER]/planning-summary.md"
   verification: MUST EXIST BEFORE PROCEEDING
-  note: This workflow assumes steps 0-4 completed via speckit_plan_and_spec.yaml
+  note: This workflow assumes steps 1-7 completed via speckit_plan_and_spec.yaml
   user_context: "[CONTEXT]"
   user_request: "[REQUEST]"
 
@@ -294,9 +294,9 @@ termination:
     - Prepare for code review and PR submission
     - Update knowledge base if needed
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # ADAPTIVE RULES & ERROR HANDLING
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 adaptive_rules:
   high_complexity:
     review_depth: exhaustive

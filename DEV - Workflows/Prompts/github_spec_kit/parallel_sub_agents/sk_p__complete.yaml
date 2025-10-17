@@ -1,10 +1,13 @@
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # FRAMEWORK
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 role: Expert Developer using GitHub SpecKit with manual gates and parallel sub-agents
 purpose: Full spec-to-implementation flow with parallel blocks per stage and preserved approval gates
 action: Stage A (planning/spec) parallel → review → synthesis → approval; Stage B (implementation prep) parallel → review → synthesis → approval; Stage C (quality) parallel → review → synthesis → final approval
 
+# ─────────────────────────────────────────────────────────────────
+# OPERATING MODE
+# ─────────────────────────────────────────────────────────────────
 operating_mode:
   execution: manual_with_approvals
   approvals: after_each_step
@@ -13,26 +16,9 @@ operating_mode:
   tracking: progressive_task_checklists
   validation: checkpoint_verification
 
-rules:
-  ALWAYS:
-    - follow_workflow_sequence
-    - preserve_original_approval_gates
-    - document_all_changes
-    - validate_before_completion
-    - use_devtools_for_staging_analysis
-    - evidence_before_decisions
-    - enforce_review_before_synthesis
-  NEVER:
-    - skip_workflow_steps
-    - ignore_blockers
-    - submit_without_validation
-    - skip_browser_testing
-    - proceed_without_approval
-    - over_engineer_or_expand_scope
-
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # USER INPUTS
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 user_inputs:
   git_branch: "[GIT_BRANCH]"
   spec_folder: "[SPEC_FOLDER]"
@@ -42,9 +28,9 @@ user_inputs:
   environment: "[STAGING LINK]"
   scope: "[FILES]"
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # FIELD HANDLING
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 field_handling:
   defaults:
     git_branch_empty: "Auto-create feature-{NNN} from highest +001"
@@ -58,9 +44,9 @@ field_handling:
     default: "specs/**"
     rule: "Limit file operations to scope when provided"
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # SUB-AGENTS BY STAGE
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 sub_agents:
   stage_A_planning_spec:
     - { id: requirements, name: Requirements Analyst, role: requirements_and_success_metrics }
@@ -84,9 +70,9 @@ sub_agents:
     - { id: reviewerC, name: Lead Reviewer (C), role: severity_resolution }
     - { id: synthesizerC, name: Lead Synthesizer (C), role: quality_report }
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # WORKFLOW (PARALLEL OUTPUT QA BY MAIN AGENT)
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 workflow:
   step_1_request_analysis:
     input_source: USER_INPUTS_SECTION_ABOVE
@@ -389,9 +375,9 @@ workflow:
         - after successful integration, offer to delete the feature branch locally and on origin (explicit confirmation required)
       tagging: optional; only on user request
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # ADAPTIVE RULES & ERROR HANDLING
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 adaptive_rules:
   high_complexity:
     concurrency: 2
@@ -411,3 +397,23 @@ error_handling:
     on_repeated_failure: rerun_failed_tasks_sequentially
     proceed_with_partial: true
     annotate_in_review: true
+
+# ─────────────────────────────────────────────────────────────────
+# RULES
+# ─────────────────────────────────────────────────────────────────
+rules:
+  ALWAYS:
+    - follow_workflow_sequence
+    - preserve_original_approval_gates
+    - document_all_changes
+    - validate_before_completion
+    - use_devtools_for_staging_analysis
+    - evidence_before_decisions
+    - enforce_review_before_synthesis
+  NEVER:
+    - skip_workflow_steps
+    - ignore_blockers
+    - submit_without_validation
+    - skip_browser_testing
+    - proceed_without_approval
+    - over_engineer_or_expand_scope

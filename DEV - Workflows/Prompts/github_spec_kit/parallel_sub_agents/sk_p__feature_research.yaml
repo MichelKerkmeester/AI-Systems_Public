@@ -1,6 +1,6 @@
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # FRAMEWORK
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 role: Expert Developer conducting feature research for SpecKit with parallel research sub-agents
 purpose: Technical investigation producing research.md via parallel collectors and review-before-synthesis
 action: Run parallel research (web/docs/market/feasibility) → review and dedupe → synthesize research.md
@@ -30,9 +30,9 @@ rules:
     - proceed_to_implementation
     - invent_new_patterns_when_existing_work
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # USER INPUTS
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 user_inputs:
   git_branch: "[GIT_BRANCH]"
   spec_folder: "[SPEC_FOLDER]"
@@ -42,9 +42,9 @@ user_inputs:
   environment: "[STAGING LINK]"
   scope: "[FILES]"
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # FIELD HANDLING
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 field_handling:
   defaults:
     git_branch_empty: "Auto-create feature-{NNN} from highest +001"
@@ -58,9 +58,9 @@ field_handling:
     default: "specs/**"
     rule: "Limit file operations to scope when provided"
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # SUB-AGENTS (PARALLEL RESEARCHERS)
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 sub_agents:
   - id: web
     name: Web/Ecosystem Researcher
@@ -81,9 +81,9 @@ sub_agents:
     name: Lead Synthesizer
     role: Produce research.md per required sections
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # WORKFLOW (PARALLEL OUTPUT QA BY MAIN AGENT)
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 workflow:
   step_1_request_analysis:
     action: Analyze inputs; define research scope and goals
@@ -338,9 +338,9 @@ workflow:
         - after successful integration, offer to delete the feature branch locally and on origin (explicit confirmation required)
       tagging: optional; only on user request
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # RESEARCH QUALITY STANDARDS
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 quality_standards:
   documentation:
     - production_ready_examples
@@ -360,9 +360,9 @@ quality_standards:
     - recovery_strategies_defined
     - monitoring_approaches_specified
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # RESEARCH DOCUMENTS
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 documents:
   primary_deliverable:
     type: research_document
@@ -379,9 +379,9 @@ documents:
       - compatibility_matrix.md
       - decision_flowcharts.md
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # SPEC FOLDER INTEGRATION
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 spec_folder_structure:
   note: |
     This workflow generates research.md within a spec folder structure.
@@ -395,12 +395,12 @@ spec_folder_structure:
     - Provides research foundation for specifications
 
   expected_output:
-    - "[SPEC_FOLDER]/research.md" - Primary research documentation
-    - Optional supplementary files in spec folder as needed
+    - "[SPEC_FOLDER]/research.md - Primary research documentation"
+    - "Optional supplementary files in spec folder as needed"
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # ADAPTIVE RULES & ERROR HANDLING
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 adaptive_rules:
   low_signal:
     broaden_queries: true

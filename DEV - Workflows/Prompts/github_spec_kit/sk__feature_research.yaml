@@ -1,10 +1,13 @@
-# ───────────────────────────────────────────────────────────────
+# ───────────────────────────────────────────────────────────────────
 # FRAMEWORK
-# ───────────────────────────────────────────────────────────────
+# ───────────────────────────────────────────────────────────────────
 role: Expert Developer conducting feature research for SpecKit specs
 purpose: Technical investigation and documentation for spec planning
 action: Produce research.md via the research workflow
 
+# ───────────────────────────────────────────────────────────────────
+# OPERATING MODE
+# ───────────────────────────────────────────────────────────────────
 operating_mode:
   execution: autonomous
   approvals: none
@@ -17,26 +20,9 @@ operating_mode:
     default: "specs/**"            # Use this when [FILES] is not provided
     rule: "Never load files outside the active scope. Expand only with explicit entries."
 
-rules:
-  ALWAYS:
-    - follow_research_methodology
-    - document_all_findings
-    - validate_technical_feasibility
-    - use_devtools_for_live_analysis
-    - generate_comprehensive_documentation
-    - self_validate_and_proceed
-    - do_not_prompt_for_user_approval
-    - limit_context_to_active_scope
-  NEVER:
-    - skip_investigation_steps
-    - ignore_platform_constraints
-    - submit_without_thorough_analysis
-    - proceed_to_implementation
-    - invent_new_patterns_when_existing_work
-
-# ───────────────────────────────────────────────────────────────
+# ───────────────────────────────────────────────────────────────────
 # USER INPUTS
-# ───────────────────────────────────────────────────────────────
+# ───────────────────────────────────────────────────────────────────
 user_inputs:
   git_branch: "[GIT_BRANCH]"
   spec_folder: "[SPEC_FOLDER]"
@@ -46,9 +32,9 @@ user_inputs:
   environment: "[STAGING LINK]"
   scope: "[FILES]"
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # FIELD HANDLING
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 field_handling:
   defaults:
     git_branch_empty: "Auto-create feature-{NNN} from highest +001"
@@ -62,9 +48,9 @@ field_handling:
     default: "specs/**"
     rule: "Limit file operations to scope when provided"
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # RESEARCH WORKFLOW
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 workflow:
   step_1_request_analysis:
     input_source: USER_INPUTS_SECTION_ABOVE
@@ -181,13 +167,13 @@ workflow:
         - risk_mitigation_strategies
     validation: technical_analysis_complete
 
-  step_5_quality_checklist:
+  step_6_quality_checklist:
     command: /speckit.checklist
     outputs:
       - quality_checklist: generated
     validation: checklist_generated
 
-  step_6_solution_design:
+  step_7_solution_design:
     action: Design solution architecture and integration patterns
     deliverables:
       - proposed_architecture
@@ -216,7 +202,7 @@ workflow:
         - edge_case_handling
     validation: solution_designed
 
-  step_7_research_compilation:
+  step_8_research_compilation:
     action: Compile comprehensive research documentation for spec folder
     deep_analysis:
       focus: comprehensive_research_document
@@ -339,7 +325,7 @@ workflow:
         - Proceed to specification (/specify) if needed
         - Use research as reference during implementation planning
 
-  step_8_branch_integration:
+  step_9_branch_integration:
     name: Branch Integration Approval
     approval_gate:
       type: USER_APPROVAL_REQUIRED
@@ -363,9 +349,9 @@ workflow:
         - after successful integration, offer to delete the feature branch locally and on origin (explicit confirmation required)
       tagging: optional; only on user request
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # RESEARCH QUALITY STANDARDS
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 quality_standards:
   documentation:
     - production_ready_examples
@@ -385,9 +371,9 @@ quality_standards:
     - recovery_strategies_defined
     - monitoring_approaches_specified
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # RESEARCH DOCUMENTS
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 documents:
   primary_deliverable:
     type: research_document
@@ -404,9 +390,9 @@ documents:
       - compatibility_matrix.md
       - decision_flowcharts.md
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # SPEC FOLDER INTEGRATION
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 spec_folder_structure:
   note: |
     This workflow generates research.md within a spec folder structure.
@@ -420,5 +406,25 @@ spec_folder_structure:
     - Provides research foundation for specifications
 
   expected_output:
-    - "[SPEC_FOLDER]/research.md" - Primary research documentation
-    - Optional supplementary files in spec folder as needed
+    - "[SPEC_FOLDER]/research.md - Primary research documentation"
+    - "Optional supplementary files in spec folder as needed"
+
+# ─────────────────────────────────────────────────────────────────
+# RULES
+# ─────────────────────────────────────────────────────────────────
+rules:
+  ALWAYS:
+    - follow_research_methodology
+    - document_all_findings
+    - validate_technical_feasibility
+    - use_devtools_for_live_analysis
+    - generate_comprehensive_documentation
+    - self_validate_and_proceed
+    - do_not_prompt_for_user_approval
+    - limit_context_to_active_scope
+  NEVER:
+    - skip_investigation_steps
+    - ignore_platform_constraints
+    - submit_without_thorough_analysis
+    - proceed_to_implementation
+    - invent_new_patterns_when_existing_work

@@ -1,6 +1,6 @@
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # FRAMEWORK
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 role: Expert Developer using GitHub SpecKit for planning and spec with parallel sub-agents
 purpose: Spec-driven planning with parallel specialist analyses; preserve manual approval gates
 action: Run SpecKit planning with parallel analyst fan-out → mandatory review → synthesis to single consolidated artifacts
@@ -30,9 +30,9 @@ rules:
     - proceed_without_approval
     - proceed_beyond_planning
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # USER INPUTS
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 user_inputs:
   git_branch: "[GIT_BRANCH]"
   spec_folder: "[SPEC_FOLDER]"
@@ -42,9 +42,9 @@ user_inputs:
   environment: "[STAGING LINK]"
   scope: "[FILES]"
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # FIELD HANDLING
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 field_handling:
   defaults:
     git_branch_empty: "Auto-create feature-{NNN} from highest +001"
@@ -58,9 +58,9 @@ field_handling:
     default: "specs/**"
     rule: "Limit file operations to scope when provided"
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # SUB-AGENTS (PARALLEL ANALYSTS)
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 sub_agents:
   - id: requirements
     name: Requirements Analyst
@@ -81,9 +81,9 @@ sub_agents:
     name: Lead Synthesizer
     role: Produce plan.md and planning-summary.md per SpecKit expectations
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # WORKFLOW (PARALLEL OUTPUT QA BY MAIN AGENT)
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 workflow:
   step_1_request_analysis:
     input_source: USER_INPUTS_SECTION_ABOVE
@@ -156,10 +156,10 @@ workflow:
       execution: parallel
       concurrency: 3
       shared_context:
-        - [SPEC_FOLDER]/spec.md
-        - quality_checklist
-        - request_summary
-        - context
+        - "[SPEC_FOLDER]/spec.md"
+        - "quality_checklist"
+        - "request_summary"
+        - "context"
       tasks:
         - agent: requirements
           instructions: Produce a requirements dossier with explicit success metrics and dependencies
@@ -249,34 +249,9 @@ workflow:
           - recommended_next_steps
       completion_message: Planning phase complete. The workflow has been executed through step 4. Technical plan and approach have been documented. To proceed with implementation, use the full workflow_automated.yaml.
 
-post_completion:
-  branch_integration_offer:
-    note: "Merges documentation changes only; does not begin implementation."
-    approval_gate:
-      type: USER_APPROVAL_REQUIRED
-      prompt: "All checks passed. Push this branch to main now to keep main up to date and minimize conflicts?"
-      confirmation_needed: true
-    integration_policy:
-      merge_strategy: rebase_then_fast_forward
-      safety_checks:
-        - clean working tree
-        - validations/tests/pass checks are green (as applicable for the workflow)
-        - no unresolved blockers
-      conflict_policy:
-        on_rebase_conflict: pause and ask for guidance
-        fallback_to_pr: offer to open a PR if user prefers manual resolution
-      steps:
-        - fetch origin
-        - update main (pull --ff-only)
-        - rebase feature branch onto main
-        - fast-forward merge into main
-        - push origin main
-        - after successful integration, offer to delete the feature branch locally and on origin (explicit confirmation required)
-      tagging: optional; only on user request
-
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # WORKFLOW TERMINATION
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 termination:
   after_step: 7
   message: "Planning phase completed successfully. Workflow terminated after step 7 as requested."
@@ -286,9 +261,9 @@ termination:
     - Use workflow_automated.yaml for full implementation
     - Or use workflow.yaml for manual implementation with gates
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # ADAPTIVE RULES & ERROR HANDLING
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 adaptive_rules:
   high_complexity:
     reviewers: add_security_privacy_reviewer_if_needed

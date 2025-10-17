@@ -1,6 +1,6 @@
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # FRAMEWORK
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 role: Strategic planning coordinator using Claude Plan mode with 5 autonomous sub-agents
 purpose: Deploy native Plan mode sub-agents → Review outputs → Create single consolidated markdown plan
 action: Parallel agent deployment → Comprehensive review → Synthesis into one file
@@ -49,23 +49,21 @@ rules:
     - create_circular_dependencies
     - omit_risk_assessment
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # USER INPUTS
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 user_inputs:
   target_folder: "[TARGET_FOLDER]"
-  spec_folder: "[SPEC_FOLDER]" # Optional
   context: "[CONTEXT]"
   complexity: "[COMPLEXITY]"
   request: "[REQUEST]"
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # FIELD HANDLING
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 field_handling:
   defaults:
     target_folder_empty: "./plans"
-    spec_folder_empty: "Use target_folder as fallback"
     context_empty: "Infer from [REQUEST]"
     complexity_empty: "standard"
     request_empty: "Error: REQUEST required"
@@ -93,14 +91,13 @@ field_handling:
     safety: restrict_to_target_folder
     auto_folder: "./plans/[YYYY-MM]/[project-slug]/"
 
-# ───────────────────────────────────────────────────────────────
-# WORKFLOW (PARALLEL OUTPUT QA BY MAIN AGENT)
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
+# WORKFLOW
+# ─────────────────────────────────────────────────────────────────
 workflow:
   step_1_initialization:
     input_source: USER_INPUTS_SECTION_ABOVE
     target_folder: "[TARGET_FOLDER] → apply defaults"
-    spec_folder: "[SPEC_FOLDER] → optional, use for reference or context"
     context: "[CONTEXT] → use for agent context"
     complexity: "[COMPLEXITY] → apply policy"
     request: "[REQUEST] → main planning request"
@@ -108,7 +105,6 @@ workflow:
     validation:
       - request_not_empty
       - target_folder_accessible_or_creatable
-      - spec_folder_accessible_if_provided
       - complexity_valid
     outputs:
       - normalized_inputs
@@ -119,7 +115,6 @@ workflow:
     execution: parallel
     mode: native_plan_mode_per_agent
     context_shared: "[CONTEXT] and [REQUEST]"
-    spec_folder_reference: "[SPEC_FOLDER] if provided, for referencing existing specs"
     instruction: Each agent performs full native Plan mode planning in their domain
     
     scope_agent:
@@ -223,9 +218,9 @@ workflow:
         - synthesis_notes: integration_highlights
         - next_steps: immediate_actions
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # ADAPTIVE RULES
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 adaptive_rules:
   low_complexity_1_to_2_phases:
     agents: [Scope, Breakdown, Timeline]
@@ -247,9 +242,9 @@ adaptive_rules:
   target_folder_auto:
     create: "./plans/[YYYY-MM]/[project-slug]/"
 
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 # ERROR HANDLING
-# ───────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────
 error_handling:
   agent_failure:
     action: retry_with_simplified_scope
