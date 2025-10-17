@@ -1,59 +1,45 @@
-# Prompt Engineering Assistant - User Guide v0.900
+# Prompt Engineering Assistant - User Guide v0.910
 
 Professional prompt transformation system with **intelligent framework selection**, comprehensive enhancement patterns, and full transparency reporting through advanced DEPTH methodology.
 
-## 🔋 Table of Contents
+## 📋 Table of Contents
 
-- [🆕 What's New in v0.900](#whats-new-in-v0900)
+- [🆕 What's New in v0.910](#whats-new-in-v0910)
 - [✨ Key Features](#key-features)
 - [🚀 Quick Setup](#quick-setup)
 - [🎛️ Operating Modes](#operating-modes)
 - [🧠 Framework Intelligence](#framework-intelligence)
 - [📊 Enhancement System](#enhancement-system)
 - [📈 CLEAR Evaluation](#clear-evaluation)
-- [🔄 Output Formats](#output-formats)
+- [📄 Output Formats](#output-formats)
 - [🛠️ REPAIR+ Protocol](#repair-protocol)
 - [📚 Documentation Structure](#documentation-structure)
-- [🎯 Quick Command Reference](#quick-command-reference)
-- [📦 Version History](#version-history)
 
 ---
 
-<a id="whats-new-in-v0900"></a>
-## 🆕 What's New in v0.900
+<a id="whats-new-in-v0910"></a>
+## 🆕 What's New in v0.910
 
-### 🎉 Major Enhancements
+### 🎉 Architecture Standardization
 
-**Intelligent Framework Selection**
-- 7 professional frameworks with automatic selection
-- Success rate tracking (87-94% per framework)
-- Context-aware framework matching
-- Power combinations for complex scenarios
+**YAML Processing Structure**
+- Complete conversion to YAML notation across all systems
+- Standardized state management and framework selection
+- Consistent processing notation throughout
+- Improved maintainability and clarity
 
-**Consolidated Pattern Library**
-- Comprehensive enhancement patterns
-- Framework optimization strategies
-- Excellence patterns for 45+ CLEAR scores
-- Systematic weakness detection
-
-**Enhanced REPAIR+ Protocol**
-- Pattern-based issue detection
-- Prioritized solution proposals
-- Strategy-based fixes
-- Iterative improvement to target scores
-
-**Advanced Scoring System**
-- Context-aware CLEAR weighting
-- Multi-pass evaluation methodology
-- Dimension interdependencies
-- Comparative scoring capabilities
+**Updated Core Documents**
+- DEPTH Framework v0.105 with YAML structure
+- Interactive Mode v0.641 with state machine
+- Patterns & Evaluation v0.101 fully structured
+- System prompt v0.910 with new architecture
 
 ### Maintained Excellence
+- All 7 frameworks with intelligent selection (87-94% success rates)
 - Full transparency reporting after every enhancement
-- Interactive mode as default
-- DEPTH processing with 10-round standard
-- Quick mode with auto-scaled rounds (1-5)
+- 10-round DEPTH processing (1-5 scaled for $quick)
 - Clean artifacts with minimal headers
+- Comprehensive pattern library
 
 ---
 
@@ -68,7 +54,7 @@ Professional prompt transformation system with **intelligent framework selection
 - **⚡ Quick Mode Scaling**: 1-5 rounds based on complexity (1-10 scale)
 - **💬 Interactive Default**: Guided enhancement with framework choices
 - **📈 CLEAR Scoring**: Context-aware evaluation with dimension weighting
-- **🔄 Pattern Library**: 20+ enhancement patterns for systematic improvement
+- **📄 Pattern Library**: 20+ enhancement patterns for systematic improvement
 - **🛠️ REPAIR+ Recovery**: Advanced error detection and correction
 - **📦 Clean Artifacts**: Minimal headers, comprehensive explanations
 
@@ -94,24 +80,24 @@ Professional prompt transformation system with **intelligent framework selection
 ### Step 2: Add System Instructions
 1. Click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Writer - Prompt Improver - v0.900.md`
+3. Copy and paste: `Writer - Prompt Improver - v0.910.md`
 4. Save the project
 
 ### Step 3: Add Knowledge Base Documents
 
 **Core System (Required):**
-- `README.md` (this file)
-- `Writer - Prompt Improver - v0.900.md` - Main system prompt
+- `README.md` (this file - v0.910)
+- `Writer - Prompt Improver - v0.910.md` - Main system prompt
 
 **Enhancement Framework:**
-- `Prompt - DEPTH Thinking Framework - v0.110.md` - Core methodology
-- `Prompt - Patterns, Enhancements & Evaluation - v0.100.md` - Complete pattern library
-- `Prompt - Interactive Mode - v0.700.md` - Conversation flows
+- `Prompt - DEPTH Thinking Framework - v0.105.md` - Core methodology
+- `Prompt - Patterns, Enhancements & Evaluation - v0.101.md` - Complete pattern library
+- `Prompt - Interactive Mode - v0.641.md` - Conversation flows
 
 **Format Specifications:**
 - `Prompt - Format Guide - Markdown - v0.100.md` - Standard format
 - `Prompt - Format Guide - JSON - v0.110.md` - API integration format
-- `Prompt - Format Guide - YAML - v0.110.md` - Configuration format
+- `Prompt - Format Guide - YAML - v0.100.md` - Configuration format
 
 ### Step 4: Start Enhancing
 ```
@@ -151,12 +137,23 @@ $json api endpoint              # JSON format with structure optimization
 
 ### Automatic Framework Selection
 
-The system analyzes your request across 8 dimensions to select the optimal framework:
+The system analyzes your request across 8 dimensions using structured logic:
 
-```
-Task Analysis → Framework Selection → Success Rate Prediction
-     ↓                ↓                      ↓
-[complexity]    [best match]          [87-94% typical]
+```yaml
+framework_selection:
+  analyze_characteristics:
+    - complexity: [1-10 scale]
+    - urgency: [boolean]
+    - audience_specific: [boolean]
+    - creative_element: [boolean]
+    - precision_critical: [boolean]
+  
+  select_best:
+    method: highest_score
+    output:
+      primary: [selected_framework]
+      confidence: [normalized_score]
+      alternative: [second_best]
 ```
 
 ### Framework Selection Matrix
@@ -187,19 +184,26 @@ Task Analysis → Framework Selection → Success Rate Prediction
 
 ### Systematic Enhancement Pipeline
 
-```python
-1. Structural Enhancement    → Framework application
-2. Clarity Enhancement       → Simplification & disambiguation  
-3. Precision Enhancement     → Measurability & constraints
-4. Efficiency Enhancement    → Token optimization
-5. Reusability Enhancement   → Parameterization & templates
+```yaml
+enhancement_pipeline:
+  stages:
+    - structural_enhancement:
+        actions: [apply_framework, reorganize]
+    - clarity_enhancement:
+        actions: [simplify, disambiguate]
+    - precision_enhancement:
+        actions: [add_metrics, specify_constraints]
+    - efficiency_enhancement:
+        actions: [remove_redundancy, compress]
+    - reusability_enhancement:
+        actions: [parameterize, add_flexibility]
 ```
 
 ### Common Pattern Transformations
 
 | Pattern | Impact | CLEAR Gain |
 |---------|--------|------------|
-| **Vague→Specific** | Add role, context, metrics | +20 points |
+| **Vague→Specific** | Add role, context, metrics | +15-20 points |
 | **Assumption Elimination** | Make implicit explicit | +3-5 Correctness |
 | **Scope Boundaries** | Define included/excluded | +4-6 Logic |
 | **Example Injection** | Clarify format expectations | +3-5 Expression |
@@ -218,14 +222,23 @@ Task Analysis → Framework Selection → Success Rate Prediction
 
 ### Context-Aware Scoring System
 
-The system adjusts dimension weights based on use case:
-
-| Use Case | Correctness | Logic | Expression | Arrangement | Reuse |
-|----------|-------------|-------|------------|-------------|-------|
-| **API Integration** | 30% | 20% | 20% | 20% | 10% |
-| **Creative Writing** | 15% | 20% | 35% | 20% | 10% |
-| **Template Creation** | 20% | 15% | 20% | 20% | 25% |
-| **General (Default)** | 20% | 20% | 30% | 20% | 10% |
+```yaml
+contextual_clear_scoring:
+  base_weights:
+    correctness: 0.20
+    logic: 0.20
+    expression: 0.30
+    arrangement: 0.20
+    reuse: 0.10
+  
+  context_adjustments:
+    api_integration:
+      correctness: 0.30
+      expression: 0.20
+    creative_writing:
+      expression: 0.35
+      correctness: 0.15
+```
 
 ### Score Interpretation
 
@@ -245,7 +258,7 @@ The system adjusts dimension weights based on use case:
 ---
 
 <a id="output-formats"></a>
-## 🔄 Output Formats
+## 📄 Output Formats
 
 ### Three Format Options
 
@@ -273,17 +286,21 @@ Your choice? (1, 2, or 3)
 
 ### Enhanced Recovery System
 
-**Pattern-Based Issue Detection:**
-- **Critical**: Must fix for functionality
-- **Major**: Should fix for quality
-- **Minor**: Nice to fix for polish
-- **Style**: Optional improvements
-
-**Recovery Strategies:**
-```
-Recognize → Explain → Propose → Apply → Iterate → Record
-    ↓          ↓         ↓        ↓        ↓         ↓
-[patterns] [impact] [solutions] [fixes] [target] [learning]
+```yaml
+repair_framework:
+  severity_levels:
+    critical: "Must fix for functionality"
+    major: "Should fix for quality"
+    minor: "Nice to fix for polish"
+    style: "Optional improvements"
+  
+  process:
+    recognize: pattern_matching
+    explain: impact_analysis
+    propose: solution_prioritization
+    apply: strategy_based_fixes
+    iterate: target_achievement
+    record: pattern_learning
 ```
 
 ### Common Fixes by Score Range
@@ -303,16 +320,16 @@ Recognize → Explain → Propose → Apply → Iterate → Record
 
 | Document | Version | Purpose |
 |----------|---------|---------|
-| **Writer - Prompt Improver** | v0.900 | Main system prompt with all rules |
-| **README** | v0.900 | This user guide |
+| **Writer - Prompt Improver** | v0.910 | Main system prompt |
+| **README** | v0.910 | This user guide |
 
 ### Enhancement Framework
 
 | Document | Version | Purpose |
 |----------|---------|---------|
-| **DEPTH Thinking Framework** | v0.110 | Core 10-round methodology |
-| **Patterns, Enhancements & Evaluation** | v0.100 | Complete pattern library |
-| **Interactive Mode** | v0.700 | Conversation flow management |
+| **DEPTH Thinking Framework** | v0.105 | Core 10-round methodology |
+| **Patterns, Enhancements & Evaluation** | v0.101 | Complete pattern library |
+| **Interactive Mode** | v0.641 | Conversation flow management |
 
 ### Format Specifications
 
@@ -320,60 +337,4 @@ Recognize → Explain → Propose → Apply → Iterate → Record
 |----------|---------|---------|
 | **Format Guide - Markdown** | v0.100 | Standard/natural language |
 | **Format Guide - JSON** | v0.110 | API integration structure |
-| **Format Guide - YAML** | v0.110 | Configuration templates |
-
----
-
-<a id="quick-command-reference"></a>
-## 🎯 Quick Command Reference
-
-### Standard Commands
-```markdown
-[request]            # Interactive mode with framework choices
-$improve [request]   # Standard 10-round enhancement
-$refine [request]    # Maximum optimization with deep analysis
-$short [request]     # Minimal 3-round enhancement
-```
-
-### Speed Command
-```markdown
-$quick [request]     # Auto-scaled 1-5 rounds based on complexity
-```
-
-### Format Commands
-```markdown
-$json [request]      # JSON structure for APIs
-$yaml [request]      # YAML for configurations
-```
-
-### Combined Commands
-```markdown
-$quick $json api endpoint    # Fast JSON enhancement
-$improve $yaml config file   # Standard YAML optimization
-```
-
----
-
-<a id="version-history"></a>
-## 📦 Version History
-
-### v0.900 (Current) - INTELLIGENCE UPDATE
-- **NEW:** 7-framework intelligent selection system
-- **NEW:** Consolidated pattern library with 20+ patterns
-- **NEW:** REPAIR+ advanced recovery protocol
-- **NEW:** Context-aware CLEAR scoring
-- **NEW:** Framework success rate tracking
-- **NEW:** Power combinations for complex scenarios
-- Maintained transparency and clean artifacts
-- Enhanced weakness detection algorithms
-
-### v0.861 - TRANSPARENCY UPDATE
-- Full transparency reporting
-- CLEAR scoring always shown
-- DEPTH processing explained
-- Decision reasoning provided
-
-### v0.860
-- Enhanced interactive mode
-- Smart quick mode scaling
-- Improved UX flow
+| **Format Guide - YAML** | v0.100 | Configuration templates |
