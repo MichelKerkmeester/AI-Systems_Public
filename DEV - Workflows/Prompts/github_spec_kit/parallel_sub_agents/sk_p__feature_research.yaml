@@ -48,21 +48,27 @@ sub_agents:
   - id: web
     name: Web/Ecosystem Researcher
     role: Libraries, repos, issues, community patterns
+    focus: libraries_frameworks_repos_issues_community_patterns
   - id: docs
     name: Academic/Docs Researcher
     role: Standards, RFCs, official docs, papers
+    focus: standards_rfcs_official_docs_academic_papers
   - id: market
     name: Competitive/Market Analyst
     role: Vendors, alternatives, benchmarks
+    focus: vendors_competitors_alternatives_benchmarks_trends
   - id: feasibility
     name: Feasibility/Cost Analyst
     role: Complexity, ops costs, risks
+    focus: technical_complexity_operational_costs_risks_tradeoffs
   - id: reviewer
     name: Lead Reviewer
     role: Dedupe, rank, resolve contradictions
+    focus: deduplication_ranking_contradiction_resolution_synthesis
   - id: synthesizer
     name: Lead Synthesizer
     role: Produce research.md per required sections
+    focus: markdown_generation_section_organization_findings_integration
 
 # ─────────────────────────────────────────────────────────────────
 # WORKFLOW (PARALLEL OUTPUT QA BY MAIN AGENT)
@@ -322,7 +328,7 @@ workflow:
       tagging: optional; only on user request
 
 # ─────────────────────────────────────────────────────────────────
-# RESEARCH QUALITY STANDARDS
+# QUALITY STANDARDS
 # ─────────────────────────────────────────────────────────────────
 quality_standards:
   documentation:
@@ -382,26 +388,6 @@ spec_folder_structure:
     - "Optional supplementary files in spec folder as needed"
 
 # ─────────────────────────────────────────────────────────────────
-# RULES
-# ─────────────────────────────────────────────────────────────────
-rules:
-  ALWAYS:
-    - follow_research_methodology
-    - document_all_findings
-    - validate_technical_feasibility
-    - use_devtools_for_live_analysis
-    - generate_comprehensive_documentation
-    - self_validate_and_proceed
-    - limit_context_to_active_scope
-    - enforce_review_before_synthesis
-  NEVER:
-    - skip_investigation_steps
-    - ignore_platform_constraints
-    - submit_without_thorough_analysis
-    - proceed_to_implementation
-    - invent_new_patterns_when_existing_work
-
-# ─────────────────────────────────────────────────────────────────
 # ADAPTIVE RULES & ERROR HANDLING
 # ─────────────────────────────────────────────────────────────────
 adaptive_rules:
@@ -422,3 +408,23 @@ error_handling:
     on_low_citations: rerun_parallel_with_broadened_queries
     proceed_with_partial: true
     annotate_in_review: true
+
+# ─────────────────────────────────────────────────────────────────
+# RULES
+# ─────────────────────────────────────────────────────────────────
+rules:
+  ALWAYS:
+    - follow_research_methodology
+    - document_all_findings
+    - validate_technical_feasibility
+    - use_devtools_for_live_analysis
+    - generate_comprehensive_documentation
+    - self_validate_and_proceed
+    - limit_context_to_active_scope
+    - enforce_review_before_synthesis
+  NEVER:
+    - skip_investigation_steps
+    - ignore_platform_constraints
+    - submit_without_thorough_analysis
+    - proceed_to_implementation
+    - invent_new_patterns_when_existing_work

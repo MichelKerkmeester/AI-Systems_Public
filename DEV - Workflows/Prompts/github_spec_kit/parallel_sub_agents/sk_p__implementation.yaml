@@ -55,21 +55,27 @@ sub_agents:
   - id: core
     name: Core Implementer
     role: Draft core logic plan, modules, data structures, key algorithms
+    focus: business_logic_data_structures_algorithms_core_modules
   - id: adapters
     name: Integrations/Adapters Engineer
     role: Identify external integrations, API surfaces, configuration, error handling
+    focus: external_integrations_apis_configuration_error_handling
   - id: tests
     name: Test Engineer
     role: Create test plan (unit/integration), fixtures, coverage targets
+    focus: unit_integration_fixtures_coverage_test_strategies
   - id: docs
     name: Docs Engineer
     role: Draft usage notes, examples, migration/upgrade notes
+    focus: usage_guides_examples_migration_api_documentation
   - id: reviewer
     name: Integration Reviewer
     role: Validate coherence, API consistency, testability, identify gaps
+    focus: coherence_consistency_testability_gap_identification
   - id: synthesizer
     name: Lead Synthesizer
     role: Produce implementation_plan.md to guide development
+    focus: implementation_strategy_task_ordering_dependency_mapping
 
 # ─────────────────────────────────────────────────────────────────
 # WORKFLOW (PARALLEL OUTPUT QA BY MAIN AGENT)
@@ -279,25 +285,6 @@ termination:
     - Update knowledge base if needed
 
 # ─────────────────────────────────────────────────────────────────
-# RULES
-# ─────────────────────────────────────────────────────────────────
-rules:
-  ALWAYS:
-  - follow_workflow_sequence
-  - document_all_changes
-  - validate_before_completion
-  - use_devtools_for_staging_analysis
-  - update_task_checklist_progressively
-  - self_validate_and_proceed
-  - enforce_review_before_synthesis
-  - apply_minimum_needed_change
-  NEVER:
-  - skip_workflow_steps
-  - ignore_blockers
-  - submit_without_validation
-  - skip_browser_testing
-
-# ─────────────────────────────────────────────────────────────────
 # ADAPTIVE RULES & ERROR HANDLING
 # ─────────────────────────────────────────────────────────────────
 adaptive_rules:
@@ -318,3 +305,22 @@ error_handling:
     on_repeated_failure: rerun_failed_tasks_sequentially
     proceed_with_partial: true
     annotate_in_review: true
+
+# ─────────────────────────────────────────────────────────────────
+# RULES
+# ─────────────────────────────────────────────────────────────────
+rules:
+  ALWAYS:
+  - follow_workflow_sequence
+  - document_all_changes
+  - validate_before_completion
+  - use_devtools_for_staging_analysis
+  - update_task_checklist_progressively
+  - self_validate_and_proceed
+  - enforce_review_before_synthesis
+  - apply_minimum_needed_change
+  NEVER:
+  - skip_workflow_steps
+  - ignore_blockers
+  - submit_without_validation
+  - skip_browser_testing

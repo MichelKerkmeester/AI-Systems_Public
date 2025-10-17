@@ -192,29 +192,33 @@ devtools:
     - Save performance profiles
 
 # ─────────────────────────────────────────────────────────────────
-# FIX PATTERNS
+# QUALITY CHECKS
 # ─────────────────────────────────────────────────────────────────
-common_fixes:
-  null_reference:
-    - Add null checks
-    - Use optional chaining
-    - Provide defaults
+quality:
+  before_marking_fixed:
+    - Issue reproducible before fix
+    - Issue resolved after fix
+    - No new issues introduced
+    - Code follows standards
+    - Tests updated if needed
 
-  race_conditions:
-    - Add proper async/await
-    - Implement loading states
-    - Use Promise.all when parallel
+# ─────────────────────────────────────────────────────────────────
+# ESCALATION
+# ─────────────────────────────────────────────────────────────────
+escalation:
+  when_to_escalate:
+    - Cannot reproduce issue
+    - Root cause unclear after investigation
+    - Fix would break other features
+    - Requires architectural changes
+    - Security implications
 
-  memory_leaks:
-    - Remove event listeners
-    - Clear timers/intervals
-    - Cleanup subscriptions
-
-  performance:
-    - Implement caching
-    - Add debouncing/throttling
-    - Optimize renders
-    - Lazy load resources
+  information_to_provide:
+    - Steps attempted
+    - Evidence gathered
+    - Hypotheses tested
+    - Blockers encountered
+    - Recommended next steps
 
 # ─────────────────────────────────────────────────────────────────
 # OUTPUT FORMAT
@@ -241,17 +245,6 @@ output:
     [How to prevent similar issues]
 
 # ─────────────────────────────────────────────────────────────────
-# QUALITY CHECKS
-# ─────────────────────────────────────────────────────────────────
-quality:
-  before_marking_fixed:
-    - Issue reproducible before fix
-    - Issue resolved after fix
-    - No new issues introduced
-    - Code follows standards
-    - Tests updated if needed
-
-# ─────────────────────────────────────────────────────────────────
 # RULES
 # ─────────────────────────────────────────────────────────────────
 rules:
@@ -268,21 +261,3 @@ rules:
     - Ignore edge cases
     - Skip verification
     - Leave debugging code in production
-
-# ─────────────────────────────────────────────────────────────────
-# ESCALATION
-# ─────────────────────────────────────────────────────────────────
-escalation:
-  when_to_escalate:
-    - Cannot reproduce issue
-    - Root cause unclear after investigation
-    - Fix would break other features
-    - Requires architectural changes
-    - Security implications
-
-  information_to_provide:
-    - Steps attempted
-    - Evidence gathered
-    - Hypotheses tested
-    - Blockers encountered
-    - Recommended next steps

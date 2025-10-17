@@ -48,21 +48,27 @@ sub_agents:
   - id: requirements
     name: Requirements Analyst
     role: Extract requirements, constraints, dependencies, and success metrics from inputs and context
+    focus: functional_nonfunctional_constraints_acceptance_criteria
   - id: architecture
     name: Solution Architect
     role: Propose architecture, components, interfaces, and data flows with trade-offs
+    focus: system_design_components_interfaces_data_flows
   - id: risk
     name: Risk/Compliance Analyst
     role: Identify risks, edge cases, non-functionals (security, privacy, performance, accessibility)
+    focus: security_privacy_performance_edge_cases_compliance
   - id: estimation
     name: Estimation/Scope Analyst
     role: Propose milestones, sequencing, ranges for effort and complexity
+    focus: effort_duration_complexity_milestones_sequencing
   - id: reviewer
     name: Lead Reviewer
     role: Reconcile parallel outputs, resolve conflicts, validate completeness
+    focus: reconciliation_conflicts_gaps_validation
   - id: synthesizer
     name: Lead Synthesizer
     role: Produce plan.md and planning-summary.md per SpecKit expectations
+    focus: artifact_generation_integration_formatting_compliance
 
 # ─────────────────────────────────────────────────────────────────
 # WORKFLOW (PARALLEL OUTPUT QA BY MAIN AGENT)
@@ -245,26 +251,6 @@ termination:
     - Or use workflow.yaml for manual implementation with gates
 
 # ─────────────────────────────────────────────────────────────────
-# RULES
-# ─────────────────────────────────────────────────────────────────
-rules:
-  ALWAYS:
-    - follow_workflow_sequence
-    - preserve_original_approval_gates
-    - document_all_changes
-    - validate_before_completion
-    - use_devtools_for_staging_analysis
-    - evidence_before_decisions
-    - enforce_review_before_synthesis
-  NEVER:
-    - skip_workflow_steps
-    - ignore_blockers
-    - submit_without_validation
-    - skip_browser_testing
-    - proceed_without_approval
-    - proceed_beyond_planning
-
-# ─────────────────────────────────────────────────────────────────
 # ADAPTIVE RULES & ERROR HANDLING
 # ─────────────────────────────────────────────────────────────────
 adaptive_rules:
@@ -287,3 +273,23 @@ error_handling:
     on_repeated_failure: rerun_failed_tasks_sequentially
     proceed_with_partial: true
     annotate_in_review: true
+
+# ─────────────────────────────────────────────────────────────────
+# RULES
+# ─────────────────────────────────────────────────────────────────
+rules:
+  ALWAYS:
+    - follow_workflow_sequence
+    - preserve_original_approval_gates
+    - document_all_changes
+    - validate_before_completion
+    - use_devtools_for_staging_analysis
+    - evidence_before_decisions
+    - enforce_review_before_synthesis
+  NEVER:
+    - skip_workflow_steps
+    - ignore_blockers
+    - submit_without_validation
+    - skip_browser_testing
+    - proceed_without_approval
+    - proceed_beyond_planning

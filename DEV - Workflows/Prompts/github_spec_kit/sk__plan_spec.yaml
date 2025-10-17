@@ -42,7 +42,7 @@ field_handling:
     rule: "Limit file operations to scope when provided"
 
 # ─────────────────────────────────────────────────────────────────
-# WORKFLOW - PLANNING PHASE ONLY
+# WORKFLOW
 # ─────────────────────────────────────────────────────────────────
 workflow:
   step_1_request_analysis:

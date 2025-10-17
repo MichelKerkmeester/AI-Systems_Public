@@ -177,42 +177,6 @@ preservation:
       - No memory leaks
 
 # ─────────────────────────────────────────────────────────────────
-# OPTIMIZATION PATTERNS
-# ─────────────────────────────────────────────────────────────────
-patterns:
-  bundle_optimization:
-    techniques:
-      - Dynamic imports
-      - Route-based splitting
-      - Vendor chunk optimization
-      - Tree shaking unused code
-    preserve: All imports still work
-
-  render_optimization:
-    techniques:
-      - React.memo/useMemo
-      - Virtual DOM optimization
-      - Batch DOM updates
-      - RAF for animations
-    preserve: UI behavior unchanged
-
-  network_optimization:
-    techniques:
-      - Request batching
-      - GraphQL/REST optimization
-      - Compression (gzip/brotli)
-      - HTTP/2 push
-    preserve: API functionality intact
-
-  image_optimization:
-    techniques:
-      - Lazy loading
-      - Responsive images
-      - WebP/AVIF formats
-      - Progressive loading
-    preserve: Visual quality acceptable
-
-# ─────────────────────────────────────────────────────────────────
 # DEVTOOLS INTEGRATION
 # ─────────────────────────────────────────────────────────────────
 devtools:
@@ -242,6 +206,28 @@ devtools:
     - Time to Interactive
     - Cumulative Layout Shift
     - First Input Delay
+
+# ─────────────────────────────────────────────────────────────────
+# SUCCESS CRITERIA
+# ─────────────────────────────────────────────────────────────────
+success:
+  performance:
+    - Measurable improvement
+    - Metrics documented
+    - Bottlenecks addressed
+    - User experience better
+
+  preservation:
+    - 100% feature parity
+    - Animations smooth
+    - Logic intact
+    - No regressions
+
+  quality:
+    - Code maintainable
+    - Changes documented
+    - Rollback possible
+    - Tests updated
 
 # ─────────────────────────────────────────────────────────────────
 # OUTPUT FORMAT
@@ -277,29 +263,7 @@ output:
     - Performance gain: XX%
     - User experience: Improved
     - Risk level: Low
-    - Rollback plan: Available
-
-# ─────────────────────────────────────────────────────────────────
-# ROLLBACK STRATEGY
-# ─────────────────────────────────────────────────────────────────
-rollback:
-  triggers:
-    - Feature broken
-    - Animation degraded
-    - Logic error introduced
-    - Regression detected
-
-  process:
-    - Immediate revert
-    - Re-test baseline
-    - Document issue
-    - Alternative approach
-
-  prevention:
-    - Small incremental changes
-    - Continuous testing
-    - Feature flags
-    - Gradual rollout
+    - Rollback plan: Available if needed
 
 # ─────────────────────────────────────────────────────────────────
 # RULES
@@ -325,25 +289,3 @@ rules:
     - Visual regression occurs
     - Business logic affected
     - User experience degraded
-
-# ─────────────────────────────────────────────────────────────────
-# SUCCESS CRITERIA
-# ─────────────────────────────────────────────────────────────────
-success:
-  performance:
-    - Measurable improvement
-    - Metrics documented
-    - Bottlenecks addressed
-    - User experience better
-
-  preservation:
-    - 100% feature parity
-    - Animations smooth
-    - Logic intact
-    - No regressions
-
-  quality:
-    - Code maintainable
-    - Changes documented
-    - Rollback possible
-    - Tests updated

@@ -26,7 +26,7 @@ user_inputs:
   scope: "[FILES]"
   target_folder: "[TARGET_FOLDER]"  # Often points to plan document or feature specification folder
   context: "[CONTEXT]"
-  request: "[FEATURE REQUEST]"
+  request: "[REQUEST]"
 
 # ─────────────────────────────────────────────────────────────────
 # FIELD HANDLING
@@ -106,50 +106,23 @@ workflow:
       - Ready for review
 
 # ─────────────────────────────────────────────────────────────────
-# IMPLEMENTATION PATTERNS
+# INCREMENTAL DELIVERY
 # ─────────────────────────────────────────────────────────────────
-patterns:
-  frontend:
-    components:
-      - Start with structure
-      - Add styling
-      - Implement interactions
-      - Handle states
-      - Add animations
-    state_management:
-      - Local state first
-      - Lift when needed
-      - Global if necessary
-    api_integration:
-      - Mock first
-      - Real endpoints
-      - Error handling
-      - Loading states
+incremental:
+  milestone_1:
+    goal: Basic functionality
+    deliverable: Core feature working
+    validation: Happy path works
 
-  backend:
-    api_development:
-      - Route definition
-      - Controller logic
-      - Data validation
-      - Error responses
-      - Documentation
-    database:
-      - Schema design
-      - Migrations
-      - Queries
-      - Optimization
-    business_logic:
-      - Service layer
-      - Validation rules
-      - Error handling
-      - Logging
+  milestone_2:
+    goal: Complete functionality
+    deliverable: All features implemented
+    validation: All paths work
 
-  fullstack:
-    approach:
-      - API contract first
-      - Parallel development
-      - Integration points
-      - End-to-end testing
+  milestone_3:
+    goal: Production ready
+    deliverable: Polished and tested
+    validation: Ready to ship
 
 # ─────────────────────────────────────────────────────────────────
 # QUALITY STANDARDS
@@ -175,104 +148,6 @@ standards:
     - Integration verified
     - Manual testing done
     - No regressions
-
-# ─────────────────────────────────────────────────────────────────
-# INCREMENTAL DELIVERY
-# ─────────────────────────────────────────────────────────────────
-incremental:
-  milestone_1:
-    goal: Basic functionality
-    deliverable: Core feature working
-    validation: Happy path works
-
-  milestone_2:
-    goal: Complete functionality
-    deliverable: All features implemented
-    validation: All paths work
-
-  milestone_3:
-    goal: Production ready
-    deliverable: Polished and tested
-    validation: Ready to ship
-
-# ─────────────────────────────────────────────────────────────────
-# COMMON TASKS
-# ─────────────────────────────────────────────────────────────────
-tasks:
-  setup:
-    - Environment configuration
-    - Dependencies installation
-    - Development server
-    - Database setup
-
-  feature_development:
-    - Component creation
-    - API endpoints
-    - Data models
-    - Business logic
-    - UI implementation
-
-  integration:
-    - Frontend-backend connection
-    - Third-party services
-    - Authentication
-    - Authorization
-
-  testing:
-    - Unit tests
-    - Integration tests
-    - Manual testing
-    - User acceptance
-
-  deployment_prep:
-    - Build optimization
-    - Environment variables
-    - Documentation
-    - Deployment scripts
-
-# ─────────────────────────────────────────────────────────────────
-# DEVTOOLS INTEGRATION
-# ─────────────────────────────────────────────────────────────────
-devtools:
-  development:
-    - Console for debugging
-    - Network for API testing
-    - Elements for DOM inspection
-    - Sources for breakpoints
-    - Performance for optimization
-
-  testing:
-    - Test implementations
-    - Verify API calls
-    - Check state changes
-    - Validate UI updates
-    - Monitor performance
-
-# ─────────────────────────────────────────────────────────────────
-# TROUBLESHOOTING
-# ─────────────────────────────────────────────────────────────────
-troubleshooting:
-  common_issues:
-    build_errors:
-      - Check dependencies
-      - Clear cache
-      - Verify configuration
-
-    runtime_errors:
-      - Check console
-      - Debug with breakpoints
-      - Verify data flow
-
-    integration_issues:
-      - Check API endpoints
-      - Verify authentication
-      - Test network calls
-
-  debugging_approach:
-    - Isolate the problem
-    - Reproduce consistently
-    - Fix root cause
-    - Verify solution
 
 # ─────────────────────────────────────────────────────────────────
 # OUTPUT FORMAT
@@ -390,27 +265,3 @@ rules:
     - Working over perfect
     - Incremental over big bang
     - Pragmatic over theoretical
-
-# ─────────────────────────────────────────────────────────────────
-# ADAPTIVE BEHAVIOR
-# ─────────────────────────────────────────────────────────────────
-adaptation:
-  for_simple_features:
-    - Direct implementation
-    - Minimal setup
-    - Quick delivery
-
-  for_complex_features:
-    - Careful planning
-    - Incremental approach
-    - More testing
-
-  for_urgent_fixes:
-    - Focus on solution
-    - Minimal refactoring
-    - Quick validation
-
-  for_new_projects:
-    - Setup foundation
-    - Establish patterns
-    - Documentation focus

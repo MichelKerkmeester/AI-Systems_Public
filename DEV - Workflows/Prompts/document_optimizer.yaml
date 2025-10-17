@@ -260,6 +260,86 @@ decision_trees:
       - otherwise: may_remove_if_redundant
 
 # ─────────────────────────────────────────────────────────────────
+# OPTIMIZATION STRATEGIES
+# ─────────────────────────────────────────────────────────────────
+strategies:
+  conciseness_techniques:
+    - eliminate_redundancy
+    - tighten_language
+    - use_structure_over_prose
+    - preserve_essential_elements
+
+  language_tightening:
+    replacements:
+      - from: "you MUST execute"
+        to: "execute"
+      - from: "in order to"
+        to: "to"
+    remove_fillers:
+      - clearly
+      - obviously
+      - simply
+
+  preserve_always:
+    - scannability_with_vertical_lists
+    - pattern_recognition_via_checkmarks_or_bullets
+    - explicit_quantifiers_all_at_least_one_never
+    - measurable_thresholds_counts_paths_exact_strings
+    - prevention_patterns_prohibited_vs_required
+    - error_condition_definitions
+
+  anti_patterns_avoid:
+    - convert_vertical_list_to_slash_separated
+    - compress_checklists_into_prose
+    - remove_navigation_headers
+    - merge_distinct_concepts_into_run_on_sentence
+    - replace_goals_with_priority_reference_not_equivalent
+    - remove_quick_reference_lists_because_detailed_exists
+
+user_workflow:
+  usage_example: |
+    # First invocation: Strengthens and removes redundancy
+    /optimize-doc docs/some-file.md
+
+    # Optional second invocation for further optimization
+    /optimize-doc docs/some-file.md
+
+    # Subsequent invocations: No changes if already optimized
+    /optimize-doc docs/some-file.md
+
+# ─────────────────────────────────────────────────────────────────
+# QUALITY STANDARDS
+# ─────────────────────────────────────────────────────────────────
+quality_standards:
+  must_satisfy_all:
+    - meaning_preserved
+    - executability_preserved
+    - success_criteria_intact
+    - ambiguity_resolved
+    - conciseness_increased
+
+  verification_test:
+    step_1:
+      question: Can instruction be executed correctly without removed content?
+      if_no: reject_optimization
+    step_2:
+      question: Does removed content only explain why (rationale/educational)?
+      if_yes: accept_removal
+    step_3:
+      question: Does removed content extract a general decision rule?
+      if_yes: reject_removal_keep_it
+    final_rule:
+      - if_step_1_no_or_step_3_yes → reject
+      - if_step_2_yes_and_others_no → accept
+
+  hierarchy:
+    priority_order:
+      - correctness
+      - efficiency
+      - conciseness
+    rule: Never sacrifice correctness for conciseness; prefer conciseness only when correctness and clarity are preserved
+
+# ─────────────────────────────────────────────────────────────────
 # RULES
 # ─────────────────────────────────────────────────────────────────
 rules:
@@ -385,83 +465,3 @@ rules:
         vim todo.md  # Changed - [ ] to - [x]
         # CORRECT: Deleting the entry
         vim todo.md  # DELETE entire task entry
-
-# ─────────────────────────────────────────────────────────────────
-# OPTIMIZATION STRATEGIES
-# ─────────────────────────────────────────────────────────────────
-strategies:
-  conciseness_techniques:
-    - eliminate_redundancy
-    - tighten_language
-    - use_structure_over_prose
-    - preserve_essential_elements
-
-  language_tightening:
-    replacements:
-      - from: "you MUST execute"
-        to: "execute"
-      - from: "in order to"
-        to: "to"
-    remove_fillers:
-      - clearly
-      - obviously
-      - simply
-
-  preserve_always:
-    - scannability_with_vertical_lists
-    - pattern_recognition_via_checkmarks_or_bullets
-    - explicit_quantifiers_all_at_least_one_never
-    - measurable_thresholds_counts_paths_exact_strings
-    - prevention_patterns_prohibited_vs_required
-    - error_condition_definitions
-
-  anti_patterns_avoid:
-    - convert_vertical_list_to_slash_separated
-    - compress_checklists_into_prose
-    - remove_navigation_headers
-    - merge_distinct_concepts_into_run_on_sentence
-    - replace_goals_with_priority_reference_not_equivalent
-    - remove_quick_reference_lists_because_detailed_exists
-
-user_workflow:
-  usage_example: |
-    # First invocation: Strengthens and removes redundancy
-    /optimize-doc docs/some-file.md
-
-    # Optional second invocation for further optimization
-    /optimize-doc docs/some-file.md
-
-    # Subsequent invocations: No changes if already optimized
-    /optimize-doc docs/some-file.md
-
-# ─────────────────────────────────────────────────────────────────
-# QUALITY STANDARDS
-# ─────────────────────────────────────────────────────────────────
-quality_standards:
-  must_satisfy_all:
-    - meaning_preserved
-    - executability_preserved
-    - success_criteria_intact
-    - ambiguity_resolved
-    - conciseness_increased
-
-  verification_test:
-    step_1:
-      question: Can instruction be executed correctly without removed content?
-      if_no: reject_optimization
-    step_2:
-      question: Does removed content only explain why (rationale/educational)?
-      if_yes: accept_removal
-    step_3:
-      question: Does removed content extract a general decision rule?
-      if_yes: reject_removal_keep_it
-    final_rule:
-      - if_step_1_no_or_step_3_yes → reject
-      - if_step_2_yes_and_others_no → accept
-
-  hierarchy:
-    priority_order:
-      - correctness
-      - efficiency
-      - conciseness
-    rule: Never sacrifice correctness for conciseness; prefer conciseness only when correctness and clarity are preserved

@@ -49,26 +49,80 @@ field_handling:
 # ─────────────────────────────────────────────────────────────────
 sub_agents:
   stage_A_planning_spec:
-    - { id: requirements, name: Requirements Analyst, role: requirements_and_success_metrics }
-    - { id: architecture, name: Solution Architect, role: components_interfaces_data_flow }
-    - { id: risk, name: Risk/Compliance Analyst, role: risks_edge_cases_non_functionals }
-    - { id: estimation, name: Estimation/Scope Analyst, role: milestones_sequencing_effort_ranges }
-    - { id: reviewerA, name: Lead Reviewer (A), role: reconcile_and_validate }
-    - { id: synthesizerA, name: Lead Synthesizer (A), role: plan_and_summary }
+    - id: requirements
+      name: Requirements Analyst
+      role: requirements_and_success_metrics
+      focus: requirements_constraints_success_metrics_dependencies
+    - id: architecture
+      name: Solution Architect
+      role: components_interfaces_data_flow
+      focus: components_interfaces_data_flow_architecture_patterns
+    - id: risk
+      name: Risk/Compliance Analyst
+      role: risks_edge_cases_non_functionals
+      focus: risks_edge_cases_security_privacy_performance
+    - id: estimation
+      name: Estimation/Scope Analyst
+      role: milestones_sequencing_effort_ranges
+      focus: milestones_sequencing_effort_ranges_timelines
+    - id: reviewerA
+      name: Lead Reviewer (A)
+      role: reconcile_and_validate
+      focus: reconciliation_validation_conflict_resolution
+    - id: synthesizerA
+      name: Lead Synthesizer (A)
+      role: plan_and_summary
+      focus: plan_creation_summary_generation_integration
   stage_B_implementation_prep:
-    - { id: core, name: Core Implementer, role: modules_data_structures_algorithms }
-    - { id: adapters, name: Integrations/Adapters Engineer, role: integrations_api_config }
-    - { id: tests, name: Test Engineer, role: plan_cases_fixtures_coverage }
-    - { id: docs, name: Docs Engineer, role: usage_examples_migration }
-    - { id: reviewerB, name: Integration Reviewer (B), role: coherence_api_testability }
-    - { id: synthesizerB, name: Lead Synthesizer (B), role: implementation_plan }
+    - id: core
+      name: Core Implementer
+      role: modules_data_structures_algorithms
+      focus: modules_data_structures_algorithms_business_logic
+    - id: adapters
+      name: Integrations/Adapters Engineer
+      role: integrations_api_config
+      focus: integrations_api_surfaces_configuration_protocols
+    - id: tests
+      name: Test Engineer
+      role: plan_cases_fixtures_coverage
+      focus: test_planning_cases_fixtures_coverage_strategies
+    - id: docs
+      name: Docs Engineer
+      role: usage_examples_migration
+      focus: usage_examples_migration_guides_api_docs
+    - id: reviewerB
+      name: Integration Reviewer (B)
+      role: coherence_api_testability
+      focus: coherence_api_consistency_testability_quality
+    - id: synthesizerB
+      name: Lead Synthesizer (B)
+      role: implementation_plan
+      focus: implementation_plan_synthesis_coordination
   stage_C_quality_review:
-    - { id: completeness, name: Completeness Reviewer, role: coverage_non_functionals }
-    - { id: feasibility, name: Feasibility Reviewer, role: technical_viability_perf_scale }
-    - { id: security, name: Security/Privacy Reviewer, role: threats_data_compliance }
-    - { id: consistency, name: Consistency/Traceability Reviewer, role: contradictions_terminology_refs }
-    - { id: reviewerC, name: Lead Reviewer (C), role: severity_resolution }
-    - { id: synthesizerC, name: Lead Synthesizer (C), role: quality_report }
+    - id: completeness
+      name: Completeness Reviewer
+      role: coverage_non_functionals
+      focus: coverage_gaps_missing_requirements_non_functionals
+    - id: feasibility
+      name: Feasibility Reviewer
+      role: technical_viability_perf_scale
+      focus: technical_viability_performance_scalability_constraints
+    - id: security
+      name: Security/Privacy Reviewer
+      role: threats_data_compliance
+      focus: vulnerabilities_auth_encryption_input_validation
+    - id: consistency
+      name: Consistency/Traceability Reviewer
+      role: contradictions_terminology_refs
+      focus: contradictions_terminology_references_traceability
+    - id: reviewerC
+      name: Lead Reviewer (C)
+      role: severity_resolution
+      focus: severity_assessment_resolution_prioritization
+    - id: synthesizerC
+      name: Lead Synthesizer (C)
+      role: quality_report
+      focus: quality_report_generation_findings_consolidation
 
 # ─────────────────────────────────────────────────────────────────
 # WORKFLOW (PARALLEL OUTPUT QA BY MAIN AGENT)

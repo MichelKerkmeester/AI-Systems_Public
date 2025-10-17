@@ -21,7 +21,7 @@ operating_mode:
 # ─────────────────────────────────────────────────────────────────
 user_inputs:
   target_folder: "[TARGET_FOLDER]"
-  context: "[CONTEXT]"
+  context: "Create a plan on how to improve the AGENTS.md"
   complexity: "[COMPLEXITY]"
   request: "[REQUEST]"
 
@@ -65,18 +65,23 @@ sub_agents:
   - id: scope
     name: Scope Analyst
     role: Define project boundaries and success criteria using native Plan mode
+    focus: objectives_boundaries_success_criteria_constraints
   - id: breakdown
     name: Task Decomposer
     role: Decompose project into phases and tasks using native Plan mode
+    focus: phases_tasks_dependencies_milestones
   - id: resource
     name: Resource Analyst
     role: Identify requirements and dependencies using native Plan mode
+    focus: tools_skills_external_deps_blockers
   - id: timeline
     name: Timeline Estimator
     role: Estimate durations and sequencing using native Plan mode
+    focus: durations_sequencing_critical_path_buffer
   - id: quality
     name: Quality Validator
     role: Validate completeness and identify risks using native Plan mode
+    focus: completeness_feasibility_risks_gaps
 
 # ─────────────────────────────────────────────────────────────────
 # WORKFLOW (PARALLEL OUTPUT QA BY MAIN AGENT)
@@ -219,6 +224,34 @@ workflow:
         - next_steps: immediate_actions
 
 # ─────────────────────────────────────────────────────────────────
+# OUTPUT FORMAT
+# ─────────────────────────────────────────────────────────────────
+output_format:
+  primary_deliverable:
+    location: "[TARGET_FOLDER]/plan-[slug]-[timestamp].md"
+    sections:
+      - executive_summary
+      - scope_and_boundaries
+      - phase_breakdown_with_tasks
+      - resource_requirements
+      - timeline_with_milestones
+      - risk_matrix_and_mitigations
+      - success_metrics
+      - immediate_next_actions
+    formatting:
+      - markdown_with_headers
+      - tasks_as_checklists
+      - risks_as_tables
+      - timeline_as_gantt_approximation
+
+  metadata:
+    - synthesis_timestamp
+    - agent_outputs_referenced
+    - complexity_level
+    - confidence_assessment
+
+
+# ─────────────────────────────────────────────────────────────────
 # QUALITY & VALIDATION
 # ─────────────────────────────────────────────────────────────────
 quality_standards:
@@ -246,31 +279,28 @@ quality_standards:
     - markdown_syntax_valid
 
 # ─────────────────────────────────────────────────────────────────
-# OUTPUT FORMAT
+# ERROR HANDLING
 # ─────────────────────────────────────────────────────────────────
-output_format:
-  primary_deliverable:
-    location: "[TARGET_FOLDER]/plan-[slug]-[timestamp].md"
-    sections:
-      - executive_summary
-      - scope_and_boundaries
-      - phase_breakdown_with_tasks
-      - resource_requirements
-      - timeline_with_milestones
-      - risk_matrix_and_mitigations
-      - success_metrics
-      - immediate_next_actions
-    formatting:
-      - markdown_with_headers
-      - tasks_as_checklists
-      - risks_as_tables
-      - timeline_as_gantt_approximation
-
-  metadata:
-    - synthesis_timestamp
-    - agent_outputs_referenced
-    - complexity_level
-    - confidence_assessment
+error_handling:
+  agent_failure:
+    action: retry_with_simplified_scope
+    fallback: note_limitation_in_quality_section
+    max_retries: 2
+    impact_on_review: proceed_with_available_outputs
+  
+  review_identifies_critical_gap:
+    action: return_to_specific_agent_for_replanning
+    max_iterations: 2
+    fallback: document_gap_in_plan_warnings
+  
+  validation_failure:
+    action: return_to_synthesis_with_corrections
+    max_iterations: 2
+    fallback: generate_with_warnings_section
+  
+  file_write_failure:
+    action: check_permissions
+    fallback: offer_stdout_output
 
 # ─────────────────────────────────────────────────────────────────
 # RULES
@@ -294,51 +324,3 @@ rules:
     - constrain_agent_native_planning
     - create_circular_dependencies
     - omit_risk_assessment
-
-# ─────────────────────────────────────────────────────────────────
-# ADAPTIVE RULES & ERROR HANDLING
-# ─────────────────────────────────────────────────────────────────
-adaptive_rules:
-  low_complexity_1_to_2_phases:
-    agents: [Scope, Breakdown, Timeline]
-    review_depth: light
-    skip: Resource_agent_assume_available
-  
-  high_complexity_7_plus_phases:
-    agents: add_Compliance_agent
-    review_depth: exhaustive
-    timeline_adjustment: extend_30_percent
-    requirements: explicit_sign_off_per_phase
-  
-  high_uncertainty:
-    phase_0: insert_Discovery_phase
-    estimates: use_ranges_not_fixed
-    assumptions: flag_explicitly_in_scope
-    review_focus: uncertainty_analysis
-  
-  target_folder_auto:
-    create: "./plans/[YYYY-MM]/[project-slug]/"
-
-# ─────────────────────────────────────────────────────────────────
-# ERROR HANDLING
-# ─────────────────────────────────────────────────────────────────
-error_handling:
-  agent_failure:
-    action: retry_with_simplified_scope
-    fallback: note_limitation_in_quality_section
-    max_retries: 2
-    impact_on_review: proceed_with_available_outputs
-  
-  review_identifies_critical_gap:
-    action: return_to_specific_agent_for_replanning
-    max_iterations: 2
-    fallback: document_gap_in_plan_warnings
-  
-  validation_failure:
-    action: return_to_synthesis_with_corrections
-    max_iterations: 2
-    fallback: generate_with_warnings_section
-  
-  file_write_failure:
-    action: check_permissions
-    fallback: offer_stdout_output

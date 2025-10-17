@@ -42,7 +42,7 @@ field_handling:
     rule: "Limit file operations to scope when provided"
 
 # ─────────────────────────────────────────────────────────────────
-# RESEARCH WORKFLOW
+# WORKFLOW
 # ─────────────────────────────────────────────────────────────────
 workflow:
   step_1_request_analysis:
@@ -343,7 +343,7 @@ workflow:
       tagging: optional; only on user request
 
 # ─────────────────────────────────────────────────────────────────
-# RESEARCH QUALITY STANDARDS
+# QUALITY STANDARDS
 # ─────────────────────────────────────────────────────────────────
 quality_standards:
   documentation:
