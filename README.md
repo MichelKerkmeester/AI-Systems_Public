@@ -22,7 +22,7 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 #### 🧠 Context Engineering
 
-6. [DEV Context, Prompts & Workflows](#6-dev-context-prompts-workflows)
+6. [Development: Context, Prompts & Workflows](#6-development-context-prompts-workflows)
 7. [Effective GPT](#7-effective-gpt)
 
 #### 🔧 Additional Sections
@@ -142,7 +142,7 @@ Automate ClickUp & Notion actions with this focused MCP Agent.
 ###  Context Engineering
 
 <a id="6-dev-context-prompts-workflows"></a>
-#### 6. 📜 DEV Context, Prompts & Workflows
+#### 6. 📜 Development: Context, Prompts & Workflows
 
 Context engineering for development workflows: AGENTS.md guardrails, Prompts, Claude Skills, GitHub SpecKit workflows, and Knowledge Base examples.
 
