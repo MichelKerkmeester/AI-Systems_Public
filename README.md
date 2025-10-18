@@ -9,25 +9,21 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 ## 📋 Table of Contents
 
-#### 📝 Prompts
-
-1. [Effective GPT](#1-effective-gpt)
-
 #### ✏️ Writer Systems
 
-2. [Product Owner Writer](#2-product-owner-writer)
-3. [Prompt Engineering Assistant](#3-prompt-engineering-assistant)
+1. [Product Owner Writer](#1-product-owner-writer)
+2. [Prompt Engineering Assistant](#2-prompt-engineering-assistant)
 
-#### 🧪 Dev Systems
+#### 💬 MCP Systems
 
-4. [GPT 5 Pro](#4-gpt-5-pro)
-5. [DEV Workflows](#5-dev-workflows)
+3. [Media Editor Agent](#3-media-editor-agent)
+4. [Webflow Agent](#4-webflow-agent)
+5. [ClickUp & Notion Agent](#5-clickup--notion-agent)
 
-#### 💬 MCP Agents
+#### 🧠 Context Engineering
 
-6. [Media Editor Agent](#6-media-editor-agent)
-7. [Webflow Agent](#7-webflow-agent)
-8. [ClickUp & Notion Agent](#8-clickup--notion-agent)
+6. [DEV Context, Prompts & Workflows](#6-dev-context-prompts-workflows)
+7. [Effective GPT](#7-effective-gpt)
 
 #### 🔧 Additional Sections
 
@@ -36,33 +32,10 @@ Some of my non-client AI systems that I made available to the public. They were 
 
 .
 
-### 📝 Prompts
-
-<a id="1-effective-gpt"></a>
-#### 1. 💬 Effective GPT
-
-System instructions for direct, efficient AI communication without filler.
-
-—
-
-**Core Communication Principles**:
-  - Eliminates emojis, filler, hype, and conversational transitions
-  - Blunt, directive phrasing focused on cognitive clarity
-  - No engagement-boosting or sentiment-softening behaviors
-  - Immediate termination after information delivery
-
-**Session Isolation & Privacy**:
-  - Each conversation treated as new user
-  - No continuity between sessions
-  - No memory of past interactions
-  - Dutch exception: Softened rules (non-tech user)
-
-.
-
 ### ✏️ Writer Systems
 
-<a id="2-product-owner-writer"></a>
-#### 2. 📋 Product Owner Writer
+<a id="1-product-owner-writer"></a>
+#### 1. 📋 Product Owner Writer
 
 Create professional tickets, stories, PRDs, and documentation with automatic complexity scaling.
 
@@ -78,8 +51,8 @@ Create professional tickets, stories, PRDs, and documentation with automatic com
 
 .
 
-<a id="3-prompt-engineering-assistant"></a>
-#### 3. 🎯 Prompt Engineering Assistant
+<a id="2-prompt-engineering-assistant"></a>
+#### 2. 🎯 Prompt Engineering Assistant
 
 Create effective AI prompts using 7 specialized frameworks, systematic evaluation, and transparent DEPTH processing.
 
@@ -107,50 +80,10 @@ Create effective AI prompts using 7 specialized frameworks, systematic evaluatio
     
 .
 
-### 🧪 Dev Systems
+###  MCP Systems
 
-<a id="4-gpt-5-pro"></a>
-#### 4. 🧠 GPT 5 Pro
-
-Project for GPT 5 Pro that simulates a complete dev environment with AGENTS.md, Knowledge Base, and Spec Kit workflows.
-
-—
-
-**Guardrails & Compliance**:
-  - STOP - READ AGENTS.md FIRST; code_standards.md is law
-  - Confidence gating (<80% → clarify), scope discipline, evidence > assumptions
-  - Full files only (line 1 → EOF) with path header; no snippets/diffs
-  - Receive files as downloads (⬇️) primary; Canvas (📝) secondary 
-
-**Workflow & Numbered Deliverables**:
-  - Receive more complete answers thanks to enforced Github Spec Kit imitation
-  - Spec → Plan → Tasks → Analysis → Implementation → Summary
-
-.
-
-<a id="5-dev-workflows"></a>
-#### 5. 📜 DEV Workflows
-
-Systematic development workflows with Github SpecKit integration for reliable development.
-
-—
-
-**Development Workflows**:
-  - **Multiple Execution Modes**: Complete Spec Kit, Plan, Research or Implementation only, etc.
-  - Operating modes: Standard, Investigation, Hotfix, Performance (Varies per Prompt)
-  - Specialized prompt for extracting context to apply in various workflows.
-
-**Code Review & Debugger**:
-  - **Debug-Test-Review Workflow**: Understand → Investigate → Debug → Fix → Test → Review
-  - Chrome DevTools MCP integration for browser-based debugging
-  - Evidence-based approach: Never assumes, validates everything with MCP tools
-
-.
-
-### 💬 MCP Agents
-
-<a id="6-media-editor-agent"></a>
-#### 6. 🎬 Media Editor Agent
+<a id="3-media-editor-agent"></a>
+#### 3. 🎬 Media Editor Agent
 
 Edit image, video, and audio files via natural language.
 
@@ -168,8 +101,8 @@ Edit image, video, and audio files via natural language.
 
 .
 
-<a id="7-webflow-agent"></a>
-#### 7. 🌐 Webflow Agent
+<a id="4-webflow-agent"></a>
+#### 4. 🌐 Webflow Agent
 
 Full-stack Webflow development through natural language with Designer and Data APIs.
 
@@ -187,8 +120,8 @@ Full-stack Webflow development through natural language with Designer and Data A
 
 .
 
-<a id="8-clickup--notion-agent"></a>
-#### 8. 📊 ClickUp & Notion Agent
+<a id="5-clickup--notion-agent"></a>
+#### 5. 📊 ClickUp & Notion Agent
 
 Automate ClickUp & Notion actions with this focused MCP Agent.
 
@@ -203,6 +136,68 @@ Automate ClickUp & Notion actions with this focused MCP Agent.
   - Notion: Databases, pages, rich content, wikis
   - ClickUp: Tasks, time tracking, sprints, projects
   - Always verifies MCP connections before operations
+
+.
+
+###  Context Engineering
+
+<a id="6-dev-context-prompts-workflows"></a>
+#### 6. 📜 DEV Context, Prompts & Workflows
+
+Context engineering for development workflows: AGENTS.md guardrails, Prompts, Claude Skills, GitHub SpecKit workflows, and Knowledge Base examples.
+
+—
+
+**Core Components**:
+  - **AGENTS.md**: AI behavior guardrails preventing common failure patterns (rush to code, assumptions, over-engineering)
+  - **Knowledge Base**: Code standards, initialization patterns, Webflow constraints, animation strategy, debugging guides
+  - **Claude Skills**: Specialized validators, component generators, and SpecKit integration helpers
+  - **Workflow Prompts**: Complete, Plan, Research, Implementation modes with parallel sub-agent support
+
+**AI Guardrails & Quality Framework**:
+  - Confidence gating (<80% → ask clarifying questions), scope discipline, evidence > assumptions
+  - Request analysis phases: Classification → Scope → Context → Solution → Validation → Review
+  - Solution effectiveness matrix: Simplicity, performance, maintainability, scope checks
+  - Anti-patterns prevention: Rush to code, assumption-based changes, task misinterpretation, cascading breaks
+
+**GitHub SpecKit Workflows**:
+  - **Standard Flow**: Specify → Plan → Tasks → Implementation → Complete
+  - **Parallel Execution**: Multiple sub-agents for faster feature delivery
+  - **Adaptive Modes**: Investigation, hotfix, performance optimization
+  - **Progressive Deliverables**: Spec → Plan → Tasks → Analysis → Implementation → Summary
+
+**Code Quality & Debugging**:
+  - **Pattern Validation**: Automated checks against project standards
+  - **Component Generation**: Templates for base, form, modal, CMS, video components
+  - **Debug Workflow**: Understand → Investigate → Debug → Fix → Test → Review
+  - **Chrome DevTools MCP**: Browser-based debugging with evidence-based approach
+
+**Context Management**:
+  - Context extraction prompts for workflow reuse
+  - Token-aware skill loading (progressive disclosure)
+  - Source attribution standards with confidence scoring
+  - Uncertainty explicit marking (UNKNOWN vs fabrication)
+
+.
+
+<a id="7-effective-gpt"></a>
+#### 7. 💬 Effective GPT
+
+System instructions for direct, efficient AI communication without filler.
+
+—
+
+**Core Communication Principles**:
+  - Eliminates emojis, filler, hype, and conversational transitions
+  - Blunt, directive phrasing focused on cognitive clarity
+  - No engagement-boosting or sentiment-softening behaviors
+  - Immediate termination after information delivery
+
+**Session Isolation & Privacy**:
+  - Each conversation treated as new user
+  - No continuity between sessions
+  - No memory of past interactions
+  - Dutch exception: Softened rules (non-tech user)
 
 .
 
