@@ -19,7 +19,7 @@
 #### 🧠 Context Engineering
 
 6. [Effective GPT](#6-effective-gpt)
-7. [Development: Context, Prompts & Workflows](#7-development-context-prompts-workflows)
+7. [DEV: Context, Prompts & Workflows](#7-dev-context-prompts-workflows)
 
 #### 📚 Resources
 
