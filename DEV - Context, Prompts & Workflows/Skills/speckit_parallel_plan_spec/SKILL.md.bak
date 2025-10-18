@@ -58,27 +58,10 @@ This section provides step-by-step execution guidance as defined in sk_p__plan_s
 
 ### Step 1: Request Analysis
 
-**Action**: Analyze user inputs, choose branch strategy, and confirm understanding
-
-**Branch Strategy Prompt** (REQUIRED):
-
-Before proceeding, you must choose how to work with Git for this spec:
-
-**Option A: Create new feature branch**
-- We will auto-create `feature-{NNN}` aligned with the spec folder
-- Allows isolated development and testing
-- Can be integrated to main later via complete workflow
-
-**Option B: Work on main branch**
-- Skip branch creation and commit directly to main
-- Faster for small changes or hotfixes
-- No separate integration needed
-
-This decision is required before proceeding and will be inherited by implementation workflow.
+**Action**: Analyze user inputs and confirm understanding
 
 **Inputs**: 
-- `branch_strategy`: **REQUIRED** - Choose `feature_branch` or `main_branch`
-- `git_branch`: Derived from branch_strategy (feature-{NNN} or main)
+- `git_branch`: Auto-create `feature-{NNN}` if empty
 - `spec_folder`: Auto-create `specs/{NNN}` if empty  
 - `context`: Infer from request if empty
 - `issues`: Discover during workflow if empty
@@ -87,15 +70,13 @@ This decision is required before proceeding and will be inherited by implementat
 - `scope`: Default to `specs/**` if empty
 
 **Outputs**:
-- Branch strategy chosen
-- Git branch resolved
 - Requirement summary
 - Approach overview
 - Complexity assessment
 
-**Validation**: `understanding_confirmed_and_branch_strategy_set`
+**Validation**: `understanding_confirmed`
 
-**Approval Gate**: "Requirements analyzed. Branch strategy: {branch_strategy} on {git_branch}. Proceed to pre-work review?"
+**Approval Gate**: "Requirements analyzed. Proceed to pre-work review?"
 
 ---
 
@@ -280,25 +261,10 @@ This step contains sub-phases that execute sequentially:
 
 **Termination**: Workflow ends after this step
 
-**Branch Integration Note**:
-
-Branch strategy has been set and will be inherited by subsequent workflows.
-
-- **If `feature_branch` was selected**:
-  - Feature branch created for planning artifacts
-  - Implementation workflow will use this branch
-  - Complete workflow will offer integration to main at the end
-
-- **If `main_branch` was selected**:
-  - Planning artifacts committed directly to main
-  - Implementation workflow will continue on main
-  - No integration step needed
-
 **Next Steps**:
 - Review planning documentation
 - Approve technical approach
-- Branch strategy: {branch_strategy} on {git_branch}
-- Use workflow_automated.yaml for full implementation (will inherit branch strategy)
+- Use workflow_automated.yaml for full implementation
 - Or use workflow.yaml for manual implementation with gates
 
 ---
@@ -456,29 +422,11 @@ This workflow includes manual approval gates at key points:
 
 This workflow automatically handles empty input fields per sk_p__plan_spec.yaml:
 
-### branch_strategy
-- **Required**: Yes
-- **Type**: Enum [`feature_branch`, `main_branch`]
-- **Options**:
-  - `feature_branch`: Create new feature branch (auto-create feature-{NNN} aligned with spec folder)
-  - `main_branch`: Work on main branch (skip branch creation and commit directly to main)
-- **Empty Handling**: User must choose at Step 1; cannot proceed without selection
-- **Controls**: Branch creation during planning; inherited by implementation workflow
-
-### spec_id
-- **Derived From**: spec_folder path using pattern `specs/{NNN}` or `specs/{NNN-name}`
-- **Fallback**: Extract numeric portion or use timestamp if extraction fails
-- **Usage**: Used to generate feature_branch_name
-
-### feature_branch_name
-- **Pattern**: `feature-{spec_id}`
-- **Condition**: Only used when `branch_strategy == feature_branch`
-
 ### git_branch
-- **Derived**: Based on branch_strategy
-- **If feature_branch**: Use `feature_branch_name` (feature-{NNN})
-- **If main_branch**: Use `main`
-- **Empty Handling**: Cannot be empty; derived automatically from branch_strategy
+- **Auto-create**: Yes
+- **Default Pattern**: `feature-{NNN}` where {NNN} is highest existing +001
+- **Scope**: Repository-wide feature branches
+- **Empty Handling**: Automatically creates new branch following naming convention
 
 ### spec_folder  
 - **Auto-create**: Yes
@@ -505,14 +453,6 @@ This workflow automatically handles empty input fields per sk_p__plan_spec.yaml:
 - **Auto-create**: No
 - **Default**: `specs/**`
 - **Empty Handling**: Uses default scope policy limiting operations to specs directory
-
-### Branch Creation
-- **Condition**: Only execute when `branch_strategy == feature_branch`
-- **Steps**:
-  1. Check if feature branch already exists
-  2. Create feature-{spec_id} if not exists
-  3. Checkout feature branch
-- **Skip When**: `branch_strategy == main_branch`
 
 ## Inputs
 

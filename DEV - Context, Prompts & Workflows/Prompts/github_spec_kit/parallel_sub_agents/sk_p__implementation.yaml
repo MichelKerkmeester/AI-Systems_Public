@@ -17,6 +17,7 @@ operating_mode:
 # USER INPUTS
 # ─────────────────────────────────────────────────────────────────
 user_inputs:
+  branch_strategy: "[BRANCH_STRATEGY]"
   git_branch: "[GIT_BRANCH]"
   spec_folder: "[SPEC_FOLDER]"
   context: "[CONTEXT]"
@@ -36,8 +37,28 @@ request_handling:
 # FIELD HANDLING
 # ─────────────────────────────────────────────────────────────────
 field_handling:
+  branch_strategy:
+    required: true
+    type: enum
+    options:
+      - feature_branch: "Create new feature branch (auto-create feature-{NNN} aligned with spec folder)"
+      - main_branch: "Work on main branch (skip branch creation and commit directly to main)"
+    note: |
+      This field should be inherited from the planning workflow (steps 1-7).
+      If starting implementation independently, prompt user for choice.
+
+  spec_id:
+    derive_from: "spec_folder path using pattern specs/{NNN} or specs/{NNN-name}"
+    fallback: "Extract numeric portion or use timestamp if extraction fails"
+    note: "Used to generate feature_branch_name"
+
+  feature_branch_name:
+    pattern: "feature-{spec_id}"
+    condition: "Only used when branch_strategy == feature_branch"
+
   defaults:
-    git_branch_empty: "Auto-create feature-{NNN} from highest +001"
+    branch_strategy_empty: "Inherit from planning phase; if unavailable, prompt user"
+    git_branch_empty: "If branch_strategy == feature_branch: use feature_branch_name; else: main"
     spec_folder_empty: "Auto-create specs/{NNN} from highest +001"
     context_empty: "Infer from [REQUEST] and [STAGING LINK]"
     issues_empty: "Investigate during workflow"
@@ -47,6 +68,15 @@ field_handling:
   scope_policy:
     default: "specs/**"
     rule: "Limit file operations to scope when provided"
+
+  branch_creation:
+    condition: "Only execute when branch_strategy == feature_branch"
+    steps:
+      - "Check if feature branch already exists"
+      - "Create feature-{spec_id} if not exists"
+      - "Checkout feature branch"
+    skip_when: "branch_strategy == main_branch"
+    note: "Branch should already exist from planning phase if feature_branch was selected"
 
 # ─────────────────────────────────────────────────────────────────
 # SUB-AGENTS (PARALLEL PREP)
@@ -82,12 +112,25 @@ sub_agents:
 # ─────────────────────────────────────────────────────────────────
 workflow:
   step_8_review_plan_and_spec:
-    action: Review spec and planning artifacts
+    note: |
+      This workflow is a continuation of the planning phase (steps 1-7).
+      Branch strategy should have been set during planning.
+      If starting independently, branch_strategy must be provided.
+    branch_strategy: "[BRANCH_STRATEGY] → inherited from planning or prompted if starting independently"
+    git_branch: "[GIT_BRANCH] → derived from branch_strategy"
+    action: |
+      1. Confirm branch_strategy (should be inherited from planning phase)
+      2. Verify git_branch is correctly set based on strategy
+      3. Review spec and planning artifacts
     required_documents:
       - "[SPEC_FOLDER]/spec.md"
       - "[SPEC_FOLDER]/plan.md"
       - "[SPEC_FOLDER]/planning-summary.md"
-    validation: planning_artifacts_understood
+    outputs:
+      - branch_strategy_confirmed
+      - git_branch_validated
+      - planning_artifacts_understood
+    validation: planning_artifacts_understood_and_branch_confirmed
 
   step_9_task_breakdown:
     command: /tasks
@@ -276,11 +319,19 @@ prerequisites:
   user_request: "[REQUEST]"
 
 termination:
-  after_step: 9
-  message: "Implementation phase completed successfully. Workflow terminated after step 9 as requested."
+  after_step: 15
+  message: "Implementation phase completed successfully. Workflow terminated after step 15 (completion)."
+  branch_integration_note: |
+    If branch_strategy == feature_branch:
+      - Branch has changes but is NOT automatically merged to main
+      - User should run the complete workflow or manually integrate the branch
+    If branch_strategy == main_branch:
+      - Changes are already on main; no integration needed
   next_steps:
     - Review implementation-summary.md
     - Verify all changes in staging environment
+    - If feature_branch: Use complete workflow for branch integration or merge manually
+    - If main_branch: Changes are already integrated
     - Prepare for code review and PR submission
     - Update knowledge base if needed
 

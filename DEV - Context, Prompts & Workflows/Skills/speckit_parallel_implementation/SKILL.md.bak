@@ -68,30 +68,14 @@ This section provides step-by-step execution guidance as defined in sk_p__implem
 
 ### Step 8: Review Plan and Spec
 
-**Note**: This workflow is a continuation of the planning phase (steps 1-7). Branch strategy should have been set during planning. If starting independently, branch_strategy must be provided.
-
-**Action**: 
-1. Confirm branch_strategy (should be inherited from planning phase)
-2. Verify git_branch is correctly set based on strategy
-3. Review spec and planning artifacts
-
-**Branch Strategy** (inherited from planning):
-- `branch_strategy`: Should be set from planning workflow
-- `git_branch`: Derived from branch_strategy
-  - If `feature_branch`: Uses feature-{NNN}
-  - If `main_branch`: Uses main
+**Action**: Review spec and planning artifacts
 
 **Required Documents**:
 - `[SPEC_FOLDER]/spec.md`
 - `[SPEC_FOLDER]/plan.md`
 - `[SPEC_FOLDER]/planning-summary.md`
 
-**Outputs**:
-- Branch strategy confirmed
-- Git branch validated
-- Planning artifacts understood
-
-**Validation**: `planning_artifacts_understood_and_branch_confirmed`
+**Validation**: `planning_artifacts_understood`
 
 **Approval Gate**: None (autonomous execution)
 
@@ -327,15 +311,9 @@ This step contains sub-phases that execute sequentially:
 
 **Termination**: Workflow ends after this step
 
-**Branch Integration Note**:
-- **If `feature_branch` was selected**: Branch has changes but is NOT automatically merged to main. User should run the complete workflow for branch integration or merge manually.
-- **If `main_branch` was selected**: Changes are already on main; no integration needed.
-
 **Next Steps**:
 - Review implementation-summary.md
 - Verify all changes in staging environment
-- **If feature_branch**: Use complete workflow for branch integration or merge manually
-- **If main_branch**: Changes are already integrated
 - Prepare for code review and PR submission
 - Update knowledge base if needed
 
@@ -497,44 +475,17 @@ This workflow is **autonomous** with NO approval gates:
 
 This workflow automatically handles empty input fields per sk_p__implementation.yaml:
 
-### branch_strategy
-- **Required**: Yes
-- **Type**: Enum [`feature_branch`, `main_branch`]
-- **Options**:
-  - `feature_branch`: Create new feature branch (auto-create feature-{NNN} aligned with spec folder)
-  - `main_branch`: Work on main branch (skip branch creation and commit directly to main)
-- **Empty Handling**: Inherit from planning phase; if unavailable, prompt user
-- **Note**: This field should be inherited from the planning workflow (steps 1-7). If starting implementation independently, prompt user for choice.
-
-### spec_id
-- **Derived From**: spec_folder path using pattern `specs/{NNN}` or `specs/{NNN-name}`
-- **Fallback**: Extract numeric portion or use timestamp if extraction fails
-- **Usage**: Used to generate feature_branch_name
-
-### feature_branch_name
-- **Pattern**: `feature-{spec_id}`
-- **Condition**: Only used when `branch_strategy == feature_branch`
-
 ### git_branch
-- **Derived**: Based on branch_strategy
-- **If feature_branch**: Use `feature_branch_name` (feature-{NNN})
-- **If main_branch**: Use `main`
-- **Empty Handling**: Cannot be empty; derived automatically from branch_strategy
+- **Auto-create**: Yes
+- **Default Pattern**: `feature-{NNN}` where {NNN} is highest existing +001
+- **Scope**: Repository-wide feature branches
+- **Empty Handling**: Automatically creates new branch following naming convention
 
 ### spec_folder
 - **Auto-create**: Yes
 - **Default Pattern**: `specs/{NNN}` where {NNN} is highest existing +001
 - **Scope**: Project specs directory
 - **Empty Handling**: Automatically creates new folder following naming convention
-
-### Branch Creation
-- **Condition**: Only execute when `branch_strategy == feature_branch`
-- **Steps**:
-  1. Check if feature branch already exists
-  2. Create feature-{spec_id} if not exists
-  3. Checkout feature branch
-- **Skip When**: `branch_strategy == main_branch`
-- **Note**: Branch should already exist from planning phase if feature_branch was selected
 
 ### request
 - **Default**: "Conduct a comprehensive review of the spec folder and carry out its implementation fully autonomously."
