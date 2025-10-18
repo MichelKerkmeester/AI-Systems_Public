@@ -49,8 +49,6 @@ Create professional tickets, stories, PRDs, and documentation with automatic com
   - 5-phase thinking with 10 rounds automatic (internals hidden by default; visibility configurable; user doesn't control)
   - $quick mode: Zero waiting, 1-5 rounds auto-scaled
 
-.
-
 <a id="2-prompt-engineering-assistant"></a>
 #### 2. 🎯 Prompt Engineering Assistant
 
@@ -77,7 +75,6 @@ Create effective AI prompts using 7 specialized frameworks, systematic evaluatio
   - **CLEAR Evaluation**: 5 dimensions (Correctness, Logic, Expression, Arrangement, Reuse)
   - Target scores: 40+/50 standard, 45+/50 excellence
 
-    
 .
 
 ###  MCP Systems
@@ -99,8 +96,6 @@ Edit image, video, and audio files via natural language.
   - Challenge at 3+ rounds ("85% quality, 50% smaller")
   - REPAIR protocol for error recovery
 
-.
-
 <a id="4-webflow-agent"></a>
 #### 4. 🌐 Webflow Agent
 
@@ -117,8 +112,6 @@ Full-stack Webflow development through natural language with Designer and Data A
   - Create collections, fields, and relationships
   - Build components and layours with Designer integratiom
   - SEO optimization and analysis
-
-.
 
 <a id="5-clickup--notion-agent"></a>
 #### 5. 📊 ClickUp & Notion Agent
@@ -177,8 +170,6 @@ Context engineering for development workflows: AGENTS.md guardrails, Prompts, Cl
   - Token-aware skill loading (progressive disclosure)
   - Source attribution standards with confidence scoring
   - Uncertainty explicit marking (UNKNOWN vs fabrication)
-
-.
 
 <a id="7-effective-gpt"></a>
 #### 7. 💬 Effective GPT
