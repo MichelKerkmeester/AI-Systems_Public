@@ -5,8 +5,6 @@ Some of my non-client AI systems that I made available to the public. They were 
 > - 99.999% of people won't try these systems. Beat the odds?
 > - Don't reward me with unwanted coffee: https://buymeacoffee.com/michelkerkmeester
 
-.
-
 ## 📋 Table of Contents
 
 #### ✏️ Writer Systems
