@@ -21,7 +21,7 @@ operating_mode:
 # ─────────────────────────────────────────────────────────────────
 user_inputs:
   target_folder: "[TARGET_FOLDER]"
-  context: "[CONTEXT]
+  context: "[CONTEXT]"
   complexity: "[COMPLEXITY]"
   request: "[REQUEST]"
 
