@@ -4,13 +4,12 @@ Complete documentation of how all SpecKit skills work together in the ecosystem.
 
 ## Skills Overview
 
-The SpecKit system consists of 5 specialized skills:
+The SpecKit system consists of 4 specialized skills:
 
-1. **speckit-command-guide** - Navigation and command recommendations
-2. **speckit_parallel_complete** - Complete 14-step workflow orchestration
-3. **speckit_parallel_feature_research** - Parallel technical research
-4. **speckit_parallel_implementation** - Autonomous implementation execution
-5. **speckit_parallel_plan_spec** - Planning and specification with approvals
+1. **speckit_parallel_complete** - Complete 14-step workflow orchestration
+2. **speckit_parallel_feature_research** - Parallel technical research
+3. **speckit_parallel_implementation** - Autonomous implementation execution
+4. **speckit_parallel_plan_spec** - Planning and specification with approvals
 
 ## Architecture Diagram
 
@@ -18,18 +17,11 @@ The SpecKit system consists of 5 specialized skills:
                     User Request
                           ↓
               ┌───────────────────────┐
-              │ speckit-command-guide │ ← Entry point for navigation
+              │    User Selects Skill  │
               └───────────────────────┘
                           ↓
-                 Recommends Command
-                          ↓
-        ┌─────────────────────────────────────┐
-        │         User Executes Command       │
-        └─────────────────────────────────────┘
-                          ↓
-    Command triggers appropriate parallel skill:
-                          ↓
     ┌────────────────────────────────────────────────┐
+    │         SpecKit Parallel Skills                │
     │                                                │
     ├─ speckit_parallel_complete (Full workflow)    │
     ├─ speckit_parallel_feature_research  (Research) │
@@ -44,15 +36,7 @@ The SpecKit system consists of 5 specialized skills:
 
 ## Skill Responsibilities
 
-### 1. speckit-command-guide
-- **Type**: Navigation Layer
-- **Purpose**: Recommend next SpecKit command
-- **Complexity**: Simple (<400 lines)
-- **Sub-agents**: None
-- **Token Usage**: Minimal
-- **When Used**: User needs guidance on workflow
-
-### 2. speckit_parallel_complete
+### 1. speckit_parallel_complete
 - **Type**: Full Orchestration
 - **Purpose**: Execute complete 14-step workflow
 - **Complexity**: Complex (18 sub-agents)
@@ -60,7 +44,7 @@ The SpecKit system consists of 5 specialized skills:
 - **Token Usage**: Very High
 - **When Used**: Full feature development cycle
 
-### 3. speckit_parallel_feature_research
+### 2. speckit_parallel_feature_research
 - **Type**: Research Execution
 - **Purpose**: Parallel technical investigation
 - **Complexity**: Medium (6 sub-agents)
@@ -68,7 +52,7 @@ The SpecKit system consists of 5 specialized skills:
 - **Token Usage**: High
 - **When Used**: Before specification, need research
 
-### 4. speckit_parallel_implementation
+### 3. speckit_parallel_implementation
 - **Type**: Implementation Execution
 - **Purpose**: Autonomous code implementation
 - **Complexity**: Medium (6 sub-agents)
@@ -76,7 +60,7 @@ The SpecKit system consists of 5 specialized skills:
 - **Token Usage**: High
 - **When Used**: Ready to build from specs
 
-### 5. speckit_parallel_plan_spec
+### 4. speckit_parallel_plan_spec
 - **Type**: Planning Execution
 - **Purpose**: Technical planning with approvals
 - **Complexity**: Medium (6 sub-agents)
@@ -86,18 +70,18 @@ The SpecKit system consists of 5 specialized skills:
 
 ## Command to Skill Mapping
 
-| SpecKit Command | Primary Skill | Sub-agents | Execution Time |
-|-----------------|---------------|------------|----------------|
-| `/speckit.specify` | (built-in) | None | 10-20s |
-| `/speckit.clarify` | (built-in) | None | 5-10s |
-| `/speckit.plan` | speckit_parallel_plan_spec | 6 agents | 2-3 min |
-| `/speckit.tasks` | (built-in) | None | 10-15s |
-| `/speckit.implement` | speckit_parallel_implementation | 6 agents | Variable |
-| `/speckit.analyze` | speckit_parallel_complete | 4 agents | 1-2 min |
-| `/speckit.checklist` | (built-in) | None | 5-10s |
-| `/speckit.constitution` | (built-in) | None | 10-15s |
-| (research) | speckit_parallel_feature_research | 6 agents | 2-5 min |
-| (full workflow) | speckit_parallel_complete | 18 agents | 10-15 min |
+| SpecKit Command | Primary Skill | Sub-agents |
+|-----------------|---------------|------------|
+| `/speckit.specify` | (built-in) | None |
+| `/speckit.clarify` | (built-in) | None |
+| `/speckit.plan` | speckit_parallel_plan_spec | 6 agents |
+| `/speckit.tasks` | (built-in) | None |
+| `/speckit.implement` | speckit_parallel_implementation | 6 agents |
+| `/speckit.analyze` | speckit_parallel_complete | 4 agents |
+| `/speckit.checklist` | (built-in) | None |
+| `/speckit.constitution` | (built-in) | None |
+| (research) | speckit_parallel_feature_research | 6 agents |
+| (full workflow) | speckit_parallel_complete | 18 agents |
 
 ## Usage Patterns
 
@@ -105,17 +89,13 @@ The SpecKit system consists of 5 specialized skills:
 
 ```
 1. User: "I need to build feature X"
-2. speckit-command-guide: Recommends /speckit.specify
-3. User: Runs /speckit.specify
-4. speckit-command-guide: Recommends /speckit.plan
-5. User: Runs /speckit.plan
-6. speckit_parallel_plan_spec: Executes parallel planning (6 agents)
-7. User: Reviews plan.md
-8. speckit-command-guide: Recommends /speckit.tasks
-9. User: Runs /speckit.tasks
-10. speckit-command-guide: Recommends /speckit.implement
-11. User: Runs /speckit.implement
-12. speckit_parallel_implementation: Executes implementation (6 agents)
+2. User: Runs /speckit.specify
+3. User: Runs /speckit.plan
+4. speckit_parallel_plan_spec: Executes parallel planning (6 agents)
+5. User: Reviews plan.md
+6. User: Runs /speckit.tasks
+7. User: Runs /speckit.implement
+8. speckit_parallel_implementation: Executes implementation (6 agents)
 ```
 
 ### Pattern 2: Research Before Planning
@@ -124,7 +104,7 @@ The SpecKit system consists of 5 specialized skills:
 1. User: "I need to research authentication options"
 2. speckit_parallel_feature_research: Executes research (6 agents)
 3. User: Reviews research.md
-4. speckit-command-guide: Recommends /speckit.specify
+4. User: Runs /speckit.specify
 5. Continue with standard flow...
 ```
 
@@ -248,10 +228,6 @@ All specialized skills follow this pattern:
 
 ```yaml
 optimization:
-  command_guide:
-    load: always          # Small, stateless
-    cache: none          # No benefit
-
   speckit_parallel_complete:
     load: on_demand      # Very large
     cache: aggressive    # Expensive to reload
@@ -314,18 +290,18 @@ If one skill fails, others can often continue:
 ## Best Practices
 
 ### DO:
-- Start with command-guide for navigation
 - Use specialized skills for parallel work
 - Check artifacts between skill executions
 - Allow skills to share context through files
 - Monitor token usage across skills
+- Select appropriate skill for task
 
 ### DON'T:
 - Load all skills simultaneously
-- Skip the command guide
 - Mix skill responsibilities
 - Ignore approval gates
 - Cache sensitive data
+- Skip prerequisite validation
 
 ### ALWAYS:
 - Verify prerequisites before skill execution
@@ -339,9 +315,6 @@ If one skill fails, others can often continue:
 ### Decision Tree
 
 ```
-Need guidance on what to do next?
-└─ YES → speckit-command-guide
-
 Need comprehensive research?
 └─ YES → speckit_parallel_feature_research
 
@@ -359,7 +332,6 @@ Want complete automated workflow?
 
 | Scenario | Recommended Skill |
 |----------|-------------------|
-| "What command should I run?" | speckit-command-guide |
 | "Research authentication options" | speckit_parallel_feature_research |
 | "Create technical architecture" | speckit_parallel_plan_spec |
 | "Implement this feature" | speckit_parallel_implementation |
@@ -386,17 +358,16 @@ Want complete automated workflow?
 
 ### Integration Points to Test
 
-- Command guide → Each parallel skill
 - Research output → Planning input
 - Planning output → Implementation input
 - Artifact consistency across skills
 - Approval gate handling
+- Parallel skill coordination
 
 ## Version Compatibility
 
 | Skill | Version | Compatible With | Based On |
 |-------|---------|-----------------|----------|
-| speckit-command-guide | 2.0.0 | All versions | N/A |
 | speckit_parallel_complete | 1.0.0 | All versions | sk_p__complete.yaml |
 | speckit_parallel_feature_research | 1.0.0 | All versions | sk_p__feature_research.yaml |
 | speckit_parallel_implementation | 1.0.0 | All versions | sk_p__implementation.yaml |
@@ -452,7 +423,6 @@ extensions:
 
 The SpecKit skill ecosystem provides:
 
-- **Navigation**: Command guide for workflow guidance
 - **Research**: Parallel technical investigation
 - **Planning**: Comprehensive planning with approvals
 - **Implementation**: Autonomous code execution
