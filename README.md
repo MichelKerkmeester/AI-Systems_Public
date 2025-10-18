@@ -25,10 +25,14 @@ Some of my non-client AI systems that I made available to the public. They were 
 6. [Development: Context, Prompts & Workflows](#6-development-context-prompts-workflows)
 7. [Effective GPT](#7-effective-gpt)
 
-#### 🔧 Additional Sections
+#### 📚 Resources
 
-- [Common Features](#common-features)
-- [Resources](#resources)
+- [Claude Desktop](https://claude.ai/desktop)
+- [Claude Skills](https://www.anthropic.com/news/skills)
+- [Claude Subagents](https://docs.claude.com/en/docs/claude-code/sub-agents)
+- [AGENTS.md](https://github.com/openai/agents.md)
+- [MCP Protocol Documentation](https://modelcontextprotocol.io)
+- [Docker Desktop](https://docker.com/products/docker-desktop)
 
 .
 
@@ -198,15 +202,3 @@ System instructions for direct, efficient AI communication without filler.
   - No continuity between sessions
   - No memory of past interactions
   - Dutch exception: Softened rules (non-tech user)
-
-.
-
-<a id="resources"></a>
-### 📚 Resources
-
-- [Claude Desktop](https://claude.ai/desktop)
-- [Claude Skills](https://www.anthropic.com/news/skills)
-- [Claude Subagents](https://docs.claude.com/en/docs/claude-code/sub-agents)
-- [AGENTS.md](https://github.com/openai/agents.md)
-- [MCP Protocol Documentation](https://modelcontextprotocol.io)
-- [Docker Desktop](https://docker.com/products/docker-desktop)
