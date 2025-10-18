@@ -23,6 +23,21 @@ Execute parallel technical research workflow to produce comprehensive documentat
 - Implementation without research
 - Writing specs without investigation
 
+## 🚀 Quick Command Reference
+
+| Step | Command | Purpose |
+|------|---------|----------|
+| 1 | Manual | Request Analysis - Define research scope |
+| 2 | Manual | Pre-work Review |
+| 3 | *Parallel Block* | 4 researchers collect data |
+| 4 | Manual | Research Compilation |
+| 5 | `/speckit.checklist` | Quality validation |
+| 6 | Manual | Solution Design |
+| 7 | Manual | Final Compilation |
+| 8 | Manual | Branch Integration (optional) |
+
+**✅ Autonomous**: This workflow executes steps 1-7 without approval gates. Only step 8 (branch integration) requires user confirmation.
+
 ## Architecture Overview
 
 This skill implements the sk_p__feature_research.yaml workflow with 6 specialized research sub-agents executing in parallel.
@@ -32,11 +47,276 @@ This skill implements the sk_p__feature_research.yaml workflow with 6 specialize
 1. **Request Analysis** - Define research scope and goals
 2. **Pre-work Review** - Review AGENTS.md, code standards
 3. **Parallel Research Block** - 4 researchers collect data
-4. **Review Phase** - Lead Reviewer deduplicates and ranks
-5. **Synthesis Phase** - Lead Synthesizer creates research.md
-6. **Main Agent QA** - Final quality review and polish
-7. **Solution Design** - Architecture and integration patterns
-8. **Research Compilation** - Complete documentation
+4. **Research Compilation** - Intermediate compilation
+5. **Quality Checklist** - Generate quality gates
+6. **Solution Design** - Architecture and integration patterns
+7. **Final Research Compilation** - Complete comprehensive documentation
+8. **Branch Integration** - Optional merge to main
+
+**Note**: This is an autonomous workflow with NO approval gates.
+
+## Workflow Steps (Detailed Execution)
+
+This section provides step-by-step execution guidance as defined in sk_p__feature_research.yaml.
+
+### Step 1: Request Analysis
+
+**Action**: Analyze inputs and define research scope and goals
+
+**Inputs**:
+- `git_branch`: Auto-create `feature-{NNN}` if empty
+- `spec_folder`: Auto-create `specs/{NNN}` if empty
+- `context`: Infer from request if empty
+- `issues`: Investigate during workflow if empty
+- `request`: REQUIRED
+- `environment`: Skip browser testing if empty
+- `scope`: Default to `specs/**` if empty
+
+**Validation**: `scope_defined`
+
+**Approval Gate**: None (autonomous execution)
+
+---
+
+### Step 2: Pre-work Review
+
+**Action**: Review required documents
+
+**Required Documents**:
+- AGENTS.md
+- knowledge/code_standards.md
+- knowledge/debugging.md
+
+**Validation**: `principles_established`
+
+**Approval Gate**: None (autonomous execution)
+
+---
+
+### Step 3: Parallel Research Block
+
+**Description**: Parallel research execution spanning codebase and external sources
+
+This step contains sub-phases that execute sequentially:
+
+#### Phase A: Analyze Inputs
+
+**Define Queries**:
+- Domains to search
+- Keywords and search terms
+- Constraints and filters
+
+**Structure Outputs**:
+- Fields: title, url, quote, finding, assessment, confidence
+
+#### Phase B: Parallel Work
+
+**Execution**: Parallel
+
+**Concurrency**: 3 (maximum parallel agents)
+
+**Shared Context**:
+- request
+- context
+
+**Tasks**:
+
+1. **Web/Ecosystem Researcher**:
+   - Instructions: Collect libraries, repos, issues, ecosystem patterns with pros/cons
+   - Focus: Libraries, frameworks, repos, issues, community patterns
+
+2. **Academic/Docs Researcher**:
+   - Instructions: Collect standards, official docs, papers; extract key constraints and canonical patterns
+   - Focus: Standards, RFCs, official documentation, academic papers, canonical patterns
+
+3. **Competitive/Market Analyst**:
+   - Instructions: Collect vendor options, alternatives, benchmark data
+   - Focus: Vendor solutions, alternative approaches, benchmarks, market trends
+
+4. **Feasibility/Cost Analyst**:
+   - Instructions: Analyze complexity, cost, operational impact, risks
+   - Focus: Technical complexity, operational costs, risk assessment, trade-offs
+
+#### Phase C: Review
+
+**By**: Lead Reviewer
+
+**Focus**:
+- Deduplicate findings
+- Rank relevance
+- Identify conflicts
+- Flag insufficient citations
+
+**Outputs**:
+- Synthesis guidance
+- Ranked findings
+- Contradictions noted
+
+#### Phase D: Synthesis
+
+**By**: Lead Synthesizer
+
+**Action**: Produce research.md per required sections
+
+**Output Files**:
+- `[SPEC_FOLDER]/research.md`
+
+**Validation Checklist**:
+- Citations present
+- Contradictory sources flagged
+- Options matrix complete
+- Recommendation justified
+
+#### Phase E: Main Agent Finalization
+
+**By**: MAIN_AGENT
+
+**Action**: QA review and finalization of `[SPEC_FOLDER]/research.md`
+
+**Checks**:
+- Confirm alignment with request and context
+- Validate completeness and consistency
+- Ensure output format and sections present
+- Resolve remaining open questions or note them
+
+**Outputs**:
+- Main agent review notes
+- Final signoff: true
+
+**Note**: Main agent finalization occurs within this step (no subsequent approval gate)
+
+---
+
+### Step 4: Research Compilation
+
+**Action**: Intermediate compilation (note: research document already synthesized in step 3)
+
+**Note**: Ensure section coverage and polish
+
+**Validation**: Research sections structured
+
+---
+
+### Step 5: Quality Checklist
+
+**Command**: `/speckit.checklist`
+
+**Action**: Generate quality validation checklist
+
+**Outputs**:
+- Quality checklist generated
+
+**Validation**: `checklist_generated`
+
+---
+
+### Step 6: Solution Design
+
+**Action**: Design solution architecture and integration patterns
+
+**Deliverables**:
+- Proposed architecture
+- Integration patterns
+- API design
+- Data flow diagrams
+- Component interactions
+
+**Chrome DevTools** (when prototyping solutions):
+- Test API endpoints
+- Validate approaches
+- Measure performance impact
+- Verify compatibility
+
+**Deep Analysis**:
+- Focus: solution_architecture_design
+- Approach: comprehensive_design
+- Outputs: solution_architecture, implementation_patterns, code_examples, configuration_requirements, architectural_patterns, integration_blueprint, implementation_roadmap, edge_case_handling
+
+**Validation**: `solution_designed`
+
+---
+
+### Step 7: Final Research Compilation
+
+**Action**: Compile comprehensive research documentation for spec folder
+
+**Deep Analysis**:
+- Focus: comprehensive_research_document
+- Approach: exhaustive_documentation
+
+**Required Sections** (complete list in YAML lines 217-289):
+- Changelog and updates
+- Investigation report
+- Executive overview
+- Architecture analysis
+- Technical specifications
+- Constraints and limitations
+- Integration patterns
+- Implementation guide
+- Code examples and snippets
+- Testing strategies
+- Performance optimization
+- Security considerations
+- Future proofing
+- API reference
+- Troubleshooting guide
+- Acknowledgements
+
+**Document Structure**:
+- Format: Markdown
+- Location: `[SPEC_FOLDER]/research.md`
+- Table of contents: Required
+- Code blocks: Syntax highlighted
+- Diagrams: ASCII art
+- Cross-references: Linked
+
+**Validation**: `documentation_complete`
+
+**Final Output Message**:
+```
+Research documentation complete.
+Comprehensive technical investigation has been documented in [SPEC_FOLDER]/research.md
+This document serves as the authoritative reference for feature implementation.
+
+Spec folder structure:
+- [SPEC_FOLDER]/research.md - Complete research documentation
+
+Next steps:
+- Review research findings in the spec folder
+- Validate technical approach
+- Proceed to specification (/specify) if needed
+- Use research as reference during implementation planning
+```
+
+---
+
+### Step 8: Branch Integration
+
+**Name**: Branch Integration Approval
+
+**Approval Gate**: "All checks passed. Would you like me to push this branch to main now to keep main up to date and minimize conflicts?"
+
+**Confirmation Needed**: true
+
+**Integration Policy**:
+- Merge strategy: rebase_then_fast_forward
+- Safety checks:
+  - Clean working tree
+  - Validations/tests/pass checks are green (as applicable)
+  - No unresolved blockers
+- Conflict policy:
+  - On rebase conflict: pause and ask for guidance
+  - Fallback to PR: offer to open a PR if user prefers manual resolution
+- Steps:
+  - Fetch origin
+  - Update main (pull --ff-only)
+  - Rebase feature branch onto main
+  - Fast-forward merge into main
+  - Push origin main
+  - After successful integration, offer to delete the feature branch locally and on origin (explicit confirmation required)
+- Tagging: optional; only on user request
+
+**Termination**: Workflow ends after this step
 
 ### The 6 Research Sub-Agents
 
@@ -80,6 +360,8 @@ This skill implements the sk_p__feature_research.yaml workflow with 6 specialize
 
 ### Parallel Research Pattern
 
+**Note**: All parallel execution, review, synthesis, and main agent finalization occur within Step 3 as sub-phases, NOT as separate steps.
+
 ```
 ┌─────────────────────────────────┐
 │   Parallel Research Execution    │
@@ -100,6 +382,34 @@ This skill implements the sk_p__feature_research.yaml workflow with 6 specialize
 │      Main Agent QA Phase         │ ← Final polish and validation
 └─────────────────────────────────┘
 ```
+
+### Parallel Execution Configuration
+
+**Concurrency Settings**:
+- **Default**: 3 parallel research agents maximum
+- **Low signal**: Broaden queries and include secondary sources
+- **Fallback**: 1 (sequential execution if parallel not supported)
+
+**Shared Context** (passed to all parallel agents):
+- `request` - User research request
+- `context` - Additional context from user inputs
+
+**Research Output Format** (all agents):
+```yaml
+finding:
+  title: [descriptive title]
+  url: [source URL]
+  quote: [relevant excerpt]
+  finding: [key insight]
+  assessment: [evaluation]
+  confidence: [high/medium/low]
+```
+
+**Important**:
+- Review and synthesis phases execute sequentially AFTER parallel work completes
+- Main agent finalization occurs within Step 3 (no approval gate)
+- All phases in Step 3 are sub-phases within that single workflow step
+- This is an autonomous workflow - no user approval needed until branch integration
 
 ## Research Document Structure
 
@@ -203,6 +513,56 @@ finding:
 - Citation verification
 - Contradiction flagging
 - Completeness validation
+
+---
+
+## ✅ Approval Gates
+
+This workflow is **autonomous** with minimal user interaction:
+
+| Step | Approval Prompt | Confirmation | Note |
+|------|-----------------|--------------|------|
+| 8 | "All checks passed. Would you like me to push this branch to main now to keep main up to date and minimize conflicts?" | Required | Branch integration only |
+
+**Note**: Steps 1-7 execute autonomously without approval gates. Only step 8 (branch integration) requires user confirmation.
+
+---
+
+## ⚙️ Field Handling
+
+This workflow automatically handles empty input fields per sk_p__feature_research.yaml:
+
+### git_branch
+- **Auto-create**: Yes
+- **Default Pattern**: `feature-{NNN}` where {NNN} is highest existing +001
+- **Scope**: Repository-wide feature branches
+- **Empty Handling**: Automatically creates new branch following naming convention
+
+### spec_folder
+- **Auto-create**: Yes
+- **Default Pattern**: `specs/{NNN}` where {NNN} is highest existing +001
+- **Scope**: Project specs directory
+- **Empty Handling**: Automatically creates new folder following naming convention
+
+### context
+- **Auto-create**: No
+- **Default**: Inferred from request and staging link if provided
+- **Empty Handling**: Inference from available inputs
+
+### issues
+- **Auto-create**: No
+- **Default**: None
+- **Empty Handling**: Investigated and discovered during workflow execution
+
+### environment (staging link)
+- **Auto-create**: No
+- **Default**: None
+- **Empty Handling**: Browser testing and DevTools steps are skipped
+
+### scope (files)
+- **Auto-create**: No
+- **Default**: `specs/**`
+- **Empty Handling**: Uses default scope policy limiting operations to specs directory
 
 ## Integration Points
 

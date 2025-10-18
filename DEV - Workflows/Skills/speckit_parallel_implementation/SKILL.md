@@ -22,22 +22,300 @@ Execute autonomous implementation workflow with parallel preparation and progres
 - Simple planning without implementation
 - Manual implementation processes
 
+## 🚀 Quick Command Reference
+
+> **⚠️ CRITICAL**: This workflow starts at **Step 8** (continuation from planning workflow steps 1-7)
+
+| Step | Command | Purpose |
+|------|---------|----------|
+| **8** | Manual | Review Plan and Spec |
+| **9** | `/tasks` | Generate actionable tasks |
+| **10** | `/analyze` | Check consistency |
+| **11** | `/speckit.checklist` | Quality gates |
+| **12** | *Parallel Block* | 4 implementation agents prepare |
+| **13** | `/implement` | Verify prerequisites |
+| **14** | Manual | Autonomous development |
+| **15** | Manual | Document changes and completion |
+
+**✅ Autonomous**: This workflow executes all steps without approval gates.
+
 ## Architecture Overview
 
 This skill implements the sk_p__implementation.yaml workflow with 6 specialized implementation sub-agents executing in parallel preparation phase.
 
 ### Implementation Workflow Steps
 
+**CRITICAL**: Step numbering starts at **8** (continuation from planning workflow steps 1-7).
+
 **Note**: This workflow covers steps 8-15 of the complete SpecKit process (8 steps total). Steps 1-7 are assumed completed via planning workflow.
 
-1. **Review Plan and Spec** (Step 8) - Understand existing artifacts
-2. **Task Breakdown** (Step 9) - Generate actionable tasks
-3. **Analysis** (Step 10) - Check consistency and coverage
-4. **Quality Checklist** (Step 11) - Generate quality gates
-5. **Parallel Implementation Prep** (Step 12) - 4 agents prepare approach
-6. **Implementation Check** (Step 13) - Verify prerequisites
-7. **Development** (Step 14) - Execute autonomous implementation
-8. **Completion** (Step 15) - Document changes and summary
+8. **Review Plan and Spec** - Understand existing artifacts
+9. **Task Breakdown** - Generate actionable tasks
+10. **Analysis** - Check consistency and coverage
+11. **Quality Checklist** - Generate quality gates
+12. **Parallel Implementation Prep** - 4 agents prepare approach
+13. **Implementation Check** - Verify prerequisites
+14. **Development** - Execute autonomous implementation
+15. **Completion** - Document changes and summary
+
+**Note**: This is an autonomous workflow with NO approval gates.
+
+## Workflow Steps (Detailed Execution)
+
+**Prerequisites**: Requires `spec.md`, `plan.md`, and `planning-summary.md` from steps 1-7.
+
+This section provides step-by-step execution guidance as defined in sk_p__implementation.yaml.
+
+### Step 8: Review Plan and Spec
+
+**Action**: Review spec and planning artifacts
+
+**Required Documents**:
+- `[SPEC_FOLDER]/spec.md`
+- `[SPEC_FOLDER]/plan.md`
+- `[SPEC_FOLDER]/planning-summary.md`
+
+**Validation**: `planning_artifacts_understood`
+
+**Approval Gate**: None (autonomous execution)
+
+---
+
+### Step 9: Task Breakdown
+
+**Command**: `/tasks`
+
+**Action**: Generate actionable task checklist
+
+**Outputs**:
+- `tasks/checklist.md`
+- Task duration: 15-60 minutes per task
+- Tracking structure established
+
+**Validation**: `tasks_actionable`
+
+---
+
+### Step 10: Analysis
+
+**Command**: `/analyze`
+
+**Action**: Check consistency and verify alignment
+
+**Outputs**:
+- Consistency report
+- Coverage verification
+- Alignment check
+- Gap analysis
+
+**Validation**: `consistency_verified`
+
+---
+
+### Step 11: Quality Checklist
+
+**Command**: `/speckit.checklist`
+
+**Action**: Generate quality validation checklist
+
+**Outputs**:
+- Quality checklist generated
+
+**Validation**: `checklist_generated`
+
+---
+
+### Step 12: Parallel Implementation Preparation
+
+**Description**: Parallel preparation for core, integrations, tests, and docs
+
+This step contains sub-phases that execute sequentially:
+
+#### Phase A: Analyze Inputs
+
+**Summarize**:
+- Key requirements
+- Constraints
+- Unknowns
+
+**Shard Plan Across**:
+- Core
+- Adapters
+- Tests
+- Docs
+
+#### Phase B: Parallel Work
+
+**Execution**: Parallel
+
+**Concurrency**: 3 (maximum parallel agents)
+
+**Shared Context**:
+- `[SPEC_FOLDER]/spec.md`
+- `[SPEC_FOLDER]/plan.md`
+- `tasks/checklist.md`
+- consistency_report
+
+**Tasks**:
+
+1. **Core Implementer**:
+   - Instructions: Draft module breakdown, key data structures, and algorithmic approach with rationale
+   - Expected Output Sections: modules, data_structures, algorithms, rationale
+
+2. **Integrations/Adapters Engineer**:
+   - Instructions: Enumerate integration points, API contracts, error-handling, and configuration matrix
+   - Expected Output Sections: integrations, api_contracts, error_handling, configuration
+
+3. **Test Engineer**:
+   - Instructions: Define test plan with key test cases, fixtures, and coverage goals
+   - Expected Output Sections: test_plan, key_cases, fixtures, coverage_targets
+
+4. **Docs Engineer**:
+   - Instructions: Draft developer-facing docs: usage patterns, examples, migration notes
+   - Expected Output Sections: usage, examples, migration_upgrade
+
+#### Phase C: Review
+
+**By**: Integration Reviewer
+
+**Focus**:
+- Coherence across tracks
+- API consistency
+- Testability
+- Identify gaps
+
+**Outputs**:
+- Synthesis guidance
+- Review notes
+
+#### Phase D: Synthesis
+
+**By**: Lead Synthesizer
+
+**Action**: Produce `implementation_plan.md` combining parallel outputs + review guidance
+
+**Output Files**:
+- `[SPEC_FOLDER]/implementation_plan.md`
+
+**Validation Checklist**:
+- Modules and integrations aligned
+- Tests cover critical paths
+- Docs reflect actual interfaces
+- Risks and open questions listed
+
+#### Phase E: Main Agent Finalization
+
+**By**: MAIN_AGENT
+
+**Action**: QA review and finalization of `[SPEC_FOLDER]/implementation_plan.md`
+
+**Checks**:
+- Confirm alignment with request and context
+- Validate completeness and consistency
+- Ensure output format and sections present
+- Resolve remaining open questions or note them
+
+**Outputs**:
+- Main agent review notes
+- Final signoff: true
+
+**Note**: Main agent finalization occurs within this step (no subsequent approval gate)
+
+---
+
+### Step 13: Implementation Check
+
+**Command**: `/implement [task-id]`
+
+**Action**: Verify prerequisites before code changes
+
+**Checks**:
+- Prerequisites: verified
+- Blockers: none
+- Environment: ready
+
+**Chrome DevTools** (when validating environment):
+- Verify API endpoints accessible
+- Check authentication working
+- Confirm dependencies loaded
+
+**Deep Analysis**:
+- Focus: pre_implementation_verification
+- Approach: environment_validation
+- Outputs: environment_status, dependency_verification, blocker_identification, readiness_confirmation
+
+**Validation**: Environment ready for implementation
+
+---
+
+### Step 14: Development
+
+**Approach**: Autonomous implementation with checkpoints
+
+**Requirements**:
+- Follow: `knowledge/code_standards.md`
+- Update: task_checklist_progressively
+- Test: before_commit
+- No premature optimization
+
+**Checkpoints**:
+
+**Major Changes**:
+- Action: Log progress
+
+**Issues Found**:
+- Action: Document resolution
+
+**Architecture Change**:
+- Action: Note deviation
+
+**Chrome DevTools** (when debugging implementation):
+- Test in browser
+- Verify network calls
+- Check console output
+- Validate DOM changes
+- Measure performance impact
+
+**Deep Analysis**:
+- Focus: iterative_problem_solving
+- Approach: continuous_validation
+- Outputs: implementation_decisions, debugging_insights, optimization_opportunities, test_coverage_gaps
+
+---
+
+### Step 15: Completion
+
+**Action**: Document changes and create summary
+
+**Summary Document**:
+- Location: `[SPEC_FOLDER]/implementation-summary.md`
+- Required Sections:
+  - Feature branch name
+  - Files modified/created
+  - Verification steps taken
+  - Deviations from plan
+  - Knowledge base updates
+  - Recommended next steps
+  - Browser testing results
+
+**Final Checklist**:
+- Update task status: completed
+- Validation passed: confirmed
+- Summary created: true
+- Staging verified: true
+
+**Deep Analysis**:
+- Focus: comprehensive_completion_review
+- Approach: retrospective_analysis
+- Outputs: implementation_quality_assessment, lessons_learned, technical_debt_noted, future_improvements
+
+**Termination**: Workflow ends after this step
+
+**Next Steps**:
+- Review implementation-summary.md
+- Verify all changes in staging environment
+- Prepare for code review and PR submission
+- Update knowledge base if needed
 
 ### The 6 Implementation Sub-Agents
 
@@ -83,6 +361,8 @@ This skill implements the sk_p__implementation.yaml workflow with 6 specialized 
 
 ### Parallel Preparation Pattern
 
+**Note**: All parallel execution, review, synthesis, and main agent finalization occur within Step 12 as sub-phases, NOT as separate steps.
+
 ```
 ┌─────────────────────────────────┐
 │  Parallel Implementation Prep    │
@@ -100,13 +380,32 @@ This skill implements the sk_p__implementation.yaml workflow with 6 specialized 
 └─────────────────────────────────┘
                 ↓
 ┌─────────────────────────────────┐
-│      Main Agent QA Phase         │ ← Final validation
+│      Main Agent QA Phase         │ ← Final validation (no approval gate)
 └─────────────────────────────────┘
                 ↓
 ┌─────────────────────────────────┐
 │    Autonomous Implementation     │ ← Execute code changes
 └─────────────────────────────────┘
 ```
+
+### Parallel Execution Configuration
+
+**Concurrency Settings**:
+- **Default**: 3 parallel implementation agents maximum
+- **High Complexity**: 2 parallel agents (reduced concurrency)
+- **Fallback**: 1 (sequential execution if parallel not supported)
+
+**Shared Context** (passed to all parallel agents):
+- `[SPEC_FOLDER]/spec.md` - Feature specification
+- `[SPEC_FOLDER]/plan.md` - Technical plan
+- `tasks/checklist.md` - Task breakdown
+- consistency_report - Analysis results
+
+**Important**:
+- Review and synthesis phases execute sequentially AFTER parallel work completes
+- Main agent finalization occurs within Step 12 (no approval gate)
+- All phases in Step 12 are sub-phases within that single workflow step
+- This is an autonomous workflow - no user approval needed
 
 ## Implementation Plan Structure
 
@@ -157,6 +456,61 @@ The skill produces `implementation_plan.md` with these sections:
 - Performance targets
 - Security requirements
 - Accessibility standards
+
+---
+
+## ✅ Approval Gates
+
+This workflow is **autonomous** with NO approval gates:
+
+| Step | Note |
+|------|------|
+| 8-15 | All steps execute autonomously without user approval |
+
+**Note**: This is a fully autonomous workflow designed for continuous execution once prerequisites are met.
+
+---
+
+## ⚙️ Field Handling
+
+This workflow automatically handles empty input fields per sk_p__implementation.yaml:
+
+### git_branch
+- **Auto-create**: Yes
+- **Default Pattern**: `feature-{NNN}` where {NNN} is highest existing +001
+- **Scope**: Repository-wide feature branches
+- **Empty Handling**: Automatically creates new branch following naming convention
+
+### spec_folder
+- **Auto-create**: Yes
+- **Default Pattern**: `specs/{NNN}` where {NNN} is highest existing +001
+- **Scope**: Project specs directory
+- **Empty Handling**: Automatically creates new folder following naming convention
+
+### request
+- **Default**: "Conduct a comprehensive review of the spec folder and carry out its implementation fully autonomously."
+- **Override**: Uses provided request if specified
+- **Empty Handling**: Uses default request string
+
+### context
+- **Auto-create**: No
+- **Default**: Inferred from request and staging link if provided
+- **Empty Handling**: Inference from available inputs
+
+### issues
+- **Auto-create**: No
+- **Default**: None
+- **Empty Handling**: Investigated and discovered during workflow execution
+
+### environment (staging link)
+- **Auto-create**: No
+- **Default**: None
+- **Empty Handling**: Browser testing and DevTools steps are skipped
+
+### scope (files)
+- **Auto-create**: No
+- **Default**: `specs/**`
+- **Empty Handling**: Uses default scope policy limiting operations to specs directory
 
 ## Inputs
 
