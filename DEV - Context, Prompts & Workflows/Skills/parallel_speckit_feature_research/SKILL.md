@@ -1,5 +1,5 @@
 ---
-name: speckit_parallel_feature_research
+name: parallel_speckit_feature_research
 description: Conduct parallel technical research and investigation for SpecKit features. Orchestrates 6 specialized research sub-agents to produce comprehensive research.md documentation through parallel collection, review, and synthesis phases.
 ---
 

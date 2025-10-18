@@ -1,5 +1,5 @@
 ---
-name: speckit_parallel_plan_spec
+name: parallel_speckit_spec_plan
 description: Execute spec-driven planning workflow with parallel specialist analyses. Orchestrates 6 specialized planning sub-agents through parallel execution, review, and synthesis to produce plan.md and planning-summary.md with manual approval gates.
 ---
 
@@ -38,7 +38,7 @@ Execute comprehensive planning and specification workflow with parallel speciali
 
 ## Architecture Overview
 
-This skill implements the sk_p__plan_spec.yaml workflow with 6 specialized planning sub-agents executing in parallel analysis phase.
+This skill implements the sk_p__spec_plan.yaml workflow with 6 specialized planning sub-agents executing in parallel analysis phase.
 
 ### Planning Workflow Steps
 
@@ -54,7 +54,7 @@ This skill implements the sk_p__plan_spec.yaml workflow with 6 specialized plann
 
 ## Workflow Steps (Detailed Execution)
 
-This section provides step-by-step execution guidance as defined in sk_p__plan_spec.yaml.
+This section provides step-by-step execution guidance as defined in sk_p__spec_plan.yaml.
 
 ### Step 1: Request Analysis
 
@@ -454,7 +454,7 @@ This workflow includes manual approval gates at key points:
 
 ## ⚙️ Field Handling
 
-This workflow automatically handles empty input fields per sk_p__plan_spec.yaml:
+This workflow automatically handles empty input fields per sk_p__spec_plan.yaml:
 
 ### branch_strategy
 - **Required**: Yes
@@ -768,7 +768,7 @@ When staging URL is provided:
 ## Version
 
 **Current Version**: 1.0.0
-**Based On**: sk_p__plan_spec.yaml
+**Based On**: sk_p__spec_plan.yaml
 **Created**: 2025-10-18
 **Architecture**: Parallel planning with approval gates
 
@@ -776,7 +776,7 @@ When staging URL is provided:
 
 ## References
 
-- Source: `/b_prompts/github_spec_kit/parallel_agents/sk_p__plan_spec.yaml`
+- Source: `/b_prompts/github_spec_kit/parallel_agents/sk_p__spec_plan.yaml`
 - Prerequisites: Feature request or existing spec
 - Next Steps: Use speckit-implementation for execution
 - Output: plan.md, planning-summary.md

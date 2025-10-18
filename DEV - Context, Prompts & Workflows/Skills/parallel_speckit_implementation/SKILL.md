@@ -1,5 +1,5 @@
 ---
-name: speckit_parallel_implementation
+name: parallel_speckit_implementation
 description: Execute autonomous spec-driven implementation with parallel preparation agents. Orchestrates 6 specialized sub-agents for implementation planning (core, integrations, tests, docs) through parallel execution, review, and synthesis into implementation_plan.md, then proceeds with development.
 ---
 

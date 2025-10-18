@@ -1,5 +1,5 @@
 ---
-name: code-pattern-validator
+name: code_pattern_validator
 description: Validate JavaScript files against Webflow project code standards, naming conventions, initialization patterns, and platform constraints. Use when reviewing code quality, catching violations before bugs occur, or enforcing consistency. Validates snake_case naming, 3-line file headers, Webflow.push initialization, comment density, ARIA attributes, and platform-specific patterns like collection handling.
 ---
 

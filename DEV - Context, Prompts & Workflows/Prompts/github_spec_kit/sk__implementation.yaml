@@ -17,6 +17,7 @@ operating_mode:
 # USER INPUTS
 # ─────────────────────────────────────────────────────────────────
 user_inputs:
+  branch_strategy: "[BRANCH_STRATEGY]"
   git_branch: "[GIT_BRANCH]"
   spec_folder: "/Users/michelkerkmeester/MEGA/Websites/anobel.com/specs/003_welcome_modal"
   context: "[CONTEXT]"
@@ -36,8 +37,28 @@ request_handling:
 # FIELD HANDLING
 # ─────────────────────────────────────────────────────────────────
 field_handling:
+  branch_strategy:
+    required: true
+    type: enum
+    options:
+      - feature_branch: "Create new feature branch (auto-create feature-{NNN} aligned with spec folder)"
+      - main_branch: "Work on main branch (skip branch creation and commit directly to main)"
+    note: |
+      This field should be inherited from the planning workflow.
+      If starting implementation independently, prompt user for choice.
+
+  spec_id:
+    derive_from: "spec_folder path using pattern specs/{NNN} or specs/{NNN-name}"
+    fallback: "Extract numeric portion or use timestamp if extraction fails"
+    note: "Used to generate feature_branch_name"
+
+  feature_branch_name:
+    pattern: "feature-{spec_id}"
+    condition: "Only used when branch_strategy == feature_branch"
+
   defaults:
-    git_branch_empty: "Auto-create feature-{NNN} from highest +001"
+    branch_strategy_empty: "Inherit from planning phase; if unavailable, prompt user"
+    git_branch_empty: "If branch_strategy == feature_branch: use feature_branch_name; else: main"
     spec_folder_empty: "Auto-create specs/{NNN} from highest +001"
     context_empty: "Infer from [REQUEST] and [STAGING LINK]"
     issues_empty: "Investigate during workflow"
@@ -47,6 +68,15 @@ field_handling:
   scope_policy:
     default: "specs/**"
     rule: "Limit file operations to scope when provided"
+
+  branch_creation:
+    condition: "Only execute when branch_strategy == feature_branch"
+    steps:
+      - "Check if feature branch already exists"
+      - "Create feature-{spec_id} if not exists"
+      - "Checkout feature branch"
+    skip_when: "branch_strategy == main_branch"
+    note: "Branch should already exist from planning phase if feature_branch was selected"
 
 # ─────────────────────────────────────────────────────────────────
 # WORKFLOW
