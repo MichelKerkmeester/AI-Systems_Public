@@ -47,7 +47,7 @@ Create professional tickets, stories, PRDs, and documentation with automatic com
   - 5-phase thinking with 10 rounds automatic (internals hidden by default; visibility configurable; user doesn't control)
   - $quick mode: Zero waiting, 1-5 rounds auto-scaled
 
----
+.
 
 <a id="2-prompt-engineering-assistant"></a>
 #### 2. 🎯 Prompt Engineering Assistant
@@ -92,7 +92,7 @@ Edit image, video, and audio files via natural language.
   - Challenge at 3+ rounds ("85% quality, 50% smaller")
   - REPAIR protocol for error recovery
 
----
+.
 
 <a id="4-webflow-agent"></a>
 #### 4. 🌐 Webflow Agent
@@ -109,7 +109,7 @@ Full-stack Webflow development through natural language with Designer and Data A
   - Build components and layours with Designer integratiom
   - SEO optimization and analysis
 
----
+.
 
 <a id="5-clickup--notion-agent"></a>
 #### 5. 📊 ClickUp & Notion Agent
@@ -147,7 +147,7 @@ System instructions for direct, efficient AI communication without filler.
   - No memory of past interactions
   - Dutch exception: Softened rules (non-tech user)
 
----
+.
 
 <a id="7-dev-context-prompts-workflows"></a>
 #### 7. 📜 Development: Context, Prompts & Workflows
