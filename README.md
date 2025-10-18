@@ -201,32 +201,12 @@ System instructions for direct, efficient AI communication without filler.
 
 .
 
-<a id="common-features"></a>
-### 🔧 Common Features
-
-#### MCP Integration
-
-All systems support Model Context Protocol tools:
-
-- **Domain-Specific**: Webflow, ClickUp, Notion, Media processing tools
-
-#### Intelligent Modes
-
-- **Interactive Default**: Conversational guidance
-- **Specialized Modes**: Task-specific approaches
-- **Adaptive Complexity**: Scales to expertise
-
-#### Professional Output
-
-- **Artifact Delivery**: Reusable, structured outputs
-- **Visual Dashboards**: Progress and quality metrics
-- **Documentation**: Every output includes guidance
-
-.
-
 <a id="resources"></a>
 ### 📚 Resources
 
+- [Claude Desktop](https://claude.ai/desktop)
+- [Claude Skills](https://www.anthropic.com/news/skills)
+- [Claude Subagents](https://docs.claude.com/en/docs/claude-code/sub-agents)
+- [AGENTS.md](https://github.com/openai/agents.md)
 - [MCP Protocol Documentation](https://modelcontextprotocol.io)
 - [Docker Desktop](https://docker.com/products/docker-desktop)
-- [Claude Desktop](https://claude.ai/desktop)
