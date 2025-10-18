@@ -21,7 +21,7 @@ operating_mode:
 # ─────────────────────────────────────────────────────────────────
 user_inputs:
   target_folder: "[TARGET_FOLDER]"
-  context: "Create a plan on how to improve the AGENTS.md"
+  context: "[CONTEXT]
   complexity: "[COMPLEXITY]"
   request: "[REQUEST]"
 
@@ -30,7 +30,7 @@ user_inputs:
 # ─────────────────────────────────────────────────────────────────
 field_handling:
   defaults:
-    target_folder_empty: "./plans"
+    target_folder_empty: "/specs"
     context_empty: "Infer from [REQUEST]"
     complexity_empty: "standard"
     request_empty: "Error: REQUEST required"
@@ -323,4 +323,4 @@ rules:
     - create_multiple_output_files
     - constrain_agent_native_planning
     - create_circular_dependencies
-    - omit_risk_assessment
+    - omit_risk_assessment2
