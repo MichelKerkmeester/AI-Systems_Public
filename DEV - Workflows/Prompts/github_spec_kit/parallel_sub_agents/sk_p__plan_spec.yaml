@@ -17,13 +17,13 @@ operating_mode:
 # USER INPUTS
 # ─────────────────────────────────────────────────────────────────
 user_inputs:
-  git_branch: "[GIT_BRANCH]"
-  spec_folder: "[SPEC_FOLDER]"
-  context: "[CONTEXT]"
+  git_branch: "MAIN"
+  spec_folder: "/Users/michelkerkmeester/MEGA/Websites/anobel.com/specs/005-form-validation-helpers"
+  context: "Helper Rework"
   issues: "[ISSUES]"
-  request: "[REQUEST]"
-  environment: "[STAGING LINK]"
-  scope: "[FILES]"
+  request: "We already have a plan in this folder, which you can use as a basis to re-do it based on speckit workflow. DO NOT delete original plan."
+  environment: "https://a-nobel-en-zn.webflow.io/contact"
+  scope: "/contact"
 
 # ─────────────────────────────────────────────────────────────────
 # FIELD HANDLING
