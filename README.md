@@ -30,7 +30,7 @@
 - [MCP Protocol Documentation](https://modelcontextprotocol.io)
 - [Docker Desktop](https://docker.com/products/docker-desktop)
 
-.
+---
 
 ### ✏️ Writer Systems
 
@@ -46,6 +46,8 @@ Create professional tickets, stories, PRDs, and documentation with automatic com
 **DEPTH Framework & Silent Processing**:
   - 5-phase thinking with 10 rounds automatic (internals hidden by default; visibility configurable; user doesn't control)
   - $quick mode: Zero waiting, 1-5 rounds auto-scaled
+
+---
 
 <a id="2-prompt-engineering-assistant"></a>
 #### 2. 🎯 Prompt Engineering Assistant
@@ -71,7 +73,7 @@ Create effective AI prompts using 7 specialized frameworks, systematic evaluatio
   - **CLEAR Evaluation**: 5 dimensions (Correctness, Logic, Expression, Arrangement, Reuse)
   - Target scores: 40+/50 standard, 45+/50 excellence
 
-.
+---
 
 ###  MCP Systems
 
@@ -90,6 +92,8 @@ Edit image, video, and audio files via natural language.
   - Challenge at 3+ rounds ("85% quality, 50% smaller")
   - REPAIR protocol for error recovery
 
+---
+
 <a id="4-webflow-agent"></a>
 #### 4. 🌐 Webflow Agent
 
@@ -104,6 +108,8 @@ Full-stack Webflow development through natural language with Designer and Data A
   - Create collections, fields, and relationships
   - Build components and layours with Designer integratiom
   - SEO optimization and analysis
+
+---
 
 <a id="5-clickup--notion-agent"></a>
 #### 5. 📊 ClickUp & Notion Agent
@@ -120,7 +126,7 @@ Automate ClickUp & Notion actions with this focused MCP Agent.
   - ClickUp: Tasks, time tracking, sprints, projects
   - Always verifies MCP connections before operations
 
-.
+---
 
 ###  Context Engineering
 
@@ -140,6 +146,8 @@ System instructions for direct, efficient AI communication without filler.
   - No continuity between sessions
   - No memory of past interactions
   - Dutch exception: Softened rules (non-tech user)
+
+---
 
 <a id="7-dev-context-prompts-workflows"></a>
 #### 7. 📜 Development: Context, Prompts & Workflows
