@@ -18,8 +18,8 @@
 
 #### 🧠 Context Engineering
 
-6. [Development: Context, Prompts & Workflows](#6-development-context-prompts-workflows)
-7. [Effective GPT](#7-effective-gpt)
+6. [Effective GPT](#6-effective-gpt)
+7. [Development: Context, Prompts & Workflows](#7-development-context-prompts-workflows)
 
 #### 📚 Resources
 
@@ -39,8 +39,6 @@
 
 Create professional tickets, stories, PRDs, and documentation with automatic complexity scaling.
 
-—
-
 **Intelligent Modes & Auto-Scaling**:
   - Modes: $ticket, $prd, $doc, $interactive (discovery), $quick (instant)
   - Auto-complexity for tickets: Simple (2-3), Standard (4-5), Complex (6-8 sections)
@@ -53,8 +51,6 @@ Create professional tickets, stories, PRDs, and documentation with automatic com
 #### 2. 🎯 Prompt Engineering Assistant
 
 Create effective AI prompts using 7 specialized frameworks, systematic evaluation, and transparent DEPTH processing.
-
-—
 
 **Modes & Output Formats**:
   - **Core Modes**: $interactive (DEFAULT), $improve, $refine, $quick, $short
@@ -84,8 +80,6 @@ Create effective AI prompts using 7 specialized frameworks, systematic evaluatio
 
 Edit image, video, and audio files via natural language.
 
-—
-
 **Universal Media Operations & Intelligence**:
   - Image: Resize, convert, compress, crop, batch
   - Video: Transcode, trim, overlay, subtitles
@@ -100,8 +94,6 @@ Edit image, video, and audio files via natural language.
 #### 4. 🌐 Webflow Agent
 
 Full-stack Webflow development through natural language with Designer and Data APIs.
-
-—
 
 **Smart MCP agent focused on Webflow = better results**:
   - Up to date with all current MCP and CMS capabilities 
@@ -118,8 +110,6 @@ Full-stack Webflow development through natural language with Designer and Data A
 
 Automate ClickUp & Notion actions with this focused MCP Agent.
 
-—
-
 **Smart Notion & ClickUp automation guidance**:
   - Interactive mode helps you get results
   - SYNC Thinking Framework
@@ -134,12 +124,27 @@ Automate ClickUp & Notion actions with this focused MCP Agent.
 
 ###  Context Engineering
 
-<a id="6-dev-context-prompts-workflows"></a>
-#### 6. 📜 Development: Context, Prompts & Workflows
+<a id="6-effective-gpt"></a>
+#### 6. 💬 Effective GPT
+
+System instructions for direct, efficient AI communication without filler.
+
+**Core Communication Principles**:
+  - Eliminates emojis, filler, hype, and conversational transitions
+  - Blunt, directive phrasing focused on cognitive clarity
+  - No engagement-boosting or sentiment-softening behaviors
+  - Immediate termination after information delivery
+
+**Session Isolation & Privacy**:
+  - Each conversation treated as new user
+  - No continuity between sessions
+  - No memory of past interactions
+  - Dutch exception: Softened rules (non-tech user)
+
+<a id="7-dev-context-prompts-workflows"></a>
+#### 7. 📜 Development: Context, Prompts & Workflows
 
 Context engineering for development workflows: AGENTS.md guardrails, Prompts, Claude Skills, GitHub SpecKit workflows, and Knowledge Base examples.
-
-—
 
 **Core Components**:
   - **AGENTS.md**: AI behavior guardrails preventing common failure patterns (rush to code, assumptions, over-engineering)
@@ -170,22 +175,3 @@ Context engineering for development workflows: AGENTS.md guardrails, Prompts, Cl
   - Token-aware skill loading (progressive disclosure)
   - Source attribution standards with confidence scoring
   - Uncertainty explicit marking (UNKNOWN vs fabrication)
-
-<a id="7-effective-gpt"></a>
-#### 7. 💬 Effective GPT
-
-System instructions for direct, efficient AI communication without filler.
-
-—
-
-**Core Communication Principles**:
-  - Eliminates emojis, filler, hype, and conversational transitions
-  - Blunt, directive phrasing focused on cognitive clarity
-  - No engagement-boosting or sentiment-softening behaviors
-  - Immediate termination after information delivery
-
-**Session Isolation & Privacy**:
-  - Each conversation treated as new user
-  - No continuity between sessions
-  - No memory of past interactions
-  - Dutch exception: Softened rules (non-tech user)
