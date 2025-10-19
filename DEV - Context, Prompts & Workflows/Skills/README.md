@@ -14,7 +14,7 @@ This project contains **10 specialized skills** organized into three categories:
 
 ### Code Development Skills
 
-#### 1. code_debugger
+#### 1. code-debugger
 **Purpose**: Systematically reproduce, diagnose, fix, and verify bugs through evidence-based investigation and root cause analysis.
 
 **Use when**:
@@ -23,11 +23,11 @@ This project contains **10 specialized skills** organized into three categories:
 - Features not working as expected
 - Need systematic bug reproduction and minimal fixes
 
-**Location**: `.claude/skills/code_debugger/`
+**Location**: `.claude/skills/code-debugger/`
 
 ---
 
-#### 2. code_implementer
+#### 2. code-implementer
 **Purpose**: Build features incrementally using 3-step workflow (Understand → Build → Polish). Implements from specs or plans with continuous testing, incremental delivery, and pragmatic approach.
 
 **Use when**:
@@ -36,11 +36,11 @@ This project contains **10 specialized skills** organized into three categories:
 - Converting designs to code
 - Need implementation.md documentation
 
-**Location**: `.claude/skills/code_implementer/`
+**Location**: `.claude/skills/code-implementer/`
 
 ---
 
-#### 3. code_pattern_validator
+#### 3. code-pattern-validator
 **Purpose**: Validate JavaScript files against Webflow project code standards, naming conventions, initialization patterns, and platform constraints.
 
 **Use when**:
@@ -50,11 +50,11 @@ This project contains **10 specialized skills** organized into three categories:
 - Checking platform constraint awareness
 - Verifying accessibility compliance (ARIA attributes)
 
-**Location**: `.claude/skills/code_pattern_validator/`
+**Location**: `.claude/skills/code-pattern-validator/`
 
 ---
 
-#### 4. code_performance_improver
+#### 4. code-performance-improver
 **Purpose**: Optimize code and application performance through systematic profiling, analysis, and incremental improvements while preserving all functionality.
 
 **Use when**:
@@ -64,11 +64,11 @@ This project contains **10 specialized skills** organized into three categories:
 - Animations are choppy or dropping frames
 - Bundle sizes are too large
 
-**Location**: `.claude/skills/code_performance_improver/`
+**Location**: `.claude/skills/code-performance-improver/`
 
 ---
 
-#### 5. code_planner
+#### 5. code-planner
 **Purpose**: Create comprehensive project plans using 5 parallel autonomous planning agents (Scope, Breakdown, Resource, Timeline, Quality).
 
 **Use when**:
@@ -78,7 +78,7 @@ This project contains **10 specialized skills** organized into three categories:
 - Identifying risks and dependencies
 - Planning multi-phase projects
 
-**Location**: `.claude/skills/code_planner/`
+**Location**: `.claude/skills/code-planner/`
 
 ---
 
@@ -86,7 +86,7 @@ This project contains **10 specialized skills** organized into three categories:
 
 High-performance workflow execution with multiple specialized sub-agents running concurrently.
 
-#### 6. speckit_complete
+#### 6. speckit-complete
 **Purpose**: Execute the complete 14-step SpecKit workflow with 18 specialized sub-agents running in 3 parallel stages.
 
 **Complexity**: Very High (18 sub-agents in 3 stages)
@@ -96,12 +96,12 @@ High-performance workflow execution with multiple specialized sub-agents running
 - Complex workflows require orchestration of multiple agents
 - Want maximum parallelization for speed
 
-**Location**: `.claude/skills/speckit_complete/`
+**Location**: `.claude/skills/speckit-complete/`
 **Based on**: `z_prompts/github_spec_kit/parallel_agents/sk_p__complete.yaml`
 
 ---
 
-#### 7. speckit_feature_research
+#### 7. speckit-feature-research
 **Purpose**: Conduct parallel technical research and investigation for SpecKit features. Orchestrates 6 specialized research sub-agents to produce comprehensive research.md documentation.
 
 **Complexity**: Medium (6 sub-agents)
@@ -112,12 +112,12 @@ High-performance workflow execution with multiple specialized sub-agents running
 - Analyzing vendor solutions and alternatives
 - Evaluating technical feasibility and costs
 
-**Location**: `.claude/skills/speckit_feature_research/`
+**Location**: `.claude/skills/speckit-feature-research/`
 **Based on**: `z_prompts/github_spec_kit/parallel_agents/sk_p__feature_research.yaml`
 
 ---
 
-#### 8. speckit_implementation
+#### 8. speckit-implementation
 **Purpose**: Execute autonomous spec-driven implementation with parallel preparation agents. Orchestrates 6 specialized sub-agents for implementation planning (core, integrations, tests, docs).
 
 **Complexity**: Medium (6 sub-agents)
@@ -128,12 +128,12 @@ High-performance workflow execution with multiple specialized sub-agents running
 - Need comprehensive implementation preparation
 - Want parallel planning for core, tests, and docs
 
-**Location**: `.claude/skills/speckit_implementation/`
+**Location**: `.claude/skills/speckit-implementation/`
 **Based on**: `z_prompts/github_spec_kit/parallel_agents/sk_p__implementation.yaml`
 
 ---
 
-#### 9. speckit_spec_plan
+#### 9. speckit-spec-plan
 **Purpose**: Execute spec-driven planning workflow with parallel specialist analyses. Orchestrates 6 specialized planning sub-agents through parallel execution, review, and synthesis.
 
 **Complexity**: Medium (6 sub-agents)
@@ -144,14 +144,14 @@ High-performance workflow execution with multiple specialized sub-agents running
 - Require comprehensive risk and architecture assessment
 - Want estimation and milestone planning
 
-**Location**: `.claude/skills/speckit_spec_plan/`
+**Location**: `.claude/skills/speckit-spec-plan/`
 **Based on**: `z_prompts/github_spec_kit/parallel_agents/sk_p__spec_plan.yaml`
 
 ---
 
 ### Meta Skills
 
-#### 10. create_skills
+#### 10. create-skills
 **Purpose**: Guide for creating effective skills. This skill should be used when users want to create a new skill or update an existing skill.
 
 **Use when**:
@@ -160,7 +160,7 @@ High-performance workflow execution with multiple specialized sub-agents running
 - Need guidance on skill structure and best practices
 - Want to extend Claude's capabilities with specialized knowledge
 
-**Location**: `.claude/skills/create_skills/`
+**Location**: `.claude/skills/create-skills/`
 
 ---
 
@@ -170,48 +170,48 @@ High-performance workflow execution with multiple specialized sub-agents running
 
 ```
 Need to debug existing code?
-└─ YES → code_debugger
+└─ YES → code-debugger
 
 Need to validate code quality?
-└─ YES → code_pattern_validator
+└─ YES → code-pattern-validator
 
 Need to optimize performance?
-└─ YES → code_performance_improver
+└─ YES → code-performance-improver
 
 Need to implement a feature?
-├─ Have specs/plan? → code_implementer
-└─ Need plan first? → code_planner
+├─ Have specs/plan? → code-implementer
+└─ Need plan first? → code-planner
 
 Need research for new feature?
-└─ YES → speckit_feature_research
+└─ YES → speckit-feature-research
 
 Need technical plan from spec?
-└─ YES → speckit_spec_plan
+└─ YES → speckit-spec-plan
 
 Ready to implement with specs?
-└─ YES → speckit_implementation
+└─ YES → speckit-implementation
 
 Want complete automated workflow?
-└─ YES → speckit_complete
+└─ YES → speckit-complete
 
 Need to create/update skills?
-└─ YES → create_skills
+└─ YES → create-skills
 ```
 
 ### Quick Reference
 
 | Task | Recommended Skill |
 |------|-------------------|
-| Fix a bug | code_debugger |
-| Validate code quality | code_pattern_validator |
-| Optimize performance | code_performance_improver |
-| Create project plan | code_planner |
-| Implement feature | code_implementer |
-| Research feature | speckit_feature_research |
-| Plan from spec | speckit_spec_plan |
-| Implement from plan | speckit_implementation |
-| Complete workflow | speckit_complete |
-| Create new skill | create_skills |
+| Fix a bug | code-debugger |
+| Validate code quality | code-pattern-validator |
+| Optimize performance | code-performance-improver |
+| Create project plan | code-planner |
+| Implement feature | code-implementer |
+| Research feature | speckit-feature-research |
+| Plan from spec | speckit-spec-plan |
+| Implement from plan | speckit-implementation |
+| Complete workflow | speckit-complete |
+| Create new skill | create-skills |
 
 ---
 
@@ -223,14 +223,14 @@ Need to create/update skills?
 |-----------------|------------------|
 | `/speckit.specify` | (built-in) |
 | `/speckit.clarify` | (built-in) |
-| `/speckit.plan` | speckit_spec_plan |
+| `/speckit.plan` | speckit-spec-plan |
 | `/speckit.tasks` | (built-in) |
-| `/speckit.implement` | speckit_implementation |
+| `/speckit.implement` | speckit-implementation |
 | `/speckit.analyze` | (built-in) |
 | `/speckit.checklist` | (built-in) |
 | `/speckit.constitution` | (built-in) |
-| (research workflow) | speckit_feature_research |
-| (complete workflow) | speckit_complete |
+| (research workflow) | speckit-feature-research |
+| (complete workflow) | speckit-complete |
 
 ---
 
@@ -244,11 +244,11 @@ User Request
 ┌────────────────────────────────────┐
 │   Code Development Skills          │
 │                                    │
-├─ Debugging? → code_debugger       │
-├─ Planning? → code_planner         │
-├─ Implementing? → code_implementer │
-├─ Validating? → code_pattern_validator
-└─ Optimizing? → code_performance_improver
+├─ Debugging? → code-debugger       │
+├─ Planning? → code-planner         │
+├─ Implementing? → code-implementer │
+├─ Validating? → code-pattern-validator
+└─ Optimizing? → code-performance-improver
 └────────────────────────────────────┘
      ↓
 Production Code
@@ -339,15 +339,15 @@ shared_artifacts:
 
 ```yaml
 recommended_concurrency:
-  code_debugger: 1           # Sequential debugging
-  code_implementer: 1        # Sequential implementation
-  code_pattern_validator: 3  # Can validate multiple files
-  code_performance_improver: 1  # Sequential optimization
-  code_planner: 2            # Can plan multiple aspects
+  code-debugger: 1           # Sequential debugging
+  code-implementer: 1        # Sequential implementation
+  code-pattern-validator: 3  # Can validate multiple files
+  code-performance-improver: 1  # Sequential optimization
+  code-planner: 2            # Can plan multiple aspects
 
-  speckit_*: 3               # Designed for parallelism
+  speckit-*: 3               # Designed for parallelism
 
-  create_skills: 1           # Single skill creation
+  create-skills: 1           # Single skill creation
 ```
 
 ---
@@ -377,16 +377,16 @@ recommended_concurrency:
 
 | Skill | Version | Last Updated | Status |
 |-------|---------|--------------|--------|
-| code_debugger | 1.0.0 | 2025-10-18 | Active |
-| code_implementer | 1.0.0 | 2025-10-18 | Active |
-| code_pattern_validator | 1.0.0 | 2025-10-18 | Active |
-| code_performance_improver | 1.0.0 | 2025-10-18 | Active |
-| code_planner | 1.0.0 | 2025-10-18 | Active |
-| speckit_complete | 1.0.0 | 2025-10-18 | Active |
-| speckit_feature_research | 1.0.0 | 2025-10-18 | Active |
-| speckit_implementation | 1.0.0 | 2025-10-18 | Active |
-| speckit_spec_plan | 1.0.0 | 2025-10-18 | Active |
-| create_skills | 1.0.0 | 2025-10-18 | Active |
+| code-debugger | 1.0.0 | 2025-10-18 | Active |
+| code-implementer | 1.0.0 | 2025-10-18 | Active |
+| code-pattern-validator | 1.0.0 | 2025-10-18 | Active |
+| code-performance-improver | 1.0.0 | 2025-10-18 | Active |
+| code-planner | 1.0.0 | 2025-10-18 | Active |
+| speckit-complete | 1.0.0 | 2025-10-18 | Active |
+| speckit-feature-research | 1.0.0 | 2025-10-18 | Active |
+| speckit-implementation | 1.0.0 | 2025-10-18 | Active |
+| speckit-spec-plan | 1.0.0 | 2025-10-18 | Active |
+| create-skills | 1.0.0 | 2025-10-18 | Active |
 
 ---
 

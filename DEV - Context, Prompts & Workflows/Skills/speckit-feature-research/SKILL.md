@@ -1,5 +1,5 @@
 ---
-name: parallel_speckit_feature_research
+name: speckit-feature-research
 description: Conduct parallel technical research and investigation for SpecKit features. Orchestrates 6 specialized research sub-agents to produce comprehensive research.md documentation through parallel collection, review, and synthesis phases.
 ---
 
@@ -59,42 +59,62 @@ This skill implements the sk_p__feature_research.yaml workflow with 6 specialize
 
 This section provides step-by-step execution guidance as defined in sk_p__feature_research.yaml.
 
-### Step 1: Request Analysis
+### Step 1: Gather User Inputs & Define Research Scope
 
-**Action**: Analyze inputs, choose branch strategy, and define research scope and goals
+**Action**: Collect all required information from the user before proceeding with research
 
-**Branch Strategy Prompt** (REQUIRED):
+**IMPORTANT**: Before starting the workflow, ask the user for the following inputs in a conversational way:
 
-Before proceeding, you must choose how to work with Git for this spec:
+#### Required Inputs:
 
-**Option A: Create new feature branch**
-- We will auto-create `feature-{NNN}` aligned with the spec folder
-- Allows isolated development and testing
-- Final step will offer to merge to main
+1. **Branch Strategy** (REQUIRED):
+   - Ask: "How would you like to work with Git for this research?"
+   - Options:
+     - **feature_branch**: Create new feature branch (auto-create `feature-{NNN}` aligned with spec folder). Allows isolated development and testing. Final step will offer to merge to main.
+     - **main_branch**: Work on main branch (skip branch creation and commit directly to main). Faster for small changes or hotfixes. No merge step at the end.
+   - This decision controls branch creation and final integration gates.
 
-**Option B: Work on main branch**
-- Skip branch creation and commit directly to main
-- Faster for small changes or hotfixes
-- No merge step at the end
+2. **Research Request** (REQUIRED):
+   - Ask: "What would you like to research? Please describe the feature or technical area you need investigated."
+   - This is the main research topic that drives the investigation.
 
-This decision is required before proceeding and will control later integration gates.
+#### Optional Inputs (with smart defaults):
 
-**Inputs**:
-- `branch_strategy`: **REQUIRED** - Choose `feature_branch` or `main_branch`
-- `git_branch`: Derived from branch_strategy (feature-{NNN} or main)
-- `spec_folder`: Auto-create `specs/{NNN}` if empty
-- `context`: Infer from request if empty
-- `issues`: Investigate during workflow if empty
-- `request`: REQUIRED
-- `environment`: Skip browser testing if empty
-- `scope`: Default to `specs/**` if empty
+3. **Spec Folder**:
+   - Ask: "Which spec folder should I use for research documentation? (Leave empty to auto-create `specs/{NNN}` from highest +001)"
+   - Default: Auto-create `specs/{NNN}` based on existing specs
+
+4. **Context**:
+   - Ask: "Any additional context about this research? (Leave empty to infer from your request)"
+   - Default: Infer from request and environment
+
+5. **Known Issues**:
+   - Ask: "Are there any known issues or constraints to investigate? (Leave empty to investigate during workflow)"
+   - Default: Discover during research
+
+6. **Environment/Staging Link**:
+   - Ask: "Do you have a staging environment URL to analyze? (Leave empty to skip browser testing)"
+   - Default: Skip DevTools/browser testing if not provided
+
+7. **Scope/Files**:
+   - Ask: "Which files or directories should I focus on? (Leave empty to default to `specs/**`)"
+   - Default: `specs/**`
+
+**After Collecting Inputs**:
+- Confirm all inputs with the user
+- Resolve `git_branch` from branch_strategy (either `feature-{NNN}` or `main`)
+- Define research scope and goals
+- Identify key research areas
 
 **Outputs**:
 - Branch strategy chosen
 - Git branch resolved
+- Spec folder determined
+- All inputs confirmed
 - Research scope defined
+- Research goals established
 
-**Validation**: `scope_defined_and_branch_strategy_set`
+**Validation**: `all_inputs_collected_and_scope_defined`
 
 **Approval Gate**: None (autonomous execution)
 

@@ -1,5 +1,5 @@
 ---
-name: code_implementer
+name: code-implementer
 description: Build features incrementally using 3-step workflow (Understand → Build → Polish). Implements from specs or plans with continuous testing, incremental delivery, and pragmatic approach. Creates implementation.md documentation. Use for feature development, coding from specifications, and delivering production-ready code.
 ---
 
@@ -140,7 +140,44 @@ if (window.Webflow && window.Webflow.push) {
 
 ## Workflow
 
-### Step 1: Understand
+### Step 1: Gather User Inputs
+
+**Purpose**: Collect all necessary information before starting implementation
+
+**IMPORTANT**: Before starting the implementation workflow, ask the user for the following inputs in a conversational way:
+
+#### Required Inputs:
+
+1. **Request/Feature Description** (REQUIRED):
+   - Ask: "What feature would you like me to implement? Please describe what you want to build, or reference a spec/plan."
+   - This is the main feature description that drives the implementation.
+
+#### Optional Inputs (with smart defaults):
+
+2. **Target Folder**:
+   - Ask: "Which folder contains the plan or spec for this feature? (Leave empty to use current directory or infer from your request)"
+   - Default: Current directory or inferred from request
+
+3. **Environment/Staging Link**:
+   - Ask: "Do you have a staging environment URL for testing? (Leave empty to skip browser testing)"
+   - Default: Skip DevTools/browser testing if not provided
+
+4. **Scope/Files**:
+   - Ask: "Which files should I modify or create? (Leave empty to use all relevant project files)"
+   - Default: All relevant project files
+
+5. **Context**:
+   - Ask: "Any additional implementation context? (Leave empty to infer from plan/spec)"
+   - Default: Infer from target plan/specification
+
+**After Collecting Inputs**:
+- Confirm all inputs with the user
+- Locate and review spec/plan documents
+- Identify implementation scope
+
+---
+
+### Step 2: Understand
 
 **Purpose**: Grasp what needs to be built before writing code
 
@@ -174,7 +211,7 @@ if (window.Webflow && window.Webflow.push) {
 
 ---
 
-### Step 2: Build
+### Step 3: Build
 
 **Purpose**: Implement the feature incrementally with quality
 
@@ -240,7 +277,7 @@ if (window.Webflow && window.Webflow.push) {
 
 ---
 
-### Step 3: Polish
+### Step 4: Polish
 
 **Purpose**: Refine code for production readiness
 

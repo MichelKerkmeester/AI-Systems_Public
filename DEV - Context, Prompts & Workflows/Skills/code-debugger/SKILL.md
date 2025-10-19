@@ -1,5 +1,5 @@
 ---
-name: code_debugger
+name: code-debugger
 description: Systematically reproduce, diagnose, fix, and verify bugs through evidence-based investigation and root cause analysis. Use when investigating unexpected behavior, runtime errors, visual glitches, or functionality issues. Reproduces bugs reliably, identifies root causes with evidence, implements minimal fixes, and verifies complete resolution without regressions.
 ---
 
@@ -88,7 +88,48 @@ This skill follows a 4-step systematic debugging workflow:
 
 ## Workflow
 
-### Step 1: Reproduce
+### Step 1: Gather User Inputs
+
+**Purpose**: Collect all necessary information before starting debugging
+
+**IMPORTANT**: Before starting the debugging workflow, ask the user for the following inputs in a conversational way:
+
+#### Required Inputs:
+
+1. **Request/Bug Description** (REQUIRED):
+   - Ask: "What bug would you like me to investigate and fix? Please describe the issue you're experiencing."
+   - This is the main bug description that drives the debugging workflow.
+
+#### Optional Inputs (with smart defaults):
+
+2. **Issues/Details**:
+   - Ask: "Can you provide detailed information about the bug? (Include error messages, reproduction steps, or leave empty to parse from your request)"
+   - Default: Parse from request if available
+
+3. **Environment/Staging Link**:
+   - Ask: "Do you have a staging environment URL where I can reproduce the bug? (Leave empty to skip browser testing)"
+   - Default: Skip DevTools/browser testing if not provided
+
+4. **Scope/Files**:
+   - Ask: "Which files are suspected to contain the bug? (Leave empty to search all relevant files)"
+   - Default: All relevant files
+
+5. **Target Folder**:
+   - Ask: "Is there a specific folder for bug documentation? (Leave empty to infer from your request)"
+   - Default: Infer from issues or request
+
+6. **Context**:
+   - Ask: "Any additional context about when/how the bug occurs? (Leave empty to infer from issue description)"
+   - Default: Infer from issue description and environment
+
+**After Collecting Inputs**:
+- Confirm all inputs with the user
+- Parse and categorize the bug information
+- Identify likely affected areas
+
+---
+
+### Step 2: Reproduce
 
 **Purpose**: Confirm the issue exists and can be triggered reliably
 
@@ -148,7 +189,7 @@ This skill follows a 4-step systematic debugging workflow:
 
 **Validation**: `can_reliably_reproduce_issue`
 
-### Step 2: Diagnose
+### Step 3: Diagnose
 
 **Purpose**: Find the root cause through systematic investigation
 
@@ -240,7 +281,7 @@ This skill follows a 4-step systematic debugging workflow:
 
 **Validation**: `root_cause_identified_with_evidence`
 
-### Step 3: Fix
+### Step 4: Fix
 
 **Purpose**: Implement minimal solution that addresses the root cause
 
@@ -313,7 +354,7 @@ function fixed_code() {
 
 **Validation**: `fix_resolves_issue`
 
-### Step 4: Verify
+### Step 5: Verify
 
 **Purpose**: Ensure fix works completely without introducing regressions
 

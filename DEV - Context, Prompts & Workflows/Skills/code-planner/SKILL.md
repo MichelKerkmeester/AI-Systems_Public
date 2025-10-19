@@ -1,5 +1,5 @@
 ---
-name: code_planner
+name: code-planner
 description: Create comprehensive project plans using 5 parallel autonomous planning agents (Scope, Breakdown, Resource, Timeline, Quality). Deploys agents simultaneously, reviews outputs, resolves conflicts, and synthesizes into single consolidated plan. Use for project planning, feature breakdown, timeline estimation, and resource allocation.
 ---
 
@@ -106,7 +106,41 @@ This skill orchestrates 5 autonomous planning agents running in parallel, each s
 
 ## Workflow
 
-### Step 1: Initialization
+### Step 1: Gather User Inputs
+
+**Purpose**: Collect all necessary information before starting planning
+
+**IMPORTANT**: Before starting the planning workflow, ask the user for the following inputs in a conversational way:
+
+#### Required Inputs:
+
+1. **Request/Planning Description** (REQUIRED):
+   - Ask: "What would you like me to plan? Please describe the project or feature you need a comprehensive plan for."
+   - This is the main planning request that drives the workflow.
+
+#### Optional Inputs (with smart defaults):
+
+2. **Target Folder**:
+   - Ask: "Where should I save the plan document? (Leave empty to use `/specs`)"
+   - Default: `/specs`
+
+3. **Context**:
+   - Ask: "Any additional context about this planning task? (Leave empty to infer from your request)"
+   - Default: Infer from request
+
+4. **Complexity**:
+   - Ask: "What planning complexity level do you need? Options: `quick` (3 agents, light review), `standard` (5 agents, comprehensive), `deep` (6 agents, exhaustive +30% buffer). Leave empty for `standard`."
+   - Default: `standard`
+
+**After Collecting Inputs**:
+- Confirm all inputs with the user
+- Validate inputs and apply defaults
+- Configure agent deployment based on complexity
+- Generate plan filename
+
+---
+
+### Step 2: Initialization
 
 **Purpose**: Validate inputs and prepare agent deployment
 
@@ -131,7 +165,7 @@ This skill orchestrates 5 autonomous planning agents running in parallel, each s
 
 ---
 
-### Step 2: Parallel Planning Deployment
+### Step 3: Parallel Planning Deployment
 
 **Purpose**: Deploy specialized agents to analyze from multiple perspectives
 
@@ -193,7 +227,7 @@ This skill orchestrates 5 autonomous planning agents running in parallel, each s
 
 ---
 
-### Step 3: Review & Analysis
+### Step 4: Review & Analysis
 
 **Purpose**: Comprehensive review of all agent outputs
 
@@ -223,7 +257,7 @@ This skill orchestrates 5 autonomous planning agents running in parallel, each s
 
 ---
 
-### Step 4: Synthesis & Finalization
+### Step 5: Synthesis & Finalization
 
 **Purpose**: Create single consolidated plan from all inputs
 

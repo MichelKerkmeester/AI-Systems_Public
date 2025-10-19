@@ -1,5 +1,5 @@
 ---
-name: code_performance_improver
+name: code-performance-improver
 description: Optimize code and application performance through systematic profiling, analysis, and incremental improvements while preserving all functionality. Use when addressing performance bottlenecks, slow load times, high memory usage, or Core Web Vitals issues. Measures baseline metrics, identifies bottlenecks, applies optimizations incrementally, and verifies improvements without regressions.
 ---
 
@@ -86,7 +86,48 @@ This skill follows a 4-step systematic workflow to improve performance while pre
 
 ## Workflow
 
-### Step 1: Baseline Measurement
+### Step 1: Gather User Inputs
+
+**Purpose**: Collect all necessary information before starting optimization
+
+**IMPORTANT**: Before starting the performance improvement workflow, ask the user for the following inputs in a conversational way:
+
+#### Required Inputs:
+
+1. **Request/Performance Goal** (REQUIRED):
+   - Ask: "What performance issue would you like me to optimize? Please describe what needs improvement."
+   - This is the main optimization goal that drives the workflow.
+
+#### Optional Inputs (with smart defaults):
+
+2. **Issues/Performance Problems**:
+   - Ask: "Can you provide details about the performance issues? (Include metrics like 'LCP > 4s' or leave empty to identify during baseline measurement)"
+   - Default: Identify during baseline measurement
+
+3. **Environment/Staging Link**:
+   - Ask: "Do you have a staging environment URL for browser-based profiling? (Leave empty to skip browser profiling)"
+   - Default: Skip browser-based profiling if not provided
+
+4. **Scope/Files**:
+   - Ask: "Which files should I optimize? (Leave empty to optimize all performance-critical files)"
+   - Default: All performance-critical files
+
+5. **Target Folder**:
+   - Ask: "Is there a performance plan or optimization spec folder? (Leave empty to infer from your request)"
+   - Default: Current application or infer from request
+
+6. **Context**:
+   - Ask: "Any additional context about the performance issue? (Leave empty to infer from metrics)"
+   - Default: Infer from performance issues and metrics
+
+**After Collecting Inputs**:
+- Confirm all inputs with the user
+- Parse and categorize the performance goals
+- Identify likely optimization areas
+
+---
+
+### Step 2: Baseline Measurement
 
 **Purpose**: Measure current performance before any changes
 
@@ -124,7 +165,7 @@ This skill follows a 4-step systematic workflow to improve performance while pre
 
 **Validation**: `baseline_captured_and_documented`
 
-### Step 2: Analysis
+### Step 3: Analysis
 
 **Purpose**: Identify optimization opportunities and prioritize by impact
 
@@ -164,7 +205,7 @@ This skill follows a 4-step systematic workflow to improve performance while pre
 
 **Validation**: `bottlenecks_identified_with_evidence`
 
-### Step 3: Optimization
+### Step 4: Optimization
 
 **Purpose**: Apply improvements incrementally with continuous validation
 
@@ -214,7 +255,7 @@ This skill follows a 4-step systematic workflow to improve performance while pre
 
 **Validation**: `each_optimization_verified`
 
-### Step 4: Verification
+### Step 5: Verification
 
 **Purpose**: Ensure improvements achieved without any regressions
 

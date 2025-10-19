@@ -1,5 +1,5 @@
 ---
-name: parallel_speckit_implementation
+name: speckit-implementation
 description: Execute autonomous spec-driven implementation with parallel preparation agents. Orchestrates 6 specialized sub-agents for implementation planning (core, integrations, tests, docs) through parallel execution, review, and synthesis into implementation_plan.md, then proceeds with development.
 ---
 
@@ -66,20 +66,53 @@ This skill implements the sk_p__implementation.yaml workflow with 6 specialized 
 
 This section provides step-by-step execution guidance as defined in sk_p__implementation.yaml.
 
-### Step 8: Review Plan and Spec
+### Step 8: Gather User Inputs & Review Plan and Spec
 
-**Note**: This workflow is a continuation of the planning phase (steps 1-7). Branch strategy should have been set during planning. If starting independently, branch_strategy must be provided.
+**Note**: This workflow is typically a continuation of the planning phase (steps 1-7). If continuing from planning, inputs should be inherited. If starting independently, all inputs must be collected first.
 
-**Action**: 
-1. Confirm branch_strategy (should be inherited from planning phase)
-2. Verify git_branch is correctly set based on strategy
-3. Review spec and planning artifacts
+**Action**: Collect inputs (if not inherited), then review spec and planning artifacts
 
-**Branch Strategy** (inherited from planning):
-- `branch_strategy`: Should be set from planning workflow
-- `git_branch`: Derived from branch_strategy
-  - If `feature_branch`: Uses feature-{NNN}
-  - If `main_branch`: Uses main
+**IMPORTANT**: Before starting implementation, ask the user for the following inputs in a conversational way (skip if inherited from planning):
+
+#### Required Inputs:
+
+1. **Branch Strategy** (REQUIRED if not inherited):
+   - Ask: "How would you like to work with Git for this implementation?"
+   - Options:
+     - **feature_branch**: Create new feature branch (auto-create `feature-{NNN}` aligned with spec folder). Allows isolated development and testing. Final step will offer to merge to main.
+     - **main_branch**: Work on main branch (skip branch creation and commit directly to main). Faster for small changes or hotfixes. No merge step at the end.
+   - If inherited from planning workflow, use the existing branch_strategy.
+
+2. **Request/Implementation Goal** (OPTIONAL):
+   - Ask: "What should I implement? (Leave empty to use default: 'Conduct comprehensive review of spec folder and carry out its implementation fully autonomously')"
+   - Default: "Conduct a comprehensive review of the spec folder and carry out its implementation fully autonomously."
+
+#### Optional Inputs (with smart defaults):
+
+3. **Spec Folder**:
+   - Ask: "Which spec folder should I implement? (Leave empty to auto-create `specs/{NNN}`)"
+   - Default: Auto-determine from existing specs
+
+4. **Context**:
+   - Ask: "Any additional context about this implementation? (Leave empty to infer from spec/plan)"
+   - Default: Infer from spec and plan documents
+
+5. **Known Issues**:
+   - Ask: "Are there any known issues to address during implementation? (Leave empty to investigate)"
+   - Default: Discover during implementation
+
+6. **Environment/Staging Link**:
+   - Ask: "Do you have a staging environment URL to test against? (Leave empty to skip browser testing)"
+   - Default: Skip DevTools/browser testing if not provided
+
+7. **Scope/Files**:
+   - Ask: "Which files should I focus on? (Leave empty to use all relevant project files)"
+   - Default: All relevant project files
+
+**After Collecting Inputs**:
+- Confirm all inputs with the user
+- Resolve `git_branch` from branch_strategy (either `feature-{NNN}` or `main`)
+- Review required planning artifacts
 
 **Required Documents**:
 - `[SPEC_FOLDER]/spec.md`
@@ -89,9 +122,10 @@ This section provides step-by-step execution guidance as defined in sk_p__implem
 **Outputs**:
 - Branch strategy confirmed
 - Git branch validated
+- All inputs confirmed
 - Planning artifacts understood
 
-**Validation**: `planning_artifacts_understood_and_branch_confirmed`
+**Validation**: `all_inputs_collected_and_planning_artifacts_understood`
 
 **Approval Gate**: None (autonomous execution)
 

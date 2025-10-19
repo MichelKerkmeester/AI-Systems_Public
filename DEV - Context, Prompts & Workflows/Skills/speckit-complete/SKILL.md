@@ -1,5 +1,5 @@
 ---
-name: parallel_speckit_complete
+name: speckit-complete
 description: Execute the complete 14-step SpecKit workflow with 18 specialized sub-agents running in 3 parallel stages. Implements the full sk_p__complete.yaml workflow with approval gates, review/synthesis phases, and adaptive rules for complexity handling.
 ---
 
@@ -69,48 +69,66 @@ This skill implements the complete 14-step workflow with 18 specialized sub-agen
 
 This section provides step-by-step execution guidance as defined in sk_p__complete.yaml.
 
-### Step 1: Request Analysis
+### Step 1: Gather User Inputs
 
-**Action**: Analyze user inputs, choose branch strategy, and confirm understanding
+**Action**: Collect all required information from the user before proceeding
 
-**Input Source**: USER_INPUTS_SECTION
+**IMPORTANT**: Before starting the workflow, ask the user for the following inputs in a conversational way:
 
-**Branch Strategy Prompt** (REQUIRED):
+#### Required Inputs:
 
-Before proceeding, you must choose how to work with Git for this spec:
+1. **Branch Strategy** (REQUIRED):
+   - Ask: "How would you like to work with Git for this feature?"
+   - Options:
+     - **feature_branch**: Create new feature branch (auto-create `feature-{NNN}` aligned with spec folder). Allows isolated development and testing. Final step will offer to merge to main.
+     - **main_branch**: Work on main branch (skip branch creation and commit directly to main). Faster for small changes or hotfixes. No merge step at the end.
+   - This decision controls branch creation and final integration gates.
 
-**Option A: Create new feature branch**
-- We will auto-create `feature-{NNN}` aligned with the spec folder
-- Allows isolated development and testing
-- Final step will offer to merge to main
+2. **Request/Feature Description** (REQUIRED):
+   - Ask: "What feature would you like to build? Please describe the request or feature you want to implement."
+   - This is the main feature description that drives the entire workflow.
 
-**Option B: Work on main branch**
-- Skip branch creation and commit directly to main
-- Faster for small changes or hotfixes
-- No merge step at the end
+#### Optional Inputs (with smart defaults):
 
-This decision is required before proceeding and will control later integration gates.
+3. **Spec Folder**:
+   - Ask: "Which spec folder should I use? (Leave empty to auto-create `specs/{NNN}` from highest +001)"
+   - Default: Auto-create `specs/{NNN}` based on existing specs
 
-**Inputs**:
-- `branch_strategy`: **REQUIRED** - Choose `feature_branch` or `main_branch`
-- `git_branch`: Derived from branch_strategy (feature-{NNN} or main)
-- `spec_folder`: Auto-create `specs/{NNN}` if empty
-- `context`: Infer from request if empty
-- `issues`: Discover during workflow if empty
-- `request`: REQUIRED
-- `environment`: Skip DevTools steps if empty
-- `scope`: Default to `specs/**` if empty
+4. **Context**:
+   - Ask: "Any additional context about this feature? (Leave empty to infer from your request)"
+   - Default: Infer from request and environment
+
+5. **Known Issues**:
+   - Ask: "Are there any known issues or bugs to address? (Leave empty to investigate during workflow)"
+   - Default: Discover during workflow
+
+6. **Environment/Staging Link**:
+   - Ask: "Do you have a staging environment URL to test against? (Leave empty to skip browser testing steps)"
+   - Default: Skip DevTools/browser testing if not provided
+
+7. **Scope/Files**:
+   - Ask: "Which files or directories should I focus on? (Leave empty to default to `specs/**`)"
+   - Default: `specs/**`
+
+**After Collecting Inputs**:
+- Confirm all inputs with the user
+- Resolve `git_branch` from branch_strategy (either `feature-{NNN}` or `main`)
+- Parse and analyze the request
+- Create requirement summary
+- Assess complexity
 
 **Outputs**:
 - Branch strategy chosen
 - Git branch resolved
+- Spec folder determined
+- All inputs confirmed
 - Requirement summary
 - Approach overview
 - Complexity assessment
 
-**Validation**: `understanding_confirmed_and_branch_strategy_set`
+**Validation**: `all_inputs_collected_and_confirmed`
 
-**Approval Gate**: "Requirements analyzed. Branch strategy: {branch_strategy} on {git_branch}. Proceed to pre-work review?"
+**Approval Gate**: "All inputs collected. Branch strategy: {branch_strategy} on {git_branch}. Spec folder: {spec_folder}. Proceed to pre-work review?"
 
 ---
 
