@@ -4,12 +4,11 @@ Complete documentation of all Claude Code skills available in this project.
 
 ## Overview
 
-This project contains **14 specialized skills** organized into three categories:
+This project contains **10 specialized skills** organized into three categories:
 
 1. **Code Development Skills** (5) - General code development, validation, debugging, and optimization
-2. **SpecKit Parallel Skills** (4) - High-performance parallel workflow execution
-3. **SpecKit Sequential Skills** (4) - Sequential workflow execution with approval gates
-4. **Meta Skills** (1) - Skill creation and management
+2. **SpecKit Skills** (4) - High-performance parallel workflow execution
+3. **Meta Skills** (1) - Skill creation and management
 
 ## Skills Catalog
 
@@ -83,11 +82,11 @@ This project contains **14 specialized skills** organized into three categories:
 
 ---
 
-### SpecKit Parallel Skills
+### SpecKit Skills
 
 High-performance workflow execution with multiple specialized sub-agents running concurrently.
 
-#### 6. parallel_speckit_complete
+#### 6. speckit_complete
 **Purpose**: Execute the complete 14-step SpecKit workflow with 18 specialized sub-agents running in 3 parallel stages.
 
 **Complexity**: Very High (18 sub-agents in 3 stages)
@@ -97,12 +96,12 @@ High-performance workflow execution with multiple specialized sub-agents running
 - Complex workflows require orchestration of multiple agents
 - Want maximum parallelization for speed
 
-**Location**: `.claude/skills/parallel_speckit_complete/`
+**Location**: `.claude/skills/speckit_complete/`
 **Based on**: `z_prompts/github_spec_kit/parallel_agents/sk_p__complete.yaml`
 
 ---
 
-#### 7. parallel_speckit_feature_research
+#### 7. speckit_feature_research
 **Purpose**: Conduct parallel technical research and investigation for SpecKit features. Orchestrates 6 specialized research sub-agents to produce comprehensive research.md documentation.
 
 **Complexity**: Medium (6 sub-agents)
@@ -113,12 +112,12 @@ High-performance workflow execution with multiple specialized sub-agents running
 - Analyzing vendor solutions and alternatives
 - Evaluating technical feasibility and costs
 
-**Location**: `.claude/skills/parallel_speckit_feature_research/`
+**Location**: `.claude/skills/speckit_feature_research/`
 **Based on**: `z_prompts/github_spec_kit/parallel_agents/sk_p__feature_research.yaml`
 
 ---
 
-#### 8. parallel_speckit_implementation
+#### 8. speckit_implementation
 **Purpose**: Execute autonomous spec-driven implementation with parallel preparation agents. Orchestrates 6 specialized sub-agents for implementation planning (core, integrations, tests, docs).
 
 **Complexity**: Medium (6 sub-agents)
@@ -129,12 +128,12 @@ High-performance workflow execution with multiple specialized sub-agents running
 - Need comprehensive implementation preparation
 - Want parallel planning for core, tests, and docs
 
-**Location**: `.claude/skills/parallel_speckit_implementation/`
+**Location**: `.claude/skills/speckit_implementation/`
 **Based on**: `z_prompts/github_spec_kit/parallel_agents/sk_p__implementation.yaml`
 
 ---
 
-#### 9. parallel_speckit_spec_plan
+#### 9. speckit_spec_plan
 **Purpose**: Execute spec-driven planning workflow with parallel specialist analyses. Orchestrates 6 specialized planning sub-agents through parallel execution, review, and synthesis.
 
 **Complexity**: Medium (6 sub-agents)
@@ -145,74 +144,14 @@ High-performance workflow execution with multiple specialized sub-agents running
 - Require comprehensive risk and architecture assessment
 - Want estimation and milestone planning
 
-**Location**: `.claude/skills/parallel_speckit_spec_plan/`
-**Based on**: `z_prompts/github_spec_kit/parallel_agents/sk_p__spec_plan.yaml`
-
----
-
-### SpecKit Sequential Skills
-
-Sequential workflow execution with manual approval gates and step-by-step control.
-
-#### 10. speckit_complete
-**Purpose**: Execute the complete 12-step SpecKit workflow with sequential execution and manual approval gates.
-
-**Use when**:
-- Executing full end-to-end feature development
-- Need comprehensive workflow with validation gates
-- Want manual control and approval at each step
-- Following spec-driven development methodology
-
-**Location**: `.claude/skills/speckit_complete/`
-**Based on**: `z_prompts/github_spec_kit/sk__complete.yaml`
-
----
-
-#### 11. speckit_feature_research
-**Purpose**: Conduct sequential technical research and investigation for SpecKit features. Execute comprehensive research workflow to produce research.md documentation.
-
-**Use when**:
-- Conducting technical investigation for a new feature
-- Need systematic, sequential research process
-- Want manual control over research steps
-- Creating comprehensive research documentation
-
-**Location**: `.claude/skills/speckit_feature_research/`
-**Based on**: `z_prompts/github_spec_kit/sk__feature_research.yaml`
-
----
-
-#### 12. speckit_implementation
-**Purpose**: Execute autonomous spec-driven implementation with sequential execution. Continue from planning phase with comprehensive implementation preparation.
-
-**Use when**:
-- Ready to implement a fully specified feature
-- Have spec.md and plan.md completed
-- Need comprehensive implementation preparation
-- Want sequential implementation process
-
-**Location**: `.claude/skills/speckit_implementation/`
-**Based on**: `z_prompts/github_spec_kit/sk__implementation.yaml`
-
----
-
-#### 13. speckit_spec_plan
-**Purpose**: Execute spec-driven planning workflow with sequential execution. Run SpecKit from specification through planning with validation and manual approval gates.
-
-**Use when**:
-- Creating technical plans from specifications
-- Need comprehensive risk and architecture assessment
-- Want estimation and milestone planning
-- Following manual approval workflow
-
 **Location**: `.claude/skills/speckit_spec_plan/`
-**Based on**: `z_prompts/github_spec_kit/sk__spec_plan.yaml`
+**Based on**: `z_prompts/github_spec_kit/parallel_agents/sk_p__spec_plan.yaml`
 
 ---
 
 ### Meta Skills
 
-#### 14. create_skills
+#### 10. create_skills
 **Purpose**: Guide for creating effective skills. This skill should be used when users want to create a new skill or update an existing skill.
 
 **Use when**:
@@ -244,20 +183,16 @@ Need to implement a feature?
 └─ Need plan first? → code_planner
 
 Need research for new feature?
-├─ Want parallel execution? → parallel_speckit_feature_research
-└─ Want sequential control? → speckit_feature_research
+└─ YES → speckit_feature_research
 
 Need technical plan from spec?
-├─ Want parallel execution? → parallel_speckit_spec_plan
-└─ Want sequential control? → speckit_spec_plan
+└─ YES → speckit_spec_plan
 
 Ready to implement with specs?
-├─ Want parallel execution? → parallel_speckit_implementation
-└─ Want sequential control? → speckit_implementation
+└─ YES → speckit_implementation
 
 Want complete automated workflow?
-├─ Want parallel execution? → parallel_speckit_complete
-└─ Want sequential control? → speckit_complete
+└─ YES → speckit_complete
 
 Need to create/update skills?
 └─ YES → create_skills
@@ -265,49 +200,18 @@ Need to create/update skills?
 
 ### Quick Reference
 
-| Task | Recommended Skill | Alternative |
-|------|-------------------|-------------|
-| Fix a bug | code_debugger | - |
-| Validate code quality | code_pattern_validator | - |
-| Optimize performance | code_performance_improver | - |
-| Create project plan | code_planner | - |
-| Implement feature | code_implementer | - |
-| Research feature | parallel_speckit_feature_research | speckit_feature_research |
-| Plan from spec | parallel_speckit_spec_plan | speckit_spec_plan |
-| Implement from plan | parallel_speckit_implementation | speckit_implementation |
-| Complete workflow | parallel_speckit_complete | speckit_complete |
-| Create new skill | create_skills | - |
-
----
-
-## Parallel vs Sequential SpecKit Skills
-
-### When to Use Parallel Skills
-
-**Advantages**:
-- Faster execution (multiple agents run concurrently)
-- Comprehensive analysis from multiple perspectives
-- Ideal for complex features requiring diverse expertise
-
-**Best for**:
-- Complex features with multiple aspects
-- Time-sensitive projects
-- When maximum thoroughness is needed
-- When you have confidence in automation
-
-### When to Use Sequential Skills
-
-**Advantages**:
-- Step-by-step control and visibility
-- Manual approval gates at each step
-- Easier to understand and follow
-- Lower resource usage
-
-**Best for**:
-- Learning the SpecKit workflow
-- Projects requiring careful review at each step
-- When you want maximum control
-- Simpler features that don't need parallelization
+| Task | Recommended Skill |
+|------|-------------------|
+| Fix a bug | code_debugger |
+| Validate code quality | code_pattern_validator |
+| Optimize performance | code_performance_improver |
+| Create project plan | code_planner |
+| Implement feature | code_implementer |
+| Research feature | speckit_feature_research |
+| Plan from spec | speckit_spec_plan |
+| Implement from plan | speckit_implementation |
+| Complete workflow | speckit_complete |
+| Create new skill | create_skills |
 
 ---
 
@@ -315,18 +219,18 @@ Need to create/update skills?
 
 ### Commands and Their Associated Skills
 
-| SpecKit Command | Primary Skill (Parallel) | Alternative (Sequential) |
-|-----------------|-------------------------|--------------------------|
-| `/speckit.specify` | (built-in) | (built-in) |
-| `/speckit.clarify` | (built-in) | (built-in) |
-| `/speckit.plan` | parallel_speckit_spec_plan | speckit_spec_plan |
-| `/speckit.tasks` | (built-in) | (built-in) |
-| `/speckit.implement` | parallel_speckit_implementation | speckit_implementation |
-| `/speckit.analyze` | (built-in) | (built-in) |
-| `/speckit.checklist` | (built-in) | (built-in) |
-| `/speckit.constitution` | (built-in) | (built-in) |
-| (research workflow) | parallel_speckit_feature_research | speckit_feature_research |
-| (complete workflow) | parallel_speckit_complete | speckit_complete |
+| SpecKit Command | Associated Skill |
+|-----------------|------------------|
+| `/speckit.specify` | (built-in) |
+| `/speckit.clarify` | (built-in) |
+| `/speckit.plan` | speckit_spec_plan |
+| `/speckit.tasks` | (built-in) |
+| `/speckit.implement` | speckit_implementation |
+| `/speckit.analyze` | (built-in) |
+| `/speckit.checklist` | (built-in) |
+| `/speckit.constitution` | (built-in) |
+| (research workflow) | speckit_feature_research |
+| (complete workflow) | speckit_complete |
 
 ---
 
@@ -353,24 +257,18 @@ Production Code
 ### SpecKit Skills Architecture
 
 ```
-                    User Request
-                          ↓
-              ┌───────────────────────┐
-              │  Execution Strategy?   │
-              └───────────────────────┘
-                     /        \
-              Parallel        Sequential
-                 ↓                ↓
-    ┌───────────────────┐  ┌───────────────────┐
-    │ Parallel Skills   │  │ Sequential Skills │
-    │                   │  │                   │
-    │ • Complete        │  │ • Complete        │
-    │ • Research        │  │ • Research        │
-    │ • Planning        │  │ • Planning        │
-    │ • Implementation  │  │ • Implementation  │
-    └───────────────────┘  └───────────────────┘
-                 ↓                ↓
-           Feature Artifacts & Code
+           User Request
+                ↓
+    ┌───────────────────────┐
+    │    SpecKit Skills     │
+    │                       │
+    │ • Complete            │
+    │ • Research            │
+    │ • Planning            │
+    │ • Implementation      │
+    └───────────────────────┘
+                ↓
+    Feature Artifacts & Code
 ```
 
 ---
@@ -414,9 +312,9 @@ shared_artifacts:
 ### DON'T:
 - Load all skills simultaneously
 - Mix skill responsibilities
-- Ignore approval gates in sequential workflows
+- Ignore approval gates in workflows
 - Skip prerequisite validation
-- Use parallel skills for simple tasks
+- Use complex SpecKit workflows for simple tasks
 
 ### ALWAYS:
 - Verify prerequisites before skill execution
@@ -434,8 +332,7 @@ shared_artifacts:
 | Skill Category | Initial Load | Full Context | Recommendation |
 |----------------|--------------|--------------|----------------|
 | Code Skills | Low (~1-2K) | Medium (~3-5K) | Load as needed |
-| Parallel SpecKit | High (~5-8K) | Very High (~15-25K) | On-demand only |
-| Sequential SpecKit | Medium (~3-5K) | High (~8-15K) | On-demand only |
+| SpecKit | High (~5-8K) | Very High (~15-25K) | On-demand only |
 | Meta Skills | Low (~1K) | Low (~2K) | Load as needed |
 
 ### Concurrency Management
@@ -448,8 +345,7 @@ recommended_concurrency:
   code_performance_improver: 1  # Sequential optimization
   code_planner: 2            # Can plan multiple aspects
 
-  parallel_speckit_*: 3      # Designed for parallelism
-  speckit_*: 1               # Sequential by design
+  speckit_*: 3               # Designed for parallelism
 
   create_skills: 1           # Single skill creation
 ```
@@ -463,16 +359,16 @@ recommended_concurrency:
 **Issue**: Skills not loading or triggering
 **Solution**: Check skill name matches exactly; verify SKILL.md exists
 
-**Issue**: Parallel execution timeout
-**Solution**: Reduce concurrency or switch to sequential skills
+**Issue**: Workflow execution timeout
+**Solution**: Reduce concurrency, break into smaller tasks, or use simpler code skills
 
 **Issue**: Artifact mismatch between skills
 **Solution**: Verify file paths and naming conventions in spec directory
 
 **Issue**: Token limit exceeded
-**Solution**: Use skills sequentially, not all at once; prefer simpler skills for simple tasks
+**Solution**: Use skills one at a time; prefer simpler code skills for simple tasks
 
-**Issue**: Approval gates blocking in sequential workflows
+**Issue**: Approval gates blocking in workflows
 **Solution**: Ensure explicit user approval at each gate; don't skip steps
 
 ---
@@ -486,10 +382,6 @@ recommended_concurrency:
 | code_pattern_validator | 1.0.0 | 2025-10-18 | Active |
 | code_performance_improver | 1.0.0 | 2025-10-18 | Active |
 | code_planner | 1.0.0 | 2025-10-18 | Active |
-| parallel_speckit_complete | 1.0.0 | 2025-10-18 | Active |
-| parallel_speckit_feature_research | 1.0.0 | 2025-10-18 | Active |
-| parallel_speckit_implementation | 1.0.0 | 2025-10-18 | Active |
-| parallel_speckit_spec_plan | 1.0.0 | 2025-10-18 | Active |
 | speckit_complete | 1.0.0 | 2025-10-18 | Active |
 | speckit_feature_research | 1.0.0 | 2025-10-18 | Active |
 | speckit_implementation | 1.0.0 | 2025-10-18 | Active |
@@ -517,8 +409,7 @@ Skills follow the principles and standards defined in `/AGENTS.md`:
 This project provides a comprehensive skill ecosystem:
 
 - **5 Code Skills** for general development, debugging, validation, and optimization
-- **4 Parallel SpecKit Skills** for high-performance automated workflows
-- **4 Sequential SpecKit Skills** for controlled step-by-step workflows
+- **4 SpecKit Skills** for high-performance automated workflows with parallel execution
 - **1 Meta Skill** for skill creation and management
 
-Together, these 14 skills enable efficient development workflows while maintaining clarity, control, and quality standards.
+Together, these 10 skills enable efficient development workflows while maintaining clarity, control, and quality standards.

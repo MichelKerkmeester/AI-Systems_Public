@@ -1,11 +1,11 @@
 ---
-name: speckit_feature_research
-description: Conduct sequential technical research and investigation for SpecKit features. Execute comprehensive research workflow to produce research.md documentation through systematic collection, analysis, and synthesis.
+name: parallel_speckit_feature_research
+description: Conduct parallel technical research and investigation for SpecKit features. Orchestrates 6 specialized research sub-agents to produce comprehensive research.md documentation through parallel collection, review, and synthesis phases.
 ---
 
 # SpecKit Feature Research
 
-Execute sequential technical research workflow to produce comprehensive documentation for feature planning and implementation.
+Execute parallel technical research workflow to produce comprehensive documentation for feature planning and implementation.
 
 ## When to Use This Skill
 
@@ -18,49 +18,46 @@ Execute sequential technical research workflow to produce comprehensive document
 - Creating comprehensive research documentation
 
 **Do NOT use this skill for**:
-- Full SpecKit workflow execution (use speckit_complete)
-- Simple command recommendations
+- Full SpecKit workflow execution (use speckit-parallel-complete)
+- Simple command recommendations (use speckit-command-guide)
 - Implementation without research
 - Writing specs without investigation
-- Workflows requiring parallel execution (use parallel_speckit_feature_research)
 
-## Quick Command Reference
+## 🚀 Quick Command Reference
 
 | Step | Command | Purpose |
 |------|---------|----------|
 | 1 | Manual | Request Analysis - Define research scope |
 | 2 | Manual | Pre-work Review |
-| 3 | Manual | Codebase Investigation |
-| 4 | Manual | External Research |
-| 5 | Manual | Technical Analysis |
-| 6 | `/speckit.checklist` | Quality validation |
-| 7 | Manual | Solution Design |
-| 8 | Manual | Research Compilation |
-| 9 | Manual | Branch Integration (optional) |
+| 3 | *Parallel Block* | 4 researchers collect data |
+| 4 | Manual | Research Compilation |
+| 5 | `/speckit.checklist` | Quality validation |
+| 6 | Manual | Solution Design |
+| 7 | Manual | Final Compilation |
+| 8 | Manual | Branch Integration (optional) |
 
-**Autonomous**: This workflow executes steps 1-8 without approval gates. Only step 9 (branch integration) requires user confirmation.
+**✅ Autonomous**: This workflow executes steps 1-7 without approval gates. Only step 8 (branch integration) requires user confirmation.
 
 ## Architecture Overview
 
-This skill implements the sk__feature_research.yaml workflow with sequential execution by the main agent.
+This skill implements the sk_p__feature_research.yaml workflow with 6 specialized research sub-agents executing in parallel.
 
 ### Research Workflow Steps
 
 1. **Request Analysis** - Define research scope and goals
 2. **Pre-work Review** - Review AGENTS.md, code standards
-3. **Codebase Investigation** - Investigate existing patterns
-4. **External Research** - Research external documentation
-5. **Technical Analysis** - Perform feasibility assessment
-6. **Quality Checklist** - Generate quality gates
-7. **Solution Design** - Architecture and integration patterns
-8. **Research Compilation** - Compile comprehensive documentation
-9. **Branch Integration** - Optional merge to main
+3. **Parallel Research Block** - 4 researchers collect data
+4. **Research Compilation** - Intermediate compilation
+5. **Quality Checklist** - Generate quality gates
+6. **Solution Design** - Architecture and integration patterns
+7. **Final Research Compilation** - Complete comprehensive documentation
+8. **Branch Integration** - Optional merge to main
 
-**Note**: This is an autonomous workflow with NO approval gates (except branch integration).
+**Note**: This is an autonomous workflow with NO approval gates.
 
 ## Workflow Steps (Detailed Execution)
 
-This section provides step-by-step execution guidance as defined in sk__feature_research.yaml.
+This section provides step-by-step execution guidance as defined in sk_p__feature_research.yaml.
 
 ### Step 1: Request Analysis
 
@@ -96,14 +93,6 @@ This decision is required before proceeding and will control later integration g
 - Branch strategy chosen
 - Git branch resolved
 - Research scope defined
-- Feature summary
-- Research objectives
-- Complexity assessment
-- Key questions to answer
-- Research questions identified
-- Investigation priorities
-- Technical depth required
-- Output structure planning
 
 **Validation**: `scope_defined_and_branch_strategy_set`
 
@@ -120,168 +109,156 @@ This decision is required before proceeding and will control later integration g
 - knowledge/code_standards.md
 - knowledge/debugging.md
 
-**Verification**: MUST REVIEW
-
 **Validation**: `principles_established`
 
 **Approval Gate**: None (autonomous execution)
 
 ---
 
-### Step 3: Codebase Investigation
+### Step 3: Parallel Research Block
 
-**Action**: Investigate existing codebase and patterns
+**Description**: Parallel research execution spanning codebase and external sources
 
-**Research Areas**:
-- existing_implementations
-- related_components
-- current_architecture
-- code_conventions
-- dependencies
+This step contains sub-phases that execute sequentially:
 
-**Tools**:
-- grep_patterns
-- file_exploration
-- dependency_analysis
+#### Phase A: Analyze Inputs
 
-**Deep Analysis**:
-- Focus: codebase_pattern_analysis
-- Approach: systematic_code_investigation
-- Outputs:
-  - current_state_analysis
-  - existing_patterns
-  - technical_constraints
-  - pattern_identification
-  - architectural_constraints
-  - reusable_components
-  - integration_opportunities
+**Define Queries**:
+- Domains to search
+- Keywords and search terms
+- Constraints and filters
 
-**Validation**: `codebase_understood`
+**Structure Outputs**:
+- Fields: title, url, quote, finding, assessment, confidence
 
-**Approval Gate**: None (autonomous execution)
+#### Phase B: Parallel Work
 
----
+**Execution**: Parallel
 
-### Step 4: External Research
+**Concurrency**: 3 (maximum parallel agents)
 
-**Action**: Research external documentation and best practices
+**Shared Context**:
+- request
+- context
 
-**Sources**:
-- official_documentation
-- api_references
-- community_solutions
-- industry_standards
-- similar_implementations
+**Tasks**:
 
-**Chrome DevTools** (when analyzing live examples):
-- inspect_implementations
-- analyze_network_patterns
-- review_dom_structures
-- capture_performance_metrics
+1. **Web/Ecosystem Researcher**:
+   - Instructions: Collect libraries, repos, issues, ecosystem patterns with pros/cons
+   - Focus: Libraries, frameworks, repos, issues, community patterns
 
-**Deep Analysis**:
-- Focus: external_solutions_analysis
-- Approach: comprehensive_research
-- Outputs:
-  - best_practices_summary
-  - external_solutions_analysis
-  - api_specifications
-  - integration_options
-  - best_practice_synthesis
-  - api_evaluation
-  - integration_strategy
-  - vendor_comparison
+2. **Academic/Docs Researcher**:
+   - Instructions: Collect standards, official docs, papers; extract key constraints and canonical patterns
+   - Focus: Standards, RFCs, official documentation, academic papers, canonical patterns
 
-**Validation**: `external_research_complete`
+3. **Competitive/Market Analyst**:
+   - Instructions: Collect vendor options, alternatives, benchmark data
+   - Focus: Vendor solutions, alternative approaches, benchmarks, market trends
 
-**Approval Gate**: None (autonomous execution)
+4. **Feasibility/Cost Analyst**:
+   - Instructions: Analyze complexity, cost, operational impact, risks
+   - Focus: Technical complexity, operational costs, risk assessment, trade-offs
 
----
+#### Phase C: Review
 
-### Step 5: Technical Analysis
+**By**: Lead Reviewer
 
-**Action**: Perform deep technical analysis and feasibility assessment
+**Focus**:
+- Deduplicate findings
+- Rank relevance
+- Identify conflicts
+- Flag insufficient citations
 
-**Analysis Areas**:
-- architecture_implications
-- performance_considerations
-- security_requirements
-- accessibility_standards
-- browser_compatibility
-- mobile_responsiveness
+**Outputs**:
+- Synthesis guidance
+- Ranked findings
+- Contradictions noted
 
-**Deep Analysis**:
-- Focus: technical_feasibility_analysis
-- Approach: rigorous_evaluation
-- Outputs:
-  - technical_specifications
-  - constraints_and_limitations
-  - risk_assessment
-  - compatibility_matrix
-  - architecture_assessment
-  - performance_projections
-  - security_analysis
-  - compatibility_verification
-  - risk_mitigation_strategies
+#### Phase D: Synthesis
 
-**Validation**: `technical_analysis_complete`
+**By**: Lead Synthesizer
 
-**Approval Gate**: None (autonomous execution)
+**Action**: Produce research.md per required sections
+
+**Output Files**:
+- `[SPEC_FOLDER]/research.md`
+
+**Validation Checklist**:
+- Citations present
+- Contradictory sources flagged
+- Options matrix complete
+- Recommendation justified
+
+#### Phase E: Main Agent Finalization
+
+**By**: MAIN_AGENT
+
+**Action**: QA review and finalization of `[SPEC_FOLDER]/research.md`
+
+**Checks**:
+- Confirm alignment with request and context
+- Validate completeness and consistency
+- Ensure output format and sections present
+- Resolve remaining open questions or note them
+
+**Outputs**:
+- Main agent review notes
+- Final signoff: true
+
+**Note**: Main agent finalization occurs within this step (no subsequent approval gate)
 
 ---
 
-### Step 6: Quality Checklist
+### Step 4: Research Compilation
+
+**Action**: Intermediate compilation (note: research document already synthesized in step 3)
+
+**Note**: Ensure section coverage and polish
+
+**Validation**: Research sections structured
+
+---
+
+### Step 5: Quality Checklist
 
 **Command**: `/speckit.checklist`
 
 **Action**: Generate quality validation checklist
 
 **Outputs**:
-- Quality checklist: generated
+- Quality checklist generated
 
 **Validation**: `checklist_generated`
 
-**Approval Gate**: None (autonomous execution)
-
 ---
 
-### Step 7: Solution Design
+### Step 6: Solution Design
 
 **Action**: Design solution architecture and integration patterns
 
 **Deliverables**:
-- proposed_architecture
-- integration_patterns
-- api_design
-- data_flow_diagrams
-- component_interactions
+- Proposed architecture
+- Integration patterns
+- API design
+- Data flow diagrams
+- Component interactions
 
 **Chrome DevTools** (when prototyping solutions):
-- test_api_endpoints
-- validate_approaches
-- measure_performance_impact
-- verify_compatibility
+- Test API endpoints
+- Validate approaches
+- Measure performance impact
+- Verify compatibility
 
 **Deep Analysis**:
 - Focus: solution_architecture_design
 - Approach: comprehensive_design
-- Outputs:
-  - solution_architecture
-  - implementation_patterns
-  - code_examples
-  - configuration_requirements
-  - architectural_patterns
-  - integration_blueprint
-  - implementation_roadmap
-  - edge_case_handling
+- Outputs: solution_architecture, implementation_patterns, code_examples, configuration_requirements, architectural_patterns, integration_blueprint, implementation_roadmap, edge_case_handling
 
 **Validation**: `solution_designed`
 
-**Approval Gate**: None (autonomous execution)
-
 ---
 
-### Step 8: Research Compilation
+### Step 7: Final Research Compilation
 
 **Action**: Compile comprehensive research documentation for spec folder
 
@@ -289,118 +266,31 @@ This decision is required before proceeding and will control later integration g
 - Focus: comprehensive_research_document
 - Approach: exhaustive_documentation
 
-**Required Sections**:
-- changelog_and_updates
-- investigation_report
-- executive_overview
-- architecture_analysis
-- technical_specifications
-- constraints_and_limitations
-- integration_patterns
-- implementation_guide
-- code_examples_and_snippets
-- testing_strategies
-- performance_optimization
-- security_considerations
-- future_proofing
-- api_reference
-- troubleshooting_guide
-- acknowledgements
+**Required Sections** (complete list in YAML lines 217-289):
+- Changelog and updates
+- Investigation report
+- Executive overview
+- Architecture analysis
+- Technical specifications
+- Constraints and limitations
+- Integration patterns
+- Implementation guide
+- Code examples and snippets
+- Testing strategies
+- Performance optimization
+- Security considerations
+- Future proofing
+- API reference
+- Troubleshooting guide
+- Acknowledgements
 
 **Document Structure**:
-- Format: markdown
+- Format: Markdown
 - Location: `[SPEC_FOLDER]/research.md`
-- table_of_contents: required
-- code_blocks: syntax_highlighted
-- diagrams: ascii_art
-- cross_references: linked
-
-**Detailed Section Requirements**:
-
-**Investigation Report**:
-- request_summary
-- current_behavior
-- findings
-- recommendations
-
-**Overview**:
-- executive_summary
-- architecture_diagram
-- quick_reference_guide
-- research_sources
-
-**Core Architecture**:
-- system_components
-- data_flow
-- integration_points
-- dependencies
-
-**Technical Specifications**:
-- api_documentation
-- attribute_reference
-- event_contracts
-- state_management
-
-**Constraints & Limitations**:
-- platform_limitations
-- security_restrictions
-- performance_boundaries
-- browser_compatibility
-- rate_limiting
-
-**Integration Patterns**:
-- third_party_services
-- authentication_handling
-- error_management
-- retry_strategies
-
-**Implementation Guide**:
-- markup_requirements
-- javascript_implementation
-- css_specifications
-- configuration_options
-
-**Code Examples**:
-- initialization_patterns
-- helper_functions
-- api_usage
-- edge_cases
-
-**Testing & Debugging**:
-- test_strategies
-- debugging_approaches
-- e2e_examples
-- diagnostic_tools
-
-**Performance**:
-- optimization_tactics
-- benchmarks
-- rate_limiting
-- caching_strategies
-
-**Security**:
-- validation_approach
-- data_protection
-- spam_prevention
-- authentication
-
-**Maintenance**:
-- upgrade_paths
-- compatibility_matrix
-- decision_trees
-- spa_support
-
-**API Reference**:
-- attributes_table
-- javascript_api
-- events_reference
-- cleanup_methods
-
-**Troubleshooting**:
-- common_issues
-- error_messages
-- solutions
-- workarounds
+- Table of contents: Required
+- Code blocks: Syntax highlighted
+- Diagrams: ASCII art
+- Cross-references: Linked
 
 **Validation**: `documentation_complete`
 
@@ -420,11 +310,9 @@ Next steps:
 - Use research as reference during implementation planning
 ```
 
-**Approval Gate**: None (autonomous execution)
-
 ---
 
-### Step 9: Branch Integration
+### Step 8: Branch Integration
 
 **Name**: Branch Integration Approval
 
@@ -459,21 +347,221 @@ Next steps:
   - After successful integration, offer to delete the feature branch locally and on origin (explicit confirmation required)
 - Tagging: optional; only on user request
 
-**Termination**: Workflow ends after this step (or after Step 8 if main_branch was selected)
+**Termination**: Workflow ends after this step (or after Step 7 if main_branch was selected)
 
-## Approval Gates
+### The 6 Research Sub-Agents
+
+1. **Web/Ecosystem Researcher**
+   - Libraries and frameworks
+   - GitHub repos and issues
+   - Community patterns
+   - Ecosystem trends
+
+2. **Academic/Docs Researcher**
+   - Standards and RFCs
+   - Official documentation
+   - Academic papers
+   - Canonical patterns
+
+3. **Competitive/Market Analyst**
+   - Vendor solutions
+   - Alternative approaches
+   - Benchmarks and comparisons
+   - Market trends
+
+4. **Feasibility/Cost Analyst**
+   - Technical complexity
+   - Operational costs
+   - Risk assessment
+   - Trade-off analysis
+
+5. **Lead Reviewer**
+   - Deduplication
+   - Relevance ranking
+   - Contradiction resolution
+   - Citation validation
+
+6. **Lead Synthesizer**
+   - Document generation
+   - Section organization
+   - Findings integration
+   - Markdown formatting
+
+## Execution Model
+
+### Parallel Research Pattern
+
+**Note**: All parallel execution, review, synthesis, and main agent finalization occur within Step 3 as sub-phases, NOT as separate steps.
+
+```
+┌─────────────────────────────────┐
+│   Parallel Research Execution    │
+│  ┌────┐ ┌────┐ ┌────┐ ┌────┐   │
+│  │Web │ │Docs│ │Mkt │ │Feas│   │ ← Execute in parallel
+│  └────┘ └────┘ └────┘ └────┘   │
+└─────────────────────────────────┘
+                ↓
+┌─────────────────────────────────┐
+│         Review Phase             │ ← Lead Reviewer deduplicates
+└─────────────────────────────────┘
+                ↓
+┌─────────────────────────────────┐
+│        Synthesis Phase           │ ← Lead Synthesizer creates document
+└─────────────────────────────────┘
+                ↓
+┌─────────────────────────────────┐
+│      Main Agent QA Phase         │ ← Final polish and validation
+└─────────────────────────────────┘
+```
+
+### Parallel Execution Configuration
+
+**Concurrency Settings**:
+- **Default**: 3 parallel research agents maximum
+- **Low signal**: Broaden queries and include secondary sources
+- **Fallback**: 1 (sequential execution if parallel not supported)
+
+**Shared Context** (passed to all parallel agents):
+- `request` - User research request
+- `context` - Additional context from user inputs
+
+**Research Output Format** (all agents):
+```yaml
+finding:
+  title: [descriptive title]
+  url: [source URL]
+  quote: [relevant excerpt]
+  finding: [key insight]
+  assessment: [evaluation]
+  confidence: [high/medium/low]
+```
+
+**Important**:
+- Review and synthesis phases execute sequentially AFTER parallel work completes
+- Main agent finalization occurs within Step 3 (no approval gate)
+- All phases in Step 3 are sub-phases within that single workflow step
+- This is an autonomous workflow - no user approval needed until branch integration
+
+## Research Document Structure
+
+The skill produces a comprehensive `research.md` with these sections:
+
+**Note**: This is a high-level overview. For the complete section specifications with all subsections and required fields, see [sk_p__feature_research.yaml lines 217-289](../../../b_prompts/github_spec_kit/parallel_agents/sk_p__feature_research.yaml#L217-L289).
+
+### Core Sections
+
+**Investigation Report**
+- Request summary
+- Current behavior analysis
+- Key findings
+- Recommendations
+
+**Architecture Analysis**
+- System components
+- Data flow patterns
+- Integration points
+- Dependencies
+
+**Technical Specifications**
+- API documentation
+- Attribute reference
+- Event contracts
+- State management
+
+**Implementation Guide**
+- Markup requirements
+- JavaScript implementation
+- CSS specifications
+- Configuration options
+
+### Supporting Sections
+
+**Constraints & Limitations**
+- Platform limitations
+- Security restrictions
+- Performance boundaries
+- Browser compatibility
+
+**Integration Patterns**
+- Third-party services
+- Authentication handling
+- Error management
+- Retry strategies
+
+**Testing & Debugging**
+- Test strategies
+- Debugging approaches
+- E2E examples
+- Diagnostic tools
+
+**Performance & Security**
+- Optimization tactics
+- Benchmarks
+- Data protection
+- Spam prevention
+
+## Inputs
+
+### Required Inputs
+- **request**: Feature description or research goals
+- **spec_folder**: Where to save research.md
+
+### Optional Inputs
+- **context**: Additional context for research
+- **issues**: Known issues to investigate
+- **environment**: Staging URL for live analysis
+- **scope**: File scope limitations
+
+## Outputs
+
+### Primary Output
+- **research.md**: Complete research documentation
+  - Location: `[SPEC_FOLDER]/research.md`
+  - Format: Structured markdown
+  - Sections: 15+ comprehensive sections
+
+### Research Findings Structure
+
+```yaml
+finding:
+  title: [descriptive title]
+  url: [source URL]
+  quote: [relevant excerpt]
+  finding: [key insight]
+  assessment: [evaluation]
+  confidence: [high/medium/low]
+```
+
+## Parallel Execution Details
+
+### Concurrency Settings
+- **Default**: 3 parallel agents
+- **High complexity**: 2 parallel agents
+- **Fallback**: Sequential execution
+
+### Quality Controls
+- Deduplication of findings
+- Citation verification
+- Contradiction flagging
+- Completeness validation
+
+---
+
+## ✅ Approval Gates
 
 This workflow is **autonomous** with minimal user interaction:
 
 | Step | Approval Prompt | Confirmation | Note |
 |------|-----------------|--------------|------|
-| 9 | "All checks passed. Would you like me to push this branch to main now to keep main up to date and minimize conflicts?" | Required | Branch integration only |
+| 8 | "All checks passed. Would you like me to push this branch to main now to keep main up to date and minimize conflicts?" | Required | Branch integration only |
 
-**Note**: Steps 1-8 execute autonomously without approval gates. Only step 9 (branch integration) requires user confirmation.
+**Note**: Steps 1-7 execute autonomously without approval gates. Only step 8 (branch integration) requires user confirmation.
 
-## Field Handling
+---
 
-This workflow automatically handles empty input fields per sk__feature_research.yaml:
+## ⚙️ Field Handling
+
+This workflow automatically handles empty input fields per sk_p__feature_research.yaml:
 
 ### branch_strategy
 - **Required**: Yes
@@ -482,7 +570,7 @@ This workflow automatically handles empty input fields per sk__feature_research.
   - `feature_branch`: Create new feature branch (auto-create feature-{NNN} aligned with spec folder)
   - `main_branch`: Work on main branch (skip branch creation and commit directly to main)
 - **Empty Handling**: User must choose at Step 1; cannot proceed without selection
-- **Controls**: Branch creation behavior and Step 9 integration gate
+- **Controls**: Branch creation behavior and Step 8 integration gate
 
 ### spec_id
 - **Derived From**: spec_folder path using pattern `specs/{NNN}` or `specs/{NNN-name}`
@@ -533,37 +621,13 @@ This workflow automatically handles empty input fields per sk__feature_research.
   3. Checkout feature branch
 - **Skip When**: `branch_strategy == main_branch`
 
-## Execution Model
-
-This workflow executes sequentially and autonomously:
-
-```
-Step 1: Request Analysis (autonomous)
-        ↓
-Step 2: Pre-work Review (autonomous)
-        ↓
-Step 3: Codebase Investigation (autonomous)
-        ↓
-Step 4: External Research (autonomous)
-        ↓
-Step 5: Technical Analysis (autonomous)
-        ↓
-Step 6: Quality Checklist (autonomous)
-        ↓
-Step 7: Solution Design (autonomous)
-        ↓
-Step 8: Research Compilation (autonomous)
-        ↓
-Step 9: Branch Integration [Approval Required if feature_branch]
-        ↓
-[Complete]
-```
-
 ## Integration Points
 
 ### With Chrome DevTools
-- Step 4: Test API endpoints, validate approaches
-- Step 7: Measure performance impact, verify compatibility
+- Test API endpoints
+- Validate approaches
+- Measure performance impact
+- Verify compatibility
 
 ### With SpecKit Workflow
 - Research before `/speckit.specify`
@@ -571,64 +635,110 @@ Step 9: Branch Integration [Approval Required if feature_branch]
 - Support implementation decisions
 - Document constraints early
 
+### With Other Skills
+- **speckit-command-guide**: Recommends when to research
+- **speckit-parallel-complete**: Uses research for full workflow
+- **speckit-plan-spec**: Leverages research for planning
+
+## Adaptive Rules
+
+**Note**: For complete adaptive rule specifications, complexity scoring, and execution mode details, see [references/adaptive-rules.md](references/adaptive-rules.md).
+
+### Low Signal Handling
+When research yields limited results:
+- Broaden search queries
+- Include secondary sources
+- Expand to related domains
+- Document gaps explicitly
+
+### High Uncertainty
+When findings are contradictory:
+- Add clarification pass
+- Document conflicting sources
+- Provide multiple options
+- Highlight trade-offs
+
+### Fallback Strategy
+If parallel execution fails:
+- Run agents sequentially
+- Maintain review/synthesis phases
+- Document degraded mode
+- Continue with partial results
+
 ## Quality Standards
 
 ### Documentation Requirements
-- production_ready_examples
-- defensive_programming_patterns
-- error_handling_strategies
-- memory_leak_prevention
-- spa_compatibility
+- Production-ready examples
+- Defensive programming patterns
+- Error handling strategies
+- Memory leak prevention
+- SPA compatibility
 
 ### Code Examples
-- working_snippets
-- proper_error_handling
-- performance_optimized
-- accessibility_compliant
-- browser_compatible
+- Working snippets
+- Proper error handling
+- Performance optimized
+- Accessibility compliant
+- Browser compatible
 
 ### Analysis Depth
-- edge_cases_covered
-- failure_modes_documented
-- recovery_strategies_defined
-- monitoring_approaches_specified
+- Edge cases covered
+- Failure modes documented
+- Recovery strategies defined
+- Monitoring approaches specified
 
-## Spec Folder Integration
+## Performance Characteristics
 
-**Note**: This workflow generates research.md within a spec folder structure. It does NOT follow the full GitHub SpecKit workflow (no /specify, /plan, etc). It creates comprehensive research documentation to support feature planning.
+**Note**: Performance varies based on research scope, available sources, and system resources.
 
-**Workflow Relationship**:
-- This is a standalone research workflow
-- Outputs to spec folders for consistency
-- Can be used before or during SpecKit workflows
-- Provides research foundation for specifications
+- **Execution**: Variable based on research depth and source availability
+- **Parallel phase**: Multiple researchers execute concurrently
+- **Review/synthesis**: Sequential refinement after parallel collection
+- **Document generation**: Comprehensive markdown output
+- **Output size**: 50-150KB markdown (typical)
 
-**Expected Output**:
-- `[SPEC_FOLDER]/research.md` - Primary research documentation
-- Optional supplementary files in spec folder as needed
+## Error Handling
 
-## Rules
+### Retry Policy
+- **Max retries**: 2 per agent
+- **Backoff**: Exponential
+- **Targeted**: Only failed agents
 
-**ALWAYS**:
-- follow_research_methodology
-- document_all_findings
-- validate_technical_feasibility
-- use_devtools_for_live_analysis
-- generate_comprehensive_documentation
-- self_validate_and_proceed
-- do_not_prompt_for_user_approval
-- limit_context_to_active_scope
+### Recovery Actions
+- Use cached results if available
+- Continue with partial findings
+- Document missing research areas
+- Provide fallback recommendations
 
-**NEVER**:
-- skip_investigation_steps
-- ignore_platform_constraints
-- submit_without_thorough_analysis
-- proceed_to_implementation
-- invent_new_patterns_when_existing_work
+## Limitations
+
+- **Research scope**: Technical/implementation focus
+- **Sources**: Public information only
+- **Language**: English sources primarily
+- **Real-time**: No live system monitoring
+- **Dependencies**: Requires internet access
+
+## Success Metrics
+
+**Note**: Target quality benchmarks for research completeness and accuracy.
+
+- **Coverage**: >80% of research areas
+- **Citations**: >20 validated sources
+- **Contradictions**: <10% unresolved
+- **Completeness**: All sections populated
+- **Quality score**: >85% validation pass
 
 ## Version
 
 **Current Version**: 1.0.0
-**Based On**: sk__feature_research.yaml
+**Based On**: sk_p__feature_research.yaml
 **Created**: 2025-10-18
-**Architecture**: Sequential research execution with autonomous operation
+**Architecture**: Parallel research orchestration
+
+---
+
+## References
+
+- Source: `/b_prompts/github_spec_kit/parallel_agents/sk_p__feature_research.yaml`
+- Integration: Works with all SpecKit skills
+- Output: Comprehensive research.md documentation

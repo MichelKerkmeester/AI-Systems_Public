@@ -1,28 +1,28 @@
 ---
-name: speckit_spec_plan
-description: Execute spec-driven planning workflow with sequential execution. Run SpecKit from specification through planning with validation and manual approval gates.
+name: parallel_speckit_spec_plan
+description: Execute spec-driven planning workflow with parallel specialist analyses. Orchestrates 6 specialized planning sub-agents through parallel execution, review, and synthesis to produce plan.md and planning-summary.md with manual approval gates.
 ---
 
 # SpecKit Plan & Spec
 
-Execute comprehensive planning and specification workflow with sequential execution and manual approval gates.
+Execute comprehensive planning and specification workflow with parallel specialist analyses and approval gates.
 
 ## When to Use This Skill
 
 **Use this skill when**:
 - Creating technical plans from specifications
-- Need comprehensive risk and architecture assessment
+- Need parallel analysis from multiple specialists
+- Require comprehensive risk and architecture assessment
 - Want estimation and milestone planning
 - Following manual approval workflow
-- Stopping workflow after planning (before implementation)
 
 **Do NOT use this skill for**:
-- Full end-to-end workflow (use speckit_complete)
-- Implementation execution (use speckit_implementation)
-- Research tasks (use speckit_feature_research)
-- Workflows requiring parallel analysis (use parallel_speckit_spec_plan)
+- Quick planning without parallel analysis
+- Implementation execution (use speckit-implementation)
+- Research tasks (use speckit-feature-research)
+- Automated workflows without approvals
 
-## Quick Command Reference
+## 🚀 Quick Command Reference
 
 | Step | Command | Purpose |
 |------|---------|----------|
@@ -31,15 +31,14 @@ Execute comprehensive planning and specification workflow with sequential execut
 | 3 | `/specify` | Create spec.md |
 | 4 | `/clarify` | Resolve ambiguities |
 | 5 | `/speckit.checklist` | Generate quality checklist |
-| 6 | `/plan` | Technical planning and approach |
+| 6 | *Parallel Block* | 4 analysts work in parallel |
+| 7 | `/plan` | Finalize technical approach |
 
-**Important**: This workflow requires **2 approval gates** (steps 1→2 and 4→5)
-
-**Termination**: This workflow ends after step 6 (planning phase only).
+**⚠️ Important**: This workflow requires **3 approval gates** (steps 1→2, 4→5, 6→7)
 
 ## Architecture Overview
 
-This skill implements the sk__spec_plan.yaml workflow with sequential execution by the main agent.
+This skill implements the sk_p__spec_plan.yaml workflow with 6 specialized planning sub-agents executing in parallel analysis phase.
 
 ### Planning Workflow Steps
 
@@ -48,19 +47,18 @@ This skill implements the sk__spec_plan.yaml workflow with sequential execution 
 3. **Specification** - Create spec.md with acceptance criteria
 4. **Clarification** - Resolve ambiguities and clarify requirements
 5. **Quality Checklist** - Generate quality validation checklist
-6. **Planning** - Create technical approach and plan.md
+6. **Parallel Planning Block** - 4 analysts work in parallel
+7. **Planning** - Finalize technical approach and plan.md
 
-**Termination**: Workflow ends after step 6 (planning phase only).
+**Termination**: This workflow ends after step 7 (planning phase only).
 
 ## Workflow Steps (Detailed Execution)
 
-This section provides step-by-step execution guidance as defined in sk__spec_plan.yaml.
+This section provides step-by-step execution guidance as defined in sk_p__spec_plan.yaml.
 
 ### Step 1: Request Analysis
 
 **Action**: Analyze user inputs, choose branch strategy, and confirm understanding
-
-**Input Source**: USER_INPUTS_SECTION
 
 **Branch Strategy Prompt** (REQUIRED):
 
@@ -78,10 +76,10 @@ Before proceeding, you must choose how to work with Git for this spec:
 
 This decision is required before proceeding and will be inherited by implementation workflow.
 
-**Inputs**:
+**Inputs**: 
 - `branch_strategy`: **REQUIRED** - Choose `feature_branch` or `main_branch`
 - `git_branch`: Derived from branch_strategy (feature-{NNN} or main)
-- `spec_folder`: Auto-create `specs/{NNN}` if empty
+- `spec_folder`: Auto-create `specs/{NNN}` if empty  
 - `context`: Infer from request if empty
 - `issues`: Discover during workflow if empty
 - `request`: REQUIRED
@@ -114,7 +112,7 @@ This decision is required before proceeding and will be inherited by implementat
 
 **Validation**: `principles_established`
 
-**Approval Gate**: None (proceeds automatically after Step 1 approval)
+**Note**: No approval gate for this step
 
 ---
 
@@ -125,16 +123,13 @@ This decision is required before proceeding and will be inherited by implementat
 **Action**: Create spec.md with acceptance criteria
 
 **Outputs**:
-- Feature branch: created
-- spec.md: acceptance_criteria
+- Feature branch created
+- spec.md with acceptance criteria
 - Location: `specs/[NNN-feature]/spec.md`
 
 **Validation**: `spec_complete_and_testable`
 
-**Chrome DevTools** (when analyzing existing features):
-- Navigate → Snapshot → Analyze → Document
-
-**Approval Gate**: None (proceeds automatically)
+**Note**: No approval gate for this step
 
 ---
 
@@ -151,10 +146,6 @@ This decision is required before proceeding and will be inherited by implementat
 
 **Validation**: `requirements_clear`
 
-**Chrome DevTools** (when staging URL provided):
-- Navigate → Inspect → Analyze → Clarify
-- Capture: current_behavior_screenshots
-
 **Approval Gate**: "Requirements clarified. Proceed to quality checklist?"
 
 ---
@@ -166,89 +157,304 @@ This decision is required before proceeding and will be inherited by implementat
 **Action**: Generate quality validation checklist
 
 **Outputs**:
-- Quality checklist: generated
+- Quality checklist generated
 
 **Validation**: `checklist_generated`
 
-**Approval Gate**: None (proceeds automatically after Step 4 approval)
+**Note**: No approval gate for this step
 
 ---
 
-### Step 6: Planning
+### Step 6: Parallel Planning Block
+
+**Description**: Parallel specialist analyses with bounded concurrency
+
+This step contains sub-phases that execute sequentially:
+
+#### Phase A: Analyze Inputs
+- Summarize goals, constraints, unknowns
+- Shard plan across: requirements, architecture, risk, estimation
+
+#### Phase B: Parallel Work
+
+**Execution**: Parallel
+
+**Concurrency**: 3 (maximum parallel agents)
+
+**Shared Context**:
+- `[SPEC_FOLDER]/spec.md`
+- quality_checklist
+- request_summary
+- context
+
+**Parallel Agent Tasks**:
+
+| Agent | Instructions | Output Sections |
+|-------|--------------|------------------|
+| **Requirements Analyst** | Produce requirements dossier with explicit success metrics and dependencies | objectives, acceptance_criteria_map, dependencies, constraints, success_metrics |
+| **Solution Architect** | Propose clear architecture with components, interfaces, data flow, and alternatives | components, interfaces, data_flow, patterns, alternatives, tradeoffs |
+| **Risk/Compliance Analyst** | Identify risks, edge cases, and non-functional requirements with severities and mitigations | risks, severities, mitigations, edge_cases, security_privacy, performance_accessibility |
+| **Estimation/Scope Analyst** | Propose phases, milestones, sequencing, and effort ranges; include assumptions | phases, milestones, dependencies, sequencing, effort_ranges, assumptions |
+
+#### Phase C: Review
+
+**By**: Lead Reviewer
+
+**Focus**:
+- Resolve conflicts
+- Validate completeness  
+- Ensure consistency
+- Identify open questions
+
+**Outputs**:
+- Synthesis guidance
+- Review notes
+
+#### Phase D: Synthesis
+
+**By**: Lead Synthesizer
+
+**Action**: Create plan.md and planning-summary.md from parallel outputs + review guidance
+
+**Output Files**:
+- `[SPEC_FOLDER]/plan.md`
+- `[SPEC_FOLDER]/planning-summary.md`
+
+**Validation Checklist**:
+- All parallel tasks present
+- Risks have mitigations
+- Dependencies acyclic
+- Success metrics measurable
+- Phases have owners and effort
+
+#### Phase E: Main Agent Finalization
+
+**By**: MAIN_AGENT
+
+**Action**: QA review and finalization of planning artifacts (deferred to step 7)
+
+**Checks**:
+- Confirm alignment with request and context
+- Validate completeness and consistency
+- Ensure output format and sections present
+- Resolve remaining open questions or note them
+
+**Outputs**:
+- Main agent review notes
+- Final signoff: true
+
+**Note**: This phase executes BEFORE the approval gate
+
+**Approval Gate**: "Planning artifacts synthesized. Approve to proceed?"
+
+---
+
+### Step 7: Planning
 
 **Command**: `/plan [context]`
 
-**Action**: Create technical plan and approach
+**Action**: Finalize technical approach and plan.md
 
 **Outputs**:
 - plan.md: technical_approach
-- dependencies: identified
-- upstream_docs: reviewed
+- Dependencies identified
+- Upstream docs reviewed
 
 **Validation**: `approach_defined`
 
 **Chrome DevTools** (when analyzing current implementation):
-- inspect_network_requests
-- analyze_dom_structure
-- review_console_errors
-- capture_performance_metrics
+- Inspect network requests
+- Analyze DOM structure
+- Review console errors
+- Capture performance metrics
 
 **Deep Analysis**:
 - Focus: comprehensive_planning
 - Approach: deep_analysis
-- Outputs:
-  - detailed_technical_approach
-  - implementation_strategy
-  - risk_assessment
-  - dependency_mapping
+- Outputs: detailed_technical_approach, implementation_strategy, risk_assessment, dependency_mapping
 
 **Final Output**:
-
-**Summary Document**:
 - Location: `specs/[NNN-feature]/planning-summary.md`
-- Required Sections:
-  - feature_overview
-  - technical_approach
-  - dependencies_identified
-  - risks_and_mitigation
-  - recommended_next_steps
+- Required Sections: feature_overview, technical_approach, dependencies_identified, risks_and_mitigation, recommended_next_steps
+- Completion Message: "Planning phase complete. The workflow has been executed through step 7. Technical plan and approach have been documented. To proceed with implementation, use the full workflow_automated.yaml."
 
-**Completion Message**:
-```
-Planning phase complete. The workflow has been executed through step 6.
-Technical plan and approach have been documented.
-To proceed with implementation, use the full speckit_complete workflow
-or use speckit_implementation for autonomous implementation.
-```
+**Termination**: Workflow ends after this step
 
----
+**Branch Integration Note**:
 
-## Workflow Termination
+Branch strategy has been set and will be inherited by subsequent workflows.
 
-**After Step**: 6
+- **If `feature_branch` was selected**:
+  - Feature branch created for planning artifacts
+  - Implementation workflow will use this branch
+  - Complete workflow will offer integration to main at the end
 
-**Message**: "Planning phase completed successfully. Workflow terminated after step 6 as requested."
+- **If `main_branch` was selected**:
+  - Planning artifacts committed directly to main
+  - Implementation workflow will continue on main
+  - No integration step needed
 
 **Next Steps**:
 - Review planning documentation
 - Approve technical approach
-- Use speckit_complete for full implementation with gates
-- Or use speckit_implementation for autonomous implementation
+- Branch strategy: {branch_strategy} on {git_branch}
+- Use workflow_automated.yaml for full implementation (will inherit branch strategy)
+- Or use workflow.yaml for manual implementation with gates
 
-## Approval Gates
+---
 
-This workflow has 2 mandatory approval gates:
+### The 6 Planning Sub-Agents
 
-| Step | Approval Prompt | Confirmation |
-|------|-----------------|--------------|
-| 1→2 | "Requirements analyzed. Branch strategy: {branch_strategy} on {git_branch}. Proceed to pre-work review?" | Required |
-| 4→5 | "Requirements clarified. Proceed to quality checklist?" | Required |
+**Note**: For detailed agent specifications and output formats, see [references/sub-agents.md](references/sub-agents.md).
 
-**Note**: Steps 2, 3, 5, and 6 proceed automatically after their preceding approval gate.
+1. **Requirements Analyst**
+   - Extract requirements
+   - Define constraints
+   - Map dependencies
+   - Create success metrics
 
-## Field Handling
+2. **Solution Architect**
+   - Design architecture
+   - Define components
+   - Map interfaces
+   - Document data flows
 
-This workflow automatically handles empty input fields per sk__spec_plan.yaml:
+3. **Risk/Compliance Analyst**
+   - Identify risks
+   - Assess severity
+   - Define mitigations
+   - Check compliance
+
+4. **Estimation/Scope Analyst**
+   - Create milestones
+   - Sequence phases
+   - Estimate effort
+   - Document assumptions
+
+5. **Lead Reviewer**
+   - Reconcile outputs
+   - Resolve conflicts
+   - Validate completeness
+   - Identify gaps
+
+6. **Lead Synthesizer**
+   - Generate plan.md
+   - Create planning-summary.md
+   - Integrate findings
+   - Format artifacts
+
+## Execution Model
+
+### Parallel Planning Pattern
+
+**Note**: All parallel execution, review, synthesis, and main agent finalization occur within Step 6 as sub-phases, NOT as separate steps.
+
+```
+┌─────────────────────────────────┐
+│    Parallel Planning Analysis    │
+│  ┌────┐ ┌────┐ ┌────┐ ┌────┐   │
+│  │Req │ │Arch│ │Risk│ │Est │   │ ← Execute in parallel
+│  └────┘ └────┘ └────┘ └────┘   │
+└─────────────────────────────────┘
+                ↓
+┌─────────────────────────────────┐
+│         Review Phase             │ ← Lead Reviewer reconciles
+└─────────────────────────────────┘
+                ↓
+┌─────────────────────────────────┐
+│        Synthesis Phase           │ ← Lead Synthesizer creates docs
+└─────────────────────────────────┘
+                ↓
+┌─────────────────────────────────┐
+│      Main Agent QA Phase         │ ← Final validation BEFORE approval
+└─────────────────────────────────┘
+                ↓
+┌─────────────────────────────────┐
+│        Approval Gate             │ ← User approval required
+└─────────────────────────────────┘
+```
+
+### Parallel Execution Configuration
+
+**Concurrency Settings**:
+- **Default**: 3 parallel agents maximum
+- **High Complexity**: 2 parallel agents (reduced concurrency)
+- **Fallback**: 1 (sequential execution if parallel not supported)
+
+**Shared Context** (passed to all parallel agents):
+- `[SPEC_FOLDER]/spec.md` - Feature specification
+- `quality_checklist` - Generated quality validation checklist
+- `request_summary` - Parsed user request
+- `context` - Additional context from user inputs
+
+**Important**: 
+- Review and synthesis phases execute sequentially AFTER parallel work completes
+- Main agent finalization occurs BEFORE any approval gate
+- All phases in Step 6 are sub-phases within that single workflow step
+
+## Planning Document Structure
+
+The skill produces two key documents:
+
+### plan.md Structure
+
+**Technical Approach**
+- Architecture overview
+- Component design
+- Integration strategy
+- Technology choices
+
+**Implementation Phases**
+- Phase breakdown
+- Milestone definitions
+- Dependencies mapping
+- Timeline estimates
+
+**Risk Assessment**
+- Identified risks
+- Severity levels
+- Mitigation strategies
+- Contingency plans
+
+**Success Metrics**
+- Measurable objectives
+- Acceptance criteria
+- Performance targets
+- Quality indicators
+
+### planning-summary.md Structure
+
+**Executive Summary**
+- Feature overview
+- Key decisions
+- Critical risks
+- Timeline summary
+
+**Recommended Next Steps**
+- Immediate actions
+- Prerequisite tasks
+- Resource needs
+- Decision points
+
+---
+
+## ✅ Approval Gates
+
+This workflow includes manual approval gates at key points:
+
+| Step | Approval Prompt | Confirmation | Warning |
+|------|-----------------|--------------|----------|
+| 1→2 | "Requirements analyzed. Proceed to pre-work review?" | Required | None |
+| 4→5 | "Requirements clarified. Proceed to quality checklist?" | Required | None |
+| 6→7 | "Planning artifacts synthesized. Approve to proceed?" | Required | None |
+
+**Note**: All approval gates require explicit user confirmation before proceeding to the next step.
+
+---
+
+## ⚙️ Field Handling
+
+This workflow automatically handles empty input fields per sk_p__spec_plan.yaml:
 
 ### branch_strategy
 - **Required**: Yes
@@ -257,7 +463,7 @@ This workflow automatically handles empty input fields per sk__spec_plan.yaml:
   - `feature_branch`: Create new feature branch (auto-create feature-{NNN} aligned with spec folder)
   - `main_branch`: Work on main branch (skip branch creation and commit directly to main)
 - **Empty Handling**: User must choose at Step 1; cannot proceed without selection
-- **Controls**: Branch creation behavior during planning
+- **Controls**: Branch creation during planning; inherited by implementation workflow
 
 ### spec_id
 - **Derived From**: spec_folder path using pattern `specs/{NNN}` or `specs/{NNN-name}`
@@ -274,7 +480,7 @@ This workflow automatically handles empty input fields per sk__spec_plan.yaml:
 - **If main_branch**: Use `main`
 - **Empty Handling**: Cannot be empty; derived automatically from branch_strategy
 
-### spec_folder
+### spec_folder  
 - **Auto-create**: Yes
 - **Default Pattern**: `specs/{NNN}` where {NNN} is highest existing +001
 - **Scope**: Project specs directory
@@ -286,14 +492,14 @@ This workflow automatically handles empty input fields per sk__spec_plan.yaml:
 - **Empty Handling**: Inference from available inputs
 
 ### issues
-- **Auto-create**: No
+- **Auto-create**: No  
 - **Default**: None
 - **Empty Handling**: Investigated and discovered during workflow execution
 
 ### environment (staging link)
 - **Auto-create**: No
 - **Default**: None
-- **Empty Handling**: Browser testing and DevTools steps are skipped
+- **Empty Handling**: DevTools/browser testing steps are skipped
 
 ### scope (files)
 - **Auto-create**: No
@@ -308,63 +514,269 @@ This workflow automatically handles empty input fields per sk__spec_plan.yaml:
   3. Checkout feature branch
 - **Skip When**: `branch_strategy == main_branch`
 
-## Execution Model
+## Inputs
 
-This workflow executes sequentially with 2 approval gates:
+### Required Inputs
+- **request**: Feature description or requirements
+- **spec_folder**: Location for planning artifacts
 
+### Optional Inputs
+- **git_branch**: Feature branch name
+- **context**: Additional planning context
+- **issues**: Known issues to address
+- **environment**: Staging URL for analysis
+- **scope**: File scope limitations
+
+### Field Defaults
+- **git_branch**: Auto-create `feature-{NNN}`
+- **spec_folder**: Auto-create `specs/{NNN}`
+- **context**: Infer from request
+- **scope**: Default to `specs/**`
+
+## Outputs
+
+### Primary Outputs
+
+1. **plan.md**
+   - Location: `[SPEC_FOLDER]/plan.md`
+   - Technical approach documentation
+   - Complete planning artifact
+
+2. **planning-summary.md**
+   - Location: `[SPEC_FOLDER]/planning-summary.md`
+   - Executive summary
+   - Next steps guidance
+
+### Intermediate Outputs
+- Requirements dossier
+- Architecture proposal
+- Risk assessment
+- Estimation breakdown
+
+## Parallel Agent Specifications
+
+### Requirements Analyst Output
+```yaml
+requirements_dossier:
+  objectives:
+    - objective: "Clear goal"
+      priority: "P0|P1|P2"
+      success_criteria: "Measurable outcome"
+
+  acceptance_criteria:
+    - feature: "Feature name"
+      criteria:
+        - "Given X, When Y, Then Z"
+
+  dependencies:
+    - type: "internal|external"
+      name: "Dependency"
+      status: "available|needed"
+
+  constraints:
+    - type: "technical|business|regulatory"
+      description: "Constraint"
+      impact: "high|medium|low"
+
+  success_metrics:
+    - metric: "KPI"
+      target: "Value"
+      measurement: "How to measure"
 ```
-Step 1: Request Analysis
-        ↓ [Approval Required]
-Step 2: Pre-work Review (automatic)
-        ↓
-Step 3: Specification (/specify) (automatic)
-        ↓
-Step 4: Clarification (/clarify) (automatic)
-        ↓ [Approval Required]
-Step 5: Quality Checklist (/speckit.checklist) (automatic)
-        ↓
-Step 6: Planning (/plan) (automatic)
-        ↓
-[Workflow Terminated]
+
+### Solution Architect Output
+```yaml
+architecture_proposal:
+  components:
+    - name: "ComponentName"
+      responsibility: "What it does"
+      interfaces:
+        - type: "API|Event|Data"
+        - contract: "Specification"
+
+  data_flow:
+    - source: "Origin"
+      destination: "Target"
+      data_type: "Type"
+      protocol: "Method"
+
+  patterns:
+    - pattern: "Design pattern"
+      rationale: "Why chosen"
+
+  alternatives:
+    - option: "Alternative approach"
+      pros: ["Benefits"]
+      cons: ["Drawbacks"]
+      decision: "Why not chosen"
 ```
 
-## Integration Points
+### Risk Analyst Output
+```yaml
+risk_assessment:
+  risks:
+    - category: "technical|business|security"
+      description: "Risk description"
+      severity: "critical|high|medium|low"
+      likelihood: "percentage"
+      mitigation: "Strategy"
+      owner: "Responsible party"
 
-### With Chrome DevTools
-- Step 3: Analyze current implementation
-- Step 4: Capture current behavior screenshots
-- Step 6: Inspect network, DOM, errors, performance
+  edge_cases:
+    - scenario: "Edge case"
+      handling: "Approach"
+      validation: "How to test"
 
-### With SpecKit Workflows
-- Output planning artifacts used by implementation workflows
-- Branch strategy inherited by implementation phase
-- Planning documents inform task breakdown
+  non_functionals:
+    security:
+      - requirement: "Security need"
+        implementation: "How to address"
+    performance:
+      - metric: "Performance KPI"
+        target: "Goal"
+    accessibility:
+      - standard: "WCAG level"
+        compliance: "How to meet"
+```
 
-### Continuation Workflows
-- Use **speckit_implementation** for autonomous implementation continuation
-- Use **speckit_complete** for full workflow with approval gates
+### Estimation Analyst Output
+```yaml
+estimation_breakdown:
+  phases:
+    - phase: "Phase name"
+      deliverables: ["List of outputs"]
+      effort_range: "min-max hours"
+      dependencies: ["Prerequisites"]
 
-## Rules
+  milestones:
+    - milestone: "Achievement"
+      target_date: "When"
+      success_criteria: "Definition of done"
 
-**ALWAYS**:
-- follow_workflow_sequence
-- document_all_changes
-- validate_before_completion
-- use_devtools_for_staging_analysis
-- await_user_approval_at_gates
-- evidence_before_decisions
+  sequencing:
+    - step: 1
+      task: "What to do"
+      dependency: "What must complete first"
 
-**NEVER**:
-- skip_workflow_steps
-- ignore_blockers
-- submit_without_validation
-- skip_browser_testing
-- proceed_without_approval
-- proceed_beyond_planning
+  effort_summary:
+    total_range: "min-max person-days"
+    confidence_level: "percentage"
+    assumptions:
+      - "Assumption about scope"
+      - "Resource availability"
+```
+
+## Chrome DevTools Integration
+
+When staging URL is provided:
+
+### Analysis Actions
+- Inspect network requests
+- Analyze DOM structure
+- Review console errors
+- Capture performance metrics
+
+### Planning Insights
+- Current implementation patterns
+- API endpoint discovery
+- Performance baselines
+- Integration points
+
+## Adaptive Rules
+
+**Note**: For complete adaptive rule specifications, planning complexity assessment, requirement clarity scoring, and stakeholder strategies, see [references/adaptive-rules.md](references/adaptive-rules.md).
+
+### High Complexity Handling
+- Add security/privacy reviewer
+- Exhaustive review depth
+- Reduce concurrency to 2
+- Extended analysis time
+
+### High Uncertainty Handling
+- Insert discovery phase
+- Use effort ranges
+- Document unknowns
+- Additional clarification
+
+### Fallback Strategy
+- Sequential execution if parallel fails
+- Maintain review/synthesis
+- Proceed with partial results
+- Document degradation
+
+## Quality Standards
+
+### Planning Quality
+- Complete requirement coverage
+- Clear architecture definition
+- Comprehensive risk analysis
+- Realistic estimations
+
+### Document Quality
+- Logical organization
+- Clear writing
+- Measurable metrics
+- Actionable recommendations
+
+### Review Quality
+- Conflict resolution
+- Gap identification
+- Consistency validation
+- Completeness check
+
+## Performance Characteristics
+
+**Note**: Performance varies based on specification complexity and detail level.
+
+- **Overall execution**: Variable based on planning depth required
+- **Parallel analysis**: 4 specialist agents work concurrently
+- **Review phase**: Lead reviewer reconciles outputs
+- **Synthesis phase**: Document generation and integration
+- **QA phase**: Main agent final validation
+
+## Error Handling
+
+### Retry Policy
+- **Targeted retries**: Failed agents only
+- **Max attempts**: 2 per agent
+- **Fallback**: Sequential execution
+
+### Recovery Actions
+- Rerun failed tasks
+- Proceed with partial results
+- Annotate gaps in review
+- Document issues
+
+## Limitations
+
+- **Scope**: Planning phase only (not implementation)
+- **Approvals**: Manual gates required
+- **Termination**: Ends after step 7
+- **Dependencies**: Requires spec.md
+- **Language**: English only
+
+## Success Metrics
+
+**Note**: Target benchmarks for planning quality and thoroughness.
+
+- **Coverage**: All planning aspects addressed
+- **Alignment**: >95% requirement mapping
+- **Completeness**: No critical gaps
+- **Quality**: >85% first-pass approval
+- **Efficiency**: Optimized parallel execution
 
 ## Version
 
 **Current Version**: 1.0.0
-**Based On**: sk__spec_plan.yaml
+**Based On**: sk_p__spec_plan.yaml
 **Created**: 2025-10-18
-**Architecture**: Sequential execution with manual approval gates (planning phase only)
+**Architecture**: Parallel planning with approval gates
+
+---
+
+## References
+
+- Source: `/b_prompts/github_spec_kit/parallel_agents/sk_p__spec_plan.yaml`
+- Prerequisites: Feature request or existing spec
+- Next Steps: Use speckit-implementation for execution
+- Output: plan.md, planning-summary.md
