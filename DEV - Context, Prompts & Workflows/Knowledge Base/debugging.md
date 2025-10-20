@@ -60,7 +60,33 @@ Use the available DevTools MCP tools to capture facts fast.
 
 .
 
-## 3. 🐛 Common Webflow Root Causes → Checks
+## 3. 🔧 Browser Automation Tool Selection
+
+When browser automation or DevTools access is needed, follow this decision tree:
+
+### Primary: Chrome DevTools MCP
+- **Available servers**: `mcp__chrome-devtools__*` (instances: default, -2, -3, -4)
+- **Why multiple instances**: Each can run with `--isolated` flag to prevent session interference
+- **If conflicts occur**: Try alternate instances (e.g., switch from -2 to -3)
+- **Common functions**: `navigate_page`, `take_snapshot`, `evaluate_script`, `list_console_messages`, `performance_start_trace`
+
+### Fallback: Playwright MCP
+- **Use when**: Chrome DevTools unavailable or fails repeatedly
+- **Available functions**: `mcp__playwright__*`
+- **Functions**: `playwright_navigate`, `playwright_evaluate`, `playwright_get_visible_html`
+- **Benefits**: Similar automation with different architecture
+
+### Final Fallback: Code-Focused Analysis
+- **Use when**: Both browser automation MCPs fail or unavailable
+- **Method**: Static analysis using Read, Grep, Glob tools
+- **Approach**: Infer behavior from code structure and configuration
+- **Important**: Document assumptions and analysis limitations clearly
+
+**Best Practice**: When browser automation is needed alongside manual development browsing, use an isolated Chrome DevTools instance to prevent conflicts.
+
+.
+
+## 4. 🐛 Common Webflow Root Causes → Checks
 
 - Collections empty intermittently
   - Cause: Async render delay
@@ -80,7 +106,7 @@ Use the available DevTools MCP tools to capture facts fast.
 
 .
 
-## 4 🧪 Minimal Helpers (optional)
+## 5. 🧪 Minimal Helpers (optional)
 
 - Collections quick view
 ```javascript
@@ -109,7 +135,7 @@ Use the available DevTools MCP tools to capture facts fast.
 
 .
 
-## 5. 🔗 References
+## 6. 🔗 References
 
 - MCP flows: console, network, performance, snapshots (see tool descriptions)
 - Debug prompt: [../z_prompts/code_debugger.yaml](../z_prompts/code_debugger.yaml)
