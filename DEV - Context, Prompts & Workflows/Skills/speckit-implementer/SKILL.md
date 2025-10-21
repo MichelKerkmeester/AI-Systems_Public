@@ -1,13 +1,17 @@
 ---
-name: speckit-implementation
-description: Execute autonomous spec-driven implementation with parallel preparation agents. Orchestrates 6 specialized sub-agents for implementation planning (core, integrations, tests, docs) through parallel execution, review, and synthesis into implementation_plan.md, then proceeds with development.
+name: speckit-implementer
+description: Execute autonomous spec-driven implementation with parallel preparation agents. Orchestrates 6 specialized sub-agents for implementation planning (core, integrations, tests, docs) through parallel execution, review, and synthesis into implementation_plan.md, then proceeds with development
 ---
 
-# SpecKit Implementation
+# SpecKit Implementer
+Autonomous Implementation Workflow
 
-Execute autonomous implementation workflow with parallel preparation and progressive development checkpoints.
+> Change Notes (2025-10-21)
+- Removed 4.x sub-step numbering; standardized headers and emojis
+- Added YAML → Steps Crosswalk; preserved autonomous execution semantics
+- Retained outputs/checkpoints; references remain in references/ (agent specs)
 
-## When to Use This Skill
+## 1. 🎯 When to Use
 
 **Use this skill when**:
 - Ready to implement a fully specified feature
@@ -22,9 +26,11 @@ Execute autonomous implementation workflow with parallel preparation and progres
 - Simple planning without implementation
 - Manual implementation processes
 
-## 🚀 Quick Command Reference
+.
 
-> **⚠️ CRITICAL**: This workflow starts at **Step 8** (continuation from planning workflow steps 1-7)
+## 2. 🚀 Quick Command Reference
+
+> **📌 Context Note**: This skill implements **Workflow Steps 8-15** from the SpecKit implementation process (continuation from planning steps 1-7). References to "Workflow Step N" indicate steps from the source YAML specification, while "Section N" refers to document organization below.
 
 | Step | Command | Purpose |
 |------|---------|----------|
@@ -37,38 +43,53 @@ Execute autonomous implementation workflow with parallel preparation and progres
 | **14** | Manual | Autonomous development |
 | **15** | Manual | Document changes and completion |
 
-**✅ Autonomous**: This workflow executes all steps without approval gates.
+**✅ Autonomous**: This workflow executes all steps without approval gates
 
-## Architecture Overview
+.
+
+## 3. 🏗️ Architecture Overview
 
 This skill implements the sk_p__implementation.yaml workflow with 6 specialized implementation sub-agents executing in parallel preparation phase.
 
 ### Implementation Workflow Steps
 
-**CRITICAL**: Step numbering starts at **8** (continuation from planning workflow steps 1-7).
+**Note**: This workflow covers Workflow Steps 8-15 of the complete SpecKit process. Steps 1-7 are assumed completed via planning workflow.
 
-**Note**: This workflow covers steps 8-15 of the complete SpecKit process (8 steps total). Steps 1-7 are assumed completed via planning workflow.
+- **Workflow Step 8**: Review Plan and Spec - Understand existing artifacts
+- **Workflow Step 9**: Task Breakdown - Generate actionable tasks
+- **Workflow Step 10**: Analysis - Check consistency and coverage
+- **Workflow Step 11**: Quality Checklist - Generate quality gates
+- **Workflow Step 12**: Parallel Implementation Prep - 4 agents prepare approach
+- **Workflow Step 13**: Implementation Check - Verify prerequisites
+- **Workflow Step 14**: Development - Execute autonomous implementation
+- **Workflow Step 15**: Completion - Document changes and summary
 
-8. **Review Plan and Spec** - Understand existing artifacts
-9. **Task Breakdown** - Generate actionable tasks
-10. **Analysis** - Check consistency and coverage
-11. **Quality Checklist** - Generate quality gates
-12. **Parallel Implementation Prep** - 4 agents prepare approach
-13. **Implementation Check** - Verify prerequisites
-14. **Development** - Execute autonomous implementation
-15. **Completion** - Document changes and summary
+**Note**: This is an autonomous workflow with NO approval gates
 
-**Note**: This is an autonomous workflow with NO approval gates.
+.
 
-## Workflow Steps (Detailed Execution)
+## YAML → Steps Crosswalk
 
-**Prerequisites**: Requires `spec.md`, `plan.md`, and `planning-summary.md` from steps 1-7.
+- Source: b_prompts/github_spec_kit/parallel_agents/sk_p__implementation.yaml
+- Mapping (this skill covers Steps 8–15):
+  - Step 8 → Review Plan and Spec
+  - Step 9 → Task Breakdown (/speckit.tasks)
+  - Step 10 → Analysis (/speckit.analyze)
+  - Step 11 → Quality Checklist (/speckit.checklist)
+  - Step 12 → Parallel Implementation Preparation
+  - Step 13 → Implementation Check (/speckit.implement)
+  - Step 14 → Development
+  - Step 15 → Completion
+
+## 4. 📝 Workflow Steps
+
+**Prerequisites**: Requires `spec.md`, `plan.md`, and `planning-summary.md` from Workflow Steps 1-7.
 
 This section provides step-by-step execution guidance as defined in sk_p__implementation.yaml.
 
-### Step 8: Gather User Inputs & Review Plan and Spec
+### Workflow Step 8: Gather User Inputs & Review Plan and Spec
 
-**Note**: This workflow is typically a continuation of the planning phase (steps 1-7). If continuing from planning, inputs should be inherited. If starting independently, all inputs must be collected first.
+**Note**: This workflow is typically a continuation of the planning phase (Workflow Steps 1-7). If continuing from planning, inputs should be inherited. If starting independently, all inputs must be collected first.
 
 **Action**: Collect inputs (if not inherited), then review spec and planning artifacts
 
@@ -129,9 +150,7 @@ This section provides step-by-step execution guidance as defined in sk_p__implem
 
 **Approval Gate**: None (autonomous execution)
 
----
-
-### Step 9: Task Breakdown
+### Workflow Step 9: Task Breakdown
 
 **Command**: `/tasks`
 
@@ -144,9 +163,7 @@ This section provides step-by-step execution guidance as defined in sk_p__implem
 
 **Validation**: `tasks_actionable`
 
----
-
-### Step 10: Analysis
+### Workflow Step 10: Analysis
 
 **Command**: `/analyze`
 
@@ -160,9 +177,7 @@ This section provides step-by-step execution guidance as defined in sk_p__implem
 
 **Validation**: `consistency_verified`
 
----
-
-### Step 11: Quality Checklist
+### Workflow Step 11: Quality Checklist
 
 **Command**: `/speckit.checklist`
 
@@ -173,9 +188,7 @@ This section provides step-by-step execution guidance as defined in sk_p__implem
 
 **Validation**: `checklist_generated`
 
----
-
-### Step 12: Parallel Implementation Preparation
+### Workflow Step 12: Parallel Implementation Preparation
 
 **Description**: Parallel preparation for core, integrations, tests, and docs
 
@@ -271,9 +284,7 @@ This step contains sub-phases that execute sequentially:
 
 **Note**: Main agent finalization occurs within this step (no subsequent approval gate)
 
----
-
-### Step 13: Implementation Check
+### Workflow Step 13: Implementation Check
 
 **Command**: `/implement [task-id]`
 
@@ -296,9 +307,7 @@ This step contains sub-phases that execute sequentially:
 
 **Validation**: Environment ready for implementation
 
----
-
-### Step 14: Development
+### Workflow Step 14: Development
 
 **Approach**: Autonomous implementation with checkpoints
 
@@ -331,9 +340,7 @@ This step contains sub-phases that execute sequentially:
 - Approach: continuous_validation
 - Outputs: implementation_decisions, debugging_insights, optimization_opportunities, test_coverage_gaps
 
----
-
-### Step 15: Completion
+### Workflow Step 15: Completion
 
 **Action**: Document changes and create summary
 
@@ -413,12 +420,6 @@ This step contains sub-phases that execute sequentially:
    - Dependency mapping
    - Plan document creation
 
-## Execution Model
-
-### Parallel Preparation Pattern
-
-**Note**: All parallel execution, review, synthesis, and main agent finalization occur within Step 12 as sub-phases, NOT as separate steps.
-
 ```
 ┌─────────────────────────────────┐
 │  Parallel Implementation Prep    │
@@ -459,11 +460,13 @@ This step contains sub-phases that execute sequentially:
 
 **Important**:
 - Review and synthesis phases execute sequentially AFTER parallel work completes
-- Main agent finalization occurs within Step 12 (no approval gate)
-- All phases in Step 12 are sub-phases within that single workflow step
+- Main agent finalization occurs within Workflow Step 12 (no approval gate)
+- All phases in Workflow Step 12 are sub-phases within that single workflow step
 - This is an autonomous workflow - no user approval needed
 
-## Implementation Plan Structure
+.
+
+## 5. 📋 Implementation Plan Structure
 
 The skill produces `implementation_plan.md` with these sections:
 
@@ -513,9 +516,9 @@ The skill produces `implementation_plan.md` with these sections:
 - Security requirements
 - Accessibility standards
 
----
+.
 
-## ✅ Approval Gates
+## 6. ✅ Approval Gates
 
 This workflow is **autonomous** with NO approval gates:
 
@@ -523,11 +526,11 @@ This workflow is **autonomous** with NO approval gates:
 |------|------|
 | 8-15 | All steps execute autonomously without user approval |
 
-**Note**: This is a fully autonomous workflow designed for continuous execution once prerequisites are met.
+**Note**: This is a fully autonomous workflow designed for continuous execution once prerequisites are met
 
----
+.
 
-## ⚙️ Field Handling
+## 7. ⚙️ Field Handling
 
 This workflow automatically handles empty input fields per sk_p__implementation.yaml:
 
@@ -538,7 +541,7 @@ This workflow automatically handles empty input fields per sk_p__implementation.
   - `feature_branch`: Create new feature branch (auto-create feature-{NNN} aligned with spec folder)
   - `main_branch`: Work on main branch (skip branch creation and commit directly to main)
 - **Empty Handling**: Inherit from planning phase; if unavailable, prompt user
-- **Note**: This field should be inherited from the planning workflow (steps 1-7). If starting implementation independently, prompt user for choice.
+- **Note**: This field should be inherited from the planning workflow (Workflow Steps 1-7). If starting implementation independently, prompt user for choice.
 
 ### spec_id
 - **Derived From**: spec_folder path using pattern `specs/{NNN}` or `specs/{NNN-name}`
@@ -595,13 +598,17 @@ This workflow automatically handles empty input fields per sk_p__implementation.
 - **Default**: `specs/**`
 - **Empty Handling**: Uses default scope policy limiting operations to specs directory
 
-## Inputs
+.
 
-### Required Inputs
+## 8. 📥 Inputs & Outputs
+
+### Inputs
+
+#### Required Inputs
 - **spec_folder**: Location with spec.md and plan.md
 - **request**: Implementation requirements (or uses default)
 
-### Optional Inputs
+#### Optional Inputs
 - **git_branch**: Feature branch name
 - **context**: Additional implementation context
 - **issues**: Known issues to address
@@ -635,7 +642,12 @@ carry out its implementation fully autonomously."
    - Tests and documentation
    - Progressive updates
 
-## Parallel Agent Details
+
+.
+
+## 9. 👥 Implementation Agents & Checkpoints
+
+### 9.1 Parallel Agent Details
 
 ### Core Implementer Output
 ```yaml
@@ -705,14 +717,14 @@ documentation:
       steps: [process]
 ```
 
-## Development Checkpoints
+### 9.2 Development Checkpoints
 
-### Major Change Checkpoint
+#### Major Change Checkpoint
 - Log progress to summary
 - Update task checklist
 - Verify against spec
 
-### Issue Found Checkpoint
+#### Issue Found Checkpoint
 - Document issue and resolution
 - Update implementation plan if needed
 - Continue or escalate
@@ -722,21 +734,27 @@ documentation:
 - Document rationale
 - Update affected documentation
 
-## Chrome DevTools Integration
+.
 
-### Environment Validation
+## 10. 🔗 Integration & Standards
+
+### Chrome DevTools Integration
+
+#### Environment Validation
 - Test API endpoints
 - Verify authentication
 - Check dependencies
 
-### Implementation Testing
+#### Implementation Testing
 - Test in browser
 - Verify network calls
 - Check console output
 - Validate DOM changes
 - Measure performance
 
-## Adaptive Rules
+- Measure performance impact
+
+### 10.2 Adaptive Rules
 
 **Note**: For complete adaptive rule specifications, complexity assessment, technical debt scoring, and testing strategies, see [references/adaptive-rules.md](references/adaptive-rules.md).
 
@@ -755,7 +773,7 @@ documentation:
 - Maintain review/synthesis phases
 - Continue with partial results
 
-## Quality Standards
+### 10.3 Quality Standards
 
 ### Implementation Requirements
 - Follow code_standards.md
@@ -774,8 +792,11 @@ documentation:
 - Edge cases identified
 - Performance benchmarks
 - Security validations
+- Source attribution present
 
-## Performance Characteristics
+.
+
+## 11. ⚡ Performance Characteristics
 
 **Note**: Performance varies based on implementation scope and complexity. Preparation is structured; implementation duration depends on feature requirements.
 
@@ -785,20 +806,25 @@ documentation:
 - **Implementation**: Variable based on scope and complexity
 - **Checkpoints**: Lightweight validation points
 
-## Error Handling
+.
 
-### Retry Policy
+## 12. 🚨 Error Handling
+
+### 12.1 Retry Policy
 - **Targeted retries**: Only failed components
 - **Max attempts**: 2 per agent
 - **Backoff**: Exponential
 
-### Recovery Actions
+### 12.2 Recovery Actions
 - Document blockers
 - Use partial results
 - Manual intervention points
 - Graceful degradation
+- Provide fallback recommendations
 
-## Limitations
+.
+
+## 13. ⚠️ Limitations
 
 - **Prerequisites**: Requires completed spec/plan
 - **Scope**: Limited to defined file scope
@@ -806,7 +832,9 @@ documentation:
 - **Testing**: Browser testing requires staging URL
 - **Complexity**: Best for medium complexity features
 
-## Success Metrics
+.
+
+## 14. 📈 Success Metrics
 
 **Note**: Target quality objectives for implementation execution.
 
@@ -816,16 +844,9 @@ documentation:
 - **Test coverage**: Meets defined targets
 - **Documentation**: Complete and accurate
 
-## Version
+.
 
-**Current Version**: 1.0.0
-**Based On**: sk_p__implementation.yaml
-**Created**: 2025-10-18
-**Architecture**: Parallel preparation → Autonomous implementation
-
----
-
-## References
+## 15. References
 
 - Source: `/b_prompts/github_spec_kit/parallel_agents/sk_p__implementation.yaml`
 - Prerequisites: spec.md, plan.md, planning-summary.md

@@ -1,13 +1,17 @@
 ---
 name: code-performance-improver
-description: Optimize code and application performance through systematic profiling, analysis, and incremental improvements while preserving all functionality. Use when addressing performance bottlenecks, slow load times, high memory usage, or Core Web Vitals issues. Measures baseline metrics, identifies bottlenecks, applies optimizations incrementally, and verifies improvements without regressions.
+description: Optimize code and application performance through systematic profiling, analysis, and incremental improvements while preserving all functionality. Use when addressing performance bottlenecks, slow load times, high memory usage, or Core Web Vitals issues. Measures baseline metrics, identifies bottlenecks, applies optimizations incrementally, and verifies improvements without regressions
 ---
 
 # Performance Improver
-
 Systematically improve application performance through profiling, optimization, and validation while guaranteeing 100% feature preservation.
 
-## When to Use This Skill
+> Change Notes (2025-10-21)
+- Replaced local References with Embedded Reference (Optimization Catalog + Metrics Primer)
+- Normalized workflow headings (whole steps only)
+- Added YAML → Steps Crosswalk; header-only emoji policy enforced
+
+## 1. 🎯 When to Use
 
 **Use this skill when**:
 - Application has slow load times or poor performance
@@ -26,7 +30,9 @@ Systematically improve application performance through profiling, optimization, 
 - Code that doesn't work yet (fix functionality first)
 - Micro-optimizations without measurable impact
 
-## How It Works
+.
+
+## 2. 🛠️ How It Works
 
 This skill follows a 4-step systematic workflow to improve performance while preserving functionality:
 
@@ -35,11 +41,13 @@ This skill follows a 4-step systematic workflow to improve performance while pre
 3. **Optimization** - Apply improvements incrementally with testing
 4. **Verification** - Ensure improvements achieved without regressions
 
-**Core Principle**: "Features first, performance second" - Never break functionality for speed.
+**Core Principle**: "Features first, performance second" - Never break functionality for speed
 
-## Inputs
+.
 
-### Required Inputs
+## 3. 📊 Inputs
+
+### 3.1 Required Inputs
 
 **Request**:
 - **Description**: What needs to be optimized
@@ -50,7 +58,7 @@ This skill follows a 4-step systematic workflow to improve performance while pre
   - "Reduce memory usage"
   - "Fix choppy scrolling"
 
-### Optional Inputs
+### 3.2 Optional Inputs
 
 **Environment** (staging link):
 - **Type**: URL
@@ -84,7 +92,19 @@ This skill follows a 4-step systematic workflow to improve performance while pre
 - **Default**: Identified during baseline measurement
 - **Example**: "LCP > 4s, main thread blocking 800ms"
 
-## Workflow
+.
+
+## YAML → Steps Crosswalk
+
+- Source: b_prompts/code/code_performance_improvement.yaml
+- Mapping:
+  - Step 1 → Gather User Inputs
+  - Step 2 → Baseline Measurement
+  - Step 3 → Analysis
+  - Step 4 → Optimization
+  - Step 5 → Verification
+
+## 4. 🚀 Workflow
 
 ### Step 1: Gather User Inputs
 
@@ -124,8 +144,6 @@ This skill follows a 4-step systematic workflow to improve performance while pre
 - Confirm all inputs with the user
 - Parse and categorize the performance goals
 - Identify likely optimization areas
-
----
 
 ### Step 2: Baseline Measurement
 
@@ -291,9 +309,11 @@ This skill follows a 4-step systematic workflow to improve performance while pre
 
 **Validation**: `all_checks_pass`
 
-## Chrome DevTools Integration
+.
 
-### Performance Profiling
+## 5. 🔍 Chrome DevTools Integration
+
+### 5.1 Performance Profiling
 
 **Steps**:
 1. Open Chrome DevTools (F12)
@@ -310,7 +330,7 @@ This skill follows a 4-step systematic workflow to improve performance while pre
 - JavaScript execution time
 - Render-blocking resources
 
-### Network Analysis
+### 5.2 Network Analysis
 
 **Steps**:
 1. Open Network tab
@@ -326,7 +346,7 @@ This skill follows a 4-step systematic workflow to improve performance while pre
 - Slow TTFB (Time to First Byte)
 - Missing cache headers
 
-### Memory Profiling
+### 5.3 Memory Profiling
 
 **Steps**:
 1. Open Memory tab
@@ -342,7 +362,7 @@ This skill follows a 4-step systematic workflow to improve performance while pre
 - Retained objects after cleanup
 - Memory not released after navigation
 
-### Lighthouse Audit
+### 5.4 Lighthouse Audit
 
 **Steps**:
 1. Open Lighthouse tab
@@ -357,9 +377,36 @@ This skill follows a 4-step systematic workflow to improve performance while pre
 - Opportunities (potential savings)
 - Diagnostics (issues found)
 
-## Preservation Requirements
+### 5.5 Browser Automation Tool Selection
 
-### Mandatory Preservation
+**Strategy**: Follow this decision tree when browser automation or DevTools access is needed:
+
+1. **Chrome DevTools MCP** (Primary choice)
+   - Use available Chrome DevTools MCP servers: `mcp__chrome-devtools__*`
+   - Multiple instances available: `chrome-devtools`, `chrome-devtools-2`, `chrome-devtools-3`, `chrome-devtools-4`
+   - **If conflicts occur**: Try alternate instances (e.g., switch from -2 to -3)
+   - **Why multiple instances**: Each can run with `--isolated` flag to prevent session interference
+   - Common functions: `navigate_page`, `take_snapshot`, `evaluate_script`, `performance_start_trace`
+
+2. **Playwright MCP** (Fallback)
+   - If Chrome DevTools unavailable or fails repeatedly
+   - Use Playwright MCP: `mcp__playwright__*` functions
+   - Functions: `playwright_navigate`, `playwright_evaluate`, `playwright_get_visible_html`
+   - Provides similar automation with different architecture
+
+3. **Code-Focused Analysis** (Final fallback)
+   - If both browser automation MCPs fail or unavailable
+   - Use static analysis: Read, Grep, Glob tools
+   - Infer behavior from code structure and configuration
+   - **Important**: Document assumptions and analysis limitations clearly
+
+**Best Practice**: When browser automation is needed alongside manual development browsing, use an isolated instance to prevent conflicts
+
+.
+
+## 6. 🔒 Preservation Requirements
+
+### 6.1 Mandatory Preservation
 
 **Features**:
 - All functionality remains intact
@@ -380,7 +427,7 @@ This skill follows a 4-step systematic workflow to improve performance while pre
 - Accessibility features intact (ARIA, keyboard, focus)
 - Responsive design maintained
 
-### Testing Protocol
+### 6.2 Testing Protocol
 
 **After Each Change**:
 - Feature still works correctly
@@ -396,9 +443,11 @@ This skill follows a 4-step systematic workflow to improve performance while pre
 - No memory leaks detected
 - Lighthouse score improved or maintained
 
-## Success Criteria
+.
 
-### Performance Success
+## 7. ✅ Success Criteria
+
+### 7.1 Performance Success
 
 **Metrics**:
 - Measurable improvement in target metrics
@@ -407,7 +456,7 @@ This skill follows a 4-step systematic workflow to improve performance while pre
 - User experience noticeably better
 - Lighthouse score improved
 
-### Preservation Success
+### 7.2 Preservation Success
 
 **Requirements**:
 - 100% feature parity confirmed
@@ -416,7 +465,7 @@ This skill follows a 4-step systematic workflow to improve performance while pre
 - No regressions in functionality
 - Cross-browser compatibility maintained
 
-### Quality Success
+### 7.3 Quality Success
 
 **Standards**:
 - Code remains maintainable
@@ -425,7 +474,9 @@ This skill follows a 4-step systematic workflow to improve performance while pre
 - Tests updated if applicable
 - Future-proof improvements
 
-## Output Format
+.
+
+## 8. 📝 Output Format
 
 After completing the workflow, generate a performance optimization report:
 
@@ -482,9 +533,11 @@ After completing the workflow, generate a performance optimization report:
 [Optional: Future optimization opportunities]
 ```
 
-## Rules
+.
 
-### ALWAYS
+## 9. 📖 Rules
+
+### 9.1 ALWAYS
 
 - Measure baseline before any optimization
 - Preserve all features and functionality
@@ -496,7 +549,7 @@ After completing the workflow, generate a performance optimization report:
 - Prioritize high-impact optimizations
 - Apply changes incrementally, not all at once
 
-### NEVER
+### 9.2 NEVER
 
 - Break features for speed gains
 - Optimize without measuring first
@@ -507,7 +560,7 @@ After completing the workflow, generate a performance optimization report:
 - Assume optimization worked without measurement
 - Sacrifice maintainability for micro-optimizations
 
-### ROLLBACK IF
+### 9.3 ROLLBACK IF
 
 - Any feature breaks
 - Animation performance drops below 60 FPS
@@ -517,55 +570,27 @@ After completing the workflow, generate a performance optimization report:
 - Memory usage increases
 - Accessibility is reduced
 
-## Bundled Resources
+.
 
-### References
+## 10. 📚 Embedded Reference
 
-**`references/optimization-catalog.md`** (~600 lines):
-- **Purpose**: Exhaustive catalog of 60+ optimization techniques with implementation examples
-- **When to Load**: When applying specific optimization or need detailed examples
-- **Contents**:
-  - Code optimizations (lazy loading, code splitting, tree shaking, debouncing, memoization, virtual scrolling)
-  - Asset optimizations (image compression, WebP/AVIF, responsive images, font optimization, CSS optimization)
-  - Runtime optimizations (layout batching, requestAnimationFrame, Web Workers, request batching)
-  - Caching strategies (browser cache, service workers, CDN)
-  - Quick reference matrix with complexity/impact assessment
+- No External References: This skill is self-contained. Cite only knowledge/*.md when needed.
 
-**`references/metrics-deep-dive.md`** (~450 lines):
-- **Purpose**: Comprehensive guide to all performance metrics and measurement techniques
-- **When to Load**: When interpreting metrics, setting up measurement, or understanding Core Web Vitals
-- **Contents**:
-  - Core Web Vitals detailed breakdown (LCP, FCP, CLS, FID, INP, TTI, TBT)
-  - Performance API usage (Navigation Timing, Resource Timing, User Timing)
-  - Real User Monitoring (RUM) implementation
-  - Custom metrics creation (long tasks, memory, FPS)
-  - Performance budgets and scoring
-  - Percentile analysis (why P75 matters)
+### Optimization Catalog (condensed)
+- Code: lazy loading, code splitting, tree shaking, debouncing/throttling, memoization, virtual scrolling.
+- Assets: image compression/resizing/WebP/AVIF, font subsetting/font-display, CSS cleanup/minify.
+- Runtime: layout batching, requestAnimationFrame, Web Workers, request batching, efficient selectors.
+- Caching: cache headers, service workers, CDN, API response caching.
 
-**`references/devtools-performance.md`** (~350 lines):
-- **Purpose**: Step-by-step Chrome DevTools workflows for performance profiling
-- **When to Load**: When using Chrome DevTools for profiling, network analysis, or memory debugging
-- **Contents**:
-  - Performance tab workflow (recording, flame chart analysis, bottleneck identification)
-  - Network tab workflow (waterfall analysis, critical resource identification)
-  - Memory tab workflow (heap snapshots, memory leak detection)
-  - Lighthouse workflow (running audits, interpreting results)
-  - Rendering tab tools (paint flashing, layout shift regions, FPS monitoring)
-  - Coverage tab workflow (unused code identification)
-  - Keyboard shortcuts and settings
+### Metrics Primer
+- Core Web Vitals: LCP, FCP, CLS, INP/TTI/TBT basics.
+- Profiling: DevTools Performance/Network/Memory/Lighthouse workflows.
 
----
+See knowledge/animation_strategy.md and knowledge/webflow_platform_constraints.md for context impacting performance patterns.
 
-## Version Information
+.
 
-**Current Version**: 1.0.0
-**Created**: 2025-10-18
-**Based On**: `code_performance_improvement.yaml`
-**Compatible With**: Chrome DevTools, Lighthouse, Web Performance APIs
-
----
-
-## Performance Philosophy
+## 11. 💡 Performance Philosophy
 
 **Core Principle**: "Features first, performance second"
 

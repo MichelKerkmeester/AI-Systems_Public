@@ -1,10 +1,12 @@
-# Adaptive Rules for Implementation Execution
+# Adaptive Rules for Implementation Execution - Context-Aware Adaptation
 
-Rules and strategies for adapting parallel implementation preparation and autonomous development based on code complexity, technical debt, and implementation risk.
+Rules to adapt implementation depth and execution mode based on complexity, debt, and risk.
 
-## Implementation Complexity Assessment
+---
 
-### Complexity Factors
+## 1. 📊 Implementation Complexity Assessment
+
+### 1.1 Complexity Factors
 
 ```yaml
 complexity_factors:
@@ -47,7 +49,7 @@ complexity_factors:
       high: extensive
 ```
 
-### Complexity Score Calculation
+### 1.2 Complexity Score Calculation
 
 ```python
 def calculate_implementation_complexity(factors):
@@ -74,9 +76,11 @@ def calculate_implementation_complexity(factors):
     return score * 33.33  # Normalize to 0-100
 ```
 
-## Technical Debt Assessment
+.
 
-### Debt Indicators
+## 2. ⚠️ Technical Debt Assessment
+
+### 2.1 Debt Indicators
 
 ```yaml
 technical_debt:
@@ -109,7 +113,7 @@ technical_debt:
       complex: >3_steps
 ```
 
-### Debt Score Calculation
+### 2.2 Debt Score Calculation
 
 ```python
 def calculate_technical_debt(indicators):
@@ -134,9 +138,11 @@ def calculate_technical_debt(indicators):
     return score * 33.33  # Normalize to 0-100
 ```
 
-## Adaptive Strategies
+.
 
-### Based on Implementation Complexity
+## 3. 🔄 Adaptive Strategies
+
+### 3.1 Based on Implementation Complexity
 
 #### Low Complexity (0-30)
 ```yaml
@@ -181,7 +187,7 @@ strategy:
     - rollback_planning
 ```
 
-### Based on Technical Debt
+### 3.2 Based on Technical Debt
 
 #### Low Debt (0-30)
 ```yaml
@@ -222,9 +228,12 @@ strategy:
     - extensive_migration_support
 ```
 
-## Execution Modes
+.
 
-### Mode 1: Standard Implementation (Default)
+## 4. ⚙️ Execution Modes
+
+### 4.1 Mode 1: Standard Implementation (Default)
+
 ```yaml
 configuration:
   preparation: [core, integrations, tests, docs]
@@ -235,7 +244,8 @@ configuration:
   when: complexity < 60 AND debt < 40
 ```
 
-### Mode 2: Incremental Implementation
+### 4.2 Mode 2: Incremental Implementation
+
 ```yaml
 configuration:
   preparation: sequential_detailed
@@ -246,7 +256,8 @@ configuration:
   when: complexity > 70 OR debt > 60
 ```
 
-### Mode 3: Prototype-First
+### 4.3 Mode 3: Prototype-First
+
 ```yaml
 configuration:
   preparation: minimal
@@ -257,7 +268,8 @@ configuration:
   when: high_uncertainty OR new_technology
 ```
 
-### Mode 4: Refactor-Then-Implement
+### 4.4 Mode 4: Refactor-Then-Implement
+
 ```yaml
 configuration:
   preparation: extensive_analysis
@@ -268,9 +280,11 @@ configuration:
   when: debt > 70 OR legacy_codebase
 ```
 
-## Dynamic Adjustments
+.
 
-### Runtime Monitoring
+## 5. 🎯 Dynamic Adjustments
+
+### 5.1 Runtime Monitoring
 
 ```python
 class ImplementationMonitor:
@@ -292,7 +306,7 @@ class ImplementationMonitor:
             self.consider_simplification()
 ```
 
-### Progressive Implementation
+### 5.2 Progressive Implementation
 
 ```yaml
 implementation_phases:
@@ -321,9 +335,11 @@ implementation_phases:
     checkpoint: required
 ```
 
-## Fallback Strategies
+.
 
-### Graceful Degradation Path
+## 6. 🛡️ Fallback Strategies
+
+### 6.1 Graceful Degradation Path
 
 ```
 1. Full Autonomous Implementation
@@ -339,7 +355,7 @@ implementation_phases:
 6. Document Blockers + Manual Handoff
 ```
 
-### Recovery Actions
+### 6.2 Recovery Actions
 
 ```yaml
 on_test_failure:
@@ -371,9 +387,11 @@ on_complexity_spike:
   - refactor_incrementally
 ```
 
-## Optimization Rules
+.
 
-### Pre-implementation Optimization
+## 7. 🚀 Optimization Rules
+
+### 7.1 Pre-implementation Optimization
 
 ```python
 def optimize_before_implementation(context):
@@ -393,7 +411,7 @@ def optimize_before_implementation(context):
         return 'standard_autonomous'
 ```
 
-### Code Quality Gates
+### 7.2 Code Quality Gates
 
 ```python
 def quality_gates(code):
@@ -409,9 +427,11 @@ def quality_gates(code):
     return passed, gates
 ```
 
-## Testing Strategy Adaptation
+.
 
-### Test Coverage Targets
+## 8. 🧪 Testing Strategy Adaptation
+
+### 8.1 Test Coverage Targets
 
 ```yaml
 coverage_by_complexity:
@@ -431,7 +451,7 @@ coverage_by_complexity:
     e2e: comprehensive
 ```
 
-### Test Priority Matrix
+### 8.2 Test Priority Matrix
 
 ```python
 def prioritize_tests(component):
@@ -451,9 +471,12 @@ def prioritize_tests(component):
     return sorted(tests, key=lambda t: t.priority)
 ```
 
-## Configuration Examples
+.
 
-### Example 1: Simple Feature Addition
+## 9. 📋 Configuration Examples
+
+### 9.1 Example 1: Simple Feature Addition
+
 ```yaml
 detected:
   complexity: 25
@@ -469,7 +492,8 @@ applied_rules:
   documentation: inline
 ```
 
-### Example 2: Complex Integration
+### 9.2 Example 2: Complex Integration
+
 ```yaml
 detected:
   complexity: 85
@@ -490,7 +514,8 @@ applied_rules:
     - monitoring
 ```
 
-### Example 3: Legacy Refactoring
+### 9.3 Example 3: Legacy Refactoring
+
 ```yaml
 detected:
   complexity: 60
@@ -510,9 +535,11 @@ applied_rules:
     - migration_tooling
 ```
 
-## Success Metrics
+.
 
-### Implementation Quality Metrics
+## 10. ✅ Success Metrics
+
+### 10.1 Implementation Quality Metrics
 
 ```yaml
 metrics:
@@ -541,23 +568,28 @@ metrics:
     measure: successful_checkpoints / total_checkpoints
 ```
 
-## Best Practices
+.
 
-### DO:
+## 11. ⭐ Best Practices
+
+### 11.1 DO:
+
 - Write tests before implementation
 - Commit after each module
 - Add inline documentation
 - Use type hints/annotations
 - Handle errors explicitly
 
-### DON'T:
+### 11.2 DON'T:
+
 - Skip test writing
 - Ignore linter warnings
 - Leave TODOs uncommitted
 - Over-engineer solutions
 - Ignore performance implications
 
-### ALWAYS:
+### 11.3 ALWAYS:
+
 - Follow code standards
 - Run tests before commit
 - Update documentation

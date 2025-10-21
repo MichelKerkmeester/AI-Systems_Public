@@ -1,13 +1,17 @@
 ---
 name: speckit-complete
-description: Execute the complete 14-step SpecKit workflow with 18 specialized sub-agents running in 3 parallel stages. Implements the full sk_p__complete.yaml workflow with approval gates, review/synthesis phases, and adaptive rules for complexity handling.
+description: Execute the complete 14-step SpecKit workflow with 18 specialized sub-agents running in 3 parallel stages. Implements the full sk_p__complete.yaml workflow with approval gates, review/synthesis phases, and adaptive rules for complexity handling
 ---
 
 # SpecKit Parallel Complete
+Full 14-Step Workflow Orchestration
 
-Execute the complete SpecKit workflow with parallel sub-agent orchestration as defined in the sk_p__complete.yaml specification.
+> Change Notes (2025-10-21)
+- Removed 4.x sub-step numbering across Workflow Steps
+- Standardized headers and header-only emoji usage
+- Added YAML → Steps Crosswalk; preserved stage semantics and approval gates
 
-## When to Use This Skill
+## 1. 🎯 When to Use
 
 **Use this skill when**:
 - SpecKit commands need to execute their underlying parallel workflows
@@ -21,7 +25,9 @@ Execute the complete SpecKit workflow with parallel sub-agent orchestration as d
 - Single-agent tasks
 - Sequential workflows without parallelization needs
 
-## 🚀 Quick Command Reference
+.
+
+## 2. 🚀 Quick Command Reference
 
 **Complete 14-Step Workflow** with 3 Parallel Stages:
 
@@ -44,7 +50,9 @@ Execute the complete SpecKit workflow with parallel sub-agent orchestration as d
 
 **⚠️ Manual Control**: This workflow requires **14 approval gates** (one after each step)
 
-## Architecture Overview
+.
+
+## 3. 🏗️ Architecture Overview
 
 This skill implements the complete 14-step workflow with 18 specialized sub-agents organized into 3 parallel execution stages.
 
@@ -65,7 +73,28 @@ This skill implements the complete 14-step workflow with 18 specialized sub-agen
 13. **Completion** - Document changes
 14. **Branch Integration** - Merge to main
 
-## Workflow Steps (Detailed Execution)
+.
+
+## YAML → Steps Crosswalk
+
+- Source: b_prompts/github_spec_kit/parallel_agents/sk_p__complete.yaml
+- Mapping:
+  - Step 1 → Request Analysis
+  - Step 2 → Pre-work Review
+  - Step 3 → Specification (/speckit.specify)
+  - Step 4 → Clarification (/speckit.clarify)
+  - Step 5 → Quality Checklist (/speckit.checklist)
+  - Step 6 → Parallel Planning (Stage A)
+  - Step 7 → Task Breakdown (/speckit.tasks)
+  - Step 8 → Analysis (/speckit.analyze)
+  - Step 9 → Parallel Implementation Prep (Stage B)
+  - Step 10 → Implementation Check (/speckit.implement)
+  - Step 11 → Development
+  - Step 12 → Parallel Quality Review (Stage C)
+  - Step 13 → Completion
+  - Step 14 → Branch Integration
+
+## 4. 📝 Workflow Steps
 
 This section provides step-by-step execution guidance as defined in sk_p__complete.yaml.
 
@@ -130,8 +159,6 @@ This section provides step-by-step execution guidance as defined in sk_p__comple
 
 **Approval Gate**: "All inputs collected. Branch strategy: {branch_strategy} on {git_branch}. Spec folder: {spec_folder}. Proceed to pre-work review?"
 
----
-
 ### Step 2: Pre-work Review
 
 **Action**: Review required documents
@@ -146,8 +173,6 @@ This section provides step-by-step execution guidance as defined in sk_p__comple
 **Validation**: `principles_established`
 
 **Approval Gate**: "Pre-work documentation reviewed. Proceed to specification?"
-
----
 
 ### Step 3: Specification
 
@@ -166,8 +191,6 @@ This section provides step-by-step execution guidance as defined in sk_p__comple
 - Navigate → Snapshot → Analyze → Document
 
 **Approval Gate**: "Specification created. Review spec.md and approve to proceed to clarification?"
-
----
 
 ### Step 4: Clarification
 
@@ -188,8 +211,6 @@ This section provides step-by-step execution guidance as defined in sk_p__comple
 
 **Approval Gate**: "Requirements clarified. Proceed to quality checklist?"
 
----
-
 ### Step 5: Quality Checklist
 
 **Command**: `/speckit.checklist`
@@ -202,8 +223,6 @@ This section provides step-by-step execution guidance as defined in sk_p__comple
 **Validation**: `checklist_generated`
 
 **Approval Gate**: "Quality checklist complete. Proceed to planning parallel block?"
-
----
 
 ### Step 6: Parallel Planning Block (Stage A)
 
@@ -266,8 +285,6 @@ This step contains sub-phases that execute sequentially:
 
 **Approval Gate**: "Planning artifacts synthesized. Approve to proceed to task breakdown?"
 
----
-
 ### Step 7: Task Breakdown
 
 **Command**: `/tasks`
@@ -282,8 +299,6 @@ This step contains sub-phases that execute sequentially:
 **Validation**: `tasks_actionable`
 
 **Approval Gate**: "Tasks broken down. Review checklist.md and approve to proceed to analysis?"
-
----
 
 ### Step 8: Analysis
 
@@ -304,8 +319,6 @@ This step contains sub-phases that execute sequentially:
 - Focus: ui_consistency, functionality_gaps, performance_baseline
 
 **Approval Gate**: "Analysis complete. Review consistency report and approve to proceed to implementation parallel prep?"
-
----
 
 ### Step 9: Parallel Implementation Prep (Stage B)
 
@@ -367,8 +380,6 @@ This step contains sub-phases that execute sequentially:
 
 **Approval Gate**: "Implementation plan synthesized. Approve to proceed to implementation check?"
 
----
-
 ### Step 10: Implementation Check
 
 **Command**: `/implement [task-id]`
@@ -388,8 +399,6 @@ This step contains sub-phases that execute sequentially:
 **Approval Gate**: "Implementation prerequisites verified. APPROVE TO BEGIN CODE IMPLEMENTATION?"
 
 **Warning**: "This will begin actual code changes"
-
----
 
 ### Step 11: Development
 
@@ -422,8 +431,6 @@ This step contains sub-phases that execute sequentially:
 - Measure performance impact
 
 **Approval Gate**: "Development complete. Proceed to quality parallel review before completion?"
-
----
 
 ### Step 12: Parallel Quality Review (Stage C)
 
@@ -479,8 +486,6 @@ This step contains sub-phases that execute sequentially:
 
 **Approval Gate**: "Quality review complete. Approve to proceed to completion summary?"
 
----
-
 ### Step 13: Completion
 
 **Action**: Document changes and create summary
@@ -503,8 +508,6 @@ This step contains sub-phases that execute sequentially:
 - Staging verified: true
 
 **Approval Gate**: "Implementation summary complete. Approve to finalize workflow?"
-
----
 
 ### Step 14: Branch Integration
 
@@ -543,7 +546,9 @@ This step contains sub-phases that execute sequentially:
 
 **Termination**: Workflow ends after this step (or after Step 13 if main_branch was selected)
 
-### The 18 Sub-Agents
+.
+
+## 5. ⚙️ Agent Coordination
 
 **Note**: For complete sub-agent role definitions and output specifications, see [references/sub-agents.md](references/sub-agents.md).
 
@@ -571,7 +576,9 @@ This step contains sub-phases that execute sequentially:
 17. Lead Reviewer C
 18. Lead Synthesizer C
 
-## Execution Model
+.
+
+## 6. 🔄 Execution Model
 
 ### Parallel Block Pattern
 
@@ -602,11 +609,15 @@ Each parallel stage follows this pattern:
 └─────────────────────────────────┘
 ```
 
-## Stage A: Planning/Spec (Step 6)
+.
+
+## 7. 📊 Stage Definitions
+
+### 7.1 Stage A: Planning/Spec (Step 6)
 
 **Note**: This stage executes as part of the workflow's step 6 parallel planning block. The association with `/speckit.plan` is inferred from workflow context.
 
-### Sub-Agents
+#### Sub-Agents
 
 **Requirements Analyst**:
 - Extracts functional requirements
@@ -632,7 +643,7 @@ Each parallel stage follows this pattern:
 - Provides effort ranges
 - Documents assumptions
 
-### Review & Synthesis
+#### Review & Synthesis
 
 **Lead Reviewer A**:
 - Reconciles conflicting recommendations
@@ -646,15 +657,15 @@ Each parallel stage follows this pattern:
 - Integrates all findings
 - Ensures coherence
 
-### Outputs
+#### Outputs
 - `[SPEC_FOLDER]/plan.md`
 - `[SPEC_FOLDER]/planning-summary.md`
 
-## Stage B: Implementation Prep (Step 9)
+### 7.2 Stage B: Implementation Prep (Step 9)
 
 **Note**: This stage executes as part of the workflow's step 9 parallel implementation preparation block. Runs before actual implementation begins.
 
-### Sub-Agents
+#### Sub-Agents
 
 **Core Implementer**:
 - Defines modules
@@ -680,7 +691,7 @@ Each parallel stage follows this pattern:
 - Prepares migration guides
 - API documentation
 
-### Review & Synthesis
+#### Review & Synthesis
 
 **Integration Reviewer B**:
 - Ensures API coherence
@@ -694,14 +705,14 @@ Each parallel stage follows this pattern:
 - Synthesizes strategies
 - Ensures alignment
 
-### Outputs
+#### Outputs
 - `[SPEC_FOLDER]/implementation_plan.md`
 
-## Stage C: Quality Review (Step 12)
+### 7.3 Stage C: Quality Review (Step 12)
 
 **Note**: This stage executes as part of the workflow's step 12 parallel quality review block. Provides comprehensive quality validation after development.
 
-### Sub-Agents
+#### Sub-Agents
 
 **Completeness Reviewer**:
 - Checks coverage gaps
@@ -727,7 +738,7 @@ Each parallel stage follows this pattern:
 - Validates references
 - Ensures traceability
 
-### Review & Synthesis
+#### Review & Synthesis
 
 **Lead Reviewer C**:
 - Assesses severity
@@ -741,12 +752,12 @@ Each parallel stage follows this pattern:
 - Generates recommendations
 - Provides summary
 
-### Outputs
+#### Outputs
 - `[SPEC_FOLDER]/quality_report.md`
 
----
+.
 
-## ✅ Approval Gates
+## 8. ✅ Approval Gates
 
 Each step has a mandatory approval gate per sk_p__complete.yaml:
 
@@ -769,9 +780,13 @@ Each step has a mandatory approval gate per sk_p__complete.yaml:
 
 **Note**: All 14 approval gates require explicit user confirmation before proceeding.
 
----
+.
 
-## ⚙️ Field Handling
+## 9. ⚙️ Adaptive Rules & Field Handling
+
+### 9.1 Adaptive Rules
+
+**Note**: For detailed adaptive rule specifications and decision trees, see [references/adaptive-rules.md](references/adaptive-rules.md).
 
 This workflow automatically handles empty input fields per sk_p__complete.yaml:
 
@@ -832,60 +847,23 @@ This workflow automatically handles empty input fields per sk_p__complete.yaml:
   2. Create feature-{spec_id} if not exists
   3. Checkout feature branch
 - **Skip When**: `branch_strategy == main_branch`
-| 1→2 | "Requirements analyzed. Proceed to pre-work review?" |
-| 2→3 | "Pre-work documentation reviewed. Proceed to specification?" |
-| 3→4 | "Specification created. Review spec.md and approve to proceed?" |
-| 4→5 | "Requirements clarified. Proceed to quality checklist?" |
-| 5→6 | "Quality checklist complete. Proceed to planning parallel block?" |
-| 6→7 | "Planning artifacts synthesized. Approve to proceed to task breakdown?" |
-| 7→8 | "Tasks broken down. Review and approve to proceed to analysis?" |
-| 8→9 | "Analysis complete. Approve to proceed to implementation prep?" |
-| 9→10 | "Implementation plan synthesized. Approve to proceed?" |
-| 10→11 | "Prerequisites verified. APPROVE TO BEGIN CODE IMPLEMENTATION?" |
-| 11→12 | "Development complete. Proceed to quality review?" |
-| 12→13 | "Quality review complete. Approve to proceed to completion?" |
-| 13→14 | "Implementation summary complete. Approve to finalize?" |
-| 14 | "All checks passed. Push to main now?" |
 
-## Adaptive Rules
+### 9.2 Field Handling
 
-**Note**: For detailed adaptive rule specifications and decision trees, see [references/adaptive-rules.md](references/adaptive-rules.md).
-
-### High Complexity
-When complexity is high:
-- Reduce concurrency from 3 to 2
-- Increase review depth to exhaustive
-- Add discovery microsteps
-- Use effort ranges instead of point estimates
-
-### High Uncertainty
-When uncertainty is high:
-- Insert discovery steps before parallel blocks
-- Add validation checkpoints
-- Increase clarification depth
-- Document assumptions explicitly
-
-### Fallback Strategy
-If parallel execution fails:
-- Run tasks sequentially
-- Maintain review and synthesis phases
-- Document degraded mode
-- Continue with partial results
-
-## Field Handling
-
-### Auto-Creation
+#### Auto-Creation
 - **git_branch**: Auto-create `feature-{NNN}` from highest +001
 - **spec_folder**: Auto-create `specs/{NNN}` from highest +001
 - **context**: Infer from request and staging link
 - **issues**: Discover during workflow execution
 
-### Scope Policy
+#### Scope Policy
 - **Default**: `specs/**`
 - **Enforcement**: Limit file operations to scope
 - **Validation**: Block operations outside scope
 
-## Integration Points
+.
+
+## 10. 🔗 Integration Points
 
 ### With speckit-command-guide
 - Command guide recommends commands
@@ -902,7 +880,9 @@ If parallel execution fails:
 - Review artifacts between stages
 - Manual fixes for identified issues
 
-## Performance Characteristics
+.
+
+## 11. ⚡ Performance Characteristics
 
 **Note**: Performance varies based on system resources, complexity, and agent response efficiency.
 
@@ -912,7 +892,7 @@ If parallel execution fails:
 - **Stage C**: Parallel execution of 4 quality reviewers + review + synthesis
 - **Orchestration**: Minimal overhead for coordination between stages
 
-## Error Handling
+## 12. 🚨 Error Handling
 
 ### Retry Policy
 - **Targeted retries**: Only failed agents
@@ -925,14 +905,18 @@ If parallel execution fails:
 - **Synthesis failure**: Use partial results
 - **Approval rejection**: Document and stop
 
-## Limitations
+.
+
+## 13. ⚠️ Limitations
 
 - **Requires parallel execution support**: Falls back to sequential if unavailable
 - **Memory intensive**: 18 agents require significant context
 - **Approval gates mandatory**: Cannot skip user confirmations
 - **English only**: Agent prompts and outputs in English
 
-## Success Metrics
+.
+
+## 14. 📈 Success Metrics
 
 **Note**: Target quality metrics for workflow execution. These represent ideal performance goals.
 
@@ -941,16 +925,9 @@ If parallel execution fails:
 - **Synthesis quality**: >90% coherence score
 - **Approval rate**: >80% first-time approvals
 
-## Version
+.
 
-**Current Version**: 1.0.0
-**Based On**: sk_p__complete.yaml
-**Created**: 2025-10-18
-**Architecture**: Parallel sub-agent orchestration
-
----
-
-## References
+## 15. References
 
 - `references/sub-agents.md` - Detailed sub-agent definitions
 - `references/parallel-stages.md` - Stage orchestration patterns

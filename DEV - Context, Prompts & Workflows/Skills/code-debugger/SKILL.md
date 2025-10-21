@@ -1,13 +1,17 @@
 ---
 name: code-debugger
-description: Systematically reproduce, diagnose, fix, and verify bugs through evidence-based investigation and root cause analysis. Use when investigating unexpected behavior, runtime errors, visual glitches, or functionality issues. Reproduces bugs reliably, identifies root causes with evidence, implements minimal fixes, and verifies complete resolution without regressions.
+description: Systematically reproduce, diagnose, fix, and verify bugs through evidence-based investigation and root cause analysis. Use when investigating unexpected behavior, runtime errors, visual glitches, or functionality issues. Reproduces bugs reliably, identifies root causes with evidence, implements minimal fixes, and verifies complete resolution without regressions
 ---
 
 # Code Debugger
+Systematic Bug Investigation & Resolution
 
-Expert debugging through systematic reproduction, evidence-based diagnosis, minimal fixes, and comprehensive verification.
+> Change Notes (2025-10-21)
+- Replaced local References with Embedded Reference quick catalogs
+- Normalized workflow headings (whole steps only)
+- Added YAML → Steps Crosswalk; header-only emoji policy enforced
 
-## When to Use This Skill
+## 1. 🎯 When to Use
 
 **Use this skill when**:
 - Bug reports from users or QA
@@ -26,7 +30,7 @@ Expert debugging through systematic reproduction, evidence-based diagnosis, mini
 - Preventive code quality improvements (use code-pattern-validator)
 - Design changes or enhancements
 
-## How It Works
+## 2. 🛠️ How It Works
 
 This skill follows a 4-step systematic debugging workflow:
 
@@ -39,9 +43,9 @@ This skill follows a 4-step systematic debugging workflow:
 
 **Approach**: Systematic elimination with evidence at every step
 
-## Inputs
+## 3. 📊 Inputs
 
-### Required Inputs
+### 3.1 Required Inputs
 
 **Request**:
 - **Description**: Bug to investigate and fix
@@ -52,7 +56,7 @@ This skill follows a 4-step systematic debugging workflow:
   - "Animation is choppy on mobile"
   - "Memory leak after navigation"
 
-### Optional Inputs
+### 3.2 Optional Inputs
 
 **Environment** (staging link):
 - **Type**: URL
@@ -86,7 +90,17 @@ This skill follows a 4-step systematic debugging workflow:
 - **Default**: Parsed from request if available
 - **Example**: "TypeError: Cannot read property 'close' of null at modal.js:42"
 
-## Workflow
+## YAML → Steps Crosswalk
+
+- Source: b_prompts/code/code_debugger.yaml
+- Mapping:
+  - Step 1 → Gather User Inputs
+  - Step 2 → Reproduce
+  - Step 3 → Diagnose
+  - Step 4 → Fix
+  - Step 5 → Verify
+
+## 4. 🚀 Workflow
 
 ### Step 1: Gather User Inputs
 
@@ -126,8 +140,6 @@ This skill follows a 4-step systematic debugging workflow:
 - Confirm all inputs with the user
 - Parse and categorize the bug information
 - Identify likely affected areas
-
----
 
 ### Step 2: Reproduce
 
@@ -425,7 +437,7 @@ function fixed_code() {
 
 **Final Validation**: `all_tests_pass`
 
-## Debug Modes
+## 5. 🧩 Debug Modes
 
 Select appropriate mode based on issue complexity:
 
@@ -468,7 +480,7 @@ Select appropriate mode based on issue complexity:
 
 **Example**: Race condition, timing issue, memory leak, state management bug
 
-### Performance Mode
+### 5.4 Performance Mode
 
 **When to Use**:
 - Speed or memory issues
@@ -480,9 +492,9 @@ Select appropriate mode based on issue complexity:
 
 **Example**: Slow rendering, memory growth, janky animations
 
-## Diagnostic Toolkit
+## 6. 🔍 Diagnostic Toolkit
 
-### Browser Issues
+### 6.1 Browser Issues
 
 **Tools**:
 - DevTools Console: JavaScript errors and logs
@@ -497,7 +509,7 @@ Select appropriate mode based on issue complexity:
 - `CORS error`: Cross-origin request blocked
 - `Uncaught ReferenceError`: Variable not defined
 
-### Backend Issues
+### 6.2 Backend Issues
 
 **Investigation**:
 - Server logs analysis
@@ -505,7 +517,7 @@ Select appropriate mode based on issue complexity:
 - API endpoint testing (Postman, curl)
 - Request/response validation
 
-### State Issues
+### 6.3 State Issues
 
 **Investigation**:
 - Component state inspection (React DevTools)
@@ -513,7 +525,7 @@ Select appropriate mode based on issue complexity:
 - Local storage review
 - Session data analysis
 
-### Timing Issues
+### 6.4 Timing Issues
 
 **Investigation**:
 - Race condition detection
@@ -521,9 +533,9 @@ Select appropriate mode based on issue complexity:
 - Event order verification
 - Debouncing/throttling checks
 
-## Chrome DevTools Integration
+### 6.5 Chrome DevTools Integration
 
-### Essential Actions
+#### Essential Actions
 
 **Navigate to Environment**:
 1. Open staging URL in Chrome
@@ -557,7 +569,7 @@ Select appropriate mode based on issue complexity:
 5. Step through execution
 6. Inspect variables
 
-### Evidence Capture
+#### Evidence Capture
 
 **Screenshots**:
 - Use DevTools screenshot (Cmd+Shift+P → "screenshot")
@@ -569,7 +581,32 @@ Select appropriate mode based on issue complexity:
 - Network HAR: Network tab → Export HAR
 - Performance profile: Performance tab → Save profile
 
-## Output Format
+### 6.6 Browser Automation Tool Selection
+
+**Strategy**: Follow this decision tree when browser automation or DevTools access is needed:
+
+1. **Chrome DevTools MCP** (Primary choice)
+   - Use available Chrome DevTools MCP servers: `mcp__chrome-devtools__*`
+   - Multiple instances available: `chrome-devtools`, `chrome-devtools-2`, `chrome-devtools-3`, `chrome-devtools-4`
+   - **If conflicts occur**: Try alternate instances (e.g., switch from -2 to -3)
+   - **Why multiple instances**: Each can run with `--isolated` flag to prevent session interference
+   - Common functions: `navigate_page`, `take_snapshot`, `evaluate_script`, `list_console_messages`
+
+2. **Playwright MCP** (Fallback)
+   - If Chrome DevTools unavailable or fails repeatedly
+   - Use Playwright MCP: `mcp__playwright__*` functions
+   - Functions: `playwright_navigate`, `playwright_evaluate`, `playwright_get_visible_html`
+   - Provides similar automation with different architecture
+
+3. **Code-Focused Analysis** (Final fallback)
+   - If both browser automation MCPs fail or unavailable
+   - Use static analysis: Read, Grep, Glob tools
+   - Infer behavior from code structure and configuration
+   - **Important**: Document assumptions and analysis limitations clearly
+
+**Best Practice**: When browser automation is needed alongside manual development browsing, use an isolated instance to prevent conflicts
+
+## 7. ✅ Output Format
 
 After completing the workflow, generate a bug fix report:
 
@@ -623,9 +660,9 @@ After completing the workflow, generate a bug fix report:
 [Optional: Preventive measures to add]
 ```
 
-## Rules
+## 8. 📖 Rules
 
-### ALWAYS
+### 8.1 ALWAYS
 
 - Reproduce the bug reliably before attempting to fix
 - Find root cause with evidence (not assumptions)
@@ -637,7 +674,7 @@ After completing the workflow, generate a bug fix report:
 - Capture evidence (errors, logs, screenshots)
 - Fix the cause, not the symptom
 
-### NEVER
+### 8.2 NEVER
 
 - Fix symptoms without understanding root cause
 - Apply fixes without testing first
@@ -648,7 +685,7 @@ After completing the workflow, generate a bug fix report:
 - Introduce regressions for a fix
 - Skip documentation for complex fixes
 
-### ESCALATE IF
+### 8.3 ESCALATE IF
 
 - Cannot reproduce the issue consistently
 - Root cause remains unclear after investigation
@@ -658,9 +695,9 @@ After completing the workflow, generate a bug fix report:
 - Affects critical production systems
 - Need domain expertise not available
 
-## Troubleshooting
+## 9. 🛠️ Troubleshooting
 
-### Cannot Reproduce Bug
+### 9.1 Cannot Reproduce Bug
 
 **Actions**:
 - Verify environment matches reported conditions
@@ -669,7 +706,7 @@ After completing the workflow, generate a bug fix report:
 - Try different data states
 - Check if already fixed in newer version
 
-### Multiple Potential Causes
+### 9.2 Multiple Potential Causes
 
 **Actions**:
 - List all hypotheses
@@ -678,7 +715,7 @@ After completing the workflow, generate a bug fix report:
 - Eliminate one at a time
 - May be multiple bugs (fix separately)
 
-### Intermittent Bug
+### 9.3 Intermittent Bug
 
 **Actions**:
 - Increase reproduction attempts
@@ -688,7 +725,7 @@ After completing the workflow, generate a bug fix report:
 - Add extensive logging
 - Use performance profiling
 
-### Fix Doesn't Work
+### 9.4 Fix Doesn't Work
 
 **Actions**:
 - Re-verify root cause
@@ -697,65 +734,19 @@ After completing the workflow, generate a bug fix report:
 - Check for competing code paths
 - Review for logical errors in fix
 
-## Bundled Resources
+## 10. 📚 Embedded Reference
 
-### References
+- No External References: This skill is self-contained. Cite only knowledge/*.md when needed.
 
-**`references/bug-patterns.md`** (~500 lines):
-- **Purpose**: Comprehensive catalog of common bug patterns with diagnosis and fix strategies
-- **When to Load**: When diagnosing specific bug type or need pattern matching
-- **Contents**:
-  - Null/undefined errors (property access, function calls)
-  - Race conditions (async data timing, stale closures)
-  - Memory leaks (event listeners, timers not cleared)
-  - State management bugs (direct mutations, async updates)
-  - DOM manipulation bugs (wrong selectors, timing issues)
-  - Network/API bugs (CORS errors, JSON parsing failures)
-  - Animation/timing bugs (jank, requestAnimationFrame usage)
-  - Quick diagnosis checklist
-  - Bug pattern priority matrix
+### Quick Catalogs
 
-**`references/debugging-techniques.md`** (~400 lines):
-- **Purpose**: Advanced systematic debugging methodologies
-- **When to Load**: When dealing with complex bugs requiring advanced techniques
-- **Contents**:
-  - Binary search debugging (isolating bugs in large codebases)
-  - Hypothesis testing framework (systematic investigation)
-  - Git bisect for regressions (finding when bug introduced)
-  - Root cause analysis (5 Whys, causal chain analysis)
-  - Logging strategies (strategic placement, structured logging, conditional logging)
-  - Rubber duck debugging
-  - Time-travel debugging (DevTools, React/Redux)
-  - Divide and conquer approach
-  - Checklist-driven debugging
+- Common Bug Patterns: Null/undefined access, race conditions, memory leaks, state bugs, DOM timing issues, network/API failures, animation jank.
+- DevTools Workflows: Console, Network, Elements, Sources, Performance; breakpoints (line, conditional, DOM, XHR/event); watch expressions; call stack; HAR/profile export.
+- Diagnostic Techniques: Binary search isolation, git bisect, hypothesis testing, logging strategy, time-travel debugging.
 
-**`references/devtools-debugging.md`** (~450 lines):
-- **Purpose**: Complete Chrome DevTools debugging reference with workflows
-- **When to Load**: When using Chrome DevTools for debugging session
-- **Contents**:
-  - Breakpoints (line, conditional, DOM, XHR/fetch, event listener)
-  - Stepping through code (step over/into/out)
-  - Watch expressions and scope variables
-  - Call stack analysis
-  - Console debugging (methods, shortcuts, trace, timing)
-  - Network debugging (request inspection, blocking, throttling)
-  - Sources panel features (local overrides, snippets, search)
-  - Debugging async code (stack traces, Promise debugging)
-  - Keyboard shortcuts
-  - Standard debugging workflow
+See knowledge/debugging.md, knowledge/initialization_pattern.md, knowledge/code_standards.md for deeper guidance.
 
----
-
-## Version Information
-
-**Current Version**: 1.0.0
-**Created**: 2025-10-18
-**Based On**: `code_debugger.yaml`
-**Compatible With**: Chrome DevTools, debugging tools, logging systems
-
----
-
-## Debug Philosophy
+## 11. 💡 Debug Philosophy
 
 **Core Principle**: "Fix the root cause, not the symptom"
 

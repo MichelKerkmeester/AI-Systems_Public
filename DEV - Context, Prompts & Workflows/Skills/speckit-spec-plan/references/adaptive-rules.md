@@ -1,10 +1,12 @@
-# Adaptive Rules for Planning & Specification
+# Adaptive Rules for Planning & Specification - Context-Aware Adaptation
 
-Rules and strategies for adapting parallel planning based on requirement clarity, stakeholder complexity, and architectural uncertainty.
+Rules to adapt planning depth and execution mode based on complexity, clarity, and uncertainty.
 
-## Planning Complexity Assessment
+---
 
-### Complexity Factors
+## 1. 📊 Planning Complexity Assessment
+
+### 1.1 Complexity Factors
 
 ```yaml
 planning_factors:
@@ -51,7 +53,7 @@ planning_factors:
       critical: zero_trust
 ```
 
-### Planning Complexity Score
+### 1.2 Planning Complexity Score
 
 ```python
 def calculate_planning_complexity(factors):
@@ -79,9 +81,11 @@ def calculate_planning_complexity(factors):
     return score * 33.33  # Normalize to 0-100
 ```
 
-## Requirement Clarity Assessment
+.
 
-### Clarity Indicators
+## 2. 🔍 Requirement Clarity Assessment
+
+### 2.1 Clarity Indicators
 
 ```yaml
 clarity_indicators:
@@ -113,7 +117,7 @@ clarity_indicators:
       conflicting: contradictory
 ```
 
-### Clarity Score Calculation
+### 2.2 Clarity Score Calculation
 
 ```python
 def calculate_clarity(indicators):
@@ -138,9 +142,11 @@ def calculate_clarity(indicators):
     return (score / 3) * 100  # Normalize to 0-100
 ```
 
-## Adaptive Strategies
+.
 
-### Based on Planning Complexity
+## 3. 🎯 Adaptive Strategies
+
+### 3.1 Based on Planning Complexity
 
 #### Low Complexity (0-30)
 ```yaml
@@ -185,7 +191,7 @@ strategy:
     - external_review
 ```
 
-### Based on Requirement Clarity
+### 3.2 Based on Requirement Clarity
 
 #### High Clarity (>70)
 ```yaml
@@ -227,9 +233,12 @@ strategy:
     - frequent_checkpoints
 ```
 
-## Execution Modes
+.
 
-### Mode 1: Standard Planning (Default)
+## 4. ⚙️ Execution Modes
+
+### 4.1 Mode 1: Standard Planning (Default)
+
 ```yaml
 configuration:
   analysts: [requirements, architecture, risk, estimation]
@@ -241,7 +250,8 @@ configuration:
   when: complexity < 60 AND clarity > 50
 ```
 
-### Mode 2: Discovery Planning
+### 4.2 Mode 2: Discovery Planning
+
 ```yaml
 configuration:
   analysts: all + exploratory
@@ -253,7 +263,8 @@ configuration:
   when: clarity < 40 OR new_domain
 ```
 
-### Mode 3: Rapid Planning
+### 4.3 Mode 3: Rapid Planning
+
 ```yaml
 configuration:
   analysts: [requirements, architecture]
@@ -265,7 +276,8 @@ configuration:
   when: time_critical AND complexity < 40
 ```
 
-### Mode 4: Enterprise Planning
+### 4.4 Mode 4: Enterprise Planning
+
 ```yaml
 configuration:
   analysts: all + compliance + stakeholder
@@ -277,9 +289,11 @@ configuration:
   when: complexity > 70 OR regulated_industry
 ```
 
-## Dynamic Adjustments
+.
 
-### Runtime Monitoring
+## 5. 🔄 Dynamic Adjustments
+
+### 5.1 Runtime Monitoring
 
 ```python
 class PlanningMonitor:
@@ -297,7 +311,7 @@ class PlanningMonitor:
             self.add_architecture_review()
 ```
 
-### Progressive Refinement
+### 5.2 Progressive Refinement
 
 ```yaml
 refinement_stages:
@@ -326,9 +340,11 @@ refinement_stages:
     checkpoint: commitment
 ```
 
-## Fallback Strategies
+.
 
-### Graceful Degradation Path
+## 6. 🛡️ Fallback Strategies
+
+### 6.1 Graceful Degradation Path
 
 ```
 1. Full Parallel Planning (4 analysts)
@@ -344,7 +360,7 @@ refinement_stages:
 6. External Facilitation Required
 ```
 
-### Recovery Actions
+### 6.2 Recovery Actions
 
 ```yaml
 on_conflicting_requirements:
@@ -376,9 +392,11 @@ on_architectural_uncertainty:
   - recommend_with_confidence_levels
 ```
 
-## Optimization Rules
+.
 
-### Planning Workflow Optimization
+## 7. 🚀 Optimization Rules
+
+### 7.1 Planning Workflow Optimization
 
 ```python
 def optimize_planning_workflow(context):
@@ -397,7 +415,7 @@ def optimize_planning_workflow(context):
         return 'standard_parallel'
 ```
 
-### Stakeholder Engagement Strategy
+### 7.2 Stakeholder Engagement Strategy
 
 ```python
 def optimize_stakeholder_engagement(stakeholders):
@@ -418,9 +436,11 @@ def optimize_stakeholder_engagement(stakeholders):
     return strategy
 ```
 
-## Risk Analysis Adaptation
+.
 
-### Risk Assessment Depth
+## 8. ⚠️ Risk Analysis Adaptation
+
+### 8.1 Risk Assessment Depth
 
 ```yaml
 risk_depth_by_criticality:
@@ -446,9 +466,12 @@ risk_depth_by_criticality:
       - escalation_procedures
 ```
 
-## Configuration Examples
+.
 
-### Example 1: Well-Defined Feature
+## 9. 💡 Configuration Examples
+
+### 9.1 Example 1: Well-Defined Feature
+
 ```yaml
 detected:
   complexity: 35
@@ -464,7 +487,8 @@ applied_rules:
   documentation: standard
 ```
 
-### Example 2: Enterprise Initiative
+### 9.2 Example 2: Enterprise Initiative
+
 ```yaml
 detected:
   complexity: 80
@@ -484,7 +508,8 @@ applied_rules:
     - risk_mitigation_planning
 ```
 
-### Example 3: Exploratory Project
+### 9.3 Example 3: Exploratory Project
+
 ```yaml
 detected:
   complexity: 55
@@ -504,9 +529,11 @@ applied_rules:
     - assumption_testing
 ```
 
-## Success Metrics
+.
 
-### Planning Quality Metrics
+## 10. 📈 Success Metrics
+
+### 10.1 Planning Quality Metrics
 
 ```yaml
 metrics:
@@ -535,23 +562,28 @@ metrics:
     measure: approval_rounds_needed
 ```
 
-## Best Practices
+.
 
-### DO:
+## 11. ✅ Best Practices
+
+### 11.1 DO:
+
 - Start with why (business value)
 - Involve stakeholders early
 - Document assumptions explicitly
 - Consider alternatives
 - Define success metrics
 
-### DON'T:
+### 11.2 DON'T:
+
 - Skip stakeholder alignment
 - Ignore constraints
 - Over-commit on timelines
 - Leave risks unmitigated
 - Assume requirements are static
 
-### ALWAYS:
+### 11.3 ALWAYS:
+
 - Validate understanding
 - Document decisions and rationale
 - Consider technical debt

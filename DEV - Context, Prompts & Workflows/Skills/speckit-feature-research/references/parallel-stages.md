@@ -1,18 +1,22 @@
-# Parallel Research Orchestration
+# Parallel Research Orchestration - Parallel Execution Stages and Dependencies
 
-Detailed patterns and rules for orchestrating parallel research execution in the feature research workflow.
+Parallel orchestration for research with clear stage flow, review gates, and approval.
 
-## Stage Overview
+---
+
+## 1. 🎯 Stage Overview
 
 The research workflow contains one major parallel execution block:
 
 **Research Stage** (Step 3) - Parallel multi-source research collection
 
-This stage follows a specific execution pattern optimized for research gathering and synthesis.
+This stage follows a specific execution pattern optimized for research gathering and synthesis
 
-## Execution Pattern
+.
 
-### 1. Parallel Research Phase
+## 2. ⚙️ Execution Pattern
+
+### 2.1 Parallel Research Phase
 
 ```
 Launch →
@@ -41,7 +45,7 @@ Complete →
 - Continue with partial results if needed
 - Minimum viable: 2 of 4 researchers
 
-### 2. Review Phase
+### 2.2 Review Phase
 
 ```
 Inputs: [web_findings, docs_findings, market_findings, feasibility_findings]
@@ -62,7 +66,7 @@ Output: synthesis_guidance + ranked_findings + contradictions
 - Can proceed with 50% research coverage
 - Focus: Contradiction resolution
 
-### 3. Synthesis Phase
+### 2.3 Synthesis Phase
 
 ```
 Inputs: [all_findings, review_guidance, ranked_sources]
@@ -83,7 +87,7 @@ Output: research.md
 - Creates comprehensive research artifact
 - Follows required section structure
 
-### 4. Main Agent QA Phase
+### 2.4 Main Agent QA Phase
 
 ```
 Inputs: [research.md]
@@ -104,7 +108,9 @@ Output: final_research.md + signoff
 - Validates research quality
 - Can request additional research
 
-## Research Stage Details
+.
+
+## 3. 📊 Research Stage Details
 
 **Parallel Researchers** (Step 3):
 
@@ -143,9 +149,11 @@ Output: final_research.md + signoff
 - Ensures: All required sections present
 - Resolves: Open questions and gaps
 
-## Orchestration Implementation
+.
 
-### Coordinator Pattern
+## 4. 🔍 Orchestration Implementation
+
+### 4.1 Coordinator Pattern
 
 ```python
 class ResearchCoordinator:
@@ -183,7 +191,7 @@ class ResearchCoordinator:
         return final_research
 ```
 
-### Error Handling
+### 4.2 Error Handling
 
 ```python
 def handle_researcher_failure(self, researcher, error):
@@ -213,9 +221,11 @@ def handle_low_signal(self, findings):
     return self.document_research_gaps(findings)
 ```
 
-## Performance Optimization
+.
 
-### Concurrency Control
+## 5. 📈 Performance Optimization
+
+### 5.1 Concurrency Control
 
 ```yaml
 concurrency_limits:
@@ -230,7 +240,7 @@ concurrency_limits:
     feasibility: 3  # Analysis-heavy
 ```
 
-### Query Optimization
+### 5.2 Query Optimization
 
 ```yaml
 query_strategy:
@@ -253,9 +263,11 @@ query_strategy:
       depth: comprehensive
 ```
 
-## Monitoring & Telemetry
+.
 
-### Research Metrics
+## 6. 📡 Monitoring & Telemetry
+
+### 6.1 Research Metrics
 
 ```yaml
 research_metrics:
@@ -266,7 +278,7 @@ research_metrics:
   - gap_documentation_rate
 ```
 
-### Researcher Metrics
+### 6.2 Researcher Metrics
 
 ```yaml
 researcher_metrics:
@@ -277,7 +289,7 @@ researcher_metrics:
   - query_modifications
 ```
 
-### Quality Metrics
+### 6.3 Quality Metrics
 
 ```yaml
 quality_metrics:
@@ -287,9 +299,11 @@ quality_metrics:
   - actionable_recommendations
 ```
 
-## Adaptive Rules
+.
 
-### Low Signal Handling
+## 7. 🔄 Adaptive Rules
+
+### 7.1 Low Signal Handling
 
 When findings < minimum_threshold:
 ```yaml
@@ -301,7 +315,7 @@ adjustments:
   reduce_precision: increase_recall
 ```
 
-### High Contradiction Handling
+### 7.2 High Contradiction Handling
 
 When contradiction_rate > 25%:
 ```yaml
@@ -313,7 +327,7 @@ adjustments:
   provide_context: all_sources
 ```
 
-### Scope Adaptation
+### 7.3 Scope Adaptation
 
 When scope = broad:
 ```yaml
@@ -325,9 +339,11 @@ adjustments:
   synthesis: multi_pass
 ```
 
-## Research Dependencies
+.
 
-### Input Requirements
+## 8. 🔗 Research Dependencies
+
+### 8.1 Input Requirements
 
 ```yaml
 research_requires:
@@ -340,7 +356,7 @@ research_requires:
     - preferred_sources
 ```
 
-### Output Contract
+### 8.2 Output Contract
 
 ```yaml
 research_produces:
@@ -363,23 +379,28 @@ research_produces:
     - troubleshooting
 ```
 
-## Best Practices
+.
 
-### DO:
+## 9. ✅ Best Practices
+
+### 9.1 DO:
+
 - Start specific, broaden if needed
 - Cite all significant sources
 - Document contradictions explicitly
 - Flag confidence levels
 - Note research limitations
 
-### DON'T:
+### 9.2 DON'T:
+
 - Ignore contradictory findings
 - Rely on single source types
 - Skip validation for critical claims
 - Omit source citations
 - Hide research gaps
 
-### CONSIDER:
+### 9.3 CONSIDER:
+
 - Caching research for similar queries
 - Progressive search refinement
 - Source quality scoring

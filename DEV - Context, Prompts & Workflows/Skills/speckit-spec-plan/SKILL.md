@@ -1,13 +1,17 @@
 ---
 name: speckit-spec-plan
-description: Execute spec-driven planning workflow with parallel specialist analyses. Orchestrates 6 specialized planning sub-agents through parallel execution, review, and synthesis to produce plan.md and planning-summary.md with manual approval gates.
+description: Execute spec-driven planning workflow with parallel specialist analyses. Orchestrates 6 specialized planning sub-agents through parallel execution, review, and synthesis to produce plan.md and planning-summary.md with manual approval gates
 ---
 
 # SpecKit Plan & Spec
+Plan and Specify Features with Parallel Analysis Workflow
 
-Execute comprehensive planning and specification workflow with parallel specialist analyses and approval gates.
+> Change Notes (2025-10-21)
+- Removed 4.x sub-step numbering; standardized headers and emojis
+- Added YAML → Steps Crosswalk; clarified approval gates
+- Cleaned sub-agent references (removed placeholder appendices, de-numbered headings)
 
-## When to Use This Skill
+## 1. 🎯 When to Use This Skill
 
 **Use this skill when**:
 - Creating technical plans from specifications
@@ -17,13 +21,19 @@ Execute comprehensive planning and specification workflow with parallel speciali
 - Following manual approval workflow
 
 **Do NOT use this skill for**:
-- Quick planning without parallel analysis
-- Implementation execution (use speckit-implementation)
-- Research tasks (use speckit-feature-research)
-- Automated workflows without approvals
 
-## 🚀 Quick Command Reference
+Use other skills or direct edits for:
+- Implementing or refactoring code, shipping patches, or writing production-ready solutions
+- Simple copy edits, formatting-only changes, or trivial content tweaks without planning value
+- Direct bug fixes, debugging, or hotfixes that don't require a planning deliverable
+- Non-planning workflows (e.g., content writing, generic brainstorming) unrelated to a Speckit spec/plan
+- Executing or orchestrating agents and pipelines (this skill outputs planning artifacts, not execution)
+- Generating tests, migration scripts, or infra changes (belongs to implementation/build skills)
+- Replacing or diverging from AGENTS.md standards (this skill must align to AGENTS.md)
 
+.
+  
+## 2. 🚀 Quick Command Reference
 | Step | Command | Purpose |
 |------|---------|----------|
 | 1 | Manual | Request Analysis |
@@ -36,7 +46,9 @@ Execute comprehensive planning and specification workflow with parallel speciali
 
 **⚠️ Important**: This workflow requires **3 approval gates** (steps 1→2, 4→5, 6→7)
 
-## Architecture Overview
+.
+
+## 3. 🏗️ Architecture Overview
 
 This skill implements the sk_p__spec_plan.yaml workflow with 6 specialized planning sub-agents executing in parallel analysis phase.
 
@@ -50,9 +62,23 @@ This skill implements the sk_p__spec_plan.yaml workflow with 6 specialized plann
 6. **Parallel Planning Block** - 4 analysts work in parallel
 7. **Planning** - Finalize technical approach and plan.md
 
-**Termination**: This workflow ends after step 7 (planning phase only).
+**Termination**: This workflow ends after step 7 (planning phase only)
 
-## Workflow Steps (Detailed Execution)
+.
+
+## YAML → Steps Crosswalk
+
+- Source: b_prompts/github_spec_kit/parallel_agents/sk_p__spec_plan.yaml
+- Mapping:
+  - Step 1 → Request Analysis
+  - Step 2 → Pre-work Review
+  - Step 3 → Specification (/speckit.specify)
+  - Step 4 → Clarification (/speckit.clarify)
+  - Step 5 → Quality Checklist (/speckit.checklist)
+  - Step 6 → Parallel Planning Block
+  - Step 7 → Planning (/speckit.plan)
+
+## 4. 📋 Workflow Steps
 
 This section provides step-by-step execution guidance as defined in sk_p__spec_plan.yaml.
 
@@ -117,8 +143,6 @@ This section provides step-by-step execution guidance as defined in sk_p__spec_p
 
 **Approval Gate**: "All inputs collected. Branch strategy: {branch_strategy} on {git_branch}. Spec folder: {spec_folder}. Proceed to pre-work review?"
 
----
-
 ### Step 2: Pre-work Review
 
 **Action**: Review required documents
@@ -133,8 +157,6 @@ This section provides step-by-step execution guidance as defined in sk_p__spec_p
 **Validation**: `principles_established`
 
 **Note**: No approval gate for this step
-
----
 
 ### Step 3: Specification
 
@@ -151,8 +173,6 @@ This section provides step-by-step execution guidance as defined in sk_p__spec_p
 
 **Note**: No approval gate for this step
 
----
-
 ### Step 4: Clarification
 
 **Command**: `/clarify`
@@ -168,8 +188,6 @@ This section provides step-by-step execution guidance as defined in sk_p__spec_p
 
 **Approval Gate**: "Requirements clarified. Proceed to quality checklist?"
 
----
-
 ### Step 5: Quality Checklist
 
 **Command**: `/speckit.checklist`
@@ -182,8 +200,6 @@ This section provides step-by-step execution guidance as defined in sk_p__spec_p
 **Validation**: `checklist_generated`
 
 **Note**: No approval gate for this step
-
----
 
 ### Step 6: Parallel Planning Block
 
@@ -267,8 +283,6 @@ This step contains sub-phases that execute sequentially:
 
 **Approval Gate**: "Planning artifacts synthesized. Approve to proceed?"
 
----
-
 ### Step 7: Planning
 
 **Command**: `/plan [context]`
@@ -321,9 +335,9 @@ Branch strategy has been set and will be inherited by subsequent workflows.
 - Use workflow_automated.yaml for full implementation (will inherit branch strategy)
 - Or use workflow.yaml for manual implementation with gates
 
----
+.
 
-### The 6 Planning Sub-Agents
+## 5. ⚙️ Planning Sub-Agents
 
 **Note**: For detailed agent specifications and output formats, see [references/sub-agents.md](references/sub-agents.md).
 
@@ -363,7 +377,9 @@ Branch strategy has been set and will be inherited by subsequent workflows.
    - Integrate findings
    - Format artifacts
 
-## Execution Model
+.
+
+## 6. ⚙️ Execution Model
 
 ### Parallel Planning Pattern
 
@@ -412,7 +428,9 @@ Branch strategy has been set and will be inherited by subsequent workflows.
 - Main agent finalization occurs BEFORE any approval gate
 - All phases in Step 6 are sub-phases within that single workflow step
 
-## Planning Document Structure
+.
+
+## 7. 📄 Planning Document Structure
 
 The skill produces two key documents:
 
@@ -456,11 +474,9 @@ The skill produces two key documents:
 - Resource needs
 - Decision points
 
----
+.
 
-## ✅ Approval Gates
-
-This workflow includes manual approval gates at key points:
+## 8. ✅ Approval GatesThis workflow includes manual approval gates at key points:
 
 | Step | Approval Prompt | Confirmation | Warning |
 |------|-----------------|--------------|----------|
@@ -468,11 +484,11 @@ This workflow includes manual approval gates at key points:
 | 4→5 | "Requirements clarified. Proceed to quality checklist?" | Required | None |
 | 6→7 | "Planning artifacts synthesized. Approve to proceed?" | Required | None |
 
-**Note**: All approval gates require explicit user confirmation before proceeding to the next step.
+**Note**: All approval gates require explicit user confirmation before proceeding to the next step
 
----
+.
 
-## ⚙️ Field Handling
+## 9. ⚙️ Field Handling
 
 This workflow automatically handles empty input fields per sk_p__spec_plan.yaml:
 
@@ -531,10 +547,12 @@ This workflow automatically handles empty input fields per sk_p__spec_plan.yaml:
 - **Steps**:
   1. Check if feature branch already exists
   2. Create feature-{spec_id} if not exists
-  3. Checkout feature branch
+   3. Checkout feature branch
 - **Skip When**: `branch_strategy == main_branch`
 
-## Inputs
+.
+
+## 10. 📥 Inputs
 
 ### Required Inputs
 - **request**: Feature description or requirements
@@ -553,7 +571,9 @@ This workflow automatically handles empty input fields per sk_p__spec_plan.yaml:
 - **context**: Infer from request
 - **scope**: Default to `specs/**`
 
-## Outputs
+.
+
+## 11. 📤 Outputs
 
 ### Primary Outputs
 
@@ -573,7 +593,9 @@ This workflow automatically handles empty input fields per sk_p__spec_plan.yaml:
 - Risk assessment
 - Estimation breakdown
 
-## Parallel Agent Specifications
+.
+
+## 12. 🧩 Parallel Agent Specifications
 
 ### Requirements Analyst Output
 ```yaml
@@ -686,7 +708,9 @@ estimation_breakdown:
       - "Resource availability"
 ```
 
-## Chrome DevTools Integration
+.
+
+## 13. 🌐 Chrome DevTools Integration
 
 When staging URL is provided:
 
@@ -702,7 +726,9 @@ When staging URL is provided:
 - Performance baselines
 - Integration points
 
-## Adaptive Rules
+.
+
+## 14. 🎛️ Adaptive Rules
 
 **Note**: For complete adaptive rule specifications, planning complexity assessment, requirement clarity scoring, and stakeholder strategies, see [references/adaptive-rules.md](references/adaptive-rules.md).
 
@@ -724,7 +750,9 @@ When staging URL is provided:
 - Proceed with partial results
 - Document degradation
 
-## Quality Standards
+.
+
+## 15. ✨ Quality Standards
 
 ### Planning Quality
 - Complete requirement coverage
@@ -744,7 +772,9 @@ When staging URL is provided:
 - Consistency validation
 - Completeness check
 
-## Performance Characteristics
+.
+
+## 16. ⚡ Performance Characteristics
 
 **Note**: Performance varies based on specification complexity and detail level.
 
@@ -754,7 +784,9 @@ When staging URL is provided:
 - **Synthesis phase**: Document generation and integration
 - **QA phase**: Main agent final validation
 
-## Error Handling
+.
+
+## 17. 🚨 Error Handling
 
 ### Retry Policy
 - **Targeted retries**: Failed agents only
@@ -767,7 +799,9 @@ When staging URL is provided:
 - Annotate gaps in review
 - Document issues
 
-## Limitations
+.
+
+## 18. ⚠️ Limitations
 
 - **Scope**: Planning phase only (not implementation)
 - **Approvals**: Manual gates required
@@ -775,7 +809,9 @@ When staging URL is provided:
 - **Dependencies**: Requires spec.md
 - **Language**: English only
 
-## Success Metrics
+.
+
+## 19. 📈 Success Metrics
 
 **Note**: Target benchmarks for planning quality and thoroughness.
 
@@ -785,16 +821,9 @@ When staging URL is provided:
 - **Quality**: >85% first-pass approval
 - **Efficiency**: Optimized parallel execution
 
-## Version
+.
 
-**Current Version**: 1.0.0
-**Based On**: sk_p__spec_plan.yaml
-**Created**: 2025-10-18
-**Architecture**: Parallel planning with approval gates
-
----
-
-## References
+## 20. References
 
 - Source: `/b_prompts/github_spec_kit/parallel_agents/sk_p__spec_plan.yaml`
 - Prerequisites: Feature request or existing spec

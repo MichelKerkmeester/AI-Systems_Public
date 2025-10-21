@@ -1,18 +1,30 @@
 # Skills Directory
+Comprehensive Skills Documentation and Usage Guide
 
-Complete documentation of all Claude Code skills available in this project.
+## Table of Contents
 
-## Overview
+- [1. 📄 Description](#1--description)
+- [2. 🧭 Skills Catalog](#2--skills-catalog)
+- [3. 🛠️ Skill Selection Guide](#3--skill-selection-guide)
+- [4. ⚙️ SpecKit Command Integration](#4--speckit-command-integration)
+- [5. 🧩 Architecture Overview](#5--architecture-overview)
+- [6. 📊 Shared Artifacts](#6--shared-artifacts)
+- [7. ✅ Best Practices](#7--best-practices)
+- [8. 📊 Token Usage & Performance](#8--token-usage--performance)
+- [9. 🔍 Troubleshooting](#9--troubleshooting)
+- [10. 🔗 Integration with AGENTS.md](#10--integration-with-agentsmd)
 
-This project contains **10 specialized skills** organized into three categories:
+## 1. 📄 Description
 
-1. **Code Development Skills** (5) - General code development, validation, debugging, and optimization
+This project contains **8 specialized skills** present (plus 2 planned) organized into three categories:
+
+1. **Code Development Skills** (3 present, 2 planned) - General code development, validation, debugging, and optimization
 2. **SpecKit Skills** (4) - High-performance parallel workflow execution
 3. **Meta Skills** (1) - Skill creation and management
 
-## Skills Catalog
+## 2. 🧭 Skills Catalog
 
-### Code Development Skills
+### 2.1 Code Development Skills
 
 #### 1. code-debugger
 **Purpose**: Systematically reproduce, diagnose, fix, and verify bugs through evidence-based investigation and root cause analysis.
@@ -25,8 +37,6 @@ This project contains **10 specialized skills** organized into three categories:
 
 **Location**: `.claude/skills/code-debugger/`
 
----
-
 #### 2. code-implementer
 **Purpose**: Build features incrementally using 3-step workflow (Understand → Build → Polish). Implements from specs or plans with continuous testing, incremental delivery, and pragmatic approach.
 
@@ -36,9 +46,7 @@ This project contains **10 specialized skills** organized into three categories:
 - Converting designs to code
 - Need implementation.md documentation
 
-**Location**: `.claude/skills/code-implementer/`
-
----
+**Location**: (not present in repo)
 
 #### 3. code-pattern-validator
 **Purpose**: Validate JavaScript files against Webflow project code standards, naming conventions, initialization patterns, and platform constraints.
@@ -52,8 +60,6 @@ This project contains **10 specialized skills** organized into three categories:
 
 **Location**: `.claude/skills/code-pattern-validator/`
 
----
-
 #### 4. code-performance-improver
 **Purpose**: Optimize code and application performance through systematic profiling, analysis, and incremental improvements while preserving all functionality.
 
@@ -66,8 +72,6 @@ This project contains **10 specialized skills** organized into three categories:
 
 **Location**: `.claude/skills/code-performance-improver/`
 
----
-
 #### 5. code-planner
 **Purpose**: Create comprehensive project plans using 5 parallel autonomous planning agents (Scope, Breakdown, Resource, Timeline, Quality).
 
@@ -78,11 +82,9 @@ This project contains **10 specialized skills** organized into three categories:
 - Identifying risks and dependencies
 - Planning multi-phase projects
 
-**Location**: `.claude/skills/code-planner/`
+**Location**: (not present in repo)
 
----
-
-### SpecKit Skills
+### 2.2 SpecKit Skills
 
 High-performance workflow execution with multiple specialized sub-agents running concurrently.
 
@@ -97,9 +99,7 @@ High-performance workflow execution with multiple specialized sub-agents running
 - Want maximum parallelization for speed
 
 **Location**: `.claude/skills/speckit-complete/`
-**Based on**: `z_prompts/github_spec_kit/parallel_agents/sk_p__complete.yaml`
-
----
+**Based on**: `b_prompts/github_spec_kit/parallel_agents/sk_p__complete.yaml`
 
 #### 7. speckit-feature-research
 **Purpose**: Conduct parallel technical research and investigation for SpecKit features. Orchestrates 6 specialized research sub-agents to produce comprehensive research.md documentation.
@@ -113,9 +113,7 @@ High-performance workflow execution with multiple specialized sub-agents running
 - Evaluating technical feasibility and costs
 
 **Location**: `.claude/skills/speckit-feature-research/`
-**Based on**: `z_prompts/github_spec_kit/parallel_agents/sk_p__feature_research.yaml`
-
----
+**Based on**: `b_prompts/github_spec_kit/parallel_agents/sk_p__feature_research.yaml`
 
 #### 8. speckit-implementation
 **Purpose**: Execute autonomous spec-driven implementation with parallel preparation agents. Orchestrates 6 specialized sub-agents for implementation planning (core, integrations, tests, docs).
@@ -129,9 +127,7 @@ High-performance workflow execution with multiple specialized sub-agents running
 - Want parallel planning for core, tests, and docs
 
 **Location**: `.claude/skills/speckit-implementation/`
-**Based on**: `z_prompts/github_spec_kit/parallel_agents/sk_p__implementation.yaml`
-
----
+**Based on**: `b_prompts/github_spec_kit/parallel_agents/sk_p__implementation.yaml`
 
 #### 9. speckit-spec-plan
 **Purpose**: Execute spec-driven planning workflow with parallel specialist analyses. Orchestrates 6 specialized planning sub-agents through parallel execution, review, and synthesis.
@@ -145,11 +141,9 @@ High-performance workflow execution with multiple specialized sub-agents running
 - Want estimation and milestone planning
 
 **Location**: `.claude/skills/speckit-spec-plan/`
-**Based on**: `z_prompts/github_spec_kit/parallel_agents/sk_p__spec_plan.yaml`
+**Based on**: `b_prompts/github_spec_kit/parallel_agents/sk_p__spec_plan.yaml`
 
----
-
-### Meta Skills
+### 2.3 Meta Skills
 
 #### 10. create-skills
 **Purpose**: Guide for creating effective skills. This skill should be used when users want to create a new skill or update an existing skill.
@@ -162,11 +156,9 @@ High-performance workflow execution with multiple specialized sub-agents running
 
 **Location**: `.claude/skills/create-skills/`
 
----
+## 3. 🛠️ Skill Selection Guide
 
-## Skill Selection Guide
-
-### Decision Tree
+### 3.1 Decision Tree
 
 ```
 Need to debug existing code?
@@ -198,7 +190,7 @@ Need to create/update skills?
 └─ YES → create-skills
 ```
 
-### Quick Reference
+### 3.2 Quick Reference
 
 | Task | Recommended Skill |
 |------|-------------------|
@@ -213,11 +205,9 @@ Need to create/update skills?
 | Complete workflow | speckit-complete |
 | Create new skill | create-skills |
 
----
+## 4. ⚙️ SpecKit Command Integration
 
-## SpecKit Command Integration
-
-### Commands and Their Associated Skills
+### 4.1 Commands and Their Associated Skills
 
 | SpecKit Command | Associated Skill |
 |-----------------|------------------|
@@ -232,11 +222,9 @@ Need to create/update skills?
 | (research workflow) | speckit-feature-research |
 | (complete workflow) | speckit-complete |
 
----
+## 5. 🧩 Architecture Overview
 
-## Architecture Overview
-
-### Code Development Skills Architecture
+### 5.1 Code Development Skills Architecture
 
 ```
 User Request
@@ -254,7 +242,7 @@ User Request
 Production Code
 ```
 
-### SpecKit Skills Architecture
+### 5.2 SpecKit Skills Architecture
 
 ```
            User Request
@@ -271,9 +259,7 @@ Production Code
     Feature Artifacts & Code
 ```
 
----
-
-## Shared Artifacts
+## 6. 📊 Shared Artifacts
 
 Skills communicate through standardized artifacts:
 
@@ -298,36 +284,35 @@ shared_artifacts:
     - quality_report.md
 ```
 
----
+## 7. ✅ Best Practices
 
-## Best Practices
+### 7.1 DO
 
-### DO:
 - Use specialized skills for their intended purpose
 - Check artifacts between skill executions
 - Allow skills to share context through files
 - Monitor token usage with parallel skills
 - Select appropriate skill for task complexity
 
-### DON'T:
+### 7.2 DON'T
+
 - Load all skills simultaneously
 - Mix skill responsibilities
 - Ignore approval gates in workflows
 - Skip prerequisite validation
 - Use complex SpecKit workflows for simple tasks
 
-### ALWAYS:
+### 7.3 ALWAYS
+
 - Verify prerequisites before skill execution
 - Document skill handoffs through artifacts
 - Maintain artifact consistency
 - Provide user visibility into progress
 - Enable manual override when needed
 
----
+## 8. 📊 Token Usage & Performance
 
-## Token Usage & Performance
-
-### Token Usage by Skill Type
+### 8.1 Token Usage by Skill Type
 
 | Skill Category | Initial Load | Full Context | Recommendation |
 |----------------|--------------|--------------|----------------|
@@ -335,7 +320,7 @@ shared_artifacts:
 | SpecKit | High (~5-8K) | Very High (~15-25K) | On-demand only |
 | Meta Skills | Low (~1K) | Low (~2K) | Load as needed |
 
-### Concurrency Management
+### 8.2 Concurrency Management
 
 ```yaml
 recommended_concurrency:
@@ -350,11 +335,9 @@ recommended_concurrency:
   create-skills: 1           # Single skill creation
 ```
 
----
+## 9. 🔍 Troubleshooting
 
-## Troubleshooting
-
-### Common Issues
+### 9.1 Common Issues
 
 **Issue**: Skills not loading or triggering
 **Solution**: Check skill name matches exactly; verify SKILL.md exists
@@ -371,28 +354,9 @@ recommended_concurrency:
 **Issue**: Approval gates blocking in workflows
 **Solution**: Ensure explicit user approval at each gate; don't skip steps
 
----
+## 10. 🔗 Integration with AGENTS.md
 
-## Version Information
-
-| Skill | Version | Last Updated | Status |
-|-------|---------|--------------|--------|
-| code-debugger | 1.0.0 | 2025-10-18 | Active |
-| code-implementer | 1.0.0 | 2025-10-18 | Active |
-| code-pattern-validator | 1.0.0 | 2025-10-18 | Active |
-| code-performance-improver | 1.0.0 | 2025-10-18 | Active |
-| code-planner | 1.0.0 | 2025-10-18 | Active |
-| speckit-complete | 1.0.0 | 2025-10-18 | Active |
-| speckit-feature-research | 1.0.0 | 2025-10-18 | Active |
-| speckit-implementation | 1.0.0 | 2025-10-18 | Active |
-| speckit-spec-plan | 1.0.0 | 2025-10-18 | Active |
-| create-skills | 1.0.0 | 2025-10-18 | Active |
-
----
-
-## Integration with AGENTS.md
-
-Skills follow the principles and standards defined in `/AGENTS.md`:
+Skills follow the principles and standards defined in [AGENTS.md](/Users/michelkerkmeester/MEGA/Websites/anobel.com/AGENTS.md):
 
 - All skills adhere to the Clarification Rule (confidence < 80% → ask questions)
 - All skills use Explicit Uncertainty markers when appropriate
@@ -400,16 +364,11 @@ Skills follow the principles and standards defined in `/AGENTS.md`:
 - All skills maintain evidence-based decision making
 - All skills prioritize simplicity and maintainability
 
-**Reference**: See `AGENTS.md:500-665` for detailed skill integration guidance.
+**Reference**: See [AGENTS.md:500-665](AGENTS.md#L500-L665) for detailed skill integration guidance.
 
----
+## 11. 🧭 Conventions
 
-## Summary
-
-This project provides a comprehensive skill ecosystem:
-
-- **5 Code Skills** for general development, debugging, validation, and optimization
-- **4 SpecKit Skills** for high-performance automated workflows with parallel execution
-- **1 Meta Skill** for skill creation and management
-
-Together, these 10 skills enable efficient development workflows while maintaining clarity, control, and quality standards.
+- Section headers only use emojis: 🎯, 🚀, 🏗️, 📝, 📥, 📤, ⚙️, ✅, ⚠️, 🔧.
+- No sub-step numbering like 4.1, 4.2 under Workflow Steps; use whole steps only (Step 1, Step 2, ...).
+- Non-Spec-Kit skills are self-contained (No External References); cite knowledge/*.md as needed.
+- SpecKit skills must align titles/order to their source YAML in b_prompts/github_spec_kit/parallel_agents.

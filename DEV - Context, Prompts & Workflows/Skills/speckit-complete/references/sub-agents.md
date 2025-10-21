@@ -1,10 +1,12 @@
-# Sub-Agent Definitions
+# Sub-Agent Definitions - Specialized Responsibilities and Coordination
 
-Complete specifications for all 18 specialized sub-agents in the SpecKit parallel executor.
+Role definitions and coordination rules for specialized sub-agents across planning, implementation prep, and quality review stages.
 
-## Stage A: Planning/Spec Sub-Agents
+---
 
-### 1. Requirements Analyst
+## 1. 📋 Stage A: Planning/Spec Sub-Agents
+
+### 1.1 Requirements Analyst
 
 **Role**: Extract and structure requirements from specification
 
@@ -28,9 +30,7 @@ requirements_dossier:
   priorities: [P0, P1, P2, P3]
 ```
 
----
-
-### 2. Solution Architect
+### 1.2 Solution Architect
 
 **Role**: Design technical architecture and component structure
 
@@ -54,9 +54,7 @@ architecture_design:
   integration_points: [external systems]
 ```
 
----
-
-### 3. Risk/Compliance Analyst
+### 1.3 Risk/Compliance Analyst
 
 **Role**: Identify risks and compliance requirements
 
@@ -86,9 +84,7 @@ risk_assessment:
     availability: [requirements]
 ```
 
----
-
-### 4. Estimation/Scope Analyst
+### 1.4 Estimation/Scope Analyst
 
 **Role**: Create project timeline and effort estimates
 
@@ -116,9 +112,7 @@ project_estimation:
   confidence_level: [percentage]
 ```
 
----
-
-### 5. Lead Reviewer A
+### 1.5 Lead Reviewer A
 
 **Role**: Reconcile and validate Stage A outputs
 
@@ -142,9 +136,7 @@ review_summary:
   quality_score: [0-100]
 ```
 
----
-
-### 6. Lead Synthesizer A
+### 1.6 Lead Synthesizer A
 
 **Role**: Create consolidated planning artifacts
 
@@ -164,11 +156,11 @@ review_summary:
 - `data-model.md` - Data structures
 - `contracts/` - API specifications
 
----
+.
 
-## Stage B: Implementation Prep Sub-Agents
+## 2. 🛠️ Stage B: Implementation Prep Sub-Agents
 
-### 7. Core Implementer
+### 2.1 Core Implementer
 
 **Role**: Design core business logic implementation
 
@@ -195,9 +187,7 @@ core_implementation:
   reusable_components: [shared code]
 ```
 
----
-
-### 8. Integrations/Adapters Engineer
+### 2.2 Integrations/Adapters Engineer
 
 **Role**: Design external system integrations
 
@@ -226,9 +216,7 @@ integration_design:
     circuit_breaker: [threshold]
 ```
 
----
-
-### 9. Test Engineer
+### 2.3 Test Engineer
 
 **Role**: Create comprehensive test strategy
 
@@ -259,9 +247,7 @@ test_strategy:
   automation: [CI/CD integration]
 ```
 
----
-
-### 10. Docs Engineer
+### 2.4 Docs Engineer
 
 **Role**: Plan documentation and examples
 
@@ -293,9 +279,7 @@ documentation_plan:
       code: [sample implementation]
 ```
 
----
-
-### 11. Integration Reviewer B
+### 2.5 Integration Reviewer B
 
 **Role**: Ensure implementation coherence
 
@@ -319,9 +303,7 @@ integration_review:
   approval_status: [pass/fail/conditional]
 ```
 
----
-
-### 12. Lead Synthesizer B
+### 2.6 Lead Synthesizer B
 
 **Role**: Create implementation plan
 
@@ -340,11 +322,11 @@ integration_review:
 - Resource requirements
 - Technical approach summary
 
----
+.
 
-## Stage C: Quality Review Sub-Agents
+## 3. ✅ Stage C: Quality Review Sub-Agents
 
-### 13. Completeness Reviewer
+### 3.1 Completeness Reviewer
 
 **Role**: Validate coverage and completeness
 
@@ -368,9 +350,7 @@ completeness_assessment:
   overall_completeness: [percentage]
 ```
 
----
-
-### 14. Feasibility Reviewer
+### 3.2 Feasibility Reviewer
 
 **Role**: Assess technical viability
 
@@ -398,9 +378,7 @@ feasibility_assessment:
   recommendations: [improvements]
 ```
 
----
-
-### 15. Security/Privacy Reviewer
+### 3.3 Security/Privacy Reviewer
 
 **Role**: Assess security and privacy compliance
 
@@ -428,9 +406,7 @@ security_assessment:
   security_score: [0-100]
 ```
 
----
-
-### 16. Consistency/Traceability Reviewer
+### 3.4 Consistency/Traceability Reviewer
 
 **Role**: Ensure consistency and traceability
 
@@ -456,9 +432,7 @@ consistency_assessment:
   consistency_score: [0-100]
 ```
 
----
-
-### 17. Lead Reviewer C
+### 3.5 Lead Reviewer C
 
 **Role**: Prioritize and consolidate quality findings
 
@@ -486,9 +460,7 @@ quality_review_summary:
   risk_assessment: [overall risk level]
 ```
 
----
-
-### 18. Lead Synthesizer C
+### 3.6 Lead Synthesizer C
 
 **Role**: Create quality report
 
@@ -508,11 +480,11 @@ quality_review_summary:
 - Recommended actions
 - Quality metrics dashboard
 
----
+.
 
-## Agent Coordination
+## 4. ⚙️ Agent Coordination
 
-### Parallel Execution Rules
+### 4.1 Parallel Execution Rules
 
 1. **Within Stage**: Agents 1-4, 7-10, 13-16 run in parallel
 2. **Review First**: Lead Reviewers wait for parallel agents
@@ -520,7 +492,7 @@ quality_review_summary:
 4. **Main Agent QA**: Final check after synthesis
 5. **Approval Required**: User must approve before next stage
 
-### Communication Protocol
+### 4.2 Communication Protocol
 
 ```yaml
 agent_message:
@@ -532,11 +504,10 @@ agent_message:
   correlation_id: [unique id]
 ```
 
-### Quality Standards
+### 4.3 Quality Standards
 
 All agents must:
 - Provide structured outputs in specified format
 - Include confidence scores where applicable
 - Document assumptions explicitly
 - Flag blockers immediately
-- Complete within timeout (30 seconds default)

@@ -1,8 +1,10 @@
-# Planning & Specification Sub-Agents
+# Planning & Specification Sub-Agents - Specialized Responsibilities and Coordination
 
-Detailed specifications for the 6 specialized planning and specification sub-agents.
+Roles and outputs for sub-agents in the planning and specification stage, plus the required artifacts and success metrics.
 
-## 1. Requirements Analyst
+---
+
+## 1. 📋 Requirements Analyst
 
 **Role**: Extract and structure requirements from specifications and context
 
@@ -82,9 +84,9 @@ requirements_dossier:
 - Traced dependencies
 - Prioritized objectives
 
----
+.
 
-## 2. Solution Architect
+## 2. 🏗️ Solution Architect
 
 **Role**: Design technical architecture and system components
 
@@ -175,9 +177,9 @@ architecture_proposal:
 - Justified decisions
 - Scalability consideration
 
----
+.
 
-## 3. Risk/Compliance Analyst
+## 3. ⚠️ Risk/Compliance Analyst
 
 **Role**: Identify and assess risks, ensure compliance
 
@@ -270,9 +272,9 @@ risk_assessment:
 - Compliance verification
 - Edge case documentation
 
----
+.
 
-## 4. Estimation/Scope Analyst
+## 4. 📊 Estimation/Scope Analyst
 
 **Role**: Create project timeline and effort estimates
 
@@ -369,9 +371,9 @@ estimation_breakdown:
 - Documented assumptions
 - Risk-adjusted timeline
 
----
+.
 
-## 5. Lead Reviewer
+## 5. 🔍 Lead Reviewer
 
 **Role**: Consolidate and validate parallel analysis outputs
 
@@ -463,9 +465,9 @@ review_summary:
 - Quality standards met
 - Clear synthesis guidance
 
----
+.
 
-## 6. Lead Synthesizer
+## 6. ✍️ Lead Synthesizer
 
 **Role**: Create unified planning artifacts from parallel analyses
 
@@ -486,94 +488,118 @@ review_summary:
 **Output Format**:
 
 ### plan.md Structure
+
 ```markdown
 # Technical Plan
+Specialized Sub-Agent Specifications
 
-## Executive Summary
+## 7. 📄 Executive Summary
+
 [High-level overview of approach]
 
-## Requirements Analysis
+## 8. 📄 Requirements Analysis
+
 [From Requirements Analyst]
 
-## Architecture Design
-### System Architecture
+## 9. 📄 Architecture Design
+
+### 9.1 System Architecture
+
 [From Solution Architect]
 
-### Component Design
+### 9.2 Component Design
+
 [Detailed component specifications]
 
-### Data Model
+### 9.3 Data Model
+
 [Entity relationships and schemas]
 
-## Risk Assessment
-### Identified Risks
+## 10. 📄 Risk Assessment
+
+### 10.1 Identified Risks
+
 [From Risk Analyst]
 
-### Mitigation Strategies
+### 10.2 Mitigation Strategies
+
 [Detailed mitigation plans]
 
-## Implementation Plan
-### Phase 1: [Name]
+## 11. 📄 Implementation Plan
+
+### 11.1 Phase 1: Name
+
 [From Estimation Analyst]
 - Duration: X weeks
 - Deliverables: [List]
 - Dependencies: [List]
 
-### Phase 2: [Name]
+### 11.2 Phase 2: Name
+
 [Continued phases]
 
-## Success Metrics
+## 12. 📄 Success Metrics
+
 [Measurable objectives and KPIs]
 
-## Dependencies
+## 13. 📄 Dependencies
+
 [Internal and external dependencies]
 
-## Timeline
+## 14. 📄 Timeline
+
 [Gantt chart or timeline visualization]
 
-## Appendices
-### A. Alternative Approaches
-### B. Technical Specifications
-### C. Compliance Requirements
+
 ```
 
 ### planning-summary.md Structure
+
 ```markdown
 # Planning Summary
+Specialized Sub-Agent Specifications
 
-## Feature Overview
+## 16. 📄 Feature Overview
+
 [Brief description]
 
-## Key Decisions
+## 17. 📄 Key Decisions
+
 - Decision 1: [What and why]
 - Decision 2: [What and why]
 
-## Critical Risks
+## 18. 📄 Critical Risks
+
 | Risk | Impact | Mitigation |
 |------|--------|------------|
 | [Risk] | [Impact] | [Mitigation] |
 
-## Timeline Summary
+## 19. 📄 Timeline Summary
+
 - Start: [Date]
 - Phase 1 Complete: [Date]
 - Phase 2 Complete: [Date]
 - Final Delivery: [Date]
 
-## Resource Requirements
+## 20. 📄 Resource Requirements
+
 - Team: [Size and skills]
 - Duration: [Total time]
 - Dependencies: [Critical dependencies]
 
-## Recommended Next Steps
+## 21. 📄 Recommended Next Steps
+
 1. [Immediate action]
 2. [Following action]
 3. [Subsequent action]
 
-## Open Questions
+## 22. 📄 Open Questions
+
 - [ ] Question requiring resolution
 - [ ] Decision needed
 
-## Approval Status
+## 23. 📄 Approval Status
+
 - [ ] Requirements approved
 - [ ] Architecture approved
 - [ ] Timeline approved
@@ -587,11 +613,9 @@ review_summary:
 - All sections populated
 - Executive-friendly summary
 
----
+## 7. ⚙️ Agent Coordination
 
-## Agent Coordination
-
-### Execution Flow
+### 7.1 Execution Flow
 
 ```
 1. PARALLEL PHASE (45-60 seconds)
@@ -613,7 +637,7 @@ review_summary:
    └─ User: Manual approval
 ```
 
-### Communication Protocol
+### 7.2 Communication Protocol
 
 ```yaml
 inter_agent_communication:
@@ -631,7 +655,7 @@ inter_agent_communication:
     priority: "high|medium|low"
 ```
 
-### Quality Gates
+### 7.3 Quality Gates
 
 Each agent must meet minimum thresholds:
 
@@ -642,11 +666,9 @@ Each agent must meet minimum thresholds:
 - **Review**: >90% completeness score
 - **Synthesis**: All sections populated
 
----
+## 8. 📈 Success Metrics
 
-## Success Metrics
-
-### Individual Agent Success
+### 8.1 Individual Agent Success
 
 - **Requirements Analyst**: 100% requirement coverage
 - **Solution Architect**: Complete architecture definition
@@ -655,10 +677,9 @@ Each agent must meet minimum thresholds:
 - **Lead Reviewer**: All conflicts resolved
 - **Lead Synthesizer**: Documents generated
 
-### Overall Success
+### 8.2 Overall Success
 
 - **Completeness**: >95% coverage of planning aspects
 - **Quality**: >85% quality score from reviewer
 - **Timeliness**: <5 minutes total execution
 - **Approval Rate**: >80% first-pass approval
-- **Documentation**: Publication-ready artifacts

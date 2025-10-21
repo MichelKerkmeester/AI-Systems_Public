@@ -1,13 +1,17 @@
 ---
 name: code-pattern-validator
-description: Validate JavaScript files against Webflow project code standards, naming conventions, initialization patterns, and platform constraints. Use when reviewing code quality, catching violations before bugs occur, or enforcing consistency. Validates snake_case naming, 3-line file headers, Webflow.push initialization, comment density, ARIA attributes, and platform-specific patterns like collection handling.
+description: Validate JavaScript files against Webflow project code standards, naming conventions, initialization patterns, and platform constraints. Use when reviewing code quality, catching violations before bugs occur, or enforcing consistency. Validates snake_case naming, 3-line file headers, Webflow.push initialization, comment density, ARIA attributes, and platform-specific patterns like collection handling
 ---
 
 # Code Pattern Validator
+Automated Code Standards Compliance
 
-Automatically validate JavaScript files against project code standards and Webflow platform constraints to catch violations before they cause bugs.
+> Change Notes (2025-10-21)
+- Removed dependency on references/* and embedded full 37-rule catalog inline
+- Added YAML → Steps Crosswalk (canonical sources: SKILL.md + knowledge/*.md)
+- Normalized workflow headings and updated token budget note
 
-## When to Use This Skill
+## 1. 🎯 When to Use
 
 **Use this skill when**:
 - Reviewing code for standards compliance before committing
@@ -24,7 +28,9 @@ Automatically validate JavaScript files against project code standards and Webfl
 - Performance profiling - this checks for performance anti-patterns but doesn't profile
 - Webflow Designer issues - this validates JavaScript only
 
-## How It Works
+.
+
+## 2. 🛠️ How It Works
 
 This skill analyzes JavaScript files against 37 validation rules organized into 8 categories (Naming, Headers, Comments, Initialization, Platform Constraints, Integrations, Accessibility, Error Handling). It detects violations, provides specific line numbers, suggests fixes, and generates a compliance score.
 
@@ -35,9 +41,11 @@ This skill analyzes JavaScript files against 37 validation rules organized into 
 4. Generate detailed validation report with compliance score and fix suggestions
 5. Reference knowledge base documents for complete rule explanations
 
-## Inputs
+.
 
-### Required Inputs
+## 3. 📊 Inputs
+
+### 3.1 Required Inputs
 
 **File Path(s)**:
 - **Type**: String or array of strings
@@ -48,7 +56,7 @@ This skill analyzes JavaScript files against 37 validation rules organized into 
   - Multiple files: `/path/to/src/**/*.js`
   - Specific files: `['file1.js', 'file2.js', 'file3.js']`
 
-### Optional Inputs
+### 3.2 Optional Inputs
 
 **Validation Level**:
 - **Type**: String (enum)
@@ -70,9 +78,11 @@ This skill analyzes JavaScript files against 37 validation rules organized into 
 - **Description**: Output format preference
 - **Example**: `detailed`
 
-## Outputs
+.
 
-### Primary Output
+## 4. ✅ Outputs
+
+### 4.1 Primary Output
 
 **Validation Report**:
 - **Format**: Markdown (or JSON if requested)
@@ -181,14 +191,28 @@ document.addEventListener('click', (e) => {
 - Re-run validator to confirm all issues resolved
 ```
 
-## Workflow
+.
+
+## YAML → Steps Crosswalk
+
+- Source: No dedicated YAML file. Canonical sources are this SKILL.md and knowledge documents:
+  - knowledge/code_standards.md
+  - knowledge/initialization_pattern.md
+  - knowledge/webflow_platform_constraints.md
+- Mapping:
+  - Step 1 → Rule Loading & Categorization (Sections: 5.1 + Rules Catalog)
+  - Step 2 → File Reading & Parsing
+  - Step 3 → Validation Execution (Levels: quick/standard/comprehensive)
+  - Step 4 → Report Generation
+
+## 5. 🚀 Workflow
 
 ### Step 1: Rule Loading & Categorization
 
-Load validation rules from `references/validation-rules.md` and organize by:
+Load the inlined Rules Catalog and organize by:
 - **Category**: Naming, Headers, Comments, Initialization, Platform, Integrations, Accessibility, Errors
 - **Priority**: P0 (ERROR - blocking), P1 (ERROR - high), P2 (WARNING), P3 (INFO)
-- **Validation Level**: Which level includes this rule
+- **Validation Level**: quick / standard / comprehensive
 
 **Rules Loaded**:
 - P0 Rules (12 total): Initialization pattern, naming conventions, file headers
@@ -196,8 +220,7 @@ Load validation rules from `references/validation-rules.md` and organize by:
 - P2 Rules (14 total): Comments, accessibility, error handling
 - P3 Rules (Various): Best practices and suggestions
 
-**References Used**:
-- `references/validation-rules.md` - Complete rule catalog (always loaded)
+Note: This skill is self-contained (No External References). See knowledge/code_standards.md and knowledge/webflow_platform_constraints.md for detailed guidance.
 
 ### Step 2: File Reading & Parsing
 
@@ -271,6 +294,100 @@ Execute validation rules based on selected level:
 - Semantic analysis (context-aware platform constraints)
 - Reference cross-checking (patterns.md for comprehensive)
 
+#### Rules Catalog (Inline)
+
+- This catalog replaces external references and is the canonical rule set (37 rules). Each rule lists detection and fix guidance. See knowledge/code_standards.md, knowledge/initialization_pattern.md, knowledge/webflow_platform_constraints.md for deeper examples.
+
+Naming (1.x)
+- 1.1 Function names (snake_case)
+  - Detect: camelCase function declarations; Fix: rename to snake_case
+- 1.2 Variable names (snake_case)
+  - Detect: camelCase/ PascalCase variables; Fix: snake_case
+- 1.3 Constants (UPPER_SNAKE_CASE)
+  - Detect: const not UPPER_SNAKE_CASE; Fix: rename
+- 1.4 Private members (_prefix)
+  - Detect: internal helpers without _; Fix: add _ prefix where applicable
+- 1.5 Boolean prefixes (is_/has_/can_)
+  - Detect: boolean names without prefixes; Fix: rename
+- 1.6 Event handlers (handle_*)
+  - Detect: handlers without handle_ prefix; Fix: rename
+- 1.7 Callbacks (on_*)
+  - Detect: callback props/args not prefixed; Fix: rename
+- 1.8 CSS classes (kebab-case)
+  - Detect: non-kebab CSS class strings; Fix: kebab-case
+- 1.9 BEM modifiers (--modifier)
+  - Detect: missing -- modifiers; Fix: apply BEM
+- 1.10 File names (snake_case)
+  - Detect: non-snake file names; Fix: rename file
+- 1.11 Class names (PascalCase)
+  - Detect: non-Pascal classes; Fix: rename
+
+Headers (2.x)
+- 2.1 File header (3 lines)
+  - Detect: missing/invalid 3-line header; Fix: add per standards
+- 2.2 No metadata in header
+  - Detect: extra fields in header; Fix: remove metadata
+- 2.3 Section headers (numbered)
+  - Detect: missing numbered section headers when applicable; Fix: add
+
+Comments (3.x)
+- 3.1 Comment density (≤5/10 lines)
+  - Detect: >5 comments per 10 lines; Fix: remove narration
+- 3.2 Comments explain "why"
+  - Detect: “what” narration; Fix: explain intent/why
+- 3.3 No commented-out code
+  - Detect: large commented code blocks; Fix: delete or move to docs
+- 3.4 TODO with context
+  - Detect: TODO without owner/context; Fix: add context or remove
+
+Initialization (4.x)
+- 4.1 Webflow init pattern
+  - Detect: missing pattern; Fix: add push/DOMContentLoaded/else template
+- 4.2 IIFE wrapper
+  - Detect: missing IIFE for scoping; Fix: wrap
+- 4.3 No direct DOMContentLoaded
+  - Detect: direct listeners used instead of pattern; Fix: migrate to pattern
+- 4.4 No jQuery ready
+  - Detect: $(document).ready usage; Fix: migrate
+- 4.5 No window.onload
+  - Detect: window.onload usage; Fix: migrate
+
+Platform Constraints (5.x)
+- 5.1 No ID selectors in collections
+  - Detect: #id inside .w-dyn-*; Fix: use class or data-attr
+- 5.2 Collection timing awareness
+  - Detect: assumes immediate render; Fix: handle async rendering
+- 5.3 Event delegation
+  - Detect: direct listeners on dynamic items; Fix: delegate from parent
+- 5.4 No function.name reliance
+  - Detect: code relying on function.name; Fix: explicit mapping
+- 5.5 Collection limit awareness
+  - Detect: logic breaking with pagination/limits; Fix: guard for limits
+
+Integrations (6.x)
+- 6.1 Motion.dev availability check
+  - Detect: using Motion without guard; Fix: if (window.Motion) ...
+- 6.2 Lenis availability check
+  - Detect: using Lenis without guard; Fix: if (window.Lenis) ...
+- 6.3 Third-party defensive loading
+  - Detect: assuming globals; Fix: null-checks and fallbacks
+
+Accessibility (7.x)
+- 7.1 ARIA attributes
+  - Detect: interactive elements missing ARIA; Fix: add aria-*
+- 7.2 Focus management
+  - Detect: modals/menus without focus trap/return; Fix: implement
+- 7.3 Keyboard navigation
+  - Detect: Enter/Escape/Arrow handling missing; Fix: add handlers
+
+Error Handling (8.x)
+- 8.1 Try-catch for APIs
+  - Detect: external ops without try-catch; Fix: wrap and log
+- 8.2 Graceful degradation
+  - Detect: no fallback when feature/library absent; Fix: add fallback
+- 8.3 Console errors
+  - Detect: console.error in shipped code or unhandled errors; Fix: handle and remove noisy logs
+
 ### Step 4: Report Generation
 
 Collect all violations and generate structured report:
@@ -295,9 +412,11 @@ Minimum score: 0%
 - Provide fix suggestions with examples
 - Reference knowledge base documents
 
-## Examples
+.
 
-### Example 1: Validate Single File (Standard Level)
+## 6. 🔍 Examples
+
+### 6.1 Example 1: Validate Single File (Standard Level)
 
 **Input**:
 ```
@@ -339,7 +458,7 @@ Use standard validation level
 **Explanation**:
 This demonstrates standard validation catching an accessibility issue while confirming the file follows all critical patterns correctly.
 
-### Example 2: Quick Validation of Multiple Files
+### 6.2 Example 2: Quick Validation of Multiple Files
 
 **Input**:
 ```
@@ -374,7 +493,7 @@ Generate summary report
 **Explanation**:
 Quick validation across multiple files provides fast feedback on critical issues without deep analysis.
 
-### Example 3: Comprehensive Validation with JSON Output
+### 6.3 Example 3: Comprehensive Validation with JSON Output
 
 **Input**:
 ```
@@ -430,38 +549,19 @@ Output JSON format
 ```
 
 **Explanation**:
-Comprehensive validation with JSON output enables integration with CI/CD pipelines and automated quality gates.
+Comprehensive validation with JSON output enables integration with CI/CD pipelines and automated quality gates
 
-## Bundled Resources
+## 7. 📚 Embedded Rules & Notes
 
-### References
+- No External References: This skill is self-contained. The rules catalog is embedded in this document (see Section "Validation Level to Rules Mapping").
+- For deeper context, cite knowledge/code_standards.md, knowledge/initialization_pattern.md, knowledge/webflow_platform_constraints.md.
+- Optional: Maintain a short "Common Violations" list here sourced from real findings as the project evolves.
 
-**`references/validation-rules.md`** (800 lines):
-- **Purpose**: Complete catalog of all 37 validation rules with detection patterns, examples, and fix suggestions
-- **When to Load**: Always loaded (contains rule definitions needed for all validation levels)
-- **Contents**:
-  - 8 rule categories with priority levels
-  - Detection methods (regex patterns, AST analysis)
-  - Fix suggestions with code examples
-  - Validation priority matrix
-  - Implementation guidance
+## 8. 🧾 Quick Reference
 
-**`references/common-violations.md`** (200 lines):
-- **Purpose**: Top 10 most common violations with detailed fixes
-- **When to Load**: When generating detailed reports or when user requests common issues
-- **Contents**:
-  - Missing initialization pattern (most common)
-  - camelCase vs snake_case naming
-  - Excessive comment density
-  - Missing ARIA attributes
-  - Collection ID selector usage
-  - Each with before/after examples
+### 8.1 Common Usage Patterns
 
-## Quick Reference
-
-### Common Usage Patterns
-
-**Pattern 1: Pre-Commit Validation**
+#### Pattern 1: Pre-Commit Validation
 ```
 Validate all changed files before committing:
 - Run quick validation on staged files
@@ -469,7 +569,7 @@ Validate all changed files before committing:
 - Commit only if compliance score > 90%
 ```
 
-**Pattern 2: Generated Code Verification**
+#### Pattern 2: Generated Code Verification
 ```
 After using Webflow Component Generator:
 1. Generate component with generator skill
@@ -478,7 +578,7 @@ After using Webflow Component Generator:
 4. Deploy with confidence
 ```
 
-**Pattern 3: Codebase Audit**
+#### Pattern 3: Codebase Audit
 ```
 Audit entire codebase for quality:
 - Run comprehensive validation on src/**/*.js
@@ -487,7 +587,7 @@ Audit entire codebase for quality:
 - Track compliance score over time
 ```
 
-### Validation Level Selection Guide
+### 8.2 Validation Level Selection Guide
 
 **Use Quick** when:
 - Pre-commit checks (speed matters)
@@ -507,7 +607,7 @@ Audit entire codebase for quality:
 - Learning code standards
 - Maximum assurance needed
 
-### Validation Checklist
+### 8.3 Validation Checklist
 
 Before finalizing code, verify:
 - [ ] Compliance score ≥ 90% (production ready)
@@ -517,7 +617,7 @@ Before finalizing code, verify:
 - [ ] All naming conventions correct
 - [ ] Platform constraints respected
 
-### Troubleshooting
+### 8.4 Troubleshooting
 
 **Issue**: "Cannot find initialization pattern"
 **Solution**: Add the required Webflow.push pattern at the end of your file. See `knowledge/initialization_pattern.md:17-34` for exact template.
@@ -529,13 +629,13 @@ Before finalizing code, verify:
 **Solution**: Remove comments that narrate what code does. Keep only comments explaining WHY decisions were made. Target: ≤ 5 comments per 10 lines.
 
 **Issue**: "Missing ARIA attributes on modal"
-**Solution**: Reference `specs/004-claude-skills/analysis/patterns.md` Accessibility Patterns section for complete ARIA implementation examples from existing modals.
+**Solution**: Reference `specs/004-claude-skills/analysis/patterns.md` Accessibility Patterns section for complete ARIA implementation examples from existing modals
 
-### Edge Case Handling
+## 9. ⚙️ Edge Case Handling
 
 This section provides guidance for special scenarios and edge cases encountered during validation.
 
-#### When to Skip Validation
+### 9.1 When to Skip Validation
 
 **Skip validation entirely for**:
 - **Minified files**: Files with `.min.js` extension or single-line code
@@ -666,7 +766,7 @@ const price_cents = price * 100;
 4. Track compliance score over time
 5. Set incremental targets: 70% → 80% → 90% → 95%
 
-## Performance & Limitations
+## 10. 📊 Performance & Limitations
 
 **Performance**:
 - Quick validation: Fast - minimal rule set (18 rules), simple pattern matching
@@ -683,24 +783,10 @@ const price_cents = price * 100;
 - Comment quality analysis is heuristic-based (may flag some valid comments)
 
 **Token Budget**:
-- **SKILL.md**: ~400 lines
-- **references/validation-rules.md**: ~800 lines (always loaded)
-- **references/common-violations.md**: ~200 lines (loaded for detailed reports)
-- **Total**: ~1400 lines maximum
+- This SKILL.md includes the embedded rules catalog and examples.
+- Use summary or JSON output for large scans to keep responses concise.
 
-## Version Information
-
-**Current Version**: 1.0.0
-**Last Updated**: 2025-10-18
-**Compatibility**:
-- Requires: `knowledge/code_standards.md`
-- Requires: `knowledge/initialization_pattern.md`
-- Requires: `knowledge/webflow_platform_constraints.md`
-- Optional: `specs/004-claude-skills/analysis/patterns.md` (for comprehensive validation)
-
----
-
-## Success Metrics
+## 11. 📈 Success Metrics
 
 **Accuracy Targets**:
 - 100% detection of P0 errors (initialization, naming)

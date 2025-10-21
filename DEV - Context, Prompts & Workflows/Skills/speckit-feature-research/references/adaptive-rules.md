@@ -1,10 +1,12 @@
-# Adaptive Rules for Research Execution
+# Adaptive Rules for Research Execution - Context-Aware Adaptation
 
-Rules and strategies for adapting parallel research based on scope, signal quality, and uncertainty.
+Rules to adapt research scope and execution modes based on clarity, signal quality, and uncertainty.
 
-## Research Scope Assessment
+---
 
-### Scope Factors
+## 1. 🎯 Research Scope Assessment
+
+### 1.1 Scope Factors
 
 ```yaml
 scope_factors:
@@ -29,7 +31,7 @@ scope_factors:
     cutting_edge: experimental/new
 ```
 
-### Scope Score Calculation
+### 1.2 Scope Score Calculation
 
 ```python
 def calculate_research_scope(factors):
@@ -53,9 +55,11 @@ def calculate_research_scope(factors):
     return score * 33.33  # Normalize to 0-100
 ```
 
-## Signal Quality Assessment
+.
 
-### Signal Indicators
+## 2. 📊 Signal Quality Assessment
+
+### 2.1 Signal Indicators
 
 ```yaml
 signal_indicators:
@@ -80,7 +84,7 @@ signal_indicators:
     dated: >24 months
 ```
 
-### Signal Quality Score
+### 2.2 Signal Quality Score
 
 ```python
 def calculate_signal_quality(indicators):
@@ -109,9 +113,11 @@ def calculate_signal_quality(indicators):
     return (score / 3) * 100  # Normalize to 0-100
 ```
 
-## Adaptive Strategies
+.
 
-### Based on Research Scope
+## 3. 🔄 Adaptive Strategies
+
+### 3.1 Based on Research Scope
 
 #### Narrow Scope (0-30)
 ```yaml
@@ -154,7 +160,7 @@ strategy:
     - ecosystem_overview
 ```
 
-### Based on Signal Quality
+### 3.2 Based on Signal Quality
 
 #### High Signal (>70)
 ```yaml
@@ -194,9 +200,12 @@ strategy:
     - gap_documentation
 ```
 
-## Execution Modes
+.
 
-### Mode 1: Comprehensive Research (Default)
+## 4. ⚙️ Execution Modes
+
+### 4.1 Mode 1: Comprehensive Research (Default)
+
 ```yaml
 configuration:
   researchers: [web, docs, market, feasibility]
@@ -208,7 +217,8 @@ configuration:
   when: scope < 70 AND signal > 40
 ```
 
-### Mode 2: Focused Research
+### 4.2 Mode 2: Focused Research
+
 ```yaml
 configuration:
   researchers: [web, docs, feasibility]
@@ -220,7 +230,8 @@ configuration:
   when: scope < 40 AND time_limited
 ```
 
-### Mode 3: Discovery Research
+### 4.3 Mode 3: Discovery Research
+
 ```yaml
 configuration:
   researchers: all + exploratory
@@ -232,7 +243,8 @@ configuration:
   when: signal < 30 OR novelty == cutting_edge
 ```
 
-### Mode 4: Rapid Assessment
+### 4.4 Mode 4: Rapid Assessment
+
 ```yaml
 configuration:
   researchers: [web, docs]
@@ -244,9 +256,11 @@ configuration:
   when: time_critical OR initial_assessment
 ```
 
-## Dynamic Adjustments
+.
 
-### Runtime Monitoring
+## 5. 🎚️ Dynamic Adjustments
+
+### 5.1 Runtime Monitoring
 
 ```python
 class ResearchMonitor:
@@ -265,7 +279,7 @@ class ResearchMonitor:
             self.refine_queries()
 ```
 
-### Progressive Enhancement
+### 5.2 Progressive Enhancement
 
 ```yaml
 enhancement_levels:
@@ -294,9 +308,11 @@ enhancement_levels:
     synthesis: multi_iteration
 ```
 
-## Fallback Strategies
+.
 
-### Graceful Degradation Path
+## 6. 🔧 Fallback Strategies
+
+### 6.1 Graceful Degradation Path
 
 ```
 1. Full Parallel Research (4 agents)
@@ -312,7 +328,7 @@ enhancement_levels:
 6. Manual Research Required
 ```
 
-### Recovery Actions
+### 6.2 Recovery Actions
 
 ```yaml
 on_low_signal:
@@ -344,9 +360,11 @@ on_paywall_blocking:
   - note_limitation
 ```
 
-## Optimization Rules
+.
 
-### Query Optimization
+## 7. 🚀 Optimization Rules
+
+### 7.1 Query Optimization
 
 ```python
 def optimize_queries(context):
@@ -369,7 +387,7 @@ def optimize_queries(context):
     return queries
 ```
 
-### Source Quality Filtering
+### 7.2 Source Quality Filtering
 
 ```python
 def filter_sources(sources):
@@ -388,9 +406,12 @@ def filter_sources(sources):
     return [s for s, score in sorted_sources if score > 0.6]
 ```
 
-## Configuration Examples
+.
 
-### Example 1: New Framework Research
+## 8. 📋 Configuration Examples
+
+### 8.1 Example 1: New Framework Research
+
 ```yaml
 detected:
   scope: 75  # broad
@@ -410,7 +431,8 @@ applied_rules:
     - trend_analysis
 ```
 
-### Example 2: Well-Known Library
+### 8.2 Example 2: Well-Known Library
+
 ```yaml
 detected:
   scope: 25  # narrow
@@ -427,7 +449,8 @@ applied_rules:
   synthesis: single_pass
 ```
 
-### Example 3: Uncertain Requirements
+### 8.3 Example 3: Uncertain Requirements
+
 ```yaml
 detected:
   scope: 60  # moderate
@@ -448,9 +471,11 @@ applied_rules:
     - gap_documentation
 ```
 
-## Success Metrics
+.
 
-### Research Quality Metrics
+## 9. 📈 Success Metrics
+
+### 9.1 Research Quality Metrics
 
 ```yaml
 metrics:
@@ -475,23 +500,28 @@ metrics:
     measure: documented_gaps / identified_gaps
 ```
 
-## Best Practices
+.
 
-### DO:
+## 10. ✅ Best Practices
+
+### 10.1 DO:
+
 - Start specific, broaden if needed
 - Cite all significant sources
 - Document contradictions explicitly
 - Flag confidence levels
 - Note research limitations
 
-### DON'T:
+### 10.2 DON'T:
+
 - Ignore contradictory findings
 - Rely on single source types
 - Skip validation for critical claims
 - Omit source citations
 - Hide research gaps
 
-### ALWAYS:
+### 10.3 ALWAYS:
+
 - Prioritize official documentation
 - Cross-validate critical findings
 - Document search methodology

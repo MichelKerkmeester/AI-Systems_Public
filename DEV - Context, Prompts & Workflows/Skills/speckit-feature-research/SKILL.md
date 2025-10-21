@@ -1,13 +1,17 @@
 ---
 name: speckit-feature-research
-description: Conduct parallel technical research and investigation for SpecKit features. Orchestrates 6 specialized research sub-agents to produce comprehensive research.md documentation through parallel collection, review, and synthesis phases.
+description: Conduct parallel technical research and investigation for SpecKit features. Orchestrates 6 specialized research sub-agents to produce comprehensive research.md documentation through parallel collection, review, and synthesis phases
 ---
 
 # SpecKit Feature Research
+Parallel Technical Investigation
 
-Execute parallel technical research workflow to produce comprehensive documentation for feature planning and implementation.
+> Change Notes (2025-10-21)
+- Removed 4.x sub-step numbering; standardized headers and emojis
+- Added YAML → Steps Crosswalk; clarified autonomous gating
+- Kept research document structure and field handling intact
 
-## When to Use This Skill
+## 1. 🎯 When to Use
 
 **Use this skill when**:
 - Conducting technical investigation for a new feature
@@ -23,7 +27,9 @@ Execute parallel technical research workflow to produce comprehensive documentat
 - Implementation without research
 - Writing specs without investigation
 
-## 🚀 Quick Command Reference
+.
+
+## 2. 🚀 Quick Command Reference
 
 | Step | Command | Purpose |
 |------|---------|----------|
@@ -36,9 +42,11 @@ Execute parallel technical research workflow to produce comprehensive documentat
 | 7 | Manual | Final Compilation |
 | 8 | Manual | Branch Integration (optional) |
 
-**✅ Autonomous**: This workflow executes steps 1-7 without approval gates. Only step 8 (branch integration) requires user confirmation.
+**✅ Autonomous**: This workflow executes steps 1-7 without approval gates. Only step 8 (branch integration) requires user confirmation
 
-## Architecture Overview
+.
+
+## 3. 🏗️ Architecture Overview
 
 This skill implements the sk_p__feature_research.yaml workflow with 6 specialized research sub-agents executing in parallel.
 
@@ -55,7 +63,22 @@ This skill implements the sk_p__feature_research.yaml workflow with 6 specialize
 
 **Note**: This is an autonomous workflow with NO approval gates.
 
-## Workflow Steps (Detailed Execution)
+.
+
+## YAML → Steps Crosswalk
+
+- Source: b_prompts/github_spec_kit/parallel_agents/sk_p__feature_research.yaml
+- Mapping:
+  - Step 1 → Gather Inputs & Define Scope
+  - Step 2 → Pre-work Review
+  - Step 3 → Parallel Research Block
+  - Step 4 → Research Compilation
+  - Step 5 → Quality Checklist (/speckit.checklist)
+  - Step 6 → Solution Design
+  - Step 7 → Final Research Compilation
+  - Step 8 → Branch Integration (conditional)
+
+## 4. 📝 Workflow Steps
 
 This section provides step-by-step execution guidance as defined in sk_p__feature_research.yaml.
 
@@ -93,8 +116,8 @@ This section provides step-by-step execution guidance as defined in sk_p__featur
    - Default: Discover during research
 
 6. **Environment/Staging Link**:
-   - Ask: "Do you have a staging environment URL to analyze? (Leave empty to skip browser testing)"
-   - Default: Skip DevTools/browser testing if not provided
+   - Ask: "Do you have a staging environment URL? (Leave empty to skip browser testing)"
+   - Default: None (browser testing steps skipped)
 
 7. **Scope/Files**:
    - Ask: "Which files or directories should I focus on? (Leave empty to default to `specs/**`)"
@@ -118,8 +141,6 @@ This section provides step-by-step execution guidance as defined in sk_p__featur
 
 **Approval Gate**: None (autonomous execution)
 
----
-
 ### Step 2: Pre-work Review
 
 **Action**: Review required documents
@@ -132,8 +153,6 @@ This section provides step-by-step execution guidance as defined in sk_p__featur
 **Validation**: `principles_established`
 
 **Approval Gate**: None (autonomous execution)
-
----
 
 ### Step 3: Parallel Research Block
 
@@ -227,8 +246,6 @@ This step contains sub-phases that execute sequentially:
 
 **Note**: Main agent finalization occurs within this step (no subsequent approval gate)
 
----
-
 ### Step 4: Research Compilation
 
 **Action**: Intermediate compilation (note: research document already synthesized in step 3)
@@ -236,8 +253,6 @@ This step contains sub-phases that execute sequentially:
 **Note**: Ensure section coverage and polish
 
 **Validation**: Research sections structured
-
----
 
 ### Step 5: Quality Checklist
 
@@ -249,8 +264,6 @@ This step contains sub-phases that execute sequentially:
 - Quality checklist generated
 
 **Validation**: `checklist_generated`
-
----
 
 ### Step 6: Solution Design
 
@@ -275,8 +288,6 @@ This step contains sub-phases that execute sequentially:
 - Outputs: solution_architecture, implementation_patterns, code_examples, configuration_requirements, architectural_patterns, integration_blueprint, implementation_roadmap, edge_case_handling
 
 **Validation**: `solution_designed`
-
----
 
 ### Step 7: Final Research Compilation
 
@@ -329,8 +340,6 @@ Next steps:
 - Proceed to specification (/specify) if needed
 - Use research as reference during implementation planning
 ```
-
----
 
 ### Step 8: Branch Integration
 
@@ -407,9 +416,11 @@ Next steps:
    - Findings integration
    - Markdown formatting
 
-## Execution Model
+.
 
-### Parallel Research Pattern
+## 6. 🔄 Execution Model
+
+### 6.1 Parallel Research Pattern
 
 **Note**: All parallel execution, review, synthesis, and main agent finalization occur within Step 3 as sub-phases, NOT as separate steps.
 
@@ -462,7 +473,9 @@ finding:
 - All phases in Step 3 are sub-phases within that single workflow step
 - This is an autonomous workflow - no user approval needed until branch integration
 
-## Research Document Structure
+.
+
+## 7. 📋 Research Document Structure
 
 The skill produces a comprehensive `research.md` with these sections:
 
@@ -520,9 +533,13 @@ The skill produces a comprehensive `research.md` with these sections:
 - Data protection
 - Spam prevention
 
-## Inputs
+.
 
-### Required Inputs
+## 8. 📥 Inputs & Outputs
+
+### 8.1 Inputs
+
+#### Required Inputs
 - **request**: Feature description or research goals
 - **spec_folder**: Where to save research.md
 
@@ -532,7 +549,7 @@ The skill produces a comprehensive `research.md` with these sections:
 - **environment**: Staging URL for live analysis
 - **scope**: File scope limitations
 
-## Outputs
+### 8.2 Outputs
 
 ### Primary Output
 - **research.md**: Complete research documentation
@@ -565,9 +582,9 @@ finding:
 - Contradiction flagging
 - Completeness validation
 
----
+.
 
-## ✅ Approval Gates
+## 9. ✅ Approval Gates
 
 This workflow is **autonomous** with minimal user interaction:
 
@@ -575,11 +592,11 @@ This workflow is **autonomous** with minimal user interaction:
 |------|-----------------|--------------|------|
 | 8 | "All checks passed. Would you like me to push this branch to main now to keep main up to date and minimize conflicts?" | Required | Branch integration only |
 
-**Note**: Steps 1-7 execute autonomously without approval gates. Only step 8 (branch integration) requires user confirmation.
+**Note**: Steps 1-7 execute autonomously without approval gates. Only step 8 (branch integration) requires user confirmation
 
----
+.
 
-## ⚙️ Field Handling
+## 10. ⚙️ Field Handling
 
 This workflow automatically handles empty input fields per sk_p__feature_research.yaml:
 
@@ -641,7 +658,9 @@ This workflow automatically handles empty input fields per sk_p__feature_researc
   3. Checkout feature branch
 - **Skip When**: `branch_strategy == main_branch`
 
-## Integration Points
+.
+
+## 11. 🔗 Integration Points
 
 ### With Chrome DevTools
 - Test API endpoints
@@ -660,32 +679,36 @@ This workflow automatically handles empty input fields per sk_p__feature_researc
 - **speckit-parallel-complete**: Uses research for full workflow
 - **speckit-plan-spec**: Leverages research for planning
 
-## Adaptive Rules
+.
+
+## 12. ⚙️ Adaptive Rules & Quality Standards
+
+### 12.1 Adaptive Rules
 
 **Note**: For complete adaptive rule specifications, complexity scoring, and execution mode details, see [references/adaptive-rules.md](references/adaptive-rules.md).
 
-### Low Signal Handling
+#### Low Signal Handling
 When research yields limited results:
 - Broaden search queries
 - Include secondary sources
 - Expand to related domains
 - Document gaps explicitly
 
-### High Uncertainty
+#### High Uncertainty
 When findings are contradictory:
 - Add clarification pass
 - Document conflicting sources
 - Provide multiple options
 - Highlight trade-offs
 
-### Fallback Strategy
+#### Fallback Strategy
 If parallel execution fails:
 - Run agents sequentially
 - Maintain review/synthesis phases
 - Document degraded mode
 - Continue with partial results
 
-## Quality Standards
+### 12.2 Quality Standards
 
 ### Documentation Requirements
 - Production-ready examples
@@ -706,8 +729,11 @@ If parallel execution fails:
 - Failure modes documented
 - Recovery strategies defined
 - Monitoring approaches specified
+- Source attribution present
 
-## Performance Characteristics
+.
+
+## 13. ⚡ Performance Characteristics
 
 **Note**: Performance varies based on research scope, available sources, and system resources.
 
@@ -717,7 +743,9 @@ If parallel execution fails:
 - **Document generation**: Comprehensive markdown output
 - **Output size**: 50-150KB markdown (typical)
 
-## Error Handling
+.
+
+## 14. 🚨 Error Handling
 
 ### Retry Policy
 - **Max retries**: 2 per agent
@@ -730,7 +758,9 @@ If parallel execution fails:
 - Document missing research areas
 - Provide fallback recommendations
 
-## Limitations
+.
+
+## 14. ⚠️ Limitations
 
 - **Research scope**: Technical/implementation focus
 - **Sources**: Public information only
@@ -738,7 +768,9 @@ If parallel execution fails:
 - **Real-time**: No live system monitoring
 - **Dependencies**: Requires internet access
 
-## Success Metrics
+.
+
+## 15. 📈 Success Metrics
 
 **Note**: Target quality benchmarks for research completeness and accuracy.
 
@@ -748,16 +780,9 @@ If parallel execution fails:
 - **Completeness**: All sections populated
 - **Quality score**: >85% validation pass
 
-## Version
+.
 
-**Current Version**: 1.0.0
-**Based On**: sk_p__feature_research.yaml
-**Created**: 2025-10-18
-**Architecture**: Parallel research orchestration
-
----
-
-## References
+## 17. References
 
 - Source: `/b_prompts/github_spec_kit/parallel_agents/sk_p__feature_research.yaml`
 - Integration: Works with all SpecKit skills

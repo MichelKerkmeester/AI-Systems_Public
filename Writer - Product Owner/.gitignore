@@ -1,6 +1,6 @@
 # Git Ignore Configuration
 # Specifies intentionally untracked files that Git should ignore
-
+Briefing/
 Context/
 Export/
 /.vscode/

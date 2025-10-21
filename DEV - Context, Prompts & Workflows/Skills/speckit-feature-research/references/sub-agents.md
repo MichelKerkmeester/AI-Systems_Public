@@ -1,8 +1,10 @@
-# Feature Research Sub-Agents
+# Feature Research Sub-Agents - Specialized Responsibilities and Coordination
 
-Detailed specifications for the 6 specialized research sub-agents.
+Sub-agent roles for feature research and the required research artifacts.
 
-## 1. Web/Ecosystem Researcher
+---
+
+## 1. 🔍 Web/Ecosystem Researcher
 
 **Role**: Investigate libraries, frameworks, and ecosystem patterns
 
@@ -43,9 +45,9 @@ findings:
 - License compatibility
 - Security considerations
 
----
+.
 
-## 2. Academic/Docs Researcher
+## 2. 📚 Academic/Docs Researcher
 
 **Role**: Research standards, RFCs, and official documentation
 
@@ -87,9 +89,9 @@ findings:
 - Browser compatibility
 - Standards compliance
 
----
+.
 
-## 3. Competitive/Market Analyst
+## 3. 🏪 Competitive/Market Analyst
 
 **Role**: Analyze vendor solutions and market alternatives
 
@@ -131,9 +133,9 @@ findings:
 - Integration capabilities
 - Total cost of ownership
 
----
+.
 
-## 4. Feasibility/Cost Analyst
+## 4. 💰 Feasibility/Cost Analyst
 
 **Role**: Evaluate technical complexity and operational costs
 
@@ -182,9 +184,9 @@ analysis:
 - Mitigation strategies
 - ROI analysis
 
----
+.
 
-## 5. Lead Reviewer
+## 5. 🔄 Lead Reviewer
 
 **Role**: Consolidate and validate research findings
 
@@ -234,9 +236,9 @@ review_summary:
   quality_score: percentage
 ```
 
----
+.
 
-## 6. Lead Synthesizer
+## 6. ✍️ Lead Synthesizer
 
 **Role**: Create comprehensive research.md document
 
@@ -247,46 +249,55 @@ review_summary:
 - Ensure narrative flow
 - Format for readability
 
-**Document Structure**:
+**Document Structure Template**:
+
+The Lead Synthesizer produces a research.md document following this structure. Each section below represents the output document structure, not additional sub-agent sections:
+
 ```markdown
 # Research Documentation
+Specialized Sub-Agent Specifications
 
-## Table of Contents
-[Auto-generated]
-
-## Executive Summary
 [High-level overview]
 
-## Investigation Report
+## 🧭 Investigation Report
+
 ### Request Summary
 ### Current Behavior
 ### Key Findings
 ### Recommendations
 
-## Architecture Analysis
+## 🏗️ Architecture Analysis
+
 ### System Components
 ### Data Flow
 ### Integration Points
 
-## Technical Specifications
+## 📋 Technical Specifications
+
 [Detailed specs]
 
-## Implementation Guide
+## 📖 Implementation Guide
+
 [Step-by-step guidance]
 
-## Constraints & Limitations
+## ⚠️ Constraints & Limitations
+
 [Platform limitations]
 
-## Testing Strategy
+## 🧪 Testing Strategy
+
 [Test approaches]
 
-## Performance Analysis
+## 📊 Performance Analysis
+
 [Benchmarks and optimization]
 
-## Security Considerations
+## 🔒 Security Considerations
+
 [Security analysis]
 
-## References
+## 📚 References
+
 [All citations]
 ```
 
@@ -304,11 +315,11 @@ review_summary:
 - Proper citations
 - Actionable insights
 
----
+.
 
-## Agent Coordination
+## 7. 🔗 Agent Coordination
 
-### Execution Flow
+### 7.1 Execution Flow
 
 ```
 1. PARALLEL PHASE (45-60 seconds)
@@ -327,7 +338,7 @@ review_summary:
    └─ Main Agent: Final review & polish
 ```
 
-### Communication Protocol
+### 7.2 Communication Protocol
 
 Agents communicate findings using structured format:
 
@@ -344,7 +355,7 @@ agent_output:
     issues_encountered: [list]
 ```
 
-### Quality Metrics
+### 7.3 Quality Metrics
 
 Each agent must meet minimum quality thresholds:
 
@@ -354,11 +365,9 @@ Each agent must meet minimum quality thresholds:
 - **Execution time**: Within timeout limits
 - **Error rate**: <10% failed searches
 
----
+## 8. ⚠️ Error Handling
 
-## Error Handling
-
-### Agent-Level Errors
+### 8.1 Agent-Level Errors
 
 **Search Failures**:
 - Retry with broader terms
@@ -375,7 +384,7 @@ Each agent must meet minimum quality thresholds:
 - Low confidence → Seek additional sources
 - Contradictions → Document all viewpoints
 
-### System-Level Errors
+### 8.2 System-Level Errors
 
 **Parallel Execution Failure**:
 - Fallback to sequential
@@ -387,11 +396,9 @@ Each agent must meet minimum quality thresholds:
 - Manual intervention
 - Error documentation
 
----
+## 9. ✅ Success Criteria
 
-## Success Criteria
-
-### Individual Agent Success
+### 9.1 Individual Agent Success
 
 - **Web Researcher**: 10+ relevant libraries/repos
 - **Docs Researcher**: 5+ authoritative sources
@@ -400,10 +407,9 @@ Each agent must meet minimum quality thresholds:
 - **Lead Reviewer**: <5% contradictions unresolved
 - **Lead Synthesizer**: All sections populated
 
-### Overall Success
+### 9.2 Overall Success
 
 - **Coverage**: >80% research areas addressed
 - **Quality**: >85% findings high/medium confidence
 - **Completeness**: No critical gaps
 - **Timeliness**: <5 minutes total execution
-- **Documentation**: Publication-ready output
