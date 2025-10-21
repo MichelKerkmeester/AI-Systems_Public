@@ -16,7 +16,7 @@ This stage follows a specific execution pattern optimized for comprehensive plan
 
 ## 2. ⚡ Execution Pattern
 
-### 2.1 Parallel Analysis Phase
+### Parallel Analysis Phase
 
 ```
 Launch →
@@ -45,7 +45,7 @@ Complete →
 - Continue with partial results if needed
 - Minimum viable: 3 of 4 analysts (requirements + 2 others)
 
-### 2.2 Review Phase
+### Review Phase
 
 ```
 Inputs: [requirements, architecture, risks, estimates]
@@ -66,7 +66,7 @@ Output: synthesis_guidance + review_notes + reconciliation
 - Can proceed with 75% analyst success
 - Focus: Conflict resolution and completeness
 
-### 2.3 Synthesis Phase
+### Synthesis Phase
 
 ```
 Inputs: [all_analyses, review_guidance, reconciliation_notes]
@@ -87,7 +87,7 @@ Output: plan.md + planning-summary.md
 - Creates cohesive planning artifacts
 - Follows SpecKit template structure
 
-### 2.4 Main Agent QA Phase
+### Main Agent QA Phase
 
 ```
 Inputs: [plan.md, planning-summary.md]
@@ -108,7 +108,7 @@ Output: final_planning_artifacts + signoff
 - Validates technical soundness
 - Prepares for user approval
 
-### 2.5 Approval Gate
+### Approval Gate
 
 ```
 Present: [plan.md, planning-summary.md]
@@ -175,7 +175,7 @@ User Decision:
 
 ## 4. ⚙️ Orchestration Implementation
 
-### 4.1 Coordinator Pattern
+### Coordinator Pattern
 
 ```python
 class PlanningCoordinator:
@@ -217,7 +217,7 @@ class PlanningCoordinator:
         return final_docs
 ```
 
-### 4.2 Error Handling
+### Error Handling
 
 ```python
 def handle_analyst_failure(self, analyst, error):
@@ -251,7 +251,7 @@ def handle_conflicting_analyses(self, analyses):
 
 ## 5. 🚀 Performance Optimization
 
-### 5.1 Concurrency Control
+### Concurrency Control
 
 ```yaml
 concurrency_limits:
@@ -266,7 +266,7 @@ concurrency_limits:
     estimation: 2  # Calculation-heavy
 ```
 
-### 5.2 Analysis Depth
+### Analysis Depth
 
 ```yaml
 depth_by_complexity:
@@ -293,7 +293,7 @@ depth_by_complexity:
 
 ## 6. 📊 Monitoring & Telemetry
 
-### 6.1 Planning Metrics
+### Planning Metrics
 
 ```yaml
 planning_metrics:
@@ -304,7 +304,7 @@ planning_metrics:
   - requirement_coverage
 ```
 
-### 6.2 Analyst Metrics
+### Analyst Metrics
 
 ```yaml
 analyst_metrics:
@@ -315,7 +315,7 @@ analyst_metrics:
   - coherence_rating
 ```
 
-### 6.3 Quality Metrics
+### Quality Metrics
 
 ```yaml
 quality_metrics:
@@ -330,7 +330,7 @@ quality_metrics:
 
 ## 7. 🎛️ Adaptive Rules
 
-### 7.1 High Complexity Handling
+### High Complexity Handling
 
 When complexity > 70:
 ```yaml
@@ -342,7 +342,7 @@ adjustments:
   review_depth: comprehensive
 ```
 
-### 7.2 Low Clarity Handling
+### Low Clarity Handling
 
 When requirement_clarity < 40:
 ```yaml
@@ -354,7 +354,7 @@ adjustments:
   stakeholder_involvement: high
 ```
 
-### 7.3 High Uncertainty
+### High Uncertainty
 
 When uncertainty > 70:
 ```yaml
@@ -370,7 +370,7 @@ adjustments:
 
 ## 8. 🔗 Planning Dependencies
 
-### 8.1 Input Requirements
+### Input Requirements
 
 ```yaml
 planning_requires:
@@ -384,7 +384,7 @@ planning_requires:
     - stakeholder_input
 ```
 
-### 8.2 Output Contract
+### Output Contract
 
 ```yaml
 planning_produces:
@@ -426,7 +426,7 @@ termination:
 
 ## 10. ✅ Best Practices
 
-### 10.1 DO:
+### DO:
 
 - Start with why (business value)
 - Involve stakeholders early
@@ -434,7 +434,7 @@ termination:
 - Consider alternatives
 - Define success metrics
 
-### 10.2 DON'T:
+### DON'T:
 
 - Skip stakeholder alignment
 - Ignore constraints
@@ -442,7 +442,7 @@ termination:
 - Leave risks unmitigated
 - Assume requirements are static
 
-### 10.3 CONSIDER:
+### CONSIDER:
 
 - Iterative refinement for uncertain areas
 - Proof-of-concepts for risky approaches

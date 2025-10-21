@@ -420,7 +420,7 @@ Next steps:
 
 ## 6. 🔄 Execution Model
 
-### 6.1 Parallel Research Pattern
+### Parallel Research Pattern
 
 **Note**: All parallel execution, review, synthesis, and main agent finalization occur within Step 3 as sub-phases, NOT as separate steps.
 
@@ -537,7 +537,7 @@ The skill produces a comprehensive `research.md` with these sections:
 
 ## 8. 📥 Inputs & Outputs
 
-### 8.1 Inputs
+### Inputs
 
 #### Required Inputs
 - **request**: Feature description or research goals
@@ -549,7 +549,7 @@ The skill produces a comprehensive `research.md` with these sections:
 - **environment**: Staging URL for live analysis
 - **scope**: File scope limitations
 
-### 8.2 Outputs
+### Outputs
 
 ### Primary Output
 - **research.md**: Complete research documentation
@@ -596,7 +596,7 @@ This workflow is **autonomous** with minimal user interaction:
 
 .
 
-## 10. ⚙️ Field Handling
+## 10. 🏷️ Field Handling
 
 This workflow automatically handles empty input fields per sk_p__feature_research.yaml:
 
@@ -683,7 +683,7 @@ This workflow automatically handles empty input fields per sk_p__feature_researc
 
 ## 12. ⚙️ Adaptive Rules & Quality Standards
 
-### 12.1 Adaptive Rules
+### Adaptive Rules
 
 **Note**: For complete adaptive rule specifications, complexity scoring, and execution mode details, see [references/adaptive-rules.md](references/adaptive-rules.md).
 
@@ -708,7 +708,7 @@ If parallel execution fails:
 - Document degraded mode
 - Continue with partial results
 
-### 12.2 Quality Standards
+### Quality Standards
 
 ### Documentation Requirements
 - Production-ready examples
@@ -781,6 +781,11 @@ If parallel execution fails:
 - **Quality score**: >85% validation pass
 
 .
+
+## 🔧 Troubleshooting / Notes
+- Insufficient sources: broaden queries; include secondary sources; document gaps
+- Contradictory findings: add clarification pass; present options with trade-offs
+- Branch integration problems: skip integration (main_branch) or open PR for feature_branch
 
 ## 17. References
 

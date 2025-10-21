@@ -319,7 +319,7 @@ Specialized Sub-Agent Specifications
 
 ## 7. 🔗 Agent Coordination
 
-### 7.1 Execution Flow
+### Execution Flow
 
 ```
 1. PARALLEL PHASE (45-60 seconds)
@@ -338,7 +338,7 @@ Specialized Sub-Agent Specifications
    └─ Main Agent: Final review & polish
 ```
 
-### 7.2 Communication Protocol
+### Communication Protocol
 
 Agents communicate findings using structured format:
 
@@ -355,7 +355,7 @@ agent_output:
     issues_encountered: [list]
 ```
 
-### 7.3 Quality Metrics
+### Quality Metrics
 
 Each agent must meet minimum quality thresholds:
 
@@ -367,7 +367,7 @@ Each agent must meet minimum quality thresholds:
 
 ## 8. ⚠️ Error Handling
 
-### 8.1 Agent-Level Errors
+### Agent-Level Errors
 
 **Search Failures**:
 - Retry with broader terms
@@ -384,7 +384,7 @@ Each agent must meet minimum quality thresholds:
 - Low confidence → Seek additional sources
 - Contradictions → Document all viewpoints
 
-### 8.2 System-Level Errors
+### System-Level Errors
 
 **Parallel Execution Failure**:
 - Fallback to sequential
@@ -398,7 +398,7 @@ Each agent must meet minimum quality thresholds:
 
 ## 9. ✅ Success Criteria
 
-### 9.1 Individual Agent Success
+### Individual Agent Success
 
 - **Web Researcher**: 10+ relevant libraries/repos
 - **Docs Researcher**: 5+ authoritative sources
@@ -407,7 +407,7 @@ Each agent must meet minimum quality thresholds:
 - **Lead Reviewer**: <5% contradictions unresolved
 - **Lead Synthesizer**: All sections populated
 
-### 9.2 Overall Success
+### Overall Success
 
 - **Coverage**: >80% research areas addressed
 - **Quality**: >85% findings high/medium confidence

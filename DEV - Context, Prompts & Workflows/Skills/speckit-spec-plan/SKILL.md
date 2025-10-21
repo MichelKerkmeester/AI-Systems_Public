@@ -337,7 +337,7 @@ Branch strategy has been set and will be inherited by subsequent workflows.
 
 .
 
-## 5. ⚙️ Planning Sub-Agents
+## 5. 👥 Planning Sub-Agents
 
 **Note**: For detailed agent specifications and output formats, see [references/sub-agents.md](references/sub-agents.md).
 
@@ -379,7 +379,7 @@ Branch strategy has been set and will be inherited by subsequent workflows.
 
 .
 
-## 6. ⚙️ Execution Model
+## 6. 🔄 Execution Model
 
 ### Parallel Planning Pattern
 
@@ -822,6 +822,11 @@ When staging URL is provided:
 - **Efficiency**: Optimized parallel execution
 
 .
+
+## 🔧 Troubleshooting / Notes
+- Ambiguous requirements: ensure Clarification (Step 4) completed before planning
+- Parallel planning gaps: verify all four analyst outputs present before synthesis
+- Approval gates: ensure gate after Step 6 before proceeding to Step 7
 
 ## 20. References
 

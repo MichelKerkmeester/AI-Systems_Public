@@ -6,7 +6,7 @@ Rules to adapt planning depth and execution mode based on complexity, clarity, a
 
 ## 1. 📊 Planning Complexity Assessment
 
-### 1.1 Complexity Factors
+### Complexity Factors
 
 ```yaml
 planning_factors:
@@ -53,7 +53,7 @@ planning_factors:
       critical: zero_trust
 ```
 
-### 1.2 Planning Complexity Score
+### Planning Complexity Score
 
 ```python
 def calculate_planning_complexity(factors):
@@ -85,7 +85,7 @@ def calculate_planning_complexity(factors):
 
 ## 2. 🔍 Requirement Clarity Assessment
 
-### 2.1 Clarity Indicators
+### Clarity Indicators
 
 ```yaml
 clarity_indicators:
@@ -117,7 +117,7 @@ clarity_indicators:
       conflicting: contradictory
 ```
 
-### 2.2 Clarity Score Calculation
+### Clarity Score Calculation
 
 ```python
 def calculate_clarity(indicators):
@@ -146,7 +146,7 @@ def calculate_clarity(indicators):
 
 ## 3. 🎯 Adaptive Strategies
 
-### 3.1 Based on Planning Complexity
+### Based on Planning Complexity
 
 #### Low Complexity (0-30)
 ```yaml
@@ -191,7 +191,7 @@ strategy:
     - external_review
 ```
 
-### 3.2 Based on Requirement Clarity
+### Based on Requirement Clarity
 
 #### High Clarity (>70)
 ```yaml
@@ -237,7 +237,7 @@ strategy:
 
 ## 4. ⚙️ Execution Modes
 
-### 4.1 Mode 1: Standard Planning (Default)
+### Mode 1: Standard Planning (Default)
 
 ```yaml
 configuration:
@@ -250,7 +250,7 @@ configuration:
   when: complexity < 60 AND clarity > 50
 ```
 
-### 4.2 Mode 2: Discovery Planning
+### Mode 2: Discovery Planning
 
 ```yaml
 configuration:
@@ -263,7 +263,7 @@ configuration:
   when: clarity < 40 OR new_domain
 ```
 
-### 4.3 Mode 3: Rapid Planning
+### Mode 3: Rapid Planning
 
 ```yaml
 configuration:
@@ -276,7 +276,7 @@ configuration:
   when: time_critical AND complexity < 40
 ```
 
-### 4.4 Mode 4: Enterprise Planning
+### Mode 4: Enterprise Planning
 
 ```yaml
 configuration:
@@ -293,7 +293,7 @@ configuration:
 
 ## 5. 🔄 Dynamic Adjustments
 
-### 5.1 Runtime Monitoring
+### Runtime Monitoring
 
 ```python
 class PlanningMonitor:
@@ -311,7 +311,7 @@ class PlanningMonitor:
             self.add_architecture_review()
 ```
 
-### 5.2 Progressive Refinement
+### Progressive Refinement
 
 ```yaml
 refinement_stages:
@@ -344,7 +344,7 @@ refinement_stages:
 
 ## 6. 🛡️ Fallback Strategies
 
-### 6.1 Graceful Degradation Path
+### Graceful Degradation Path
 
 ```
 1. Full Parallel Planning (4 analysts)
@@ -360,7 +360,7 @@ refinement_stages:
 6. External Facilitation Required
 ```
 
-### 6.2 Recovery Actions
+### Recovery Actions
 
 ```yaml
 on_conflicting_requirements:
@@ -396,7 +396,7 @@ on_architectural_uncertainty:
 
 ## 7. 🚀 Optimization Rules
 
-### 7.1 Planning Workflow Optimization
+### Planning Workflow Optimization
 
 ```python
 def optimize_planning_workflow(context):
@@ -415,7 +415,7 @@ def optimize_planning_workflow(context):
         return 'standard_parallel'
 ```
 
-### 7.2 Stakeholder Engagement Strategy
+### Stakeholder Engagement Strategy
 
 ```python
 def optimize_stakeholder_engagement(stakeholders):
@@ -440,7 +440,7 @@ def optimize_stakeholder_engagement(stakeholders):
 
 ## 8. ⚠️ Risk Analysis Adaptation
 
-### 8.1 Risk Assessment Depth
+### Risk Assessment Depth
 
 ```yaml
 risk_depth_by_criticality:
@@ -470,7 +470,7 @@ risk_depth_by_criticality:
 
 ## 9. 💡 Configuration Examples
 
-### 9.1 Example 1: Well-Defined Feature
+### Example 1: Well-Defined Feature
 
 ```yaml
 detected:
@@ -487,7 +487,7 @@ applied_rules:
   documentation: standard
 ```
 
-### 9.2 Example 2: Enterprise Initiative
+### Example 2: Enterprise Initiative
 
 ```yaml
 detected:
@@ -508,7 +508,7 @@ applied_rules:
     - risk_mitigation_planning
 ```
 
-### 9.3 Example 3: Exploratory Project
+### Example 3: Exploratory Project
 
 ```yaml
 detected:
@@ -533,7 +533,7 @@ applied_rules:
 
 ## 10. 📈 Success Metrics
 
-### 10.1 Planning Quality Metrics
+### Planning Quality Metrics
 
 ```yaml
 metrics:
@@ -566,7 +566,7 @@ metrics:
 
 ## 11. ✅ Best Practices
 
-### 11.1 DO:
+### DO:
 
 - Start with why (business value)
 - Involve stakeholders early
@@ -574,7 +574,7 @@ metrics:
 - Consider alternatives
 - Define success metrics
 
-### 11.2 DON'T:
+### DON'T:
 
 - Skip stakeholder alignment
 - Ignore constraints
@@ -582,7 +582,7 @@ metrics:
 - Leave risks unmitigated
 - Assume requirements are static
 
-### 11.3 ALWAYS:
+### ALWAYS:
 
 - Validate understanding
 - Document decisions and rationale

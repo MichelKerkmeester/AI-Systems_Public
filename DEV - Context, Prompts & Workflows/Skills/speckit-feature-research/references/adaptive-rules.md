@@ -6,7 +6,7 @@ Rules to adapt research scope and execution modes based on clarity, signal quali
 
 ## 1. 🎯 Research Scope Assessment
 
-### 1.1 Scope Factors
+### Scope Factors
 
 ```yaml
 scope_factors:
@@ -31,7 +31,7 @@ scope_factors:
     cutting_edge: experimental/new
 ```
 
-### 1.2 Scope Score Calculation
+### Scope Score Calculation
 
 ```python
 def calculate_research_scope(factors):
@@ -59,7 +59,7 @@ def calculate_research_scope(factors):
 
 ## 2. 📊 Signal Quality Assessment
 
-### 2.1 Signal Indicators
+### Signal Indicators
 
 ```yaml
 signal_indicators:
@@ -84,7 +84,7 @@ signal_indicators:
     dated: >24 months
 ```
 
-### 2.2 Signal Quality Score
+### Signal Quality Score
 
 ```python
 def calculate_signal_quality(indicators):
@@ -117,7 +117,7 @@ def calculate_signal_quality(indicators):
 
 ## 3. 🔄 Adaptive Strategies
 
-### 3.1 Based on Research Scope
+### Based on Research Scope
 
 #### Narrow Scope (0-30)
 ```yaml
@@ -160,7 +160,7 @@ strategy:
     - ecosystem_overview
 ```
 
-### 3.2 Based on Signal Quality
+### Based on Signal Quality
 
 #### High Signal (>70)
 ```yaml
@@ -204,7 +204,7 @@ strategy:
 
 ## 4. ⚙️ Execution Modes
 
-### 4.1 Mode 1: Comprehensive Research (Default)
+### Mode 1: Comprehensive Research (Default)
 
 ```yaml
 configuration:
@@ -217,7 +217,7 @@ configuration:
   when: scope < 70 AND signal > 40
 ```
 
-### 4.2 Mode 2: Focused Research
+### Mode 2: Focused Research
 
 ```yaml
 configuration:
@@ -230,7 +230,7 @@ configuration:
   when: scope < 40 AND time_limited
 ```
 
-### 4.3 Mode 3: Discovery Research
+### Mode 3: Discovery Research
 
 ```yaml
 configuration:
@@ -243,7 +243,7 @@ configuration:
   when: signal < 30 OR novelty == cutting_edge
 ```
 
-### 4.4 Mode 4: Rapid Assessment
+### Mode 4: Rapid Assessment
 
 ```yaml
 configuration:
@@ -260,7 +260,7 @@ configuration:
 
 ## 5. 🎚️ Dynamic Adjustments
 
-### 5.1 Runtime Monitoring
+### Runtime Monitoring
 
 ```python
 class ResearchMonitor:
@@ -279,7 +279,7 @@ class ResearchMonitor:
             self.refine_queries()
 ```
 
-### 5.2 Progressive Enhancement
+### Progressive Enhancement
 
 ```yaml
 enhancement_levels:
@@ -312,7 +312,7 @@ enhancement_levels:
 
 ## 6. 🔧 Fallback Strategies
 
-### 6.1 Graceful Degradation Path
+### Graceful Degradation Path
 
 ```
 1. Full Parallel Research (4 agents)
@@ -328,7 +328,7 @@ enhancement_levels:
 6. Manual Research Required
 ```
 
-### 6.2 Recovery Actions
+### Recovery Actions
 
 ```yaml
 on_low_signal:
@@ -364,7 +364,7 @@ on_paywall_blocking:
 
 ## 7. 🚀 Optimization Rules
 
-### 7.1 Query Optimization
+### Query Optimization
 
 ```python
 def optimize_queries(context):
@@ -387,7 +387,7 @@ def optimize_queries(context):
     return queries
 ```
 
-### 7.2 Source Quality Filtering
+### Source Quality Filtering
 
 ```python
 def filter_sources(sources):
@@ -410,7 +410,7 @@ def filter_sources(sources):
 
 ## 8. 📋 Configuration Examples
 
-### 8.1 Example 1: New Framework Research
+### Example 1: New Framework Research
 
 ```yaml
 detected:
@@ -431,7 +431,7 @@ applied_rules:
     - trend_analysis
 ```
 
-### 8.2 Example 2: Well-Known Library
+### Example 2: Well-Known Library
 
 ```yaml
 detected:
@@ -449,7 +449,7 @@ applied_rules:
   synthesis: single_pass
 ```
 
-### 8.3 Example 3: Uncertain Requirements
+### Example 3: Uncertain Requirements
 
 ```yaml
 detected:
@@ -475,7 +475,7 @@ applied_rules:
 
 ## 9. 📈 Success Metrics
 
-### 9.1 Research Quality Metrics
+### Research Quality Metrics
 
 ```yaml
 metrics:
@@ -504,7 +504,7 @@ metrics:
 
 ## 10. ✅ Best Practices
 
-### 10.1 DO:
+### DO:
 
 - Start specific, broaden if needed
 - Cite all significant sources
@@ -512,7 +512,7 @@ metrics:
 - Flag confidence levels
 - Note research limitations
 
-### 10.2 DON'T:
+### DON'T:
 
 - Ignore contradictory findings
 - Rely on single source types
@@ -520,7 +520,7 @@ metrics:
 - Omit source citations
 - Hide research gaps
 
-### 10.3 ALWAYS:
+### ALWAYS:
 
 - Prioritize official documentation
 - Cross-validate critical findings

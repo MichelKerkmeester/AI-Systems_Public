@@ -16,7 +16,7 @@ This stage follows a specific execution pattern optimized for research gathering
 
 ## 2. ⚙️ Execution Pattern
 
-### 2.1 Parallel Research Phase
+### Parallel Research Phase
 
 ```
 Launch →
@@ -45,7 +45,7 @@ Complete →
 - Continue with partial results if needed
 - Minimum viable: 2 of 4 researchers
 
-### 2.2 Review Phase
+### Review Phase
 
 ```
 Inputs: [web_findings, docs_findings, market_findings, feasibility_findings]
@@ -66,7 +66,7 @@ Output: synthesis_guidance + ranked_findings + contradictions
 - Can proceed with 50% research coverage
 - Focus: Contradiction resolution
 
-### 2.3 Synthesis Phase
+### Synthesis Phase
 
 ```
 Inputs: [all_findings, review_guidance, ranked_sources]
@@ -87,7 +87,7 @@ Output: research.md
 - Creates comprehensive research artifact
 - Follows required section structure
 
-### 2.4 Main Agent QA Phase
+### Main Agent QA Phase
 
 ```
 Inputs: [research.md]
@@ -153,7 +153,7 @@ Output: final_research.md + signoff
 
 ## 4. 🔍 Orchestration Implementation
 
-### 4.1 Coordinator Pattern
+### Coordinator Pattern
 
 ```python
 class ResearchCoordinator:
@@ -191,7 +191,7 @@ class ResearchCoordinator:
         return final_research
 ```
 
-### 4.2 Error Handling
+### Error Handling
 
 ```python
 def handle_researcher_failure(self, researcher, error):
@@ -225,7 +225,7 @@ def handle_low_signal(self, findings):
 
 ## 5. 📈 Performance Optimization
 
-### 5.1 Concurrency Control
+### Concurrency Control
 
 ```yaml
 concurrency_limits:
@@ -240,7 +240,7 @@ concurrency_limits:
     feasibility: 3  # Analysis-heavy
 ```
 
-### 5.2 Query Optimization
+### Query Optimization
 
 ```yaml
 query_strategy:
@@ -267,7 +267,7 @@ query_strategy:
 
 ## 6. 📡 Monitoring & Telemetry
 
-### 6.1 Research Metrics
+### Research Metrics
 
 ```yaml
 research_metrics:
@@ -278,7 +278,7 @@ research_metrics:
   - gap_documentation_rate
 ```
 
-### 6.2 Researcher Metrics
+### Researcher Metrics
 
 ```yaml
 researcher_metrics:
@@ -289,7 +289,7 @@ researcher_metrics:
   - query_modifications
 ```
 
-### 6.3 Quality Metrics
+### Quality Metrics
 
 ```yaml
 quality_metrics:
@@ -303,7 +303,7 @@ quality_metrics:
 
 ## 7. 🔄 Adaptive Rules
 
-### 7.1 Low Signal Handling
+### Low Signal Handling
 
 When findings < minimum_threshold:
 ```yaml
@@ -315,7 +315,7 @@ adjustments:
   reduce_precision: increase_recall
 ```
 
-### 7.2 High Contradiction Handling
+### High Contradiction Handling
 
 When contradiction_rate > 25%:
 ```yaml
@@ -327,7 +327,7 @@ adjustments:
   provide_context: all_sources
 ```
 
-### 7.3 Scope Adaptation
+### Scope Adaptation
 
 When scope = broad:
 ```yaml
@@ -343,7 +343,7 @@ adjustments:
 
 ## 8. 🔗 Research Dependencies
 
-### 8.1 Input Requirements
+### Input Requirements
 
 ```yaml
 research_requires:
@@ -356,7 +356,7 @@ research_requires:
     - preferred_sources
 ```
 
-### 8.2 Output Contract
+### Output Contract
 
 ```yaml
 research_produces:
@@ -383,7 +383,7 @@ research_produces:
 
 ## 9. ✅ Best Practices
 
-### 9.1 DO:
+### DO:
 
 - Start specific, broaden if needed
 - Cite all significant sources
@@ -391,7 +391,7 @@ research_produces:
 - Flag confidence levels
 - Note research limitations
 
-### 9.2 DON'T:
+### DON'T:
 
 - Ignore contradictory findings
 - Rely on single source types
@@ -399,7 +399,7 @@ research_produces:
 - Omit source citations
 - Hide research gaps
 
-### 9.3 CONSIDER:
+### CONSIDER:
 
 - Caching research for similar queries
 - Progressive search refinement

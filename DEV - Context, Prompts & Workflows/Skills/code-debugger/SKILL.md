@@ -45,7 +45,7 @@ This skill follows a 4-step systematic debugging workflow:
 
 ## 3. 📊 Inputs
 
-### 3.1 Required Inputs
+### Required Inputs
 
 **Request**:
 - **Description**: Bug to investigate and fix
@@ -56,7 +56,7 @@ This skill follows a 4-step systematic debugging workflow:
   - "Animation is choppy on mobile"
   - "Memory leak after navigation"
 
-### 3.2 Optional Inputs
+### Optional Inputs
 
 **Environment** (staging link):
 - **Type**: URL
@@ -480,7 +480,7 @@ Select appropriate mode based on issue complexity:
 
 **Example**: Race condition, timing issue, memory leak, state management bug
 
-### 5.4 Performance Mode
+### Performance Mode
 
 **When to Use**:
 - Speed or memory issues
@@ -494,7 +494,7 @@ Select appropriate mode based on issue complexity:
 
 ## 6. 🔍 Diagnostic Toolkit
 
-### 6.1 Browser Issues
+### Browser Issues
 
 **Tools**:
 - DevTools Console: JavaScript errors and logs
@@ -509,7 +509,7 @@ Select appropriate mode based on issue complexity:
 - `CORS error`: Cross-origin request blocked
 - `Uncaught ReferenceError`: Variable not defined
 
-### 6.2 Backend Issues
+### Backend Issues
 
 **Investigation**:
 - Server logs analysis
@@ -517,7 +517,7 @@ Select appropriate mode based on issue complexity:
 - API endpoint testing (Postman, curl)
 - Request/response validation
 
-### 6.3 State Issues
+### State Issues
 
 **Investigation**:
 - Component state inspection (React DevTools)
@@ -525,7 +525,7 @@ Select appropriate mode based on issue complexity:
 - Local storage review
 - Session data analysis
 
-### 6.4 Timing Issues
+### Timing Issues
 
 **Investigation**:
 - Race condition detection
@@ -533,7 +533,7 @@ Select appropriate mode based on issue complexity:
 - Event order verification
 - Debouncing/throttling checks
 
-### 6.5 Chrome DevTools Integration
+### Chrome DevTools Integration
 
 #### Essential Actions
 
@@ -581,7 +581,7 @@ Select appropriate mode based on issue complexity:
 - Network HAR: Network tab → Export HAR
 - Performance profile: Performance tab → Save profile
 
-### 6.6 Browser Automation Tool Selection
+### Browser Automation Tool Selection
 
 **Strategy**: Follow this decision tree when browser automation or DevTools access is needed:
 
@@ -662,7 +662,7 @@ After completing the workflow, generate a bug fix report:
 
 ## 8. 📖 Rules
 
-### 8.1 ALWAYS
+### ALWAYS
 
 - Reproduce the bug reliably before attempting to fix
 - Find root cause with evidence (not assumptions)
@@ -674,7 +674,7 @@ After completing the workflow, generate a bug fix report:
 - Capture evidence (errors, logs, screenshots)
 - Fix the cause, not the symptom
 
-### 8.2 NEVER
+### NEVER
 
 - Fix symptoms without understanding root cause
 - Apply fixes without testing first
@@ -685,7 +685,7 @@ After completing the workflow, generate a bug fix report:
 - Introduce regressions for a fix
 - Skip documentation for complex fixes
 
-### 8.3 ESCALATE IF
+### ESCALATE IF
 
 - Cannot reproduce the issue consistently
 - Root cause remains unclear after investigation
@@ -695,9 +695,9 @@ After completing the workflow, generate a bug fix report:
 - Affects critical production systems
 - Need domain expertise not available
 
-## 9. 🛠️ Troubleshooting
+## 9. 🔧 Troubleshooting
 
-### 9.1 Cannot Reproduce Bug
+### Cannot Reproduce Bug
 
 **Actions**:
 - Verify environment matches reported conditions
@@ -706,7 +706,7 @@ After completing the workflow, generate a bug fix report:
 - Try different data states
 - Check if already fixed in newer version
 
-### 9.2 Multiple Potential Causes
+### Multiple Potential Causes
 
 **Actions**:
 - List all hypotheses
@@ -715,7 +715,7 @@ After completing the workflow, generate a bug fix report:
 - Eliminate one at a time
 - May be multiple bugs (fix separately)
 
-### 9.3 Intermittent Bug
+### Intermittent Bug
 
 **Actions**:
 - Increase reproduction attempts
@@ -725,7 +725,7 @@ After completing the workflow, generate a bug fix report:
 - Add extensive logging
 - Use performance profiling
 
-### 9.4 Fix Doesn't Work
+### Fix Doesn't Work
 
 **Actions**:
 - Re-verify root cause

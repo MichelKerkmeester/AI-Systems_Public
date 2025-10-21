@@ -47,7 +47,7 @@ This skill follows a 4-step systematic workflow to improve performance while pre
 
 ## 3. 📊 Inputs
 
-### 3.1 Required Inputs
+### Required Inputs
 
 **Request**:
 - **Description**: What needs to be optimized
@@ -58,7 +58,7 @@ This skill follows a 4-step systematic workflow to improve performance while pre
   - "Reduce memory usage"
   - "Fix choppy scrolling"
 
-### 3.2 Optional Inputs
+### Optional Inputs
 
 **Environment** (staging link):
 - **Type**: URL
@@ -313,7 +313,7 @@ This skill follows a 4-step systematic workflow to improve performance while pre
 
 ## 5. 🔍 Chrome DevTools Integration
 
-### 5.1 Performance Profiling
+### Performance Profiling
 
 **Steps**:
 1. Open Chrome DevTools (F12)
@@ -330,7 +330,7 @@ This skill follows a 4-step systematic workflow to improve performance while pre
 - JavaScript execution time
 - Render-blocking resources
 
-### 5.2 Network Analysis
+### Network Analysis
 
 **Steps**:
 1. Open Network tab
@@ -346,7 +346,7 @@ This skill follows a 4-step systematic workflow to improve performance while pre
 - Slow TTFB (Time to First Byte)
 - Missing cache headers
 
-### 5.3 Memory Profiling
+### Memory Profiling
 
 **Steps**:
 1. Open Memory tab
@@ -362,7 +362,7 @@ This skill follows a 4-step systematic workflow to improve performance while pre
 - Retained objects after cleanup
 - Memory not released after navigation
 
-### 5.4 Lighthouse Audit
+### Lighthouse Audit
 
 **Steps**:
 1. Open Lighthouse tab
@@ -377,7 +377,7 @@ This skill follows a 4-step systematic workflow to improve performance while pre
 - Opportunities (potential savings)
 - Diagnostics (issues found)
 
-### 5.5 Browser Automation Tool Selection
+### Browser Automation Tool Selection
 
 **Strategy**: Follow this decision tree when browser automation or DevTools access is needed:
 
@@ -406,7 +406,7 @@ This skill follows a 4-step systematic workflow to improve performance while pre
 
 ## 6. 🔒 Preservation Requirements
 
-### 6.1 Mandatory Preservation
+### Mandatory Preservation
 
 **Features**:
 - All functionality remains intact
@@ -427,7 +427,7 @@ This skill follows a 4-step systematic workflow to improve performance while pre
 - Accessibility features intact (ARIA, keyboard, focus)
 - Responsive design maintained
 
-### 6.2 Testing Protocol
+### Testing Protocol
 
 **After Each Change**:
 - Feature still works correctly
@@ -447,7 +447,7 @@ This skill follows a 4-step systematic workflow to improve performance while pre
 
 ## 7. ✅ Success Criteria
 
-### 7.1 Performance Success
+### Performance Success
 
 **Metrics**:
 - Measurable improvement in target metrics
@@ -456,7 +456,7 @@ This skill follows a 4-step systematic workflow to improve performance while pre
 - User experience noticeably better
 - Lighthouse score improved
 
-### 7.2 Preservation Success
+### Preservation Success
 
 **Requirements**:
 - 100% feature parity confirmed
@@ -465,7 +465,7 @@ This skill follows a 4-step systematic workflow to improve performance while pre
 - No regressions in functionality
 - Cross-browser compatibility maintained
 
-### 7.3 Quality Success
+### Quality Success
 
 **Standards**:
 - Code remains maintainable
@@ -537,7 +537,7 @@ After completing the workflow, generate a performance optimization report:
 
 ## 9. 📖 Rules
 
-### 9.1 ALWAYS
+### ALWAYS
 
 - Measure baseline before any optimization
 - Preserve all features and functionality
@@ -549,7 +549,7 @@ After completing the workflow, generate a performance optimization report:
 - Prioritize high-impact optimizations
 - Apply changes incrementally, not all at once
 
-### 9.2 NEVER
+### NEVER
 
 - Break features for speed gains
 - Optimize without measuring first
@@ -560,7 +560,7 @@ After completing the workflow, generate a performance optimization report:
 - Assume optimization worked without measurement
 - Sacrifice maintainability for micro-optimizations
 
-### 9.3 ROLLBACK IF
+### ROLLBACK IF
 
 - Any feature breaks
 - Animation performance drops below 60 FPS

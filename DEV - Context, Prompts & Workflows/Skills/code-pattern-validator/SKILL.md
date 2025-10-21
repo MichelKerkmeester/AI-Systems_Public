@@ -43,9 +43,9 @@ This skill analyzes JavaScript files against 37 validation rules organized into 
 
 .
 
-## 3. 📊 Inputs
+## 3. 📥 Inputs
 
-### 3.1 Required Inputs
+### Required Inputs
 
 **File Path(s)**:
 - **Type**: String or array of strings
@@ -56,7 +56,7 @@ This skill analyzes JavaScript files against 37 validation rules organized into 
   - Multiple files: `/path/to/src/**/*.js`
   - Specific files: `['file1.js', 'file2.js', 'file3.js']`
 
-### 3.2 Optional Inputs
+### Optional Inputs
 
 **Validation Level**:
 - **Type**: String (enum)
@@ -82,7 +82,7 @@ This skill analyzes JavaScript files against 37 validation rules organized into 
 
 ## 4. ✅ Outputs
 
-### 4.1 Primary Output
+### Primary Output
 
 **Validation Report**:
 - **Format**: Markdown (or JSON if requested)
@@ -416,7 +416,7 @@ Minimum score: 0%
 
 ## 6. 🔍 Examples
 
-### 6.1 Example 1: Validate Single File (Standard Level)
+### Example 1: Validate Single File (Standard Level)
 
 **Input**:
 ```
@@ -458,7 +458,7 @@ Use standard validation level
 **Explanation**:
 This demonstrates standard validation catching an accessibility issue while confirming the file follows all critical patterns correctly.
 
-### 6.2 Example 2: Quick Validation of Multiple Files
+### Example 2: Quick Validation of Multiple Files
 
 **Input**:
 ```
@@ -493,7 +493,7 @@ Generate summary report
 **Explanation**:
 Quick validation across multiple files provides fast feedback on critical issues without deep analysis.
 
-### 6.3 Example 3: Comprehensive Validation with JSON Output
+### Example 3: Comprehensive Validation with JSON Output
 
 **Input**:
 ```
@@ -559,7 +559,7 @@ Comprehensive validation with JSON output enables integration with CI/CD pipelin
 
 ## 8. 🧾 Quick Reference
 
-### 8.1 Common Usage Patterns
+### Common Usage Patterns
 
 #### Pattern 1: Pre-Commit Validation
 ```
@@ -587,7 +587,7 @@ Audit entire codebase for quality:
 - Track compliance score over time
 ```
 
-### 8.2 Validation Level Selection Guide
+### Validation Level Selection Guide
 
 **Use Quick** when:
 - Pre-commit checks (speed matters)
@@ -607,7 +607,7 @@ Audit entire codebase for quality:
 - Learning code standards
 - Maximum assurance needed
 
-### 8.3 Validation Checklist
+### Validation Checklist
 
 Before finalizing code, verify:
 - [ ] Compliance score ≥ 90% (production ready)
@@ -617,7 +617,7 @@ Before finalizing code, verify:
 - [ ] All naming conventions correct
 - [ ] Platform constraints respected
 
-### 8.4 Troubleshooting
+### Troubleshooting
 
 **Issue**: "Cannot find initialization pattern"
 **Solution**: Add the required Webflow.push pattern at the end of your file. See `knowledge/initialization_pattern.md:17-34` for exact template.
@@ -635,7 +635,7 @@ Before finalizing code, verify:
 
 This section provides guidance for special scenarios and edge cases encountered during validation.
 
-### 9.1 When to Skip Validation
+### When to Skip Validation
 
 **Skip validation entirely for**:
 - **Minified files**: Files with `.min.js` extension or single-line code

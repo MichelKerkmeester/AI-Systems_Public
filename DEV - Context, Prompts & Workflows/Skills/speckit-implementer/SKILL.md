@@ -647,7 +647,7 @@ carry out its implementation fully autonomously."
 
 ## 9. 👥 Implementation Agents & Checkpoints
 
-### 9.1 Parallel Agent Details
+### Parallel Agent Details
 
 ### Core Implementer Output
 ```yaml
@@ -717,7 +717,7 @@ documentation:
       steps: [process]
 ```
 
-### 9.2 Development Checkpoints
+### Development Checkpoints
 
 #### Major Change Checkpoint
 - Log progress to summary
@@ -754,7 +754,7 @@ documentation:
 
 - Measure performance impact
 
-### 10.2 Adaptive Rules
+### Adaptive Rules
 
 **Note**: For complete adaptive rule specifications, complexity assessment, technical debt scoring, and testing strategies, see [references/adaptive-rules.md](references/adaptive-rules.md).
 
@@ -773,7 +773,7 @@ documentation:
 - Maintain review/synthesis phases
 - Continue with partial results
 
-### 10.3 Quality Standards
+### Quality Standards
 
 ### Implementation Requirements
 - Follow code_standards.md
@@ -810,12 +810,12 @@ documentation:
 
 ## 12. 🚨 Error Handling
 
-### 12.1 Retry Policy
+### Retry Policy
 - **Targeted retries**: Only failed components
 - **Max attempts**: 2 per agent
 - **Backoff**: Exponential
 
-### 12.2 Recovery Actions
+### Recovery Actions
 - Document blockers
 - Use partial results
 - Manual intervention points
@@ -845,6 +845,11 @@ documentation:
 - **Documentation**: Complete and accurate
 
 .
+
+## 🔧 Troubleshooting / Notes
+- Environment not ready: re-run Implementation Check (Step 13) and fix blockers
+- Failing tests/checkpoints: address, update checklist, and re-verify before proceeding
+- Branch policy: if conflicts occur on integration, prefer PR workflow
 
 ## 15. References
 

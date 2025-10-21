@@ -548,7 +548,7 @@ This step contains sub-phases that execute sequentially:
 
 .
 
-## 5. ⚙️ Agent Coordination
+## 5. 🤝 Agent Coordination
 
 **Note**: For complete sub-agent role definitions and output specifications, see [references/sub-agents.md](references/sub-agents.md).
 
@@ -613,7 +613,7 @@ Each parallel stage follows this pattern:
 
 ## 7. 📊 Stage Definitions
 
-### 7.1 Stage A: Planning/Spec (Step 6)
+### Stage A: Planning/Spec (Step 6)
 
 **Note**: This stage executes as part of the workflow's step 6 parallel planning block. The association with `/speckit.plan` is inferred from workflow context.
 
@@ -661,7 +661,7 @@ Each parallel stage follows this pattern:
 - `[SPEC_FOLDER]/plan.md`
 - `[SPEC_FOLDER]/planning-summary.md`
 
-### 7.2 Stage B: Implementation Prep (Step 9)
+### Stage B: Implementation Prep (Step 9)
 
 **Note**: This stage executes as part of the workflow's step 9 parallel implementation preparation block. Runs before actual implementation begins.
 
@@ -708,7 +708,7 @@ Each parallel stage follows this pattern:
 #### Outputs
 - `[SPEC_FOLDER]/implementation_plan.md`
 
-### 7.3 Stage C: Quality Review (Step 12)
+### Stage C: Quality Review (Step 12)
 
 **Note**: This stage executes as part of the workflow's step 12 parallel quality review block. Provides comprehensive quality validation after development.
 
@@ -784,7 +784,7 @@ Each step has a mandatory approval gate per sk_p__complete.yaml:
 
 ## 9. ⚙️ Adaptive Rules & Field Handling
 
-### 9.1 Adaptive Rules
+### Adaptive Rules
 
 **Note**: For detailed adaptive rule specifications and decision trees, see [references/adaptive-rules.md](references/adaptive-rules.md).
 
@@ -848,7 +848,7 @@ This workflow automatically handles empty input fields per sk_p__complete.yaml:
   3. Checkout feature branch
 - **Skip When**: `branch_strategy == main_branch`
 
-### 9.2 Field Handling
+### Field Handling
 
 #### Auto-Creation
 - **git_branch**: Auto-create `feature-{NNN}` from highest +001
@@ -926,6 +926,20 @@ This workflow automatically handles empty input fields per sk_p__complete.yaml:
 - **Approval rate**: >80% first-time approvals
 
 .
+
+## 15. References
+
+## 🔧 Troubleshooting / Notes
+- Missing inputs (branch_strategy/spec_folder): rerun Step 1 input collection
+- Stage sequence confusion: follow YAML ↔ Steps Crosswalk mapping
+- Branch integration issues: open a PR instead of force-pushing; resolve conflicts externally if needed
+etrics
+
+### Success Criteria / Quality Gates
+- Approval gates acknowledged and passed at each step
+- Planning, implementation plan, and quality report artifacts present
+- No blockers in environment check; development checkpoints completed
+- Crosswalk step-order adhered to; branch integration policy followed
 
 ## 15. References
 

@@ -18,7 +18,7 @@ Each stage follows the same execution pattern but with different agents and outp
 
 ## 2. ⚡ Execution Pattern
 
-### 2.1 Parallel Agent Phase
+### Parallel Agent Phase
 
 ```
 Time →
@@ -47,7 +47,7 @@ Tn: Collect outputs as agents complete
 - Retry on failure: 2 attempts
 - Continue with partial results if needed
 
-### 2.2 Review Phase
+### Review Phase
 
 ```
 Inputs: [output_1, output_2, output_3, output_4]
@@ -67,7 +67,7 @@ Output: review_summary + synthesis_guidance
 - Can proceed with 75% agent success
 - Timeout: 15 seconds
 
-### 2.3 Synthesis Phase
+### Synthesis Phase
 
 ```
 Inputs: [all_outputs, review_summary, synthesis_guidance]
@@ -87,7 +87,7 @@ Output: stage_artifacts
 - Creates final stage outputs
 - Timeout: 20 seconds
 
-### 2.4 Main Agent QA Phase
+### Main Agent QA Phase
 
 ```
 Inputs: [stage_artifacts]
@@ -107,7 +107,7 @@ Output: final_artifacts + signoff
 - Adds final touches
 - Timeout: 10 seconds
 
-### 2.5 Approval Gate
+### Approval Gate
 
 ```
 Present: final_artifacts + summary
@@ -215,7 +215,7 @@ User Decision:
 
 ## 6. ⚙️ Orchestration Implementation
 
-### 6.1 Coordinator Pattern
+### Coordinator Pattern
 
 ```python
 class StageCoordinator:
@@ -258,7 +258,7 @@ class StageCoordinator:
         return final_output
 ```
 
-### 6.2 Error Handling
+### Error Handling
 
 ```python
 def handle_agent_failure(self, agent, error):
@@ -293,7 +293,7 @@ def handle_stage_failure(self, stage, error):
 
 ## 7. 🚀 Performance Optimization
 
-### 7.1 Concurrency Control
+### Concurrency Control
 
 ```yaml
 concurrency_limits:
@@ -307,7 +307,7 @@ concurrency_limits:
     stage_c: 3  # I/O-bound reviews
 ```
 
-### 7.2 Resource Management
+### Resource Management
 
 ```yaml
 resource_allocation:
@@ -327,7 +327,7 @@ resource_allocation:
     qa: 10s
 ```
 
-### 7.3 Caching Strategy
+### Caching Strategy
 
 ```yaml
 caching:
@@ -345,7 +345,7 @@ caching:
 
 ## 8. 📊 Monitoring & Telemetry
 
-### 8.1 Stage Metrics
+### Stage Metrics
 
 ```yaml
 stage_metrics:
@@ -357,7 +357,7 @@ stage_metrics:
   - user_modification_rate
 ```
 
-### 8.2 Agent Metrics
+### Agent Metrics
 
 ```yaml
 agent_metrics:
@@ -368,7 +368,7 @@ agent_metrics:
   - failure_reason
 ```
 
-### 8.3 Quality Metrics
+### Quality Metrics
 
 ```yaml
 quality_metrics:
@@ -382,7 +382,7 @@ quality_metrics:
 
 ## 9. 🎛️ Adaptive Rules
 
-### 9.1 High Complexity Handling
+### High Complexity Handling
 
 When complexity score > 80:
 ```yaml
@@ -394,7 +394,7 @@ adjustments:
   qa_thoroughness: detailed
 ```
 
-### 9.2 High Uncertainty Handling
+### High Uncertainty Handling
 
 When uncertainty score > 70:
 ```yaml
@@ -406,7 +406,7 @@ adjustments:
   document_assumptions: explicit
 ```
 
-### 9.3 Resource Constraints
+### Resource Constraints
 
 When resources limited:
 ```yaml
@@ -422,7 +422,7 @@ fallback:
 
 ## 10. 🔗 Stage Dependencies
 
-### 10.1 Input Requirements
+### Input Requirements
 
 ```yaml
 stage_a_requires:
@@ -441,7 +441,7 @@ stage_c_requires:
   - user_approval (step 11)
 ```
 
-### 10.2 Output Contracts
+### Output Contracts
 
 ```yaml
 stage_a_produces:
@@ -472,7 +472,7 @@ stage_c_produces:
 
 ## 11. 💡 Best Practices
 
-### 11.1 DO:
+### DO:
 
 - Always wait for approval gates
 - Document partial failures
@@ -480,7 +480,7 @@ stage_c_produces:
 - Use structured logging
 - Monitor resource usage
 
-### 11.2 DON'T:
+### DON'T:
 
 - Skip review/synthesis phases
 - Ignore partial failures
@@ -488,7 +488,7 @@ stage_c_produces:
 - Bypass approval gates
 - Lose context between stages
 
-### 11.3 CONSIDER:
+### CONSIDER:
 
 - Pre-warming agents for faster start
 - Caching common analyses

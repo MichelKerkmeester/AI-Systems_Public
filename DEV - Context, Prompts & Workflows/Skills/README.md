@@ -8,7 +8,7 @@ Comprehensive Skills Documentation and Usage Guide
 - [3. 🛠️ Skill Selection Guide](#3--skill-selection-guide)
 - [4. ⚙️ SpecKit Command Integration](#4--speckit-command-integration)
 - [5. 🧩 Architecture Overview](#5--architecture-overview)
-- [6. 📊 Shared Artifacts](#6--shared-artifacts)
+- [6. 📦 Shared Artifacts](#6--shared-artifacts)
 - [7. ✅ Best Practices](#7--best-practices)
 - [8. 📊 Token Usage & Performance](#8--token-usage--performance)
 - [9. 🔍 Troubleshooting](#9--troubleshooting)
@@ -24,7 +24,7 @@ This project contains **8 specialized skills** present (plus 2 planned) organize
 
 ## 2. 🧭 Skills Catalog
 
-### 2.1 Code Development Skills
+### Code Development Skills
 
 #### 1. code-debugger
 **Purpose**: Systematically reproduce, diagnose, fix, and verify bugs through evidence-based investigation and root cause analysis.
@@ -84,7 +84,7 @@ This project contains **8 specialized skills** present (plus 2 planned) organize
 
 **Location**: (not present in repo)
 
-### 2.2 SpecKit Skills
+### SpecKit Skills
 
 High-performance workflow execution with multiple specialized sub-agents running concurrently.
 
@@ -115,7 +115,7 @@ High-performance workflow execution with multiple specialized sub-agents running
 **Location**: `.claude/skills/speckit-feature-research/`
 **Based on**: `b_prompts/github_spec_kit/parallel_agents/sk_p__feature_research.yaml`
 
-#### 8. speckit-implementation
+#### 8. speckit-implementer
 **Purpose**: Execute autonomous spec-driven implementation with parallel preparation agents. Orchestrates 6 specialized sub-agents for implementation planning (core, integrations, tests, docs).
 
 **Complexity**: Medium (6 sub-agents)
@@ -126,7 +126,7 @@ High-performance workflow execution with multiple specialized sub-agents running
 - Need comprehensive implementation preparation
 - Want parallel planning for core, tests, and docs
 
-**Location**: `.claude/skills/speckit-implementation/`
+**Location**: `.claude/skills/speckit-implementer/`
 **Based on**: `b_prompts/github_spec_kit/parallel_agents/sk_p__implementation.yaml`
 
 #### 9. speckit-spec-plan
@@ -143,7 +143,7 @@ High-performance workflow execution with multiple specialized sub-agents running
 **Location**: `.claude/skills/speckit-spec-plan/`
 **Based on**: `b_prompts/github_spec_kit/parallel_agents/sk_p__spec_plan.yaml`
 
-### 2.3 Meta Skills
+### Meta Skills
 
 #### 10. create-skills
 **Purpose**: Guide for creating effective skills. This skill should be used when users want to create a new skill or update an existing skill.
@@ -158,7 +158,7 @@ High-performance workflow execution with multiple specialized sub-agents running
 
 ## 3. 🛠️ Skill Selection Guide
 
-### 3.1 Decision Tree
+### Decision Tree
 
 ```
 Need to debug existing code?
@@ -181,7 +181,7 @@ Need technical plan from spec?
 └─ YES → speckit-spec-plan
 
 Ready to implement with specs?
-└─ YES → speckit-implementation
+└─ YES → speckit-implementer
 
 Want complete automated workflow?
 └─ YES → speckit-complete
@@ -190,7 +190,7 @@ Need to create/update skills?
 └─ YES → create-skills
 ```
 
-### 3.2 Quick Reference
+### Quick Reference
 
 | Task | Recommended Skill |
 |------|-------------------|
@@ -201,13 +201,13 @@ Need to create/update skills?
 | Implement feature | code-implementer |
 | Research feature | speckit-feature-research |
 | Plan from spec | speckit-spec-plan |
-| Implement from plan | speckit-implementation |
+| Implement from plan | speckit-implementer |
 | Complete workflow | speckit-complete |
 | Create new skill | create-skills |
 
 ## 4. ⚙️ SpecKit Command Integration
 
-### 4.1 Commands and Their Associated Skills
+### Commands and Their Associated Skills
 
 | SpecKit Command | Associated Skill |
 |-----------------|------------------|
@@ -215,7 +215,7 @@ Need to create/update skills?
 | `/speckit.clarify` | (built-in) |
 | `/speckit.plan` | speckit-spec-plan |
 | `/speckit.tasks` | (built-in) |
-| `/speckit.implement` | speckit-implementation |
+| `/speckit.implement` | speckit-implementer |
 | `/speckit.analyze` | (built-in) |
 | `/speckit.checklist` | (built-in) |
 | `/speckit.constitution` | (built-in) |
@@ -224,7 +224,7 @@ Need to create/update skills?
 
 ## 5. 🧩 Architecture Overview
 
-### 5.1 Code Development Skills Architecture
+### Code Development Skills Architecture
 
 ```
 User Request
@@ -242,7 +242,7 @@ User Request
 Production Code
 ```
 
-### 5.2 SpecKit Skills Architecture
+### SpecKit Skills Architecture
 
 ```
            User Request
@@ -253,13 +253,13 @@ Production Code
     │ • Complete            │
     │ • Research            │
     │ • Planning            │
-    │ • Implementation      │
+    │ • Implementer         │
     └───────────────────────┘
                 ↓
     Feature Artifacts & Code
 ```
 
-## 6. 📊 Shared Artifacts
+## 6. 📦 Shared Artifacts
 
 Skills communicate through standardized artifacts:
 
@@ -286,7 +286,7 @@ shared_artifacts:
 
 ## 7. ✅ Best Practices
 
-### 7.1 DO
+### DO
 
 - Use specialized skills for their intended purpose
 - Check artifacts between skill executions
@@ -294,7 +294,7 @@ shared_artifacts:
 - Monitor token usage with parallel skills
 - Select appropriate skill for task complexity
 
-### 7.2 DON'T
+### DON'T
 
 - Load all skills simultaneously
 - Mix skill responsibilities
@@ -302,7 +302,7 @@ shared_artifacts:
 - Skip prerequisite validation
 - Use complex SpecKit workflows for simple tasks
 
-### 7.3 ALWAYS
+### ALWAYS
 
 - Verify prerequisites before skill execution
 - Document skill handoffs through artifacts
@@ -312,7 +312,7 @@ shared_artifacts:
 
 ## 8. 📊 Token Usage & Performance
 
-### 8.1 Token Usage by Skill Type
+### Token Usage by Skill Type
 
 | Skill Category | Initial Load | Full Context | Recommendation |
 |----------------|--------------|--------------|----------------|
@@ -320,7 +320,7 @@ shared_artifacts:
 | SpecKit | High (~5-8K) | Very High (~15-25K) | On-demand only |
 | Meta Skills | Low (~1K) | Low (~2K) | Load as needed |
 
-### 8.2 Concurrency Management
+### Concurrency Management
 
 ```yaml
 recommended_concurrency:
@@ -337,7 +337,7 @@ recommended_concurrency:
 
 ## 9. 🔍 Troubleshooting
 
-### 9.1 Common Issues
+### Common Issues
 
 **Issue**: Skills not loading or triggering
 **Solution**: Check skill name matches exactly; verify SKILL.md exists
@@ -366,7 +366,7 @@ Skills follow the principles and standards defined in [AGENTS.md](/Users/michelk
 
 **Reference**: See [AGENTS.md:500-665](AGENTS.md#L500-L665) for detailed skill integration guidance.
 
-## 11. 🧭 Conventions
+## 11. 📐 Conventions
 
 - Section headers only use emojis: 🎯, 🚀, 🏗️, 📝, 📥, 📤, ⚙️, ✅, ⚠️, 🔧.
 - No sub-step numbering like 4.1, 4.2 under Workflow Steps; use whole steps only (Step 1, Step 2, ...).

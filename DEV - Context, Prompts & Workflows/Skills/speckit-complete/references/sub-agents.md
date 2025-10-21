@@ -6,7 +6,7 @@ Role definitions and coordination rules for specialized sub-agents across planni
 
 ## 1. 📋 Stage A: Planning/Spec Sub-Agents
 
-### 1.1 Requirements Analyst
+### Requirements Analyst
 
 **Role**: Extract and structure requirements from specification
 
@@ -30,7 +30,7 @@ requirements_dossier:
   priorities: [P0, P1, P2, P3]
 ```
 
-### 1.2 Solution Architect
+### Solution Architect
 
 **Role**: Design technical architecture and component structure
 
@@ -54,7 +54,7 @@ architecture_design:
   integration_points: [external systems]
 ```
 
-### 1.3 Risk/Compliance Analyst
+### Risk/Compliance Analyst
 
 **Role**: Identify risks and compliance requirements
 
@@ -84,7 +84,7 @@ risk_assessment:
     availability: [requirements]
 ```
 
-### 1.4 Estimation/Scope Analyst
+### Estimation/Scope Analyst
 
 **Role**: Create project timeline and effort estimates
 
@@ -112,7 +112,7 @@ project_estimation:
   confidence_level: [percentage]
 ```
 
-### 1.5 Lead Reviewer A
+### Lead Reviewer A
 
 **Role**: Reconcile and validate Stage A outputs
 
@@ -136,7 +136,7 @@ review_summary:
   quality_score: [0-100]
 ```
 
-### 1.6 Lead Synthesizer A
+### Lead Synthesizer A
 
 **Role**: Create consolidated planning artifacts
 
@@ -160,7 +160,7 @@ review_summary:
 
 ## 2. 🛠️ Stage B: Implementation Prep Sub-Agents
 
-### 2.1 Core Implementer
+### Core Implementer
 
 **Role**: Design core business logic implementation
 
@@ -187,7 +187,7 @@ core_implementation:
   reusable_components: [shared code]
 ```
 
-### 2.2 Integrations/Adapters Engineer
+### Integrations/Adapters Engineer
 
 **Role**: Design external system integrations
 
@@ -216,7 +216,7 @@ integration_design:
     circuit_breaker: [threshold]
 ```
 
-### 2.3 Test Engineer
+### Test Engineer
 
 **Role**: Create comprehensive test strategy
 
@@ -247,7 +247,7 @@ test_strategy:
   automation: [CI/CD integration]
 ```
 
-### 2.4 Docs Engineer
+### Docs Engineer
 
 **Role**: Plan documentation and examples
 
@@ -279,7 +279,7 @@ documentation_plan:
       code: [sample implementation]
 ```
 
-### 2.5 Integration Reviewer B
+### Integration Reviewer B
 
 **Role**: Ensure implementation coherence
 
@@ -303,7 +303,7 @@ integration_review:
   approval_status: [pass/fail/conditional]
 ```
 
-### 2.6 Lead Synthesizer B
+### Lead Synthesizer B
 
 **Role**: Create implementation plan
 
@@ -326,7 +326,7 @@ integration_review:
 
 ## 3. ✅ Stage C: Quality Review Sub-Agents
 
-### 3.1 Completeness Reviewer
+### Completeness Reviewer
 
 **Role**: Validate coverage and completeness
 
@@ -350,7 +350,7 @@ completeness_assessment:
   overall_completeness: [percentage]
 ```
 
-### 3.2 Feasibility Reviewer
+### Feasibility Reviewer
 
 **Role**: Assess technical viability
 
@@ -378,7 +378,7 @@ feasibility_assessment:
   recommendations: [improvements]
 ```
 
-### 3.3 Security/Privacy Reviewer
+### Security/Privacy Reviewer
 
 **Role**: Assess security and privacy compliance
 
@@ -406,7 +406,7 @@ security_assessment:
   security_score: [0-100]
 ```
 
-### 3.4 Consistency/Traceability Reviewer
+### Consistency/Traceability Reviewer
 
 **Role**: Ensure consistency and traceability
 
@@ -432,7 +432,7 @@ consistency_assessment:
   consistency_score: [0-100]
 ```
 
-### 3.5 Lead Reviewer C
+### Lead Reviewer C
 
 **Role**: Prioritize and consolidate quality findings
 
@@ -460,7 +460,7 @@ quality_review_summary:
   risk_assessment: [overall risk level]
 ```
 
-### 3.6 Lead Synthesizer C
+### Lead Synthesizer C
 
 **Role**: Create quality report
 
@@ -484,7 +484,7 @@ quality_review_summary:
 
 ## 4. ⚙️ Agent Coordination
 
-### 4.1 Parallel Execution Rules
+### Parallel Execution Rules
 
 1. **Within Stage**: Agents 1-4, 7-10, 13-16 run in parallel
 2. **Review First**: Lead Reviewers wait for parallel agents
@@ -492,7 +492,7 @@ quality_review_summary:
 4. **Main Agent QA**: Final check after synthesis
 5. **Approval Required**: User must approve before next stage
 
-### 4.2 Communication Protocol
+### Communication Protocol
 
 ```yaml
 agent_message:
@@ -504,7 +504,7 @@ agent_message:
   correlation_id: [unique id]
 ```
 
-### 4.3 Quality Standards
+### Quality Standards
 
 All agents must:
 - Provide structured outputs in specified format
