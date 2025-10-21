@@ -16,9 +16,9 @@ Comprehensive Skills Documentation and Usage Guide
 
 ## 1. 📄 Description
 
-This project contains **8 specialized skills** present (plus 2 planned) organized into three categories:
+This project contains **9 specialized skills** present (plus 2 planned) organized into three categories:
 
-1. **Code Development Skills** (3 present, 2 planned) - General code development, validation, debugging, and optimization
+1. **Code Development Skills** (4 present, 2 planned) - Workspace management, code development, validation, debugging, and optimization
 2. **SpecKit Skills** (4) - High-performance parallel workflow execution
 3. **Meta Skills** (1) - Skill creation and management
 
@@ -26,7 +26,25 @@ This project contains **8 specialized skills** present (plus 2 planned) organize
 
 ### Code Development Skills
 
-#### 1. code-debugger
+#### 1. git-worktrees
+**Purpose**: Create isolated workspaces with minimal branching (main-focused by default). Uses short-lived temp branches that merge back to main immediately, keeping codebase unified while providing isolation benefits.
+
+**Use when**:
+- Starting feature work requiring isolation from current workspace
+- Handling urgent hotfixes without disrupting feature development
+- Reviewing pull requests locally without stashing work
+- Comparing implementations side-by-side
+- Testing dependency upgrades in isolation
+- Running long builds/tests while continuing development
+
+**Branch Strategies**:
+- `main_temp` (default): Short-lived branches merging back to main immediately
+- `feature_branch`: Long-running features requiring PR review
+- `main_detached`: Quick experiments without branch creation
+
+**Location**: `.claude/skills/git-worktrees/`
+
+#### 2. code-debugger
 **Purpose**: Systematically reproduce, diagnose, fix, and verify bugs through evidence-based investigation and root cause analysis.
 
 **Use when**:
@@ -37,7 +55,7 @@ This project contains **8 specialized skills** present (plus 2 planned) organize
 
 **Location**: `.claude/skills/code-debugger/`
 
-#### 2. code-implementer
+#### 3. code-implementer
 **Purpose**: Build features incrementally using 3-step workflow (Understand → Build → Polish). Implements from specs or plans with continuous testing, incremental delivery, and pragmatic approach.
 
 **Use when**:
@@ -48,7 +66,7 @@ This project contains **8 specialized skills** present (plus 2 planned) organize
 
 **Location**: (not present in repo)
 
-#### 3. code-pattern-validator
+#### 4. code-pattern-validator
 **Purpose**: Validate JavaScript files against Webflow project code standards, naming conventions, initialization patterns, and platform constraints.
 
 **Use when**:
@@ -60,7 +78,7 @@ This project contains **8 specialized skills** present (plus 2 planned) organize
 
 **Location**: `.claude/skills/code-pattern-validator/`
 
-#### 4. code-performance-improver
+#### 5. code-performance-improver
 **Purpose**: Optimize code and application performance through systematic profiling, analysis, and incremental improvements while preserving all functionality.
 
 **Use when**:
@@ -72,7 +90,7 @@ This project contains **8 specialized skills** present (plus 2 planned) organize
 
 **Location**: `.claude/skills/code-performance-improver/`
 
-#### 5. code-planner
+#### 6. code-planner
 **Purpose**: Create comprehensive project plans using 5 parallel autonomous planning agents (Scope, Breakdown, Resource, Timeline, Quality).
 
 **Use when**:
@@ -88,7 +106,7 @@ This project contains **8 specialized skills** present (plus 2 planned) organize
 
 High-performance workflow execution with multiple specialized sub-agents running concurrently.
 
-#### 6. speckit-complete
+#### 7. speckit-complete
 **Purpose**: Execute the complete 14-step SpecKit workflow with 18 specialized sub-agents running in 3 parallel stages.
 
 **Complexity**: Very High (18 sub-agents in 3 stages)
@@ -101,7 +119,7 @@ High-performance workflow execution with multiple specialized sub-agents running
 **Location**: `.claude/skills/speckit-complete/`
 **Based on**: `b_prompts/github_spec_kit/parallel_agents/sk_p__complete.yaml`
 
-#### 7. speckit-feature-research
+#### 8. speckit-feature-research
 **Purpose**: Conduct parallel technical research and investigation for SpecKit features. Orchestrates 6 specialized research sub-agents to produce comprehensive research.md documentation.
 
 **Complexity**: Medium (6 sub-agents)
@@ -115,7 +133,7 @@ High-performance workflow execution with multiple specialized sub-agents running
 **Location**: `.claude/skills/speckit-feature-research/`
 **Based on**: `b_prompts/github_spec_kit/parallel_agents/sk_p__feature_research.yaml`
 
-#### 8. speckit-implementer
+#### 9. speckit-implementer
 **Purpose**: Execute autonomous spec-driven implementation with parallel preparation agents. Orchestrates 6 specialized sub-agents for implementation planning (core, integrations, tests, docs).
 
 **Complexity**: Medium (6 sub-agents)
@@ -129,7 +147,7 @@ High-performance workflow execution with multiple specialized sub-agents running
 **Location**: `.claude/skills/speckit-implementer/`
 **Based on**: `b_prompts/github_spec_kit/parallel_agents/sk_p__implementation.yaml`
 
-#### 9. speckit-spec-plan
+#### 10. speckit-spec-plan
 **Purpose**: Execute spec-driven planning workflow with parallel specialist analyses. Orchestrates 6 specialized planning sub-agents through parallel execution, review, and synthesis.
 
 **Complexity**: Medium (6 sub-agents)
@@ -145,7 +163,7 @@ High-performance workflow execution with multiple specialized sub-agents running
 
 ### Meta Skills
 
-#### 10. create-skills
+#### 11. create-skills
 **Purpose**: Guide for creating effective skills. This skill should be used when users want to create a new skill or update an existing skill.
 
 **Use when**:
@@ -161,6 +179,9 @@ High-performance workflow execution with multiple specialized sub-agents running
 ### Decision Tree
 
 ```
+Need isolated workspace for development?
+└─ YES → git-worktrees
+
 Need to debug existing code?
 └─ YES → code-debugger
 
@@ -194,6 +215,9 @@ Need to create/update skills?
 
 | Task | Recommended Skill |
 |------|-------------------|
+| Create isolated workspace | git-worktrees |
+| Handle urgent hotfix | git-worktrees (main_temp strategy) |
+| Review PR locally | git-worktrees |
 | Fix a bug | code-debugger |
 | Validate code quality | code-pattern-validator |
 | Optimize performance | code-performance-improver |
@@ -232,6 +256,7 @@ User Request
 ┌────────────────────────────────────┐
 │   Code Development Skills          │
 │                                    │
+├─ Workspace setup? → git-worktrees │
 ├─ Debugging? → code-debugger       │
 ├─ Planning? → code-planner         │
 ├─ Implementing? → code-implementer │
@@ -293,6 +318,8 @@ shared_artifacts:
 - Allow skills to share context through files
 - Monitor token usage with parallel skills
 - Select appropriate skill for task complexity
+- Use git-worktrees before starting implementation (provides isolation)
+- Consider git-worktrees for hotfixes during feature development
 
 ### DON'T
 
@@ -324,6 +351,7 @@ shared_artifacts:
 
 ```yaml
 recommended_concurrency:
+  git-worktrees: 1           # Sequential worktree creation
   code-debugger: 1           # Sequential debugging
   code-implementer: 1        # Sequential implementation
   code-pattern-validator: 3  # Can validate multiple files
