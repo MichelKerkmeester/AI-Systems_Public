@@ -570,6 +570,26 @@ After completing the workflow, generate a performance optimization report:
 - Memory usage increases
 - Accessibility is reduced
 
+### ESCALATE IF
+
+- Performance targets are fundamentally impossible with current architecture
+- Optimization requires architectural changes beyond scope
+- Performance bottleneck is in external dependencies or platform constraints
+- Optimization breaks critical features with no viable workaround
+- Memory constraints cannot be resolved without infrastructure changes
+- Need specialized performance engineering expertise not available
+- Trade-offs between performance and other requirements are unacceptable
+- Investigation reveals systemic performance issues requiring team discussion
+
+**When Escalating, Provide**:
+- Baseline performance metrics (before optimization attempts)
+- All optimization attempts made and their results
+- Profiling data and bottleneck analysis
+- Identified constraints (architectural, platform, resource)
+- Performance targets vs. achievable results
+- Recommended architectural changes or infrastructure needs
+- Risk assessment if left unresolved
+
 .
 
 ## 10. 📚 Embedded Reference

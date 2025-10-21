@@ -155,7 +155,7 @@ if (window.Webflow && window.Webflow.push) {
 dialog.setAttribute('aria-label', 'Welcome modal');
 dialog.setAttribute('aria-describedby', 'modal-description-id');
 ```
-**References**: specs/004-claude-skills/analysis/patterns.md - Accessibility Patterns
+**References**: knowledge/code_standards.md (Accessibility guidance)
 
 ## Info (Best Practices)
 
@@ -420,7 +420,7 @@ Minimum score: 0%
 
 **Input**:
 ```
-Validate /Users/username/project/src/modal/modal_welcome.js
+Validate src/modal/modal_welcome.js
 Use standard validation level
 ```
 
@@ -629,7 +629,7 @@ Before finalizing code, verify:
 **Solution**: Remove comments that narrate what code does. Keep only comments explaining WHY decisions were made. Target: ≤ 5 comments per 10 lines.
 
 **Issue**: "Missing ARIA attributes on modal"
-**Solution**: Reference `specs/004-claude-skills/analysis/patterns.md` Accessibility Patterns section for complete ARIA implementation examples from existing modals
+**Solution**: See `knowledge/code_standards.md` for accessibility guidance and ARIA best practices applicable across components
 
 ## 9. ⚙️ Edge Case Handling
 

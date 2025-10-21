@@ -502,7 +502,137 @@ metrics:
 
 .
 
-## 10. ✅ Best Practices
+## 10. 🎯 YAML ADAPTIVE RULES MAPPING
+
+This section maps the YAML `adaptive_rules` fields from `sk_p__feature_research.yaml` to concrete workflow behaviors.
+
+### Rule: high_complexity
+
+**YAML Configuration**:
+```yaml
+high_complexity:
+  concurrency: 2
+  review_depth: exhaustive
+```
+
+**Triggers**:
+- Broad research scope (>10 research areas)
+- Multiple competing solutions (>5 alternatives)
+- Deep technical domain (specialized knowledge required)
+- Research complexity score > 70
+
+**Adaptations Applied**:
+- **Reduce Concurrency**: `3 → 2` parallel researchers (fewer simultaneous executions)
+- **Increase Review Depth**: `standard → exhaustive` (more thorough source validation)
+- **Additional Domain Expert**: Add specialized researcher for complex areas
+- **Extended Timeouts**: Allow more time for deep research
+
+**Impact**:
+- **Execution Time**: Longer (reduced parallelism, deeper research)
+- **Quality**: Higher (exhaustive review validates sources better)
+- **Resource Usage**: Lower peak usage (fewer concurrent researchers)
+
+---
+
+### Rule: low_signal (high_uncertainty for research)
+
+**YAML Configuration**:
+```yaml
+low_signal:
+  action: broaden_queries_and_include_secondary_sources
+```
+
+**Triggers**:
+- Limited search results (<10 quality sources)
+- Niche or emerging technology
+- Contradictory findings (>30% conflicting sources)
+- New research domain with sparse documentation
+
+**Adaptations Applied**:
+- **Broaden Search Queries**: Expand keywords and search terms
+- **Include Secondary Sources**: Add blogs, forums, community discussions
+- **Cross-Domain Research**: Look for analogous solutions in related fields
+- **Document Gaps Explicitly**: Flag areas with insufficient evidence
+
+**Impact**:
+- **Execution Time**: Additional search rounds add time
+- **Coverage**: Better breadth (secondary sources fill gaps)
+- **Transparency**: Explicit gap documentation helps decision-making
+
+---
+
+### Rule: parallel_not_supported
+
+**YAML Configuration**:
+```yaml
+parallel_not_supported:
+  concurrency: 1
+  note: "If parallel sub-agents unsupported, run tasks one-by-one; keep review and synthesis."
+```
+
+**Triggers**:
+- Environment limitations (single-threaded execution environment)
+- API rate limits preventing concurrent requests
+- Context window constraints (insufficient memory for parallel agents)
+- System resources exhausted
+
+**Adaptations Applied**:
+- **Reduce to Sequential**: `concurrency → 1` (all researchers run one-by-one)
+- **Preserve Phases**: Keep review and synthesis phases intact
+- **Extend Timeouts**: Account for sequential execution duration
+- **Simplified Monitoring**: Reduce overhead of parallel coordination
+
+**Impact**:
+- **Execution Time**: Significantly longer (3-4x sequential vs parallel)
+- **Quality**: Same (review/synthesis phases preserved)
+- **Resource Usage**: Minimal (single researcher at a time)
+
+---
+
+### Adaptive Rule Decision Tree
+
+```
+Start Research Workflow
+    ↓
+Check Research Complexity Score
+    ↓
+    ├─ >70? → Apply high_complexity rules
+    └─ ≤70? → Continue
+    ↓
+Execute Initial Research Pass
+    ↓
+Check Signal Quality (sources found)
+    ↓
+    ├─ <10 quality sources? → Apply low_signal rules (broaden)
+    └─ ≥10 sources? → Continue
+    ↓
+Check Parallel Support
+    ↓
+    ├─ Not supported? → Apply parallel_not_supported rules (sequential)
+    └─ Supported? → Use default parallelism (concurrency=3)
+    ↓
+Execute Research with Adapted Configuration
+```
+
+---
+
+### Rule Combination Matrix
+
+| Complexity | Signal Quality | Parallel Support | Concurrency | Review Depth | Broaden Search |
+|-----------|----------------|------------------|-------------|--------------|----------------|
+| Low | High (>10 sources) | Yes | 3 | Standard | No |
+| High | High (>10 sources) | Yes | 2 | Exhaustive | No |
+| Low | Low (<10 sources) | Yes | 3 | Standard | Yes |
+| High | Low (<10 sources) | Yes | 2 | Exhaustive | Yes |
+| Any | Any | No | 1 | Standard/Exhaustive* | As needed |
+
+*Review depth determined by complexity score
+
+---
+
+.
+
+## 11. ✅ Best Practices
 
 ### DO:
 

@@ -21,7 +21,7 @@ Autonomous Implementation Workflow
 - Executing actual code changes autonomously
 
 **Do NOT use this skill for**:
-- Initial specification creation (use speckit-plan-spec)
+- Initial specification creation (use speckit-spec-plan)
 - Research and investigation (use speckit-feature-research)
 - Simple planning without implementation
 - Manual implementation processes
@@ -30,16 +30,16 @@ Autonomous Implementation Workflow
 
 ## 2. 🚀 Quick Command Reference
 
-> **📌 Context Note**: This skill implements **Workflow Steps 8-15** from the SpecKit implementation process (continuation from planning steps 1-7). References to "Workflow Step N" indicate steps from the source YAML specification, while "Section N" refers to document organization below.
+> **📌 Context Note**: This skill implements **Steps 8-15** from the SpecKit implementation process (continuation from planning steps 1-7). References to "Step N" indicate steps from the source YAML specification, while "Section N" refers to document organization below.
 
 | Step | Command | Purpose |
 |------|---------|----------|
 | **8** | Manual | Review Plan and Spec |
-| **9** | `/tasks` | Generate actionable tasks |
-| **10** | `/analyze` | Check consistency |
+| **9** | `/speckit.tasks` | Generate actionable tasks |
+| **10** | `/speckit.analyze` | Check consistency |
 | **11** | `/speckit.checklist` | Quality gates |
 | **12** | *Parallel Block* | 4 implementation agents prepare |
-| **13** | `/implement` | Verify prerequisites |
+| **13** | `/speckit.implement` | Verify prerequisites |
 | **14** | Manual | Autonomous development |
 | **15** | Manual | Document changes and completion |
 
@@ -49,20 +49,20 @@ Autonomous Implementation Workflow
 
 ## 3. 🏗️ Architecture Overview
 
-This skill implements the sk_p__implementation.yaml workflow with 6 specialized implementation sub-agents executing in parallel preparation phase.
+This skill implements the sk_p__implementation.yaml workflow with 6 specialized implementation sub-agents: 4 execute in the parallel preparation phase, followed by sequential review and synthesis.
 
-### Implementation Workflow Steps
+### Implementation Steps
 
-**Note**: This workflow covers Workflow Steps 8-15 of the complete SpecKit process. Steps 1-7 are assumed completed via planning workflow.
+**Note**: This workflow covers Steps 8-15 of the complete SpecKit process. Steps 1-7 are assumed completed via planning workflow.
 
-- **Workflow Step 8**: Review Plan and Spec - Understand existing artifacts
-- **Workflow Step 9**: Task Breakdown - Generate actionable tasks
-- **Workflow Step 10**: Analysis - Check consistency and coverage
-- **Workflow Step 11**: Quality Checklist - Generate quality gates
-- **Workflow Step 12**: Parallel Implementation Prep - 4 agents prepare approach
-- **Workflow Step 13**: Implementation Check - Verify prerequisites
-- **Workflow Step 14**: Development - Execute autonomous implementation
-- **Workflow Step 15**: Completion - Document changes and summary
+- **Step 8**: Review Plan and Spec - Understand existing artifacts
+- **Step 9**: Task Breakdown - Generate actionable tasks
+- **Step 10**: Analysis - Check consistency and coverage
+- **Step 11**: Quality Checklist - Generate quality gates
+- **Step 12**: Parallel Implementation Prep - 4 agents prepare approach
+- **Step 13**: Implementation Check - Verify prerequisites
+- **Step 14**: Development - Execute autonomous implementation
+- **Step 15**: Completion - Document changes and summary
 
 **Note**: This is an autonomous workflow with NO approval gates
 
@@ -81,15 +81,15 @@ This skill implements the sk_p__implementation.yaml workflow with 6 specialized 
   - Step 14 → Development
   - Step 15 → Completion
 
-## 4. 📝 Workflow Steps
+## 4. 📝 Steps
 
-**Prerequisites**: Requires `spec.md`, `plan.md`, and `planning-summary.md` from Workflow Steps 1-7.
+**Prerequisites**: Requires `spec.md`, `plan.md`, and `planning-summary.md` from Steps 1-7.
 
 This section provides step-by-step execution guidance as defined in sk_p__implementation.yaml.
 
-### Workflow Step 8: Gather User Inputs & Review Plan and Spec
+### Step 8: Gather User Inputs & Review Plan and Spec
 
-**Note**: This workflow is typically a continuation of the planning phase (Workflow Steps 1-7). If continuing from planning, inputs should be inherited. If starting independently, all inputs must be collected first.
+**Note**: This workflow is typically a continuation of the planning phase (Steps 1-7). If continuing from planning, inputs should be inherited. If starting independently, all inputs must be collected first.
 
 **Action**: Collect inputs (if not inherited), then review spec and planning artifacts
 
@@ -150,9 +150,9 @@ This section provides step-by-step execution guidance as defined in sk_p__implem
 
 **Approval Gate**: None (autonomous execution)
 
-### Workflow Step 9: Task Breakdown
+### Step 9: Task Breakdown
 
-**Command**: `/tasks`
+**Command**: `/speckit.tasks`
 
 **Action**: Generate actionable task checklist
 
@@ -163,9 +163,9 @@ This section provides step-by-step execution guidance as defined in sk_p__implem
 
 **Validation**: `tasks_actionable`
 
-### Workflow Step 10: Analysis
+### Step 10: Analysis
 
-**Command**: `/analyze`
+**Command**: `/speckit.analyze`
 
 **Action**: Check consistency and verify alignment
 
@@ -177,7 +177,7 @@ This section provides step-by-step execution guidance as defined in sk_p__implem
 
 **Validation**: `consistency_verified`
 
-### Workflow Step 11: Quality Checklist
+### Step 11: Quality Checklist
 
 **Command**: `/speckit.checklist`
 
@@ -188,7 +188,7 @@ This section provides step-by-step execution guidance as defined in sk_p__implem
 
 **Validation**: `checklist_generated`
 
-### Workflow Step 12: Parallel Implementation Preparation
+### Step 12: Parallel Implementation Preparation
 
 **Description**: Parallel preparation for core, integrations, tests, and docs
 
@@ -284,9 +284,9 @@ This step contains sub-phases that execute sequentially:
 
 **Note**: Main agent finalization occurs within this step (no subsequent approval gate)
 
-### Workflow Step 13: Implementation Check
+### Step 13: Implementation Check
 
-**Command**: `/implement [task-id]`
+**Command**: `/speckit.implement [task-id]`
 
 **Action**: Verify prerequisites before code changes
 
@@ -307,7 +307,7 @@ This step contains sub-phases that execute sequentially:
 
 **Validation**: Environment ready for implementation
 
-### Workflow Step 14: Development
+### Step 14: Development
 
 **Approach**: Autonomous implementation with checkpoints
 
@@ -340,7 +340,7 @@ This step contains sub-phases that execute sequentially:
 - Approach: continuous_validation
 - Outputs: implementation_decisions, debugging_insights, optimization_opportunities, test_coverage_gaps
 
-### Workflow Step 15: Completion
+### Step 15: Completion
 
 **Action**: Document changes and create summary
 
@@ -460,8 +460,8 @@ This step contains sub-phases that execute sequentially:
 
 **Important**:
 - Review and synthesis phases execute sequentially AFTER parallel work completes
-- Main agent finalization occurs within Workflow Step 12 (no approval gate)
-- All phases in Workflow Step 12 are sub-phases within that single workflow step
+- Main agent finalization occurs within Step 12 (no approval gate)
+- All phases in Step 12 are sub-phases within that single workflow step
 - This is an autonomous workflow - no user approval needed
 
 .
@@ -541,7 +541,7 @@ This workflow automatically handles empty input fields per sk_p__implementation.
   - `feature_branch`: Create new feature branch (auto-create feature-{NNN} aligned with spec folder)
   - `main_branch`: Work on main branch (skip branch creation and commit directly to main)
 - **Empty Handling**: Inherit from planning phase; if unavailable, prompt user
-- **Note**: This field should be inherited from the planning workflow (Workflow Steps 1-7). If starting implementation independently, prompt user for choice.
+- **Note**: This field should be inherited from the planning workflow (Steps 1-7). If starting implementation independently, prompt user for choice.
 
 ### spec_id
 - **Derived From**: spec_folder path using pattern `specs/{NNN}` or `specs/{NNN-name}`
@@ -845,11 +845,6 @@ documentation:
 - **Documentation**: Complete and accurate
 
 .
-
-## 🔧 Troubleshooting / Notes
-- Environment not ready: re-run Implementation Check (Step 13) and fix blockers
-- Failing tests/checkpoints: address, update checklist, and re-verify before proceeding
-- Branch policy: if conflicts occur on integration, prefer PR workflow
 
 ## 15. References
 

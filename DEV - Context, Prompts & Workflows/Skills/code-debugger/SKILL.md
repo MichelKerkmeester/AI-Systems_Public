@@ -695,6 +695,33 @@ After completing the workflow, generate a bug fix report:
 - Affects critical production systems
 - Need domain expertise not available
 
+### Information to Provide When Escalating
+
+When escalating a debugging issue, provide the following information:
+
+**Investigation Summary**:
+- All reproduction steps attempted and their results
+- Hypotheses tested and outcomes
+- Evidence gathered (logs, screenshots, stack traces, profiling data)
+- Timeline of investigation efforts
+
+**Current Understanding**:
+- What is known with certainty about the bug
+- What remains uncertain or unclear
+- Any contradictions or anomalies discovered
+
+**Blockers Encountered**:
+- Technical blockers preventing resolution
+- Missing knowledge or expertise areas
+- Resource constraints or access limitations
+- Dependencies on external systems or teams
+
+**Recommended Next Steps**:
+- Suggested approaches for further investigation
+- Alternative solutions to consider
+- Required expertise or resources
+- Risk assessment if issue remains unresolved
+
 ## 9. 🔧 Troubleshooting
 
 ### Cannot Reproduce Bug

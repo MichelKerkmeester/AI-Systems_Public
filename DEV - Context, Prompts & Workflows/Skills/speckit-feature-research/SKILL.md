@@ -22,8 +22,7 @@ Parallel Technical Investigation
 - Creating comprehensive research documentation
 
 **Do NOT use this skill for**:
-- Full SpecKit workflow execution (use speckit-parallel-complete)
-- Simple command recommendations (use speckit-command-guide)
+- Full SpecKit workflow execution (use speckit-complete)
 - Implementation without research
 - Writing specs without investigation
 
@@ -42,7 +41,7 @@ Parallel Technical Investigation
 | 7 | Manual | Final Compilation |
 | 8 | Manual | Branch Integration (optional) |
 
-**✅ Autonomous**: This workflow executes steps 1-7 without approval gates. Only step 8 (branch integration) requires user confirmation
+**✅ Autonomous**: This workflow executes steps 1–7 without approval gates. Step 8 (branch integration) requires explicit user confirmation.
 
 .
 
@@ -50,7 +49,7 @@ Parallel Technical Investigation
 
 This skill implements the sk_p__feature_research.yaml workflow with 6 specialized research sub-agents executing in parallel.
 
-### Research Workflow Steps
+### Research Steps
 
 1. **Request Analysis** - Define research scope and goals
 2. **Pre-work Review** - Review AGENTS.md, code standards
@@ -61,7 +60,7 @@ This skill implements the sk_p__feature_research.yaml workflow with 6 specialize
 7. **Final Research Compilation** - Complete comprehensive documentation
 8. **Branch Integration** - Optional merge to main
 
-**Note**: This is an autonomous workflow with NO approval gates.
+**Note**: This workflow runs autonomously for steps 1–7; step 8 requires user confirmation for branch integration.
 
 .
 
@@ -78,7 +77,7 @@ This skill implements the sk_p__feature_research.yaml workflow with 6 specialize
   - Step 7 → Final Research Compilation
   - Step 8 → Branch Integration (conditional)
 
-## 4. 📝 Workflow Steps
+## 4. 📝 Steps
 
 This section provides step-by-step execution guidance as defined in sk_p__feature_research.yaml.
 
@@ -337,7 +336,7 @@ Spec folder structure:
 Next steps:
 - Review research findings in the spec folder
 - Validate technical approach
-- Proceed to specification (/specify) if needed
+- Proceed to specification (/speckit.specify) if needed
 - Use research as reference during implementation planning
 ```
 
@@ -675,9 +674,35 @@ This workflow automatically handles empty input fields per sk_p__feature_researc
 - Document constraints early
 
 ### With Other Skills
-- **speckit-command-guide**: Recommends when to research
-- **speckit-parallel-complete**: Uses research for full workflow
-- **speckit-plan-spec**: Leverages research for planning
+- **speckit-complete**: Uses research for full workflow
+- **speckit-spec-plan**: Leverages research for planning
+
+### Workflow Relationship
+
+**⚠️ Important**: This is a **standalone research workflow**
+
+- **Does NOT run**: `/speckit.specify`, `/speckit.plan`, `/speckit.tasks`, `/speckit.analyze`, or `/speckit.implement`
+- **Only generates**: `research.md` documentation in spec folder
+- **Purpose**: Provide research foundation before or during SpecKit workflows
+- **Flexibility**: Can be used independently or as prep step for full SpecKit execution
+
+**When to Use This vs. Complete Workflow**:
+
+| Use speckit-feature-research | Use speckit-complete |
+|------------------------------|----------------------|
+| Need research only | Need full spec → implementation |
+| Evaluating feasibility | Building complete feature |
+| Gathering vendor options | End-to-end automated workflow |
+| Creating knowledge base | Managed approval gates |
+
+**Output Location**:
+- Primary: `[SPEC_FOLDER]/research.md`
+- Optional: Supplementary files in spec folder as needed
+
+**Integration Pattern**:
+1. **Before SpecKit**: Run research → Use findings in `/speckit.specify`
+2. **During SpecKit**: Reference research.md in planning steps
+3. **Standalone**: Use research.md as decision document without implementation
 
 .
 
@@ -781,11 +806,6 @@ If parallel execution fails:
 - **Quality score**: >85% validation pass
 
 .
-
-## 🔧 Troubleshooting / Notes
-- Insufficient sources: broaden queries; include secondary sources; document gaps
-- Contradictory findings: add clarification pass; present options with trade-offs
-- Branch integration problems: skip integration (main_branch) or open PR for feature_branch
 
 ## 17. References
 

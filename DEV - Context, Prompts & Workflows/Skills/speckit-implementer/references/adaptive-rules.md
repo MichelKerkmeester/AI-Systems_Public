@@ -570,7 +570,138 @@ metrics:
 
 .
 
-## 11. ⭐ Best Practices
+## 11. 🎯 YAML ADAPTIVE RULES MAPPING
+
+This section maps the YAML `adaptive_rules` fields from `sk_p__implementation.yaml` to concrete workflow behaviors.
+
+### Rule: high_complexity
+
+**YAML Configuration**:
+```yaml
+high_complexity:
+  concurrency: 2
+  review_depth: exhaustive
+```
+
+**Triggers**:
+- Large implementation scope (>20 files to modify)
+- Complex technical requirements (>15 modules)
+- Multiple integration points (>5 external systems)
+- High technical debt score
+- Implementation complexity score > 70
+
+**Adaptations Applied**:
+- **Reduce Concurrency**: `3 → 2` parallel agents (fewer simultaneous executions)
+- **Increase Review Depth**: `standard → exhaustive` (more thorough validation)
+- **Add Checkpoints**: More frequent validation during implementation
+- **Extended Timeouts**: Allow more time for complex implementation tasks
+
+**Impact**:
+- **Execution Time**: Longer (reduced parallelism, more checkpoints)
+- **Quality**: Higher (exhaustive review catches more issues)
+- **Resource Usage**: Lower peak usage (fewer concurrent agents)
+
+---
+
+### Rule: high_uncertainty
+
+**YAML Configuration**:
+```yaml
+high_uncertainty:
+  insert: discovery_microstep_before_parallel_blocks
+  estimates: use_ranges
+```
+
+**Triggers**:
+- Unclear implementation approach in plan.md
+- Missing technical specifications
+- New technology or unfamiliar patterns
+- Contradictory information in artifacts
+- Uncertainty score > 80
+
+**Adaptations Applied**:
+- **Insert Discovery Phase**: Add proof-of-concept step BEFORE parallel blocks
+- **Use Estimate Ranges**: Replace point estimates with min-max ranges
+- **Prototype First**: Create throwaway prototypes to validate approach
+- **Iterative Refinement**: Enable progressive implementation with frequent validation
+
+**Impact**:
+- **Execution Time**: Additional discovery/prototyping adds time
+- **Risk Mitigation**: Discovery phase prevents implementing wrong solution
+- **Accuracy**: More conservative estimates reduce over-commitment
+
+---
+
+### Rule: parallel_not_supported
+
+**YAML Configuration**:
+```yaml
+parallel_not_supported:
+  concurrency: 1
+  note: "If parallel sub-agents unsupported, run tasks one-by-one; keep review and synthesis."
+```
+
+**Triggers**:
+- Environment limitations (single-threaded execution environment)
+- API rate limits preventing concurrent requests
+- Context window constraints (insufficient memory for parallel agents)
+- System resources exhausted
+
+**Adaptations Applied**:
+- **Reduce to Sequential**: `concurrency → 1` (all agents run one-by-one)
+- **Preserve Phases**: Keep review and synthesis phases intact
+- **Extend Timeouts**: Account for sequential execution duration
+- **Simplified Monitoring**: Reduce overhead of parallel coordination
+
+**Impact**:
+- **Execution Time**: Significantly longer (3-4x sequential vs parallel)
+- **Quality**: Same (review/synthesis phases preserved)
+- **Resource Usage**: Minimal (single agent at a time)
+
+---
+
+### Adaptive Rule Decision Tree
+
+```
+Start Implementation Workflow
+    ↓
+Check Implementation Complexity Score
+    ↓
+    ├─ >70? → Apply high_complexity rules
+    └─ ≤70? → Continue
+    ↓
+Check Technical Uncertainty Score
+    ↓
+    ├─ >80? → Apply high_uncertainty rules (insert discovery)
+    └─ ≤80? → Continue
+    ↓
+Check Parallel Support
+    ↓
+    ├─ Not supported? → Apply parallel_not_supported rules (sequential)
+    └─ Supported? → Use default parallelism (concurrency=3)
+    ↓
+Execute Implementation with Adapted Configuration
+```
+
+---
+
+### Rule Combination Matrix
+
+| Complexity | Uncertainty | Parallel Support | Concurrency | Review Depth | Discovery Phase |
+|-----------|-------------|------------------|-------------|--------------|-----------------|
+| Low | Low | Yes | 3 | Standard | No |
+| High | Low | Yes | 2 | Exhaustive | No |
+| Low | High | Yes | 3 | Standard | Yes (Prototype) |
+| High | High | Yes | 2 | Exhaustive | Yes (Prototype) |
+| Any | Any | No | 1 | Standard/Exhaustive* | As needed |
+
+*Review depth determined by complexity score
+
+---
+
+.
+
+## 12. ⭐ Best Practices
 
 ### DO:
 

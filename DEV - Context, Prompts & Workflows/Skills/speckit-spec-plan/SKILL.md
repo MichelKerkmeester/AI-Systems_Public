@@ -38,11 +38,11 @@ Use other skills or direct edits for:
 |------|---------|----------|
 | 1 | Manual | Request Analysis |
 | 2 | Manual | Pre-work Review |
-| 3 | `/specify` | Create spec.md |
-| 4 | `/clarify` | Resolve ambiguities |
+| 3 | `/speckit.specify` | Create spec.md |
+| 4 | `/speckit.clarify` | Resolve ambiguities |
 | 5 | `/speckit.checklist` | Generate quality checklist |
 | 6 | *Parallel Block* | 4 analysts work in parallel |
-| 7 | `/plan` | Finalize technical approach |
+| 7 | `/speckit.plan` | Finalize technical approach |
 
 **⚠️ Important**: This workflow requires **3 approval gates** (steps 1→2, 4→5, 6→7)
 
@@ -52,7 +52,7 @@ Use other skills or direct edits for:
 
 This skill implements the sk_p__spec_plan.yaml workflow with 6 specialized planning sub-agents executing in parallel analysis phase.
 
-### Planning Workflow Steps
+### Planning Steps
 
 1. **Request Analysis** - Analyze inputs and confirm understanding
 2. **Pre-work Review** - Review AGENTS.md and constitution
@@ -78,7 +78,7 @@ This skill implements the sk_p__spec_plan.yaml workflow with 6 specialized plann
   - Step 6 → Parallel Planning Block
   - Step 7 → Planning (/speckit.plan)
 
-## 4. 📋 Workflow Steps
+## 4. 📋 Steps
 
 This section provides step-by-step execution guidance as defined in sk_p__spec_plan.yaml.
 
@@ -160,7 +160,7 @@ This section provides step-by-step execution guidance as defined in sk_p__spec_p
 
 ### Step 3: Specification
 
-**Command**: `/specify [feature-description]`
+**Command**: `/speckit.specify [feature-description]`
 
 **Action**: Create spec.md with acceptance criteria
 
@@ -175,7 +175,7 @@ This section provides step-by-step execution guidance as defined in sk_p__spec_p
 
 ### Step 4: Clarification
 
-**Command**: `/clarify`
+**Command**: `/speckit.clarify`
 
 **Action**: Resolve ambiguities and clarify requirements
 
@@ -285,7 +285,7 @@ This step contains sub-phases that execute sequentially:
 
 ### Step 7: Planning
 
-**Command**: `/plan [context]`
+**Command**: `/speckit.plan [context]`
 
 **Action**: Finalize technical approach and plan.md
 
@@ -476,7 +476,9 @@ The skill produces two key documents:
 
 .
 
-## 8. ✅ Approval GatesThis workflow includes manual approval gates at key points:
+## 8. ✅ Approval Gates
+
+This workflow includes manual approval gates at key points:
 
 | Step | Approval Prompt | Confirmation | Warning |
 |------|-----------------|--------------|----------|
@@ -823,14 +825,9 @@ When staging URL is provided:
 
 .
 
-## 🔧 Troubleshooting / Notes
-- Ambiguous requirements: ensure Clarification (Step 4) completed before planning
-- Parallel planning gaps: verify all four analyst outputs present before synthesis
-- Approval gates: ensure gate after Step 6 before proceeding to Step 7
-
 ## 20. References
 
 - Source: `/b_prompts/github_spec_kit/parallel_agents/sk_p__spec_plan.yaml`
 - Prerequisites: Feature request or existing spec
-- Next Steps: Use speckit-implementation for execution
+- Next Steps: Use speckit-implementer for execution
 - Output: plan.md, planning-summary.md

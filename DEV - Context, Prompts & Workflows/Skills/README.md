@@ -356,7 +356,7 @@ recommended_concurrency:
 
 ## 10. 🔗 Integration with AGENTS.md
 
-Skills follow the principles and standards defined in [AGENTS.md](/Users/michelkerkmeester/MEGA/Websites/anobel.com/AGENTS.md):
+Skills follow the principles and standards defined in `AGENTS.md`:
 
 - All skills adhere to the Clarification Rule (confidence < 80% → ask questions)
 - All skills use Explicit Uncertainty markers when appropriate

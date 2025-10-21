@@ -7,7 +7,7 @@ description: Execute the complete 14-step SpecKit workflow with 18 specialized s
 Full 14-Step Workflow Orchestration
 
 > Change Notes (2025-10-21)
-- Removed 4.x sub-step numbering across Workflow Steps
+- Removed 4.x sub-step numbering across Steps
 - Standardized headers and header-only emoji usage
 - Added YAML → Steps Crosswalk; preserved stage semantics and approval gates
 
@@ -21,7 +21,7 @@ Full 14-Step Workflow Orchestration
 - Complex workflows require orchestration of multiple agents
 
 **Do NOT use this skill for**:
-- Simple command recommendations (use speckit-command-guide)
+- Simple command recommendations (see skills/README selection guide)
 - Single-agent tasks
 - Sequential workflows without parallelization needs
 
@@ -35,14 +35,14 @@ Full 14-Step Workflow Orchestration
 |------|---------|-------|----------|
 | 1 | Manual | - | Request Analysis |
 | 2 | Manual | - | Pre-work Review |
-| 3 | `/specify` | - | Create spec.md |
-| 4 | `/clarify` | - | Resolve ambiguities |
+| 3 | `/speckit.specify` | - | Create spec.md |
+| 4 | `/speckit.clarify` | - | Resolve ambiguities |
 | 5 | `/speckit.checklist` | - | Quality checklist |
 | 6 | *Parallel Block* | **A: Planning** | 4 analysts work in parallel |
-| 7 | `/tasks` | - | Task breakdown |
-| 8 | `/analyze` | - | Consistency check |
+| 7 | `/speckit.tasks` | - | Task breakdown |
+| 8 | `/speckit.analyze` | - | Consistency check |
 | 9 | *Parallel Block* | **B: Implementation** | 4 implementation agents prepare |
-| 10 | `/implement` | - | Implementation check |
+| 10 | `/speckit.implement` | - | Implementation check |
 | 11 | Manual | - | Development - Code changes |
 | 12 | *Parallel Block* | **C: Quality** | 4 quality reviewers validate |
 | 13 | Manual | - | Document changes |
@@ -56,7 +56,7 @@ Full 14-Step Workflow Orchestration
 
 This skill implements the complete 14-step workflow with 18 specialized sub-agents organized into 3 parallel execution stages.
 
-### The 14 Workflow Steps
+### The 14 Steps
 
 1. **Request Analysis** - Parse and understand requirements
 2. **Pre-work Review** - Review AGENTS.md, constitution, knowledge base
@@ -94,7 +94,7 @@ This skill implements the complete 14-step workflow with 18 specialized sub-agen
   - Step 13 → Completion
   - Step 14 → Branch Integration
 
-## 4. 📝 Workflow Steps
+## 4. 📝 Steps
 
 This section provides step-by-step execution guidance as defined in sk_p__complete.yaml.
 
@@ -176,7 +176,7 @@ This section provides step-by-step execution guidance as defined in sk_p__comple
 
 ### Step 3: Specification
 
-**Command**: `/specify [feature-description]`
+**Command**: `/speckit.specify [feature-description]`
 
 **Action**: Create spec.md with acceptance criteria
 
@@ -194,7 +194,7 @@ This section provides step-by-step execution guidance as defined in sk_p__comple
 
 ### Step 4: Clarification
 
-**Command**: `/clarify`
+**Command**: `/speckit.clarify`
 
 **Action**: Resolve ambiguities and clarify requirements
 
@@ -287,7 +287,7 @@ This step contains sub-phases that execute sequentially:
 
 ### Step 7: Task Breakdown
 
-**Command**: `/tasks`
+**Command**: `/speckit.tasks`
 
 **Action**: Generate actionable task checklist
 
@@ -302,7 +302,7 @@ This step contains sub-phases that execute sequentially:
 
 ### Step 8: Analysis
 
-**Command**: `/analyze`
+**Command**: `/speckit.analyze`
 
 **Action**: Check consistency and verify alignment
 
@@ -382,7 +382,7 @@ This step contains sub-phases that execute sequentially:
 
 ### Step 10: Implementation Check
 
-**Command**: `/implement [task-id]`
+**Command**: `/speckit.implement [task-id]`
 
 **Action**: Verify prerequisites before code changes
 
@@ -526,23 +526,53 @@ This step contains sub-phases that execute sequentially:
 - **Confirmation Needed**: true
 - **Condition**: Only prompt if `branch_strategy == feature_branch`
 
-**Integration Policy**:
-- Merge strategy: rebase_then_fast_forward
-- Safety checks:
-  - Clean working tree
-  - Validations/tests/pass checks are green
-  - No unresolved blockers
-- Conflict policy:
-  - On rebase conflict: pause and ask for guidance
-  - Fallback to PR: offer to open a PR if user prefers manual resolution
-- Steps:
-  - Fetch origin
-  - Update main (pull --ff-only)
-  - Rebase feature branch onto main
-  - Fast-forward merge into main
-  - Push origin main
-  - After successful integration, offer to delete the feature branch locally and on origin (explicit confirmation required)
-- Tagging: optional; only on user request
+#### Integration Policy
+
+**Merge Strategy**: `rebase_then_fast_forward`
+
+**Safety Checks** (must pass before integration):
+- ✅ Clean working tree (no uncommitted changes)
+- ✅ Validations/tests/pass checks are green (as applicable)
+- ✅ No unresolved blockers
+
+**Integration Steps**:
+1. `git fetch origin` - Get latest remote changes
+2. `git checkout main && git pull --ff-only` - Update local main
+3. `git checkout [feature-branch] && git rebase main` - Rebase feature onto main
+4. `git checkout main && git merge --ff-only [feature-branch]` - Fast-forward merge
+5. `git push origin main` - Push integrated changes
+6. **Optional**: Delete feature branch (requires explicit user confirmation)
+
+#### Conflict Resolution
+
+**On Rebase Conflict**:
+- **Behavior**: Pause integration and ask for guidance
+- **Options Offered**:
+  - A) Resolve conflicts manually, then continue
+  - B) Open a PR for manual resolution in GitHub
+  - C) Abort integration and leave branches separate
+
+**Fallback Strategy**: If conflicts are complex, offer to open PR instead of forcing resolution
+
+#### Post-Integration
+
+**Branch Deletion**:
+- **Local**: Offer to delete feature branch locally (explicit confirmation required)
+- **Remote**: Offer to delete feature branch on origin (explicit confirmation required)
+- **Default**: Preserve branches unless user explicitly approves deletion
+
+**Tagging**:
+- **Policy**: Optional, only on explicit user request
+- **Usage**: If user wants to tag release after integration
+
+#### Skip Message
+
+When `branch_strategy == main_branch`:
+```
+Skipping branch integration (working on main branch).
+Changes are already committed directly to main.
+No separate integration needed.
+```
 
 **Termination**: Workflow ends after this step (or after Step 13 if main_branch was selected)
 
@@ -865,9 +895,9 @@ This workflow automatically handles empty input fields per sk_p__complete.yaml:
 
 ## 10. 🔗 Integration Points
 
-### With speckit-command-guide
-- Command guide recommends commands
-- Executor handles parallel execution
+### With skills/README Selection Guide
+- Selection guide recommends which skill to use
+- This executor handles parallel execution
 - Clear handoff at command boundaries
 
 ### With Chrome DevTools
@@ -928,12 +958,6 @@ This workflow automatically handles empty input fields per sk_p__complete.yaml:
 .
 
 ## 15. References
-
-## 🔧 Troubleshooting / Notes
-- Missing inputs (branch_strategy/spec_folder): rerun Step 1 input collection
-- Stage sequence confusion: follow YAML ↔ Steps Crosswalk mapping
-- Branch integration issues: open a PR instead of force-pushing; resolve conflicts externally if needed
-etrics
 
 ### Success Criteria / Quality Gates
 - Approval gates acknowledged and passed at each step
