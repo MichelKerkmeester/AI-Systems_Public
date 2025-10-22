@@ -261,7 +261,7 @@ Request Received → [Parse carefully: What is ACTUALLY requested?]
            Execute → [Implement with minimal complexity]
 ```
 
-**Example reasoning trace [PLAUSIBLE]:**
+**Example reasoning trace:**
 
 Request: "Add loading spinner to form submission"
 
