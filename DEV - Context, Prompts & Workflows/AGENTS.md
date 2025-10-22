@@ -418,6 +418,35 @@ C) [option with brief rationale]"
 
 ## 🏎️ QUICK REFERENCE
 
+### Pre-code checklist
+
+**Before writing ANY code, verify:**
+
+```markdown
+□ I have parsed the request correctly (not assuming or extrapolating)
+□ I understand which files need changes (read them first)
+□ I know what success looks like (clear acceptance criteria)
+□ I pass the Solution Effectiveness Matrix checks (simplicity, performance, maintainability, scope)
+□ If confidence < 80% or requirements are ambiguous: ask a clarifying question (see 🧠 Confidence & Clarification Framework)
+□ I can explain why this approach is optimal
+□ I have cited sources for key claims or marked "UNKNOWN"
+□ I ran a quick self-check for contradictions/inconsistencies
+□ I avoided fabrication; missing info is labeled "UNKNOWN"
+```
+**If ANY unchecked → STOP and analyze further**
+
+### When Uncertain, Ask Yourself:
+
+1. "What is the ACTUAL request, not what I assume?"
+2. "What's the simplest solution that fulfills the requirement?"
+3. "Am I adding complexity that isn't needed?"
+4. "Does this follow knowledge/code_standards.md patterns?"
+5. "Can I explain why this approach is optimal?"
+6. "Am I solving requested problems or imagined ones?"
+7. "Have I read all relevant code first?"
+8. "Is this performant enough for the use case?"
+9. "Will this be easy to maintain and understand?"
+
 ### Core Principles & Decision Mantras
 
 #### Remember These Always:
@@ -451,47 +480,6 @@ C) [option with brief rationale]"
 - "Determinism > Variation" (same inputs → same outputs)
 - "Truth/Safety > Engagement"
 
-#### When Uncertain, Ask Yourself:
-
-1. "What is the ACTUAL request, not what I assume?"
-2. "What's the simplest solution that fulfills the requirement?"
-3. "Am I adding complexity that isn't needed?"
-4. "Does this follow knowledge/code_standards.md patterns?"
-5. "Can I explain why this approach is optimal?"
-6. "Am I solving requested problems or imagined ones?"
-7. "Have I read all relevant code first?"
-8. "Is this performant enough for the use case?"
-9. "Will this be easy to maintain and understand?"
-
-#### Professional Responsibility Declaration
-
-**I should NOT:**
-- Assume user's diagnosis without verification
-- Optimize for engagement over truth or safety
-
-**I MUST:**
-- Read existing code before modifying
-- Provide solutions I can reason about with evidence
-- Be honest about tradeoffs and limitations
-- Leave every conversation clearer than I found it
-
-### Pre-code checklist
-
-**Before writing ANY code, verify:**
-
-```markdown
-□ I have parsed the request correctly (not assuming or extrapolating)
-□ I understand which files need changes (read them first)
-□ I know what success looks like (clear acceptance criteria)
-□ I pass the Solution Effectiveness Matrix checks (simplicity, performance, maintainability, scope)
-□ If confidence < 80% or requirements are ambiguous: ask a clarifying question (see 🧠 Confidence & Clarification Framework)
-□ I can explain why this approach is optimal
-□ I have cited sources for key claims or marked "UNKNOWN"
-□ I ran a quick self-check for contradictions/inconsistencies
-□ I avoided fabrication; missing info is labeled "UNKNOWN"
-```
-**If ANY unchecked → STOP and analyze further**
-
 ### Definition of Done & PR Checklist
 
 - [ ] Tests pass locally (unit/integration/e2e as applicable)
@@ -508,25 +496,32 @@ C) [option with brief rationale]"
 **Glob** — Find files by name pattern → Find files matching naming pattern (e.g., `**/*modal*.js`)
 **Task+Explore** — Broad investigation when specific path unknown → Open-ended investigation, understanding architecture
 
-*Task+Explore provides open-ended investigation and architecture mapping; see knowledge/debugging.md for exploration guidelines.*
-
----
-
-## Appendix: Tag Glossary
-
-- [SOURCE: file.md:lines] A specific file and line range supporting a claim
-- [CITATION: NONE] No direct source available; claim should be treated cautiously
-- [STATUS: UNVERIFIED] Evidence could not be verified live; requires follow-up
-- [CAVEATS: ...] Limitations or counter-evidence relevant to the claim
-
 ### Knowledge base
 
 **Required Reading** - These documents define our non-negotiable standards:
 
-### Core Development Standards
 1. [knowledge/code_standards.md](./knowledge/code_standards.md)
 2. [knowledge/initialization_pattern.md](./knowledge/initialization_pattern.md)
 3. [knowledge/webflow_platform_constraints.md](./knowledge/webflow_platform_constraints.md)
 4. [knowledge/animation_strategy.md](./knowledge/animation_strategy.md)
 5. [knowledge/debugging.md](./knowledge/debugging.md)
 6. [knowledge/document_style_guide.md](./knowledge/document_style_guide.md)
+
+### Professional Responsibility Declaration
+
+**I should NOT:**
+- Assume user's diagnosis without verification
+- Optimize for engagement over truth or safety
+
+**I MUST:**
+- Read existing code before modifying
+- Provide solutions I can reason about with evidence
+- Be honest about tradeoffs and limitations
+- Leave every conversation clearer than I found it
+
+### Appendix: Tag Glossary
+
+- [SOURCE: file.md:lines] A specific file and line range supporting a claim
+- [CITATION: NONE] No direct source available; claim should be treated cautiously
+- [STATUS: UNVERIFIED] Evidence could not be verified live; requires follow-up
+- [CAVEATS: ...] Limitations or counter-evidence relevant to the claim
