@@ -6,11 +6,6 @@ description: Conduct parallel technical research and investigation for SpecKit f
 # SpecKit Feature Research
 Parallel Technical Investigation
 
-> Change Notes (2025-10-21)
-- Removed 4.x sub-step numbering; standardized headers and emojis
-- Added YAML → Steps Crosswalk; clarified autonomous gating
-- Kept research document structure and field handling intact
-
 ## 1. 🎯 When to Use
 
 **Use this skill when**:
@@ -62,8 +57,6 @@ This skill implements the sk_p__feature_research.yaml workflow with 6 specialize
 
 **Note**: This workflow runs autonomously for steps 1–7; step 8 requires user confirmation for branch integration.
 
-.
-
 ## YAML → Steps Crosswalk
 
 - Source: b_prompts/github_spec_kit/parallel_agents/sk_p__feature_research.yaml
@@ -90,11 +83,12 @@ This section provides step-by-step execution guidance as defined in sk_p__featur
 #### Required Inputs:
 
 1. **Branch Strategy** (REQUIRED):
-   - Ask: "How would you like to work with Git for this research?"
+   - Ask: "Select development isolation strategy for this research:"
    - Options:
-     - **feature_branch**: Create new feature branch (auto-create `feature-{NNN}` aligned with spec folder). Allows isolated development and testing. Final step will offer to merge to main.
-     - **main_branch**: Work on main branch (skip branch creation and commit directly to main). Faster for small changes or hotfixes. No merge step at the end.
-   - This decision controls branch creation and final integration gates.
+     - **main_temp** (⭐ RECOMMENDED - default): Temporary worktree with short-lived branch `temp/{NNN}`. Work is isolated, then merged back to main immediately after research.
+     - **feature_branch**: Long-running feature branch `feature-{NNN}` in a worktree for PR review.
+   - Default: `main_temp`
+   - This decision controls workspace setup and final integration gates.
 
 2. **Research Request** (REQUIRED):
    - Ask: "What would you like to research? Please describe the feature or technical area you need investigated."
@@ -124,7 +118,7 @@ This section provides step-by-step execution guidance as defined in sk_p__featur
 
 **After Collecting Inputs**:
 - Confirm all inputs with the user
-- Resolve `git_branch` from branch_strategy (either `feature-{NNN}` or `main`)
+- Resolve `git_branch` from branch_strategy (`temp/{NNN}` for main_temp, or `feature-{NNN}`)
 - Define research scope and goals
 - Identify key research areas
 
@@ -139,6 +133,34 @@ This section provides step-by-step execution guidance as defined in sk_p__featur
 **Validation**: `all_inputs_collected_and_scope_defined`
 
 **Approval Gate**: None (autonomous execution)
+
+### Step 1.5: Workspace Setup
+
+**Action**: Create isolated worktree for research
+
+**Skill Invocation**: Execute git-worktrees workflow
+**Strategy**: Use selected `branch_strategy` (default: `main_temp`)
+**Inputs passed**:
+- Task description: {request}
+- Branch strategy: {branch_strategy}
+- Worktree directory: Auto-detect via priority system
+
+**Worktree Creation**:
+- If `main_temp`: Creates `.worktrees/{spec-id}` with temp branch `temp/{spec-id}`
+- If `feature_branch`: Creates `.worktrees/{spec-id}` with branch `feature-{spec-id}`
+
+**Dependencies installed**: Auto-detected (npm/cargo/pip/go)
+**Tests run**: Baseline verification (if applicable)
+**Environment verified**: Clean starting state
+
+**Outputs**:
+- worktree_path: Absolute path to worktree (e.g., `.worktrees/003`)
+- git_branch: Active branch name (e.g., `temp/003` or `feature-003`)
+- baseline_tests: Pass/fail status
+
+**Validation**: `worktree_ready_and_verified`
+
+**Note**: All subsequent steps execute within this worktree context
 
 ### Step 2: Pre-work Review
 
@@ -340,42 +362,29 @@ Next steps:
 - Use research as reference during implementation planning
 ```
 
-### Step 8: Branch Integration
+### Step 8: Branch Integration & Cleanup
 
-**Name**: Branch Integration Approval
+**Action**: Integrate research outputs and cleanup based on strategy
 
-**Condition**: **Only execute if `branch_strategy == feature_branch`**
+#### If `main_temp` (Default)
+1. Verify worktree clean
+2. Return to main repository
+3. Checkout and update main: `git checkout main && git pull --ff-only`
+4. Fast-forward merge temp branch: `git merge --ff-only temp/{spec-id}`
+5. Delete temp branch: `git branch -d temp/{spec-id}`
+6. Remove worktree: `git worktree remove .worktrees/{spec-id}`
+7. Verify: `git worktree list` clean; no `temp/{spec-id}` branch remains
 
-**Skip When**: `branch_strategy == main_branch`
+#### If `feature_branch` (Exception)
+1. Push feature branch: `git push -u origin feature-{spec-id}`
+2. Keep worktree for continued work
+3. Create PR and proceed with review; cleanup after merge
 
-**Skip Message**: "Skipping branch integration (working on main branch)"
+**Approval Gate** (when `feature_branch` is selected):
+- Prompt: "Feature branch pushed. Create PR now?"
+- Confirmation: Required if you want to proceed to PR creation
 
-**Note**: This step is automatically skipped when working on the main branch. If you selected `main_branch` at Step 1, changes are already committed directly to main and no integration is needed.
-
-**Approval Gate** (when feature_branch is selected):
-- **Prompt**: "All checks passed. Branch: {git_branch}. Would you like me to push this branch to main now to keep main up to date and minimize conflicts?"
-- **Confirmation Needed**: true
-- **Condition**: Only prompt if `branch_strategy == feature_branch`
-
-**Integration Policy**:
-- Merge strategy: rebase_then_fast_forward
-- Safety checks:
-  - Clean working tree
-  - Validations/tests/pass checks are green (as applicable)
-  - No unresolved blockers
-- Conflict policy:
-  - On rebase conflict: pause and ask for guidance
-  - Fallback to PR: offer to open a PR if user prefers manual resolution
-- Steps:
-  - Fetch origin
-  - Update main (pull --ff-only)
-  - Rebase feature branch onto main
-  - Fast-forward merge into main
-  - Push origin main
-  - After successful integration, offer to delete the feature branch locally and on origin (explicit confirmation required)
-- Tagging: optional; only on user request
-
-**Termination**: Workflow ends after this step (or after Step 7 if main_branch was selected)
+**Termination**: Workflow ends after integration/push
 
 ### The 6 Research Sub-Agents
 
@@ -601,12 +610,13 @@ This workflow automatically handles empty input fields per sk_p__feature_researc
 
 ### branch_strategy
 - **Required**: Yes
-- **Type**: Enum [`feature_branch`, `main_branch`]
+- **Type**: Enum [`main_temp`, `feature_branch`]
 - **Options**:
-  - `feature_branch`: Create new feature branch (auto-create feature-{NNN} aligned with spec folder)
-  - `main_branch`: Work on main branch (skip branch creation and commit directly to main)
-- **Empty Handling**: User must choose at Step 1; cannot proceed without selection
-- **Controls**: Branch creation behavior and Step 8 integration gate
+  - `main_temp` (default): Temporary worktree with short-lived branch `temp/{spec-id}`; integrate immediately after research
+  - `feature_branch`: Long-running feature branch `feature-{spec-id}` for PR workflow
+- **Default**: `main_temp`
+- **Empty Handling**: Defaults to `main_temp` if not specified
+- **Controls**: Workspace setup and Step 8 integration behavior
 
 ### spec_id
 - **Derived From**: spec_folder path using pattern `specs/{NNN}` or `specs/{NNN-name}`
@@ -618,10 +628,10 @@ This workflow automatically handles empty input fields per sk_p__feature_researc
 - **Condition**: Only used when `branch_strategy == feature_branch`
 
 ### git_branch
-- **Derived**: Based on branch_strategy
-- **If feature_branch**: Use `feature_branch_name` (feature-{NNN})
-- **If main_branch**: Use `main`
-- **Empty Handling**: Cannot be empty; derived automatically from branch_strategy
+- **Derived**: Based on `branch_strategy`
+- **If `main_temp`**: Use `temp/{spec-id}` (e.g., `temp/003`)
+- **If `feature_branch`**: Use `feature-{spec-id}` (e.g., `feature-003`)
+- **Empty Handling**: Cannot be empty; derived automatically from `branch_strategy`
 
 ### spec_folder
 - **Auto-create**: Yes
@@ -655,7 +665,7 @@ This workflow automatically handles empty input fields per sk_p__feature_researc
   1. Check if feature branch already exists
   2. Create feature-{spec_id} if not exists
   3. Checkout feature branch
-- **Skip When**: `branch_strategy == main_branch`
+- **Skip When**: `branch_strategy == main_temp`
 
 .
 

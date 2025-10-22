@@ -6,11 +6,6 @@ description: Systematically reproduce, diagnose, fix, and verify bugs through ev
 # Code Debugger
 Systematic Bug Investigation & Resolution
 
-> Change Notes (2025-10-21)
-- Replaced local References with Embedded Reference quick catalogs
-- Normalized workflow headings (whole steps only)
-- Added YAML → Steps Crosswalk; header-only emoji policy enforced
-
 ## 1. 🎯 When to Use
 
 **Use this skill when**:
@@ -30,6 +25,8 @@ Systematic Bug Investigation & Resolution
 - Preventive code quality improvements (use code-pattern-validator)
 - Design changes or enhancements
 
+.
+
 ## 2. 🛠️ How It Works
 
 This skill follows a 4-step systematic debugging workflow:
@@ -42,6 +39,8 @@ This skill follows a 4-step systematic debugging workflow:
 **Core Principle**: "Fix the root cause, not the symptom"
 
 **Approach**: Systematic elimination with evidence at every step
+
+.
 
 ## 3. 📊 Inputs
 
@@ -90,6 +89,16 @@ This skill follows a 4-step systematic debugging workflow:
 - **Default**: Parsed from request if available
 - **Example**: "TypeError: Cannot read property 'close' of null at modal.js:42"
 
+### Worktree Option
+
+**use_worktree** (boolean):
+- **Default by mode**:
+  - Quick Fix Mode: false
+  - Standard Mode: true
+  - Deep Investigation: true
+  - Performance Mode: true
+- **Rationale**: Isolate debugging changes in a temporary worktree to avoid polluting `main`; skip for trivial quick fixes.
+
 ## YAML → Steps Crosswalk
 
 - Source: b_prompts/code/code_debugger.yaml
@@ -99,6 +108,8 @@ This skill follows a 4-step systematic debugging workflow:
   - Step 3 → Diagnose
   - Step 4 → Fix
   - Step 5 → Verify
+
+.
 
 ## 4. 🚀 Workflow
 
@@ -140,6 +151,24 @@ This skill follows a 4-step systematic debugging workflow:
 - Confirm all inputs with the user
 - Parse and categorize the bug information
 - Identify likely affected areas
+
+### Step 1.5: Setup Isolated Environment (conditional)
+
+**Condition**: Execute when `use_worktree == true`
+
+**Action**: Create isolated worktree using git-worktrees with `branch_strategy: main_temp`
+
+**Worktree Creation**:
+- Path: `.worktrees/{spec-id}` (e.g., `.worktrees/003`)
+- Branch: `temp/{spec-id}` (e.g., `temp/003`)
+- Install dependencies and run baseline tests if applicable
+
+**Outputs**:
+- worktree_path, git_branch, baseline_tests
+
+**Validation**: `worktree_ready_for_debugging`
+
+**Note**: Subsequent steps run inside `worktree_path`
 
 ### Step 2: Reproduce
 
@@ -356,7 +385,6 @@ function fixed_code() {
 ```
 
 **Why This Works**: [Explanation]
-```
 
 **Testing During Fix**:
 - Test fix resolves original issue
@@ -437,6 +465,22 @@ function fixed_code() {
 
 **Final Validation**: `all_tests_pass`
 
+### Integration & Cleanup (worktree only)
+
+**Condition**: Execute when `use_worktree == true` and `branch_strategy == main_temp`
+
+**Integration Steps**:
+1. Verify worktree clean
+2. Return to main repository
+3. Checkout and update main: `git checkout main && git pull --ff-only`
+4. Fast-forward merge temp branch: `git merge --ff-only temp/{spec-id}`
+5. Delete temp branch: `git branch -d temp/{spec-id}`
+6. Remove worktree: `git worktree remove .worktrees/{spec-id}`
+
+**Validation**: `temp_branch_integrated_and_cleaned`
+
+.
+
 ## 5. 🧩 Debug Modes
 
 Select appropriate mode based on issue complexity:
@@ -491,6 +535,8 @@ Select appropriate mode based on issue complexity:
 **Time**: 1-3 hours
 
 **Example**: Slow rendering, memory growth, janky animations
+
+.
 
 ## 6. 🔍 Diagnostic Toolkit
 
@@ -606,6 +652,8 @@ Select appropriate mode based on issue complexity:
 
 **Best Practice**: When browser automation is needed alongside manual development browsing, use an isolated instance to prevent conflicts
 
+.
+
 ## 7. ✅ Output Format
 
 After completing the workflow, generate a bug fix report:
@@ -658,7 +706,8 @@ After completing the workflow, generate a bug fix report:
 
 **Suggested Improvements**:
 [Optional: Preventive measures to add]
-```
+
+.
 
 ## 8. 📖 Rules
 
@@ -722,6 +771,8 @@ When escalating a debugging issue, provide the following information:
 - Required expertise or resources
 - Risk assessment if issue remains unresolved
 
+.
+
 ## 9. 🔧 Troubleshooting
 
 ### Cannot Reproduce Bug
@@ -761,6 +812,8 @@ When escalating a debugging issue, provide the following information:
 - Check for competing code paths
 - Review for logical errors in fix
 
+.
+
 ## 10. 📚 Embedded Reference
 
 - No External References: This skill is self-contained. Cite only knowledge/*.md when needed.
@@ -772,6 +825,8 @@ When escalating a debugging issue, provide the following information:
 - Diagnostic Techniques: Binary search isolation, git bisect, hypothesis testing, logging strategy, time-travel debugging.
 
 See knowledge/debugging.md, knowledge/initialization_pattern.md, knowledge/code_standards.md for deeper guidance.
+
+.
 
 ## 11. 💡 Debug Philosophy
 

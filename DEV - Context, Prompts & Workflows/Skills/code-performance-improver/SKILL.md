@@ -6,11 +6,6 @@ description: Optimize code and application performance through systematic profil
 # Performance Improver
 Systematically improve application performance through profiling, optimization, and validation while guaranteeing 100% feature preservation.
 
-> Change Notes (2025-10-21)
-- Replaced local References with Embedded Reference (Optimization Catalog + Metrics Primer)
-- Normalized workflow headings (whole steps only)
-- Added YAML → Steps Crosswalk; header-only emoji policy enforced
-
 ## 1. 🎯 When to Use
 
 **Use this skill when**:
@@ -94,6 +89,12 @@ This skill follows a 4-step systematic workflow to improve performance while pre
 
 .
 
+### Worktree Option
+
+**use_worktree** (boolean):
+- **Default**: true
+- **Rationale**: Accurate baseline comparison requires isolating changes from `main` in a temporary worktree.
+
 ## YAML → Steps Crosswalk
 
 - Source: b_prompts/code/code_performance_improvement.yaml
@@ -103,6 +104,8 @@ This skill follows a 4-step systematic workflow to improve performance while pre
   - Step 3 → Analysis
   - Step 4 → Optimization
   - Step 5 → Verification
+
+.
 
 ## 4. 🚀 Workflow
 
@@ -144,6 +147,24 @@ This skill follows a 4-step systematic workflow to improve performance while pre
 - Confirm all inputs with the user
 - Parse and categorize the performance goals
 - Identify likely optimization areas
+
+### Step 1.5: Setup Isolated Environment (conditional)
+
+**Condition**: Execute when `use_worktree == true`
+
+**Action**: Create isolated worktree using git-worktrees with `branch_strategy: main_temp`
+
+**Worktree Creation**:
+- Path: `.worktrees/{spec-id}` (e.g., `.worktrees/003`)
+- Branch: `temp/{spec-id}` (e.g., `temp/003`)
+- Install dependencies and run baseline tests
+
+**Outputs**:
+- worktree_path, git_branch, baseline_tests
+
+**Validation**: `worktree_ready_for_performance`
+
+**Note**: Measurements and optimizations run inside `worktree_path`
 
 ### Step 2: Baseline Measurement
 
@@ -308,6 +329,20 @@ This skill follows a 4-step systematic workflow to improve performance while pre
 | Features | Working | Working | ✓/✗ |
 
 **Validation**: `all_checks_pass`
+
+### Integration & Cleanup (worktree only)
+
+**Condition**: Execute when `use_worktree == true` and `branch_strategy == main_temp`
+
+**Integration Steps**:
+1. Verify worktree clean
+2. Return to main repository
+3. Checkout and update main: `git checkout main && git pull --ff-only`
+4. Fast-forward merge temp branch: `git merge --ff-only temp/{spec-id}`
+5. Delete temp branch: `git branch -d temp/{spec-id}`
+6. Remove worktree: `git worktree remove .worktrees/{spec-id}`
+
+**Validation**: `temp_branch_integrated_and_cleaned`
 
 .
 

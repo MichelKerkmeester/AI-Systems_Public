@@ -22,9 +22,10 @@ implementation_philosophy:
 # USER INPUTS
 # ─────────────────────────────────────────────────────────────────
 user_inputs:
+  use_worktree: "[USE_WORKTREE]"
   environment: "[STAGING LINK]"
   scope: "[FILES]"
-  target_folder: "[TARGET_FOLDER]"  # Often points to plan document or feature specification folder
+  target_document: "[TARGET_DOCUMENT]"  
   context: "[CONTEXT]"
   request: "[REQUEST]"
 
@@ -32,12 +33,18 @@ user_inputs:
 # FIELD HANDLING
 # ─────────────────────────────────────────────────────────────────
 field_handling:
+  use_worktree:
+    type: boolean
+    default: false  # Optional isolation for feature implementation
+    note: "Enable for complex tasks requiring isolation. Most implementations work fine on main branch."
+
   defaults:
+    use_worktree_empty: false
     environment_empty: "Skip browser testing steps"
     scope_empty: "Use all relevant project files"
-    target_folder_empty: "Use current directory or infer from [REQUEST]"
+    target_document_empty: "Use current directory or infer from [REQUEST]"
     context_empty: "Infer from target plan/specification"
-    request_empty: "Build features as specified in target folder"
+    request_empty: "Build features as specified in target document"
 
 # ─────────────────────────────────────────────────────────────────
 # WORKFLOW
@@ -46,8 +53,8 @@ workflow:
   step_1_understand:
     purpose: Grasp what needs to be built
     activities:
-      - Review target folder plan/specification
-      - Parse requirements from target folder
+      - Review target document plan/specification
+      - Parse requirements from target document
       - Identify success criteria
       - Note any constraints
       - Plan approach
@@ -56,6 +63,25 @@ workflow:
       - Clear objectives
       - Technical approach
       - Success metrics
+
+  step_1_5_workspace_setup:
+    condition: use_worktree == true
+    action: Create isolated worktree via git-worktrees skill
+    strategy: main_temp  # Always main_temp for code workflows
+    description: |
+      Create isolated workspace for feature implementation (optional).
+      Allows developing complex features in isolation.
+      Work happens in .worktrees/feature-{timestamp} on temp/feature-{timestamp} branch.
+    inputs:
+      task_description: derived_from_request_or_target_document
+      branch_strategy: main_temp
+    outputs:
+      worktree_path: absolute_path
+      git_branch: temp/feature-{timestamp}
+    validation: worktree_ready_or_skipped
+    note: |
+      If use_worktree=true: Create worktree for isolated feature work
+      If use_worktree=false: Skip, work in current directory
 
   step_2_build:
     purpose: Implement the feature
@@ -92,7 +118,7 @@ workflow:
       - Performance check
       - Error handling
       - Edge cases
-      - Create implementation.md in target folder
+      - Create implementation.md in target document
     validation:
       - Feature complete
       - Tests passing
@@ -104,6 +130,26 @@ workflow:
       - Final testing complete
       - implementation.md document
       - Ready for review
+
+  step_4_integration_and_cleanup:
+    condition: use_worktree == true
+    action: Integrate feature and cleanup worktree
+    strategy: main_temp  # Always main_temp for code workflows
+    description: |
+      After successful implementation and testing, integrate changes back to main.
+      Fast-forward merge ensures clean integration.
+      Cleanup removes temporary feature branch and worktree.
+    steps:
+      - verify_worktree_clean
+      - return_to_main_repo
+      - checkout_main_and_update
+      - merge_temp_branch_fast_forward_only
+      - delete_temp_branch
+      - remove_worktree
+    validation: integrated_and_cleaned_or_skipped
+    note: |
+      If use_worktree=true: Integrate feature to main and cleanup
+      If use_worktree=false: Skip (already working on main)
 
 # ─────────────────────────────────────────────────────────────────
 # INCREMENTAL DELIVERY
@@ -154,7 +200,7 @@ standards:
 # ─────────────────────────────────────────────────────────────────
 output:
   documentation:
-    location: "[TARGET_FOLDER]/implementation.md"  # Same folder as target documents
+    location: "[TARGET_DOCUMENT]/implementation.md"  # Same folder as target documents
     follows: "knowledge/document_style_guide.md"
     creation: "Automatically created at completion"
     structure: |

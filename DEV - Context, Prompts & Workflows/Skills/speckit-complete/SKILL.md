@@ -6,11 +6,6 @@ description: Execute the complete 14-step SpecKit workflow with 18 specialized s
 # SpecKit Parallel Complete
 Full 14-Step Workflow Orchestration
 
-> Change Notes (2025-10-21)
-- Removed 4.x sub-step numbering across Steps
-- Standardized headers and header-only emoji usage
-- Added YAML → Steps Crosswalk; preserved stage semantics and approval gates
-
 ## 1. 🎯 When to Use
 
 **Use this skill when**:
@@ -73,8 +68,6 @@ This skill implements the complete 14-step workflow with 18 specialized sub-agen
 13. **Completion** - Document changes
 14. **Branch Integration** - Merge to main
 
-.
-
 ## YAML → Steps Crosswalk
 
 - Source: b_prompts/github_spec_kit/parallel_agents/sk_p__complete.yaml
@@ -107,11 +100,19 @@ This section provides step-by-step execution guidance as defined in sk_p__comple
 #### Required Inputs:
 
 1. **Branch Strategy** (REQUIRED):
-   - Ask: "How would you like to work with Git for this feature?"
+   - Ask: "Select development isolation strategy:"
    - Options:
-     - **feature_branch**: Create new feature branch (auto-create `feature-{NNN}` aligned with spec folder). Allows isolated development and testing. Final step will offer to merge to main.
-     - **main_branch**: Work on main branch (skip branch creation and commit directly to main). Faster for small changes or hotfixes. No merge step at the end.
-   - This decision controls branch creation and final integration gates.
+     - **main_temp** (⭐ RECOMMENDED - default): Temporary worktree with short-lived branch.
+       Work is isolated, tested, then merged back to main immediately.
+       Use for: 80% of work - normal features, bug fixes, improvements.
+
+     - **feature_branch**: Long-running feature branch in worktree for PR review.
+       Work stays on separate branch for team review before integration.
+       Use for: 20% of work - complex features requiring multi-day development and code review.
+
+   - Default: main_temp
+   - Note: main_branch option removed (use main_temp for quick integration)
+   - This decision controls workspace isolation and final integration gates.
 
 2. **Request/Feature Description** (REQUIRED):
    - Ask: "What feature would you like to build? Please describe the request or feature you want to implement."
@@ -157,7 +158,37 @@ This section provides step-by-step execution guidance as defined in sk_p__comple
 
 **Validation**: `all_inputs_collected_and_confirmed`
 
-**Approval Gate**: "All inputs collected. Branch strategy: {branch_strategy} on {git_branch}. Spec folder: {spec_folder}. Proceed to pre-work review?"
+**Approval Gate**: "All inputs collected. Branch strategy: {branch_strategy}. Spec folder: {spec_folder}. Proceed to workspace setup?"
+
+### Step 1.5: Workspace Setup
+
+**Action**: Create isolated worktree for development
+
+**Skill Invocation**: Execute git-worktrees workflow
+**Strategy**: Use selected branch_strategy
+**Inputs passed**:
+- Task description: {request}
+- Branch strategy: {branch_strategy}
+- Worktree directory: Auto-detect via priority system
+
+**Worktree Creation**:
+- If main_temp: Creates `.worktrees/{spec-id}` with temp branch `temp/{spec-id}`
+- If feature_branch: Creates `.worktrees/{spec-id}` with branch `feature-{spec-id}`
+
+**Dependencies installed**: Auto-detected (npm/cargo/pip/go)
+**Tests run**: Baseline verification
+**Environment verified**: Clean starting state
+
+**Outputs**:
+- worktree_path: Absolute path to worktree (e.g., `.worktrees/001`)
+- git_branch: Active branch name (e.g., `temp/001` or `feature-001`)
+- baseline_tests: Pass/fail status
+
+**Validation**: `worktree_ready_and_verified`
+
+**Approval Gate**: "Workspace created at {worktree_path} on branch {git_branch}. Proceed to pre-work review?"
+
+**Note**: All subsequent steps execute within this worktree context
 
 ### Step 2: Pre-work Review
 
@@ -509,72 +540,176 @@ This step contains sub-phases that execute sequentially:
 
 **Approval Gate**: "Implementation summary complete. Approve to finalize workflow?"
 
-### Step 14: Branch Integration
+### Step 14: Integration & Cleanup
 
-**Name**: Branch Integration Approval
+**Action**: Integrate work and cleanup based on strategy
 
-**Condition**: **Only execute if `branch_strategy == feature_branch`**
+#### If main_temp (Default - 80% of work):
 
-**Skip When**: `branch_strategy == main_branch`
-
-**Skip Message**: "Skipping branch integration (working on main branch)"
-
-**Note**: This step is automatically skipped when working on the main branch. If you selected `main_branch` at Step 1, changes are already committed directly to main and no integration is needed.
-
-**Approval Gate** (when feature_branch is selected):
-- **Prompt**: "All checks passed. Branch: {git_branch}. Would you like me to push this branch to main now to keep main up to date and minimize conflicts?"
-- **Confirmation Needed**: true
-- **Condition**: Only prompt if `branch_strategy == feature_branch`
-
-#### Integration Policy
-
-**Merge Strategy**: `rebase_then_fast_forward`
-
-**Safety Checks** (must pass before integration):
-- ✅ Clean working tree (no uncommitted changes)
-- ✅ Validations/tests/pass checks are green (as applicable)
-- ✅ No unresolved blockers
+**Philosophy**: Temp branches are immediately merged and deleted. This is the recommended workflow for most development work.
 
 **Integration Steps**:
-1. `git fetch origin` - Get latest remote changes
-2. `git checkout main && git pull --ff-only` - Update local main
-3. `git checkout [feature-branch] && git rebase main` - Rebase feature onto main
-4. `git checkout main && git merge --ff-only [feature-branch]` - Fast-forward merge
-5. `git push origin main` - Push integrated changes
-6. **Optional**: Delete feature branch (requires explicit user confirmation)
+1. **Verify worktree clean**: Ensure no uncommitted changes in worktree
+   ```bash
+   cd {worktree_path}
+   git status  # Should show "nothing to commit, working tree clean"
+   ```
 
-#### Conflict Resolution
+2. **Return to main repository**: Leave worktree and return to main project
+   ```bash
+   cd ../..  # Return to main project root
+   ```
 
-**On Rebase Conflict**:
-- **Behavior**: Pause integration and ask for guidance
-- **Options Offered**:
-  - A) Resolve conflicts manually, then continue
-  - B) Open a PR for manual resolution in GitHub
-  - C) Abort integration and leave branches separate
+3. **Checkout and update main**: Ensure main is current
+   ```bash
+   git checkout main
+   git pull --ff-only  # Get latest changes from remote
+   ```
 
-**Fallback Strategy**: If conflicts are complex, offer to open PR instead of forcing resolution
+4. **Merge temp branch**: Fast-forward merge (should always succeed)
+   ```bash
+   git merge --ff-only temp/{spec-id}
+   ```
 
-#### Post-Integration
+5. **Delete temp branch**: Remove temporary branch
+   ```bash
+   git branch -d temp/{spec-id}
+   ```
 
-**Branch Deletion**:
-- **Local**: Offer to delete feature branch locally (explicit confirmation required)
-- **Remote**: Offer to delete feature branch on origin (explicit confirmation required)
-- **Default**: Preserve branches unless user explicitly approves deletion
+6. **Remove worktree**: Clean up worktree directory
+   ```bash
+   git worktree remove .worktrees/{spec-id}
+   ```
 
-**Tagging**:
-- **Policy**: Optional, only on explicit user request
-- **Usage**: If user wants to tag release after integration
+7. **Verify integration**: Confirm changes are on main
+   ```bash
+   git log --oneline -5  # Should show integrated commits
+   git worktree list     # Should not show removed worktree
+   ```
 
-#### Skip Message
+**Success Criteria**:
+- ✅ Changes integrated to main
+- ✅ Temp branch deleted (verify: `git branch | grep temp/{spec-id}` returns nothing)
+- ✅ Worktree removed (verify: `.worktrees/{spec-id}` directory gone)
+- ✅ No orphaned references (verify: `git worktree list` clean)
 
-When `branch_strategy == main_branch`:
+**Validation**: `temp_branch_integrated_and_cleaned`
+
+**Note**: This happens automatically after Step 13. Temp branches NEVER persist.
+
+**Approval Gate**: "Temp branch integrated to main and cleaned up. Workflow complete!"
+
+**Termination**: Workflow ends after integration complete
+
+#### If feature_branch (Exception - 20% of work):
+
+**Philosophy**: Long-running branches remain for PR workflow and team review.
+
+**Actions**:
+
+1. **Push feature branch**: Push to remote for PR creation
+   ```bash
+   cd {worktree_path}
+   git push -u origin feature-{spec-id}
+   ```
+
+2. **Keep worktree**: Leave worktree in place for continued development
+   - Worktree remains at `.worktrees/{spec-id}`
+   - Branch remains as `feature-{spec-id}`
+   - Work can continue iteratively
+
+3. **Notify user**:
+   ```
+   Feature branch 'feature-{spec-id}' ready for PR.
+   Worktree preserved at {worktree_path}
+
+   Next steps:
+   - Create PR on GitHub/GitLab
+   - Request code review
+   - Address feedback in worktree
+   - Merge via web interface after approval
+   ```
+
+**User Manual Steps**:
+- Create pull request via GitHub/GitLab web interface
+- Await and address code review feedback
+- Continue development in worktree as needed
+- Merge PR when approved
+- **Manual cleanup after PR merged**:
+  ```bash
+  cd ../..  # Return to main repo
+  git worktree remove .worktrees/{spec-id}
+  git branch -d feature-{spec-id}  # Delete local branch
+  ```
+
+**Validation**: `feature_branch_pushed_and_ready_for_pr`
+
+**Approval Gate**: "Feature branch pushed. Create PR when ready. Workflow paused for review process."
+
+**Termination**: Workflow pauses; PR workflow takes over
+
+#### Conflict Resolution (Applies to both strategies)
+
+**If merge conflict occurs** (rare with main_temp, possible with feature_branch):
+
+**Detection**:
+```bash
+git merge temp/{spec-id}
+# Error: CONFLICT (content): Merge conflict in {file}
 ```
-Skipping branch integration (working on main branch).
-Changes are already committed directly to main.
-No separate integration needed.
+
+**Options Offered**:
+A) **Rebase and retry**: Rebase branch onto current main, then merge
+   ```bash
+   git checkout temp/{spec-id}
+   git rebase main
+   # Resolve conflicts
+   git checkout main
+   git merge --ff-only temp/{spec-id}
+   ```
+
+B) **Manual resolution**: Resolve conflicts in worktree, commit, then merge
+
+C) **Abort and investigate**: Cancel integration, investigate why main diverged
+
+**Note**: Conflicts are rare with main_temp (immediate integration). If conflicts occur frequently, review team workflow.
+
+#### Troubleshooting
+
+**Issue**: "Worktree removal fails"
+```bash
+Error: cannot remove a worktree that contains untracked or uncommitted files
 ```
 
-**Termination**: Workflow ends after this step (or after Step 13 if main_branch was selected)
+**Solution**:
+```bash
+cd {worktree_path}
+git status
+git add .  # Stage untracked files
+git commit -m "Final changes"
+cd ../..
+git worktree remove .worktrees/{spec-id}
+```
+
+**Issue**: "Temp branch still exists"
+```bash
+git branch | grep temp/{spec-id}
+# Shows: temp/{spec-id}
+```
+
+**Solution**:
+```bash
+git branch -D temp/{spec-id}  # Force delete
+```
+
+**Issue**: "Merge not fast-forward"
+```bash
+Error: fatal: Not possible to fast-forward, aborting.
+```
+
+**Solution**: Main has diverged; use rebase approach (Option A above)
+
+**Termination**: Workflow ends after this step
 
 .
 
@@ -822,27 +957,43 @@ This workflow automatically handles empty input fields per sk_p__complete.yaml:
 
 ### branch_strategy
 - **Required**: Yes
-- **Type**: Enum [`feature_branch`, `main_branch`]
+- **Type**: Enum [`main_temp`, `feature_branch`]
+- **Default**: `main_temp` ⭐
 - **Options**:
-  - `feature_branch`: Create new feature branch (auto-create feature-{NNN} aligned with spec folder)
-  - `main_branch`: Work on main branch (skip branch creation and commit directly to main)
-- **Empty Handling**: User must choose at Step 1; cannot proceed without selection
-- **Controls**: Branch creation behavior and Step 14 integration gate
+  - `main_temp`: Create temporary worktree with short-lived branch. Merge immediately after completion (80% of work)
+  - `feature_branch`: Create long-running feature branch in worktree for PR workflow (20% of work)
+- **Empty Handling**: Defaults to `main_temp` if not specified
+- **Controls**: Worktree creation, branch naming, and Step 14 integration behavior
+- **Breaking Change**: `main_branch` option removed; use `main_temp` for quick integration
 
 ### spec_id
 - **Derived From**: spec_folder path using pattern `specs/{NNN}` or `specs/{NNN-name}`
 - **Fallback**: Extract numeric portion or use timestamp if extraction fails
-- **Usage**: Used to generate feature_branch_name
+- **Usage**: Used to generate worktree path and branch name
+
+### temp_branch_name
+- **Pattern**: `temp/{spec_id}`
+- **Condition**: Only used when `branch_strategy == main_temp`
+- **Lifecycle**: Created, used, merged, deleted automatically
 
 ### feature_branch_name
 - **Pattern**: `feature-{spec_id}`
 - **Condition**: Only used when `branch_strategy == feature_branch`
+- **Lifecycle**: Created, used, pushed for PR, manually cleaned up after merge
 
 ### git_branch
 - **Derived**: Based on branch_strategy
-- **If feature_branch**: Use `feature_branch_name` (feature-{NNN})
-- **If main_branch**: Use `main`
+- **If main_temp**: Use `temp/{spec-id}` (e.g., `temp/001`)
+- **If feature_branch**: Use `feature-{spec-id}` (e.g., `feature-001`)
 - **Empty Handling**: Cannot be empty; derived automatically from branch_strategy
+
+### worktree_path
+- **Pattern**: `.worktrees/{spec-id}`
+- **Purpose**: Isolated workspace for development
+- **Created**: At Step 1.5 via git-worktrees skill
+- **Lifecycle**:
+  - If main_temp: Created → Used → Removed (Step 14)
+  - If feature_branch: Created → Used → Preserved for PR workflow
 
 ### spec_folder
 - **Auto-create**: Yes
@@ -870,19 +1021,25 @@ This workflow automatically handles empty input fields per sk_p__complete.yaml:
 - **Default**: `specs/**`
 - **Empty Handling**: Uses default scope policy limiting operations to specs directory
 
-### Branch Creation
-- **Condition**: Only execute when `branch_strategy == feature_branch`
-- **Steps**:
-  1. Check if feature branch already exists
-  2. Create feature-{spec_id} if not exists
-  3. Checkout feature branch
-- **Skip When**: `branch_strategy == main_branch`
+### Worktree & Branch Creation
+- **Execution**: Step 1.5 via git-worktrees skill invocation
+- **Process**:
+  1. Determine spec_id from spec_folder
+  2. Create worktree at `.worktrees/{spec-id}`
+  3. Create and checkout branch based on strategy:
+     - If main_temp: Create `temp/{spec-id}` from main
+     - If feature_branch: Create `feature-{spec-id}` from main
+  4. Install dependencies in worktree
+  5. Run baseline tests
+  6. Return worktree_path and git_branch to calling skill
+- **No Direct Branch Creation**: All workspace setup delegated to git-worktrees skill
 
 ### Field Handling
 
 #### Auto-Creation
-- **git_branch**: Auto-create `feature-{NNN}` from highest +001
 - **spec_folder**: Auto-create `specs/{NNN}` from highest +001
+- **worktree_path**: Auto-create `.worktrees/{NNN}` via git-worktrees skill
+- **git_branch**: Auto-derive from branch_strategy (temp/{NNN} or feature-{NNN})
 - **context**: Infer from request and staging link
 - **issues**: Discover during workflow execution
 
@@ -958,15 +1115,6 @@ This workflow automatically handles empty input fields per sk_p__complete.yaml:
 .
 
 ## 15. References
-
-### Success Criteria / Quality Gates
-- Approval gates acknowledged and passed at each step
-- Planning, implementation plan, and quality report artifacts present
-- No blockers in environment check; development checkpoints completed
-- Crosswalk step-order adhered to; branch integration policy followed
-
-## 15. References
-
 - `references/sub-agents.md` - Detailed sub-agent definitions
 - `references/parallel-stages.md` - Stage orchestration patterns
 - `references/adaptive-rules.md` - Complexity handling rules

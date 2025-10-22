@@ -6,7 +6,7 @@ purpose: Deploy native Plan mode sub-agents → Review outputs → Create single
 action:
   - Deploy 5 planning agents in parallel → gather native plan outputs
   - Review all outputs → identify overlaps and conflicts
-  - Synthesize into single consolidated plan → write to target folder
+  - Synthesize into single consolidated plan → write to target document
 
 operating_mode:
   workflow: sequential_with_parallel_blocks
@@ -20,7 +20,8 @@ operating_mode:
 # USER INPUTS
 # ─────────────────────────────────────────────────────────────────
 user_inputs:
-  target_folder: "[TARGET_FOLDER]"
+  use_worktree: "[USE_WORKTREE]"
+  target_document: "[TARGET_DOCUMENT]"
   context: "[CONTEXT]"
   complexity: "[COMPLEXITY]"
   request: "[REQUEST]"
@@ -29,8 +30,14 @@ user_inputs:
 # FIELD HANDLING
 # ─────────────────────────────────────────────────────────────────
 field_handling:
+  use_worktree:
+    type: boolean
+    default: false  # Optional isolation for planning work
+    note: "Enable for complex planning requiring isolation. Most planning work fine on main branch."
+
   defaults:
-    target_folder_empty: "/specs"
+    use_worktree_empty: false
+    target_document_empty: "/specs"
     context_empty: "Infer from [REQUEST]"
     complexity_empty: "standard"
     request_empty: "Error: REQUEST required"
@@ -55,7 +62,7 @@ field_handling:
   
   path_policy:
     validation: must_exist_or_create
-    safety: restrict_to_target_folder
+    safety: restrict_to_target_document
     auto_folder: "./plans/[YYYY-MM]/[project-slug]/"
 
 # ─────────────────────────────────────────────────────────────────
@@ -89,19 +96,38 @@ sub_agents:
 workflow:
   step_1_initialization:
     input_source: USER_INPUTS_SECTION_ABOVE
-    target_folder: "[TARGET_FOLDER] → apply defaults"
+    target_document: "[TARGET_DOCUMENT] → apply defaults"
     context: "[CONTEXT] → use for agent context"
     complexity: "[COMPLEXITY] → apply policy"
     request: "[REQUEST] → main planning request"
     action: Validate inputs and prepare agent deployment
     validation:
       - request_not_empty
-      - target_folder_accessible_or_creatable
+      - target_document_accessible_or_creatable
       - complexity_valid
     outputs:
       - normalized_inputs
       - agent_configuration
-      - plan_filename: "[TARGET_FOLDER]/plan-[slug]-[YYYYMMDD-HHMMSS].md"
+      - plan_filename: "[TARGET_DOCUMENT]/plan-[slug]-[YYYYMMDD-HHMMSS].md"
+
+  step_1_5_workspace_setup:
+    condition: use_worktree == true
+    action: Create isolated worktree via git-worktrees skill
+    strategy: main_temp  # Always main_temp for code workflows
+    description: |
+      Create isolated workspace for planning work (optional).
+      Allows developing complex plans in isolation.
+      Work happens in .worktrees/plan-{timestamp} on temp/plan-{timestamp} branch.
+    inputs:
+      task_description: derived_from_request
+      branch_strategy: main_temp
+    outputs:
+      worktree_path: absolute_path
+      git_branch: temp/plan-{timestamp}
+    validation: worktree_ready_or_skipped
+    note: |
+      If use_worktree=true: Create worktree for isolated planning work
+      If use_worktree=false: Skip, work in current directory
 
   step_2_parallel_planning_deployment:
     description: Deploy 5 planning agents in parallel for comprehensive analysis
@@ -112,7 +138,7 @@ workflow:
       shared_context:
         - "[CONTEXT]"
         - "[REQUEST]"
-        - "[TARGET_FOLDER]"
+        - "[TARGET_DOCUMENT]"
 
       agents:
         - agent: scope
@@ -215,7 +241,7 @@ workflow:
       - plan_metadata: synthesis_info
     
     completion:
-      write: "[TARGET_FOLDER]/plan-[slug]-[timestamp].md"
+      write: "[TARGET_DOCUMENT]/plan-[slug]-[timestamp].md"
       display:
         - file_path
         - summary: phases_tasks_timeline
@@ -223,12 +249,32 @@ workflow:
         - synthesis_notes: integration_highlights
         - next_steps: immediate_actions
 
+  step_5_integration_and_cleanup:
+    condition: use_worktree == true
+    action: Integrate plan and cleanup worktree
+    strategy: main_temp  # Always main_temp for code workflows
+    description: |
+      After successful plan creation, integrate changes back to main.
+      Fast-forward merge ensures clean integration.
+      Cleanup removes temporary plan branch and worktree.
+    steps:
+      - verify_worktree_clean
+      - return_to_main_repo
+      - checkout_main_and_update
+      - merge_temp_branch_fast_forward_only
+      - delete_temp_branch
+      - remove_worktree
+    validation: integrated_and_cleaned_or_skipped
+    note: |
+      If use_worktree=true: Integrate plan to main and cleanup
+      If use_worktree=false: Skip (already working on main)
+
 # ─────────────────────────────────────────────────────────────────
 # OUTPUT FORMAT
 # ─────────────────────────────────────────────────────────────────
 output_format:
   primary_deliverable:
-    location: "[TARGET_FOLDER]/plan-[slug]-[timestamp].md"
+    location: "[TARGET_DOCUMENT]/plan-[slug]-[timestamp].md"
     sections:
       - executive_summary
       - scope_and_boundaries

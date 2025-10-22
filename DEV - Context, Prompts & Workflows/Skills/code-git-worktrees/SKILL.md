@@ -1,18 +1,10 @@
 ---
-name: git-worktrees
+name: code-git-worktrees
 description: Create isolated workspaces with minimal branching (main-focused by default). Uses short-lived temp branches that merge back to main immediately, keeping codebase unified while providing isolation benefits. Alternative strategies available for long-running features or experiments.
 ---
 
 # Git Worktrees
 Isolated Workspace Management
-
-> Change Notes (2025-10-21)
-- **Changed default strategy to `main_temp`** (main-focused workflow with short-lived branches)
-- Normalized formatting with other skills (numbered sections, emojis in headers only)
-- Added main-branch-focused workflow guidance with three branch strategies
-- Added YAML → Steps Crosswalk notation
-- Clarified directory selection and safety verification processes
-- Reordered examples to show default workflow first
 
 ## 1. 🎯 When to Use
 
@@ -40,7 +32,7 @@ Isolated Workspace Management
 This skill creates isolated git worktrees - separate working directories sharing the same repository database. Each worktree can have a different branch checked out, allowing parallel work without context switching.
 
 **Process Overview**:
-1. Determine worktree directory location (priority: existing → CLAUDE.md → ask user)
+1. Determine worktree directory location (priority: existing → AGENTS.md → ask user)
 2. Verify safety (`.gitignore` check for project-local directories)
 3. Create worktree with appropriate branch strategy
 4. Run project setup (auto-detect and install dependencies)
@@ -85,7 +77,7 @@ This skill creates isolated git worktrees - separate working directories sharing
 - **Type**: String (path)
 - **Default**: Auto-detect via priority system
 - **Description**: Where to create the worktree
-- **Priority**: Existing directory → CLAUDE.md preference → Ask user
+- **Priority**: Existing directory → AGENTS.md preference → Ask user
 - **Example**: `.worktrees/`
 
 .
@@ -130,14 +122,14 @@ This skill creates isolated git worktrees - separate working directories sharing
    ```
    **If found**: Use that directory. If both exist, `.worktrees` wins.
 
-2. **Check CLAUDE.md**
+2. **Check AGENTS.md**
    ```bash
-   grep -i "worktree.*director" CLAUDE.md 2>/dev/null
+   grep -i "worktree.*director" AGENTS.md 2>/dev/null
    ```
    **If preference specified**: Use it without asking.
 
 3. **Ask User**
-   If no directory exists and no CLAUDE.md preference:
+   If no directory exists and no AGENTS.md preference:
    ```
    No worktree directory found. Where should I create worktrees?
 
@@ -351,7 +343,7 @@ git worktree add --detach .worktrees/experiment main
 | `.worktrees/` exists | Use it (verify .gitignore) | User preference |
 | `worktrees/` exists | Use it (verify .gitignore) | User preference |
 | Both exist | Use `.worktrees/` | User preference |
-| Neither exists | Check CLAUDE.md → Ask | User preference |
+| Neither exists | Check AGENTS.md → Ask | User preference |
 | Directory not in .gitignore | Add + commit immediately | User preference |
 | Tests fail during baseline | Report + ask permission | User preference |
 | No package.json/Cargo.toml | Skip dependency install | User preference |
@@ -366,7 +358,7 @@ git worktree add --detach .worktrees/experiment main
 
 **Assuming directory location**:
 - **Problem**: Creates inconsistency, violates project conventions
-- **Fix**: Follow priority: existing > CLAUDE.md > ask
+- **Fix**: Follow priority: existing > AGENTS.md > ask
 
 **Proceeding with failing tests**:
 - **Problem**: Can't distinguish new bugs from pre-existing issues
@@ -386,7 +378,7 @@ git worktree add --detach .worktrees/experiment main
 
 ### ALWAYS
 
-- Follow directory priority: existing > CLAUDE.md > ask
+- Follow directory priority: existing > AGENTS.md > ask
 - Verify .gitignore for project-local directories
 - Auto-detect and run project setup
 - Verify clean test baseline before reporting ready
@@ -399,7 +391,7 @@ git worktree add --detach .worktrees/experiment main
 - Skip baseline test verification
 - Proceed with failing tests without asking
 - Assume directory location when ambiguous
-- Skip CLAUDE.md check
+- Skip AGENTS.md check
 - Checkout same branch in multiple worktrees
 
 ### ESCALATE IF
@@ -509,7 +501,7 @@ Claude: "Creating branch from detached HEAD..."
 - **code-debugger** - Debug in isolated worktree without affecting main work
 
 ### Interacts With
-- **CLAUDE.md** - Checks for worktree directory preferences
+- **AGENTS.md** - Checks for worktree directory preferences
 - **knowledge/code_standards.md** - Follows during implementation
 - **Project test suite** - Runs for baseline verification
 
@@ -556,7 +548,7 @@ git worktree prune
 **Actions**:
 1. Skip automated dependency install
 2. Ask user: "Cannot detect project type. What command should I run to set up dependencies?"
-3. Document command in CLAUDE.md for future use
+3. Document command in AGENTS.md for future use
 
 ### Directory Not in .gitignore
 
@@ -600,5 +592,3 @@ git worktree prune
 - Directory must be in `.gitignore` (if project-local)
 - Tests must pass OR user explicitly approves proceeding with failures
 - Full path and status reported to user
-
-.

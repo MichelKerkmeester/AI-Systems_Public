@@ -6,11 +6,6 @@ description: Execute autonomous spec-driven implementation with parallel prepara
 # SpecKit Implementer
 Autonomous Implementation Workflow
 
-> Change Notes (2025-10-21)
-- Removed 4.x sub-step numbering; standardized headers and emojis
-- Added YAML → Steps Crosswalk; preserved autonomous execution semantics
-- Retained outputs/checkpoints; references remain in references/ (agent specs)
-
 ## 1. 🎯 When to Use
 
 **Use this skill when**:
@@ -66,8 +61,6 @@ This skill implements the sk_p__implementation.yaml workflow with 6 specialized 
 
 **Note**: This is an autonomous workflow with NO approval gates
 
-.
-
 ## YAML → Steps Crosswalk
 
 - Source: b_prompts/github_spec_kit/parallel_agents/sk_p__implementation.yaml
@@ -80,6 +73,8 @@ This skill implements the sk_p__implementation.yaml workflow with 6 specialized 
   - Step 13 → Implementation Check (/speckit.implement)
   - Step 14 → Development
   - Step 15 → Completion
+
+.
 
 ## 4. 📝 Steps
 
@@ -98,10 +93,18 @@ This section provides step-by-step execution guidance as defined in sk_p__implem
 #### Required Inputs:
 
 1. **Branch Strategy** (REQUIRED if not inherited):
-   - Ask: "How would you like to work with Git for this implementation?"
+   - Ask: "Select development isolation strategy (or inherit from planning):"
    - Options:
-     - **feature_branch**: Create new feature branch (auto-create `feature-{NNN}` aligned with spec folder). Allows isolated development and testing. Final step will offer to merge to main.
-     - **main_branch**: Work on main branch (skip branch creation and commit directly to main). Faster for small changes or hotfixes. No merge step at the end.
+     - **main_temp** (⭐ RECOMMENDED - default): Temporary worktree with short-lived branch.
+       Work is isolated, tested, then merged back to main immediately.
+       Use for: 80% of work - normal features, bug fixes, improvements.
+
+     - **feature_branch**: Long-running feature branch in worktree for PR review.
+       Work stays on separate branch for team review before integration.
+       Use for: 20% of work - complex features requiring multi-day development and code review.
+
+   - Default: Inherit from planning workflow if available, otherwise `main_temp`
+   - Note: main_branch option removed (use main_temp for quick integration)
    - If inherited from planning workflow, use the existing branch_strategy.
 
 2. **Request/Implementation Goal** (OPTIONAL):
@@ -149,6 +152,42 @@ This section provides step-by-step execution guidance as defined in sk_p__implem
 **Validation**: `all_inputs_collected_and_planning_artifacts_understood`
 
 **Approval Gate**: None (autonomous execution)
+
+### Step 8.5: Workspace Setup
+
+**Action**: Create or verify isolated worktree for implementation
+
+**Note**: If continuing from planning workflow (speckit-spec-plan), worktree may already exist. Verify and reuse if available, otherwise create new.
+
+**Skill Invocation**: Execute git-worktrees workflow (if worktree doesn't exist)
+**Strategy**: Use selected or inherited branch_strategy
+**Inputs passed**:
+- Task description: {request}
+- Branch strategy: {branch_strategy}
+- Worktree directory: Auto-detect via priority system
+
+**Worktree Verification/Creation**:
+- Check if worktree exists at `.worktrees/{spec-id}`
+- If exists: Verify it's clean and ready
+- If not exists:
+  - If main_temp: Creates `.worktrees/{spec-id}` with temp branch `temp/{spec-id}`
+  - If feature_branch: Creates `.worktrees/{spec-id}` with branch `feature-{spec-id}`
+
+**Dependencies verified**: Already installed (from planning) or auto-detected (npm/cargo/pip/go)
+**Tests run**: Baseline verification (if worktree newly created)
+**Environment verified**: Clean starting state for implementation
+
+**Outputs**:
+- worktree_path: Absolute path to worktree (e.g., `.worktrees/001`)
+- git_branch: Active branch name (e.g., `temp/001` or `feature-001`)
+- worktree_status: existing | newly_created
+- baseline_tests: Pass/fail status
+
+**Validation**: `worktree_ready_for_implementation`
+
+**Note**: All subsequent steps execute within this worktree context
+
+.
 
 ### Step 9: Task Breakdown
 
@@ -340,20 +379,24 @@ This step contains sub-phases that execute sequentially:
 - Approach: continuous_validation
 - Outputs: implementation_decisions, debugging_insights, optimization_opportunities, test_coverage_gaps
 
-### Step 15: Completion
+### Step 15: Completion & Integration
 
-**Action**: Document changes and create summary
+**Action**: Document changes, create summary, and integrate based on strategy
+
+#### Part A: Documentation
 
 **Summary Document**:
 - Location: `[SPEC_FOLDER]/implementation-summary.md`
 - Required Sections:
-  - Feature branch name
+  - Branch name and strategy used
+  - Worktree path
   - Files modified/created
   - Verification steps taken
   - Deviations from plan
   - Knowledge base updates
   - Recommended next steps
   - Browser testing results
+  - Integration status
 
 **Final Checklist**:
 - Update task status: completed
@@ -366,19 +409,57 @@ This step contains sub-phases that execute sequentially:
 - Approach: retrospective_analysis
 - Outputs: implementation_quality_assessment, lessons_learned, technical_debt_noted, future_improvements
 
-**Termination**: Workflow ends after this step
+#### Part B: Integration & Cleanup
 
-**Branch Integration Note**:
-- **If `feature_branch` was selected**: Branch has changes but is NOT automatically merged to main. User should run the complete workflow for branch integration or merge manually.
-- **If `main_branch` was selected**: Changes are already on main; no integration needed.
+**Action**: Integrate work based on branch_strategy
 
-**Next Steps**:
-- Review implementation-summary.md
-- Verify all changes in staging environment
-- **If feature_branch**: Use complete workflow for branch integration or merge manually
-- **If main_branch**: Changes are already integrated
-- Prepare for code review and PR submission
-- Update knowledge base if needed
+##### If main_temp (Default - 80% of work):
+
+**Philosophy**: Temp branches are immediately merged and deleted
+
+**Integration Steps**:
+1. Verify worktree clean (no uncommitted changes)
+2. Return to main repository
+3. Checkout and update main: `git checkout main && git pull --ff-only`
+4. Merge temp branch: `git merge --ff-only temp/{spec-id}`
+5. Delete temp branch: `git branch -d temp/{spec-id}`
+6. Remove worktree: `git worktree remove .worktrees/{spec-id}`
+7. Verify integration complete
+
+**Validation**: `temp_branch_integrated_and_cleaned`
+
+**Termination**: Workflow ends after integration
+
+##### If feature_branch (Exception - 20% of work):
+
+**Philosophy**: Long-running branches remain for PR workflow
+
+**Actions**:
+1. Push feature branch: `git push -u origin feature-{spec-id}`
+2. Keep worktree: Preserved at `.worktrees/{spec-id}` for continued work
+3. Notify user: Feature branch ready for PR creation
+
+**Next Steps** (User manual):
+- Create PR on GitHub/GitLab
+- Request code review
+- Address feedback in worktree
+- Merge via web interface after approval
+- Manual cleanup after PR merged
+
+**Validation**: `feature_branch_pushed_and_ready_for_pr`
+
+**Termination**: Workflow pauses; PR workflow takes over
+
+#### Troubleshooting
+
+**Issue**: "Merge not fast-forward"
+**Solution**: Rebase temp branch onto main, then retry merge
+
+**Issue**: "Worktree removal fails"
+**Solution**: Commit or stash uncommitted changes first
+
+**Issue**: "Temp branch still exists after cleanup"
+**Solution**: Force delete with `git branch -D temp/{spec-id}`
 
 ### The 6 Implementation Sub-Agents
 
@@ -536,27 +617,43 @@ This workflow automatically handles empty input fields per sk_p__implementation.
 
 ### branch_strategy
 - **Required**: Yes
-- **Type**: Enum [`feature_branch`, `main_branch`]
+- **Type**: Enum [`main_temp`, `feature_branch`]
+- **Default**: Inherit from planning phase, otherwise `main_temp` ⭐
 - **Options**:
-  - `feature_branch`: Create new feature branch (auto-create feature-{NNN} aligned with spec folder)
-  - `main_branch`: Work on main branch (skip branch creation and commit directly to main)
-- **Empty Handling**: Inherit from planning phase; if unavailable, prompt user
-- **Note**: This field should be inherited from the planning workflow (Steps 1-7). If starting implementation independently, prompt user for choice.
+  - `main_temp`: Create temporary worktree with short-lived branch. Merge immediately after completion (80% of work)
+  - `feature_branch`: Create long-running feature branch in worktree for PR workflow (20% of work)
+- **Empty Handling**: Inherit from planning phase; if unavailable, defaults to `main_temp`
+- **Breaking Change**: `main_branch` option removed; use `main_temp` for quick integration
+- **Note**: This field should be inherited from the planning workflow (Steps 1-7). If starting implementation independently, defaults to `main_temp`.
 
 ### spec_id
 - **Derived From**: spec_folder path using pattern `specs/{NNN}` or `specs/{NNN-name}`
 - **Fallback**: Extract numeric portion or use timestamp if extraction fails
-- **Usage**: Used to generate feature_branch_name
+- **Usage**: Used to generate worktree path and branch name
+
+### temp_branch_name
+- **Pattern**: `temp/{spec_id}`
+- **Condition**: Only used when `branch_strategy == main_temp`
+- **Lifecycle**: Created, used, merged, deleted automatically
 
 ### feature_branch_name
 - **Pattern**: `feature-{spec_id}`
 - **Condition**: Only used when `branch_strategy == feature_branch`
+- **Lifecycle**: Created, used, pushed for PR, manually cleaned up after merge
 
 ### git_branch
 - **Derived**: Based on branch_strategy
-- **If feature_branch**: Use `feature_branch_name` (feature-{NNN})
-- **If main_branch**: Use `main`
+- **If main_temp**: Use `temp/{spec-id}` (e.g., `temp/001`)
+- **If feature_branch**: Use `feature-{spec-id}` (e.g., `feature-001`)
 - **Empty Handling**: Cannot be empty; derived automatically from branch_strategy
+
+### worktree_path
+- **Pattern**: `.worktrees/{spec-id}`
+- **Purpose**: Isolated workspace for implementation
+- **Verification**: At Step 8.5, check if exists from planning phase
+- **Lifecycle**:
+  - If main_temp: Created → Used → Removed (Step 15)
+  - If feature_branch: Created → Used → Preserved for PR workflow
 
 ### spec_folder
 - **Auto-create**: Yes
@@ -564,14 +661,20 @@ This workflow automatically handles empty input fields per sk_p__implementation.
 - **Scope**: Project specs directory
 - **Empty Handling**: Automatically creates new folder following naming convention
 
-### Branch Creation
-- **Condition**: Only execute when `branch_strategy == feature_branch`
-- **Steps**:
-  1. Check if feature branch already exists
-  2. Create feature-{spec_id} if not exists
-  3. Checkout feature branch
-- **Skip When**: `branch_strategy == main_branch`
-- **Note**: Branch should already exist from planning phase if feature_branch was selected
+### Worktree & Branch Creation
+- **Execution**: Step 8.5 via git-worktrees skill invocation
+- **Verification**: Check if worktree already exists from planning phase
+- **Creation** (if not exists):
+  1. Determine spec_id from spec_folder
+  2. Create worktree at `.worktrees/{spec-id}`
+  3. Create and checkout branch based on strategy:
+     - If main_temp: Create `temp/{spec-id}` from main
+     - If feature_branch: Create `feature-{spec-id}` from main
+  4. Install dependencies in worktree (if newly created)
+  5. Run baseline tests
+  6. Return worktree_path and git_branch
+- **Reuse** (if exists): Verify worktree is clean and ready for implementation
+- **Note**: All workspace setup delegated to git-worktrees skill
 
 ### request
 - **Default**: "Conduct a comprehensive review of the spec folder and carry out its implementation fully autonomously."
@@ -641,7 +744,6 @@ carry out its implementation fully autonomously."
    - Implementation of all tasks
    - Tests and documentation
    - Progressive updates
-
 
 .
 

@@ -34,9 +34,10 @@ field_handling:
     required: true
     type: enum
     options:
-      - feature_branch: "Create new feature branch (auto-create feature-{NNN} aligned with spec folder)"
-      - main_branch: "Work on main branch (skip branch creation and commit directly to main)"
-    note: "This decision is required at Step 1 and controls branch creation during planning"
+      - main_temp: "Temporary worktree with short-lived branch (default). Work is isolated in .worktrees/{spec-id} on temp/{spec-id} branch, then merged back to main immediately after validation. Use for: 80% of work - normal features, bug fixes, improvements."
+      - feature_branch: "Long-running feature branch in worktree for PR review. Work stays in .worktrees/{spec-id} on feature-{spec-id} branch for team review before integration. Use for: 20% of work - complex features requiring multi-day development and code review."
+    default: main_temp
+    note: "This decision controls workspace isolation strategy during planning. main_branch option removed (use main_temp for quick integration)."
 
   spec_id:
     derive_from: "spec_folder path using pattern specs/{NNN} or specs/{NNN-name}"
@@ -48,8 +49,8 @@ field_handling:
     condition: "Only used when branch_strategy == feature_branch"
 
   defaults:
-    branch_strategy_empty: "Prompt user at Step 1; cannot proceed without choice"
-    git_branch_empty: "If branch_strategy == feature_branch: use feature_branch_name; else: main"
+    branch_strategy_empty: "Default to main_temp (recommended for 80% of work)"
+    git_branch_empty: "Derived from worktree setup: temp/{spec-id} for main_temp, feature-{spec-id} for feature_branch"
     spec_folder_empty: "Auto-create specs/{NNN} from highest +001"
     context_empty: "Infer from [REQUEST] and [STAGING LINK]"
     issues_empty: "Investigate during workflow"
@@ -60,13 +61,39 @@ field_handling:
     default: "specs/**"
     rule: "Limit file operations to scope when provided"
 
-  branch_creation:
-    condition: "Only execute when branch_strategy == feature_branch"
-    steps:
-      - "Check if feature branch already exists"
-      - "Create feature-{spec_id} if not exists"
-      - "Checkout feature branch"
-    skip_when: "branch_strategy == main_branch"
+  note_on_branch_creation: "Worktree and branch creation handled by git-worktrees skill (see worktree_setup section below)"
+
+# ─────────────────────────────────────────────────────────────────
+# WORKTREE SETUP
+# ─────────────────────────────────────────────────────────────────
+worktree_setup:
+  trigger: after_step_1_input_gathering
+  invoke: git_worktrees_skill
+  description: |
+    Create isolated worktree for planning using git-worktrees skill.
+    Worktree location: .worktrees/{spec-id}
+    Branch depends on strategy:
+      - main_temp: temp/{spec-id} (short-lived, merges back immediately)
+      - feature_branch: feature-{spec-id} (long-running, preserved for continued implementation)
+
+  strategy: branch_strategy  # Derived from user input in step 1
+
+  inputs:
+    task_description: derived_from_request_field
+    branch_strategy: branch_strategy
+    spec_folder: spec_folder  # Used to derive worktree name
+    worktree_directory: auto_detect  # Priority: existing → AGENTS.md → ask user
+
+  outputs:
+    worktree_path: absolute_path_to_worktree  # e.g., /project/.worktrees/001
+    git_branch: active_branch_name  # e.g., temp/001 or feature-001
+    baseline_tests: pass_fail_status  # Tests passed at worktree creation
+
+  validation: worktree_ready_and_verified
+
+  note: |
+    All subsequent planning steps execute within this worktree context.
+    Planning documents created in isolated workspace.
 
 # ─────────────────────────────────────────────────────────────────
 # WORKFLOW
@@ -77,24 +104,31 @@ workflow:
     branch_strategy_prompt:
       required: true
       question: |
-        Branch Strategy: Choose how you want to work with Git for this spec.
-        
-        Option A: Create new feature branch
-          - We will auto-create feature-{NNN} aligned with the spec folder
-          - Allows isolated development and testing
-          - Can be integrated to main later via complete workflow
-        
-        Option B: Work on main branch
-          - Skip branch creation and commit directly to main
-          - Faster for small changes or hotfixes
-          - No separate integration needed
-        
-        This decision is required before proceeding and will be inherited by implementation workflow.
+        Select development isolation strategy:
+
+        Option A: main_temp (⭐ RECOMMENDED - default)
+          - Temporary worktree with short-lived branch
+          - Work isolated in .worktrees/{NNN} on temp/{NNN} branch
+          - Planning docs isolated, then merged back to main immediately
+          - Branch and worktree deleted after successful integration
+          - Use for: 80% of work - normal features, bug fixes, improvements
+
+        Option B: feature_branch
+          - Long-running feature branch in worktree for PR review
+          - Work isolated in .worktrees/{NNN} on feature-{NNN} branch
+          - Planning docs preserved for continued implementation
+          - Worktree remains active for implementation phase
+          - Use for: 20% of work - complex features requiring multi-day development
+
+        This decision will be inherited by implementation workflow.
+
+        Note: main_branch option removed. Use main_temp for quick integration with isolation benefits.
       options:
+        - value: main_temp
+          label: "Temporary worktree (main_temp) - Recommended"
         - value: feature_branch
-          label: "Create new feature branch (feature-{NNN})"
-        - value: main_branch
-          label: "Work on main branch (no branching)"
+          label: "Feature branch for PR (feature_branch)"
+      default: main_temp
     branch_strategy: "[BRANCH_STRATEGY] → REQUIRED; cannot proceed without choice"
     git_branch: "[GIT_BRANCH] → derived from branch_strategy"
     spec_folder: "[SPEC_FOLDER] → auto-create if empty"
@@ -104,11 +138,9 @@ workflow:
     environment: "[STAGING LINK] → skip DevTools if empty"
     scope: "[FILES] → default scope if empty"
     action: |
-      1. Prompt user for branch_strategy (required)
-      2. Derive git_branch based on choice:
-         - If feature_branch: extract spec_id from spec_folder, create feature-{spec_id}
-         - If main_branch: use 'main'
-      3. Analyze user inputs and confirm understanding
+      1. Prompt user for branch_strategy (default: main_temp)
+      2. Analyze user inputs and confirm understanding
+      3. Prepare for worktree setup (next step will create isolated workspace)
     outputs:
     - branch_strategy_chosen
     - git_branch_resolved
@@ -118,7 +150,20 @@ workflow:
     validation: understanding_confirmed_and_branch_strategy_set
     approval_gate:
       type: USER_APPROVAL_REQUIRED
-      prompt: "Requirements analyzed. Branch strategy: {branch_strategy} on {git_branch}. Proceed to pre-work review?"
+      prompt: "Requirements analyzed. Branch strategy: {branch_strategy}. Workspace will be created at .worktrees/{spec-id}. Proceed to workspace setup?"
+      confirmation_needed: true
+
+  step_1_5_workspace_setup:
+    action: Create isolated worktree via git-worktrees skill
+    reference: worktree_setup section above defines complete setup process
+    validation: worktree_ready_and_verified
+    outputs:
+      - worktree_path_resolved
+      - git_branch_active
+      - baseline_tests_status
+    approval_gate:
+      type: USER_APPROVAL_REQUIRED
+      prompt: "Workspace created at {worktree_path} on branch {git_branch}. Proceed to pre-work review?"
       confirmation_needed: true
 
   step_2_pre_work_review:
@@ -193,13 +238,50 @@ workflow:
         - dependencies_identified
         - risks_and_mitigation
         - recommended_next_steps
-      completion_message: Planning phase complete. The workflow has been executed through step 4. Technical plan and approach have been documented. To proceed with implementation, use the full workflow_automated.yaml.
+      completion_message: Planning phase complete. Technical plan and approach have been documented.
+
+  step_7_integration_and_cleanup:
+    name: Integration & Cleanup
+    description: Integrate planning docs and cleanup based on strategy
+
+    condition_main_temp:
+      when: branch_strategy == main_temp
+      approval_gate:
+        type: USER_APPROVAL_REQUIRED
+        prompt: "Planning complete. Ready to integrate planning docs to main and cleanup? This will: (1) Merge temp/{spec-id} to main, (2) Delete temp branch, (3) Remove worktree."
+        confirmation_needed: true
+      integration_steps:
+        - verify_worktree_clean
+        - return_to_main_repo
+        - checkout_main_and_update
+        - merge_temp_branch_fast_forward_only
+        - delete_temp_branch
+        - remove_worktree
+      final_message: |
+        ✓ Planning docs integrated to main
+        ✓ Temp branch deleted
+        ✓ Worktree removed
+
+    condition_feature_branch:
+      when: branch_strategy == feature_branch
+      approval_gate:
+        type: USER_APPROVAL_REQUIRED
+        prompt: "Planning complete. Ready to push feature branch? Worktree will be preserved for implementation phase."
+        confirmation_needed: true
+      push_steps:
+        - verify_worktree_clean
+        - push_feature_branch_to_origin
+        - preserve_worktree
+      final_message: |
+        ✓ Feature branch pushed
+        ✓ Worktree preserved at .worktrees/{spec-id}
+        ✓ Ready for implementation phase
 
 # ─────────────────────────────────────────────────────────────────
 # WORKFLOW TERMINATION
 # ─────────────────────────────────────────────────────────────────
 termination:
-  after_step: 6
+  after_step: 7
   message: "Planning phase completed successfully. Workflow terminated after step 6 as requested."
   next_steps:
   - Review planning documentation

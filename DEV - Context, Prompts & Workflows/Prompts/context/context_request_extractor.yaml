@@ -69,7 +69,7 @@ workflow:
 
   step_2_generate_yaml:
     action: AUTOMATICALLY create YAML file
-    output_location: /context/export
+    output_location: /Users/michelkerkmeester/MEGA/Websites/anobel.com/a_nobel/context/export
     naming: context_request_{slug}.yaml (lowercase_underscores, max 50 chars)
 
     yaml_structure: |

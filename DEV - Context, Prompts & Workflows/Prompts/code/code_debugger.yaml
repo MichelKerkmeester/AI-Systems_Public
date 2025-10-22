@@ -22,9 +22,10 @@ debug_philosophy:
 # USER INPUTS
 # ─────────────────────────────────────────────────────────────────
 user_inputs:
+  use_worktree: "[USE_WORKTREE]"
   environment: "[STAGING LINK]"
   scope: "[FILES]"
-  target_folder: "[TARGET_FOLDER]"  # Often points to issue document or bug report folder
+  target_document: "[TARGET_DOCUMENT]"  
   context: "[CONTEXT]"
   issues: "[ISSUES]"
   request: "[REQUEST]"
@@ -33,10 +34,20 @@ user_inputs:
 # FIELD HANDLING
 # ─────────────────────────────────────────────────────────────────
 field_handling:
+  use_worktree:
+    type: boolean
+    default:
+      quick_fix: false         # Simple fix, no isolation needed
+      standard: true           # Isolate for testing fix
+      deep_investigation: true # Complex debugging requires isolation
+      performance: true        # Performance issues require baseline comparison
+    note: "Enable isolated worktree for testing debug fixes. Default varies by debug mode."
+
   defaults:
+    use_worktree_empty: "Use mode-based default (see above)"
     environment_empty: "Skip browser testing steps"
     scope_empty: "Use all relevant files"
-    target_folder_empty: "Infer from [ISSUES] or [REQUEST]"
+    target_document_empty: "Infer from [ISSUES] or [REQUEST]"
     context_empty: "Infer from issue description and environment"
     issues_empty: "Parse from [REQUEST] if available"
     request_empty: "Use [ISSUES] as primary source"
@@ -48,7 +59,7 @@ workflow:
   step_1_reproduce:
     purpose: Confirm the issue exists
     actions:
-      - Review target folder for issue documentation
+      - Review target document for issue documentation
       - Parse issues from [ISSUES] field
       - Follow reproduction steps from [REQUEST]
       - Document actual behavior
@@ -61,6 +72,26 @@ workflow:
       - Network tab for API issues
       - Performance profiler if needed
     validation: Can reliably reproduce issue
+
+  step_1_5_workspace_setup:
+    condition: use_worktree == true
+    action: Create isolated worktree via git-worktrees skill
+    strategy: main_temp  # Always main_temp for code workflows
+    description: |
+      Create isolated workspace for debug work.
+      Allows testing fix in isolation without affecting main branch.
+      All debugging and fixes happen in .worktrees/debug-{timestamp} on temp/debug-{timestamp} branch.
+    inputs:
+      task_description: derived_from_issues_or_request
+      branch_strategy: main_temp
+      debug_mode: mode_from_context  # quick_fix, standard, deep_investigation, performance
+    outputs:
+      worktree_path: absolute_path
+      git_branch: temp/debug-{timestamp}
+    validation: worktree_ready_or_skipped
+    note: |
+      If use_worktree=true: Create worktree for isolated debug work
+      If use_worktree=false: Skip, work in current directory (e.g., quick_fix mode)
 
   step_2_diagnose:
     purpose: Find the root cause
@@ -113,6 +144,26 @@ workflow:
       - Code quality maintained
       - Documentation updated
     validation: All tests pass
+
+  step_5_integration_and_cleanup:
+    condition: use_worktree == true
+    action: Integrate debug fix and cleanup worktree
+    strategy: main_temp  # Always main_temp for code workflows
+    description: |
+      After successful fix and verification, integrate changes back to main.
+      Fast-forward merge ensures clean integration.
+      Cleanup removes temporary debug branch and worktree.
+    steps:
+      - verify_worktree_clean
+      - return_to_main_repo
+      - checkout_main_and_update
+      - merge_temp_branch_fast_forward_only
+      - delete_temp_branch
+      - remove_worktree
+    validation: integrated_and_cleaned_or_skipped
+    note: |
+      If use_worktree=true: Integrate fix to main and cleanup
+      If use_worktree=false: Skip (already working on main, e.g., quick_fix mode)
 
 # ─────────────────────────────────────────────────────────────────
 # DEBUG MODES

@@ -19,7 +19,7 @@ operating_mode:
 user_inputs:
   branch_strategy: "[BRANCH_STRATEGY]"
   git_branch: "[GIT_BRANCH]"
-  spec_folder: "/Users/michelkerkmeester/MEGA/Websites/anobel.com/specs/003_welcome_modal"
+  spec_folder: "[SPEC_FOLDER]"
   context: "[CONTEXT]"
   issues: "[ISSUES]"
   request: "[REQUEST]"
@@ -41,11 +41,13 @@ field_handling:
     required: true
     type: enum
     options:
-      - feature_branch: "Create new feature branch (auto-create feature-{NNN} aligned with spec folder)"
-      - main_branch: "Work on main branch (skip branch creation and commit directly to main)"
+      - main_temp: "Temporary worktree with short-lived branch (default or inherited from planning). Work is isolated in .worktrees/{spec-id} on temp/{spec-id} branch, then merged back to main immediately after validation. Use for: 80% of work."
+      - feature_branch: "Long-running feature branch in worktree (or inherited from planning). Work stays in .worktrees/{spec-id} on feature-{spec-id} branch for team review before integration. Use for: 20% of work."
+    default: inherit_from_planning_or_main_temp
     note: |
-      This field should be inherited from the planning workflow.
-      If starting implementation independently, prompt user for choice.
+      This field should be inherited from the planning workflow if available.
+      If starting implementation independently, defaults to main_temp (recommended).
+      main_branch option removed (use main_temp for quick integration).
 
   spec_id:
     derive_from: "spec_folder path using pattern specs/{NNN} or specs/{NNN-name}"
@@ -57,8 +59,8 @@ field_handling:
     condition: "Only used when branch_strategy == feature_branch"
 
   defaults:
-    branch_strategy_empty: "Inherit from planning phase; if unavailable, prompt user"
-    git_branch_empty: "If branch_strategy == feature_branch: use feature_branch_name; else: main"
+    branch_strategy_empty: "Inherit from planning phase; if unavailable, default to main_temp"
+    git_branch_empty: "Derived from worktree setup or inherited: temp/{spec-id} for main_temp, feature-{spec-id} for feature_branch"
     spec_folder_empty: "Auto-create specs/{NNN} from highest +001"
     context_empty: "Infer from [REQUEST] and [STAGING LINK]"
     issues_empty: "Investigate during workflow"
@@ -69,14 +71,57 @@ field_handling:
     default: "specs/**"
     rule: "Limit file operations to scope when provided"
 
-  branch_creation:
-    condition: "Only execute when branch_strategy == feature_branch"
-    steps:
-      - "Check if feature branch already exists"
-      - "Create feature-{spec_id} if not exists"
-      - "Checkout feature branch"
-    skip_when: "branch_strategy == main_branch"
-    note: "Branch should already exist from planning phase if feature_branch was selected"
+  note_on_branch_creation: "Worktree may already exist from planning phase. Worktree setup checks for existing worktree and creates only if needed."
+
+# ─────────────────────────────────────────────────────────────────
+# WORKTREE SETUP
+# ─────────────────────────────────────────────────────────────────
+worktree_setup:
+  trigger: after_step_7_review_or_at_start
+  invoke: git_worktrees_skill
+  description: |
+    Handle worktree for implementation using git-worktrees skill.
+
+    INHERITANCE SCENARIOS:
+    1. Continuing from planning phase:
+       - Worktree already exists at .worktrees/{spec-id}
+       - Branch already active (temp/{spec-id} or feature-{spec-id})
+       - Simply cd into existing worktree and continue
+
+    2. Starting implementation independently:
+       - Create new worktree at .worktrees/{spec-id}
+       - Create branch based on inherited or default strategy
+       - Set up environment
+
+  strategy: branch_strategy  # Inherited from planning or user input
+
+  existence_check:
+    action: check_if_worktree_exists
+    path: .worktrees/{spec-id}
+    on_exists:
+      - verify_branch_matches_strategy
+      - cd_into_existing_worktree
+      - verify_environment_ready
+      - skip_creation
+    on_not_exists:
+      - create_new_worktree_as_usual
+
+  inputs:
+    task_description: derived_from_request_field
+    branch_strategy: branch_strategy  # Inherited or defaulted
+    spec_folder: spec_folder
+    worktree_directory: auto_detect
+
+  outputs:
+    worktree_path: absolute_path_to_worktree  # e.g., /project/.worktrees/001
+    git_branch: active_branch_name  # e.g., temp/001 or feature-001
+    worktree_status: existing_or_newly_created
+
+  validation: worktree_ready_for_implementation
+
+  note: |
+    Implementation continues in the worktree context (existing or new).
+    Dependencies already installed if continuing from planning.
 
 # ─────────────────────────────────────────────────────────────────
 # WORKFLOW
@@ -117,6 +162,23 @@ workflow:
       - edge_case_identification
       - implementation_strategy_refinement
     validation: planning_artifacts_understood
+
+  step_7_5_workspace_verification_or_setup:
+    action: Verify existing worktree or create new one via git-worktrees skill
+    reference: worktree_setup section above defines complete setup/verification process
+    scenarios:
+      continuing_from_planning:
+        check: worktree_exists_at_.worktrees/{spec-id}
+        action: cd_into_existing_worktree
+        validation: environment_ready
+      starting_independently:
+        check: worktree_does_not_exist
+        action: create_new_worktree
+        validation: worktree_ready_and_verified
+    outputs:
+      - worktree_path_resolved
+      - git_branch_active
+      - worktree_status_confirmed
 
   step_8_task_breakdown:
     command: /tasks
@@ -240,6 +302,53 @@ workflow:
       - lessons_learned
       - technical_debt_noted
       - future_improvements
+
+  step_13_integration_and_cleanup:
+    name: Integration & Cleanup
+    description: Integrate implementation and cleanup based on strategy
+
+    condition_main_temp:
+      when: branch_strategy == main_temp
+      philosophy: "Temp branches are immediately merged and deleted. Worktree is ephemeral."
+      integration_steps:
+        - action: verify_worktree_clean
+          validation: no_uncommitted_changes
+        - action: return_to_main_repo
+        - action: checkout_main_and_update
+          validation: main_up_to_date
+        - action: merge_temp_branch
+          command: "git merge --ff-only temp/{spec-id}"
+          validation: fast_forward_successful
+        - action: delete_temp_branch
+          validation: branch_deleted
+        - action: remove_worktree
+          validation: worktree_removed
+      success_criteria:
+        - changes_integrated_to_main: true
+        - temp_branch_deleted: true
+        - worktree_removed: true
+      final_message: |
+        ✓ Implementation integrated to main
+        ✓ Temp branch deleted
+        ✓ Worktree removed
+
+    condition_feature_branch:
+      when: branch_strategy == feature_branch
+      philosophy: "Long-running branches remain for PR workflow. Worktree preserved."
+      push_steps:
+        - action: verify_worktree_clean
+        - action: push_feature_branch
+          command: "git push -u origin feature-{spec-id}"
+        - action: preserve_worktree
+      success_criteria:
+        - feature_branch_pushed: true
+        - worktree_preserved: true
+      final_message: |
+        ✓ Feature branch pushed
+        ✓ Worktree preserved at .worktrees/{spec-id}
+        ✓ Ready for PR creation
+
+    validation: integration_complete_per_strategy
 
 # ─────────────────────────────────────────────────────────────────
 # WORKFLOW CONTINUATION

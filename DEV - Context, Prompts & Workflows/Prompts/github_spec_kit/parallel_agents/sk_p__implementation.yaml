@@ -41,11 +41,14 @@ field_handling:
     required: true
     type: enum
     options:
-      - feature_branch: "Create new feature branch (auto-create feature-{NNN} aligned with spec folder)"
-      - main_branch: "Work on main branch (skip branch creation and commit directly to main)"
+      - main_temp: "Temporary worktree with short-lived branch (default). Work is isolated in .worktrees/{spec-id} on temp/{spec-id} branch, then merged back to main immediately after validation. Use for: 80% of work - normal features, bug fixes, improvements."
+      - feature_branch: "Long-running feature branch in worktree for PR review. Work stays in .worktrees/{spec-id} on feature-{spec-id} branch for team review before integration. Use for: 20% of work - complex features requiring multi-day development and code review."
+    default: main_temp
     note: |
       This field should be inherited from the planning workflow (steps 1-7).
+      Worktree may already exist from planning phase and will be reused.
       If starting implementation independently, prompt user for choice.
+      main_branch option removed (use main_temp for quick integration).
 
   spec_id:
     derive_from: "spec_folder path using pattern specs/{NNN} or specs/{NNN-name}"
@@ -57,8 +60,8 @@ field_handling:
     condition: "Only used when branch_strategy == feature_branch"
 
   defaults:
-    branch_strategy_empty: "Inherit from planning phase; if unavailable, prompt user"
-    git_branch_empty: "If branch_strategy == feature_branch: use feature_branch_name; else: main"
+    branch_strategy_empty: "Inherit from planning phase; if unavailable, default to main_temp"
+    git_branch_empty: "Derived from worktree: temp/{spec-id} for main_temp, feature-{spec-id} for feature_branch"
     spec_folder_empty: "Auto-create specs/{NNN} from highest +001"
     context_empty: "Infer from [REQUEST] and [STAGING LINK]"
     issues_empty: "Investigate during workflow"
@@ -69,14 +72,51 @@ field_handling:
     default: "specs/**"
     rule: "Limit file operations to scope when provided"
 
-  branch_creation:
-    condition: "Only execute when branch_strategy == feature_branch"
-    steps:
-      - "Check if feature branch already exists"
-      - "Create feature-{spec_id} if not exists"
-      - "Checkout feature branch"
-    skip_when: "branch_strategy == main_branch"
-    note: "Branch should already exist from planning phase if feature_branch was selected"
+  note_on_branch_creation: "Worktree and branch creation handled by git-worktrees skill. Worktree may already exist from planning phase and will be reused (see worktree_setup section below)."
+
+# ─────────────────────────────────────────────────────────────────
+# WORKTREE SETUP
+# ─────────────────────────────────────────────────────────────────
+worktree_setup:
+  trigger: after_step_8_review
+  invoke: git_worktrees_skill
+  description: |
+    Verify or create isolated worktree for implementation using git-worktrees skill.
+    Worktree location: .worktrees/{spec-id}
+    Branch depends on strategy:
+      - main_temp: temp/{spec-id} (short-lived, merges back immediately)
+      - feature_branch: feature-{spec-id} (long-running, preserved for PR)
+
+  strategy: branch_strategy  # Inherited from planning phase (steps 1-7)
+
+  inheritance_handling:
+    from_planning_phase: true
+    worktree_exists_check: required
+    actions:
+      if_exists: verify_and_reuse
+      if_not_exists: create_new
+
+  inputs:
+    task_description: derived_from_request_field
+    branch_strategy: branch_strategy  # Inherited from planning
+    spec_folder: spec_folder
+    worktree_directory: auto_detect
+    existing_worktree: check_if_present
+
+  outputs:
+    worktree_path: absolute_path_to_worktree  # e.g., /project/.worktrees/001
+    git_branch: active_branch_name  # e.g., temp/001 or feature-001
+    baseline_tests: pass_fail_status
+    worktree_reused: true_if_inherited_from_planning
+
+  validation: worktree_ready_and_verified
+
+  note: |
+    Implementation phase (steps 8-15) may inherit worktree from planning phase (steps 1-7).
+    If worktree exists: verify it's clean and on correct branch, then reuse.
+    If worktree doesn't exist: create new isolated workspace.
+    All subsequent implementation steps execute within this worktree context.
+    All sub-agents in parallel stages run within the same worktree.
 
 # ─────────────────────────────────────────────────────────────────
 # SUB-AGENTS (PARALLEL PREP)
@@ -115,22 +155,39 @@ workflow:
     note: |
       This workflow is a continuation of the planning phase (steps 1-7).
       Branch strategy should have been set during planning.
+      Worktree may already exist from planning and will be verified/reused.
       If starting independently, branch_strategy must be provided.
-    branch_strategy: "[BRANCH_STRATEGY] → inherited from planning or prompted if starting independently"
-    git_branch: "[GIT_BRANCH] → derived from branch_strategy"
+    branch_strategy: "[BRANCH_STRATEGY] → inherited from planning (default: main_temp)"
+    git_branch: "[GIT_BRANCH] → derived from worktree"
     action: |
-      1. Confirm branch_strategy (should be inherited from planning phase)
-      2. Verify git_branch is correctly set based on strategy
+      1. Confirm branch_strategy (should be inherited from planning phase, defaults to main_temp)
+      2. Check if worktree exists from planning phase
       3. Review spec and planning artifacts
+      4. Prepare for workspace verification (next step will verify/create workspace)
     required_documents:
       - "[SPEC_FOLDER]/spec.md"
       - "[SPEC_FOLDER]/plan.md"
       - "[SPEC_FOLDER]/planning-summary.md"
     outputs:
       - branch_strategy_confirmed
-      - git_branch_validated
+      - worktree_existence_checked
       - planning_artifacts_understood
     validation: planning_artifacts_understood_and_branch_confirmed
+
+  step_8_5_workspace_verification:
+    action: Verify or create isolated worktree via git-worktrees skill
+    reference: worktree_setup section above defines complete setup process with inheritance handling
+    inheritance_check:
+      - check_if_worktree_exists_from_planning
+      - if_exists_verify_clean_and_reuse
+      - if_not_exists_create_new
+    validation: worktree_ready_and_verified
+    outputs:
+      - worktree_path_resolved
+      - git_branch_active
+      - baseline_tests_status
+      - worktree_reused_from_planning
+    note: "All parallel sub-agents and implementation steps will execute within this worktree context"
 
   step_9_task_breakdown:
     command: /tasks
@@ -318,22 +375,94 @@ prerequisites:
   user_context: "[CONTEXT]"
   user_request: "[REQUEST]"
 
+  step_16_integration_and_cleanup:
+    name: Integration & Cleanup
+    description: Integrate implementation and cleanup based on strategy
+
+    # ─────────────────────────────────────────────────────────────
+    # MAIN_TEMP STRATEGY (DEFAULT - 80% of work)
+    # ─────────────────────────────────────────────────────────────
+    condition_main_temp:
+      when: branch_strategy == main_temp
+      philosophy: "Temp branches are immediately merged and deleted. Worktree is ephemeral."
+
+      approval_gate:
+        type: USER_APPROVAL_REQUIRED
+        prompt: "Implementation complete. Ready to integrate to main and cleanup? This will: (1) Merge temp/{spec-id} to main, (2) Delete temp branch, (3) Remove worktree."
+        confirmation_needed: true
+
+      integration_steps:
+        - action: verify_worktree_clean
+          command: "git status"
+          validation: no_uncommitted_changes
+        - action: return_to_main_repo
+          command: "cd ../.."
+        - action: checkout_main_and_update
+          command: "git checkout main && git pull --ff-only"
+          validation: main_up_to_date
+        - action: merge_temp_branch
+          command: "git merge --ff-only temp/{spec-id}"
+          validation: fast_forward_successful
+          on_failure: |
+            If merge fails: offer to rebase
+        - action: delete_temp_branch
+          command: "git branch -d temp/{spec-id}"
+        - action: remove_worktree
+          command: "git worktree remove .worktrees/{spec-id}"
+        - action: verify_integration
+          command: "git log --oneline -5"
+
+      success_criteria:
+        - changes_integrated_to_main: true
+        - temp_branch_deleted: true
+        - worktree_removed: true
+
+      final_message: |
+        ✓ Implementation integrated to main
+        ✓ Temp branch deleted
+        ✓ Worktree removed
+        ✓ Review implementation-summary.md for details
+
+    # ─────────────────────────────────────────────────────────────
+    # FEATURE_BRANCH STRATEGY (EXCEPTION - 20% of work)
+    # ─────────────────────────────────────────────────────────────
+    condition_feature_branch:
+      when: branch_strategy == feature_branch
+      philosophy: "Long-running branches remain for PR workflow. Worktree preserved."
+
+      approval_gate:
+        type: USER_APPROVAL_REQUIRED
+        prompt: "Ready to push feature branch for PR? Worktree will be preserved for continued work."
+        confirmation_needed: true
+
+      push_steps:
+        - action: verify_worktree_clean
+          command: "cd .worktrees/{spec-id} && git status"
+        - action: push_feature_branch
+          command: "git push -u origin feature-{spec-id}"
+        - action: preserve_worktree
+
+      manual_steps:
+        - "Create PR via GitHub/GitLab when ready"
+        - "Merge PR after code review"
+        - "Manual cleanup: git worktree remove .worktrees/{spec-id}"
+
+      success_criteria:
+        - feature_branch_pushed: true
+        - worktree_preserved: true
+
+      final_message: |
+        ✓ Feature branch pushed
+        ✓ Branch: feature-{spec-id}
+        ✓ Worktree preserved at .worktrees/{spec-id}
+        ✓ Ready for PR creation and code review
+        ✓ Review implementation-summary.md for details
+
+    validation: integration_complete_per_strategy
+
 termination:
-  after_step: 15
-  message: "Implementation phase completed successfully. Workflow terminated after step 15 (completion)."
-  branch_integration_note: |
-    If branch_strategy == feature_branch:
-      - Branch has changes but is NOT automatically merged to main
-      - User should run the complete workflow or manually integrate the branch
-    If branch_strategy == main_branch:
-      - Changes are already on main; no integration needed
-  next_steps:
-    - Review implementation-summary.md
-    - Verify all changes in staging environment
-    - If feature_branch: Use complete workflow for branch integration or merge manually
-    - If main_branch: Changes are already integrated
-    - Prepare for code review and PR submission
-    - Update knowledge base if needed
+  after_step: 16
+  message: "Implementation phase completed successfully. Workflow terminated after step 16 (integration and cleanup)."
 
 # ─────────────────────────────────────────────────────────────────
 # ADAPTIVE RULES & ERROR HANDLING
