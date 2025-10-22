@@ -24,7 +24,7 @@
 - **Pattern:** Jumping directly to implementation without proper analysis
 - **Root Cause:** Overconfidence in understanding the problem
 - **Prevention:** Analyze request thoroughly → Verify understanding (ask for clarification if needed) → Choose simplest approach
-- **Example [PLAUSIBLE]:** Asked to investigate, but starts changing code immediately
+- **Example:** Asked to investigate, but starts changing code immediately
 
 #### 2. Assumption-Based Changes
 - **Pattern:** Modifying code based on assumptions rather than evidence
@@ -36,21 +36,19 @@
 - **Pattern:** Implementing features when asked to investigate/document
 - **Root Cause:** Not carefully parsing the actual request
 - **Prevention:** Explicit request type classification and scope analysis; confirm by asking a clarifying question when needed
-- **Example [PLAUSIBLE]:** Creating code when asked for a task document
+- **Example:** Creating code when asked for a task document
 
 #### 4. Cascading Breaks
 - **Pattern:** "Fixing" non-existent problems and breaking working code
 - **Root Cause:** Not testing assumptions before making changes
 - **Prevention:** Verify problem exists through reproduction first; if reproduction is blocked by ambiguity, ask for clarification
-- **Example [PLAUSIBLE]:** Breaking working code by "fixing" non-existent problems
+- **Example:** Breaking working code by "fixing" non-existent problems
 
 #### 5. Over-Engineering
 - **Pattern:** Adding unnecessary complexity, abstractions, or "future-proofing"
 - **Root Cause:** Anticipating needs that don't exist; gold-plating solutions
 - **Prevention:** Solve ONLY the stated problem; reject premature optimization; confirm scope via a clarifying question when in doubt
-- **Example [PLAUSIBLE]:** Creating a complex state management system when a simple variable suffices
-
-**📌 Example Authenticity:** Tag every example as [REAL], [PLAUSIBLE], or [HYPOTHETICAL]. If [REAL], cite source (file path, line number). If uncertain, use [PLAUSIBLE] and state "I'M UNCERTAIN" per Explicit Uncertainty Rule---
+- **Example:** Creating a complex state management system when a simple variable suffices
 
 ---
 
