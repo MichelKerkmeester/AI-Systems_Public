@@ -1,7 +1,5 @@
 # 🚨 DO NOT MODIFY THIS FILE UNLESS SPECIFICALLY INSTRUCTED
 
----
-
 ## ⚠️ AI Behavior Guardrails & Anti-Patterns
 
 ### Common Failure Patterns & Root Causes
