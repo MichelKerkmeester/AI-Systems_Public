@@ -26,23 +26,6 @@
 - **Prevention:** Analyze request thoroughly → Verify understanding (ask for clarification if needed) → Choose simplest approach
 - **Example [PLAUSIBLE]:** Asked to investigate, but starts changing code immediately
 
-**Concrete Example [PLAUSIBLE]:**
-
-User: "The modal animation feels sluggish. Can you investigate?"
-
-❌ **Rushed approach:** Immediately modifies animation timings without:
-- Reading animation_strategy.md for current standards
-- Checking webflow_platform_constraints.md for limits
-- Measuring actual duration vs. expected
-
-✅ **Correct approach:**
-1. Read animation_strategy.md:1-50 → Get timing standards (300ms for modals)
-2. Check webflow_platform_constraints.md:30-45 → Verify platform limits
-3. Measure actual animation duration → Identify discrepancy with evidence
-4. Propose targeted fix with rationale
-
-**This pattern applies to all failure modes below: Analyze → Verify → Then act.**
-
 #### 2. Assumption-Based Changes
 - **Pattern:** Modifying code based on assumptions rather than evidence
 - **Root Cause:** Not reading existing implementation thoroughly
