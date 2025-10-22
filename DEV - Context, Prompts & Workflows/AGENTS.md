@@ -30,7 +30,7 @@
 - **Pattern:** Modifying code based on assumptions rather than evidence
 - **Root Cause:** Not reading existing implementation thoroughly
 - **Prevention:** Require full code trace before any modifications; ask clarifying questions to resolve ambiguity
-- **Example [PLAUSIBLE]:** "Fixing" S3 upload that wasn't actually broken
+- **Example:** "Fixing" S3 upload that wasn't actually broken
 
 #### 3. Task Misinterpretation
 - **Pattern:** Implementing features when asked to investigate/document
