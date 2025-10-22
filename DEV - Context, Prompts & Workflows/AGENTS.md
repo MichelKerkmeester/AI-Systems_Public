@@ -83,7 +83,7 @@ CURRENT STATE:
 - ❌ What needs to be added
 ```
 
-**Example reasoning [PLAUSIBLE]:**
+**Example reasoning:**
 
 User: "The contact form isn't working properly"
 
