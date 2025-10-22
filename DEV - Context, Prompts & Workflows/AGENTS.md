@@ -1,4 +1,4 @@
-# 🚨 DO NOT MODIFY THIS FILE UNLESS SPECIFICALLY INSTRUCTED.
+# 🚨 DO NOT MODIFY THIS FILE UNLESS SPECIFICALLY INSTRUCTED
 
 ---
 
@@ -20,9 +20,7 @@
 - If not completely certain about a claim, prepend "I'M UNCERTAIN ABOUT THIS" before that specific claim.
 - Do not soften or omit this marker.
 - When information is insufficient or unverifiable, output "UNKNOWN" explicitly—never fabricate plausible-sounding details.
-- State confidence levels for factual claims (see 🧠 Confidence & Clarification Framework).
-
----
+- State confidence levels for factual claims (see 🧠 Confidence & Clarification Framework)---
 
 #### 1. The Rush to Code
 - **Pattern:** Jumping directly to implementation without proper analysis
@@ -71,7 +69,7 @@ User: "The modal animation feels sluggish. Can you investigate?"
 - **Prevention:** Solve ONLY the stated problem; reject premature optimization; confirm scope via a clarifying question when in doubt
 - **Example [PLAUSIBLE]:** Creating a complex state management system when a simple variable suffices
 
-**📌 Example Authenticity:** Tag every example as [REAL], [PLAUSIBLE], or [HYPOTHETICAL]. If [REAL], cite source (file path, line number). If uncertain, use [PLAUSIBLE] and state "I'M UNCERTAIN" per Explicit Uncertainty Rule.
+**📌 Example Authenticity:** Tag every example as [REAL], [PLAUSIBLE], or [HYPOTHETICAL]. If [REAL], cite source (file path, line number). If uncertain, use [PLAUSIBLE] and state "I'M UNCERTAIN" per Explicit Uncertainty Rule---
 
 ---
 
@@ -88,8 +86,6 @@ REQUEST CLASSIFICATION:
 □ What is the scope? [Single feature, bug fix, refactor, investigation]
 □ What constraints exist? [Time, compatibility, dependencies]
 ```
-
-.
 
 ### Phase 2: Detailed Scope Analysis
 
@@ -124,8 +120,6 @@ A) Which form (main contact page, modal, footer)?
 B) What specific behavior fails (error message, no submission, styling issue)?
 C) What steps reproduce the problem?"
 
-.
-
 ### Phase 3: Context Gathering & Evidence Collection
 
 ```markdown
@@ -142,8 +136,6 @@ SOLUTION REQUIREMENTS:
 □ What existing code can be reused or extended?
 □ What approach is most maintainable per code_standards.md?
 ```
-
-.
 
 ### Phase 4: Solution Design & Selection
 
@@ -180,8 +172,6 @@ SOLUTION REQUIREMENTS:
    - No "while I'm here" refactors
    - No premature optimization
 
-.
-
 ### Phase 5: Solution Effectiveness Validation
 
 **Evaluate proposed approach against:**
@@ -211,8 +201,6 @@ SCOPE CHECK:
 □ Am I avoiding premature optimization?
 □ Have I removed any gold-plating?
 ```
-
-.
 
 ### Phase 6: Pre-Coding Verification
 
@@ -253,8 +241,6 @@ Include an uncertainty statement and citations for factual claims; otherwise exp
 4. Solving problems that don't exist yet
 ```
 
-.
-
 ### Phase 7: Final Output Review
 
 **Verification Summary (Mandatory for Factual Content):**
@@ -274,7 +260,7 @@ Review response for:
 - Unverified sources → Mark [STATUS: UNVERIFIED]
 - Missing counter-evidence for significant claims → Add caveats
 
-**Number Handling:** Prefer ranges or orders of magnitude unless confidence ≥8/10 and source is cited. Use qualifiers: "approximately," "range of," "circa." Never fabricate specific statistics to appear precise.
+**Number Handling:** Prefer ranges or orders of magnitude unless confidence ≥8/10 and source is cited. Use qualifiers: "approximately," "range of," "circa." Never fabricate specific statistics to appear precise---
 
 ---
 
@@ -387,6 +373,47 @@ C) [option with brief rationale]"
 
 ---
 
+## 🔧 GIT WORKTREES
+
+**Default workflow**: Use temporary worktrees connected to main for all development work.
+
+**What it is**:
+- Isolated workspace from main branch
+- Work happens in `.worktrees/[task-name]` directory
+- Uses short-lived `temp/[task-name]` branch
+- Merge back to main immediately when done
+- Delete temp branch after merge
+
+**Why this approach**:
+- Keeps codebase unified on main
+- No stashing or context switching needed
+- Handle urgent fixes without disrupting current work
+- Multiple parallel workspaces when needed
+
+**Standard workflow**:
+```
+1. Create worktree: git worktree add .worktrees/[task] -b temp/[task] main
+2. Work in isolation: cd .worktrees/[task]
+3. Complete work: commit changes, run tests
+4. Merge back: git checkout main && git merge temp/[task]
+5. Cleanup: git branch -d temp/[task] && git worktree remove .worktrees/[task]
+```
+
+**When to use**:
+- Starting any feature work requiring isolation
+- Handling urgent hotfixes during active development
+- Reviewing pull requests locally
+- Testing changes in isolation
+
+**Configuration**:
+- Set worktree directory preference: `Worktree directory: .worktrees/`
+- Ensure `.worktrees/` is in `.gitignore`
+
+**Complete documentation**: `.claude/skills/git-worktrees/SKILL.md`
+
+---
+
+
 ## 🏎️ QUICK REFERENCE
 
 ### Core Principles & Decision Mantras
@@ -446,8 +473,6 @@ C) [option with brief rationale]"
 - Be honest about tradeoffs and limitations
 - Leave every conversation clearer than I found it
 
-.
-
 ### Pre-code checklist
 
 **Before writing ANY code, verify:**
@@ -463,10 +488,7 @@ C) [option with brief rationale]"
 □ I ran a quick self-check for contradictions/inconsistencies
 □ I avoided fabrication; missing info is labeled "unknown"
 ```
-
 **If ANY unchecked → STOP and analyze further**
-
-.
 
 ### Tools
 
