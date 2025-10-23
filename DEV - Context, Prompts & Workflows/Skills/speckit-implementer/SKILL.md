@@ -3,10 +3,33 @@ name: speckit-implementer
 description: Execute autonomous spec-driven implementation with parallel preparation agents. Orchestrates 6 specialized sub-agents for implementation planning (core, integrations, tests, docs) through parallel execution, review, and synthesis into implementation_plan.md, then proceeds with development
 ---
 
-# SpecKit Implementer
-Autonomous Implementation Workflow
+# SpecKit Implementer - Autonomous Implementation Workflow
 
-## 1. 🎯 When to Use
+## 1. 📄 Description
+
+Execute autonomous spec-driven implementation with parallel preparation agents. Orchestrates 6 specialized sub-agents for implementation planning (core, integrations, tests, docs) through parallel execution, review, and synthesis into implementation_plan.md, then proceeds with development
+
+## 📋 Table of Contents
+
+- [📄 Description](#description)
+- [🎯 When to Use](#when-to-use)
+- [🚀 Quick Command Reference](#quick-command-reference)
+- [🏗️ Architecture Overview](#architecture-overview)
+- [📝 Steps](#steps)
+- [📋 Implementation Plan Structure](#implementation-plan-structure)
+- [✅ Approval Gates](#approval-gates)
+- [⚙️ Field Handling](#field-handling)
+- [📥 Inputs & Outputs](#inputs--outputs)
+- [👥 Implementation Agents & Checkpoints](#implementation-agents--checkpoints)
+- [🔗 Integration & Standards](#integration--standards)
+- [⚡ Performance Characteristics](#performance-characteristics)
+- [🚨 Error Handling](#error-handling)
+- [⚠️ Limitations](#limitations)
+- [📈 Success Metrics](#success-metrics)
+
+.
+
+## 2. 🎯 When to Use
 
 **Use this skill when**:
 - Ready to implement a fully specified feature
@@ -23,7 +46,7 @@ Autonomous Implementation Workflow
 
 .
 
-## 2. 🚀 Quick Command Reference
+## 3. 🚀 Quick Command Reference
 
 > **📌 Context Note**: This skill implements **Steps 8-15** from the SpecKit implementation process (continuation from planning steps 1-7). References to "Step N" indicate steps from the source YAML specification, while "Section N" refers to document organization below.
 
@@ -42,7 +65,7 @@ Autonomous Implementation Workflow
 
 .
 
-## 3. 🏗️ Architecture Overview
+## 4. 🏗️ Architecture Overview
 
 This skill implements the sk_p__implementation.yaml workflow with 6 specialized implementation sub-agents: 4 execute in the parallel preparation phase, followed by sequential review and synthesis.
 
@@ -63,8 +86,7 @@ This skill implements the sk_p__implementation.yaml workflow with 6 specialized 
 
 .
 
-
-## 4. 📝 Steps
+## 5. 📝 Steps
 
 **Prerequisites**: Requires `spec.md`, `plan.md`, and `planning-summary.md` from Steps 1-7.
 
@@ -489,7 +511,7 @@ This step contains sub-phases that execute sequentially:
    - Dependency mapping
    - Plan document creation
 
-```
+```text
 ┌─────────────────────────────────┐
 │  Parallel Implementation Prep    │
 │  ┌────┐ ┌────┐ ┌────┐ ┌────┐   │
@@ -535,7 +557,7 @@ This step contains sub-phases that execute sequentially:
 
 .
 
-## 5. 📋 Implementation Plan Structure
+## 6. 📋 Implementation Plan Structure
 
 The skill produces `implementation_plan.md` with these sections:
 
@@ -587,7 +609,7 @@ The skill produces `implementation_plan.md` with these sections:
 
 .
 
-## 6. ✅ Approval Gates
+## 7. ✅ Approval Gates
 
 This workflow is **autonomous** with NO approval gates:
 
@@ -599,7 +621,7 @@ This workflow is **autonomous** with NO approval gates:
 
 .
 
-## 7. ⚙️ Field Handling
+## 8. ⚙️ Field Handling
 
 This workflow automatically handles empty input fields per sk_p__implementation.yaml:
 
@@ -691,7 +713,7 @@ This workflow automatically handles empty input fields per sk_p__implementation.
 
 .
 
-## 8. 📥 Inputs & Outputs
+## 9. 📥 Inputs & Outputs
 
 ### Inputs
 
@@ -708,7 +730,7 @@ This workflow automatically handles empty input fields per sk_p__implementation.
 
 ### Default Request
 If no request provided:
-```
+```text
 "Conduct a comprehensive review of the spec folder and
 carry out its implementation fully autonomously."
 ```
@@ -733,10 +755,9 @@ carry out its implementation fully autonomously."
    - Tests and documentation
    - Progressive updates
 
-
 .
 
-## 9. 👥 Implementation Agents & Checkpoints
+## 10. 👥 Implementation Agents & Checkpoints
 
 ### Parallel Agent Details
 
@@ -827,7 +848,7 @@ documentation:
 
 .
 
-## 10. 🔗 Integration & Standards
+## 11. 🔗 Integration & Standards
 
 ### Chrome DevTools Integration
 
@@ -887,7 +908,7 @@ documentation:
 
 .
 
-## 11. ⚡ Performance Characteristics
+## 12. ⚡ Performance Characteristics
 
 **Note**: Performance varies based on implementation scope and complexity. Preparation is structured; implementation duration depends on feature requirements.
 
@@ -899,7 +920,7 @@ documentation:
 
 .
 
-## 12. 🚨 Error Handling
+## 13. 🚨 Error Handling
 
 ### Retry Policy
 - **Targeted retries**: Only failed components
@@ -915,7 +936,7 @@ documentation:
 
 .
 
-## 13. ⚠️ Limitations
+## 14. ⚠️ Limitations
 
 - **Prerequisites**: Requires completed spec/plan
 - **Scope**: Limited to defined file scope
@@ -925,7 +946,7 @@ documentation:
 
 .
 
-## 14. 📈 Success Metrics
+## 15. 📈 Success Metrics
 
 **Note**: Target quality objectives for implementation execution.
 

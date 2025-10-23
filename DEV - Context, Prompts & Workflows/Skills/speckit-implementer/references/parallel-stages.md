@@ -2,7 +2,7 @@
 
 Parallel orchestration for implementation preparation with clear review and approval flow.
 
---
+---
 
 ## 1. 🎯 Stage Overview
 

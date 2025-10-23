@@ -3,10 +3,33 @@ name: speckit-complete
 description: Execute the complete 14-step SpecKit workflow with 18 specialized sub-agents running in 3 parallel stages. Implements the full sk_p__complete.yaml workflow with approval gates, review/synthesis phases, and adaptive rules for complexity handling
 ---
 
-# SpecKit Parallel Complete
-Full 14-Step Workflow Orchestration
+# SpecKit Parallel Complete - Full 14-Step Workflow Orchestration
 
-## 1. 🎯 When to Use
+## 1. 📄 Description
+
+Execute the complete 14-step SpecKit workflow with 18 specialized sub-agents running in 3 parallel stages. Implements the full sk_p__complete.yaml workflow with approval gates, review/synthesis phases, and adaptive rules for complexity handling
+
+## 📋 Table of Contents
+
+- [📄 Description](#description)
+- [🎯 When to Use](#when-to-use)
+- [🚀 Quick Command Reference](#quick-command-reference)
+- [🏗️ Architecture Overview](#architecture-overview)
+- [📝 Steps](#steps)
+- [🤝 Agent Coordination](#agent-coordination)
+- [🔄 Execution Model](#execution-model)
+- [📊 Stage Definitions](#stage-definitions)
+- [✅ Approval Gates](#approval-gates)
+- [⚙️ Adaptive Rules & Field Handling](#adaptive-rules--field-handling)
+- [🔗 Integration Points](#integration-points)
+- [⚡ Performance Characteristics](#performance-characteristics)
+- [🚨 Error Handling](#error-handling)
+- [⚠️ Limitations](#limitations)
+- [📈 Success Metrics](#success-metrics)
+
+.
+
+## 2. 🎯 When to Use
 
 **Use this skill when**:
 - SpecKit commands need to execute their underlying parallel workflows
@@ -22,7 +45,7 @@ Full 14-Step Workflow Orchestration
 
 .
 
-## 2. 🚀 Quick Command Reference
+## 3. 🚀 Quick Command Reference
 
 **Complete 14-Step Workflow** with 3 Parallel Stages:
 
@@ -47,7 +70,7 @@ Full 14-Step Workflow Orchestration
 
 .
 
-## 3. 🏗️ Architecture Overview
+## 4. 🏗️ Architecture Overview
 
 This skill implements the complete 14-step workflow with 18 specialized sub-agents organized into 3 parallel execution stages.
 
@@ -70,7 +93,7 @@ This skill implements the complete 14-step workflow with 18 specialized sub-agen
 
 .
 
-## 4. 📝 Steps
+## 5. 📝 Steps
 
 This section provides step-by-step execution guidance as defined in sk_p__complete.yaml.
 
@@ -538,39 +561,39 @@ This step contains sub-phases that execute sequentially:
    ```bash
    cd {worktree_path}
    git status  # Should show "nothing to commit, working tree clean"
-   ```
+```
 
 2. **Return to main repository**: Leave worktree and return to main project
    ```bash
    cd ../..  # Return to main project root
-   ```
+```
 
 3. **Checkout and update main**: Ensure main is current
    ```bash
    git checkout main
    git pull --ff-only  # Get latest changes from remote
-   ```
+```
 
 4. **Merge temp branch**: Fast-forward merge (should always succeed)
    ```bash
    git merge --ff-only temp/{spec-id}
-   ```
+```
 
 5. **Delete temp branch**: Remove temporary branch
    ```bash
    git branch -d temp/{spec-id}
-   ```
+```
 
 6. **Remove worktree**: Clean up worktree directory
    ```bash
    git worktree remove .worktrees/{spec-id}
-   ```
+```
 
 7. **Verify integration**: Confirm changes are on main
    ```bash
    git log --oneline -5  # Should show integrated commits
    git worktree list     # Should not show removed worktree
-   ```
+```
 
 **Success Criteria**:
 - ✅ Changes integrated to main
@@ -598,7 +621,7 @@ This step contains sub-phases that execute sequentially:
    ```bash
    cd {worktree_path}
    git push -u origin feature-{spec-id}
-   ```
+```
 
 2. **Keep worktree**: Leave worktree in place for continued development
    - Worktree remains at `.worktrees/{spec-id}`
@@ -606,7 +629,7 @@ This step contains sub-phases that execute sequentially:
    - Work can continue iteratively
 
 3. **Notify user**:
-   ```
+```text
    Feature branch 'feature-{spec-id}' ready for PR.
    Worktree preserved at {worktree_path}
 
@@ -615,7 +638,7 @@ This step contains sub-phases that execute sequentially:
    - Request code review
    - Address feedback in worktree
    - Merge via web interface after approval
-   ```
+```
 
 **User Manual Steps**:
 - Create pull request via GitHub/GitLab web interface
@@ -627,7 +650,7 @@ This step contains sub-phases that execute sequentially:
   cd ../..  # Return to main repo
   git worktree remove .worktrees/{spec-id}
   git branch -d feature-{spec-id}  # Delete local branch
-  ```
+```
 
 **Validation**: `feature_branch_pushed_and_ready_for_pr`
 
@@ -655,7 +678,7 @@ A) **Rebase and retry**: Rebase branch onto current main, then merge
    # Resolve conflicts
    git checkout main
    git merge --ff-only temp/{spec-id}
-   ```
+```
 
 B) **Manual resolution**: Resolve conflicts in worktree, commit, then merge
 
@@ -704,7 +727,7 @@ Error: fatal: Not possible to fast-forward, aborting.
 
 .
 
-## 5. 🤝 Agent Coordination
+## 6. 🤝 Agent Coordination
 
 **Note**: For complete sub-agent role definitions and output specifications, see [references/sub-agents.md](references/sub-agents.md).
 
@@ -734,13 +757,13 @@ Error: fatal: Not possible to fast-forward, aborting.
 
 .
 
-## 6. 🔄 Execution Model
+## 7. 🔄 Execution Model
 
 ### Parallel Block Pattern
 
 Each parallel stage follows this pattern:
 
-```
+```text
 ┌─────────────────────────────────┐
 │     Parallel Agent Execution     │
 │  ┌────┐ ┌────┐ ┌────┐ ┌────┐   │
@@ -767,7 +790,7 @@ Each parallel stage follows this pattern:
 
 .
 
-## 7. 📊 Stage Definitions
+## 8. 📊 Stage Definitions
 
 ### Stage A: Planning/Spec (Step 6)
 
@@ -913,7 +936,7 @@ Each parallel stage follows this pattern:
 
 .
 
-## 8. ✅ Approval Gates
+## 9. ✅ Approval Gates
 
 Each step has a mandatory approval gate per sk_p__complete.yaml:
 
@@ -938,7 +961,7 @@ Each step has a mandatory approval gate per sk_p__complete.yaml:
 
 .
 
-## 9. ⚙️ Adaptive Rules & Field Handling
+## 10. ⚙️ Adaptive Rules & Field Handling
 
 ### Adaptive Rules
 
@@ -1041,7 +1064,7 @@ This workflow automatically handles empty input fields per sk_p__complete.yaml:
 
 .
 
-## 10. 🔗 Integration Points
+## 11. 🔗 Integration Points
 
 ### With skills/README Selection Guide
 - Selection guide recommends which skill to use
@@ -1060,7 +1083,7 @@ This workflow automatically handles empty input fields per sk_p__complete.yaml:
 
 .
 
-## 11. ⚡ Performance Characteristics
+## 12. ⚡ Performance Characteristics
 
 **Note**: Performance varies based on system resources, complexity, and agent response efficiency.
 
@@ -1072,7 +1095,7 @@ This workflow automatically handles empty input fields per sk_p__complete.yaml:
 
 .
 
-## 12. 🚨 Error Handling
+## 13. 🚨 Error Handling
 
 ### Retry Policy
 - **Targeted retries**: Only failed agents
@@ -1087,7 +1110,7 @@ This workflow automatically handles empty input fields per sk_p__complete.yaml:
 
 .
 
-## 13. ⚠️ Limitations
+## 14. ⚠️ Limitations
 
 - **Requires parallel execution support**: Falls back to sequential if unavailable
 - **Memory intensive**: 18 agents require significant context
@@ -1096,7 +1119,7 @@ This workflow automatically handles empty input fields per sk_p__complete.yaml:
 
 .
 
-## 14. 📈 Success Metrics
+## 15. 📈 Success Metrics
 
 **Note**: Target quality metrics for workflow execution. These represent ideal performance goals.
 

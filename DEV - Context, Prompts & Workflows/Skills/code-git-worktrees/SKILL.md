@@ -3,10 +3,32 @@ name: code-git-worktrees
 description: Create isolated workspaces with minimal branching (main-focused by default). Uses short-lived temp branches that merge back to main immediately, keeping codebase unified while providing isolation benefits. Alternative strategies available for long-running features or experiments.
 ---
 
-# Git Worktrees
-Isolated Workspace Management
+# Git Worktrees - Isolated Workspace Management
 
-## 1. 🎯 When to Use
+## 1. 📄 Description
+
+Create isolated workspaces with minimal branching (main-focused by default). Uses short-lived temp branches that merge back to main immediately, keeping codebase unified while providing isolation benefits. Alternative strategies available for long-running features or experiments.
+
+## 📋 Table of Contents
+
+- [📄 Description](#description)
+- [🎯 When to Use](#when-to-use)
+- [🛠️ How It Works](#how-it-works)
+- [📊 Inputs](#inputs)
+- [🚀 Workflow](#workflow)
+- [📋 Branch Strategy Guide](#branch-strategy-guide)
+- [🎯 Decision Matrix](#decision-matrix)
+- [⚠️ Common Mistakes](#common-mistakes)
+- [📖 Rules](#rules)
+- [💡 Example Workflows](#example-workflows)
+- [🔗 Integration Points](#integration-points)
+- [🔧 Troubleshooting](#troubleshooting)
+- [📚 References](#references)
+- [🎓 Success Criteria](#success-criteria)
+
+.
+
+## 2. 🎯 When to Use
 
 **Use this skill when**:
 - Starting feature work requiring isolation from current workspace
@@ -27,7 +49,7 @@ Isolated Workspace Management
 
 .
 
-## 2. 🛠️ How It Works
+## 3. 🛠️ How It Works
 
 This skill creates isolated git worktrees - separate working directories sharing the same repository database. Each worktree can have a different branch checked out, allowing parallel work without context switching.
 
@@ -46,7 +68,7 @@ This skill creates isolated git worktrees - separate working directories sharing
 
 .
 
-## 3. 📊 Inputs
+## 4. 📊 Inputs
 
 ### Required Inputs
 
@@ -82,7 +104,7 @@ This skill creates isolated git worktrees - separate working directories sharing
 
 .
 
-## 4. 🚀 Workflow
+## 5. 🚀 Workflow
 
 ### Step 1: Gather User Inputs
 
@@ -111,25 +133,25 @@ This skill creates isolated git worktrees - separate working directories sharing
    ```bash
    ls -d .worktrees 2>/dev/null     # Preferred (hidden)
    ls -d worktrees 2>/dev/null      # Alternative
-   ```
+```
    **If found**: Use that directory. If both exist, `.worktrees` wins.
 
 2. **Check AGENTS.md**
    ```bash
    grep -i "worktree.*directory" AGENTS.md 2>/dev/null
-   ```
+```
    **If preference specified**: Use it without asking.
 
 3. **Ask User**
    If no directory exists and no AGENTS.md preference:
-   ```
+```text
    No worktree directory found. Where should I create worktrees?
 
    1. .worktrees/ (project-local, hidden)
    2. ~/.config/superpowers/worktrees/<project-name>/ (global location)
 
    Which would you prefer?
-   ```
+```
 
 **Validation**: `directory_determined`
 
@@ -166,7 +188,7 @@ grep -q "^\.worktrees/$" .gitignore || grep -q "^worktrees/$" .gitignore
 1. **Detect Project Name**:
    ```bash
    project=$(basename "$(git rev-parse --show-toplevel)")
-   ```
+```
 
 2. **Determine Path**:
    ```bash
@@ -178,29 +200,29 @@ grep -q "^\.worktrees/$" .gitignore || grep -q "^worktrees/$" .gitignore
        path="$HOME/.config/superpowers/worktrees/$project/$BRANCH_NAME"
        ;;
    esac
-   ```
+```
 
 3. **Create Worktree** (strategy-dependent):
 
    **Feature Branch**:
    ```bash
    git worktree add "$path" -b "$BRANCH_NAME"
-   ```
+```
 
    **Main Temp** (short-lived branch):
    ```bash
    git worktree add "$path" -b "temp/$TASK_ID" main
-   ```
+```
 
    **Main Detached** (no branch):
    ```bash
    git worktree add --detach "$path" main
-   ```
+```
 
 4. **Navigate**:
    ```bash
    cd "$path"
-   ```
+```
 
 **Validation**: `worktree_created`
 
@@ -254,7 +276,7 @@ if [ -f go.mod ]; then go test ./...; fi    # Go
 **Purpose**: Communicate location and status
 
 **Report Format**:
-```
+```text
 ✓ Worktree ready at <full-path>
 ✓ Branch: <branch-name> (<strategy>)
 ✓ Tests passing (<N> tests, 0 failures)
@@ -265,7 +287,7 @@ if [ -f go.mod ]; then go test ./...; fi    # Go
 
 .
 
-## 5. 📋 Branch Strategy Guide
+## 6. 📋 Branch Strategy Guide
 
 ### Main Temp (Default - Recommended) ⭐
 
@@ -328,7 +350,7 @@ git worktree add --detach .worktrees/experiment main
 
 .
 
-## 6. 🎯 Decision Matrix
+## 7. 🎯 Decision Matrix
 
 | Situation | Directory Strategy | Branch Strategy |
 |-----------|-------------------|-----------------|
@@ -342,7 +364,7 @@ git worktree add --detach .worktrees/experiment main
 
 .
 
-## 7. ⚠️ Common Mistakes
+## 8. ⚠️ Common Mistakes
 
 **Skipping .gitignore verification**:
 - **Problem**: Worktree contents get tracked, pollute git status
@@ -366,7 +388,7 @@ git worktree add --detach .worktrees/experiment main
 
 .
 
-## 8. 📖 Rules
+## 9. 📖 Rules
 
 ### ALWAYS
 
@@ -395,11 +417,11 @@ git worktree add --detach .worktrees/experiment main
 
 .
 
-## 9. 💡 Example Workflows
+## 10. 💡 Example Workflows
 
 ### Example 1: Main Temp (Default Workflow) ⭐
 
-```
+```text
 User: "Quick fix for modal close button"
 Claude: "I'm using the git-worktrees skill with main-focused strategy (default)."
 
@@ -427,7 +449,7 @@ Claude: "Merging back to main and cleaning up temp branch..."
 
 ### Example 2: Feature Branch (Long-Running Work)
 
-```
+```text
 User: "I need to implement user authentication - this will take a few days"
 
 Claude: "I'm using the git-worktrees skill with feature branch strategy."
@@ -451,7 +473,7 @@ Claude: "I'm using the git-worktrees skill with feature branch strategy."
 
 ### Example 3: Main Detached (Experimental)
 
-```
+```text
 User: "Want to experiment with a new approach, not sure if I'll keep it"
 
 Claude: "I'm using detached HEAD worktree for experimentation."
@@ -480,7 +502,7 @@ Claude: "Creating branch from detached HEAD..."
 
 .
 
-## 10. 🔗 Integration Points
+## 11. 🔗 Integration Points
 
 ### Called By
 - **SpecKit workflows** - When implementation begins (Step 11)
@@ -499,7 +521,7 @@ Claude: "Creating branch from detached HEAD..."
 
 .
 
-## 11. 🔧 Troubleshooting
+## 12. 🔧 Troubleshooting
 
 ### Worktree Creation Fails
 
@@ -553,7 +575,7 @@ git worktree prune
 
 .
 
-## 12. 📚 References
+## 13. 📚 References
 
 ### Related Documentation
 - specs/002-claude-skill-git-worktree/git-worktrees-guide.md - Complete conceptual guide
@@ -570,7 +592,7 @@ git worktree prune
 
 .
 
-## 13. 🎓 Success Criteria
+## 14. 🎓 Success Criteria
 
 **Worktree creation is successful when**:
 - ✅ Directory selected following priority system

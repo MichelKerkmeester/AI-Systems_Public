@@ -594,7 +594,6 @@ high_complexity:
 - **Quality**: Higher (exhaustive review catches more issues)
 - **Resource Usage**: Lower peak usage (fewer concurrent agents)
 
----
 
 ### Rule: high_uncertainty
 
@@ -623,7 +622,6 @@ high_uncertainty:
 - **Accuracy**: More conservative estimates reduce over-commitment
 - **Risk Mitigation**: Discovery phase prevents wasted parallel effort
 
----
 
 ### Rule: parallel_not_supported
 
@@ -651,7 +649,6 @@ parallel_not_supported:
 - **Quality**: Same (review/synthesis phases preserved)
 - **Resource Usage**: Minimal (single agent at a time)
 
----
 
 ### Adaptive Rule Decision Tree
 
@@ -676,7 +673,6 @@ Check Parallel Support
 Execute Planning with Adapted Configuration
 ```
 
----
 
 ### Rule Combination Matrix
 
@@ -690,7 +686,6 @@ Execute Planning with Adapted Configuration
 
 *Review depth determined by complexity score
 
----
 
 .
 

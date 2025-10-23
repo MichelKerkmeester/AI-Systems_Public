@@ -3,10 +3,38 @@ name: speckit-spec-plan
 description: Execute spec-driven planning workflow with parallel specialist analyses. Orchestrates 6 specialized planning sub-agents through parallel execution, review, and synthesis to produce plan.md and planning-summary.md with manual approval gates
 ---
 
-# SpecKit Plan & Spec
-Plan and Specify Features with Parallel Analysis Workflow
+# SpecKit Plan & Spec - Plan and Specify Features with Parallel Analysis Workflow
 
-## 1. 🎯 When to Use This Skill
+## 1. 📄 Description
+
+Execute spec-driven planning workflow with parallel specialist analyses. Orchestrates 6 specialized planning sub-agents through parallel execution, review, and synthesis to produce plan.md and planning-summary.md with manual approval gates
+
+## 📋 Table of Contents
+
+- [📄 Description](#description)
+- [🎯 When to Use This Skill](#when-to-use-this-skill)
+- [🚀 Quick Command Reference](#quick-command-reference)
+- [🏗️ Architecture Overview](#architecture-overview)
+- [📋 Steps](#steps)
+- [👥 Planning Sub-Agents](#planning-sub-agents)
+- [🔄 Execution Model](#execution-model)
+- [📄 Planning Document Structure](#planning-document-structure)
+- [✅ Approval Gates](#approval-gates)
+- [⚙️ Field Handling](#field-handling)
+- [📥 Inputs](#inputs)
+- [📤 Outputs](#outputs)
+- [🧩 Parallel Agent Specifications](#parallel-agent-specifications)
+- [🌐 Chrome DevTools Integration](#chrome-devtools-integration)
+- [🎛️ Adaptive Rules](#adaptive-rules)
+- [✨ Quality Standards](#quality-standards)
+- [⚡ Performance Characteristics](#performance-characteristics)
+- [🚨 Error Handling](#error-handling)
+- [⚠️ Limitations](#limitations)
+- [📈 Success Metrics](#success-metrics)
+
+.
+
+## 2. 🎯 When to Use This Skill
 
 **Use this skill when**:
 - Creating technical plans from specifications
@@ -28,7 +56,7 @@ Use other skills or direct edits for:
 
 .
   
-## 2. 🚀 Quick Command Reference
+## 3. 🚀 Quick Command Reference
 | Step | Command | Purpose |
 |------|---------|----------|
 | 1 | Manual | Request Analysis |
@@ -43,7 +71,7 @@ Use other skills or direct edits for:
 
 .
 
-## 3. 🏗️ Architecture Overview
+## 4. 🏗️ Architecture Overview
 
 This skill implements the sk_p__spec_plan.yaml workflow with 6 specialized planning sub-agents executing in parallel analysis phase.
 
@@ -61,7 +89,7 @@ This skill implements the sk_p__spec_plan.yaml workflow with 6 specialized plann
 
 .
 
-## 4. 📋 Steps
+## 5. 📋 Steps
 
 This section provides step-by-step execution guidance as defined in sk_p__spec_plan.yaml.
 
@@ -168,7 +196,7 @@ This section provides step-by-step execution guidance as defined in sk_p__spec_p
 
 **Validation**: `principles_established`
 
-**Note**: No approval gate for this step
+**Note**: Approval gate occurs before this step (1→2)
 
 ### Step 3: Specification
 
@@ -211,7 +239,7 @@ This section provides step-by-step execution guidance as defined in sk_p__spec_p
 
 **Validation**: `checklist_generated`
 
-**Note**: No approval gate for this step
+**Note**: Approval gate occurs before this step (4→5)
 
 ### Step 6: Parallel Planning Block
 
@@ -367,7 +395,7 @@ Branch strategy has been set and will be inherited by subsequent workflows.
 
 .
 
-## 5. 👥 Planning Sub-Agents
+## 6. 👥 Planning Sub-Agents
 
 **Note**: For detailed agent specifications and output formats, see [references/sub-agents.md](references/sub-agents.md).
 
@@ -409,13 +437,13 @@ Branch strategy has been set and will be inherited by subsequent workflows.
 
 .
 
-## 6. 🔄 Execution Model
+## 7. 🔄 Execution Model
 
 ### Parallel Planning Pattern
 
 **Note**: All parallel execution, review, synthesis, and main agent finalization occur within Step 6 as sub-phases, NOT as separate steps.
 
-```
+```text
 ┌─────────────────────────────────┐
 │    Parallel Planning Analysis    │
 │  ┌────┐ ┌────┐ ┌────┐ ┌────┐   │
@@ -460,7 +488,7 @@ Branch strategy has been set and will be inherited by subsequent workflows.
 
 .
 
-## 7. 📄 Planning Document Structure
+## 8. 📄 Planning Document Structure
 
 The skill produces two key documents:
 
@@ -506,7 +534,7 @@ The skill produces two key documents:
 
 .
 
-## 8. ✅ Approval Gates
+## 9. ✅ Approval Gates
 
 This workflow includes manual approval gates at key points:
 
@@ -520,7 +548,7 @@ This workflow includes manual approval gates at key points:
 
 .
 
-## 9. ⚙️ Field Handling
+## 10. ⚙️ Field Handling
 
 This workflow automatically handles empty input fields per sk_p__spec_plan.yaml:
 
@@ -585,7 +613,7 @@ This workflow automatically handles empty input fields per sk_p__spec_plan.yaml:
 
 .
 
-## 10. 📥 Inputs
+## 11. 📥 Inputs
 
 ### Required Inputs
 - **request**: Feature description or requirements
@@ -606,7 +634,7 @@ This workflow automatically handles empty input fields per sk_p__spec_plan.yaml:
 
 .
 
-## 11. 📤 Outputs
+## 12. 📤 Outputs
 
 ### Primary Outputs
 
@@ -628,7 +656,7 @@ This workflow automatically handles empty input fields per sk_p__spec_plan.yaml:
 
 .
 
-## 12. 🧩 Parallel Agent Specifications
+## 13. 🧩 Parallel Agent Specifications
 
 ### Requirements Analyst Output
 ```yaml
@@ -743,7 +771,7 @@ estimation_breakdown:
 
 .
 
-## 13. 🌐 Chrome DevTools Integration
+## 14. 🌐 Chrome DevTools Integration
 
 When staging URL is provided:
 
@@ -761,7 +789,7 @@ When staging URL is provided:
 
 .
 
-## 14. 🎛️ Adaptive Rules
+## 15. 🎛️ Adaptive Rules
 
 **Note**: For complete adaptive rule specifications, planning complexity assessment, requirement clarity scoring, and stakeholder strategies, see [references/adaptive-rules.md](references/adaptive-rules.md).
 
@@ -785,7 +813,7 @@ When staging URL is provided:
 
 .
 
-## 15. ✨ Quality Standards
+## 16. ✨ Quality Standards
 
 ### Planning Quality
 - Complete requirement coverage
@@ -807,7 +835,7 @@ When staging URL is provided:
 
 .
 
-## 16. ⚡ Performance Characteristics
+## 17. ⚡ Performance Characteristics
 
 **Note**: Performance varies based on specification complexity and detail level.
 
@@ -819,7 +847,7 @@ When staging URL is provided:
 
 .
 
-## 17. 🚨 Error Handling
+## 18. 🚨 Error Handling
 
 ### Retry Policy
 - **Targeted retries**: Failed agents only
@@ -834,7 +862,7 @@ When staging URL is provided:
 
 .
 
-## 18. ⚠️ Limitations
+## 19. ⚠️ Limitations
 
 - **Scope**: Planning phase only (not implementation)
 - **Approvals**: Manual gates required
@@ -844,7 +872,7 @@ When staging URL is provided:
 
 .
 
-## 19. 📈 Success Metrics
+## 20. 📈 Success Metrics
 
 **Note**: Target benchmarks for planning quality and thoroughness.
 
