@@ -82,14 +82,6 @@ This skill creates isolated git worktrees - separate working directories sharing
 
 .
 
-## YAML → Steps Crosswalk
-
-- Source: N/A (No YAML source - skill is self-contained)
-- Canonical: This SKILL.md + specs/002-claude-skill-git-worktree/*.md
-- Steps: See Section 4 (Workflow)
-
-.
-
 ## 4. 🚀 Workflow
 
 ### Step 1: Gather User Inputs
@@ -124,7 +116,7 @@ This skill creates isolated git worktrees - separate working directories sharing
 
 2. **Check AGENTS.md**
    ```bash
-   grep -i "worktree.*director" AGENTS.md 2>/dev/null
+   grep -i "worktree.*directory" AGENTS.md 2>/dev/null
    ```
    **If preference specified**: Use it without asking.
 
@@ -155,7 +147,7 @@ grep -q "^\.worktrees/$" .gitignore || grep -q "^worktrees/$" .gitignore
 
 **If NOT in .gitignore**:
 1. Add appropriate line to `.gitignore`
-2. Commit the change immediately
+2. Ask for approval, then commit the change
 3. Proceed with worktree creation
 
 **Rationale**: Prevents accidentally committing worktree contents to repository.
@@ -183,7 +175,7 @@ grep -q "^\.worktrees/$" .gitignore || grep -q "^worktrees/$" .gitignore
        path="$LOCATION/$BRANCH_NAME"
        ;;
      ~/.config/superpowers/worktrees/*)
-       path="~/.config/superpowers/worktrees/$project/$BRANCH_NAME"
+       path="$HOME/.config/superpowers/worktrees/$project/$BRANCH_NAME"
        ;;
    esac
    ```
@@ -242,10 +234,10 @@ if [ -f go.mod ]; then go mod download; fi
 **Actions**:
 ```bash
 # Run project-appropriate tests
-npm test           # Node.js
-cargo test         # Rust
-pytest             # Python
-go test ./...      # Go
+if [ -f package.json ]; then npm test; fi    # Node.js
+if [ -f Cargo.toml ]; then cargo test; fi   # Rust
+if [ -f pyproject.toml ] || [ -f requirements.txt ]; then pytest; fi  # Python
+if [ -f go.mod ]; then go test ./...; fi    # Go
 ```
 
 **If tests fail**:
@@ -368,9 +360,9 @@ git worktree add --detach .worktrees/experiment main
 - **Problem**: Breaks on projects using different tools
 - **Fix**: Auto-detect from project files (package.json, etc.)
 
-**Not checking out same branch twice**:
-- **Problem**: Git prevents checking out same branch in multiple worktrees
-- **Fix**: Use different branches or detached HEAD for parallel work on same codebase state
+**Avoid checking out the same branch in multiple worktrees**:
+- **Problem**: Git prevents checking out the same branch in multiple worktrees
+- **Fix**: Use different branches or detached HEAD for parallel work on the same codebase state
 
 .
 
@@ -520,13 +512,13 @@ Claude: "Creating branch from detached HEAD..."
 
 **Solutions**:
 ```bash
-# Remove existing directory
-rm -rf .worktrees/branch-name
+# Remove worktree safely
+git worktree remove .worktrees/branch-name
 
 # Check existing worktrees
 git worktree list
 
-# Remove stale worktree reference
+# Prune stale references (if needed)
 git worktree prune
 ```
 

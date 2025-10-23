@@ -68,24 +68,7 @@ This skill implements the complete 14-step workflow with 18 specialized sub-agen
 13. **Completion** - Document changes
 14. **Branch Integration** - Merge to main
 
-## YAML → Steps Crosswalk
-
-- Source: b_prompts/github_spec_kit/parallel_agents/sk_p__complete.yaml
-- Mapping:
-  - Step 1 → Request Analysis
-  - Step 2 → Pre-work Review
-  - Step 3 → Specification (/speckit.specify)
-  - Step 4 → Clarification (/speckit.clarify)
-  - Step 5 → Quality Checklist (/speckit.checklist)
-  - Step 6 → Parallel Planning (Stage A)
-  - Step 7 → Task Breakdown (/speckit.tasks)
-  - Step 8 → Analysis (/speckit.analyze)
-  - Step 9 → Parallel Implementation Prep (Stage B)
-  - Step 10 → Implementation Check (/speckit.implement)
-  - Step 11 → Development
-  - Step 12 → Parallel Quality Review (Stage C)
-  - Step 13 → Completion
-  - Step 14 → Branch Integration
+.
 
 ## 4. 📝 Steps
 
@@ -189,6 +172,8 @@ This section provides step-by-step execution guidance as defined in sk_p__comple
 **Approval Gate**: "Workspace created at {worktree_path} on branch {git_branch}. Proceed to pre-work review?"
 
 **Note**: All subsequent steps execute within this worktree context
+
+.
 
 ### Step 2: Pre-work Review
 
@@ -601,6 +586,8 @@ This step contains sub-phases that execute sequentially:
 
 **Termination**: Workflow ends after integration complete
 
+.
+
 #### If feature_branch (Exception - 20% of work):
 
 **Philosophy**: Long-running branches remain for PR workflow and team review.
@@ -648,6 +635,8 @@ This step contains sub-phases that execute sequentially:
 
 **Termination**: Workflow pauses; PR workflow takes over
 
+.
+
 #### Conflict Resolution (Applies to both strategies)
 
 **If merge conflict occurs** (rare with main_temp, possible with feature_branch):
@@ -673,6 +662,8 @@ B) **Manual resolution**: Resolve conflicts in worktree, commit, then merge
 C) **Abort and investigate**: Cancel integration, investigate why main diverged
 
 **Note**: Conflicts are rare with main_temp (immediate integration). If conflicts occur frequently, review team workflow.
+
+.
 
 #### Troubleshooting
 
@@ -1079,6 +1070,8 @@ This workflow automatically handles empty input fields per sk_p__complete.yaml:
 - **Stage C**: Parallel execution of 4 quality reviewers + review + synthesis
 - **Orchestration**: Minimal overhead for coordination between stages
 
+.
+
 ## 12. 🚨 Error Handling
 
 ### Retry Policy
@@ -1111,10 +1104,3 @@ This workflow automatically handles empty input fields per sk_p__complete.yaml:
 - **Agent success rate**: >95% first attempt
 - **Synthesis quality**: >90% coherence score
 - **Approval rate**: >80% first-time approvals
-
-.
-
-## 15. References
-- `references/sub-agents.md` - Detailed sub-agent definitions
-- `references/parallel-stages.md` - Stage orchestration patterns
-- `references/adaptive-rules.md` - Complexity handling rules

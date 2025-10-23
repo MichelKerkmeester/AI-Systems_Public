@@ -59,17 +59,7 @@ This skill implements the sk_p__spec_plan.yaml workflow with 6 specialized plann
 
 **Termination**: This workflow ends after step 7 (planning phase only)
 
-## YAML → Steps Crosswalk
-
-- Source: b_prompts/github_spec_kit/parallel_agents/sk_p__spec_plan.yaml
-- Mapping:
-  - Step 1 → Request Analysis
-  - Step 2 → Pre-work Review
-  - Step 3 → Specification (/speckit.specify)
-  - Step 4 → Clarification (/speckit.clarify)
-  - Step 5 → Quality Checklist (/speckit.checklist)
-  - Step 6 → Parallel Planning Block
-  - Step 7 → Planning (/speckit.plan)
+.
 
 ## 4. 📋 Steps
 
@@ -863,12 +853,3 @@ When staging URL is provided:
 - **Completeness**: No critical gaps
 - **Quality**: >85% first-pass approval
 - **Efficiency**: Optimized parallel execution
-
-.
-
-## 20. References
-
-- Source: `/b_prompts/github_spec_kit/parallel_agents/sk_p__spec_plan.yaml`
-- Prerequisites: Feature request or existing spec
-- Next Steps: Use speckit-implementer for execution
-- Output: plan.md, planning-summary.md

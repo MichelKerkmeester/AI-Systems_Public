@@ -57,18 +57,7 @@ This skill implements the sk_p__feature_research.yaml workflow with 6 specialize
 
 **Note**: This workflow runs autonomously for steps 1–7; step 8 requires user confirmation for branch integration.
 
-## YAML → Steps Crosswalk
-
-- Source: b_prompts/github_spec_kit/parallel_agents/sk_p__feature_research.yaml
-- Mapping:
-  - Step 1 → Gather Inputs & Define Scope
-  - Step 2 → Pre-work Review
-  - Step 3 → Parallel Research Block
-  - Step 4 → Research Compilation
-  - Step 5 → Quality Checklist (/speckit.checklist)
-  - Step 6 → Solution Design
-  - Step 7 → Final Research Compilation
-  - Step 8 → Branch Integration (conditional)
+,
 
 ## 4. 📝 Steps
 
@@ -814,11 +803,3 @@ If parallel execution fails:
 - **Contradictions**: <10% unresolved
 - **Completeness**: All sections populated
 - **Quality score**: >85% validation pass
-
-.
-
-## 17. References
-
-- Source: `/b_prompts/github_spec_kit/parallel_agents/sk_p__feature_research.yaml`
-- Integration: Works with all SpecKit skills
-- Output: Comprehensive research.md documentation

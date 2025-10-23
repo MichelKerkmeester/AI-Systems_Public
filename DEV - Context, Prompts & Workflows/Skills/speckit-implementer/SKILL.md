@@ -61,20 +61,8 @@ This skill implements the sk_p__implementation.yaml workflow with 6 specialized 
 
 **Note**: This is an autonomous workflow with NO approval gates
 
-## YAML → Steps Crosswalk
-
-- Source: b_prompts/github_spec_kit/parallel_agents/sk_p__implementation.yaml
-- Mapping (this skill covers Steps 8–15):
-  - Step 8 → Review Plan and Spec
-  - Step 9 → Task Breakdown (/speckit.tasks)
-  - Step 10 → Analysis (/speckit.analyze)
-  - Step 11 → Quality Checklist (/speckit.checklist)
-  - Step 12 → Parallel Implementation Preparation
-  - Step 13 → Implementation Check (/speckit.implement)
-  - Step 14 → Development
-  - Step 15 → Completion
-
 .
+
 
 ## 4. 📝 Steps
 
@@ -745,6 +733,7 @@ carry out its implementation fully autonomously."
    - Tests and documentation
    - Progressive updates
 
+
 .
 
 ## 9. 👥 Implementation Agents & Checkpoints
@@ -945,12 +934,3 @@ documentation:
 - **Implementation coverage**: >95% tasks completed
 - **Test coverage**: Meets defined targets
 - **Documentation**: Complete and accurate
-
-.
-
-## 15. References
-
-- Source: `/b_prompts/github_spec_kit/parallel_agents/sk_p__implementation.yaml`
-- Prerequisites: spec.md, plan.md, planning-summary.md
-- Integration: Works with all SpecKit skills
-- Output: implementation_plan.md, implementation-summary.md, code changes
