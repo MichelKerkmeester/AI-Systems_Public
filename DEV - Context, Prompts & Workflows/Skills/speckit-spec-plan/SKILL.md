@@ -85,7 +85,7 @@ This skill implements the sk_p__spec_plan.yaml workflow with 6 specialized plann
 6. **Parallel Planning Block** - 4 analysts work in parallel
 7. **Planning** - Finalize technical approach and plan.md
 
-**Termination**: This workflow ends after step 7 (planning phase only)
+**Termination**: This workflow ends after step 9 (planning phase only)
 
 .
 
@@ -153,9 +153,9 @@ This section provides step-by-step execution guidance as defined in sk_p__spec_p
 
 **Validation**: `all_inputs_collected_and_confirmed`
 
-**Approval Gate**: "All inputs collected. Branch strategy: {branch_strategy} on {git_branch}. Spec folder: {spec_folder}. Proceed to pre-work review?"
+**Approval Gate**: "All inputs collected. Branch strategy: {branch_strategy} on {git_branch}. Spec folder: {spec_folder}. Proceed to workspace setup?"
 
-### Step 1.5: Workspace Setup
+### Step 2: Workspace Setup
 
 **Action**: Create isolated worktree for planning
 
@@ -183,7 +183,9 @@ This section provides step-by-step execution guidance as defined in sk_p__spec_p
 
 **Note**: All subsequent steps execute within this worktree context
 
-### Step 2: Pre-work Review
+**Approval Gate**: "Workspace ready at {worktree_path} on branch {git_branch}. Baseline tests: {baseline_tests}. Proceed to pre-work review?"
+
+### Step 3: Pre-work Review
 
 **Action**: Review required documents
 
@@ -196,9 +198,9 @@ This section provides step-by-step execution guidance as defined in sk_p__spec_p
 
 **Validation**: `principles_established`
 
-**Note**: Approval gate occurs before this step (1→2)
+**Note**: Approval gate occurs before this step (2→3)
 
-### Step 3: Specification
+### Step 4: Specification
 
 **Command**: `/speckit.specify [feature-description]`
 
@@ -213,7 +215,7 @@ This section provides step-by-step execution guidance as defined in sk_p__spec_p
 
 **Note**: No approval gate for this step
 
-### Step 4: Clarification
+### Step 5: Clarification
 
 **Command**: `/speckit.clarify`
 
@@ -228,7 +230,7 @@ This section provides step-by-step execution guidance as defined in sk_p__spec_p
 
 **Approval Gate**: "Requirements clarified. Proceed to quality checklist?"
 
-### Step 5: Quality Checklist
+### Step 6: Quality Checklist
 
 **Command**: `/speckit.checklist`
 
@@ -241,7 +243,7 @@ This section provides step-by-step execution guidance as defined in sk_p__spec_p
 
 **Note**: Approval gate occurs before this step (4→5)
 
-### Step 6: Parallel Planning Block
+### Step 7: Parallel Planning Block
 
 **Description**: Parallel specialist analyses with bounded concurrency
 
@@ -323,7 +325,7 @@ This step contains sub-phases that execute sequentially:
 
 **Approval Gate**: "Planning artifacts synthesized. Approve to proceed?"
 
-### Step 7: Planning
+### Step 8: Planning
 
 **Command**: `/speckit.plan [context]`
 
@@ -350,9 +352,9 @@ This step contains sub-phases that execute sequentially:
 **Final Output**:
 - Location: `specs/[NNN-feature]/planning-summary.md`
 - Required Sections: feature_overview, technical_approach, dependencies_identified, risks_and_mitigation, recommended_next_steps
-- Completion Message: "Planning phase complete. The workflow has been executed through step 7. Technical plan and approach have been documented. To proceed with implementation, use the full workflow_automated.yaml."
+- Completion Message: "Planning phase complete. The workflow has been executed through step 9. Technical plan and approach have been documented. To proceed with implementation, use the speckit-implementer skill."
 
-**Termination**: Workflow ends after this step
+**Termination**: Workflow ends after Step 9
 
 **Branch Integration Note**:
 
@@ -360,13 +362,13 @@ Branch strategy has been set and will be inherited by subsequent workflows.
 
 - **If `main_temp` was selected (default)**:
   - Planning work occurs in an isolated worktree on branch `temp/{spec-id}`
-  - Integration and cleanup are handled in Step 7.5 (fast-forward merge to main, delete temp branch, remove worktree)
+  - Integration and cleanup are handled in Step 8 (fast-forward merge to main, delete temp branch, remove worktree)
 
 - **If `feature_branch` was selected**:
   - Planning artifacts live on `feature-{spec-id}`
-  - Step 7.5 will push the feature branch for PR and preserve the worktree until PR merge
+  - Step 8 will push the feature branch for PR and preserve the worktree until PR merge
 
-### Step 7.5: Integration & Cleanup
+### Step 9: Integration & Cleanup
 
 **Action**: Integrate planning work and cleanup based on strategy
 
@@ -380,7 +382,7 @@ Branch strategy has been set and will be inherited by subsequent workflows.
 7. Verify: `git worktree list` shows no removed worktree; `git branch | grep temp/{spec-id}` returns nothing
 
 #### If `feature_branch` (Exception)
-1. Push feature branch: `git push -u origin feature-{spec-id}`
+1. Push feature branch: `git push -u <remote> feature-{spec-id}` (default remote: `origin`)
 2. Keep worktree for continued work
 3. Create PR and proceed with review; cleanup after merge
 
@@ -866,7 +868,7 @@ When staging URL is provided:
 
 - **Scope**: Planning phase only (not implementation)
 - **Approvals**: Manual gates required
-- **Termination**: Ends after step 7
+- **Termination**: Ends after step 9
 - **Dependencies**: Requires spec.md
 - **Language**: English only
 

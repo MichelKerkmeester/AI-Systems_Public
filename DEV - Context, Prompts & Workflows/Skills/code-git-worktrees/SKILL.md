@@ -130,14 +130,14 @@ This skill creates isolated git worktrees - separate working directories sharing
 **Priority Order**:
 
 1. **Check Existing Directories**
-   ```bash
+```bash
    ls -d .worktrees 2>/dev/null     # Preferred (hidden)
    ls -d worktrees 2>/dev/null      # Alternative
 ```
    **If found**: Use that directory. If both exist, `.worktrees` wins.
 
 2. **Check AGENTS.md**
-   ```bash
+```bash
    grep -i "worktree.*directory" AGENTS.md 2>/dev/null
 ```
    **If preference specified**: Use it without asking.
@@ -163,11 +163,14 @@ This skill creates isolated git worktrees - separate working directories sharing
 
 **Critical Check**:
 ```bash
-# Verify directory pattern in .gitignore
-grep -q "^\.worktrees/$" .gitignore || grep -q "^worktrees/$" .gitignore
+# Prefer git's matcher to verify ignore status for project-local directories
+# A match indicates the path would be ignored
+git check-ignore -n .worktrees 2>/dev/null \
+  || git check-ignore -n worktrees 2>/dev/null \
+  || echo "NOT_IGNORED"
 ```
 
-**If NOT in .gitignore**:
+**If NOT ignored**:
 1. Add appropriate line to `.gitignore`
 2. Ask for approval, then commit the change
 3. Proceed with worktree creation
@@ -186,12 +189,12 @@ grep -q "^\.worktrees/$" .gitignore || grep -q "^worktrees/$" .gitignore
 **Actions**:
 
 1. **Detect Project Name**:
-   ```bash
+```bash
    project=$(basename "$(git rev-parse --show-toplevel)")
 ```
 
 2. **Determine Path**:
-   ```bash
+```bash
    case $LOCATION in
      .worktrees|worktrees)
        path="$LOCATION/$BRANCH_NAME"
@@ -205,22 +208,22 @@ grep -q "^\.worktrees/$" .gitignore || grep -q "^worktrees/$" .gitignore
 3. **Create Worktree** (strategy-dependent):
 
    **Feature Branch**:
-   ```bash
+```bash
    git worktree add "$path" -b "$BRANCH_NAME"
 ```
 
    **Main Temp** (short-lived branch):
-   ```bash
+```bash
    git worktree add "$path" -b "temp/$TASK_ID" main
 ```
 
    **Main Detached** (no branch):
-   ```bash
+```bash
    git worktree add --detach "$path" main
 ```
 
 4. **Navigate**:
-   ```bash
+```bash
    cd "$path"
 ```
 
@@ -233,8 +236,13 @@ grep -q "^\.worktrees/$" .gitignore || grep -q "^worktrees/$" .gitignore
 **Auto-Detection**:
 
 ```bash
-# Node.js
-if [ -f package.json ]; then npm install; fi
+# Node.js — respect lockfiles and package manager
+if [ -f package.json ]; then
+  if [ -f yarn.lock ]; then yarn install;
+  elif [ -f pnpm-lock.yaml ]; then pnpm install;
+  elif [ -f bun.lockb ]; then bun install;
+  else npm install; fi
+fi
 
 # Rust
 if [ -f Cargo.toml ]; then cargo build; fi
@@ -246,6 +254,10 @@ if [ -f pyproject.toml ]; then poetry install; fi
 # Go
 if [ -f go.mod ]; then go mod download; fi
 ```
+
+Notes:
+- For monorepos, run installs at the correct package scope (e.g., workspace managers) instead of assuming repo root.
+- If `corepack` is enabled, use it to ensure correct yarn/pnpm versions.
 
 **Validation**: `dependencies_installed`
 
@@ -261,6 +273,9 @@ if [ -f Cargo.toml ]; then cargo test; fi   # Rust
 if [ -f pyproject.toml ] || [ -f requirements.txt ]; then pytest; fi  # Python
 if [ -f go.mod ]; then go test ./...; fi    # Go
 ```
+
+Fast mode (large repos):
+- Optionally run a reduced subset or skip baseline tests when explicitly requested (e.g., set `FAST_BASELINE=true`). Confirm with the user before skipping tests.
 
 **If tests fail**:
 - Report failures with details
@@ -510,9 +525,9 @@ Claude: "Creating branch from detached HEAD..."
 - Any skill needing isolated workspace
 
 ### Pairs With
-- **finishing-a-development-branch** - Cleanup after work complete
-- **executing-plans** or **subagent-driven-development** - Work happens in this worktree
-- **code-debugger** - Debug in isolated worktree without affecting main work
+- speckit-spec-plan - Planning artifacts created in isolated worktree
+- speckit-implementer - Implementation work proceeds in isolated worktree
+- speckit-complete - Full orchestration uses isolated worktrees per task
 
 ### Interacts With
 - **AGENTS.md** - Checks for worktree directory preferences
@@ -551,7 +566,7 @@ git worktree prune
 **Actions**:
 1. Report failure details to user
 2. Ask: "Tests failing. Options: (A) Investigate now (B) Proceed anyway (C) Abort"
-3. If investigate: Use code-debugger skill
+3. If investigate: Follow the guidance in `knowledge/debugging.md`
 4. If proceed: Document that baseline is broken
 5. If abort: Remove worktree
 

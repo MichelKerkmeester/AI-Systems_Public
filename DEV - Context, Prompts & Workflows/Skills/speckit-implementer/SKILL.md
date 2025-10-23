@@ -40,7 +40,6 @@ Execute autonomous spec-driven implementation with parallel preparation agents. 
 
 **Do NOT use this skill for**:
 - Initial specification creation (use speckit-spec-plan)
-- Research and investigation (use speckit-feature-research)
 - Simple planning without implementation
 - Manual implementation processes
 
@@ -48,18 +47,20 @@ Execute autonomous spec-driven implementation with parallel preparation agents. 
 
 ## 3. 🚀 Quick Command Reference
 
-> **📌 Context Note**: This skill implements **Steps 8-15** from the SpecKit implementation process (continuation from planning steps 1-7). References to "Step N" indicate steps from the source YAML specification, while "Section N" refers to document organization below.
+> **📌 Context Note**: This skill implements **Steps 8-17** from the SpecKit implementation process (continuation from planning steps 1-7). References to "Step N" indicate steps from the source YAML specification, while "Section N" refers to document organization below.
 
 | Step | Command | Purpose |
 |------|---------|----------|
 | **8** | Manual | Review Plan and Spec |
-| **9** | `/speckit.tasks` | Generate actionable tasks |
-| **10** | `/speckit.analyze` | Check consistency |
-| **11** | `/speckit.checklist` | Quality gates |
-| **12** | *Parallel Block* | 4 implementation agents prepare |
-| **13** | `/speckit.implement` | Verify prerequisites |
-| **14** | Manual | Autonomous development |
-| **15** | Manual | Document changes and completion |
+| **9** | Manual | Workspace Setup |
+| **10** | `/speckit.tasks` | Generate actionable tasks |
+| **11** | `/speckit.analyze` | Check consistency |
+| **12** | `/speckit.checklist` | Quality gates |
+| **13** | *Parallel Block* | 4 implementation agents prepare |
+| **14** | `/speckit.implement` | Verify prerequisites |
+| **15** | Manual | Autonomous development |
+| **16** | Manual | Completion summary |
+| **17** | Manual | Integration & cleanup |
 
 **✅ Autonomous**: This workflow executes all steps without approval gates
 
@@ -71,18 +72,21 @@ This skill implements the sk_p__implementation.yaml workflow with 6 specialized 
 
 ### Implementation Steps
 
-**Note**: This workflow covers Steps 8-15 of the complete SpecKit process. Steps 1-7 are assumed completed via planning workflow.
+**Note**: This workflow covers Steps 8-17 of the complete SpecKit process. Steps 1-7 are assumed completed via planning workflow.
 
 - **Step 8**: Review Plan and Spec - Understand existing artifacts
-- **Step 9**: Task Breakdown - Generate actionable tasks
-- **Step 10**: Analysis - Check consistency and coverage
-- **Step 11**: Quality Checklist - Generate quality gates
-- **Step 12**: Parallel Implementation Prep - 4 agents prepare approach
-- **Step 13**: Implementation Check - Verify prerequisites
-- **Step 14**: Development - Execute autonomous implementation
-- **Step 15**: Completion - Document changes and summary
+- **Step 9**: Workspace Setup - Verify/reuse or create worktree
+- **Step 10**: Task Breakdown - Generate actionable tasks
+- **Step 11**: Analysis - Check consistency and coverage
+- **Step 12**: Quality Checklist - Generate quality gates
+- **Step 13**: Parallel Implementation Prep - 4 agents prepare approach
+- **Step 14**: Implementation Check - Verify prerequisites
+- **Step 15**: Development - Execute autonomous implementation
+- **Step 16**: Completion - Document changes and summary
+- **Step 17**: Integration & Cleanup - Merge or push branch and clean up worktree
 
 **Note**: This is an autonomous workflow with NO approval gates
+Integration (Step 17) also proceeds autonomously without a manual approval gate.
 
 .
 
@@ -163,7 +167,7 @@ This section provides step-by-step execution guidance as defined in sk_p__implem
 
 **Approval Gate**: None (autonomous execution)
 
-### Step 8.5: Workspace Setup
+### Step 9: Workspace Setup
 
 **Action**: Create or verify isolated worktree for implementation
 
@@ -197,9 +201,7 @@ This section provides step-by-step execution guidance as defined in sk_p__implem
 
 **Note**: All subsequent steps execute within this worktree context
 
-.
-
-### Step 9: Task Breakdown
+### Step 10: Task Breakdown
 
 **Command**: `/speckit.tasks`
 
@@ -212,7 +214,7 @@ This section provides step-by-step execution guidance as defined in sk_p__implem
 
 **Validation**: `tasks_actionable`
 
-### Step 10: Analysis
+### Step 11: Analysis
 
 **Command**: `/speckit.analyze`
 
@@ -226,7 +228,7 @@ This section provides step-by-step execution guidance as defined in sk_p__implem
 
 **Validation**: `consistency_verified`
 
-### Step 11: Quality Checklist
+### Step 12: Quality Checklist
 
 **Command**: `/speckit.checklist`
 
@@ -237,7 +239,7 @@ This section provides step-by-step execution guidance as defined in sk_p__implem
 
 **Validation**: `checklist_generated`
 
-### Step 12: Parallel Implementation Preparation
+### Step 13: Parallel Implementation Preparation
 
 **Description**: Parallel preparation for core, integrations, tests, and docs
 
@@ -333,7 +335,7 @@ This step contains sub-phases that execute sequentially:
 
 **Note**: Main agent finalization occurs within this step (no subsequent approval gate)
 
-### Step 13: Implementation Check
+### Step 14: Implementation Check
 
 **Command**: `/speckit.implement [task-id]`
 
@@ -356,7 +358,7 @@ This step contains sub-phases that execute sequentially:
 
 **Validation**: Environment ready for implementation
 
-### Step 14: Development
+### Step 15: Development
 
 **Approach**: Autonomous implementation with checkpoints
 
@@ -384,14 +386,16 @@ This step contains sub-phases that execute sequentially:
 - Validate DOM changes
 - Measure performance impact
 
+For deeper debugging techniques and patterns, see `knowledge/debugging.md`.
+
 **Deep Analysis**:
 - Focus: iterative_problem_solving
 - Approach: continuous_validation
 - Outputs: implementation_decisions, debugging_insights, optimization_opportunities, test_coverage_gaps
 
-### Step 15: Completion & Integration
+### Step 16: Completion
 
-**Action**: Document changes, create summary, and integrate based on strategy
+**Action**: Document changes and create summary
 
 #### Part A: Documentation
 
@@ -419,7 +423,7 @@ This step contains sub-phases that execute sequentially:
 - Approach: retrospective_analysis
 - Outputs: implementation_quality_assessment, lessons_learned, technical_debt_noted, future_improvements
 
-#### Part B: Integration & Cleanup
+### Step 17: Integration & Cleanup
 
 **Action**: Integrate work based on branch_strategy
 
@@ -445,7 +449,7 @@ This step contains sub-phases that execute sequentially:
 **Philosophy**: Long-running branches remain for PR workflow
 
 **Actions**:
-1. Push feature branch: `git push -u origin feature-{spec-id}`
+1. Push feature branch: `git push -u <remote> feature-{spec-id}` (default remote: `origin`)
 2. Keep worktree: Preserved at `.worktrees/{spec-id}` for continued work
 3. Notify user: Feature branch ready for PR creation
 
@@ -660,9 +664,9 @@ This workflow automatically handles empty input fields per sk_p__implementation.
 ### worktree_path
 - **Pattern**: `.worktrees/{spec-id}`
 - **Purpose**: Isolated workspace for implementation
-- **Verification**: At Step 8.5, check if exists from planning phase
+- **Verification**: At Step 9, check if exists from planning phase
 - **Lifecycle**:
-  - If main_temp: Created → Used → Removed (Step 15)
+  - If main_temp: Created → Used → Removed (Step 17)
   - If feature_branch: Created → Used → Preserved for PR workflow
 
 ### spec_folder
@@ -672,7 +676,7 @@ This workflow automatically handles empty input fields per sk_p__implementation.
 - **Empty Handling**: Automatically creates new folder following naming convention
 
 ### Worktree & Branch Creation
-- **Execution**: Step 8.5 via git-worktrees skill invocation
+- **Execution**: Step 9 via git-worktrees skill invocation
 - **Verification**: Check if worktree already exists from planning phase
 - **Creation** (if not exists):
   1. Determine spec_id from spec_folder

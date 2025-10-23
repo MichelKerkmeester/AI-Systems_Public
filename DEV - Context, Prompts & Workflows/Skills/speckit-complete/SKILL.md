@@ -3,7 +3,7 @@ name: speckit-complete
 description: Execute the complete 14-step SpecKit workflow with 18 specialized sub-agents running in 3 parallel stages. Implements the full sk_p__complete.yaml workflow with approval gates, review/synthesis phases, and adaptive rules for complexity handling
 ---
 
-# SpecKit Parallel Complete - Full 14-Step Workflow Orchestration
+# SpecKit Parallel Complete - Full 15-Step Workflow Orchestration
 
 ## 1. 📄 Description
 
@@ -39,7 +39,7 @@ Execute the complete 14-step SpecKit workflow with 18 specialized sub-agents run
 - Complex workflows require orchestration of multiple agents
 
 **Do NOT use this skill for**:
-- Simple command recommendations (see skills/README selection guide)
+- Simple command recommendations
 - Single-agent tasks
 - Sequential workflows without parallelization needs
 
@@ -47,49 +47,51 @@ Execute the complete 14-step SpecKit workflow with 18 specialized sub-agents run
 
 ## 3. 🚀 Quick Command Reference
 
-**Complete 14-Step Workflow** with 3 Parallel Stages:
+**Complete 15-Step Workflow** with 3 Parallel Stages:
 
 | Step | Command | Stage | Purpose |
 |------|---------|-------|----------|
 | 1 | Manual | - | Request Analysis |
-| 2 | Manual | - | Pre-work Review |
-| 3 | `/speckit.specify` | - | Create spec.md |
-| 4 | `/speckit.clarify` | - | Resolve ambiguities |
-| 5 | `/speckit.checklist` | - | Quality checklist |
-| 6 | *Parallel Block* | **A: Planning** | 4 analysts work in parallel |
-| 7 | `/speckit.tasks` | - | Task breakdown |
-| 8 | `/speckit.analyze` | - | Consistency check |
-| 9 | *Parallel Block* | **B: Implementation** | 4 implementation agents prepare |
-| 10 | `/speckit.implement` | - | Implementation check |
-| 11 | Manual | - | Development - Code changes |
-| 12 | *Parallel Block* | **C: Quality** | 4 quality reviewers validate |
-| 13 | Manual | - | Document changes |
-| 14 | Manual | - | Branch Integration |
+| 2 | Manual | - | Workspace Setup |
+| 3 | Manual | - | Pre-work Review |
+| 4 | `/speckit.specify` | - | Create spec.md |
+| 5 | `/speckit.clarify` | - | Resolve ambiguities |
+| 6 | `/speckit.checklist` | - | Quality checklist |
+| 7 | *Parallel Block* | **A: Planning** | 4 analysts work in parallel |
+| 8 | `/speckit.tasks` | - | Task breakdown |
+| 9 | `/speckit.analyze` | - | Consistency check |
+| 10 | *Parallel Block* | **B: Implementation** | 4 implementation agents prepare |
+| 11 | `/speckit.implement` | - | Implementation check |
+| 12 | Manual | - | Development - Code changes |
+| 13 | *Parallel Block* | **C: Quality** | 4 quality reviewers validate |
+| 14 | Manual | - | Document changes |
+| 15 | Manual | - | Branch Integration |
 
-**⚠️ Manual Control**: This workflow requires **14 approval gates** (one after each step)
+**⚠️ Manual Control**: This workflow requires **15 approval gates** (one after each step)
 
 .
 
 ## 4. 🏗️ Architecture Overview
 
-This skill implements the complete 14-step workflow with 18 specialized sub-agents organized into 3 parallel execution stages.
+This skill implements the complete 15-step workflow with 18 specialized sub-agents organized into 3 parallel execution stages.
 
-### The 14 Steps
+### The 15 Steps
 
 1. **Request Analysis** - Parse and understand requirements
-2. **Pre-work Review** - Review AGENTS.md, constitution, knowledge base
-3. **Specification** - Create spec.md with `/speckit.specify`
-4. **Clarification** - Resolve ambiguities with `/speckit.clarify`
-5. **Quality Checklist** - Generate checklists with `/speckit.checklist`
-6. **Parallel Planning** (Stage A) - 4 specialist agents + review + synthesis
-7. **Task Breakdown** - Generate tasks with `/speckit.tasks`
-8. **Analysis** - Check consistency with `/speckit.analyze`
-9. **Parallel Implementation Prep** (Stage B) - 4 implementation agents
-10. **Implementation Check** - Verify prerequisites
-11. **Development** - Execute code changes
-12. **Parallel Quality Review** (Stage C) - 4 quality reviewers
-13. **Completion** - Document changes
-14. **Branch Integration** - Merge to main
+2. **Workspace Setup** - Create isolated worktree and branch
+3. **Pre-work Review** - Review AGENTS.md, constitution, knowledge base
+4. **Specification** - Create spec.md with `/speckit.specify`
+5. **Clarification** - Resolve ambiguities with `/speckit.clarify`
+6. **Quality Checklist** - Generate checklists with `/speckit.checklist`
+7. **Parallel Planning** (Stage A) - 4 specialist agents + review + synthesis
+8. **Task Breakdown** - Generate tasks with `/speckit.tasks`
+9. **Analysis** - Check consistency with `/speckit.analyze`
+10. **Parallel Implementation Prep** (Stage B) - 4 implementation agents
+11. **Implementation Check** - Verify prerequisites
+12. **Development** - Execute code changes
+13. **Parallel Quality Review** (Stage C) - 4 quality reviewers
+14. **Completion** - Document changes
+15. **Branch Integration** - Merge to main
 
 .
 
@@ -166,7 +168,7 @@ This section provides step-by-step execution guidance as defined in sk_p__comple
 
 **Approval Gate**: "All inputs collected. Branch strategy: {branch_strategy}. Spec folder: {spec_folder}. Proceed to workspace setup?"
 
-### Step 1.5: Workspace Setup
+### Step 2: Workspace Setup
 
 **Action**: Create isolated worktree for development
 
@@ -192,13 +194,11 @@ This section provides step-by-step execution guidance as defined in sk_p__comple
 
 **Validation**: `worktree_ready_and_verified`
 
-**Approval Gate**: "Workspace created at {worktree_path} on branch {git_branch}. Proceed to pre-work review?"
+**Approval Gate**: "Workspace created at {worktree_path} on branch {git_branch}. Baseline tests: {baseline_tests}. Proceed to pre-work review?"
 
 **Note**: All subsequent steps execute within this worktree context
 
-.
-
-### Step 2: Pre-work Review
+### Step 3: Pre-work Review
 
 **Action**: Review required documents
 
@@ -213,7 +213,7 @@ This section provides step-by-step execution guidance as defined in sk_p__comple
 
 **Approval Gate**: "Pre-work documentation reviewed. Proceed to specification?"
 
-### Step 3: Specification
+### Step 4: Specification
 
 **Command**: `/speckit.specify [feature-description]`
 
@@ -231,7 +231,7 @@ This section provides step-by-step execution guidance as defined in sk_p__comple
 
 **Approval Gate**: "Specification created. Review spec.md and approve to proceed to clarification?"
 
-### Step 4: Clarification
+### Step 5: Clarification
 
 **Command**: `/speckit.clarify`
 
@@ -250,7 +250,7 @@ This section provides step-by-step execution guidance as defined in sk_p__comple
 
 **Approval Gate**: "Requirements clarified. Proceed to quality checklist?"
 
-### Step 5: Quality Checklist
+### Step 6: Quality Checklist
 
 **Command**: `/speckit.checklist`
 
@@ -263,7 +263,7 @@ This section provides step-by-step execution guidance as defined in sk_p__comple
 
 **Approval Gate**: "Quality checklist complete. Proceed to planning parallel block?"
 
-### Step 6: Parallel Planning Block (Stage A)
+### Step 7: Parallel Planning Block (Stage A)
 
 **Description**: Parallel specialist analyses for planning/spec
 
@@ -324,7 +324,7 @@ This step contains sub-phases that execute sequentially:
 
 **Approval Gate**: "Planning artifacts synthesized. Approve to proceed to task breakdown?"
 
-### Step 7: Task Breakdown
+### Step 8: Task Breakdown
 
 **Command**: `/speckit.tasks`
 
@@ -339,7 +339,7 @@ This step contains sub-phases that execute sequentially:
 
 **Approval Gate**: "Tasks broken down. Review checklist.md and approve to proceed to analysis?"
 
-### Step 8: Analysis
+### Step 9: Analysis
 
 **Command**: `/speckit.analyze`
 
@@ -359,7 +359,7 @@ This step contains sub-phases that execute sequentially:
 
 **Approval Gate**: "Analysis complete. Review consistency report and approve to proceed to implementation parallel prep?"
 
-### Step 9: Parallel Implementation Prep (Stage B)
+### Step 10: Parallel Implementation Prep (Stage B)
 
 **Description**: Parallel prep for core, integrations, tests, docs
 
@@ -419,7 +419,7 @@ This step contains sub-phases that execute sequentially:
 
 **Approval Gate**: "Implementation plan synthesized. Approve to proceed to implementation check?"
 
-### Step 10: Implementation Check
+### Step 11: Implementation Check
 
 **Command**: `/speckit.implement [task-id]`
 
@@ -439,7 +439,7 @@ This step contains sub-phases that execute sequentially:
 
 **Warning**: "This will begin actual code changes"
 
-### Step 11: Development
+### Step 12: Development
 
 **Approach**: manual_implementation_with_checkpoints
 
@@ -471,7 +471,7 @@ This step contains sub-phases that execute sequentially:
 
 **Approval Gate**: "Development complete. Proceed to quality parallel review before completion?"
 
-### Step 12: Parallel Quality Review (Stage C)
+### Step 13: Parallel Quality Review (Stage C)
 
 **Description**: Parallel reviewers for final quality validation
 
@@ -525,7 +525,7 @@ This step contains sub-phases that execute sequentially:
 
 **Approval Gate**: "Quality review complete. Approve to proceed to completion summary?"
 
-### Step 13: Completion
+### Step 14: Completion
 
 **Action**: Document changes and create summary
 
@@ -548,7 +548,7 @@ This step contains sub-phases that execute sequentially:
 
 **Approval Gate**: "Implementation summary complete. Approve to finalize workflow?"
 
-### Step 14: Integration & Cleanup
+### Step 15: Integration & Cleanup
 
 **Action**: Integrate work and cleanup based on strategy
 
@@ -558,39 +558,39 @@ This step contains sub-phases that execute sequentially:
 
 **Integration Steps**:
 1. **Verify worktree clean**: Ensure no uncommitted changes in worktree
-   ```bash
+```bash
    cd {worktree_path}
    git status  # Should show "nothing to commit, working tree clean"
 ```
 
 2. **Return to main repository**: Leave worktree and return to main project
-   ```bash
+```bash
    cd ../..  # Return to main project root
 ```
 
 3. **Checkout and update main**: Ensure main is current
-   ```bash
+```bash
    git checkout main
    git pull --ff-only  # Get latest changes from remote
 ```
 
 4. **Merge temp branch**: Fast-forward merge (should always succeed)
-   ```bash
+```bash
    git merge --ff-only temp/{spec-id}
 ```
 
 5. **Delete temp branch**: Remove temporary branch
-   ```bash
+```bash
    git branch -d temp/{spec-id}
 ```
 
 6. **Remove worktree**: Clean up worktree directory
-   ```bash
+```bash
    git worktree remove .worktrees/{spec-id}
 ```
 
 7. **Verify integration**: Confirm changes are on main
-   ```bash
+```bash
    git log --oneline -5  # Should show integrated commits
    git worktree list     # Should not show removed worktree
 ```
@@ -609,18 +609,16 @@ This step contains sub-phases that execute sequentially:
 
 **Termination**: Workflow ends after integration complete
 
-.
-
 #### If feature_branch (Exception - 20% of work):
 
 **Philosophy**: Long-running branches remain for PR workflow and team review.
 
 **Actions**:
 
-1. **Push feature branch**: Push to remote for PR creation
-   ```bash
+1. **Push feature branch**: Push to remote for PR creation (default remote: `origin`)
+```bash
    cd {worktree_path}
-   git push -u origin feature-{spec-id}
+   git push -u <remote> feature-{spec-id}
 ```
 
 2. **Keep worktree**: Leave worktree in place for continued development
@@ -646,7 +644,7 @@ This step contains sub-phases that execute sequentially:
 - Continue development in worktree as needed
 - Merge PR when approved
 - **Manual cleanup after PR merged**:
-  ```bash
+```bash
   cd ../..  # Return to main repo
   git worktree remove .worktrees/{spec-id}
   git branch -d feature-{spec-id}  # Delete local branch
@@ -657,8 +655,6 @@ This step contains sub-phases that execute sequentially:
 **Approval Gate**: "Feature branch pushed. Create PR when ready. Workflow paused for review process."
 
 **Termination**: Workflow pauses; PR workflow takes over
-
-.
 
 #### Conflict Resolution (Applies to both strategies)
 
@@ -672,7 +668,7 @@ git merge temp/{spec-id}
 
 **Options Offered**:
 A) **Rebase and retry**: Rebase branch onto current main, then merge
-   ```bash
+```bash
    git checkout temp/{spec-id}
    git rebase main
    # Resolve conflicts
@@ -685,8 +681,6 @@ B) **Manual resolution**: Resolve conflicts in worktree, commit, then merge
 C) **Abort and investigate**: Cancel integration, investigate why main diverged
 
 **Note**: Conflicts are rare with main_temp (immediate integration). If conflicts occur frequently, review team workflow.
-
-.
 
 #### Troubleshooting
 
@@ -957,7 +951,7 @@ Each step has a mandatory approval gate per sk_p__complete.yaml:
 | 13→14 | "Implementation summary complete. Approve to finalize workflow?" | Required | None |
 | 14 | "All checks passed. Would you like me to push this branch to main now to keep main up to date and minimize conflicts?" | Required | None |
 
-**Note**: All 14 approval gates require explicit user confirmation before proceeding.
+**Note**: All 15 approval gates require explicit user confirmation before proceeding.
 
 .
 
@@ -1004,7 +998,7 @@ This workflow automatically handles empty input fields per sk_p__complete.yaml:
 ### worktree_path
 - **Pattern**: `.worktrees/{spec-id}`
 - **Purpose**: Isolated workspace for development
-- **Created**: At Step 1.5 via git-worktrees skill
+- **Created**: At Step 2 via git-worktrees skill
 - **Lifecycle**:
   - If main_temp: Created → Used → Removed (Step 14)
   - If feature_branch: Created → Used → Preserved for PR workflow
@@ -1036,7 +1030,7 @@ This workflow automatically handles empty input fields per sk_p__complete.yaml:
 - **Empty Handling**: Uses default scope policy limiting operations to specs directory
 
 ### Worktree & Branch Creation
-- **Execution**: Step 1.5 via git-worktrees skill invocation
+- **Execution**: Step 2 via git-worktrees skill invocation
 - **Process**:
   1. Determine spec_id from spec_folder
   2. Create worktree at `.worktrees/{spec-id}`
@@ -1066,10 +1060,10 @@ This workflow automatically handles empty input fields per sk_p__complete.yaml:
 
 ## 11. 🔗 Integration Points
 
-### With skills/README Selection Guide
-- Selection guide recommends which skill to use
-- This executor handles parallel execution
-- Clear handoff at command boundaries
+### Skill Selection Guidance
+- Choose this skill when a full orchestrated, parallel, gated flow is required
+- For planning-only, use speckit-spec-plan; for implementation-only, use speckit-implementer
+- This executor coordinates parallel execution with explicit approval gates
 
 ### With Chrome DevTools
 - Stage A: Analyze current implementation
