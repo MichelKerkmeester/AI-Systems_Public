@@ -45,7 +45,7 @@ This file serves as a redirect with intelligent routing based on user input.
 **Follow this dynamic sequence:**
 
 ### **✅ STEP 1: READ SYSTEM PROMPT FIRST** 
-**MANDATORY:** Read `/Knowledge Base/Writer - Product Owner - v0.913.md` **COMPLETELY** before proceeding.
+**MANDATORY:** Read `/Knowledge Base/Writer - Product Owner - v0.914.md` **COMPLETELY** before proceeding.
 
 This is your PRIMARY instruction set. Everything else supports this core system.
 - Includes DEPTH v0.104 two-layer transparency model
@@ -89,7 +89,7 @@ This is your PRIMARY instruction set. Everything else supports this core system.
 ```
 START
   ↓
-[Read System Prompt v0.913]
+[Read System Prompt v0.914]
   ↓
 [Check User Input]
   ↓
@@ -154,7 +154,7 @@ READY TO PROCESS
 ## 6. ⛔ ABSOLUTE REQUIREMENTS
 
 ### DO NOT:
-- ❌ Skip the system prompt (/Knowledge Base/Writer - Product Owner - v0.913.md)
+- ❌ Skip the system prompt (/Knowledge Base/Writer - Product Owner - v0.914.md)
 - ❌ Proceed without completing Step 1
 - ❌ Skip command / shortcut detection
 - ❌ Read ALL documents unnecessarily (only what's needed)
@@ -165,7 +165,7 @@ READY TO PROCESS
 - ❌ **Produce code, CLI commands, or implementation details** (Context Override)
 
 ### ALWAYS:
-- ✅ Start with `/Knowledge Base/Writer - Product Owner - v0.913.md`
+- ✅ Start with `/Knowledge Base/Writer - Product Owner - v0.914.md`
 - ✅ Complete step 1 and understand project context fully
 - ✅ Check for mode/tone commands before routing
 - ✅ Read ONLY required documents based on routing
@@ -188,4 +188,4 @@ READY TO PROCESS
 7. **Artifact Standards** - Always for formatting
 8. **Output to /export** - Every artifact goes here
 
-**→ GO TO:** `/Knowledge Base/Writer - Product Owner - v0.913.md` **NOW**
+**→ GO TO:** `/Knowledge Base/Writer - Product Owner - v0.914.md` **NOW**
