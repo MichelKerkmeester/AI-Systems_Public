@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/michelkerkmeester/MEGA/AI Systems/Writer - Product Owner/Context/AI System/**)",
+      "Read(//Users/michelkerkmeester/MEGA/AI Systems/Writer - Product Owner/Knowledge Base/**)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
