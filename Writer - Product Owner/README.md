@@ -32,7 +32,7 @@ Transforms requests into professional tickets, PRDs, and documentation with **co
 ### Updated Components
 - **System Prompt:** v0.914 (two-layer transparency)
 - **DEPTH Framework:** v0.104 (mandatory perspectives + concise output)
-- **Interactive Mode:** v0.304 (concise updates)
+- **Interactive Mode:** v0.305 (50% token reduction, core logic preserved)
 - **Key Insights:** Critical findings highlighted vs. full transcripts
 
 ### 📊 What Changed From v0.913
@@ -59,7 +59,7 @@ Transforms requests into professional tickets, PRDs, and documentation with **co
 ### Updated Files in v0.914
 - **Writer:** v0.914 - Two-layer transparency model; mandatory multi-perspective enforcement
 - **DEPTH Framework:** v0.104 - Concise external communication; blocking perspective validation
-- **Interactive Mode:** v0.304 - Meaningful progress updates; mandatory perspective analysis
+- **Interactive Mode:** v0.305 - Streamlined conversation mechanics; 50% token reduction
 
 ---
 
@@ -93,7 +93,7 @@ Add these documents to your project:
 
 **Core Documents (Latest Versions):**
 - `Product Owner - DEPTH Thinking Framework - v0.104.md` (with two-layer transparency & mandatory perspectives)
-- `Product Owner - Interactive Mode - v0.304.md` (with concise updates & perspective enforcement)
+- `Product Owner - Interactive Mode - v0.305.md` (concise conversation mechanics with full cognitive rigor)
 
 **Self-Contained Templates (Current Versions):**
 - `Product Owner - Template - Ticket Mode - v0.132.md` 
@@ -322,7 +322,7 @@ Writer - Product Owner - v0.914.md (System prompt)
     ↓
 DEPTH Framework v0.104 (Methodology)
     ↓
-Interactive Mode v0.304 (Conversation flow)
+Interactive Mode v0.305 (Conversation flow)
     ↓
 Templates (Ticket v0.132, PRD v0.129, Doc v0.118)
     ↓

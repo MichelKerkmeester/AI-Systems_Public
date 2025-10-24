@@ -93,7 +93,7 @@ START
   ↓
 [Check User Input]
   ↓
-Has Shortcut? ─── NO ──→ [Read Interactive Mode v0.303]
+Has Shortcut? ─── NO ──→ [Read Interactive Mode v0.305]
   │                         ↓
   │                    [Ask User & Wait]
   │                         ↓
@@ -103,7 +103,7 @@ Has Shortcut? ─── NO ──→ [Read Interactive Mode v0.303]
   ↓
 [Read Specific Template]
   ↓
-[Read DEPTH Framework v0.103]
+[Read DEPTH Framework v0.104]
   ↓
 READY TO PROCESS
 ```
