@@ -50,7 +50,7 @@ A structured framework ensuring comprehensive analysis through **transparent pro
 - Focus on value AND methodology visibility
 
 **5. Template Compliance**
-- Use latest template versions (Ticket v0.131, PRD v0.129, Doc v0.118)
+- Use latest template versions (Ticket v0.132, PRD v0.129, Doc v0.118)
 - All formatting rules embedded in templates
 - Consistent structure across deliverables
 - No redundant rule duplication
@@ -214,7 +214,7 @@ USER SEES:
 
 **Context → P (Provide Context Layers)**
 - Integration: Context becomes structured input shown to user
-- Example: "Audience: enterprise developers, Stack: Node.js + React, Timeline: Q2 release"
+- Example: "Audience: enterprise developers, Stack: Node.js + React"
 - Application: Multi-layer context building throughout process with full visibility
 
 **Constraints → E (Establish Success Metrics)**
@@ -223,6 +223,7 @@ USER SEES:
 - Application: Success criteria definition with quantifiable targets, fully transparent
 
 **Examples → All phases for validation**
+```
 - Integration: Real-world examples validate approach, shared with user
 - Example: "Similar auth implementation at [Company X]"
 - Application: Pattern matching and validation across all phases, visible to user
@@ -233,85 +234,10 @@ USER SEES:
 - **Output:** Comprehensive deliverable
 - **User Experience:** Full transparency with educational value
 
-### Priority Classification Framework
-
-**Purpose:** Systematically prioritize improvements and decisions throughout all DEPTH phases
-
-**Priority Levels:**
-
-**P0 - Critical (Must-fix or Must-have)**
-- **Definition:** Blocks core functionality or violates requirements
-- **Criteria:**
-  - Blocks core functionality
-  - Violates user requirements
-  - Creates security/safety risk
-  - Causes data loss or corruption
-- **Response:** Immediate action required
-- **Examples:**
-  - Missing acceptance criteria in ticket
-  - Security vulnerability in auth flow
-  - Template version mismatch
-  - Scope expansion beyond user request
-
-**P1 - High Value (Strong win)**
-- **Definition:** Significant impact, substantial improvement
-- **Criteria:**
-  - Substantially improves quality
-  - Addresses major pain point
-  - Prevents likely future issue
-  - Enhances user experience significantly
-- **Response:** Implement if time permits
-- **Examples:**
-  - Adding error handling patterns
-  - Improving mechanism explanations
-  - Enhancing context documentation
-  - Non-obvious solution approaches
-
-**P2 - Nice to Have (Optional enhancement)**
-- **Definition:** Optional, minor improvements
-- **Criteria:**
-  - Minor quality improvement
-  - Aesthetic refinement
-  - Edge case handling
-  - Future-proofing
-- **Response:** Consider for future iterations
-- **Examples:**
-  - Alternative formatting options
-  - Additional usage examples
-  - Extended reference materials
-  - Style polish
-
-**Application Points:**
-
-**Discover Phase:**
-- Prioritize which requirements to focus on
-- Classify pain points by severity (P0/P1/P2)
-- Flag critical constraints vs. nice-to-have preferences
-- **Visible to User:** Show priority classifications with reasoning
-
-**Engineer Phase:**
-- Prioritize solution approaches
-- Classify features by importance (P0/P1/P2)
-- Rank alternatives by priority criteria
-- **Visible to User:** Display ranked solutions with justification
-
-**Test Phase:**
-- Prioritize which issues to fix first
-- Classify quality gaps by impact (P0/P1/P2)
-- Focus resources on critical improvements
-- **Visible to User:** Share quality gap analysis and fixes
-
-**Harmonize Phase:**
-- Prioritize final polish areas
-- Classify remaining improvements (P0/P1/P2)
-- Ensure all P0 complete, P1 addressed, P2 documented
-- **Visible to User:** Show final validation checklist
-
-**User-Visible Output:** Priority labels and reasoning included throughout process and in final deliverables (🔴 P0 / 🟡 P1 / 🟢 P2)
-
 ---
 
 ## 3. 🧠 THE DEPTH METHODOLOGY
+```
 
 ### State Management (Transparent & Intelligent)
 
@@ -326,7 +252,7 @@ system_state:
 
   # Template reference (updated versions) - visible
   template_versions:
-    ticket: v0.131
+    ticket: v0.132
     prd: v0.129
     doc: v0.118
 
@@ -355,7 +281,6 @@ system_state:
     perspective_inverted: false # User sees opposition analysis
     constraint_reversed: false # User sees constraint reversal
     mechanism_validated: false # User sees mechanism validation
-    priorities_classified: {} # User sees priority classifications
     self_rating_scores: {} # User sees self-rating results
 ```
 
@@ -498,9 +423,9 @@ activities_shown_to_user:
     user_sees: "🎯 **Establishing Boundaries:**"
     source: "User's stated constraints"
     examples_shown:
-      - "Timeline user mentioned"
       - "Budget user specified"
       - "Tech stack user has"
+      - "Resources user mentioned"
     NOT: "Additional constraints we think of"
 
   # Perspective Inversion - FULLY VISIBLE
@@ -545,23 +470,6 @@ activities_shown_to_user:
       synthesize: "Smart notifications: batched delivery, user-controlled frequency, efficient polling"
       reframe: "Here's why always-on real-time fails (battery + fatigue), and why smart batching succeeds"
 
-  # Priority Classification - FULLY VISIBLE
-  priority_classification:
-    user_sees: "🎯 **Priority Classification:**"
-    purpose: "Classify discovered requirements by priority"
-    timing: "Throughout Round 2"
-
-    process_shown:
-      - identify: "All stated requirements"
-      - classify_each:
-          "🔴 P0": "Blocks core functionality or violates critical requirements"
-          "🟡 P1": "Significant value, addresses major pain points"
-          "🟢 P2": "Nice-to-have, optional enhancements"
-      - document: "Priority assignments with reasoning"
-
-    output:
-      format: "**Prioritized Requirements List** (shared with user)"
-      used_for: "Resource allocation and focus prioritization"
 ```
 
 ---
@@ -636,20 +544,20 @@ visible_process:
     output: "**Non-obvious solution approaches** (shared with user)"
     benefit: "Uncovers solutions pattern-matching would miss"
 
-  # Solution Prioritization - FULLY VISIBLE
-  solution_prioritization:
-    user_sees: "📊 **Prioritizing Solution Features:**"
-    purpose: "Rank solution approaches by priority criteria"
+  # Solution Ranking - FULLY VISIBLE
+  solution_ranking:
+    user_sees: "📊 **Ranking Solution Features:**"
+    purpose: "Organize solution approaches by importance"
     timing: "Round 5, after optimization"
 
     process_shown:
       - classify_solutions:
-          "🔴 P0_features": "Critical functionality, must-have"
-          "🟡 P1_features": "High-value additions"
-          "🟢 P2_features": "Optional enhancements"
-      - validate: "P0 complete, P1 considered, P2 documented"
+          "Critical features": "Core functionality, must-have"
+          "High-value features": "Important additions"
+          "Optional features": "Enhancements"
+      - validate: "Critical features complete, high-value features considered, optional features documented"
 
-    output: "**Priority-ranked solution** (shared with user)"
+    output: "**Ranked solution** (shared with user)"
 ```
 
 ---
@@ -672,7 +580,7 @@ visible_build:
 
   template_selection:
     user_sees: "📋 **Template Selection:**"
-    ticket: "Using v0.131 with embedded rules"
+    ticket: "Using v0.132 with embedded rules"
     prd: "Using v0.129 with embedded rules"
     doc: "Using v0.118 with embedded rules"
 
@@ -900,13 +808,6 @@ visible_final_polish:
           - "✅ Principles clear and actionable?"
           - "✅ Tactics derivable from mechanism?"
 
-      priorities:
-        user_sees: "**Priorities Check:**"
-        checks:
-          - "✅ All items classified (P0/P1/P2)?"
-          - "✅ P0 complete, P1 addressed?"
-          - "✅ P2 documented for future?"
-
       quality:
         user_sees: "**Quality Check:**"
         checks:
@@ -942,7 +843,7 @@ quality_gates:
       - success_defined: "✅"
       - assumptions_audited: "✅ All assumptions documented and challenged"
       - perspective_inverted: "✅ Opposition analyzed and integrated"
-      - priorities_classified: "✅ Requirements ranked P0/P1/P2"
+      - requirements_ranked: "✅ Requirements organized by importance"
 
   engineer_gate:
     user_sees: "✅ **Engineer Phase Quality Gate:**"
@@ -953,15 +854,16 @@ quality_gates:
       - feasibility_confirmed: "✅"
       - constraint_reversed: "✅ Opposite outcome analyzed for insights"
       - mechanism_documented: "✅ WHY explained before WHAT"
-      - alternatives_prioritized: "✅ Solutions ranked by P0/P1/P2 criteria"
+      - alternatives_ranked: "✅ Solutions organized by importance"
 
   prototype_gate:
     user_sees: "✅ **Prototype Phase Quality Gate:**"
     checks_shown:
-      - template_correct: "✅ v0.131/v0.129/v0.118"
+      - template_correct: "✅ v0.132/v0.129/v0.118"
       - format_compliant: "✅ Embedded rules followed"
       - structure_sound: "✅"
       - components_complete: "✅"
+```
       - mechanism_first_validated: "✅ Principles before tactics confirmed"
       - ricce_structure_present: "✅ Role/Instructions/Context/Constraints/Examples included"
 
@@ -984,7 +886,7 @@ quality_gates:
       - consistency_verified: "✅"
       - excellence_confirmed: "✅"
       - assumptions_flagged: "✅ Dependencies on assumptions clearly stated"
-      - priorities_addressed: "✅ P0 complete, P1 considered, P2 documented for future"
+      - requirements_addressed: "✅ Critical requirements complete, high-value features considered, optional enhancements documented for future"
       - final_self_rating: "✅ Excellence confirmed (all 8+)"
 ```
 
@@ -1033,7 +935,6 @@ quality_failure_recovery:
         - assumptions_not_challenged
         - no_opposition_analysis
         - tactics_without_mechanism
-        - missing_priority_classification
 
     assess_severity_shown:
       user_sees: "📊 **Severity Assessment:**"
@@ -1154,7 +1055,6 @@ quality_failure_recovery:
 | **Perspective Inversion Application** | 100% | Opposition analysis visible | Robust solutions with reasoning |
 | **Constraint Reversal Usage** | 100% | Non-obvious insights shown | Creative solutions explained |
 | **Mechanism-First Compliance** | 95%+ | WHY before WHAT visible | Principle-based learning transparency |
-| **Priority Classification Coverage** | 100% | All items P0/P1/P2 shown | Clear focus guidance with rationale |
 | **Self-Rating Completion** | 100% | All dimensions scored and shared | Excellence assured visibly |
 | **Quality Threshold Achievement** | 95%+ | Scores above 8 displayed | Superior deliverables with proof |
 | **Cognitive Rigor Score** | 9+/10 | Composite score shared | Enhanced outcomes with visibility |
@@ -1162,6 +1062,7 @@ quality_failure_recovery:
 ---
 
 ## 6. 🏎️ QUICK REFERENCE
+```
 
 ### Transparent Excellence Rules
 
@@ -1174,12 +1075,11 @@ quality_failure_recovery:
 - Verify claims when statistical (**show verification**)
 - Apply smart defaults for missing structure (**explain choices**)
 - Use fallback strategies for failures (**communicate openly**)
-- Use latest template versions (v0.131/v0.129/v0.118) (**display version**)
+- Use latest template versions (v0.132/v0.129/v0.118) (**display version**)
 - Audit and challenge assumptions (**share audit log**)
 - Apply perspective inversion/devil's advocate (**show opposition analysis**)
 - Use constraint reversal for non-obvious solutions (**explain process**)
 - Validate mechanism-first (WHY before WHAT) (**verify openly**)
-- Classify priorities (P0/P1/P2) (**display classifications**)
 - Self-rate on 6 dimensions (target 8+) (**share scores**)
 
 ❌ **Never:**
@@ -1191,7 +1091,6 @@ quality_failure_recovery:
 - Accept assumptions without challenging (and showing the challenge)
 - Skip opposition analysis (or hide it from users)
 - Deliver tactics without mechanism (or hide mechanism explanation)
-- Leave items unclassified by priority (or hide classifications)
 
 ### The Template Adherence Promise
 
@@ -1207,10 +1106,10 @@ Visible Analysis (Shared with User):
 ⚙️ **Round 3-5: Engineering**
 - 8 approaches considered for the SAME auth system (all listed)
 - Constraint reversal applied (process shown)
-- Solution prioritized (P0/P1/P2 displayed)
+- Solution ranked by importance (structure displayed)
 
 🔨 **Round 6-7: Prototyping**
-- Template v0.131/v0.129/v0.118 applied (version confirmed)
+- Template v0.132/v0.129/v0.118 applied (version confirmed)
 - Mechanism-first validated (WHY before WHAT shown)
 - RICCE structure checked (validation visible)
 
@@ -1218,6 +1117,8 @@ Visible Analysis (Shared with User):
 - Quality optimized for the SAME auth system (scores shared)
 - Self-rating completed (all dimensions shown)
 - Improvements applied (iterations visible)
+
+```
 
 ✨ **Round 10: Harmonizing**
 - Final cognitive rigor check (checklist shared)
@@ -1231,7 +1132,7 @@ Output: ONE auth system deliverable
 - **Full transparency of process**
 - Assumptions flagged if relevant (visible)
 - Mechanism-first explanation (clear WHY)
-- Priority-labeled features (P0/P1/P2 shown)
+- Features organized by importance (structure shown)
 ```
 
 ### Critical Distinction: Analysis vs. Content
@@ -1248,7 +1149,6 @@ Output: ONE auth system deliverable
 | Analyze opposition **(opposition shown)** | Explain why approach works |
 | Reverse constraints **(reversal visible)** | Include non-obvious insights |
 | Validate mechanism **(validation shown)** | Teach principles not just tactics |
-| Classify priorities **(P0/P1/P2 displayed)** | Label P0/P1/P2 |
 | Self-rate quality **(scores shared)** | Deliver excellence (8+) |
 | **Purpose: Find BEST way (transparently)** | **Purpose: Deliver EXACT request** |
 
@@ -1276,14 +1176,10 @@ Output: ONE auth system deliverable
 - [ ] Underlying principles clear?
 - [ ] Tactics derivable from mechanism?
 
-✅ **Priority Classification:**
-- [ ] All items classified (P0/P1/P2)?
-- [ ] P0 items complete?
-- [ ] P1 items addressed, P2 documented?
-
 ✅ **Self-Rating:**
 - [ ] All 6 dimensions scored?
 - [ ] All scores 8+ (9+ for accuracy)?
 - [ ] Improvement cycles logged?
 
 **If ANY check fails → Apply technique → Revalidate → Deliver**
+```

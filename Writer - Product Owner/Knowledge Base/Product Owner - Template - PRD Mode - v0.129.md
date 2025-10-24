@@ -52,9 +52,9 @@ Product Requirements Document templates with integrated formatting rules and qua
 
 ### PRD-Specific Standards
 - **Scaling:** 
-  - Initiative: 5-10 features, single team, quarterly
-  - Program: 10-20 features, multi-team, half-year
-  - Strategic: 20+ features, company-wide, annual
+  - Initiative: 5-10 features, single team
+  - Program: 10-20 features, multi-team
+  - Strategic: 20+ features, company-wide
 - **Output Focus:** ONLY deliver what user requested
 - **No Scope Expansion:** Scale affects template structure, not feature count beyond request
 - **Multiple Perspectives:** All analyze the SAME PRD requirements
@@ -95,11 +95,11 @@ Product Requirements Document templates with integrated formatting rules and qua
 
 ## 3. 📊 COMPLEXITY AUTO-SCALING
 
-| Keywords | Scale | Team/Timeline | Features | DEPTH Processing |
-|----------|-------|---------------|----------|-----------------|
-| feature, component | Initiative | Single team/quarter | 5-10 | 10 rounds (2 if $quick) |
-| platform, system | Program | Multi-team/half-year | 10-20 | 10 rounds (3 if $quick) |
-| strategic, ecosystem | Strategic | Company-wide/annual | 20+ | 10 rounds (5 if $quick) |
+| Keywords | Scale | Team Scope | Features | DEPTH Processing |
+|----------|-------|------------|----------|-----------------|
+| feature, component | Initiative | Single team | 5-10 | 10 rounds (2 if $quick) |
+| platform, system | Program | Multi-team | 10-20 | 10 rounds (3 if $quick) |
+| strategic, ecosystem | Strategic | Company-wide | 20+ | 10 rounds (5 if $quick) |
 
 **Important:** Scale determines TEMPLATE STRUCTURE, not content scope
 - User requests "platform PRD" → Program template for THAT platform only
@@ -134,7 +134,7 @@ Product Requirements Document templates with integrated formatting rules and qua
 7. Technical Requirements (❖)
 8. User Research (❖) - If applicable
 9. Implementation Plan (❖)
-10. Stakeholders & Timeline (❖)
+10. Stakeholders (❖)
 11. Risks & Mitigations (∅) - When criteria met
 
 #### Formatting Standards
@@ -276,7 +276,6 @@ Mode: $prd | Scale: Initiative | Template: v0.129
 **Product:** [One-sentence definition of requested product]
 **Target Users:** [Primary segments for this product]
 **Core Value:** [Key benefits and differentiation]
-**Timeline:** [Duration with major milestones]
 
 ---
 
@@ -284,19 +283,19 @@ Mode: $prd | Scale: Initiative | Template: v0.129
 
 **Business Metrics**
 
-| Metric | Current | Target (Q1) | Target (Q2) | Measurement |
-|--------|---------|-------------|-------------|-------------|
-| Primary KPI | [X] | [Y] | [Z] | [How tracked] |
-| Revenue Impact | $[X] | $[Y] | $[Z] | [System] |
-| Cost Savings | $[X] | $[Y] | $[Z] | [Method] |
+| Metric | Current | Target | Measurement |
+|--------|---------|--------|-------------|
+| Primary KPI | [X] | [Y] | [How tracked] |
+| Revenue Impact | $[X] | $[Y] | [System] |
+| Cost Savings | $[X] | $[Y] | [Method] |
 
 **Product Metrics**
 
-| Metric | Baseline | Week 2 | Week 4 | Success Threshold |
-|--------|----------|--------|--------|-------------------|
-| Adoption Rate | - | [X]% | [Y]% | >[Z]% |
-| Daily Active Users | [A] | [B] | [C] | [D] |
-| Feature Usage | - | [X]% | [Y]% | >[Z]% |
+| Metric | Baseline | Target | Success Threshold |
+|--------|----------|--------|-------------------|
+| Adoption Rate | - | [X]% | >[Y]% |
+| Daily Active Users | [A] | [B] | >[C] |
+| Feature Usage | - | [X]% | >[Y]% |
 
 ---
 
@@ -422,7 +421,7 @@ Mode: $prd | Scale: Initiative | Template: v0.129
 
 ## ◻ Development Phases
 
-**Phase 1: Foundation (Weeks 1-4)**
+**Phase 1: Foundation**
 
 [2-3 sentences on core infrastructure for requested features]
 
@@ -437,7 +436,7 @@ Exit Criteria:
 - Deployment pipeline operational
 - Security review completed
 
-**Phase 2: Enhancement (Weeks 5-8)**
+**Phase 2: Enhancement**
 
 [2-3 sentences on advanced functionality for user's features]
 
@@ -462,7 +461,7 @@ Deliverables:
 
 ---
 
-# ❖ Stakeholders & Timeline
+# ❖ Stakeholders
 
 ## ◻ RACI Matrix
 
@@ -473,16 +472,6 @@ Deliverables:
 | Implementation | Engineers | Tech Lead | QA | PM |
 | Quality Assurance | QA Lead | Eng Manager | PM | Stakeholders |
 | Launch | PM | VP Product | All teams | Company |
-
-## ◻ Milestone Timeline
-
-| Milestone | Date | Deliverable | Owner | Status |
-|-----------|------|-------------|-------|--------|
-| Kickoff | Week 0 | PRD Approved | PM | Complete |
-| Design Complete | Week 2 | All Mockups | Design | In Progress |
-| Phase 1 Complete | Week 4 | Core Features | Eng | Not Started |
-| Phase 2 Complete | Week 8 | Enhancements | Eng | Not Started |
-| Launch Ready | Week 12 | Full Product | All | Not Started |
 ```
 
 ---
@@ -503,7 +492,6 @@ Mode: $prd | Scale: Program | Template: v0.129
 **Program:** [One-sentence definition of multi-team initiative]
 **Scope:** [Teams and platforms involved in THIS program]
 **Impact:** [User segments and business areas affected]
-**Timeline:** [6-month timeline with quarterly milestones]
 
 ---
 
@@ -511,19 +499,19 @@ Mode: $prd | Scale: Program | Template: v0.129
 
 **Program-Level Metrics**
 
-| Metric | Current | Q1 Target | Q2 Target | Owner |
-|--------|---------|-----------|-----------|-------|
-| Platform Adoption | [X]% | [Y]% | [Z]% | Product |
-| Revenue Impact | $[X]M | $[Y]M | $[Z]M | Business |
-| User Satisfaction | [X] | [Y] | [Z] | Success |
-| Operating Efficiency | [X]% | [Y]% | [Z]% | Operations |
+| Metric | Current | Target | Owner |
+|--------|---------|--------|-------|
+| Platform Adoption | [X]% | [Y]% | Product |
+| Revenue Impact | $[X]M | $[Y]M | Business |
+| User Satisfaction | [X] | [Y] | Success |
+| Operating Efficiency | [X]% | [Y]% | Operations |
 
 **Team-Specific Metrics**
 
-| Team | Primary KPI | Q1 Target | Q2 Target | Dependencies |
-|------|-------------|-----------|-----------|--------------|
-| Frontend | Page Performance | <2s | <1.5s | API Team |
-| Backend | API Latency | <200ms | <150ms | Infrastructure |
+| Team | Primary KPI | Target | Dependencies |
+|------|-------------|--------|--------------|
+| Frontend | Page Performance | <2s | API Team |
+| Backend | API Latency | <200ms | Infrastructure |
 | Mobile | App Crash Rate | <1% | <0.5% | Backend |
 | Data | Pipeline Reliability | 99% | 99.5% | Infrastructure |
 
@@ -557,13 +545,11 @@ Mode: $prd | Scale: Program | Template: v0.129
 
 1. **[Core Feature 1]**
    - Team: [Responsible team]
-   - Timeline: [Weeks X-Y]
    - Dependencies: [Other features/teams]
    - Success Criteria: [Measurable outcome]
 
 2. **[Core Feature 2]**
    - Team: [Responsible team]
-   - Timeline: [Weeks X-Y]
    - Dependencies: [Other features/teams]
    - Success Criteria: [Measurable outcome]
 
@@ -574,7 +560,6 @@ Mode: $prd | Scale: Program | Template: v0.129
 
 6. **[UX Feature 1]**
    - Team: Frontend + Design
-   - Timeline: [Weeks X-Y]
    - User Impact: [Specific improvement]
    - Success Metric: [Measurable]
 
@@ -585,7 +570,6 @@ Mode: $prd | Scale: Program | Template: v0.129
 
 11. **[Integration Feature 1]**
     - Team: Backend + Partners
-    - Timeline: [Weeks X-Y]
     - Systems: [Systems to integrate]
     - Data Flow: [Direction and volume]
 
@@ -596,7 +580,6 @@ Mode: $prd | Scale: Program | Template: v0.129
 
 16. **[Analytics Feature 1]**
     - Team: Data + DevOps
-    - Timeline: [Weeks X-Y]
     - Metrics Tracked: [Key metrics]
     - Dashboard: [Reporting tool]
 
@@ -667,7 +650,7 @@ Mode: $prd | Scale: Program | Template: v0.129
 
 # ❖ Implementation Roadmap
 
-## ◻ Q1 Deliverables
+## ◻ Phase 1 Deliverables
 
 **Month 1: Foundation**
 - Infrastructure setup
@@ -685,9 +668,9 @@ Mode: $prd | Scale: Program | Template: v0.129
 - Performance tuning
 - Bug fixes
 - User feedback incorporation
-- Q1 feature completion
+- Phase 1 feature completion
 
-## ◻ Q2 Deliverables
+## ◻ Phase 2 Deliverables
 
 **Month 4: Expansion**
 - Additional features
@@ -737,8 +720,8 @@ Mode: $prd | Scale: Strategic | Template: v0.129
 
 **Vision:** [Transformational goal in one sentence]
 **Scale:** [Company-wide impact across all divisions]
-**Investment:** $[X]M over [Y] months
-**ROI:** [Expected return and timeline]
+**Investment:** $[X]M
+**ROI:** [Expected return]
 
 ---
 
@@ -754,14 +737,14 @@ Mode: $prd | Scale: Strategic | Template: v0.129
 | NPS Score | [X] | [Y] | [Z] | Survey platform |
 | Operating Margin | [X]% | [Y]% | [Z]% | Finance |
 
-**Quarterly Milestones**
+**Phase Milestones**
 
-| Quarter | Key Results | Success Criteria | Risk Indicators |
-|---------|-------------|------------------|-----------------|
-| Q1 2025 | Foundation complete | Infrastructure ready | Delays >2 weeks |
-| Q2 2025 | Core features live | 30% adoption | <20% adoption |
-| Q3 2025 | Scale achieved | 60% adoption | <40% adoption |
-| Q4 2025 | Optimization done | 90% adoption | <70% adoption |
+| Phase | Key Results | Success Criteria | Risk Indicators |
+|-------|-------------|------------------|-----------------|
+| Phase 1 | Foundation complete | Infrastructure ready | Delays >2 weeks |
+| Phase 2 | Core features live | 30% adoption | <20% adoption |
+| Phase 3 | Scale achieved | 60% adoption | <40% adoption |
+| Phase 4 | Optimization done | 90% adoption | <70% adoption |
 
 ---
 
@@ -774,7 +757,7 @@ Mode: $prd | Scale: Strategic | Template: v0.129
    • Platform Design - Complete - Critical - [Tech - to be added]
 
 3. Roadmap
-   • Feature Timeline - Active - High - [Product - to be added]
+   • Feature Plan - Active - High - [Product - to be added]
 
 4. Business Case
    • ROI Analysis - Validated - Critical - [Finance - to be added]
@@ -793,7 +776,6 @@ Mode: $prd | Scale: Strategic | Template: v0.129
 
 1. **Cloud Migration**
    - Scope: All services to AWS/Azure/GCP
-   - Timeline: Q1-Q2 2025
    - Investment: $[X]M
    - Success: 99.99% uptime
 
@@ -804,7 +786,6 @@ Mode: $prd | Scale: Strategic | Template: v0.129
 
 8. **[Core Capability 1]**
    - Impact: [User segment affected]
-   - Timeline: Q2-Q3 2025
    - Team: Product + Engineering
    - Success: [Metric and target]
 
@@ -815,7 +796,6 @@ Mode: $prd | Scale: Strategic | Template: v0.129
 
 16. **[Market Feature 1]**
     - Region: [Geographic/segment]
-    - Timeline: Q3-Q4 2025
     - Investment: $[X]M
     - Success: [Market penetration %]
 
@@ -826,7 +806,6 @@ Mode: $prd | Scale: Strategic | Template: v0.129
 
 21. **[Innovation 1]**
     - Technology: [AI/ML/Blockchain/etc]
-    - Timeline: Q4 2025
     - R&D Investment: $[X]M
     - Expected Impact: [Metric]
 
@@ -840,12 +819,12 @@ Mode: $prd | Scale: Strategic | Template: v0.129
 
 **Organizational Structure**
 
-| Division | Current State | Future State | Change Required | Timeline |
-|----------|---------------|--------------|-----------------|----------|
-| Engineering | [X] teams | [Y] teams | Hire [Z] engineers | Q1-Q2 |
-| Product | [X] PMs | [Y] PMs | Hire [Z] PMs | Q1 |
-| Sales | [X] reps | [Y] reps | Train & hire | Q2-Q3 |
-| Support | [X] agents | [Y] agents | Scale team | Q3-Q4 |
+| Division | Current State | Future State | Change Required |
+|----------|---------------|--------------|-----------------|
+| Engineering | [X] teams | [Y] teams | Hire [Z] engineers |
+| Product | [X] PMs | [Y] PMs | Hire [Z] PMs |
+| Sales | [X] reps | [Y] reps | Train & hire |
+| Support | [X] agents | [Y] agents | Scale team |
 
 **Capability Development**
 
@@ -910,13 +889,13 @@ Mode: $prd | Scale: Strategic | Template: v0.129
 
 **Investment Breakdown**
 
-| Category | Year 1 | Year 2 | Total | ROI Timeline |
+| Category | Year 1 | Year 2 | Total | Expected ROI |
 |----------|--------|--------|-------|--------------|
-| Technology | $[X]M | $[Y]M | $[Z]M | [Months] |
-| People | $[X]M | $[Y]M | $[Z]M | [Months] |
-| Marketing | $[X]M | $[Y]M | $[Z]M | [Months] |
-| Operations | $[X]M | $[Y]M | $[Z]M | [Months] |
-| **Total** | **$[X]M** | **$[Y]M** | **$[Z]M** | **[Months]** |
+| Technology | $[X]M | $[Y]M | $[Z]M | [Percentage] |
+| People | $[X]M | $[Y]M | $[Z]M | [Percentage] |
+| Marketing | $[X]M | $[Y]M | $[Z]M | [Percentage] |
+| Operations | $[X]M | $[Y]M | $[Z]M | [Percentage] |
+| **Total** | **$[X]M** | **$[Y]M** | **$[Z]M** | **[Percentage]** |
 
 **Revenue Projections**
 
@@ -964,12 +943,12 @@ Mode: $prd | Scale: Feature | Template: v0.129
 
 ## ✦ Success Metrics
 
-| Metric | Week 1 | Week 2 | Month 1 | Target |
-|--------|--------|--------|---------|--------|
-| Usage | [X]% | [Y]% | [Z]% | >[A]% |
-| Errors | <[X]% | <[Y]% | <[Z]% | <[A]% |
-| Performance | [X]ms | [Y]ms | [Z]ms | <[A]ms |
-| Satisfaction | [X] | [Y] | [Z] | >[A] |
+| Metric | Baseline | Current | Target |
+|--------|----------|---------|--------|
+| Usage | [X]% | [Y]% | >[Z]% |
+| Errors | <[X]% | <[Y]% | <[Z]% |
+| Performance | [X]ms | [Y]ms | <[Z]ms |
+| Satisfaction | [X] | [Y] | >[Z] |
 
 ---
 

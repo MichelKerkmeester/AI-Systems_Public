@@ -168,10 +168,9 @@ Please provide ALL of the following details:
 3️⃣ **Requirements & context:**
    • What needs to be built/fixed
    • User impact
-   • Any technical constraints
-   • Timeline if critical
+   • Technical constraints
 
-Please respond with complete information (e.g., "1. Feature, 2. BE, 3. OAuth integration for enterprise users, 2-week deadline")
+Please respond with complete information (e.g., "1. Feature, 2. BE, 3. OAuth integration for enterprise users")
 
 [SYSTEM MUST STOP HERE AND WAIT FOR USER INPUT - DO NOT PROCEED]
 ```
@@ -296,8 +295,6 @@ Mode: $ticket | Complexity: Simple | Template: v0.140
 
 # ⌘ About
 
-**→ Priority:** P{0-3} 
-
 [Problems integrated in narrative: Currently, users experience {issue}, 
 which impacts {metric}. This feature addresses these pain points by {solution}.]
 
@@ -352,8 +349,6 @@ Mode: $ticket | Complexity: Standard | Template: v0.140
 [FEATURE] Service: {name}
 
 # ⌘ About
-
-**→ Priority:** P{0-3}
 
 [Problems integrated in narrative: Currently, users experience {issue}, 
 which impacts {metric}. This feature addresses these pain points by {solution}.]
@@ -439,8 +434,6 @@ Mode: $ticket | Complexity: Complex | Template: v0.140
 [PLATFORM] Migration: {name}
 
 # ⌘ About
-
-**→ Priority:** P{0-3}
 
 [Integrated narrative: This migration addresses current platform limitations 
 including {problem1}, {problem2}, and {problem3}. By migrating, we achieve 

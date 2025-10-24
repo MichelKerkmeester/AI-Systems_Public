@@ -35,12 +35,11 @@ Transforms requests into professional development tickets, strategic PRDs, and d
 ### 🧠 DEPTH Framework Evolution (v0.103)
 - **Transparent Processing:** All 10 rounds visible with detailed progress updates
 - **RICCE Integration:** Role, Instructions, Context, Constraints, Examples mapped to DEPTH phases
-- **Cognitive Rigor Frameworks:** 
+**Cognitive Rigor Frameworks:** 
   - ✅ Assumption Audit (surfacing and challenging hidden assumptions)
   - ✅ Perspective Inversion (devil's advocate analysis)
   - ✅ Constraint Reversal (non-obvious solution generation)
   - ✅ Mechanism-First Validation (WHY before WHAT)
-  - ✅ Priority Classification (P0/P1/P2 labeling)
   - ✅ Self-Rating Protocol (6-dimension quality scoring)
 
 ### 💬 Interactive Mode Enhancements (v0.303)
@@ -53,7 +52,6 @@ Transforms requests into professional development tickets, strategic PRDs, and d
 - **Real-Time Processing Visibility:** See each DEPTH phase as it executes
 - **Assumption Logs Shared:** All assumptions surfaced and validated openly
 - **Opposition Analysis Shown:** Perspective inversion visible step-by-step
-- **Priority Reasoning Explained:** P0/P1/P2 classifications with justification
 - **Quality Scores Displayed:** Self-rating results for all 6 dimensions
 - **Error Recovery Transparent:** When issues occur, users see resolution steps
 
@@ -91,7 +89,6 @@ Transforms requests into professional development tickets, strategic PRDs, and d
 
 **Enhanced Quality:**
 - Mechanism-first thinking (WHY before WHAT)
-- Priority classification (P0/P1/P2) throughout
 - Self-rating on 6 dimensions (targets: 8+ scores)
 - Assumption dependencies explicitly flagged
 
@@ -101,7 +98,6 @@ Transforms requests into professional development tickets, strategic PRDs, and d
 2. **Perspective Inversion** - Argue opposition first, then synthesize
 3. **Constraint Reversal** - Opposite outcome analysis for non-obvious insights
 4. **Mechanism First** - Explain principles before tactics
-5. **Priority Classification** - P0 (critical), P1 (high-value), P2 (optional) labeling
 
 ### 📊 Interactive Mode Enhancements ✅
 **Transparent Conversations:**
@@ -217,7 +213,6 @@ The v0.132 templates feature:
 - **Streamlined requirements** - Bullet format with inline descriptions
 - **Tighter success criteria** - Essential metrics only
 - **Cleaner checklists** - Optimized for scannability
-- **Priority labels** - P0/P1/P2 classification throughout
 - **Mechanism explanations** - WHY before WHAT structure
 
 ---
@@ -233,11 +228,11 @@ The v0.129 template includes:
 - Error recovery included
 
 ### PRD Complexity Levels
-| Level | Features | Timeline | Template Sections | Focus |
-|-------|----------|----------|-------------------|-------|
-| **Initiative** | 5-10 | Quarterly | 5-7 sections | Single team deliverables |
-| **Program** | 10-20 | Half-year | 8-10 sections | Multi-team coordination |
-| **Strategic** | 20+ | Annual | 10+ sections | Platform transformation |
+| Level | Features | Template Sections | Focus |
+|-------|----------|-------------------|-------|
+| **Initiative** | 5-10 | 5-7 sections | Single team deliverables |
+| **Program** | 10-20 | 8-10 sections | Multi-team coordination |
+| **Strategic** | 20+ | 10+ sections | Platform transformation |
 
 ---
 
@@ -291,7 +286,6 @@ DEPTH methodology (Discover, Engineer, Prototype, Test, Harmonize) is automatica
   • User Experience: [analysis shown]
   • Business Stakeholder: [analysis shown]
 - Assumption audit: [assumptions listed and challenged]
-- Priority classification: [P0/P1/P2 reasoning shown]
 
 **⚙️ Round 3-5: Engineering Phase**
 - Generating solution approaches...
@@ -318,7 +312,6 @@ DEPTH methodology (Discover, Engineer, Prototype, Test, Harmonize) is automatica
 **✨ Round 10: Harmonizing Phase**
 - Final cognitive rigor validation complete
 - All assumptions flagged in deliverable
-- P0/P1/P2 priorities clearly labeled
 
 [Deliverable with complete processing transparency]
 ```
@@ -330,7 +323,6 @@ DEPTH methodology (Discover, Engineer, Prototype, Test, Harmonize) is automatica
 - **Quality Transparency:** Self-rating scores and validation results shared
 - **Educational Value:** Users learn methodology while receiving deliverables
 - **Mechanism-First:** WHY before WHAT throughout all solutions
-- **Priority Classification:** P0/P1/P2 labeling with reasoning
 - **Assumption Visibility:** All assumptions surfaced, challenged, and flagged
 
 ---
