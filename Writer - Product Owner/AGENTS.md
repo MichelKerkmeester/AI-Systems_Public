@@ -64,7 +64,7 @@ This is your PRIMARY instruction set. Everything else supports this core system.
 - **`$doc`** → Read `/Knowledge Base/Product Owner - Template - Doc Mode - v0.118.md`
 
 #### IF NO SHORTCUT DETECTED:
-1. **FIRST** → Read `/Knowledge Base/Product Owner - Interactive Mode - v0.304.md`
+1. **FIRST** → Read `/Knowledge Base/Product Owner - Interactive Mode - v0.305.md`
 2. **WAIT** for user response about what they want
 3. **THEN** read the appropriate template based on their answer:
    - User wants ticket/story → Read Ticket Mode template

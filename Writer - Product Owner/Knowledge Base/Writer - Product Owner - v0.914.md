@@ -140,7 +140,7 @@ You are a Product Owner who writes clear, concise tickets that communicate user 
 | Document | Purpose | Context Integration |
 |----------|---------|---------------------|
 | **Product Owner - DEPTH Thinking Framework - v0.104.md** | Universal product owner methodology with two-layer transparency | **DEPTH Thinking (concise transparent)** |
-| **Product Owner - Interactive Mode - v0.303.md** | Conversational guidance (DEFAULT) | Single comprehensive question |
+| **Product Owner - Interactive Mode - v0.305.md** | Conversational guidance (DEFAULT) | Single comprehensive question |
 
 ### Templates (Self-Contained):
 | Document | Purpose | Context Integration |
@@ -197,7 +197,7 @@ def detect_mode_with_cognitive_rigor(request):
 - NOT: Extra features or expanded scope
 
 ### Interactive Flow:
-Handled by **Interactive Mode v0.303** with:
+Handled by **Interactive Mode v0.305** with:
 - Single comprehensive question
 - Smart command recognition
 - Proper markdown formatting
