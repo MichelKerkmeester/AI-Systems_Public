@@ -1,10 +1,10 @@
-# Product Owner System - User Guide v0.913
+# Product Owner System - User Guide v0.914
 
-Transforms requests into professional development tickets, strategic PRDs, and documentation through intelligent interactive guidance with **transparent DEPTH processing** and cognitive rigor frameworks.
+Transforms requests into professional development tickets, strategic PRDs, and documentation through intelligent interactive guidance with **concise transparent DEPTH processing** and mandatory cognitive rigor frameworks.
 
 ## 📋 Table of Contents
 
-- [🆕 What's New In V0.913](#whats-new-in-v0913)
+- [🆕 What's New In V0.914](#whats-new-in-v0914)
 - [🔧 What's Improved](#whats-improved)
 - [✨ Key Features](#key-features)
 - [🚀 Quick Setup](#quick-setup)
@@ -15,96 +15,127 @@ Transforms requests into professional development tickets, strategic PRDs, and d
 - [🧠 DEPTH Thinking Framework](#depth-thinking-framework)
 - [🎯 RICCE Framework Integration](#ricce-framework-integration)
 - [🔍 Cognitive Rigor Techniques](#cognitive-rigor-techniques)
-- [📊 Transparent Processing](#transparent-processing)
+- [📊 Two-Layer Transparency Model](#two-layer-transparency-model)
 - [🎯 Automatic Complexity Detection](#automatic-complexity-detection)
 
 ---
 
-<a id="whats-new-in-v0913"></a>
-## 🆕 What's New In V0.913
+<a id="whats-new-in-v0914"></a>
+## 🆕 What's New In V0.914
 
-### 🌟 Major Paradigm Shift: Full Transparency
+### 🌟 Major Enhancement: Two-Layer Transparency Model
 
-**From Silent Excellence to Transparent Excellence:**
-- All internal processing now **visible to users** for educational value
-- DEPTH rounds shown in real-time (Rounds 1-10 with progress indicators)
-- Cognitive rigor techniques displayed as they're applied
-- Quality validation shared openly with scores and improvements
-- Users see and learn from the complete methodology
+**From Overwhelming Detail to Meaningful Transparency:**
+- **Layer 1 (Internal):** Full DEPTH rigor applied automatically (all 10 rounds, all techniques)
+- **Layer 2 (External):** Concise meaningful progress updates shown to users
+- Professional depth maintained while eliminating information overload
+- Educational value preserved through key insights
 
-### 🧠 DEPTH Framework Evolution (v0.103)
-- **Transparent Processing:** All 10 rounds visible with detailed progress updates
-- **RICCE Integration:** Role, Instructions, Context, Constraints, Examples mapped to DEPTH phases
-**Cognitive Rigor Frameworks:** 
-  - ✅ Assumption Audit (surfacing and challenging hidden assumptions)
-  - ✅ Perspective Inversion (devil's advocate analysis)
-  - ✅ Constraint Reversal (non-obvious solution generation)
-  - ✅ Mechanism-First Validation (WHY before WHAT)
-  - ✅ Self-Rating Protocol (6-dimension quality scoring)
+### 🔒 Multi-Perspective Analysis Now MANDATORY
+**Cannot Be Skipped:**
+- **BLOCKING requirement:** Minimum 3 perspectives (target 5)
+- Enforced at multiple validation gates throughout DEPTH phases
+- AI cannot proceed without completing perspective analysis
+- Defense-in-depth enforcement with multiple checkpoints
 
-### 💬 Interactive Mode Enhancements (v0.303)
-- **Visible Cognitive Rigor:** All techniques shown during conversation
-- **Quality Self-Rating Displayed:** Scores shared with users (Clarity, Completeness, etc.)
-- **Transparent Validation:** Pre-delivery checklist shown with results
-- **Educational Experience:** Users learn methodology while getting deliverables
+### 🧠 DEPTH Framework Evolution (v0.104)
+- **Two-Layer Transparency:** Full rigor internally, concise updates externally
+- **Mandatory Perspectives:** BLOCKING enforcement (minimum 3, target 5)
+- **Concise Communication:** Users see meaningful progress without overwhelming detail
+- **Quality Maintained:** All cognitive rigor still applied (just communicated concisely)
 
-### 📊 System Transparency Features
-- **Real-Time Processing Visibility:** See each DEPTH phase as it executes
-- **Assumption Logs Shared:** All assumptions surfaced and validated openly
-- **Opposition Analysis Shown:** Perspective inversion visible step-by-step
-- **Quality Scores Displayed:** Self-rating results for all 6 dimensions
-- **Error Recovery Transparent:** When issues occur, users see resolution steps
+### 💬 Interactive Mode Enhanced (v0.304)
+- **Concise Updates:** Meaningful progress without information overload
+- **Perspective Enforcement:** Multi-perspective analysis cannot be skipped
+- **Quality Summary:** High-level validation shown vs. complete checklists
+- **Key Insights:** Critical findings highlighted vs. full transcripts
 
-### Updated Files in v0.913
-- **Writer:** v0.913 - Full transparency alignment; visible processing emphasis
-- **DEPTH Framework:** v0.103 - Transparent excellence; cognitive rigor integration; RICCE mapping
-- **Interactive Mode:** v0.303 - Visible conversation quality; transparent cognitive techniques
+### 📊 What Changed From v0.913
+**Before (v0.913):** Full transparency with verbose output
+```markdown
+**🔍 Round 1-2: Discovery Phase**
+- Analyzing from multiple perspectives...
+- Technical Architect perspective: [5 paragraphs]
+- User Experience perspective: [5 paragraphs]
+- Business Stakeholder perspective: [5 paragraphs]
+[...25+ paragraphs of detail...]
+```
+
+**After (v0.914):** Concise transparency with full internal rigor
+```markdown
+🔍 **Analyzing from 5 perspectives** (Technical, UX, Business, QA, Strategic)
+**Key Insight:** [Most important finding]
+
+⚙️ **Engineering solution** (8 approaches evaluated, optimal selected)
+```
+
+**Result:** Same professional quality, 90% less visual noise
+
+### Updated Files in v0.914
+- **Writer:** v0.914 - Two-layer transparency model; mandatory multi-perspective enforcement
+- **DEPTH Framework:** v0.104 - Concise external communication; blocking perspective validation
+- **Interactive Mode:** v0.304 - Meaningful progress updates; mandatory perspective analysis
 
 ---
 
 <a id="whats-improved"></a>
 ## 🔧 What's Improved
 
-### 🎯 Transparency Revolution ✅
-**Complete Visibility:**
-- Users see all 10 DEPTH rounds as they execute with progress indicators
-- Cognitive rigor techniques displayed in real-time (assumption audit, perspective inversion, etc.)
-- Quality validation shared openly with scores and improvement cycles
-- Error recovery shown transparently with resolution strategies
+### 🎯 Concise Transparency Revolution ✅
+**Meaningful Communication:**
+- Users see concise progress updates during DEPTH phases
+- Key insights highlighted (not complete analysis transcripts)
+- Critical assumptions flagged (not full audit logs)
+- Quality scores summarized (not every dimension breakdown)
 
-**Educational Value:**
-- Users learn methodology while receiving deliverables
-- Understanding of WHY decisions are made, not just WHAT is delivered
-- Exposure to structured thinking frameworks
-- Insight into quality assurance processes
+**Professional Depth Maintained:**
+- All 10 DEPTH rounds still applied internally
+- Multi-perspective analysis MANDATORY (minimum 3, target 5)
+- All cognitive rigor techniques still executed
+- Quality standards unchanged (8+ targets)
 
-### 🧠 DEPTH + RICCE Integration ✅
-**Unified Framework:**
-- **RICCE Structure** mapped to **DEPTH Process**
-- Role → Define Multiple Perspectives (Discovery)
-- Instructions → Task Breakdown (Engineering)
-- Context → Provide Context Layers (All Phases)
-- Constraints → Establish Success Metrics (Engineering)
-- Examples → Validation Across All Phases
+### 🔒 Mandatory Multi-Perspective Analysis ✅
+**BLOCKING Enforcement:**
+- **Cannot be skipped** - System halts if not completed
+- **Multiple validation gates** - Checked at phase transitions
+- **State tracking** - `perspectives_analyzed >= 3` required
+- **Explicit error handling** - Recovery if skip attempted
+- **Logging required** - Completion must be confirmed
 
-**Enhanced Quality:**
-- Mechanism-first thinking (WHY before WHAT)
-- Self-rating on 6 dimensions (targets: 8+ scores)
-- Assumption dependencies explicitly flagged
+**Defense-in-Depth:**
+1. Declaration: "MANDATORY", "BLOCKING", "CRITICAL" keywords
+2. State Tracking: Measurable checkpoints (`>= 3`)
+3. Gate Validation: 4 independent validation points
+4. Error Recovery: Explicit on-fail handling
+5. Final Check: Last validation before delivery
 
-### 🎨 Cognitive Rigor Techniques ✅
-**Five Mandatory Frameworks:**
-1. **Assumption Audit** - Surface, classify, challenge all hidden assumptions
-2. **Perspective Inversion** - Argue opposition first, then synthesize
-3. **Constraint Reversal** - Opposite outcome analysis for non-obvious insights
-4. **Mechanism First** - Explain principles before tactics
+### 🧠 DEPTH + RICCE Integration (Enhanced) ✅
+**Unified Framework with Concise Output:**
+- All RICCE elements applied internally
+- Key structural decisions shown to users
+- Educational value through meaningful insights
+- Professional communication maintained
 
-### 📊 Interactive Mode Enhancements ✅
-**Transparent Conversations:**
-- Quality self-rating scores displayed to users
-- Assumption validation questions visible
-- Processing steps shown with emojis and progress
-- Pre-delivery validation checklist shared
+### 🎨 Cognitive Rigor Techniques (Still Applied) ✅
+**Five Mandatory Frameworks (Concisely Communicated):**
+1. **Multi-Perspective Analysis** - MANDATORY minimum 3 (count shown, key insights shared)
+2. **Assumption Audit** - Applied internally (critical ones flagged)
+3. **Perspective Inversion** - Applied internally (key opposition insights shown)
+4. **Constraint Reversal** - Applied internally (non-obvious solutions shared)
+5. **Mechanism First** - Applied internally (WHY before WHAT validated)
+
+### 📊 User Experience Improvements ✅
+**Cleaner Communication:**
+- Progress updates concise and meaningful
+- No overwhelming detail dumps
+- Key insights highlighted clearly
+- Quality confirmed with summaries
+
+**Educational Value Maintained:**
+- Users still learn from methodology
+- Key decision points explained
+- Critical insights shared
+- Professional reasoning visible
 
 ---
 
@@ -112,12 +143,13 @@ Transforms requests into professional development tickets, strategic PRDs, and d
 ## ✨ Key Features
 
 - **🚀 Three Modes**: Documentation, PRDs, Tickets & Stories
-- **🧠 DEPTH Framework**: 5-phase methodology with **transparent processing** (all 10 rounds visible)
+- **🧠 DEPTH Framework**: 5-phase methodology with **concise transparent processing** (10 rounds internal, meaningful updates external)
+- **🔒 Mandatory Perspectives**: BLOCKING requirement for minimum 3 perspectives (target 5) - cannot be skipped
 - **🎓 RICCE Integration**: Role, Instructions, Context, Constraints, Examples mapped to DEPTH
-- **🔬 Cognitive Rigor**: 5 mandatory techniques (assumption audit, perspective inversion, etc.)
-- **📊 Quality Transparency**: Self-rating scores and validation results shared openly
+- **🔬 Cognitive Rigor**: 5 mandatory techniques (all applied, key insights shown)
+- **📊 Two-Layer Transparency**: Full rigor internally, concise updates externally
 - **🎯 Smart Complexity**: Automatic detection and template scaling
-- **⚡ Quick Mode**: Zero-wait creation with auto-scaled thinking (1-5 rounds, summary transparency)
+- **⚡ Quick Mode**: Zero-wait creation with auto-scaled thinking (1-5 rounds)
 - **💬 Single Question Flow**: ALL information gathered at once
 - **🔒 Output Constraints**: Exact request = exact output (no scope expansion)
 - **📦 Self-Contained Templates**: Each template includes all its own rules
@@ -135,22 +167,22 @@ Transforms requests into professional development tickets, strategic PRDs, and d
 ### Step 2: Add System Instructions
 1. Click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Writer - Product Owner - v0.913.md` 
+3. Copy and paste: `Writer - Product Owner - v0.914.md` 
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
 Add these documents to your project:
 
 **Core Documents (Latest Versions):**
-- `Product Owner - DEPTH Thinking Framework - v0.103.md` (with transparency and RICCE)
-- `Product Owner - Interactive Mode - v0.303.md` (with visible cognitive rigor)
+- `Product Owner - DEPTH Thinking Framework - v0.104.md` (with two-layer transparency & mandatory perspectives)
+- `Product Owner - Interactive Mode - v0.304.md` (with concise updates & perspective enforcement)
 
 **Self-Contained Templates (Current Versions):**
 - `Product Owner - Template - Ticket Mode - v0.132.md` 
 - `Product Owner - Template - PRD Mode - v0.129.md` 
 - `Product Owner - Template - Doc Mode - v0.118.md` 
 
-**Note:** All rules embedded in templates. System now operates with full transparency.
+**Note:** All rules embedded in templates. System operates with two-layer transparency model (full rigor internally, concise updates externally).
 
 ### Step 4: Start Creating
 ```
@@ -169,12 +201,12 @@ $ticket payment integration     # Direct ticket mode (10 rounds auto)
 
 | Mode | Purpose | Questions | DEPTH Processing | Transparency | Template Version | Output |
 |------|---------|-----------|------------------|--------------|------------------|---------|
-| **Interactive** | Determine what to create | 1 comprehensive | 10 rounds visible | Full | Auto-selected | Exact request |
+| **Interactive** | Determine what to create | 1 comprehensive | 10 rounds (concise updates) | Two-layer | Auto-selected | Exact request |
 | **$quick** | Fast creation | NONE | 1-5 auto-scaled | Summary | Auto-selected | Exact request |
-| **$doc** | Documentation | 1 comprehensive | 10 rounds visible | Full | v0.118 | Requested doc only |
-| **$prd** | Product requirements | 1 comprehensive | 10 rounds visible | Full | v0.129 | Requested PRD only |
-| **$story** | User stories | 1 comprehensive | 10 rounds visible | Full | v0.132 | Requested story only |
-| **$ticket** | Dev tickets | 1 comprehensive | 10 rounds visible | Full | v0.132 | Requested ticket only |
+| **$doc** | Documentation | 1 comprehensive | 10 rounds (concise updates) | Two-layer | v0.118 | Requested doc only |
+| **$prd** | Product requirements | 1 comprehensive | 10 rounds (concise updates) | Two-layer | v0.129 | Requested PRD only |
+| **$story** | User stories | 1 comprehensive | 10 rounds (concise updates) | Two-layer | v0.132 | Requested story only |
+| **$ticket** | Dev tickets | 1 comprehensive | 10 rounds (concise updates) | Two-layer | v0.132 | Requested ticket only |
 
 ### Interactive Flow (Default) - Single Question Format
 ```
