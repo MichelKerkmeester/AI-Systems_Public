@@ -1,53 +1,38 @@
-# Product Owner System - User Guide v0.914
+# Product Owner System v0.914
 
-Transforms requests into professional development tickets, strategic PRDs, and documentation through intelligent interactive guidance with **concise transparent DEPTH processing** and mandatory cognitive rigor frameworks.
+Transforms requests into professional tickets, PRDs, and documentation with **concise transparent DEPTH processing**.
 
 ## 📋 Table of Contents
 
-- [🆕 What's New In V0.914](#whats-new-in-v0914)
-- [🔧 What's Improved](#whats-improved)
-- [✨ Key Features](#key-features)
-- [🚀 Quick Setup](#quick-setup)
-- [🎛️ Operating Modes](#operating-modes)
-- [🎫 Ticket Mode](#ticket-mode)
-- [🚀 PRD Mode](#prd-mode)
-- [📄 Doc Mode](#doc-mode)
-- [🧠 DEPTH Thinking Framework](#depth-thinking-framework)
-- [🎯 RICCE Framework Integration](#ricce-framework-integration)
-- [🔍 Cognitive Rigor Techniques](#cognitive-rigor-techniques)
-- [📊 Two-Layer Transparency Model](#two-layer-transparency-model)
-- [🎯 Automatic Complexity Detection](#automatic-complexity-detection)
+1. [🆕 What's New in v0.914](#1-whats-new-in-v0914)
+2. [✨ Key Features](#2-key-features)
+3. [🚀 Quick Setup](#3-quick-setup)
+4. [🎛️ Operating Modes](#4-operating-modes)
+5. [📋 Mode Details](#5-mode-details)
+6. [🧠 DEPTH Thinking Framework](#6-depth-thinking-framework)
+7. [🔬 Cognitive Rigor Techniques](#7-cognitive-rigor-techniques)
+8. [⚙️ Automatic Complexity Detection](#8-automatic-complexity-detection)
+9. [🏗️ System Architecture](#9-system-architecture)
 
 ---
 
-<a id="whats-new-in-v0914"></a>
-## 🆕 What's New In V0.914
+<a id="1-whats-new-in-v0914"></a>
+## 1. 🆕 What's New In V0.914
 
-### 🌟 Major Enhancement: Two-Layer Transparency Model
+### Two-Layer Transparency Model
+- **Internal:** Full DEPTH rigor (10 rounds, 3-5 perspectives, all cognitive techniques)
+- **External:** Concise progress updates (key insights only)
+- **Result:** Same quality, 90% less noise
 
-**From Overwhelming Detail to Meaningful Transparency:**
-- **Layer 1 (Internal):** Full DEPTH rigor applied automatically (all 10 rounds, all techniques)
-- **Layer 2 (External):** Concise meaningful progress updates shown to users
-- Professional depth maintained while eliminating information overload
-- Educational value preserved through key insights
-
-### 🔒 Multi-Perspective Analysis Now MANDATORY
-**Cannot Be Skipped:**
+### Mandatory Multi-Perspective Analysis
 - **BLOCKING requirement:** Minimum 3 perspectives (target 5)
-- Enforced at multiple validation gates throughout DEPTH phases
-- AI cannot proceed without completing perspective analysis
-- Defense-in-depth enforcement with multiple checkpoints
+- Cannot be skipped - enforced at multiple validation gates
+- Technical, UX, Business, QA, Strategic viewpoints
 
-### 🧠 DEPTH Framework Evolution (v0.104)
-- **Two-Layer Transparency:** Full rigor internally, concise updates externally
-- **Mandatory Perspectives:** BLOCKING enforcement (minimum 3, target 5)
-- **Concise Communication:** Users see meaningful progress without overwhelming detail
-- **Quality Maintained:** All cognitive rigor still applied (just communicated concisely)
-
-### 💬 Interactive Mode Enhanced (v0.304)
-- **Concise Updates:** Meaningful progress without information overload
-- **Perspective Enforcement:** Multi-perspective analysis cannot be skipped
-- **Quality Summary:** High-level validation shown vs. complete checklists
+### Updated Components
+- **System Prompt:** v0.914 (two-layer transparency)
+- **DEPTH Framework:** v0.104 (mandatory perspectives + concise output)
+- **Interactive Mode:** v0.304 (concise updates)
 - **Key Insights:** Critical findings highlighted vs. full transcripts
 
 ### 📊 What Changed From v0.913
@@ -78,95 +63,28 @@ Transforms requests into professional development tickets, strategic PRDs, and d
 
 ---
 
-<a id="whats-improved"></a>
-## 🔧 What's Improved
+<a id="2-key-features"></a>
+## 2. ✨ Key Features
 
-### 🎯 Concise Transparency Revolution ✅
-**Meaningful Communication:**
-- Users see concise progress updates during DEPTH phases
-- Key insights highlighted (not complete analysis transcripts)
-- Critical assumptions flagged (not full audit logs)
-- Quality scores summarized (not every dimension breakdown)
-
-**Professional Depth Maintained:**
-- All 10 DEPTH rounds still applied internally
-- Multi-perspective analysis MANDATORY (minimum 3, target 5)
-- All cognitive rigor techniques still executed
-- Quality standards unchanged (8+ targets)
-
-### 🔒 Mandatory Multi-Perspective Analysis ✅
-**BLOCKING Enforcement:**
-- **Cannot be skipped** - System halts if not completed
-- **Multiple validation gates** - Checked at phase transitions
-- **State tracking** - `perspectives_analyzed >= 3` required
-- **Explicit error handling** - Recovery if skip attempted
-- **Logging required** - Completion must be confirmed
-
-**Defense-in-Depth:**
-1. Declaration: "MANDATORY", "BLOCKING", "CRITICAL" keywords
-2. State Tracking: Measurable checkpoints (`>= 3`)
-3. Gate Validation: 4 independent validation points
-4. Error Recovery: Explicit on-fail handling
-5. Final Check: Last validation before delivery
-
-### 🧠 DEPTH + RICCE Integration (Enhanced) ✅
-**Unified Framework with Concise Output:**
-- All RICCE elements applied internally
-- Key structural decisions shown to users
-- Educational value through meaningful insights
-- Professional communication maintained
-
-### 🎨 Cognitive Rigor Techniques (Still Applied) ✅
-**Five Mandatory Frameworks (Concisely Communicated):**
-1. **Multi-Perspective Analysis** - MANDATORY minimum 3 (count shown, key insights shared)
-2. **Assumption Audit** - Applied internally (critical ones flagged)
-3. **Perspective Inversion** - Applied internally (key opposition insights shown)
-4. **Constraint Reversal** - Applied internally (non-obvious solutions shared)
-5. **Mechanism First** - Applied internally (WHY before WHAT validated)
-
-### 📊 User Experience Improvements ✅
-**Cleaner Communication:**
-- Progress updates concise and meaningful
-- No overwhelming detail dumps
-- Key insights highlighted clearly
-- Quality confirmed with summaries
-
-**Educational Value Maintained:**
-- Users still learn from methodology
-- Key decision points explained
-- Critical insights shared
-- Professional reasoning visible
+- **🧠 DEPTH Framework v0.104**: 10-round methodology with two-layer transparency
+- **🔒 Mandatory Perspectives**: Minimum 3 perspectives (BLOCKING requirement)
+- **🔬 Cognitive Rigor**: 5 techniques (multi-perspective, assumption audit, perspective inversion, constraint reversal, mechanism-first)
+- **📊 Two-Layer Model**: Full rigor internally, concise updates externally
+- **🚀 Three Modes**: Tickets, PRDs, Documentation
+- **⚡ Quick Mode**: Auto-scaled 1-5 rounds
+- **💬 Single Question**: All info gathered at once
+- **🎯 Smart Templates**: Auto-complexity detection
 
 ---
 
-<a id="key-features"></a>
-## ✨ Key Features
+<a id="3-quick-setup"></a>
+## 3. 🚀 Quick Setup
 
-- **🚀 Three Modes**: Documentation, PRDs, Tickets & Stories
-- **🧠 DEPTH Framework**: 5-phase methodology with **concise transparent processing** (10 rounds internal, meaningful updates external)
-- **🔒 Mandatory Perspectives**: BLOCKING requirement for minimum 3 perspectives (target 5) - cannot be skipped
-- **🎓 RICCE Integration**: Role, Instructions, Context, Constraints, Examples mapped to DEPTH
-- **🔬 Cognitive Rigor**: 5 mandatory techniques (all applied, key insights shown)
-- **📊 Two-Layer Transparency**: Full rigor internally, concise updates externally
-- **🎯 Smart Complexity**: Automatic detection and template scaling
-- **⚡ Quick Mode**: Zero-wait creation with auto-scaled thinking (1-5 rounds)
-- **💬 Single Question Flow**: ALL information gathered at once
-- **🔒 Output Constraints**: Exact request = exact output (no scope expansion)
-- **📦 Self-Contained Templates**: Each template includes all its own rules
-
----
-
-<a id="quick-setup"></a>
-## 🚀 Quick Setup
-
-### Step 1: Create A Claude Project
-1. Go to claude.ai
-2. Click "Projects" in sidebar
-3. Create new project named "Product Owner"
+### Step 1: Create Claude Project
+1. Go to claude.ai → Projects → Create "Product Owner"
 
 ### Step 2: Add System Instructions
-1. Click "Edit project details"
-2. Find "Custom instructions" section
+1. Edit project details → Custom instructions
 3. Copy and paste: `Writer - Product Owner - v0.914.md` 
 4. Save the project
 
@@ -194,8 +112,8 @@ $ticket payment integration     # Direct ticket mode (10 rounds auto)
 
 ---
 
-<a id="operating-modes"></a>
-## 🎛️ Operating Modes
+<a id="4-operating-modes"></a>
+## 4. 🎛️ Operating Modes
 
 **Default Mode:** The system defaults to `$interactive` with automatic 10-round DEPTH unless specified.
 
@@ -208,233 +126,205 @@ $ticket payment integration     # Direct ticket mode (10 rounds auto)
 | **$story** | User stories | 1 comprehensive | 10 rounds (concise updates) | Two-layer | v0.132 | Requested story only |
 | **$ticket** | Dev tickets | 1 comprehensive | 10 rounds (concise updates) | Two-layer | v0.132 | Requested ticket only |
 
-### Interactive Flow (Default) - Single Question Format
-```
-Welcome! Let's create exactly what you need. 🎯
+### Interactive Flow (Default)
+System asks one comprehensive question gathering all info at once:
+- Deliverable type (ticket/story/PRD/doc)
+- Scope/platform
+- Brief description
 
-Please provide ALL of the following information:
-
-1️⃣ **What type of deliverable?**
-   • Development ticket - Feature or bug with QA checklist
-   • User story - Narrative format without checklist
-   • PRD - Strategic initiative or detailed specs
-   • Documentation - User guide, feature docs, or strategy
-
-2️⃣ **What's the scope or platform?**
-   • For tickets: BE, FE, Mobile, FS, DevOps, or QA
-   • For PRDs: Web, Mobile, Web+Mobile, or All platforms
-   • For docs: Simple (2-3 sections), Standard (4-6), or Complex (7+)
-
-3️⃣ **Brief description of what you need**
-   • What are you building/fixing?
-   • Any specific requirements or context?
-
-Please respond with complete information (e.g., "1. Ticket, 2. BE, 3. User authentication system")
-
-[SYSTEM MUST STOP HERE AND WAIT FOR USER INPUT - DO NOT PROCEED]
-```
+System waits for complete response before proceeding.
 
 ---
 
-<a id="ticket-mode"></a>
-## 🎫 Ticket Mode (v0.132 - More Concise)
+<a id="5-mode-details"></a>
+## 5. 📋 Mode Details
 
-### Improved Concise Format
-The v0.132 templates feature:
+### 🎫 Ticket Mode (v0.132)
+
+**Purpose:** Development tickets and user stories with QA checklists
+
+**Format Improvements:**
 - **Compressed About sections** - 1-2 lines with bold key-value pairs
 - **Streamlined requirements** - Bullet format with inline descriptions
 - **Tighter success criteria** - Essential metrics only
 - **Cleaner checklists** - Optimized for scannability
 - **Mechanism explanations** - WHY before WHAT structure
 
+**Ticket vs Story:**
+- **Ticket** - Technical implementation with detailed QA checklist
+- **Story** - User-focused narrative without technical checklist
+
+**Complexity Levels:**
+| Level | Indicators | Sections | Resolution Items | Use Case |
+|-------|-----------|----------|------------------|----------|
+| **Simple** | bug, fix, typo, update | 2-3 | 4-6 | Quick fixes and minor updates |
+| **Standard** | feature, dashboard, api | 4-5 | 8-12 | Standard features and enhancements |
+| **Complex** | platform, architecture, migration | 6-8 | 12-20 | System-wide changes and migrations |
+
 ---
 
-<a id="prd-mode"></a>
-## 🚀 PRD Mode (v0.129)
+### 🚀 PRD Mode (v0.129)
 
-### Product Requirements with Embedded Rules
-The v0.129 template includes:
+**Purpose:** Product requirements documents for strategic initiatives
+
+**Self-Contained Features:**
 - All formatting standards built-in
 - Complete symbol hierarchy defined
 - Quality checks embedded
 - Error recovery included
 
-### PRD Complexity Levels
-| Level | Features | Template Sections | Focus |
-|-------|----------|-------------------|-------|
-| **Initiative** | 5-10 | 5-7 sections | Single team deliverables |
-| **Program** | 10-20 | 8-10 sections | Multi-team coordination |
-| **Strategic** | 20+ | 10+ sections | Platform transformation |
+**Complexity Levels:**
+| Level | Features | Template Sections | Focus | Use Case |
+|-------|----------|-------------------|-------|----------|
+| **Initiative** | 5-10 | 5-7 sections | Single team deliverables | Focused features, single-team projects |
+| **Program** | 10-20 | 8-10 sections | Multi-team coordination | Cross-team initiatives, platform features |
+| **Strategic** | 20+ | 10+ sections | Platform transformation | Company-wide changes, major platforms |
+
+**Standard PRD Sections:**
+1. **Executive Summary** - High-level overview and business value
+2. **Problem Statement** - User needs and pain points
+3. **Goals & Success Metrics** - Measurable outcomes
+4. **User Stories & Use Cases** - Detailed scenarios
+5. **Functional Requirements** - Feature specifications
+6. **Technical Considerations** - Architecture and constraints
+7. **Launch Plan** - Rollout strategy and timeline
+8. **Success Metrics** - KPIs and measurement plan
 
 ---
 
-<a id="doc-mode"></a>
-## 📄 Doc Mode (v0.118)
+### 📄 Doc Mode (v0.118)
 
-### Documentation with Integrated Standards
-The v0.118 template features:
+**Purpose:** Technical documentation and user guides
+
+**Self-Contained Features:**
 - Complete formatting rules embedded
 - Self-contained quality checks
 - Standalone operation
 - No external dependencies
 
-### Documentation Complexity
-| Type | Main Sections | Depth | Use Case |
-|------|---------------|-------|----------|
-| **Simple** | 2-3 | Quick reference | Product briefs, overviews |
-| **Standard** | 4-6 | Detailed guide | Feature specs, user guides |
-| **Complex** | 7+ | Comprehensive | Strategy docs, platforms |
+**Complexity Levels:**
+| Type | Main Sections | Depth | Use Case | Examples |
+|------|---------------|-------|----------|----------|
+| **Simple** | 2-3 | Quick reference | Product briefs, overviews | Feature announcements, quick guides |
+| **Standard** | 4-6 | Detailed guide | Feature specs, user guides | API documentation, user manuals |
+| **Complex** | 7+ | Comprehensive | Strategy docs, platforms | Architecture docs, system specifications |
+
+**Common Documentation Types:**
+- **Feature Documentation** - How features work and how to use them
+- **API Documentation** - Endpoint specifications and examples
+- **User Guides** - Step-by-step instructions for end users
+- **Technical Specifications** - System architecture and design
+- **Strategy Documents** - Product vision and roadmaps
+- **Process Documentation** - Workflows and procedures
 
 ---
 
-<a id="depth-thinking-framework"></a>
-## 🧠 DEPTH Thinking Framework
+<a id="6-depth-thinking-framework"></a>
+## 6. 🧠 DEPTH Thinking Framework
 
-### Transparent DEPTH Processing System
+### Two-Layer Transparency Processing System
 | Mode | Processing Depth | User Visibility | Application | Output |
 |------|-----------------|-----------------|-------------|---------|
-| **Standard Modes** | 10 rounds enforced | Full transparency | Real-time display | Exact request |
+| **Standard Modes** | 10 rounds enforced | Concise meaningful updates | Real-time progress | Exact request |
 | **$Quick Mode** | 1-5 auto-scaled | Summary provided | Complexity-based | Exact request |
 
 **DEPTH Definition:**
-DEPTH methodology (Discover, Engineer, Prototype, Test, Harmonize) is automatically applied with **full transparency**. Users see all internal processing, decision-making, and quality validation for educational value.
+DEPTH methodology (Discover, Engineer, Prototype, Test, Harmonize) is automatically applied with **two-layer transparency**. Full rigor applied internally, concise meaningful updates shown externally for optimal user experience.
 
-### DEPTH Phases (Fully Visible to Users)
-| Phase | Purpose | Visible Processing | User Sees |
-|-------|---------|-------------------|-----------|
-| **D**iscover | Deep understanding | Multiple perspectives shown | "🔍 Round 1-2: Analyzing from 5 perspectives..." |
-| **E**ngineer | Solution generation | Approaches displayed | "⚙️ Round 3-5: Generating solutions, applying constraint reversal..." |
-| **P**rototype | Build framework | Template application shown | "🔨 Round 6-7: Building with v0.132, validating mechanism-first..." |
-| **T**est | Validate quality | Quality scores shared | "✅ Round 8-9: Self-rating (Completeness: 9/10, Clarity: 9/10)..." |
-| **H**armonize | Final polish | Validation checklist visible | "✨ Round 10: Final checks, all gates passed ✅" |
+### DEPTH Phases (v0.104 Two-Layer Model)
+| Phase | Purpose | Internal Processing | User Sees (Concise) |
+|-------|---------|-------------------|---------------------|
+| **D**iscover | Deep understanding | 5 perspectives analyzed, assumption audit, opposition analysis | "🔍 Analyzing (5 perspectives) - Key insight: [finding]" |
+| **E**ngineer | Solution generation | 8 approaches evaluated, constraint reversal, mechanism validation | "⚙️ Engineering (optimal approach selected)" |
+| **P**rototype | Build framework | Template application, RICCE validation, mechanism-first check | "🔨 Building (template v0.132, mechanism-first validated)" |
+| **T**est | Validate quality | 6-dimension self-rating, quality gates, improvement cycles | "✅ Validating (all dimensions 8+, excellence confirmed)" |
+| **H**armonize | Final polish | Final validation, cognitive rigor check, delivery prep | "✨ Finalizing (excellence confirmed, ready for delivery)" |
 
-### Transparent Excellence in Action
+### Concise Transparent Excellence in Action
 ```markdown
-🔄 **Processing with Full Transparency:**
+🔄 **Processing (DEPTH v0.104 - Concise Updates):**
 
-**🔍 Round 1-2: Discovery Phase**
-- Analyzing requirements from multiple perspectives...
-  • Technical Architect: [analysis shown]
-  • User Experience: [analysis shown]
-  • Business Stakeholder: [analysis shown]
-- Assumption audit: [assumptions listed and challenged]
+🔍 **Analyzing** (5 perspectives: Technical, UX, Business, QA, Strategic)
+**Key Insight:** OAuth token validation failure with configuration as primary suspect
 
-**⚙️ Round 3-5: Engineering Phase**
-- Generating solution approaches...
-  • Standard implementation
-  • Alternative patterns
-  • Risk-mitigated options
-- Constraint reversal: [opposite outcome analysis shown]
-- Selected approach: [with justification]
+⚙️ **Engineering** (8 solution approaches evaluated)
+**Non-obvious Insight:** Constraint reversal revealed security pattern opportunity
+**Selected:** Configuration validation + enhanced error handling
 
-**🔨 Round 6-7: Prototyping Phase**
-- Building with template v0.132...
-- Mechanism-first validation: WHY explained before WHAT ✅
-- RICCE structure confirmed ✅
-
-**✅ Round 8-9: Testing Phase**
-- Quality self-rating:
-  • Completeness: 9/10 ✅
-  • Clarity: 9/10 ✅
-  • Actionability: 9/10 ✅
-  • Accuracy: 9/10 ✅
-  • Relevance: 10/10 ✅
-  • Mechanism Depth: 8/10 ✅
-
-**✨ Round 10: Harmonizing Phase**
-- Final cognitive rigor validation complete
-- All assumptions flagged in deliverable
-
-[Deliverable with complete processing transparency]
-```
-
-### DEPTH v0.103 Revolution (Summary)
-- **Full Transparency:** All 10 rounds visible with detailed progress
-- **RICCE Integration:** Role/Instructions/Context/Constraints/Examples mapped to DEPTH
-- **Cognitive Rigor:** 5 mandatory techniques applied and shown
-- **Quality Transparency:** Self-rating scores and validation results shared
-- **Educational Value:** Users learn methodology while receiving deliverables
-- **Mechanism-First:** WHY before WHAT throughout all solutions
-- **Assumption Visibility:** All assumptions surfaced, challenged, and flagged
+🔨 **Building** (Template v0.132, mechanism-first validated)
+**Structure:** WHY OAuth fails → HOW to diagnose → WHAT to implement
 
 ---
 
-<a id="ricce-framework-integration"></a>
-## 🎯 RICCE Framework Integration
+<a id="depth-framework"></a>
+## 🧠 DEPTH Framework (v0.104)
 
-### RICCE + DEPTH: Unified Approach
+**Two-Layer Model:**
+- **Internal**: Full 10-round methodology, all cognitive rigor, mandatory perspectives (min 3, target 5)
+- **External**: Concise phase updates with key insights only
 
-**RICCE Structure:**
-- **R**ole - Define who is analyzing
-- **I**nstructions - Break down tasks
-- **C**ontext - Build comprehensive understanding
-- **C**onstraints - Establish success metrics
-- **E**xamples - Validate with real-world patterns
+**Example User Communication:**
+```markdown
+🔍 **Analyzing** (5 perspectives confirmed)
+**Key Insight:** [Most important finding]
 
-**Mapping to DEPTH:**
+✅ **Validating** (Quality: 92/100)
+**Assumption Flagged:** [Critical dependency]
 
-| RICCE Element | DEPTH Phase | Transparency | Purpose |
-|---------------|-------------|--------------|---------|
-| **Role** | Discover | Multiple perspectives shown | "Analyzing as: architect, UX designer, stakeholder..." |
-| **Instructions** | Engineer | Task breakdown visible | "Step 1: X, Step 2: Y, Step 3: Z" |
-| **Context** | All Phases | Context layers shared | "Technical: [details], Business: [details], User: [details]" |
-| **Constraints** | Engineer | Success metrics displayed | "Target: 95%+ completeness, 90%+ clarity" |
-| **Examples** | All Phases | Validation shown | "Similar pattern at Company X validates approach" |
+✨ **Finalizing** (Excellence confirmed)
+```
 
-**Benefits:**
-- Structure (RICCE) + Process (DEPTH) = Complete methodology
-- Users see WHAT (structure) and HOW (process)
-- Educational transparency throughout
-- Quality assured at every step
+**Full details in:** `Product Owner - DEPTH Thinking Framework - v0.104.md`
 
 ---
 
-<a id="automatic-complexity-detection"></a>
-## 🎯 Automatic Complexity Detection
+<a id="7-cognitive-rigor"></a>
+## 7. 🔬 Cognitive Rigor Techniques
 
-### For Tickets
-| Indicators | Complexity | Sections | Resolution Items | DEPTH | Transparency | Output |
-|------------|------------|----------|------------------|-------|--------------|---------|
-| bug, fix, typo, update | **Simple** | 2-3 | 4-6 | 10 rounds visible | Full | That specific bug only |
-| feature, dashboard, api | **Standard** | 4-5 | 8-12 | 10 rounds visible | Full | Requested feature only |
-| platform, architecture, migration | **Complex** | 6-8 | 12-20 | 10 rounds visible | Full | Specified platform only |
+Five mandatory frameworks applied internally (users see key insights only):
 
-**Quick Mode:** 2/3/5 rounds respectively with summary transparency
+1. **Multi-Perspective Analysis** - BLOCKING requirement (min 3, target 5)
+2. **Assumption Audit** - Critical flags shown
+3. **Perspective Inversion** - Key opposition insights
+4. **Constraint Reversal** - Non-obvious solutions
+5. **Mechanism First** - WHY before WHAT validation
 
-### Enhanced Template Selection with Tie-Breaking
-System includes intelligent tie-breaking for ambiguous cases:
-- "bug platform" → Analyzes context, typically Standard template for that bug
-- "feature migration" → Complex template for that feature
-- Complex keywords override simpler ones
-- Defaults to Standard when unclear
-- **Important:** Complexity affects TEMPLATE SIZE, not content scope
-- **All detection logic shown to user in v0.913**
+**Quality Dimensions:** Completeness, Clarity, Actionability, Accuracy, Relevance, Mechanism Depth (all target 8+)
 
-### Output Guarantee Examples (With Transparency)
+---
+
+<a id="8-automatic-complexity"></a>
+## 8. ⚙️ Automatic Complexity Detection
+
+System auto-detects complexity from keywords:
+
+**For Tickets:**
+- **Simple**: bug, fix, typo (2-3 sections, 4-6 items)
+- **Standard**: feature, dashboard, api (4-5 sections, 8-12 items)
+- **Complex**: platform, architecture, migration (6-8 sections, 12-20 items)
+
+**$quick mode:** Auto-scales to 2/3/5 rounds based on complexity
+
+**Output Guarantee:** Exact request = exact output (no scope expansion)
+- "Fix login bug" → That bug only
+- "Build dashboard" → That dashboard only
+- "Platform migration" → That migration only
+
+---
+
+<a id="9-system-architecture"></a>
+## 9. 🏗️ System Architecture
+
 ```
-User: "Fix login bug"
-[Shows analysis of "fix" + "bug" keywords]
-→ Simple template for THAT login bug only
-NOT: Simple template with multiple bugs
-
-User: "Build dashboard"
-[Shows analysis of "feature" + "dashboard" keywords]
-→ Standard template for THAT dashboard only
-NOT: Standard template with extra features
-
-User: "Platform migration"
-[Shows analysis of "platform" + "migration" keywords]
-→ Complex template for THAT migration only
-NOT: Complex template with multiple platforms
-```
-
-### Transparency in Complexity Detection (New in v0.913)
-```
-🎯 **Complexity Analysis:**
-Keywords detected: ["feature", "dashboard", "api"]
-Complexity score: Standard (4-5 sections)
-Template selected: v0.132 Standard
-Reasoning: Feature-level work with moderate scope
-
-Proceeding with 10-round DEPTH processing...
+AGENTS.md → Entry point with routing logic
+    ↓
+Writer - Product Owner - v0.914.md (System prompt)
+    ↓
+DEPTH Framework v0.104 (Methodology)
+    ↓
+Interactive Mode v0.304 (Conversation flow)
+    ↓
+Templates (Ticket v0.132, PRD v0.129, Doc v0.118)
+    ↓
+Output → /Export/[###]-artifact.md
 ```

@@ -1378,7 +1378,7 @@ External (Concise Updates Shown):
 - Completeness (8+ threshold) - Shown to user
 - Assumption Challenge (7+ threshold) - Shown to user
 - Perspective Diversity (7+ threshold) - Shown to user
-```
+
 - Mechanism Depth (8+ threshold) - Shown to user
 
 ### Smart Defaults
@@ -1406,4 +1406,3 @@ When information is incomplete, the system applies intelligent defaults:
 - **Cognitive rigor** - Assumptions challenged, mechanisms explained (all visible)
 - **Perspective diversity** - Opposition considered and synthesized (shown to users)
 - **Full transparency** - All internal processing shared with users for educational value
-```

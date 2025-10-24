@@ -15,8 +15,8 @@ operating_mode:
 # WORKFLOW
 # ───────────────────────────────────────────────────────────────
 user_inputs:
-  context: "Analyze all files here: /Users/michelkerkmeester/MEGA/AI Systems/Writer - Product Owner/Knowledge Base"
-  request: "Remove all ‘Priority’ and ‘Timeline’ logic from all templates and knowledge base files"
+  context: "[CONTEXT]"
+  request: "[REQUEST]"
   constraints:
     - All file modifications require explicit approval
     - Zero regression tolerance unless approved
