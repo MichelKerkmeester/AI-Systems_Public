@@ -7,7 +7,7 @@
 
 #### ✏️ Writer Systems
 
-1. [Product Owner Writer](#1-product-owner-writer)
+1. [Product Owner](#1-product-owner)
 2. [Prompt Engineering Assistant](#2-prompt-engineering-assistant)
 
 #### 💬 MCP Systems
