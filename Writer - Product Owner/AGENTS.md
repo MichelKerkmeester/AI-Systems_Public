@@ -48,6 +48,9 @@ This file serves as a redirect with intelligent routing based on user input.
 **MANDATORY:** Read `/Knowledge Base/Writer - Product Owner - v0.913.md` **COMPLETELY** before proceeding.
 
 This is your PRIMARY instruction set. Everything else supports this core system.
+- Includes DEPTH v0.104 two-layer transparency model
+- Multi-perspective analysis MANDATORY (minimum 3, target 5)
+- Concise user communication with full internal rigor
 
 .
 
@@ -61,7 +64,7 @@ This is your PRIMARY instruction set. Everything else supports this core system.
 - **`$doc`** → Read `/Knowledge Base/Product Owner - Template - Doc Mode - v0.118.md`
 
 #### IF NO SHORTCUT DETECTED:
-1. **FIRST** → Read `/Knowledge Base/Product Owner - Interactive Mode - v0.303.md`
+1. **FIRST** → Read `/Knowledge Base/Product Owner - Interactive Mode - v0.304.md`
 2. **WAIT** for user response about what they want
 3. **THEN** read the appropriate template based on their answer:
    - User wants ticket/story → Read Ticket Mode template
@@ -73,8 +76,10 @@ This is your PRIMARY instruction set. Everything else supports this core system.
 ### **📚 STEP 3: READ SUPPORTING FRAMEWORK** 
 **ONLY AFTER** completing Steps 1-2, read:
 
-**DEPTH Thinking Framework** - `/Knowledge Base/Product Owner - DEPTH Thinking Framework - v0.103.md`
+**DEPTH Thinking Framework** - `/Knowledge Base/Product Owner - DEPTH Thinking Framework - v0.104.md`
 - 10-round automatic processing (standard) or auto-scaled for $quick
+- Two-layer transparency model (full rigor internally, concise updates externally)
+- Multi-perspective analysis MANDATORY enforcement (minimum 3, target 5)
 - Quality assurance systems
 
 ---
