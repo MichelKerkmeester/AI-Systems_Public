@@ -1,10 +1,10 @@
-# Product Owner System - User Guide v0.912
+# Product Owner System - User Guide v0.913
 
-Transforms requests into professional development tickets, strategic PRDs, and documentation through intelligent interactive guidance with automatic DEPTH processing.
+Transforms requests into professional development tickets, strategic PRDs, and documentation through intelligent interactive guidance with **transparent DEPTH processing** and cognitive rigor frameworks.
 
 ## 📋 Table of Contents
 
-- [🆕 What's New In V0.912](#whats-new-in-v0912)
+- [🆕 What's New In V0.913](#whats-new-in-v0913)
 - [🔧 What's Improved](#whats-improved)
 - [✨ Key Features](#key-features)
 - [🚀 Quick Setup](#quick-setup)
@@ -13,51 +13,102 @@ Transforms requests into professional development tickets, strategic PRDs, and d
 - [🚀 PRD Mode](#prd-mode)
 - [📄 Doc Mode](#doc-mode)
 - [🧠 DEPTH Thinking Framework](#depth-thinking-framework)
+- [🎯 RICCE Framework Integration](#ricce-framework-integration)
+- [🔍 Cognitive Rigor Techniques](#cognitive-rigor-techniques)
+- [📊 Transparent Processing](#transparent-processing)
 - [🎯 Automatic Complexity Detection](#automatic-complexity-detection)
 
 ---
 
-<a id="whats-new-in-v0912"></a>
-## 🆕 What's New In V0.912
+<a id="whats-new-in-v0913"></a>
+## 🆕 What's New In V0.913
 
-### DEPTH Framework Enhancements (v0.102)
-- **Structured Phase Distribution:** Standardized 10-round flow (D→H) with explicit internal state tracking
-- **Formal Quality Gates:** Detection signals, severity scoring, and action matrices across all phases
-- **Robust Error Recovery:** Retry policies, rollback strategies, and escalation paths with minimal user disruption
-- **Output Discipline:** Strict constraints prevent scope expansion; multiple perspectives converge to single deliverable
-- **Configurable Visibility:** Internals hidden by default with optional brief summaries when explicitly enabled
+### 🌟 Major Paradigm Shift: Full Transparency
 
-### Interactive Mode Improvements (v0.302)
-- **Critical Formatting Enforcement:** Validation rules prevent emoji bullets and single-line compression
-- **Pre-Response Checklist:** 6-point quality gate ensures markdown compliance before every response
-- **Multi-Line Preservation:** Strict enforcement of proper bullet structure and spacing
-- **Format Validation Gates:** CRITICAL severity checks for markdown compliance and line break preservation
+**From Silent Excellence to Transparent Excellence:**
+- All internal processing now **visible to users** for educational value
+- DEPTH rounds shown in real-time (Rounds 1-10 with progress indicators)
+- Cognitive rigor techniques displayed as they're applied
+- Quality validation shared openly with scores and improvements
+- Users see and learn from the complete methodology
 
-### Updated Files in v0.912
-- **Writer:** v0.912 - Visibility configurable DEPTH alignment; streamlined without redundant rules
-- **DEPTH Framework:** v0.102 - Improved clarity; reduced redundancy; YAML/Markdown specs; visibility configurable
-- **Interactive Mode:** v0.302 - Enhanced formatting enforcement with validation rules and pre-response checklist
+### 🧠 DEPTH Framework Evolution (v0.103)
+- **Transparent Processing:** All 10 rounds visible with detailed progress updates
+- **RICCE Integration:** Role, Instructions, Context, Constraints, Examples mapped to DEPTH phases
+- **Cognitive Rigor Frameworks:** 
+  - ✅ Assumption Audit (surfacing and challenging hidden assumptions)
+  - ✅ Perspective Inversion (devil's advocate analysis)
+  - ✅ Constraint Reversal (non-obvious solution generation)
+  - ✅ Mechanism-First Validation (WHY before WHAT)
+  - ✅ Priority Classification (P0/P1/P2 labeling)
+  - ✅ Self-Rating Protocol (6-dimension quality scoring)
+
+### 💬 Interactive Mode Enhancements (v0.303)
+- **Visible Cognitive Rigor:** All techniques shown during conversation
+- **Quality Self-Rating Displayed:** Scores shared with users (Clarity, Completeness, etc.)
+- **Transparent Validation:** Pre-delivery checklist shown with results
+- **Educational Experience:** Users learn methodology while getting deliverables
+
+### 📊 System Transparency Features
+- **Real-Time Processing Visibility:** See each DEPTH phase as it executes
+- **Assumption Logs Shared:** All assumptions surfaced and validated openly
+- **Opposition Analysis Shown:** Perspective inversion visible step-by-step
+- **Priority Reasoning Explained:** P0/P1/P2 classifications with justification
+- **Quality Scores Displayed:** Self-rating results for all 6 dimensions
+- **Error Recovery Transparent:** When issues occur, users see resolution steps
+
+### Updated Files in v0.913
+- **Writer:** v0.913 - Full transparency alignment; visible processing emphasis
+- **DEPTH Framework:** v0.103 - Transparent excellence; cognitive rigor integration; RICCE mapping
+- **Interactive Mode:** v0.303 - Visible conversation quality; transparent cognitive techniques
 
 ---
 
 <a id="whats-improved"></a>
 ## 🔧 What's Improved
 
-### DEPTH Framework Enhancements ✅
-**Clarity & Discipline:**
-- Standardized 10-round phase distribution (D→H) with explicit internal state and context layers
-- Strict output constraints and template compliance; no scope expansion
+### 🎯 Transparency Revolution ✅
+**Complete Visibility:**
+- Users see all 10 DEPTH rounds as they execute with progress indicators
+- Cognitive rigor techniques displayed in real-time (assumption audit, perspective inversion, etc.)
+- Quality validation shared openly with scores and improvement cycles
+- Error recovery shown transparently with resolution strategies
 
-**Quality & Recovery:**
-- Formal quality gates with detection signals and severity scoring
-- Structured recovery protocol (action matrix, retry, rollback, escalation)
+**Educational Value:**
+- Users learn methodology while receiving deliverables
+- Understanding of WHY decisions are made, not just WHAT is delivered
+- Exposure to structured thinking frameworks
+- Insight into quality assurance processes
 
-### Interactive Mode Enhancements ✅
-**Formatting Enforcement:**
-- Enhanced validation rules for markdown formatting
-- Pre-response checklist to prevent formatting errors
-- Strict multi-line bullet preservation
-- Prohibited emoji bullet detection
+### 🧠 DEPTH + RICCE Integration ✅
+**Unified Framework:**
+- **RICCE Structure** mapped to **DEPTH Process**
+- Role → Define Multiple Perspectives (Discovery)
+- Instructions → Task Breakdown (Engineering)
+- Context → Provide Context Layers (All Phases)
+- Constraints → Establish Success Metrics (Engineering)
+- Examples → Validation Across All Phases
+
+**Enhanced Quality:**
+- Mechanism-first thinking (WHY before WHAT)
+- Priority classification (P0/P1/P2) throughout
+- Self-rating on 6 dimensions (targets: 8+ scores)
+- Assumption dependencies explicitly flagged
+
+### 🎨 Cognitive Rigor Techniques ✅
+**Five Mandatory Frameworks:**
+1. **Assumption Audit** - Surface, classify, challenge all hidden assumptions
+2. **Perspective Inversion** - Argue opposition first, then synthesize
+3. **Constraint Reversal** - Opposite outcome analysis for non-obvious insights
+4. **Mechanism First** - Explain principles before tactics
+5. **Priority Classification** - P0 (critical), P1 (high-value), P2 (optional) labeling
+
+### 📊 Interactive Mode Enhancements ✅
+**Transparent Conversations:**
+- Quality self-rating scores displayed to users
+- Assumption validation questions visible
+- Processing steps shown with emojis and progress
+- Pre-delivery validation checklist shared
 
 ---
 
@@ -65,11 +116,14 @@ Transforms requests into professional development tickets, strategic PRDs, and d
 ## ✨ Key Features
 
 - **🚀 Three Modes**: Documentation, PRDs, Tickets & Stories
-- **🧠 DEPTH Framework**: 5-phase methodology with automatic processing
+- **🧠 DEPTH Framework**: 5-phase methodology with **transparent processing** (all 10 rounds visible)
+- **🎓 RICCE Integration**: Role, Instructions, Context, Constraints, Examples mapped to DEPTH
+- **🔬 Cognitive Rigor**: 5 mandatory techniques (assumption audit, perspective inversion, etc.)
+- **📊 Quality Transparency**: Self-rating scores and validation results shared openly
 - **🎯 Smart Complexity**: Automatic detection and template scaling
-- **⚡ Quick Mode**: Zero-wait creation with auto-scaled thinking (1-5 rounds)
+- **⚡ Quick Mode**: Zero-wait creation with auto-scaled thinking (1-5 rounds, summary transparency)
 - **💬 Single Question Flow**: ALL information gathered at once
-- **🔒 Output Constraints**: Exact request = exact output
+- **🔒 Output Constraints**: Exact request = exact output (no scope expansion)
 - **📦 Self-Contained Templates**: Each template includes all its own rules
 
 ---
@@ -85,22 +139,22 @@ Transforms requests into professional development tickets, strategic PRDs, and d
 ### Step 2: Add System Instructions
 1. Click "Edit project details"
 2. Find "Custom instructions" section
-3. Copy and paste: `Writer - Product Owner - v0.912.md` 
+3. Copy and paste: `Writer - Product Owner - v0.913.md` 
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
 Add these documents to your project:
 
 **Core Documents (Latest Versions):**
-- `Product Owner - DEPTH Thinking Framework - v0.102.md`
-- `Product Owner - Interactive Mode - v0.302.md` 
+- `Product Owner - DEPTH Thinking Framework - v0.103.md` (with transparency and RICCE)
+- `Product Owner - Interactive Mode - v0.303.md` (with visible cognitive rigor)
 
 **Self-Contained Templates (Current Versions):**
-- `Product Owner - Template - Ticket Mode - v0.131.md` 
+- `Product Owner - Template - Ticket Mode - v0.132.md` 
 - `Product Owner - Template - PRD Mode - v0.129.md` 
 - `Product Owner - Template - Doc Mode - v0.118.md` 
 
-**Note:** Artifact Standards file no longer needed - all rules embedded in templates
+**Note:** All rules embedded in templates. System now operates with full transparency.
 
 ### Step 4: Start Creating
 ```
@@ -117,14 +171,14 @@ $ticket payment integration     # Direct ticket mode (10 rounds auto)
 
 **Default Mode:** The system defaults to `$interactive` with automatic 10-round DEPTH unless specified.
 
-| Mode | Purpose | Questions | DEPTH Processing | Template Version | Output |
-|------|---------|-----------|-----------------|------------------|---------|
-| **Interactive** | Determine what to create | 1 comprehensive | 10 rounds auto | Auto-selected | Exact request |
-| **$quick** | Fast creation | NONE | 1-5 auto-scaled | Auto-selected | Exact request |
-| **$doc** | Documentation | 1 comprehensive | 10 rounds auto | v0.118 | Requested doc only |
-| **$prd** | Product requirements | 1 comprehensive | 10 rounds auto | v0.129 | Requested PRD only |
-| **$story** | User stories | 1 comprehensive | 10 rounds auto | v0.131 | Requested story only |
-| **$ticket** | Dev tickets | 1 comprehensive | 10 rounds auto | v0.131 | Requested ticket only |
+| Mode | Purpose | Questions | DEPTH Processing | Transparency | Template Version | Output |
+|------|---------|-----------|------------------|--------------|------------------|---------|
+| **Interactive** | Determine what to create | 1 comprehensive | 10 rounds visible | Full | Auto-selected | Exact request |
+| **$quick** | Fast creation | NONE | 1-5 auto-scaled | Summary | Auto-selected | Exact request |
+| **$doc** | Documentation | 1 comprehensive | 10 rounds visible | Full | v0.118 | Requested doc only |
+| **$prd** | Product requirements | 1 comprehensive | 10 rounds visible | Full | v0.129 | Requested PRD only |
+| **$story** | User stories | 1 comprehensive | 10 rounds visible | Full | v0.132 | Requested story only |
+| **$ticket** | Dev tickets | 1 comprehensive | 10 rounds visible | Full | v0.132 | Requested ticket only |
 
 ### Interactive Flow (Default) - Single Question Format
 ```
@@ -155,66 +209,16 @@ Please respond with complete information (e.g., "1. Ticket, 2. BE, 3. User authe
 ---
 
 <a id="ticket-mode"></a>
-## 🎫 Ticket Mode (v0.131 - More Concise)
+## 🎫 Ticket Mode (v0.132 - More Concise)
 
 ### Improved Concise Format
-The new v0.131 templates feature:
+The v0.132 templates feature:
 - **Compressed About sections** - 1-2 lines with bold key-value pairs
 - **Streamlined requirements** - Bullet format with inline descriptions
 - **Tighter success criteria** - Essential metrics only
 - **Cleaner checklists** - Optimized for scannability
-
-### Example of New Concise Format
-```markdown
-Mode: $ticket | Complexity: Standard | Template: v0.131
----
-[FEATURE] Service: Authentication
-
-# ⌘ About
-
-**Purpose:** Enable secure user login via OAuth  
-**Value:** Reduce password fatigue, improve security  
-**Users:** All platform users
-
----
-
-## ✦ Success Criteria
-
-- Users complete login in <3 seconds
-- OAuth providers integrate successfully
-- Zero security vulnerabilities
-- 99.9% authentication uptime
-
----
-
-## ❖ Requirements
-
-### ◻ Functional
-- Core: OAuth 2.0 login flow
-- Providers: Google, GitHub, Microsoft
-- Security: Token refresh, session management
-- UX: One-click authentication
-
----
-
-## ✓ Resolution Checklist
-
-⚠️ Complete all items before moving to QA
-
-[] OAuth flow implemented
-[] Provider integration tested
-[] Security review passed
-[] Performance validated
-[] Documentation updated
-[] Monitoring configured
-```
-
-### Ticket Complexity Levels
-| Type | Sections | Resolution Items | Template Focus |
-|------|----------|------------------|----------------|
-| **Simple** | 2-3 | 4-6 items | Bug fixes, small updates |
-| **Standard** | 4-5 | 8-12 items | Features, enhancements |
-| **Complex** | 6-8 | 12-20 items | Platforms, migrations |
+- **Priority labels** - P0/P1/P2 classification throughout
+- **Mechanism explanations** - WHY before WHAT structure
 
 ---
 
@@ -259,40 +263,105 @@ The v0.118 template features:
 <a id="depth-thinking-framework"></a>
 ## 🧠 DEPTH Thinking Framework
 
-### Automatic DEPTH Processing System
-| Mode | Processing Depth | User Choice | Application | Output |
-|------|-----------------|-------------|-------------|---------|
-| **Standard Modes** | 10 rounds enforced | None | Automatic | Exact request |
-| **$Quick Mode** | 1-5 auto-scaled | None | Complexity-based | Exact request |
+### Transparent DEPTH Processing System
+| Mode | Processing Depth | User Visibility | Application | Output |
+|------|-----------------|-----------------|-------------|---------|
+| **Standard Modes** | 10 rounds enforced | Full transparency | Real-time display | Exact request |
+| **$Quick Mode** | 1-5 auto-scaled | Summary provided | Complexity-based | Exact request |
 
 **DEPTH Definition:**
-DEPTH methodology (Discover, Engineer, Prototype, Test, Harmonize) is automatically applied to ensure quality while maintaining output constraints. Internals are hidden by default; visibility is configurable when explicitly enabled.
+DEPTH methodology (Discover, Engineer, Prototype, Test, Harmonize) is automatically applied with **full transparency**. Users see all internal processing, decision-making, and quality validation for educational value.
 
-### DEPTH Phases (Applied Automatically)
-| Phase | Purpose | Internal Process | User Sees |
-|-------|---------|-----------------|-----------|
-| **D**iscover | Deep understanding | Multiple perspectives analyze SAME requirement | "Analyzing requirements..." |
-| **E**ngineer | Solution generation | Various approaches for SAME deliverable | "Optimizing approach..." |
-| **P**rototype | Build framework | Template structure for exact request | "Building deliverable..." |
-| **T**est | Validate quality | Quality checks on requested content | "Ensuring quality..." |
-| **H**armonize | Final polish | Excellence for specific output | Final polished artifact |
+### DEPTH Phases (Fully Visible to Users)
+| Phase | Purpose | Visible Processing | User Sees |
+|-------|---------|-------------------|-----------|
+| **D**iscover | Deep understanding | Multiple perspectives shown | "🔍 Round 1-2: Analyzing from 5 perspectives..." |
+| **E**ngineer | Solution generation | Approaches displayed | "⚙️ Round 3-5: Generating solutions, applying constraint reversal..." |
+| **P**rototype | Build framework | Template application shown | "🔨 Round 6-7: Building with v0.132, validating mechanism-first..." |
+| **T**est | Validate quality | Quality scores shared | "✅ Round 8-9: Self-rating (Completeness: 9/10, Clarity: 9/10)..." |
+| **H**armonize | Final polish | Validation checklist visible | "✨ Round 10: Final checks, all gates passed ✅" |
 
-### Silent Excellence Principles
+### Transparent Excellence in Action
 ```markdown
-🎯 Processing your request...
+🔄 **Processing with Full Transparency:**
 
-[DEPTH processing runs internally (hidden by default)]
-[Multiple perspectives analyze the SAME requirement]
-[Output contains ONLY what was requested]
+**🔍 Round 1-2: Discovery Phase**
+- Analyzing requirements from multiple perspectives...
+  • Technical Architect: [analysis shown]
+  • User Experience: [analysis shown]
+  • Business Stakeholder: [analysis shown]
+- Assumption audit: [assumptions listed and challenged]
+- Priority classification: [P0/P1/P2 reasoning shown]
+
+**⚙️ Round 3-5: Engineering Phase**
+- Generating solution approaches...
+  • Standard implementation
+  • Alternative patterns
+  • Risk-mitigated options
+- Constraint reversal: [opposite outcome analysis shown]
+- Selected approach: [with justification]
+
+**🔨 Round 6-7: Prototyping Phase**
+- Building with template v0.132...
+- Mechanism-first validation: WHY explained before WHAT ✅
+- RICCE structure confirmed ✅
+
+**✅ Round 8-9: Testing Phase**
+- Quality self-rating:
+  • Completeness: 9/10 ✅
+  • Clarity: 9/10 ✅
+  • Actionability: 9/10 ✅
+  • Accuracy: 9/10 ✅
+  • Relevance: 10/10 ✅
+  • Mechanism Depth: 8/10 ✅
+
+**✨ Round 10: Harmonizing Phase**
+- Final cognitive rigor validation complete
+- All assumptions flagged in deliverable
+- P0/P1/P2 priorities clearly labeled
+
+[Deliverable with complete processing transparency]
 ```
 
-**Note:** Users don't choose processing depth. Internals remain hidden by default; optional brief summaries can be enabled without exposing step-by-step analysis.
+### DEPTH v0.103 Revolution (Summary)
+- **Full Transparency:** All 10 rounds visible with detailed progress
+- **RICCE Integration:** Role/Instructions/Context/Constraints/Examples mapped to DEPTH
+- **Cognitive Rigor:** 5 mandatory techniques applied and shown
+- **Quality Transparency:** Self-rating scores and validation results shared
+- **Educational Value:** Users learn methodology while receiving deliverables
+- **Mechanism-First:** WHY before WHAT throughout all solutions
+- **Priority Classification:** P0/P1/P2 labeling with reasoning
+- **Assumption Visibility:** All assumptions surfaced, challenged, and flagged
 
-### DEPTH v0.102 Improvements (Summary)
-- Clearer phase distribution and state: standardized 10-round flow (D→H) with explicit internal state, perspectives, metrics, and context layers; templates referenced (Ticket v0.131, PRD v0.129, Doc v0.118).
-- Stronger output discipline: strict output constraints prevent scope expansion; templates are followed exactly; multiple approaches considered internally but converge to one deliverable.
-- Robust QA and recovery: formal quality gates across phases, detailed detection signals, severity-based action matrix, retry and rollback strategies, and escalation with minimal user-facing messaging.
-- Configurable visibility: internals hidden by default with optional brief summaries; performance metrics tracked (template compliance, wait compliance, verification success) to ensure consistent excellence.
+---
+
+<a id="ricce-framework-integration"></a>
+## 🎯 RICCE Framework Integration
+
+### RICCE + DEPTH: Unified Approach
+
+**RICCE Structure:**
+- **R**ole - Define who is analyzing
+- **I**nstructions - Break down tasks
+- **C**ontext - Build comprehensive understanding
+- **C**onstraints - Establish success metrics
+- **E**xamples - Validate with real-world patterns
+
+**Mapping to DEPTH:**
+
+| RICCE Element | DEPTH Phase | Transparency | Purpose |
+|---------------|-------------|--------------|---------|
+| **Role** | Discover | Multiple perspectives shown | "Analyzing as: architect, UX designer, stakeholder..." |
+| **Instructions** | Engineer | Task breakdown visible | "Step 1: X, Step 2: Y, Step 3: Z" |
+| **Context** | All Phases | Context layers shared | "Technical: [details], Business: [details], User: [details]" |
+| **Constraints** | Engineer | Success metrics displayed | "Target: 95%+ completeness, 90%+ clarity" |
+| **Examples** | All Phases | Validation shown | "Similar pattern at Company X validates approach" |
+
+**Benefits:**
+- Structure (RICCE) + Process (DEPTH) = Complete methodology
+- Users see WHAT (structure) and HOW (process)
+- Educational transparency throughout
+- Quality assured at every step
 
 ---
 
@@ -300,11 +369,13 @@ DEPTH methodology (Discover, Engineer, Prototype, Test, Harmonize) is automatica
 ## 🎯 Automatic Complexity Detection
 
 ### For Tickets
-| Indicators | Complexity | Sections | Resolution Items | DEPTH | Output |
-|------------|------------|----------|------------------|-------|---------|
-| bug, fix, typo, update | **Simple** | 2-3 | 4-6 | 10 rounds (2 if $quick) | That specific bug only |
-| feature, dashboard, api | **Standard** | 4-5 | 8-12 | 10 rounds (3 if $quick) | Requested feature only |
-| platform, architecture, migration | **Complex** | 6-8 | 12-20 | 10 rounds (5 if $quick) | Specified platform only |
+| Indicators | Complexity | Sections | Resolution Items | DEPTH | Transparency | Output |
+|------------|------------|----------|------------------|-------|--------------|---------|
+| bug, fix, typo, update | **Simple** | 2-3 | 4-6 | 10 rounds visible | Full | That specific bug only |
+| feature, dashboard, api | **Standard** | 4-5 | 8-12 | 10 rounds visible | Full | Requested feature only |
+| platform, architecture, migration | **Complex** | 6-8 | 12-20 | 10 rounds visible | Full | Specified platform only |
+
+**Quick Mode:** 2/3/5 rounds respectively with summary transparency
 
 ### Enhanced Template Selection with Tie-Breaking
 System includes intelligent tie-breaking for ambiguous cases:
@@ -313,18 +384,33 @@ System includes intelligent tie-breaking for ambiguous cases:
 - Complex keywords override simpler ones
 - Defaults to Standard when unclear
 - **Important:** Complexity affects TEMPLATE SIZE, not content scope
+- **All detection logic shown to user in v0.913**
 
-### Output Guarantee Examples
+### Output Guarantee Examples (With Transparency)
 ```
 User: "Fix login bug"
+[Shows analysis of "fix" + "bug" keywords]
 → Simple template for THAT login bug only
 NOT: Simple template with multiple bugs
 
 User: "Build dashboard"
+[Shows analysis of "feature" + "dashboard" keywords]
 → Standard template for THAT dashboard only
 NOT: Standard template with extra features
 
 User: "Platform migration"
+[Shows analysis of "platform" + "migration" keywords]
 → Complex template for THAT migration only
 NOT: Complex template with multiple platforms
+```
+
+### Transparency in Complexity Detection (New in v0.913)
+```
+🎯 **Complexity Analysis:**
+Keywords detected: ["feature", "dashboard", "api"]
+Complexity score: Standard (4-5 sections)
+Template selected: v0.132 Standard
+Reasoning: Feature-level work with moderate scope
+
+Proceeding with 10-round DEPTH processing...
 ```
