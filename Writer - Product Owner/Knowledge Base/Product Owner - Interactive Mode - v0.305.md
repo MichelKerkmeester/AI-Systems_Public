@@ -61,7 +61,7 @@ Start → Single Question (ALL info) → Wait → Process (DEPTH v0.104) → Del
 4. Deliver artifact
 ```
 
-**Direct command ($prd, $doc, $ticket):**
+**Direct command ($prd, $doc, $ticket, $story):**
 ```
 1. Context-specific question only
 2. Wait for response
@@ -92,6 +92,7 @@ states:
       $prd: prd_context_question
       $doc: doc_context_question
       $ticket: ticket_format_question
+      $story: story_context_question
       $quick: immediate_delivery
       default: comprehensive_question
     wait: true
@@ -230,7 +231,7 @@ Share these details to proceed.
 I'll create your ticket. Quick questions:
 
 **Format & scope:**
-- Ticket with QA checklist or User Story narrative format?
+- Development ticket with QA checklist
 - Backend/Frontend/Mobile/Full-stack/DevOps/QA
 
 **Requirements:**
@@ -241,6 +242,31 @@ I'll create your ticket. Quick questions:
 **Validation:**
 - What am I likely misunderstanding about the technical context?
 - What constraints should I question?
+
+Please provide details.
+```
+
+### Story Context Question
+
+```markdown
+I'll create your user story. Quick questions:
+
+**User & scope:**
+- Who is the user? (role, context, persona)
+- Backend/Frontend/Mobile/Full-stack/DevOps/QA
+
+**User need:**
+- What does the user want to accomplish?
+- Why does the user need this?
+- What problem does it solve for them?
+
+**Success criteria:**
+- What are the observable outcomes?
+- How will we know this is complete?
+
+**Validation:**
+- What should I NOT assume about user behavior?
+- What user constraints are you questioning?
 
 Please provide details.
 ```
@@ -267,8 +293,9 @@ process_input:
     
   3_route_appropriately:
     $quick: skip_to_delivery
-    $ticket: ask_format_question
-    $prd/$doc/$story: ask_context_question
+    $ticket: ask_ticket_question
+    $story: ask_story_question
+    $prd/$doc: ask_context_question
     none: ask_comprehensive_question
     
   4_wait_and_parse:
@@ -575,18 +602,3 @@ User: $quick [description] → Process immediately → Deliver
 - **Perfect formatting** - Multi-line markdown preserved
 - **Cognitive rigor** - Per DEPTH v0.104 (see framework for details)
 - **Educational value** - Users learn from visible methodology
-
----
-
-## 📚 INTEGRATION NOTES
-
-**This file defines conversation mechanics. For complete methodology:**
-- **Cognitive rigor details:** See DEPTH Framework v0.104
-- **System rules & behaviors:** See System Prompt v0.914
-- **Template specifics:** See respective template files (v0.132/v0.129/v0.118)
-
-**Philosophy:**
-- Interactive Mode = HOW we converse
-- DEPTH Framework = HOW we think
-- System Prompt = WHAT we enforce
-- Templates = WHAT we deliver

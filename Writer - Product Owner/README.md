@@ -1,10 +1,10 @@
-# Product Owner System v0.914
+# Product Owner System v0.915
 
 Transforms requests into professional tickets, PRDs, and documentation with **concise transparent DEPTH processing**.
 
 ## 📋 Table of Contents
 
-1. [🆕 What's New in v0.914](#1-whats-new-in-v0914)
+1. [🆕 What's New in v0.915](#1-whats-new-in-v0915)
 2. [✨ Key Features](#2-key-features)
 3. [🚀 Quick Setup](#3-quick-setup)
 4. [🎛️ Operating Modes](#4-operating-modes)
@@ -16,8 +16,43 @@ Transforms requests into professional tickets, PRDs, and documentation with **co
 
 ---
 
-<a id="1-whats-new-in-v0914"></a>
-## 1. 🆕 What's New In V0.914
+<a id="1-whats-new-in-v0915"></a>
+## 1. 🆕 What's New In V0.915
+
+### Template Separation Complete
+- **Story Mode Now Separate:** User stories (`$story`) have their own dedicated template (v0.132)
+- **Ticket Mode Streamlined:** Development tickets (`$ticket`) now focused purely on implementation with QA checklists
+- **Clear Differentiation:** Distinct commands, templates, and use cases for tickets vs stories
+- **Updated Routing:** All Knowledge Base files updated with proper cross-references
+
+### Story Template Features
+- User journey and narrative focus
+- "As a [user], I want to [action] so that [benefit]" format
+- Given-When-Then acceptance criteria
+- **No Resolution Checklist** (key differentiator from tickets)
+- Simple/Standard/Complex auto-scaling
+
+### Updated Files in v0.915
+- **System Prompt:** v0.915 - Added Story Mode template reference and `$story` command detection
+- **Story Template:** v0.132 - New dedicated file for user story format
+- **Ticket Template:** v0.132 - Removed story logic, focused on development tickets
+- **DEPTH Framework:** v0.104 - Added Story v0.132 to template versions
+- **Interactive Mode:** v0.305 - Added story context question and updated routing
+- **AGENTS.md:** Updated shortcuts and routing for separated templates
+
+### Template Structure Now:
+```
+Knowledge Base/
+├── Writer - Product Owner - v0.915.md (System Prompt) ← Updated
+├── Product Owner - DEPTH Thinking Framework - v0.104.md ← Updated
+├── Product Owner - Interactive Mode - v0.305.md ← Updated
+├── Product Owner - Template - Ticket Mode - v0.132.md ← Updated
+├── Product Owner - Template - Story Mode - v0.132.md ← New
+├── Product Owner - Template - PRD Mode - v0.129.md
+└── Product Owner - Template - Doc Mode - v0.118.md
+```
+
+### Previous Version (v0.914) 
 
 ### Two-Layer Transparency Model
 - **Internal:** Full DEPTH rigor (10 rounds, 3-5 perspectives, all cognitive techniques)
@@ -29,37 +64,12 @@ Transforms requests into professional tickets, PRDs, and documentation with **co
 - Cannot be skipped - enforced at multiple validation gates
 - Technical, UX, Business, QA, Strategic viewpoints
 
-### Updated Components
-- **System Prompt:** v0.914 (two-layer transparency)
-- **DEPTH Framework:** v0.104 (mandatory perspectives + concise output)
-- **Interactive Mode:** v0.305 (50% token reduction, core logic preserved)
-- **Key Insights:** Critical findings highlighted vs. full transcripts
+### 📊 Evolution: v0.913 → v0.914 → v0.915
+**v0.913:** Full transparency with verbose output  
+**v0.914:** Two-layer transparency (concise + full rigor)  
+**v0.915:** Template separation (dedicated story mode)
 
-### 📊 What Changed From v0.913
-**Before (v0.913):** Full transparency with verbose output
-```markdown
-**🔍 Round 1-2: Discovery Phase**
-- Analyzing from multiple perspectives...
-- Technical Architect perspective: [5 paragraphs]
-- User Experience perspective: [5 paragraphs]
-- Business Stakeholder perspective: [5 paragraphs]
-[...25+ paragraphs of detail...]
-```
-
-**After (v0.914):** Concise transparency with full internal rigor
-```markdown
-🔍 **Analyzing from 5 perspectives** (Technical, UX, Business, QA, Strategic)
-**Key Insight:** [Most important finding]
-
-⚙️ **Engineering solution** (8 approaches evaluated, optimal selected)
-```
-
-**Result:** Same professional quality, 90% less visual noise
-
-### Updated Files in v0.914
-- **Writer:** v0.914 - Two-layer transparency model; mandatory multi-perspective enforcement
-- **DEPTH Framework:** v0.104 - Concise external communication; blocking perspective validation
-- **Interactive Mode:** v0.305 - Streamlined conversation mechanics; 50% token reduction
+**Result:** Professional quality + 90% less noise + clear ticket/story distinction
 
 ---
 
@@ -85,7 +95,7 @@ Transforms requests into professional tickets, PRDs, and documentation with **co
 
 ### Step 2: Add System Instructions
 1. Edit project details → Custom instructions
-3. Copy and paste: `Writer - Product Owner - v0.914.md` 
+3. Copy and paste: `Writer - Product Owner - v0.915.md` 
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
@@ -96,7 +106,9 @@ Add these documents to your project:
 - `Product Owner - Interactive Mode - v0.305.md` (concise conversation mechanics with full cognitive rigor)
 
 **Self-Contained Templates (Current Versions):**
-- `Product Owner - Template - Ticket Mode - v0.132.md` 
+- `Product Owner - Template - Ticket Mode - v0.132.md` (development tickets with QA checklists)
+- `Product Owner - Template - Story Mode - v0.132.md` (user stories in narrative format) **← New in v0.915**
+- `Product Owner - Template - PRD Mode - v0.129.md` 
 - `Product Owner - Template - PRD Mode - v0.129.md` 
 - `Product Owner - Template - Doc Mode - v0.118.md` 
 
@@ -108,6 +120,7 @@ need user authentication        # Interactive discovery flow
 $quick auth PRD                 # Immediate PRD creation (1-5 rounds auto)
 $prd payment platform           # Direct PRD mode (10 rounds auto)
 $ticket payment integration     # Direct ticket mode (10 rounds auto)
+$story user login               # Direct story mode (10 rounds auto) ← New in v0.915
 ```
 
 ---
@@ -134,6 +147,8 @@ System asks one comprehensive question gathering all info at once:
 
 System waits for complete response before proceeding.
 
+**Note:** In v0.915, tickets and stories are now separate templates with distinct formatting and use cases.
+
 ---
 
 <a id="5-mode-details"></a>
@@ -141,18 +156,16 @@ System waits for complete response before proceeding.
 
 ### 🎫 Ticket Mode (v0.132)
 
-**Purpose:** Development tickets and user stories with QA checklists
+**Purpose:** Development tickets with detailed QA checklists for implementation tracking
 
 **Format Improvements:**
 - **Compressed About sections** - 1-2 lines with bold key-value pairs
 - **Streamlined requirements** - Bullet format with inline descriptions
 - **Tighter success criteria** - Essential metrics only
-- **Cleaner checklists** - Optimized for scannability
+- **Detailed QA checklist** - Resolution items for verification
 - **Mechanism explanations** - WHY before WHAT structure
 
-**Ticket vs Story:**
-- **Ticket** - Technical implementation with detailed QA checklist
-- **Story** - User-focused narrative without technical checklist
+**Key Feature:** Includes Resolution Checklist for QA verification (differentiates from stories)
 
 **Complexity Levels:**
 | Level | Indicators | Sections | Resolution Items | Use Case |
@@ -160,6 +173,37 @@ System waits for complete response before proceeding.
 | **Simple** | bug, fix, typo, update | 2-3 | 4-6 | Quick fixes and minor updates |
 | **Standard** | feature, dashboard, api | 4-5 | 8-12 | Standard features and enhancements |
 | **Complex** | platform, architecture, migration | 6-8 | 12-20 | System-wide changes and migrations |
+
+---
+
+### 📖 Story Mode (v0.132) **← New in v0.915**
+
+**Purpose:** User stories in narrative format focusing on user journey and experience
+
+**Key Features:**
+- **User-centric format:** "As a [user], I want to [action] so that [benefit]"
+- **User journey focus:** Emphasizes user perspective and experience throughout
+- **Given-When-Then criteria:** Acceptance criteria in standard user story format
+- **No Resolution Checklist:** Stories end with acceptance criteria (key differentiator)
+- **Business value clear:** Explicit articulation of user and business value
+
+**Complexity Levels:**
+| Level | Indicators | Sections | Focus | Use Case |
+|-------|-----------|----------|-------|----------|
+| **Simple** | simple, basic, quick | 2-3 | Single user action | Simple user interactions |
+| **Standard** | feature, capability, flow | 4-5 | Complete user journey | Standard user features |
+| **Complex** | platform, system, ecosystem | 6-8 | Multi-step scenarios | Complex user workflows |
+
+**Story vs Ticket Comparison:**
+| Feature | Story (v0.132) | Ticket (v0.132) |
+|---------|----------------|-----------------|
+| **Command** | `$story` | `$ticket` |
+| **Focus** | User journey & experience | Technical implementation |
+| **Title Format** | "As a [user], I want..." | "[SCOPE] Feature: name" |
+| **Acceptance** | Given-When-Then format | Standard criteria |
+| **Checklist** | ❌ No Resolution Checklist | ✅ Detailed QA Checklist |
+| **Audience** | Stakeholders, product team | Engineering, QA team |
+| **Use Case** | Requirements definition | Implementation tracking |
 
 ---
 
@@ -318,13 +362,13 @@ System auto-detects complexity from keywords:
 ```
 AGENTS.md → Entry point with routing logic
     ↓
-Writer - Product Owner - v0.914.md (System prompt)
+Writer - Product Owner - v0.915.md (System prompt)
     ↓
 DEPTH Framework v0.104 (Methodology)
     ↓
 Interactive Mode v0.305 (Conversation flow)
     ↓
-Templates (Ticket v0.132, PRD v0.129, Doc v0.118)
+Templates (Ticket v0.132, Story v0.132, PRD v0.129, Doc v0.118)
     ↓
 Output → /Export/[###]-artifact.md
 ```

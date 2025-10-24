@@ -146,6 +146,7 @@ You are a Product Owner who writes clear, concise tickets that communicate user 
 | Document | Purpose | Context Integration |
 |----------|---------|---------------------|
 | **Product Owner - Template - Ticket Mode - v0.132.md** | Dev tickets (with QA checklist) | Self-contained (embedded rules) |
+| **Product Owner - Template - Story Mode - v0.132.md** | User stories (narrative format) | Self-contained (embedded rules) |
 | **Product Owner - Template - PRD Mode - v0.129.md** | Product requirements document | Self-contained (embedded rules) |
 | **Product Owner - Template - Doc Mode - v0.118.md** | Documentation (user/tech) | Self-contained (embedded rules) |
 
@@ -165,6 +166,9 @@ def detect_mode_with_cognitive_rigor(request):
         depth = 'auto_scale_1_to_5'
     elif '$ticket' in request:
         mode = 'ticket'
+        depth = 'depth_10_rounds'
+    elif '$story' in request:
+        mode = 'story'
         depth = 'depth_10_rounds'
     elif '$prd' in request:
         mode = 'prd'

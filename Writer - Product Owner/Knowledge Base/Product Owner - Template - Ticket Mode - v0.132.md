@@ -13,29 +13,31 @@ Streamlined ticket templates with integrated formatting rules and quality standa
 6. [🚨 ERROR RECOVERY](#6-error-recovery)
 7. [🔵 SIMPLE TICKET TEMPLATE](#7-simple-ticket-template)
 8. [🟠 STANDARD TICKET TEMPLATE](#8-standard-ticket-template)
-9.  [🔴 COMPLEX TICKET TEMPLATE](#9-complex-ticket-template)
-10. [📖 STORY TEMPLATES](#10-story-templates)
-11. [⚡ QUICK MODE TEMPLATES](#11-quick-mode-templates)
+9. [🔴 COMPLEX TICKET TEMPLATE](#9-complex-ticket-template)
+10. [⚡ QUICK MODE TEMPLATES](#10-quick-mode-templates)
 
 ---
 
 ## 1. 🎫 TICKET MODE OVERVIEW
 
-### Command: `$ticket` or `$story`
+### Command: `$ticket`
 
-- **Purpose:** Create development tickets or user stories that auto-scale complexity
+- **Purpose:** Create development tickets with QA checklists that auto-scale complexity
 - **Output:** Always as `text/markdown` artifact
 - **Thinking:** 10 rounds automatic (DEPTH methodology), 1-5 auto-scaled for $quick
 - **Interactive Mode:** Single comprehensive question gathering ALL requirements
-- **Key Difference:** Stories omit Resolution Checklist
 - **Header Position:** Always at top as first line
 - **Output Constraints:** Ticket contains ONLY the requested feature/fix/change
+- **Key Feature:** Includes Resolution Checklist for QA verification
 
 ### Critical Rules
 - **NEVER create artifact until user responds to comprehensive question**
 - **NEVER answer own questions - always wait for user response**
 - **NO TABLE OF CONTENTS** - ClickUp/Jira provide native TOC functionality
 - **HEADER AT TOP:** System metadata appears as first line of artifact
+
+### Note on User Stories
+For user story format (narrative without QA checklists), use `$story` command which references **Product Owner - Template - Story Mode - v0.132.md**
 
 ---
 
@@ -59,6 +61,7 @@ Streamlined ticket templates with integrated formatting rules and quality standa
 - **No Scope Expansion:** Template scaling affects structure, not content scope
 - **Multiple Perspectives:** All analyze the SAME requirement
 - **Convergent Output:** Many approaches considered, ONE delivered
+- **Resolution Checklist:** Mandatory for all ticket templates
 
 ### Mandatory Structure Elements
 
@@ -155,7 +158,6 @@ Please provide ALL of the following details:
 1️⃣ **Ticket type:**
    • Bug fix (fixing broken functionality)
    • Feature (new capability)
-   • Story (user narrative format)
 
 2️⃣ **Scope/Platform:**
    • BE (Backend)
@@ -543,62 +545,7 @@ including {problem1}, {problem2}, and {problem3}. By migrating, we achieve
 
 ---
 
-## 10. 📖 STORY TEMPLATES
-
-### Story Format Differences
-- **No Resolution Checklist** - Stories use narrative format
-- **Same structure** otherwise - About, Success, Designs, Requirements
-- **Focus on user journey** - Emphasize user perspective
-- **Acceptance criteria** - More prominent than in tickets
-
-### Simple Story Example
-```markdown
-Mode: $story | Complexity: Simple | Template: v0.140
----
-[STORY] As a user, I want to {action} so that {benefit}
-
-# ⌘ About
-
-**User Need:** {what problem this solves}  
-**Business Value:** {why this matters}  
-**Scope:** {BE/FE/Mobile/FS}
-
-[Integration of context: Users currently struggle with {issue}, 
-causing {impact}. This story delivers {solution}.]
-
----
-
-## ✦ Success Criteria
-
-- I can {primary action}
-- The system {response}
-- My data is {state}
-
----
-
-## ⌥ Designs & References
-
-1. Mockup
-   • User flow - [Link - to be added]
-
-2. Spec
-   • Requirements - [Link - to be added]
-
----
-
-## ❖ Requirements
-
-### 1. Acceptance Criteria
-Given I am {initial state}
-When I {action}
-Then I see {result}
-
-[NOTE: No Resolution Checklist for stories]
-```
-
----
-
-## 11. ⚡ QUICK MODE TEMPLATES
+## 10. ⚡ QUICK MODE TEMPLATES
 
 ### Quick Mode Rules
 - **NO questions asked** - System proceeds immediately
@@ -606,10 +553,11 @@ Then I see {result}
 - **1-5 round scaling** - Based on detected complexity
 - **Minimal format** - Essential sections only
 - **Same scope discipline** - Only requested content
+- **Resolution Checklist Required** - Even in quick mode
 
 ### $quick ticket
 ```markdown
-Mode: $quick | Complexity: Auto-scaled | Template: v0.140
+Mode: $quick | Complexity: Auto-scaled | Template: v0.132
 ---
 [FIX] {feature}: {issue}
 
@@ -623,3 +571,49 @@ Mode: $quick | Complexity: Auto-scaled | Template: v0.140
 [] Deploy staging
 [] Verify prod
 ```
+
+---
+
+## 📚 INTEGRATION NOTES
+
+### Ticket vs Story Differences
+
+**Tickets Have:**
+- Resolution Checklist with QA verification steps
+- Detailed implementation tracking
+- PR/deployment checklist items
+- Technical focus throughout
+
+**For User Stories:**
+- Use `$story` command instead
+- References **Product Owner - Template - Story Mode - v0.132.md**
+- No Resolution Checklist
+- User journey focus
+- "As a [user], I want to [action] so that [benefit]" format
+
+### When to Use Tickets vs Stories
+
+**Use Tickets When:**
+- Detailed implementation tracking needed
+- QA checklist required
+- Step-by-step resolution needed
+- Engineering-focused delivery
+
+**Use Stories When:**
+- Emphasizing user perspective and journey
+- Communicating with stakeholders
+- Defining user value and acceptance criteria
+- Planning from user needs
+
+---
+
+## 🎯 FINAL REMINDERS
+
+1. **Always wait** for user response (except $quick)
+2. **Never answer** own questions
+3. **Resolution Checklist Required** for all tickets (key differentiator from stories)
+4. **Header at top** as first line
+5. **No Table of Contents**
+6. **Only requested features** - no scope expansion
+7. **DEPTH methodology** applied automatically (10 rounds standard, 1-5 quick)
+8. **For user stories** - use `$story` command which uses separate Story Mode template
