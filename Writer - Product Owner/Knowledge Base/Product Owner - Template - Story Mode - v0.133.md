@@ -2,6 +2,10 @@
 
 User story templates with integrated formatting rules and quality standards. All delivery logic consolidated for self-contained operation.
 
+**Core Purpose:** Transform user requests into narrative-focused user stories that communicate user value, business outcomes, and implementation requirements through clean storytelling without QA checklists.
+
+**Integration:** Used by System Prompt v0.921 via `$story` command. Applies DEPTH Framework v0.106 and Interactive Mode v0.306.
+
 ---
 
 ## 📋 TABLE OF CONTENTS
@@ -99,7 +103,7 @@ For development tickets with QA checklists and resolution tracking, use `$ticket
 - Use `---` as section separators
 - H1 for title, major sections (⌘ About, ❖ Requirements, ❖ Change Summary)
 - H2 for secondary sections (✦ Success, ⌥ Designs)
-- H3 NEVER used in current pattern
+- H3 NEVER used - use H4 for all subsections
 - H4 for subsections within Requirements and Change Summary
 - No blank lines between dividers and section headers
 - Clean headers at H4 level (no symbols)
@@ -176,20 +180,21 @@ For development tickets with QA checklists and resolution tracking, use `$ticket
 - [] Requirements section with H4 subsections?
 - [] Change Summary section at bottom with H4 subsections?
 - [] Correct symbol hierarchy applied (H1: ⌘/❖, H2: ✦/⌥, H4: ####)?
-- [] Using `* * *` dividers between sections?
+- [] Using `---` dividers between sections?
 - [] NO H3 headers used?
 - [] NO Resolution Checklist (story-specific)?
 
 ### Format Validation
 - [] Using `text/markdown` artifact type?
-- [] Lists use `*` bullets?
+- [] Lists use `-` bullets?
 - [] Checkboxes use `[]` format?
-- [] Dividers (`* * *`) between all sections?
+- [] Dividers (`---`) between all sections?
 - [] Clean H4 headers for subsections?
 - [] Actual links included (not placeholders)?
 - [] No Table of Contents?
 - [] No unrequested features?
 - [] Content limited to requested feature?
+- [] Status notes use format `[Status note: "description"]` with quotes?
 
 ### Story-Specific Validation (v0.133)
 - [] Short description explains WHAT was built/changed?
@@ -197,7 +202,7 @@ For development tickets with QA checklists and resolution tracking, use `$ticket
 - [] About section is narrative only (no bold labels)?
 - [] User Need and Business Value as numbered sections?
 - [] Designs organized by category (Flows, Components, etc.)?
-- [] Requirements use H4 subsections (not H3)?
+- [] Requirements use H4 subsections (H3 never used)?
 - [] Change Summary section present at bottom?
 - [] Change Summary organized by component/area?
 - [] Implementation focus maintained?
@@ -213,10 +218,10 @@ For development tickets with QA checklists and resolution tracking, use `$ticket
 **Fix:** Update to H1: ⌘/❖, H2: ✦/⌥, H4: ####, NEVER H3
 
 #### Using H3 Headers
-**Fix:** Replace all H3 with H4 for subsections
+**Fix:** Replace all H3 with H4 for subsections (H3 never used in Story mode)
 
 #### Wrong Divider Type
-**Fix:** Replace `* * *` with `---` between all sections
+**Fix:** Use `---` between all sections (not `* * *`)
 
 #### Success Criteria at Top
 **Fix:** Move after About section, add divider

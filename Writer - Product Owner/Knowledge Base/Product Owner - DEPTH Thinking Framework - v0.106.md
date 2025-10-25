@@ -4,7 +4,7 @@ A comprehensive methodology combining systematic analysis with **transparent pro
 
 **Core Purpose:** Define the multi-perspective analysis, quality optimization, and error recovery systems that operate with **concise transparency** - showing users meaningful progress without overwhelming detail.
 
-**Integration:** Works with System Prompt v0.921 and Interactive Mode v0.306.
+**Integration:** Used by System Prompt v0.921 and Interactive Mode v0.306.
 
 ---
 

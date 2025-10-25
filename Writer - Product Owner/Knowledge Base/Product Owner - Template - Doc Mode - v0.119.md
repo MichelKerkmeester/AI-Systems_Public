@@ -2,6 +2,10 @@
 
 Documentation templates with integrated formatting rules and quality standards. All delivery logic consolidated for self-contained operation.
 
+**Core Purpose:** Transform documentation requests into comprehensive product documentation that communicates features, specifications, performance metrics, and strategic context for technical teams and stakeholders.
+
+**Integration:** Used by System Prompt v0.921 via `$doc` command. Applies DEPTH Framework v0.106 and Interactive Mode v0.306.
+
 ---
 
 ## 📋 TABLE OF CONTENTS
@@ -25,7 +29,7 @@ Documentation templates with integrated formatting rules and quality standards. 
 - **Purpose:** Create product documentation that auto-scales complexity
 - **Output:** Always as `text/markdown` artifact
 - **Thinking:** 10 rounds automatic (DEPTH methodology), 1-5 auto-scaled for $quick
-- **Interactive Mode:** Handled by Interactive Mode system (see v0.301)
+- **Interactive Mode:** Handled by Interactive Mode v0.306
 - **Key Focus:** Product features, performance metrics, strategy docs - ONLY what user requests
 - **Header Position:** Always at top as first line
 - **Silent Processing:** User sees simple messages, not methodology details
@@ -120,8 +124,8 @@ Documentation templates with integrated formatting rules and quality standards. 
 #### Symbol Hierarchy
 - **H1:** ⌘ (About), ❖ (Main sections)
 - **H2:** ⌥ (References & Resources)
-- **H3:** Numbered format when multiple subsections (### 1. Title), clean otherwise
-- **H4:** Clean headers (no symbols)
+- **H3:** NEVER used in Doc mode - use H4 for subsections
+- **H4:** Clean headers (no symbols) for all subsections
 
 #### Structure Order
 1. Header (Mode | Complexity | Template) - FIRST LINE
@@ -141,9 +145,8 @@ Documentation templates with integrated formatting rules and quality standards. 
 
 ### Visual Hierarchy Rules
 - Consistent spacing throughout
-- H3 headers: Numbered format (### 1. Title) when multiple subsections exist
-- H3 headers: Clean (no symbols, no numbers) when single subsection
-- H4 headers: Always clean (no symbols)
+- H4 headers: Clean (no symbols) for all subsections
+- H3 NEVER used in Doc mode
 - Use `---` as section separators between major sections (not after headers)
 
 ### Content Integration
@@ -192,7 +195,7 @@ Documentation templates with integrated formatting rules and quality standards. 
 - [] Main sections properly structured?
 - [] Correct symbol hierarchy applied?
 - [] Dividers used appropriately?
-- [] Clean H3/H4 headers?
+- [] Clean H4 headers (H3 never used)?
 
 ### Format Validation
 - [] Using `text/markdown` artifact type?
@@ -222,7 +225,7 @@ Documentation templates with integrated formatting rules and quality standards. 
 ### Common Errors & Fixes
 
 #### Wrong Symbol Hierarchy
-**Fix:** Update to H1: ⌘/❖, H2: ⌥, H3: numbered when multiple subsections, H4: clean
+**Fix:** Update to H1: ⌘/❖, H2: ⌥, H4: for subsections (H3 never used)
 
 #### About Section Not First
 **Fix:** Move About to first position after metadata
@@ -843,12 +846,13 @@ The north star that guides all platform decisions and investments
 6. **Use H3 for subsections** - number them (### 1. Title) only when multiple subsections exist
 7. **Single subsection** uses clean H3 (no numbers, no symbols)
 8. **Use `---` dividers** between all major sections
-9. **Interactive questions** handled by Interactive Mode v0.306 file
-10. **Header at top** as first line (Mode | Complexity | Template)
-11. **No Table of Contents** (ClickUp/Jira provide native TOC)
-12. **Only requested topic** - no scope expansion beyond user request
-13. **DEPTH methodology** applied automatically (10 rounds standard, 1-5 quick)
-14. **Template version** v0.119 confirmed before creation
-15. **Complexity scales structure** not content scope (Simple: 2-3 sections, Standard: 4-6, Complex: 7+)
-16. **Documentation focus** maintained throughout (product features, performance metrics, strategy docs)
+10. **Interactive questions** handled by Interactive Mode v0.306 file
+11. **Header at top** as first line (Mode | Complexity | Template)
+12. **No Table of Contents** (ClickUp/Jira provide native TOC)
+13. **Only requested topic** - no scope expansion beyond user request
+14. **DEPTH methodology** applied automatically (10 rounds standard, 1-5 quick)
+15. **Template version** v0.119 confirmed before creation
+16. **Complexity scales structure** not content scope (Simple: 2-3 sections, Standard: 4-6, Complex: 7+)
+17. **Documentation focus** maintained throughout (product features, performance metrics, strategy docs)
+18. **H3 NEVER used** - use H4 for all subsections
 ```

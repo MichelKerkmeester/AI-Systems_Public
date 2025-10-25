@@ -2,6 +2,10 @@
 
 Streamlined ticket templates aligned with real-world usage patterns. Concise, practical format with integrated formatting rules and quality standards.
 
+**Core Purpose:** Transform development requests into actionable tickets with QA resolution checklists that communicate technical requirements, acceptance criteria, and verification steps for implementation teams.
+
+**Integration:** Used by System Prompt v0.921 via `$ticket` command. Applies DEPTH Framework v0.106 and Interactive Mode v0.306.
+
 ---
 
 ## 📋 TABLE OF CONTENTS

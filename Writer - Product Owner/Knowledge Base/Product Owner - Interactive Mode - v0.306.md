@@ -1,8 +1,10 @@
 # Product Owner - Interactive Mode - v0.306
 
-**Purpose:** Define conversation flows, state management, and response patterns for interactive guidance with concise transparency.
+Establishes conversation flows, state management, and response patterns for interactive guidance with concise transparency.
 
-**Integration:** Works with System Prompt v0.921 and DEPTH Framework v0.106.
+**Core Purpose:** Enable intelligent interactive guidance through single comprehensive questions, smart command detection, and transparent DEPTH processing that transforms user requests into high-quality deliverables.
+
+**Integration:** Used by System Prompt v0.921. Applies DEPTH Framework v0.106.
 
 ---
 

@@ -2,6 +2,10 @@
 
 Epic templates with integrated formatting rules and quality standards. All delivery logic consolidated for self-contained operation.
 
+**Core Purpose:** Transform strategic initiatives into high-level epic summaries that communicate vision, success metrics, and scope overview with links to detailed stories and tickets for execution.
+
+**Integration:** Used by System Prompt v0.921 via `$epic` command. Applies DEPTH Framework v0.106 and Interactive Mode v0.306.
+
 ---
 
 ## 📋 TABLE OF CONTENTS
@@ -123,7 +127,8 @@ Epic templates with integrated formatting rules and quality standards. All deliv
 #### Symbol Hierarchy
 - **H1:** ⌘ (About), ❖ (Main sections)
 - **H2:** ✦ (Success Criteria), ⌥ (Designs & References), ∅ (Risks when criteria met)
-- **H3:** Clean headers (no symbols) - Use numbered format only when multiple subsections exist
+- **H3:** NEVER used in Epic mode - use H4 for subsections
+- **H4:** Clean headers (no symbols) for subsections
 
 #### Structure Order
 1. Header (Mode | Scale | Template) - FIRST LINE
@@ -150,7 +155,8 @@ Epic templates with integrated formatting rules and quality standards. All deliv
 - One blank line after divider
 - Exception: No blank line after final divider
 - Consistent spacing throughout
-- Clean H3 headers without symbols
+- Clean H4 headers for subsections (no symbols)
+- H3 NEVER used in Epic mode
 
 ### Content Integration
 - Strategic context in brief About section
@@ -216,7 +222,7 @@ Epic templates with integrated formatting rules and quality standards. All deliv
 ### Common Errors & Fixes
 
 #### Wrong Symbol Hierarchy
-**Fix:** Update to H1: ⌘/❖, H2: ✦/⌥/∅, H3: clean (numbered only when multiple subsections)
+**Fix:** Update to H1: ⌘/❖, H2: ✦/⌥/∅, H4: for subsections (H3 never used)
 
 #### Success Criteria at Top
 **Fix:** Move after About section
@@ -724,10 +730,10 @@ Major Milestones:
 3. **Short About** required (3 sentences maximum explaining WHAT and WHY)
 4. **Success Criteria** positioned after About (not at top)
 5. **Designs as bullets** organized by category (Documentation, Flows, Components, Related Stories/Tickets)
-6. **Feature lists** include links to stories/tickets (summary approach, not full specs)
-7. **Use H3 for subsections** - only number them (1., 2., 3.) when multiple subsections exist
-8. **NO ◻ symbol** - removed in v0.130
-9. **Use `---` dividers** between all major sections
+7. **Feature lists** include links to stories/tickets (summary approach, not full specs)
+8. **Use H4 for subsections** - H3 never used in Epic mode
+9. **NO ◻ symbol** - removed in v0.130
+10. **Use `---` dividers** between all major sections
 10. **Interactive questions** handled by Interactive Mode v0.306 file
 11. **Header at top** as first line (Mode | Scale | Template)
 12. **No Table of Contents** (ClickUp/Jira provide native TOC)
