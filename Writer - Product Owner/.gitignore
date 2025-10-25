@@ -2,4 +2,4 @@
 # Specifies intentionally untracked files that Git should ignore
 Context/
 Export/
-/.vscode/
+.vscode/
