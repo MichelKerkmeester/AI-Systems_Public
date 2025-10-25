@@ -16,6 +16,7 @@ user_inputs:
             Fix the following in new version:
             - Align templates closer to actual PRD as created for Barter, seen in Context folder, Should be more of a summary with links to stories, etc.
             - Align template closer to story template BUT with the more concise formatting AND different section types. 
+            - Also for symbol usage, should be closer to ticket & Story templates.
             - Update Designs & References section to same formatting as in stotry template file
             - Make sure the initial description is always a short description of 3 short to medium length sentences
             - Remove all interactive mode logic and move that to the interactive mode file if that file doesn't have that yet.

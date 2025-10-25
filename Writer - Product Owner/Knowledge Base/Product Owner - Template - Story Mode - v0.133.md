@@ -39,6 +39,9 @@ User story templates with integrated formatting rules and quality standards. All
 - **FEATURES SECTION:** Bulleted list of key features immediately after description
 - **INTERACTIVE QUESTIONS:** Handled by Interactive Mode v0.305 file, not in template
 
+### Note on Development Tickets
+For development tickets with QA checklists and resolution tracking, use `$ticket` command which references **Product Owner - Template - Ticket Mode - v0.133.md**
+
 ---
 
 ## 2. 📦 DELIVERY STANDARDS
@@ -728,56 +731,7 @@ Overview of all existing components that have been changed or updated.
 
 ---
 
-## 10. 📚 INTEGRATION NOTES
-
-### Story vs Ticket Differences
-
-**Stories Have:**
-- Simple feature name as title
-- Short description after title (1-2 sentences)
-- Features section (bulleted list)
-- About section (narrative only)
-- User Need and Business Value (numbered sections)
-- Bulleted list for Designs & References
-- Change Summary at bottom
-- H4 for subsections (not H3)
-- `---` dividers
-- `-` list bullets
-- Implementation focus
-
-**Stories Don't Have:**
-- Resolution Checklist (that's only for tickets)
-- "As a [user]" title format
-- Bold labels in About section (Scope, User Need, Business Value)
-- Technical verification checklists
-- QA steps
-- PR/deployment items
-
-**Both Share:**
-- DEPTH methodology
-- Same quality requirements
-- Header at top
-- Symbol hierarchy for sections
-- Scope discipline
-
-### When to Use Stories vs Tickets
-
-**Use Stories When:**
-- Documenting features for stakeholders
-- Focusing on what was built
-- Creating implementation records
-- Narrative format preferred
-- Need change documentation
-
-**Use Tickets When:**
-- Detailed task tracking needed
-- QA checklist required
-- Step-by-step resolution needed
-- Engineering-focused delivery
-
----
-
-## 🎯 FINAL REMINDERS
+## 10. 🎯 FINAL REMINDERS
 
 1. **Always wait** for user response (except $quick)
 2. **Never answer** own questions
@@ -795,20 +749,3 @@ Overview of all existing components that have been changed or updated.
 14. **No Table of Contents**
 15. **Only requested features** - no scope expansion
 16. **DEPTH methodology** applied automatically (10 rounds standard, 1-5 quick)
-
----
-
-## 🎯 FINAL REMINDERS
-
-1. **Always wait** for user response (except $quick)
-2. **Never answer** own questions
-3. **Short description** required after title (3 sentences explaining WHAT)
-4. **NO "As a user"** format in title - use simple feature name
-5. **Designs as bullets** organized by category (Flows, Components, etc.)
-6. **H4 subsections** in Requirements (NEVER H3)
-7. **Change Summary** at bottom (mandatory in v0.133)
-8. **Use `* * *` dividers** between all sections
-9. **Header at top** as first line
-10. **No Table of Contents**
-11. **Only requested features** - no scope expansion
-12. **DEPTH methodology** applied automatically (10 rounds standard, 1-5 quick)
