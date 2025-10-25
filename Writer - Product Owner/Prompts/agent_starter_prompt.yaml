@@ -9,18 +9,8 @@ action: Locate → Read → Apply AGENTS.md, then process [CONTEXT] and [REQUEST
 # USER INPUTS
 # ───────────────────────────────────────────────────────────────
 user_inputs:
-  context: "Improve PRD template file, align with actual PRD we created at Barter and recent story/ticket templates"
-  request: "- Analyze these PRD's:
-            /Users/michelkerkmeester/MEGA/AI Systems/Writer - Product Owner/Context/Epics
-            Afterwards.. Duplicate the current PRD template file and update to v0.130
-            Fix the following in new version:
-            - Align templates closer to actual PRD as created for Barter, seen in Context folder, Should be more of a summary with links to stories, etc.
-            - Align template closer to story template BUT with the more concise formatting AND different section types. 
-            - Also for symbol usage, should be closer to ticket & Story templates.
-            - Update Designs & References section to same formatting as in stotry template file
-            - Make sure the initial description is always a short description of 3 short to medium length sentences
-            - Remove all interactive mode logic and move that to the interactive mode file if that file doesn't have that yet.
-            - Rename PRD to Epic, rename the file, all references in all files seen in /Knowledge Base and AGENTS.md"
+  context: "[CONTEXT]"
+  request: "[REQUEST]"
 
 # ───────────────────────────────────────────────────────────────
 # RESOURCES
