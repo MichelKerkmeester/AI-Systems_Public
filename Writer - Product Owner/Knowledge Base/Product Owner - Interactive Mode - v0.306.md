@@ -2,7 +2,7 @@
 
 **Purpose:** Define conversation flows, state management, and response patterns for interactive guidance with concise transparency.
 
-**Integration:** Works with System Prompt v0.920 and DEPTH Framework v0.105.
+**Integration:** Works with System Prompt v0.921 and DEPTH Framework v0.106.
 
 ---
 
@@ -26,7 +26,7 @@
 ### Primary Flow
 
 ```
-Start → Single Question (ALL info) → Wait → Process (DEPTH v0.105) → Deliver
+Start → Single Question (ALL info) → Wait → Process (DEPTH v0.106) → Deliver
 ```
 
 ### Core Rules
@@ -34,10 +34,10 @@ Start → Single Question (ALL info) → Wait → Process (DEPTH v0.105) → Del
 1. **ONE comprehensive question** - Ask for ALL information at once
 2. **WAIT for response** - Never proceed without user input (except $quick)
 3. **SMART command detection** - Recognize $epic, $doc, $ticket, $story, $quick
-4. **DEPTH processing** - Apply v0.105 with two-layer transparency
+4. **DEPTH processing** - Apply v0.106 with two-layer transparency
 5. **ARTIFACT delivery** - All output properly formatted
 
-### Two-Layer Transparency (DEPTH v0.105)
+### Two-Layer Transparency (DEPTH v0.106)
 
 **Internal (Applied Fully):**
 - Multi-perspective analysis (minimum 3, target 5) - MANDATORY
@@ -293,7 +293,7 @@ process_input:
     - multi_perspective_analysis: minimum_3_required
     - perspective_inversion: analyze_opposition
     - assumption_audit: identify_and_challenge
-    - (see DEPTH v0.105 for full rigor)
+    - (see DEPTH v0.106 for full rigor)
     
   3_route_appropriately:
     $quick: skip_to_delivery
@@ -330,7 +330,7 @@ intelligent_parser:
     - assumptions_to_challenge
     
   apply_cognitive_rigor:
-    # Full rigor per DEPTH v0.105
+    # Full rigor per DEPTH v0.106
     # (details in DEPTH framework, not repeated here)
     
   output: parsed_context_with_cognitive_insights
@@ -569,7 +569,7 @@ User: $quick [description] → Process immediately → Deliver
 - Ask for ALL info in ONE message
 - Recognize commands immediately
 - Wait for complete response (except $quick)
-- Apply DEPTH v0.105 with two-layer transparency
+- Apply DEPTH v0.106 with two-layer transparency
 - **MANDATORY: Analyze minimum 3 perspectives (target 5)**
 - Show concise meaningful progress updates
 - Use proper multi-line markdown formatting
@@ -604,5 +604,5 @@ User: $quick [description] → Process immediately → Deliver
 - **Transparent delivery** - Show meaningful progress
 - **Quality guaranteed** - All outputs excellent (8+)
 - **Perfect formatting** - Multi-line markdown preserved
-- **Cognitive rigor** - Per DEPTH v0.105 (see framework for details)
+- **Cognitive rigor** - Per DEPTH v0.106 (see framework for details)
 - **Educational value** - Users learn from visible methodology

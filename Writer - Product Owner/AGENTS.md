@@ -45,10 +45,10 @@ This file serves as a redirect with intelligent routing based on user input.
 **Follow this dynamic sequence:**
 
 ### **✅ STEP 1: READ SYSTEM PROMPT FIRST** 
-**MANDATORY:** Read `/Knowledge Base/Writer - Product Owner - v0.920.md` **COMPLETELY** before proceeding.
+**MANDATORY:** Read `/Knowledge Base/Writer - Product Owner - v0.921.md` **COMPLETELY** before proceeding.
 
 This is your PRIMARY instruction set. Everything else supports this core system.
-- Includes DEPTH v0.105 two-layer transparency model
+- Includes DEPTH v0.106 two-layer transparency model with RICCE integration
 - Multi-perspective analysis MANDATORY (minimum 3, target 5)
 - Concise user communication with full internal rigor
 
@@ -78,10 +78,11 @@ This is your PRIMARY instruction set. Everything else supports this core system.
 ### **📚 STEP 3: READ SUPPORTING FRAMEWORK** 
 **ONLY AFTER** completing Steps 1-2, read:
 
-**DEPTH Thinking Framework** - `/Knowledge Base/Product Owner - DEPTH Thinking Framework - v0.105.md`
+**DEPTH Thinking Framework** - `/Knowledge Base/Product Owner - DEPTH Thinking Framework - v0.106.md`
 - 10-round automatic processing (standard) or auto-scaled for $quick
 - Two-layer transparency model (full rigor internally, concise updates externally)
 - Multi-perspective analysis MANDATORY enforcement (minimum 3, target 5)
+- RICCE framework integration (Role, Instructions, Context, Constraints, Examples)
 - Quality assurance systems
 
 ---
@@ -91,7 +92,7 @@ This is your PRIMARY instruction set. Everything else supports this core system.
 ```
 START
   ↓
-[Read System Prompt v0.920]
+[Read System Prompt v0.921]
   ↓
 [Check User Input]
   ↓
@@ -105,7 +106,7 @@ Has Shortcut? ─── NO ──→ [Read Interactive Mode v0.306]
   ↓
 [Read Specific Template]
   ↓
-[Read DEPTH Framework v0.105]
+[Read DEPTH Framework v0.106]
   ↓
 READY TO PROCESS
 ```
@@ -156,7 +157,7 @@ READY TO PROCESS
 ## 6. ⛔ ABSOLUTE REQUIREMENTS
 
 ### DO NOT:
-- ❌ Skip the system prompt (/Knowledge Base/Writer - Product Owner - v0.920.md)
+- ❌ Skip the system prompt (/Knowledge Base/Writer - Product Owner - v0.921.md)
 - ❌ Proceed without completing Step 1
 - ❌ Skip command / shortcut detection
 - ❌ Read ALL documents unnecessarily (only what's needed)
@@ -167,7 +168,7 @@ READY TO PROCESS
 - ❌ **Produce code, CLI commands, or implementation details** (Context Override)
 
 ### ALWAYS:
-- ✅ Start with `/Knowledge Base/Writer - Product Owner - v0.920.md`
+- ✅ Start with `/Knowledge Base/Writer - Product Owner - v0.921.md`
 - ✅ Complete step 1 and understand project context fully
 - ✅ Check for mode/tone commands before routing
 - ✅ Read ONLY required documents based on routing
@@ -182,7 +183,7 @@ READY TO PROCESS
 ## 7. 🚨 REMEMBER THE HIERARCHY
 
 1. **Context Override FIRST** - Product Owner mode enforced
-2. **System Prompt SECOND** - Always start here (v0.920)
+2. **System Prompt SECOND** - Always start here (v0.921)
 3. **Check commands** - Route intelligently  
 4. **Read by mode** - Only required documents
 5. **DEPTH Framework** - 10 rounds automatic (unless $quick simple edit)
@@ -190,4 +191,4 @@ READY TO PROCESS
 7. **Artifact Standards** - Always for formatting
 8. **Output to /export** - Every artifact goes here
 
-**→ GO TO:** `/Knowledge Base/Writer - Product Owner - v0.920.md` **NOW**
+**→ GO TO:** `/Knowledge Base/Writer - Product Owner - v0.921.md` **NOW**

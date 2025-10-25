@@ -1,71 +1,65 @@
-# Product Owner System v0.920
+# Product Owner System v0.921
 
 Transforms requests into professional tickets, epics, and documentation with **concise transparent DEPTH processing**.
 
 ## 📋 Table of Contents
 
-1. [🆕 What's New in v0.920](#1-whats-new-in-v0920)
+1. [🆕 What's New in v0.921](#1-whats-new-in-v0921)
 2. [✨ Key Features](#2-key-features)
-3. [🚀 Quick Setup](#3-quick-setup)
-4. [🎛️ Operating Modes](#4-operating-modes)
-5. [📋 Mode Details](#5-mode-details)
-6. [🧠 DEPTH Thinking Framework](#6-depth-thinking-framework)
-7. [🔬 Cognitive Rigor Techniques](#7-cognitive-rigor-techniques)
-8. [⚙️ Automatic Complexity Detection](#8-automatic-complexity-detection)
-9. [🏗️ System Architecture](#9-system-architecture)
+3. [🌳 System Architecture](#3-system-architecture)
+4. [🚀 Quick Setup](#4-quick-setup)
+5. [🎛️ Operating Modes](#5-operating-modes)
+6. [📋 Mode Details](#6-mode-details)
+7. [💬 Interactive Mode](#7-interactive-mode)
+8. [🧠 DEPTH Thinking Framework](#8-depth-thinking-framework)
+9. [🏗️ RICCE Framework](#9-ricce-framework)
 
 ---
 
-<a id="1-whats-new-in-v0920"></a>
-## 1. 🆕 What's New In V0.920
+<a id="1-whats-new-in-v0921"></a>
+## 1. 🆕 What's New In V0.921
 
 ### Major Improvements
 
-**Enhanced Readability & Alignment:**
-- **Reduced excessive capitalization** in rules section for improved readability
-- **Fixed Section 7 (Quick Reference)** to align with DEPTH v0.105 two-layer transparency model
-- **Removed contradictory language** about "showing all rounds to users"
-- **Emphasized concise transparency** throughout - full rigor internally, meaningful updates externally
-- **Standardized formatting** to match template conventions
+**RICCE Framework Integration:**
+- **Added comprehensive RICCE definition** to DEPTH Thinking Framework v0.106
+- **RICCE = Role, Instructions, Context, Constraints, Examples**
+- Full integration with DEPTH methodology for structural completeness validation
+- Each RICCE element clearly defined with internal validation and user-facing formats
+- RICCE-DEPTH integration mapped across all 5 DEPTH phases
+
+**Enhanced Framework Documentation:**
+- **DEPTH Framework updated to v0.106** with detailed RICCE framework definition
+- **System Prompt updated to v0.921** with RICCE compliance checkpoints
+- RICCE validation integrated into cognitive rigor framework (rule 21)
+- All version references updated across AGENTS.md and knowledge base
+- README updated to reflect v0.921 improvements
 
 ### Key Changes
 
-**Improved Self-Contained Templates:**
-- All templates now fully self-contained with embedded rules, quality checks, and formatting standards
-- Ticket v0.133: Auto-scaling resolution checklists (4-6, 8-12, 12-20 items), mechanism-first validation
-- Story v0.133: Narrative format with Given-When-Then criteria, no QA checklist (key differentiator)
-- Epic v0.130: Three scale options (Initiative/Program/Strategic) with links to stories/tickets
-- Doc v0.119: Three complexity levels with tool-agnostic design principles
-- No external rule dependencies - complete error recovery protocols built-in
+**RICCE Definition Added:**
+Each element of RICCE now has:
+- Clear purpose statement
+- Internal validation YAML structure
+- User-facing communication format
+- Integration points with DEPTH phases
+- Quality checkpoints and validation gates
 
+**System-Wide Version Updates:**
+- DEPTH Thinking Framework: v0.106 → v0.106
+- System Prompt: v0.920 → v0.921
+- AGENTS.md: Updated to reference v0.921 and v0.106
+- README: Updated to reflect v0.921 improvements
 
-### Template Structure Now:
-```
-Knowledge Base/
-├── Writer - Product Owner - v0.920.md (System Prompt)
-├── Product Owner - DEPTH Thinking Framework - v0.105.md (Methodology)
-├── Product Owner - Interactive Mode - v0.306.md (Conversation Flow)
-│
-├── Product Owner - Template - Ticket Mode - v0.133.md ← Improved self-contained
-├── Product Owner - Template - Story Mode - v0.133.md ← Improved self-contained
-├── Product Owner - Template - Epic Mode - v0.130.md ← Improved self-contained
-└── Product Owner - Template - Doc Mode - v0.119.md ← Improved self-contained
-```
-
-**Template Improvements:**
-- All formatting rules, quality checks, and standards embedded in each template
-- No external dependencies or rule duplication
-- Auto-complexity scaling with clear indicators
-- Complete error recovery protocols built-in
-
-### 📊 Evolution: v0.913 → v0.914 → v0.915 → v0.920
+### 📊 Evolution: v0.913 → v0.914 → v0.915 → v0.920 → v0.921
 
 **v0.913:** Initial multi-perspective framework  
 **v0.914:** Two-layer transparency (concise + full rigor)  
 **v0.915:** Template separation (dedicated story mode)  
-**v0.920:** Readability improvements and transparency model alignment
+**v0.920:** Readability improvements and transparency model alignment  
+**v0.921:** RICCE framework integration and comprehensive definition
 
-**Result:** Professional quality + concise transparency + clear separation of concerns
+**Result:** Professional quality + concise transparency + structural completeness + RICCE validation
 
 ---
 
@@ -73,10 +67,11 @@ Knowledge Base/
 ## 2. ✨ Key Features
 
 - **📋 Improved Self-Contained Templates**: All rules, quality checks, and formatting embedded (v0.133 Ticket/Story, v0.130 Epic, v0.119 Doc)
-- **🧠 DEPTH Framework v0.105**: 10-round methodology with two-layer transparency
+- **🧠 DEPTH Framework v0.106**: 10-round methodology with two-layer transparency and RICCE integration
 - **🔒 Mandatory Perspectives**: Minimum 3 perspectives (BLOCKING requirement)
-- **🔬 Cognitive Rigor**: 5 techniques (multi-perspective, assumption audit, perspective inversion, constraint reversal, mechanism-first)
+- **🔬 Cognitive Rigor**: 6 techniques (multi-perspective, assumption audit, perspective inversion, constraint reversal, mechanism-first, RICCE compliance)
 - **📊 Two-Layer Model**: Full rigor internally, concise updates externally
+- **🎯 RICCE Framework**: Role, Instructions, Context, Constraints, Examples validation
 - **🚀 Four Modes**: Tickets, Stories, Epics, Documentation
 - **⚡ Quick Mode**: Auto-scaled 1-5 rounds
 - **💬 Single Question**: All info gathered at once
@@ -84,22 +79,41 @@ Knowledge Base/
 
 ---
 
-<a id="3-quick-setup"></a>
-## 3. 🚀 Quick Setup
+<a id="3-system-architecture"></a>
+## 3. 🌳 System Architecture
+
+```
+AGENTS.md → Entry point with routing logic
+    ↓
+Writer - Product Owner - v0.921.md (System prompt - 25 core rules)
+    ↓
+DEPTH Framework v0.106 (Methodology with RICCE)
+    ↓
+Interactive Mode v0.306 (Conversation flow)
+    ↓
+Templates (Ticket v0.133, Story v0.133, Epic v0.130, Doc v0.119)
+    ↓
+Output → /Export/[###]-artifact.md
+```
+
+---
+
+<a id="4-quick-setup"></a>
+## 4. 🚀 Quick Setup
 
 ### Step 1: Create Claude Project
 1. Go to claude.ai → Projects → Create "Product Owner"
 
 ### Step 2: Add System Instructions
 1. Edit project details → Custom instructions
-3. Copy and paste: `Writer - Product Owner - v0.920.md` 
+3. Copy and paste: `Writer - Product Owner - v0.921.md` 
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
 Add these documents to your project:
 
 **Core Framework:**
-- `Product Owner - DEPTH Thinking Framework - v0.105.md` (two-layer transparency & mandatory perspectives)
+- `Product Owner - DEPTH Thinking Framework - v0.106.md` (two-layer transparency, mandatory perspectives, & RICCE integration)
 - `Product Owner - Interactive Mode - v0.306.md` (conversation flow & smart routing)
 
 **Improved Self-Contained Templates:**
@@ -129,7 +143,7 @@ Each template is fully self-contained with embedded rules, quality checks, and f
 - No external rule dependencies - everything embedded in each template
 - Automatic complexity scaling based on request keywords
 - Complete quality checklists and error recovery built-in
-- Consistent DEPTH v0.105 integration across all templates
+- Consistent DEPTH v0.106 integration across all templates
 
 ### Step 4: Start Creating
 ```
@@ -142,8 +156,8 @@ $story user login               # Direct story mode (10 rounds auto)
 
 ---
 
-<a id="4-operating-modes"></a>
-## 4. 🎛️ Operating Modes
+<a id="5-operating-modes"></a>
+## 5. 🎛️ Operating Modes
 
 **Default Mode:** The system defaults to `$interactive` with automatic 10-round DEPTH unless specified.
 
@@ -168,8 +182,8 @@ System waits for complete response before proceeding.
 
 ---
 
-<a id="5-mode-details"></a>
-## 5. 📋 Mode Details
+<a id="6-mode-details"></a>
+## 6. 📋 Mode Details
 
 ### 🎫 Ticket Mode (v0.133)
 
@@ -279,112 +293,158 @@ System waits for complete response before proceeding.
 
 ---
 
-<a id="6-depth-thinking-framework"></a>
-## 6. 🧠 DEPTH Thinking Framework
+<a id="7-interactive-mode"></a>
+## 7. 💬 Interactive Mode
 
-### Two-Layer Transparency Processing System
-| Mode | Processing Depth | User Visibility | Application | Output |
-|------|-----------------|-----------------|-------------|---------|
-| **Standard Modes** | 10 rounds enforced | Concise meaningful updates | Real-time progress | Exact request |
-| **$Quick Mode** | 1-5 auto-scaled | Summary provided | Complexity-based | Exact request |
+### Conversational Guidance Flow
 
-**DEPTH Definition:**
-DEPTH methodology (Discover, Engineer, Prototype, Test, Harmonize) is automatically applied with **two-layer transparency**. Full rigor applied internally, concise meaningful updates shown externally for optimal user experience.
+**Default behavior** when no mode specified ($ticket, $story, $epic, $doc, $quick)
 
-### DEPTH Phases (v0.105 Two-Layer Model)
-| Phase | Purpose | Internal Processing | User Sees (Concise) |
-|-------|---------|-------------------|---------------------|
-| **D**iscover | Deep understanding | 5 perspectives analyzed, assumption audit, opposition analysis | "🔍 Analyzing (5 perspectives) - Key insight: [finding]" |
-| **E**ngineer | Solution generation | 8 approaches evaluated, constraint reversal, mechanism validation | "⚙️ Engineering (optimal approach selected)" |
-| **P**rototype | Build framework | Template application, RICCE validation, mechanism-first check | "🔨 Building (template v0.133, mechanism-first validated)" |
-| **T**est | Validate quality | 6-dimension self-rating, quality gates, improvement cycles | "✅ Validating (all dimensions 8+, excellence confirmed)" |
-| **H**armonize | Final polish | Final validation, cognitive rigor check, delivery prep | "✨ Finalizing (excellence confirmed, ready for delivery)" |
-
-### Concise Transparent Excellence in Action
-```markdown
-🔄 **Processing (DEPTH v0.105 - Concise Updates):**
-
-🔍 **Analyzing** (5 perspectives: Technical, UX, Business, QA, Strategic)
-**Key Insight:** OAuth token validation failure with configuration as primary suspect
-
-⚙️ **Engineering** (8 solution approaches evaluated)
-**Non-obvious Insight:** Constraint reversal revealed security pattern opportunity
-**Selected:** Configuration validation + enhanced error handling
-
-🔨 **Building** (Template v0.133, mechanism-first validated)
-**Structure:** WHY OAuth fails → HOW to diagnose → WHAT to implement
-
----
-
-<a id="depth-framework"></a>
-## 🧠 DEPTH Framework (v0.105)
-
-**Two-Layer Model:**
-- **Internal**: Full 10-round methodology, all cognitive rigor, mandatory perspectives (min 3, target 5)
-- **External**: Concise phase updates with key insights only
-
-**Example User Communication:**
-```markdown
-🔍 **Analyzing** (5 perspectives confirmed)
-**Key Insight:** [Most important finding]
-
-✅ **Validating** (Quality: 92/100)
-**Assumption Flagged:** [Critical dependency]
-
-✨ **Finalizing** (Excellence confirmed)
+**Process:**
+```
+User Request
+     ↓
+Single Comprehensive Question
+(What to create? Scope? Brief description?)
+     ↓
+Wait for Complete User Response
+     ↓
+Apply DEPTH v0.106 (10 rounds with concise updates)
+     ↓
+Deliver Exact Request
 ```
 
-**Full details in:** `Product Owner - DEPTH Thinking Framework - v0.105.md`
+**Key Features:**
+- ONE question gathering ALL needed info
+- Never answers own questions
+- Always waits for user response
+- Applies full DEPTH with two-layer transparency
+- Routes to appropriate template based on user's answer
+
+**Full details:** `Product Owner - Interactive Mode - v0.306.md`
 
 ---
 
-<a id="7-cognitive-rigor"></a>
-## 7. 🔬 Cognitive Rigor Techniques
+<a id="8-depth-thinking-framework"></a>
+## 8. 🧠 DEPTH Thinking Framework
 
-Five mandatory frameworks applied internally (users see key insights only):
+### Two-Layer Transparency Model
+
+**DEPTH** = **D**iscover **E**ngineer **P**rototype **T**est **H**armonize
+
+A structured 5-phase methodology ensuring comprehensive analysis through **concise transparent excellence** - full rigor applied internally, meaningful updates shown to users.
+
+**Processing Depth:**
+| Mode | Rounds | User Visibility | Application |
+|------|--------|-----------------|-------------|
+| **Standard** | 10 rounds | Concise progress updates | Real-time transparency |
+| **$Quick** | 1-5 auto-scaled | Summary at completion | Complexity-based |
+
+### DEPTH Phases (v0.106 with RICCE Integration)
+
+| Phase | Purpose | Internal Processing | User Sees |
+|-------|---------|---------------------|-----------|
+| **D**iscover | Deep understanding | 5 perspectives, assumption audit, opposition analysis, RICCE Role & Context | "🔍 Analyzing (5 perspectives)" |
+| **E**ngineer | Solution generation | 8 approaches, constraint reversal, RICCE Constraints & Instructions | "⚙️ Engineering (optimal selected)" |
+| **P**rototype | Build framework | Template application, RICCE validation, mechanism-first | "🔨 Building (RICCE-compliant)" |
+| **T**est | Validate quality | 6-dimension rating, quality gates, RICCE Examples | "✅ Validating (excellence confirmed)" |
+| **H**armonize | Final polish | Final validation, cognitive rigor check, RICCE verification | "✨ Finalizing (ready for delivery)" |
+
+### What Users Actually See
+
+**Example DEPTH Progress Updates:**
+```markdown
+🔍 **Analyzing from 5 perspectives:** Technical, UX, Business, QA, Strategic
+**Key Insight:** Payment flow requires multi-tenant isolation
+
+⚙️ **Engineering solution** (8 approaches evaluated)
+**Selected:** Microservice architecture with event-driven sync
+
+🔨 **Building** (Template v0.133, RICCE-compliant)
+**Structure:** 5 sections, 12 acceptance criteria
+
+✅ **Quality validation complete**
+All dimensions 8+ (Completeness: 94%, Clarity: 91%, Actionability: 93%)
+
+✨ **Finalizing** (Excellence confirmed, RICCE verified)
+Ready for delivery
+```
+
+### Cognitive Rigor (Applied Automatically)
+
+Six mandatory frameworks applied internally (users see key insights only):
 
 1. **Multi-Perspective Analysis** - BLOCKING requirement (min 3, target 5)
 2. **Assumption Audit** - Critical flags shown
 3. **Perspective Inversion** - Key opposition insights
 4. **Constraint Reversal** - Non-obvious solutions
 5. **Mechanism First** - WHY before WHAT validation
+6. **RICCE Compliance** - Structural completeness
 
-**Quality Dimensions:** Completeness, Clarity, Actionability, Accuracy, Relevance, Mechanism Depth (all target 8+)
+**Quality Targets:** All dimensions 8+ (Completeness, Clarity, Actionability, Accuracy, Relevance, Mechanism Depth)
 
----
-
-<a id="8-automatic-complexity"></a>
-## 8. ⚙️ Automatic Complexity Detection
-
-System auto-detects complexity from keywords:
-
-**For Tickets:**
-- **Simple**: bug, fix, typo (2-3 sections, 4-6 items)
-- **Standard**: feature, dashboard, api (4-5 sections, 8-12 items)
-- **Complex**: platform, architecture, migration (6-8 sections, 12-20 items)
-
-**$quick mode:** Auto-scales to 2/3/5 rounds based on complexity
-
-**Output Guarantee:** Exact request = exact output (no scope expansion)
-- "Fix login bug" → That bug only
-- "Build dashboard" → That dashboard only
-- "Platform migration" → That migration only
+**Full details:** `Product Owner - DEPTH Thinking Framework - v0.106.md`
 
 ---
 
-<a id="9-system-architecture"></a>
-## 9. 🏗️ System Architecture
+<a id="9-ricce-framework"></a>
+## 9. 🏗️ RICCE Framework
 
+### Structural Validation Checklist
+
+**RICCE** ensures every deliverable contains essential elements for complete understanding:
+
+**R**ole - Perspectives Defined
+- ✅ Minimum 3 perspectives analyzed (target 5)
+- ✅ Stakeholders identified
+- ✅ Target users defined
+
+**I**nstructions - Tasks Broken Down
+- ✅ Clear action items
+- ✅ Execution sequence logical
+- ✅ Dependencies identified
+
+**C**ontext - Layers Comprehensive
+- ✅ Technical context provided
+- ✅ Business context included
+- ✅ User context explained
+
+**C**onstraints - Metrics Established
+- ✅ Scope boundaries clear
+- ✅ Success metrics defined
+- ✅ Quality thresholds set
+
+**E**xamples - Validation Included
+- ✅ Use cases provided
+- ✅ Expected outcomes shown
+- ✅ Validation steps included
+
+### RICCE-DEPTH Integration
+
+**How They Work Together:**
+- **DEPTH** = The **HOW** (process methodology)
+- **RICCE** = The **WHAT** (structural checklist)
+- **Together** = Rigorous process + Complete structure = Superior deliverables
+
+**Integration Points:**
+- Discover Phase → Populates RICCE Role & Context
+- Engineer Phase → Validates RICCE Constraints & Instructions
+- Prototype Phase → Applies full RICCE structure
+- Test Phase → Validates RICCE Examples
+- Harmonize Phase → Final RICCE verification
+
+### What Users See for RICCE
+
+**Example RICCE Communication:**
+```markdown
+✅ **RICCE validation complete:**
+- Role: 5 perspectives analyzed (Technical, UX, Business, QA, Strategic)
+- Instructions: 12 clear action items with dependencies mapped
+- Context: Technical stack, business constraints, user needs defined
+- Constraints: Scope boundaries set, success metrics established
+- Examples: 8 use cases with validation steps
+
+**Assumption Flagged:** [Assumes: SSO integration available by Sprint 3]
 ```
-AGENTS.md → Entry point with routing logic
-    ↓
-Writer - Product Owner - v0.920.md (System prompt)
-    ↓
-DEPTH Framework v0.105 (Methodology)
-    ↓
-Interactive Mode v0.306 (Conversation flow)
-    ↓
-Templates (Ticket v0.133, Story v0.133, Epic v0.130, Doc v0.119)
-    ↓
-Output → /Export/[###]-artifact.md
-```
+
+**Full details:** `Product Owner - DEPTH Thinking Framework - v0.106.md` (Section 4-5)
