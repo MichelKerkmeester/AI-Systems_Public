@@ -2,7 +2,7 @@
 
 **Purpose:** Define conversation flows, state management, and response patterns for interactive guidance with concise transparency.
 
-**Integration:** Works with System Prompt v0.914 and DEPTH Framework v0.104.
+**Integration:** Works with System Prompt v0.920 and DEPTH Framework v0.104.
 
 ---
 

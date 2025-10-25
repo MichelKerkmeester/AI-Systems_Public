@@ -37,15 +37,25 @@
 <a id="1-product-owner-writer"></a>
 #### 1. 📋 Product Owner Writer
 
-Create professional tickets, stories, PRDs, and documentation with automatic complexity scaling.
+Create professional tickets, stories, epics, and documentation with automatic complexity scaling and concise transparent DEPTH processing.
 
-**Intelligent Modes & Auto-Scaling**:
-  - Modes: $ticket, $prd, $doc, $interactive (discovery), $quick (instant)
-  - Auto-complexity for tickets: Simple (2-3), Standard (4-5), Complex (6-8 sections)
+**Intelligent Modes & Commands**:
+  - Modes: $ticket, $story, $epic, $doc, $interactive (default), $quick (instant)
+  - Auto-complexity: Simple (2-3), Standard (4-5), Complex (6-8 sections)
+  - Smart routing: Single comprehensive question, then intelligent template selection
 
-**DEPTH Framework & Silent Processing**:
-  - 5-phase thinking with 10 rounds automatic (internals hidden by default; visibility configurable; user doesn't control)
-  - $quick mode: Zero waiting, 1-5 rounds auto-scaled
+**DEPTH + RICCE Framework**:
+  - **DEPTH Methodology**: 10-round thinking (Discover → Engineer → Prototype → Test → Harmonize)
+  - **Two-Layer Transparency**: Full rigor internally, concise meaningful updates externally
+  - **RICCE Structure**: Requirements, Implementation, Criteria, Context, Execution
+  - **$quick mode**: Auto-scaled 1-5 rounds based on complexity
+  
+**Cognitive Rigor (Mandatory)**:
+  - Multi-perspective analysis: Minimum 3 perspectives (target 5) - blocking requirement
+  - Assumption audit: Surface, classify, challenge, flag critical dependencies
+  - Perspective inversion: Analyze opposition, strengthen solution
+  - Constraint reversal: Non-obvious insights through backward logic
+  - Mechanism-first: WHY before WHAT validation in all solutions
 
 .
 

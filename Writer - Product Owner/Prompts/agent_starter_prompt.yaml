@@ -9,9 +9,8 @@ action: Locate → Read → Apply AGENTS.md, then process [CONTEXT] and [REQUEST
 # USER INPUTS
 # ───────────────────────────────────────────────────────────────
 user_inputs:
-  context: "System Prompt & Interactive & DEPTH file, minimal updates"
-  request: "We recently updated all Template files. This might have cause that the system prompt, interactive mode, or DEPTH framework are out of sync. Please verify full compliance and adjust as needed."
-
+  context: "[CONTEXT]"
+  request: "[REQUEST]"
 # ───────────────────────────────────────────────────────────────
 # RESOURCES
 # ───────────────────────────────────────────────────────────────

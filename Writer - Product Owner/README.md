@@ -1,10 +1,10 @@
-# Product Owner System v0.915
+# Product Owner System v0.920
 
 Transforms requests into professional tickets, epics, and documentation with **concise transparent DEPTH processing**.
 
 ## 📋 Table of Contents
 
-1. [🆕 What's New in v0.915](#1-whats-new-in-v0915)
+1. [🆕 What's New in v0.920](#1-whats-new-in-v0920)
 2. [✨ Key Features](#2-key-features)
 3. [🚀 Quick Setup](#3-quick-setup)
 4. [🎛️ Operating Modes](#4-operating-modes)
@@ -16,74 +16,71 @@ Transforms requests into professional tickets, epics, and documentation with **c
 
 ---
 
-<a id="1-whats-new-in-v0915"></a>
-## 1. 🆕 What's New In V0.915
+<a id="1-whats-new-in-v0920"></a>
+## 1. 🆕 What's New In V0.920
 
-### Template Separation Complete
-- **Story Mode Now Separate:** User stories (`$story`) have their own dedicated template (v0.132)
-- **Ticket Mode Streamlined:** Development tickets (`$ticket`) now focused purely on implementation with QA checklists
-- **Clear Differentiation:** Distinct commands, templates, and use cases for tickets vs stories
-- **Updated Routing:** All Knowledge Base files updated with proper cross-references
+### Major Improvements
 
-### Story Template Features
-- User journey and narrative focus
-- "As a [user], I want to [action] so that [benefit]" format
-- Given-When-Then acceptance criteria
-- **No Resolution Checklist** (key differentiator from tickets)
-- Simple/Standard/Complex auto-scaling
+**Enhanced Readability & Alignment:**
+- **Reduced excessive capitalization** in rules section for improved readability
+- **Fixed Section 7 (Quick Reference)** to align with DEPTH v0.104 two-layer transparency model
+- **Removed contradictory language** about "showing all rounds to users"
+- **Emphasized concise transparency** throughout - full rigor internally, meaningful updates externally
+- **Standardized formatting** to match template conventions
 
-### Updated Files in v0.915
-- **System Prompt:** v0.915 - Added Story Mode template reference and `$story` command detection
-- **Story Template:** v0.132 - New dedicated file for user story format
-- **Ticket Template:** v0.132 - Removed story logic, focused on development tickets
-- **DEPTH Framework:** v0.104 - Added Story v0.132 to template versions
-- **Interactive Mode:** v0.305 - Added story context question and updated routing
-- **AGENTS.md:** Updated shortcuts and routing for separated templates
+### Key Changes
+
+**Improved Self-Contained Templates:**
+- All templates now fully self-contained with embedded rules, quality checks, and formatting standards
+- Ticket v0.133: Auto-scaling resolution checklists (4-6, 8-12, 12-20 items), mechanism-first validation
+- Story v0.133: Narrative format with Given-When-Then criteria, no QA checklist (key differentiator)
+- Epic v0.130: Three scale options (Initiative/Program/Strategic) with links to stories/tickets
+- Doc v0.119: Three complexity levels with tool-agnostic design principles
+- No external rule dependencies - complete error recovery protocols built-in
+
 
 ### Template Structure Now:
 ```
 Knowledge Base/
-├── Writer - Product Owner - v0.915.md (System Prompt) ← Updated
-├── Product Owner - DEPTH Thinking Framework - v0.104.md ← Updated
-├── Product Owner - Interactive Mode - v0.305.md ← Updated
-├── Product Owner - Template - Ticket Mode - v0.133.md ← Updated
-├── Product Owner - Template - Story Mode - v0.133.md ← Updated
-├── Product Owner - Template - Epic Mode - v0.130.md ← New
-└── Product Owner - Template - Doc Mode - v0.118.md
+├── Writer - Product Owner - v0.920.md (System Prompt)
+├── Product Owner - DEPTH Thinking Framework - v0.104.md (Methodology)
+├── Product Owner - Interactive Mode - v0.305.md (Conversation Flow)
+│
+├── Product Owner - Template - Ticket Mode - v0.133.md ← Improved self-contained
+├── Product Owner - Template - Story Mode - v0.133.md ← Improved self-contained
+├── Product Owner - Template - Epic Mode - v0.130.md ← Improved self-contained
+└── Product Owner - Template - Doc Mode - v0.119.md ← Improved self-contained
 ```
 
-### Previous Version (v0.914) 
+**Template Improvements:**
+- All formatting rules, quality checks, and standards embedded in each template
+- No external dependencies or rule duplication
+- Auto-complexity scaling with clear indicators
+- Complete error recovery protocols built-in
 
-### Two-Layer Transparency Model
-- **Internal:** Full DEPTH rigor (10 rounds, 3-5 perspectives, all cognitive techniques)
-- **External:** Concise progress updates (key insights only)
-- **Result:** Same quality, 90% less noise
+### 📊 Evolution: v0.913 → v0.914 → v0.915 → v0.920
 
-### Mandatory Multi-Perspective Analysis
-- **BLOCKING requirement:** Minimum 3 perspectives (target 5)
-- Cannot be skipped - enforced at multiple validation gates
-- Technical, UX, Business, QA, Strategic viewpoints
-
-### 📊 Evolution: v0.913 → v0.914 → v0.915
-**v0.913:** Full transparency with verbose output  
+**v0.913:** Initial multi-perspective framework  
 **v0.914:** Two-layer transparency (concise + full rigor)  
-**v0.915:** Template separation (dedicated story mode)
+**v0.915:** Template separation (dedicated story mode)  
+**v0.920:** Readability improvements and transparency model alignment
 
-**Result:** Professional quality + 90% less noise + clear ticket/story distinction
+**Result:** Professional quality + concise transparency + clear separation of concerns
 
 ---
 
 <a id="2-key-features"></a>
 ## 2. ✨ Key Features
 
+- **📋 Improved Self-Contained Templates**: All rules, quality checks, and formatting embedded (v0.133 Ticket/Story, v0.130 Epic, v0.119 Doc)
 - **🧠 DEPTH Framework v0.104**: 10-round methodology with two-layer transparency
 - **🔒 Mandatory Perspectives**: Minimum 3 perspectives (BLOCKING requirement)
 - **🔬 Cognitive Rigor**: 5 techniques (multi-perspective, assumption audit, perspective inversion, constraint reversal, mechanism-first)
 - **📊 Two-Layer Model**: Full rigor internally, concise updates externally
-- **🚀 Three Modes**: Tickets, Epics, Documentation
+- **🚀 Four Modes**: Tickets, Stories, Epics, Documentation
 - **⚡ Quick Mode**: Auto-scaled 1-5 rounds
 - **💬 Single Question**: All info gathered at once
-- **🎯 Smart Templates**: Auto-complexity detection
+- **🎯 Auto-Complexity**: Smart detection and scaling
 
 ---
 
@@ -95,23 +92,44 @@ Knowledge Base/
 
 ### Step 2: Add System Instructions
 1. Edit project details → Custom instructions
-3. Copy and paste: `Writer - Product Owner - v0.915.md` 
+3. Copy and paste: `Writer - Product Owner - v0.920.md` 
 4. Save the project
 
 ### Step 3: Upload Supporting Documents
 Add these documents to your project:
 
-**Core Documents (Latest Versions):**
-- `Product Owner - DEPTH Thinking Framework - v0.104.md` (with two-layer transparency & mandatory perspectives)
-- `Product Owner - Interactive Mode - v0.305.md` (concise conversation mechanics with full cognitive rigor)
+**Core Framework:**
+- `Product Owner - DEPTH Thinking Framework - v0.104.md` (two-layer transparency & mandatory perspectives)
+- `Product Owner - Interactive Mode - v0.305.md` (conversation flow & smart routing)
 
-**Self-Contained Templates (Current Versions):**
-- `Product Owner - Template - Ticket Mode - v0.133.md` (development tickets with QA checklists)
-- `Product Owner - Template - Story Mode - v0.133.md` (user stories in narrative format)
-- `Product Owner - Template - Epic Mode - v0.130.md` (epics with links to stories/tickets)
-- `Product Owner - Template - Doc Mode - v0.118.md` 
+**Improved Self-Contained Templates:**
+Each template is fully self-contained with embedded rules, quality checks, and formatting standards:
 
-**Note:** All rules embedded in templates. System operates with two-layer transparency model (full rigor internally, concise updates externally).
+- **`Product Owner - Template - Ticket Mode - v0.133.md`**
+  - Development tickets with detailed QA Resolution Checklists
+  - Auto-scaling: Simple (4-6 items), Standard (8-12), Complex (12-20)
+  - Includes mechanism-first validation and scope discipline
+  
+- **`Product Owner - Template - Story Mode - v0.133.md`**
+  - User stories in narrative format (no QA checklist)
+  - Focus on user journey and business value
+  - Given-When-Then acceptance criteria
+  
+- **`Product Owner - Template - Epic Mode - v0.130.md`**
+  - High-level summaries with links to stories/tickets
+  - Scale options: Initiative (5-10), Program (10-20), Strategic (20+)
+  - Includes success metrics and implementation phases
+  
+- **`Product Owner - Template - Doc Mode - v0.119.md`**
+  - Technical and user documentation
+  - Complexity levels: Simple (2-3), Standard (4-6), Complex (7+)
+  - Tool-agnostic design principles
+
+**Key Advantages:**
+- No external rule dependencies - everything embedded in each template
+- Automatic complexity scaling based on request keywords
+- Complete quality checklists and error recovery built-in
+- Consistent DEPTH v0.104 integration across all templates
 
 ### Step 4: Start Creating
 ```
@@ -133,7 +151,7 @@ $story user login               # Direct story mode (10 rounds auto)
 |------|---------|-----------|------------------|--------------|------------------|---------|
 | **Interactive** | Determine what to create | 1 comprehensive | 10 rounds (concise updates) | Two-layer | Auto-selected | Exact request |
 | **$quick** | Fast creation | NONE | 1-5 auto-scaled | Summary | Auto-selected | Exact request |
-| **$doc** | Documentation | 1 comprehensive | 10 rounds (concise updates) | Two-layer | v0.118 | Requested doc only |
+| **$doc** | Documentation | 1 comprehensive | 10 rounds (concise updates) | Two-layer | v0.119 | Requested doc only |
 | **$epic** | Epics | 1 comprehensive | 10 rounds (concise updates) | Two-layer | v0.130 | Requested epic only |
 | **$story** | User stories | 1 comprehensive | 10 rounds (concise updates) | Two-layer | v0.133 | Requested story only |
 | **$ticket** | Dev tickets | 1 comprehensive | 10 rounds (concise updates) | Two-layer | v0.133 | Requested ticket only |
@@ -146,7 +164,7 @@ System asks one comprehensive question gathering all info at once:
 
 System waits for complete response before proceeding.
 
-**Note:** In v0.915, tickets and stories are now separate templates with distinct formatting and use cases.
+**Note:** In v0.920, tickets and stories are separate templates with distinct formatting and use cases. The system emphasizes concise transparency with two-layer processing.
 
 ---
 
@@ -175,7 +193,7 @@ System waits for complete response before proceeding.
 
 ---
 
-### 📖 Story Mode (v0.132) **← New in v0.915**
+### 📖 Story Mode (v0.133) **← Separated in v0.915**
 
 **Purpose:** User stories in narrative format focusing on user journey and experience
 
@@ -194,7 +212,7 @@ System waits for complete response before proceeding.
 | **Complex** | platform, system, ecosystem | 6-8 | Multi-step scenarios | Complex user workflows |
 
 **Story vs Ticket Comparison:**
-| Feature | Story (v0.132) | Ticket (v0.132) |
+| Feature | Story (v0.133) | Ticket (v0.133) |
 |---------|----------------|-----------------|
 | **Command** | `$story` | `$ticket` |
 | **Focus** | User journey & experience | Technical implementation |
@@ -234,7 +252,7 @@ System waits for complete response before proceeding.
 
 ---
 
-### 📄 Doc Mode (v0.118)
+### 📄 Doc Mode (v0.119)
 
 **Purpose:** Technical documentation and user guides
 
@@ -293,7 +311,7 @@ DEPTH methodology (Discover, Engineer, Prototype, Test, Harmonize) is automatica
 **Non-obvious Insight:** Constraint reversal revealed security pattern opportunity
 **Selected:** Configuration validation + enhanced error handling
 
-🔨 **Building** (Template v0.132, mechanism-first validated)
+🔨 **Building** (Template v0.133, mechanism-first validated)
 **Structure:** WHY OAuth fails → HOW to diagnose → WHAT to implement
 
 ---
@@ -360,13 +378,13 @@ System auto-detects complexity from keywords:
 ```
 AGENTS.md → Entry point with routing logic
     ↓
-Writer - Product Owner - v0.915.md (System prompt)
+Writer - Product Owner - v0.920.md (System prompt)
     ↓
 DEPTH Framework v0.104 (Methodology)
     ↓
 Interactive Mode v0.305 (Conversation flow)
     ↓
-Templates (Ticket v0.133, Story v0.133, Epic v0.130, Doc v0.118)
+Templates (Ticket v0.133, Story v0.133, Epic v0.130, Doc v0.119)
     ↓
 Output → /Export/[###]-artifact.md
 ```
