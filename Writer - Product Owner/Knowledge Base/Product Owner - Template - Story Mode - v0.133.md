@@ -37,7 +37,7 @@ User story templates with integrated formatting rules and quality standards. All
 - **NO RESOLUTION CHECKLIST:** Stories use narrative format with acceptance criteria
 - **SHORT DESCRIPTION:** 1-2 concise sentences after title explaining WHAT was built/changed
 - **FEATURES SECTION:** Bulleted list of key features immediately after description
-- **INTERACTIVE QUESTIONS:** Handled by Interactive Mode v0.305 file, not in template
+- **INTERACTIVE QUESTIONS:** Handled by Interactive Mode v0.306 file, not in template
 
 ### Note on Development Tickets
 For development tickets with QA checklists and resolution tracking, use `$ticket` command which references **Product Owner - Template - Ticket Mode - v0.133.md**
@@ -744,7 +744,7 @@ Overview of all existing components that have been changed or updated.
 9. **H4 subsections** in Requirements (NEVER H3)
 10. **Change Summary** at bottom (mandatory in v0.133)
 11. **Use `---` dividers** between all sections
-12. **Interactive questions** handled by Interactive Mode v0.305 file
+12. **Interactive questions** handled by Interactive Mode v0.306 file
 13. **Header at top** as first line
 14. **No Table of Contents**
 15. **Only requested features** - no scope expansion

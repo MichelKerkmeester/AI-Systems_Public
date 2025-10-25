@@ -23,7 +23,7 @@ Transforms requests into professional tickets, epics, and documentation with **c
 
 **Enhanced Readability & Alignment:**
 - **Reduced excessive capitalization** in rules section for improved readability
-- **Fixed Section 7 (Quick Reference)** to align with DEPTH v0.104 two-layer transparency model
+- **Fixed Section 7 (Quick Reference)** to align with DEPTH v0.105 two-layer transparency model
 - **Removed contradictory language** about "showing all rounds to users"
 - **Emphasized concise transparency** throughout - full rigor internally, meaningful updates externally
 - **Standardized formatting** to match template conventions
@@ -43,8 +43,8 @@ Transforms requests into professional tickets, epics, and documentation with **c
 ```
 Knowledge Base/
 ├── Writer - Product Owner - v0.920.md (System Prompt)
-├── Product Owner - DEPTH Thinking Framework - v0.104.md (Methodology)
-├── Product Owner - Interactive Mode - v0.305.md (Conversation Flow)
+├── Product Owner - DEPTH Thinking Framework - v0.105.md (Methodology)
+├── Product Owner - Interactive Mode - v0.306.md (Conversation Flow)
 │
 ├── Product Owner - Template - Ticket Mode - v0.133.md ← Improved self-contained
 ├── Product Owner - Template - Story Mode - v0.133.md ← Improved self-contained
@@ -73,7 +73,7 @@ Knowledge Base/
 ## 2. ✨ Key Features
 
 - **📋 Improved Self-Contained Templates**: All rules, quality checks, and formatting embedded (v0.133 Ticket/Story, v0.130 Epic, v0.119 Doc)
-- **🧠 DEPTH Framework v0.104**: 10-round methodology with two-layer transparency
+- **🧠 DEPTH Framework v0.105**: 10-round methodology with two-layer transparency
 - **🔒 Mandatory Perspectives**: Minimum 3 perspectives (BLOCKING requirement)
 - **🔬 Cognitive Rigor**: 5 techniques (multi-perspective, assumption audit, perspective inversion, constraint reversal, mechanism-first)
 - **📊 Two-Layer Model**: Full rigor internally, concise updates externally
@@ -99,8 +99,8 @@ Knowledge Base/
 Add these documents to your project:
 
 **Core Framework:**
-- `Product Owner - DEPTH Thinking Framework - v0.104.md` (two-layer transparency & mandatory perspectives)
-- `Product Owner - Interactive Mode - v0.305.md` (conversation flow & smart routing)
+- `Product Owner - DEPTH Thinking Framework - v0.105.md` (two-layer transparency & mandatory perspectives)
+- `Product Owner - Interactive Mode - v0.306.md` (conversation flow & smart routing)
 
 **Improved Self-Contained Templates:**
 Each template is fully self-contained with embedded rules, quality checks, and formatting standards:
@@ -129,7 +129,7 @@ Each template is fully self-contained with embedded rules, quality checks, and f
 - No external rule dependencies - everything embedded in each template
 - Automatic complexity scaling based on request keywords
 - Complete quality checklists and error recovery built-in
-- Consistent DEPTH v0.104 integration across all templates
+- Consistent DEPTH v0.105 integration across all templates
 
 ### Step 4: Start Creating
 ```
@@ -291,18 +291,18 @@ System waits for complete response before proceeding.
 **DEPTH Definition:**
 DEPTH methodology (Discover, Engineer, Prototype, Test, Harmonize) is automatically applied with **two-layer transparency**. Full rigor applied internally, concise meaningful updates shown externally for optimal user experience.
 
-### DEPTH Phases (v0.104 Two-Layer Model)
+### DEPTH Phases (v0.105 Two-Layer Model)
 | Phase | Purpose | Internal Processing | User Sees (Concise) |
 |-------|---------|-------------------|---------------------|
 | **D**iscover | Deep understanding | 5 perspectives analyzed, assumption audit, opposition analysis | "🔍 Analyzing (5 perspectives) - Key insight: [finding]" |
 | **E**ngineer | Solution generation | 8 approaches evaluated, constraint reversal, mechanism validation | "⚙️ Engineering (optimal approach selected)" |
-| **P**rototype | Build framework | Template application, RICCE validation, mechanism-first check | "🔨 Building (template v0.132, mechanism-first validated)" |
+| **P**rototype | Build framework | Template application, RICCE validation, mechanism-first check | "🔨 Building (template v0.133, mechanism-first validated)" |
 | **T**est | Validate quality | 6-dimension self-rating, quality gates, improvement cycles | "✅ Validating (all dimensions 8+, excellence confirmed)" |
 | **H**armonize | Final polish | Final validation, cognitive rigor check, delivery prep | "✨ Finalizing (excellence confirmed, ready for delivery)" |
 
 ### Concise Transparent Excellence in Action
 ```markdown
-🔄 **Processing (DEPTH v0.104 - Concise Updates):**
+🔄 **Processing (DEPTH v0.105 - Concise Updates):**
 
 🔍 **Analyzing** (5 perspectives: Technical, UX, Business, QA, Strategic)
 **Key Insight:** OAuth token validation failure with configuration as primary suspect
@@ -317,7 +317,7 @@ DEPTH methodology (Discover, Engineer, Prototype, Test, Harmonize) is automatica
 ---
 
 <a id="depth-framework"></a>
-## 🧠 DEPTH Framework (v0.104)
+## 🧠 DEPTH Framework (v0.105)
 
 **Two-Layer Model:**
 - **Internal**: Full 10-round methodology, all cognitive rigor, mandatory perspectives (min 3, target 5)
@@ -334,7 +334,7 @@ DEPTH methodology (Discover, Engineer, Prototype, Test, Harmonize) is automatica
 ✨ **Finalizing** (Excellence confirmed)
 ```
 
-**Full details in:** `Product Owner - DEPTH Thinking Framework - v0.104.md`
+**Full details in:** `Product Owner - DEPTH Thinking Framework - v0.105.md`
 
 ---
 
@@ -380,9 +380,9 @@ AGENTS.md → Entry point with routing logic
     ↓
 Writer - Product Owner - v0.920.md (System prompt)
     ↓
-DEPTH Framework v0.104 (Methodology)
+DEPTH Framework v0.105 (Methodology)
     ↓
-Interactive Mode v0.305 (Conversation flow)
+Interactive Mode v0.306 (Conversation flow)
     ↓
 Templates (Ticket v0.133, Story v0.133, Epic v0.130, Doc v0.119)
     ↓

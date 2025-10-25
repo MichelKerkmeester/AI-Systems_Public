@@ -728,7 +728,7 @@ Major Milestones:
 7. **Use H3 for subsections** - only number them (1., 2., 3.) when multiple subsections exist
 8. **NO ◻ symbol** - removed in v0.130
 9. **Use `---` dividers** between all major sections
-10. **Interactive questions** handled by Interactive Mode v0.305 file
+10. **Interactive questions** handled by Interactive Mode v0.306 file
 11. **Header at top** as first line (Mode | Scale | Template)
 12. **No Table of Contents** (ClickUp/Jira provide native TOC)
 13. **Only requested features** - no scope expansion

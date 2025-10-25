@@ -25,7 +25,7 @@ Streamlined ticket templates aligned with real-world usage patterns. Concise, pr
 - **Purpose:** Create development tickets with QA checklists that auto-scale complexity
 - **Output:** Always as `text/markdown` artifact
 - **Thinking:** 10 rounds automatic (DEPTH methodology), 1-5 auto-scaled for $quick
-- **Interactive Mode:** Handled by Interactive Mode v0.305 file (all question logic lives there)
+- **Interactive Mode:** Handled by Interactive Mode v0.306 file (all question logic lives there)
 - **Header Position:** Always at top as first line
 - **Output Constraints:** Ticket contains ONLY the requested feature/fix/change
 - **Key Feature:** Includes Resolution Checklist for QA verification
@@ -35,7 +35,7 @@ Streamlined ticket templates aligned with real-world usage patterns. Concise, pr
 - **NEVER answer own questions - always wait for user response**
 - **NO TABLE OF CONTENTS** - ClickUp/Jira provide native TOC functionality
 - **HEADER AT TOP:** System metadata appears as first line of artifact
-- **INTERACTIVE QUESTIONS:** All question logic is in Interactive Mode v0.305 (not duplicated here)
+- **INTERACTIVE QUESTIONS:** All question logic is in Interactive Mode v0.306 (not duplicated here)
 
 ### Note on User Stories
 For user story format (narrative without QA checklists), use `$story` command which references **Product Owner - Template - Story Mode - v0.133.md**
@@ -219,8 +219,8 @@ For user story format (narrative without QA checklists), use `$story` command wh
 #### Problems Listed Separately
 **Fix:** Integrate into About narrative
 
-#### Created Without User Input
-**Fix:** Stop, apologize, ask comprehensive question (in Interactive Mode v0.305), WAIT
+**Pattern:** Sequential questions
+**Fix:** Stop, apologize, ask comprehensive question (in Interactive Mode v0.306), WAIT
 
 #### Added Unrequested Features
 **Fix:** Remove extras, keep only requested scope
@@ -727,7 +727,7 @@ Mode: $ticket | Complexity: Standard | Template: v0.133 | Quick
 9. **H3 subsections** in Requirements (NEVER H4, numbered format like 1., 2., 3.)
 10. **Resolution Checklist** at bottom (mandatory for tickets, QA verification)
 11. **Use `---` dividers** between all sections
-12. **Interactive questions** handled by Interactive Mode v0.305 file
+12. **Interactive questions** handled by Interactive Mode v0.306 file
 13. **Header at top** as first line (Mode | Complexity | Template)
 14. **No Table of Contents**
 15. **Only requested features** - no scope expansion

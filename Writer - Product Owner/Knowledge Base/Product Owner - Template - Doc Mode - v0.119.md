@@ -843,7 +843,7 @@ The north star that guides all platform decisions and investments
 6. **Use H3 for subsections** - number them (### 1. Title) only when multiple subsections exist
 7. **Single subsection** uses clean H3 (no numbers, no symbols)
 8. **Use `---` dividers** between all major sections
-9. **Interactive questions** handled by Interactive Mode v0.305 file
+9. **Interactive questions** handled by Interactive Mode v0.306 file
 10. **Header at top** as first line (Mode | Complexity | Template)
 11. **No Table of Contents** (ClickUp/Jira provide native TOC)
 12. **Only requested topic** - no scope expansion beyond user request
