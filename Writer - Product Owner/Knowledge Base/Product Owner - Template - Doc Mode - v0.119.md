@@ -132,7 +132,7 @@ Documentation templates with integrated formatting rules and quality standards. 
 6. Subsections - H3 numbered when multiple, clean otherwise
 
 #### Formatting Standards
-- **Dividers:** Use `---` between header and content, between major sections
+- **Dividers:** Use `---` between major sections only (not after headers)
 - **Lists:** Always use `-` for bullets
 - **Designs & References:** Bulleted list with categories (Documentation, Flows, Related Stories/Tickets)
 - **Tables:** For metrics and data presentation only
@@ -623,7 +623,7 @@ The north star that guides all platform decisions and investments
 ### 1. Core Capabilities
 ---
 
-### Discovery Engine
+#### Discovery Engine
 
 **Purpose:** Help users find value quickly
 
@@ -639,7 +639,7 @@ The north star that guides all platform decisions and investments
 - Engagement depth
 ---
 
-### Engagement Framework
+#### Engagement Framework
 
 **Purpose:** Keep users active and engaged
 
@@ -655,10 +655,10 @@ The north star that guides all platform decisions and investments
 - Return frequency
 ---
 
-## ◻︎ Feature Ecosystem
+### 2. Feature Ecosystem
 ---
 
-### Feature Map
+#### Feature Map
 
 | Category | Features | User Segment | Business Value |
 |----------|----------|--------------|----------------|
@@ -672,10 +672,10 @@ The north star that guides all platform decisions and investments
 # ❖ Performance Metrics
 ---
 
-## ◻︎ North Star Framework
+### 1. North Star Framework
 ---
 
-### Primary Metrics
+#### Primary Metrics
 
 | Metric | Current | Target | Owner |
 |--------|---------|--------|-------|
@@ -684,7 +684,7 @@ The north star that guides all platform decisions and investments
 | NPS | 42 | 65 | Success |
 | Retention D30 | 45% | 70% | Product |
 
-### Leading Indicators
+#### Leading Indicators
 
 - Activation rate trends
 - Feature adoption curves
@@ -692,10 +692,10 @@ The north star that guides all platform decisions and investments
 - Support ticket volume
 ---
 
-## ◻︎ Operational Excellence
+### 2. Operational Excellence
 ---
 
-### Performance Tracking
+#### Performance Tracking
 
 **Real-time Monitoring**
 - System health dashboards
@@ -710,7 +710,7 @@ The north star that guides all platform decisions and investments
 - Period planning: Goal adjustment
 ---
 
-### Intervention Framework
+#### Intervention Framework
 
 | Status | Trigger | Response Time | Action | Escalation |
 |--------|---------|---------------|---------|------------|
@@ -723,10 +723,10 @@ The north star that guides all platform decisions and investments
 # ❖ User Segments
 ---
 
-## ◻︎ Segmentation Strategy
+### 1. Segmentation Strategy
 ---
 
-### Power Users (Top 10%)
+#### Power Users (Top 10%)
 
 **Characteristics:**
 - Daily platform usage
@@ -741,7 +741,7 @@ The north star that guides all platform decisions and investments
 - Revenue sharing
 ---
 
-### Core Users (Next 30%)
+#### Core Users (Next 30%)
 
 **Characteristics:**
 - Regular engagement
@@ -756,10 +756,10 @@ The north star that guides all platform decisions and investments
 - Community building
 ---
 
-## ◻︎ Persona Development
+### 2. Persona Development
 ---
 
-### Detailed Personas
+#### Detailed Personas
 
 | Persona | Primary Need | Solution | Success Metric | Monetization |
 |---------|-------------|----------|----------------|--------------|
@@ -772,10 +772,10 @@ The north star that guides all platform decisions and investments
 # ❖ Growth & Scaling
 ---
 
-## ◻︎ Growth Framework
+### 1. Growth Framework
 ---
 
-### Acquisition Strategy
+#### Acquisition Strategy
 
 **Channels:**
 - Organic search (SEO)
@@ -791,7 +791,7 @@ The north star that guides all platform decisions and investments
 - LTV/CAC ratio
 ---
 
-### Retention Mechanics
+#### Retention Mechanics
 
 **Engagement Loops:**
 - Daily habits formation
@@ -806,10 +806,10 @@ The north star that guides all platform decisions and investments
 - Community events
 ---
 
-## ◻︎ Scaling Operations
+### 2. Scaling Operations
 ---
 
-### Infrastructure Scaling
+#### Infrastructure Scaling
 
 | Component | Current | Target | Investment |
 |-----------|---------|--------|------------|
@@ -818,7 +818,7 @@ The north star that guides all platform decisions and investments
 | Data Storage | 10TB | 100TB | $300K |
 | Team Size | 25 | 75 | $8M |
 
-### International Expansion
+#### International Expansion
 
 **Phase 1: English Markets**
 - Market validation
@@ -836,68 +836,20 @@ The north star that guides all platform decisions and investments
 
 ## 10. 🎯 FINAL REMINDERS
 
-### Pre-Creation Checklist
-**STOP before creating any artifact. Verify:**
-- [] User has responded to comprehensive question (never answer own questions)
-- [] DEPTH methodology applied (10 rounds standard, 1-5 for $quick)
-- [] Complexity correctly determined from user request
-- [] Scope limited to EXACTLY what user requested
-- [] Template version v0.119 confirmed
-- [] Artifact type set to `text/markdown`
-
-### Structure Requirements
-**Every documentation artifact MUST have:**
-- [] Header at TOP as first line (Mode | Complexity | Template)
-- [] Document metadata (Parent, Version, Reading Time)
-- [] About section (⌘) positioned first after metadata
-- [] References & Resources (⌥) in bulleted list format with categories
-- [] Main sections (❖) with appropriate symbols
-- [] Subsections (◻︎) where needed
-- [] Dividers (`---`) between all major sections
-- [] Clean H3/H4 headers (no symbols)
-
-### Format Standards
-**Mandatory formatting rules:**
-- [] Using `-` for all bullet points
-- [] Designs & References as bulleted list (NOT table) with categories
-- [] Tables ONLY for metrics and data presentation
-- [] Links formatted as `[Description](URL)` or `[Link - to be added]`
-- [] No Table of Contents (external tools provide this)
-- [] No scope expansion beyond user request
-- [] Content covers ONLY requested topic/system
-
-### Common Mistakes to Avoid
-**NEVER:**
-- ❌ Create artifact before user responds
-- ❌ Answer your own questions
-- ❌ Use table format for References & Resources
-- ❌ Add unrequested features or scope expansion
-- ❌ Skip DEPTH methodology application
-- ❌ Place header at bottom or middle
-- ❌ Use `text/plain` artifact type
-- ❌ Include Table of Contents
-- ❌ Use symbols in H3/H4 headers
-- ❌ Proceed without template version confirmation
-
-**ALWAYS:**
-- ✅ Wait for user response to comprehensive question
-- ✅ Apply 10-round DEPTH (or 1-5 for $quick)
-- ✅ Use bulleted list format for References & Resources
-- ✅ Deliver exactly what user requested (no extras)
-- ✅ Place header at top as first line
-- ✅ Use `text/markdown` artifact type
-- ✅ Apply correct symbol hierarchy
-- ✅ Include dividers between sections
-- ✅ Limit content to requested documentation scope
-
-### Quality Validation
-**Before delivery, confirm:**
-- [] All Pre-Creation items checked
-- [] All Structure Requirements present
-- [] All Format Standards followed
-- [] No Common Mistakes made
-- [] Documentation covers ONLY requested topic
-- [] References in bulleted list format with categories
-- [] DEPTH processing completed and documented
-- [] User value clearly communicated in About section
+1. **Always wait** for user response (except $quick)
+2. **Never answer** own questions
+3. **About section first** after metadata (integrate context narratively)
+4. **Designs as bullets** organized by category (Documentation, Flows, Analytics, Research, Related Stories/Tickets/Epics)
+5. **Tables for metrics only** - not for References & Resources
+6. **Use H3 for subsections** - number them (### 1. Title) only when multiple subsections exist
+7. **Single subsection** uses clean H3 (no numbers, no symbols)
+8. **Use `---` dividers** between all major sections
+9. **Interactive questions** handled by Interactive Mode v0.305 file
+10. **Header at top** as first line (Mode | Complexity | Template)
+11. **No Table of Contents** (ClickUp/Jira provide native TOC)
+12. **Only requested topic** - no scope expansion beyond user request
+13. **DEPTH methodology** applied automatically (10 rounds standard, 1-5 quick)
+14. **Template version** v0.119 confirmed before creation
+15. **Complexity scales structure** not content scope (Simple: 2-3 sections, Standard: 4-6, Complex: 7+)
+16. **Documentation focus** maintained throughout (product features, performance metrics, strategy docs)
 ```
