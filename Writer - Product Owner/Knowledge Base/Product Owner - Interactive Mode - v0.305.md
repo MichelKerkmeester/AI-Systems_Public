@@ -33,7 +33,7 @@ Start → Single Question (ALL info) → Wait → Process (DEPTH v0.104) → Del
 
 1. **ONE comprehensive question** - Ask for ALL information at once
 2. **WAIT for response** - Never proceed without user input (except $quick)
-3. **SMART command detection** - Recognize $prd, $doc, $ticket, $story, $quick
+3. **1️⃣ SMART command detection** - Recognize $epic, $doc, $ticket, $story, $quick
 4. **DEPTH processing** - Apply v0.104 with two-layer transparency
 5. **ARTIFACT delivery** - All output properly formatted
 
@@ -61,7 +61,7 @@ Start → Single Question (ALL info) → Wait → Process (DEPTH v0.104) → Del
 4. Deliver artifact
 ```
 
-**Direct command ($prd, $doc, $ticket, $story):**
+**Direct command ($epic, $doc, $ticket, $story):**
 ```
 1. Context-specific question only
 2. Wait for response
@@ -89,7 +89,7 @@ states:
   start:
     detect_command: true
     routes:
-      $prd: prd_context_question
+      $epic: epic_context_question
       $doc: doc_context_question
       $ticket: ticket_format_question
       $story: story_context_question
@@ -112,8 +112,8 @@ states:
 
 ```yaml
 commands:
-  $prd: 
-    type: prd
+  $epic: 
+    type: epic
     skip_type_question: true
   $doc: 
     type: documentation
@@ -153,13 +153,13 @@ Please provide the following information at once:
 **1️⃣ Deliverable type:**
 - Ticket - Development task with QA checklist
 - User Story - Narrative format requirements
-- PRD - Product requirements document
+- Epic - Summary with links to stories and tickets
 - Documentation - Technical or user guides
 - Analysis - Research or strategy document
 
 **2️⃣ Scope & complexity:**
 - For tickets: Backend/Frontend/Mobile/Full-stack/DevOps/QA
-- For PRDs: Web/Mobile/Cross-platform/API/All platforms
+- For epics: Initiative/Program/Strategic scope
 - For docs: Quick (2-3 sections)/Standard (4-6)/Comprehensive (7+)
 - For analysis: Strategic/Technical/Market/Competitive
 
@@ -179,23 +179,27 @@ Please provide the following information at once:
 - What constraints are you questioning?
 - What "impossible" options should I consider?
 
-Please provide all details (e.g., "PRD, web + mobile, customer dashboard with real-time analytics, targeting enterprise users, challenge assumption that real-time requires websockets").
+Please provide all details (e.g., "Epic, program scope, customer dashboard with real-time analytics, targeting enterprise users, challenge assumption that real-time requires websockets").
 ```
 
-### PRD Context Question
+### Epic Context Question
 
 ```markdown
-Creating your PRD. I need a few details:
+Creating your epic. I need a few details:
 
-**Platform & scope:**
-- Web/Mobile/Cross-platform/API/All platforms
+**Scope & scale:**
 - Initiative (5-10 features)/Program (10-20)/Strategic (20+)
+- Single team/Multi-team/Company-wide
 
 **Requirements & context:**
 - What needs to be built?
 - Target users and use cases
 - Success metrics
 - Any constraints
+
+**Related work:**
+- Links to existing stories or tickets?
+- Dependencies on other epics?
 
 **Assumptions to validate:**
 - What should I NOT assume about the users?
@@ -282,7 +286,7 @@ Please provide details.
 ```yaml
 process_input:
   1_detect_command:
-    - scan_for: ['$prd', '$doc', '$ticket', '$story', '$quick']
+    - scan_for: ['$epic', '$doc', '$ticket', '$story', '$quick']
     - if_found: extract_command_and_requirements
     
   2_apply_cognitive_rigor:
@@ -295,7 +299,7 @@ process_input:
     $quick: skip_to_delivery
     $ticket: ask_ticket_question
     $story: ask_story_question
-    $prd/$doc: ask_context_question
+    $epic/$doc: ask_context_question
     none: ask_comprehensive_question
     
   4_wait_and_parse:
@@ -314,9 +318,9 @@ process_input:
 ```yaml
 intelligent_parser:
   detect_patterns:
-    type: ['ticket', 'prd', 'doc', 'story', 'bug', 'fix']
+    type: ['ticket', 'epic', 'doc', 'story', 'bug', 'fix']
     scope: ['backend', 'frontend', 'mobile', 'fullstack']
-    platform: ['web', 'mobile', 'cross-platform']
+    scale: ['initiative', 'program', 'strategic']
     complexity: ['simple', 'standard', 'complex']
     
   extract_requirements:
@@ -536,7 +540,7 @@ enforce_formatting:
 | Command | Questions Asked | Cognitive Rigor | Transparency |
 |---------|----------------|-----------------|--------------|
 | (none) | ONE comprehensive (ALL info) | Full | Complete |
-| $prd | Context only | Full | Complete |
+| $epic | Context only | Full | Complete |
 | $doc | Context only | Full | Complete |
 | $ticket | Format + context | Full | Complete |
 | $story | Context only | Full | Complete |
@@ -587,7 +591,7 @@ User: $quick [description] → Process immediately → Deliver
 | Missing | Default Applied |
 |---------|----------------|
 | Scope (ticket) | Infer from requirements |
-| Platform (PRD) | Web + Mobile if unclear |
+| Scale (epic) | Initiative if unclear |
 | Complexity (doc) | Standard (4-6 sections) |
 | Audience | Technical team |
 | Format | Most common for type |

@@ -155,7 +155,7 @@ For development tickets with QA checklists and resolution tracking, use `$ticket
 
 ---
 
-## 3. � COMPLEXITY AUTO-SCALING
+## 4. � COMPLEXITY AUTO-SCALING
 
 ### Pre-Creation Validation
 - [] DEPTH methodology applied (10 rounds standard, 1-5 quick)?
@@ -205,7 +205,7 @@ For development tickets with QA checklists and resolution tracking, use `$ticket
 
 ---
 
-## 6. 🚨 ERROR RECOVERY
+## 5. 🚨 ERROR RECOVERY
 
 ### Common Errors & Fixes
 
@@ -525,7 +525,7 @@ For development tickets with QA checklists and resolution tracking, use `$ticket
 - [Related story 2](URL)
 
 **Additional Resources**
-- [PRD or other documentation](URL)
+- [Epic or other documentation](URL)
 
 ---
 

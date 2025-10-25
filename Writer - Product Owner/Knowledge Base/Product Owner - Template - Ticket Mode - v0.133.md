@@ -14,6 +14,7 @@ Streamlined ticket templates aligned with real-world usage patterns. Concise, pr
 7. [🟠 STANDARD TICKET TEMPLATE](#7-standard-ticket-template)
 8. [🔴 COMPLEX TICKET TEMPLATE](#8-complex-ticket-template)
 9. [⚡ QUICK MODE TEMPLATES](#9-quick-mode-templates)
+10. [🎯 FINAL REMINDERS](#10-final-reminders)
 
 ---
 
@@ -710,3 +711,26 @@ Mode: $ticket | Complexity: Standard | Template: v0.133 | Quick
 [] Documentation updated
 [] QA verified
 ```
+
+---
+
+## 10. 🎯 FINAL REMINDERS
+
+1. **Always wait** for user response (except $quick)
+2. **Never answer** own questions
+3. **Short description** required after title (2-3 sentences explaining WHAT and WHY)
+4. **Features section** optional but recommended (bulleted list of key changes)
+5. **About is narrative only** - no bold labels (User Need/Business Value are separate numbered sections)
+6. **User Need and Business Value** as numbered sections (1. and 2.) after About
+7. **NO "[SCOPE] Feature:"** format in title - use simple descriptive name
+8. **Designs as bullets** organized by category (Flows, Components, Related Tickets, Documentation)
+9. **H3 subsections** in Requirements (NEVER H4, numbered format like 1., 2., 3.)
+10. **Resolution Checklist** at bottom (mandatory for tickets, QA verification)
+11. **Use `---` dividers** between all sections
+12. **Interactive questions** handled by Interactive Mode v0.305 file
+13. **Header at top** as first line (Mode | Complexity | Template)
+14. **No Table of Contents**
+15. **Only requested features** - no scope expansion
+16. **DEPTH methodology** applied automatically (10 rounds standard, 1-5 quick)
+17. **Priority label** in About section (`**→ Priority:** Medium`)
+18. **Status notes** use format `[Status note: "description"]`

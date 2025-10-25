@@ -1,6 +1,6 @@
 # Product Owner System v0.915
 
-Transforms requests into professional tickets, PRDs, and documentation with **concise transparent DEPTH processing**.
+Transforms requests into professional tickets, epics, and documentation with **concise transparent DEPTH processing**.
 
 ## 📋 Table of Contents
 
@@ -46,9 +46,9 @@ Knowledge Base/
 ├── Writer - Product Owner - v0.915.md (System Prompt) ← Updated
 ├── Product Owner - DEPTH Thinking Framework - v0.104.md ← Updated
 ├── Product Owner - Interactive Mode - v0.305.md ← Updated
-├── Product Owner - Template - Ticket Mode - v0.132.md ← Updated
-├── Product Owner - Template - Story Mode - v0.132.md ← New
-├── Product Owner - Template - PRD Mode - v0.129.md
+├── Product Owner - Template - Ticket Mode - v0.133.md ← Updated
+├── Product Owner - Template - Story Mode - v0.133.md ← Updated
+├── Product Owner - Template - Epic Mode - v0.130.md ← New
 └── Product Owner - Template - Doc Mode - v0.118.md
 ```
 
@@ -80,7 +80,7 @@ Knowledge Base/
 - **🔒 Mandatory Perspectives**: Minimum 3 perspectives (BLOCKING requirement)
 - **🔬 Cognitive Rigor**: 5 techniques (multi-perspective, assumption audit, perspective inversion, constraint reversal, mechanism-first)
 - **📊 Two-Layer Model**: Full rigor internally, concise updates externally
-- **🚀 Three Modes**: Tickets, PRDs, Documentation
+- **🚀 Three Modes**: Tickets, Epics, Documentation
 - **⚡ Quick Mode**: Auto-scaled 1-5 rounds
 - **💬 Single Question**: All info gathered at once
 - **🎯 Smart Templates**: Auto-complexity detection
@@ -106,10 +106,9 @@ Add these documents to your project:
 - `Product Owner - Interactive Mode - v0.305.md` (concise conversation mechanics with full cognitive rigor)
 
 **Self-Contained Templates (Current Versions):**
-- `Product Owner - Template - Ticket Mode - v0.132.md` (development tickets with QA checklists)
-- `Product Owner - Template - Story Mode - v0.132.md` (user stories in narrative format) **← New in v0.915**
-- `Product Owner - Template - PRD Mode - v0.129.md` 
-- `Product Owner - Template - PRD Mode - v0.129.md` 
+- `Product Owner - Template - Ticket Mode - v0.133.md` (development tickets with QA checklists)
+- `Product Owner - Template - Story Mode - v0.133.md` (user stories in narrative format)
+- `Product Owner - Template - Epic Mode - v0.130.md` (epics with links to stories/tickets)
 - `Product Owner - Template - Doc Mode - v0.118.md` 
 
 **Note:** All rules embedded in templates. System operates with two-layer transparency model (full rigor internally, concise updates externally).
@@ -117,10 +116,10 @@ Add these documents to your project:
 ### Step 4: Start Creating
 ```
 need user authentication        # Interactive discovery flow
-$quick auth PRD                 # Immediate PRD creation (1-5 rounds auto)
-$prd payment platform           # Direct PRD mode (10 rounds auto)
+$quick auth epic                # Immediate epic creation (1-5 rounds auto)
+$epic payment platform          # Direct epic mode (10 rounds auto)
 $ticket payment integration     # Direct ticket mode (10 rounds auto)
-$story user login               # Direct story mode (10 rounds auto) ← New in v0.915
+$story user login               # Direct story mode (10 rounds auto)
 ```
 
 ---
@@ -135,14 +134,14 @@ $story user login               # Direct story mode (10 rounds auto) ← New in 
 | **Interactive** | Determine what to create | 1 comprehensive | 10 rounds (concise updates) | Two-layer | Auto-selected | Exact request |
 | **$quick** | Fast creation | NONE | 1-5 auto-scaled | Summary | Auto-selected | Exact request |
 | **$doc** | Documentation | 1 comprehensive | 10 rounds (concise updates) | Two-layer | v0.118 | Requested doc only |
-| **$prd** | Product requirements | 1 comprehensive | 10 rounds (concise updates) | Two-layer | v0.129 | Requested PRD only |
-| **$story** | User stories | 1 comprehensive | 10 rounds (concise updates) | Two-layer | v0.132 | Requested story only |
-| **$ticket** | Dev tickets | 1 comprehensive | 10 rounds (concise updates) | Two-layer | v0.132 | Requested ticket only |
+| **$epic** | Epics | 1 comprehensive | 10 rounds (concise updates) | Two-layer | v0.130 | Requested epic only |
+| **$story** | User stories | 1 comprehensive | 10 rounds (concise updates) | Two-layer | v0.133 | Requested story only |
+| **$ticket** | Dev tickets | 1 comprehensive | 10 rounds (concise updates) | Two-layer | v0.133 | Requested ticket only |
 
 ### Interactive Flow (Default)
 System asks one comprehensive question gathering all info at once:
-- Deliverable type (ticket/story/PRD/doc)
-- Scope/platform
+- Deliverable type (ticket/story/epic/doc)
+- Scope/scale
 - Brief description
 
 System waits for complete response before proceeding.
@@ -154,7 +153,7 @@ System waits for complete response before proceeding.
 <a id="5-mode-details"></a>
 ## 5. 📋 Mode Details
 
-### 🎫 Ticket Mode (v0.132)
+### 🎫 Ticket Mode (v0.133)
 
 **Purpose:** Development tickets with detailed QA checklists for implementation tracking
 
@@ -207,15 +206,15 @@ System waits for complete response before proceeding.
 
 ---
 
-### 🚀 PRD Mode (v0.129)
+### 🚀 Epic Mode (v0.130)
 
-**Purpose:** Product requirements documents for strategic initiatives
+**Purpose:** Epics as summaries with links to stories and tickets
 
 **Self-Contained Features:**
 - All formatting standards built-in
 - Complete symbol hierarchy defined
 - Quality checks embedded
-- Error recovery included
+- Links to related stories and tickets
 
 **Complexity Levels:**
 | Level | Features | Template Sections | Focus | Use Case |
@@ -224,15 +223,14 @@ System waits for complete response before proceeding.
 | **Program** | 10-20 | 8-10 sections | Multi-team coordination | Cross-team initiatives, platform features |
 | **Strategic** | 20+ | 10+ sections | Platform transformation | Company-wide changes, major platforms |
 
-**Standard PRD Sections:**
-1. **Executive Summary** - High-level overview and business value
-2. **Problem Statement** - User needs and pain points
-3. **Goals & Success Metrics** - Measurable outcomes
-4. **User Stories & Use Cases** - Detailed scenarios
-5. **Functional Requirements** - Feature specifications
-6. **Technical Considerations** - Architecture and constraints
-7. **Launch Plan** - Rollout strategy and timeline
-8. **Success Metrics** - KPIs and measurement plan
+**Standard Epic Sections:**
+1. **About** - 3 sentences max on what's being built and why
+2. **Success Criteria** - Measurable outcomes
+3. **Designs & References** - Links to documentation and designs
+4. **Scope Overview** - High-level feature list with story/ticket links
+5. **Implementation Plan** - Phases and timeline
+6. **Stakeholders** - RACI matrix (if applicable)
+7. **Risks & Mitigations** - When criteria met
 
 ---
 
@@ -368,7 +366,7 @@ DEPTH Framework v0.104 (Methodology)
     ↓
 Interactive Mode v0.305 (Conversation flow)
     ↓
-Templates (Ticket v0.132, Story v0.132, PRD v0.129, Doc v0.118)
+Templates (Ticket v0.133, Story v0.133, Epic v0.130, Doc v0.118)
     ↓
 Output → /Export/[###]-artifact.md
 ```

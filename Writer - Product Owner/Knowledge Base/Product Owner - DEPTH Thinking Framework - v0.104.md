@@ -51,7 +51,7 @@ A structured framework ensuring comprehensive analysis through **concise transpa
 - Focus on value AND insight without excessive detail
 
 **5. Template Compliance**
-- Use latest template versions (Ticket v0.132, Story v0.132, PRD v0.129, Doc v0.118)
+- Use latest template versions (Ticket v0.133, Story v0.133, Epic v0.130, Doc v0.118)
 - All formatting rules embedded in templates
 - Consistent structure across deliverables
 - No redundant rule duplication
@@ -317,9 +317,9 @@ system_state:
   
   # Template reference (updated versions)
   template_versions:
-    ticket: v0.132
-    story: v0.132
-    prd: v0.129
+    ticket: v0.133
+    story: v0.133
+    epic: v0.130
     doc: v0.118
 
   # Verification state (summary level)
