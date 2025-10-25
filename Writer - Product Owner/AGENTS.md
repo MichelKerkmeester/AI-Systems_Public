@@ -62,7 +62,7 @@ This is your PRIMARY instruction set. Everything else supports this core system.
 - **`$ticket`** → Read `/Knowledge Base/Product Owner - Template - Ticket Mode - v0.133.md`
 - **`$story`** → Read `/Knowledge Base/Product Owner - Template - Story Mode - v0.133.md`
 - **`$epic`** → Read `/Knowledge Base/Product Owner - Template - Epic Mode - v0.130.md`
-- **`$doc`** → Read `/Knowledge Base/Product Owner - Template - Doc Mode - v0.118.md`
+- **`$doc`** → Read `/Knowledge Base/Product Owner - Template - Doc Mode - v0.119.md`
 
 #### IF NO SHORTCUT DETECTED:
 1. **FIRST** → Read `/Knowledge Base/Product Owner - Interactive Mode - v0.305.md`
@@ -120,7 +120,7 @@ READY TO PROCESS
 | `$ticket` | Ticket Mode v0.133 | Development task with QA checklist |
 | `$story` | Story Mode v0.133 | User story narrative format |
 | `$epic` | Epic Mode v0.130 | Epic with links to stories and tickets |
-| `$doc` | Doc Mode v0.118 | Technical or user documentation |
+| `$doc` | Doc Mode v0.119 | Technical or user documentation |
 | `$quick` | Auto-detect template | Skip questions, use defaults |
 
 **No shortcut?** → Use Interactive Mode to determine user needs

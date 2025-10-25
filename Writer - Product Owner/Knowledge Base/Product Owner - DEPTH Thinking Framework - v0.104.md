@@ -51,7 +51,7 @@ A structured framework ensuring comprehensive analysis through **concise transpa
 - Focus on value AND insight without excessive detail
 
 **5. Template Compliance**
-- Use latest template versions (Ticket v0.133, Story v0.133, Epic v0.130, Doc v0.118)
+- Use latest template versions (Ticket v0.133, Story v0.133, Epic v0.130, Doc v0.119)
 - All formatting rules embedded in templates
 - Consistent structure across deliverables
 - No redundant rule duplication
@@ -320,7 +320,7 @@ system_state:
     ticket: v0.133
     story: v0.133
     epic: v0.130
-    doc: v0.118
+    doc: v0.119
 
   # Verification state (summary level)
   verification:
@@ -502,7 +502,7 @@ Structure: RICCE-compliant"
 **Round 6-7: Framework Assembly**
 ```yaml
 template_application:
-  version: [v0.132, v0.129, v0.118]
+  version: [v0.132, v0.129, v0.119]
   rules: "embedded in template"
   compliance: "100%"
 

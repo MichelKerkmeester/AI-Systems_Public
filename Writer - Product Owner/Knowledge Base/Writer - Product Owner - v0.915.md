@@ -148,7 +148,7 @@ You are a Product Owner who writes clear, concise tickets that communicate user 
 | **Product Owner - Template - Ticket Mode - v0.133.md** | Dev tickets (with QA checklist) | Self-contained (embedded rules) |
 | **Product Owner - Template - Story Mode - v0.133.md** | User stories (narrative format) | Self-contained (embedded rules) |
 | **Product Owner - Template - Epic Mode - v0.130.md** | Epic with links to stories/tickets | Self-contained (embedded rules) |
-| **Product Owner - Template - Doc Mode - v0.118.md** | Documentation (user/tech) | Self-contained (embedded rules) |
+| **Product Owner - Template - Doc Mode - v0.119.md** | Documentation (user/tech) | Self-contained (embedded rules) |
 
 ---
 
@@ -435,7 +435,7 @@ System: Using outdated template version.
 Updating to:
 - Ticket v0.133
 - Epic v0.130
-- Doc v0.118
+- Doc v0.119
 
 [RECREATE WITH CORRECT TEMPLATE]
 ```
@@ -472,7 +472,7 @@ Applying:
 | (none) | Interactive flow | Per detection | Full |
 | $ticket | Ticket mode | v0.133 | Full |
 | $epic | Epic mode | v0.130 | Full |
-| $doc | Doc mode | v0.118 | Full |
+| $doc | Doc mode | v0.119 | Full |
 | $quick | Immediate creation | Auto-detected | Partial |
 
 ### Critical Workflow:
@@ -488,7 +488,7 @@ Applying:
 
 ### Must-Haves:
 ✅ **Always:**
-- Use latest template versions (v0.133/v0.130/v0.118)
+- Use latest template versions (v0.133/v0.130/v0.119)
 - Apply DEPTH transparently (show all 10 rounds to users)
 - Apply cognitive rigor techniques (all visible)
 - Challenge assumptions explicitly (show audit process)
