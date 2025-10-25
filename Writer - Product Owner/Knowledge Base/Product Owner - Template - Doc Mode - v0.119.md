@@ -140,14 +140,11 @@ Documentation templates with integrated formatting rules and quality standards. 
 - **Content:** Integrated narrative in About section
 
 ### Visual Hierarchy Rules
-- One blank line before divider
-- One blank line after divider
-- Exception: No blank line after final divider
 - Consistent spacing throughout
 - H3 headers: Numbered format (### 1. Title) when multiple subsections exist
 - H3 headers: Clean (no symbols, no numbers) when single subsection
 - H4 headers: Always clean (no symbols)
-- Use `---` as major section separators
+- Use `---` as section separators between major sections (not after headers)
 
 ### Content Integration
 - Context and purpose integrated in About
@@ -270,18 +267,20 @@ Mode: $doc | Complexity: Simple | Template: v0.119
 # [Document Title]
 
 **Parent:** [Parent Doc] | **Version:** 1.0 | **Reading Time:** 5 minutes
+
 ---
 
 # ⌘ About
----
+
 [Brief description of what this document covers and why it's important. 
 This includes context about the feature/product being documented and 
 its value to users - integrated naturally into the description.
 Covers ONLY what user requested.]
+
 ---
 
 ## ⌥ References & Resources
----
+
 **Documentation**
 - UI Mockups - Current - [Link - to be added]
 - Requirements Doc - Latest - [Link - to be added]
@@ -292,16 +291,15 @@ Covers ONLY what user requested.]
 **Related Stories**
 - [Story 1] - [Link - to be added]
 - [Story 2] - [Link - to be added]
+
 ---
 
 # ❖ Key Features
----
 
 ### Overview
----
+
 High-level description of the main capabilities and value proposition
 [ONLY for the requested feature/product].
----
 
 ### Prerequisites
 
@@ -322,13 +320,12 @@ High-level description of the main capabilities and value proposition
 3. **Feature Three**
    - What it does [within requested scope]
    - Value proposition
+
 ---
 
 # ❖ Success Metrics
----
 
 ### Performance Indicators
----
 
 ### Key Metrics
 
@@ -355,19 +352,21 @@ Mode: $doc | Complexity: Standard | Template: v0.119
 # [Document Title]
 
 **Parent:** [Parent Doc] | **Version:** 1.0 | **Reading Time:** 10 minutes
+
 ---
 
 # ⌘ About
----
+
 [Detailed description of the documented feature or product, incorporating
 the business context, user needs, market positioning, and value 
 proposition. This narrative naturally includes why this documentation 
 exists, who benefits from it, and how it fits into the larger ecosystem.
 Covers ONLY the specific feature/product requested by user.]
+
 ---
 
 ## ⌥ References & Resources
----
+
 **Documentation**
 - Component Library - v2.1 - [Link - to be added]
 - Product Requirements - Current - [Link - to be added]
@@ -384,16 +383,15 @@ Covers ONLY the specific feature/product requested by user.]
 **Related Stories**
 - [Story 1] - [Link - to be added]
 - [Story 2] - [Link - to be added]
+
 ---
 
 # ❖ Product Overview
----
 
 ### 1. Architecture & Flow
----
+
 System components and their relationships, showing how value flows through 
 the product [limited to requested system only].
----
 
 #### User Journey
 
@@ -408,23 +406,22 @@ the product [limited to requested system only].
 - API connections
 - Data flows
 - Dependencies
+
 ---
 
 ### 2. Key Terminology
----
 
 | Term | Definition | Context |
 |------|------------|---------|
 | **[Term 1]** | [Clear definition] | [When/where used] |
 | **[Term 2]** | [Clear definition] | [When/where used] |
 | **[Term 3]** | [Clear definition] | [When/where used] |
+
 ---
 
 # ❖ Feature Specifications
----
 
 ### 1. Core Features
----
 
 #### Primary Feature
 
@@ -449,10 +446,10 @@ the product [limited to requested system only].
    - Purpose and functionality [as requested]
    - Target users
    - Expected impact
+
 ---
 
 ### 2. User Scenarios
----
 
 #### Happy Path
 
@@ -466,13 +463,12 @@ the product [limited to requested system only].
 **Scenario:** [Unusual situation]
 **Handling:** [How system responds]
 **Recovery:** [Path back to success]
+
 ---
 
 # ❖ Performance Framework
----
 
 ### 1. Success Metrics
----
 
 #### Key Performance Indicators
 
@@ -489,10 +485,10 @@ the product [limited to requested system only].
 - Data collection methods
 - Reporting frequency
 - Review cycles
+
 ---
 
 ### 2. Business Impact
----
 
 #### Revenue Impact
 
@@ -519,10 +515,11 @@ Mode: $doc | Complexity: Complex | Template: v0.119
 # [Platform/Ecosystem Documentation]
 
 **Parent:** [Strategy Docs] | **Version:** 1.0 | **Reading Time:** 20 minutes
+
 ---
 
 # ⌘ About
----
+
 [Comprehensive overview of the documented platform, incorporating its 
 evolution, current state, strategic importance, and future roadmap. 
 This narrative weaves together the product vision, business 
@@ -530,10 +527,11 @@ drivers, market requirements, user needs, and stakeholder
 impacts into a cohesive story that explains not just what the platform 
 does, but why it exists and how it creates value.
 Documentation covers ONLY the specific platform/ecosystem requested by user.]
+
 ---
 
 ## ⌥ References & Resources
----
+
 **Documentation**
 - Product Vision - Current - [Link - to be added]
 - Design System - v3.0 - [Link - to be added]
@@ -558,16 +556,17 @@ Documentation covers ONLY the specific platform/ecosystem requested by user.]
 **Related Stories**
 - [Story 1] - [Link - to be added]
 - [Story 2] - [Link - to be added]
+
 ---
 
 # ❖ Platform Strategy
----
 
-## ◻︎ Vision & Mission
----
+### 1. Vision & Mission
+
 The north star that guides all platform decisions and investments
 [for the requested platform only].
-```
+
+#### Core Value Propositions
 ---
 
 # ❖ Platform Strategy
@@ -615,13 +614,12 @@ The north star that guides all platform decisions and investments
 - Conversion funnel optimization
 - Expansion revenue model
 - Partnership ecosystem
+
 ---
 
 # ❖ Product Architecture
----
 
 ### 1. Core Capabilities
----
 
 #### Discovery Engine
 
@@ -637,6 +635,7 @@ The north star that guides all platform decisions and investments
 - Time to first value
 - Discovery satisfaction
 - Engagement depth
+
 ---
 
 #### Engagement Framework
@@ -653,10 +652,10 @@ The north star that guides all platform decisions and investments
 - Daily active usage
 - Session duration
 - Return frequency
+
 ---
 
 ### 2. Feature Ecosystem
----
 
 #### Feature Map
 
@@ -667,13 +666,12 @@ The north star that guides all platform decisions and investments
 | **Collaboration** | Share, Comment, Co-create | Teams | Virality |
 | **Analytics** | Insights, Reports, Tracking | Business | Monetization |
 | **Administration** | Controls, Permissions, Billing | Enterprise | Revenue |
+
 ---
 
 # ❖ Performance Metrics
----
 
 ### 1. North Star Framework
----
 
 #### Primary Metrics
 
@@ -690,10 +688,10 @@ The north star that guides all platform decisions and investments
 - Feature adoption curves
 - User satisfaction scores
 - Support ticket volume
+
 ---
 
 ### 2. Operational Excellence
----
 
 #### Performance Tracking
 
@@ -708,6 +706,7 @@ The north star that guides all platform decisions and investments
 - Weekly reviews: Business KPIs
 - Monthly deep-dives: Strategic progress
 - Period planning: Goal adjustment
+
 ---
 
 #### Intervention Framework
@@ -718,13 +717,12 @@ The north star that guides all platform decisions and investments
 | Warning | -10% target | Daily | Investigate | Team Lead |
 | Critical | -25% target | Immediate | Intervene | Director |
 | Crisis | -50% target | War Room | All Hands | C-Suite |
+
 ---
 
 # ❖ User Segments
----
 
 ### 1. Segmentation Strategy
----
 
 #### Power Users (Top 10%)
 
@@ -739,6 +737,7 @@ The north star that guides all platform decisions and investments
 - Early access
 - Enhanced support
 - Revenue sharing
+
 ---
 
 #### Core Users (Next 30%)
@@ -754,10 +753,10 @@ The north star that guides all platform decisions and investments
 - Engagement campaigns
 - Upgrade incentives
 - Community building
+
 ---
 
 ### 2. Persona Development
----
 
 #### Detailed Personas
 
@@ -767,13 +766,12 @@ The north star that guides all platform decisions and investments
 | **Business** | ROI | Analytics | Revenue | Enterprise |
 | **Consumer** | Content | Curation | Time Spent | Ads/Premium |
 | **Team Lead** | Efficiency | Collaboration | Productivity | Seats |
+
 ---
 
 # ❖ Growth & Scaling
----
 
 ### 1. Growth Framework
----
 
 #### Acquisition Strategy
 
@@ -789,6 +787,7 @@ The north star that guides all platform decisions and investments
 - Conversion rates
 - Payback period
 - LTV/CAC ratio
+
 ---
 
 #### Retention Mechanics
@@ -804,10 +803,10 @@ The north star that guides all platform decisions and investments
 - Re-engagement offers
 - Feature announcements
 - Community events
+
 ---
 
 ### 2. Scaling Operations
----
 
 #### Infrastructure Scaling
 
