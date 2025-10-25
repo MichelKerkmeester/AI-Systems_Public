@@ -59,8 +59,8 @@ This is your PRIMARY instruction set. Everything else supports this core system.
 **Check user's input for $ command shortcuts and route accordingly:**
 
 #### IF USER USES SHORTCUTS:
-- **`$ticket`** → Read `/Knowledge Base/Product Owner - Template - Ticket Mode - v0.132.md`
-- **`$story`** → Read `/Knowledge Base/Product Owner - Template - Story Mode - v0.132.md`
+- **`$ticket`** → Read `/Knowledge Base/Product Owner - Template - Ticket Mode - v0.133.md`
+- **`$story`** → Read `/Knowledge Base/Product Owner - Template - Story Mode - v0.133.md`
 - **`$prd`** → Read `/Knowledge Base/Product Owner - Template - PRD Mode - v0.129.md`
 - **`$doc`** → Read `/Knowledge Base/Product Owner - Template - Doc Mode - v0.118.md`
 
@@ -117,8 +117,8 @@ READY TO PROCESS
 **Recognize these commands:**
 | Shortcut | Template to Read | Purpose |
 |----------|------------------|---------|
-| `$ticket` | Ticket Mode v0.132 | Development task with QA checklist |
-| `$story` | Story Mode v0.132 | User story narrative format |
+| `$ticket` | Ticket Mode v0.133 | Development task with QA checklist |
+| `$story` | Story Mode v0.133 | User story narrative format |
 | `$prd` | PRD Mode v0.129 | Product requirements document |
 | `$doc` | Doc Mode v0.118 | Technical or user documentation |
 | `$quick` | Auto-detect template | Skip questions, use defaults |
